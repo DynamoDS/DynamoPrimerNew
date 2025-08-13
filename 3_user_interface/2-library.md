@@ -27,13 +27,13 @@ Durchsuchen Sie die Bibliothek, indem Sie durch die Menüs klicken, um die einze
 
 Mit diesen werden die Blöcke weiter in derselben Unterkategorie kategorisiert, je nachdem, ob die Blöcke Daten **erstellen**, eine **Aktion** ausführen oder Daten **abfragen**.
 
-* ![](<images/3-2/user interface - create.jpg>) **Erstellen**: Erstellt oder konstruiert eine Geometrie von Grund auf neu. Beispiel: Kreis.
-* ![](<images/3-2/user interface - action.jpg>) **Aktion**: Führt eine Aktion für ein Objekt aus. Beispiel: Skalieren eines Kreises.
-* ![](<images/3-2/user interface - query.jpg>) **Abfrage**: Ruft eine Eigenschaft eines bereits vorhandenen Objekts ab. Beispiel: Abrufen des Radius eines Kreises.
+* \![](<images/3-2/user interface - create.jpg>) **Erstellen**: Erstellt oder konstruiert eine Geometrie von Grund auf neu. Beispiel: Kreis.
+* \![](<images/3-2/user interface - action.jpg>) **Aktion**: Führt eine Aktion für ein Objekt aus. Beispiel: Skalieren eines Kreises.
+* \![](<images/3-2/user interface - query.jpg>) **Abfrage**: Ruft eine Eigenschaft eines bereits vorhandenen Objekts ab. Beispiel: Abrufen des Radius eines Kreises.
 
 Bewegen Sie den Mauszeiger über einen Block, um weitere Informationen über seinen Namen und sein Symbol hinaus anzuzeigen. Dadurch können Sie schnell nachvollziehen, welche Aktion der Block ausführt, welche Eingaben erforderlich sind und was von dem Block ausgegeben wird.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Beschreibung: Kurze Beschreibung des Blocks
 > 2. Symbol: Größere Version des Symbols im Menü Bibliothek
@@ -46,7 +46,7 @@ Wenn Sie relativ genau wissen, welchen Block Sie zu Ihrem Arbeitsbereich hinzuf�
 
 Treffen Sie Ihre Auswahl, indem Sie auf den hinzuzufügenden Block klicken, oder drücken Sie die EINGABETASTE, um die markierten Blöcke in der Mitte des Arbeitsbereichs hinzuzufügen.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### Suchen nach Hierarchie
 
@@ -125,10 +125,10 @@ Wir können auch Codeblöcke als Abkürzung verwenden, um einen Number Input-Blo
 
 Hier sehen Sie eine einfache Demonstration (mit Anweisungen) zur Verwendung von Codeblöcken in Ihrem Skript.
 
-![](<images/3-2/library-code block demo.gif>)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. Doppelklicken Sie, um einen Code Block-Block zu erstellen.
-2. `Circle.ByCenterPointRadius(x,y);`Typ
+2. Geben Sie `Circle.ByCenterPointRadius(x,y);` ein.
 3. Klicken Sie auf den Arbeitsbereich, um die Auswahl aufzuheben und automatisch `x`- und `y`-Eingaben hinzuzufügen.
 4. Erstellen Sie einen Point.ByCoordinates-Block und einen Number Slider und verbinden Sie sie anschließend mit den Eingaben des Codeblocks.
 5. Das Ergebnis der Ausführung des visuellen Programms wird in der 3D-Vorschau als Kreis dargestellt.
