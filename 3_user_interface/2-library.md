@@ -27,13 +27,13 @@
 
 這些項目會根據節點是**建立**資料、執行**動作**或**查詢**資料，進一步分類成有相同子品類的節點。
 
-* \![](<images/3-2/user interface - create.jpg>) **建立**：從頭開始建立或建構幾何圖形。例如圓。
-* \![](<images/3-2/user interface - action.jpg>) **動作**：對物件執行動作。例如，調整圓的比例。
-* \![](<images/3-2/user interface - query.jpg>) **查詢**：取得已存在物件的性質。例如，取得圓的半徑。
+* ![](<images/3-2/user interface - create.jpg>) **建立**：從頭開始建立或建構幾何圖形。例如圓。
+* ![](<images/3-2/user interface - action.jpg>) **動作**：對物件執行動作。例如，調整圓的比例。
+* ![](<images/3-2/user interface - query.jpg>) **查詢**：取得已存在物件的性質。例如，取得圓的半徑。
 
 將滑鼠懸停在節點上，可顯示名稱和圖示之外更詳細的資訊。我們由此可以快速了解節點的功能、所需的輸入及其提供的輸出。
 
-\![](<images/3-2/user interface - node description.jpg>)
+![](<images/3-2/user interface - node description.jpg>)
 
 > 1. 描述 - 節點的普通語言描述
 > 2. 圖示 -「資源庫」功能表中更大版本的圖示
@@ -46,7 +46,7 @@
 
 選擇按一下要加入的節點，或按 Enter 將亮顯的節點加入工作區的中心。
 
-\![](<images/3-2/user interface - search.jpg>)
+![](<images/3-2/user interface - search.jpg>)
 
 #### 依階層搜尋
 
@@ -125,10 +125,11 @@ Code Block 節點可以用於定義一塊程式碼 (以分號分隔各行)。這
 
 以下是在腳本中使用 Code Block 的簡單示範 (含指示)。
 
-\![](<images/3-2/library-code block demo.gif>)
+![](<images/3-2/library-code block demo.gif>)
 
 1. 按兩下以建立 Code Block 節點
 2. 鍵入 `Circle.ByCenterPointRadius(x,y);`
 3. 按一下工作區以清除選取，這會自動加入 `x` 和 `y` 輸入。
 4. 建立 Point.ByCoordinates 節點與 Number Slider，然後將其連接至 Code Block 的輸入。
 5. 執行視覺程式的結果如 3D 預覽中顯示為圓
+
