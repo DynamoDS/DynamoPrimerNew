@@ -27,13 +27,13 @@ Navegue na biblioteca clicando nos menus para expandir cada categoria e suas sub
 
 Essas opções categorizam os nós na mesma subcategoria com base na capacidade dos nós **criar** dados, executar uma **ação** ou **consultar** dados.
 
-* \![](<images/3-2/user interface - create.jpg>) **Criar**: criar ou construir uma geometria do zero. Por exemplo, um círculo.
-* \![](<images/3-2/user interface - action.jpg>) **Ação**: executar uma ação em um objeto. Por exemplo, dimensionar um círculo.
-* \![](<images/3-2/user interface - query.jpg>) **Consulta**: obter uma propriedade de um objeto que já existe. Por exemplo, obter o raio de um círculo.
+* ![](<images/3-2/user interface - create.jpg>) **Criar**: criar ou construir uma geometria do zero. Por exemplo, um círculo.
+* ![](<images/3-2/user interface - action.jpg>) **Ação**: executar uma ação em um objeto. Por exemplo, dimensionar um círculo.
+* ![](<images/3-2/user interface - query.jpg>) **Consulta**: obter uma propriedade de um objeto que já existe. Por exemplo, obter o raio de um círculo.
 
 Passe o cursor do mouse sobre um nó para obter informações mais detalhadas além do nome e do ícone. Isso nos oferece uma maneira rápida de entender o que o nó faz, o que ele exigirá para as entradas e o que ele fornecerá como resultado.
 
-\![](<images/3-2/user interface - node description.jpg>)
+![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Descrição: descrição de texto simples do nó
 > 2. Ícone: versão maior do ícone no menu Biblioteca
@@ -46,7 +46,7 @@ Se você souber com algum grau de especificidade qual é o nó que deseja adicio
 
 Clique no nó que deseja adicionar ou pressione Enter para adicionar nós realçados ao centro do espaço de trabalho.
 
-\![](<images/3-2/user interface - search.jpg>)
+![](<images/3-2/user interface - search.jpg>)
 
 #### Pesquisar por hierarquia
 
@@ -125,10 +125,11 @@ Também é possível usar os blocos de código como um atalho para definir uma e
 
 Confira aqui uma demonstração simples (com instruções) para usar o Bloco de código no script.
 
-\![](<images/3-2/library-code block demo.gif>)
+![](<images/3-2/library-code block demo.gif>)
 
 1. Clique duas vezes para criar um nó de bloco de código
 2. Digite `Circle.ByCenterPointRadius(x,y);`
 3. Clique no espaço de trabalho para limpar a seleção e adicionar as entradas `x` e `y` automaticamente.
 4. Crie um nó Point.ByCoordinates e um controle deslizante de número e, em seguida, conecte-os às entradas do Bloco de código.
 5. O resultado da execução do Programa visual é mostrado como o círculo na visualização 3D
+
