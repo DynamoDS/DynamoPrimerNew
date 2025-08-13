@@ -27,13 +27,13 @@
 
 この階層によってノードは細かく分類され、データを **Create** するノードか、**Action** を実行するノードか、データを **Query** するノードかに基づいて、同じサブカテゴリに分類されます。
 
-* ![](<images/3-2/user interface - create.jpg>) **Create**: 最初からジオメトリを作成または構築します。たとえば、円を作成します。
-* ![](<images/3-2/user interface - action.jpg>) **Action**: オブジェクトに対してアクションを実行します。たとえば、円のスケールを変更します。
-* ![](<images/3-2/user interface - query.jpg>) **Query**: 既に存在するオブジェクトのプロパティを取得します。たとえば、円の半径を取得します。
+* \![](<images/3-2/user interface - create.jpg>) **Create**: 最初からジオメトリを作成または構築します。たとえば、円を作成します。
+* \![](<images/3-2/user interface - action.jpg>) **Action**: オブジェクトに対してアクションを実行します。たとえば、円のスケールを変更します。
+* \![](<images/3-2/user interface - query.jpg>) **Query**: 既に存在するオブジェクトのプロパティを取得します。たとえば、円の半径を取得します。
 
 ノードの名前とアイコン以外の詳細情報を表示するには、ノードにマウスを合わせます。これにより、そのノードの機能、必要な入力、生成される出力について、すぐに確認できます。
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. ノードに関する簡単な説明
 > 2. [ライブラリ]メニューの大きなアイコン
@@ -46,7 +46,7 @@
 
 追加するノードをクリックして選択するか、[Enter]を押してハイライト表示されたノードをワークスペースの中心に追加します。
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### 階層ごとの検索
 
@@ -125,7 +125,7 @@ Code Block ノードでセミコロン区切りの行を使用して、Code Bloc
 
 次に、スクリプトで Code Block を使用するための簡単なデモンストレーションを示します(手順を含む)。
 
-![](<images/3-2/library-code block demo.gif>)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. ダブルクリックして Code Block ノードを作成します。
 2. `Circle.ByCenterPointRadius(x,y);` と入力します。
