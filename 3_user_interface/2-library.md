@@ -27,13 +27,13 @@ Przeglądaj bibliotekę, klikając poszczególne menu, aby rozwijać kategorie i
 
 Zapewnia to dodatkowe skategoryzowanie węzłów należących do tej samej podkategorii w zależności od tego, czy węzły **tworzą** dane, wykonują **operacje**, czy wysyłają **zapytania** dotyczące danych.
 
-* ![](<images/3-2/user interface - create.jpg>) **Create — węzły tworzenia**: tworzą lub konstruują geometrię od podstaw. Np. okrąg.
-* ![](<images/3-2/user interface - action.jpg>) **Action — węzły operacji**: wykonują operacje na obiekcie. Np. skalowanie okręgu.
-* ![](<images/3-2/user interface - query.jpg>) **Query — węzły zapytań**: pobierają właściwość obiektu, który już istnieje. Np. pobieranie promienia okręgu.
+* \![](<images/3-2/user interface - create.jpg>) **Create — węzły tworzenia**: tworzą lub konstruują geometrię od podstaw. Np. okrąg.
+* \![](<images/3-2/user interface - action.jpg>) **Action — węzły operacji**: wykonują operacje na obiekcie. Np. skalowanie okręgu.
+* \![](<images/3-2/user interface - query.jpg>) **Query — węzły zapytań**: pobierają właściwość obiektu, który już istnieje. Np. pobieranie promienia okręgu.
 
 Umieść wskaźnik myszy na węźle, aby wyświetlić informacje bardziej szczegółowe od jego nazwy i ikony. Dzięki temu można szybko zrozumieć, do czego służy węzeł, jakich wejść wymaga i jakie będą jego dane wyjściowe.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Opis — prosty opis węzła
 > 2. Ikona — większa wersja ikony w menu Biblioteka
@@ -46,7 +46,7 @@ Jeśli dosyć dobrze wiadomo, jaki węzeł ma zostać dodany do obszaru roboczeg
 
 Wybierz, klikając węzeł, który chcesz dodać, lub naciśnij klawisz Enter, aby dodać wyróżnione węzły do środka obszaru roboczego.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### Wyszukiwanie według hierarchii
 
@@ -125,10 +125,10 @@ Bloków kodu można też używać jako skrótów do definiowania wejścia liczbo
 
 Oto prosty przykład (z instrukcjami) użycia węzła Code Block w skrypcie.
 
-![](<images/3-2/library-code block demo.gif>)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. Kliknij dwukrotnie, aby utworzyć węzeł Code Block
-2. `Circle.ByCenterPointRadius(x,y);`Typ
+2. Wpisz `Circle.ByCenterPointRadius(x,y);`
 3. Kliknij obszar roboczy, aby wyczyścić zaznaczenie i automatycznie dodać wejścia `x` i `y`.
 4. Utwórz węzły Point.ByCoordinates i Number Slider, a następnie połącz je z wejściami bloku kodu.
 5. Wynik wykonania programu wizualnego jest pokazany jako okrąg w podglądzie 3D
