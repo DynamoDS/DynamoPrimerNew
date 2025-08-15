@@ -74,7 +74,7 @@
   * [Dynamo Player](dynamo-for-civil-3d/dynamo-player.md)
   * [Useful Packages](dynamo-for-civil-3d/useful-packages.md)
   * [Resources](dynamo-for-civil-3d/resources.md)
-* [Dynamo in Forma Beta](dynamo-in-forma-beta/README.md)
+* [Dynamo in Forma](dynamo-in-forma-beta/README.md)
   * [Set Up Dynamo Player in Forma](dynamo-in-forma-beta/set-up-dynamo-player-in-forma.md)
   * [Add and Share Graphs in Dynamo Player](dynamo-in-forma-beta/add-and-share-graphs-in-dynamo-player.md)
   * [Run Graphs in Dynamo Player](dynamo-in-forma-beta/run-graphs-in-dynamo-player.md)
