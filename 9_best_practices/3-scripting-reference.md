@@ -6,7 +6,7 @@ Esta página de referencia amplía las prácticas recomendadas incluidas en las 
 
 Las bibliotecas estándar son externas a Dynamo y están presentes en los lenguajes de programación Python y C# (Zerotouch). Dynamo también tiene su propio conjunto de bibliotecas que corresponden directamente con su jerarquía de nodos, lo que permite al usuario crear mediante código cualquier elemento que se pueda crear con nodos y líneas. A continuación, se muestra una guía sobre los elementos a los que cada biblioteca de Dynamo proporciona acceso y cuándo utilizar una biblioteca estándar.
 
-![](./images/3/textual-programming.jpg)
+![](images/3/textual-programming.jpg)
 
 **Bibliotecas estándar y bibliotecas de Dynamo**
 
@@ -15,12 +15,9 @@ Las bibliotecas estándar son externas a Dynamo y están presentes en los lengua
 
 **Bibliotecas de Dynamo**
 
-1.  ProtoGeometry*
-
-    * Funciones: Arco, Cuadro delimitador, Círculo, Cono, Sistema de coordenadas, Cubo, Curva, Cilindro, Borde, Elipse, Arco de elipse, Cara, Geometría, Hélice, Grupo de índice, Línea, Malla, Curva Nurbs, Superficie Nurbs, Plano, Punto, Polígono, Rectángulo, Sólido, Esfera, Superficie, Topología, T-Spline, UV, Vector, Vértice.
-    * Cómo importar: `import Autodesk.DesignScript.Geometry`
-
-    \`\`
+1. ProtoGeometry*
+   * Funciones: Arco, Cuadro delimitador, Círculo, Cono, Sistema de coordenadas, Cubo, Curva, Cilindro, Borde, Elipse, Arco de elipse, Cara, Geometría, Hélice, Grupo de índice, Línea, Malla, Curva Nurbs, Superficie Nurbs, Plano, Punto, Polígono, Rectángulo, Sólido, Esfera, Superficie, Topología, T-Spline, UV, Vector, Vértice.
+   * Cómo importar: `import Autodesk.DesignScript.Geometry`
 2. DSCoreNodes
    * Funciones: Color, Rango de colores 2D, Fecha y hora, Intervalo de tiempo, IO, Fórmula, Lógica, Lista, Matemáticas, Árbol cuádruple, Cadena, Rosca.
    * Cómo importar: `import DSCore`
@@ -31,9 +28,7 @@ Las bibliotecas estándar son externas a Dynamo y están presentes en los lengua
    * Función: Excel.
    * Cómo importar: `import DSOffice`
 
-{% hint style="warning" %}
-\*Nota: Tenga en cuenta que, al utilizar **ProtoGeometry** a través de Python o C#, se crean objetos no administrados, que requieren que la memoria se administre manualmente. Consulte la sección **Objetos no administrados** mostrada a continuación para obtener más información.
-{% endhint %}
+{% hint style="warning" %} *Nota: Tenga en cuenta que, al utilizar **ProtoGeometry** a través de Python o C#, se crean objetos no administrados, que requieren que la memoria se administre manualmente. Consulte la sección **Objetos no administrados** mostrada a continuación para obtener más información. {% endhint %}
 
 ## Atención en el uso de etiquetas
 
