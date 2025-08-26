@@ -22,15 +22,13 @@ Cuando aparece `<PythonTemplateFilePath />`, solo tenemos que sustituir esto por
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_Nota: Sustituya CURRENTUSER por su nombre de usuario_.
-{% endhint %}
+{% hint style="warning" %} _Nota: Sustituya CURRENTUSER por su nombre de usuario_. {% endhint %}
 
 A continuación, debemos crear una plantilla con la funcionalidad integrada que deseamos utilizar. En este caso, insertaremos las importaciones relacionadas con Revit y algunos de los demás elementos habituales al trabajar con Revit.
 
 Puede iniciar un documento del Bloc de notas en blanco y pegar el siguiente código:
 
-``` py
+```py
 import clr
 
 clr.AddReference('RevitAPI')
