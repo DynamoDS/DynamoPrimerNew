@@ -22,7 +22,7 @@ En estos documentos, utilizaremos indistintamente los términos secuencia de com
 
 [https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534](https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534)
 
-El `DynamoModel` es el punto de entrada de una aplicación que aloja Dynamo; representa una aplicación de Dynamo. El modelo es el objeto raíz de nivel superior que contiene referencias a las demás estructuras de datos y objetos importantes que componen la aplicación de Dynamo y la máquina virtual de DesignScript.
+`DynamoModel` es el punto de entrada para una aplicación que aloja Dynamo. Representa una aplicación de Dynamo. El modelo es el objeto raíz de nivel superior que contiene referencias a las demás estructuras de datos y objetos importantes que componen la aplicación de Dynamo y la máquina virtual de DesignScript.
 
 Se utiliza un objeto de configuración para establecer parámetros comunes en el `DynamoModel` cuando se construye.
 
@@ -38,7 +38,7 @@ Para inicializar el `DynamoModel`, los integradores deberán realizar estos paso
 
 ### Cargar previamente archivos DLL de Dynamo compartidos desde el anfitrión
 
-Actualmente, la lista en D4R solo incluye `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` Esto se hace para evitar conflictos de versiones de bibliotecas entre Dynamo y Revit. Por ejemplo, Cuando se producen conflictos en `AvalonEdit`, la función de bloque de código puede quedar totalmente interrumpida. El problema se notifica en Dynamo 1.1.x, en https://github.com/DynamoDS/Dynamo/issues/7130, y también se puede reproducir manualmente. Si los integradores encuentran conflictos de bibliotecas entre la función del anfitrión y Dynamo, se sugiere que realicen esta operación como primer paso. En ocasiones, esto es necesario para evitar que otro complemento o la propia aplicación anfitriona carguen una versión incompatible como dependencia compartida. Una solución mejor es resolver el conflicto de versiones adaptando la versión o utilizar una redirección de enlace .net en app.config del anfitrión si es posible.
+Actualmente, la lista en D4R solo incluye `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` Esto se hace para evitar conflictos de versiones de bibliotecas entre Dynamo y Revit. Por ejemplo, Cuando se producen conflictos en `AvalonEdit`, la función de bloque de código puede quedar totalmente interrumpida. La incidencia se indica en Dynamo 1.1.x, en [https://github.com/DynamoDS/Dynamo/issues/7130](https://github.com/DynamoDS/Dynamo/issues/7130), y también se puede reproducir manualmente. Si los integradores encuentran conflictos de bibliotecas entre la función del anfitrión y Dynamo, se sugiere que realicen esta operación como primer paso. En ocasiones, esto es necesario para evitar que otro complemento o la propia aplicación anfitriona carguen una versión incompatible como dependencia compartida. Una solución mejor es resolver el conflicto de versiones adaptando la versión o utilizar una redirección de enlace .net en app.config del anfitrión si es posible.
 
 ### Carga de ASM
 
@@ -88,9 +88,9 @@ internal static Version PreloadAsmFromRevit()
 
 #### Dynamo: carga de ASM desde una ruta personalizada
 
-Recientemente, hemos añadido la capacidad de que `DynamoSandbox.exe` y `DynamoCLI.exe` carguen una versión de ASM concreta. Para omitir el comportamiento normal de búsqueda en el Registro, puede utilizar el indicador `�gp` para forzar a Dynamo a cargar ASM desde una ruta determinada.
+Recientemente, hemos añadido la capacidad de que `DynamoSandbox.exe` y `DynamoCLI.exe` carguen una versión de ASM concreta. Para omitir el comportamiento normal de búsqueda en el Registro, puede utilizar el indicador `--GeometryPath` para forzar a Dynamo a cargar ASM desde una ruta determinada.
 
-`DynamoSandbox.exe -gp �somePath/To/ASMDirectory/�`
+`DynamoSandbox.exe --GeometryPath "somePath/To/ASMDirectory"`
 
 ### Crear una StartConfiguration
 
@@ -118,7 +118,7 @@ Consta de lo siguiente:
 
 * IsFirstRun: indica si es la primera vez que se ejecuta esta versión de Dynamo, por ejemplo, se utiliza para determinar si es necesario mostrar el mensaje de inclusión/exclusión de GA. También se utiliza para determinar si es necesario migrar la configuración de preferencias de Dynamo heredada al iniciar una nueva versión de Dynamo para que los usuarios tengan una experiencia coherente.
 * IsUsageReportingApproved: indica si se aprueban o no los informes de uso.
-* IsAnalyticsReportingApproved: indica si se aprueban o no los informes analíticos.
+* IsAnalyticsReportingApproved: indica si se aprueban o no los informes analíticos
 * LibraryWidth: indica la anchura del panel izquierdo de la biblioteca de Dynamo.
 * ConsoleHeight: indica la altura de la pantalla de la consola.
 * ShowPreviewBubbles: indica si deben mostrarse burbujas de vista preliminar.
@@ -126,11 +126,11 @@ Consta de lo siguiente:
 * ConnectorType: indica el tipo de conector: Bezier o Polilínea.
 * BackgroundPreviews: indica el estado activo de la vista preliminar del fondo especificada.
 * RenderPrecision: el nivel de precisión de la renderización: cuanto más bajo, se generarán mallas con menos triángulos. Un valor más alto generará una geometría más uniforme en la vista preliminar del fondo. 128 es un valor fácil recomendado para la previsualización de la geometría.
-* ShowEdges: indica si se renderizarán los bordes de la superficie y los sólidos.
+* ShowEdges: indica si se renderizarán los bordes de la superficie y los sólidos
 * ShowDetailedLayout: no se utiliza.
 * WindowX, WindowY: última coordenada X, Y de la ventana de Dynamo.
 * WindowW, WindowH: última anchura y altura de la ventana de Dynamo.
-* UseHardwareAcceleration: indica si Dynamo debe utilizar la aceleración de hardware si es compatible.
+* UseHardwareAcceleration: indica si Dynamo debe utilizar la aceleración de hardware si es compatible
 * NumberFormat: la precisión decimal utilizada para mostrar los números en la burbuja de vista preliminar toString().
 * MaxNumRecentFiles: el número máximo de rutas de archivos recientes que se guardarán.
 * RecentFiles: una lista de rutas de archivos abiertos recientemente. Si se modifica, afectará directamente a la lista de archivos recientes en la página de inicio de Dynamo.
@@ -570,7 +570,7 @@ En general, estos nodos permiten al usuario describir de algún modo un subconju
 
 De forma general, **una buena forma de conceptualizar estos nodos es como una función que acepta un ID de elemento y devuelve un indicador a ese elemento o a alguna geometría que represente ese elemento.**
 
-Hay varios nodos de `�Selection�` en DynamoRevit. Podemos dividirlos en al menos estos dos grupos:
+Hay varios nodos `Selection` en DynamoRevit. Podemos dividirlos en al menos los siguientes dos grupos:
 
 ![Nodos de selección de Revit](images/revitSelectionNodes.png)
 
@@ -583,7 +583,7 @@ Hay varios nodos de `�Selection�` en DynamoRevit. Podemos dividirlos en al m
 
     Los nodos de ejemplo de esta categoría son `AllElementsOfClass` y `AllElementsOfCategory`.
 
-    Estos nodos permiten al usuario buscar un subconjunto de elementos en todo el documento; estos nodos suelen devolver empaquetadores que señalan a los elementos subyacentes de Revit. Estos empaquetadores forman parte integral de la experiencia de DynamoRevit, ya que ofrecen una funcionalidad más avanzada, como el enlace de elementos, y permiten a los integradores de Dynamo elegir las API de anfitrión que se exponen como nodos a los usuarios.
+    Estos nodos permiten al usuario consultar todo el documento en busca de un subconjunto de elementos. Por lo general, estos nodos devuelven empaquetadores que señalan a los elementos de Revit subyacentes. Estos empaquetadores forman parte integral de la experiencia de DynamoRevit, ya que ofrecen una funcionalidad más avanzada, como el enlace de elementos, y permiten a los integradores de Dynamo elegir las API de anfitrión que se exponen como nodos a los usuarios.
 
 ### Flujos de trabajo de usuario de Dynamo Revit:
 
@@ -591,10 +591,10 @@ Hay varios nodos de `�Selection�` en DynamoRevit. Podemos dividirlos en al m
 
 1.
    * El usuario selecciona un muro de Revit con `SelectModelElement`. Se devuelve un empaquetador de muros de Dynamo al gráfico (visible en la burbuja de vista preliminar del nodo).
-   * El usuario coloca el nodo Element.Geometry y enlaza la salida de `SelectModelElement` a este nuevo nodo. Se extrae la geometría del muro ajustado y se convierte en geometría de Dynamo mediante la API de LibG.
+   * El usuario coloca el nodo Element.Geometry y enlaza la salida de `SelectModelElement` a este nuevo nodo. La geometría del muro empaquetado se extrae y se convierte en geometría de Dynamo mediante la API libG.
    * El usuario cambia el gráfico al modo de ejecución automático.
    * El usuario modifica el muro original en Revit.
-   * El gráfico se vuelve a ejecutar automáticamente cuando el documento de Revit lanza un evento que indica que algunos elementos se han actualizado; el nodo de selección observa este evento y ve que el ID del elemento que ha seleccionado se ha modificado.
+   * El gráfico se vuelve a ejecutar automáticamente a medida que el documento de Revit genera un evento que indica que se han actualizado algunos elementos. El nodo de selección observa este evento y ve que se ha modificado el ID de elemento seleccionado.
 
 ### Flujos de trabajo de usuario de DynamoCivil:
 
@@ -607,7 +607,7 @@ Los flujos de trabajo de D4C son muy similares a la descripción anterior para R
 *   Debido a la herramienta de actualización de modificaciones del documento que implementan los nodos de selección en `DynamoRevit`, se pueden crear fácilmente bucles infinitos; imagine un nodo que examina el documento en busca de todos los elementos y, a continuación, crea nuevos elementos en algún punto posterior de este nodo. Cuando se ejecute, este programa provocará un bucle. `DynamoRevit` intenta detectar estos casos de varias formas mediante identificadores de transacción y, para ello, evita modificar el documento cuando las entradas a los constructores de elementos no hayan cambiado.
 
     Esto debe tenerse en cuenta si la ejecución automática del gráfico se inicia cuando se modifica un elemento seleccionado en la aplicación anfitriona.
-* Los nodos de selección de `DynamoRevit` se implementan en el proyecto de `RevitUINodes.dll` que hace referencia a WPF Puede que no sea una incidencia, pero conviene tenerlo en cuenta en función de la plataforma de destino.
+* Los nodos de selección de `DynamoRevit` se implementan en el proyecto `RevitUINodes.dll` que hace referencia a WPF. Es posible que no sea una incidencia, pero merece la pena tenerla en cuenta en función de la plataforma de destino.
 
 ### Diagramas de flujo de datos
 
@@ -619,7 +619,7 @@ Los flujos de trabajo de D4C son muy similares a la descripción anterior para R
 
 Los nodos de selección se implementan al heredar de los tipos de `SelectionBase` genéricos: `SelectionBase<TSelection, TResult>` y un conjunto mínimo de barras:
 
-* Implementación de un método `BuildOutputAST`. Este método debe devolver un AST, que se ejecutará en algún momento en el futuro, cuando se vaya a ejecutar el nodo. En el caso de los nodos de selección, debe devolver elementos o geometría de los ID de elemento. https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280
+* Implementación de un método `BuildOutputAST`: este método debe devolver un AST, que se ejecutará en algún momento en el futuro, cuando se vaya a ejecutar el nodo. En el caso de los nodos de selección, debe devolver elementos o geometría a partir de los ID de elemento. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * La implementación de `BuildOutputAST` es una de las partes más difíciles de la implementación de nodos de `NodeModel`/interfaz de usuario. Es mejor poner toda la lógica posible en una función de C# y simplemente incrustar un nodo de llamada de función AST en AST. Tenga en cuenta que aquí `node` hace referencia a un nodo AST en el árbol de sintaxis abstracta, no a un nodo en el gráfico de Dynamo.
 
 ![Flujo de selección 2](images/selectionAST.png)
@@ -628,7 +628,7 @@ Los nodos de selección se implementan al heredar de los tipos de `SelectionBase
   *   Dado que se trata de tipos derivados de `NodeModel` explícitos (no ZeroTouch), también requieren la implementación de un [JsonConstructor] que se utilizará durante la deserialización del nodo a partir de un archivo .dyn.
 
       Las referencias a elementos del anfitrión se deben guardar en el archivo .dyn para que, cuando un usuario abra un gráfico que contenga este nodo, su selección siga definida. Los nodos NodeModel en Dynamo utilizan json.net para la serialización; cualquier propiedad pública se serializará automáticamente mediante json.net; utilice el atributo [JsonIgnore] para serializar solo lo necesario.
-* Los nodos de consulta de documentos son un poco más sencillos, ya que no necesitan almacenar una referencia a ningún ID de elemento; consulte a continuación las implementaciones de la clase `ElementQueryBase` y la clase derivada. Cuando se ejecutan, estos nodos realizan una llamada a la API de Revit y consultan los elementos en el documento subyacente; además, realizan la conversión mencionada anteriormente a la geometría o a los contenedores de elementos de Revit.
+* Los nodos de consulta de documentos son un poco más sencillos, ya que no necesitan almacenar una referencia a ningún ID de elemento. Consulte a continuación las implementaciones de la clase `ElementQueryBase` y las clases derivadas. Cuando se ejecutan, estos nodos realizan una llamada a la API de Revit y consultan los elementos en el documento subyacente; además, realizan la conversión mencionada anteriormente a la geometría o a los contenedores de elementos de Revit.
 
 ### Referencias:
 
