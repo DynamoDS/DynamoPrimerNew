@@ -3,13 +3,13 @@ cover: ../.gitbook/assets/coverimage.png
 coverY: 0
 ---
 
-# Dynamo en Forma (beta)
+# Dynamo en Forma
 
-Dynamo está disponible como extensión en Forma. Por el momento, está disponible en estos dos formatos: una versión conectada al escritorio y una integración basada en la nube, que se ofrece como versión beta cerrada. Obtenga más información sobre la versión de escritorio en esta [entrada del blog](https://dynamobim.org/dynamo-in-forma/) y sobre la integración en la nube en versión beta cerrada en esta [entrada del blog](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/).
+Dynamo está disponible como extensión en Forma. Por el momento, está disponible en estos dos formatos: una versión conectada al escritorio y una integración basada en la nube, que se ofrece como versión beta cerrada. Obtenga más información sobre la versión de escritorio en esta [entrada del blog](https://dynamobim.org/dynamo-in-forma/) y sobre la integración en la nube en versión beta en esta [entrada del blog](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/). Tenga en cuenta que el blog se publicó durante la fase beta cerrada; la integración en la nube está actualmente en fase beta abierta y disponible para todos los usuarios de Forma.
 
 ### ¿Qué es Autodesk Forma?
 
-Autodesk Forma es un software basado en la nube que ofrece eficaces herramientas basadas en IA, pero fáciles de usar, para el diseño previo y esquemático. Los arquitectos y los diseñadores utilizan Forma para modelar complejos diseños en 3D en cuestión de minutos, optimizar la calidad de vida y la sostenibilidad mediante análisis medioambientales en tiempo real y continuar el proceso de diseño mediante la conexión fluida con Revit, Rhino y Dynamo. Puede obtener más información e iniciar la versión de prueba gratuita o comprar el producto aquí: [Autodesk Forma](https://www.autodesk.com/es/products/forma/overview). Forma se incluye como parte de la AEC Collection.  
+Autodesk Forma es un software basado en la nube que ofrece eficaces herramientas basadas en IA, pero fáciles de usar, para el diseño previo y esquemático. Los arquitectos y los diseñadores utilizan Forma para modelar complejos diseños en 3D en cuestión de minutos, optimizar la calidad de vida y la sostenibilidad mediante análisis medioambientales en tiempo real y continuar el proceso de diseño mediante la conexión fluida con Revit, Rhino y Dynamo. Puede obtener más información e iniciar la versión de prueba gratuita o comprar el producto aquí: [Autodesk Forma](https://www.autodesk.com/products/forma/overview?term=1-YEAR\&tab=subscription). Forma se incluye como parte de la AEC Collection.  
 
 ### ¿Qué es Dynamo Player en Forma?
 
