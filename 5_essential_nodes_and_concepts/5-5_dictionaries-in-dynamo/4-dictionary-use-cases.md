@@ -60,14 +60,14 @@ Con esta misma lógica de diccionario, también podemos crear diccionarios con o
 
 ![](../images/5-5/4/dictionary-exerciseII-02.jpg)
 
-> 1. Ahora podemos agrupar las habitaciones por el nivel en el que residen.
+> 2. Ahora podemos agrupar las habitaciones por el nivel en el que residen.
 
 ![](../images/5-5/4/dictionary-exerciseII-03.jpg)
 
-> 1. Con los elementos agrupados por el nivel, ahora podemos utilizar las claves compartidas (claves exclusivas) como nuestra clave para el diccionario y las listas de habitaciones como elementos.
+> 3. Con los elementos agrupados por el nivel, ahora podemos utilizar las claves compartidas (claves exclusivas) como nuestra clave para el diccionario y las listas de habitaciones como elementos.
 
 ![](../images/5-5/4/dictionary-exerciseII-04.jpg)
 
-> 1. Por último, mediante los niveles del modelo de Revit, podemos buscar en el diccionario las habitaciones que se encuentran en ese nivel. `Dictionary.ValueAtKey` utilizará el nombre de nivel y devolverá los objetos de habitación presentes en ese nivel.
+> 4. Por último, mediante los niveles del modelo de Revit, podemos buscar en el diccionario las habitaciones que se encuentran en ese nivel. `Dictionary.ValueAtKey` utilizará el nombre de nivel y devolverá los objetos de habitación presentes en ese nivel.
 
 Las oportunidades de uso del diccionario son realmente infinitas. La capacidad de relacionar los datos de BIM de Revit con el propio elemento plantea diversos casos de uso.

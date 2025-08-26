@@ -36,7 +36,8 @@ Una malla es un conjunto de cuadriláteros y triángulos que representa una supe
 ![Elementos de malla](../images/5-2/7/MeshElements2.jpg)
 
 > 1. Vértices de malla.
-> 2. Aristas de malla. * Las aristas con una única cara adyacente se denominan "desnudas". El resto de aristas están "vestidas".
+> 2. Aristas de malla 
+>    1. Las aristas con una única cara adyacente se denominan "desnudas". El resto de aristas están "vestidas".
 > 3. Caras de malla.
 
 ### Vértices + normales de vértice

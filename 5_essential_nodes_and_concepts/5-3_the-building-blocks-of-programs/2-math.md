@@ -8,10 +8,10 @@ Los operadores son un conjunto de componentes que utilizan funciones algebraicas
 
 | Icono                                                  | Nombre (sintaxis)     | Entradas                     | Salidas      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Sumar (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Restar (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplicar (*) | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Sumar (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Restar (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplicar (*****) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Ejercicio: la fórmula de la espiral dorada
 
@@ -25,7 +25,7 @@ Los operadores son un conjunto de componentes que utilizan funciones algebraicas
 
 Combine operadores y variables para formar una relación más compleja mediante **fórmulas**. Utilice los controles deslizantes para crear una fórmula que se pueda manejar con parámetros de entrada.
 
-1\. Cree la secuencia numérica que representa la "t" de la ecuación paramétrica, por lo que debemos utilizar una lista lo suficientemente grande como para definir una espiral.
+1. Cree la secuencia numérica que representa la "t" de la ecuación paramétrica, por lo que debemos utilizar una lista lo suficientemente grande como para definir una espiral.
 
 **Number Sequence**: defina una secuencia de números basada en tres entradas: _start, amount_ y _step_.
 
@@ -61,7 +61,7 @@ La imagen siguiente representa la espiral dorada en forma de programación visua
 
 ### Parte II: de la fórmula a la geometría
 
-El cúmulo de nodos del paso anterior funcionará correctamente, pero conlleva mucho trabajo. Para crear un flujo de trabajo más eficiente, consulte [DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md) a fin de definir una cadena de expresiones de Dynamo en un nodo. En la siguiente serie de pasos, veremos cómo utilizar la ecuación paramétrica para dibujar la espiral Fibonacci.
+El cúmulo de nodos del paso anterior funcionará correctamente, pero conlleva mucho trabajo. Para crear un flujo de trabajo más eficiente, consulte [DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md) a fin de definir una cadena de expresiones de Dynamo en un nodo. En la siguiente serie de pasos, veremos cómo utilizar la ecuación paramétrica para dibujar la espiral Fibonacci.
 
 **Point.ByCoordinates**: conecte el nodo de multiplicación superior a la entrada "_x_" y el inferior a la entrada "_y_". Ahora se muestra una espiral paramétrica de puntos en la pantalla.
 
@@ -91,7 +91,7 @@ Ahora que hemos hecho una concha de caracol circular, vamos a pasar a las rejill
 
 Como punto de partida, vamos a realizar el mismo paso del ejercicio anterior: crear una matriz de puntos de espiral con el nodo **Point.ByCoordinates**.
 
-\![](../images/5-3/2/math-part IV-01.jpg)
+<figure><img src="../images/5-3/2/math-partIV-01.jpg" alt=""><figcaption></figcaption></figure>
 
 A continuación, siga estos pequeños pasos para generar una serie de espirales en varias rotaciones.
 

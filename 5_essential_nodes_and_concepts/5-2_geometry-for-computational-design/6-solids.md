@@ -31,17 +31,12 @@ Las operaciones booleanas son complejas y pueden resultar lentas de calcular. Pu
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
-> 1\. Utilice el menú contextual para bloquear la operación de unión de sólidos.
->
-> 2\. El nodo seleccionado y todos los nodos descendentes se previsualizan en modo atenuado con un color gris claro y los cables afectados se muestran como líneas continuas. La vista preliminar de la geometría afectada también se mostrará atenuada. Ahora puede cambiar los valores ascendentes sin calcular la unión booleana.
->
-> 3\. Para desbloquear los nodos, haga clic con el botón derecho y desactive la opción Bloquear.
->
-> 4\. Todos los nodos afectados y las vistas preliminares de la geometría asociada se actualizarán y se restablecerán al modo de vista preliminar estándar.
+> 1. Utilice el menú contextual para bloquear la operación de unión de sólidos.
+> 2. El nodo seleccionado y todos los nodos descendentes se previsualizan en modo atenuado con un color gris claro y los cables afectados se muestran como líneas continuas. La vista preliminar de la geometría afectada también se mostrará atenuada. Ahora puede cambiar los valores ascendentes sin calcular la unión booleana.
+> 3. Para desbloquear los nodos, haga clic con el botón derecho y desactive la opción Bloquear.
+> 4. Todos los nodos afectados y las vistas preliminares de la geometría asociada se actualizarán y se restablecerán al modo de vista preliminar estándar.
 
-{% hint style="info" %}
-Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention").
-{% endhint %}
+{% hint style="info" %} Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
 
 ## Información más detallada sobre...
 
