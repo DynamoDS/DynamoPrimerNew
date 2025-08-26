@@ -2,9 +2,7 @@
 
 Los paquetes de Dynamo son conjuntos de herramientas desarrollados por terceros para ampliar las principales funciones de Dynamo. Todos los usuarios pueden acceder a ellos y descargarlos con un solo clic.
 
-{% hint style="info" %}
-Consulte la sección [6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention") para obtener más información sobre cómo empezar a trabajar con paquetes.
-{% endhint %}
+{% hint style="info" %} Consulte la sección [6-2_packages](../6_custom_nodes_and_packages/6-2_packages/ "mention") para obtener más información sobre cómo empezar a trabajar con paquetes. {% endhint %}
 
 A continuación, se muestra una lista de algunos de los paquetes más populares que pueden llevar los gráficos de Dynamo for Civil 3D al siguiente nivel.
 
@@ -14,11 +12,11 @@ El _kit de herramientas de Civil 3D_ es un paquete de Dynamo for Civil 3D que ap
 
 #### Comentarios
 
-{% embed url="https://forum.dynamobim.com/t/civil-3d-toolkit-feedback-thread/43570" %}
+[Hilo de comentarios sobre el kit de herramientas de Civil 3D](https://forum.dynamobim.com/t/civil-3d-toolkit-feedback-thread/43570)
 
 #### Clases de Autodesk University relacionadas
 
-{% embed url="https://www.autodesk.com/autodesk-university/es/class/Supercharge-Your-Dynamo-Graph-Civil-3D-Toolkit-2020" %}
+[Supercharge Your Dynamo Graph with Civil 3D Toolkit | Autodesk University](https://www.autodesk.com/autodesk-university/class/Supercharge-Your-Dynamo-Graph-Civil-3D-Toolkit-2020)
 
 ## Camber
 
@@ -26,7 +24,7 @@ Camber es un paquete de Dynamo for Civil 3D de código abierto que incluye cient
 
 #### Comentarios
 
-{% embed url="https://forum.dynamobim.com/t/camber-feedback-thread/68942" %}
+[Hilo de comentarios sobre Camber](https://forum.dynamobim.com/t/camber-feedback-thread/68942)
 
 #### Código fuente
 
@@ -38,11 +36,11 @@ _CivilConnection_ es un paquete de Dynamo para Revit de código abierto que perm
 
 #### Clases de Autodesk University relacionadas
 
-{% embed url="https://www.autodesk.com/autodesk-university/es/class/Computational-modeling-linear-structure-Civil-3D-Revit-Dynamo-CivilConnection-2019" %}
+[Computational modeling linear structure with Civil 3D, Revit & Dynamo CivilConnection | Autodesk University](https://www.autodesk.com/autodesk-university/class/Computational-modeling-linear-structure-Civil-3D-Revit-Dynamo-CivilConnection-2019)
 
-{% embed url="https://www.autodesk.com/autodesk-university/es/class/Bridge-Detailing-20-Computational-modelling-methods-using-Civil-3D-Revit-Dynamo-2019" %}
+[Bridge Detailing 2.0: Computational modelling methods using Civil 3D, Revit & Dynamo | Autodesk University](https://www.autodesk.com/autodesk-university/class/Bridge-Detailing-20-Computational-modelling-methods-using-Civil-3D-Revit-Dynamo-2019)
 
-{% embed url="https://www.autodesk.com/autodesk-university/es/class/Parametric-modeling-and-automating-placement-Universal-TBM-Rings-2021" %}
+[Parametric modeling and automating the placement of Universal TBM Rings | Autodesk University](https://www.autodesk.com/autodesk-university/class/Parametric-modeling-and-automating-placement-Universal-TBM-Rings-2021)
 
 #### Código fuente
 
@@ -54,7 +52,7 @@ Los nodos de Arkance Systems son un paquete de Dynamo for Civil 3D con una ampli
 
 #### Comentarios
 
-{% embed url="https://forum.dynamobim.com/t/arkance-systems-node-library-feedback-thread/75681" %}
+[Hilo de comentarios sobre la biblioteca de nodos de Arkance Systems](https://forum.dynamobim.com/t/arkance-systems-node-library-feedback-thread/75681)
 
 #### Documentación
 
