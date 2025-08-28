@@ -33,13 +33,13 @@ As informações gerais e configurações podem ser encontradas no menu suspenso
 
 Se você tiver dúvidas, confira o menu **Ajuda**. Você pode acessar um dos sites de referência do Dynamo através do navegador da Internet.
 
-![](images/userinterface-helpmenu.jpg)
+![](../.gitbook/assets/help-menu.png)
 
-> 1. Introdução – Uma breve introdução sobre o uso do Dynamo.
-> 2. Guias interativos –
-> 3. Amostras – Arquivos de exemplo de referência.
-> 4. Dicionário do Dynamo – Recurso com a documentação sobre todos os nós.
-> 5. Site do Dynamo – Visualizar o projeto do Dynamo no GitHub.
+> 1. Guias interativos – Tours que guiam você passo a passo através de vários recursos do Dynamo.
+> 2. Amostras – Arquivos de exemplo de referência. Disponíveis somente nos programas hospedeiros, incluindo o Revit e o Civil 3D.
+> 3. Dicionário do Dynamo – Recurso com a documentação sobre todos os nós.
+> 4. Site do Dynamo – Um site de informações sobre o Dynamo e links para recursos como o fórum, o blog etc.
+> 5. Repositório do Dynamo – Visualize o projeto do Dynamo no GitHub. 
 > 6. Wiki do projeto do Dynamo – Visite a wiki para saber como desenvolver usando a API do Dynamo, com suporte a bibliotecas e ferramentas.
 > 7. Exibir a página inicial – Retorna para a página inicial do Dynamo quando dentro de um documento.
 > 8. Relatório de um bug – Abre um problema no GitHub.
@@ -49,7 +49,7 @@ Se você tiver dúvidas, confira o menu **Ajuda**. Você pode acessar um dos sit
 A barra de ferramentas do Dynamo contém uma série de botões para acesso rápido ao trabalho com arquivos, bem como os comandos Desfazer [Ctrl + Z] e Refazer [Ctrl + Y]. Na parte mais à direita, há outro botão que exporta um instantâneo do espaço de trabalho, o que é extremamente útil para fins de documentação e compartilhamento.
 
 * ![](images/userinterface-newfile.jpg) Novo – Criar um novo arquivo .dyn
-* ![](<images/userinterface-open(1) (1) (1).jpg>) Abrir – Abrir um arquivo .dyn (espaço de trabalho) ou .dyf (nó personalizado) existente
+* \![](<images/userinterface-open(1) (1) (1).jpg>) Abrir – Abrir um arquivo .dyn (espaço de trabalho) ou .dyf (nó personalizado) existente
 * ![](images/userinterface-save.jpg) Salvar/Salvar como – Salvar o arquivo .dyn ou .dyf ativo
 * ![](images/userinterface-undo.jpg) Desfazer – Desfaz a última ação
 * ![](images/userinterface-redo.jpg) Refazer – Refaz a próxima ação

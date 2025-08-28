@@ -22,11 +22,11 @@ Usaremos os termos script, gráfico e programa do Dynamo de forma intercambiáve
 
 [https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534](https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534)
 
-O `DynamoModel` é o ponto de entrada para um aplicativo que hospeda o Dynamo, ele representa um aplicativo do Dynamo. O modelo é o objeto raiz de nível superior que contém referências a outras estruturas de dados e objetos importantes que compõem o aplicativo Dynamo e a máquina virtual do DesignScript.
+O `DynamoModel` é o ponto de entrada para um aplicativo que hospeda o Dynamo. Ele representa um aplicativo do Dynamo. O modelo é o objeto raiz de nível superior que contém referências a outras estruturas de dados e objetos importantes que compõem o aplicativo Dynamo e a máquina virtual do DesignScript.
 
 Um objeto de configuração é usado para definir parâmetros comuns no `DynamoModel` quando ele é construído.
 
-Os exemplos neste documento foram retirados da implementação do DynamoRevit, que é uma integração na qual o Revit hospeda um `DynamoModel` como um complemento (arquitetura de plug-in para Revit). Quando esse complemento é carregado, ele inicia um `DynamoModel` e o exibe ao usuário com um `DynamoView` e um `DynamoViewModel`.
+Os exemplos neste documento foram retirados da implementação do DynamoRevit, que é uma integração na qual o Revit hospeda um `DynamoModel` como um complemento (arquitetura de plug-in para Revit). Quando esse complemento é carregado, ele inicia um `DynamoModel` e, em seguida, o exibe para o usuário com um `DynamoView` e `DynamoViewModel`.
 
 O Dynamo é um projeto .net em c#. Para usá-lo em seu aplicativo, você precisa ser capaz de hospedar e executar código .net.
 
@@ -38,7 +38,7 @@ Para inicializar o `DynamoModel`, os integradores precisarão executar estas eta
 
 ### Pré-carregar as DLLs do Dynamo compartilhadas do hospedeiro.
 
-No momento, a lista no D4R inclui apenas `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` Isso é feito para evitar conflitos de versões de bibliotecas entre o Dynamo e o Revit. Por exemplo: quando ocorrem conflitos em `AvalonEdit`, a função do bloco de código pode ser totalmente interrompida. O problema é relatado no Dynamo 1.1.x em https://github.com/DynamoDS/Dynamo/issues/7130 e também pode ser reproduzido manualmente. Se os integradores encontrarem conflitos de bibliotecas entre a função do hospedeiro e o Dynamo, recomenda-se fazer isso como primeiro passo. Às vezes, isso é necessário para impedir que outro plug-in ou o próprio aplicativo hospedeiro carregue uma versão incompatível de uma dependência compartilhada. Uma solução melhor é resolver o conflito de versões alinhando a versão ou usar um redirecionamento de vinculação .net no app.config do hospedeiro, se possível.
+No momento, a lista no D4R inclui apenas `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` Isso é feito para evitar conflitos de versões de bibliotecas entre o Dynamo e o Revit. Por exemplo: quando ocorrem conflitos em `AvalonEdit`, a função do bloco de código pode ser totalmente interrompida. O problema é reportado no Dynamo 1.1.x em [https://github.com/DynamoDS/Dynamo/issues/7130](https://github.com/DynamoDS/Dynamo/issues/7130) e também é reproduzível manualmente. Se os integradores encontrarem conflitos de bibliotecas entre a função do hospedeiro e o Dynamo, recomenda-se fazer isso como primeiro passo. Às vezes, isso é necessário para impedir que outro plug-in ou o próprio aplicativo hospedeiro carregue uma versão incompatível de uma dependência compartilhada. Uma solução melhor é resolver o conflito de versões alinhando a versão ou usar um redirecionamento de vinculação .net no app.config do hospedeiro, se possível.
 
 ### Carregar o ASM
 
@@ -88,9 +88,9 @@ internal static Version PreloadAsmFromRevit()
 
 #### O Dynamo carregando a ASM de um caminho personalizado
 
-Recentemente, adicionamos a capacidade de o `DynamoSandbox.exe` e o `DynamoCLI.exe` carregarem uma versão da ASM específica. Para ignorar o comportamento normal de pesquisa do registro, é possível usar o indicador `�gp` para forçar o Dynamo a carregar a ASM de um caminho específico.
+Recentemente, adicionamos a capacidade de o `DynamoSandbox.exe` e o `DynamoCLI.exe` carregarem uma versão da ASM específica. Para ignorar o comportamento normal de pesquisa do registro, é possível usar o indicador `--GeometryPath` para forçar o Dynamo a carregar a ASM de um caminho específico.
 
-`DynamoSandbox.exe -gp �somePath/To/ASMDirectory/�`
+`DynamoSandbox.exe --GeometryPath "somePath/To/ASMDirectory"`
 
 ### Criar um StartConfiguration
 
@@ -98,16 +98,16 @@ O StartupConfiguration é usado para ser passado como um parâmetro para inicial
 
 Consiste no seguinte:
 
-* DynamoCorePath // Onde os binários de carregamento do DynamoCore estão localizados.
-* DynamoHostPath // Onde os binários de integração do Dynamo estão localizados.
-* GeometryFactoryPath // Onde os binários libG carregados estão localizados.
-* PathResolver // Objeto que ajuda a resolver vários arquivos.
-* PreloadLibraryPaths // Onde estão localizados os nós binários pré-carregados, por exemplo, DSOffice.dll.
-* AdditionalNodeDirectories // Onde os binários dos nós adicionais estão localizados.
-* AdditionalResolutionPaths // Caminhos de resolução de montagem adicionais para outras dependências que podem ser necessárias durante o carregamento de bibliotecas.
-* UserDataRootFolder // Pasta de dados do usuário, por exemplo, `"AppData\Roaming\Dynamo\Dynamo Revit"`.
+* DynamoCorePath // Onde os binários de carregamento do DynamoCore estão localizados
+* DynamoHostPath // Onde os binários de integração do Dynamo estão localizados
+* GeometryFactoryPath // Onde os binários libG carregados estão localizados
+* PathResolver // Objeto que ajuda a resolver vários arquivos
+* PreloadLibraryPaths // Onde estão localizados os nós binários pré-carregados, por exemplo, DSOffice.dll
+* AdditionalNodeDirectories // Onde os binários dos nós adicionais estão localizados
+* AdditionalResolutionPaths // Caminhos de resolução de montagem adicionais para outras dependências que podem ser necessárias durante o carregamento de bibliotecas
+* UserDataRootFolder // Pasta de dados do usuário, por exemplo, `"AppData\Roaming\Dynamo\Dynamo Revit"`
 * CommonDataRootFolder // Pasta padrão para salvar definições personalizadas, amostras etc.
-* Context // Nome do hospedeiro do integrador + versão `(Revit<BuildNum>)`.
+* Context // Nome do hospedeiro do integrador + versão `(Revit<BuildNum>)`
 * SchedulerThread // Thread do programador do integrador implementando o `ISchedulerThread`. Para a maioria dos integradores, esse é o thread da interface principal ou qualquer thread de onde eles podem acessar sua API.
 * StartInTestMode // Se a sessão atual é uma sessão de automação de teste (modifica vários comportamentos do Dynamo), não use, a menos que esteja escrevendo testes.
 * AuthProvider // Implementação do integrador do IAuthProvider, por exemplo, a implementação do RevitOxygenProvider está no Greg.dll, usado para integração de carregamento do packageManager.
@@ -116,33 +116,33 @@ Consiste no seguinte:
 
 O caminho de configuração de preferência padrão é gerenciado por `PathManager.PreferenceFilePath`, por exemplo, `"AppData\\Roaming\\Dynamo\\Dynamo Revit\\2.5\\DynamoSettings.xml"`. Os integradores podem decidir se desejam também enviar um arquivo de configuração de preferência personalizado para uma localização que precisa ser alinhada com o gerenciador de caminho. A seguir, estão as propriedades de configuração de preferência que são serializadas:
 
-* IsFirstRun // Indica se é a primeira vez que esta versão do Dynamo é executada, por exemplo, usado para determinar se é necessário exibir a mensagem de aceitação/exclusão do GA. Também usado para determinar se é necessário migrar a configuração de preferência do Dynamo legado ao iniciar uma nova versão do Dynamo, para que os usuários tenham uma experiência consistente.
-* IsUsageReportingApproved // Indica se o relatório de uso foi aprovado ou não.
-* IsAnalyticsReportingApproved // Indica se o relatório analítico foi aprovado ou não.
+* IsFirstRun // Indica se é a primeira vez que esta versão do Dynamo é executada, por exemplo, usado para determinar se é necessário exibir a mensagem de aceitação/exclusão do GA. Também usado para determinar se é necessário migrar a configuração de preferência do Dynamo legado ao iniciar uma nova versão do Dynamo, para que os usuários tenham uma experiência consistente
+* IsUsageReportingApproved // Indica se o relatório de uso foi aprovado ou não
+* IsAnalyticsReportingApproved // Indica se o relatório analítico foi aprovado ou não
 * LibraryWidth // A largura do painel esquerdo da biblioteca do Dynamo.
-* ConsoleHeight // A altura da tela do console.
-* ShowPreviewBubbles // Indica se as bolhas de visualização devem ser exibidas.
-* ShowConnector // Indica se os conectores são exibidos.
-* ConnectorType // Indica o tipo de conector: Bezier ou Polilinha.
-* BackgroundPreviews // Indica o estado ativo da visualização do plano de fundo especificada.
+* ConsoleHeight // A altura da tela do console
+* ShowPreviewBubbles // Indica se as bolhas de visualização devem ser exibidas
+* ShowConnector // Indica se os conectores são exibidos
+* ConnectorType // Indica o tipo de conector: Bezier ou Polilinha
+* BackgroundPreviews // Indica o estado ativo da visualização do plano de fundo especificada
 * RenderPrecision // O nível de precisão de renderização; menor gera malhas com menos triângulos. Maior gerará uma geometria mais suave na visualização do plano de fundo. 128 é um bom número rápido para a geometria de visualização.
-* ShowEdges // Indica se as arestas de sólido e superfície serão renderizadas.
-* ShowDetailedLayout // NÃO USADO.
-* WindowX, WindowY // Última coordenada X, Y da janela do Dynamo.
-* WindowW, WindowH // Última largura, altura da janela do Dynamo.
-* UseHardwareAcceleration // O Dynamo deve usar a aceleração por hardware, se for compatível.
+* ShowEdges // Indica se as arestas de sólido e superfície serão renderizadas
+* ShowDetailedLayout // NÃO USADO
+* WindowX, WindowY // Última coordenada X, Y da janela do Dynamo
+* WindowW, WindowH // Última largura, altura da janela do Dynamo
+* UseHardwareAcceleration // O Dynamo deve usar a aceleração por hardware, se for compatível
 * NumberFormat // A precisão decimal usada para exibir os números em toString() da bolha de visualização.
-* MaxNumRecentFiles // O número máximo de caminhos de arquivo recentes a serem salvos.
-* RecentFiles // Uma lista de caminhos de arquivos abertos recentemente. Tocar aqui afetará diretamente a lista de arquivos recentes na página inicial do Dynamo.
-* BackupFiles // Uma lista de caminhos de arquivo de backup.
+* MaxNumRecentFiles // O número máximo de caminhos de arquivo recentes a serem salvos
+* RecentFiles // Uma lista de caminhos de arquivos abertos recentemente. Tocar aqui afetará diretamente a lista de arquivos recentes na página inicial do Dynamo
+* BackupFiles // Uma lista de caminhos de arquivo de backup
 * CustomPackageFolders // Uma lista de pastas contendo binários sem toque e caminhos de diretório que serão verificados em busca de pacotes e nós personalizados.
 * PackageDirectoriesToUninstall // Uma lista de pacotes usados pelo Gerenciador de pacotes para determinar quais pacotes estão marcados para exclusão. Esses caminhos serão excluídos, se possível, durante a inicialização do Dynamo.
 * PythonTemplateFilePath // Caminho para o arquivo Python (.py) para ser usado como modelo inicial ao criar um novo nó PythonScript. Pode ser usado para configurar um modelo Python personalizado para a integração.
-* BackupInterval // Indica em quanto tempo (em milissegundos) o gráfico será salvo automaticamente.
-* BackupFilesCount // Indica quantos backups serão feitos.
-* PackageDownloadTouAccepted // Indica se o usuário aceitou os termos de uso para fazer o download dos pacotes do gerenciador de pacotes.
-* OpenFileInManualExecutionMode // Indica o estado padrão da caixa de seleção “Abrir no modo manual” na OpenFileDialog.
-* NamespacesToExcludeFromLibrary // Indica quais namespaces (se houver) não devem ser exibidos na biblioteca de nós do Dynamo. Formato da sequência de caracteres: “[nome da biblioteca]:[namespace totalmente qualificado]”.
+* BackupInterval // Indica em quanto tempo (em milissegundos) o gráfico será salvo automaticamente
+* BackupFilesCount // Indica quantos backups serão feitos
+* PackageDownloadTouAccepted // Indica se o usuário aceitou os termos de uso para fazer o download dos pacotes do gerenciador de pacotes
+* OpenFileInManualExecutionMode // Indica o estado padrão da caixa de seleção “Abrir no modo manual” na OpenFileDialog
+* NamespacesToExcludeFromLibrary // Indica quais namespaces (se houver) não devem ser exibidos na biblioteca de nós do Dynamo. Formato da sequência de caracteres: “[nome da biblioteca]:[namespace totalmente qualificado]”
 
 Um exemplo de configurações de preferência serializadas:
 
@@ -246,9 +246,9 @@ Um exemplo de configurações de preferência serializadas:
 </PreferenceSettings> 
 ```
 
-* Extensions // Uma lista de extensões que implementam a IExtension. Se for nulo, o Dynamo carregará as extensões do caminho padrão (pasta `extensions` na pasta Dynamo).
+* Extensions // Uma lista de extensões que implementam a IExtension. Se for nulo, o Dynamo carregará as extensões do caminho padrão (pasta `extensions` na pasta Dynamo)
 * IsHeadless // Indica se o Dynamo é iniciado sem a interface do usuário. Afeta o Analytics.
-* UpdateManager // Implementação do UpdateManager do integrador. Veja a descrição acima.
+* UpdateManager // Implementação do UpdateManager do integrador. Veja a descrição acima
 * ProcessMode // Equivalente a TaskProcessMode. Síncrono se estiver em modo de teste; caso contrário, Assíncrono. Isso controla o comportamento do agendador. Os ambientes de thread único também podem definir isso como síncrono.
 
 Use o StartConfiguration de destino para iniciar o `DynamoModel`
@@ -286,7 +286,7 @@ Para construir o `DynamoView`, basta o `DynamoViewModel`. A Vista é um controle
 
 ### Exemplo do DynamoSandbox.exe:
 
-O DynamoSandbox.exe é um ambiente de desenvolvimento para testar, usar e experimentar o DynamoCore. É um ótimo exemplo para verificar como os componentes `DynamoCore` e `DynamoCoreWPF` são carregados e configurados. É possível ver alguns pontos de entrada [aqui](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoSandbox/DynamoCoreSetup.cs#L37)
+O DynamoSandbox.exe é um ambiente de desenvolvimento para testar, usar e experimentar o DynamoCore. É um ótimo exemplo para verificar como os componentes `DynamoCore` e `DynamoCoreWPF` são carregados e configurados. É possível ver alguns dos pontos de entrada [aqui](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoSandbox/DynamoCoreSetup.cs#L37).
 
 ## Vinculação e rastreamento de elementos
 
@@ -570,7 +570,7 @@ Em geral, esses nós permitem que o usuário descreva de alguma forma um subconj
 
 Em um nível superior, **uma boa maneira de conceituar esses nós é como uma função que aceita uma ID de elemento e que retorna um ponteiro para esse elemento ou alguma geometria que representa esse elemento.**
 
-Há vários nós `�Selection�` no DynamoRevit. Podemos dividi-los em pelo menos dois grupos:
+Há vários nós `Selection` no DynamoRevit. Podemos dividi-los em pelo menos dois grupos:
 
 ![Nós de seleção do Revit](images/revitSelectionNodes.png)
 
@@ -583,7 +583,7 @@ Há vários nós `�Selection�` no DynamoRevit. Podemos dividi-los em pelo me
 
     Os nós de exemplo nessa categoria são `AllElementsOfClass`, `AllElementsOfCategory`
 
-    Esses nós permitem que o usuário consulte todo o documento em busca de um subconjunto de elementos. Esses nós geralmente retornam wrappers que apontam para os elementos subjacentes do Revit. Esses wrappers são essenciais para a experiência do DynamoRevit, permitindo funcionalidades mais avançadas, como vinculação de elementos, e permitindo que os integradores do Dynamo selecionem quais APIs de hospedeiro serão expostas como nós para os usuários.
+    Esses nós permitem que o usuário consulte todo o documento em busca de um subconjunto de elementos. Esses nós normalmente retornam wrappers que apontam para os elementos subjacentes do Revit. Esses wrappers são essenciais para a experiência do DynamoRevit, permitindo funcionalidades mais avançadas, como vinculação de elementos, e permitindo que os integradores do Dynamo selecionem quais APIs de hospedeiro serão expostas como nós para os usuários.
 
 ### Fluxos de trabalho do usuário do Revit do Dynamo:
 
@@ -591,10 +591,10 @@ Há vários nós `�Selection�` no DynamoRevit. Podemos dividi-los em pelo me
 
 1.
    * O usuário seleciona uma parede do Revit com `SelectModelElement`. Um wrapper de parede do Dynamo é retornado ao gráfico (visível na bolha de visualização do nó)
-   * O usuário coloca o nó Element.Geometry e anexa a saída `SelectModelElement` a esse novo nó. A geometria da parede envolvida é extraída e convertida em geometria do Dynamo usando a API libG.
+   * O usuário coloca o nó Element.Geometry e anexa a saída do `SelectModelElement` a esse novo nó. A geometria da parede envolvida é extraída e convertida em geometria do Dynamo usando a API libG.
    * O usuário alterna o gráfico para o modo de execução automática.
    * O usuário modifica a parede original no Revit.
-   * O gráfico é executado novamente automaticamente quando o documento do Revit gera um evento sinalizando que alguns elementos foram atualizados, O nó de seleção observa esse evento e vê que a ID do elemento selecionado foi modificada.
+   * O gráfico é executado novamente de forma automática quando o documento do Revit gera um evento sinalizando que alguns elementos foram atualizados. O nó de seleção observa esse evento e vê que a ID do elemento selecionado foi modificada.
 
 ### Fluxos de trabalho do usuário do DynamoCivil:
 
@@ -619,8 +619,8 @@ Os fluxos de trabalho no D4C são muito semelhantes à descrição acima para o 
 
 Os nós de seleção são implementados herdando os tipos de `SelectionBase` genéricos: `SelectionBase<TSelection, TResult>` e um conjunto mínimo de membros:
 
-* Implementação de um método `BuildOutputAST`. Esse método precisa retornar um AST, que será executado em algum momento no futuro, quando o nó for executado. No caso de nós de seleção, ele deve retornar os elementos ou a geometria das IDs dos elementos. https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280
-* A implementação do `BuildOutputAST` é uma das partes mais difíceis da implementação de nós de `NodeModel`/interface do usuário. É melhor colocar o máximo de lógica possível em uma função c# e simplesmente incorporar um nó de chamada de função AST no AST. Observe que aqui, o `node` é um nó AST na árvore de sintaxe abstrata, não um nó no gráfico do Dynamo.
+* Implementação de um método `BuildOutputAST`. Esse método precisa retornar um AST, que será executado em algum momento no futuro, quando o nó for executado. No caso de nós de seleção, ele deve retornar elementos ou geometria das IDs de elementos. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
+* A implementação do `BuildOutputAST` é uma das partes mais difíceis da implementação de nós `NodeModel`/da interface do usuário. É melhor colocar o máximo de lógica possível em uma função c# e simplesmente incorporar um nó de chamada de função AST no AST. Observe que aqui, o `node` é um nó AST na árvore de sintaxe abstrata, não um nó no gráfico do Dynamo.
 
 ![Fluxo de seleção2](images/selectionAST.png)
 
@@ -628,7 +628,7 @@ Os nós de seleção são implementados herdando os tipos de `SelectionBase` gen
   *   Como esses são tipos derivados explícitos do `NodeModel` (não do ZeroTouch), eles também exigem a implementação de um [JsonConstructor] que será usado durante a desserialização do nó em um arquivo .dyn.
 
       As referências de elementos do hospedeiro devem ser salvas no arquivo .dyn para que, quando um usuário abrir um gráfico contendo esse nó, sua seleção ainda esteja definida. Os nós NodeModel no Dynamo usam json.net para serializar. Todas as propriedades públicas serão serializadas automaticamente usando Json.net. Use o atributo [JsonIgnore] para serializar apenas o que for necessário.
-* Os nós de consulta de documento são um pouco mais simples, pois não precisam armazenar uma referência para nenhuma ID de elemento. Veja a seguir as implementações da classe `ElementQueryBase` e da classe derivada. Quando executados, esses nós fazem uma chamada para a API do Revit e consultam o documento subjacente em busca de elementos, além de realizar a conversão mencionada anteriormente para a geometria ou os wrappers de elementos do Revit.
+* Os nós de consulta de documento são um pouco mais simples, pois não precisam armazenar uma referência a nenhuma ID de elemento. Veja a seguir as implementações da classe `ElementQueryBase` e da classe derivada. Quando executados, esses nós fazem uma chamada para a API do Revit e consultam o documento subjacente em busca de elementos, além de realizar a conversão mencionada anteriormente para a geometria ou os wrappers de elementos do Revit.
 
 ### Referências:
 

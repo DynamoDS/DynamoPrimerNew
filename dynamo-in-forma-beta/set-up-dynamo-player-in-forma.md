@@ -10,7 +10,7 @@ Nesta página, explicaremos como configurar as duas opções.
 
 ### Configurar o Dynamo como um serviço
 
-O Dynamo no Forma Beta está atualmente disponível como um beta aberto de acesso antecipado, o que significa que os recursos e a interface do usuário podem mudar com frequência.
+O Dynamo no Forma está atualmente disponível como um beta aberto de acesso antecipado, o que significa que os recursos e a interface do usuário podem mudar com frequência.
 
 Primeiro, vamos instalar o Dynamo Player no Forma.
 
@@ -24,39 +24,39 @@ Primeiro, vamos instalar o Dynamo Player no Forma.
 
 ### Configuração do Dynamo Desktop
 
-Para usar o Dynamo Desktop, você precisará do Dynamo, como Sandbox independente ou conectado ao Revit ou ao Civil 3D. Você também precisará do pacote DynamoFormaBeta.
+Para usar o Dynamo Desktop, você precisará do Dynamo, como Sandbox independente ou conectado ao Revit ou ao Civil 3D. Você também precisará do pacote DynamoForma.
 
 #### Revit
 
-Siga estas instruções para configurar o Dynamo no Revit e no pacote DynamoFormaBeta.
+Siga estas instruções para configurar o Dynamo no Revit e no pacote DynamoForma.
 
 1. Verifique se você tem o Revit 2024.1 ou superior instalado.
 2. Abra o Dynamo no Revit acessando Gerenciar > Dynamo.
-3. No Dynamo, instale o pacote DynamoFormaBeta. Vá para Pacotes > Gerenciador de pacotes e, em seguida, procure DynamoFormaBeta.
-   1. Se você tiver o Revit 2024, instale o pacote DynamoFormaBeta para 2.x.
-   2. Se você tiver o Revit 2025, instale o pacote DynamoFormaBeta.
+3. No Dynamo, instale o pacote do DynamoForma. Vá para Pacotes > Gerenciador de pacotes e, em seguida, procure DynamoForma.
+   1. Se você tiver o Revit 2024, instale o pacote DynamoForma para 2.x.
+   2. Se você tiver o Revit 2025, instale o pacote DynamoForma.
 
 #### Civil 3D
 
-Siga estas instruções para configurar o Dynamo no Civil 3D e o pacote DynamoFormaBeta.
+Siga estas instruções para configurar o Dynamo no Civil 3D e o pacote DynamoForma.
 
 1. Verifique se você tem o Civil 3D 2024.1 ou superior instalado.
 2. Abra o Dynamo no Civil 3D acessando Gerenciar > Dynamo.
-3. No Dynamo, instale o pacote DynamoFormaBeta. Vá para Pacotes > Gerenciador de pacotes e, em seguida, procure DynamoFormaBeta.
-   1. Se você tiver o Civil 3D 2024, instale o pacote DynamoFormaBeta para 2.x.
-   2. Se você tiver o Civil 3D 2025, instale o pacote DynamoFormaBeta.
+3. No Dynamo, instale o pacote do DynamoForma. Vá para Pacotes > Gerenciador de pacotes e, em seguida, procure DynamoForma.
+   1. Se você tiver o Civil 3D 2024, instale o pacote DynamoForma para 2.x.
+   2. Se você tiver o Civil 3D 2025, instale o pacote DynamoForma.
 
 #### Dynamo Sandbox
 
-Siga estas instruções para instalar o Dynamo Sandbox e o pacote DynamoFormaBeta.
+Siga estas instruções para instalar o Dynamo Sandbox e o pacote DynamoForma.
 
 1. Faça o download do Dynamo 2.18.0 ou superior em [Compilações do Dynamo](https://dynamobuilds.com/). Para ter a melhor experiência, escolha a mais recente das versões mais estáveis, listada na parte superior.
    1. As versões diárias são versões de desenvolvimento e podem incluir recursos incompletos ou em andamento.
-2. Extraia o Dynamo usando [7zip](https://7zip.rnbastos.com/) para uma pasta de sua escolha.
+2. Extraia o Dynamo usando [7zip](https://7-zip.org/) para uma pasta de sua escolha.
 3. Execute DynamoSandbox.exe na pasta de instalação do Dynamo.
-4. No Dynamo, instale o pacote DynamoFormaBeta. Vá para Pacotes > Gerenciador de pacotes e, em seguida, procure DynamoFormaBeta.
-   1. Se você tiver o Dynamo 2.x, instale o pacote DynamoFormaBeta para 2.x.
-   2. Se você tiver o Dynamo 3.x, instale o pacote DynamoFormaBeta.
+4. No Dynamo, instale o pacote do DynamoForma. Vá para Pacotes > Gerenciador de pacotes e, em seguida, procure DynamoForma.
+   1. Se você tiver o Dynamo 2.x, instale o pacote DynamoForma para 2.x.
+   2. Se você tiver o Dynamo 3.x, instale o pacote DynamoForma.
 
 Quando Dynamo estiver instalado, você estará pronto para usá-lo com o Forma. Ao executar a opção de desktop do Dynamo no Forma, você precisará ter o Dynamo aberto para poder usar a extensão do Dynamo Player.
 

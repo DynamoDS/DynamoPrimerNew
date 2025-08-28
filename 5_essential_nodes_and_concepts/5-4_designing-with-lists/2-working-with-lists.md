@@ -4,9 +4,9 @@
 
 Agora que estabelecemos o que é uma lista, vamos falar sobre as operações que podemos realizar nela. Imagine uma lista como um baralho de cartas. O baralho é a lista e cada carta representa um item.
 
-![cartas](../images/5-4/2/Playing\_cards\_modified.jpg)
+![cartas](../images/5-4/2/Playing_cards_modified.jpg)
 
-> Foto de [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
+> Foto de [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
 ### Consulta
 
@@ -67,7 +67,7 @@ O nó _List.Count_ é simples: conta o número de valores em uma lista e retorna
 
 ![Contagem](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
 
-> 1. O nó **List.Count **_****_ retorna o número de linhas no nó **Line.ByStartPointEndPoint**. Neste caso, o valor é 10, que concorda com o número de pontos criados no nó original do **Bloco de código**.
+> 1. O nó **List.Count** retorna o número de linhas no nó **Line.ByStartPointEndPoint**. Neste caso, o valor é 10, que concorda com o número de pontos criados no nó original do **Bloco de código**.
 
 ### List.GetItemAtIndex
 

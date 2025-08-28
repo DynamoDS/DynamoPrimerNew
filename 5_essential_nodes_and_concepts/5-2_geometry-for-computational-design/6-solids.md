@@ -31,17 +31,12 @@ As operações booleanas são complexas e seu cálculo pode ser lento. É possí
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
-> 1\. Use o menu de contexto do botão direito do mouse para congelar a operação de União de sólidos
->
-> 2\. O nó selecionado e todos os nós a jusante serão visualizados em um modo duplicado cinza claro, e os fios afetados serão exibidos como linhas tracejadas. A visualização da geometria afetada também será duplicada. Agora é possível alterar os valores anteriores sem calcular a união booleana.
->
-> 3\. Para descongelar os nós, clique com o botão direito do mouse e desmarque Congelar.
->
-> 4\. Todos os nós afetados e as visualizações de geometria associadas serão atualizados e revertidos para o modo de visualização padrão.
+> 1. Use o menu de contexto do botão direito do mouse para congelar a operação União de sólidos.
+> 2. O nó selecionado e todos os nós a jusante serão visualizados em um modo duplicado cinza claro, e os fios afetados serão exibidos como linhas tracejadas. A visualização da geometria afetada também será duplicada. Agora é possível alterar os valores anteriores sem calcular a união booleana.
+> 3. Para descongelar os nós, clique com o botão direito do mouse e desmarque Congelar.
+> 4. Todos os nós afetados e as visualizações de geometria associadas serão atualizados e revertidos para o modo de visualização padrão.
 
-{% hint style="info" %}
-Você pode obter mais informações sobre o congelamento de nós na seção [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention").
-{% endhint %}
+{% hint style="info" %} Você pode obter mais informações sobre o congelamento de nós na seção [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
 
 ## Análise abrangente de...
 

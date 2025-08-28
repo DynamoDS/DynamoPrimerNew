@@ -8,7 +8,7 @@ As cores no Dynamo são criadas usando entradas ARGB. Isso corresponde aos canai
 
 | Ícone                                     | Nome (Sintaxe)                 | Entradas  | Saídas |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-1/ColorbyARGB (2).jpg>) | Cor ARGB (**Color.ByARGB**) | A,R,G,B | cor   |
+| \![](<../images/5-1/ColorbyARGB (2).jpg>) | Cor ARGB (**Color.ByARGB**) | A,R,G,B | cor   |
 
 ### Consultar os valores de cor
 
@@ -16,23 +16,23 @@ As cores na tabela abaixo consultam as propriedades usadas para definir a cor: A
 
 | Ícone                                              | Nome (Sintaxe)                     | Entradas | Saídas    |
 | ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | Alfa (**Color.Alpha**)           | cor  | A          |
+| \![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | Alfa (**Color.Alpha**)           | cor  | A          |
 | ![](../images/5-1/ColorRed.jpg)                   | Vermelho (**Color.Red**)               | cor  | R          |
-| ![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | Verde (**Color.Green**)           | cor  | G          |
+| \![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | Verde (**Color.Green**)           | cor  | G          |
 | ![](../images/5-1/ColorBlue.jpg)                  | Azul (**Color.Blue**)             | cor  | B          |
-| ![](<../images/5-1/ColorComponent (2).jpg>)       | Componentes (**Color.Components**) | cor  | A, R, G, B |
+| \![](<../images/5-1/ColorComponent (2).jpg>)       | Componentes (**Color.Components**) | cor  | A, R, G, B |
 
 As cores na tabela abaixo correspondem ao **espaço de cores HSB**. A divisão das cores em matiz, saturação e brilho é, sem dúvida, algo mais intuitivo para a maneira como interpretamos as cores: qual deve ser a cor? Quão colorido deve ser? E quão clara ou escura deve ser a cor? Este é o detalhamento de matiz, saturação e brilho, respectivamente.
 
 | Ícone                                         | Nome (Sintaxe)                     | Entradas | Saídas    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
 | ![](../images/5-1/ColorHue.jpg)              | Matiz (**Color.Hue**)               | cor  | Matiz        |
-| ![](<../images/5-1/ColorSaturation (2).jpg>) | Saturação (**Color.Saturation**) | cor  | Saturação |
-| ![](<../images/5-1/ColorBrightness (2).jpg>) | Brilho (**Color.Brightness**) | cor  | Brilho |
+| \![](<../images/5-1/ColorSaturation (2).jpg>) | Saturação (**Color.Saturation**) | cor  | Saturação |
+| \![](<../images/5-1/ColorBrightness (2).jpg>) | Brilho (**Color.Brightness**) | cor  | Brilho |
 
 ### Faixa de cores
 
-A faixa de cores é similar ao nó **Remapear faixa** do exercício [\#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention"): remapeia uma lista de números em outro domínio. Mas, em vez de mapear para um domínio de _números_, o mapeamento é feito para um _gradiente de cores_ com base nos números de entrada que variam de 0 a 1.
+A faixa de cores é similar ao nó **Remap Range** do exercício [\#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention"): remapeia uma lista de números em outro domínio. Mas, em vez de mapear para um domínio de _números_, o mapeamento é feito para um _gradiente de cores_ com base nos números de entrada que variam de 0 a 1.
 
 O nó atual funciona bem, mas pode ser um pouco estranho fazer com que tudo funcione da primeira vez. A melhor forma de se familiarizar com o gradiente de cores é testar o resultado de forma interativa. Vamos fazer um exercício rápido para rever como configurar um gradiente com cores de saída correspondentes aos números.
 

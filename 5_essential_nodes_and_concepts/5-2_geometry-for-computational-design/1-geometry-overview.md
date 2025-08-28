@@ -32,9 +32,9 @@ A geometria, tradicionalmente definida, é o estudo de forma, tamanho, posição
 Compreender a geometria no contexto de algoritmos, computação e complexidade pode parecer desafiador. No entanto, há alguns princípios-chave e relativamente simples que podemos estabelecer como fundamentos para começar a construção em aplicativos mais avançados:
 
 1. A geometria corresponde a **dados**: para o computador e o Dynamo, um modelo Bunny não é tão diferente de um número.
-2. A geometria depende da **abstração**: fundamentalmente, os elementos geométricos são descritos por números, relações e fórmulas em um determinado sistema de coordenadas espaciais
-3. A geometria possui uma **hierarquia**: os pontos são reunidos para criar linhas, as linhas se unem para criar superfícies, e assim por diante
-4. A geometria descreve simultaneamente **a parte e o todo**: quando uma curva é exibida, ela tem a forma e todos os pontos possíveis ao longo dela
+2. A geometria depende da **abstração**: fundamentalmente, os elementos geométricos são descritos por números, relações e fórmulas em um determinado sistema de coordenadas espaciais.
+3. A geometria possui uma **hierarquia**: os pontos são reunidos para criar linhas, as linhas se unem para criar superfícies, e assim por diante.
+4. A geometria descreve simultaneamente **a parte e o todo**: quando uma curva é exibida, ela tem a forma e todos os pontos possíveis ao longo dela.
 
 Na prática, esses princípios significam que precisamos estar cientes do material com o qual estamos trabalhando (com que tipo de geometria, como ela foi criada, etc.) para que possamos compor, decompor e recompor de forma fluida diferentes geometrias à medida que desenvolvemos modelos mais complexos.
 

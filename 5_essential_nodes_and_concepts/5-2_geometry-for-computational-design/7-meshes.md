@@ -4,7 +4,7 @@
 
 ### O que é a malha?
 
-No campo da modelagem de cálculo, as [malhas](7-meshes.md#mesh) são uma das formas mais difundidas de representar a geometria 3D. A geometria de malha é geralmente feita com um conjunto de quadriláteros ou triângulos, pode ser uma alternativa leve e flexível para trabalhar com NURBS. As malhas são usadas em tudo, desde renderização e visualizações até fabricação digital e impressão 3D.
+No campo da modelagem computacional, as [malhas](7-meshes.md#mesh) são uma das formas mais difundidas de representar a geometria 3D. A geometria de malha é geralmente feita com um conjunto de quadriláteros ou triângulos, pode ser uma alternativa leve e flexível para trabalhar com NURBS. As malhas são usadas em tudo, desde renderização e visualizações até fabricação digital e impressão 3D.
 
 ### Elementos de malha
 
@@ -36,7 +36,8 @@ Uma Malha é uma coleção de quadriláteros e triângulos que representam uma g
 ![Elementos de malha](../images/5-2/7/MeshElements2.jpg)
 
 > 1. Vértices de malha
-> 2. Arestas de malha *Arestas com apenas uma face adjacente são chamadas "Naked". Todas as outras arestas são "Clothed"
+> 2. Arestas de malha 
+>    1. Arestas com apenas uma face adjacente são chamadas “consolidadas”. Todas as outras arestas são “revestidas”.
 > 3. Faces de malha
 
 ### Vértices + normais de vértice
@@ -59,7 +60,7 @@ Uma face é uma lista ordenada de três ou quatro vértices. A representação "
 
 ### Malhas versus superfícies NURBS
 
-Como a geometria de malha é diferente da geometria NURBS? Em que casos é recomendado utilizar um e não o outro?
+Como a geometria de malha é diferente da geometria NURBS? Em que casos é recomendado usar um e não o outro?
 
 #### Parametrização
 

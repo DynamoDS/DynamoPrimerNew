@@ -3,9 +3,9 @@ cover: ../.gitbook/assets/coverimage.png
 coverY: 0
 ---
 
-# Dynamo no Forma Beta
+# Dynamo no Forma
 
-O Dynamo está disponível como uma extensão no Forma. No momento, ele é fornecido com duas opções: uma versão conectada ao desktop e uma integração baseada na nuvem como um beta fechado. Leia mais sobre a versão desktop nesta [postagem de blog](https://dynamobim.org/dynamo-in-forma/) e sobre a integração na nuvem beta fechada nesta [postagem de blog](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/).
+O Dynamo está disponível como uma extensão no Forma. No momento, ele é fornecido com duas opções: uma versão conectada ao desktop e uma integração baseada na nuvem como um beta fechado. Leia mais sobre a versão desktop nesta [postagem de blog](https://dynamobim.org/dynamo-in-forma/) e sobre a integração na nuvem beta nesta [postagem de blog](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/). Observe que o blog foi publicado durante a fase beta fechada; a integração com a nuvem está atualmente em beta aberto e disponível para todos os usuários do Forma.
 
 ### O que é o Autodesk Forma?
 

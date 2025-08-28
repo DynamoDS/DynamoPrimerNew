@@ -60,14 +60,14 @@ Usando a mesma lógica de dicionário, também é possível criar dicionários c
 
 ![](../images/5-5/4/dictionary-exerciseII-02.jpg)
 
-> 1. Agora, é possível agrupar os ambientes pelo nível em que residem.
+> 2. Agora, é possível agrupar os ambientes pelo nível em que residem.
 
 ![](../images/5-5/4/dictionary-exerciseII-03.jpg)
 
-> 1. Com os elementos agrupados pelo nível, agora podemos usar as chaves compartilhadas (chaves exclusivas) como a nossa chave para o dicionário e as listas de ambientes como os elementos.
+> 3. Com os elementos agrupados pelo nível, agora podemos usar as chaves compartilhadas (chaves exclusivas) como a nossa chave para o dicionário e as listas de ambientes como os elementos.
 
 ![](../images/5-5/4/dictionary-exerciseII-04.jpg)
 
-> 1. Por fim, usando os níveis no modelo do Revit, podemos procurar quais ambientes residem naquele nível no dicionário. `Dictionary.ValueAtKey` coleta o nome do nível e retorna os objetos do ambiente naquele nível.
+> 4. Por fim, usando os níveis no modelo do Revit, podemos procurar quais ambientes residem naquele nível no dicionário. `Dictionary.ValueAtKey` coleta o nome do nível e retorna os objetos do ambiente naquele nível.
 
 As oportunidades de uso do dicionário são realmente infinitas. A capacidade de relacionar seus dados do BIM no Revit com o próprio elemento apresenta uma variedade de casos de uso.
