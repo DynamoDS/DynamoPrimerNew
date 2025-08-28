@@ -3,13 +3,13 @@ cover: ../.gitbook/assets/coverimage.png
 coverY: 0
 ---
 
-# Dynamo in Forma Beta
+# Dynamo in Forma
 
-Dynamo は Forma の拡張機能として使用できます。現時点では、デスクトップ接続バージョンと、クローズド ベータとしてクラウドベースで統合するバージョンの 2 種類があります。デスクトップ バージョンの詳細についてはこちらの[ブログの投稿](https://dynamobim.org/dynamo-in-forma/)、クローズド ベータのクラウド統合の詳細についてはこちらの[ブログの投稿](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/)を参照してください。
+Dynamo は Forma の拡張機能として使用できます。現時点では、デスクトップ接続バージョンと、クローズド ベータとしてクラウドベースで統合するバージョンの 2 種類があります。デスクトップ バージョンの詳細についてはこちらの[ブログ投稿](https://dynamobim.org/dynamo-in-forma/)、ベータのクラウド統合の詳細についてはこちらの[ブログ投稿](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/)を参照してください。ブログはクローズド ベータの段階で公開されたことにご注意ください。クラウド統合は現在オープン ベータで、すべての Forma ユーザが利用できます。
 
 ### Autodesk Forma とは?
 
-Autodesk Forma は、事前設計や概略設計に対応したクラウド ソフトウェアです。強力かつ簡単に使用できる、AI を活用したツールが備わっています。建築家や設計者は Forma を使用して複雑な 3D 設計を数分でモデル化し、リアルタイムの環境解析を通して生活の質とサステナビリティを最適化し、Revit、Rhino、Dynamo とスムーズに連携して設計プロセスを続行します。詳細の確認、無償体験版のお申し込み、およびご購入については、こちらの [Autodesk Forma](https://www.autodesk.com/jp/products/forma/overview) のページをご覧ください。Forma は AEC コレクションに含まれています。 
+Autodesk Forma は、事前設計や概略設計に対応したクラウド ソフトウェアです。強力かつ簡単に使用できる、AI を活用したツールが備わっています。建築家や設計者は Forma を使用して複雑な 3D 設計を数分でモデル化し、リアルタイムの環境解析を通して生活の質とサステナビリティを最適化し、Revit、Rhino、Dynamo とスムーズに連携して設計プロセスを続行します。詳細の確認、無償体験版のお申し込み、およびご購入については、こちらの [Autodesk Forma](https://www.autodesk.com/products/forma/overview?term=1-YEAR\&tab=subscription) のページをご覧ください。Forma は AEC コレクションに含まれています。 
 
 ### Forma の Dynamo Player とは?
 

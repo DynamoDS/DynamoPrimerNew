@@ -4,9 +4,9 @@
 
 リストとは何かということを理解したところで、ここからは、リストに対して実行できる操作について見ていきます。ここでは、リストをトランプのカードだと考えてください。1 組のトランプがリストで、1 枚 1 枚のカードが 1 つの項目ということになります。
 
-![カード](../images/5-4/2/Playing\_cards\_modified.jpg)
+![カード](../images/5-4/2/Playing_cards_modified.jpg)
 
-> 写真: [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
+> 写真: [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
 ### Query
 
@@ -65,9 +65,9 @@ Dynamo では、これらの操作に似た操作を実行することができ�
 
 _List.Count_ ノードは、リスト内の値の数をカウントしてその数を返すという単純なノードです。「リストのリスト」を操作する場合は、このノードの使用方法も多少複雑になりますが、それについてはこれ以降のセクションで説明します。
 
-![個数](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
+![Count](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
 
-> 1. **List.Count **_****_ ノードは、**Line.ByStartPointEndPoint** ノード内の線分の数を返します。この場合は 10 という値が返されますが、これは、元の **Code Block** ノードで作成した点の数に対応しています。
+> 1. **List.Count** ノードは、**Line.ByStartPointEndPoint** ノード内の線分の数を返します。この場合は 10 という値が返されますが、これは、元の **Code Block** ノードで作成した点の数に対応しています。
 
 ### List.GetItemAtIndex
 

@@ -22,15 +22,13 @@ Dynamo 2.0 では、初めて Python ウィンドウを開く際に、既定で�
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_注: CURRENTUSER を自分のユーザ名に置き換えてください_ 
-{% endhint %}
+{% hint style="warning" %} _注: CURRENTUSER を自分のユーザ名に置き換えてください_ {% endhint %}
 
 次に、使用する機能を組み込んだテンプレートを作成する必要があります。ここでは、Revit に関連するインポートおよび Revit で作業する際の他の一般的な項目の一部を組み込みます。
 
 空のメモ帳を起動して、次のコードを貼り付けることができます。
 
-``` py
+```py
 import clr
 
 clr.AddReference('RevitAPI')

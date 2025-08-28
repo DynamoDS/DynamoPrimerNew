@@ -10,7 +10,7 @@ Dynamo を Forma と一緒に使用するには、クラウドベースの Dynam
 
 ### Dynamo as a Service を設定する
 
-Dynamo in Forma Beta は、現時点では早期アクセス用のオープン ベータとして提供されているため、機能やユーザ インタフェースが頻繁に変更される可能性があります。
+Dynamo in Forma は、現時点では早期アクセス用のオープン ベータとして提供されているため、機能やユーザ インタフェースが頻繁に変更される可能性があります。
 
 まず、Forma に Dynamo Player をインストールします。
 
@@ -24,39 +24,39 @@ Dynamo in Forma Beta は、現時点では早期アクセス用のオープン �
 
 ### Dynamo Desktop を設定する
 
-Dynamo Desktop を使用するには、スタンドアロンの Dynamo Sandbox か、Revit や Civil 3D に接続されている Dynamo が必要になります。また、DynamoFormaBeta パッケージも必要です。
+Dynamo Desktop を使用するには、スタンドアロンの Dynamo Sandbox か、Revit や Civil 3D に接続されている Dynamo が必要になります。また、DynamoForma パッケージも必要です。
 
 #### Revit
 
-Revit および DynamoFormaBeta パッケージで Dynamo をセットアップするには、次の手順に従います。
+Revit および DynamoForma パッケージで Dynamo をセットアップするには、次の手順に従います。
 
 1. Revit 2024.1 以降がインストールされているようにします。
 2. [管理] > [Dynamo]の順に移動して、Revit から Dynamo を開きます。
-3. Dynamo で、DynamoFormaBeta パッケージをインストールします。[パッケージ] > [Package Manager]に移動して、DynamoFormaBeta を検索します。
-   1. Revit 2024 を使用している場合は、DynamoFormaBeta for 2.x パッケージをインストールします。
-   2. Revit 2025 を使用している場合は、DynamoFormaBeta パッケージをインストールします。
+3. Dynamo で、DynamoForma パッケージをインストールします。[パッケージ] > [Package Manager]に移動して、DynamoForma を検索します。
+   1. Revit 2024 を使用している場合は、DynamoForma for 2.x パッケージをインストールします。
+   2. Revit 2025 を使用している場合は、DynamoForma パッケージをインストールします。
 
 #### Civil 3D
 
-Civil 3D および DynamoFormaBeta パッケージで Dynamo をセットアップするには、次の手順を実行します。
+Civil 3D および DynamoForma パッケージで Dynamo をセットアップするには、次の手順を実行します。
 
 1. Civil 3D 2024.1 以降がインストールされているようにします。
 2. [管理] > [Dynamo]の順に移動して、Civil 3D から Dynamo を開きます。
-3. Dynamo で、DynamoFormaBeta パッケージをインストールします。[パッケージ] > [Package Manager]に移動して、DynamoFormaBeta を検索します。
-   1. Civil 3D 2024 を使用している場合は、DynamoFormaBeta for 2.x パッケージをインストールします。
-   2. Civil 3D 2025 を使用している場合は、DynamoFormaBeta パッケージをインストールします。
+3. Dynamo で、DynamoForma パッケージをインストールします。[パッケージ] > [Package Manager]に移動して、DynamoForma を検索します。
+   1. Civil 3D 2024 を使用している場合は、DynamoForma for 2.x パッケージをインストールします。
+   2. Civil 3D 2025 を使用している場合は、DynamoForma パッケージをインストールします。
 
 #### Dynamo Sandbox
 
-Dynamo Sandbox と DynamoFormaBeta パッケージをインストールするには、次の手順に従います。
+Dynamo Sandbox と DynamoForma パッケージをインストールするには、次の手順に従います。
 
 1. [Dynamo ビルド](https://dynamobuilds.com/)で Dynamo 2.18.0 以降をダウンロードします。最高のエクスペリエンスを得るには、上部にリストされている最も安定しているバージョンの最新のものを選択してください。
    1. Daily バージョンは開発バージョンであり、不完全な機能や開発中の機能が含まれている場合があります。
-2. [7zip](https://7-zip.opensource.jp/) を使用して、指定したフォルダに Dynamo を抽出します。
+2. [7zip](https://7-zip.org/) を使用して、指定したフォルダに Dynamo を抽出します。
 3. Dynamo のインストール フォルダにある DynamoSandbox.exe を実行します。
-4. Dynamo で、DynamoFormaBeta パッケージをインストールします。[パッケージ] > [Package Manager]に移動して、DynamoFormaBeta を検索します。
-   1. Dynamo 2.x を使用している場合は、DynamoFormaBeta for 2.x パッケージをインストールします。
-   2. Dynamo 3.x を使用している場合は、DynamoFormaBeta パッケージをインストールします。
+4. Dynamo で、DynamoForma パッケージをインストールします。[パッケージ] > [Package Manager]に移動して、DynamoForma を検索します。
+   1. Dynamo 2.x を使用している場合は、DynamoForma for 2.x パッケージをインストールします。
+   2. Dynamo 3.x を使用している場合は、DynamoForma パッケージをインストールします。
 
 Dynamo をインストールすると、Forma で使用できるようになります。Forma で Dynamo のデスクトップ オプションを実行する場合、Dynamo Player 拡張機能を使用できるようにするには、Dynamo を開く必要があります。
 

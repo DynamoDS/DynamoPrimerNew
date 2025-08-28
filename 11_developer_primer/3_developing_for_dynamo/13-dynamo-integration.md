@@ -22,7 +22,7 @@
 
 [https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534](https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534)
 
-`DynamoModel` は、Dynamo をホストするアプリケーションのエントリ ポイントで、Dynamo アプリケーションを示しています。モデルは、Dynamo アプリケーションおよび DesignScript 仮想マシンを構成する他の重要なデータ構造やオブジェクトへの参照を含む、最上位のルート オブジェクトです。
+`DynamoModel` は、Dynamo をホストするアプリケーションのエントリ ポイントです。これは Dynamo アプリケーションを示しています。モデルは、Dynamo アプリケーションおよび DesignScript 仮想マシンを構成する他の重要なデータ構造やオブジェクトへの参照を含む、最上位のルート オブジェクトです。
 
 コンフィギュレーション オブジェクトは、構成時に `DynamoModel` の共通パラメータセットを設定するために使用されます。
 
@@ -38,7 +38,7 @@ DynamoCore はクロス プラットフォームの計算エンジンであり�
 
 ### 共有されている Dynamo Dll をホストから事前ロードします。
 
-現在、D4R のリストには `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` のみ含まれています。これは、Dynamo と Revit 間のライブラリ バージョンの競合を回避するために行われます。例:`AvalonEdit` で競合が発生すると、コード ブロックの関数が完全に壊れる可能性があります。指摘事項は、Dynamo 1.1.x の https://github.com/DynamoDS/Dynamo/issues/7130 で、手動で再現することもできます。インテグレータがホスト関数と Dynamo の間でライブラリの競合に気付いた場合は、最初の手順としてこれを実施することをお勧めします。これは、他のプラグインまたはホスト アプリケーション自体が互換性のないバージョンを共有依存関係としてロードしないようにするために必要になる場合があります。適切な解決策は、バージョンを揃えてバージョンの競合を解決するか、可能であればホストの app.config で .net バインディング リダイレクトを使用することです。
+現在、D4R のリストには `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` のみ含まれています。これは、Dynamo と Revit 間のライブラリ バージョンの競合を回避するために行われます。例:`AvalonEdit` で競合が発生すると、コード ブロックの関数が完全に壊れる可能性があります。この指摘事項は、Dynamo 1.1.x について [https://github.com/DynamoDS/Dynamo/issues/7130](https://github.com/DynamoDS/Dynamo/issues/7130) で報告されており、手動でも再現できます。インテグレータがホスト関数と Dynamo の間でライブラリの競合に気付いた場合は、最初の手順としてこれを実施することをお勧めします。これは、他のプラグインまたはホスト アプリケーション自体が互換性のないバージョンを共有依存関係としてロードしないようにするために必要になる場合があります。適切な解決策は、バージョンを揃えてバージョンの競合を解決するか、可能であればホストの app.config で .net バインディング リダイレクトを使用することです。
 
 ### ASM をロードする
 
@@ -88,9 +88,9 @@ internal static Version PreloadAsmFromRevit()
 
 #### Dynamo でカスタマイズ パスから ASM をロードする
 
-最近、`DynamoSandbox.exe` と `DynamoCLI.exe` で特定の ASM バージョンをロードする機能を追加しました。通常のレジストリ検索動作をスキップするには、`�gp` フラグを使用して、強制的に Dynamo が特定のパスから ASM をロードするようにします。
+最近、`DynamoSandbox.exe` と `DynamoCLI.exe` で特定の ASM バージョンをロードする機能を追加しました。通常のレジストリ検索動作をスキップするには、`--GeometryPath` フラグを使用して、強制的に Dynamo が特定のパスから ASM をロードするようにします。
 
-`DynamoSandbox.exe -gp �somePath/To/ASMDirectory/�`
+`DynamoSandbox.exe --GeometryPath "somePath/To/ASMDirectory"`
 
 ### StartConfiguration を作成する
 
@@ -98,16 +98,16 @@ StartupConfiguration は、DynamoModel を初期化するためのパラメー�
 
 このファイルの構成は、次のとおりです。
 
-* DynamoCorePath // ロードする DynamoCore バイナリの配置場所。
-* DynamoHostPath // Dynamo 統合バイナリの配置場所。
-* GeometryFactoryPath // ロードされた libG バイナリの配置場所。
-* PathResolver //さまざまなファイルの解決に役立つオブジェクト。
-* PreloadLibraryPaths // プリロードされたノード バイナリの配置場所(例: DSOffice.dll)。
-* AdditionalNodeDirectories // 追加のノード バイナリの配置場所。
-* AdditionalResolutionPaths // ライブラリのロード中に必要になる可能性がある、その他の依存関係の追加のアセンブリ解決処理パス。
-* UserDataRootFolder // ユーザのデータ フォルダ、例: `"AppData\Roaming\Dynamo\Dynamo Revit"`。
-* CommonDataRootFolder // カスタム定義、サンプルなどを保存する既定フォルダ。
-* Context // インテグレータのホスト名 + バージョン `(Revit<BuildNum>)`。
+* DynamoCorePath // ロードする DynamoCore バイナリの配置場所
+* DynamoHostPath // Dynamo 統合バイナリの配置場所
+* GeometryFactoryPath // ロードされた libG バイナリの配置場所
+* PathResolver //さまざまなファイルの解決に役立つオブジェクト
+* PreloadLibraryPaths // プリロードされたノード バイナリの配置場所(例: DSOffice.dll)
+* AdditionalNodeDirectories // 追加のノード バイナリの配置場所
+* AdditionalResolutionPaths // ライブラリのロード中に必要になる可能性がある、その他の依存関係の追加のアセンブリ解決処理パス
+* UserDataRootFolder // ユーザのデータ フォルダ、例: `"AppData\Roaming\Dynamo\Dynamo Revit"`
+* CommonDataRootFolder // カスタム定義、サンプルなどを保存する既定フォルダ
+* Context // インテグレータのホスト名 + バージョン `(Revit<BuildNum>)`
 * SchedulerThread // `ISchedulerThread` を実装する、インテグレータ スケジューラのスレッド。ほとんどのインテグレータの場合、これはメイン UI スレッドか、API にアクセスできる任意のスレッドになります。
 * StartInTestMode // 現在のセッションがテストの自動化セッションであるかどうか。一連の Dynamo の動作を変更します。テストを記述していない限りは使用しないでください。
 * AuthProvider // インテグレータによる IAuthProvider の実装(例: RevitOxygenProvider の実装の場合は Greg.dll の中)。packageManager アップロードの統合に使用されます。
@@ -117,31 +117,31 @@ StartupConfiguration は、DynamoModel を初期化するためのパラメー�
 既定の基本設定の設定パスは、`PathManager.PreferenceFilePath` によって管理されます(例: `"AppData\\Roaming\\Dynamo\\Dynamo Revit\\2.5\\DynamoSettings.xml"`)。インテグレータは、カスタマイズされた基本設定の設定ファイルについても、パス マネージャと整合させる必要がある場所に送るかどうかを決定できます。以下は、シリアル化される基本設定の設定プロパティです。
 
 * IsFirstRun // このバージョンの Dynamo を初めて実行するかどうかを示します(例: GA オプトイン/オプトアウトのメッセージを表示する必要があるかどうかを決定するために使用)。また、新しいバージョンの Dynamo の起動時に旧式の Dynamo 基本設定を移行する必要があるかどうかを決定するためにも使用され、ユーザのエクスペリエンスに一貫性を持たせることができます。
-* IsUsageReportingApproved // 使用状況レポートが承認されているかどうかを示します。
-* IsAnalyticsReportingApproved // 分析レポートが承認されているかどうかを示します。
+* IsUsageReportingApproved // 使用状況レポートが承認されているかどうかを示します
+* IsAnalyticsReportingApproved // 分析レポートが承認されているかどうかを示します
 * LibraryWidth // Dynamo 左側のライブラリ パネルの幅。
 * ConsoleHeight // コンソール表示の高さ。
-* ShowPreviewBubbles // プレビュー バルーンを表示するかどうかを示します。
-* ShowConnector // コネクタを表示するかどうかを示します。
-* ConnectorType // コネクタのタイプ(ベジェまたはポリライン)を示します。
-* BackgroundPreviews // 指定した背景プレビューのアクティブ状態を示します。
+* ShowPreviewBubbles // プレビュー バルーンを表示するかどうかを示します
+* ShowConnector // コネクタを表示するかどうかを示します
+* ConnectorType // コネクタのタイプ(ベジェまたはポリライン)を示します
+* BackgroundPreviews // 指定した背景プレビューのアクティブ状態を示します
 * RenderPrecision // レンダリング精度のレベル。低い場合、三角形の数が少ないメッシュが生成されます。高い場合は、背景プレビューでより滑らかなジオメトリが生成されます。ジオメトリを素早くプレビューするには、128 が適した数値です。
-* ShowEdges // サーフェスとソリッドのエッジをレンダリングするかどうかを示します。
-* ShowDetailedLayout // 未使用。
-* WindowX, WindowY // Dynamo ウィンドウの最後の X 座標と Y 座標。
-* WindowW, WindowH // Dynamo ウィンドウの最後の幅と高さ。
-* UseHardwareAcceleration // Dynamo でハードウェア アクセラレーションがサポートされている場合、それを使用するかどうかを示します。
+* ShowEdges // サーフェスとソリッドのエッジをレンダリングするかどうかを示します
+* ShowDetailedLayout // 未使用
+* WindowX, WindowY // Dynamo ウィンドウの最後の X 座標と Y 座標
+* WindowW, WindowH // Dynamo ウィンドウの最後の幅と高さ
+* UseHardwareAcceleration // Dynamo でハードウェア アクセラレーションがサポートされている場合、それを使用するかどうかを示します
 * NumberFormat // プレビュー バブル toString() に数値を表示するために使用される小数点の精度。
-* MaxNumRecentFiles // 保存する最近使用したファイル パスの最大数。
-* RecentFiles // 最近開いたファイル パスのリスト。このリストを操作すると、Dynamo の起動ページにある最近使用したファイルのリストに直接影響します。
-* BackupFiles // バックアップ ファイル パスのリスト。
+* MaxNumRecentFiles // 保存する最近使用したファイル パスの最大数
+* RecentFiles // 最近開いたファイル パスのリスト。このリストを操作すると、Dynamo の起動ページにある最近使用したファイルのリストに直接影響します
+* BackupFiles // バックアップ ファイル パスのリスト
 * CustomPackageFolders // パッケージとカスタム ノードがスキャンされる Zero-Touch バイナリとディレクトリ パスを含むフォルダのリスト。
 * PackageDirectoriesToUninstall // Package Manager が、削除対象としてマークされているパッケージを決定するために使用するパッケージの一覧。これらのパスは、可能な限り Dynamo の起動時に削除されます。
 * PythonTemplateFilePath // 新しい PythonScript ノードの作成時に開始テンプレートとして使用する Python(.py)ファイルへのパス。これを使用して、統合用のカスタム Python テンプレートをセットアップできます。
-* BackupInterval // グラフを自動的に保存する期間(ミリ秒単位)を示します。
-* BackupFilesCount // 作成されるバックアップの数を示します。
-* PackageDownloadTouAccepted // ユーザが Package Manager からパッケージをダウンロードするための利用規約に同意したかどうかを示します。
-* OpenFileInManualExecutionMode // OpenFileDialog の[手動モードで開く]チェックボックスの既定の状態を示します。
+* BackupInterval // グラフを自動的に保存する期間(ミリ秒単位)を示します
+* BackupFilesCount // 作成されるバックアップの数を示します
+* PackageDownloadTouAccepted // ユーザが Package Manager からパッケージをダウンロードするための利用規約に同意したかどうかを示します
+* OpenFileInManualExecutionMode // OpenFileDialog の[手動モードで開く]チェックボックスの既定の状態を示します
 * NamespacesToExcludeFromLibrary // Dynamo ノード ライブラリに表示しない名前空間(存在する場合)を示します。文字列形式: "[ライブラリ名]:[完全な名前空間]"
 
 シリアル化された基本設定の例:
@@ -246,9 +246,9 @@ StartupConfiguration は、DynamoModel を初期化するためのパラメー�
 </PreferenceSettings> 
 ```
 
-* Extensions // IExtension を実装する拡張機能のリスト。NULL の場合、Dynamo は既定のパス(Dynamo フォルダ下の `extensions` フォルダ)から拡張機能をロードします。
+* Extensions // IExtension を実装する拡張機能のリスト。NULL の場合、Dynamo は既定のパス(Dynamo フォルダ下の `extensions` フォルダ)から拡張機能をロードします
 * IsHeadless // Dynamo が UI なしで起動されたかどうかを示します。これは解析に影響します。
-* UpdateManager // UpdateManager のインテグレータによる実装。上記説明を参照。
+* UpdateManager // UpdateManager のインテグレータによる実装。上記説明を参照
 * ProcessMode // TaskProcessMode と同様。テスト モードの場合は同期、それ以外の場合は非同期になります。これはスケジューラの動作をコントロールします。シングル スレッド環境では、これを同期に設定することもできます。
 
 ターゲットの StartConfiguration を使用して、`DynamoModel` を起動します。
@@ -286,7 +286,7 @@ StartConfig が渡されて `DynamoModel` が起動すると、DynamoCore は実
 
 ### DynamoSandbox.exe の例:
 
-DynamoSandbox.exe は、DynamoCore を使用してテスト、使用、実験を行うための開発環境です。これは、`DynamoCore` および `DynamoCoreWPF` コンポーネントがどのようにロードおよびセットアップされるかを確認するためのチェックアウトの最適な例です。エントリ ポイントの一部は、[こちら](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoSandbox/DynamoCoreSetup.cs#L37)で確認できます。
+DynamoSandbox.exe は、DynamoCore を使用してテスト、使用、実験を行うための開発環境です。これは、`DynamoCore` および `DynamoCoreWPF` コンポーネントがどのようにロードおよびセットアップされるかを確認するためのチェックアウトの最適な例です。エントリ ポイントの一部を[こちら](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoSandbox/DynamoCoreSetup.cs#L37)で確認できます。
 
 ## 要素のバインドとトレース
 
@@ -570,7 +570,7 @@ Dynamo の最新バージョンでは、TLS (スレッド ローカル ストレ
 
 大まかに言うと、**これらのノードは、要素 ID を受け取り、その要素またはその要素を表すジオメトリへのポインタを返す関数として概念化することができます。**
 
-DynamoRevit には複数の `�Selection�` ノードがあります。これは少なくとも 2 つのグループに分けることができます。
+DynamoRevit には複数の `Selection` ノードがあります。これらは少なくとも 2 つのグループに分けることができます。
 
 ![Revit 選択ノード](images/revitSelectionNodes.png)
 
@@ -583,18 +583,18 @@ DynamoRevit には複数の `�Selection�` ノードがあります。これ�
 
     このカテゴリのサンプル ノードは `AllElementsOfClass` と `AllElementsOfCategory` です
 
-    これらのノードを使用すると、ユーザは要素のサブセットのドキュメント全体をクエリーできます。これらのノードは通常、基礎となる Revit 要素を指すラッパーを返します。これらのラッパーは DynamoRevit の環境に不可欠であり、要素のバインドなどの高度な機能を使用できます。また、Dynamo インテグレータは、ユーザにノードとして公開されるホスト API を選択することができます。
+    これらのノードを使用すると、ユーザは要素のサブセットにドキュメント全体をクエリできます。これらのノードは通常、基礎となる Revit 要素を指すラッパーを返します。これらのラッパーは DynamoRevit の環境に不可欠であり、要素のバインドなどの高度な機能を使用できます。また、Dynamo インテグレータは、ユーザにノードとして公開されるホスト API を選択することができます。
 
 ### Dynamo Revit ユーザ ワークフロー:
 
 #### 事例
 
 1.
-   * ユーザが `SelectModelElement` で Revit の壁を選択すると、Dynamo 壁ラッパーがグラフに返されます(ノードのプレビュー バルーンに表示されます)。
-   * ユーザは Element.Geometry ノードを配置し、この新しいノードに `SelectModelElement` 出力をアタッチします。ラップされた壁のジオメトリが抽出され、libG API を使用して Dynamo ジオメトリに変換されます。
+   * ユーザが `SelectModelElement` で Revit の壁を選択すると、Dynamo 壁ラッパーがグラフに返されます(ノードのプレビュー バルーンに表示されます)
+   * ユーザは Element.Geometry ノードを配置し、`SelectModelElement` 出力をこの新しいノードにアタッチします。ラップされた壁のジオメトリが抽出され、libG API を使用して Dynamo ジオメトリに変換されます。
    * ユーザは、グラフを自動実行モードに切り替えます。
    * ユーザが Revit で元の壁を変更します。
-   * Revit ドキュメントが一部の要素が更新されたことを通知するイベントを発生させると、グラフが自動的に再実行されます。選択ノードはこのイベントを監視して、選択した要素の ID が変更されたことを確認します。
+   * Revit ドキュメントで一部の要素が更新されたことを示すイベントが発生すると、グラフは自動的に再実行されます。選択ノードはこのイベントを監視し、選択した要素の ID が変更されたことを確認します。
 
 ### DynamoCivil ユーザ ワークフロー:
 
@@ -604,10 +604,10 @@ D4C のワークフローは、上記で説明した Revit の場合と非常に
 
 ### 指摘事項:
 
-*   ドキュメント変更アップデータにより、無限ループを実装する `DynamoRevit` の選択ノードを簡単に構築できます。ノードがすべての要素のドキュメントを監視し、その後このノードの下流のどこかに新しい要素を作成すると考えてください。このプログラムを実行すると、ループがトリガされます。`DynamoRevit` は、トランザクション ID を使用してさまざまな方法でこのようなケースを捕捉しようとし、要素コンストラクタへの入力が変更されていない場合にドキュメントを変更しないようにします。
+*   `DynamoRevit` の選択ノードが実装するドキュメント変更アップデータにより、無限ループを簡単に構築できます。ノードがすべての要素のドキュメントを監視し、その後このノードの下流のどこかに新しい要素を作成すると考えてください。このプログラムは、実行するとループをトリガします。`DynamoRevit` は、トランザクション ID を使用してさまざまな方法でこのようなケースの捕捉を試み、要素コンストラクタへの入力が変更されていない場合にドキュメントを変更しないようにします。
 
     選択した要素がホスト アプリケーションで修正されたときにグラフの自動実行が開始される場合は、この点を考慮する必要があります。
-* `DynamoRevit` の選択ノードは、WPF を参照する `RevitUINodes.dll` プロジェクトに実装されます これは非指摘事項の可能性がありますが、ターゲットのプラットフォームによっては注意する価値があります。
+* `DynamoRevit` の選択ノードは、WPF を参照する `RevitUINodes.dll` プロジェクトに実装されています。これは指摘事項ではないかもしれませんが、対象のプラットフォームによっては注意するとよいでしょう。
 
 ### データ フロー図
 
@@ -619,7 +619,7 @@ D4C のワークフローは、上記で説明した Revit の場合と非常に
 
 選択ノードは、一般的な `SelectionBase` 型である `SelectionBase<TSelection, TResult>` とメンバーの最小セットを継承することによって実装されます。
 
-* `BuildOutputAST` メソッドの実装 このメソッドは、将来のノードの実行時に実行される AST を返す必要があります。選択ノードの場合は、要素 ID から要素またはジオメトリを返す必要があります。 https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280
+* `BuildOutputAST` メソッドの実装: このメソッドは、将来のノードの実行時に実行される AST を返す必要があります。選択ノードの場合は、要素 ID から要素またはジオメトリを返す必要があります。[https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * `BuildOutputAST` の実装は、`NodeModel` / UI ノードの実装で最も難しい部分の 1 つです。できるだけ多くのロジックを C# 関数に組み込み、AST 関数呼び出しノードを AST に埋め込むのがベストです。ここで `node` は抽象構文ツリーの AST ノードであり、Dynamo グラフのノードではないことに注意してください。
 
 ![選択フロー 2](images/selectionAST.png)
@@ -628,7 +628,7 @@ D4C のワークフローは、上記で説明した Revit の場合と非常に
   *   これらは明示的な `NodeModel` 派生型(ZeroTouch ではない)であるため、.dyn ファイルからノードを逆シリアル化する際に使用される[JsonConstructor]を実装する必要もあります。
 
       ユーザがこのノードを含むグラフを開いたときに選択が設定されたままになるように、ホストからの要素参照を .dyn ファイルに保存する必要があります。Dynamo の NodeModel ノードは json.net を使用してシリアル化します。パブリック プロパティは、Json.net を使用して自動的にシリアル化されます。ここでは[JsonIgnore]属性を使用して、必要なものだけをシリアル化します。
-* Document Query ノードは Element ID の参照先を保存する必要がないため、少しシンプルになります。`ElementQueryBase` クラスと派生クラスの実装については、以下を参照してください。これらのノードを実行すると、Revit API を呼び出して基礎となるドキュメントの要素をクエリーし、前述のジオメトリまたは Revit 要素ラッパーへの変換を実行します。
+* Document Query ノードは、要素 ID の参照先を保存する必要がないため、少しシンプルになります。`ElementQueryBase` クラスと派生クラスの実装については、以下を参照してください。これらのノードを実行すると、Revit API を呼び出して基礎となるドキュメントの要素をクエリーし、前述のジオメトリまたは Revit 要素ラッパーへの変換を実行します。
 
 ### 参考資料
 
