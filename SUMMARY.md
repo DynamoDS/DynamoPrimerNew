@@ -74,7 +74,7 @@
   * [Проигрыватель Dynamo](dynamo-for-civil-3d/dynamo-player.md)
   * [Полезные пакеты](dynamo-for-civil-3d/useful-packages.md)
   * [Ресурсы](dynamo-for-civil-3d/resources.md)
-* [Бета-версия Dynamo в Forma](dynamo-in-forma-beta/README.md)
+* [Dynamo в Forma](dynamo-in-forma-beta/README.md)
   * [Настройка Dynamo Player в Forma](dynamo-in-forma-beta/set-up-dynamo-player-in-forma.md)
   * [Добавление графов и предоставление к ним общего доступа в Dynamo Player](dynamo-in-forma-beta/add-and-share-graphs-in-dynamo-player.md)
   * [Запуск графов в Dynamo Player](dynamo-in-forma-beta/run-graphs-in-dynamo-player.md)
