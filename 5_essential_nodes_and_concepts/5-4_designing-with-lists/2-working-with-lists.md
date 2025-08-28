@@ -4,9 +4,9 @@
 
 Maintenant que vous avez établi une liste, il est temps de découvrir les opérations que vous pouvez effectuer sur celle-ci. Imaginez que la liste est un paquet de cartes de jeu. Un paquet est la liste et chaque carte de jeu représente un élément.
 
-![cartes](../images/5-4/2/Playing\_cards\_modified.jpg)
+![cartes](../images/5-4/2/Playing_cards_modified.jpg)
 
-> Photo de [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
+> Photo de [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
 ### Query
 
@@ -67,7 +67,7 @@ Le nœud _List.Count_ est simple : il compte le nombre de valeurs dans une list
 
 ![Quantité](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
 
-> 1. Le nœud **List.Count **_****_ renvoie le nombre de lignes dans le nœud **Line.ByStartPointEndPoint**. Dans ce cas, la valeur est de 10, ce qui correspond au nombre de points créés à partir du nœud **Code Block** d’origine.
+> 1. Le nœud **List.Count** renvoie le nombre de lignes dans le nœud **Line.ByStartPointEndPoint**. Dans ce cas, la valeur est de 10, ce qui correspond au nombre de points créés à partir du nœud **Code Block** d’origine.
 
 ### List.GetItemAtIndex
 

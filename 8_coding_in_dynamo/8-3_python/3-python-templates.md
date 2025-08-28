@@ -22,15 +22,13 @@ Vous pouvez simplement remplacer `<PythonTemplateFilePath />` par ce qui suit :
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_Remarque : remplacez CURRENTUSER par votre nom d’utilisateur_
-{% endhint %}
+{% hint style="warning" %} _Remarque : remplacez CURRENTUSER par votre nom d’utilisateur_ {% endhint %}
 
 Ensuite, vous devez créer un gabarit en intégrant la fonctionnalité que vous voulez utiliser. Dans cet exemple, vous allez incorporer les importations liées à Revit et d'autres éléments que vous utilisez généralement lorsque vous travaillez avec Revit.
 
 Vous pouvez ouvrir un document de bloc-notes vide et coller le code suivant à l'intérieur :
 
-``` py
+```py
 import clr
 
 clr.AddReference('RevitAPI')
@@ -71,7 +69,7 @@ Une fois cela fait, enregistrez ce fichier sous le nom `PythonTemplate.py` à l�
 
 ### Comportement du script Python par la suite
 
-Une fois le gabarit Python défini, Dynamo le recherche à chaque fois qu’un nœud Python est positionné. Si le gabarit est introuvable, l’affichage sera comparable à la fenêtre Python par défaut.
+Une fois le gabarit Python défini, Dynamo le recherche à chaque fois qu'un nœud Python est positionné. Si le gabarit est introuvable, l’affichage sera comparable à la fenêtre Python par défaut.
 
 ![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
 

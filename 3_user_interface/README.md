@@ -33,13 +33,13 @@ Des informations générales et des paramètres sont disponibles dans le menu d�
 
 Si vous êtes bloqué, consultez le menu **Aide**. Vous pouvez accéder à l’un des sites Web de référence Dynamo via votre navigateur Internet.
 
-![](images/userinterface-helpmenu.jpg)
+![](../.gitbook/assets/help-menu.png)
 
-> 1. Mise en route : brève introduction à l’utilisation de Dynamo.
-> 2. Guides interactifs.
-> 3. Échantillons : fichiers d'exemple de référence.
-> 4. Dictionnaire Dynamo : ressource avec documentation sur tous les nœuds.
-> 5. Site Web Dynamo : affichez le projet Dynamo sur GitHub.
+> 1. Guides interactifs : des visites guidées qui vous guident pas à pas à travers les différentes fonctionnalités de Dynamo.
+> 2. Échantillons : fichiers d'exemple de référence. Disponible uniquement dans les programmes hôtes, notamment Revit et Civil 3D.
+> 3. Dictionnaire Dynamo : ressource avec documentation sur tous les nœuds.
+> 4. Site Web Dynamo = un site Web pour obtenir des informations sur Dynamo et des liens vers des ressources telles que le forum, le blog, etc.
+> 5. Dynamo Repository : consultez le projet Dynamo sur GitHub. 
 > 6. Wiki du projet Dynamo : permet de consulter le wiki pour en savoir plus sur le développement à l’aide de l’API Dynamo, qui prend en charge les bibliothèques et les outils.
 > 7. Afficher la page de démarrage : permet de revenir à la page de démarrage de Dynamo lorsque vous vous trouvez dans un document.
 > 8. Signaler un bogue : permet d'ouvrir un problème sur GitHub.
@@ -49,7 +49,7 @@ Si vous êtes bloqué, consultez le menu **Aide**. Vous pouvez accéder à l’u
 La barre d'outils de Dynamo contient une série de boutons permettant d'accéder rapidement aux fichiers et aux commandes Annuler [Ctrl + Z] et Rétablir [Ctrl + Y]. À l’extrémité droite se trouve un autre bouton qui permet d’exporter un cliché de l’espace de travail, ce qui est extrêmement utile pour la documentation et le partage.
 
 * ![](images/userinterface-newfile.jpg) Nouveau : permet de créer un fichier .dyn
-* ![](<images/userinterface-open(1) (1) (1).jpg>) Ouvrir : permet d’ouvrir un fichier .dyn (espace de travail) ou .dyf (nœud personnalisé).
+* \![](<images/userinterface-open(1) (1) (1).jpg>) Ouvrir : permet d’ouvrir un fichier .dyn (espace de travail) ou .dyf (nœud personnalisé).
 * ![](images/userinterface-save.jpg) Enregistrer/Enregistrer sous : permet d’enregistrer votre fichier .dyn ou .dyf actif
 * ![](images/userinterface-undo.jpg) Annuler : permet d’annuler la dernière action
 * ![](images/userinterface-redo.jpg) Rétablir : permet de rétablir la prochaine action

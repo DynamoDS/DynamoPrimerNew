@@ -8,10 +8,10 @@ Les opérateurs sont un ensemble de composants qui utilisent des fonctions algé
 
 | Icône                                                  | Nom (Syntaxe)     | Entrées                     | Sorties      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplier (*) | var[]…[], var[]…[] | var[]…[] |
-| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
+| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplier ( ***** ) | var[]…[], var[]…[] | var[]…[] |
+| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
 
 ## Exercice : Formule de la clothoïde dorée
 
@@ -25,7 +25,7 @@ Les opérateurs sont un ensemble de composants qui utilisent des fonctions algé
 
 Combinez les opérateurs et les variables pour créer une relation plus complexe à l’aide de **formules**. Utilisez les curseurs pour créer une formule qui peut être contrôlée à l’aide des paramètres d’entrée.
 
-1. Créez une séquence de nombres qui représente le « t » dans l’équation paramétrique. Vous devez donc utiliser une liste suffisamment grande pour définir une clothoïde.
+1. Créez une séquence de nombres qui représente le « t » dans l’équation paramétrique. Vous devez donc utiliser une liste suffisamment grande pour définir une clothoïde.
 
 **Number Sequence :** définissez une séquence de nombres reposant sur les trois entrées _start, amount_ et _step_.
 
@@ -61,7 +61,7 @@ L’image ci-dessous représente la spirale dorée sous forme de programmation v
 
 ### Partie II : De la formule à la géométrie
 
-Le bloc de nœuds de l’étape précédente fonctionne correctement, mais cela demande beaucoup de travail. Pour créer un workflow plus efficace, consultez la section [DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md) pour définir une chaîne d’expressions Dynamo en un nœud. Dans cette prochaine série d’étapes, vous allez utiliser l’équation paramétrique pour dessiner la clothoïde de Fibonacci.
+Le bloc de nœuds de l’étape précédente fonctionne correctement, mais cela demande beaucoup de travail. Pour créer un workflow plus efficace, consultez la section [DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md) pour définir une chaîne d’expressions Dynamo en un nœud. Dans cette prochaine série d’étapes, vous allez utiliser l’équation paramétrique pour dessiner la clothoïde de Fibonacci.
 
 **Point.ByCoordinates :** connectez le nœud de multiplication supérieur à l’entrée « _x_ » et le nœud inférieur à l’entrée « _y_ ». Une clothoïde paramétrique de points apparaît à l’écran.
 
@@ -91,7 +91,7 @@ Maintenant que vous avez créé une coque Nautilus circulaire, passez aux grille
 
 Comme point de départ, commencez par la même étape qu’à l’exercice précédent : la création d’un réseau de points en forme de spirale avec le nœud **Point.ByCoordinates**.
 
-\![](../images/5-3/2/math-part IV-01.jpg)
+<figure><img src="../images/5-3/2/math-partIV-01.jpg" alt=""><figcaption></figcaption></figure>
 
 Ensuite, suivez ces courtes étapes pour générer une série de clothoïdes à différentes rotations.
 

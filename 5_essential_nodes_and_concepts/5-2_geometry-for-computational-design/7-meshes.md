@@ -36,7 +36,8 @@ Un maillage est un ensemble de quadrilatères et de triangles représentant une 
 ![Éléments maillage](../images/5-2/7/MeshElements2.jpg)
 
 > 1. Sommets de maillage.
-> 2. Arêtes de maillage. *Les arêtes avec une seule face adjacente sont appelées "nues". Toutes les autres arêtes sont "habillées".
+> 2. Arêtes de maillage 
+>    1. Les arêtes avec une seule face adjacente sont appelées « nues ». Toutes les autres arêtes sont « habillées ».
 > 3. Faces de maillage.
 
 ### Sommets + normales de sommet

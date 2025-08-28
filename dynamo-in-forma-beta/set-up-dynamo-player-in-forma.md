@@ -24,39 +24,39 @@ Commençons par installer Dynamo Player dans Forma.
 
 ### Configuration de Dynamo Desktop
 
-Pour utiliser Dynamo Desktop, vous aurez besoin de Dynamo, soit en tant que sandbox autonome, soit connecté à Revit ou Civil 3D. Vous aurez également besoin du package DynamoFormaBeta.
+Pour utiliser Dynamo Desktop, vous aurez besoin de Dynamo, soit en tant que sandbox autonome, soit connecté à Revit ou Civil 3D. Vous aurez également besoin du package DynamoForma.
 
 #### Revit
 
-Suivez ces instructions pour configurer Dynamo dans Revit et le package DynamoFormaBeta.
+Suivez ces instructions pour configurer Dynamo dans Revit et le package DynamoForma.
 
 1. Assurez-vous que Revit 2024.1 ou une version ultérieure est installée.
 2. Ouvrez Dynamo à partir de Revit en accédant à Gérer > Dynamo.
-3. Dans Dynamo, installez le package DynamoFormaBeta. Accédez à Packages > Gestionnaire de packages, puis recherchez DynamoFormaBeta.
-   1. Si vous utilisez Revit 2024, installez le package DynamoFormaBeta pour la version 2.x.
-   2. Si vous utilisez Revit 2025, installez le package DynamoFormaBeta.
+3. Dans Dynamo, installez le package DynamoForma. Accédez à Packages > Gestionnaire de packages, puis recherchez DynamoForma.
+   1. Si vous utilisez Revit 2024, installez le package DynamoForma pour la version 2.x.
+   2. Si vous utilisez Revit 2025, installez le package DynamoForma.
 
 #### Civil 3D
 
-Suivez ces instructions pour configurer Dynamo dans Civil 3D et le package DynamoFormaBeta.
+Suivez ces instructions pour configurer Dynamo dans Civil 3D et le package DynamoForma.
 
 1. Assurez-vous que Civil 3D 2024.1 ou une version ultérieure est installée.
 2. Ouvrez Dynamo à partir de Civil 3D en accédant à Gérer > Dynamo.
-3. Dans Dynamo, installez le package DynamoFormaBeta. Accédez à Packages > Gestionnaire de packages, puis recherchez DynamoFormaBeta.
-   1. Si vous utilisez Civil 3D 2024, installez le package DynamoFormaBeta pour la version 2.x.
-   2. Si vous utilisez Civil 3D 2025, installez le package DynamoFormaBeta.
+3. Dans Dynamo, installez le package DynamoForma. Accédez à Packages > Gestionnaire de packages, puis recherchez DynamoForma.
+   1. Si vous utilisez Civil 3D 2024, installez le package DynamoForma pour la version 2.x.
+   2. Si vous utilisez Civil 3D 2025, installez le package DynamoForma.
 
 #### Dynamo Sandbox
 
-Suivez ces instructions pour installer Dynamo Sandbox et le package DynamoFormaBeta.
+Suivez ces instructions pour installer Dynamo Sandbox et le package DynamoForma.
 
 1. Téléchargez Dynamo version 2.18.0 ou ultérieure à partir de [builds Dynamo](https://dynamobuilds.com/). Pour une expérience optimale, choisissez la dernière des versions les plus stables, qui s’affiche en haut de la liste.
    1. Les versions Daily sont des versions de développement et peuvent inclure des fonctionnalités incomplètes ou en cours d’élaboration.
 2. Extrayez Dynamo à l’aide de [7zip](https://www.7-zip.fr/) dans le dossier de votre choix.
 3. Exécutez DynamoSandbox.exe à partir du dossier d’installation de Dynamo.
-4. Dans Dynamo, installez le package DynamoFormaBeta. Accédez à Packages > Gestionnaire de packages, puis recherchez DynamoFormaBeta.
-   1. Si vous utilisez Dynamo 2.x, installez le package DynamoFormaBeta pour la version 2.x.
-   2. Si vous utilisez Dynamo 3.x, installez le package DynamoFormaBeta.
+4. Dans Dynamo, installez le package DynamoForma. Accédez à Packages > Gestionnaire de packages, puis recherchez DynamoForma.
+   1. Si vous utilisez Dynamo 2.x, installez le package DynamoForma pour la version 2.x.
+   2. Si vous utilisez Dynamo 3.x, installez le package DynamoForma.
 
 Une fois Dynamo installé, vous pouvez commencer à l’utiliser avec Forma. Lorsque vous exécutez l’option de bureau de Dynamo dans Forma, Dynamo doit être ouvert pour pouvoir utiliser l’extension Dynamo Player.
 

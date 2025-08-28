@@ -60,14 +60,14 @@ Cette logique de dictionnaire permet également de créer des dictionnaires cont
 
 ![](../images/5-5/4/dictionary-exerciseII-02.jpg)
 
-> 1. Maintenant, vous pouvez regrouper les pièces selon le niveau sur lequel elles résident.
+> 2. Maintenant, vous pouvez regrouper les pièces selon le niveau sur lequel elles résident.
 
 ![](../images/5-5/4/dictionary-exerciseII-03.jpg)
 
-> 1. Avec les éléments regroupés par niveau, vous pouvez désormais utiliser les clés partagées (clés uniques) comme clés de votre dictionnaire, ainsi que les listes de pièces comme éléments.
+> 3. Avec les éléments regroupés par niveau, vous pouvez désormais utiliser les clés partagées (clés uniques) comme clés de votre dictionnaire, ainsi que les listes de pièces comme éléments.
 
 ![](../images/5-5/4/dictionary-exerciseII-04.jpg)
 
-> 1. Enfin, en utilisant les niveaux du modèle Revit, vous pouvez rechercher les pièces qui résident sur ce niveau dans le dictionnaire. `Dictionary.ValueAtKey` prend le nom du niveau et renvoie les objets de pièce à ce niveau.
+> 4. Enfin, en utilisant les niveaux du modèle Revit, vous pouvez rechercher les pièces qui résident sur ce niveau dans le dictionnaire. `Dictionary.ValueAtKey` prend le nom du niveau et renvoie les objets de pièce à ce niveau.
 
 Les possibilités d’utilisation du dictionnaire sont infinies. La possibilité de lier vos données BIM dans Revit à l'élément lui-même offre une variété de cas d'utilisation.

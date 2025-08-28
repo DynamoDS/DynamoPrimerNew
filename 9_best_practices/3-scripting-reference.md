@@ -6,7 +6,7 @@ Cette page de référence présente les meilleures pratiques décrites dans la s
 
 Les bibliothèques standard sont externes à Dynamo et sont présentes dans les langages de programmation Python et C# (Zerotouch). Dynamo possède également son propre ensemble de bibliothèques qui correspondent directement à sa hiérarchie de nœuds, permettant à l'utilisateur de coder tout ce qui peut être fait avec des nœuds et des fils. Voici un guide qui présente le contenu auquel chaque bibliothèque Dynamo permet d’accéder et qui explique quand utiliser une bibliothèque standard.
 
-![](./images/3/textual-programming.jpg)
+![](images/3/textual-programming.jpg)
 
 **Bibliothèques standard et bibliothèques Dynamo**
 
@@ -15,12 +15,9 @@ Les bibliothèques standard sont externes à Dynamo et sont présentes dans les 
 
 **Bibliothèques Dynamo**
 
-1.  ProtoGeometry*
-
-    * Fonctionnalités : Arc, Zone de contour, Cercle, Cône, Système de coordonnées, Cuboïde, Courbe, Cylindre, Arête, Ellipse, Arc d’ellipse, Face, Géométrie, Hélice, Groupe d’index, Ligne, Maillage, Courbe NURBS, Surface NURBS, Plan, Point, Polygone, Rectangle, Solide, Sphère, Surface, Topologie, T-Spline, UV, Vecteur, Sommet.
-    * Comment importer : `import Autodesk.DesignScript.Geometry`
-
-    \`\`
+1. ProtoGeometry*
+   * Fonctionnalités : Arc, Zone de contour, Cercle, Cône, Système de coordonnées, Cuboïde, Courbe, Cylindre, Arête, Ellipse, Arc d’ellipse, Face, Géométrie, Hélice, Groupe d’index, Ligne, Maillage, Courbe NURBS, Surface NURBS, Plan, Point, Polygone, Rectangle, Solide, Sphère, Surface, Topologie, T-Spline, UV, Vecteur, Sommet.
+   * Comment importer : `import Autodesk.DesignScript.Geometry`
 2. DSCoreNodes
    * Fonctionnalités : Couleur, Intervalle de couleurs 2D, Date et heure, Durée, E/S, Formule, Logique, Liste, Math, Arbre quadratique, Chaîne, Thread.
    * Comment importer : `import DSCore`
@@ -31,9 +28,7 @@ Les bibliothèques standard sont externes à Dynamo et sont présentes dans les 
    * Fonctionnalité : Excel.
    * Comment importer : `import DSOffice`
 
-{% hint style="warning" %}
-*Remarque : lorsque vous utilisez **ProtoGeometry** via Python ou C#, vous créez des objets non gérés dont la mémoire doit être gérée manuellement. Pour plus d’informations, reportez-vous à la section **Objets non gérés**.
-{% endhint %}
+{% hint style="warning" %} *Remarque : lorsque vous utilisez **ProtoGeometry** via Python ou C#, vous créez des objets non gérés dont la mémoire doit être gérée manuellement. Pour plus d’informations, reportez-vous à la section **Objets non gérés**. {% endhint %}
 
 ## Étiquetage soigneux
 

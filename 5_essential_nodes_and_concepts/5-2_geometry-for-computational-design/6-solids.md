@@ -31,17 +31,12 @@ Les opérations booléennes sont complexes et peuvent être lentes à calculer. 
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
-> 1. Utilisez le menu contextuel du bouton droit de la souris pour geler l’opération d’union de solide.
->
-> 2\. Le nœud sélectionné et tous les nœuds en aval s’affichent en mode fantôme gris clair et les fils affectés en tant que lignes en pointillés. Le mode fantôme sera également appliqué à l'aperçu de la géométrie concernée. Vous pouvez maintenant modifier les valeurs en amont sans calculer l’union booléenne.
->
-> 3\. Pour dégeler les nœuds, cliquez avec le bouton droit de la souris et désactivez l’option Geler.
->
-> 4\. Tous les nœuds concernés et les aperçus de géométrie associés sont mis à jour et reviendront en mode d’aperçu standard.
+> 1. Utilisez le menu contextuel du bouton droit de la souris pour geler l'opération d'union de solide.
+> 2. Le nœud sélectionné et tous les nœuds en aval s’affichent en mode fantôme gris clair et les fils affectés en tant que lignes en pointillés. Le mode fantôme sera également appliqué à l'aperçu de la géométrie concernée. Vous pouvez maintenant modifier les valeurs en amont sans calculer l’union booléenne.
+> 3. Pour dégeler les nœuds, cliquez avec le bouton droit de la souris et désactivez l’option Geler.
+> 4. Tous les nœuds concernés et les aperçus de géométrie associés sont mis à jour et reviendront en mode d’aperçu standard.
 
-{% hint style="info" %}
- Pour en savoir plus sur le gel des nœuds, consultez la section [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
-{% endhint %} 
+{% hint style="info" %} Pour en savoir plus sur le gel des nœuds, consultez la section [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
 
 ## Approfondir…
 
