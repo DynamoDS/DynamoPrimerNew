@@ -8,7 +8,7 @@ Kolory w dodatku Dynamo są tworzone przy użyciu danych wejściowych ARGB. Odpo
 
 | Ikona                                     | Nazwa (składnia)                 | Dane wejściowe  | Dane wyjściowe |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-1/ColorbyARGB (2).jpg>) | Kolor ARGB (**Color.ByARGB**) | A, R, G, B | color   |
+| \![](<../images/5-1/ColorbyARGB (2).jpg>) | Kolor ARGB (**Color.ByARGB**) | A, R, G, B | color   |
 
 ### Zapytania o wartości kolorów
 
@@ -16,23 +16,23 @@ Kolory w poniższej tabeli umożliwiają wykonywanie zapytań o właściwości u
 
 | Ikona                                              | Nazwa (składnia)                     | Dane wejściowe | Dane wyjściowe    |
 | ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
+| \![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
 | ![](../images/5-1/ColorRed.jpg)                   | Red (**Color.Red**)               | color  | R          |
-| ![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | Green (**Color.Green**)           | color  | G          |
+| \![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | Green (**Color.Green**)           | color  | G          |
 | ![](../images/5-1/ColorBlue.jpg)                  | Blue (**Color.Blue**)             | color  | B          |
-| ![](<../images/5-1/ColorComponent (2).jpg>)       | Components (**Color.Components**) | color  | A, R, G, B |
+| \![](<../images/5-1/ColorComponent (2).jpg>)       | Components (**Color.Components**) | color  | A, R, G, B |
 
 Kolory w poniższej tabeli odpowiadają **przestrzeni kolorów HSB**. Podział koloru na barwę, nasycenie i jasność jest bardziej intuicyjny pod względem interpretacji kolorów: jaki to kolor? Jak bardzo jest intensywny? Jak bardzo jest jasny lub ciemny? To właśnie podział na barwę, nasycenie i jasność.
 
 | Ikona                                         | Nazwa (składnia)                     | Dane wejściowe | Dane wyjściowe    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
 | ![](../images/5-1/ColorHue.jpg)              | Hue (**Color.Hue**)               | color  | Hue        |
-| ![](<../images/5-1/ColorSaturation (2).jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
-| ![](<../images/5-1/ColorBrightness (2).jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
+| \![](<../images/5-1/ColorSaturation (2).jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
+| \![](<../images/5-1/ColorBrightness (2).jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
 
 ### Zakres kolorów
 
-Węzeł Color Range jest podobny do węzła **Remap Range** z [\#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention")ćwiczenia: ponownie odwzorowuje listę liczb w innej dziedzinie. Zamiast jednak odwzorowywać je w dziedzinie _liczb_, odwzorowuje je jako _gradient kolorów_ na podstawie liczb wejściowych z zakresu od 0 do 1.
+Węzeł Color Range jest podobny do węzła **Remap Range** z ćwiczenia [\#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention"): ponownie odwzorowuje listę liczb w innej dziedzinie. Zamiast jednak odwzorowywać je w dziedzinie _liczb_, odwzorowuje je jako _gradient kolorów_ na podstawie liczb wejściowych z zakresu od 0 do 1.
 
 Ten węzeł działa dobrze, ale osiągnięcie właściwego efektu za pierwszym razem może być trudne. Najlepszym sposobem na poznanie gradientu kolorów jest przetestowanie go przez interakcję. Wykonamy szybkie ćwiczenie, aby poznać sposób konfigurowania gradientu, w którym kolory wyjściowe odpowiadają liczbom.
 

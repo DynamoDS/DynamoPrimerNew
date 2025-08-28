@@ -22,15 +22,13 @@ Część `<PythonTemplateFilePath />` można po prostu zastąpić następującą
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} 
-_Uwaga: zastąp element CURRENTUSER nazwą użytkownika_ 
-{% endhint %}
+{% hint style="warning" %} _Uwaga: zastąp element CURRENTUSER nazwą użytkownika_ {% endhint %}
 
 Następnie musimy utworzyć szablon z funkcjami, które mają być wbudowane. W tym przypadku osadźmy powiązane z programem Revit importy i niektóre inne typowe elementy podczas pracy z programem Revit.
 
 Można rozpocząć od pustego dokumentu Notatnika i wkleić do niego następujący kod:
 
-``` py
+```py
 import clr
 
 clr.AddReference('RevitAPI')
@@ -71,7 +69,7 @@ Po zakończeniu zapisz ten plik jako `PythonTemplate.py` w lokalizacji `APPDATA`
 
 ### Późniejsze zachowanie skryptu w języku Python
 
-_P_o zdefiniowaniu szablonu w języku Python dodatek Dynamo będzie go szukać po każdym umieszczeniu węzła w języku Python. Jeśli go nie znajdzie, okno będzie wyglądać jak domyślne okno języka Python.
+Po zdefiniowaniu szablonu w języku Python dodatek Dynamo będzie go szukać po każdym umieszczeniu węzła w języku Python. Jeśli go nie znajdzie, okno będzie wyglądać jak domyślne okno języka Python.
 
 ![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
 

@@ -36,7 +36,8 @@ Siatka jest zbiorem czworokątów i trójkątów reprezentujących geometrię po
 ![Elementy siatki](../images/5-2/7/MeshElements2.jpg)
 
 > 1. Wierzchołki siatki
-> 2. Krawędzie siatki *Krawędzie z tylko jedną przylegającą powierzchnią są nazywane „nagimi”. Pozostałe krawędzie są „obleczone”
+> 2. Krawędzie siatki 
+>    1. Krawędzie z tylko jedną przylegającą powierzchnią są nazywane „nagimi”. Pozostałe krawędzie są „obleczone”.
 > 3. Powierzchnie siatki
 
 ### Wierzchołki i normalne wierzchołków

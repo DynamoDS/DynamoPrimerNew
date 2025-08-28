@@ -8,10 +8,10 @@ Operatory to zestaw komponentów, w których używane są funkcje algebraiczne z
 
 | Ikona                                                  | Nazwa (składnia)     | Dane wejściowe                     | Dane wyjściowe      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Dodawanie (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Odejmowanie (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Mnożenie (*) | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dzielenie (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Dodawanie (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Odejmowanie (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Mnożenie (*****) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dzielenie (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Ćwiczenie: formuła złotej spirali
 
@@ -25,7 +25,7 @@ Operatory to zestaw komponentów, w których używane są funkcje algebraiczne z
 
 Połącz operatory i zmienne, aby utworzyć bardziej złożone zależności za pomocą **formuł**. Użyj suwaków, aby utworzyć formułę, którą można sterować za pomocą parametrów wejściowych.
 
-1\. Utwórz sekwencję liczb reprezentującą „t” w równaniu parametrycznym. Lista powinna być wystarczająco duża, aby można było zdefiniować spiralę.
+1. Utwórz sekwencję liczb reprezentującą „t” w równaniu parametrycznym. Lista powinna być wystarczająco duża, aby można było zdefiniować spiralę.
 
 **Number Sequence**: zdefiniuj sekwencję liczb w oparciu o trzy wejścia: _start, amount_ i _step_.
 
@@ -61,7 +61,7 @@ Poniższa ilustracja przedstawia złotą spiralę w postaci programowania wizual
 
 ### Część II. Od formuły do geometrii
 
-Teraz zestaw węzłów z poprzedniego kroku będzie działać poprawnie, ale to sporo pracy. Aby utworzyć wydajniejszy proces roboczy, zapoznaj się z częścią [DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md) w celu definiowania ciągu wyrażeń Dynamo w jednym węźle. W następnej serii kroków przeanalizujemy używanie równania parametrycznego do rysowania spirali Fibonacciego.
+Teraz zestaw węzłów z poprzedniego kroku będzie działać poprawnie, ale to sporo pracy. Aby utworzyć wydajniejszy proces roboczy, zapoznaj się z częścią [DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md) w celu definiowania ciągu wyrażeń Dynamo w jednym węźle. W następnej serii kroków przeanalizujemy używanie równania parametrycznego do rysowania spirali Fibonacciego.
 
 **Point.ByCoordinates:** połącz górny węzeł multiplication z wejściem _„x”_, a dolny — z wejściem _„y”_. Na ekranie pojawi się spirala parametryczna punktów.
 
@@ -91,7 +91,7 @@ Mamy już powłokę nautilusa — przejdźmy do siatek parametrycznych. Użyjemy
 
 Punktem wyjścia będzie ten sam krok co w poprzednim ćwiczeniu: utworzenie szyku spirali punktów za pomocą węzła **Point.ByCoordinates**.
 
-\![](../images/5-3/2/math-part IV-01.jpg)
+<figure><img src="../images/5-3/2/math-partIV-01.jpg" alt=""><figcaption></figcaption></figure>
 
 Następnie wykonaj te minikroki, aby wygenerować serię spiral o różnych obrotach.
 

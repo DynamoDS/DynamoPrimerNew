@@ -4,9 +4,9 @@
 
 Ustaliliśmy już, czym jest lista. Omówmy teraz operacje, które możemy na niej wykonać. Wyobraź sobie listę jako talię kart do gry. Talia jest listą, a każda karta reprezentuje element.
 
-![karty](../images/5-4/2/Playing\_cards\_modified.jpg)
+![karty](../images/5-4/2/Playing_cards_modified.jpg)
 
-> Autor zdjęcia: [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
+> Autor zdjęcia: [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
 ### Zapytanie
 
@@ -67,7 +67,7 @@ Węzeł _List.Count_ jest prosty: zlicza wartości na liście i zwraca ich liczb
 
 ![Count](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
 
-> 1. Węzeł **List.Count **_****_ zwraca liczbę linii w węźle **Line.ByStartPointEndPoint**. W tym przypadku wynosi ona 10, co odpowiada liczbie punktów utworzonych z oryginalnego węzła **Code Block**.
+> 1. Węzeł **List.Count** zwraca liczbę linii w węźle **Line.ByStartPointEndPoint**. W tym przypadku wynosi ona 10, co odpowiada liczbie punktów utworzonych z oryginalnego węzła **Code Block**.
 
 ### List.GetItemAtIndex
 

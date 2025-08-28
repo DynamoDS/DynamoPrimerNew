@@ -33,13 +33,13 @@ Ogólne informacje i ustawienia można znaleźć w menu rozwijanym aplikacji **D
 
 Jeśli nie wiesz, co zrobić dalej, skorzystaj z menu **Pomoc**. Możesz odwiedzić jedną z informacyjnych witryn internetowych dotyczących aplikacji Dynamo za pośrednictwem przeglądarki internetowej.
 
-![](images/userinterface-helpmenu.jpg)
+![](../.gitbook/assets/help-menu.png)
 
-> 1. Pierwsze kroki — krótkie wprowadzenie do korzystania z dodatku Dynamo.
-> 2. Interaktywne podręczniki —
-> 3. Przykłady — informacyjne pliki przykładowe.
-> 4. Słownik Dynamo — zasoby z dokumentacją dla wszystkich węzłów.
-> 5. Witryna Dynamo — wyświetl projekt Dynamo w serwisie GitHub.
+> 1. Interaktywne przewodniki — przewodniki prowadzące krok po kroku przez różne funkcje dodatku Dynamo.
+> 2. Przykłady — informacyjne pliki przykładowe. Dostępne tylko w programach nadrzędnych, w tym Revit i Civil 3D.
+> 3. Słownik Dynamo — zasoby z dokumentacją dla wszystkich węzłów.
+> 4. Witryna dodatku Dynamo — witryna internetowa z informacjami na temat dodatku Dynamo i łączami do zasobów, takich jak forum, blog itp.
+> 5. Repozytorium dodatku Dynamo — wyświetl projekt Dynamo w serwisie GitHub. 
 > 6. Witryna wiki Dynamo — odwiedź witrynę wiki, aby dowiedzieć się więcej na temat opracowywania rozwiązań za pomocą interfejsu API Dynamo, obsługi bibliotek i narzędzi.
 > 7. Wyświetl stronę startową — wróć do strony startowej dodatku Dynamo z poziomu dokumentu.
 > 8. Zgłoś błąd — zgłoś problem w serwisie GitHub.
@@ -49,7 +49,7 @@ Jeśli nie wiesz, co zrobić dalej, skorzystaj z menu **Pomoc**. Możesz odwiedz
 Pasek narzędzi Dynamo zawiera szereg przycisków umożliwiających szybki dostęp do plików oraz polecenia Cofnij [Ctrl+Z] i Ponów [Ctrl+Y]. Po skrajnej prawej stronie znajduje się kolejny przycisk, który umożliwia wyeksportowanie migawki obszaru roboczego. Jest on wyjątkowo przydatny do tworzenia dokumentacji i udostępniania.
 
 * ![](images/userinterface-newfile.jpg) Nowy — utwórz nowy plik .dyn
-* ![](<images/userinterface-open(1) (1) (1).jpg>) Otwórz — otwórz istniejący plik .dyn (obszar roboczy) lub .dyf (węzeł niestandardowy)
+* \![](<images/userinterface-open(1) (1) (1).jpg>) Otwórz — otwórz istniejący plik .dyn (obszar roboczy) lub .dyf (węzeł niestandardowy)
 * ![](images/userinterface-save.jpg) Zapisz/Zapisz jako — zapisz aktywny plik .dyn lub .dyf
 * ![](images/userinterface-undo.jpg) Cofnij — cofnij ostatnią operację
 * ![](images/userinterface-redo.jpg) Ponów — ponów następną operację

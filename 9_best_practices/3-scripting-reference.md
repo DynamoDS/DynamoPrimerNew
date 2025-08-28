@@ -6,7 +6,7 @@ Ta strona informacyjna stanowi rozszerzenie wzorców postępowania omówionych w
 
 Biblioteki standardowe są zewnętrzne wobec dodatku Dynamo i są obecne w językach programowania Python i C# (Zerotouch). Dodatek Dynamo zawiera również własny zestaw bibliotek bezpośrednio odpowiadających hierarchii węzłów, umożliwiając użytkownikowi tworzenie dowolnego kodu, który może zostać utworzony za pomocą węzłów i przewodów. Poniżej przedstawiono wskazówki na temat tego, do czego każda biblioteka Dynamo zapewnia dostęp i kiedy należy używać standardowej.
 
-![](./images/3/textual-programming.jpg)
+![](images/3/textual-programming.jpg)
 
 **Biblioteki standardowe i biblioteki Dynamo**
 
@@ -15,12 +15,9 @@ Biblioteki standardowe są zewnętrzne wobec dodatku Dynamo i są obecne w języ
 
 **Biblioteki Dynamo**
 
-1.  ProtoGeometry*
-
-    * Funkcjonalność: łuk, ramka ograniczająca, okrąg, stożek, układ współrzędnych, prostopadłościan, krzywa, walec, krawędź, elipsa, łuk eliptyczny, powierzchnia, geometria, helisa, grupa indeksu, linia, siatka, krzywa nurbs, powierzchnia nurbs, płaszczyzna, punkt, wielobok, prostokąt, bryła, sfera, powierzchnia, topologia, T-splajn, UV, wektor, wierzchołek.
-    * Sposób importowania: `import Autodesk.DesignScript.Geometry`
-
-    \`\`
+1. ProtoGeometry*
+   * Funkcjonalność: łuk, ramka ograniczająca, okrąg, stożek, układ współrzędnych, prostopadłościan, krzywa, walec, krawędź, elipsa, łuk eliptyczny, powierzchnia, geometria, helisa, grupa indeksu, linia, siatka, krzywa nurbs, powierzchnia nurbs, płaszczyzna, punkt, wielobok, prostokąt, bryła, sfera, powierzchnia, topologia, T-splajn, UV, wektor, wierzchołek.
+   * Sposób importowania: `import Autodesk.DesignScript.Geometry`
 2. DSCoreNodes
    * Funkcjonalność: kolor, zakres kolorów 2D, data i godzina, przedział czasu, IO, formuła, logika, lista, matematyka, drzewo czwórkowe, ciąg, gwint.
    * Sposób importowania: `import DSCore`
@@ -31,9 +28,7 @@ Biblioteki standardowe są zewnętrzne wobec dodatku Dynamo i są obecne w języ
    * Funkcjonalność: Excel.
    * Sposób importowania: `import DSOffice`
 
-{% hint style="warning" %}
-*Uwaga: podczas używania obiektu **ProtoGeometry** za pomocą języka Python lub C# tworzone są obiekty niezarządzane, które wymagają ręcznego zarządzania pamięcią — więcej informacji znajduje się w poniższej sekcji: **Obiekty niezarządzane**. 
-{% endhint %}
+{% hint style="warning" %} *Uwaga: podczas używania obiektu **ProtoGeometry** za pomocą języka Python lub C# tworzone są obiekty niezarządzane, które wymagają ręcznego zarządzania pamięcią — więcej informacji znajduje się w poniższej sekcji: **Obiekty niezarządzane**. {% endhint %}
 
 ## Uważne etykietowanie
 

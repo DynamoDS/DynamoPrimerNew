@@ -31,17 +31,12 @@ Operacje logiczne są złożone i ich obliczanie może być powolne. Za pomocą 
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
-> 1\. Użyj menu kontekstowego wyświetlanego po kliknięciu prawym przyciskiem myszy, aby zablokować operację sumowania brył
->
-> 2\. Wybrany węzeł i wszystkie węzły na dalszym etapie przepływu będą wyświetlane w podglądzie z jasnoszarym cieniowaniem, a zależne przewody będą wyświetlane jako linie kreskowane. Także zależny podgląd geometrii będzie cieniowany. Teraz można zmienić wartości na wcześniejszym etapie przepływu bez obliczania sumy logicznej.
->
-> 3\. Aby odblokować węzły, kliknij prawym przyciskiem myszy i wyczyść pole wyboru Zablokuj.
->
-> 4\. Wszystkie zależne węzły i skojarzone podglądy geometrii zostaną zaktualizowane i wrócą do standardowego trybu podglądu.
+> 1. Użyj menu kontekstowego wyświetlanego po kliknięciu prawym przyciskiem myszy, aby zablokować operację sumowania brył.
+> 2. Wybrany węzeł i wszystkie węzły na dalszym etapie przepływu będą wyświetlane w podglądzie z jasnoszarym cieniowaniem, a zależne przewody będą wyświetlane jako linie kreskowane. Także zależny podgląd geometrii będzie cieniowany. Teraz można zmienić wartości na wcześniejszym etapie przepływu bez obliczania sumy logicznej.
+> 3. Aby odblokować węzły, kliknij prawym przyciskiem myszy i wyczyść pole wyboru Zablokuj.
+> 4. Wszystkie zależne węzły i skojarzone podglądy geometrii zostaną zaktualizowane i wrócą do standardowego trybu podglądu.
 
-{% hint style="info" %}
- Więcej informacji na temat blokowania węzłów można znaleźć w sekcji [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
-{% endhint %} 
+{% hint style="info" %} Więcej informacji na temat blokowania węzłów można znaleźć w sekcji [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
 
 ## Bliższe spojrzenie na...
 

@@ -4,7 +4,7 @@
 
 ## Dla dodatku Dynamo 2.13 i nowszych wersji
 
-![Logo dodatku Dynamo](images/dynamo\_logo\_dark-trim.jpg)
+![Logo dodatku Dynamo](images/dynamo_logo_dark-trim.jpg)
 
 > Dynamo to platforma programowania wizualnego typu Open Source dla projektantów.
 
@@ -21,15 +21,15 @@ Olbrzymie możliwości dodatku Dynamo ujawniają się w wielu różnych działan
 
 W obliczu tych wspaniałych działań i możliwości dotyczących pracy z dodatkiem Dynamo potrzebny jest tego samego kalibru dokument — przewodnik Dynamo Primer.
 
-Zapoznaj się z [podręcznikiem użytkownika przewodnika Primer](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md), aby dowiedzieć się, czego można się nauczyć z tego przewodnika Primer.
+Zapoznaj się z [podręcznikiem użytkownika przewodnika Primer](1_introduction/2-primer-user-guide-dynamo-community-and-platform.md), aby dowiedzieć się, czego można się nauczyć z tego przewodnika Primer.
 
 Nieustannie ulepszamy dodatek Dynamo, więc niektóre funkcje mogą wyglądać inaczej, niż pokazano w tym przewodniku Primer. Jednak wszystkie zmiany funkcjonalności zostaną poprawnie przedstawione.
 
 ### Otwórz źródło
 
-Przewodnik Dynamo Primer jest projektem typu open source. Dokładamy starań, aby dostarczać wysokiej jakości zawartość, i doceniamy wszelkie przekazywane nam opinie. Jeśli chcesz zgłosić jakikolwiek problem, opublikuj go na naszej stronie problemów w serwisie GitHub: https://github.com/DynamoDS/DynamoPrimer/issues
+Przewodnik Dynamo Primer jest projektem typu open source. Dokładamy starań, aby dostarczać wysokiej jakości zawartość, i doceniamy wszelkie przekazywane nam opinie. Jeśli chcesz zgłosić jakikolwiek problem, opublikuj go na naszej stronie problemów w serwisie GitHub: [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues) 
 
-Jeśli chcesz wziąć udział w opracowywaniu nowej sekcji, pomóc w edycji lub w inny sposób współtworzyć ten projekt, zapoznaj się z repozytorium w serwisie GitHub, aby rozpocząć: https://github.com/DynamoDS/DynamoPrimer.
+Jeśli chcesz wziąć udział w opracowywaniu nowej sekcji, pomóc w edycji lub w inny sposób współtworzyć ten projekt, zapoznaj się z repozytorium w serwisie GitHub, aby rozpocząć: [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew) 
 
 ### Projekt przewodnika Dynamo Primer
 
@@ -37,19 +37,19 @@ Przewodnik Dynamo Primer to projekt typu open source zainicjowany przez Matta Je
 
 Napisanie pierwszej wersji tego przewodnika Primer zlecono **Mode Lab**. Dziękujemy im za wszystkie starania mające na celu ustanowienie tego cennego zasobu.
 
-![](images/MODELAB\_Logo.png)
+![](images/MODELAB_Logo.png)
 
 ***
 
 Aktualizację przewodnika Primer w celu odzwierciedlenia zmian w dodatku Dynamo 2.0 zlecono **Johnowi Piersonowi z Parallax Team**.
 
-![](images/PRLX\_Logo.jpg)
+![](images/PRLX_Logo.jpg)
 
 ***
 
 Aktualizację przewodnika Primer w celu odzwierciedlenia zmian w dodatku Dynamo 2.13 zlecono **Matterlab**.
 
-![](images/matterlab\_final-07.jpg)
+![](images/matterlab_final-07.jpg)
 
 ***
 
@@ -73,17 +73,17 @@ Dziękujemy Mattowi Jezykowi, Ianowi Keoughowi, Zachowi Kronowi, Racel Amour i C
 
 **Dynamo** Najbardziej aktualną **stabilną** wersję dodatku Dynamo można znaleźć w witrynach przedstawionych poniżej.
 
-http://dynamobim.com/download/ lub http://dynamobuilds.com
+[https://dynamobim.com/download/](https://dynamobim.com/download/) lub [https://dynamobuilds.com](https://dynamobuilds.com/)
 
 *Uwaga: od programu Revit 2020 dodatek Dynamo jest dostarczany z wersjami programu Revit, dzięki czemu ręczna instalacja nie jest wymagana. Więcej informacji można znaleźć w tym [wpisie na blogu](https://dynamobim.org/dynamo-core-2-1-release/).
 
-**DynamoBIM** — najlepsze źródło dodatkowych informacji, treści edukacyjnych oraz forów to witryna DynamoBIM.
+**DynamoBIM**: najlepsze źródło dodatkowych informacji, treści edukacyjnych oraz forów to witryna DynamoBIM.
 
-http://dynamobim.org
+[https://dynamobim.org](https://dynamobim.org/)
 
 **Dynamo GitHub** — Dynamo to projekt typu open source w serwisie GitHub. Aby wziąć w nim udział, odwiedź stronę DynamoDS.
 
-https://github.com/DynamoDS/Dynamo
+[https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
 **Kontakt** — poinformuj nas o problemach związanych z tym dokumentem.
 
@@ -95,6 +95,6 @@ Copyright 2023 Autodesk
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+[https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.

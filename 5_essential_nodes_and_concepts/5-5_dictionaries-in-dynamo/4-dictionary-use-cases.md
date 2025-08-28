@@ -60,14 +60,14 @@ Używając tej samej logiki słowników, można także tworzyć słowniki ze zgr
 
 ![](../images/5-5/4/dictionary-exerciseII-02.jpg)
 
-> 1. Teraz możemy pogrupować pomieszczenia według poziomu, na którym się znajdują.
+> 2. Teraz możemy pogrupować pomieszczenia według poziomu, na którym się znajdują.
 
 ![](../images/5-5/4/dictionary-exerciseII-03.jpg)
 
-> 1. Po pogrupowaniu elementów według poziomów możemy używać wspólnych (niepowtarzalnych) kluczy jako kluczy w słowniku, a list pomieszczeń jako elementów.
+> 3. Po pogrupowaniu elementów według poziomów możemy używać wspólnych (niepowtarzalnych) kluczy jako kluczy w słowniku, a list pomieszczeń jako elementów.
 
 ![](../images/5-5/4/dictionary-exerciseII-04.jpg)
 
-> 1. Na koniec, korzystając z poziomów w modelu programu Revit, możemy sprawdzić w słowniku, które pomieszczenia znajdują się na danym poziomie. Węzeł `Dictionary.ValueAtKey` pobierze nazwę poziomu i zwróci obiekty pomieszczeń na tym poziomie.
+> 4. Na koniec, korzystając z poziomów w modelu programu Revit, możemy sprawdzić w słowniku, które pomieszczenia znajdują się na danym poziomie. Węzeł `Dictionary.ValueAtKey` pobierze nazwę poziomu i zwróci obiekty pomieszczeń na tym poziomie.
 
 Możliwości zastosowań słowników są naprawdę nieograniczone. Już sama możliwość powiązywania danych BIM w programie Revit z elementem zapewnia wiele różnych przypadków zastosowań.

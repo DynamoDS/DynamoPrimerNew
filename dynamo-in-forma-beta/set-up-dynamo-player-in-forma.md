@@ -10,7 +10,7 @@ Na tej stronie wyjaśnimy, jak skonfigurować obie opcje.
 
 ### Konfigurowanie dodatku Dynamo jako usługi
 
-Dodatek Dynamo w programie Forma w wersji beta jest obecnie w otwartej wersji beta w fazie wczesnego dostępu, co oznacza, że funkcje i interfejs użytkownika mogą się często zmieniać.
+Dodatek Dynamo w programie Forma jest obecnie w otwartej wersji beta w fazie wczesnego dostępu, co oznacza, że funkcje i interfejs użytkownika mogą się często zmieniać.
 
 Najpierw zainstalujmy program Dynamo Player w programie Forma.
 
@@ -24,39 +24,39 @@ Najpierw zainstalujmy program Dynamo Player w programie Forma.
 
 ### Konfigurowanie dodatku Dynamo na komputerze
 
-Aby można było używać dodatku Dynamo na komputerze, potrzebny jest dodatek Dynamo w postaci autonomicznej aplikacji Sandbox albo w postaci połączonej z programem Revit lub programem Civil 3D. Potrzebny będzie również pakiet DynamoFormaBeta.
+Aby można było używać dodatku Dynamo na komputerze, potrzebny jest dodatek Dynamo w postaci autonomicznej aplikacji Sandbox albo w postaci połączonej z programem Revit lub programem Civil 3D. Potrzebny będzie również pakiet DynamoForma.
 
 #### Revit
 
-Wykonaj poniższe czynności, aby skonfigurować dodatek Dynamo w programie Revit i pakiet DynamoFormaBeta.
+Wykonaj poniższe czynności, aby skonfigurować dodatek Dynamo w programie Revit i pakiet DynamoForma.
 
 1. Upewnij się, że jest zainstalowany program Revit 2024.1 lub nowszy.
 2. Otwórz dodatek Dynamo z programu Revit, przechodząc do opcji Zarządzaj > Dynamo.
-3. W dodatku Dynamo zainstaluj pakiet DynamoFormaBeta. Przejdź do pozycji Pakiety > Menedżer pakietów, a następnie wyszukaj pozycję DynamoFormaBeta.
-   1. Jeśli masz program Revit 2024, zainstaluj pakiet DynamoFormaBeta dla wersji 2.x.
-   2. Jeśli masz program Revit 2025, zainstaluj pakiet DynamoFormaBeta.
+3. W dodatku Dynamo zainstaluj pakiet DynamoForma. Przejdź do pozycji Pakiety > Menedżer pakietów, a następnie wyszukaj pozycję DynamoForma.
+   1. Jeśli masz program Revit 2024, zainstaluj pakiet DynamoForma dla wersji 2.x.
+   2. Jeśli masz program Revit 2025, zainstaluj pakiet DynamoForma.
 
 #### Civil 3D
 
-Wykonaj poniższe czynności, aby skonfigurować dodatek Dynamo w programie Civil 3D i pakiet DynamoFormaBeta.
+Wykonaj poniższe czynności, aby skonfigurować dodatek Dynamo w programie Civil 3D i pakiet DynamoForma.
 
 1. Upewnij się, że jest zainstalowany program Civil 3D 2024.1 lub nowszy.
 2. Otwórz dodatek Dynamo z programu Civil 3D, przechodząc do opcji Zarządzaj > Dynamo.
-3. W dodatku Dynamo zainstaluj pakiet DynamoFormaBeta. Przejdź do pozycji Pakiety > Menedżer pakietów, a następnie wyszukaj pozycję DynamoFormaBeta.
-   1. Jeśli masz program Civil 3D 2024, zainstaluj pakiet DynamoFormaBeta dla wersji 2.x.
-   2. Jeśli masz program Civil 3D 2025, zainstaluj pakiet DynamoFormaBeta.
+3. W dodatku Dynamo zainstaluj pakiet DynamoForma. Przejdź do pozycji Pakiety > Menedżer pakietów, a następnie wyszukaj pozycję DynamoForma.
+   1. Jeśli masz program Civil 3D 2024, zainstaluj pakiet DynamoForma dla wersji 2.x.
+   2. Jeśli masz program Civil 3D 2025, zainstaluj pakiet DynamoForma.
 
 #### Dynamo Sandbox
 
-Wykonaj poniższe czynności, aby zainstalować aplikację Dynamo Sandbox i pakiet DynamoFormaBeta.
+Wykonaj poniższe czynności, aby zainstalować aplikację Dynamo Sandbox i pakiet DynamoForma.
 
 1. Pobierz wersję Dynamo 2.18.0 lub nowszą z [kompilacji Dynamo](https://dynamobuilds.com/). Aby uzyskać najlepsze środowisko, wybierz najnowszą z najbardziej stabilnych wersji, wymienionych u góry.
    1. Wersje dzienne są wersjami rozwojowymi i mogą zawierać funkcje niekompletne lub w trakcie opracowywania.
 2. Rozpakuj dodatek Dynamo za pomocą programu [7zip](https://7-zip.org/) do wybranego folderu.
 3. Uruchom aplikację DynamoSandbox.exe z folderu instalacyjnego dodatku Dynamo.
-4. W dodatku Dynamo zainstaluj pakiet DynamoFormaBeta. Przejdź do pozycji Pakiety > Menedżer pakietów, a następnie wyszukaj pozycję DynamoFormaBeta.
-   1. Jeśli masz dodatek Dynamo 2.x, zainstaluj pakiet DynamoFormaBeta dla wersji 2.x.
-   2. Jeśli masz dodatek Dynamo 3.x, zainstaluj pakiet DynamoFormaBeta.
+4. W dodatku Dynamo zainstaluj pakiet DynamoForma. Przejdź do pozycji Pakiety > Menedżer pakietów, a następnie wyszukaj pozycję DynamoForma.
+   1. Jeśli masz dodatek Dynamo 2.x, zainstaluj pakiet DynamoForma dla wersji 2.x.
+   2. Jeśli masz dodatek Dynamo 3.x, zainstaluj pakiet DynamoForma.
 
 Po zainstalowaniu dodatku Dynamo można go używać z programem Forma. W przypadku uruchamianiu opcji komputerowej dodatku Dynamo w programie Forma dodatek Dynamo musi być otwarty, aby można było używać rozszerzenia Dynamo Player.
 

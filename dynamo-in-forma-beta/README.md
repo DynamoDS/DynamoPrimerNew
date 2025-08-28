@@ -3,13 +3,13 @@ cover: ../.gitbook/assets/coverimage.png
 coverY: 0
 ---
 
-# Dodatek Dynamo w programie Forma w wersji beta
+# Dodatek Dynamo w programie Forma
 
-Dodatek Dynamo jest dostępny jako rozszerzenie w programie Forma. W tej chwili jest dostępny w dwóch wersjach: w postaci wersji połączonej z komputerem i w postaci integracji opartej na chmurze będącej zamkniętą wersją beta. Przeczytaj więcej o wersji komputerowej w tym [wpisie w blogu](https://dynamobim.org/dynamo-in-forma/), a o integracji opartej na chmurze będącej zamkniętą wersją beta w tym [wpisie w blogu](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/).
+Dodatek Dynamo jest dostępny jako rozszerzenie w programie Forma. W tej chwili jest dostępny w dwóch wersjach: w postaci wersji połączonej z komputerem i w postaci integracji opartej na chmurze będącej zamkniętą wersją beta. Przeczytaj więcej o wersji komputerowej w tym [wpisie w blogu](https://dynamobim.org/dynamo-in-forma/), a o integracji opartej na chmurze w wersji beta w tym [wpisie w blogu](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/). Pamiętaj, że ten wpis w blogu został opublikowany na etapie zamkniętej wersji beta. Integracja z chmurą jest obecnie na etapie otwartej wersji beta i jest dostępna dla wszystkich użytkowników programu Forma.
 
 ### Czym jest Autodesk Forma?
 
-Autodesk Forma to oprogramowanie w chmurze, które oferuje zaawansowane, a przy tym łatwe w obsłudze narzędzia oparte na sztucznej inteligencji do projektowania wstępnego i projektowania schematycznego. Architekci i projektanci używają programu Forma do modelowania złożonych projektów 3D w ciągu kilku minut, optymalizowania jakości życia i zrównoważonego rozwoju dzięki analizom środowiskowym w czasie rzeczywistym oraz kontynuowania procesu projektowania za pomocą płynnego łączenia się z oprogramowaniem Revit, Rhino i Dynamo. Możesz dowiedzieć się więcej i rozpocząć bezpłatny okres próbny lub dokonać zakupu tutaj: [Autodesk Forma](https://www.autodesk.com/pl/products/forma/overview). Program Forma jest częścią kolekcji AEC Collection.  
+Autodesk Forma to oprogramowanie w chmurze, które oferuje zaawansowane, a przy tym łatwe w obsłudze narzędzia oparte na sztucznej inteligencji do projektowania wstępnego i projektowania schematycznego. Architekci i projektanci używają programu Forma do modelowania złożonych projektów 3D w ciągu kilku minut, optymalizowania jakości życia i zrównoważonego rozwoju dzięki analizom środowiskowym w czasie rzeczywistym oraz kontynuowania procesu projektowania za pomocą płynnego łączenia się z oprogramowaniem Revit, Rhino i Dynamo. Możesz dowiedzieć się więcej i rozpocząć bezpłatny okres próbny lub dokonać zakupu tutaj: [Autodesk Forma](https://www.autodesk.com/products/forma/overview?term=1-YEAR\&tab=subscription). Program Forma jest częścią kolekcji AEC Collection.  
 
 ### Czym jest program Dynamo Player w programie Forma?
 
