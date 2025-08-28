@@ -6,7 +6,7 @@
 
 标准库位于 Dynamo 外部，并以编程语言 Python 和 C# (Zerotouch) 呈现。Dynamo 还有自己的库集，这些库直接对应于其节点层次结构，使用户能够使用代码构建可以由节点和线生成的任何内容。下面介绍了每个 Dynamo 库对哪些内容提供访问以及何时使用标准库。
 
-![](./images/3/textual-programming.jpg)
+![](images/3/textual-programming.jpg)
 
 **标准库和 Dynamo 库**
 
@@ -15,12 +15,9 @@
 
 **Dynamo 库**
 
-1.  ProtoGeometry*
-
-    * 功能：圆弧、边界框、圆、圆锥体、坐标系、立方体、曲线、圆柱体、边、椭圆、椭圆弧、面、几何图形、螺旋、索引组、线、网格、Nurbs 曲线、Nurbs 曲面、平面、点、多边形、矩形、实体、球体、曲面、拓扑、T 样条曲线、UV、向量、顶点。
-    * 如何输入：`import Autodesk.DesignScript.Geometry`
-
-    \`\`
+1. ProtoGeometry*
+   * 功能：圆弧、边界框、圆、圆锥体、坐标系、立方体、曲线、圆柱体、边、椭圆、椭圆弧、面、几何图形、螺旋、索引组、线、网格、Nurbs 曲线、Nurbs 曲面、平面、点、多边形、矩形、实体、球体、曲面、拓扑、T 样条曲线、UV、向量、顶点。
+   * 如何输入：`import Autodesk.DesignScript.Geometry`
 2. DSCoreNodes
    * 功能：颜色、二维颜色范围、日期时间、时间跨度、IO、公式、逻辑、列表、数学、四元树、字符串、线程。
    * 如何输入：`import DSCore`
@@ -31,9 +28,7 @@
    * 功能：Excel。
    * 如何输入：`import DSOffice`
 
-{% hint style="warning" %}
-*注意：通过 Python 或 C# 使用 **“ProtoGeometry”** 时，正在创建的是非托管对象，这些对象需要手动对其内存进行管理 - 请参见以下部分： **“非托管对象”** 以了解详细信息。
-{% endhint %}
+{% hint style="warning" %} *注意：通过 Python 或 C# 使用 **“ProtoGeometry”** 时，正在创建的是非托管对象，这些对象需要手动对其内存进行管理 - 请参见以下部分： **“非托管对象”** 以了解详细信息。{% endhint %}
 
 ## 小心标记
 

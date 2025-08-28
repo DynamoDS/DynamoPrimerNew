@@ -4,9 +4,9 @@
 
 既然我们已经建立了列表，那么让我们来介绍如何对它执行操作。将一个列表想象为一副纸牌。一副纸牌即是列表，每张纸牌表示一个项目。
 
-![纸牌](../images/5-4/2/Playing\_cards\_modified.jpg)
+![纸牌](../images/5-4/2/Playing_cards_modified.jpg)
 
-> 照片由 [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg) 提供
+> 照片由 [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg) 提供
 
 ### 查询
 
@@ -67,7 +67,7 @@ _“List.Count”_ 节点简单明了：它计算列表中值的数量，并返�
 
 ![合计](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
 
-> 1. **“List.Count”**_****_ 节点会返回 **“Line.ByStartPointEndPoint”** 节点中线的数量。在本例中，该值为 10，表示与从原始 **“Code Block”** 节点创建的点数一致。
+> 1. **“List.Count”**节点会返回**“Line.ByStartPointEndPoint”**节点中线的数量。在本例中，该值为 10，表示与从原始 **“Code Block”** 节点创建的点数一致。
 
 ### List.GetItemAtIndex
 

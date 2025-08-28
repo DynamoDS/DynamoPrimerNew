@@ -33,13 +33,13 @@ Dynamo 的用户界面 (UI) 分为五个主要区域。我们将在此简要介�
 
 如果遇到问题，请查看 **“帮助”** 菜单。可以通过 Internet 浏览器访问其中一个 Dynamo 参考网站。
 
-![](images/userinterface-helpmenu.jpg)
+![](../.gitbook/assets/help-menu.png)
 
-> 1. 快速入门 - 简要介绍如何使用 Dynamo。
-> 2. 互动指南 -
-> 3. 样例 - 参考示例文件。
-> 4. Dynamo 词典 - 包含所有节点文档的资源。
-> 5. Dynamo 网站 - 在 GitHub 上查看 Dynamo 项目。
+> 1. 交互式手册 - 指导您逐步了解各种 Dynamo 功能的导览。
+> 2. 样例 - 参考示例文件。仅在主机程序（包括 Revit 和 Civil 3D）中可用。
+> 3. Dynamo 词典 - 包含所有节点文档的资源。
+> 4. Dynamo 网站 - 该网站提供有关 Dynamo 的信息以及指向论坛、博客等资源的链接。
+> 5. Dynamo 存储库 - 在 GitHub 上查看 Dynamo 项目。
 > 6. Dynamo Project Wiki - 访问 Wiki 以了解如何使用 Dynamo API、支持库和工具进行开发。
 > 7. 显示开始页面 - 在文档内时返回 Dynamo 开始页面。
 > 8. 报告错误 - 在 GitHub 上打开问题。
@@ -49,7 +49,7 @@ Dynamo 的用户界面 (UI) 分为五个主要区域。我们将在此简要介�
 Dynamo 工具栏包含一系列按钮，可快速处理文件以及访问“Undo [Ctrl + Z]”和“Redo [Ctrl + Y]”命令。最右侧是另一个按钮，它将输出工作空间快照，这对于文档编制和共享非常重要。
 
 * ![](images/userinterface-newfile.jpg) 新建 - 创建新的 .dyn 文件
-* ![](<images/userinterface-open(1) (1) (1).jpg>) 打开 - 打开现有 .dyn（工作空间）或 .dyf（自定义节点）文件
+* \![](<images/userinterface-open(1) (1) (1).jpg>) 打开 - 打开现有 .dyn（工作空间）或 .dyf（自定义节点）文件
 * ![](images/userinterface-save.jpg) 保存/另存为 - 保存活动的 .dyn 或 .dyf 文件
 * ![](images/userinterface-undo.jpg) 撤消 - 撤消上一个操作
 * ![](images/userinterface-redo.jpg) 重做 - 重做下一个操作

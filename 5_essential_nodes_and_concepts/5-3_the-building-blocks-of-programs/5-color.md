@@ -8,7 +8,7 @@ Dynamo 中的颜色是使用 ARGB 输入创建的。这对应于 Alpha、红、�
 
 | 图标                                     | 名称（语法）                 | 输入  | 输出 |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-1/ColorbyARGB (2).jpg>) | ARGB 颜色 (**Color.ByARGB**) | A,R,G,B | 颜色   |
+| \![](<../images/5-1/ColorbyARGB (2).jpg>) | ARGB 颜色 (**Color.ByARGB**) | A,R,G,B | 颜色   |
 
 ### 查询颜色值
 
@@ -16,23 +16,23 @@ Dynamo 中的颜色是使用 ARGB 输入创建的。这对应于 Alpha、红、�
 
 | 图标                                              | 名称（语法）                     | 输入 | 输出    |
 | ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | Alpha (**Color.Alpha**)           | 颜色  | A          |
+| \![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | Alpha (**Color.Alpha**)           | 颜色  | A          |
 | ![](../images/5-1/ColorRed.jpg)                   | 红色 (**Color.Red**)               | 颜色  | R          |
-| ![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | 绿色 (**Color.Green**)           | 颜色  | G          |
+| \![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | 绿色 (**Color.Green**)           | 颜色  | G          |
 | ![](../images/5-1/ColorBlue.jpg)                  | 蓝色 (**Color.Blue**)             | 颜色  | B          |
-| ![](<../images/5-1/ColorComponent (2).jpg>)       | 组件 (**Color.Components**) | 颜色  | A,R,G,B |
+| \![](<../images/5-1/ColorComponent (2).jpg>)       | 组件 (**Color.Components**) | 颜色  | A,R,G,B |
 
 下表中的颜色对应于 **HSB 颜色空间**。对于我们如何解释颜色，将颜色分为色调、饱和度和亮度无疑更加直观：应该是什么颜色？应该如何呈现多彩？颜色应该如何变亮或变暗？这分别是色调、饱和度和亮度的细分。
 
 | 图标                                         | 名称（语法）                     | 输入 | 输出    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
 | ![](../images/5-1/ColorHue.jpg)              | 色调 (**Color.Hue**)               | 颜色  | 色调        |
-| ![](<../images/5-1/ColorSaturation (2).jpg>) | 饱和度 (**Color.Saturation**) | 颜色  | 饱和度 |
-| ![](<../images/5-1/ColorBrightness (2).jpg>) | 亮度 (**Color.Brightness**) | 颜色  | 亮度 |
+| \![](<../images/5-1/ColorSaturation (2).jpg>) | 饱和度 (**Color.Saturation**) | 颜色  | 饱和度 |
+| \![](<../images/5-1/ColorBrightness (2).jpg>) | 亮度 (**Color.Brightness**) | 颜色  | 亮度 |
 
 ### 颜色范围
 
-颜色范围类似于 [\#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention")练习中的 **“Remap Range”** 节点：它将数字列表重新映射到其他域。但它不会映射到 _“数字”_ 域，而是基于 0 到 1 范围的输入数字映射到 _“颜色渐变”_。
+颜色范围类似于 [\#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention")练习中的**“Remap Range”**节点：它将数字列表重新映射到其他域。但它不会映射到 _“数字”_ 域，而是基于 0 到 1 范围的输入数字映射到 _“颜色渐变”_。
 
 当前节点运作良好，但第一次就使一切正常工作可能会有点勉强。熟悉颜色渐变的最佳方法是以交互方式对其进行测试。让我们快速练习，了解如何使用与数字对应的输出颜色设置渐变。
 

@@ -22,15 +22,13 @@
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} 
-_注意：将 CURRENTUSER 替换为您的用户名_ 
-{% endhint %}
+{% hint style="warning" %} _注意：将 CURRENTUSER 替换为您的用户名_ {% endhint %}
 
 接下来，我们需要使用要内置的功能构建模板。在本例中，我们在使用 Revit 时嵌入 Revit 相关的导入和一些其他典型项目。
 
 您可以开始一个空白记事本文档，并在其中粘贴以下代码：
 
-``` py
+```py
 import clr
 
 clr.AddReference('RevitAPI')
@@ -71,7 +69,7 @@ OUT = element
 
 ### 之后的 Python 脚本行为
 
-完成定义 Python 模板后，Dynamo 会在每次放置 Python 节点时查找该模板。如果找不到，它将看起来像默认的 Python 窗口。
+定义了 Python 模板后，在每次放置 Python 节点时，Dynamo 都会查找该模板。如果找不到，它将看起来像默认的 Python 窗口。
 
 ![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
 

@@ -3,9 +3,9 @@ cover: ../.gitbook/assets/coverimage.png
 coverY: 0
 ---
 
-# Forma Beta 版中的 Dynamo
+# Forma 中的 Dynamo
 
-Dynamo 在 Forma 中作为扩展提供。目前，它有两种风格：桌面连接版本和作为封闭 Beta 版的基于云的集成。请在此[博客帖子](https://dynamobim.org/dynamo-in-forma/)中详细了解桌面版本，并在此[博客帖子](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/)中详细了解封闭 Beta 版云集成。
+Dynamo 在 Forma 中作为扩展提供。目前，它有两种风格：桌面连接版本和作为封闭 Beta 版的基于云的集成。请在此[博客帖子](https://dynamobim.org/dynamo-in-forma/)中详细了解桌面版本，并在此[博客帖子](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/)中详细了解 Beta 版云集成。请注意，该博客是在封闭测试阶段发布的；云集成目前处于开放测试阶段，可供所有 Forma 用户使用。
 
 ### 什么是 Autodesk Forma？
 
