@@ -26,7 +26,7 @@ Das `DynamoModel`-Objekt ist der Einstiegspunkt für eine Anwendung, die Dynamo 
 
 Ein Konfigurationsobjekt wird verwendet, um allgemeine Parameter für das `DynamoModel`-Objekt festzulegen, wenn es konstruiert wird.
 
-Die Beispiele in diesem Dokument stammen aus der DynamoRevit-Implementierung, einer Integration, bei der Revit ein `DynamoModel`-Objekt als Zusatzmodul hostet. (Plugin-Architektur für Revit.) Wenn dieses Zusatzmodul geladen wird, wird ein `DynamoModel`-Objekt gestartet, und es wird dem Benutzer mit einem `DynamoView`\- und `DynamoViewModel`-Objekt angezeigt.
+Die Beispiele in diesem Dokument stammen aus der DynamoRevit-Implementierung, einer Integration, bei der Revit ein `DynamoModel`-Objekt als Zusatzmodul hostet. (Plugin-Architektur für Revit.) Wird dieses Zusatzmodul geladen, wird ein `DynamoModel`-Objekt gestartet und dem Benutzer mit einem `DynamoView`\- und -`DynamoViewModel`-Objekt angezeigt.
 
 Dynamo ist ein C#-.NET-Projekt. Um es in Ihrer Anwendung verwenden zu können, müssen Sie .NET-Code hosten und ausführen können.
 
@@ -38,7 +38,7 @@ Um das `DynamoModel`-Objekt zu initialisieren, müssen Integratoren die folgende
 
 ### Laden Sie freigegebene Dynamo-DLL-Dateien vorab vom Host.
 
-Derzeit enthält die Liste in D4R nur `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` Dies ist erforderlich, um Bibliotheksversionskonflikte zwischen Dynamo und Revit zu vermeiden. Beispiel: Wenn Konflikte bei `AvalonEdit` auftreten, kann die Funktion des Codeblocks völlig zerstört werden. Das Problem wurde in Dynamo 1.1.x unter https://github.com/DynamoDS/Dynamo/issues/7130 gemeldet und ist auch manuell reproduzierbar. Wenn Integratoren Bibliothekskonflikte zwischen der Host-Funktion und Dynamo festgestellt haben, sollten sie dies als ersten Schritt ausführen. Dies ist manchmal erforderlich, um zu verhindern, dass andere Plugins oder die Host-Anwendung selbst eine inkompatible Version von freigegebenen Abhängigkeiten laden bzw. lädt. Eine bessere Lösung besteht darin, den Versionskonflikt durch Ausrichten der Version zu lösen oder nach Möglichkeit eine .NET-Bindungsumleitung in der app.config-Datei des Hosts zu verwenden.
+Derzeit enthält die Liste in D4R nur `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` Dies ist erforderlich, um Bibliotheksversionskonflikte zwischen Dynamo und Revit zu vermeiden. Beispiel: Wenn Konflikte bei `AvalonEdit` auftreten, kann die Funktion des Codeblocks völlig zerstört werden. Das Problem wird in Dynamo 1.1.x unter [https://github.com/DynamoDS/Dynamo/issues/7130](https://github.com/DynamoDS/Dynamo/issues/7130) gemeldet und ist auch manuell reproduzierbar. Wenn Integratoren Bibliothekskonflikte zwischen der Host-Funktion und Dynamo festgestellt haben, sollten sie dies als ersten Schritt ausführen. Dies ist manchmal erforderlich, um zu verhindern, dass andere Plugins oder die Host-Anwendung selbst eine inkompatible Version von freigegebenen Abhängigkeiten laden bzw. lädt. Eine bessere Lösung besteht darin, den Versionskonflikt durch Ausrichten der Version zu lösen oder nach Möglichkeit eine .NET-Bindungsumleitung in der app.config-Datei des Hosts zu verwenden.
 
 ### Laden von ASM
 
@@ -88,9 +88,9 @@ internal static Version PreloadAsmFromRevit()
 
 #### Dynamo lädt ASM aus einem benutzerdefinierten Pfad
 
-Seit Kurzem können `DynamoSandbox.exe` und `DynamoCLI.exe` auch eine bestimmte ASM-Version laden. Zum Überspringen des normalen Suchverhaltens in der Registrierung können Sie das Flag `�gp` verwenden, um zu erzwingen, dass Dynamo ASM aus einem bestimmten Pfad lädt.
+Seit Kurzem können `DynamoSandbox.exe` und `DynamoCLI.exe` auch eine bestimmte ASM-Version laden. Zum Überspringen des normalen Suchverhaltens in der Registrierung können Sie das Flag `--GeometryPath` verwenden, um zu erzwingen, dass Dynamo ASM aus einem bestimmten Pfad lädt.
 
-`DynamoSandbox.exe -gp �somePath/To/ASMDirectory/�`
+`DynamoSandbox.exe --GeometryPath "somePath/To/ASMDirectory"`
 
 ### Erstellen eines StartConfiguration-Objekts
 
@@ -98,16 +98,16 @@ StartupConfiguration wird als Parameter für die Initialisierung des DynamoModel
 
 Sie besteht aus folgenden Komponenten:
 
-* DynamoCorePath // Speicherort der ladenden DynamoCore-Binärdateien.
-* DynamoHostPath // Speicherort der Binärdateien der Dynamo-Integration.
-* GeometryFactoryPath // Speicherort der geladenen LibG-Binärdateien.
-* PathResolver // Objekt, das beim Auflösen verschiedener Dateien hilft.
-* PreloadLibraryPaths // Speicherort der Binärdateien der vorgeladenen Blöcke, z. B. DSOffice.dll.
-* AdditionalNodeDirectories // Speicherort zusätzlicher Block-Binärdateien.
-* AdditionalResolutionPaths // Zusätzliche Assembly-Lösungspfade für andere Abhängigkeiten, die beim Laden von Bibliotheken erforderlich sein können.
-* UserDataRootFolder // Benutzerdatenordner, z. B. `"AppData\Roaming\Dynamo\Dynamo Revit"`.
+* DynamoCorePath // Speicherort der ladenden DynamoCore-Binärdateien
+* DynamoHostPath // Speicherort der Binärdateien der Dynamo-Integration
+* GeometryFactoryPath // Speicherort der geladenen LibG-Binärdateien
+* PathResolver // Objekt, das beim Auflösen verschiedener Dateien hilft
+* PreloadLibraryPaths // Speicherort der Binärdateien der vorgeladenen Blöcke, z. B. DSOffice.dll
+* AdditionalNodeDirectories // Speicherort zusätzlicher Block-Binärdateien
+* AdditionalResolutionPaths // Zusätzliche Assembly-Lösungspfade für andere Abhängigkeiten, die beim Laden von Bibliotheken erforderlich sein können
+* UserDataRootFolder // Benutzerdatenordner, z. B. `"AppData\Roaming\Dynamo\Dynamo Revit"`
 * CommonDataRootFolder // Vorgabeordner zum Speichern von benutzerdefinierten Definitionen, Beispielen usw.
-* Context // Integrator-Hostname + Version `(Revit<BuildNum>)`.
+* Context // Integrator-Hostname + Version `(Revit<BuildNum>)`
 * SchedulerThread // Integrator-Scheduler-Thread, der `ISchedulerThread` implementiert. Für die meisten Integratoren ist dies der Haupt-Benutzeroberflächen-Thread oder der Thread, von dem aus sie auf ihre API zugreifen können.
 * StartInTestMode // Angabe, ob die aktuelle Sitzung eine Testautomatisierungssitzung ist. Ändert eine Reihe von Dynamo-Verhaltensweisen. Verwenden Sie diese Option nur, wenn Sie Tests schreiben.
 * AuthProvider // Implementierung von IAuthProvider des Integrators. Die RevitOxygenProvider-Implementierung befindet sich z. B. in der Datei Greg.dll. Wird für die PackageManager-Upload-Integration verwendet.
@@ -116,25 +116,25 @@ Sie besteht aus folgenden Komponenten:
 
 Der Pfad für die Vorgabeeinstellungen wird von `PathManager.PreferenceFilePath` verwaltet, z. B. `"AppData\\Roaming\\Dynamo\\Dynamo Revit\\2.5\\DynamoSettings.xml"`. Integratoren können entscheiden, ob sie auch eine benutzerdefinierte Datei mit den Voreinstellungen an einen Speicherort senden möchten, der mit dem Pfadmanager abgestimmt werden muss. Im Folgenden sind Voreinstellungseigenschaften aufgeführt, die serialisiert werden:
 
-* IsFirstRun // Gibt an, ob diese Version von Dynamo zum ersten Mal ausgeführt wird, z. B., um zu bestimmen, ob eine Meldung zur Aktivierung/Deaktivierung der allgemeinen Verfügbarkeit angezeigt werden muss. Wird auch verwendet, um zu ermitteln, ob die älteren Dynamo-Voreinstellungen beim Starten einer neuen Dynamo-Version migriert werden müssen, damit die Benutzer eine konsistente Erfahrung erhalten.
+* IsFirstRun // Gibt an, ob diese Version von Dynamo zum ersten Mal ausgeführt wird, z. B., um zu bestimmen, ob eine Meldung zur Aktivierung/Deaktivierung der allgemeinen Verfügbarkeit angezeigt werden muss. Wird auch verwendet, um zu ermitteln, ob die älteren Dynamo-Voreinstellungen beim Starten einer neuen Dynamo-Version migriert werden müssen, damit Benutzer eine konsistente Erfahrung erhalten.
 * IsUsageReportingApproved // Gibt an, ob Nutzungsberichte genehmigt wurden.
 * IsAnalyticsReportingApproved // Gibt an, ob die Analyse-Berichterstellung genehmigt wurde.
-* LibraryWidth // Breite der linken Bibliotheksgruppe von Dynamo.
-* ConsoleHeight // Höhe der Konsolenanzeige.
+* LibraryWidth // Breite der linken Bibliotheksgruppe von Dynamo
+* ConsoleHeight // Höhe der Konsolenanzeige
 * ShowPreviewBubbles // Gibt an, ob Vorschaufenster angezeigt werden sollen.
 * ShowConnector // Gibt an, ob Connectors angezeigt werden.
 * ConnectorType // Gibt den Connector-Typ an: Bezier oder Polylinie.
 * BackgroundPreviews // Gibt den aktiven Status der angegebenen Hintergrundvorschau an.
 * RenderPrecision // Render-Genauigkeitsstufe. Ein niedrigerer Wert generiert Netze mit weniger Dreiecken. Mit einem höheren Wert wird eine glattere Geometrie in der Hintergrundvorschau erzeugt. 128 ist ein guter Mittelwert für die Vorschau von Geometrie.
 * ShowEdges // Gibt an, ob Oberflächen- und Volumenkörperkanten gerendert werden.
-* ShowDetailedLayout // NICHT VERWENDET.
-* WindowX, WindowY // Letzte X-, Y-Koordinate des Dynamo-Fensters.
-* WindowW, WindowH // Letzte Breite, Höhe des Dynamo-Fensters.
-* UseHardwareAcceleration // Angabe, ob Dynamo die Hardwarebeschleunigung verwenden soll, wenn diese unterstützt wird.
-* NumberFormat // Dezimalgenauigkeit, die zum Anzeigen von Zahlen im Vorschaufenster toString() verwendet wird.
-* MaxNumRecentFiles // Maximale Anzahl der aktuellen Dateipfade, die gespeichert werden sollen.
+* ShowDetailedLayout // NICHT VERWENDET
+* WindowX, WindowY // Letzte X-, Y-Koordinate des Dynamo-Fensters
+* WindowW, WindowH // Letzte Breite, Höhe des Dynamo-Fensters
+* UseHardwareAcceleration // Angabe, ob Dynamo die Hardwarebeschleunigung verwenden soll, wenn diese unterstützt wird
+* NumberFormat // Dezimalgenauigkeit, die zum Anzeigen von Zahlen im Vorschaufenster toString() verwendet wird
+* MaxNumRecentFiles // Maximale Anzahl der aktuellen Dateipfade, die gespeichert werden sollen
 * RecentFiles // Liste der zuletzt geöffneten Dateipfade. Wenn Sie hier Änderungen vornehmen, wirkt sich dies direkt auf die Liste der zuletzt geöffneten Dateien auf der Startseite von Dynamo aus.
-* BackupFiles // Liste von Sicherungsdateipfaden.
+* BackupFiles // Liste von Sicherungsdateipfaden
 * CustomPackageFolders // Liste von Ordnern mit Zero-Touch-Binärdateien und Verzeichnispfaden, die nach Paketen und benutzerdefinierten Blöcken durchsucht werden.
 * PackageDirectoriesToUninstall // Liste von Paketen, die vom Package Manager verwendet werden, um zu bestimmen, welche Pakete zum Löschen markiert sind. Diese Pfade werden nach Möglichkeit beim Start von Dynamo gelöscht.
 * PythonTemplateFilePath // Pfad zur Python-Datei (.py), die beim Erstellen eines neuen PythonScript-Blocks als Startvorlage verwendet werden soll. Diese Option kann zum Einrichten einer benutzerdefinierten Python-Vorlage für Ihre Integration verwendet werden.
@@ -570,7 +570,7 @@ Im Allgemeinen kann der Benutzer mit diesen Blöcken eine Teilmenge des aktiven 
 
 Im Allgemeinen **können Sie diese Blöcke gut als Funktion konzeptualisieren, die eine Element-ID akzeptiert und einen Zeiger auf dieses Element oder eine Geometrie, die dieses Element darstellt, zurückgibt**.
 
-In DynamoRevit sind mehrere `�Selection�`-Blöcke vorhanden. Sie können in mindestens zwei Gruppen unterteilt werden:
+Es sind mehrere `Selection`-Blöcke in DynamoRevit vorhanden. Sie lassen sich in mindestens zwei Gruppen unterteilen:
 
 ![Revit-Auswahlblöcke](images/revitSelectionNodes.png)
 
@@ -578,12 +578,12 @@ In DynamoRevit sind mehrere `�Selection�`-Blöcke vorhanden. Sie können in 
 
     `DynamoRevit`-Beispielblöcke in dieser Kategorie sind`SelectModelElement` und `SelectElementFace`.
 
-    Diese Blöcke ermöglichen es dem Benutzer, in den Kontext der Revit-Benutzeroberfläche zu wechseln und ein Element oder einen Elementsatz auszuwählen. Die IDs dieser Elemente werden erfasst, und es wird eine Konvertierungsfunktion ausgeführt. Entweder wird ein Wrapper erstellt oder Geometrie wird aus dem Element extrahiert und konvertiert. Die ausgeführte Konvertierung hängt vom Typ des Blocks ab, den der Benutzer auswählt.
+    Diese Blöcke ermöglichen es Benutzern, in den Kontext der Revit-Benutzeroberfläche zu wechseln und ein Element oder einen Elementsatz auszuwählen. Die IDs dieser Elemente werden erfasst, und es wird eine Konvertierungsfunktion ausgeführt. Entweder wird ein Wrapper erstellt, oder Geometrie wird aus dem Element extrahiert und konvertiert. Die ausgeführte Konvertierung hängt vom Typ des Blocks ab, den der Benutzer auswählt.
 2.  Dokumentabfrage:
 
     Beispielblöcke in dieser Kategorie sind `AllElementsOfClass` und `AllElementsOfCategory`.
 
-    Diese Blöcke ermöglichen es dem Benutzer, das gesamte Dokument nach einer Teilmenge von Elementen abzufragen. Die Blöcke geben in der Regel Wrapper zurück, die auf die zugrunde liegenden Revit-Elemente verweisen. Diese Wrapper sind ein wesentlicher Bestandteil der DynamoRevit-Benutzererfahrung, da sie erweiterte Funktionen wie die Elementbindung ermöglichen. Dynamo-Integratoren können so auswählen, welche Host-APIs den Benutzern als Blöcke zur Verfügung stehen.
+    Mit diesen Blöcken haben Benutzer die Möglichkeit, das gesamte Dokument nach einer Teilmenge von Elementen zu durchsuchen. Die Blöcke geben in der Regel Wrapper zurück, die auf die zugrunde liegenden Revit-Elemente verweisen. Diese Wrapper sind ein wesentlicher Bestandteil der DynamoRevit-Benutzererfahrung, da sie erweiterte Funktionen wie die Elementbindung ermöglichen. Dynamo-Integratoren können so auswählen, welche Host-APIs den Benutzern als Blöcke zur Verfügung stehen.
 
 ### Dynamo Revit-Benutzerarbeitsabläufe:
 
@@ -591,7 +591,7 @@ In DynamoRevit sind mehrere `�Selection�`-Blöcke vorhanden. Sie können in 
 
 1.
    * Der Benutzer wählt eine Revit-Wand mit `SelectModelElement` aus. Ein Dynamo-Wand-Wrapper wird in das Diagramm zurückgegeben (sichtbar im Vorschaufenster des Blocks).
-   * Der Benutzer platziert den Block Element.Geometry und ordnet die `SelectModelElement`-Ausgabe diesem neuen Block zu, wobei die Geometrie der umschlossenen Wand extrahiert und mit der LibG-API in Dynamo-Geometrie konvertiert wird.
+   * Der Benutzer platziert den Block Element.Geometry und verbindet die Ausgabe `SelectModelElement` mit diesem neuen Block. Die Geometrie der umhüllten Wand wird extrahiert und mithilfe der LibG-API in Dynamo-Geometrie konvertiert.
    * Der Benutzer schaltet das Diagramm in den automatischen Ausführungsmodus um.
    * Der Benutzer ändert die ursprüngliche Wand in Revit.
    * Das Diagramm wird automatisch erneut ausgeführt, da das Revit-Dokument ein Ereignis ausgelöst hat, das signalisiert, dass einige Elemente aktualisiert wurden. Der Auswahlblock beobachtet dieses Ereignis und erkennt, dass die ID des ausgewählten Elements geändert wurde.
@@ -607,7 +607,7 @@ Die Arbeitsabläufe in D4C ähneln der obigen Beschreibung für Revit. Hier sehe
 *   Aufgrund des Dokumentänderungs-Updaters, den Auswahlblöcke in `DynamoRevit` implementieren, können Endlosschleifen einfach erstellt werden: Stellen Sie sich einen Block vor, der das Dokument auf alle Elemente hin beobachtet und dann an einer beliebigen Stelle hinter diesem Block neue Elemente erstellt. Wenn dieses Programm ausgeführt wird, löst es eine Schleife aus. `DynamoRevit` versucht, diese Fälle auf verschiedene Weise mithilfe von Transaktions-IDs zu erkennen, und vermeidet, dass das Dokument geändert wird, wenn sich die Eingaben für Elementkonstruktoren nicht geändert haben.
 
     Dies muss berücksichtigt werden, wenn die automatische Ausführung des Diagramms initiiert und ein ausgewähltes Element in der Host-Anwendung geändert wird.
-* Auswahlblöcke in `DynamoRevit` werden im `RevitUINodes.dll`-Projekt implementiert, das WPF referenziert. Dies muss kein Problem darstellen. Je nach Zielplattform ist es jedoch sinnvoll, dies zu beachten.
+* Auswahlblöcke in `DynamoRevit` werden im Projekt `RevitUINodes.dll` implementiert, das auf WPF verweist. Dies stellt möglicherweise kein Problem dar, sollte aber je nach Zielplattform berücksichtigt werden.
 
 ### Datenablaufdiagramme
 
@@ -619,8 +619,8 @@ Die Arbeitsabläufe in D4C ähneln der obigen Beschreibung für Revit. Hier sehe
 
 Auswahlblöcke werden implementiert, indem sie Daten von den generischen `SelectionBase`-Typen `SelectionBase<TSelection, TResult>` und einem minimalen Satz von Elementen übernehmen:
 
-* Implementierung einer `BuildOutputAST`-Methode. Diese Methode muss einen AST zurückgeben, der irgendwann in der Zukunft ausgeführt wird, wenn der Block ausgeführt werden soll. Im Falle von Auswahlblöcken sollten Elemente oder Geometrie aus den Element-IDs zurückgegeben werden. https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280
-* Die Implementierung von `BuildOutputAST` ist einer der schwierigsten Aspekte bei der Implementierung von `NodeModel`-/Benutzeroberflächen-Blöcken. Es empfiehlt sich, einer C#-Funktion so viel Logik wie möglich hinzuzufügen und einfach einen AST-Funktionsaufruf-Block in den AST einzubetten. Beachten Sie, dass `node` hier ein AST-Block in der abstrakten Syntaxstruktur und kein Block im Dynamo Diagramm ist.
+* Implementierung einer `BuildOutputAST`-Methode. Diese Methode muss einen AST zurückgeben, der irgendwann in der Zukunft ausgeführt wird, wenn der Block ausgeführt werden soll. Im Fall von Auswahlblöcken sollten Elemente oder Geometrie aus den Element-IDs zurückgegeben werden. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
+* Die Implementierung von `BuildOutputAST` ist einer der schwierigsten Aspekte bei der Implementierung von `NodeModel`-/Benutzeroberflächen-Blöcken. Es empfiehlt sich, einer C#-Funktion so viel Logik wie möglich hinzuzufügen und einfach einen AST-Funktionsaufruf-Block in den AST einzubetten. Beachten Sie, dass `node` hier ein AST-Block in der abstrakten Syntaxstruktur und kein Block im Dynamo-Diagramm ist.
 
 ![Auswahlfluss2](images/selectionAST.png)
 

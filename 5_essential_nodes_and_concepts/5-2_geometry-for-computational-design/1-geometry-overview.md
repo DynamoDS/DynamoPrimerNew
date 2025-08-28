@@ -34,7 +34,7 @@ Das Verstehen von Geometrie im Kontext von Algorithmen, Berechnungen und Komplex
 1. Geometrie sind **Daten** – Für den Computer und Dynamo unterscheidet sich ein Bunny nicht wesentlich von einer Zahl.
 2. Geometrie basiert auf **Abstraktion** – grundsätzlich werden geometrische Elemente durch Zahlen, Beziehungen und Formeln innerhalb eines bestimmten räumlichen Koordinatensystems beschrieben.
 3. Geometrie verfügt über eine **Hierarchie** – Punkte werden verbunden, um Linien zu bilden, Linien werden verbunden, um Flächen zu bilden, usw.
-4. Geometrie beschreibt gleichzeitig sowohl **das Bauteil als auch das Ganze** – bei einer Kurve handelt es sich sowohl um die Form als auch um alle möglichen Punkte entlang der Kurve
+4. Geometrie beschreibt gleichzeitig sowohl **das Bauteil als auch das Ganze** – bei einer Kurve handelt es sich sowohl um die Form als auch um alle möglichen Punkte entlang der Kurve.
 
 In der Praxis bedeutet dies, dass uns bewusst sein muss, womit wir arbeiten (welche Art von Geometrie, wie sie erzeugt wurde usw.), damit wir fließend unterschiedliche Geometrien zusammenstellen, zerlegen und neu zusammensetzen können, um komplexere Modelle zu entwickeln.
 

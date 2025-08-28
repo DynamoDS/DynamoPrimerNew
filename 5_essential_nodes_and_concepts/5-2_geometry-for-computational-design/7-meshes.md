@@ -36,7 +36,8 @@ Ein Netz ist eine Sammlung von Vierecken und Dreiecken, die eine Oberfläche ode
 ![Netzelemente](../images/5-2/7/MeshElements2.jpg)
 
 > 1. Netzscheitelpunkte
-> 2. Netzkanten *Kanten mit nur einer angrenzenden Fläche werden als "nackt" bezeichnet. Alle anderen Kanten sind "angezogen".
+> 2. Netzkanten 
+>    1. Kanten mit nur einer angrenzenden Fläche werden als "nackt" bezeichnet. Alle anderen Kanten sind "angezogen".
 > 3. Netzflächen
 
 ### Scheitelpunkte + Scheitelpunktnormalen

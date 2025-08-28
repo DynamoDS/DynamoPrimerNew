@@ -4,7 +4,7 @@
 
 ### Was ist ein Volumenkörper?
 
-Wenn wir komplexere Modelle erstellen möchten, die nicht aus einer einzelnen Fläche erstellt werden können, oder wenn wir ein explizites Volumen definieren möchten, müssen wir uns in den Bereich der [Volumenkörper](6-solids.md#solids) (und PolySurfaces) vorwagen. Selbst ein einfacher Würfel ist so komplex, dass er sechs Oberflächen erfordert, eine pro Seite. Volumenkörper ermöglichen den Zugriff auf zwei wichtige Konzepte, den Oberflächen nicht bieten – eine verfeinerte topologische Beschreibung (Flächen, Kanten, Scheitelpunkte) und boolesche Operationen.
+Wenn wir komplexere Modelle entwickeln möchten, die nicht aus einer einzelnen Fläche erstellt werden können, oder wenn wir ein explizites Volumen definieren möchten, müssen wir uns in den Bereich der [Volumenkörper](6-solids.md#solids) (und PolySurfaces) vorwagen. Selbst ein einfacher Würfel ist so komplex, dass er sechs Oberflächen erfordert, eine pro Seite. Volumenkörper ermöglichen den Zugriff auf zwei wichtige Konzepte, den Oberflächen nicht bieten – eine verfeinerte topologische Beschreibung (Flächen, Kanten, Scheitelpunkte) und boolesche Operationen.
 
 ### Boolesche Operation zur Erstellung eines stacheligen Kugelvolumens
 
@@ -31,17 +31,12 @@ Boolesche Operationen sind sehr komplex und ihre Berechnung kann möglicherweise
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
-> 1. Verwenden Sie das Kontextmenü, um den Vorgang Vereinigung für einen Volumenkörper anzuhalten.
->
-> 2\. Der ausgewählte Block und alle untergeordneten Blöcke werden in einem hellgrauen halbtransparenten Modus in einer Vorschau angezeigt und die betroffenen Drähte werden als gestrichelte Linien angezeigt. Die betroffene Geometrievorschau wird ebenfalls halbtransparent angezeigt. Sie können jetzt vorgelagerte Werte ändern, ohne die boolesche Vereinigung zu berechnen.
->
-> 3\. Um die Ausführung der Blöcke fortzusetzen, klicken Sie mit der rechten Maustaste und deaktivieren "Anhalten".
->
-> 4\. Alle betroffenen Blöcke und die zugehörigen Geometrievorschauen werden aktualisiert und wieder im standardmäßigen Vorschaumodus angezeigt.
+> 1. Verwenden Sie das Kontextmenü, um den Vorgang Vereinigung für einen Volumenkörper anzuhalten.
+> 2. Der ausgewählte Block und alle untergeordneten Blöcke werden in einem hellgrauen halbtransparenten Modus in einer Vorschau angezeigt und die betroffenen Drähte werden als gestrichelte Linien angezeigt. Die betroffene Geometrievorschau wird ebenfalls halbtransparent angezeigt. Sie können jetzt vorgelagerte Werte ändern, ohne die boolesche Vereinigung zu berechnen.
+> 3. Um die Ausführung der Blöcke fortzusetzen, klicken Sie mit der rechten Maustaste und deaktivieren "Anhalten".
+> 4. Alle betroffenen Blöcke und die zugehörigen Geometrievorschauen werden aktualisiert und wieder im standardmäßigen Vorschaumodus angezeigt.
 
-{% hint style="info" %}
- Weitere Informationen zum Anhalten von Blöcken finden Sie im Abschnitt [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
-{% endhint %} 
+{% hint style="info" %} Weitere Informationen zum Anhalten von Blöcken finden Sie im Abschnitt [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
 
 ## Vertiefung...
 

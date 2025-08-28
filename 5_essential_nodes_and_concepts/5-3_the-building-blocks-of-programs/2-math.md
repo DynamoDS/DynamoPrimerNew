@@ -8,10 +8,10 @@ Operatoren sind Komponenten für algebraische Funktionen, die zwei Eingabewerte 
 
 | Symbol                                                  | Name (Syntax)     | Eingaben                     | Ausgaben      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Addieren (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrahieren (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplizieren ( * ) | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividieren (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Addieren (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrahieren (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplizieren ( ***** ) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividieren (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Übung: Die Goldene Spirale-Formel
 
@@ -25,7 +25,7 @@ Operatoren sind Komponenten für algebraische Funktionen, die zwei Eingabewerte 
 
 Kombinieren Sie Operatoren und Variablen, um mithilfe von **Formeln** eine komplexere Beziehung zu bilden. Verwenden Sie die Schieberegler, um eine Formel zu erstellen, die mit Eingabeparametern gesteuert werden kann.
 
-1\. Wir erstellen eine Zahlenfolge, die für die Angabe "t" in der parametrischen Gleichung steht. Wir benötigen daher eine Liste mit genügend Werten zum Definieren einer Spirale.
+1. Wir erstellen eine Zahlenfolge, die für die Angabe "t" in der parametrischen Gleichung steht. Wir benötigen daher eine Liste mit genügend Werten zum Definieren einer Spirale.
 
 **Number Sequence**: Definieren Sie eine Zahlenfolge mithilfe von drei Eingaben: _start, amount_ und _step_.
 
@@ -61,7 +61,7 @@ Die folgende Abbildung zeigt die goldene Spirale in visueller Programmierung. Be
 
 ### Teil II: Von der Formel zur Geometrie
 
-Die Gruppe von Blöcken aus dem letzten Schritt funktioniert einwandfrei, erfordert jedoch erheblichen Aufwand. Einen effizienteren Arbeitsablauf finden Sie unter [DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md). Dort wird beschrieben, wie Sie eine Reihe von Dynamo-Ausdrücken in ein und demselben Block definieren können. In den nächsten Schritten zeichnen Sie mithilfe der parametrischen Gleichung die Fibonacci-Spirale.
+Die Gruppe von Blöcken aus dem letzten Schritt funktioniert einwandfrei, erfordert jedoch erheblichen Aufwand. Einen effizienteren Arbeitsablauf finden Sie unter [DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md). Dort wird beschrieben, wie Sie eine Reihe von Dynamo-Ausdrücken in ein und demselben Block definieren können. In den nächsten Schritten zeichnen Sie mithilfe der parametrischen Gleichung die Fibonacci-Spirale.
 
 **Point.ByCoordinates**: Verbinden Sie den oberen Multiplikationsblock mit der _x_-Eingabe und den unteren mit der _y_-Eingabe. Dadurch wird auf dem Bildschirm eine parametrische Spirale aus Punkten angezeigt.
 
@@ -91,7 +91,7 @@ Muster: Nachdem Sie eine Nautilusmuschel aus Kreisen erstellt haben, betrachten 
 
 Beginnen Sie mit demselben Schritt wie in der vorigen Übung, d. h., indem Sie mithilfe des **Point.ByCoordinates**-Blocks ein spiralförmiges Array aus Punkten erstellen.
 
-\![](../images/5-3/2/math-part IV-01.jpg)
+<figure><img src="../images/5-3/2/math-partIV-01.jpg" alt=""><figcaption></figcaption></figure>
 
 Als Nächstes führen Sie diese kleinen Schritte aus, um eine Reihe von Spiralen mit verschiedenen Drehungen zu erstellen.
 

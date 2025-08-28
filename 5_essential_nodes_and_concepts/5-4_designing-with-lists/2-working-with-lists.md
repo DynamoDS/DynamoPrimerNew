@@ -4,9 +4,9 @@
 
 Im vorigen Kapitel wurde definiert, was unter einer Liste zu verstehen ist. Thema des folgenden Kapitels sind die Vorgänge, die für Listen durchgeführt werden können. Eine Liste lässt sich mit einem Stapel Spielkarten vergleichen. Der Stapel ist die Liste und jede Spielkarte steht für ein Element.
 
-![Karten](../images/5-4/2/Playing\_cards\_modified.jpg)
+![Karten](../images/5-4/2/Playing_cards_modified.jpg)
 
-> Foto von [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg).
+> Foto von [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg).
 
 ### Abfrage
 
@@ -67,7 +67,7 @@ Der Block _List.Count_ ist einfach: Er zählt die in einer Liste enthaltenen Wer
 
 ![Anzahl](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
 
-> 1. Der **List.Count**_****_-Block gibt die Anzahl der Linien aus dem **Line.ByStartPointEndPoint**-Block zurück. In diesem Fall beträgt dieser Wert 10\. Dies stimmt mit der Anzahl der Punkte überein, die mithilfe des ursprünglichen **Code Block**-Blocks erstellt wurden.
+> 1. Der **List.Count**-Block gibt die Anzahl der Linien aus dem **Line.ByStartPointEndPoint**-Block zurück. In diesem Fall beträgt dieser Wert 10\. Dies stimmt mit der Anzahl der Punkte überein, die mithilfe des ursprünglichen **Code Block**-Blocks erstellt wurden.
 
 ### List.GetItemAtIndex
 

@@ -22,15 +22,13 @@ Ersetzen Sie alle Vorkommen von `<PythonTemplateFilePath />` durch das Folgende:
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_Anmerkung: Ersetzen Sie CURRENTUSER durch Ihren Benutzernamen_
-{% endhint %}
+{% hint style="warning" %} _Anmerkung: Ersetzen Sie CURRENTUSER durch Ihren Benutzernamen_ {% endhint %}
 
 Als Nächstes müssen wir eine Vorlage mit den Funktionen erstellen, die wir integrieren möchten. In diesem Fall können wir die Revit-bezogenen Importe und einige andere typische Elemente einbetten, die wir bei der Arbeit mit Revit verwenden.
 
 Sie können mit einem leeren Editor-Dokument beginnen und den folgenden Code einfügen:
 
-``` py
+```py
 import clr
 
 clr.AddReference('RevitAPI')
@@ -71,7 +69,7 @@ Anschließend speichern Sie diese Datei als `PythonTemplate.py` am Speicherort `
 
 ### Das Verhalten des Python-Skripts danach
 
-Nach dem Erstellen der Python-Vorlage sucht Dynamo jedes Mal danach, wenn Sie einen Python-Block einfügen. Wenn sie nicht gefunden wird, wird das vorgabemäßige Python-Fenster angezeigt.
+Nach dem Definieren der Python-Vorlage sucht Dynamo jedes Mal danach, wenn Sie einen Python-Block einfügen. Wenn sie nicht gefunden wird, wird das vorgabemäßige Python-Fenster angezeigt.
 
 ![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
 

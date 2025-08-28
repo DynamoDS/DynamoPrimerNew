@@ -33,13 +33,13 @@ Allgemeine Informationen und Einstellungen finden Sie im Dropdown-Menü **Dynamo
 
 Wenn Sie nicht weiterkommen, verwenden Sie das Menü **Hilfe**. Sie können über Ihren Internetbrowser auf eine der Referenz-Websites von Dynamo zugreifen.
 
-![](images/userinterface-helpmenu.jpg)
+![](../.gitbook/assets/help-menu.png)
 
-> 1. Erste Schritte: Eine kurze Einführung in die Verwendung von Dynamo.
-> 2. Interaktiver Leitfaden:
-> 3. Beispiele: Beispieldateien als Referenz.
-> 4. Dynamo-Wörterbuch: Ressource mit Dokumentation für alle Blöcke.
-> 5. Dynamo-Website: Anzeigen des Dynamo-Projekts auf GitHub.
+> 1. Interaktive Leitfäden: Touren, die Sie Schritt für Schritt durch die verschiedenen Funktionen von Dynamo führen.
+> 2. Beispiele: Beispieldateien als Referenz. Nur verfügbar in Host-Programmen wie Revit und Civil 3D.
+> 3. Dynamo-Wörterbuch: Ressource mit Dokumentation für alle Blöcke.
+> 4. Dynamo-Website: Eine Website mit Informationen zu Dynamo und Links zu Ressourcen wie Foren, Blogs usw.
+> 5. Dynamo-Repository: Zeigen Sie Ihr Dynamo-Projekt auf GitHub an. 
 > 6. Dynamo-Projekt-Wiki: Im Wiki erhalten Sie Entwicklungsinformationen mithilfe der Dynamo-API, unterstützenden Bibliotheken und Tools.
 > 7. Startseite anzeigen: Kehren Sie von einem Dokument aus zur Dynamo-Startseite zurück.
 > 8. Fehler melden: Melden Sie ein Problem auf GitHub.
@@ -49,7 +49,7 @@ Wenn Sie nicht weiterkommen, verwenden Sie das Menü **Hilfe**. Sie können übe
 Der Werkzeugkasten von Dynamo enthält eine Reihe von Schaltflächen für den Schnellzugriff zum Arbeiten mit Dateien sowie die Befehle Rückgängig [Ctrl + Z] und Wiederholen [Ctrl + Y]. Ganz rechts befindet sich eine weitere Schaltfläche, über die Sie einen Snapshot des Arbeitsbereichs exportieren können. Dies ist für die Dokumentation und die gemeinsame Bearbeitung mit anderen äußerst nützlich.
 
 * ![](images/userinterface-newfile.jpg) Neu: Neue DYN-Datei erstellen
-* ![](<images/userinterface-open(1) (1) (1).jpg>) Öffnen: Öffnet eine vorhandene DYN-Datei (Arbeitsbereich) oder DYF-Datei (benutzerdefinierter Block).
+* \![](<images/userinterface-open(1) (1) (1).jpg>) Öffnen: Öffnet eine vorhandene DYN-Datei (Arbeitsbereich) oder DYF-Datei (benutzerdefinierter Block).
 * ![](images/userinterface-save.jpg) Speichern/Speichern unter: Aktive DYN- oder DYF-Datei speichern
 * ![](images/userinterface-undo.jpg) Rückgängig: Die letzte Aktion rückgängig machen
 * ![](images/userinterface-redo.jpg) Wiederholen: Die nächste Aktion wiederherstellen

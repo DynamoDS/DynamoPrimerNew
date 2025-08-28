@@ -60,14 +60,14 @@ Mit derselben Wörterbuch-Logik können wir auch Wörterbücher mit gruppierten 
 
 ![](../images/5-5/4/dictionary-exerciseII-02.jpg)
 
-> 1. Jetzt können wir die Räume nach der Ebene gruppieren, auf der sie sich befinden.
+> 2. Jetzt können wir die Räume nach der Ebene gruppieren, auf der sie sich befinden.
 
 ![](../images/5-5/4/dictionary-exerciseII-03.jpg)
 
-> 1. Wir haben die Elemente nach Ebene gruppiert. Jetzt können wir die gemeinsam verwendeten Schlüssel (eindeutige Schlüssel) als Schlüssel für das Wörterbuch und die Listen der Räume als die Elemente verwenden.
+> 3. Wir haben die Elemente nach Ebene gruppiert. Jetzt können wir die gemeinsam verwendeten Schlüssel (eindeutige Schlüssel) als Schlüssel für das Wörterbuch und die Listen der Räume als die Elemente verwenden.
 
 ![](../images/5-5/4/dictionary-exerciseII-04.jpg)
 
-> 1. Letztendlich können wird die Ebenen im Revit-Modell nutzen, um zu ermitteln, welche Räume sich auf dieser Ebene im Wörterbuch befinden. `Dictionary.ValueAtKey` nimmt den Ebenennamen und gibt die Raumobjekte auf dieser Ebene wieder.
+> 4. Letztendlich können wird die Ebenen im Revit-Modell nutzen, um zu ermitteln, welche Räume sich auf dieser Ebene im Wörterbuch befinden. `Dictionary.ValueAtKey` nimmt den Ebenennamen und gibt die Raumobjekte auf dieser Ebene wieder.
 
 Mit dem Wörterbuch stehen uns praktisch unbeschränkte Möglichkeiten zur Verfügung. Die Möglichkeit, eine Beziehung zwischen Ihren BIM-Daten in Revit und dem eigentlichen Element herzustellen, ermöglicht zahlreiche Anwendungsfälle.
