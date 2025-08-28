@@ -31,17 +31,12 @@ Booleovské operace jsou složité a jejich výpočet může být pomalý. Pomoc
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
-> 1\. Zmrazte operaci sjednocení těles tím, že kliknete pravým tlačítkem myši a vyberete možnost Zmrazit
->
-> 2\. Vybraný uzel a všechny následné uzly se zobrazí světle šedou průhlednou barvou a související dráty budou zobrazeny přerušovaně. Náhled ovlivněné geometrie bude také zobrazen světle šedou průhlednou barvou. Nyní můžete měnit předcházející hodnoty, aniž by došlo k výpočtu booleovského sjednocení.
->
-> 3\. Chcete-li zmrazení zrušit, klikněte pravým tlačítkem a zrušte výběr možnosti Zmrazit.
->
-> 4\. Všechny ovlivněné uzly a geometrie se aktualizují a zobrazí se běžným způsobem.
+> 1. Zmrazte operaci sjednocení těles tím, že kliknete pravým tlačítkem myši a vyberete možnost Zmrazit.
+> 2. Vybraný uzel a všechny následné uzly se zobrazí světle šedou průhlednou barvou a související dráty budou zobrazeny přerušovaně. Náhled ovlivněné geometrie bude také zobrazen světle šedou průhlednou barvou. Nyní můžete měnit předcházející hodnoty, aniž by došlo k výpočtu booleovského sjednocení.
+> 3. Chcete-li zmrazení zrušit, klikněte pravým tlačítkem a zrušte výběr možnosti Zmrazit.
+> 4. Všechny ovlivněné uzly a geometrie se aktualizují a zobrazí se běžným způsobem.
 
-{% hint style="info" %}
- Další informace o zmrazení uzlů naleznete v části [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
-{% endhint %} 
+{% hint style="info" %} Další informace o zmrazení uzlů naleznete v části [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
 
 ## Podrobné informace...
 

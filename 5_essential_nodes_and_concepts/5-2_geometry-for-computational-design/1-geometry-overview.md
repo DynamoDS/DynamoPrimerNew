@@ -32,9 +32,9 @@ Geometrie je tradičně definována jako studium tvaru, velikosti, relativní po
 Pochopení geometrie v kontextu algoritmů, výpočtů a složitosti může znít náročně. Existuje však několik klíčových a poměrně jednoduchých zásad, které můžeme stanovit jako základ pro zahájení tvorby pokročilejších aplikací:
 
 1. Geometrie jsou **data** – pro počítač a aplikaci Dynamo se zajíček neliší od čísla.
-2. Geometrie je založena na **abstrakci** – v zásadě jsou geometrické prvky popsány čísly, vztahy a vzorci v daném prostorovém souřadnicovém systému
-3. Geometrie má **hierarchii** – body se spojí, aby se vytvořily úsečky, úsečky se spojí, aby se vytvořily povrchy, a tak dále
-4. Geometrie současně popisuje **součást i celek** – když máme křivku, je to jak tvar i všechny možné body podél ní
+2. Geometrie je založena na **abstrakci** – v zásadě jsou geometrické prvky popsány čísly, vztahy a vzorci v daném prostorovém souřadnicovém systému.
+3. Geometrie má **hierarchii** – body se spojí, aby se vytvořily úsečky, úsečky se spojí, aby se vytvořily povrchy, a tak dále.
+4. Geometrie současně popisuje **součást i celek** – když máme křivku, je to jak tvar i všechny možné body podél ní.
 
 V praxi tyto zásady znamenají, že je nutné vědět, s čím pracujeme (jaký typ geometrie, jak byla vytvořena atd.), abychom mohli plynule sestavovat, rozebírat a znovu seskupovat různé geometrie při vývoji složitějších modelů.
 

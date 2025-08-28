@@ -74,7 +74,7 @@
   * [Přehrávač skriptů Dynamo](dynamo-for-civil-3d/dynamo-player.md)
   * [Užitečné balíčky](dynamo-for-civil-3d/useful-packages.md)
   * [Zdroje](dynamo-for-civil-3d/resources.md)
-* [Dynamo v aplikaci Forma (beta verze)](dynamo-in-forma-beta/README.md)
+* [Dynamo v aplikaci Forma](dynamo-in-forma-beta/README.md)
   * [Nastavení rozšíření Dynamo Player v aplikaci Forma](dynamo-in-forma-beta/set-up-dynamo-player-in-forma.md)
   * [Přidávání a sdílení grafů v rozšíření Dynamo Player](dynamo-in-forma-beta/add-and-share-graphs-in-dynamo-player.md)
   * [Spouštění grafů v rozšíření Dynamo Player](dynamo-in-forma-beta/run-graphs-in-dynamo-player.md)

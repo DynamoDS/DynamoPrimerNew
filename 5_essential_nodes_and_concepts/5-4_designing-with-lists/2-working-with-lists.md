@@ -4,9 +4,9 @@
 
 Teď, když jsme stanovili, co je to seznam, pojďme si promluvit o operacích, které s ním můžeme provádět. Představte si seznam jako balíček karet. Seznam je balíček a každá karta představuje položku.
 
-![karty](../images/5-4/2/Playing\_cards\_modified.jpg)
+![karty](../images/5-4/2/Playing_cards_modified.jpg)
 
-> Autor fotografie: [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
+> Autor fotografie: [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
 ### Dotaz
 
@@ -67,7 +67,7 @@ Uzel _List.Count_ je jednoduchý: spočítá počet hodnot v seznamu a vrátí 
 
 ![Počet](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
 
-> 1. Uzel **List.Count **_****_ vrací počet řádků v uzlu **Line.ByStartPointEndPoint**. V tomto případě je to hodnota 10, která souhlasí s počtem bodů vytvořených z původního uzlu **Code Block**.
+> 1. Uzel **List.Count** vrací počet řádků v uzlu **Line.ByStartPointEndPoint**. V tomto případě je to hodnota 10, která souhlasí s počtem bodů vytvořených z původního uzlu **Code Block**.
 
 ### List.GetItemAtIndex
 

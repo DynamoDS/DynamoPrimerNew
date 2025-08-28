@@ -4,7 +4,7 @@
 
 ## Pro aplikaci Dynamo verze 2.13 a novější
 
-![Logo aplikace Dynamo](images/dynamo\_logo\_dark-trim.jpg)
+![Logo aplikace Dynamo](images/dynamo_logo_dark-trim.jpg)
 
 > Aplikace Dynamo je platforma vizuálního programování s otevřeným kódem určená pro konstruktéry.
 
@@ -21,15 +21,15 @@ Aplikace Dynamo obsahuje výkonné funkce pro širokou škálu navrhovacích pos
 
 Pro kvalitní funkce, které nabízí aplikace Dynamo, je potřeba stejně kvalitní dokumentace, Dynamo Primer.
 
-Informace o tématech dostupných v této dokumentaci naleznete v [uživatelské příručce Primer](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md).
+Informace o tématech dostupných v této dokumentaci naleznete v [uživatelské příručce Primer](1_introduction/2-primer-user-guide-dynamo-community-and-platform.md).
 
 Aplikaci Dynamo neustále vylepšujeme, takže některé funkce mohou vypadat jinak, než je znázorněno v této příručce Primer. Všechny změny funkcí však budou správně reprezentovány.
 
 ### Otevřený zdrojový kód
 
-Projekt Dynamo Primer má otevřený zdrojový kód. Naším cílem je nabídnout uživatelům kvalitní obsah a oceníme jakoukoliv zpětnou vazbu. Pokud chcete ohlásit problém nebo připomínku, vložte ji na stránku s problémy na GitHubu: https://github.com/DynamoDS/DynamoPrimer/issues.
+Projekt Dynamo Primer má otevřený zdrojový kód. Naším cílem je nabídnout uživatelům kvalitní obsah a oceníme jakoukoliv zpětnou vazbu. Pokud chcete ohlásit problém nebo připomínku, zadejte svou zpětnou vazbu na stránce s problémy na GitHubu: [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues). 
 
-Pokud do projektu chcete přidat novou část, úpravy nebo něco jiného, začněte u našeho repozitáře na GitHubu: https://github.com/DynamoDS/DynamoPrimer
+Pokud do projektu chcete přidat novou část, úpravy nebo něco jiného, začněte u našeho repozitáře na GitHubu: [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew) 
 
 ### Projekt Dynamo Primer
 
@@ -37,19 +37,19 @@ Dynamo Primer je projekt s otevřeným zdrojovým kódem, který vytvořil Matt
 
 Společnost **Mode Lab** sepsala první edici příručky Primer. Děkujeme jim za jejich úsilí při vytváření tohoto hodnotného zdroje.
 
-![](images/MODELAB\_Logo.png)
+![](images/MODELAB_Logo.png)
 
 ***
 
 **John Pierson ze společnosti Parallax Team** aktualizoval příručku Primer podle verze aplikace Dynamo 2.0.
 
-![](images/PRLX\_Logo.jpg)
+![](images/PRLX_Logo.jpg)
 
 ***
 
 Společnost **Matterlab** byla pověřena aktualizací příručky Primer tak, aby odrážela revize aplikace Dynamo 2.13.
 
-![](images/matterlab\_final-07.jpg)
+![](images/matterlab_final-07.jpg)
 
 ***
 
@@ -73,17 +73,17 @@ Děkujeme Mattu Jezykovi, Ianu Keoughovi, Zachu Kronovi, Racel Amourové a Colin
 
 **Dynamo** Nejnovější **stabilní** verzi aplikace Dynamo naleznete na následujících webových stránkách.
 
-http://dynamobim.com/download/ nebo http://dynamobuilds.com
+[https://dynamobim.com/download/](https://dynamobim.com/download/) nebo [https://dynamobuilds.com](https://dynamobuilds.com/)
 
 *Poznámka: Počínaje aplikací Revit 2020 je aplikace Dynamo součástí vydání aplikace Revit a nemusí být ručně instalována. Další informace jsou k dispozici na tomto příspěvku na [blogu](https://dynamobim.org/dynamo-core-2-1-release/).
 
-**DynamoBIM** Nejlepší zdroj dalších informací, výukových materiálů a komunitních diskuzí je webová stránka DynamoBIM.
+**DynamoBIM**: Nejlepší zdroj dalších informací, výukových materiálů a komunitních diskuzí je webová stránka DynamoBIM.
 
-http://dynamobim.org
+[https://dynamobim.org](https://dynamobim.org/)
 
 **GitHub aplikace Dynamo** Dynamo je projekt s otevřeným zdrojovým kódem na GitHubu. Chcete-li přispět, podívejte se na stránku DynamoDS.
 
-https://github.com/DynamoDS/Dynamo
+[https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
 **Kontakt** Pokud v tomto dokumentu najdete chyby, neváhejte a kontaktujte nás.
 
@@ -95,6 +95,6 @@ Copyright 2023 Autodesk
 
 Licence Apache, verze 2.0 („Licence“); tento soubor lze použít pouze v souladu s Licencí. Kopii licence lze získat na adrese
 
-http://www.apache.org/licenses/LICENSE-2.0
+[https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
 Pokud příslušné zákony nebo písemná smlouva nestanoví jinak, je software distribuovaný na základě Licence distribuován TAK, JAK JE, BEZ JAKÝCHKOLI PODMÍNEK A ZÁRUK, ať už výslovně uvedených nebo odvozených. Konkrétní ustanovení o povoleních a omezeních naleznete v Licenci.

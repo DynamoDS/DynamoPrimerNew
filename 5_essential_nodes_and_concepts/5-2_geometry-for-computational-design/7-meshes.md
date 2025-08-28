@@ -36,7 +36,8 @@ Síť je kolekce čtyřúhelníků a trojúhelníků, které představují geome
 ![Prvky sítě](../images/5-2/7/MeshElements2.jpg)
 
 > 1. Vrcholy sítě
-> 2. Hrany sítě *Hrany pouze s jednou sousední plochou se nazývají „Nahé“. Všechny ostatní hrany jsou „Oblečené“.
+> 2. Hrany sítě 
+>    1. Hrany pouze s jednou sousední plochou se nazývají „Nahé“. Všechny ostatní hrany jsou „Oblečené“.
 > 3. Plochy sítě
 
 ### Vrcholy + normály vrcholů

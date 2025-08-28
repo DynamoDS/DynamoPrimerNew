@@ -22,7 +22,7 @@ V této příručce budeme k označení kódu, který uživatelé vytvářejí
 
 [https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534](https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534)
 
-`DynamoModel` je vstupním bodem pro aplikaci hostující Dynamo; představuje aplikaci Dynamo. Model je kořenový objekt nejvyšší úrovně, který obsahuje odkazy na další důležité datové struktury a objekty, které tvoří aplikaci Dynamo a virtuální počítač DesignScript.
+`DynamoModel` je vstupní bod pro aplikaci, která hostuje Dynamo. Představuje aplikaci Dynamo. Model je kořenový objekt nejvyšší úrovně, který obsahuje odkazy na další důležité datové struktury a objekty, které tvoří aplikaci Dynamo a virtuální počítač DesignScript.
 
 Objekt konfigurace se používá k nastavení běžných parametrů `DynamoModel` při jeho vytváření.
 
@@ -38,7 +38,7 @@ K inicializaci `DynamoModel` budou muset integrátory provést tyto kroky v k�
 
 ### Předběžné načtení sdílených knihoven DLL aplikace Dynamo z hostitele.
 
-V současné době seznam v D4R obsahuje pouze knihovnu `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.`. Důvodem je to, aby se zabránilo konfliktům verzí knihoven v aplikacích Dynamo a Revit. Pokud například dojde ke konfliktům s knihovnou `AvalonEdit`, může být funkce bloku kódu zcela nefunkční. Tento problém je hlášen pro aplikaci Dynamo 1.1.x na adrese https://github.com/DynamoDS/Dynamo/issues/7130 a je také ručně reprodukovatelný. Pokud integrátory zjistí konflikty knihoven mezi hostitelskou funkcí a aplikací Dynamo, doporučujeme provést tento krok jako první. Někdy je to nutné, aby jiný modul plug-in nebo samotná hostitelská aplikace nenačetly nekompatibilní verzi aplikace jako sdílenou závislost. Lepším řešením je vyřešit konflikt verzí vyrovnáním verze nebo použít přesměrování vazby .NET v souboru app.config hostitele, pokud je to možné.
+V současné době seznam v D4R obsahuje pouze knihovnu `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.`. Důvodem je to, aby se zabránilo konfliktům verzí knihoven v aplikacích Dynamo a Revit. Pokud například dojde ke konfliktům s knihovnou `AvalonEdit`, může být funkce bloku kódu zcela nefunkční. Tento problém je hlášen pro aplikaci Dynamo 1.1.x na webu [https://github.com/DynamoDS/Dynamo/issues/7130](https://github.com/DynamoDS/Dynamo/issues/7130) a je také ručně reprodukovatelný. Pokud integrátory zjistí konflikty knihoven mezi hostitelskou funkcí a aplikací Dynamo, doporučujeme provést tento krok jako první. Někdy je to nutné, aby jiný modul plug-in nebo samotná hostitelská aplikace nenačetly nekompatibilní verzi aplikace jako sdílenou závislost. Lepším řešením je vyřešit konflikt verzí vyrovnáním verze nebo použít přesměrování vazby .NET v souboru app.config hostitele, pokud je to možné.
 
 ### Načítání ASM
 
@@ -88,9 +88,9 @@ internal static Version PreloadAsmFromRevit()
 
 #### Načtení ASM aplikací Dynamo z přizpůsobené cesty
 
-Nedávno jsme do souborů `DynamoSandbox.exe` a `DynamoCLI.exe` přidali možnost načíst konkrétní verzi ASM. Chcete-li přeskočit běžné chování vyhledávání v registru, můžete pomocí příznaku `�gp` vynutit, aby aplikace Dynamo načetla ASM z konkrétní určité cesty.
+Nedávno jsme do souborů `DynamoSandbox.exe` a `DynamoCLI.exe` přidali možnost načíst konkrétní verzi ASM. Chcete-li přeskočit běžné chování vyhledávání v registru, můžete pomocí příznaku `--GeometryPath` vynutit, aby aplikace Dynamo načetla ASM z konkrétní určité cesty.
 
-`DynamoSandbox.exe -gp �somePath/To/ASMDirectory/�`
+`DynamoSandbox.exe --GeometryPath "somePath/To/ASMDirectory"`
 
 ### Vytvoření souboru StartConfiguration
 
@@ -116,24 +116,24 @@ Skládá se z následujících částí:
 
 Výchozí cesta k nastavení předvoleb je řízena parametrem `PathManager.PreferenceFilePath`, např. `"AppData\\Roaming\\Dynamo\\Dynamo Revit\\2.5\\DynamoSettings.xml"`. Integrátory se mohou rozhodnout, zda chtějí do umístění, které je třeba sladit se správcem cest, dodat také přizpůsobený soubor nastavení předvoleb. Následují vlastnosti nastavení předvoleb, které jsou serializovány:
 
-* IsFirstRun // Označuje, zda je tato verze aplikace Dynamo spuštěna poprvé, používá se například k určení, zda je nutné zobrazit zprávu o přihlášení/odhlášení GA. Slouží také k určení, zda je při spuštění nové verze Dynamo nutné migrovat starší nastavení předvoleb aplikace Dynamo, aby uživatelé měli konzistentní prostředí.
+* IsFirstRun // Označuje, zda je tato verze aplikace Dynamo spuštěna poprvé, používá se například k určení, zda je nutné zobrazit zprávu o přihlášení/odhlášení GA. Slouží také k určení, zda je při spuštění nové verze aplikace Dynamo nutné migrovat starší nastavení předvoleb aplikace Dynamo, aby uživatelé měli konzistentní prostředí.
 * IsUsageReportingApproved // Označuje, zda jsou schváleny zprávy o využití či nikoli.
 * IsUsageReportingApproved // Označuje, zda jsou schváleny analytické zprávy či nikoli.
 * LibraryWidth // Šířka levého panelu knihovny aplikace Dynamo.
 * ConsoleHeight // Výška zobrazení konzole.
 * ShowPreviewBubbles // Označuje, zda se zobrazí bubliny náhledu.
 * ShowConnector // Označuje, zda se zobrazí konektory.
-* ConnectorType // Označuje typ konektoru: beziérova křivka nebo křivka.
+* ConnectorType // Označuje typ konektoru: beziérova křivka nebo křivka
 * BackgroundPreviews // Označuje aktivní stav zadaného náhledu na pozadí.
 * RenderPrecision // Úroveň přesnosti rendrování – nižší generuje sítě s menším počtem trojúhelníků. Vyšší přesnost vygeneruje hladší geometrii v náhledu na pozadí. Dobré číslo pro rychlé rendrování geometrie náhledu je 128.
 * ShowEdges // Označuje, zda budou rendrovány hrany povrchů a těles.
-* ShowDetailedLayout // NEPOUŽÍVANÉ.
+* ShowDetailedLayout // NEPOUŽÍVANÉ
 * WindowX, WindowY // Poslední souřadnice X, Y okna aplikace Dynamo.
 * WindowW, WindowH // Poslední šířka a výška okna aplikace Dynamo.
 * UseHardwareAcceleration // Aplikace Dynamo použije hardwarovou akceleraci, pokud je podporována.
 * NumberFormat // Přesnost na desetinná místa použitá k zobrazení čísel v bublině náhledu toString().
 * MaxNumRecentFiles // Maximální počet posledních cest k souborům, které mají být uloženy.
-* RecentFiles // Seznam cest k naposledy otevřených souborům. Změna tohoto nastavení přímo ovlivní seznam posledních souborů na úvodní stránce aplikace Dynamo.
+* RecentFiles // Seznam cest k naposledy otevřených souborům. Změna tohoto nastavení přímo ovlivní seznam posledních souborů na úvodní stránce aplikace Dynamo
 * BackupFiles // Seznam cest k záložním souborům.
 * CustomPackageFolders // Seznam složek obsahujících binární soubory Zero-Touch a cesty k adresářům, u kterých budou kontrolovány balíčky a vlastní uzly.
 * PackageDirectoriesToUninstall // Seznam balíčků, pomocí nichž nástroj Package Manager určuje, které balíčky jsou označeny k odstranění. Pokud je to možné, budou tyto cesty odstraněny během spuštění aplikace Dynamo.
@@ -142,7 +142,7 @@ Výchozí cesta k nastavení předvoleb je řízena parametrem `PathManager.Pre
 * BackupFilesCount // Označuje, kolik záloh bude vytvořeno.
 * PackageDownloadTouAccepted // Označuje, zda uživatel přijal podmínky používání pro stahování balíčků z nástroje Package Manager.
 * OpenFileInManualExecutionMode // Označuje výchozí stav zaškrtávacího políčka Otevřít v režimu ručního spuštění v dialogu pro otevření souboru.
-* NamespacesToExcludeFromLibrary //Určuje, které (pokud existují) jmenné prostory by se neměly zobrazovat v knihovně uzlů aplikace Dynamo. Formát řetězce: „[název knihovny]:[plně kvalifikovaný jmenný prostor]“.
+* NamespacesToExcludeFromLibrary //Určuje, které (pokud existují) jmenné prostory by se neměly zobrazovat v knihovně uzlů aplikace Dynamo. Formát řetězce: „[název knihovny]:[plně kvalifikovaný jmenný prostor]“
 
 Příklad nastavení serializovaných předvoleb:
 
@@ -286,7 +286,7 @@ Chcete-li vytvořit `DynamoView`, vše, co je potřeba, je `DynamoViewModel`. Po
 
 ### Příklad souboru DynamoSandbox.exe
 
-DynamoSandbox.exe je vývojové prostředí pro testování a používání komponenty DynamoCore a experimentování s ní. Je to skvělý příklad, na kterém si můžete prohlédnout, jak se načítají a nastavují komponenty `DynamoCore` a `DynamoCoreWPF`. Některé vstupní body si můžete prohlédnout [zde](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoSandbox/DynamoCoreSetup.cs#L37)
+DynamoSandbox.exe je vývojové prostředí pro testování a používání komponenty DynamoCore a experimentování s ní. Je to skvělý příklad, na kterém si můžete prohlédnout, jak se načítají a nastavují komponenty `DynamoCore` a `DynamoCoreWPF`. Některé vstupní body si můžete prohlédnout [zde](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoSandbox/DynamoCoreSetup.cs#L37).
 
 ## Vazba a trasování prvků
 
@@ -570,7 +570,7 @@ Tyto uzly obecně umožňují uživateli nějakým způsobem popsat podmnožinu 
 
 Na vysoké úrovni je **dobré si tyto uzly představit jako funkci, která přijímá ID prvku a vrací ukazatel na tento prvek nebo nějakou geometrii, která tento prvek reprezentuje.**
 
-V doplňku DynamoRevit existuje více uzlů `�Selection�`. Můžeme je rozdělit nejméně do dvou skupin:
+V doplňku DynamoRevit je více uzlů `Selection`. Můžeme je rozdělit alespoň do dvou skupin:
 
 ![Uzly výběru aplikace Revit](images/revitSelectionNodes.png)
 
@@ -583,7 +583,7 @@ V doplňku DynamoRevit existuje více uzlů `�Selection�`. Můžeme je rozd
 
     Příklady uzlů v této kategorii jsou `AllElementsOfClass` a `AllElementsOfCategory`.
 
-    Tyto uzly umožňují uživatel dotazovat celý dokument na sadu prvků, tyto uzly obvykle vracejí obálky, které odkazují na podkladové prvky aplikace Revit. Tyto obálky jsou nedílnou součástí doplňku DynamoRevit. Umožňují pokročilejší funkce, jako je vazba prvků, a integrátorům aplikace Dynamo umožňují vybírat hostitelská rozhraní API, která budou uživatelům přístupná jako uzly.
+    Tyto uzly umožňují uživatel dotazovat celý dokument na podmnožinu prvků. Tyto uzly obvykle vracejí obálky, které ukazují na základní prvky aplikace Revit. Tyto obálky jsou nedílnou součástí doplňku DynamoRevit. Umožňují pokročilejší funkce, jako je vazba prvků, a integrátorům aplikace Dynamo umožňují vybírat hostitelská rozhraní API, která budou uživatelům přístupná jako uzly.
 
 ### Uživatelské pracovní postupy v doplňku Dynamo Revit:
 
@@ -607,7 +607,7 @@ Pracovní postupy v D4C jsou velmi podobné výše uvedenému popisu pro aplikac
 *   Díky aktualizačnímu nástroji pro změnu dokumentu, který implementují uzly výběru v doplňku `DynamoRevit`, lze snadno vytvářet nekonečné smyčky: Představte si uzel, který sleduje všechny prvky v dokumentu a pak vytváří nové prvky někde za tímto uzlem. Tento program po spuštění spustí smyčku. `DynamoRevit` se snaží tyto případy zachytit různými způsoby pomocí ID transakcí a vyhnout se úpravám dokumentu, pokud se nezměnily vstupy do konstruktorů prvků.
 
     To je třeba vzít v úvahu, pokud je aktivováno automatické spuštění grafu při změně vybraného prvku v hostitelské aplikaci!
-* Uzly výběru v doplňku `DynamoRevit` jsou implementovány v projektu `RevitUINodes.dll`, který odkazuje na WPF. To nemusí být problém, ale v závislosti na vaší cílové platformě stojí za to o tom vědět.
+* Uzly výběru v doplňku `DynamoRevit` jsou implementovány v projektu`RevitUINodes.dll`, který odkazuje na WPF. To nemusí být problém, ale v závislosti na vaší cílové platformě stojí za to o tom vědět.
 
 ### Diagramy datových toků
 
@@ -619,7 +619,7 @@ Pracovní postupy v D4C jsou velmi podobné výše uvedenému popisu pro aplikac
 
 Uzly výběru jsou implementovány děděním z obecných typů `SelectionBase`: `SelectionBase<TSelection, TResult>` a minimální sada členů:
 
-* Implementace metody `BuildOutputAST` – Tato metoda musí vracet AST, který bude proveden v určitém okamžiku v budoucnosti, kdy bude uzel spuštěn. V případě uzlů Selection by měla vracet prvky nebo geometrii z ID prvků. https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280
+* Implementace metody `BuildOutputAST` – Tato metoda musí vracet AST, který bude proveden v určitém okamžiku v budoucnosti, kdy bude uzel spuštěn. V případě uzlů Selection by měla vracet prvky nebo geometrii z ID prvků. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * Implementace metody `BuildOutputAST` je jednou z nejobtížnějších částí implementace uzlů `NodeModel` / uzlů uživatelského rozhraní. Nejlepší je vložit do funkce jazyka C# co nejvíce logiky a jednoduše vložit uzel volání funkce AST do AST. Všimněte si, že `node` zde je uzel AST v abstraktním stromu syntaxe, nikoli uzel v grafu Dynamo.
 
 ![Tok výběru 2](images/selectionAST.png)
@@ -684,7 +684,7 @@ Pokud je z nějakého důvodu nutné balíček také publikovat v nástroji Pa
 
 Tyto podadresáře jazykových verzí jsou bez problémů načítány modulem runtime .net, pokud se nacházejí ve stejném adresáři jako binární soubory uzlu nebo rozšíření.
 
-Další informace o sestavách prostředků a souborech .resx naleznete zde: [https://docs.microsoft.com/cs-cz/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/cs-cz/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
+Další informace o sestavách prostředků a souborech .resx naleznete zde: [https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/cs-cz/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
 
 Pravděpodobně budete vytvářet soubory `.resx` a kompilovat je pomocí aplikace Visual Studio. Pro danou sestavu `xyz.dll` budou výsledné prostředky zkompilovány do nové sestavy `xyz.resources.dll`. Jak je popsáno výše, důležité je umístění a název této sestavy.
 

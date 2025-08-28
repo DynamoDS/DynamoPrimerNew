@@ -22,15 +22,13 @@ Aby bylo možné tuto funkci používat, je nutné přidat do souboru `DynamoSet
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_Poznámka: Nahraďte proměnnou CURRENTUSER svým uživatelským jménem._ 
-{% endhint %}
+{% hint style="warning" %} _Poznámka: Nahraďte proměnnou CURRENTUSER svým uživatelským jménem._ {% endhint %}
 
 Dále je nutné vytvořit šablonu s funkcemi, které má obsahovat. V tomto případě do ní zahrneme importy související s aplikací Revit a další položky, které se s aplikací Revit obvykle používají.
 
 Otevřete prázdný dokument v poznámkovém bloku a vložte do něj následující kód:
 
-``` py
+```py
 import clr
 
 clr.AddReference('RevitAPI')

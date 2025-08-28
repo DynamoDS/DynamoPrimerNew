@@ -8,10 +8,10 @@ Operátory jsou sada komponent, které používají algebraické funkce se dvěm
 
 | Ikona                                                  | Název (Syntaxe)     | Vstupy                     | Výstupy      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Součet (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Rozdíl (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Násobení (*) | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dělení (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Součet (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Rozdíl (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Násobení ( ***** ) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dělení (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Cvičení: Vzorec zlaté spirály
 
@@ -25,7 +25,7 @@ Operátory jsou sada komponent, které používají algebraické funkce se dvěm
 
 Kombinací operátorů a proměnných vytvořte složitější vztah prostřednictvím **vzorců**. Pomocí posuvníků vytvořte vzorec, který lze řídit pomocí vstupních parametrů.
 
-1\. Vytvořte posloupnost čísel, která představuje „t“ v parametrické rovnici. Chceme tedy použít seznam, který je dostatečně velký k definici spirály.
+1. Vytvořte posloupnost čísel, která představuje „t“ v parametrické rovnici. Chceme tedy použít seznam, který je dostatečně velký k definici spirály.
 
 **Number Sequence:** Definuje posloupnost čísel na základě tří vstupů: _start, amount_ a _step_.
 
@@ -61,7 +61,7 @@ Obrázek níže znázorňuje zlatou spirálu ve vizuální programové podobě. 
 
 ### Část II: Od vzorce ke geometrii
 
-Většina uzlů z předchozího kroku bude fungovat dobře, ale jedná se o pracný postup. Chcete-li vytvořit efektivnější pracovní postup, přečtěte si v části [DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md) jak definovat řetězec výrazů aplikace Dynamo do jednoho uzlu. V následující řadě kroků se podíváme, jak použít parametrickou rovnici k nakreslení Fibonacciho spirály.
+Většina uzlů z předchozího kroku bude fungovat dobře, ale jedná se o pracný postup. Chcete-li vytvořit efektivnější pracovní postup, přečtěte si v části [DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md) jak definovat řetězec výrazů aplikace Dynamo do jednoho uzlu. V následující řadě kroků se podíváme, jak použít parametrickou rovnici k nakreslení Fibonacciho spirály.
 
 **Point.ByCoordinates:** Spojte horní uzel násobení se vstupem _x_ a dolní část se vstupem _y_. Nyní vidíte parametrickou spirálu bodů na obrazovce.
 
@@ -91,7 +91,7 @@ Nyní, když jsme vytvořili kruhovou ulitu loděnky, přejděme k parametrick�
 
 Jako výchozí bod použijeme stejný krok z předchozího cvičení: Vytvoření spirálového pole bodů pomocí uzlu **Point.ByCoordinates**.
 
-\![](../images/5-3/2/math-part IV-01.jpg)
+<figure><img src="../images/5-3/2/math-partIV-01.jpg" alt=""><figcaption></figcaption></figure>
 
 Dále postupujte podle těchto krátkých kroků a vygenerujte řadu spirál s různým natočením.
 

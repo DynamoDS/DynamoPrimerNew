@@ -10,7 +10,7 @@ Na této stránce si vysvětlíme, jak nastavit obě možnosti.
 
 ### Nastavení aplikace Dynamo jako služby
 
-Dynamo v aplikaci Forma (beta verze) je v současné době k dispozici jako otevřená beta verze s předběžným přístupem, což znamená, že funkce a uživatelské rozhraní se mohou často měnit.
+Dynamo v aplikaci Forma je v současné době k dispozici jako otevřená beta verze s předběžným přístupem, což znamená, že funkce a uživatelské rozhraní se mohou často měnit.
 
 Nejprve nainstalujeme rozšíření Dynamo Player v aplikaci Forma.
 
@@ -24,39 +24,39 @@ Nejprve nainstalujeme rozšíření Dynamo Player v aplikaci Forma.
 
 ### Instalace počítačové verze aplikace Dynamo
 
-Chcete-li používat počítačovou verzi aplikace Dynamo, budete potřebovat Dynamo, a to buď jako samostatnou instalaci Dynamo Sandbox, nebo připojenou k aplikaci Revit či Civil 3D. Budete také potřebovat balíček DynamoFormaBeta.
+Chcete-li používat počítačovou verzi aplikace Dynamo, budete potřebovat Dynamo, a to buď jako samostatnou instalaci Dynamo Sandbox, nebo připojenou k aplikaci Revit či Civil 3D. Budete také potřebovat balíček DynamoForma.
 
 #### Revit
 
-Při instalaci aplikace Dynamo v aplikaci Revit a balíčku DynamoFormaBeta postupujte podle následujících pokynů.
+Při instalaci aplikace Dynamo v aplikaci Revit a balíčku DynamoForma postupujte podle následujících pokynů.
 
 1. Ujistěte se, že máte nainstalovanou aplikaci Revit verze 2024.1 nebo vyšší.
 2. Otevřete Dynamo z aplikace Revit z nabídky Správa > Dynamo.
-3. V aplikaci Dynamo nainstalujte balíček DynamoFormaBeta. Přejděte do části Balíčky > Package Manager a vyhledejte položku DynamoFormaBeta.
-   1. Pokud máte aplikaci Revit 2024, nainstalujte balíček DynamoFormaBeta for 2.x.
-   2. Pokud máte aplikaci Revit 2025, nainstalujte balíček DynamoFormaBeta.
+3. V aplikaci Dynamo nainstalujte balíček DynamoForma. Přejděte do části Balíčky > Package Manager a vyhledejte položku DynamoForma.
+   1. Pokud máte aplikaci Revit 2024, nainstalujte balíček DynamoForma for 2.x.
+   2. Pokud máte aplikaci Revit 2025, nainstalujte balíček DynamoForma.
 
 #### Civil 3D
 
-Při instalaci aplikace Dynamo v aplikaci Civil 3D a balíčku DynamoFormaBeta postupujte podle následujících pokynů.
+Při instalaci aplikace Dynamo v aplikaci Civil 3D a balíčku DynamoForma postupujte podle následujících pokynů.
 
 1. Ujistěte se, že máte nainstalovanou aplikaci Civil 3D verze 2024.1 nebo vyšší.
 2. Otevřete Dynamo z aplikace Civil 3D z nabídky Správa > Dynamo.
-3. V aplikaci Dynamo nainstalujte balíček DynamoFormaBeta. Přejděte do části Balíčky > Package Manager a vyhledejte položku DynamoFormaBeta.
-   1. Pokud máte aplikaci Civil 3D 2024, nainstalujte balíček DynamoFormaBeta for 2.x.
-   2. Pokud máte aplikaci Civil 3D 2025, nainstalujte balíček DynamoFormaBeta.
+3. V aplikaci Dynamo nainstalujte balíček DynamoForma. Přejděte do části Balíčky > Package Manager a vyhledejte položku DynamoForma.
+   1. Pokud máte aplikaci Civil 3D 2024, nainstalujte balíček DynamoForma for 2.x.
+   2. Pokud máte aplikaci Civil 3D 2025, nainstalujte balíček DynamoForma.
 
 #### Dynamo Sandbox
 
-Při instalaci aplikace Dynamo Sandbox a balíčku DynamoFormaBeta postupujte podle následujících pokynů.
+Při instalaci aplikace Dynamo Sandbox a balíčku DynamoForma postupujte podle následujících pokynů.
 
 1. Stáhněte si Dynamo 2.18.0 nebo vyšší verzi ze [sestavení aplikace Dynamo](https://dynamobuilds.com/). Chcete-li získat co nejlepší výkon, vyberte si nejnovější z nejstabilnějších verzí uvedených nahoře.
    1. Denní verze jsou vývojové verze a mohou obsahovat neúplné nebo rozpracované funkce.
 2. Rozbalte Dynamo pomocí aplikace [7zip](https://7-zip.org/) do složky dle vlastního výběru.
 3. Spusťte soubor DynamoSandbox.exe z instalační složky aplikace Dynamo.
-4. V aplikaci Dynamo nainstalujte balíček DynamoFormaBeta. Přejděte do části Balíčky > Package Manager a vyhledejte položku DynamoFormaBeta.
-   1. Pokud máte verzi Dynamo 2.x, nainstalujte balíček DynamoForma Beta for 2.x.
-   2. Pokud máte verzi Dynamo 3.x, nainstalujte balíček DynamoFormaBeta.
+4. V aplikaci Dynamo nainstalujte balíček DynamoForma. Přejděte do části Balíčky > Package Manager a vyhledejte položku DynamoForma.
+   1. Pokud máte verzi Dynamo 2.x, nainstalujte balíček DynamoForma for 2.x.
+   2. Pokud máte verzi Dynamo 3.x, nainstalujte balíček DynamoForma.
 
 Jakmile je aplikace Dynamo nainstalována, můžete ji začít používat s aplikací Forma. Při spuštění počítačové varianty aplikace Dynamo v aplikaci Forma musíte mít otevřenou aplikaci Dynamo, abyste mohli používat rozšíření Dynamo Player.
 

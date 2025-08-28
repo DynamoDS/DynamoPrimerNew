@@ -60,14 +60,14 @@ Stejným způsobem lze vytvářet slovníky seskupených objektů. Pokud bychom 
 
 ![](../images/5-5/4/dictionary-exerciseII-02.jpg)
 
-> 1. Nyní můžete místnosti seskupit podle podlaží, na kterém se nacházejí.
+> 2. Nyní můžete místnosti seskupit podle podlaží, na kterém se nacházejí.
 
 ![](../images/5-5/4/dictionary-exerciseII-03.jpg)
 
-> 1. Po seskupení místností podle podlaží, můžeme použít sdílené (jedinečné) klíče jako klíče pro slovník a seznamy místností jako prvky.
+> 3. Po seskupení místností podle podlaží, můžeme použít sdílené (jedinečné) klíče jako klíče pro slovník a seznamy místností jako prvky.
 
 ![](../images/5-5/4/dictionary-exerciseII-04.jpg)
 
-> 1. Nakonec můžeme pomocí podlaží v modelu aplikace Revit a pomocí slovníku vyhledat, které místnosti se na daném podlaží nacházejí. Uzel `Dictionary.ValueAtKey` načte jako vstup název podlaží a vrátí objekty místností na daném podlaží.
+> 4. Nakonec můžeme pomocí podlaží v modelu aplikace Revit a pomocí slovníku vyhledat, které místnosti se na daném podlaží nacházejí. Uzel `Dictionary.ValueAtKey` načte jako vstup název podlaží a vrátí objekty místností na daném podlaží.
 
 Možnosti slovníků jsou opravdu nekonečné. Možnost propojit BIM data v aplikaci Revit s prvkem samotným nabízí mnohá využití.

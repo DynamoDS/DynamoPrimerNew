@@ -33,13 +33,13 @@ V rozevírací nabídce **Dynamo** naleznete obecné informace a přístup k n
 
 Pokud máte problém, podívejte se do nabídky **Nápověda**. Prostřednictvím internetového prohlížeče můžete navštívit některou z referenčních webových stránek aplikace Dynamo.
 
-![](images/userinterface-helpmenu.jpg)
+![](../.gitbook/assets/help-menu.png)
 
-> 1. Začínáme – Stručný úvod do používání aplikace Dynamo.
-> 2. Interaktivní průvodce –
-> 3. Ukázky – Vzorové referenční soubory.
-> 4. Slovník aplikace Dynamo – Zdroj s dokumentací o všech uzlech.
-> 5. Webová stránka aplikace Dynamo – Zobrazení projektu aplikace Dynamo v úložišti GitHub.
+> 1. Interaktivní průvodci – Prohlídky, které vás krok za krokem provedou různými funkcemi aplikace Dynamo.
+> 2. Ukázky – Vzorové referenční soubory. K dispozici pouze v hostitelských programech včetně aplikací Revit a Civil 3D.
+> 3. Slovník aplikace Dynamo – Zdroj s dokumentací o všech uzlech.
+> 4. Web aplikace Dynamo – Webová stránka s informacemi o aplikaci Dynamo a odkazy na zdroje informací, jako jsou fórum, blog atd.
+> 5. Úložiště aplikace Dynamo – Zobrazení projektu aplikace Dynamo v úložišti GitHub. 
 > 6. Stránka Wiki k projektu aplikace Dynamo – Na stránce Wiki najdete informace o vývoji pomocí rozhraní Dynamo API, podpůrných knihoven a nástrojů.
 > 7. Zobrazit úvodní stránku – Návrat na úvodní stránku aplikace Dynamo, když se nacházíte v dokumentu.
 > 8. Hlášení chyby – Otevře problém v úložišti GitHub.
@@ -49,7 +49,7 @@ Pokud máte problém, podívejte se do nabídky **Nápověda**. Prostřednictví
 Panel nástrojů aplikace Dynamo obsahuje řadu tlačítek pro rychlý přístup k práci se soubory a také příkazy Zpět [Ctrl+Z] a Znovu [Ctrl+Y]. Zcela vpravo je další tlačítko, které umožňuje exportovat snímek pracovního prostoru, což je mimořádně užitečné pro dokumentaci a sdílení.
 
 * ![](images/userinterface-newfile.jpg) Nový – Vytvoří nový soubor .dyn.
-* ![](<images/userinterface-open(1) (1) (1).jpg>) Otevřít – Otevře existující soubor .dyn (pracovní prostor) nebo .dyf (vlastní uzel).
+* \![](<images/userinterface-open(1) (1) (1).jpg>) Otevřít – Otevře existující soubor .dyn (pracovní prostor) nebo .dyf (vlastní uzel).
 * ![](images/userinterface-save.jpg) Uložit/uložit jako – Uloží aktivní soubor .dyn nebo .dyf.
 * ![](images/userinterface-undo.jpg) Zpět – Vrátí zpět poslední akci.
 * ![](images/userinterface-redo.jpg) Znovu – Znovu provede další akci.

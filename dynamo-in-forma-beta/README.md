@@ -3,9 +3,9 @@ cover: ../.gitbook/assets/coverimage.png
 coverY: 0
 ---
 
-# Dynamo v aplikaci Forma (beta verze)
+# Dynamo v aplikaci Forma
 
-Dynamo je k dispozici jako rozšíření v aplikaci Forma. V současné době je k dispozici ve dvou variantách: verze pro počítače a cloudová integrace jako uzavřená beta. Další informace o verzi pro počítače naleznete v tomto [příspěvku na blogu](https://dynamobim.org/dynamo-in-forma/) a o uzavřené beta verzi cloudové integrace v tomto [příspěvku na blogu](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/).
+Dynamo je k dispozici jako rozšíření v aplikaci Forma. V současné době je k dispozici ve dvou variantách: verze pro počítače a cloudová integrace jako uzavřená beta. Další informace o verzi pro počítače naleznete v tomto [příspěvku na blogu](https://dynamobim.org/dynamo-in-forma/) a o beta verzi cloudové integrace v tomto [příspěvku na blogu](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/). Upozorňujeme, že blogový příspěvek byl publikován během fáze uzavřené beta verze. Cloudová integrace je aktuálně ve fázi otevřené beta verze a je k dispozici všem uživatelům aplikace Forma.
 
 ### Co je Autodesk Forma?
 
