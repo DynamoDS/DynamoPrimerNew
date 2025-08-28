@@ -3,9 +3,9 @@ cover: ../.gitbook/assets/coverimage.png
 coverY: 0
 ---
 
-# Forma 베타의 Dynamo
+# Dynamo in Forma
 
-Dynamo는 Forma에서 확장 프로그램으로 사용할 수 있습니다. 현재, 두 가지 형태인 데스크톱 연결 버전과 클라우드 기반 통합(클로즈드 베타)으로 제공됩니다. 데스크톱 버전에 대해서는 이 [블로그 게시물](https://dynamobim.org/dynamo-in-forma/)을, 클로즈드 베타 클라우드 통합에 대해서는 이 [블로그 게시물](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/)을 참고하십시오.
+Dynamo는 Forma에서 확장 프로그램으로 사용할 수 있습니다. 현재, 두 가지 형태인 데스크톱 연결 버전과 클라우드 기반 통합(클로즈드 베타)으로 제공됩니다. 데스크톱 버전에 대해서는 이 [블로그 게시물](https://dynamobim.org/dynamo-in-forma/)을, 베타 클라우드 통합에 대해서는 이 [블로그 게시물](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/)을 참고하십시오. 참고로, 이 블로그는 클로즈드 베타 단계에서 게시되었으며, 현재 클라우드 통합 기능은 오픈 베타 상태로 모든 Forma 사용자에게 제공됩니다.
 
 ### Autodesk Forma란 무엇인가요?
 

@@ -8,7 +8,7 @@ Dynamo의 색상은 ARGB 입력을 사용하여 작성됩니다. ARGB는 알파,
 
 | 아이콘                                     | 이름(구문)                 | 입력  | 출력 |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-1/ColorbyARGB (2).jpg>) | ARGB 색상(**Color.ByARGB**) | A,R,G,B | 색상   |
+| \![](<../images/5-1/ColorbyARGB (2).jpg>) | ARGB 색상(**Color.ByARGB**) | A,R,G,B | 색상   |
 
 ### 색상 값 조회하기
 
@@ -16,23 +16,23 @@ Dynamo의 색상은 ARGB 입력을 사용하여 작성됩니다. ARGB는 알파,
 
 | 아이콘                                              | 이름(구문)                     | 입력 | 출력    |
 | ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | 알파(**Color.Alpha**)           | 색상  | A          |
+| \![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | 알파(**Color.Alpha**)           | 색상  | A          |
 | ![](../images/5-1/ColorRed.jpg)                   | 빨간색(**Color.Red**)               | 색상  | R          |
-| ![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | 초록색(**Color.Green**)           | 색상  | G          |
+| \![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | 초록색(**Color.Green**)           | 색상  | G          |
 | ![](../images/5-1/ColorBlue.jpg)                  | 파란색(**Color.Blue**)             | 색상  | B          |
-| ![](<../images/5-1/ColorComponent (2).jpg>)       | 구성요소(**Color.Components**) | 색상  | A,R,G,B |
+| \![](<../images/5-1/ColorComponent (2).jpg>)       | 구성요소(**Color.Components**) | 색상  | A,R,G,B |
 
 아래 표의 색상은 **HSB 색상 공간**에 해당합니다. 색상을 색조, 채도 및 밝기로 나누면 색상을 좀 더 직관적으로 해석할 수 있습니다. 즉, '어떤 색상인가?', '색상이 얼마나 선명한가?', '색상이 얼마나 밝거나 어두운가?'와 같은 질문으로 각각 색조, 채도 및 밝기를 분석할 수 있습니다.
 
 | 아이콘                                         | 이름(구문)                     | 입력 | 출력    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
 | ![](../images/5-1/ColorHue.jpg)              | 색조(**Color.Hue**)               | 색상  | 색조        |
-| ![](<../images/5-1/ColorSaturation (2).jpg>) | 채도(**Color.Saturation**) | 색상  | 채도 |
-| ![](<../images/5-1/ColorBrightness (2).jpg>) | 밝기(**Color.Brightness**) | 색상  | 밝기 |
+| \![](<../images/5-1/ColorSaturation (2).jpg>) | 채도(**Color.Saturation**) | 색상  | 채도 |
+| \![](<../images/5-1/ColorBrightness (2).jpg>) | 밝기(**Color.Brightness**) | 색상  | 밝기 |
 
 ### 색상 범위
 
-색상 범위는 [\#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention") 연습의 **Remap Range** 노드와 비슷합니다. 이 노드에서는 숫자 리스트를 다른 영역에 다시 매핑합니다. 그러나 _숫자_ 영역으로 매핑하는 대신, 0에서 1 사이의 입력 숫자를 기준으로 _색상 그라데이션_ 에 매핑합니다.
+색상 범위는 [\#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention") 연습의 **Remap Range** 노드와 유사합니다. 이 노드는 숫자 리스트를 다른 영역으로 다시 매핑합니다. 그러나 _숫자_ 영역으로 매핑하는 대신, 0에서 1 사이의 입력 숫자를 기준으로 _색상 그라데이션_ 에 매핑합니다.
 
 현재 노드는 잘 작동하지만 처음에는 모든 항목이 다 제대로 작동하지는 않을 수 있습니다. 색상 그라데이션에 익숙해지려면 대화식으로 테스트하는 것이 가장 좋습니다. 간단한 연습을 통해 숫자에 해당하는 출력 색상으로 그라데이션을 설정하는 방법을 살펴보겠습니다.
 

@@ -22,15 +22,13 @@ Dynamo 2.0을 사용하면 Python 창을 처음 열 때 사용할 기본 템플�
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_참고: CURRENTUSER를 사용자 이름으로 대치하십시오._
-{% endhint %}
+{% hint style="warning" %} _참고: CURRENTUSER를 사용자 이름으로 대치하십시오._ {% endhint %}
 
 다음으로, 내장 항목으로 사용하려는 기능이 포함된 템플릿을 작성해야 합니다. 이 예에서는 Revit 관련 가져오기와 Revit으로 작업할 때의 다른 일반적인 항목을 포함할 수 있습니다.
 
 빈 메모장 문서를 시작하고 다음 코드를 그 안에 붙여 넣습니다.
 
-``` py
+```py
 import clr
 
 clr.AddReference('RevitAPI')
@@ -71,7 +69,7 @@ OUT = element
 
 ### 이후의 Python 스크립트 동작
 
-Python 템플릿을 정의했으므로 Dynamo는 Python 노드가 배치될 때마다 이 템플릿을 찾습니다. 이 템플릿을 찾을 수 없는 경우 기본 Python 창과 유사한 항목이 표시됩니다.
+Python 템플릿이 정의되면 Dynamo는 Python 노드가 배치될 때마다 이 템플릿을 참조합니다. 이 템플릿을 찾을 수 없는 경우 기본 Python 창과 유사한 항목이 표시됩니다.
 
 ![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
 

@@ -6,7 +6,7 @@
 
 표준 라이브러리는 Dynamo 외부에 있으며 프로그래밍 언어 Python 및 C#(Zerotouch)에 있습니다. Dynamo에는 노드 계층에 바로 해당되는 고유한 라이브러리 세트도 있으므로, 사용자는 노드 및 와이어로 만들 수 있는 모든 요소를 코드에서 만들 수 있습니다. 아래에는 각 Dynamo 라이브러리를 통해 액세스할 수 있는 항목과 표준 라이브러리를 사용해야 하는 경우에 대한 지침이 나와 있습니다.
 
-![](./images/3/textual-programming.jpg)
+![](images/3/textual-programming.jpg)
 
 **표준 라이브러리 및 Dynamo 라이브러리**
 
@@ -15,12 +15,9 @@
 
 **Dynamo 라이브러리**
 
-1.  ProtoGeometry*
-
-    * 기능: 호, 경계 상자, 원, 원추, 좌표계, 직육면체, 곡선, 원통, 모서리, 타원, 타원 호, 면, 형상, 나선, 색인 그룹, 선, 메쉬, NURBS 곡선, NURBS 표면, 평면, 점, 다각형, 직사각형, 솔리드, 구, 표면, 위상, TSpline, UV, 벡터, 정점
-    * 가져오는 방법: `import Autodesk.DesignScript.Geometry`
-
-    \`\`
+1. ProtoGeometry*
+   * 기능: 호, 경계 상자, 원, 원추, 좌표계, 직육면체, 곡선, 원통, 모서리, 타원, 타원 호, 면, 형상, 나선, 색인 그룹, 선, 메쉬, NURBS 곡선, NURBS 표면, 평면, 점, 다각형, 직사각형, 솔리드, 구, 표면, 위상, TSpline, UV, 벡터, 정점
+   * 가져오는 방법: `import Autodesk.DesignScript.Geometry`
 2. DSCoreNodes
    * 기능: 색상, 색상 범위 2D, 날짜 시간, 시간 간격, IO, 수식, 논리, 리스트, 수학, 쿼드 트리, 문자열, 스레드
    * 가져오는 방법: `import DSCore`
@@ -31,9 +28,7 @@
    * 기능: Excel
    * 가져오는 방법: `import DSOffice`
 
-{% hint style="warning" %}
-*주: Python 또는 C#을 통해 **ProtoGeometry** 를 사용할 때 비관리형 객체를 작성하는 경우에는 해당 메모리를 수동으로 관리해야 합니다. 자세한 내용은 아래의 **비관리형 객체** 섹션을 참고하십시오.
-{% endhint %}
+{% hint style="warning" %} *주: Python 또는 C#을 통해 **ProtoGeometry** 를 사용할 때 비관리형 객체를 작성하는 경우에는 해당 메모리를 수동으로 관리해야 합니다. 자세한 내용은 아래의 **비관리형 객체** 섹션을 참고하십시오. {% endhint %}
 
 ## 신중하게 레이블 지정하기
 

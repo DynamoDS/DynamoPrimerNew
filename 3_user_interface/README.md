@@ -33,13 +33,13 @@ Dynamo의 UI(사용자 인터페이스)는 5개의 주요 영역으로 구성되
 
 문제가 있는 경우 **도움말** 메뉴를 확인합니다. 인터넷 브라우저를 통해 Dynamo 참조 웹 사이트 중 하나에 액세스할 수 있습니다.
 
-![](images/userinterface-helpmenu.jpg)
+![](../.gitbook/assets/help-menu.png)
 
-> 1. 시작하기 - Dynamo 사용에 대한 간략한 소개입니다.
-> 2. 대화식 안내서 -
-> 3. 샘플 - 참조 예시 파일입니다.
-> 4. Dynamo 사전 - 모든 노드에 대한 문서가 포함된 리소스입니다.
-> 5. Dynamo 웹사이트 - GitHub에서 Dynamo 프로젝트를 봅니다.
+> 1. 대화식 안내서 - 다양한 Dynamo 기능을 단계별로 안내하는 둘러보기입니다.
+> 2. 샘플 - 참조 예시 파일입니다. Revit 및 Civil 3D와 같은 호스트 프로그램에서만 사용할 수 있습니다.
+> 3. Dynamo 사전 - 모든 노드에 대한 문서가 포함된 리소스입니다.
+> 4. Dynamo 웹사이트 - Dynamo에 대한 정보와 포럼, 블로그 등과 같은 리소스에 대한 링크를 제공하는 웹사이트입니다.
+> 5. Dynamo 리포지토리 - GitHub에서 Dynamo 프로젝트를 확인할 수 있습니다. 
 > 6. Dynamo 프로젝트 Wiki - Dynamo API, 지원 라이브러리 및 도구를 사용한 개발 방법에 대해 알아보기 위해 Wiki를 방문합니다.
 > 7. 시작 페이지 표시 - 문서 내에 있는 경우 Dynamo 시작 페이지로 돌아갑니다.
 > 8. 버그 신고 - GitHub에서 문제를 엽니다.
@@ -49,7 +49,7 @@ Dynamo의 UI(사용자 인터페이스)는 5개의 주요 영역으로 구성되
 Dynamo의 도구막대에는 파일 작업에 빠르게 액세스할 수 있는 일련의 버튼과 실행취소[Ctrl + Z] 및 재실행[Ctrl + Y] 명령이 포함되어 있습니다. 맨 오른쪽에는 작업공간의 스냅샷을 내보내는 또 다른 버튼이 있습니다. 이 버튼은 문서화 및 공유에 매우 유용합니다.
 
 * ![](images/userinterface-newfile.jpg) 새로 작성 - 새 .dyn 파일을 작성합니다.
-* ![](<images/userinterface-open(1) (1) (1).jpg>) 열기 - 기존 .dyn(작업공간) 또는 .dyf(사용자 노드) 파일을 엽니다.
+* \![](<images/userinterface-open(1) (1) (1).jpg>) 열기 - 기존 .dyn(작업공간) 또는 .dyf(사용자 노드) 파일을 엽니다.
 * ![](images/userinterface-save.jpg) 저장/다른 이름으로 저장 - 활성 .dyn 또는 .dyf 파일을 저장합니다.
 * ![](images/userinterface-undo.jpg) 실행취소 - 마지막 작업을 실행취소합니다.
 * ![](images/userinterface-redo.jpg) 재실행 - 다음 작업을 재실행합니다.

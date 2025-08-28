@@ -4,7 +4,7 @@
 
 ## Dynamo 2.13 이상 버전용
 
-![Dynamo 로고](images/dynamo\_logo\_dark-trim.jpg)
+![Dynamo 로고](images/dynamo_logo_dark-trim.jpg)
 
 > Dynamo는 설계자를 위한 오픈 소스 시각적 프로그래밍 플랫폼입니다.
 
@@ -21,15 +21,15 @@ Dynamo의 강력한 기능은 다양한 설계 관련 활동에서 확인할 수
 
 이러한 활동을 진행하고 Dynamo를 사용할 수 있는 흥미로운 기회를 제공하려면 Dynamo Primer가 필요합니다.
 
-이 Primer에서 무엇을 배울 수 있는지 알아보려면 [기본 사용자 안내서](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)를 참조하십시오.
+이 [Primer 사용자 안내서](1_introduction/2-primer-user-guide-dynamo-community-and-platform.md)를 참조하여 이 Primer에서 무엇을 배울 수 있는지 확인하십시오.
 
 Autodesk에서는 Dynamo를 지속적으로 개선하고 있으므로 일부 기능은 이 Primer에 표시된 기능과 다르게 보일 수 있습니다. 하지만 기능 변경 사항은 모두 올바르게 표시되어 있습니다.
 
 ### 오픈 소스
 
-Dynamo Primer 프로젝트는 오픈 소스입니다. Autodesk는 고품질 컨텐츠를 제공하기 위해 노력하고 있으며 여러분이 제공하는 피드백을 소중하게 생각하고 있습니다. 문제를 보고하려는 경우 GitHub 문제 페이지(https://github.com/DynamoDS/DynamoPrimer/issues)에 게시해 주십시오.
+Dynamo Primer 프로젝트는 오픈 소스입니다. Autodesk는 고품질 컨텐츠를 제공하기 위해 노력하고 있으며 여러분이 제공하는 피드백을 소중하게 생각하고 있습니다. 어떤 사항이든 문제를 보고하고자 하는 경우 GitHub 문제 페이지([https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues))에 게시해 주십시오. 
 
-새 섹션, 편집 또는 이 프로젝트의 다른 내용에 기여하고 싶은 경우 GitHub 리포지토리(https://github.com/DynamoDS/DynamoPrimer)를 확인해 보십시오.
+이 프로젝트에 새로운 섹션을 추가하거나 프로젝트를 편집하거나 그 밖의 기여를 하고자 하는 경우 GitHub 리포지토리를 확인하여 시작하십시오([https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew)). 
 
 ### Dynamo Primer 프로젝트
 
@@ -37,19 +37,19 @@ Dynamo Primer는 Matt Jezyk 및 Autodesk의 Dynamo 개발 팀에서 시작한 �
 
 **Mode Lab**은 본 입문서의 초판을 작성하는 책임을 맡았습니다. 이러한 소중한 리소스를 마련하는 데 들인 모든 노고에 감사드립니다.
 
-![](images/MODELAB\_Logo.png)
+![](images/MODELAB_Logo.png)
 
 ***
 
 **Parallax 팀의 John Pierson**은 Dynamo 2.0 개정 내용을 반영하도록 입문서를 업데이트하는 업무를 맡았습니다.
 
-![](images/PRLX\_Logo.jpg)
+![](images/PRLX_Logo.jpg)
 
 ***
 
 **Matterlab**은 Dynamo 2.13 개정 내용을 반영하도록 입문서를 업데이트하는 업무를 맡았습니다.
 
-![](images/matterlab\_final-07.jpg)
+![](images/matterlab_final-07.jpg)
 
 ***
 
@@ -73,17 +73,17 @@ Dynamo 프로젝트를 시작하도록 도와주시고 지침을 주신 Ian Keou
 
 **Dynamo** Dynamo의 최신 **안정적인** 릴리즈는 다음 사이트를 참조하십시오.
 
-http://dynamobim.com/download/ 또는 http://dynamobuilds.com
+[https://dynamobim.com/download/](https://dynamobim.com/download/) 또는 [https://dynamobuilds.com](https://dynamobuilds.com/)
 
 *참고: Revit 2020부터 Dynamo는 Revit 릴리스와 함께 번들로 제공되므로 수동 설치가 필요하지 않습니다. 자세한 내용은 이 [블로그 게시물](https://dynamobim.org/dynamo-core-2-1-release/)에서 확인할 수 있습니다.
 
 **DynamoBIM** 추가 정보, 학습 컨텐츠 및 포럼을 확인할 수 있는 최고의 출처는 DynamoBIM 웹 사이트입니다.
 
-http://dynamobim.org
+[https://dynamobim.org](https://dynamobim.org/)
 
 **Dynamo GitHub** Dynamo는 GitHub의 오픈 소스 개발 프로젝트입니다. 참여하려면 DynamoDS를 확인해 주십시오.
 
-https://github.com/DynamoDS/Dynamo
+[https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
 **문의하기** 이 문서에 문제가 있으면 알려주십시오.
 
@@ -95,6 +95,6 @@ Copyright 2023 Autodesk
 
 Apache License, 버전 2.0(이하 "라이센스")에 따라 라이센스가 부여되었으며, 라이센스를 준수하지 않을 경우 이 파일을 사용할 수 없습니다. 라이센스 사본은 다음에서 구할 수 있습니다.
 
-http://www.apache.org/licenses/LICENSE-2.0
+[https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
 준거법에서 요구하거나 서면으로 동의하지 않는 한 본 라이센스에 따라 배포된 소프트웨어는 어떠한 종류의 명시적 또는 암시적 보증 또는 조건 없이 "있는 그대로" 배포됩니다. 라이센스에 따라 권한 및 제한을 규제하는 특정 언어의 라이센스를 확인하십시오.

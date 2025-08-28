@@ -4,9 +4,9 @@
 
 지금까지 리스트가 무엇인지 확인했으므로 리스트에서 수행할 수 있는 작업에 대해 설명하겠습니다. 리스트가 하나의 게임 카드 세트라고 생각해 보십시오. 세트는 리스트이며, 각 카드는 하나의 항목을 나타냅니다.
 
-![카드](../images/5-4/2/Playing\_cards\_modified.jpg)
+![카드](../images/5-4/2/Playing_cards_modified.jpg)
 
-> 사진 출처: [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
+> 사진 출처: [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
 ### 조회
 
@@ -67,7 +67,7 @@ _List.Count_ 노드는 간단합니다. 리스트의 값 개수를 계산하고 
 
 ![개수](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
 
-> 1. **List.Count **_****_ 노드에서는 **Line.ByStartPointEndPoint** 노드의 줄 수를 반환합니다. 이 경우 해당 값은 원래 **Code Block** 노드에서 작성된 점 수와 일치하는 10입니다.
+> 1. **List.Count** 노드는 **Line.ByStartPointEndPoint** 노드의 선 개수를 반환합니다. 이 경우 해당 값은 원래 **Code Block** 노드에서 작성된 점 수와 일치하는 10입니다.
 
 ### List.GetItemAtIndex
 

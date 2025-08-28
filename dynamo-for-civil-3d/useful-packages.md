@@ -2,9 +2,7 @@
 
 Dynamo 패키지는 Dynamo의 핵심 기능을 확장하기 위해 타사에서 개발한 도구 세트입니다. 누구나 액세스할 수 있으며 한 번의 버튼 클릭으로 다운로드할 수 있습니다.
 
-{% hint style="info" %}
-패키지를 시작하는 방법에 대한 자세한 내용은 [6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention") 섹션을 참조하십시오.
-{% endhint %}
+{% hint style="info" %} 패키지를 시작하는 방법에 대한 자세한 내용은 [6-2_packages](../6_custom_nodes_and_packages/6-2_packages/ "mention") 섹션을 참조하십시오. {% endhint %}
 
 다음은 Dynamo for Civil 3D 그래프를 한 단계 높은 수준으로 끌어올릴 수 있는 가장 인기 있는 패키지 리스트입니다.
 
@@ -14,11 +12,11 @@ _Civil 3D 도구 키트_ 는 대규모의 추가 노드 인벤토리를 통해 D
 
 #### 피드백
 
-{% embed url="https://forum.dynamobim.com/t/civil-3d-toolkit-feedback-thread/43570" %}
+[Civil 3D 도구 키트 피드백 스레드](https://forum.dynamobim.com/t/civil-3d-toolkit-feedback-thread/43570)
 
 #### 관련 Autodesk University 강좌
 
-{% embed url="https://www.autodesk.com/autodesk-university/ko/class/Supercharge-Your-Dynamo-Graph-Civil-3D-Toolkit-2020" %}
+[Civil 3D 도구 키트로 Dynamo 그래프 강화 | Autodesk University](https://www.autodesk.com/autodesk-university/class/Supercharge-Your-Dynamo-Graph-Civil-3D-Toolkit-2020)
 
 ## 캠버
 
@@ -26,7 +24,7 @@ _Civil 3D 도구 키트_ 는 대규모의 추가 노드 인벤토리를 통해 D
 
 #### 피드백
 
-{% embed url="https://forum.dynamobim.com/t/camber-feedback-thread/68942" %}
+[캠버 피드백 스레드](https://forum.dynamobim.com/t/camber-feedback-thread/68942)
 
 #### 소스 코드
 
@@ -38,11 +36,11 @@ _CivilConnection_ 은 Civil 3D, Dynamo 및 Revit 간에 정보를 교환할 수 
 
 #### 관련 Autodesk University 강좌
 
-{% embed url="https://www.autodesk.com/autodesk-university/ko/class/Computational-modeling-linear-structure-Civil-3D-Revit-Dynamo-CivilConnection-2019" %}
+[Civil 3D, Revit 및 Dynamo CivilConnection을 사용한 선형 구조 계산 모델링 | Autodesk University](https://www.autodesk.com/autodesk-university/class/Computational-modeling-linear-structure-Civil-3D-Revit-Dynamo-CivilConnection-2019)
 
-{% embed url="https://www.autodesk.com/autodesk-university/ko/class/Bridge-Detailing-20-Computational-modelling-methods-using-Civil-3D-Revit-Dynamo-2019" %}
+[교량 상세 설계 2.0: Civil 3D, Revit 및 Dynamo를 사용한 계산 모델링 기법 | Autodesk University](https://www.autodesk.com/autodesk-university/class/Bridge-Detailing-20-Computational-modelling-methods-using-Civil-3D-Revit-Dynamo-2019)
 
-{% embed url="https://www.autodesk.com/autodesk-university/ko/class/Parametric-modeling-and-automating-placement-Universal-TBM-Rings-2021" %}
+[파라메트릭 모델링과 Universal TBM 링 배치 자동화 | Autodesk University](https://www.autodesk.com/autodesk-university/class/Parametric-modeling-and-automating-placement-Universal-TBM-Rings-2021)
 
 #### 소스 코드
 
@@ -54,7 +52,7 @@ Arkance Systems 노드는 치수, 테이블, 뷰, 드릴 제어 등의 작업에
 
 #### 피드백
 
-{% embed url="https://forum.dynamobim.com/t/arkance-systems-node-library-feedback-thread/75681" %}
+[Arkance Systems 노드 라이브러리 피드백 스레드](https://forum.dynamobim.com/t/arkance-systems-node-library-feedback-thread/75681)
 
 #### 설명서
 

@@ -6,7 +6,7 @@
 
 일련의 가변 구성요소를 작성하고 해당 점 위치를 기준으로 매개변수를 편집한다고 가정합니다. 예를 들어 점은 요소의 면적과 관련된 두께 매개변수를 구동할 수 있습니다. 또는 한 해 동안의 일조 노출과 관련된 불투명도 매개변수를 구동할 수 있습니다. Dynamo를 사용하면 몇 가지 간단한 단계를 통해 매개변수에 해석을 연결할 수 있으며, 아래 연습에서 기본 버전을 살펴보겠습니다.
 
-![](./images/5/customizing-pointlocation.jpg)
+![](images/5/customizing-pointlocation.jpg)
 
 > **AdaptiveComponent.Locations** 노드를 사용하여 선택한 가변 구성요소의 가변 점을 조회합니다. 이 도구를 사용하면 해석을 위해 Revit 요소의 추상화된 버전으로 작업할 수 있습니다.
 
@@ -14,7 +14,7 @@
 
 ### 일조 방향 해석
 
-![](./images/5/customizing-solarorientationanalysis.jpg)
+![](images/5/customizing-solarorientationanalysis.jpg)
 
 > 재매핑을 사용하여 데이터 세트를 매개변수 범위에 매핑합니다. 이는 파라메트릭 모델에 사용되는 기본적인 도구이며 아래 연습에서 이러한 기본적인 내용을 보여드리겠습니다.
 
@@ -26,44 +26,44 @@ Dynamo를 사용하면 가변 구성요소의 점 위치를 사용하여 각 요
 >
 > 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
-{% file src="./datasets/5/Revit-Customizing.zip" %}
+{% file src="datasets/5/Revit-Customizing.zip" %}
 
 이 연습에서는 이전 섹션에서 설명한 기술을 확장합니다. 이 경우 4점 가변 구성요소를 인스턴스화한 다음, 태양에 대한 방향을 기준으로 편집하여 Revit 요소에서 파라메트릭 표면을 정의합니다.
 
-![](./images/5/customizing-exercise01.jpg)
+![](images/5/customizing-exercise01.jpg)
 
 > 1. 먼저 _"Select Edge"_ 노드를 사용하여 두 개의 모서리를 선택합니다. 두 모서리는 아트리움의 긴 스팬입니다.
 > 2. _List.Create_ 노드를 사용하여 두 모서리를 하나의 리스트로 결합합니다.
 > 3. _Surface.ByLoft_ 로 두 모서리 사이에 표면을 작성합니다.
 
-![](./images/5/customizing-exercise02.jpg)
+![](images/5/customizing-exercise02.jpg)
 
 > 1. _code block_ 을 사용하여 0부터 1까지 10개의 동일한 간격으로 배치된 값을 정의합니다(`0..1..#10;`).
 > 2. _code block_ 을 _Surface.PointAtParameter_ 노드의 *u* 및 _v_ 입력에 연결하고 _Surface.ByLoft_ 노드를 _surface_ 입력에 연결합니다. 노드를 마우스 오른쪽 버튼으로 클릭하고 _레이싱_ 을 _외적_ 으로 변경합니다. 그러면 표면에 점 그리드가 나타납니다.
 
 이 점 그리드는 파라메트릭 방식으로 정의된 표면에 대한 제어점 역할을 합니다. 이러한 각 점의 u 및 v 위치를 추출하여 파라메트릭 수식에 연결하고 동일한 데이터 구조를 유지해 보겠습니다. 방금 작성한 점의 매개변수 위치를 조회하여 이를 수행할 수 있습니다.
 
-![](./images/5/customizing-exercise03.jpg)
+![](images/5/customizing-exercise03.jpg)
 
 > 1. 캔버스에 _Surface.ParameterAtPoint_ 노드를 추가하고 위에 표시된 대로 입력을 연결합니다.
 > 2. UV.U 노드를 사용하여 이러한 매개변수의 _u_ 값을 조회합니다.
 > 3. UV.V 노드를 사용하여 이러한 매개변수의 _v_ 값을 조회합니다.
 > 4. 출력은 표면의 모든 점에 대해 해당 _u_ 및 _v_ 값을 표시합니다. 이제 적절한 데이터 구조에 각 값의 _0_~_1_ 범위가 구성되었으므로 파라메트릭 알고리즘을 적용할 준비가 되었습니다.
 
-![](./images/5/customizing-exercise04.jpg)
+![](images/5/customizing-exercise04.jpg)
 
 > 1. 캔버스에 _code block_ 을 추가하고 코드 `Math.Sin(u*180)*Math.Sin(v*180)*w;`를 입력합니다. 이는 평평한 표면에서 사인 마운드를 작성하는 파라메트릭 함수입니다.
 > 2. _UV.U_ 를 _u_ 입력에 연결하고 UV.V를 _v_ 입력에 연결합니다.
 > 3. _w_ 입력은 모양의 _진폭_ 을 나타내므로 _number slider_ 를 부착합니다.
 
-![](./images/5/customizing-exercise05.jpg)
+![](images/5/customizing-exercise05.jpg)
 
 > 1. 이제 알고리즘에 의해 정의된 값 리스트가 있습니다. 이 값 리스트를 사용하여 점을 _+Z_ 방향으로 위로 이동합니다. _Geometry.Translate_ 를 사용하여 *code block*을 _zTranslation_ 에 연결하고 _Surface.PointAtParameter_ 를 _geometry_ 입력에 연결합니다. Dynamo 미리보기에 새 점이 표시됩니다.
 > 2. 마지막으로 _NurbsSurface.ByPoints_ 노드를 사용하여 표면을 작성하고 이전 단계의 노드를 점 입력에 연결합니다. 이제 파라메트릭 표면이 생겼습니다. 슬라이더를 자유롭게 끌어 마운드가 축소 및 확장되는 것을 확인합니다.
 
 파라메트릭 표면을 사용하여 4점 가변 구성요소를 배열하기 위해 패널화하는 방법을 정의하려고 합니다. Dynamo에는 표면 패널화를 위한 즉시 사용 가능한 기능이 없기 때문에 커뮤니티에서 유용한 Dynamo 패키지를 찾아보겠습니다.
 
-![](./images/5/customizing-exercise06.jpg)
+![](images/5/customizing-exercise06.jpg)
 
 > 1. _패키지>패키지 검색..._ 으로 이동합니다.
 > 2. _"LunchBox"_ 를 검색하고 _"LunchBox for Dynamo"_ 를 설치합니다. 이는 이러한 형상 작업에 매우 유용한 도구 세트입니다.
@@ -89,9 +89,9 @@ _참고: Dynamo에서 노드를 계산하는 데 시간이 오래 걸리는 경�
 
 > 1. 이전 단계에서 계속 진행하면서 태양에 대한 노출을 기준으로 각 패널의 조리개를 더 많이 움직이도록 해보겠습니다. Revit으로 줌하고 패널 하나를 선택하면 특성 막대에 _"조리개 비율"_ 이라는 매개변수가 표시됩니다. 조리개 범위가 대략 _0.05_~_0.45_ 가 되도록 패밀리가 설정됩니다.
 
-> 1. 태양 경로를 켜면 Revit에서 현재 태양 위치를 볼 수 있습니다.
+> 2. 태양 경로를 켜면 Revit에서 현재 태양 위치를 볼 수 있습니다.
 
-> 1. _SunSettings.Current_ 노드를 사용하여 이 태양 위치를 참조할 수 있습니다.
+> 3. _SunSettings.Current_ 노드를 사용하여 이 태양 위치를 참조할 수 있습니다.
 
 1. 태양 설정을 _Sunsetting.SunDirection_ 에 연결하여 일조 벡터를 가져옵니다.
 2. 가변 구성요소를 작성하는 데 사용된 _패널 점_ 에서 _Plane.ByBestFitThroughPoints_ 를 사용하여 구성요소의 대략적인 평면을 만듭니다.
@@ -100,13 +100,13 @@ _참고: Dynamo에서 노드를 계산하는 데 시간이 오래 걸리는 경�
 5. 결과의 _절댓값_ 을 사용합니다. 그래야 평면 법선이 반대 방향을 향하고 있는 경우 내적이 정확해집니다.
 6. _실행_ 을 누릅니다.
 
-> 1. _내적_ 을 보면 다양한 범위의 숫자가 표시됩니다. 상대 분산을 사용할 것이지만, 이러한 숫자를 편집하려는 _"조리개 비율"_ 매개변수의 적절한 범위로 압축해야 합니다.
+> 1) _내적_ 을 보면 다양한 범위의 숫자가 표시됩니다. 상대 분산을 사용할 것이지만, 이러한 숫자를 편집하려는 _"조리개 비율"_ 매개변수의 적절한 범위로 압축해야 합니다.
 
 1. _Math.RemapRange_ 는 이 작업에 유용한 도구입니다. 입력 리스트를 가져와서 해당 경계를 두 대상 값으로 다시 매핑합니다.
 2. 대상 값을 _code block_ 에서 _0.15_ 및 _0.45_ 로 정의합니다.
 3. _실행_ 을 누릅니다.
 
-> 1. 다시 매핑된 값을 _Element.SetParameterByName_ 노드에 연결합니다.
+> 1) 다시 매핑된 값을 _Element.SetParameterByName_ 노드에 연결합니다.
 
 1. 문자열 _"조리개 비율"_ 을 _parameterName_ 입력에 연결합니다.
 2. _가변 구성요소_ 를 _element_ 입력에 연결합니다.

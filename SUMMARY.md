@@ -74,7 +74,7 @@
   * [Dynamo 플레이어](dynamo-for-civil-3d/dynamo-player.md)
   * [유용한 패키지](dynamo-for-civil-3d/useful-packages.md)
   * [리소스](dynamo-for-civil-3d/resources.md)
-* [Forma 베타의 Dynamo](dynamo-in-forma-beta/README.md)
+* [Dynamo in Forma](dynamo-in-forma-beta/README.md)
   * [Forma에서 Dynamo Player 설정](dynamo-in-forma-beta/set-up-dynamo-player-in-forma.md)
   * [Dynamo Player에서 그래프 추가 및 공유](dynamo-in-forma-beta/add-and-share-graphs-in-dynamo-player.md)
   * [Dynamo Player에서 그래프 실행](dynamo-in-forma-beta/run-graphs-in-dynamo-player.md)
