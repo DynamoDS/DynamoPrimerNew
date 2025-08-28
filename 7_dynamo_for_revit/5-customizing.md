@@ -6,7 +6,7 @@ Mentre in precedenza è stata esaminata la modifica della massa di un edificio d
 
 Si supponga di aver creato un'ampia gamma di componenti adattivi e di voler modificare i parametri in base alle relative posizioni dei punti. I punti, ad esempio, potrebbero controllare un parametro di spessore correlato all'area dell'elemento. Oppure potrebbero controllare un parametro di opacità correlato all'esposizione solare durante tutto l'anno. Dynamo consente il collegamento dell'analisi ai parametri in pochi semplici passaggi. Verrà analizzata una versione di base nell'esercizio riportato di seguito.
 
-![](./images/5/customizing-pointlocation.jpg)
+![](images/5/customizing-pointlocation.jpg)
 
 > Eseguire una query sui punti adattivi del componente adattivo selezionato utilizzando il nodo **AdaptiveComponent.Locations**. Questo consente di utilizzare una versione astratta di un elemento di Revit per l'analisi.
 
@@ -14,7 +14,7 @@ Estraendo la posizione dei punti dei componenti adattivi, è possibile eseguire 
 
 ### Analisi dell'orientamento solare
 
-![](./images/5/customizing-solarorientationanalysis.jpg)
+![](images/5/customizing-solarorientationanalysis.jpg)
 
 > Utilizzare il rimappaggio per associare un gruppo di dati ad un intervallo di parametri. Questo è uno strumento fondamentale utilizzato in un modello parametrico e verrà dimostrato nell'esercizio riportato di seguito.
 
@@ -26,44 +26,44 @@ Utilizzando Dynamo, le posizioni dei punti dei componenti adattivi possono esser
 >
 > Un elenco completo di file di esempio è disponibile nell'Appendice.
 
-{% file src="./datasets/5/Revit-Customizing.zip" %}
+{% file src="datasets/5/Revit-Customizing.zip" %}
 
 Questo esercizio verterà sulle tecniche illustrate nella sezione precedente. In questo caso, verrà definita una superficie parametrica degli elementi di Revit, saranno create istanze di componenti adattivi a quattro punti, che verranno poi modificati in base all'orientamento rispetto al sole.
 
-![](./images/5/customizing-exercise01.jpg)
+![](images/5/customizing-exercise01.jpg)
 
 > 1. Iniziare selezionando due spigoli con il nodo _Select Edge_. I due spigoli sono i tratti lunghi dell'atrio.
 > 2. Combinare i due spigoli in un elenco con il nodo _List.Create_.
 > 3. Creare una superficie tra i due spigoli con _Surface.ByLoft_.
 
-![](./images/5/customizing-exercise02.jpg)
+![](images/5/customizing-exercise02.jpg)
 
 > 1. Utilizzando _Code Block_, definire un intervallo da 0 a 1 con 10 valori a spaziatura uniforme: `0..1..#10;`.
 > 2. Collegare _Code Block_ agli input *u* e _v_ di un nodo _Surface.PointAtParameter_ e collegare il nodo _Surface.ByLoft_ all'input _surface_. Fare clic con il pulsante destro del mouse sul nodo e modificare _Collegamento_ in _Globale_. In questo modo si ottiene una griglia di punti sulla superficie.
 
 Questa griglia di punti funge da punti di controllo per una superficie definita in modo parametrico. Si desidera estrarre le posizioni u e v di ciascuno di questi punti in modo da poterle collegare ad una formula parametrica e mantenere la stessa struttura di dati. A tale scopo, è possibile eseguire una query sulle posizioni dei parametri dei punti appena creati.
 
-![](./images/5/customizing-exercise03.jpg)
+![](images/5/customizing-exercise03.jpg)
 
 > 1. Aggiungere un nodo _Surface.ParameterAtPoint_ all'area di disegno e collegare gli input come mostrato in precedenza.
 > 2. Eseguire una query sui valori _u_ di questi parametri con il nodo UV.U.
 > 3. Eseguire una query sui valori _v_ di questi parametri con il nodo UV.V.
 > 4. Gli output mostrano i valori _u_ e _v_ corrispondenti per ogni punto della superficie. Ora è disponibile un intervallo compreso tra _0_ e _1_ per ogni valore, nella struttura di dati corretta, pertanto è possibile applicare un algoritmo parametrico.
 
-![](./images/5/customizing-exercise04.jpg)
+![](images/5/customizing-exercise04.jpg)
 
 > 1. Aggiungere _Code Block_ all'area di disegno e immettere il codice: `Math.Sin(u*180)*Math.Sin(v*180)*w;`. Si tratta di una funzione parametrica che crea una protuberanza sinusoidale da una superficie piana.
 > 2. Collega _UV.U_ all'input _u_ e UV.V all'input _v_.
 > 3. L'input _w_ rappresenta l'_ampiezza_ della forma, pertanto si associa _Number Slider_ ad esso.
 
-![](./images/5/customizing-exercise05.jpg)
+![](images/5/customizing-exercise05.jpg)
 
 > 1. Ora è disponibile un elenco di valori come definito dall'algoritmo. Utilizzare questo elenco di valori per spostare i punti verso l'alto nella direzione _+Z_. Utilizzando _Geometry.Translate_, collegare *Code Block* a _zTranslation_ e _Surface.PointAtParameter_ all'input _geometry_. I nuovi punti dovrebbero essere visualizzati nell'anteprima di Dynamo.
 > 2. Infine, creare una superficie con il nodo _NurbsSurface.ByPoints_, collegando il nodo del passaggio precedente all'input points. Si ottiene una superficie parametrica. È possibile trascinare il dispositivo di scorrimento per restringere e ingrandire la protuberanza.
 
 Con la superficie parametrica, si vuole definire un modo per suddividerla in pannelli al fine di creare la serie di componenti adattivi a quattro punti. Dynamo non dispone di funzionalità predefinite per la suddivisione della superficie in pannelli, pertanto è possibile accedere alla community per i pacchetti di Dynamo utili.
 
-![](./images/5/customizing-exercise06.jpg)
+![](images/5/customizing-exercise06.jpg)
 
 > 1. Passare a _Pacchetti > Cerca pacchetto_.
 > 2. Cercare _LunchBox_ e installare _LunchBox for Dynamo_. Si tratta di un insieme veramente utile di strumenti per le operazioni di geometria come questa.
@@ -89,9 +89,9 @@ _Nota: se Dynamo richiede molto tempo per il calcolo dei nodi, potrebbe essere n
 
 > 1. Continuando dal passaggio precedente, proseguire e controllare l'apertura di ogni pannello in base alla sua esposizione al sole. Se si esegue lo zoom in Revit e si seleziona un pannello, sulla barra delle proprietà viene visualizzato il parametro _Aperture Ratio_. La famiglia è impostata in modo che l'apertura sia compresa, approssimativamente, tra _0.05_ e _0.45_.
 
-> 1. Se si osserva il percorso solare, è possibile vedere la posizione corrente del sole in Revit.
+> 2. Se si osserva il percorso solare, è possibile vedere la posizione corrente del sole in Revit.
 
-> 1. È possibile fare riferimento a questa posizione del sole utilizzando il nodo _SunSettings.Current_.
+> 3. È possibile fare riferimento a questa posizione del sole utilizzando il nodo _SunSettings.Current_.
 
 1. Collegare le impostazioni del sole a _Sunsetting.SunDirection_ per ottenere il vettore solare.
 2. Dal nodo _Panel Pts_ utilizzato per creare i componenti adattivi, utilizzare _Plane.ByBestFitThroughPoints_ per approssimare un piano per il componente.
@@ -100,13 +100,13 @@ _Nota: se Dynamo richiede molto tempo per il calcolo dei nodi, potrebbe essere n
 5. Utilizzare il _valore assoluto_ del risultato. In questo modo si garantisce che il prodotto scalare sia preciso se la normale del piano è rivolta verso la direzione inversa.
 6. Fare clic su _Esegui_.
 
-> 1. Osservando il _prodotto scalare_, si hanno diversi numeri. Si desidera utilizzare la distribuzione relativa, ma è necessario comprimere i numeri nell'intervallo appropriato del parametro _Aperture Ratio_ che si intende modificare.
+> 1) Osservando il _prodotto scalare_, si hanno diversi numeri. Si desidera utilizzare la distribuzione relativa, ma è necessario comprimere i numeri nell'intervallo appropriato del parametro _Aperture Ratio_ che si intende modificare.
 
 1. _Math.RemapRange_ è uno strumento eccezionale per questa funzione. Prevede un elenco di input e ne riassocia i limiti a due valori obiettivo.
 2. Definire i valori obiettivo come _0.15_ e_0.45_ in _Code Block_.
 3. Fare clic su _Esegui_.
 
-> 1. Collegare i valori riassociati ad un nodo _Element.SetParameterByName_.
+> 1) Collegare i valori riassociati ad un nodo _Element.SetParameterByName_.
 
 1. Collegare la stringa _Aperture Ratio_ all'input _parameterName_.
 2. Collegare _AdaptiveComponent_ all'input _element_.

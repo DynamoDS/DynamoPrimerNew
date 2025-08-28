@@ -60,14 +60,14 @@ Utilizzando la stessa logica del dizionario, è possibile creare dizionari anche
 
 ![](../images/5-5/4/dictionary-exerciseII-02.jpg)
 
-> 1. Ora è possibile raggruppare i locali in base al livello in cui risiedono.
+> 2. Ora è possibile raggruppare i locali in base al livello in cui risiedono.
 
 ![](../images/5-5/4/dictionary-exerciseII-03.jpg)
 
-> 1. Con gli elementi raggruppati per livello, è ora possibile utilizzare le chiavi condivise (chiavi univoche) come chiave per il dizionario e gli elenchi di locali come elementi.
+> 3. Con gli elementi raggruppati per livello, è ora possibile utilizzare le chiavi condivise (chiavi univoche) come chiave per il dizionario e gli elenchi di locali come elementi.
 
 ![](../images/5-5/4/dictionary-exerciseII-04.jpg)
 
-> 1. Infine, utilizzando i livelli nel modello di Revit, è possibile cercare i locali che risiedono in tale livello nel dizionario.`Dictionary.ValueAtKey` recupererà il nome del livello e restituirà gli oggetti locale in corrispondenza di tale livello.
+> 4. Infine, utilizzando i livelli nel modello di Revit, è possibile cercare i locali che risiedono in tale livello nel dizionario.`Dictionary.ValueAtKey` recupererà il nome del livello e restituirà gli oggetti locale in corrispondenza di tale livello.
 
 Le opportunità di utilizzo del dizionario sono davvero infinite. La possibilità di correlare i dati BIM in Revit all'elemento stesso offre diversi casi di utilizzo.

@@ -8,10 +8,10 @@ Gli operatori sono un insieme di componenti che utilizzano funzioni algebriche c
 
 | Icona                                                  | Nome (Sintassi)     | Input                     | Output      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Add (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtract (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiply (*) | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Divide (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Add (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtract (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiply (*****) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Divide (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Esercizio: Formula della spirale aurea
 
@@ -25,7 +25,7 @@ Gli operatori sono un insieme di componenti che utilizzano funzioni algebriche c
 
 Combinare operatori e variabili per formare una relazione più complessa mediante le **formule**. Utilizzare i dispositivi di scorrimento per creare una formula che possa essere controllata con i parametri di input.
 
-1\. Creare una sequenza di numeri che rappresenta la "t" nell'equazione parametrica, pertanto si desidera utilizzare un elenco di dimensioni sufficienti per definire una spirale.
+1. Creare una sequenza di numeri che rappresenta la "t" nell'equazione parametrica, pertanto si desidera utilizzare un elenco di dimensioni sufficienti per definire una spirale.
 
 **Number Sequence:** definire una sequenza di numeri in base a tre input: _start, amount_ e _step_.
 
@@ -61,7 +61,7 @@ L'immagine seguente rappresenta la spirale aurea sotto forma di programmazione v
 
 ### Parte II: Dalla formula alla geometria
 
-Ora, la maggior parte dei nodi del passaggio precedente funzionerà correttamente, ma richiede molto lavoro. Per creare un workflow più efficiente, esaminare [DesignScript ](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md)per definire una stringa di espressioni di Dynamo in un nodo. In questa serie successiva di passaggi, verrà utilizzata l'equazione parametrica per disegnare la spirale di Fibonacci.
+Ora, la maggior parte dei nodi del passaggio precedente funzionerà correttamente, ma richiede molto lavoro. Per creare un workflow più efficiente, esaminare [DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md) per definire una stringa di espressioni di Dynamo in un nodo. In questa serie successiva di passaggi, verrà utilizzata l'equazione parametrica per disegnare la spirale di Fibonacci.
 
 **Point.ByCoordinates:** collegare il nodo della moltiplicazione superiore all'input "_x_" e quello inferiore all'input "_y_". Viene visualizzata una spirale parametrica di punti sullo schermo.
 
@@ -91,7 +91,7 @@ Ora che è stata creata una conchiglia Nautilus circolare, si può passare alle 
 
 Come punto di partenza, iniziare con lo stesso passaggio dell'esercizio precedente: la creazione di una serie di punti della spirale con il nodo **Point.ByCoordinates**.
 
-\![](../images/5-3/2/math-part IV-01.jpg)
+<figure><img src="../images/5-3/2/math-partIV-01.jpg" alt=""><figcaption></figcaption></figure>
 
 Quindi, seguire questi mini passaggi per generare una serie di spirali con rotazione diversa.
 

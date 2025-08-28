@@ -36,7 +36,8 @@ Una mesh è una raccolta di quadrilateri e triangoli che rappresenta una geometr
 ![Elementi della mesh](../images/5-2/7/MeshElements2.jpg)
 
 > 1. Vertici della mesh
-> 2. Bordi della mesh *I bordi con una sola faccia adiacente vengono denominati "nudi". Tutti gli altri bordi sono "vestiti"
+> 2. Bordi della mesh 
+>    1. I bordi con una sola faccia adiacente vengono denominati "nudi". Tutti gli altri bordi sono "vestiti".
 > 3. Facce della mesh
 
 ### Vertici + normali dei vertici

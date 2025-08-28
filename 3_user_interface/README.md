@@ -33,13 +33,13 @@ Informazioni generali e impostazioni sono disponibili nel menu a discesa di **Dy
 
 Se si è bloccati, consultare il menu **?**. È possibile accedere ad uno dei siti Web di riferimento di Dynamo tramite il browser Internet.
 
-![](images/userinterface-helpmenu.jpg)
+![](../.gitbook/assets/help-menu.png)
 
-> 1. Introduzione: mostra una breve introduzione all'utilizzo di Dynamo.
-> 2. Guide interattive -
-> 3. Esempi: fornisce file di esempio di riferimento.
-> 4. Dizionario di Dynamo: rappresenta una risorsa con documentazione su tutti i nodi.
-> 5. Sito Web di Dynamo: consente di visualizzare il progetto di Dynamo su GitHub.
+> 1. Guide interattive: presentazioni che guidano l'utente passo passo attraverso le varie funzionalità di Dynamo.
+> 2. Esempi: fornisce file di esempio di riferimento. Disponibili solo nei programmi host, inclusi Revit e Civil 3D.
+> 3. Dizionario di Dynamo: rappresenta una risorsa con documentazione su tutti i nodi.
+> 4. Sito Web di Dynamo: è un sito Web per informazioni su Dynamo e collegamenti a risorse quali il forum, il blog e così via.
+> 5. Repository di Dynamo: consente di visualizzare il progetto di Dynamo su GitHub. 
 > 6. Wiki progetto di Dynamo: consente di visitare la pagina Wiki per informazioni sullo sviluppo mediante l'API di Dynamo, gli strumenti e le librerie di supporto.
 > 7. Visualizza pagina iniziale: consente di tornare alla pagina iniziale di Dynamo quando ci si trova all'interno di un documento.
 > 8. Segnala un bug: consente di aprire un problema in GitHub.
@@ -49,7 +49,7 @@ Se si è bloccati, consultare il menu **?**. È possibile accedere ad uno dei si
 La barra degli strumenti di Dynamo contiene una serie di pulsanti per l'accesso rapido ai file, nonché i comandi Annulla [CTRL+Z] e Ripeti [CTRL+Y]. All'estrema destra è presente un altro pulsante che consente di esportare un'istantanea dell'area di lavoro, che è estremamente utile per la documentazione e la condivisione.
 
 * ![](images/userinterface-newfile.jpg) Nuovo: consente di creare un nuovo file .dyn.
-* ![](<images/userinterface-open(1) (1) (1).jpg>) Apri: consente di aprire un file .dyn (area di lavoro) o .dyf (nodo personalizzato) esistente.
+* \![](<images/userinterface-open(1) (1) (1).jpg>) Apri: consente di aprire un file .dyn (area di lavoro) o .dyf (nodo personalizzato) esistente.
 * ![](images/userinterface-save.jpg) Salva/Salva con nome: consente di salvare il file .dyn o .dyf attivo.
 * ![](images/userinterface-undo.jpg) Annulla: consente di annullare l'ultima azione.
 * ![](images/userinterface-redo.jpg) Ripeti: consente di ripetere l'azione successiva.

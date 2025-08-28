@@ -4,9 +4,9 @@
 
 Ora che è stato definito un elenco, si può parlare delle operazioni eseguibili su di esso. Si immagini un elenco come un mazzo di carte da gioco. Un mazzo è l'elenco e ogni carta da gioco rappresenta una voce.
 
-![carte](../images/5-4/2/Playing\_cards\_modified.jpg)
+![carte](../images/5-4/2/Playing_cards_modified.jpg)
 
-> Foto di [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
+> Foto di [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
 ### Query
 
@@ -67,7 +67,7 @@ Il nodo _List.Count_ è semplice: calcola il numero di valori in un elenco e res
 
 ![Count](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
 
-> 1. Il nodo **List.Count**_****_ restituisce il numero di linee nel nodo **Line.ByStartPointEndPoint**. In questo caso, il valore è 10, che corrisponde al numero di punti creati dal nodo **Code Block** originale.
+> 1. Il nodo **List.Count** restituisce il numero di linee nel nodo **Line.ByStartPointEndPoint**. In questo caso, il valore è 10, che corrisponde al numero di punti creati dal nodo **Code Block** originale.
 
 ### List.GetItemAtIndex
 

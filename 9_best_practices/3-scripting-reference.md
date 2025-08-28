@@ -6,7 +6,7 @@ Questa pagina di riferimento estende le procedure ottimali descritte in Strategi
 
 Le librerie standard sono esterne a Dynamo e sono presenti nei linguaggi di programmazione Python e C# (zero-touch). Dynamo dispone anche di un suo gruppo di librerie che corrispondono direttamente alla gerarchia dei nodi, consentendo all'utente di creare qualsiasi elemento nel codice che potrebbe essere creato con nodi e fili. Di seguito è riportata una guida per gli elementi a cui ciascuna libreria di Dynamo consente di accedere e per quando utilizzarne una standard.
 
-![](./images/3/textual-programming.jpg)
+![](images/3/textual-programming.jpg)
 
 **Librerie standard e librerie di Dynamo**
 
@@ -15,12 +15,9 @@ Le librerie standard sono esterne a Dynamo e sono presenti nei linguaggi di prog
 
 **Librerie di Dynamo**
 
-1.  ProtoGeometry*
-
-    * Funzionalità: arco, riquadro di delimitazione, cerchio, cono, sistema di coordinate, cuboide, curva, cilindro, spigolo, ellisse, arco di ellisse, faccia, geometria, elica, gruppo di indici, linea, mesh, curva NURBS, superficie NURBS, piano, punto, poligono, rettangolo, solido, sfera, superficie, topologia, TSpline, UV, vettore, vertice.
-    * Modalità di importazione: `import Autodesk.DesignScript.Geometry`
-
-    \`\`
+1. ProtoGeometry*
+   * Funzionalità: arco, riquadro di delimitazione, cerchio, cono, sistema di coordinate, cuboide, curva, cilindro, spigolo, ellisse, arco di ellisse, faccia, geometria, elica, gruppo di indici, linea, mesh, curva NURBS, superficie NURBS, piano, punto, poligono, rettangolo, solido, sfera, superficie, topologia, TSpline, UV, vettore, vertice.
+   * Modalità di importazione: `import Autodesk.DesignScript.Geometry`
 2. DSCoreNodes
    * Funzionalità: colore, intervallo di colori 2D, data e ora, intervallo di tempo, IO, formula, logica, elenco, matematica, Quadtree, stringa, filettatura.
    * Modalità di importazione: `import DSCore`
@@ -31,9 +28,7 @@ Le librerie standard sono esterne a Dynamo e sono presenti nei linguaggi di prog
    * Funzionalità: Excel.
    * Modalità di importazione: `import DSOffice`
 
-{% hint style="warning" %}
-\*Nota Quando si utilizza **ProtoGeometry** tramite Python o C#, si stanno creando oggetti non gestiti, che richiedono la gestione manuale della memoria. Per ulteriori informazioni, vedere la sezione riportata di seguito: **Oggetti non gestiti**.
-{% endhint %}
+{% hint style="warning" %} *Nota Quando si utilizza **ProtoGeometry** tramite Python o C#, si stanno creando oggetti non gestiti, che richiedono la gestione manuale della memoria. Per ulteriori informazioni, vedere la sezione riportata di seguito: **Oggetti non gestiti**. {% endhint %}
 
 ## Etichettatura con attenzione
 

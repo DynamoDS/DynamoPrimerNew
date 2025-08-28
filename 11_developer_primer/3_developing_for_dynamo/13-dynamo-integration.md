@@ -22,7 +22,7 @@ In questi documenti verranno utilizzati i termini script, grafico e programma di
 
 [https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534](https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534)
 
-`DynamoModel` è il punto di ingresso per un'applicazione che ospita Dynamo; rappresenta un'applicazione di Dynamo. Il modello è l'oggetto principale di livello superiore che contiene riferimenti alle altre strutture di dati e agli oggetti importanti che costituiscono l'applicazione Dynamo e la macchina virtuale DesignScript.
+`DynamoModel` è il punto di ingresso per un'applicazione che ospita Dynamo. Rappresenta un'applicazione di Dynamo. Il modello è l'oggetto principale di livello superiore che contiene riferimenti alle altre strutture di dati e agli oggetti importanti che costituiscono l'applicazione Dynamo e la macchina virtuale DesignScript.
 
 Un oggetto di configurazione viene utilizzato per impostare parametri comuni in `DynamoModel` quando viene costruito.
 
@@ -38,7 +38,7 @@ Per inizializzare `DynamoModel`, gli integratori dovranno eseguire questi passag
 
 ### Precaricare dall'host i file DLL di Dynamo condivisi.
 
-Attualmente l'elenco in Dynamo for Revit include solo `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` Questa operazione viene eseguita per evitare conflitti di versioni della libreria tra Dynamo e Revit. Esempio: quando si verificano conflitti in `AvalonEdit`, la funzione del blocco di codice può essere completamente interrotta. Il problema è riportato in Dynamo 1.1.x alla paginahttps://github.com/DynamoDS/Dynamo/issues/7130 ed è riproducibile anche manualmente. Se gli integratori rilevano conflitti di libreria tra la funzione host e Dynamo, è consigliabile eseguire questa operazione come primo passaggio. Ciò è talvolta necessario per impedire ad altri plug-in o all'applicazione host stessa di caricare una versione incompatibile di una dipendenza condivisa. Una soluzione migliore consiste nel risolvere il conflitto di versioni allineando la versione o utilizzando un reindirizzamento del binding .NET nel file app.config dell'host, se possibile.
+Attualmente l'elenco in Dynamo for Revit include solo `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` Questa operazione viene eseguita per evitare conflitti di versioni della libreria tra Dynamo e Revit. Esempio: quando si verificano conflitti in `AvalonEdit`, la funzione del blocco di codice può essere completamente interrotta. Il problema è riportato in Dynamo 1.1.x alla pagina [https://github.com/DynamoDS/Dynamo/issues/7130](https://github.com/DynamoDS/Dynamo/issues/7130) ed è riproducibile anche manualmente. Se gli integratori rilevano conflitti di libreria tra la funzione host e Dynamo, è consigliabile eseguire questa operazione come primo passaggio. Ciò è talvolta necessario per impedire ad altri plug-in o all'applicazione host stessa di caricare una versione incompatibile di una dipendenza condivisa. Una soluzione migliore consiste nel risolvere il conflitto di versioni allineando la versione o utilizzando un reindirizzamento del binding .NET nel file app.config dell'host, se possibile.
 
 ### Caricamento di ASM
 
@@ -88,9 +88,9 @@ internal static Version PreloadAsmFromRevit()
 
 #### Caricamento di ASM in Dynamo da un percorso personalizzato
 
-Recentemente è stata aggiunta la possibilità per `DynamoSandbox.exe` e `DynamoCLI.exe` di caricare una determinata versione di ASM. Per ignorare il normale comportamento di ricerca nel Registro di sistema, è possibile utilizzare il flag `�gp` per forzare Dynamo a caricare ASM da un determinato percorso.
+Recentemente è stata aggiunta la possibilità per `DynamoSandbox.exe` e `DynamoCLI.exe` di caricare una determinata versione di ASM. Per ignorare il normale comportamento di ricerca nel Registro di sistema, è possibile utilizzare il flag `--GeometryPath` per forzare Dynamo a caricare ASM da un determinato percorso.
 
-`DynamoSandbox.exe -gp �somePath/To/ASMDirectory/�`
+`DynamoSandbox.exe --GeometryPath "somePath/To/ASMDirectory"`
 
 ### Creazione di StartConfiguration
 
@@ -142,7 +142,7 @@ Il percorso di impostazione delle preferenze di default viene gestito da `PathMa
 * BackupFilesCount // Indica il numero di backup che verranno eseguiti.
 * PackageDownloadTouAccepted // Indica se l'utente ha accettato le condizioni d'uso per il download di pacchetti da Package Manager.
 * OpenFileInManualExecutionMode // Indica lo stato di default della casella di controllo Apri in modalità di esecuzione manuale in OpenFileDialog.
-* NamespacesToExcludeFromLibrary // Indica quali (se presenti) spazi dei nomi non devono essere visualizzati nella libreria di nodi di Dynamo. Formato stringa: "[nome libreria]:[spazio dei nomi completo]".
+* NamespacesToExcludeFromLibrary // Indica quali (se presenti) spazi dei nomi non devono essere visualizzati nella libreria di nodi di Dynamo. Formato stringa: "[nome libreria]:[spazio dei nomi completo]"
 
 Esempio di impostazioni delle preferenze serializzate:
 
@@ -570,7 +570,7 @@ In generale, questi nodi consentono all'utente di descrivere in qualche modo un 
 
 A livello generale, **un buon modo per concettualizzare questi nodi è come una funzione che accetta un ID elemento e restituisce un puntatore a tale elemento o alla geometria che rappresenta tale elemento.**
 
-Sono presenti più nodi `�Selection�` in DynamoRevit. È possibile suddividerli in almeno due gruppi:
+In DynamoRevit sono presenti più nodi `Selection`. Possiamo suddividerli in almeno due gruppi:
 
 ![Nodi Selection di Revit](images/revitSelectionNodes.png)
 
@@ -604,7 +604,7 @@ I workflow in Dynamo for Civil 3D sono molto simili alla descrizione precedente 
 
 ### Problemi:
 
-*   A causa dell'aggiornamento delle modifiche del documento che i nodi Selection `DynamoRevit` implementano, i loop infiniti sono facili da costruire. Si immagini un nodo che controlla il documento per tutti gli elementi e quindi crea nuovi elementi in un punto a valle. Questo programma, una volta eseguito, attiverà un loop. `DynamoRevit` tenta di individuare questi casi in vari modi utilizzando gli ID transazione ed evita di modificare il documento quando gli input per i costruttori di elementi non sono cambiati.
+*   A causa dell'aggiornamento delle modifiche del documento che i nodi Selection in `DynamoRevit` implementano, i loop infiniti sono facili da costruire. Si immagini un nodo che controlla il documento per tutti gli elementi e quindi crea nuovi elementi in un punto a valle. Questo programma, una volta eseguito, attiverà un loop. `DynamoRevit` tenta di individuare questi casi in vari modi utilizzando gli ID transazione ed evita di modificare il documento quando gli input per i costruttori di elementi non sono cambiati.
 
     Questo aspetto deve essere preso in considerazione se la modalità di esecuzione Automatico del grafico viene avviata quando un elemento selezionato viene modificato nell'applicazione host.
 * I nodi Selection in `DynamoRevit` vengono implementati nel progetto `RevitUINodes.dll` che fa riferimento a WPF. Questo potrebbe non essere un problema ma vale la pena tenerne conto a seconda della piattaforma di destinazione.
@@ -619,7 +619,7 @@ I workflow in Dynamo for Civil 3D sono molto simili alla descrizione precedente 
 
 I nodi Selection vengono implementati ereditando proprietà dai tipi `SelectionBase` generici: `SelectionBase<TSelection, TResult>` e un gruppo minimo di membri:
 
-* Implementazione di un metodo `BuildOutputAST`; questo metodo deve restituire un albero sintattico astratto (AST), che verrà eseguito in un certo momento in futuro, quando il nodo deve essere eseguito. Nel caso dei nodi Selection, dovrebbe restituire elementi o geometria dagli ID elemento. https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280
+* Implementazione di un metodo `BuildOutputAST`; questo metodo deve restituire un albero sintattico astratto (AST), che verrà eseguito in un certo momento in futuro, quando il nodo deve essere eseguito. Nel caso dei nodi Selection, dovrebbe restituire elementi o geometria dagli ID elemento. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * L'implementazione di `BuildOutputAST` è una delle parti più difficili dell'implementazione dei nodi `NodeModel`/dell'interfaccia utente. È consigliabile inserire quanta più logica possibile in una funzione C# e incorporare semplicemente un nodo di chiamata di funzione AST in AST. Si noti che qui `node` è un nodo AST nell'albero sintattico astratto, non è un nodo nel grafico di Dynamo.
 
 ![Flusso di selezione2](images/selectionAST.png)

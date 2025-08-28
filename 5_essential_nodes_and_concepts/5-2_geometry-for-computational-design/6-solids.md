@@ -31,17 +31,12 @@ Le operazioni booleane sono complesse e possono essere lente da calcolare. È po
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
-> 1\. Utilizzare il menu contestuale accessibile con il pulsante destro del mouse per congelare l'operazione di unione dei solidi.
->
-> 2\. Il nodo selezionato e tutti i nodi a valle verranno visualizzati in anteprima in modalità semitrasparente di colore grigio chiaro e i fili interessati verranno visualizzati come linee tratteggiate. Anche l'anteprima della geometria interessata sarà semitrasparente. È ora possibile modificare i valori a monte senza calcolare l'unione booleana.
->
-> 3\. Per scongelare i nodi, fare clic con il pulsante destro del mouse e deselezionare Congela.
->
-> 4\. Tutti i nodi interessati e le anteprime della geometria associata verranno aggiornati e ripristineranno la modalità di anteprima standard.
+> 1. Utilizzare il menu contestuale accessibile con il pulsante destro del mouse per congelare l'operazione di unione dei solidi.
+> 2. Il nodo selezionato e tutti i nodi a valle verranno visualizzati in anteprima in modalità semitrasparente di colore grigio chiaro e i fili interessati verranno visualizzati come linee tratteggiate. Anche l'anteprima della geometria interessata sarà semitrasparente. È ora possibile modificare i valori a monte senza calcolare l'unione booleana.
+> 3. Per scongelare i nodi, fare clic con il pulsante destro del mouse e deselezionare Congela.
+> 4. Tutti i nodi interessati e le anteprime della geometria associata verranno aggiornati e ripristineranno la modalità di anteprima standard.
 
-{% hint style="info" %}
-YÈ possibile leggere ulteriori informazioni sul congelamento dei nodi nella sezione [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention").
-{% endhint %}
+{% hint style="info" %} È possibile leggere ulteriori informazioni sul congelamento dei nodi nella sezione [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
 
 ## Approfondimento su...
 

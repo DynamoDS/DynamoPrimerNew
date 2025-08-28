@@ -22,15 +22,13 @@ Dove è visibile la riga `<PythonTemplateFilePath />`, è sufficiente sostituirl
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_Nota Sostituire CURRENTUSER con il nome utente._
-{% endhint %}
+{% hint style="warning" %} _Nota Sostituire CURRENTUSER con il nome utente._ {% endhint %}
 
 Successivamente, è necessario creare un modello con le funzionalità incorporate che si desidera utilizzare. In questo caso, si incorporano le importazioni correlate a Revit e alcuni degli altri elementi tipici quando si utilizza Revit.
 
 È possibile aprire un documento del Blocco note vuoto e incollare il seguente codice all'interno:
 
-``` py
+```py
 import clr
 
 clr.AddReference('RevitAPI')
