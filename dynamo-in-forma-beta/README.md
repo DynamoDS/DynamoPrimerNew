@@ -3,9 +3,9 @@ cover: ../.gitbook/assets/coverimage.png
 coverY: 0
 ---
 
-# Dynamo in Forma Beta 版
+# Dynamo in Forma
 
-Dynamo 在 Forma 中可作為延伸使用。目前有兩種形式：一個是桌面版連接的版本，一個是以雲端為基礎的整合版本 (作為一種封閉測試版)。您可以在這篇[部落格文章](https://dynamobim.org/dynamo-in-forma/)閱讀有關桌面版本的更多資訊，以及在這篇[部落格文章](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/)閱讀有關封閉測試版雲端整合的更多資訊。
+Dynamo 在 Forma 中可作為延伸使用。目前有兩種形式：一個是桌面版連接的版本，一個是以雲端為基礎的整合版本 (作為一種封閉測試版)。您可以在這篇[部落格文章](https://dynamobim.org/dynamo-in-forma/)閱讀有關桌面版本的更多資訊，以及在這篇[部落格文章](https://dynamobim.org/dynamo-as-a-service-powers-up-dynamo-player-in-forma/)閱讀有關測試版雲端整合的更多資訊。請注意，該部落格是在封閉測試版階段發佈；雲端整合目前為開放測試版，可供所有 Forma 使用者使用。
 
 ### 什麼是 Autodesk Forma？
 

@@ -1,4 +1,4 @@
-# 使用者介面 
+# 使用者介面
 
 ### 使用者介面概述
 
@@ -33,13 +33,13 @@ Dynamo 的使用者介面 (UI) 分為五個主要區域。我們在此將簡要�
 
 如果您遇到問題，請查閱 **「說明」** 功能表。您可以透過網際網路瀏覽器存取其中一個 Dynamo 參考網站。
 
-![](images/userinterface-helpmenu.jpg)
+![](../.gitbook/assets/help-menu.png)
 
-> 1. 開始使用 - 使用 Dynamo 的簡要介紹。
-> 2. 互動式指南 -
-> 3. 範例 - 參考範例檔案。
-> 4. Dynamo 字典 - 所有節點上具備文件的資源。
-> 5. Dynamo 網站 - 在 GitHub 上檢視 Dynamo 專案。
+> 1. 互動式指南 - 逐步引導您瞭解各種 Dynamo 功能的導覽。
+> 2. 範例 - 參考範例檔案。僅適用於主體程式，包括 Revit 和 Civil 3D。
+> 3. Dynamo 字典 - 所有節點上具備文件的資源。
+> 4. Dynamo 網站 - 提供有關 Dynamo 的資訊以及論壇、部落格等資源連結的網站。
+> 5. Dynamo 儲存庫 - 在 GitHub 上檢視 Dynamo 專案。
 > 6. Dynamo 專案 Wiki - 造訪 Wiki，以學習使用 Dynamo API 進行開發，支援資源庫與工具。
 > 7. 顯示開始頁面 - 返回至文件中的 Dynamo 開始頁面。
 > 8. 報告錯誤 - 在 Github 開啟問題。
@@ -49,7 +49,7 @@ Dynamo 的使用者介面 (UI) 分為五個主要區域。我們在此將簡要�
 Dynamo 的工具列包含一系列按鈕，可快速存取以使用檔案及退回 [Ctrl + Z] 與重做 [Ctrl + Y] 指令。最右側是另一個按鈕，可以匯出工作區的快照，這對於製作文件及分享非常有用。
 
 * ![](images/userinterface-newfile.jpg) 新建 - 建立新的 .dyn 檔案
-* ![](<images/userinterface-open(1) (1) (1).jpg>) 開啟 - 開啟既有的 .dyn (工作區) 或 .dyf (自訂節點) 檔案
+* \![](<images/userinterface-open(1) (1) (1).jpg>) 開啟 - 開啟既有的 .dyn (工作區) 或 .dyf (自訂節點) 檔案
 * ![](images/userinterface-save.jpg) 儲存/另存新檔 - 儲存使用中的 .dyn 或 .dyf 檔案
 * ![](images/userinterface-undo.jpg) 退回 - 退回上一個動作
 * ![](images/userinterface-redo.jpg) 重做 - 重做下一個動作

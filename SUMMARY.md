@@ -74,7 +74,7 @@
   * [Dynamo 播放器](dynamo-for-civil-3d/dynamo-player.md)
   * [有用的套件](dynamo-for-civil-3d/useful-packages.md)
   * [資源](dynamo-for-civil-3d/resources.md)
-* [Dynamo in Forma Beta 版](dynamo-in-forma-beta/README.md)
+* [Dynamo in Forma](dynamo-in-forma-beta/README.md)
   * [設定 Forma 中的 Dynamo Player](dynamo-in-forma-beta/set-up-dynamo-player-in-forma.md)
   * [在 Dynamo Player 中加入和分享圖表](dynamo-in-forma-beta/add-and-share-graphs-in-dynamo-player.md)
   * [在 Dynamo Player 中執行圖表](dynamo-in-forma-beta/run-graphs-in-dynamo-player.md)

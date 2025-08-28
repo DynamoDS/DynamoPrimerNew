@@ -22,14 +22,13 @@
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} _注意：請使用您的使用者名稱替換 CURRENTUSER_ 
-{% endhint %}
+{% hint style="warning" %} _注意：請使用您的使用者名稱替換 CURRENTUSER_ {% endhint %}
 
 接下來，我們需要建置一個樣板，當中含有我們要使用的內建功能。在此範例中，我們嵌入 Revit 相關的匯入，和一些在處理 Revit 時的其他典型項目。
 
 您可以開啟一份空白的記事本文件，在當中貼上以下程式碼：
 
-``` py
+```py
 import clr
 
 clr.AddReference('RevitAPI')
@@ -70,7 +69,7 @@ OUT = element
 
 ### 之後的 Python Script 行為
 
-定義 Python 樣板之後，每當放置了 Python 節點，Dynamo 都會尋找這裡。如果找不到，看起來就會是預設的 Python 視窗。
+定義 Python 樣板之後，每當放置了 Python 節點時，Dynamo 都會尋找這裡。如果找不到，看起來就會是預設的 Python 視窗。
 
 ![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
 

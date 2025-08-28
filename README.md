@@ -4,7 +4,7 @@
 
 ## 適用於 Dynamo 2.13 版和更高版本 
 
-![Dynamo 標誌](images/dynamo\_logo\_dark-trim.jpg)
+![Dynamo 標誌](images/dynamo_logo_dark-trim.jpg)
 
 > Dynamo 是一種適用於設計人員的開放原始碼視覺程式設計平台。
 
@@ -21,15 +21,15 @@
 
 在這個活動期間以及使用 Dynamo 的興奮時刻，我們需要一份具有相同水準的文件 Dynamo Primer。
 
-請參閱[手冊使用者指南](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)，以瞭解您可以從此手冊學習的內容。
+請參閱[手冊使用者指南](1_introduction/2-primer-user-guide-dynamo-community-and-platform.md)，以瞭解您可以從此手冊學習的內容。
 
 我們持續改進 Dynamo，因此某些功能看起來可能與此手冊中所呈現的功能不同。但是，所有功能變更都會正確呈現。
 
 ### 開放原始碼
 
-Dynamo Primer 專案是開放原始碼專案！我們專注於提供高品質的內容，也感謝您提出的任何意見。如果您想要回報有關任何內容的問題，請發佈到我們的 GitHub 問題頁面：https://github.com/DynamoDS/DynamoPrimer/issues
+Dynamo Primer 專案是開放原始碼專案！我們專注於提供高品質的內容，也感謝您提出的任何意見。如果您想要報告有關任何內容的問題，請將其發佈至我們的 GitHub 問題頁面：[https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues)
 
-如果您想要對此專案提供新的章節、進行編輯或新增任何其他內容，請查看 GitHub 儲存庫來開始：https://github.com/DynamoDS/DynamoPrimer。
+如果您想要對此專案建立新的小節、進行編輯或新增任何其他內容，請查看 GitHub 存放庫來開始：[https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew)
 
 ### Dynamo Primer 專案
 
@@ -37,19 +37,19 @@ Dynamo Primer 是一個開放原始碼專案，由 Autodesk 的 Matt Jezyk 和 D
 
 **Mode Lab** 受託撰寫 Primer 的第一個版本。我們感謝他們為了建立這個寶貴資源付出的所有心力。
 
-![](images/MODELAB\_Logo.png)
+![](images/MODELAB_Logo.png)
 
 ***
 
 **Parallax Team 的 John Pierson** 受託更新 Primer 以反映 Dynamo 2.0 的修訂。
 
-![](images/PRLX\_Logo.jpg)
+![](images/PRLX_Logo.jpg)
 
 ***
 
 **Matterlab** 受託更新 Primer，以反映 Dynamo 2.13 的修訂。
 
-![](images/matterlab\_final-07.jpg)
+![](images/matterlab_final-07.jpg)
 
 ***
 
@@ -73,17 +73,17 @@ Dynamo Primer 是一個開放原始碼專案，由 Autodesk 的 Matt Jezyk 和 D
 
 **Dynamo** 請參閱以下網站，以取得 Dynamo 最新的**穩定**版本。
 
-http://dynamobim.com/download/ 或 http://dynamobuilds.com
+[https://dynamobim.com/download/](https://dynamobim.com/download/) 或 [https://dynamobuilds.com](https://dynamobuilds.com/)
 
 *注意事項：從 Revit 2020 開始，Dynamo 會與 Revit 版本搭售，您不需要再手動安裝。如需更多資訊，請參閱此[部落格文章](https://dynamobim.org/dynamo-core-2-1-release/)。
 
-**DynamoBIM** 其他資訊、學習內容和論壇的最佳來源是 DynamoBIM 網站。
+**DynamoBIM**：其他資訊、學習內容和論壇的最佳來源是 DynamoBIM 網站。
 
-http://dynamobim.org
+[https://dynamobim.org](https://dynamobim.org/)
 
 **Dynamo GitHub** Dynamo 是 GitHub 上的一個開放原始碼開發專案。若要參與開發，可查看 DynamoDS。
 
-https://github.com/DynamoDS/Dynamo
+[https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
 **聯絡方式** 讓我們瞭解關於此文件的所有問題。
 
@@ -95,6 +95,6 @@ Copyright 2023 Autodesk
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.您可在以下網站獲取此「授權」的複本：
 
-http://www.apache.org/licenses/LICENSE-2.0
+[https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.

@@ -22,7 +22,7 @@
 
 [https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534](https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534)
 
-`DynamoModel` 是主控 Dynamo 之某個應用程式的進入點 - 它代表的是一個 Dynamo 應用程式。模型是頂層根物件，此物件會參考組成 Dynamo 應用程式和 DesignScript 虛擬機器的其他重要資料結構和物件。
+`DynamoModel` 是主控 Dynamo 之某個應用程式的進入點。它代表的是一個 Dynamo 應用程式。模型是頂層根物件，此物件會參考組成 Dynamo 應用程式和 DesignScript 虛擬機器的其他重要資料結構和物件。
 
 建構 `DynamoModel` 時，會使用規劃物件來設定上面的一般參數。
 
@@ -38,7 +38,7 @@ DynamoCore 是一個跨平台的計算引擎和核心模型集合，可使用 .N
 
 ### 從主體預先載入共用的 Dynamo Dll。
 
-D4R 中的清單目前只包含 `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` 這樣做是為了避免 Dynamo 與 Revit 之間的資源庫版本發生衝突。例如，當 `AvalonEdit` 發生衝突時，Code Block 的功能可能會被完全破壞。此問題已在 Dynamo 1.1.x https://github.com/DynamoDS/Dynamo/issues/7130 中進行回報，也可手動重現。如果整合者發現主體函數和 Dynamo 之間發生資源庫衝突，建議首先執行此作業。有時必須執行此作業，來阻止其他外掛程式或主體應用程式本身載入與共用相依性不相容的版本。更好的解決方式是讓版本一致來解決版本衝突 - 或者如果可能，在主體的 app.config 中使用 .net 繫結重新導向。
+D4R 中的清單目前只包含 `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` 這樣做是為了避免 Dynamo 與 Revit 之間的資源庫版本發生衝突。例如，當 `AvalonEdit` 發生衝突時，Code Block 的功能可能會被完全破壞。此問題已在 Dynamo 1.1.x 的 [https://github.com/DynamoDS/Dynamo/issues/7130](https://github.com/DynamoDS/Dynamo/issues/7130) 中回報，也可手動重現。如果整合者發現主體函數和 Dynamo 之間發生資源庫衝突，建議首先執行此作業。有時必須執行此作業，來阻止其他外掛程式或主體應用程式本身載入與共用相依性不相容的版本。更好的解決方式是讓版本一致來解決版本衝突 - 或者如果可能，在主體的 app.config 中使用 .net 繫結重新導向。
 
 ### 載入 ASM
 
@@ -88,9 +88,9 @@ internal static Version PreloadAsmFromRevit()
 
 #### Dynamo 從自訂路徑載入 ASM
 
-我們最近增加 `DynamoSandbox.exe` 和 `DynamoCLI.exe` 載入特定 ASM 版本的功能。若要略過正常的登錄搜尋行為，您可以使用 `�gp` 旗標強制 Dynamo 從特定路徑載入 ASM。
+我們最近增加 `DynamoSandbox.exe` 和 `DynamoCLI.exe` 載入特定 ASM 版本的功能。若要略過正常的登錄搜尋行為，您可以使用 `--GeometryPath` 旗標強制 Dynamo 從特定路徑載入 ASM。
 
-`DynamoSandbox.exe -gp �somePath/To/ASMDirectory/�`
+`DynamoSandbox.exe --GeometryPath "somePath/To/ASMDirectory"`
 
 ### 建立 StartConfiguration
 
@@ -98,16 +98,16 @@ internal static Version PreloadAsmFromRevit()
 
 包括以下內容：
 
-* DynamoCorePath // 載入 DynamoCore 二進位檔所在的位置。
-* DynamoHostPath // Dynamo 整合二進位檔所在的位置。
-* GeometryFactoryPath // 載入的 libG 二進位檔所在的位置。
-* PathResolver //協助解析各種檔案的物件。
-* PreloadLibraryPaths // 預載節點二進位檔 (例如 DSOffice.dll) 所在的位置。
-* AdditionalNodeDirectories // 其他節點二進位檔所在的位置。
-* AdditionalResolutionPaths // 載入資源庫時可能需要的其他相依性的額外組合解決方案路徑。
-* UserDataRootFolder // 使用者資料資料夾，例如 `"AppData\Roaming\Dynamo\Dynamo Revit"`。
+* DynamoCorePath // 載入 DynamoCore 二進位檔所在的位置
+* DynamoHostPath // Dynamo 整合二進位檔所在的位置
+* GeometryFactoryPath // 載入的 libG 二進位檔所在的位置
+* PathResolver //協助解析各種檔案的物件
+* PreloadLibraryPaths // 預載節點二進位檔 (例如 DSOffice.dll) 所在的位置
+* AdditionalNodeDirectories // 其他節點二進位檔所在的位置
+* AdditionalResolutionPaths // 載入資源庫時可能需要的其他相依性的額外組合解決方案路徑
+* UserDataRootFolder // 使用者資料資料夾，例如 `"AppData\Roaming\Dynamo\Dynamo Revit"`
 * CommonDataRootFolder // 用於儲存自訂定義、範例等的預設資料夾。
-* Context // 整合者主體名稱 + 版本 `(Revit<BuildNum>)`。
+* Context // 整合者主體名稱 + 版本 `(Revit<BuildNum>)`
 * SchedulerThread // 實作 `ISchedulerThread` 的整合者排程器執行緒 - 對於大多數整合者而言，這是主要 UI 執行緒或可存取其 API 的任何執行緒。
 * StartInTestMode // 目前階段作業是否為測試自動化階段作業 - 修改一堆 Dynamo 行為 - 除非您正在撰寫測試，否則請不要使用。
 * AuthProvider // 整合者的 IAuthProvider 實作，例如 RevitOxygenProvider 實作是在 Greg.dll - 用於 packageManager 上傳整合。
@@ -116,33 +116,33 @@ internal static Version PreloadAsmFromRevit()
 
 預設偏好設定路徑由 `PathManager.PreferenceFilePath` (例如 `"AppData\\Roaming\\Dynamo\\Dynamo Revit\\2.5\\DynamoSettings.xml"`) 管理。整合者可以決定是否也要將自訂的偏好設定檔案遞送到需要與路徑管理員一致的位置。以下是序列化的偏好設定性質：
 
-* IsFirstRun // 表示是否是第一次執行此版本的 Dynamo，例如用於判斷是否需要顯示 GA 選擇加入/退出訊息。也會用於判斷在啟動新的 Dynamo 版本時，是否需要移轉舊式 Dynamo 偏好設定，讓使用者獲得一致的體驗。
-* IsUsageReportingApproved // 指出使用情況報告是否已核准。
-* IsAnalyticsReportingApproved // 指出分析報告是否已核准。
+* IsFirstRun // 表示是否是第一次執行此版本的 Dynamo，例如用於判斷是否需要顯示 GA 選擇加入/退出訊息。也會用於判斷在啟動新的 Dynamo 版本時，是否需要移轉舊式 Dynamo 偏好設定，讓使用者獲得一致的體驗
+* IsUsageReportingApproved // 指出使用情況報告是否已核准
+* IsAnalyticsReportingApproved // 指出分析報告是否已核准
 * LibraryWidth // Dynamo 左側資源庫面板的寬度。
-* ConsoleHeight // 主控台顯示的高度。
-* ShowPreviewBubbles // 指出是否應顯示預覽標示圈。
-* ShowConnector // 指出是否顯示連接器。
-* ConnectorType // 指出連接器類型：Bezier 或 Polyline (聚合線)。
-* BackgroundPreviews // 指出指定背景預覽的作用中狀態。
+* ConsoleHeight // 主控台顯示的高度
+* ShowPreviewBubbles // 指出是否應顯示預覽標示圈
+* ShowConnector // 指出是否顯示連接器
+* ConnectorType // 指出連接器類型：Bezier 或 Polyline (聚合線)
+* BackgroundPreviews // 指出指定背景預覽的作用中狀態
 * RenderPrecision // 彩現精確度等級 - 越低表示會產生三角形數越少的網格。越高表示會在背景預覽中產生越平滑的幾何圖形。128 對於預覽幾何圖形是一個很適合可靠的數字。
-* ShowEdges // 指出是否將彩現曲面和實體邊。
-* ShowDetailedLayout // 未使用。
-* WindowX、WindowY // Dynamo 視窗的最後 X、Y 座標。
-* WindowW、WindowH // Dynamo 視窗的最後寬度、高度。
-* UseHardwareAcceleration // Dynamo 是否應使用硬體加速 (如果支援)。
+* ShowEdges // 指出是否將彩現曲面和實體邊
+* ShowDetailedLayout // 未使用
+* WindowX、WindowY // Dynamo 視窗的最後 X、Y 座標
+* WindowW、WindowH // Dynamo 視窗的最後寬度、高度
+* UseHardwareAcceleration // Dynamo 是否應使用硬體加速 (如果支援)
 * NumberFormat // 用於在預覽標示圈 toString() 中顯示數字的小數精確度。
-* MaxNumRecentFiles // 要儲存的最近檔案路徑最大數目。
-* RecentFiles // 最近開啟的檔案路徑清單，修改此設定會直接影響 Dynamo 開始頁面中的最近使用檔案清單。
-* BackupFiles // 備份檔案路徑清單。
+* MaxNumRecentFiles // 要儲存的最近檔案路徑最大數目
+* RecentFiles // 最近開啟的檔案路徑清單，修改此設定會直接影響 Dynamo 開始頁面中的最近使用檔案清單
+* BackupFiles // 備份檔案路徑清單
 * CustomPackageFolders // 包含 zero-touch 二進位檔和目錄路徑的資料夾清單，系統會掃描這些資料夾中是否有套件和自訂節點。
 * PackageDirectoriesToUninstall // Package Manager 用來判斷哪些套件被標記為刪除的套件清單。在 Dynamo 啟動期間會刪除這些路徑 (如果可以)。
 * PythonTemplateFilePath // 建立新的 PythonScript 節點時用作起始樣板的 Python (.py) 檔案路徑 - 可用來設定自訂 Python 樣板以進行整合。
-* BackupInterval // 指出自動儲存圖表的時間長度 (以毫秒為單位)。
-* BackupFilesCount // 指出要進行的備份數量。
-* PackageDownloadTouAccepted // 指出使用者是否已接受使用條款從 Package Manager 下載套件。
-* OpenFileInManualExecutionMode // 指出「開啟檔案」對話方塊中「以手動模式開啟」勾選方塊的預設狀態。
-* NamespacesToExcludeFromLibrary // 指出哪些名稱空間 (如果有) 不應顯示在 Dynamo 節點資源庫中。字串格式："[資源庫名稱]:[完整名稱空間]"。
+* BackupInterval // 指出自動儲存圖表的時間長度 (以毫秒為單位)
+* BackupFilesCount // 指出要進行的備份數量
+* PackageDownloadTouAccepted // 指出使用者是否已接受使用條款從 Package Manager 下載套件
+* OpenFileInManualExecutionMode // 指出「開啟檔案」對話方塊中「以手動模式開啟」勾選方塊的預設狀態
+* NamespacesToExcludeFromLibrary // 指出哪些名稱空間 (如果有) 不應顯示在 Dynamo 節點資源庫中。字串格式："[資源庫名稱]:[完整名稱空間]"
 
 序列化偏好設定的範例：
 
@@ -246,9 +246,9 @@ internal static Version PreloadAsmFromRevit()
 </PreferenceSettings> 
 ```
 
-* Extensions // 實作 IExtension 的延伸清單，如果為空值，Dynamo 將從預設路徑 (Dynamo 資料夾下的 `extensions` 資料夾) 載入延伸。
+* Extensions // 實作 IExtension 的延伸清單，如果為空值，Dynamo 將從預設路徑 (Dynamo 資料夾下的 `extensions` 資料夾) 載入延伸
 * IsHeadless // 指出 Dynamo 是否在沒有 UI 的情況下啟動，供分析之用。
-* UpdateManager // 整合者的 UpdateManager 實作，請參閱上面的描述。
+* UpdateManager // 整合者的 UpdateManager 實作，請參閱上面的描述
 * ProcessMode // 相當於 TaskProcessMode，如果在測試模式下為 Synchronous (同步)，否則為 Asynchronous (非同步) - 這會控制排程器的行為。單一執行緒的環境也可能將此設定為同步。
 
 使用目標 StartConfiguration 啟動 `DynamoModel`
@@ -286,7 +286,7 @@ internal static Version PreloadAsmFromRevit()
 
 ### DynamoSandbox.exe 範例：
 
-DynamoSandbox.exe 是一個開發環境，用來測試、使用和試驗 DynamoCore。這個範例很適合用來瞭解如何載入和設置 `DynamoCore` 和 `DynamoCoreWPF` 元件。[此處](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoSandbox/DynamoCoreSetup.cs#L37)可以看到一些進入點
+DynamoSandbox.exe 是一個開發環境，用來測試、使用和試驗 DynamoCore。這個範例很適合用來瞭解如何載入和設置 `DynamoCore` 和 `DynamoCoreWPF` 元件。[此處](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoSandbox/DynamoCoreSetup.cs#L37)可以看到一些進入點。
 
 ## 元素繫結和追蹤
 
@@ -570,7 +570,7 @@ public static void SetTraceData(string key, ISerializable value)
 
 概括來說，**說明這些節點概念的一個好方法是將節點當作函數，此函數會接受元素 ID，然後傳回指向該元素的指標，或表示該元素的某個幾何圖形。**
 
-DynamoRevit 中有多個 `�Selection�` 節點，我們可以將這些節點至少分為兩組：
+DynamoRevit 中有多個 `Selection` 節點。我們可以將這些節點至少分為兩組：
 
 ![Revit Selection 節點](images/revitSelectionNodes.png)
 
@@ -578,12 +578,12 @@ DynamoRevit 中有多個 `�Selection�` 節點，我們可以將這些節點�
 
     此品類中的範例 `DynamoRevit` 節點是 `SelectModelElement`、`SelectElementFace`
 
-    這些節點可讓使用者切換到 Revit UI 環境，然後選取一個元素或一組元素，程式會擷取這些元素的 ID，然後執行某個轉換函數 - 可以是建立包裝函式，或是從元素擷取並轉換幾何圖形。執行的轉換取決於使用者選擇的節點類型。
+    這些節點可讓使用者切換到 Revit UI 環境，然後選取一個元素或一組元素，程式會擷取這些元素的 ID，然後執行某個轉換函數，可以是建立包裝函式，或是從元素擷取並轉換幾何圖形。執行的轉換取決於使用者選擇的節點類型。
 2.  文件查詢：
 
     此品類中的範例節點是 `AllElementsOfClass`、`AllElementsOfCategory`
 
-    這些節點可讓使用者在整個文件中查詢一組元素，這些節點通常會傳回指向基礎 Revit 元素的包裝函式。這些包裝函式是 DynamoRevit 體驗不可或缺的一部分，允許使用更進階的功能 (例如元素繫結)，並允許 Dynamo 整合者挑選哪些主體 API 會以節點的形式公開給使用者。
+    這些節點可讓使用者查詢整份文件中是否有某組元素。這些節點通常會傳回指向基礎 Revit 元素的包裝函式。這些包裝函式是 DynamoRevit 體驗不可或缺的一部分，允許使用更進階的功能 (例如元素繫結)，並允許 Dynamo 整合者挑選哪些主體 API 會以節點的形式公開給使用者。
 
 ### Dynamo Revit 使用者工作流程：
 
@@ -591,10 +591,10 @@ DynamoRevit 中有多個 `�Selection�` 節點，我們可以將這些節點�
 
 1.
    * 使用者使用 `SelectModelElement` 選取一面 Revit 牆 - 一個 Dynamo 牆包裝函式傳回到圖表中 (在節點的預覽標示圈中可見)
-   * 使用者放置 Element.Geometry 節點，並將 `SelectModelElement` 輸出連接到此新節點 - 使用 libG API 擷取包裝後的牆的幾何圖形，並轉換為 Dynamo 幾何圖形。
+   * 使用者放置 Element.Geometry 節點，並將 `SelectModelElement` 輸出連接到此新節點。使用 libG API 擷取包裝的牆的幾何圖形並轉換為 Dynamo 幾何圖形。
    * 使用者將圖表切換到自動執行模式。
    * 使用者在 Revit 中修改原始牆。
-   * 圖表自動重新執行，因為 Revit 文件引發某些元素已更新的事件，Selection 節點監看此事件，並看到它所選取元素的 ID 已修改。
+   * 圖表會自動重新執行，因為 Revit 文件引發了某個事件，顯示某些元素已更新。Selection 節點會監看此事件，並看到它所選取元素的 ID 已修改。
 
 ### DynamoCivil 使用者工作流程：
 
@@ -607,7 +607,7 @@ D4C 中的工作流程與上述針對 Revit 的描述非常類似，以下是 D4
 *   由於 `DynamoRevit` 中的 Selection 節點實作文件修改更新程式，因此很容易建置無限迴圈：請想像一個節點監看所有元素的文件，然後在此節點下游的某個位置建立新元素。此程式在執行時會觸發迴圈。`DynamoRevit` 會嘗試使用交易 ID 以各種方式擷取這些案例，並避免在元素建構函式輸入未變更時修改文件。
 
     如果在主體應用程式中修改所選元素時啟動圖表的自動執行，則需要考慮這一點！
-* `DynamoRevit` 中的 Selection 節點是在參考 WPF 的 `RevitUINodes.dll` 專案中實作 (這可能不是問題)，但取決於您的目標平台。
+* `DynamoRevit` 中的 Selection 節點是在參考 WPF 的 `RevitUINodes.dll` 專案中實作。這可能不是問題，但取決於您的目標平台。
 
 ### 資料流程圖
 
@@ -619,7 +619,7 @@ D4C 中的工作流程與上述針對 Revit 的描述非常類似，以下是 D4
 
 透過從一般 `SelectionBase` 類型 `SelectionBase<TSelection, TResult>` 和一組最少的成員數繼承來實作 Selection 節點：
 
-* 實作 `BuildOutputAST` 方法 - 此方法在節點要執行時需要傳回一個 AST，這會在將來某個時間點執行。如果是 Selection 節點，它應該從元素 ID 傳回元素或幾何圖形。https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280
+* 實作 `BuildOutputAST` 方法：此方法在節點要執行時需要傳回一個 AST，這會在將來某個時間點執行。如果是 Selection 節點，它應該會從元素 ID 傳回元素或幾何圖形。[https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * 實作 `BuildOutputAST` 是實作 `NodeModel` / UI 節點最困難的一個部分。最好將盡可能多的邏輯放入 C# 函數中，並簡單地將 AST 函數呼叫節點嵌入到 AST 中。請注意，這裡的 `node` 是抽象語法樹中的 AST 節點，而不是 Dynamo 圖表中的節點。
 
 ![選取流程 2](images/selectionAST.png)
@@ -628,7 +628,7 @@ D4C 中的工作流程與上述針對 Revit 的描述非常類似，以下是 D4
   *   因為這些是明確的 `NodeModel` 衍生類型 (不是 ZeroTouch)，所以它們還需要實作一個 [JsonConstructor]，在從 .dyn 檔案還原序列化節點期間使用。
 
       主體的元素參考應儲存至 .dyn 檔案，以便在使用者開啟包含此節點的圖表時，仍會設定其選取。Dynamo 中的 NodeModel 節點會使用 json.net 進行序列化，任何公用性質都將使用 Json.net 自動序列化 - 請使用 [JsonIgnore] 屬性只序列化必要的性質。
-* 文件查詢節點稍微簡單一些，因為它們不需要將參考儲存到任何元素 ID，請參閱下面瞭解 `ElementQueryBase` 類別和衍生類別的實作。執行時，這些節點會呼叫 Revit API 並查詢基礎文件中的元素，並執行前面提到的轉換，轉換成幾何圖形或 Revit 元素包裝函式。
+* 文件查詢節點稍微簡單一些，因為它們不需要將參考儲存到任何元素 ID。請參閱下面瞭解 `ElementQueryBase` 類別和衍生類別的實作。執行時，這些節點會呼叫 Revit API 並查詢基礎文件中的元素，並執行前面提到的轉換，轉換成幾何圖形或 Revit 元素包裝函式。
 
 ### 參考文獻：
 
