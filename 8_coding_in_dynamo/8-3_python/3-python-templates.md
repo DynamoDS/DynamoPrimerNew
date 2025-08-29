@@ -22,7 +22,9 @@ Cuando aparece `<PythonTemplateFilePath />`, solo tenemos que sustituir esto por
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} _Nota: Sustituya CURRENTUSER por su nombre de usuario_. {% endhint %}
+{% hint style="warning" %}
+_Nota: Sustituya CURRENTUSER por su nombre de usuario_.
+{% endhint %}
 
 A continuación, debemos crear una plantilla con la funcionalidad integrada que deseamos utilizar. En este caso, insertaremos las importaciones relacionadas con Revit y algunos de los demás elementos habituales al trabajar con Revit.
 
@@ -78,3 +80,4 @@ Si se encuentra la plantilla de Python (como, por ejemplo, nuestra plantilla de 
 ![](../images/8-3/3/pythontemplates-aftersetuptemplate.jpg)
 
 Aquí encontrará información adicional (de Radu Gidei) sobre esta excelente incorporación. https://github.com/DynamoDS/Dynamo/pull/8122
+
