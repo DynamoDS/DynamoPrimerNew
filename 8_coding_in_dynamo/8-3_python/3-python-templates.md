@@ -22,7 +22,9 @@
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}_Примечание. Замените CURRENTUSER на имя пользователя._{% endhint %}
+{% hint style="warning" %}
+_Примечание. Замените CURRENTUSER на имя пользователя._
+{% endhint %}
 
 Теперь нужно создать шаблон, включающий функции для встраивания. В данном случае требуется встроить функции импорта определенных данных из Revit, а также некоторые другие функции, обычно используемые при работе с Revit.
 
@@ -78,3 +80,4 @@ OUT = element
 ![](../images/8-3/3/pythontemplates-aftersetuptemplate.jpg)
 
 Подробные сведения об этом дополнении см. в следующем материале (автор: Раду Гидей [Radu Gidei]): https://github.com/DynamoDS/Dynamo/pull/8122
+
