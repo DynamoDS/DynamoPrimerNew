@@ -36,7 +36,9 @@
 > 3. 노드를 동결 해제하려면 마우스 오른쪽 버튼을 클릭하고 동결을 선택 취소합니다.
 > 4. 영향을 받는 모든 노드와 연관된 형상 미리보기가 업데이트되고 표준 미리보기 모드로 되돌아갑니다.
 
-{% hint style="info" %} [4_nodes_and_wires](../../4_nodes_and_wires/ "mention") 섹션에서 노드 동결에 대한 자세한 내용을 확인할 수 있습니다. {% endhint %}
+{% hint style="info" %}
+[4_nodes_and_wires](../../4_nodes_and_wires/ "mention") 섹션에서 노드 동결에 대한 자세한 내용을 확인할 수 있습니다. 
+{% endhint %}
 
 ## 자세히 알아보기...
 
@@ -93,3 +95,4 @@
 > 2. **DifferenceAll:** 구와 안쪽을 향하는 원추를 사용한 차이 연산입니다.
 
 ##
+
