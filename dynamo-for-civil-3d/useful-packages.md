@@ -2,7 +2,9 @@
 
 Pakiety dodatku Dynamo to zestawy narzędzi opracowane przez strony trzecie w celu rozszerzenia podstawowej funkcjonalności dodatku Dynamo. Są one dostępne dla wszystkich i można je pobrać kliknięciem przycisku.
 
-{% hint style="info" %} Aby uzyskać więcej informacji na temat rozpoczynania pracy z pakietami, zapoznaj się z sekcją [6-2_packages](../6_custom_nodes_and_packages/6-2_packages/ "mention"). {% endhint %}
+{% hint style="info" %}
+Aby uzyskać więcej informacji na temat rozpoczynania pracy z pakietami, zapoznaj się z sekcją [6-2_packages](../6_custom_nodes_and_packages/6-2_packages/ "mention").
+{% endhint %}
 
 Oto lista najpopularniejszych pakietów, które pozwalają przenieść wykresy dodatku Dynamo for Civil 3D na wyższy poziom.
 
@@ -57,3 +59,4 @@ Arkance Systems Nodes to pakiet dodatku Dynamo for Civil 3D zawierający wiele r
 #### Documentation
 
 {% embed url="https://blog.huiz.net/arkance-systems-node-library-for-civil-3d-dynamo/" %}
+
