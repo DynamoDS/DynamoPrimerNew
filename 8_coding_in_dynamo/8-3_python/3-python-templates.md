@@ -22,7 +22,9 @@ Dynamo 2.0을 사용하면 Python 창을 처음 열 때 사용할 기본 템플�
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} _참고: CURRENTUSER를 사용자 이름으로 대치하십시오._ {% endhint %}
+{% hint style="warning" %}
+_참고: CURRENTUSER를 사용자 이름으로 대치하십시오._
+{% endhint %}
 
 다음으로, 내장 항목으로 사용하려는 기능이 포함된 템플릿을 작성해야 합니다. 이 예에서는 Revit 관련 가져오기와 Revit으로 작업할 때의 다른 일반적인 항목을 포함할 수 있습니다.
 
@@ -78,3 +80,4 @@ Python 템플릿을 찾은 경우(이 예의 Revit 템플릿처럼) 작성한 �
 ![](../images/8-3/3/pythontemplates-aftersetuptemplate.jpg)
 
 이러한 유용한 추가 기능에 대한 자세한 정보(Radu Gidei 작성)를 다음에서 확인할 수 있습니다. https://github.com/DynamoDS/Dynamo/pull/8122
+
