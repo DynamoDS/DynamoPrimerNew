@@ -2,7 +2,9 @@
 
 Balíčky aplikace Dynamo jsou sady nástrojů vyvinuté třetími stranami za účelem rozšíření základních funkcí aplikace Dynamo. Jsou přístupné všem a připravené ke stažení kliknutím na tlačítko.
 
-{% hint style="info" %} Další informace o tom, jak pracovat s balíčky, naleznete v části [6-2_packages](../6_custom_nodes_and_packages/6-2_packages/ "mention"). {% endhint %}
+{% hint style="info" %}
+Další informace o tom, jak pracovat s balíčky, naleznete v části [6-2_packages](../6_custom_nodes_and_packages/6-2_packages/ "mention").
+{% endhint %}
 
 Zde je seznam některých nejoblíbenějších balíčků, které mohou posunout vaše grafy aplikace Dynamo for Civil 3D na vyšší úroveň.
 
@@ -57,3 +59,4 @@ Arkance Systems Nodes je balíček pro aplikaci Dynamo for Civil 3D, který obsa
 #### Dokumentace
 
 {% embed url="https://blog.huiz.net/arkance-systems-node-library-for-civil-3d-dynamo/" %}
+
