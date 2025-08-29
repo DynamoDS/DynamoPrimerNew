@@ -8,10 +8,10 @@ Os operadores são um conjunto de componentes que usam funções algébricas com
 
 | Ícone                                                  | Nome (Sintaxe)     | Entradas                     | Saídas      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Adicionar (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrair (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplicar (*****) | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Adicionar (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrair (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplicar (*) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Exercício: Fórmula da espiral dourada
 
@@ -116,3 +116,4 @@ Altere o tamanho da etapa do nó **Intervalo de números** de _120,0_ para _36,0
 Altere o tamanho da etapa do nó **Intervalo de números** de _36,0_ para _3,6_. Isso nos oferece agora um eixo muito mais denso, e a direcionalidade da espiral é pouca clara. Senhoras e senhores, criamos um girassol.
 
 ![](../images/5-3/2/math-partIV-05.jpg)
+
