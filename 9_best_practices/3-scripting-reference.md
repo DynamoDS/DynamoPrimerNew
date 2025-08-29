@@ -28,7 +28,9 @@ Le librerie standard sono esterne a Dynamo e sono presenti nei linguaggi di prog
    * Funzionalità: Excel.
    * Modalità di importazione: `import DSOffice`
 
-{% hint style="warning" %} *Nota Quando si utilizza **ProtoGeometry** tramite Python o C#, si stanno creando oggetti non gestiti, che richiedono la gestione manuale della memoria. Per ulteriori informazioni, vedere la sezione riportata di seguito: **Oggetti non gestiti**. {% endhint %}
+{% hint style="warning" %}
+\*Nota Quando si utilizza **ProtoGeometry** tramite Python o C#, si stanno creando oggetti non gestiti, che richiedono la gestione manuale della memoria. Per ulteriori informazioni, vedere la sezione riportata di seguito: **Oggetti non gestiti**.
+{% endhint %}
 
 ## Etichettatura con attenzione
 
@@ -308,3 +310,4 @@ Il codice corretto avrà un aspetto simile al seguente:
 ```
 
 In generale, è necessario eliminare solo la geometria come `Surfaces`, `Curves` e `Solids`. Per essere sicuri, tuttavia, è possibile eliminare tutti i tipi di geometria (`Vectors`, `Points`, `CoordinateSystems`).
+
