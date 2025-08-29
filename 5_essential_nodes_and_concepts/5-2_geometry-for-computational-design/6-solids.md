@@ -36,7 +36,9 @@ As operações booleanas são complexas e seu cálculo pode ser lento. É possí
 > 3. Para descongelar os nós, clique com o botão direito do mouse e desmarque Congelar.
 > 4. Todos os nós afetados e as visualizações de geometria associadas serão atualizados e revertidos para o modo de visualização padrão.
 
-{% hint style="info" %} Você pode obter mais informações sobre o congelamento de nós na seção [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+Você pode obter mais informações sobre o congelamento de nós na seção [4_nodes_and_wires](../../4_nodes_and_wires/ "mention").
+{% endhint %}
 
 ## Análise abrangente de...
 
@@ -93,3 +95,4 @@ Além dessas três operações, o Dynamo tem os nós **Solid.DifferenceAll** e *
 > 2. **DifferenceAll:** operação de diferença com esfera e cones virados para dentro
 
 ##
+
