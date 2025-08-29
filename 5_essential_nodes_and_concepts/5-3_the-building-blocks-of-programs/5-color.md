@@ -8,7 +8,7 @@ As cores no Dynamo são criadas usando entradas ARGB. Isso corresponde aos canai
 
 | Ícone                                     | Nome (Sintaxe)                 | Entradas  | Saídas |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| \![](<../images/5-1/ColorbyARGB (2).jpg>) | Cor ARGB (**Color.ByARGB**) | A,R,G,B | cor   |
+| ![](<../images/5-1/ColorbyARGB (2).jpg>) | Cor ARGB (**Color.ByARGB**) | A,R,G,B | cor   |
 
 ### Consultar os valores de cor
 
@@ -16,19 +16,19 @@ As cores na tabela abaixo consultam as propriedades usadas para definir a cor: A
 
 | Ícone                                              | Nome (Sintaxe)                     | Entradas | Saídas    |
 | ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| \![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | Alfa (**Color.Alpha**)           | cor  | A          |
+| ![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | Alfa (**Color.Alpha**)           | cor  | A          |
 | ![](../images/5-1/ColorRed.jpg)                   | Vermelho (**Color.Red**)               | cor  | R          |
-| \![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | Verde (**Color.Green**)           | cor  | G          |
+| ![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | Verde (**Color.Green**)           | cor  | G          |
 | ![](../images/5-1/ColorBlue.jpg)                  | Azul (**Color.Blue**)             | cor  | B          |
-| \![](<../images/5-1/ColorComponent (2).jpg>)       | Componentes (**Color.Components**) | cor  | A, R, G, B |
+| ![](<../images/5-1/ColorComponent (2).jpg>)       | Componentes (**Color.Components**) | cor  | A, R, G, B |
 
 As cores na tabela abaixo correspondem ao **espaço de cores HSB**. A divisão das cores em matiz, saturação e brilho é, sem dúvida, algo mais intuitivo para a maneira como interpretamos as cores: qual deve ser a cor? Quão colorido deve ser? E quão clara ou escura deve ser a cor? Este é o detalhamento de matiz, saturação e brilho, respectivamente.
 
 | Ícone                                         | Nome (Sintaxe)                     | Entradas | Saídas    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
 | ![](../images/5-1/ColorHue.jpg)              | Matiz (**Color.Hue**)               | cor  | Matiz        |
-| \![](<../images/5-1/ColorSaturation (2).jpg>) | Saturação (**Color.Saturation**) | cor  | Saturação |
-| \![](<../images/5-1/ColorBrightness (2).jpg>) | Brilho (**Color.Brightness**) | cor  | Brilho |
+| ![](<../images/5-1/ColorSaturation (2).jpg>) | Saturação (**Color.Saturation**) | cor  | Saturação |
+| ![](<../images/5-1/ColorBrightness (2).jpg>) | Brilho (**Color.Brightness**) | cor  | Brilho |
 
 ### Faixa de cores
 
@@ -159,3 +159,4 @@ Primeiro, é preciso criar (ou referenciar) uma superfície para usar como uma e
 Visualização aproximada da superfície de saída com resolução de 400 x 300 amostras
 
 ![](../images/5-3/5/color-coloronsurface03.jpg)
+
