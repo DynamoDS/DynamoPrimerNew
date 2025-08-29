@@ -36,7 +36,9 @@ Operacje logiczne są złożone i ich obliczanie może być powolne. Za pomocą 
 > 3. Aby odblokować węzły, kliknij prawym przyciskiem myszy i wyczyść pole wyboru Zablokuj.
 > 4. Wszystkie zależne węzły i skojarzone podglądy geometrii zostaną zaktualizowane i wrócą do standardowego trybu podglądu.
 
-{% hint style="info" %} Więcej informacji na temat blokowania węzłów można znaleźć w sekcji [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+Więcej informacji na temat blokowania węzłów można znaleźć w sekcji [4_nodes_and_wires](../../4_nodes_and_wires/ "mention").
+{% endhint %}
 
 ## Bliższe spojrzenie na...
 
@@ -93,3 +95,4 @@ Oprócz tych trzech operacji dodatek Dynamo udostępnia też węzły **Solid.Dif
 > 2. **DifferenceAll**: operacja różnicy ze sferą i stożkami skierowanymi do wewnątrz
 
 ##
+
