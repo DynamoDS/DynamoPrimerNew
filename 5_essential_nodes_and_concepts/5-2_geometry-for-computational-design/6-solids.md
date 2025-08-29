@@ -36,7 +36,9 @@ Le operazioni booleane sono complesse e possono essere lente da calcolare. È po
 > 3. Per scongelare i nodi, fare clic con il pulsante destro del mouse e deselezionare Congela.
 > 4. Tutti i nodi interessati e le anteprime della geometria associata verranno aggiornati e ripristineranno la modalità di anteprima standard.
 
-{% hint style="info" %} È possibile leggere ulteriori informazioni sul congelamento dei nodi nella sezione [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+È possibile leggere ulteriori informazioni sul congelamento dei nodi nella sezione [4_nodes_and_wires](../../4_nodes_and_wires/ "mention").
+{% endhint %}
 
 ## Approfondimento su...
 
@@ -93,3 +95,4 @@ Oltre a queste tre operazioni, in Dynamo sono disponibili i nodi **Solid.Differe
 > 2. **DifferenceAll:** operazione di differenza con sfera e coni rivolti verso l'interno.
 
 ##
+
