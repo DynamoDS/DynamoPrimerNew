@@ -2,7 +2,9 @@
 
 Los paquetes de Dynamo son conjuntos de herramientas desarrollados por terceros para ampliar las principales funciones de Dynamo. Todos los usuarios pueden acceder a ellos y descargarlos con un solo clic.
 
-{% hint style="info" %} Consulte la sección [6-2_packages](../6_custom_nodes_and_packages/6-2_packages/ "mention") para obtener más información sobre cómo empezar a trabajar con paquetes. {% endhint %}
+{% hint style="info" %}
+Consulte la sección [6-2_packages](../6_custom_nodes_and_packages/6-2_packages/ "mention") para obtener más información sobre cómo empezar a trabajar con paquetes.
+{% endhint %}
 
 A continuación, se muestra una lista de algunos de los paquetes más populares que pueden llevar los gráficos de Dynamo for Civil 3D al siguiente nivel.
 
@@ -57,3 +59,4 @@ Los nodos de Arkance Systems son un paquete de Dynamo for Civil 3D con una ampli
 #### Documentación
 
 {% embed url="https://blog.huiz.net/arkance-systems-node-library-for-civil-3d-dynamo/" %}
+
