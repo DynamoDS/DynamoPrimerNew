@@ -36,7 +36,9 @@ Boolesche Operationen sind sehr komplex und ihre Berechnung kann möglicherweise
 > 3. Um die Ausführung der Blöcke fortzusetzen, klicken Sie mit der rechten Maustaste und deaktivieren "Anhalten".
 > 4. Alle betroffenen Blöcke und die zugehörigen Geometrievorschauen werden aktualisiert und wieder im standardmäßigen Vorschaumodus angezeigt.
 
-{% hint style="info" %} Weitere Informationen zum Anhalten von Blöcken finden Sie im Abschnitt [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+Weitere Informationen zum Anhalten von Blöcken finden Sie im Abschnitt [4_nodes_and_wires](../../4_nodes_and_wires/ "mention").
+{% endhint %}
 
 ## Vertiefung...
 
@@ -93,3 +95,4 @@ Zusätzlich zu diesen drei Vorgänge sind in Dynamo die Blöcke **Solid.Differen
 > 2. **DifferenceAll:** Differenzvorgang mit Kugel und nach innen gerichteten Kegeln
 
 ##
+
