@@ -22,7 +22,9 @@ Vous pouvez simplement remplacer `<PythonTemplateFilePath />` par ce qui suit :
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} _Remarque : remplacez CURRENTUSER par votre nom d’utilisateur_ {% endhint %}
+{% hint style="warning" %}
+_Remarque : remplacez CURRENTUSER par votre nom d’utilisateur_
+{% endhint %}
 
 Ensuite, vous devez créer un gabarit en intégrant la fonctionnalité que vous voulez utiliser. Dans cet exemple, vous allez incorporer les importations liées à Revit et d'autres éléments que vous utilisez généralement lorsque vous travaillez avec Revit.
 
@@ -78,3 +80,4 @@ Si Dynamo trouve le gabarit Python (par exemple, notre gabarit Revit), il affich
 ![](../images/8-3/3/pythontemplates-aftersetuptemplate.jpg)
 
 Vous trouverez ici des informations supplémentaires sur cet ajout important (par Radu Gidei). https://github.com/DynamoDS/Dynamo/pull/8122
+
