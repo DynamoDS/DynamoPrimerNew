@@ -36,7 +36,9 @@ Les opérations booléennes sont complexes et peuvent être lentes à calculer. 
 > 3. Pour dégeler les nœuds, cliquez avec le bouton droit de la souris et désactivez l’option Geler.
 > 4. Tous les nœuds concernés et les aperçus de géométrie associés sont mis à jour et reviendront en mode d’aperçu standard.
 
-{% hint style="info" %} Pour en savoir plus sur le gel des nœuds, consultez la section [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+Pour en savoir plus sur le gel des nœuds, consultez la section [4_nodes_and_wires](../../4_nodes_and_wires/ "mention").
+{% endhint %}
 
 ## Approfondir…
 
@@ -93,3 +95,4 @@ Outre ces trois opérations, Dynamo dispose des nœuds **Solid.DifferenceAll** e
 > 2. **DifferenceAll** : opération de différence avec une sphère et des cônes orientés vers l’intérieur
 
 ##
+
