@@ -36,8 +36,8 @@ Las operaciones booleanas son complejas y pueden resultar lentas de calcular. Pu
 > 3. Para desbloquear los nodos, haga clic con el botón derecho y desactive la opción Bloquear.
 > 4. Todos los nodos afectados y las vistas preliminares de la geometría asociada se actualizarán y se restablecerán al modo de vista preliminar estándar.
 
-{% hint style="info" %} 
-Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). 
+{% hint style="info" %}
+Puede obtener más información sobre cómo bloquear nodos en la sección [4\_nodes\_and\_wires](../../4_nodes_and_wires/ "mention").
 {% endhint %}
 
 ## Información más detallada sobre...
@@ -95,4 +95,5 @@ Además de estas tres operaciones, Dynamo incluye los nodos **Solid.DifferenceAl
 > 2. **DifferenceAll**: operación de diferencia con esfera y conos orientados hacia dentro.
 
 ##
+
 
