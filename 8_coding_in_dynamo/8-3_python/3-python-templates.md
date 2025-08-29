@@ -22,7 +22,9 @@ Ersetzen Sie alle Vorkommen von `<PythonTemplateFilePath />` durch das Folgende:
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} _Anmerkung: Ersetzen Sie CURRENTUSER durch Ihren Benutzernamen_ {% endhint %}
+{% hint style="warning" %}
+_Anmerkung: Ersetzen Sie CURRENTUSER durch Ihren Benutzernamen_
+{% endhint %}
 
 Als Nächstes müssen wir eine Vorlage mit den Funktionen erstellen, die wir integrieren möchten. In diesem Fall können wir die Revit-bezogenen Importe und einige andere typische Elemente einbetten, die wir bei der Arbeit mit Revit verwenden.
 
@@ -78,3 +80,4 @@ Wenn die Python-Vorlage gefunden wird (beispielsweise für Revit), werden alle v
 ![](../images/8-3/3/pythontemplates-aftersetuptemplate.jpg)
 
 Weitere Informationen zu dieser großartigen Ergänzung (von Radu Gidei) finden Sie hier. https://github.com/DynamoDS/Dynamo/pull/8122
+
