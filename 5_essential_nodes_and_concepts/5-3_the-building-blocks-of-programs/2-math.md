@@ -8,10 +8,10 @@ Operatoren sind Komponenten für algebraische Funktionen, die zwei Eingabewerte 
 
 | Symbol                                                  | Name (Syntax)     | Eingaben                     | Ausgaben      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Addieren (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrahieren (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplizieren ( ***** ) | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividieren (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Addieren (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrahieren (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplizieren (*) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividieren (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Übung: Die Goldene Spirale-Formel
 
@@ -116,3 +116,4 @@ Die Ausgabe nimmt eine gewisse Ähnlichkeit mit einem Wirbel an. Passen Sie jetz
 Ändern Sie die Schrittgröße für den **Number Range**-Block von _36.0_ in _3.6_. Dadurch erhalten Sie ein wesentlich dichteres Raster und die Richtung der Spiralen ist nicht mehr erkennbar. Damit haben Sie ein Sonnenblumenmuster erstellt.
 
 ![](../images/5-3/2/math-partIV-05.jpg)
+
