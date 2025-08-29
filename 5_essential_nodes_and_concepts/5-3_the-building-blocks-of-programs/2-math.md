@@ -8,10 +8,10 @@ Operátory jsou sada komponent, které používají algebraické funkce se dvěm
 
 | Ikona                                                  | Název (Syntaxe)     | Vstupy                     | Výstupy      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Součet (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Rozdíl (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Násobení ( ***** ) | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dělení (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Součet (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Rozdíl (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Násobení (*) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dělení (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Cvičení: Vzorec zlaté spirály
 
@@ -116,3 +116,4 @@ Změňte velikost kroku uzlu **Number Range** z _120.0_ na _36.0_. Všimněte s
 Změňte velikost kroku uzlu **Number Range** z _36.0_ na _3.6_. Tím získáme mnohem hustší osnovu a směr spirály je nejasný. Dámy a pánové, vytvořili jsme slunečnici.
 
 ![](../images/5-3/2/math-partIV-05.jpg)
+
