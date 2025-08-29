@@ -28,7 +28,9 @@
    * 功能：Excel。
    * 如何匯入：`import DSOffice`
 
-{% hint style="warning" %} *注意：透過 Python 或 C# 使用 **ProtoGeometry** 時，您建立的是不受管理的物件，而這需要手動管理記憶體 - 請參閱以下一節：**不受管理的物件**，以取得更多資訊。{% endhint %}
+{% hint style="warning" %}
+\*注意：透過 Python 或 C# 使用 **ProtoGeometry** 時，您建立的是不受管理的物件，而這需要手動管理記憶體 - 請參閱以下一節：**不受管理的物件**，以取得更多資訊。
+{% endhint %}
 
 ## 仔細標示
 
@@ -308,3 +310,4 @@ public Cuboid singleCube(){
 ```
 
 通常，您只需要處置幾何圖形 (例如 `Surfaces`、`Curves` 和 `Solids`)。為了安全起見，您可以處置所有幾何圖形類型 (`Vectors`、`Points`、`CoordinateSystems`)。
+
