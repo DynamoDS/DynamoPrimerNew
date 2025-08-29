@@ -36,7 +36,9 @@ Booleovské operace jsou složité a jejich výpočet může být pomalý. Pomoc
 > 3. Chcete-li zmrazení zrušit, klikněte pravým tlačítkem a zrušte výběr možnosti Zmrazit.
 > 4. Všechny ovlivněné uzly a geometrie se aktualizují a zobrazí se běžným způsobem.
 
-{% hint style="info" %} Další informace o zmrazení uzlů naleznete v části [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+Další informace o zmrazení uzlů naleznete v části [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). 
+{% endhint %}
 
 ## Podrobné informace...
 
@@ -93,3 +95,4 @@ Aplikace Dynamo kromě těchto tří operací obsahuje také uzly **Solid.Differ
 > 2. **DifferenceAll:** Operace rozdílu s koulí a kužely směřujícími dovnitř.
 
 ##
+
