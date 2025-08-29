@@ -8,10 +8,10 @@ Gli operatori sono un insieme di componenti che utilizzano funzioni algebriche c
 
 | Icona                                                  | Nome (Sintassi)     | Input                     | Output      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Add (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtract (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiply (*****) | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Divide (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Add (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtract (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiply (*) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Divide (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Esercizio: Formula della spirale aurea
 
@@ -116,3 +116,4 @@ Modificare la dimensione di incremento del nodo **Range** da _120.000_ a _36.600
 Modificare la dimensione di incremento del nodo **Range** da _36.000_ a _3.600_. In questo modo si ottiene una griglia molto più densa e la direzionalità della spirale non è chiara. Ecco, è stato creato un girasole.
 
 ![](../images/5-3/2/math-partIV-05.jpg)
+
