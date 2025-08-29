@@ -22,7 +22,9 @@ Dove è visibile la riga `<PythonTemplateFilePath />`, è sufficiente sostituirl
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} _Nota Sostituire CURRENTUSER con il nome utente._ {% endhint %}
+{% hint style="warning" %}
+_Nota: Sostituire CURRENTUSER con il nome utente._
+{% endhint %}
 
 Successivamente, è necessario creare un modello con le funzionalità incorporate che si desidera utilizzare. In questo caso, si incorporano le importazioni correlate a Revit e alcuni degli altri elementi tipici quando si utilizza Revit.
 
@@ -78,3 +80,4 @@ Se viene trovato il modello di Python (ad esempio, come il modello di Revit), ve
 ![](../images/8-3/3/pythontemplates-aftersetuptemplate.jpg)
 
 Ulteriori informazioni su questa straordinaria aggiunta (di Radu Gidei) sono disponibili qui. https://github.com/DynamoDS/Dynamo/pull/8122
+
