@@ -8,10 +8,10 @@ Operatory to zestaw komponentów, w których używane są funkcje algebraiczne z
 
 | Ikona                                                  | Nazwa (składnia)     | Dane wejściowe                     | Dane wyjściowe      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Dodawanie (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Odejmowanie (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Mnożenie (*****) | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dzielenie (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Dodawanie (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Odejmowanie (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Mnożenie (*) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dzielenie (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Ćwiczenie: formuła złotej spirali
 
@@ -116,3 +116,4 @@ Zmień rozmiar kroku (step) węzła **Number Range** z _120,0_ na _36,0_. Zwró�
 Zmień rozmiar kroku (step) węzła **Number Range** z _36,0_ na _3,6_. Daje to teraz dużo gęstszą siatkę, a kierunkowość spirali jest niejasna. W ten sposób utworzyliśmy słonecznik.
 
 ![](../images/5-3/2/math-partIV-05.jpg)
+
