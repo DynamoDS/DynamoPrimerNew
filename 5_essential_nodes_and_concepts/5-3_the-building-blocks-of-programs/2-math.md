@@ -8,10 +8,10 @@ Los operadores son un conjunto de componentes que utilizan funciones algebraicas
 
 | Icono                                                  | Nombre (sintaxis)     | Entradas                     | Salidas      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Sumar (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Restar (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplicar (*****) | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Sumar (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Restar (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplicar (**\**) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Ejercicio: la fórmula de la espiral dorada
 
@@ -116,3 +116,4 @@ Cambie el tamaño de paso del nodo **Number Range** de _120,0_ a _36,0_. Observe
 Cambie el tamaño de paso del nodo **Number Range** de _36,0_ a _3,6_. Esto nos da una rejilla mucho más densa y la dirección de la espiral no está clara. Damas y caballeros, hemos creado un girasol.
 
 ![](../images/5-3/2/math-partIV-05.jpg)
+
