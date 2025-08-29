@@ -22,7 +22,9 @@ Aby bylo možné tuto funkci používat, je nutné přidat do souboru `DynamoSet
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} _Poznámka: Nahraďte proměnnou CURRENTUSER svým uživatelským jménem._ {% endhint %}
+{% hint style="warning" %}
+_Poznámka: Nahraďte proměnnou CURRENTUSER svým uživatelským jménem._
+{% endhint %}
 
 Dále je nutné vytvořit šablonu s funkcemi, které má obsahovat. V tomto případě do ní zahrneme importy související s aplikací Revit a další položky, které se s aplikací Revit obvykle používají.
 
@@ -78,3 +80,4 @@ Pokud se podaří šablonu jazyka Python nalézt (například náš skript pro a
 ![](../images/8-3/3/pythontemplates-aftersetuptemplate.jpg)
 
 Další informace o této skvělé nové funkci (autor: Radu Gidei) naleznete zde: https://github.com/DynamoDS/Dynamo/pull/8122
+
