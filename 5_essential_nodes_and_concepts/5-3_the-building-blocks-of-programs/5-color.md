@@ -8,7 +8,7 @@ Dynamo では、ARGB 入力を使用して色を作成します。これは、�
 
 | アイコン                                     | 名前(構文)                 | 入力  | 出力 |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| \![](<../images/5-1/ColorbyARGB (2).jpg>) | ARGB Color (**Color.ByARGB**) | A、R、G、B | color   |
+| ![](<../images/5-1/ColorbyARGB (2).jpg>) | ARGB Color (**Color.ByARGB**) | A、R、G、B | color   |
 
 ### 色の値のクエリー
 
@@ -16,19 +16,19 @@ Dynamo では、ARGB 入力を使用して色を作成します。これは、�
 
 | アイコン                                              | 名前(構文)                     | 入力 | 出力    |
 | ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| \![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | アルファ(**Color.Alpha**)           | color  | A          |
+| ![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | アルファ(**Color.Alpha**)           | color  | A          |
 | ![](../images/5-1/ColorRed.jpg)                   | 赤(**Color.Red**)               | color  | R          |
-| \![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | 緑(**Color.Green**)           | color  | G          |
+| ![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | 緑(**Color.Green**)           | color  | G          |
 | ![](../images/5-1/ColorBlue.jpg)                  | 青(**Color.Blue**)             | color  | B          |
-| \![](<../images/5-1/ColorComponent (2).jpg>)       | コンポーネント(**Color.Components**) | color  | A、R、G、B |
+| ![](<../images/5-1/ColorComponent (2).jpg>)       | コンポーネント(**Color.Components**) | color  | A、R、G、B |
 
 次の表に記載されている色は、**HSB 色空間**に対応しています。色を、色相、彩度、明るさに分割すると、より直感的に色を解釈することができます。たとえば、最初に処理する色を決め、次にその色の彩度と明るさを設定します。このように、色相、彩度、明るさをそれぞれ個別に設定していきます。
 
 | アイコン                                         | 名前(構文)                     | 入力 | 出力    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
 | ![](../images/5-1/ColorHue.jpg)              | 色相(**Color.Hue**)               | color  | Hue        |
-| \![](<../images/5-1/ColorSaturation (2).jpg>) | 彩度(**Color.Saturation**) | color  | Saturation |
-| \![](<../images/5-1/ColorBrightness (2).jpg>) | 明るさ(**Color.Brightness**) | color  | Brightness |
+| ![](<../images/5-1/ColorSaturation (2).jpg>) | 彩度(**Color.Saturation**) | color  | Saturation |
+| ![](<../images/5-1/ColorBrightness (2).jpg>) | 明るさ(**Color.Brightness**) | color  | Brightness |
 
 ### Color Range
 
@@ -159,3 +159,4 @@ Number Slider ノードの値を変更し、球体のサイズが更新される
 400x300 のサンプル解像度で、出力サーフェスのプレビューを拡大します。
 
 ![](../images/5-3/5/color-coloronsurface03.jpg)
+
