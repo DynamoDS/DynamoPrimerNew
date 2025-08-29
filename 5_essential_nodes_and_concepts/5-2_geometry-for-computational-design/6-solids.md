@@ -36,7 +36,9 @@
 > 3. 若要解凍節點，請按一下右鍵，然後取消勾選「凍結」。
 > 4. 所有受影響的節點和關聯的幾何圖像預覽將更新並回復至標準預覽模式。
 
-{% hint style="info" %} 您可以在[4_nodes_and_wires](../../4_nodes_and_wires/ "mention")一節閱讀有關凍結節點的更多資訊。{% endhint %}
+{% hint style="info" %}
+您可以在[4_nodes_and_wires](../../4_nodes_and_wires/ "mention")一節閱讀有關凍結節點的更多資訊。
+{% endhint %}
 
 ## 深入探索...
 
@@ -93,3 +95,4 @@
 > 2. **DifferenceAll：** 對球和向內圓錐進行「差集」作業
 
 ##
+
