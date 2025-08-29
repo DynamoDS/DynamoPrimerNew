@@ -36,7 +36,9 @@
 > 3. 要解冻节点，请单击鼠标右键，然后取消选中“冻结”。
 > 4. 所有受影响的节点和关联的几何图形预览将更新并还原为标准预览模式。
 
-{% hint style="info" %} 您可以在 [4_nodes_and_wires](../../4_nodes_and_wires/ "mention") 部分阅读有关冻结节点的详细信息。{% endhint %}
+{% hint style="info" %}
+您可以在 [4_nodes_and_wires](../../4_nodes_and_wires/ "mention") 部分阅读有关冻结节点的详细信息。
+{% endhint %}
 
 ## 深入探讨...
 
@@ -93,3 +95,4 @@
 > 2. **DifferenceAll**：使用球体和朝内圆锥体时的差集运算
 
 ##
+
