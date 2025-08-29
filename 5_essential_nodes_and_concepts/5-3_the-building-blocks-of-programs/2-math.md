@@ -8,10 +8,10 @@ Les opérateurs sont un ensemble de composants qui utilisent des fonctions algé
 
 | Icône                                                  | Nom (Syntaxe)     | Entrées                     | Sorties      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
-| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
-| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplier ( ***** ) | var[]…[], var[]…[] | var[]…[] |
-| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplier (*) | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
 
 ## Exercice : Formule de la clothoïde dorée
 
@@ -116,3 +116,4 @@ Modifiez la taille du pas du nœud **Number Range** de _120.0_ à _36.0_. Cette 
 Modifiez la taille du pas du nœud **Number Range** de _36.0_ à _3.6_. Vous obtenez une grille beaucoup plus dense, et la direction de la clothoïde n’est pas claire. Bravo, vous avez créé un tournesol.
 
 ![](../images/5-3/2/math-partIV-05.jpg)
+
