@@ -67,7 +67,7 @@ _“List.Count”_ 节点简单明了：它计算列表中值的数量，并返�
 
 ![合计](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
 
-> 1. **“List.Count”**节点会返回**“Line.ByStartPointEndPoint”**节点中线的数量。在本例中，该值为 10，表示与从原始 **“Code Block”** 节点创建的点数一致。
+> 1. **“List.Count”** 节点会返回 **“Line.ByStartPointEndPoint”** 节点中线的数量。在本例中，该值为 10，表示与从原始 **“Code Block”** 节点创建的点数一致。
 
 ### List.GetItemAtIndex
 
@@ -148,3 +148,4 @@ _“List.Reverse”_ 可反转列表中所有项的顺序。
 > 6. 将 **“Curve.PointAtParameter”** 节点连接到 **“List.FilterByBooleanMask”** 的每个列表输入。
 > 7. **“Filter.ByBooleanMask”** 的输出读取 _“in”_ 和 _“out”_。_“in”_ 表示遮罩值为 _“true”_ 的值，而 _“out”_ 表示值为 _“false”_ 的值。通过将 _“in”_ 输出连接到 **“Line.ByStartPointEndPoint”** 节点的 _“startPoint”_ 和 _“endPoint”_ 输入，我们创建了过滤后的线列表。
 > 8. **“Watch3D”** 节点显示线数少于点数。通过仅过滤 true 值，我们仅选择了 25% 的节点！
+
