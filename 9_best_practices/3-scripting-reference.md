@@ -28,7 +28,9 @@ Les bibliothèques standard sont externes à Dynamo et sont présentes dans les 
    * Fonctionnalité : Excel.
    * Comment importer : `import DSOffice`
 
-{% hint style="warning" %} *Remarque : lorsque vous utilisez **ProtoGeometry** via Python ou C#, vous créez des objets non gérés dont la mémoire doit être gérée manuellement. Pour plus d’informations, reportez-vous à la section **Objets non gérés**. {% endhint %}
+{% hint style="warning" %}
+\*Remarque : lorsque vous utilisez **ProtoGeometry** via Python ou C#, vous créez des objets non gérés dont la mémoire doit être gérée manuellement. Pour plus d’informations, reportez-vous à la section **Objets non gérés**.
+{% endhint %}
 
 ## Étiquetage soigneux
 
@@ -308,3 +310,4 @@ Le code réparé doit ressembler à ceci :
 ```
 
 En général, il suffit de supprimer la géométrie comme `Surfaces`, `Curves` et `Solids`. Pour plus de sécurité, vous pouvez supprimer tous les types de géométrie (`Vectors`, `Points`, `CoordinateSystems`).
+
