@@ -39,7 +39,7 @@ Cet exercice fournit des informations sur les techniques présentées dans la se
 ![](images/5/customizing-exercise02.jpg)
 
 > 1. À l’aide du nœud _Code Block_, définissez une plage comprise entre 0 et 1 avec 10 valeurs équidistantes : `0..1..#10;`
-> 2. Connectez le nœud _Code Block_ aux entrées *u *et _v_ d’un nœud _Surface.PointAtParameter_, puis connectez le nœud _Surface.ByLoft_ à l’entrée _surface_. Cliquez avec le bouton droit de la souris sur le nœud et définissez la _liaison_ sur _Produit cartésien_. Cette action permet de créer une grille de points sur la surface.
+> 2. Connectez le nœud _Code Block_ aux entrées *u* et _v_ d’un nœud _Surface.PointAtParameter_, puis connectez le nœud _Surface.ByLoft_ à l’entrée _surface_. Cliquez avec le bouton droit de la souris sur le nœud et définissez la _liaison_ sur _Produit cartésien_. Cette action permet de créer une grille de points sur la surface.
 
 Cette grille de points sert de points de contrôle pour une surface définie de manière paramétrique. Vous devez extraire les positions u et v de chacun de ces points afin de pouvoir les relier à une formule paramétrique et conserver la même structure de données. Pour ce faire, vous pouvez interroger les emplacements des paramètres des points que vous venez de créer.
 
@@ -58,7 +58,7 @@ Cette grille de points sert de points de contrôle pour une surface définie de 
 
 ![](images/5/customizing-exercise05.jpg)
 
-> 1. La liste des valeurs définies par l’algorithme est maintenant disponible. Utilisez cette liste de valeurs pour déplacer les points vers le haut dans la direction _+Z_. À l’aide de _Geometry.Translate_, connectez le nœud *Code Block *à _zTranslation_ et le nœud _Surface.PointAtParameter_ à l’entrée _geometry_. Les nouveaux points doivent s’afficher dans l’aperçu Dynamo.
+> 1. La liste des valeurs définies par l’algorithme est maintenant disponible. Utilisez cette liste de valeurs pour déplacer les points vers le haut dans la direction _+Z_. À l’aide de _Geometry.Translate_, connectez le nœud *Code Block* à _zTranslation_ et le nœud _Surface.PointAtParameter_ à l’entrée _geometry_. Les nouveaux points doivent s’afficher dans l’aperçu Dynamo.
 > 2. Enfin, créez une surface avec le nœud _NurbsSurface.ByPoints_ en connectant le nœud de l’étape précédente à l’entrée des points. Vous obtenez une surface paramétrique. N'hésitez pas à déplacer le curseur pour observer la taille du monticule diminuer ou augmenter.
 
 En ce qui concerne la surface paramétrique, vous devez définir un moyen de la paneliser afin de mettre en réseau les composants adaptatifs à quatre points. Étant donné que Dynamo ne dispose pas de fonctionnalités prêtes à l’emploi pour la panelisation des surfaces, contactez la communauté pour des packages Dynamo utiles.
@@ -115,3 +115,4 @@ _Remarque : si Dynamo prend trop de temps pour calculer les nœuds, vous pouvez
 > Dans Revit, à partir d’une distance, vous pouvez définir l’impact de l’orientation du soleil sur l’ouverture des panneaux ETFE.
 
 > En zoomant, vous pouvez voir que plus les panneaux ETFE font face au soleil et plus ils sont fermés. L’objectif ici est de réduire la surchauffe de l’exposition au soleil. Si vous voulez laisser davantage de lumière en fonction de l’exposition solaire, vous devez simplement définir le domaine sur _Math.RemapRange_.
+
