@@ -275,7 +275,7 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
 
 您只需要處置不傳入圖表或儲存參考的不受管理的資源。在本節其餘部分，我們會將這些物件稱為_中間幾何圖形_。您可以在以下的程式碼範例中查看有關此類別物件的範例。此 zero touch C# 函數 **singleCube** 會傳回一個立方塊，但在執行期間會額外建立 10000 個立方塊。我們可以假設這額外的幾何圖形是用作一些中間建構幾何圖形。
 
-**此 zero touch 功能很有可能會讓 Dynamo 當機。**雖然我們建立了 10000 個實體，但只儲存其中一個並傳回這一個。我們應該改為處置所有中間立方塊，除了我們傳回的那一個。我們不想要處置我們傳回的內容，因為它會傳到圖表中並由其他節點使用。
+**此 zero touch 功能很有可能會讓 Dynamo 當機。** 雖然我們建立了 10000 個實體，但只儲存其中一個並傳回這一個。我們應該改為處置所有中間立方塊，除了我們傳回的那一個。我們不想要處置我們傳回的內容，因為它會傳到圖表中並由其他節點使用。
 
 ```
 public Cuboid singleCube(){
@@ -310,4 +310,5 @@ public Cuboid singleCube(){
 ```
 
 通常，您只需要處置幾何圖形 (例如 `Surfaces`、`Curves` 和 `Solids`)。為了安全起見，您可以處置所有幾何圖形類型 (`Vectors`、`Points`、`CoordinateSystems`)。
+
 
