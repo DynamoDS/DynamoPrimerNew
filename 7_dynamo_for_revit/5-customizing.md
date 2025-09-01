@@ -58,7 +58,7 @@ Die Punkte in diesem Raster werden als Steuerpunkte für eine parametrisch defin
 
 ![](images/5/customizing-exercise05.jpg)
 
-> 1. Dadurch erhalten Sie eine Liste mit durch den Algorithmus definierten Werten. Verwenden Sie diese Werteliste, um die Punkte nach oben, d. h. in _+Z_-Richtung, zu verschieben. Hierfür verwenden Sie _Geometry.Translate_: Verbinden Sie den *Codeblock *mit _zTranslation_ und _Surface.PointAtParameter_ mit der _geometry_-Eingabe. Die neuen Punkte sollten in der Dynamo-Vorschau angezeigt werden.
+> 1. Dadurch erhalten Sie eine Liste mit durch den Algorithmus definierten Werten. Verwenden Sie diese Werteliste, um die Punkte nach oben, d. h. in _+Z_-Richtung, zu verschieben. Hierfür verwenden Sie _Geometry.Translate_: Verbinden Sie den *Codeblock* mit _zTranslation_ und _Surface.PointAtParameter_ mit der _geometry_-Eingabe. Die neuen Punkte sollten in der Dynamo-Vorschau angezeigt werden.
 > 2. Schließlich erstellen Sie eine Oberfläche, indem Sie den Block aus dem vorigen Schritt mit der points-Eingabe eines _NurbsSurface.ByPoints_-Blocks verbinden. Damit haben Sie eine parametrische Oberfläche erstellt. Wenn Sie den Schieberegler ziehen, können Sie beobachten, wie die Oberfläche sich wölbt und abflacht.
 
 Diese parametrische Oberfläche muss jetzt in Felder unterteilt werden, damit adaptive Bauteile mit vier Punkten darauf angeordnet werden können. Dynamo verfügt nicht über integrierte Funktionen zum Unterteilen von Oberflächen. Suchen Sie daher in der Community nach geeigneten Dynamo-Paketen.
@@ -115,3 +115,4 @@ _Anmerkung: Falls die Berechnung von Blöcken in Dynamo sehr lange dauert, könn
 > In Revit ist die Auswirkung des Sonnenwinkels auf die Öffnung der EFTE-Elemente auch aus größerer Entfernung zu erkennen.
 
 > Wenn Sie die Ansicht vergrößern, ist zu sehen, dass die der Sonne zugewandten EFTE-Elemente stärker geschlossen sind. In diesem Fall soll eine Überhitzung durch Sonneneinstrahlung vermieden werden. Wenn Sie den Lichteinfall in Abhängigkeit von der Sonneneinstrahlung steuern wollten, könnten Sie dafür einfach die Domäne im _Math.RemapRange_-Block ändern.
+
