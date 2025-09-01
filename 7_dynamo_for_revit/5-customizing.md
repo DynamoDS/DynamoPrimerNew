@@ -39,7 +39,7 @@ To ćwiczenie przedstawia rozszerzenie technik omówionych w poprzedniej sekcji.
 ![](images/5/customizing-exercise02.jpg)
 
 > 1. Używając węzła _Code Block_, zdefiniuj zakres od 0 do 1 z 10 wartościami w równych odstępach: `0..1..#10;`
-> 2. Połącz węzeł _Code Block_ z elementami wejściowymi *u *i _v_ węzła _Surface.PointAtParameter_, a węzeł _Surface.ByLoft_ z elementem wejściowym _surface_. Kliknij węzeł prawym przyciskiem myszy i zmień opcję _skratowania_ na _Iloczyn wektorowy_. W ten sposób na powierzchni zostanie umieszczona siatka punktów.
+> 2. Połącz węzeł _Code Block_ z elementami wejściowymi *u* i _v_ węzła _Surface.PointAtParameter_, a węzeł _Surface.ByLoft_ z elementem wejściowym _surface_. Kliknij węzeł prawym przyciskiem myszy i zmień opcję _skratowania_ na _Iloczyn wektorowy_. W ten sposób na powierzchni zostanie umieszczona siatka punktów.
 
 Ta siatka punktów posłuży jako punkty sterujące dla powierzchni zdefiniowanej parametrycznie. Chcemy wyodrębnić położenia u i v każdego z tych punktów, aby można je było wstawić do wzoru parametrycznego i zachować tę samą strukturę danych. Można to zrobić za pomocą zapytania o położenia parametrów punktów, które właśnie utworzyliśmy.
 
@@ -58,7 +58,7 @@ Ta siatka punktów posłuży jako punkty sterujące dla powierzchni zdefiniowane
 
 ![](images/5/customizing-exercise05.jpg)
 
-> 1. Otrzymaliśmy listę wartości zdefiniowaną przez algorytm. Użyjemy tej listy wartości, aby przesunąć punkty w górę w kierunku _+Z_. Używając węzła _Geometry.Translate_, połącz węzeł *Code Block *z elementem wejściowym _zTranslation_, a węzeł _Surface.PointAtParameter_ z elementem wejściowym _geometry_. Nowe punkty powinny być widoczne w podglądzie dodatku Dynamo.
+> 1. Otrzymaliśmy listę wartości zdefiniowaną przez algorytm. Użyjemy tej listy wartości, aby przesunąć punkty w górę w kierunku _+Z_. Używając węzła _Geometry.Translate_, połącz węzeł *Code Block* z elementem wejściowym _zTranslation_, a węzeł _Surface.PointAtParameter_ z elementem wejściowym _geometry_. Nowe punkty powinny być widoczne w podglądzie dodatku Dynamo.
 > 2. Na koniec utworzymy powierzchnię za pomocą węzła _NurbsSurface.ByPoints_, łącząc węzeł z poprzedniego kroku z elementem wejściowym „points”. Otrzymaliśmy powierzchnię parametryczną. Możesz przeciągnąć suwak, aby zobaczyć, jak wzniesienie zmniejsza się i rośnie.
 
 Używając tej powierzchni parametrycznej, chcemy zdefiniować podział na panele w celu utworzenia szyku czteropunktowych komponentów adaptacyjnych. Dodatek Dynamo nie zawiera gotowej funkcji podziału powierzchni na panele, poszukamy więc przydatnych pakietów dodatku Dynamo w społeczności.
@@ -115,3 +115,4 @@ _Uwaga: jeśli w dodatku Dynamo obliczanie węzłów trwa zbyt długo, można u�
 > W programie Revit z odległości widać wpływ kierunku oświetlenia naturalnego na wielkość otworu paneli z ETFE.
 
 > Po powiększeniu widać, że panele z ETFE wystawione na słońce są bardziej zamknięte. Naszym celem jest ograniczenie przegrzewania się pod wpływem energii słonecznej. Jeśli chcemy uzyskać więcej światła poprzez wystawienie na słońce, wystarczy przełączyć dziedzinę w węźle _Math.RemapRange_.
+
