@@ -39,7 +39,7 @@ Toto cvičení rozšiřuje techniky znázorněné v předchozí části. V tom
 ![](images/5/customizing-exercise02.jpg)
 
 > 1. Pomocí _bloku kódu_ definujte rozsah od 0 do 1 s 10 rovnoměrně rozmístěnými hodnotami: `0..1..#10;`.
-> 2. Připojte _blok kódu_ ke vstupům *u *a _v_ uzlu _Surface.PointAtParameter_ a připojte uzel _Surface.ByLoft_ ke vstupu _surface_. Klikněte pravým tlačítkem na uzel a změňte _vázání_ na _Kartézský součin_. Tím se vytvoří osnova bodů na povrchu.
+> 2. Připojte _blok kódu_ ke vstupům *u* a _v_ uzlu _Surface.PointAtParameter_ a připojte uzel _Surface.ByLoft_ ke vstupu _surface_. Klikněte pravým tlačítkem na uzel a změňte _vázání_ na _Kartézský součin_. Tím se vytvoří osnova bodů na povrchu.
 
 Tato osnova bodů slouží jako řídicí body parametricky definovaného povrchu. Je třeba extrahovat pozice u a v každého z těchto bodů, aby bylo možné je připojit k parametrickému vzorci a zachovat stejnou datovou strukturu. Toho dosáhnete zadáním dotazu na umístění parametrů bodů, které jste právě vytvořili.
 
@@ -115,3 +115,4 @@ _Poznámka: Pokud aplikaci Dynamo trvá výpočet uzlů dlouho, bude možná už
 > Zpět v aplikaci Revit můžeme z dálky rozeznat vliv orientace slunečního záření na otvor v panelech ETFE.
 
 > Pokud přiblížíte pohled, zjistíte, že panely ETFE jsou více uzavřené, pokud směřují ke slunci. Cílem je snížit míru přehřátí při vystavení slunečnímu záření. Pokud chcete vpustit dovnitř více světla na základě slunečního záření, prostě jen přepněte doménu v uzlu _Math.RemapRange_.
+
