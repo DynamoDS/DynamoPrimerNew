@@ -487,37 +487,32 @@ To embed your icons into the `.dll`, create a resources file:
    * Select the resources file in the **Solution Explorer**.
    * In the **Properties** panel, clear the `Custom Tool` field by removing the `ResXFileCodeGenerator` value.
 
-![Cleaning the Custom Tool Property](images/zerotouchicons-custom-tool-property.jpg)
+3. **Set 'Build Action' to 'None'**
+    * Since we will be building this resource ourselves a bit further down, we don't need to also build it automatically.
+
+![Cleaning the Custom Tool Property](images/zerotouchicons-custom-tool-property-update.png)
 
 > _NOTE: Failing to clear the "Custom Tool" field will result in Visual Studio converting periods to underscores in your resource names. Please verify before Building that your resource names have periods separating class names rather than underscores._
 
 #### Step 4: Add Your Images as Resources
 
-1. Open the resources file using the **Managed Resources Editor (Legacy)**:
-   * If using Visual Studio 17.11 or later, right-click the resources file, choose **Open With**, and select **Managed Resources Editor (Legacy)**.
-   * If using a Visual Studio version previous to 17.11, double click on the resources file to open with the Resources Editor (which in your version of Visual Studio has not been made legacy yet).
+1. Double-click on the resouce file you created:
+    * Add one image at a time using the '+' button 
+    * Set resource type to **File**
+    * Browse to your Image file location and include your **Large** and **Small** Node icons.
 
-![Using Open With...](images/zerotouchicons-open-resource-editor.jpg)
+![Add resources...](images/zerotouchicons-open-resource-editor-update.png)
 
-![Opening the resources file with Managed Resources Editor (Legacy)](images/zerotouchicons-managed-resource-editor-legacy.jpg)
+> _NOTE: Organizing your images into a **Resource** folder, and even **Large** and **Small** subfolders is not required but a good practice to keep your resources well organized!_
 
-2. Add your images:
-   * Drag and drop your image files into the editor or use the **Add Existing File** option.
 
-![Adding Existing Files](images/zerotouchicons-add-existing-file.jpg)
-
-3. Update persistence:
-   * Select the images from within the Resources Editor (this will not work if you select them from the Solution Explorer), change the **Persistence** property in the **Properties** panel to `Embedded in .resx`. This ensures the images are included in your `.dll`.
-
-![Updating Persistence](images/zerotouchicons-edit-persistence-property.jpg)
-
-#### Step 5: Convert Your Project to SDK-Style
+#### Step 5: Convert Your Project to SDK-Style (for legacy projects)
 
 If your project is not already SDK-style (required for embedding resources), convert it:
 
 1. Install the `.NET Upgrade Assistant` extension from Visual Studio's **Extensions > Manage Extensions** menu.
 
-![Manage Extensions](images/zerotouchicons-manage-extensions.jpg)
+![Manage Extensions](images/zerotouchicons-manage-extensions-update.png)
 
 ![Installing the .NET Upgrade Assistant](images/zerotouchicons-net-upgrade-assistant.jpg)
 
