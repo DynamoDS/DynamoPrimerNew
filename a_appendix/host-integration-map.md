@@ -8,6 +8,9 @@ A continuación, se muestra una lista de la versión de Dynamo que se suministra
 
 | Versión host | Dynamo       |
 | ------------ | ------------ |
+| 2026.3       | 3.6.0.9395   |
+| 2026.2       | 3.5.2.8914   |
+| 2026.1       | 3.5.0.8297   |
 | 2026         | 3.4.1.7055   |
 | 2025.4       | 3.3.0.6316   |
 | 2025.3       | 3.2.2.5494   |
@@ -35,7 +38,10 @@ A continuación, se muestra una lista de la versión de Dynamo que se suministra
 
 | Versión host | Dynamo       |
 | ------------ | ------------ |
+| 2026.1       | 3.5.2.8914   |
 | 2026         | 3.4.1.7055   |
+| 2025.2.1     | 3.3.1.7726   |
+| 2025.2       | 3.3.0.6316   |
 | 2025.1       | 3.2.2.5494   |
 | 2025         | 3.0.3.7597   |
 | 2024.3       | 2,19         |
