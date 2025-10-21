@@ -57,7 +57,20 @@ GitHub — это хостинговая служба на базе [Git](https
 
 > Возможно, .NET и DirectX уже установлены.
 
-После завершения установки запустим Visual Studio и откроем файл `Dynamo.All.sln`, который находится в папке `Dynamo\src`.
+> **Примечание.** Существенное изменение: требуется **Visual Studio 2022 Preview/Visual Studio 2026 Insider**
+> 
+> В конце 2025 года в Dynamo будет реализована новая платформа — `dotnet10.0`. Для разработки на основе этой платформы потребуется Visual Studio 2022 Preview или Visual Studio 2026 Insider (или более поздней версии), поскольку стабильные версии еще не поддерживают .NET 10.0.
+> 
+> **Установка Visual Studio 2022 Preview/2026 Insider вместе с текущей установкой**
+> 1. Откройте **установщик Visual Studio** (найдите его в меню «Пуск»).
+> 2. Нажмите кнопку **Update**, чтобы убедиться, что установлена последняя версия установщика.
+> 3. Перейдите на вкладку **Available**.
+> 4. Найдите **Visual Studio 2022 Preview/2026 Insider** (Community, Professional или Enterprise).
+> 5. Нажмите кнопку **Install**, чтобы добавить компонент к существующей установке Visual Studio.
+> 
+![Visual Studio Preview](images/vs-preview.png) ![Visual Studio 2026 Insider](images/vs-2026-insiders.png)
+
+После завершения установки запустите Visual Studio и откройте файл `Dynamo.All.sln`, который находится в папке `Dynamo\src`.
 
 ![Открытие файла решения](images/vs-open-dynamo.jpg)
 

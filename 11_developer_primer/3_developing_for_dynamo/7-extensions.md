@@ -101,7 +101,7 @@ namespace SampleViewExtension
                 // Show a modeless window.
                 window.Show();
             };
-            p.AddMenuItem(MenuBarType.View, sampleMenuItem);
+            p.AddExtensionMenuItem(sampleMenuItem);
         }
 
         public void Shutdown()
