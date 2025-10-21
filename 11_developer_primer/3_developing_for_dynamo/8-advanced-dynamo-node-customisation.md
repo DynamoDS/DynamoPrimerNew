@@ -387,11 +387,11 @@ Markdown 非常靈活，可提供足夠的功能，讓使用者輕鬆建立良�
 
 在節點中加入文件非常容易。您可以將文件加到所有類型的自訂節點，包括：
 
-* 現成的 Dynamo 節點。
+* 現成的 Dynamo 節點
 * 自訂節點 (.dyf) - 現成和/或其他套件節點的集合。
-* 自訂 C# 套件節點 (也稱為 Zerotouch。這些自訂節點看起來像現成節點)。
-* NodeModel 節點 (包含特殊使用者介面功能 (如下拉式清單或選取按鈕) 的節點)。
-* 具有自訂使用者介面的 NodeModel 節點 (包含獨特的使用者介面功能 (如節點上有圖形) 的節點)。
+* 自訂 C# 套件節點 (也稱為 Zerotouch。這些自訂節點看起來像現成節點)
+* NodeModel 節點 (包含特殊使用者介面功能 (如下拉式清單或選取按鈕) 的節點)
+* 具有自訂使用者介面的 NodeModel 節點 (包含獨特的使用者介面功能 (如節點上有圖形) 的節點)
 
 請按照以下幾個步驟，讓 Markdown 檔案顯示在 Dynamo 內。
 
@@ -473,55 +473,50 @@ Dynamo 中 Zero Touch 節點的自訂圖示，可讓您的節點在視覺上與�
 
 1. **新增資源檔**：
 
-* 在 **「方案總管」** 中以右鍵按一下您的專案。
+* 在**「方案總管」**中以右鍵按一下您的專案。
 
 ![新增項目](images/zerotouchicons-add-resources-file-1.jpg)
 
-* 移至 **「新增」>「新項目」**，然後選取 **「資源檔」**。
+* 移至**「新增」>「新項目」**，然後選取**「資源檔」**。
 
 ![新增資源檔](images/zerotouchicons-add-resources-file-2.jpg)
 
 * 將檔案命名為 `<ProjectName>Images.resx`。例如 `ZeroTouchNodeIconsImages.resx`。
 
 2. **清除自訂工具屬性**：
-   * 在 **「方案總管」** 中選取資源檔。
-   * 在 **「屬性」** 面板中，透過移除 `ResXFileCodeGenerator` 值來清除「`Custom Tool`」欄位。
+   * 在**「方案總管」**中選取資源檔。
+   * 在**「屬性」**面板中，透過移除 `ResXFileCodeGenerator` 值來清除「`Custom Tool`」欄位。
 
-![清除自訂工具屬性](images/zerotouchicons-custom-tool-property.jpg)
+3. **將「建置動作」設定為「無」**
+    * 由於我們稍後要自己建置此資源，因此不需要自動建置。
+
+![清除自訂工具屬性](images/zerotouchicons-custom-tool-property-update.png)
 
 > _注意：如果沒有清除「自訂工具」欄位，會導致 Visual Studio 將資源名稱中的句點轉換為底線。請在建置之前，確認您的資源名稱是以句點 (而不是底線) 分隔類別名稱。_
 
 #### 步驟 4：將影像新增為資源
 
-1. 使用 **「受控資源編輯器 (舊版)」** 開啟資源檔：
-   * 如果使用 Visual Studio 17.11 或更高版本，請以右鍵按一下資源檔，選擇 **「開啟方式」**，然後選取 **「受控資源編輯器 (舊版)」**。
-   * 如果使用 17.11 之前的 Visual Studio 版本，請按兩下資源檔以使用「資源編輯器」開啟 (在您的 Visual Studio 版本中，此編輯器尚未成為舊版)。
+1. 按兩下您建立的資源檔：
+    * 使用「+」按鈕一次新增一個影像 
+    * 將資源類型設定為**「檔案」**
+    * 瀏覽至影像檔案位置，並包含**大****小**兩種節點圖示。
 
-![使用「開啟方式」...](images/zerotouchicons-open-resource-editor.jpg)
+![新增資源...](images/zerotouchicons-open-resource-editor-update.png)
 
-![使用受控資源編輯器開啟資源檔 (舊版)](images/zerotouchicons-managed-resource-editor-legacy.jpg)
+> _注意：您不一定要將影像整理到某個**「資源」**資料夾，甚至是**「大」**和**「小」**的子資料夾，但這是一個保持資源井井有條的好方法！_
 
-2. 新增您的影像：
-   * 將影像檔拖放到編輯器中，或使用 **「新增現有檔案」** 選項。
 
-![新增現有檔案](images/zerotouchicons-add-existing-file.jpg)
+#### 步驟 5：將專案轉換為 SDK 型 (適用於舊式專案)
 
-3. 更新持續性：
-   * 在「資源編輯器」中選取影像 (如果在「方案總管」中選取影像，此動作將沒有作用)，將 **「屬性」** 面板中的 **「持續性」** 屬性變更為「`Embedded in .resx`」。這可確保影像包含在 `.dll` 中。
+如果您的專案還不是 SDK 型 (內嵌資源需要)，請加以轉換：
 
-![更新持續性](images/zerotouchicons-edit-persistence-property.jpg)
+1. 從 Visual Studio 的**「延伸模組」>「管理延伸模組」**功能表安裝 `.NET Upgrade Assistant` 延伸模組。
 
-#### 步驟 5：將專案轉換為 SDK 型
-
-如果您的專案還不是 SDK 型 (嵌入資源需要)，請加以轉換：
-
-1. 從 Visual Studio 的 **「延伸模組」>「管理延伸模組」** 功能表安裝 `.NET Upgrade Assistant` 延伸模組。
-
-![管理延伸模組](images/zerotouchicons-manage-extensions.jpg)
+![管理延伸模組](images/zerotouchicons-manage-extensions-update.png)
 
 ![安裝 .NET Upgrade Assistant](images/zerotouchicons-net-upgrade-assistant.jpg)
 
-2. 在 **「方案總管」** 中的專案上按一下右鍵，然後選取 **「升級」>「將專案轉換為 SDK 型」**。
+2. 在**「方案總管」**中的專案上按一下右鍵，然後選取**「升級」>「將專案轉換為 SDK 型」**。
 
 ![升級專案](images/zerotouchicons-upgrade-project.jpg)
 
@@ -534,7 +529,7 @@ Dynamo 中 Zero Touch 節點的自訂圖示，可讓您的節點在視覺上與�
 #### 步驟 6：新增要嵌入資源的建置後指令碼
 
 1. 卸載專案：
-   * 在 **「方案總管」** 中的專案上按一下右鍵，然後選取 **「卸載專案」**。
+   * 在**「方案總管」**中的專案上按一下右鍵，然後選取**「卸載專案」**。
 
 ![卸載專案](images/zerotouchicons-unload-project.jpg)
 
@@ -561,7 +556,7 @@ Dynamo 中 Zero Touch 節點的自訂圖示，可讓您的節點在視覺上與�
 
 1. 將 `ZeroTouchNodeIcons` 的所有例證取代為您的專案名稱。
 2. 重新載入專案：
-   * 在已卸載的專案上按一下右鍵，然後選取 **「重新載入專案」**。
+   * 在已卸載的專案上按一下右鍵，然後選取**「重新載入專案」**。
 
 ![重新載入專案](images/zerotouchicons-reload-project.jpg)
 
