@@ -57,6 +57,19 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 
 > 可能已安装 .NET 和 DirectX。
 
+> **注意：** 重大变更 - **Visual Studio 2022 预览版/Visual Studio 2026 Insider** 为必需
+> 
+> 从 2025 年底开始，Dynamo将实施 `dotnet10.0` 框架。若要针对此框架进行开发，需要 Visual Studio 2022 预览版或 Visual Studio 2026 Insider（或更高版本），因为稳定版本尚不支持 .NET 10.0。
+> 
+> **将 Visual Studio 2022 预览版/2026 Insider 与现有安装一起安装：**
+> 1. 打开 **Visual Studio 安装程序**（在“开始”菜单中搜索它）
+> 2. 单击**“更新”**以确保拥有最新的安装程序版本
+> 3. 转至**“可用”**选项卡
+> 4. 查找 **Visual Studio 2022 预览版/2026 Insider**（社区版、专业版或企业版）
+> 5. 单击**“安装”**，将其与现有 Visual Studio 安装一起添加
+> 
+![Visual Studio 预览版](images/vs-preview.png) ![Visual Studio 2026 Insider](images/vs-2026-insiders.png)
+
 在完成所有安装后，我们就可以启动 Visual Studio，然后打开位于 `Dynamo\src` 中的 `Dynamo.All.sln` 解决方案。
 
 ![打开解决方案文件](images/vs-open-dynamo.jpg)
