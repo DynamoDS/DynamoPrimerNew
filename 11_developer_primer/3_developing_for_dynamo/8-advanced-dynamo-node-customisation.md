@@ -387,11 +387,11 @@ O Markdown é muito flexível e deve fornecer funcionalidade suficiente para cri
 
 É fácil adicionar documentação aos nós. É possível adicionar documentação a todos os tipos de nós personalizados, incluindo:
 
-* Nós de Dynamo prontos para uso.
+* Nós de Dynamo prontos para uso
 * Nós personalizados (.dyf) – Coleções de nós prontos para uso e/ou outros nós de pacote.
-* Nós de pacote C# personalizados (também conhecidos como Zerotouch. Esses nós personalizados se parecem com os nós prontos para uso).
-* Nós NodeModel (nós que contêm recursos especiais da interface do usuário, como menus suspensos ou botões de seleção).
-* Nós NodeModel com interface do usuário personalizada (nós que contêm recursos exclusivos da interface do usuário, como gráficos no nó).
+* Nós de pacote C# personalizados (também conhecidos como Zerotouch. Esses nós personalizados se parecem com os nós prontos para uso)
+* Nós NodeModel (nós que contêm recursos especiais da interface do usuário, como menus suspensos ou botões de seleção)
+* Nós NodeModel com interface do usuário personalizada (nós que contêm recursos exclusivos da interface do usuário, como gráficos no nó)
 
 Siga estas etapas para exibir os arquivos Markdown no Dynamo.
 
@@ -487,37 +487,32 @@ Para incorporar os ícones no `.dll`, crie um arquivo de recursos:
    * Selecione o arquivo de recursos no **Gerenciador de soluções**.
    * No painel **Propriedades**, limpe o campo `Custom Tool` removendo o valor `ResXFileCodeGenerator`.
 
-![Limpar a propriedade Ferramenta personalizada](images/zerotouchicons-custom-tool-property.jpg)
+3. **Defina “Ação de construção” como “Nenhuma”**
+    * Esse recurso será criado um pouco mais à frente, por isso, não precisamos criá-lo automaticamente.
 
-> _Observação: Não limpar o campo “Ferramenta personalizada” fará com que o Visual Studio converta os pontos em sublinhados nos nomes de recurso. Verifique antes de construir se os nomes dos recursos têm pontos separando os nomes de classe em vez de sublinhados._
+![Limpar a propriedade Ferramenta personalizada](images/zerotouchicons-custom-tool-property-update.png)
+
+> _OBSERVAÇÃO: Não limpar o campo “Ferramenta personalizada” fará com que o Visual Studio converta os pontos em sublinhados nos nomes de recurso. Verifique antes de construir se os nomes dos recursos têm pontos separando os nomes de classe em vez de sublinhados._
 
 #### Etapa 4: Adicionar as imagens como recursos
 
-1. Abra o arquivo de recursos usando o **Editor de recursos gerenciados (herdado)**:
-   * Se estiver usando o Visual Studio 17.11 ou posterior, clique com o botão direito do mouse no arquivo de recursos, escolha **Abrir com** e selecione **Editor de recursos gerenciados (herdado)**.
-   * Se estiver usando uma versão do Visual Studio anterior à 17.11, clique duas vezes no arquivo de recursos para abrir com o Editor de recursos (que em sua versão do Visual Studio ainda não foi tornada herdada).
+1. Clique duas vezes no arquivo de recursos criado:
+    * Adicione uma imagem de cada vez usando o botão “+” 
+    * Defina o tipo de recurso como **Arquivo**
+    * Navegue até a localização do arquivo de imagens e inclua os ícones dos nós **Large** e **Small**.
 
-![Usar Abrir com...](images/zerotouchicons-open-resource-editor.jpg)
+![Adicionar recursos...](images/zerotouchicons-open-resource-editor-update.png)
 
-![Abrir o arquivo de recursos com o Editor de recursos gerenciados (herdado)](images/zerotouchicons-managed-resource-editor-legacy.jpg)
+> _OBSERVAÇÃO: Não é necessário organizar as imagens em uma pasta **Recursos**, nem nas subpastas **Grandes** e **Pequenos**, mas é uma boa prática para manter os recursos bem organizados._
 
-2. Adicione as imagens:
-   * Arraste e solte os arquivos de imagem no editor ou use a opção **Adicionar arquivo existente**.
 
-![Adicionar arquivos existentes](images/zerotouchicons-add-existing-file.jpg)
-
-3. Atualize a persistência:
-   * Selecione as imagens no Editor de recursos (isso não funcionará se forem selecionadas no Gerenciador de soluções), altere a propriedade **Persistência** no painel **Propriedades** para `Embedded in .resx`. Isso garante que as imagens sejam incluídas no `.dll`.
-
-![Atualizar a persistência](images/zerotouchicons-edit-persistence-property.jpg)
-
-#### Etapa 5: Converter o projeto no estilo SDK
+#### Etapa 5: Converter o projeto no estilo SDK (para projetos herdados)
 
 Se o projeto ainda não estiver no estilo SDK (necessário para incorporar recursos), converta-o:
 
 1. Instale a extensão `.NET Upgrade Assistant` no menu **Extensões > Gerenciar extensões** do Visual Studio.
 
-![Gerenciar extensões](images/zerotouchicons-manage-extensions.jpg)
+![Gerenciar extensões](images/zerotouchicons-manage-extensions-update.png)
 
 ![Instalar o Assistente de atualização do .NET](images/zerotouchicons-net-upgrade-assistant.jpg)
 
