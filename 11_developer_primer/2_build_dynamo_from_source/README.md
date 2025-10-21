@@ -68,7 +68,8 @@ Ahora que los archivos de código fuente se han clonado en el equipo local, pode
 > 4. Busque **Visual Studio 2022 Preview/2026 Insider** (Community, Professional o Enterprise).
 > 5. Haga clic en **Instalar** para añadirlo junto con la instalación de Visual Studio existente.
 > 
-![Visual Studio Preview](images/vs-preview.png) ![Visual Studio 2026 Insider](images/vs-2026-insiders.png)
+![Visual Studio Preview](images/vs-preview.png)
+![Visual Studio 2026 Insider](images/vs-2026-insiders.png)
 
 Una vez que todo haya terminado de instalarse, podemos iniciar Visual Studio y abrir la solución `Dynamo.All.sln` ubicada en `Dynamo\src`.
 
