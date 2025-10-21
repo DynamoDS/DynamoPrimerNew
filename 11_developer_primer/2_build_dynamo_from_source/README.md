@@ -55,7 +55,20 @@ git がインストールされていると、Dynamo リポジトリをクロー
 * [Microsoft .NET Framework 4.5](https://www.microsoft.com/ja-jp/download/details.aspx?id=30653) 以降をダウンロードしてインストールします
 * ローカルの Dynamo リポジトリ(`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`)から、Microsoft DirectX をインストールします
 
-> .NET および DirectX は、すでにインストールされている可能性があります。
+> .NET および DirectX は、既にインストールされている可能性があります。
+
+> **注:** 重大な変更として、**Visual Studio 2022 Preview/Visual Studio 2026 Insider** が必須になりました
+> 
+> 2025 年後半から、Dynamo は `dotnet10.0` フレームワークを実装します。安定バージョンではまだ .NET 10.0 がサポートされていないため、このフレームワークに対して開発するには Visual Studio 2022 Preview または Visual Studio 2026 Insider (またはそれ以降)が必要です。
+> 
+> **既存のインストールとともに Visual Studio 2022 Preview / 2026 Insider をインストールする:**
+> 1. **Visual Studio インストーラ**を開きます([スタート]メニューで検索します)
+> 2. **[更新]**をクリックして、最新のインストーラ バージョンを使用していることを確認します
+> 3. **[使用可能]**タブに移動します
+> 4. **Visual Studio 2022 Preview /2026 Insider**(コミュニティ、Professional、または Enterprise)を検索します
+> 5. **[インストール]**をクリックして、既存の Visual Studio インストールとともに追加します
+> 
+![Visual Studio preview](images/vs-preview.png) ![Visual Studio 2026 insider](images/vs-2026-insiders.png)
 
 インストールがすべて完了したら、Visual Studio を起動して、`Dynamo\src` にある `Dynamo.All.sln` ソリューションを開きます。
 
