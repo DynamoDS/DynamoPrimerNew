@@ -387,11 +387,11 @@ Markdown est très flexible et fournit des fonctionnalités permettant de créer
 
 Ajouter de la documentation à vos nœuds est une tâche simple. Vous pouvez ajouter la documentation à tous les types de nœuds personnalisés :
 
-* Nœuds Dynamo prêts à l’emploi.
+* Nœuds Dynamo prêts à l’emploi
 * Nœuds personnalisés (.dyf) : collections de nœuds prêts à l’emploi et/ou d’autres nœuds de package.
-* Nœuds de package C# personnalisés (également connus sous le nom de Zero Touch. Ces nœuds personnalisés ressemblent aux nœuds prêts à l’emploi).
-* Nœuds NodeModel (nœuds contenant des fonctionnalités spéciales d’interface utilisateur telles que des listes déroulantes ou des boutons de sélection).
-* Nœuds NodeModel avec interface utilisateur personnalisée (nœuds contenant des fonctionnalités uniques d’interface utilisateur, telles que des graphes sur le nœud).
+* Nœuds de package C# personnalisés (également connus sous le nom de Zero Touch. Ces nœuds personnalisés ressemblent aux nœuds prêts à l’emploi)
+* Nœuds NodeModel (nœuds contenant des fonctionnalités spéciales d’interface utilisateur telles que des listes déroulantes ou des boutons de sélection)
+* Nœuds NodeModel avec interface utilisateur personnalisée (nœuds contenant des fonctionnalités uniques d’interface utilisateur, telles que des graphes sur le nœud)
 
 Suivez ces étapes pour que vos fichiers Markdown s’affichent dans Dynamo.
 
@@ -487,37 +487,32 @@ Pour intégrer vos icônes au `.dll`, créez un fichier de ressources :
    * Sélectionnez le fichier de ressources dans l’**Explorateur de solutions**.
    * Dans le panneau **Propriétés**, effacez le champ `Custom Tool` en supprimant la valeur `ResXFileCodeGenerator`.
 
-![Effacer la propriété Outil personnalisé](images/zerotouchicons-custom-tool-property.jpg)
+3. **Définissez « Action de création » sur « Aucune »**.
+    * Étant donné que nous créerons nous-mêmes cette ressource un peu plus tard, nous n’avons pas besoin de la créer automatiquement.
+
+![Effacer la propriété Outil personnalisé](images/zerotouchicons-custom-tool-property-update.png)
 
 > _REMARQUE : si vous n’effacez pas le champ « Outil personnalisé », Visual Studio convertit les points en tirets bas dans les noms de ressources. Avant de commencer à créer, veuillez vérifier que les noms de ressources utilisent des points pour séparer les noms de classes et non des tirets bas._
 
 #### Étape 4 : ajouter vos images en tant que ressources
 
-1. Ouvrez le fichier de ressources à l’aide de l’**Éditeur de ressources managées (hérité)** :
-   * Si vous utilisez Visual Studio 17.11 ou une version ultérieure, cliquez avec le bouton droit de la souris sur le fichier de ressources et sélectionnez **Ouvrir avec**, puis **Éditeur de ressources managées (hérité)**.
-   * Si vous utilisez une version de Visual Studio antérieure à la version 17.11, double-cliquez sur le fichier de ressources à ouvrir avec l’Éditeur de ressources (qui, dans votre version de Visual Studio, n’est pas encore un outil hérité).
+1. Double-cliquez sur le fichier de ressources que vous avez créé :
+    * Ajoutez une image à la fois à l’aide du bouton « + ». 
+    * Définissez le type de ressource sur **Fichier**.
+    * Accédez à l’emplacement de votre fichier d’images et incluez vos icônes de nœud **grandes** et **petites**.
 
-![Utiliser l’option Ouvrir avec...](images/zerotouchicons-open-resource-editor.jpg)
+![Ajouter des ressources...](images/zerotouchicons-open-resource-editor-update.png)
 
-![Ouvrir le fichier de ressources à l’aide de l’Éditeur de ressources managées (obsolète)](images/zerotouchicons-managed-resource-editor-legacy.jpg)
+> _REMARQUE : il n’est pas obligatoire d’organiser vos images dans un dossier **Ressource**, ni même dans des sous-dossiers **Grandes** et **Petites**, mais cette pratique est toutefois recommandée pour organiser vos ressources._
 
-2. Ajoutez vos images :
-   * Glissez-déposez vos fichiers image dans l’éditeur ou utilisez l’option **Ajouter un fichier existant**.
 
-![Ajouter des fichiers existants](images/zerotouchicons-add-existing-file.jpg)
-
-3. Mettre à jour la persistance :
-   * Sélectionnez les images dans l’Éditeur de ressources (cela ne fonctionnera pas si vous les sélectionnez dans l’Explorateur de solutions) et modifiez la propriété **Persistance** dans le panneau **Propriétés** pour `Embedded in .resx`. Cela permet de garantir que les images sont incluses dans votre `.dll`.
-
-![Mettre à jour la persistance](images/zerotouchicons-edit-persistence-property.jpg)
-
-#### Étape 5 : convertir votre projet au style SDK
+#### Étape 5 : convertir votre projet au style SDK (pour les projets hérités)
 
 Si votre projet n’est pas déjà de style SDK (ce qui nécessaire pour l’intégration des ressources), convertissez-le :
 
 1. Installez l’extension `.NET Upgrade Assistant` à partir du menu **Extensions > Gérer les extensions** de Visual Studio.
 
-![Gérer les extensions](images/zerotouchicons-manage-extensions.jpg)
+![Gérer les extensions](images/zerotouchicons-manage-extensions-update.png)
 
 ![Installer l’assistant Mise à niveau .NET](images/zerotouchicons-net-upgrade-assistant.jpg)
 

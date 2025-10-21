@@ -4,7 +4,7 @@ La source de Dynamo est hébergée sur Github pour que tout le monde puisse la c
 
 ### Localiser les dépôts Dynamo sur Github <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
-Github est un service d’hébergement basé sur [git](https://help.github.com/articles/git-and-github-learning-resources/), un système de contrôle de version permettant de suivre les modifications et de coordonner le travail entre les personnes. Git est un outil que nous pouvons utiliser pour télécharger les fichiers sources de Dynamo, et les maintenir à jour avec quelques commandes. L’utilisation de cette méthode permet d’éviter le travail fastidieux et inutile consistant à télécharger et à remplacer manuellement les fichiers sources à chaque mise à jour. Le système de contrôle de version git suit toutes les différences entre un dépôt de code local et un dépôt de code distant.
+Github est un service d’hébergement basé sur [git](https://docs.github.com/fr/get-started/quickstart/git-and-github-learning-resources), un système de contrôle de version permettant de suivre les modifications et de coordonner le travail entre les personnes. Git est un outil que nous pouvons utiliser pour télécharger les fichiers sources de Dynamo, et les maintenir à jour avec quelques commandes. L’utilisation de cette méthode permet d’éviter le travail fastidieux et inutile consistant à télécharger et à remplacer manuellement les fichiers sources à chaque mise à jour. Le système de contrôle de version git suit toutes les différences entre un dépôt de code local et un dépôt de code distant.
 
 La source de Dynamo est hébergée sur Github DynamoDS dans ce dépôt : [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
@@ -18,7 +18,7 @@ La source de Dynamo est hébergée sur Github DynamoDS dans ce dépôt : [https
 
 ### Tirer le dépôt Dynamo à l’aide de git <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
-Avant de pouvoir cloner le dépôt, nous devons installer git. Suivez ce [guide](https://help.github.com/articles/set-up-git/#setting-up-git) pour connaître les étapes à suivre pour l’installation et savoir comment configurer un nom d’utilisateur et une adresse email GitHub. Pour cet exemple, nous utiliserons git en ligne de commande. Ce guide part du principe que vous utilisez Windows, mais vous pouvez également utiliser git sur Mac ou Linux pour cloner la source de dynamo.
+Avant de pouvoir cloner le dépôt, nous devons installer git. Suivez ce [guide](https://docs.github.com/fr/get-started/quickstart/set-up-git#setting-up-git) pour connaître les étapes à suivre pour l’installation et savoir comment configurer un nom d’utilisateur et une adresse email GitHub. Pour cet exemple, nous utiliserons git en ligne de commande. Ce guide part du principe que vous utilisez Windows, mais vous pouvez également utiliser git sur Mac ou Linux pour cloner la source de dynamo.
 
 Nous avons besoin d’une URL pour le dépôt Dynamo à cloner. Celle-ci se trouve en cliquant sur le bouton « Cloner ou télécharger » sur la page du dépôt. Copiez l’URL pour la coller dans l’invite de commande.
 
@@ -52,10 +52,23 @@ Nous savons que git fonctionne si l’opération de clonage s’est terminée av
 Les fichiers sources étant maintenant clonés sur notre machine locale, nous pouvons générer un fichier exécutable pour Dynamo. Pour ce faire, nous devons configurer l’IDE Visual Studio et nous assurer que le .NET Framework et DirectX sont installés.
 
 * Téléchargez et installez [Microsoft Visual Studio Community 2015](https://my.visualstudio.com/Downloads/Results), un IDE (environnement de développement intégré) gratuit et complet (les versions ultérieures peuvent également fonctionner).
-* Téléchargez et installez [Microsoft .NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) ou une version ultérieure.
+* Téléchargez et installez [Microsoft .NET Framework 4.5](https://www.microsoft.com/fr-fr/download/details.aspx?id=30653) ou une version ultérieure.
 * Installez Microsoft DirectX à partir du dépôt local Dynamo (`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`).
 
 > .NET et DirectX peuvent être déjà installés.
+
+> **Remarque :** changement majeur : **Visual Studio 2022 Preview / Visual Studio 2026 Insider** requis
+> 
+> À partir de la fin de 2025, Dynamo mettra en œuvre la structure `dotnet10.0`. Pour développer dans cette structure, vous aurez besoin de Visual Studio 2022 Preview ou Visual Studio 2026 Insider (ou versions ultérieures), car les versions stables ne prennent pas encore en charge .NET 10.0.
+> 
+> **Installation de Visual Studio 2022 Preview / 2026 Insider avec votre installation existante :**
+> 1. Ouvrez le **programme d’installation de Visual Studio** (recherchez-le dans votre menu Démarrer).
+> 2. Cliquez sur **Mettre à jour** pour vous assurer de disposer de la version la plus récente du programme d’installation.
+> 3. Accédez à l’onglet **Disponible**.
+> 4. Recherchez **Visual Studio 2022 Preview / 2026 Insider** (Community, Professional ou Enterprise).
+> 5. Cliquez sur **Installer** pour l’ajouter avec votre installation Visual Studio existante.
+> 
+![Visual Studio Preview](images/vs-preview.png) ![Visual Studio 2026 Insider](images/vs-2026-insiders.png)
 
 Une fois l’installation terminée, nous pouvons lancer Visual Studio et ouvrir la solution `Dynamo.All.sln` située dans `Dynamo\src`.
 
@@ -98,7 +111,7 @@ Pour des instructions sur la génération de Dynamo pour d’autres plate-formes
 
 ### Déboguer une version locale à l’aide de Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
-Le débogage est un processus qui permet d’identifier, d’isoler et de corriger un bogue ou un problème. Une fois que Dynamo a été généré à partir de la source, nous pouvons utiliser plusieurs outils dans Visual Studio pour déboguer une application en cours d’exécution, le complément DynamoRevit par exemple. Nous pouvons analyser son code source pour trouver l’origine d’un problème, ou observer le code en cours d’exécution. Pour une explication plus détaillée sur la manière de déboguer et de parcourir le code dans Visual Studio, reportez-vous à la [documentation de Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
+Le débogage est un processus qui permet d’identifier, d’isoler et de corriger un bogue ou un problème. Une fois que Dynamo a été généré à partir de la source, nous pouvons utiliser plusieurs outils dans Visual Studio pour déboguer une application en cours d’exécution, le complément DynamoRevit par exemple. Nous pouvons analyser son code source pour trouver l’origine d’un problème, ou observer le code en cours d’exécution. Pour une explication plus détaillée sur la manière de déboguer et de parcourir le code dans Visual Studio, reportez-vous à la [documentation de Visual Studio](https://docs.microsoft.com/fr-fr/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
 Pour l’application Dynamo autonome, DynamoSandbox, nous allons couvrir deux options de débogage :
 
