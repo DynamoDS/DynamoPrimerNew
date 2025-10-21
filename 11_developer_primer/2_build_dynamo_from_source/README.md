@@ -57,6 +57,19 @@ Po sklonowaniu plików źródłowych na komputer lokalny można utworzyć plik w
 
 > Programy .NET i DirectX mogą być już zainstalowane.
 
+> **Uwaga:** poważna zmiana — wymagany program **Visual Studio 2022 Preview / Visual Studio 2026 Insider**
+> 
+> Pod koniec końca 2025 roku w dodatku Dynamo zostanie zaimplementowany program `dotnet10.0`. Aby programować w ramach tej platformy, jest potrzebny program Visual Studio 2022 Preview lub Visual Studio 2026 Insider (albo nowszy), ponieważ stabilne wersje nie obsługują jeszcze platformy .NET 10.0.
+> 
+> **Instalowanie programu Visual Studio 2022 Preview / Visual Studio 2026 Insider równolegle z istniejącą instalacją:**
+> 1. Otwórz narzędzie **Instalator programu Visual Studio** (wyszukaj je w menu Start).
+> 2. Kliknij przycisk **Aktualizuj**, aby upewnić się, że masz najnowszą wersję instalatora.
+> 3. Otwórz kartę **Dostępne**.
+> 4. Znajdź pozycję **Visual Studio 2022 Preview / 2026 Insider** (Community, Professional lub Enterprise).
+> 5. Kliknij przycisk **Zainstaluj**, aby dodać program równolegle do istniejącej instalacji programu Visual Studio.
+> 
+![Visual Studio Preview](images/vs-preview.png) ![Visual Studio 2026 insider](images/vs-2026-insiders.png)
+
 Po zakończeniu instalacji można uruchomić program Visual Studio i otworzyć rozwiązanie `Dynamo.All.sln` znajdujące się w folderze `Dynamo\src`.
 
 ![Otwieranie pliku rozwiązania](images/vs-open-dynamo.jpg)

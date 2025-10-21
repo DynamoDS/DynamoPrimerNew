@@ -391,7 +391,7 @@ Dodawanie dokumentacji do węzłów jest łatwe. Dokumentację można dodać do 
 * Węzły niestandardowe (.dyf) — kolekcje gotowych i/lub innych węzłów z pakietów.
 * Węzły niestandardowe z pakietów języka C# (znane również jako Zerotouch; te węzły niestandardowe wyglądają jak gotowe węzły).
 * Węzły NodeModel (węzły, które zawierają specjalne elementy interfejsu użytkownika, takie jak listy rozwijane lub przyciski wyboru).
-* Węzły NodeModel z niestandardowym interfejsem użytkownika (węzły, które zawierają unikatowe elementy interfejsu użytkownika, takie jak grafika w węźle).
+* Węzły NodeModel z niestandardowym interfejsem użytkownika (węzły, które zawierają unikatowe elementy interfejsu użytkownika, takie jak grafika w węźle)
 
 Wykonaj te kilka czynności, aby wyświetlić pliki Markdown w dodatku Dynamo.
 
@@ -487,37 +487,32 @@ Aby osadzić ikony w pliku `.dll`, utwórz plik zasobów:
    * Wybierz plik zasobów w **Eksploratorze rozwiązań**.
    * W panelu **Właściwości** wyczyść pole `Custom Tool`, usuwając wartość `ResXFileCodeGenerator`.
 
-![Czyszczenie właściwości narzędzia niestandardowego](images/zerotouchicons-custom-tool-property.jpg)
+3. **Ustaw opcję „Operacja kompilacji” na „Brak”**.
+    * Niedługo samodzielnie skompilujemy ten zasób, więc nie trzeba tego robić automatycznie.
+
+![Czyszczenie właściwości narzędzia niestandardowego](images/zerotouchicons-custom-tool-property-update.png)
 
 > _UWAGA: wyczyszczenie pola narzędzia niestandardowego (Custom Tool) spowoduje, że program Visual Studio przekonwertuje kropki na podkreślenia w nazwach zasobów. Przed rozpoczęciem kompilacji sprawdź, czy nazwy zasobów mają kropki oddzielające nazwy klas, a nie podkreślenia._
 
 #### Krok 4\. Dodaj obrazy jako zasoby
 
-1. Otwórz plik zasobów za pomocą **Edytora zasobów zarządzanych (starsza wersja)**:
-   * Jeśli używasz programu Visual Studio 17.11 lub nowszego, kliknij prawym przyciskiem myszy plik zasobów, wybierz pozycję **Otwórz za pomocą**, a następnie wybierz pozycję **Edytor zasobów zarządzanych (starsza wersja)**.
-   * Jeśli używasz programu Visual Studio w wersji starszej niż 17.11, kliknij dwukrotnie plik zasobów, aby otworzyć go za pomocą Edytora zasobów (który w Twojej wersji programu Visual Studio nie został jeszcze oznaczony jako starsza wersja).
+1. Kliknij dwukrotnie utworzony plik zasobu:
+    * Dodawaj po jednym obrazie za pomocą przycisku „+”. 
+    * Ustaw typ zasobu na **Plik**.
+    * Przejdź do lokalizacji pliku obrazu i dołącz ikony węzła **Duży** oraz **Mały**.
 
-![Korzystanie z polecenia Otwórz za pomocą...](images/zerotouchicons-open-resource-editor.jpg)
+![Dodaj zasoby...](images/zerotouchicons-open-resource-editor-update.png)
 
-![Otwieranie pliku zasobów za pomocą Edytora zasobów zarządzanych (starsza wersja)](images/zerotouchicons-managed-resource-editor-legacy.jpg)
+> _UWAGA: Umieszczenie obrazów w folderze **Zasoby**, a nawet w podfolderach **Duży** i **Mały**, nie jest wymagane, ale jest to dobra praktyka, która zapewnia porządek w zasobach._
 
-2. Dodaj obrazy:
-   * Przeciągnij pliki obrazów do edytora i upuść je lub użyj opcji **Dodaj istniejący plik**.
 
-![Dodawanie istniejących plików](images/zerotouchicons-add-existing-file.jpg)
-
-3. Trwałość aktualizacji:
-   * Wybierz obrazy z poziomu Edytora zasobów (to rozwiązanie nie zadziała, jeśli wybierzesz je w Eksploratorze rozwiązań), zmień właściwość **Persistence** (Trwałość) w panelu **Właściwości** na `Embedded in .resx`. Dzięki temu obrazy zostaną uwzględnione w pliku `.dll`.
-
-![Aktualizowanie trwałości](images/zerotouchicons-edit-persistence-property.jpg)
-
-#### Krok 5\. Przekonwertuj projekt na styl SDK
+#### Krok 5: Konwertuj projekt na styl SDK (w przypadku starszych projektów)
 
 Jeśli projekt nie jest jeszcze w stylu zestawu SDK (co jest wymagane do osadzenia zasobów), przekonwertuj go:
 
 1. Zainstaluj rozszerzenie `.NET Upgrade Assistant` za pomocą menu **Rozszerzenia > Zarządzaj rozszerzeniami** programu Visual Studio.
 
-![Zarządzaj rozszerzeniami](images/zerotouchicons-manage-extensions.jpg)
+![Zarządzaj rozszerzeniami](images/zerotouchicons-manage-extensions-update.png)
 
 ![Instalowanie narzędzia .NET Upgrade Assistant](images/zerotouchicons-net-upgrade-assistant.jpg)
 
