@@ -487,37 +487,32 @@ Dynamo에서 Zero Touch 노드에 사용자 정의 아이콘을 추가하면 노
    * **솔루션 탐색기**에서 리소스 파일을 선택합니다.
    * **특성** 패널에서 `ResXFileCodeGenerator` 값을 제거하여 `Custom Tool` 필드를 지웁니다.
 
-![사용자 정의 도구 특성 정리](images/zerotouchicons-custom-tool-property.jpg)
+3. **'빌드 작업'을 '없음'으로 설정**
+    * 이 리소스는 이후에 직접 빌드할 예정이므로, 자동으로 빌드할 필요는 없습니다.
+
+![사용자 정의 도구 특성 정리](images/zerotouchicons-custom-tool-property-update.png)
 
 > _참고: "사용자 정의 도구" 필드를 지우지 않으면 Visual Studio가 리소스 이름의 마침표를 밑줄로 변환합니다. 빌드하기 전에 클래스 이름을 구분하는 데 밑줄이 아닌 마침표가 사용되었는지 리소스 이름을 확인하십시오._
 
 #### 4단계: 이미지를 리소스로 추가
 
-1. **관리되는 리소스 편집기(레거시)** 를 사용하여 리소스 파일을 엽니다.
-   * Visual Studio 17.11 이상을 사용하는 경우 리소스 파일을 마우스 오른쪽 버튼으로 클릭하고, **연결 프로그램**을 선택하고, **관리되는 리소스 편집기(레거시)** 를 선택합니다.
-   * 17.11 이전 버전의 Visual Studio를 사용하는 경우 리소스 파일을 두 번 클릭하여 리소스 편집기로 엽니다(해당 버전의 Visual Studio에서는 아직 레거시로 전환되지 않았음).
+1. 작성한 리소스 파일을 두 번 클릭합니다.
+    * '+' 버튼을 사용하여 이미지를 하나씩 추가합니다. 
+    * 리소스 유형을 **파일**로 설정합니다.
+    * 이미지 파일이 있는 위치로 이동하여 **Large** 및 **Small** 노드 아이콘을 포함합니다.
 
-![연결 프로그램... 사용](images/zerotouchicons-open-resource-editor.jpg)
+![리소스 추가...](images/zerotouchicons-open-resource-editor-update.png)
 
-![관리되는 리소스 편집기(레거시)를 사용하여 리소스 파일 열기](images/zerotouchicons-managed-resource-editor-legacy.jpg)
+> _참고: 이미지를 **Resource** 폴더(또는 **Large** 및 **Small** 하위 폴더)로 정리하는 것은 필수는 아니지만, 이는 리소스를 체계적으로 정리하는 좋은 방법입니다._
 
-2. 다음과 같이 이미지를 추가합니다.
-   * 이미지 파일을 편집기로 끌어 놓거나 **기존 파일 추가** 옵션을 사용합니다.
 
-![기존 파일 추가](images/zerotouchicons-add-existing-file.jpg)
-
-3. 다음과 같이 지속성을 업데이트합니다.
-   * 리소스 편집기 내에서 이미지를 선택하고(솔루션 탐색기에서 선택하면 작동하지 않음) **특성** 패널에서 **지속성** 특성을 `Embedded in .resx`로 변경합니다. 이렇게 하면 이미지가 `.dll`에 포함됩니다.
-
-![지속성 업데이트](images/zerotouchicons-edit-persistence-property.jpg)
-
-#### 5단계: 프로젝트를 SDK 스타일로 변환
+#### 5단계: 프로젝트를 SDK 스타일로 변환(레거시 프로젝트의 경우)
 
 프로젝트가 아직 SDK 스타일(리소스를 포함하는 데 필요)이 아닌 경우 다음과 같이 변환합니다.
 
 1. Visual Studio의 **확장 > 확장 관리** 메뉴에서 `.NET Upgrade Assistant` 확장을 설치합니다.
 
-![확장 관리](images/zerotouchicons-manage-extensions.jpg)
+![확장 관리](images/zerotouchicons-manage-extensions-update.png)
 
 ![.NET 업그레이드 도우미 설치](images/zerotouchicons-net-upgrade-assistant.jpg)
 
