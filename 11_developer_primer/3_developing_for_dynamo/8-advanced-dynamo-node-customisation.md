@@ -160,7 +160,7 @@ Dadurch werden Benutzer gewarnt, dass sie eine gültige Liste mit mindestens dre
 
 ***
 
-**Beispiel 3: Überprüfen der Dateitypkompatibilität**
+**Beispiel 3: Überprüfen der Dateitypkompatibilität **
 
 Bei einem Block, der Dateipfade verarbeitet, sollten Sie sicherstellen, dass nur bestimmte Dateitypen zulässig sind. Wenn ein nicht unterstützter Dateityp erkannt wird, protokollieren Sie eine Warnung.
 
@@ -387,11 +387,11 @@ Markdown ist sehr flexibel und sollte genügend Funktionen bieten, um auf einfac
 
 Das Hinzufügen von Dokumentation zu Ihren Blöcken ist einfach. Die Dokumentation kann zu allen Varianten benutzerdefinierter Blöcke hinzugefügt werden, dazu gehören:
 
-* Vordefinierte Dynamo-Blöcke.
+* Vordefinierte Dynamo-Blöcke
 * Benutzerdefinierte Blöcke (.dyf): Sammlungen von vordefinierten und/oder anderen Paketblöcken.
 * Benutzerdefinierte C#-Paketblöcke (auch als ZeroTouch bezeichnet). Diese benutzerdefinierten Blöcke sehen wie die vordefinierten Blöcke aus.
-* NodeModel-Blöcke (Blöcke, die spezielle Benutzeroberflächen-Elemente wie Dropdown-Menüs oder Auswahlschaltflächen enthalten).
-* NodeModel-Blöcke mit angepasster Benutzeroberfläche (Blöcke, die eindeutige Benutzeroberflächen-Elemente wie Grafiken im Block enthalten).
+* NodeModel-Blöcke (Blöcke, die spezielle Benutzeroberflächen-Elemente wie Dropdown-Menüs oder Auswahlschaltflächen enthalten)
+* NodeModel-Blöcke mit angepasster Benutzeroberfläche (Blöcke, die eindeutige Benutzeroberflächen-Elemente wie Grafiken im Block enthalten)
 
 Führen Sie die folgenden Schritte aus, damit Ihre Markdown-Dateien in Dynamo angezeigt werden.
 
@@ -487,37 +487,32 @@ Erstellen Sie eine Ressourcendatei, um Ihre Symbole in die `.dll` einzubetten:
    * Wählen Sie die Ressourcendatei im **Solution Explorer** aus.
    * Löschen Sie in der Gruppe **Properties** das Feld `Custom Tool`, indem Sie den Wert `ResXFileCodeGenerator` entfernen.
 
-![Bereinigen der Eigenschaft von Custom Tool](images/zerotouchicons-custom-tool-property.jpg)
+3. **Legen Sie Build Action auf None fest.**
+    * Da wir diese Ressource etwas weiter unten selbst erstellen werden, müssen wir sie nicht zusätzlich automatisch erstellen.
+
+![Bereinigen der Eigenschaft von Custom Tool](images/zerotouchicons-custom-tool-property-update.png)
 
 > _ANMERKUNG: Wenn Sie das Feld Custom Tool nicht bereinigen, konvertiert Visual Studio Punkte in Ihren Ressourcennamen in Unterstriche. Vergewissern Sie sich vor der Erstellung, dass die Ressourcennamen anstelle von Unterstrichen Punkte als Trennzeichen für Klassennamen enthalten._
 
 #### Schritt 4: Fügen Sie Ihre Bilder als Ressourcen hinzu
 
-1. Öffnen Sie die Ressourcendatei mithilfe des **Managed Resources Editor (Legacy)**:
-   * Wenn Sie Visual Studio 17.11 oder höher verwenden, klicken Sie mit der rechten Maustaste auf die Ressourcendatei, wählen **Open With** und dann **Managed Resources Editor (Legacy)** aus.
-   * Wenn Sie eine Visual Studio-Version vor 17.11 verwenden, doppelklicken Sie auf die Ressourcendatei, um sie mit dem Resources Editor zu öffnen (der in Ihrer Version von Visual Studio noch nicht veraltet ist).
+1. Doppelklicken Sie auf die erstellte Ressourcendatei:
+    * Fügen Sie jeweils ein Bild mit der Schaltfläche + hinzu. 
+    * Setzen Sie den Ressourcentyp auf **File**.
+    * Navigieren Sie zum Speicherort der Bilddatei, und fügen Sie die **großen** und **kleinen** Blocksymbole hinzu.
 
-![Verwenden von Open With...](images/zerotouchicons-open-resource-editor.jpg)
+![Ressourcen hinzufügen...](images/zerotouchicons-open-resource-editor-update.png)
 
-![Öffnen der Ressourcendatei mit dem Managed Resources Editor (Legacy)](images/zerotouchicons-managed-resource-editor-legacy.jpg)
+> _ANMERKUNG: Sie müssen Ihre Bilder nicht in einem **Ressourcenordner** oder Unterordnern **Large** und **Small** organisieren. Diese Methode hat sich jedoch bewährt._
 
-2. Fügen Sie Ihre Bilder hinzu:
-   * Verschieben Sie Ihre Bilddateien per Ziehen und Ablegen in den Editor, oder verwenden Sie die Option **Add Existing File**.
 
-![Hinzufügen vorhandener Dateien](images/zerotouchicons-add-existing-file.jpg)
-
-3. Aktualisieren Sie die Persistenz:
-   * Wählen Sie die Bilder im Resources Editor aus (dies funktioniert nicht, wenn Sie sie im Solution Explorer auswählen), und ändern Sie die Eigenschaft **Persistence** in der Gruppe **Properties** in `Embedded in .resx`. Dadurch wird sichergestellt, dass die Bilder in der `.dll` enthalten sind.
-
-![Aktualisieren der Persistenz](images/zerotouchicons-edit-persistence-property.jpg)
-
-#### Schritt 5 : Konvertieren Ihres Projekts in den SDK-Stil
+#### Schritt 5: Konvertieren des Projekts in den SDK-Stil (für ältere Projekte)
 
 Wenn Ihr Projekt noch nicht im SDK-Stil vorliegt (erforderlich zum Einbetten von Ressourcen), konvertieren Sie es:
 
 1. Installieren Sie die `.NET Upgrade Assistant`-Erweiterung über das Menü **Extensions > Manage Extensions** in Visual Studio.
 
-![Manage Extensions](images/zerotouchicons-manage-extensions.jpg)
+![Manage Extensions](images/zerotouchicons-manage-extensions-update.png)
 
 ![Installieren des .NET-Aktualisierungsassistenten](images/zerotouchicons-net-upgrade-assistant.jpg)
 
