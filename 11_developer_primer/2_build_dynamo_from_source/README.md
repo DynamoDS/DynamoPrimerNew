@@ -57,6 +57,19 @@ Ahora que los archivos de código fuente se han clonado en el equipo local, pode
 
 > Es posible que .NET y DirectX ya estén instalados.
 
+> **Nota:** Cambio importante: **Visual Studio 2022 Preview/Visual Studio 2026 Insider** necesario
+> 
+> A partir de finales de 2025, Dynamo implementará `dotnet10.0` Framework. Para llevar a cabo el desarrollo en esta plataforma, necesitará Visual Studio 2022 Preview o Visual Studio 2026 Insider (o posterior), ya que las versiones estables aún no admiten .NET 10.0.
+> 
+> **Instalación de Visual Studio 2022 Preview/2026 Insider junto con la instalación existente:**
+> 1. Abra el **instalador de Visual Studio** (búsquelo en el menú Inicio).
+> 2. Haga clic en **Actualizar** para asegurarse de que dispone de la versión más reciente del instalador.
+> 3. Vaya a la ficha **Disponible**.
+> 4. Busque **Visual Studio 2022 Preview/2026 Insider** (Community, Professional o Enterprise).
+> 5. Haga clic en **Instalar** para añadirlo junto con la instalación de Visual Studio existente.
+> 
+![Visual Studio Preview](images/vs-preview.png) ![Visual Studio 2026 Insider](images/vs-2026-insiders.png)
+
 Una vez que todo haya terminado de instalarse, podemos iniciar Visual Studio y abrir la solución `Dynamo.All.sln` ubicada en `Dynamo\src`.
 
 ![Abrir el archivo de la solución](images/vs-open-dynamo.jpg)

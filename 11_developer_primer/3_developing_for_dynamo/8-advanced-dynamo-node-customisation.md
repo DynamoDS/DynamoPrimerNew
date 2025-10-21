@@ -411,7 +411,7 @@ Para añadir archivos de documentación a los nodos de Dynamo, cree una nueva ca
 
 #### Asignar nombre a los archivos de Markdown
 
-Para asegurarse de que Dynamo sepa qué archivo abrir para un nodo específico cuando se le solicite, la denominación del archivo de Markdown debe tener un formato específico. El archivo de Markdown debe nombrarse en función del espacio de nombres del nodo para el que genera documentación. Si no conoce con certeza el espacio de nombres del nodo, observe la sección `Node Info` cuando presione `Help` en el nodo y, bajo del nombre del nodo, verá el espacio de nombres completo del nodo seleccionado.
+Para asegurarse de que Dynamo sepa qué archivo abrir para un nodo específico cuando se le solicite, la denominación del archivo de Markdown debe tener un formato específico. El archivo de Markdown debe nombrarse en función del espacio de nombres del nodo para el que genera documentación. Si no conoce con certeza el espacio de nombres del nodo, observe la sección `Node Info` cuando presione `Help` en el nodo y, debajo del nombre del nodo, verá el espacio de nombres completo del nodo seleccionado.
 
 Este espacio de nombres debe ser el nombre del archivo de Markdown para ese nodo en particular. Por ejemplo, el espacio de nombres de `CustomNodeExample` en las imágenes anteriores es `TestPackage.TestCategory.CustomNodeExample`; por lo tanto, el archivo Markdown para este nodo debe tener por nombre `TestPackage.TestCategory.CustomNodeExample.md`
 
@@ -487,37 +487,32 @@ Para incrustar los iconos en el archivo `.dll`, cree un archivo de recursos:
    * Seleccione el archivo de recursos en el **Explorador de soluciones**.
    * En el panel **Propiedades** desactive el campo `Custom Tool` eliminando el valor `ResXFileCodeGenerator`.
 
-![Limpieza de la propiedad de herramienta personalizada](images/zerotouchicons-custom-tool-property.jpg)
+3. **Establezca "Acción de compilación" en "Ninguna".**
+    * Dado que nosotros mismos crearemos este recurso más adelante, no es necesario que lo creemos automáticamente.
+
+![Limpieza de la propiedad de herramienta personalizada](images/zerotouchicons-custom-tool-property-update.png)
 
 > _NOTA: Si no se desactiva el campo "Herramienta personalizada", Visual Studio convertirá los puntos en guiones bajos en los nombres de los recursos. Antes de generar el archivo, compruebe que los nombres de los recursos cuentan con puntos para separar los nombres de clase y no guiones bajos._
 
 #### Paso 4: Añadir las imágenes como recursos
 
-1. Abra el archivo de recursos mediante el **Editor de recursos administrados (heredado)**:
-   * Si usa Visual Studio 17.11 o una versión posterior, haga clic con el botón derecho en el archivo de recursos, elija **Abrir con** y seleccione **Editor de recursos administrados (heredado)**.
-   * Si usa una versión de Visual Studio anterior a la 17.11, haga doble clic en el archivo de recursos para abrirlo con el Editor de recursos (que en su versión de Visual Studio aún no se ha convertido en heredado).
+1. Haga doble clic en el archivo de recursos que ha creado:
+    * Añada una imagen cada vez mediante el botón "+". 
+    * Establezca el tipo de recurso en **Archivo**.
+    * Vaya a la ubicación del archivo de imagen e incluya los iconos de nodo **grandes** y **pequeños**.
 
-![Uso de Abrir con...](images/zerotouchicons-open-resource-editor.jpg)
+![Añadir recursos...](images/zerotouchicons-open-resource-editor-update.png)
 
-![Apertura del archivo de recursos con el Editor de recursos administrados (heredado)](images/zerotouchicons-managed-resource-editor-legacy.jpg)
+> _NOTA: No es necesario organizar las imágenes en una carpeta de **recursos** ni en subcarpetas de iconos **grandes** y **pequeños**, pero se considera una práctica recomendada para organizar de forma eficaz los recursos._
 
-2. Añada las imágenes:
-   * Arrastre y suelte los archivos de imagen en el editor o utilice la opción **Añadir archivo existente**.
 
-![Adición de archivos existentes](images/zerotouchicons-add-existing-file.jpg)
-
-3. Actualice la persistencia:
-   * Seleccione las imágenes en el Editor de recursos (la acción no se realizará correctamente si las selecciona en el Explorador de soluciones), cambie la propiedad **Persistencia** en el panel **Propiedades** a `Embedded in .resx`. De este modo, se garantiza la inclusión de las imágenes en el archivo `.dll`.
-
-![Actualización de la persistencia](images/zerotouchicons-edit-persistence-property.jpg)
-
-#### Paso 5: Convertir el proyecto al estilo de SDK
+#### Paso 5: Convertir el proyecto al estilo de SDK (para proyectos existentes)
 
 Si el proyecto aún no es de estilo SDK (necesario para incrustar recursos), conviértalo:
 
 1. Instale la extensión de `.NET Upgrade Assistant` desde el menú **Extensiones > Administrar extensiones** de Visual Studio.
 
-![Administrar extensiones](images/zerotouchicons-manage-extensions.jpg)
+![Administrar extensiones](images/zerotouchicons-manage-extensions-update.png)
 
 ![Instalación del Asistente para actualización de .NET](images/zerotouchicons-net-upgrade-assistant.jpg)
 
