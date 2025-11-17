@@ -309,7 +309,6 @@ When a Dynamo graph is opened from disk, the trace data saved therein is re-asso
     * DesignScript function
     * Custom node (DS function)
 * TraceSerializer
-  * Serializes `ISerializable` and `[Serializable]` marked classes into trace.
   * Handles serialization and deserialization of data into trace.
   * TraceBinder controls binding deserialized data to a runtime type. (creates instance of real class)
 
@@ -337,9 +336,6 @@ Trace data is serialized into the .dyn file inside a property called Bindings. T
 
  
 ```
-
-it is _NOT_ advisable to depend on the format of the serialized base64encoded data.
-
 #### What problem are we trying to solve.
 
 ***
@@ -388,8 +384,6 @@ Trace is a mechanism in dynamo core - it utilizes a static variable of callsites
 
 It also allows you to serialize arbitrary data into the .dyn file when writing zero touch dynamo nodes. This is not generally advisable as it means the potentially transferable zero touch code now has a dependency on dynamo core.
 
-Do not rely on the serialized format of the data in the .dyn file - instead use the \[Serializable] attribute and interface
-
 ElementBinding on the other hand is a built on top of the trace apis and is implemented in the dynamo integration _(DynamoRevit Dynamo4Civil etc.)_
 
 #### Trace APIs
@@ -397,10 +391,10 @@ ElementBinding on the other hand is a built on top of the trace apis and is impl
 some of the low level Trace APIs worth knowing about are:
 
 ```c#
-public static ISerializable GetTraceData(string key)
+public static string GetTraceData(string key)
 ///Returns the data that is bound to a particular key
 
-public static void SetTraceData(string key, ISerializable value)
+public static void SetTraceData(string key, string value)
 ///Set the data bound to a particular key
 ```
 
@@ -413,7 +407,7 @@ to interact with the trace data that Dynamo has loaded from an existing file or 
  GetTraceDataForNodes(IEnumerable<Guid> nodeGuids, Executable executable)
 ```
 
-[GetTraceDataForNodes](https://github.com/DynamoDS/Dynamo/blob/master/src/Engine/ProtoCore/RuntimeData.cs#L218)
+[GetTraceDataForNodes](https://github.com/DynamoDS/Dynamo/blob/master/src/Engine/ProtoCore/RuntimeData.cs#L213)
 
 [RuntimeTrace.cs](https://github.com/DynamoDS/Dynamo/blob/master/src/Engine/ProtoCore/RuntimeData.cs)
 
@@ -448,19 +442,16 @@ The rough setup is:
 
 A static util class `TraceExampleWrapper` is imported as a node into Dynamo. it contains a single method `ByString` which creates `TraceExampleItem` - These are regular .net objects which contain a `description` property.
 
-Each `TraceExampleItem` is serialized into trace represented as a `TraceableId` - this is just a class containing an `IntId` which is marked `[Serializeable]` so it can be serialized with `SOAP` Formatter. see [here for more info on the serializable attribute](https://docs.microsoft.com/en-us/dotnet/api/system.serializableattribute?view=netframework-4.8)
-
-You must also implement the `ISerializable` interface defined [here](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8)
+Each `TraceExampleItem` is stored in a static TraceableObjectManager. The TraceableObjectManager class maintains a static dictionary of objects keyed by their trace id.
 
 ```c#
     [IsVisibleInDynamoLibrary(false)]
-    [Serializable]
-    public class TraceableId : ISerializable
+    public class TraceableId
     {
     }
 ```
 
-This class is created for each `TraceExampleItem` we wish to save into trace, serialized, base64encoded and saved to disk when the graph is saved so that bindings can be re-associated, even later when the graph is opened back up on top of an existing dictionary of elements. That won't work well in the case of this example since the dictionary is not really persistent like a Revit document is.
+TraceableId class is created for each `TraceExampleItem` we wish to save into trace, serialized using Newtonsoft.Json and saved to disk when the graph is saved so that bindings can be re-associated, even later when the graph is opened back up on top of an existing dictionary of elements. That won't work well in the case of this example since the dictionary is not really persistent like a Revit document is.
 
 Finally the last part of the equation is the `TraceableObjectManager`, which is similar to the `ElementBinder` in `DynamoRevit` - this manages the relationship between the objects present in the host's document model and the data we have stored in dynamo trace.
 
@@ -558,7 +549,13 @@ The important phases of the constructor's execution as they relate to element bi
 
 #### Efficiency
 
-* Currently each serialize trace object is serialized using SOAP xml formatting - this is quite verbose and duplicates a lot of information. Then the data is base64 encoded twice - This is not efficient in terms of serialization or deserialization. This can be improved in the future if the internal format is not built on top of. Again, we repeat, do not rely on the format of the serialized data at rest.
+* Currently each trace object uses JSON based serialization. This is an imporvement over the earlier SOAP xml formatting method and is more efficient in terms of serialization or deserialization.
+
+#### Compatibility
+
+* The trace objects saved in versions earlier than Dynamo 3.0 are stored using SOAP so they are not supported on newer versions. The previously saved element binding data will be ignored and the below message will be displayed in Dynamo 3.0 and higher versions. Element binding data will be saved next time when you run and save the workspace.
+
+![Element Binding Compatibility](images/element_binding_compatibility_message.jpg)
 
 #### Should ElementBinding be on by default?
 
