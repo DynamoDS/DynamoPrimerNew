@@ -8,6 +8,8 @@ DaaS, Dynamo as a Service, Dynamo compute service, etc. all refer to the same th
 
 Because your graphs run in this cloud context, and not on your machine, DaaS currently cannot directly use traditional Dynamo host contexts (Revit, Civil 3D, etc.). If you want to use types from those programs in your graph, you will need to serialize (save) them into the graph using the `Data.Remember` node or other in-graph serialization techniques. These are similar to the workflows you need to use when writing graphs for Generative Design in Revit.
 
+For more information on the Dynamo compute service see the [Dynamo compute service docs](../dynamo-compute-service/README.md).
+
 ## What version of Dynamo is executing my code?
 
 The version is based on 3.x and is updated frequently based on Dynamo's open-source master branch.
