@@ -3,7 +3,7 @@
 > **Note: Beta Service**  
 > The Dynamo Compute Service is currently in beta. The support timelines and update policies described in this document represent our current intentions as we experiment with and refine the service. These are not guarantees and may change based on user feedback and operational experience.
 
-This document describes the update cadence and support policy for Dynamo as a Service (Dynamo Compute Service, daas etc). 
+This document describes the update cadence and support policy for Dynamo as a Service (Dynamo Compute Service, DaaS etc). 
 //TODO MJK - PM feedback public facing name. 
 
 It outlines how engine versions are managed, when updates occur, and what users can expect when running Dynamo graphs in the cloud.
