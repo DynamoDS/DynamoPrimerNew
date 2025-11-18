@@ -24,7 +24,7 @@ This track is intended for production workloads where reliability and predictabi
 
 The preview engine provides early access to the latest developments in Dynamo. It is based on the latest development build of the DynamoCore Runtime and is updated frequently as new features and bug fixes are merged.
 
-This track is ideal for users who want to test upcoming changes, experiment with new features before they're officially released, or verify that their graphs will continue to work with future versions of Dynamo. The preview Engine allows you to stay ahead of changes and provide feedback to the Dynamo team.
+This track is ideal for users who want to test upcoming changes, experiment with new features before they're officially released, or verify that their graphs will continue to work with future versions of Dynamo. The preview engine allows you to stay ahead of changes and provide feedback to the Dynamo team.
 
 ---
 
