@@ -16,9 +16,9 @@ To meet different user needs, the Dynamo Compute Service maintains **two distinc
 
 ### Stable Engine (Production)
 
-The Stable Engine is designed for reliability and consistency in production environments. It is based on the latest stable release of the DynamoCore Runtime and is updated when official Dynamo releases are accessible to Dynamo desktop users. Initially we'll be following the update cadence of DynamoRevit.
+The stable engine is designed for reliability and consistency in production environments. It is based on the latest stable release of the DynamoCore Runtime and is updated when official Dynamo releases are accessible to Dynamo desktop users. Initially we'll be following the update cadence of DynamoRevit.
 
-This track is intended for production workloads where reliability and predictability are critical. When you use the Stable Engine, you can expect updates to align with Dynamo's public release schedule, giving you time to prepare for changes and test your graphs before they affect your workflows.
+This track is intended for production workloads where reliability and predictability are critical. When you use the stable engine, you can expect updates to align with Dynamo's public release schedule, giving you time to prepare for changes and test your graphs before they affect your workflows.
 
 ### Preview Engine (Preview / Daily Sandbox)
 
@@ -35,7 +35,7 @@ Understanding how long each engine version remains supported helps you plan main
 
 ### Stable Engine
 
-The Stable Engine receives updates when Dynamo publishes a new stable release in DynamoRevit. Each stable version remains available and supported until the next stable release is deployed to the service.
+The stable engine receives updates when Dynamo publishes a new stable release in DynamoRevit. Each stable version remains available and supported until the next stable release is deployed to the service.
 
 For example, if the service is currently running Dynamo 3.6 (stable), it will continue to run that version until Dynamo 4.0 becomes generally available to users (typically when it ships in Revit). At that point, the service will be updated to Dynamo 4.0 (stable).
 
@@ -55,9 +55,9 @@ Because the preview engine updates frequently, you should expect occasional brea
 
 When deciding which engine track to use:
 
-- **Choose Stable** if you need predictable, tested behavior for production workflows, or if you're deploying graphs to end users who expect consistent results.
+- **Choose stable** if you need predictable, tested behavior for production workflows, or if you're deploying graphs to end users who expect consistent results.
 
-- **Choose Preview** if you want to test new features early, validate that your graphs will work with upcoming versions, or contribute feedback on Dynamo development.
+- **Choose preview** if you want to test new features early, validate that your graphs will work with upcoming versions, or contribute feedback on Dynamo development.
 
 Both engines run the same core Dynamo runtime, the difference is when and how often they receive updates. 
 
