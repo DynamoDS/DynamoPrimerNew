@@ -34,7 +34,7 @@ Understanding how long each engine version remains supported helps you plan main
 
 ### Stable Engine
 
-The stable engine receives updates when Dynamo publishes a new stable release in DynamoRevit. Each stable version remains available and supported until the next stable release is deployed to the service.
+The stable engine receives updates when Dynamo publishes a new stable release of Dynamo Core in Revit.. Each stable version remains available and supported until the next stable release is deployed to the service.
 
 For example, if the service is currently running Dynamo 3.6 (stable), it will continue to run that version until Dynamo 4.0 becomes generally available to users (typically when it ships in Revit). At that point, the service will be updated to Dynamo 4.0 (stable).
 
