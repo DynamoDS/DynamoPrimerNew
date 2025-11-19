@@ -1,10 +1,9 @@
 # The Dynamo Compute Service Lifecycle & Update Cadence
 
 > **Note: Beta Service**  
-> The Dynamo Compute Service is currently in beta. The support timelines and update policies described in this document represent our current intentions as we experiment with and refine the service. These are not guarantees and may change based on user feedback and operational experience.
+> Dynamo Cloud Compute is currently in beta. The support timelines and update policies described in this document represent our current intentions as we experiment with and refine the service. These are not guarantees and may change based on user feedback and operational experience.
 
-This document describes the update cadence and support policy for Dynamo as a Service (Dynamo Compute Service, daas etc). 
-//TODO MJK - PM feedback public facing name. 
+This document describes the update cadence and support policy for Dynamo Cloud Compute. It may also be referred to in this document interchangeably as "the service".
 
 It outlines how engine versions are managed, when updates occur, and what users can expect when running Dynamo graphs in the cloud.
 
@@ -12,7 +11,7 @@ It outlines how engine versions are managed, when updates occur, and what users 
 
 ## Update Cadence
 
-To meet different user needs, the Dynamo Compute Service maintains **two distinct engine tracks**. Each track serves a specific purpose and follows its own update schedule:
+To meet different user needs, the Dynamo Cloud Compute maintains **two distinct engine tracks**. Each track serves a specific purpose and follows its own update schedule:
 
 ### Stable Engine (Production)
 
@@ -45,7 +44,7 @@ This approach ensures that the cloud service stays in sync with what the majorit
 
 The preview engine is continuously updated from the latest development branch of Dynamo. As development progresses on each version, the preview engine tracks those changes.
 
-For example, while Dynamo 4.1 is in active development, the preview engine might be labeled as "Dynamo Service 4.1". Once development shifts to version 4.2, the preview engine will begin tracking those changes and may be relabeled as "Dynamo Service 4.2".
+For example, while Dynamo 4.1 is in active development, the preview engine might be labeled as "Dynamo Cloud Compute Service 4.1". Once development shifts to version 4.2, the preview engine will begin tracking those changes and may be relabeled as "Dynamo Cloud Compute Service 4.2".
 
 Because the preview engine updates frequently, you should expect occasional breaking changes or experimental features. It's best used for testing and validation rather than production workflows.
 

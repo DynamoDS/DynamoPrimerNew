@@ -1,9 +1,9 @@
-# Dynamo Compute Service
+# Dynamo Cloud Compute
 
 > **Note: Beta Service**  
-> The Dynamo Compute Service is currently in beta. The support timelines and update policies described in this document represent our current intentions as we experiment with and refine the service. These are not guarantees and may change based on user feedback and operational experience.
+> Dynamo Cloud Compute is currently in beta. The support timelines and update policies described in this document represent our current intentions as we experiment with and refine the service. These are not guarantees and may change based on user feedback and operational experience.
 
-The Dynamo compute service brings the power of Dynamo's visual programming runtime to the cloud. Instead of running your graphs on your local machine, the compute service executes them in a secure cloud environment and returns the results.
+Dynamo Cloud Compute brings the power of Dynamo's visual programming runtime to the cloud. Instead of running your graphs on your local machine, the compute service executes them in a secure cloud environment and returns the results.
 
 ## What is Dynamo?
 
@@ -19,9 +19,9 @@ When you use Dynamo through a cloud-based client (such as the Dynamo Player in F
 
 This cloud-based approach means you can run Dynamo graphs without installing Dynamo locally, and you can leverage cloud computing power for complex operations.
 
-## Why Use the Compute Service?
+## Why Use the Dynamo Cloud Compute?
 
-The Dynamo compute service enables scenarios where you want to:
+Dynamo Cloud Compute enables scenarios where you want to:
 
 **Run Graphs Without Desktop Installation**: Execute Dynamo graphs directly from web applications without requiring users to install Dynamo Desktop on their machines.
 
@@ -31,7 +31,7 @@ The Dynamo compute service enables scenarios where you want to:
 
 **Standardize Execution Environment**: Ensure consistent behavior across different users and machines by running graphs in a controlled cloud environment.
 
-//TODO MJK - add more use cases after checking with PM side.
+**Connect to Forma**: Interact with the Forma API using Dynamo. [see this blog post for more details.](https://dynamobim.org/design-to-configuration-your-rules-in-forma-and-revit-via-dynamo-part-1/)
 
 ## Key Characteristics
 
@@ -46,10 +46,10 @@ The Dynamo compute service enables scenarios where you want to:
 
 ## Current Availability
 
-The Dynamo compute service is currently available through:
+Dynamo Cloud Compute is currently available through:
 - **Dynamo Player in Forma Open Beta**: Upload, share, and execute Dynamo graphs directly in Autodesk Forma's web interface
 
 ## Learn More
 
-- [Dynamo compute service differences with Desktop Dynamo](../dynamo-in-forma-beta/dynamo-compute-service-differences-with-desktop-dynamo.md) - Important differences to be aware of when writing graphs for cloud execution
+- [Dynamo cloud compute differences with Desktop Dynamo](../dynamo-in-forma-beta/dynamo-compute-service-differences-with-desktop-dynamo.md) - Important differences to be aware of when writing graphs for cloud execution
 - [Engine Lifecycle](engine-lifecycle.md) - Information about supported engine versions and their lifecycle
