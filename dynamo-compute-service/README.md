@@ -1,7 +1,6 @@
 # Dynamo Cloud Compute
 
-> **Note: Beta Service**  
-> Dynamo Cloud Compute is currently in beta. The support timelines and update policies described in this document represent our current intentions as we experiment with and refine the service. These are not guarantees and may change based on user feedback and operational experience.
+
 
 Dynamo Cloud Compute brings the power of Dynamo's visual programming runtime to the cloud. Instead of running your graphs on your local machine, the compute service executes them in a secure cloud environment and returns the results.
 
@@ -53,3 +52,9 @@ Dynamo Cloud Compute is currently available through:
 
 - [Dynamo cloud compute differences with Desktop Dynamo](../dynamo-in-forma-beta/dynamo-compute-service-differences-with-desktop-dynamo.md) - Important differences to be aware of when writing graphs for cloud execution
 - [Engine Lifecycle](engine-lifecycle.md) - Information about supported engine versions and their lifecycle
+
+-----
+
+
+> **Note: Beta Service**  
+> Dynamo Cloud Compute is currently in beta. The support timelines and update policies described in this document represent our current intentions as we experiment with and refine the service. These are not guarantees and may change based on user feedback and operational experience.

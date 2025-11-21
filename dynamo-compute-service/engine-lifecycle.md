@@ -1,7 +1,6 @@
 # The Dynamo Compute Service Lifecycle & Update Cadence
 
-> **Note: Beta Service**  
-> Dynamo Cloud Compute is currently in beta. The support timelines and update policies described in this document represent our current intentions as we experiment with and refine the service. These are not guarantees and may change based on user feedback and operational experience.
+
 
 This document describes the update cadence and support policy for Dynamo Cloud Compute. It may also be referred to in this document interchangeably as "the service".
 
@@ -62,7 +61,8 @@ Both engines run the same core Dynamo runtime, the difference is when and how of
 
 ---
 
-
+> **Note: Beta Service**  
+> Dynamo Cloud Compute is currently in beta. The support timelines and update policies described in this document represent our current intentions as we experiment with and refine the service. These are not guarantees and may change based on user feedback and operational experience.
 
 
 
