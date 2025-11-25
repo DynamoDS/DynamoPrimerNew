@@ -387,7 +387,7 @@ Trace is a mechanism in dynamo core - it utilizes a static variable of callsites
 
 It also allows you to serialize arbitrary data into the .dyn file when writing zero touch dynamo nodes. This is not generally advisable as it means the potentially transferable zero touch code now has a dependency on dynamo core.
 
-Do not rely on the serialized format of the data in the .dyn file. The serialized data should not be accessed directly and can be done only throught the trace apis.
+Do not rely on the serialized format of the data in the .dyn file. The serialized data should not be accessed directly and can be done only through the trace apis.
 
 ElementBinding on the other hand is a built on top of the trace apis and is implemented in the dynamo integration _(DynamoRevit Dynamo4Civil etc.)_
 
