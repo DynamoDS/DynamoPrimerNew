@@ -447,7 +447,7 @@ The rough setup is:
 
 A static util class `TraceExampleWrapper` is imported as a node into Dynamo. it contains a single method `ByString` which creates `TraceExampleItem` - These are regular .net objects which contain a `description` property.
 
-Each `TraceExampleItem` is stored in a static TraceableObjectManager. TraceableObjectManager serializes and deserializes Dynamo’s trace records as json string. So nodes can find and update previously created elements rather than recreating them.
+Each `TraceExampleItem` is stored in a static TraceableObjectManager. TraceableObjectManager serializes and deserializes Dynamo’s trace records as JSON string. So nodes can find and update previously created elements rather than recreating them.
 
 ```c#
     [IsVisibleInDynamoLibrary(false)]
