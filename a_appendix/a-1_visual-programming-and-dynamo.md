@@ -8,7 +8,7 @@ Designing frequently involves establishing visual, systemic, or geometric relati
 
 While offering some powerful opportunities, the term **Algorithm** can carry some misconceptions with it. Algorithms can generate unexpected, wild, or cool things, but they are not magic. In fact, they are pretty plain, in and of themselves. Let's use a tangible example like an origami crane. We start with a square piece of paper (input), follow a series of folding steps (processing actions), and result in a crane (output).
 
-![Origami Crane](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
+![Origami Crane](https://primer.dynamobim.org/01_Introduction/images/1-1/00-OrigamiCrane.png)
 
 So where is the Algorithm? It is the abstract set of steps, which we can represent in a couple of ways - either textually or graphically.
 
@@ -30,7 +30,7 @@ So where is the Algorithm? It is the abstract set of steps, which we can represe
 
 **Graphical Instructions:**
 
-![Origami Crane instructions](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![Origami Crane instructions](https://primer.dynamobim.org/01_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
 #### Programming Defined <a href="#programming-defined" id="programming-defined"></a>
 
@@ -52,7 +52,7 @@ If your answer contained graphics, then **Visual Programming** is definitely for
 
 **Visual Program:**
 
-![](./images/a-1/visualProgramming(2).png)
+![](<../.gitbook/assets/visualProgramming (2).png>)
 
 **Textual Program:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 The results of our algorithm:
 
-![](./images/a-1/visualProgramming(1).png)
+![](<../.gitbook/assets/visualProgramming (1).png>)
 
 The visual characteristic to programming in such a way lowers the barrier to entry and frequently speaks to designers. Dynamo falls in the Visual Programming paradigm, but as we will see later, we can still use textual programming in the application as well.

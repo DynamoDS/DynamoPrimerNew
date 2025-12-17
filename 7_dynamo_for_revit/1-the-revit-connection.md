@@ -1,6 +1,6 @@
 # The Revit Connection
 
-![](images/1/revitconnectionlink.jpg)
+![](<../.gitbook/assets/revit connection link.jpg>)
 
 Dynamo for Revit extends building information modeling with the data and logic environment of a graphical algorithm editor. Its flexibility, coupled with a robust Revit database, offers a new perspective for BIM.
 
@@ -10,20 +10,20 @@ This chapter focuses on the Dynamo workflows for BIM. Sections are primarily exe
 
 As both Revit and Dynamo continue to evolve, you may notice that the Revit version you are working with is not compatible with the Dynamo for Revit version you have installed on your machine. Below outlines which versions of Dynamo for Revit are compatible with Revit.
 
-| Revit Version | First Stable Dynamo Version                                                       | Last Supported Dynamo for Revit Version                                                                                                                                |
-| ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2013          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe) | [0.6.3](https://downloads.dynamobuilds.com/DynamoInstall0.6.3.exe)                                                                                      |
-| 2014          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe) | [0.8.2](https://downloads.dynamobuilds.com/DynamoInstall0.8.2.exe)                                                                                      |
-| 2015          | [0.7.1](https://downloads.dynamobuilds.com/DynamoInstall0.7.1.exe) | [1.2.1](https://downloads.dynamobuilds.com/DynamoInstall1.2.1.exe)                                                                                      |
-| 2016          | [0.7.2](https://downloads.dynamobuilds.com/DynamoInstall0.7.2.exe) | [1.3.2](https://downloads.dynamobuilds.com/DynamoInstall1.3.2.exe)                                                                                      |
-| 2017          | [0.9.0](https://downloads.dynamobuilds.com/DynamoInstall0.9.0.exe) | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
-| 2018          | [1.3.0](https://downloads.dynamobuilds.com/DynamoInstall1.3.0.exe) | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
-| 2019          | [1.3.3](https://downloads.dynamobuilds.com/DynamoInstall1.3.3.exe) | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.4](https://downloads.dynamobuilds.com/DynamoInstall2.0.4.exe) |
-| 2020+         | 2.1.0 - Revit 2020+ now includes Dynamo and receives updates as Revit does.)      | N/A                                                                                                                                                                    |
+| Revit Version | First Stable Dynamo Version                                                  | Last Supported Dynamo for Revit Version                                                                                                 |
+| ------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 2013          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe)           | [0.6.3](https://downloads.dynamobuilds.com/DynamoInstall0.6.3.exe)                                                                      |
+| 2014          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe)           | [0.8.2](https://downloads.dynamobuilds.com/DynamoInstall0.8.2.exe)                                                                      |
+| 2015          | [0.7.1](https://downloads.dynamobuilds.com/DynamoInstall0.7.1.exe)           | [1.2.1](https://downloads.dynamobuilds.com/DynamoInstall1.2.1.exe)                                                                      |
+| 2016          | [0.7.2](https://downloads.dynamobuilds.com/DynamoInstall0.7.2.exe)           | [1.3.2](https://downloads.dynamobuilds.com/DynamoInstall1.3.2.exe)                                                                      |
+| 2017          | [0.9.0](https://downloads.dynamobuilds.com/DynamoInstall0.9.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
+| 2018          | [1.3.0](https://downloads.dynamobuilds.com/DynamoInstall1.3.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
+| 2019          | [1.3.3](https://downloads.dynamobuilds.com/DynamoInstall1.3.3.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.4](https://downloads.dynamobuilds.com/DynamoInstall2.0.4.exe) |
+| 2020+         | 2.1.0 - Revit 2020+ now includes Dynamo and receives updates as Revit does.) | N/A                                                                                                                                     |
 
 ### History of Dynamo
 
-![History](images/1/earlyScreenshot.jpg)
+![History](../.gitbook/assets/earlyScreenshot.jpg)
 
 With a dedicated team of developers and a passionate community, the project has come a long way from its humble beginnings.
 
@@ -39,7 +39,7 @@ In a Revit project or family editor, navigate to Add-ins and click Dynamo.\*
 \*Dynamo will run only in the file in which it was opened.
 {% endhint %}
 
-![](<images/1/launchdynamofromrevit (1).jpg>)
+![](<../.gitbook/assets/launch dynamo from revit (1).jpg>)
 
 When opening Dynamo in Revit, there is a new category called "Revit". This is a comprehensive addition to the UI which offers nodes specifically catering to Revit workflows.\*
 
@@ -47,14 +47,14 @@ When opening Dynamo in Revit, there is a new category called "Revit". This is a 
 \*By using the Revit-specific family of nodes, the Dynamo graph will only work when opening in Dynamo for Revit. If a Dynamo for Revit graph is opened in Dynamo Sandbox for example, the Revit nodes will be missing.
 {% endhint %}
 
-![](images/1/revitconnection-runningdynamoinrevit02.jpg)
+![](<../.gitbook/assets/revit connection - running dynamo in revit 02.jpg>)
 
 ### Freezing Nodes
 
 Since Revit is a platform which provides robust project management, parametric operations in Dynamo can be complex and slow to calculate. If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph.
 
 {% hint style="info" %}
-You can read more about freezing nodes in the [4\_nodes\_and\_wires](../4\_nodes\_and\_wires/ "mention") section.
+You can read more about freezing nodes in the [4\_nodes\_and\_wires](../4_nodes_and_wires/ "mention") section.
 {% endhint %}
 
 ### Community & Dynamo Blog
@@ -65,4 +65,4 @@ Dynamo is an open-source project that is constantly evolving, and a lot of devel
 
 Dynamo also maintains an active blog. Read up on recent posts to learn about the latest developments!
 
-![Blog](images/1/blog.png)
+![Blog](../.gitbook/assets/blog.png)
