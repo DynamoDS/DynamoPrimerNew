@@ -4,7 +4,7 @@
 
 If you are comfortable writing scripts in Python and want more functionality out of the standard Dynamo Python nodes, we can use Zero-Touch to create our own. Let's start with a simple example that allows us to pass a python script as a string to a Zero-Touch node where the script is executed and a result is returned. This case study will build on the walk-throughs and examples in the Getting Started section, please refer to those if you are completely new to creating Zero-Touch nodes.
 
-![A Zero-Touch node that will execute a Python script string](images/python-case-study.png)
+![A Zero-Touch node that will execute a Python script string](../../.gitbook/assets/python-case-study.png)
 
 > A Zero-Touch node that will execute a Python script string
 
@@ -68,7 +68,7 @@ output = str(volume)
 
 One limitation of the standard Python nodes is that they only have a single output port so if we wish to return multiple object we must construct a list and retrieve each object in. If we modify the example above to return a dictionary, we can add as many output ports as we want. Refer to the Returning Multiple Values section in Going Further With Zero-Touch for more specifics on dictionaries.
 
-![This node is allowing us to return both the cuboid's volume and its centroid.](images/python-multi-case-study.png)
+![This node is allowing us to return both the cuboid's volume and its centroid.](../../.gitbook/assets/python-multi-case-study.png)
 
 > This node is allowing us to return both the cuboid's volume and its centroid.
 
