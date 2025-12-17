@@ -7,23 +7,23 @@ This Primer includes chapters developed with Mode Lab. These chapters focus on t
 This guide is designed to cater to readers from different backgrounds and skill levels. General introduction about Dynamo setup, user interface and key concepts can be found in the following sections, we recommend new users to cover the following topics:
 
 * [What is Dynamo & How Does It Work?](1-what-is-dynamo.md)
-* [Setup for Dynamo](../2\_setup\_for\_dynamo/)
-* [User Interface](../3\_user\_interface/)
-* [Nodes and Wires](../4\_nodes\_and\_wires/)
+* [Setup for Dynamo](../2_setup_for_dynamo/)
+* [User Interface](../3_user_interface/)
+* [Nodes and Wires](../4_nodes_and_wires/)
 
 For users who would like to develop a more in-depth understanding of each element such as a specific Nodes and the concept behind it, we cover the fundamentals in its own chapter.
 
-* [Essential Nodes & Concepts](../5\_essential\_nodes\_and\_concepts/)
+* [Essential Nodes & Concepts](../5_essential_nodes_and_concepts/)
 
 If you would like to see the demonstration of Dynamo workflows, we have included some graphs in the Sample Workflows section. Follow the attached instructions to create your own Dynamo graphs.
 
-* [Parametric Vase](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
+* [Parametric Vase](../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.md)
 
-![](images/1-2/vase1.gif)
+![](../.gitbook/assets/vase1.gif)
 
-* [Attractor points](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
+* [Attractor points](../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.md)
 
-![](images/1-2/attractor1.gif)
+![](<../.gitbook/assets/attractor1 (1).gif>)
 
 {% hint style="info" %}
 There are more topic specific exercises can be found in later chapters as we cover different topics about Dynamo. **Exercises** can usually be found in the last section of each page.
@@ -33,7 +33,7 @@ There are more topic specific exercises can be found in later chapters as we cov
 
 Dynamo wouldn't be what it is without a strong group of avid users and active contributors. Engage the community by following the [Blog](http://dynamobim.org/blog/), adding your work to the Gallery, or discussing Dynamo in the [Forum](https://forum.dynamobim.com).
 
-![The Forum](images/1-2/02-Community.png)
+![The Forum](../.gitbook/assets/02-Community.png)
 
 ### The Platform
 
@@ -41,6 +41,6 @@ Dynamo is envisioned as a visual programming tool for designers, allowing us to 
 
 The source code for the project is open-source, enabling us to extend its functionality to our hearts content. Check out the project on GitHub and browse the Works in Progress of users customizing Dynamo.
 
-![The Repo](images/1-2/03-TheRepo.png)
+![The Repo](../.gitbook/assets/03-TheRepo.png)
 
 > Browse, Fork, and start extending Dynamo for your needs

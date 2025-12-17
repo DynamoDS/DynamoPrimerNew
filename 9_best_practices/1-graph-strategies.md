@@ -2,7 +2,7 @@
 
 Prior to this chapter, the Primer has covered how to implement the powerful visual-scripting capabilities of Dynamo. A good understanding of these capabilities is a solid foundation and the first step in building robust visual programs. When we use our visual programs in the field, share them with colleagues, troubleshoot errors, or test limits we have additional issues to deal with. If someone else will be using your program or you are expecting to open it six months from now, it needs to have an immediate graphic and logical clarity. Dynamo has many tools to manage the complexity of your program, and this chapter will give guidelines on when to use them.
 
-![groups](images/1/cad-chart-visual.jpg)
+![groups](../.gitbook/assets/cad-chart-visual.jpg)
 
 ## Reduce Complexity
 
@@ -15,7 +15,7 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
 * You can change the **color of the group to differentiate** what Groups are doing (inputs vs functions)
 * You can use groups to start **organizing your graph to streamline Custom Node creation**
 
-![](images/1/graphstrategy2.png)
+![](../.gitbook/assets/graphstrategy2.png)
 
 > The colors in this program identify the purpose of each group. This strategy can be used to create hierarchy in any graphic standards or templates you develop.
 >
@@ -23,21 +23,21 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
 > 2. Input group (orange)
 > 3. Script group (green)
 >
-> For how to use Groups, refer to [Managing Your Program](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> For how to use Groups, refer to [Managing Your Program](http://primer.dynamobim.org/en/03_Anatomy-of-a-Dynamo-Definition/3-4_best_practices.html).
 
 ### **Develop efficiently with Code Blocks**
 
 * At times, you can use a Code Block to **type a number or node method faster than searching** (Point.ByCoordinates, Number, String, Formula)
 * Code Blocks are useful **when you want to define custom functions in DesignScript to reduce the number of nodes in a graph**
 
-![](images/1/graphstrategy3\(1\).png)
+![](../.gitbook/assets/graphstrategy3.png)
 
 > Both 1 and 2 perform the same function. It was much faster to write a few lines of code than it was to search for and add each node individually. The code block is also far more concise.
 >
 > 1. Design Script written in Code Block
 > 2. Equivalent program in nodes
 >
-> For how to use Code Block, refer to [What's a Code Block](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md).
+> For how to use Code Block, refer to [What's a Code Block](../8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block.md).
 
 ### **Condense with Node to Code**
 
@@ -53,26 +53,26 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
   * More difficult to understand for other users
   * No easy way to return to the visual programming version
 
-![](images/1/graphstrategy3\_1.png)
+![](../.gitbook/assets/graphstrategy3_1.png)
 
 > 1. Existing program
 > 2. Code Block created from Node to Code
 >
-> For how to use Node to Code, refer to [Design Script Syntax](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
+> For how to use Node to Code, refer to [Design Script Syntax](../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md).
 
 ### **Access data flexibly with List@Level**
 
 * Using List@Level can help you **reduce the complexity of your graph by replacing List.Map and List.Combine nodes** which might occupy a considerable amount of canvas space
 * List@Level provides you with a\*\* quicker way than List.Map/List.Combine to construct node logic\*\* by allowing you to access data at any level in a list right from the input port of a node
 
-![](<images/1/graphstrategy4 (1).png>)
+![](../.gitbook/assets/graphstrategy4.png)
 
 > We can verify how many True values BoundingBox.Contains is returning and in which lists by activating List@Level for CountTrue's "list" input. List@Level allows the user to determine at which level the input will take data from. Using List@Level is flexible, efficient, and highly encouraged over other methods involving List.Map and List.Combine.
 >
 > 1. Counting true values at List Level 2
 > 2. Counting true values at List Level 3
 >
-> For how to use List@Level, refer to [Lists of Lists](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> For how to use List@Level, refer to [Lists of Lists](http://primer.dynamobim.org/en/06_Designing-with-Lists/6-3_lists-of-lists.html#list@level).
 
 ## Maintain Readability
 
@@ -84,7 +84,7 @@ In addition to making your graph as simple and efficient as possible, strive for
 * If others are going to be working with your graph, you should **ensure that your node-wire layout flows easily before shipping**
 * To help you with alignment, **use the "Cleanup Node Layout" feature to automatically align** your graph, though less precisely than doing it yourself
 
-![](<images/1/graphstrategy5 (2).png>)
+![](<../.gitbook/assets/graphstrategy5 (1).png>)
 
 > 1. Unorganized graph
 > 2. Aligned graph
@@ -96,7 +96,7 @@ In addition to making your graph as simple and efficient as possible, strive for
 * Renaming inputs can help others easily understand your graph, **especially if what they plug into will be off the screen**
 * **Be wary of renaming nodes other than inputs.** An alternative to this is creating a custom node from a node cluster and renaming that; it will be understood that it contains something else
 
-![](images/1/graphstrategy6.png)
+![](../.gitbook/assets/graphstrategy6.png)
 
 > 1. Inputs for surface manipulation
 > 2. Inputs for architectural parameters
@@ -109,12 +109,12 @@ In addition to making your graph as simple and efficient as possible, strive for
 * You should add a Note if something in the **graph requires a plain language explanation** that the nodes can not express
 * You should add a Note if a collection of **nodes or a Group is too large or complex and can’t be easily understood right away**
 
-![](images/1/graphstrategy7.png)
+![](../.gitbook/assets/graphstrategy7.png)
 
 > 1. A Note describing the portion of the program that returns raw translation distances
 > 2. A Note describing the code that maps those values to a Sine wave
 >
-> For how to add a Note, refer to [Managing Your Program](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> For how to add a Note, refer to [Managing Your Program](http://primer.dynamobim.org/en/03_Anatomy-of-a-Dynamo-Definition/3-4_best_practices.html).
 
 ## Flex Continuously
 
@@ -124,14 +124,14 @@ While building your visual-script, it is important to verify that what is being 
 
 * Use Watch or Preview Bubbles as you build the program to\*\* verify that key outputs are returning what you expected\*\*
 
-![](images/1/graphstrategy8.png)
+![](../.gitbook/assets/graphstrategy8.png)
 
 > The Watch nodes are being used to compare:
 >
 > 1. The raw translation distances
 > 2. The values passed through the Sine equation
 >
-> For how to use Watch, refer to [Library](../3\_user\_interface/2-library.md).
+> For how to use Watch, refer to [Library](../3_user_interface/2-library.md).
 
 ## Ensure Reusability
 
@@ -155,14 +155,14 @@ It is highly likely that someone else will be opening your program at some point
 * You should use a a Custom Node **when a portion of the graph will be reused often** in other programs
 * You should use a Custom Node if you want to **share a functionality with the Dynamo Community**
 
-![](images/1/graphstrategy9.png)
+![](../.gitbook/assets/graphstrategy9.png)
 
 > Collecting the point translation program into a Custom Node makes a robust, unique program portable and far easier to understand. Well named input ports will help other users understand how to use the node. Remember to add descriptions and required data types for each input.
 >
 > 1. Existing attractor program
 > 2. Custom Node that collects this program, PointGrid
 >
-> For how to use Custom Nodes, refer to [Custom Node Introduction](../6\_custom\_nodes\_and\_packages/6-1\_custom-nodes/1-introduction.md).
+> For how to use Custom Nodes, refer to [Custom Node Introduction](../6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction.md).
 
 ### **Build templates**
 
@@ -170,7 +170,7 @@ It is highly likely that someone else will be opening your program at some point
 * When building a template, you can standardize **group colors and font sizes** to categorize types of workflows or data actions.
 * When building a template, you can even standardize how you want to **label, color, or style the difference between front-end and back-end workflows** in your graph.
 
-![](images/1/graphstrategy10\(2\).png)
+![](../.gitbook/assets/graphstrategy10.png)
 
 > 1. The UI, or front-end, of the program includes a project name, input sliders, and import geometry.
 > 2. The back-end of the program.
@@ -184,13 +184,13 @@ It is highly likely that someone else will be opening your program at some point
 
 Now that we have established several best practices, let’s apply them to a program that was put together quickly. Though the program succeeds in generating the roof, the state of the graph is a "mind-map" of the author. It lacks any organization or description of its use. We will walk through our best practices to organize, describe, and analyze the program so other users can understand how to use it.
 
-![](images/1/graphstrategy11.png)
+![](../.gitbook/assets/graphstrategy11.png)
 
 > The program is functioning, but the graph is disorganized.
 
 Let's start by determining the data and geometry returned by the program.
 
-![](images/1/graphstrategy12.png)
+![](../.gitbook/assets/graphstrategy12.png)
 
 > Understanding when major changes to the data occur is crucial to establishing logical divisions, or modularity. Try inspecting the rest of the program with Watch nodes to see if you can determine groups before moving on to the next step.
 >
@@ -199,7 +199,7 @@ Let's start by determining the data and geometry returned by the program.
 
 Once we understand the elemental parts of the program, let's put them in Groups.
 
-![](images/1/graphstrategy13.png)
+![](../.gitbook/assets/graphstrategy13.png)
 
 > Groups allow the user to visually differentiate the parts of the program.
 >
@@ -211,13 +211,13 @@ Once we understand the elemental parts of the program, let's put them in Groups.
 
 With Groups established, align the nodes to create visual continuity across the graph.
 
-![](images/1/graphstrategy14.png)
+![](../.gitbook/assets/graphstrategy14.png)
 
 > Visual continuity helps the user to see the program flow and implicit relationships between nodes.
 
 Make the program more accessible by adding another layer of graphic improvements. Add notes to describe how a specific area of the program works, give inputs custom names, and assign colors to different types of groups.
 
-![](images/1/graphstrategy15\(1\).png)
+![](../.gitbook/assets/graphstrategy15.png)
 
 > These graphic improvements tell the user more about what the program is doing. The different group colors help to distinguish inputs from functions.
 >
@@ -226,7 +226,7 @@ Make the program more accessible by adding another layer of graphic improvements
 
 Before we start to condense the program, let's find a strategic location to introduce the Python script drainage simulator. Plug the output of the first scaled roof surface into the respective scripting input.
 
-![](images/1/graphstrategy16.png)
+![](../.gitbook/assets/graphstrategy16.png)
 
 > We've chosen to integrate scripting at this point in the program so the drainage simulation can be run on the original, single roof surface. That specific surface is not being previewed, but it saves us from having to choose the top surface of the chamfered Polysurface.
 >
@@ -237,7 +237,7 @@ Before we start to condense the program, let's find a strategic location to intr
 
 Let's simplify the graph now that everything is in place.
 
-![](images/1/graphstrategy17.png)
+![](../.gitbook/assets/graphstrategy17.png)
 
 > Condensing our program with Node to Code and Custom Node has greatly reduced the size of the graph. The groups that create the roof surface and walls have been converted to code since they are very specific to this program. The point translation group is contained in a Custom Node as it could be used in another program. In the example file, create your own custom node from the translate points group.
 >
@@ -246,14 +246,14 @@ Let's simplify the graph now that everything is in place.
 
 As a final step, create presets for exemplary roof forms.
 
-![](images/1/graphstrategy18.png)
+![](../.gitbook/assets/graphstrategy18.png)
 
 > These inputs are the primary drivers of the roof form and will help users see the potential of the program.
 
 Our program with views of two presets.
 
-![](images/1/graphstrategy19.png)
+![](../.gitbook/assets/graphstrategy19.png)
 
-![](images/1/graphstrategy20.png)
+![](../.gitbook/assets/graphstrategy20.png)
 
 > The roof drainage patterns give the user an analytical view of the respective presets.

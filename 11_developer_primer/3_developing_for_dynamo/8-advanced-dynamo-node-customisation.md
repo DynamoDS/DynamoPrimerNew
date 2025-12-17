@@ -49,7 +49,7 @@ To demonstrate `OnLogWarningMessage` in action, here are different scenarios you
 
 In this example, we'll build upon the custom node created in the previous "**Zero-Touch Case Study - Grid Node";** A Method named `RectangularGrid` that generates a grid of rectangles based on `xCount` and `yCount` inputs. We will walk through testing If an input is invalid, and then using `OnLogWarningMessage` to log a warning and stop processing.
 
-![OnLogWarningMessage Example 1](images/onlogwarningmessage-example-1.png)
+![OnLogWarningMessage Example 1](../../.gitbook/assets/onlogwarningmessage-example-1.png)
 
 **Using `OnLogWarningMessage` for Input Validation**
 
@@ -137,7 +137,7 @@ namespace CustomNodes
 
 If your method requires a list of points but a user passes an empty or null list, you can use `OnLogWarningMessage` to inform them about the issue.
 
-![OnLogWarningMessage Example 2](images/onlogwarningmessage-example-2.png)
+![OnLogWarningMessage Example 2](../../.gitbook/assets/onlogwarningmessage-example-2.png)
 
 ```
 public static Polygon CreatePolygonFromPoints(List<Point> points)
@@ -164,7 +164,7 @@ This warns users that they need to pass a valid list with at least three points 
 
 For a node that processes file paths, you may want to ensure that only certain file types are allowed. If an unsupported file type is detected, log a warning.
 
-![OnLogWarningMessage Example 3](images/onlogwarningmessage-example-3.png)
+![OnLogWarningMessage Example 3](../../.gitbook/assets/onlogwarningmessage-example-3.png)
 
 ```
 public static void ProcessFile(string filePath)
@@ -226,7 +226,7 @@ Here are different scenarios to demonstrate using `OnLogInfoMessage` in your Zer
 
 In this example, we'll build upon the custom node created in the previous "**Zero-Touch Case Study - Grid Node";** A Method named `RectangularGrid` that generates a grid of rectangles based on `xCount` and `yCount` inputs. We will walk through testing If an input is invalid, and then using `OnLogInfoMessage` to provide info after the node has completed its run.
 
-![OnLogInfoMessage Example 1](images/onloginfomessage-example-1.png)
+![OnLogInfoMessage Example 1](../../.gitbook/assets/onloginfomessage-example-1.png)
 
 **Using `OnLogInfoMessage` for Input Validation**
 
@@ -309,7 +309,7 @@ namespace CustomNodes
 
 If you're creating a node that processes a list of points, you might want to log how many points were processed successfully. This can be useful for large datasets.
 
-![OnLogInfoMessage Example 2](images/onloginfomessage-example-2.png)
+![OnLogInfoMessage Example 2](../../.gitbook/assets/onloginfomessage-example-2.png)
 
 ```
 public static List<Point> ProcessPoints(List<Point> points)
@@ -339,7 +339,7 @@ This message will help users understand the result of the processing and confirm
 
 In some cases, it's useful to confirm the input parameters a node used to complete an action. For example, if your node exports data to a file, logging the file name and path can reassure users that the correct file was used.
 
-![OnLogInfoMessage Example 3](images/onloginfomessage-example-3.png)
+![OnLogInfoMessage Example 3](../../.gitbook/assets/onloginfomessage-example-3.png)
 
 ```
 public static void ExportData(string filePath, List<string> data)
@@ -365,7 +365,7 @@ This message confirms to users that the export worked and shows the exact file p
 
 Historically, there has been limitations in Dynamo for how package authors could provide documentation for their nodes. Custom Node authors have been restricted to only allowing a short description that displays in the tooltip of the node, or to ship your package with heavily annotated sample graphs.
 
-![Node Tooltip Description](images/customnodedocumentation-overloads.png)
+![Node Tooltip Description](../../.gitbook/assets/customnodedocumentation-overloads.png)
 
 ### A new way
 
@@ -399,11 +399,11 @@ Follow these few steps to get your Markdown files to show inside Dynamo.
 
 Dynamo uses the Documentation Browser view extension to display nodes documentation. To open a nodes documentation, right click on the node and select help. This will open up the Documentation Browser and display the Markdown associated with that node, if there is any provided.
 
-![Documentation Browser](images/customnodedocumentation-no-documentation-provided.png)
+![Documentation Browser](../../.gitbook/assets/customnodedocumentation-no-documentation-provided.png)
 
 The documentation displayed in the Documentation Browser is made up of two parts. The first is the `Node Info` section, this is auto generated from the information extracted from the node, such as the inputs/outputs, node category, node name/namespace and the nodes short description. Second part show the custom nodes documentation, which is the Markdown file that is provided to document the node.
 
-![Custom Node Documentation](images/customnodedocumentation-custom-node-documentation.png)
+![Custom Node Documentation](../../.gitbook/assets/customnodedocumentation-custom-node-documentation.png)
 
 #### Package doc folder
 
@@ -417,13 +417,13 @@ This namespace should be the name of your Markdown file for that particular node
 
 In special cases where you have overloads of your nodes (nodes with same name, but different inputs), you will have to add the input names in `()` after the node namespace. For example the built-in node `Geometry.Translate` has multiple overloads. In this case we would name the Markdown files for below nodes as follows: `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction).md` `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction,distance).md`
 
-![Overload Nodes](images/customnodedocumentation-overloads.png)
+![Overload Nodes](../../.gitbook/assets/customnodedocumentation-overloads.png)
 
 #### Modifying Markdown files while open in Dynamo
 
 To make it easy to modify documentation files, the Documentation Browser implements a File Watcher on the open documentation file. This enables you to make changes to your Markdown file and you will see the changes in Dynamo instantly.
 
-![Hot Reloading](images/customnodedocumentation-hot-reload.gif)
+![Hot Reloading](../../.gitbook/assets/customnodedocumentation-hot-reload.gif)
 
 Adding new documentation files can also be done whilst Dynamo is open. Simply add a new Markdown file to the `/doc` folder, with a name that corresponds to the node it documents.
 
@@ -441,9 +441,9 @@ This guide will show you how to add icons to your Zero Touch nodes.
 
 To begin, create a Visual Studio Class Library (.NET Framework) project for your Zero Touch nodes. If you don't already have a project, refer to the **Getting Started** section for step-by-step instructions on creating one.
 
-![Creating a new Visual Studio Project](images/vs-new-project-1.jpg)
+![Creating a new Visual Studio Project](../../.gitbook/assets/vs-new-project-1.jpg)
 
-![Configuring a new project in Visual Studio](images/zerotouchicons-configure-new-project.jpg)
+![Configuring a new project in Visual Studio](../../.gitbook/assets/zerotouchicons-configure-new-project.jpg)
 
 Make sure you have at least one functional Zero Touch node, as icons can only be added to existing nodes. For guidance, see the **Zero Touch Case Study - Grid Node**.
 
@@ -475,36 +475,34 @@ To embed your icons into the `.dll`, create a resources file:
 
 * Right-click your project in the **Solution Explorer**.
 
-![Adding a new item](images/zerotouchicons-add-resources-file-1.jpg)
+![Adding a new item](../../.gitbook/assets/zerotouchicons-add-resources-file-1.jpg)
 
 * Go to **Add > New Item** and select **Resources File**.
 
-![Adding a resources file](images/zerotouchicons-add-resources-file-2.jpg)
+![Adding a resources file](../../.gitbook/assets/zerotouchicons-add-resources-file-2.jpg)
 
 * Name the file `<ProjectName>Images.resx`. For example, `ZeroTouchNodeIconsImages.resx`.
 
 2. **Clear the Custom Tool Property**:
    * Select the resources file in the **Solution Explorer**.
    * In the **Properties** panel, clear the `Custom Tool` field by removing the `ResXFileCodeGenerator` value.
-
 3. **Set 'Build Action' to 'None'**
-    * Since we will be building this resource ourselves a bit further down, we don't need to also build it automatically.
+   * Since we will be building this resource ourselves a bit further down, we don't need to also build it automatically.
 
-![Cleaning the Custom Tool Property](images/zerotouchicons-custom-tool-property-update.png)
+![Cleaning the Custom Tool Property](../../.gitbook/assets/zerotouchicons-custom-tool-property-update.png)
 
 > _NOTE: Failing to clear the "Custom Tool" field will result in Visual Studio converting periods to underscores in your resource names. Please verify before Building that your resource names have periods separating class names rather than underscores._
 
 #### Step 4: Add Your Images as Resources
 
 1. Double-click on the resouce file you created:
-    * Add one image at a time using the '+' button 
-    * Set resource type to **File**
-    * Browse to your Image file location and include your **Large** and **Small** Node icons.
+   * Add one image at a time using the '+' button
+   * Set resource type to **File**
+   * Browse to your Image file location and include your **Large** and **Small** Node icons.
 
-![Add resources...](images/zerotouchicons-open-resource-editor-update.png)
+![Add resources...](../../.gitbook/assets/zerotouchicons-open-resource-editor-update.png)
 
 > _NOTE: Organizing your images into a **Resource** folder, and even **Large** and **Small** subfolders is not required but a good practice to keep your resources well organized!_
-
 
 #### Step 5: Convert Your Project to SDK-Style (for legacy projects)
 
@@ -512,26 +510,26 @@ If your project is not already SDK-style (required for embedding resources), con
 
 1. Install the `.NET Upgrade Assistant` extension from Visual Studio's **Extensions > Manage Extensions** menu.
 
-![Manage Extensions](images/zerotouchicons-manage-extensions-update.png)
+![Manage Extensions](../../.gitbook/assets/zerotouchicons-manage-extensions-update.png)
 
-![Installing the .NET Upgrade Assistant](images/zerotouchicons-net-upgrade-assistant.jpg)
+![Installing the .NET Upgrade Assistant](../../.gitbook/assets/zerotouchicons-net-upgrade-assistant.jpg)
 
 2. Right-click the project in the **Solution Explorer** and select **Upgrade > Convert project to SDK-style**.
 
-![Upgrade the project](images/zerotouchicons-upgrade-project.jpg)
+![Upgrade the project](../../.gitbook/assets/zerotouchicons-upgrade-project.jpg)
 
-![Convert to SDK-style](images/zerotouchicons-convert-to-sdk-style.jpg)
+![Convert to SDK-style](../../.gitbook/assets/zerotouchicons-convert-to-sdk-style.jpg)
 
 3. Wait for the conversion to complete.
 
-![Upgrade Complete](images/zerotouchicons-upgrade-complete.jpg)
+![Upgrade Complete](../../.gitbook/assets/zerotouchicons-upgrade-complete.jpg)
 
 #### Step 6: Add an After-Build Script to Embed Resources
 
 1. Unload the project:
    * Right-click the project in the **Solution Explorer** and select **Unload Project**.
 
-![Unload the project](images/zerotouchicons-unload-project.jpg)
+![Unload the project](../../.gitbook/assets/zerotouchicons-unload-project.jpg)
 
 2. Edit the `.csproj` file:
    * Add the following `<Target>` element between `</ItemGroup>` and `</Project>`:
@@ -552,26 +550,26 @@ If your project is not already SDK-style (required for embedding resources), con
 	</Target>
 ```
 
-![Adding the After Build code](images/zerotouchicons-after-build.jpg)
+![Adding the After Build code](../../.gitbook/assets/zerotouchicons-after-build.jpg)
 
 1. Replace all instances of `ZeroTouchNodeIcons` with your project name.
 2. Reload the project:
    * Right-click the unloaded project and select **Reload Project**.
 
-![Reload the project](images/zerotouchicons-reload-project.jpg)
+![Reload the project](../../.gitbook/assets/zerotouchicons-reload-project.jpg)
 
 #### Step 7: Build and Load Your .dll into Dynamo
 
 1. Build the project:
    * After adding the After-Build script, build your project in Visual Studio.
 
-![Build Solution](images/zerotouchicons-build-solution.jpg)
+![Build Solution](../../.gitbook/assets/zerotouchicons-build-solution.jpg)
 
 2. Check for output files:
    * Ensure your `.dll` and the `.customization.dll` are in the `bin` folder.
 3. Add the `.dll` to Dynamo:
    * In Dynamo, use the Import Library button to import your .dll into Dynamo.
 
-![Import Library Button](images/zerotouchicons-icon-in-dynamo.jpg)
+![Import Library Button](../../.gitbook/assets/zerotouchicons-icon-in-dynamo.jpg)
 
 4. Your custom nodes should now appear with their respective icons.

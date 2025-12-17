@@ -6,7 +6,7 @@ Extensions are a powerful development tool in the Dynamo ecosystem. They allow f
 
 Following the SampleViewExtension example from the DynamoSamples Github repository, we will walk through the steps necessary to create a simple modeless window that displays the active nodes in the graph in real-time. A view extension requires that we create a UI for the window and bind values to a view model.
 
-![View extension window](images/dyn-viewextension.jpg)
+![View extension window](../../.gitbook/assets/dyn-viewextension.jpg)
 
 > 1. The view extension window developed following the SampleViewExtension example in the Github repository.
 
@@ -28,9 +28,9 @@ A view extension has three essential parts:
 
 Start by creating a new `Class Library` project named `SampleViewExtension`.
 
-![Creating a new class library](images/vs-new-project-viewextension-1.jpg)
+![Creating a new class library](../../.gitbook/assets/vs-new-project-viewextension-1.jpg)
 
-![Configuring a new project](images/vs-new-project-viewextension-2.jpg)
+![Configuring a new project](../../.gitbook/assets/vs-new-project-viewextension-2.jpg)
 
 > 1. Create a new project by selecting `File > New > Project`
 > 2. Select `Class Library`
@@ -39,14 +39,14 @@ Start by creating a new `Class Library` project named `SampleViewExtension`.
 
 In this project, we will need two classes. One class will implement `IViewExtension` and another that will implement `NotificationObject.` `IViewExtension` will contain all the information about how our extension will be deployed, loaded, referenced, and disposed. `NotificationObject` will provide notifications for changes in Dynamo and `IDisposable` When a change occurs the count will update accordingly.
 
-![View extension class files](images/vs-viewextension-classes.jpg)
+![View extension class files](../../.gitbook/assets/vs-viewextension-classes.jpg)
 
 > 1. A class file named `SampleViewExtension.cs` that will implement `IViewExtension`
 > 2. A class file named `SampleWindowViewMode.cs` that will implement `NotificationObject`
 
 To use `IViewExtension`, we will need the WpfUILibrary NuGet package. Installing this package will automatically install the Core, Services, and ZeroTouchLibrary packages.
 
-![View extension packages](images/vs-viewextension-packages.jpg)
+![View extension packages](../../.gitbook/assets/vs-viewextension-packages.jpg)
 
 > 1. Select the WpfUILibrary
 > 2. Select `Install` to install all dependent packages
@@ -133,7 +133,7 @@ The `SampleViewExtension` class creates a clickable menu item to open the window
 * `public class SampleViewExtension : IViewExtension` `SampleViewExtension` inherits from the `IViewExtension` interface provides everything we need to create the menu item.
 * `sampleMenuItem = new MenuItem { Header = "Show View Extension Sample Window" };` creates a MenuItem and adds it to the `View` menu.
 
-![The menu item](images/dyn-menuitem.jpg)
+![The menu item](../../.gitbook/assets/dyn-menuitem.jpg)
 
 > 1. The menu item
 
@@ -208,7 +208,7 @@ This implementation of the view model class listens to the `CurrentWorkspaceMode
 
 With the core logic of the extension defined, we will now specify the appearance details of the window with an `.xaml` file. All we need is a simple window that will display the string via the `ActiveNodeTypes` property binding in the`TextBlock` `Text`.
 
-![Adding a window](images/vs-window.jpg)
+![Adding a window](../../.gitbook/assets/vs-window.jpg)
 
 > 1. Right-click on the project and select `Add > New Item...`
 > 2. Select the User Control template which we will alter to create a window
@@ -259,7 +259,7 @@ namespace SampleViewExtension
 
 The view extension is now ready to be built and added to Dynamo. Dynamo requires an `xml` file in order to register our output `.dll` as an extension.
 
-![Adding a new XML](images/vs-viewextension-xml.jpg)
+![Adding a new XML](../../.gitbook/assets/vs-viewextension-xml.jpg)
 
 > 1. Right-click on the project and select `Add > New Item...`
 > 2. Select XML file
@@ -281,7 +281,7 @@ In the `xml` file, add the following code to tell Dynamo where to look for the e
 
 The last step is to copy the `SampleViewExtension_ViewExtensionDefinition.xml` file into Dynamo's view extensions folder located in the Dynamo Core installation directory `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions`. It is important to note that there are separate folders for `extensions` and `viewExtensions`. Placing the `xml` file in the incorrect folder may cause failure to properly load at runtime.
 
-![XML file copied to Extensions folder](images/fe-viewextension-xml.jpg)
+![XML file copied to Extensions folder](../../.gitbook/assets/fe-viewextension-xml.jpg)
 
 > 1. The `.xml` file we copied into Dynamo's view extensions folder
 

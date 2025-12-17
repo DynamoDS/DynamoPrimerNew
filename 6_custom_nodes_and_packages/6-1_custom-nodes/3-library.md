@@ -14,15 +14,15 @@ You can publish custom nodes and packages from Dynamo Sandbox in version 2.17 an
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../datasets/6-1/3/PointsToSurface.dyf" %}
+{% file src="../../.gitbook/assets/PointsToSurface (1).dyf" %}
 
 Let's move forward with the custom node that we created in the previous section. Once the PointsToSurface custom node is opened, we see the graph in the Dynamo Custom Node Editor. You can also open up a custom node by double clicking on it in the Dynamo Graph Editor.
 
-![](../images/6-1/3/publishcustomnodelocally01.jpg)
+![](<../../.gitbook/assets/publish custom node exercise - 01.jpg>)
 
 To Publish a custom node locally, simply right click on the canvas and select _"Publish This Custom Node..."_
 
-![](../images/6-1/3/publishcustomnodeexercise-02.jpg)
+![](<../../.gitbook/assets/publish custom node exercise - 02.jpg>)
 
 Fill out the relevant information similar to the image above and select _"Publish Locally"._ Note that the Group field defines the main element accessible from the Dynamo menu.
 
@@ -30,7 +30,7 @@ Fill out the relevant information similar to the image above and select _"Publis
 
 Choose a folder to house all of the custom nodes that you plan on publishing locally. Dynamo will check this folder each time it loads, so make sure the folder is in a permanent place. Navigate to this folder and choose _"Select Folder"._ Your Dynamo node is now published locally, and will remain in your Dynamo library each time you load the program!
 
-![](../images/6-1/3/publishcustomnodeexercise-04.jpg)
+![](<../../.gitbook/assets/publish custom node exercise - 04 (1).jpg>)
 
 To check on the custom node folder location, go to _Dynamo > Preferences > Package Settings > Node and Package Paths._
 
@@ -50,8 +50,8 @@ We switched the order of the path names in order to have Dynamo's default path a
 
 Navigating to this local folder, we can find the original custom node in the _".dyf"_ folder, which is the extension for a Dynamo Custom Node file. We can edit the file in this folder and the node will update in the UI. We can also add more nodes to the main _DynamoCustomNode_ folder and Dynamo will add them to your library at restart!
 
-![](../images/6-1/3/publishcustomnodeexercise-08.jpg)
+![](<../../.gitbook/assets/publish custom node exercise - 08.jpg>)
 
 Dynamo will now load each time with "PointsToSurface" in the "DynamoPrimer" group of your Dynamo library.
 
-![](../images/6-1/3/publishcustomnodeexercise-09.jpg)
+![](<../../.gitbook/assets/publish custom node exercise - 09.jpg>)

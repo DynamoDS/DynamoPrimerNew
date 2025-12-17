@@ -1,12 +1,14 @@
-# Dynamo compute service differences with Desktop Dynamo
+# Dynamo cloud compute differences with Desktop Dynamo
 
 This page highlights the differences you should be aware of when writing Dynamo programs to execute in the Dynamo compute service cloud context.
 
 ## What is DaaS?
 
-DaaS, Dynamo as a Service, Dynamo compute service, etc. all refer to the same thing: Dynamo's core runtime executing in a cloud context. This means your graph is not executing on your machine. DaaS can currently be accessed only through the Dynamo Player extension for Forma, where users can upload and manage `.dyn` files created in the desktop environment, run `.dyn` files shared by their colleagues through the extension, or use pre-loaded `.dyn` routines provided by Autodesk as samples.
+You may have seen documentation referring to DaaS, Dynamo as a Service, or Dynamo Cloud Compute. These all refer to the same thing: Dynamo's core runtime executing in a cloud context. This means your graph is not executing on your machine. DaaS can currently be accessed only through the Dynamo Player extension for Forma, where users can upload and manage `.dyn` files created in the desktop environment, run `.dyn` files shared by their colleagues through the extension, or use pre-loaded `.dyn` routines provided by Autodesk as samples.
 
 Because your graphs run in this cloud context, and not on your machine, DaaS currently cannot directly use traditional Dynamo host contexts (Revit, Civil 3D, etc.). If you want to use types from those programs in your graph, you will need to serialize (save) them into the graph using the `Data.Remember` node or other in-graph serialization techniques. These are similar to the workflows you need to use when writing graphs for Generative Design in Revit.
+
+For more information on the Dynamo compute service see the [Dynamo compute service docs](../dynamo-compute-service/README.md).
 
 ## What version of Dynamo is executing my code?
 

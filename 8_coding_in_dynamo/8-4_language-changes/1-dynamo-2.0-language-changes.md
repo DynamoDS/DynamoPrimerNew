@@ -68,7 +68,7 @@ The following is the list of changes in 2.0 explained:
 
 ## 1. Simplified list@level syntax
 
-New syntax for list@level, to use `list@L1` instead of `list@-1` ![](../images/8-4/1/lang2_1.png)
+New syntax for list@level, to use `list@L1` instead of `list@-1` ![](../../.gitbook/assets/lang2_1.png)
 
 ## 2. Overloaded functions with parameters that only differ by rank are illegal
 
@@ -85,7 +85,7 @@ BoundingBox BoundingBox.ByGeometry(geometry: Geometry) {...}
 BoundingBox BoundingBox.ByGeometry(geometry: Geometry[]) {...}
 ```
 
-If the user dropped the first node on the canvas and connected a list of geometries, he will expect replication to kick in but it would never happen because at runtime the second overload will be called instead as shown: ![](../images/8-4/1/lang2_2.png)
+If the user dropped the first node on the canvas and connected a list of geometries, he will expect replication to kick in but it would never happen because at runtime the second overload will be called instead as shown: ![](../../.gitbook/assets/lang2_2.png)
 
 In 2.0 we disallow overloaded functions which only differ in parameter cardinality for this reason. This means that for overloaded functions that have the same number and types of parameters but have one or more parameters that differ only in rank, the overload that is defined first always wins while the rest are discarded by the compiler. The main advantage of making this simplification is of simplifying method resolution logic by having a quick path to select function candidates.
 
@@ -105,7 +105,7 @@ In the following example, two overloads of function `foo` have been defined. In 
 
 In 2.0, it is always the first method that is defined that is picked over the rest. First-come-first-serve wins.
 
-![](../images/8-4/1/lang2_3.png)
+![](../../.gitbook/assets/lang2_3.png)
 
 For each of the following cases, the first overload defined will be taken. Note that it is purely based on the order of defining the functions and not on the parameter ranks although it is recommended to give preference to methods with higher ranked parameters for user defined and zero touch nodes.
 
@@ -137,7 +137,7 @@ For example, if a list input with the following types `[Arc, Line]` was passed i
 
 ### Dynamo 1.x: Tests only first element of input list for method resolution check
 
-![](../images/8-4/1/lang2_4.png)
+![](../../.gitbook/assets/lang2_4.png)
 
 ```
 x = [arc, line];
@@ -164,7 +164,7 @@ This is what happens in 2.0:
 
 This example would work previously in 1.x as the graph would compile to `point.X;` and it would find the `X` property on the point object. It now fails in 2.0 as the compiled code - `Vector.X(point)` expects only a `Vector` type:
 
-![](../images/8-4/1/lang2_5.png)
+![](../../.gitbook/assets/lang2_5.png)
 
 ### Advantages:
 
@@ -176,7 +176,7 @@ This example would work previously in 1.x as the graph would compile to `point.X
 
 ### Caveat: Unsolved ambiguities with overloaded methods
 
-Because Dynamo supports function overloads in general, it may still get confused if there is another overloaded function with the same number of parameters. For example, in the following graph if we connect a numeric value to `Curve.Extrude`'s `direction` input and a vector to `Curve.Extrude`’s `distance` input, both nodes continue to work, which is unexpected. In this case even though the nodes compile to static methods, the engine is still unable to tell the difference at runtime and picks either one depending on the input type. ![](../images/8-4/1/lang2_6.png)
+Because Dynamo supports function overloads in general, it may still get confused if there is another overloaded function with the same number of parameters. For example, in the following graph if we connect a numeric value to `Curve.Extrude`'s `direction` input and a vector to `Curve.Extrude`’s `distance` input, both nodes continue to work, which is unexpected. In this case even though the nodes compile to static methods, the engine is still unable to tell the difference at runtime and picks either one depending on the input type. ![](../../.gitbook/assets/lang2_6.png)
 
 ### Solved Issues:
 
@@ -186,11 +186,11 @@ The shift to static method semantics introduced the following side-effects which
 
 Let’s consider an example from `TSpline` nodes in `ProtoGeometry` (note that `TSplineTopology` inherits from the base `Topology` type): The `Topology.Edges` node that was previously compiled to the instance method, `object.Edges`, is now compiled to the static method, `Topology.Edges(object)`. The previous call would polymorphically resolve to the derived class method, `TsplineTopology.Edges` after a method dispatch over the runtime type of object.
 
-![](../images/8-4/1/lang2_7.png)
+![](../../.gitbook/assets/lang2_7.png)
 
 Whereas the new static behavior was forced to call the base class method, `Topology.Edges`. As a result this node returned the base class, `Edge` objects instead of the derived class objects of type `TSplineEdge`.
 
-![](../images/8-4/1/lang2_8.png)
+![](../../.gitbook/assets/lang2_8.png)
 
 This was a regression as downstream `TSpline` nodes expecting `TSplineEdges` started to fail.
 
@@ -198,13 +198,13 @@ The issue was fixed by adding a runtime check in the method dispatch logic to ch
 
 **New polymorphic behavior in 2.0:**
 
-![](../images/8-4/1/lang2_9.png)
+![](../../.gitbook/assets/lang2_9.png)
 
 In this case since the first element `a` is a `TSpline`, it is the `TSplineTopology.Edges` derived method that is invoked at runtime. As a result it returns `null` for the base `Topology` type `b`.
 
 In the second case, since the general `Topology` type `b` is the first element, the base `Topology.Edges` method is called. Since `Topology.Edges` also happens to accept the derived `TSplineTopology` type, `a` as input it returns `Edges` for both inputs, `a` and `b`.
 
-![](../images/8-4/1/lang2_10.png)
+![](../../.gitbook/assets/lang2_10.png)
 
 **2. Regressions from producing redundant outer lists**
 
@@ -248,13 +248,13 @@ p = Point.ByCoordinates(x<1>, y<2>, z<3>); // cross-lacing
 
 ### Dynamo 1.x: 3D list of points
 
-![](../images/8-4/1/lang2_11.png)
+![](../../.gitbook/assets/lang2_11.png)
 
 In 2.0, the presence of replication guides for each of the single value arguments `y` and `z` do not cause a promotion resulting in a list having the same dimension as the input 1D list for `x`.
 
 ### Dynamo 2.0: 1D list of points
 
-![](../images/8-4/1/lang2_12.png)
+![](../../.gitbook/assets/lang2_12.png)
 
 The above mentioned regression caused by static method compilation with generating redundant outer lists was also addressed by this language change.
 
@@ -268,7 +268,7 @@ produced a 3D list of points in Dynamo 1.x. This happened due to promotion of th
 
 ### Dynamo 1.x: List promotion of argument with replication guide
 
-![](../images/8-4/1/lang2_13.png)
+![](../../.gitbook/assets/lang2_13.png)
 
 In 2.0, we have disabled the promotion of single value arguments to lists when used with replication guides or lacing. So now the call to:
 
@@ -280,7 +280,7 @@ simply returns a 2D list as surface is not promoted.
 
 ### Dynamo 2.0: Disabled list promotion of single value argument with replication guide
 
-![](../images/8-4/1/lang2_14.png)
+![](../../.gitbook/assets/lang2_14.png)
 
 This change now removes the addition of a redundant list level and also solves the regression caused by the transition to static method compilation.
 
@@ -295,7 +295,7 @@ This change now removes the addition of a redundant list level and also solves t
 * Instance methods and static methods are consistent (fixes issues with static method semantics)
 * Nodes with inputs and with default arguments behave consistently (see below)
 
-![](../images/8-4/1/lang2_15.png)
+![](../../.gitbook/assets/lang2_15.png)
 
 ## 5. Variables are immutable in Code Block Nodes to prevent Associative update
 
@@ -336,7 +336,7 @@ a = 4;         // b = 10 or b = 7?
 
 In this geometry example, since the cube `b` depends on itself as well as on the cylinder, `a`, should moving the slider cause the hole to move along the block or should it create a cumulative effect of riddling several holes along its path for every slider position update?
 
-![](../images/8-4/1/lang2_16.gif)
+![](../../.gitbook/assets/lang2_16.gif)
 
 **3. Updating properties of variables:**
 
@@ -359,7 +359,7 @@ From experience we have found that associative update does not prove to be usefu
 
 If at all it has been used by some users it most likely has been used by them unknowingly causing more harm than good. We therefore decided in 2.0 to hide associativity in code block node usage by making variables immutable while we continue to retain associative update as a native feature of the DS engine only. This is another change made with the idea of simplifying the scripting experience for users.
 
-**Associative update is disabled in CBN’s by preventing variable redefinition:** ![](../images/8-4/1/lang2_17.png)
+**Associative update is disabled in CBN’s by preventing variable redefinition:** ![](../../.gitbook/assets/lang2_17.png)
 
 **List indexing still permitted in code blocks**
 
@@ -367,7 +367,7 @@ An exception has been made for list indexing and is still permitted in 2.0 with 
 
 In this next example we see that the list `a` is initialized but can later be overwritten with an index-operator assignment and that any variables dependent on `a` would update associatively as seen by the value of `c`. Also the node preview displays the updated values of `a` after the redefinition of one or more of its elements.
 
-![](../images/8-4/1/lang2_18.png)
+![](../../.gitbook/assets/lang2_18.png)
 
 ## 6. Variables in imperative blocks are local to imperative block scope
 
@@ -483,11 +483,11 @@ dict = {<key> : <value>, …};
 
 key-value pair format where only a string is allowed for `<key>`, and multiple key-value pairs are separated by commas.
 
-![](../images/8-4/1/lang2_19.png)
+![](../../.gitbook/assets/lang2_19.png)
 
 The `Dictionary.ByKeysValues` zero-touch method can be used as a more versatile way of initializing a Dictionary by passing in a list of keys and values respectively and having all the bells and whistles of using zero-touch methods like replication guides etc.
 
-![](../images/8-4/1/lang2_20.png)
+![](../../.gitbook/assets/lang2_20.png)
 
 ### Why did we not use arbitrary expressions for Dictionary initialization syntax?
 
@@ -507,21 +507,21 @@ We _could_ extend dictionary keys to support arbitrary expressions in the future
 
 **1. Zero Touch node returning a .NET Dictionary is returned as a Dynamo Dictionary**
 
-**Consider the following zero-touch C# method returning an IDictionary:** ![](../images/8-4/1/lang2_21.png)
+**Consider the following zero-touch C# method returning an IDictionary:** ![](../../.gitbook/assets/lang2_21.png)
 
-**The corresponding ZT node return value is marshaled as a Dynamo Dictionary:** ![](../images/8-4/1/lang2_22.png)
+**The corresponding ZT node return value is marshaled as a Dynamo Dictionary:** ![](../../.gitbook/assets/lang2_22.png)
 
 **2. Multi-return nodes are previewed as Dictionaries**
 
-**Zero Touch node returning IDictionary with Multi-Return Attribute returns a Dynamo Dictionary:** ![](../images/8-4/1/lang2_23.png)
+**Zero Touch node returning IDictionary with Multi-Return Attribute returns a Dynamo Dictionary:** ![](../../.gitbook/assets/lang2_23.png)
 
-![](../images/8-4/1/lang2_24.png)
+![](../../.gitbook/assets/lang2_24.png)
 
 **3. Dynamo Dictionary can be passed as input into Zero-touch node accepting .NET Dictionary**
 
-**ZT method with an IDictionary parameter:** ![](../images/8-4/1/lang2_25.png)
+**ZT method with an IDictionary parameter:** ![](../../.gitbook/assets/lang2_25.png)
 
-**ZT node accepts Dynamo Dictionary as input:** ![](../images/8-4/1/lang2_26.png)
+**ZT node accepts Dynamo Dictionary as input:** ![](../../.gitbook/assets/lang2_26.png)
 
 ### Dictionary preview in Multi-Return Nodes
 
@@ -529,4 +529,4 @@ Dictionaries are unordered key-value pairs. Consistent with this idea, the key-v
 
 We have however made an exception for Multi-Return nodes that have `MultiReturnAttribute`’s defined. In the following example, the `DateTime.Components` node is a "Multi-Return" node and the node preview reflects its key-value pairs to be in the same order as that of the output ports on the node, which is also the order that the outputs are specified based on the `MultiReturnAttribute`’s on the node definition.
 
-Note also that the previews for code blocks are not ordered unlike the UI node as the output port information (in the form of a multi-return attribute) does not exist for the code block node: ![](../images/8-4/1/lang2_27.png)
+Note also that the previews for code blocks are not ordered unlike the UI node as the output port information (in the form of a multi-return attribute) does not exist for the code block node: ![](../../.gitbook/assets/lang2_27.png)

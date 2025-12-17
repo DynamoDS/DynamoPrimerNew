@@ -111,9 +111,9 @@ vs
 
 `InPorts.Add(new PortModel(PortType.Input, this, new PortData("Port Name", "Port Description"))); //Recommended 2.0`
 
-Examples of converted code can be found here in the Dynamo Repo -> [DynamoConvert.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L142), or [FileSystem.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/Input/FileSystem.cs#L281)
+Examples of converted code can be found here in the Dynamo Repo -> [DynamoConvert.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0_master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L142), or [FileSystem.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0_master/src/Libraries/CoreNodeModels/Input/FileSystem.cs#L281)
 
-The other common use case that is affected by the 2.0 API changes relates to the methods commonly used in the `BuildAst()` method to determine node behavior based on the presence or absence of port connectors. Previously `HasConnectedInput(index)` was used to validate a connected port state. Developers should now use the `InPorts[0].IsConnected` property to check the port connection state. An example of the this con be found in [ColorRange.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/ColorRange.cs#L83) in the Dynamo Repo.
+The other common use case that is affected by the 2.0 API changes relates to the methods commonly used in the `BuildAst()` method to determine node behavior based on the presence or absence of port connectors. Previously `HasConnectedInput(index)` was used to validate a connected port state. Developers should now use the `InPorts[0].IsConnected` property to check the port connection state. An example of the this con be found in [ColorRange.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0_master/src/Libraries/CoreNodeModels/ColorRange.cs#L83) in the Dynamo Repo.
 
 ### Examples: <a href="#examples" id="examples"></a>
 

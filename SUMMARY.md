@@ -79,6 +79,8 @@
   * [Add and Share Graphs in Dynamo Player](dynamo-in-forma-beta/add-and-share-graphs-in-dynamo-player.md)
   * [Run Graphs in Dynamo Player](dynamo-in-forma-beta/run-graphs-in-dynamo-player.md)
   * [Dynamo compute service differences with Desktop Dynamo](dynamo-in-forma-beta/dynamo-compute-service-differences-with-desktop-dynamo.md)
+* [Dynamo Cloud Compute](dynamo-compute-service/README.md)
+  * [Engine Lifecycle](dynamo-compute-service/engine-lifecycle.md)
 * [Coding in Dynamo](8_coding_in_dynamo/README.md)
   * [Code Blocks and DesignScript](8_coding_in_dynamo/8-1_code-blocks-and-design-script/README.md)
     * [What's a Code Block](8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block.md)

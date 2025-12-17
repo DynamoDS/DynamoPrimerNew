@@ -13,7 +13,7 @@ For this guide we will use the following:
 
 To ensure a successful build we will clone and build both the Dynamo and DynamoRevit repositories to use in this walk-through.
 
-_Note: building Dynamo manually before DynamoRevit is only required if you are building Dynamo 1.x and DynamoRevit 1.x - newer versions of the DynamoRevit repository rely on the NuGet package manager for the Dynamo dependencies required to build. While a build of DynamoRevit 2.x does not require pulling Dynamo manually you'll still need the core `dlls` somewhere else to actually run the DynamoRevit `add-in` - so it's worth pulling and building Dynamo anyway. See more below:_ [_Building the repository using Visual Studio_](#building-the-repository-using-Visual-Studio)
+_Note: building Dynamo manually before DynamoRevit is only required if you are building Dynamo 1.x and DynamoRevit 1.x - newer versions of the DynamoRevit repository rely on the NuGet package manager for the Dynamo dependencies required to build. While a build of DynamoRevit 2.x does not require pulling Dynamo manually you'll still need the core `dlls` somewhere else to actually run the DynamoRevit `add-in` - so it's worth pulling and building Dynamo anyway. See more below:_ [_Building the repository using Visual Studio_](1-build-dynamorevit-from-source.md#building-the-repository-using-Visual-Studio)
 
 ### Locating the DynamoRevit repository on Github <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
@@ -21,7 +21,7 @@ The code for the DynamoRevit project lives in a separate repository on Github fr
 
 DynamoRevit's source is hosted here: [https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit)
 
-![DynamoRevit on GitHub](images/github-dynamorevit.jpg)
+![DynamoRevit on GitHub](../../.gitbook/assets/github-dynamorevit.jpg)
 
 > 1. Clone or download the repository
 > 2. DynamoRevit's branches reference Revit versions
@@ -34,21 +34,21 @@ In a similar process to pulling the Dynamo repository we will use the git clone 
 
 > Replace `username` with your username
 
-![Command line interface](images/cli-cd-revit.jpg)
+![Command line interface](../../.gitbook/assets/cli-cd-revit.jpg)
 
 We can now clone the repository into this directory. Though we will need to specify a branch of the repository, we can switch to this branch after cloning.
 
 `git clone https://github.com/DynamoDS/DynamoRevit.git` clones the repository from a remote URL and by default switches to the master branch.
 
-![Command line interface after cloning the repository](images/cli-clone-revit.jpg)
+![Command line interface after cloning the repository](../../.gitbook/assets/cli-clone-revit.jpg)
 
-Once the repository has finished cloning, change the current directory to the repository folder and switch to the branch that matches the installed version of Revit. For this example, we are using Revit RC2.13.1_Revit2023. All remote branches can be viewed on the Github page in the Branch drop-down menu.
+Once the repository has finished cloning, change the current directory to the repository folder and switch to the branch that matches the installed version of Revit. For this example, we are using Revit RC2.13.1\_Revit2023. All remote branches can be viewed on the Github page in the Branch drop-down menu.
 
 `cd C:\Users\username\Documents\GitHub\DynamoRevit` changes the directory to DynamoRevit.\
 `git checkout RC2.13.1_Revit2023` sets the current branch to `RC2.13.1_Revit2023`.\
 `git branch` verifies which branch we are on and shows the others that exist locally.
 
-![Directory switched to a branch](images/cli-branch-revit.jpg)
+![Directory switched to a branch](../../.gitbook/assets/cli-branch-revit.jpg)
 
 > The branch with an asterisk is the one currently checked out. The `Revit2018` branch is showing because we previously checked it out, so it exists locally.
 
@@ -58,19 +58,19 @@ It is important to choose the correct branch of the repository to ensure that wh
 
 Before building the repository, we will need to restore the NuGet packages with the `restorepackages.bat` file located in the `src` folder. This bat file uses the [NuGet](https://www.nuget.org) package manager to pull built binaries of dynamo core, which DynamoRevit needs. You might also choose to build these manually, but if you are only making changes to DynamoRevit and not Dynamo core. This makes getting started faster. Make sure to run this file as an admin.
 
-![Run as administrator](images/fe-restorepackages.jpg)
+![Run as administrator](../../.gitbook/assets/fe-restorepackages.jpg)
 
 > 1. Right-click `restorepackages.bat` and select `Run as administrator`
 
 If the packages are successfully restored, a `packages` folder will be added to the `src` folder with the latest beta NuGet packages.
 
-![The latest beta Dynamo NuGet packages](images/fe-packages.jpg)
+![The latest beta Dynamo NuGet packages](../../.gitbook/assets/fe-packages.jpg)
 
 > 1. The latest beta Dynamo NuGet packages
 
 With the packages restored, open the `DynamoRevit.All.sln` Visual Studio solution file in `src` and build the solution. The build may initially have trouble finding `AssemblySharedInfo.cs`. If so, rerunning the build will resolve this issue.
 
-![Building a solution](images/vs-build-dynamorevit.jpg)
+![Building a solution](../../.gitbook/assets/vs-build-dynamorevit.jpg)
 
 > 1. Select `Build > Build Solution`
 > 2. Verify that the build was successful in the Output window. A message should read `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`.
@@ -116,9 +116,9 @@ Alternatively, we can have the add-in load the version selector instead of a spe
 * Set the `<Assembly>...</Assembly>` file path to `DynamoRevitVersionSelector.dll`
 * `<FullClassName>...</FullClassName>` specifies what class to instantiate from the assembly which we pointed to with the assembly element path above. This class will be the entry point for our add-in.
 
-Additionally, we need to remove the existing Dynamo that ships with Revit. To do that, go to `C:\\Program Files\Autodesk\Revit 2023\AddIns ` and remove the two folders that contain **Dynamo** - `DynamoForRevit` and `DynamoPlayerForRevit`. You can either delete them or back them up in a separate folder if you need to recover the original Dynamo for Revit.
+Additionally, we need to remove the existing Dynamo that ships with Revit. To do that, go to `C:\\Program Files\Autodesk\Revit 2023\AddIns` and remove the two folders that contain **Dynamo** - `DynamoForRevit` and `DynamoPlayerForRevit`. You can either delete them or back them up in a separate folder if you need to recover the original Dynamo for Revit.
 
-![DynamoForRevit and DynamoPlayerforRevit folders](images/fe-dynamo-folders-remove.jpg)
+![DynamoForRevit and DynamoPlayerforRevit folders](../../.gitbook/assets/fe-dynamo-folders-remove.jpg)
 
 The second step is to add a file path for the Dynamo core assemblies to the `Dynamo.config` file in DynamoRevit's `bin` folder. DynamoRevit will load these when the add-in is opened in Revit. This config file lets you point your DynamoRevit add-in to different versions of the dynamo core for developing and testing changes in both core and DynamoRevit.
 
@@ -139,7 +139,7 @@ The code should look like this:
 
 Now when we open Revit, there should be a Dynamo add-in located in the Manage tab.
 
-![Dynamo add-in located in the Manage tab](images/revit-dynamo.jpg)
+![Dynamo add-in located in the Manage tab](../../.gitbook/assets/revit-dynamo.jpg)
 
 > 1. Select `Manage`
 > 2. Click the Dynamo add-in icon
@@ -160,13 +160,13 @@ In the previous section, **Build Dynamo from Source**, we briefly introduced deb
 
 The **Wall.ByCurveAndHeight** node throws an exception when given a PolyCurve as its curve input with the message: _"To BSPlineCurve Not Implemented"_. With debugging we can figure out why exactly the node won't accept this geometry type as an input for the curve parameter. For this example, we are assuming that DynamoRevit has been successfully built and can be run as an add-in for Revit.
 
-![The Wall.ByCurbeAndHeight node throwing an exception](images/dyn-wallbycurveandheight.jpg)
+![The Wall.ByCurbeAndHeight node throwing an exception](../../.gitbook/assets/dyn-wallbycurveandheight.jpg)
 
 > 1. The Wall.ByCurveAndHeight node throwing an exception
 
 Start by opening the `DynamoRevit.All.sln` solution file, start Revit, and start the DynamoRevit add-in. Then attach Visual Studio to the Revit process with the `Attach to Process` window.
 
-![Attach to Process window](images/vs-debug-attachprocess.jpg)
+![Attach to Process window](../../.gitbook/assets/vs-debug-attachprocess.jpg)
 
 > Revit and DynamoRevit need to be running to show as an available process
 >
@@ -177,31 +177,31 @@ Start by opening the `DynamoRevit.All.sln` solution file, start Revit, and start
 
 With Visual Studio attached to Revit, open the Wall.ByCurveAndHeight source code in `Wall.cs`. We can find this in the Solution Explorer under `Libraries > RevitNodes > Elements` in the `Public static constructors` region of the file. Set a break point in the constructor of the wall type so that when node is executed in Dynamo, the process will break and we can step through each line of code individually. Usually Dynamo zero touch type constructors start with `By<parameters>`.
 
-![Setting a breakpoint](images/vs-debugging-breakpoint.jpg)
+![Setting a breakpoint](../../.gitbook/assets/vs-debugging-breakpoint.jpg)
 
 > 1. The class file with the constructor for Wall.ByCurveAndHeight
 > 2. Set a breakpoint by either clicking left of the line number or right-clicking on the line of code and select `Breakpoint > Insert Breakpoint`.
 
 With the breakpoint set, we need the process to run through the Wall.ByCurveAndHeight function. The function can be executed again in Dynamo by reconnecting a wire to one of its ports, which will force the node to re-execute. The breakpoint will be hit in Visual Studio.
 
-![Breakpoint hit in Visual Studio](images/vs-breakpoint.jpg)
+![Breakpoint hit in Visual Studio](../../.gitbook/assets/vs-breakpoint.jpg)
 
 > 1. The breakpoint icon changes when it is hit
 > 2. The Call Stack window showing the method that is up next
 
 Now step over each line in the constructor until we hit the exception. Code highlighted in yellow is the next statement to be run.
 
-![Step over in Visual Studio](images/vs-stepover.jpg)
+![Step over in Visual Studio](../../.gitbook/assets/vs-stepover.jpg)
 
 > 1. The debugging tools for navigating code
 > 2. Press `Step Over` to run the highlighted code then suspend execution after the function returns
 > 3. The next statement to run indicated by the yellow highlight and arrow
 
-If we keep stepping through the function, we will hit the exception that displayed in the DynamoRevit window. Looking at the Call Stack window, we can see that the exception was originally thrown from a method called  `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve`. Thankfully the exception is handled here so Dynamo did not crash. The debugging process has provided context for the issue by bringing us to another method in the source code.
+If we keep stepping through the function, we will hit the exception that displayed in the DynamoRevit window. Looking at the Call Stack window, we can see that the exception was originally thrown from a method called `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve`. Thankfully the exception is handled here so Dynamo did not crash. The debugging process has provided context for the issue by bringing us to another method in the source code.
 
 Since this is not an open source library, we cannot make changes there - now that we have more information we can report the issue with more context by filing a github [issue](https://guides.github.com/features/issues/) or we could propose a workaround for this issue making a pull request.
 
-![Exception in Visual Studio](images/vs-exception.jpg)
+![Exception in Visual Studio](../../.gitbook/assets/vs-exception.jpg)
 
 > 1. When we hit the statement causing the exception in `Walls.cs`, the debugging process brings us as close as it could to the root of the issue in the user code inside `ProtoToRevitCurve.cs`
 > 2. The statement causing the exception in `ProtoToRevitCurve.cs`
@@ -220,7 +220,7 @@ This process is nearly identical to pulling changes for Dynamo, except that we w
 
 Origin simply points to the original url we cloned.
 
-![Setting a directory in the command line interface](images/cli-pull-revit.jpg)
+![Setting a directory in the command line interface](../../.gitbook/assets/cli-pull-revit.jpg)
 
 > We want to be mindful here of which branch we are currently on and which one we are pulling from to avoid pulling changes from `RC2.13.1_Revit2023` into `Revit2018` for example.
 

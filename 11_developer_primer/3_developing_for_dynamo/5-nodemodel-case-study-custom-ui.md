@@ -2,7 +2,7 @@
 
 NodeModel based nodes provides significantly more flexibility and power than the Zero-Touch nodes. In this example, we will take the Zero-Touch grid node to the next level by adding an integrated slider that randomizes the rectangle size.
 
-![Rectangular grid graph](images/cover-image-2.jpg)
+![Rectangular grid graph](../../.gitbook/assets/cover-image-2.jpg)
 
 > The slider scales the cells relative to their size so the user doesn't have to provide a slider with the correct range.
 
@@ -33,7 +33,7 @@ A NodeModel node can only call functions, so we need to separate the NodeModel a
 
 Create two C# class library projects in the solution: one for functions and one to implement the NodeModel interface.
 
-![Adding a new class library](images/vs-new-class-projects.jpg)
+![Adding a new class library](../../.gitbook/assets/vs-new-class-projects.jpg)
 
 > 1. Right-click on the Solution and select `Add > New Project`
 > 2. Choose Class Library
@@ -43,7 +43,7 @@ Create two C# class library projects in the solution: one for functions and one 
 
 Next, we need to rename the class libraries that were automatically created and add one to the `CustomNodeModel` project. The class `GridNodeModel` implements the abstract NodeModel class, `GridNodeView` is used to customize the view, and `GridFunction` contains any functions we need to call.
 
-![Solution explorer](images/vs-new-class.jpg)
+![Solution explorer](../../.gitbook/assets/vs-new-class.jpg)
 
 > 1. Add another class by right-clicking on the `CustomNodeModel` project, selecting `Add > New Item...` and choose `Class`.
 > 2. In the `CustomNodeModel` project, we need `GridNodeModel.cs` and `GridNodeView.cs` class
@@ -51,14 +51,14 @@ Next, we need to rename the class libraries that were automatically created and 
 
 Before we add any code to the classes, add the necessary packages for this project. `CustomNodeModel` will need ZeroTouchLibrary and WpfUILibrary, and `CustomNodeModelFunction` will only need ZeroTouchLibrary. The WpfUILibrary will be used in the UI customization we do later on, and ZeroTouchLibrary will be used for creating geometry. Packages can be added individually for projects. Since these packages have dependencies, Core and DynamoServices will be automatically installed.
 
-![Installing packages](images/vs-add-packages.jpg)
+![Installing packages](../../.gitbook/assets/vs-add-packages.jpg)
 
 > 1. Right-click on a project and select `Manage NuGet Packages`
 > 2. Install only the required packages for that project
 
 Visual Studio will copy the NuGet packages we referenced to the build directory. This can be set to false so we don't have any unnecessary files in the package.
 
-![Disabling local package copy](images/vs-disable-package-copying.jpg)
+![Disabling local package copy](../../.gitbook/assets/vs-disable-package-copying.jpg)
 
 > 1. Select Dynamo NuGet Packages
 > 2. Set `Copy Local` to false
@@ -199,7 +199,7 @@ This function class is very similar to the Zero-Touch Grid case study with one d
 
 Just as we added references for NuGet packages, `CustomNodeModel` will need to reference `CustomNodeModelFunction` to call the function.
 
-![Adding a reference](images/vs-add-project-reference.jpg)
+![Adding a reference](../../.gitbook/assets/vs-add-project-reference.jpg)
 
 > The using statement for CustomNodeModel will be inactive until we reference the function
 >
@@ -240,7 +240,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 After the structure of the project is set up, use Visual Studio's design environment to build a user control and define its parameters in an `.xaml` file. From the tool box, add a slider to `<Grid>...</Grid>`.
 
-![Adding a new slider](images/vs-usercontrol.jpg)
+![Adding a new slider](../../.gitbook/assets/vs-usercontrol.jpg)
 
 > 1. Right click on `CustomNodeModel` and select `Add > New Item`
 > 2. Select `WPF`
@@ -295,7 +295,7 @@ The `GridNodeModel.cs`, defines the slider computation logic.
 
 Before we build the project, the final step is to add a `pkg.json` file so that Dynamo can read the package.
 
-![Adding a JSON file](images/vs-pkg-json.jpg)
+![Adding a JSON file](../../.gitbook/assets/vs-pkg-json.jpg)
 
 > 1. Right-click on `CustomNodeModel` and select `Add > New Item`
 > 2. Select `Web`

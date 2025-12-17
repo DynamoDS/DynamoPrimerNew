@@ -38,29 +38,29 @@ Geometry Library (It will only be available with particular Autodesk modeling to
 
 If you unzipped the build and could not launch DynamoSandbox.exe at all, please make sure to use [7zip](https://www.7-zip.org/download.html) to unzip the build. You may also manually unblock the .zip archive _before_ extracting it - if you have permissions on your machine.
 
-![](images/a-7/dynamo-builds-1.png)
+![](../.gitbook/assets/dynamo-builds-1.png)
 
 If you are missing any of the required components, you may encounter problems using Dynamo, and certain parts of the UI may fail to load.
 
 Using the following screenshot as an example, unzipping our build on a clean Windows 10 VM without GPU, the machine is missing both required components. This is indicated in the Dynamo Console.
 
-![](images/a-7/dynamo-builds-2.png)
+![](../.gitbook/assets/dynamo-builds-2.png)
 
 **Installing DirectX**
 
 Please follow the Microsoft instructions here to check if you have DirectX installed already. If not, you can open DXSETUP.exe in our Dynamo Github Repository [here](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX). Once you see the dialog below, feel free to hit next to install DirectX to the default location.
 
-![](images/a-7/dynamo-builds-3.png)
+![](../.gitbook/assets/dynamo-builds-3.png)
 
 **Installing Microsoft Visual C++ 2015-2024 Redistributable (x64)**
 
 Please download the latest [here](https://aka.ms/vs/17/release/vc_redist.x64.exe). Then you should be able to run the installer named vc\_redist.x64.exe in your browser download location. Once you see the dialog below, feel free to click install to put this component in the default location.
 
-![](images/a-7/dynamo-builds-4.png)
+![](../.gitbook/assets/dynamo-builds-4.png)
 
 After installing both required components from the link above, re-launch DynamoSandbox.exe, you should see the following result:
 
-![](images/a-7/dynamo-builds-5.png)
+![](../.gitbook/assets/dynamo-builds-5.png)
 
 **Missing 3d graphics.**
 
@@ -72,7 +72,7 @@ In general you will likely need to force high performance GPU mode for your grap
 
 _example nvidia control panel:_
 
-![](images/a-7/dynamo-builds-6.png)
+![](../.gitbook/assets/dynamo-builds-6.png)
 
 **Installing WebView2 Runtime**
 
@@ -80,13 +80,13 @@ Right now the next Dynamo modules are using the WebView2 component: Documentatio
 
 This is the link for installing the WebView2 Runtime: [https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section)
 
-![](images/a-7/dynamo-builds-7.png)
+![](../.gitbook/assets/dynamo-builds-7.png)
 
 The ones that should be installed (just one of them) are the Evergreen Bootstrapper or the Evergreen Standalone Installer, the first one downloads a 1.50 MB installer and the second one downloads a 130 MB installer.
 
 After the Runtime is installed the next components of Dynamo should be working correctly:
 
-![](images/a-7/dynamo-builds-8.png)
+![](../.gitbook/assets/dynamo-builds-8.png)
 
 **Dynamo Excel Nodes Issues**
 
