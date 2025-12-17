@@ -4,7 +4,7 @@
 
 The purpose of this guide is to help you navigate the range of C# development possibilities for Dynamo from how to create zero-touch nodes to building extensions.
 
-![The Dynamo source on Github](../1-introduction/images/dynamogithub.jpg)
+![The Dynamo source on Github](../../.gitbook/assets/dynamogithub.jpg)
 
 > The Dynamo source on GitHub
 
@@ -40,7 +40,7 @@ The purpose of this guide is to help you navigate the range of C# development po
 
 **DesignScript Language Guide** A PDF guide to writing DesignScript
 
-[PDF](https://dynamobim.org/wp-content/uploads/forum-assets/colin-mccroneautodesk-com/07/10/Dynamo\_language\_guide\_version\_1.pdf)
+[PDF](https://dynamobim.org/wp-content/uploads/forum-assets/colin-mccroneautodesk-com/07/10/Dynamo_language_guide_version_1.pdf)
 
 #### How can I suggest changes to this guide? <a href="#how-can-i-suggest-changes-to-this-guide" id="how-can-i-suggest-changes-to-this-guide"></a>
 

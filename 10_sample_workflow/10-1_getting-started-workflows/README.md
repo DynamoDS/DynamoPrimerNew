@@ -1,5 +1,5 @@
 # Getting Started Workflows
 
-This section has simple workflows to get you started using Dynamo.&#x20;
+This section has simple workflows to get you started using Dynamo.
 
-![](../images/10-1/sampleWorkflows.gif)
+![](../../.gitbook/assets/sampleWorkflows.gif)
