@@ -208,7 +208,7 @@ Since this is not an open source library, we cannot make changes there - now tha
 > 3. In the Call Stack, we can see that the exception is coming from non-user code
 > 4. A pop-up window giving us information about the exception
 
-This process can be applied to any source files we are working with. If we are developing a library of Zero-Touch nodes for Dynamo Studio, we can open the library's source and attach a Dynamo process to debug the node library. Even if everything is functioning perfectly, debugging is a great way to explore code and find out how things are working.
+This process can be applied to any source files we are working with. If we are developing a library of Zero-Touch nodes for Dynamo, we can open the library's source and attach a Dynamo process to debug the node library. Even if everything is functioning perfectly, debugging is a great way to explore code and find out how things are working.
 
 ### Pull latest build <a href="#pull-latest-build" id="pull-latest-build"></a>
 
