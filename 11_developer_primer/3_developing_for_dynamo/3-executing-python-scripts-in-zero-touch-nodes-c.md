@@ -10,6 +10,8 @@ If you are comfortable writing scripts in Python and want more functionality out
 
 #### Python Engine <a href="#python-engine" id="python-engine"></a>
 
+PythonNet3 is now the default engine with a smoother experience if you’re migrating from CPython. All new Python nodes created in Dynamo 4.0+ start with PythonNet3.
+
 This node relies on an instance of the IronPython scripting engine. To do this, we need to reference a few additional assemblies. Follow the steps below to setup a basic template in Visual Studio:
 
 * Create a new Visual Studio class project
@@ -50,7 +52,7 @@ namespace PythonLibrary
 }
 ```
 
-The Python script is returning the variable `output`, which means we will need an `output` variable in the Python script. Use this sample script to test the node in Dynamo. If you have ever used the Python node in Dynamo the following should look familiar. For more information check out the [Python section of the primer](http://dynamoprimer.com/en/09_Custom-Nodes/9-4_Python.html).
+The Python script is returning the variable `output`, which means we will need an `output` variable in the Python script. Use this sample script to test the node in Dynamo. If you have ever used the Python node in Dynamo the following should look familiar. For more information check out the [Python section of the primer](https://primer2.dynamobim.org/8_coding_in_dynamo/8-3_python/1-python).
 
 ```
 import clr
@@ -122,3 +124,52 @@ volume = cube.Volume
 output1 = str(volume)
 output2 = str(centroid)
 ```
+
+#### PythonNet3 Known Limitaions and Workarounds<a href="#pythonnet3-known-Issues-Workarounds" id="pythonnet3-known-Issues-Workarounds"></a>
+
+The following are few known limitations and workarounds while using PythonNet3
+
+* .NET collections are not automatically converted to Python lists
+    * You must explicitly convert ```.NET``` arrays or collections using ```list(...)``` before using ```len()```, indexing or iteration.
+* Generic .NET methods may require explicit type parameters
+    * Some methods (e.g. ```GroupBy```) will fail unless you manually specify the generic types instead of relying on automatic inference.
+* Extension methods are not discoverable via ```dir()``` or auto complete
+    * Extension methods may still work when called explicitly, but they do not appear in introspection or code completion.
+* DataTable extension methods are not supported
+    * Importing ```System.Data.DataTableExtensions``` fails; these helper methods cannot be used directly.
+* Some Dynamo core methods behave differently in PythonNet3
+    * Certain functions (e.g. list flattening) may not work as expected due to stricter collection handling.
+* Python classes cannot be passed between nodes if they inherit from .NET types
+    * Classes derived from .NET types or interfaces cannot be safely transferred between Python nodes.
+* Python ```set()``` does not accept some .NET objects
+    * Objects like ```InvalidElementId``` must be filtered out or handled using .NET collections instead.
+* Frequent ```print()``` calls can cause memory growth
+    * Avoid heavy use of ```print()``` in loops or long-running scripts.
+* Dictionary interoperability between Dynamo and Python is limited
+    * Dynamo dictionaries and Python dictionaries are not fully interchangeable and may require manual conversion.
+* The method ```Marshal.GetActiveObject()``` to get the running COM instance of a specified object is no longer available
+    * Use ```BindToMoniker``` if you know the path of the file in use.
+    * Code a library in C# using the class structure ```Marshal.GetActiveObject()```
+
+#### Migrating from CPython3 to PythonNet3<a href="#migrating-from-cpython-pythonnet3" id="migrating-from-cpython-pythonnet3"></a>
+
+Dynamo will automatically migrate CPython nodes to PythonNet 3. 
+Here’s what happens:
+
+> 1. A backup copy of your original file is created automatically.
+> 2. All CPython nodes (including custom nodes that use CPython) are converted to PythonNet3. 
+> 3. A toast notification lets you know how many nodes were migrated.
+> 4. When saving, you’ll see a reminder that your Python nodes will now use PythonNet3. 
+Again, don’t worry about backward computability: For those who work in multi-version shops (e.g., Revit or Civil 3D 2025/2026), install the PythonNet3 Engine package in Dynamo 3.3–3.6 to maintain compatibility. 
+
+#### Migrating from IronPython2 to PythonNet3<a href="#migrating-from-cpython-pythonnet3" id="migrating-from-cpython-pythonnet3"></a>
+
+If your graph uses an IronPython engine, there’s no auto-migration. 
+
+If the matching IronPython package is installed, your graph runs normally. 
+If it’s missing, you’ll see a dependency warning in the Workspace References extension asking you to download the package. 
+You can continue using IronPython by reinstalling the package. But because IronPython hasn’t been updated in years and Dynamo hasn’t been actively supporting these engines in Dynamo for quite some time, we strongly recommend migrating to PythonNet3 to ensure your graphs keep working reliably going forward. While DynamoIronPython2.7 and DynamoIronPython3 will continue to remain available as packages on the Dynamo Package Manager they will no longer be maintained by the Dynamo team. 
+
+In this case, the migration option available to you is node-by-node migration utilizing the Migration Assistant available within the Python Editor.  
+
+More information on migration can be found in this [blog](https://dynamobim.org/dynamo-pythonnet3-upgrade-a-practical-guide-to-migrating-your-dynamo-graphs/)
