@@ -19,24 +19,6 @@ Extension authors may also have some potential changes to make - depending on ho
 * Do not bundle and distribute `CEFSharp` with your package if you can avoid it. This dll will also be loaded by Dynamo 2.x already. The same issue as above can occur.
 * In general avoid sharing dependencies with dynamo or revit if you need to control the version of that dependency.
 
-### Common Issues: <a href="#common-issues" id="common-issues"></a>
-
-1\) Upon opening a graph some nodes have multiple ports with the same name, but the graph looked fine when saving. This issue can have a few causes.
-
-The common root cause is because the node was created using a constructor that recreated the ports. Instead a constructor which loaded the ports should have been used. These constructors are usually marked `[JsonConstructor]` _see below for examples_
-
-![Broken JSON](../../.gitbook/assets/broken-json.jpg)
-
-This can occur because:
-
-* There was simply no matching `[JsonConstructor]`, or it was not passed the `Inports` and `Outports` from the JSON .dyn.
-* There were two versions of JSON.net loaded into the same process at the same time causing .net runtime failure so that the `[JsonConstructor]` attribute could not be used correctly to mark the constructor.
-* DynamoServices.dll with a different version than the current dynamo version has been bundled with the package and is causing the .net runtime to fail to identify the `[MultiReturn]` attribute so zero touch nodes marked with various attributes will fail to have them applied. You might find that a node returns a single dictionary output instead of multiple ports.
-
-2\) Nodes are completely missing upon loading the graph with some errors in the console.
-
-* This might occur if your deserialization failed for some reason. It's good practice to serialize only properties you need. We can use `[JsonIgnore]` on complex properties you don't need to load or save to ignore them. Properties like a `function pointer, delegate, action,` or `event` etc. These should not be serialized as they will usually fail to deserialize and cause a runtime error.
-
 ### Upgrading In Depth: <a href="#upgrading-in-depth" id="upgrading-in-depth"></a>
 
 ### Custom Nodes 1.3 - > 2.0 <a href="#custom-nodes-13----20" id="custom-nodes-13----20"></a>
