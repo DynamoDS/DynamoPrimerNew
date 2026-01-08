@@ -103,7 +103,7 @@ You may notice that after placing the objects for one lot line, selecting a diff
 
 This is Dynamo's default behavior, and it is very useful in many cases. However, you may find want to place several service connections sequentially and have Dynamo create new objects with each run instead of modifying the original ones. You can control this behavior by changing the object binding settings.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Dynamo's object binding sesttings</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Dynamo's object binding settings</p></figcaption></figure>
 
 {% hint style="info" %}
 Take a look at the [object-binding.md](../../advanced-topics/object-binding.md "mention") section for more information.
