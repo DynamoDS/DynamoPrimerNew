@@ -11,7 +11,7 @@ There are a few basic shorthand methods in the code block which, simply put, mak
 | Sequences              | ![](<../../.gitbook/assets/03 node- sequence.jpg>)       | ![](<../../.gitbook/assets/03 codeblock- sequence.jpg>)       |
 | Ranges                 | ![](<../../.gitbook/assets/04 node- range.jpg>)          | ![](<../../.gitbook/assets/04 codeblock - range.jpg>)         |
 | Get Item at Index      | ![](<../../.gitbook/assets/05 node - list get item.jpg>) | ![](<../../.gitbook/assets/05 codeblock - list get item.jpg>) |
-| Create List            | ![](<../../.gitbook/assets/06 node - list create.jpg>)   | ![](../images/8-1/3/06codeblock-listcreate.jpg)               |
+| Create List            | ![](<../../.gitbook/assets/06 node - list create.jpg>)   | ![](<../../.gitbook/assets/image (17).png>)                   |
 | Concatenate Strings    | ![](<../../.gitbook/assets/07 node - string concat.jpg>) | ![](<../../.gitbook/assets/07 codeblock - string concat.jpg>) |
 | Conditional Statements | ![](<../../.gitbook/assets/08 node - conditional.jpg>)   | ![](<../../.gitbook/assets/08 codeblock - conditional.jpg>)   |
 

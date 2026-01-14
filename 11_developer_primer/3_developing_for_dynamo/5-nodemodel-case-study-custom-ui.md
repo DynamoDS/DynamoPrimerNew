@@ -334,14 +334,14 @@ Before we build the project, the final step is to add a `pkg.json` file so that 
 *   `"node_libraries": []` the libraries associated with the package
 
     The last step is to build the solution and publish as a Dynamo package. Please see the Package Deployment chapter for how to create a local package before publishing online and how to build a package right out of Visual Studio.
-  
+
 #### Common Issues: <a href="#common-issues" id="common-issues"></a>
 
 1\) Upon opening a graph some nodes have multiple ports with the same name, but the graph looked fine when saving. This issue can have a few causes.
 
 The common root cause is because the node was created using a constructor that recreated the ports. Instead a constructor which loaded the ports should have been used. These constructors are usually marked `[JsonConstructor]` _see below for examples_
 
-![Broken JSON](images/broken-json.jpg)
+![Broken JSON](<../../.gitbook/assets/broken-json (1).jpg>)
 
 This can occur because:
 
@@ -352,4 +352,3 @@ This can occur because:
 2\) Nodes are completely missing upon loading the graph with some errors in the console.
 
 * This might occur if your deserialization failed for some reason. It's good practice to serialize only properties you need. We can use `[JsonIgnore]` on complex properties you don't need to load or save to ignore them. Properties like a `function pointer, delegate, action,` or `event` etc. These should not be serialized as they will usually fail to deserialize and cause a runtime error.
-
