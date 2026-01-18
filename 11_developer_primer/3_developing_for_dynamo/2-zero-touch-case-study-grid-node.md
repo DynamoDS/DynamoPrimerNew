@@ -22,7 +22,7 @@ Since we will be creating geometry, we need to reference the appropriate NuGet p
 ![ZeroTouchLibrary package](../../.gitbook/assets/vs-nugetpackage.jpg)
 
 > 1. Browse for the ZeroTouchLibrary package
-> 2. We will be using this node in the current build of Dynamo Studio, which is 1.3. Select the package version that matches this.
+> 2. We will be using this node in the current build of Dynamo. Select the package version that matches your Dynamo version.
 > 3. Notice that we have also renamed the class file to `Grids.cs`
 
 Next, we need to establish a namespace and class in which the RectangularGrid method will live. The node will be named in Dynamo according to the method and class names. We don't have to copy this into Visual Studio yet.

@@ -8,8 +8,8 @@ Contents:
 
 * [This Intro](13-dynamo-integration.md#dynamo-integration) High level overview of what this guide includes, and what Dynamo is all about.
 * [Dynamo Custom Entry Point](13-dynamo-integration.md#dynamo-custom-entry-point) How to create a DynamoModel and where to start.
-* [Element Binding and Trace](13-dynamo-integration.md#-element-binding-and-trace) Using Dynamo's trace mechanism to bind nodes in the graph to their results in your host.
-* [Dynamo Revit Selection Nodes](13-dynamo-integration.md#-dynamo-revit-selection-nodes) How to implement nodes that allow users to select objects or data from your host and pass them as inputs to the Dynamo graph.
+* [Element Binding and Trace](13-dynamo-integration.md#element-binding-and-trace) Using Dynamo's trace mechanism to bind nodes in the graph to their results in your host.
+* [Dynamo Revit Selection Nodes](13-dynamo-integration.md#dynamo-revit-selection-nodes-what-are-they) How to implement nodes that allow users to select objects or data from your host and pass them as inputs to the Dynamo graph.
 * [Dynamo Built-In Packages Overview](13-dynamo-integration.md#dynamo-built-in-packages-overview) What is the Dynamo Standard Library, and how to use the underlying mechanism to ship packages with your integration.
 
 **Some diction:**
@@ -637,9 +637,10 @@ Selection nodes are implemented by inheriting from the generic `SelectionBase` t
 #### DynamoCore base classes:
 
 * [https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs](https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs)
-* [NodeModel Case Study - Custom UI](11_developer_primer/3_developing_for_dynamo/5-nodemodel-case-study-custom-ui.md)
-* [Updating your Packages and Dynamo Libraries for Dynamo 2.x](11_developer_primer/3_developing_for_dynamo/6-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
-* [Updating your Packages and Dynamo Libraries for Dynamo 3.x](11_developer_primer/3_developing_for_dynamo/updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+* [NodeModel Case Study - Custom UI](5-nodemodel-case-study-custom-ui.md)
+* [Updating your Packages and Dynamo Libraries for Dynamo 2.x](6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+* [Updating your Packages and Dynamo Libraries for Dynamo 3.x](6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+* [Updating your Packages and Dynamo Libraries for Dynamo 4.x](6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
 
 #### DynamoRevit:
 
