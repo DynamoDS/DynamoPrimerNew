@@ -1,6 +1,7 @@
 # Table of contents
 
 * [About](README.md)
+* [Version Guide](VERSION_GUIDE.md)
 * [Introduction](1_introduction/README.md)
   * [What is Dynamo & How Does It Work?](1_introduction/1-what-is-dynamo.md)
   * [Primer User Guide, Dynamo Community & Platform](1_introduction/2-primer-user-guide-dynamo-community-and-platform.md)
