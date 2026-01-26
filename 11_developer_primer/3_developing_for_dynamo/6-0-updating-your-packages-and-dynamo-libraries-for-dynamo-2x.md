@@ -1,5 +1,13 @@
 # Updating your Packages and Dynamo Libraries for Dynamo 2.x
 
+{% hint style="info" %}
+**Applies to**: Dynamo 2.x (2.0 - 2.19)  
+**Target Runtime**: .NET Framework 4.8  
+**File Format**: JSON (transitioned from XML)
+
+For other versions, see: [Dynamo 3.x Migration](6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md) | [Dynamo 4.x Migration](6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
+{% endhint %}
+
 ### Introduction: <a href="#introduction" id="introduction"></a>
 
 Dynamo 2.0 is a major release and some APIs have been changed or removed. One of the largest changes that will effect node and package authors is our move to a JSON file format.

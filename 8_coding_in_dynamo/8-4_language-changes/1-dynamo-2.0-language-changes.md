@@ -1,5 +1,9 @@
 # Language Changes
 
+{% hint style="info" %}
+**Version-Specific Content**: This page documents language changes introduced in Dynamo 2.0. These changes apply to all subsequent versions (2.x, 3.x, 4.x) unless otherwise noted.
+{% endhint %}
+
 The language changes section provides an overview of the updates and modifications made to the language in Dynamo in each version. These changes can impact functionality, performance, and usage, and this guide will help users understand when and why to adapt to these updates.
 
 ## Dynamo 2.0 Language Changes

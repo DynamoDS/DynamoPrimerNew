@@ -6,6 +6,10 @@ Dynamo Hype Video
 
 ## For Dynamo v2.13 and newer
 
+{% hint style="info" %}
+**Multiple Versions Covered**: This Primer covers Dynamo versions 2.13 through 4.0+. See the [Version Guide](VERSION_GUIDE.md) to understand which content applies to your version.
+{% endhint %}
+
 ![Dynamo Logo](.gitbook/assets/dynamo_logo_dark-trim.jpg)
 
 > Dynamo is an open source visual programming platform for designers.
