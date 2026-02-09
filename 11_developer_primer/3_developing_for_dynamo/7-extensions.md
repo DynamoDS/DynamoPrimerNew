@@ -6,7 +6,7 @@ Extensions are a powerful development tool in the Dynamo ecosystem. They allow f
 
 Following the SampleViewExtension example from the DynamoSamples Github repository, we will walk through the steps necessary to create a simple modeless window that displays the active nodes in the graph in real-time. A view extension requires that we create a UI for the window and bind values to a view model.
 
-![View extension window](../../.gitbook/assets/dyn-viewextension.jpg)
+![View extension window](../../.gitbook/assets/dyn-viewextension.png)
 
 > 1. The view extension window developed following the SampleViewExtension example in the Github repository.
 

@@ -79,7 +79,7 @@ Now we can open Dynamo and import the `.dll`. With the Add feature, navigate to 
 
 If a category is created in the library called `MyCustomNode`, the .dll was imported successfully! However, Dynamo created two nodes from what we wanted to be a single node. In the next section we will explain why this happens and how Dynamo reads a .dll.
 
-![Custom nodes](../../.gitbook/assets/dyn-customnode.jpg)
+![Custom nodes](../../.gitbook/assets/dyn-customnode.png)
 
 > 1. MyCustomNode in the Dynamo Library. The Library category is determined by the `.dll` name.
 > 2. SampleFunctions.MultiplyByTwo on the canvas.
