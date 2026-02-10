@@ -1,6 +1,6 @@
 # Build DynamoRevit from Source
 
-The DynamoRevit source files are also hosted on the DynamoDS Github for developers to make contributions and build beta versions. Building DynamoRevit from source generally follows the same process as Dynamo with the exception of a few important details:
+The DynamoRevit source files are also hosted on the DynamoDS GitHub for developers to make contributions and build beta versions. Building DynamoRevit from source generally follows the same process as Dynamo with the exception of a few important details:
 
 * DynamoRevit references Dynamo assemblies, so these should be built with matching NuGet packages. For example, DynamoRevit 2.x will not load into Dynamo 1.3.
 * DynamoRevit is specific to Revit versions, for example: the DynamoRevit 2018 branch should run on Revit 2018.
@@ -15,9 +15,9 @@ To ensure a successful build we will clone and build both the Dynamo and DynamoR
 
 _Note: building Dynamo manually before DynamoRevit is only required if you are building Dynamo 1.x and DynamoRevit 1.x - newer versions of the DynamoRevit repository rely on the NuGet package manager for the Dynamo dependencies required to build. While a build of DynamoRevit 2.x does not require pulling Dynamo manually you'll still need the core `dlls` somewhere else to actually run the DynamoRevit `add-in` - so it's worth pulling and building Dynamo anyway. See more below:_ [_Building the repository using Visual Studio_](1-build-dynamorevit-from-source.md#building-the-repository-using-Visual-Studio)
 
-### Locating the DynamoRevit repository on Github <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
+### Locating the DynamoRevit repository on GitHub <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
-The code for the DynamoRevit project lives in a separate repository on Github from the core Dynamo source code. This repo contains the the source files for Revit-specific nodes and the Revit add-in which loads Dynamo. Builds of DynamoRevit for different versions of Revit (2016, 2017, or 2018, for example) are organized as branches in the repository.
+The code for the DynamoRevit project lives in a separate repository on GitHub from the core Dynamo source code. This repo contains the the source files for Revit-specific nodes and the Revit add-in which loads Dynamo. Builds of DynamoRevit for different versions of Revit (2016, 2017, or 2018, for example) are organized as branches in the repository.
 
 DynamoRevit's source is hosted here: [https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit)
 
@@ -42,7 +42,7 @@ We can now clone the repository into this directory. Though we will need to spec
 
 ![Command line interface after cloning the repository](../../.gitbook/assets/cli-clone-revit.jpg)
 
-Once the repository has finished cloning, change the current directory to the repository folder and switch to the branch that matches the installed version of Revit. For this example, we are using Revit RC2.13.1\_Revit2023. All remote branches can be viewed on the Github page in the Branch drop-down menu.
+Once the repository has finished cloning, change the current directory to the repository folder and switch to the branch that matches the installed version of Revit. For this example, we are using Revit RC2.13.1\_Revit2023. All remote branches can be viewed on the GitHub page in the Branch drop-down menu.
 
 `cd C:\Users\username\Documents\GitHub\DynamoRevit` changes the directory to DynamoRevit.\
 `git checkout RC2.13.1_Revit2023` sets the current branch to `RC2.13.1_Revit2023`.\
@@ -199,7 +199,7 @@ Now step over each line in the constructor until we hit the exception. Code high
 
 If we keep stepping through the function, we will hit the exception that displayed in the DynamoRevit window. Looking at the Call Stack window, we can see that the exception was originally thrown from a method called `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve`. Thankfully the exception is handled here so Dynamo did not crash. The debugging process has provided context for the issue by bringing us to another method in the source code.
 
-Since this is not an open source library, we cannot make changes there - now that we have more information we can report the issue with more context by filing a github [issue](https://guides.github.com/features/issues/) or we could propose a workaround for this issue making a pull request.
+Since this is not an open source library, we cannot make changes there - now that we have more information we can report the issue with more context by filing a GitHub [issue](https://guides.github.com/features/issues/) or we could propose a workaround for this issue making a pull request.
 
 ![Exception in Visual Studio](../../.gitbook/assets/vs-exception.jpg)
 

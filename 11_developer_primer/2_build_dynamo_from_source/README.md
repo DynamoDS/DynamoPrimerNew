@@ -1,12 +1,12 @@
 # Build Dynamo from Source
 
-Dynamo's source is hosted on Github for anyone to clone and make contributions to. In this chapter, we will walk through how to clone the repository using git, compile the source files with Visual Studio, run and debug a local build, and pull any new changes from Github.
+Dynamo's source is hosted on GitHub for anyone to clone and make contributions to. In this chapter, we will walk through how to clone the repository using git, compile the source files with Visual Studio, run and debug a local build, and pull any new changes from GitHub.
 
-### Locating the Dynamo repositories on Github <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
+### Locating the Dynamo repositories on GitHub <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
-Github is a hosting service based on [git](https://help.github.com/articles/git-and-github-learning-resources/), a version control system for tracking changes and coordinating work between people. Git is a tool we can leverage to download Dynamo's source files, and keep them updated with a few commands. Using this method will avoid the unnecessary and inherently messy work of downloading and manually replacing the source files at every update. The git version control system will track any differences between a local and remote code repository.
+GitHub is a hosting service based on [git](https://help.github.com/articles/git-and-github-learning-resources/), a version control system for tracking changes and coordinating work between people. Git is a tool we can leverage to download Dynamo's source files, and keep them updated with a few commands. Using this method will avoid the unnecessary and inherently messy work of downloading and manually replacing the source files at every update. The git version control system will track any differences between a local and remote code repository.
 
-Dynamo's source is hosted on the DynamoDS Github in this repository: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
+Dynamo's source is hosted on the DynamoDS GitHub in this repository: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
 ![The Dynamo source files](../../.gitbook/assets/github.jpg)
 
@@ -28,7 +28,7 @@ We need a URL for the Dynamo repository to clone from. This can be found in the 
 > 1. Select "Clone or download"
 > 2. Copy the URL
 
-With git installed, we can clone the Dynamo repository. Start by opening command prompt. Then use the change directory command `cd` to navigate to the folder where we want the source files to be cloned to. In this case, we have created a folder called `Github` in `Documents`.
+With git installed, we can clone the Dynamo repository. Start by opening command prompt. Then use the change directory command `cd` to navigate to the folder where we want the source files to be cloned to. In this case, we have created a folder called `GitHub` in `Documents`.
 
 `cd C:\Users\username\Documents\GitHub`
 
@@ -36,13 +36,13 @@ With git installed, we can clone the Dynamo repository. Start by opening command
 
 ![Command prompt](../../.gitbook/assets/cli-1.jpg)
 
-In the next step we will run a git command to clone the Dynamo repository to the location we specified. The URL in the command is obtained by clicking on the "Clone or Download" button on Github. Run this command in the command terminal. Note that this will clone the Dynamo repo master branch which is most updated code for Dynamo, and will contain to the latest version of Dynamo code. This branch changes daily.
+In the next step we will run a git command to clone the Dynamo repository to the location we specified. The URL in the command is obtained by clicking on the "Clone or Download" button on GitHub. Run this command in the command terminal. Note that this will clone the Dynamo repo master branch which is most updated code for Dynamo, and will contain to the latest version of Dynamo code. This branch changes daily.
 
 `git clone https://github.com/DynamoDS/Dynamo.git`
 
 ![Results of Git clone operation](../../.gitbook/assets/cli-2.jpg)
 
-We know git is working if the cloning operation completed successfully. In the file explorer, navigate to the directory where you cloned to see the source files. the directory structure should look identical to the Dynamo repository's master branch on Github.
+We know git is working if the cloning operation completed successfully. In the file explorer, navigate to the directory where you cloned to see the source files. the directory structure should look identical to the Dynamo repository's master branch on GitHub.
 
 ![Dynamo's source files](../../.gitbook/assets/source-files.jpg)
 
@@ -155,7 +155,7 @@ In the next section, **Build DynamoRevit from Source,** we will walk through a s
 
 ### Pulling latest build <a href="#pulling-latest-build" id="pulling-latest-build"></a>
 
-Since the Dynamo source is hosted on Github, the easiest way to keep local source files updated is by pulling changes using git commands.
+Since the Dynamo source is hosted on GitHub, the easiest way to keep local source files updated is by pulling changes using git commands.
 
 Using the command line, set the current directory to the Dynamo repository:
 
@@ -173,7 +173,7 @@ Use the following command to pull the latest changes:
 
 In addition to pulling updates, there are four more git workflows to be familiar with.
 
-* **Fork** the Dynamo repository to create a copy separate from the original. Any changes made here will not affect the original repository and updates can be fetched from or submitted with pull requests. Fork is not a git command, but is a workflow that github adds - the fork, pull request model is one of the most common workflows for contributing to open source projects online. It is worth learning if you want to contribute to Dynamo.
+* **Fork** the Dynamo repository to create a copy separate from the original. Any changes made here will not affect the original repository and updates can be fetched from or submitted with pull requests. Fork is not a git command, but is a workflow that GitHub adds - the fork, pull request model is one of the most common workflows for contributing to open source projects online. It is worth learning if you want to contribute to Dynamo.
 * **Branch** - work on experiments or new features isolated from other work in branches. This makes sending pull requests easier.
 * Make **commits** often, after completing a unit of work, and after a change that may want to be undone. A commit records changes to the repository and will be visible when making a pull request to the main Dynamo repository.
 * Create **pull requests** when changes are ready to be officially proposed to the main Dynamo repository.

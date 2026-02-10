@@ -1,6 +1,6 @@
 # Going Further with Zero-Touch
 
-With an understanding of how to create a Zero-Touch project, we can go deeper into the specifics of creating a node by walking through the ZeroTouchEssentials example on the Dynamo Github.
+With an understanding of how to create a Zero-Touch project, we can go deeper into the specifics of creating a node by walking through the ZeroTouchEssentials example on the Dynamo GitHub.
 
 ![Zero-touch nodes](../../.gitbook/assets/ootbzerotouch.png)
 

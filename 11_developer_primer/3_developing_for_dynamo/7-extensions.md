@@ -4,11 +4,11 @@ Extensions are a powerful development tool in the Dynamo ecosystem. They allow f
 
 #### Extension Case Study <a href="#extension-case-study" id="extension-case-study"></a>
 
-Following the SampleViewExtension example from the DynamoSamples Github repository, we will walk through the steps necessary to create a simple modeless window that displays the active nodes in the graph in real-time. A view extension requires that we create a UI for the window and bind values to a view model.
+Following the SampleViewExtension example from the DynamoSamples GitHub repository, we will walk through the steps necessary to create a simple modeless window that displays the active nodes in the graph in real-time. A view extension requires that we create a UI for the window and bind values to a view model.
 
 ![View extension window](../../.gitbook/assets/dyn-viewextension.png)
 
-> 1. The view extension window developed following the SampleViewExtension example in the Github repository.
+> 1. The view extension window developed following the SampleViewExtension example in the GitHub repository.
 
 Though we will build the example from the ground up, you can also download and build the DynamoSamples repository to serve as a reference.
 
@@ -285,8 +285,8 @@ The last step is to copy the `SampleViewExtension_ViewExtensionDefinition.xml` f
 
 > 1. The `.xml` file we copied into Dynamo's view extensions folder
 
-This is a basic introduction to view extensions. For a more sophisticated case study see the DynaShape package, an open source project on Github. The package uses a view extension that enables live editing in the Dynamo model view.
+This is a basic introduction to view extensions. For a more sophisticated case study see the DynaShape package, an open source project on GitHub. The package uses a view extension that enables live editing in the Dynamo model view.
 
 A package installer for DynaShape can be downloaded from the Dynamo Forum: [https://forum.dynamobim.com/t/dynashape-published/11666](https://forum.dynamobim.com/t/dynashape-published/11666)
 
-The source code can be cloned from Github: [https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape)
+The source code can be cloned from GitHub: [https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape)

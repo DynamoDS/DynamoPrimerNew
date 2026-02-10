@@ -91,7 +91,7 @@ With this method we can:
 
 Since Dynamo is being regularly updated, changes might be made to part of the API that a package uses. Tracking these changes is important to ensure that existing packages continue to work properly.
 
-API changes are tracked on the [Dynamo Github Wiki](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). This covers changes to DynamoCore, Libraries, and Workspaces.
+API changes are tracked on the [Dynamo GitHub Wiki](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). This covers changes to DynamoCore, Libraries, and Workspaces.
 
 ![Dynamo API changes document](../../.gitbook/assets/api-changes.png)
 

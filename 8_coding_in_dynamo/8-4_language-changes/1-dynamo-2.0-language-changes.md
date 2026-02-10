@@ -36,7 +36,7 @@ The language changes section provides an overview of the updates and modificatio
 
 Known issues:
 
-* Namespace conflicts in Imperative Blocks cause unexpected input ports to appear. See the [Github issue](https://github.com/DynamoDS/Dynamo/issues/8796) for more info. To get around this, define the function outside of the Imperative Block like this:
+* Namespace conflicts in Imperative Blocks cause unexpected input ports to appear. See the [GitHub issue](https://github.com/DynamoDS/Dynamo/issues/8796) for more info. To get around this, define the function outside of the Imperative Block like this:
 
 ```
 pnt = Autodesk.Point.ByCoordinates;
