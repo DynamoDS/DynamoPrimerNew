@@ -91,9 +91,9 @@ With this method we can:
 
 Since Dynamo is being regularly updated, changes might be made to part of the API that a package uses. Tracking these changes is important to ensure that existing packages continue to work properly.
 
-API changes are tracked on the [Dynamo Github Wiki](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). This covers changes to DynamoCore, Libraries, and Workspaces.
+API changes are tracked on the [Dynamo GitHub Wiki](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). This covers changes to DynamoCore, Libraries, and Workspaces.
 
-![Dynamo API changes document](../../.gitbook/assets/api-changes.jpg)
+![Dynamo API changes document](../../.gitbook/assets/api-changes.png)
 
 An example of an upcoming, significant change is the transition from XML to JSON file format in version 2.0. NodeModel derived nodes will now need a [JSON constructor](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node) otherwise they won't open in Dynamo 2.0.
 

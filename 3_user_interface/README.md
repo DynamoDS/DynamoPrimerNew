@@ -4,7 +4,7 @@
 
 The User Interface (UI) for Dynamo is organized into five main regions. We will briefly cover the overview here and further explain the Workspace and Library in the following sections.
 
-![](<../.gitbook/assets/user interface - ui.jpg>)
+![](<../.gitbook/assets/user interface - ui.png>)
 
 > 1. Menus
 > 2. Toolbar
@@ -49,11 +49,11 @@ If you're stuck, check out the **Help** Menu. You may access one of the Dynamo r
 Dynamo's Toolbar contains a series of buttons for quick access to working with files as well as Undo \[Ctrl + Z] and Redo \[Ctrl + Y] commands. On the far right is another button that will export a snapshot of the workspace, which is extremely useful for documentation and sharing.
 
 * ![](<../.gitbook/assets/user interface - new file.jpg>) New - Create a new .dyn file
-* ![](<../.gitbook/assets/user interface - open (1).jpg>) Open - Open an existing .dyn (workspace) or .dyf (custom node) file
-* ![](<../.gitbook/assets/user interface - save.jpg>) Save/Save As - Save your active .dyn or .dyf file
+* ![](<../.gitbook/assets/user interface - open (1).png>) Open - Open an existing .dyn (workspace) or .dyf (custom node) file
+* ![](<../.gitbook/assets/user interface - save.png>) Save/Save As - Save your active .dyn or .dyf file
 * ![](<../.gitbook/assets/user interface - undo.jpg>) Undo - Undo your last action
 * ![](<../.gitbook/assets/user interface - redo.jpg>) Redo - Redo the next action
-* ![](<../.gitbook/assets/user interface - screenshot.jpg>) Export Workspace as Image - Export the visible workspace as a PNG file
+* ![](<../.gitbook/assets/user interface - screenshot.png>) Export Workspace as Image - Export the visible workspace as a PNG file
 
 ### Library
 

@@ -45,7 +45,7 @@ In the Dynamo Library, we have a _DynamoUnfold_ Group with multiple categories a
 Now, let's take a look at the package's file structure.
 
 1. First, go to Packages > Package Manager > Installed Packages.
-2. Next to DynamoUnfold, select the options menu <img src="../../.gitbook/assets/package introduction - vertical dots menu.jpg" alt="" data-size="line">.
+2. Next to DynamoUnfold, select the options menu <img src="../../.gitbook/assets/package introduction - vertical dots menu.png" alt="" data-size="line">.
 3. Then, click Show Root Directory to open the root folder for this package.
 
 <figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
@@ -87,7 +87,7 @@ Another way to discover Dynamo packages is to explore the [Dynamo Package Manage
 
 If you would like to see where your package files are kept, in the top navigation click on Dynamo > Preferences > Package Settings > Node and Package File Locations, you can find your current root folder directory from here.
 
-![](<../../.gitbook/assets/package introduction - installing package folder 08.jpg>)
+![](<../../.gitbook/assets/package introduction - installing package folder 08.png>)
 
 By default, packages are installed in a location similar to this folder path: _C:/Users/\[username]/AppData/Roaming/Dynamo/\[Dynamo Version]_.
 

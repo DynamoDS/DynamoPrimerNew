@@ -4,7 +4,7 @@
 
 The Dynamo Workspace consists of four main elements.
 
-![](<../.gitbook/assets/workspace - ui.jpg>)
+![](<../.gitbook/assets/workspace - ui.png>)
 
 > 1. All Active Tabs.
 > 2. Preview Mode
@@ -15,11 +15,11 @@ The Dynamo Workspace consists of four main elements.
 
 When you open a new file, a new Home Workspace will be opened by default.
 
-![](<../.gitbook/assets/workspace - home tab.jpg>)
+![](<../.gitbook/assets/workspace - home tab.png>)
 
 You may create a Custom Node and open it in a Custom Node Workspace.
 
-![](<../.gitbook/assets/workspace - custom node tab.jpg>)
+![](<../.gitbook/assets/workspace - custom node tab.png>)
 
 {% hint style="info" %}
 Only one Home Workspace is allowed in each Dynamo window but you may have multiple Custom Node Workspaces opened in tabs.

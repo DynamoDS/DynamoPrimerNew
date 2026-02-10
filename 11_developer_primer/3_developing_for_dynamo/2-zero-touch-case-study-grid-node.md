@@ -90,7 +90,7 @@ If the project looks similar to this, go ahead and try to build the `.dll`.
 
 Check the project's `bin` folder for a `.dll`. If the build was successful, we can add the `.dll` to Dynamo.
 
-![Custom nodes in Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
+![Custom nodes in Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.png)
 
 > 1. The custom RectangularGrids node in the Dynamo Library
 > 2. The custom node on the canvas

@@ -12,7 +12,7 @@ In the browser, search for packages and view statistics: [https://dynamopackages
 
 * In Dynamo, the Package Manager includes install, publish, and update packages.
 
-![Searching for packages](../../.gitbook/assets/dynamopackagemanager.jpg)
+![Searching for packages](../../.gitbook/assets/dynamopackagemanager.png)
 
 > 1. Search for packages online: `Packages > Search for a Package...`
 > 2. View/edit installed packages: `Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Packages are published from Package Manager within Dynamo. The recommended proce
 
 Start Dynamo and select `Packages > Publish New Package...` to open the `Publish a Package` window.
 
-![Publishing a package](../../.gitbook/assets/dyn-publish-package-add-files.jpg)
+![Publishing a package](../../.gitbook/assets/dyn-publish-package-add-files.png)
 
 > 1. Select `Add file...` to browse for files to add to the package
 > 2. Select the two `.dll` files from the NodeModel Case Study
@@ -32,7 +32,7 @@ Start Dynamo and select `Packages > Publish New Package...` to open the `Publish
 
 With the files added to the package contents, give the package a name, description, and version. Publishing a package using Dynamo automatically creates a `pkg.json` file.
 
-![Package settings](../../.gitbook/assets/dyn-publish-package.jpg)
+![Package settings](../../.gitbook/assets/dyn-publish-package.png)
 
 > A package ready to be published.
 >

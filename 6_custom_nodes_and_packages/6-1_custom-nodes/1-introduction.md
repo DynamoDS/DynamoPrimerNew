@@ -22,7 +22,7 @@ Let's jump into the custom node environment and make a simple node to calculate 
 
 To create a Custom Node from scratch, Launch Dynamo and select Custom Node, or type Ctrl + Shift + N from the canvas.
 
-![](<../../.gitbook/assets/custom node intro - custom node environment 01.jpg>)
+![](<../../.gitbook/assets/custom node intro - custom node environment 01.png>)
 
 Assign a name, description, and category in the Custom Node Properties dialog.
 
