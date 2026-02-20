@@ -6,7 +6,7 @@
 
 가장 간단한 기하학적 변환은 x, y, z 방향으로 지정된 단위 수만큼 객체를 이동하는 전환입니다.
 
-![](../images/8-2/5/Transformations\_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -22,7 +22,7 @@ p2 = p.Translate(10, -20, 50);
 
 Dynamo의 모든 객체는 _.Translate_ 메서드를 객체 이름의 끝에 추가하여 변환할 수 있지만, 좀 더 복잡한 변환은 기본 CoordinateSystem에서 새 CoordinateSystem으로 객체를 변환해야 합니다. 예를 들어 객체를 x축을 중심으로 45도 회전하려면 객체를 회전 없는 기존 CoordinateSystem에서 _.Transform_ 메서드를 사용하여 x축을 중심으로 45도 회전한 CoordinateSystem으로 변환해야 합니다.
 
-![](../images/8-2/5/Transformations\_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -42,7 +42,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 CoordinateSystem은 변환 및 회전뿐 아니라 축척 또는 전단이 조정되어 작성될 수도 있습니다. CoordinateSystem은 다음과 같이 _.Scale_ 메서드로 축척할 수 있습니다.
 
-![](../images/8-2/5/Transformations\_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -58,7 +58,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 전단된 CoordinateSystem은 직교하지 않는 벡터를 CoordinateSystem 생성자에 입력하여 작성합니다.
 
-![](../images/8-2/5/Transformations\_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(

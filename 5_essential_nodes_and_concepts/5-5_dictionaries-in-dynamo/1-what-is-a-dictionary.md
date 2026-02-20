@@ -20,11 +20,9 @@ Dynamo 2.0에서는 사전 데이터 유형을 리스트 데이터 유형과 분
   * 사전은 구문 `{key:value}`를 사용합니다.
   * 리스트는 구문 `[value,value,value]`를 사용합니다.
 * 사전을 작성, 수정 및 조회할 수 있도록 _새 노드_가 라이브러리에 추가되었습니다.
-*   v1.x 코드 블록에서 작성된 리스트는 스크립트를 로드할 때 중괄호 `{ }` 대신 대괄호 `[ ]`를 사용하는 새 리스트 구문으로 자동으로 마이그레이션됩니다. \\
+* v1.x 코드 블록에서 작성된 리스트는 스크립트를 로드할 때 중괄호 `{ }` 대신 대괄호 `[ ]`를 사용하는 새 리스트 구문으로 자동으로 마이그레이션됩니다. \\
 
-    ***
-
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
+\![](<../../.gitbook/assets/what is a dictionary - what are the changes (1) (4).jpg>)
 
 ***
 
@@ -34,7 +32,7 @@ Dynamo 2.0에서는 사전 데이터 유형을 리스트 데이터 유형과 분
 
 아래 이미지는 사전의 잠재적인 사용 사례를 보여줍니다. 사전은 직접적인 상관 관계가 없을 수도 있는 두 가지 데이터 조각을 연관 짓는 데 사용되는 경우가 많습니다. 여기에서는 나중에 조회할 수 있도록 스페인어 버전 단어를 영어 버전에 연결합니다.
 
-![](../images/5-5/1/whatisadictionary-whatwouldyouusethesefor.jpg)
+\![](<../../.gitbook/assets/what is a dictionary - what would you use these for.jpg>)
 
 > 1. 두 가지 데이터 요소를 연결할 사전을 작성합니다.
 > 2. 지정된 키를 사용하여 값을 가져옵니다.

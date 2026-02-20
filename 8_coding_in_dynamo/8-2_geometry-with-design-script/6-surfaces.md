@@ -6,7 +6,7 @@ NurbsCurve의 2D 아날로그는 NurbsSurface입니다. 자유형 NurbsCurve와 
 
 보간된 표면을 작성하려면 표면의 모양을 대략적으로 나타내는 2D 점 모음을 생성하기만 하면 됩니다. 이 모음은 톱니 모양이 아닌 직사각형이어야 합니다. _NurbsSurface.ByPoints_ 메서드는 이러한 점에서 표면을 생성합니다.
 
-![](../images/8-2/6/Surfaces\_01.png)
+![](../../.gitbook/assets/Surfaces_01.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -19,7 +19,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 
 표면의 기본 제어점을 지정하여 자유형 NurbsSurface를 작성할 수도 있습니다. NurbsCurve와 마찬가지로, 제어점은 표면의 차수에 따라 최종 표면 형태로 완화되는 직선 세그먼트로 사각형 메쉬를 나타내는 것으로 간주할 수 있습니다. 제어점으로 NurbsSurface를 작성하려면 표면의 양방향에서 기본 곡선의 각도를 나타내는 두 개의 추가 매개변수를 _NurbsSurface.ByPoints_에 포함합니다.
 
-![](../images/8-2/6/Surfaces\_02.png)
+![](../../.gitbook/assets/Surfaces_02.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -31,7 +31,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 
 다음과 같이 NurbsSurface의 각도를 늘려 결과 표면 형상을 변경할 수 있습니다.
 
-![](../images/8-2/6/Surfaces\_03.png)
+![](../../.gitbook/assets/Surfaces_03.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -45,7 +45,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 
 입력 점 세트 간을 보간하여 표면을 작성할 수 있는 것처럼 기준 곡선 세트 간에 보간하여 표면을 작성할 수 있는데, 이를 로프트라고 합니다. 로프트된 곡선은 입력 곡선의 모음을 유일한 매개변수로 사용하여 _Surface.ByLoft_ 생성자를 통해 작성됩니다.
 
-![](../images/8-2/6/Surfaces\_04.png)
+![](../../.gitbook/assets/Surfaces_04.png)
 
 ```js
 // python_points_2, 3, and 4 are generated with
@@ -64,7 +64,7 @@ loft = Surface.ByLoft([c1, c2, c3]);
 
 회전 표면은 기준 곡선(표면의 "모서리"를 나타냄), 축 원점(표면의 기준점), 축 방향(중심 "코어" 방향), 스윕 시작 각도와 끝 각도에 의해 지정됩니다. 이러한 항목은 _Surface.Revolve_ 생성자의 입력으로 사용됩니다.
 
-![](../images/8-2/6/Surfaces\_05.png)
+![](../../.gitbook/assets/Surfaces_05.png)
 
 ```js
 pts = {};

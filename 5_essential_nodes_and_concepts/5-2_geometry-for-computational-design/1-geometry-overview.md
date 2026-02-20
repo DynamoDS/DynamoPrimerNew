@@ -6,11 +6,11 @@
 
 형상 유형과 [형상 유형이 어떻게 관련되어 있는지](1-geometry-overview.md#stepping-through-the-hierarchy)를 잘 이해하면 라이브러리에서 사용할 수 있는 **Geometry 노드** 모음을 탐색할 수 있습니다. Geometry 노드는 계층이 아닌 알파벳순으로 정리되어 있습니다. 여기서는 Dynamo 인터페이스 내 배치와 유사하게 표시됩니다.
 
-![](../images/5-2/1/geometryoverview-geometryindynamo.jpg)
+\![](<../../.gitbook/assets/geometry overview - geometry in dynamo.jpg>)
 
 또한 Dynamo에서 모델을 만들고 배경 미리보기에 표시되는 항목의 미리보기를 그래프의 데이터 흐름에 연결하는 작업은 시간이 갈수록 점점 더 간단해집니다.
 
-![](../images/5-2/1/GeometryforComputationalDesign-Overview.jpg)
+\![](<../../.gitbook/assets/Geometry for Computational Design - Overview.jpg>)
 
 > 1. 가정된 좌표계는 그리드 및 색상 축으로 렌더링됩니다.
 > 2. 선택된 노드에서는 해당하는 형상(노드에서 형상을 작성하는 경우)을 강조 표시 색상으로 배경에 렌더링합니다.
@@ -19,13 +19,13 @@
 >
 > 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
-{% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Geometry Overview.dyn" %}
 
 ## 형상 개념
 
 일반적으로 정의된 형상은 그림의 모양, 크기, 상대 위치 및 공간 특성을 연구한 것입니다. 이 분야에는 수천 년의 유구한 역사가 있습니다. 컴퓨터의 출현과 대중화를 통해 우리는 형상을 정의하고 탐색하고 생성하는 강력한 도구를 얻었습니다. 이제 복잡한 기하학적 상호 작용의 결과를 계산하는 작업이 매우 쉬워졌기에 우리가 실제로 그렇게 하고 있다는 사실은 거의 분명합니다.
 
-![Stanford Bunny](../images/5-2/1/StanfordBunny.jpg)
+![Stanford Bunny](../../.gitbook/assets/StanfordBunny.jpg)
 
 > 컴퓨터의 성능을 통해 얼마나 다양하고 복잡한 형상을 얻을 수 있는지 궁금하다면 알고리즘을 테스트하는 데 사용되는 표준 모델인 Stanford Bunny를 웹에서 빠르게 검색해 보십시오.
 
@@ -42,7 +42,7 @@
 
 잠시 형상에 대한 추상적 설명 및 계층적 설명 간의 관계를 살펴보겠습니다. 이러한 두 가지 개념은 서로 관련되어 있지만 처음에는 명확하게 드러나지 않을 수 있으므로 좀 더 심층적인 워크플로우 또는 모델 개발을 시작하면 개념적 장애물에 빠르게 도달할 수 있습니다. 초보자인 경우 차원을 통해 우리가 모델링하는 "대상"을 쉽게 파악해 보십시오. 모양을 나타내는 데 필요한 차원을 통해 형상이 계층적으로 구성된 방식을 이해할 수 있습니다.
 
-![계산 형상](../images/5-2/1/GeometryDimensionality.jpg)
+\![계산 형상](<../../.gitbook/assets/Geometry for - GeometryDimensionality.jpg>)
 
 > 1. **점**(좌표로 정의됨)에는 차원이 없습니다. 이는 각 좌표를 나타내는 숫자일 뿐입니다.
 > 2. **선**(두 점으로 정의됨)은 _1_ 차원입니다. 선을 따라 앞으로(양의 방향) 또는 뒤로(음의 방향) "걸어갈 수 있습니다".
@@ -51,7 +51,7 @@
 
 차원은 형상 분류를 시작하는 편리한 방법이지만 가장 좋은 방법은 아닙니다. 결국 점, 선, 평면 및 상자만으로 모델링하지는 않게 됩니다. 곡선이 필요할 수도 있으니까요. 또한 완전히 추상화된 형상 유형의 완전히 다른 카테고리가 있습니다. 이에 따라 방향, 체적 또는 부분 간의 관계와 같은 특성이 정의됩니다. 실제로는 벡터를 적용할 수 없으므로 공간에 표시되는 대상과 비교해서 정의하려면 어떻게 해야 할까요? 기하학적 계층을 더 상세하게 분류하면 추상 유형과 "도우미" 간의 차이점이 적용됩니다. 이는 각각 지원하는 항목 및 모델 요소의 모양을 그리는 데 도움이 되는 유형별로 그룹화할 수 있습니다.
 
-![형상 계층](../images/5-2/1/GeometryHierarchy.jpg)
+![형상 계층](../../.gitbook/assets/GeometryHierarchy.jpg)
 
 ## 형상에 대해 자세히 알아보기
 

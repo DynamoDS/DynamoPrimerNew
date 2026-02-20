@@ -2,7 +2,7 @@
 
 Dynamo는 다양한 기능을 기본적으로 제공하고, Dynamo의 기능을 크게 확장할 수 있는 광범위한 패키지 라이브러리도 유지합니다. 패키지는 사용자 노드 또는 추가 기능의 모음입니다. Dynamo Package Manager는 커뮤니티가 온라인으로 게시된 패키지를 다운로드할 수 있는 포털입니다. 이러한 도구 세트는 Dynamo의 핵심 기능을 확장하고, 누구나 액세스할 수 있으며, 버튼 클릭으로 즉시 다운로드할 수 있도록 타사에서 개발되었습니다.
 
-![Package Manager 사이트](../images/6-2/1/dpm.jpg)
+![Package Manager 사이트](../../.gitbook/assets/dpm.jpg)
 
 Dynamo와 같은 오픈 소스 프로젝트에서는 이러한 유형의 커뮤니티 참여가 활성화되어 있습니다. 전용 타사 개발자가 있으므로 Dynamo는 다양한 산업 분야에 해당하는 워크플로우로 확장할 수 있습니다. 이러한 이유로 Dynamo 팀에서는 패키지 개발 및 게시를 간소화하기 위해 합심하여 노력했습니다. 이 내용은 다음 섹션에서 좀 더 자세히 다룰 예정입니다.
 
@@ -22,11 +22,11 @@ Dynamo에서 _패키지 > Package Manager..._ 로 이동합니다.
 
 이제 Dynamo 라이브러리에 "buildz"라는 다른 그룹이 있는 것을 확인할 수 있습니다. 이 이름은 패키지의 개발자를 나타내며, 사용자 노드가 이 그룹에 배치됩니다. 이것을 바로 사용할 수 있습니다.
 
-![](../images/6-2/1/packageintroduction-installingapackage03.jpg)
+\![](<../../.gitbook/assets/package introduction - installing a package 03.jpg>)
 
 **Code Block**을 사용하여 직사각형 그리드를 빠르게 정의하고 그 결과를 **Polygon.ByPoints** 노드로 출력한 다음, **Surface.ByPatch** 노드를 사용하여 방금 작성한 직사각형 패널 리스트를 봅니다.
 
-![](../images/6-2/1/packageintroduction-installingapackage04.jpg)
+\![](<../../.gitbook/assets/package introduction - installing a package 04.jpg>)
 
 ### 패키지 폴더 설치 - DynamoUnfold
 
@@ -40,19 +40,19 @@ Dynamo에서 _패키지 > Package Manager..._ 로 이동합니다.
 
 Dynamo 라이브러리에는 여러 카테고리와 사용자 노드가 있는 _DynamoUnfold_ 그룹이 있습니다.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
+\![](<../../.gitbook/assets/package introduction - installing package folder 02.jpg>)
 
 이제 패키지의 파일 구조를 살펴보겠습니다.
 
 1. 먼저 패키지 > Package Manager > 설치된 패키지로 이동합니다.
-2. DynamoUnfold 옆의 옵션 메뉴 <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line">를 선택합니다.
+2. DynamoUnfold 옆의 옵션 메뉴 <img src="../../.gitbook/assets/package introduction - vertical dots menu.jpg" alt="" data-size="line">를 선택합니다.
 3. 그런 다음 루트 디렉토리 표시를 클릭하여 이 패키지의 루트 폴더를 엽니다.
 
 <figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 이렇게 하면 패키지의 루트 디렉토리로 이동됩니다. 3개의 폴더와 1개의 파일이 있는지 확인합니다.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder05.jpg)
+\![](<../../.gitbook/assets/package introduction - installing package folder 05.jpg>)
 
 > 1. _bin_ 폴더에는 .dll 파일이 있습니다. 이 Dynamo 패키지는 Zero-Touch를 사용하여 개발되었으므로 사용자 노드가 이 폴더에 저장됩니다.
 > 2. _dyf_ 폴더에는 사용자 노드가 있습니다. 이 패키지는 Dynamo 사용자 노드를 사용하여 개발되지 않았으므로 이 패키지의 경우 이 폴더는 비어 있습니다.
@@ -63,11 +63,11 @@ Dynamo 라이브러리에는 여러 카테고리와 사용자 노드가 있는 _
 
 "SphereUnfold"를 열어 보겠습니다.
 
-![](../images/6-2/1/rd2.jpg)
+![](../../.gitbook/assets/rd2.jpg)
 
 파일을 열고 솔버에서 "실행"을 누르면 펼쳐진 구가 표시됩니다. 이와 같은 예제 파일은 새 Dynamo 패키지를 사용하는 방법을 배우는 데 유용합니다.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../../.gitbook/assets/packageintroduction-installingpackagefolder07 (1).jpg>)
 
 ### 패키지 정보 찾아보기 및 보기
 
@@ -81,13 +81,13 @@ Package Manager에서 패키지 검색 탭의 정렬 및 필터링 옵션을 사
 
 Dynamo 패키지를 찾는 또 다른 방법은 [Dynamo Package Manager](http://dynamopackages.com) 웹사이트를 탐색하는 것입니다. 여기에서는 패키지 의존성 및 패키지 작성자가 제공한 호스트/버전 호환성 정보를 확인할 수 있습니다. 패키지 파일은 Dynamo Package Manager에서 다운로드할 수도 있지만, 보다 원활한 프로세스는 Dynamo에서 바로 다운로드하는 것입니다.
 
-![](../images/6-2/1/dpm2.jpg)
+![](../../.gitbook/assets/dpm2.jpg)
 
 ### 패키지 파일이 로컬로 저장되는 위치
 
 패키지 파일이 저장되는 위치를 확인하려면 상단 탐색에서 Dynamo > 기본 설정 > 패키지 설정 > 노드 및 패키지 파일 위치를 클릭합니다. 여기에서 현재 루트 폴더 디렉토리를 찾을 수 있습니다.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
+\![](<../../.gitbook/assets/package introduction - installing package folder 08.jpg>)
 
 기본적으로 패키지는 _C:/Users/[사용자 이름]/AppData/Roaming/Dynamo/[Dynamo 버전]_ 폴더 경로와 비슷한 위치에 설치됩니다.
 

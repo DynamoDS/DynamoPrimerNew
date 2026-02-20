@@ -2,7 +2,7 @@
 
 다음 Python 스크립트는 몇 가지 예에서 점 배열을 생성합니다. 이러한 스크립트는 다음과 같이 Python 스크립트 노드에 붙여 넣어야 합니다.
 
-![](../images/8-2/10/pythonpoints01.jpg)
+\![](<../../.gitbook/assets/python points 01.jpg>)
 
 **python_points_1**
 

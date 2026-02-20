@@ -10,17 +10,17 @@
 
 Dynamo에서 가장 일반적인 종류의 점은 3D 표준 좌표계에 있으며 3개의 좌표 [X,Y,Z]를 갖습니다(Dynamo의 3D 점).
 
-![](../images/5-2/3/points-3dpointindynamo.jpg)
+\![](<../../.gitbook/assets/points - 3d point in dynamo.jpg>)
 
 Dynamo의 2D 점에는 두 개의 좌표 [X,Y]가 있습니다.
 
-![](../images/5-2/3/points-2dpointindynamo.jpg)
+\![](<../../.gitbook/assets/points - 2d point in dynamo.jpg>)
 
 ### 곡선 및 표면 상의 점
 
 곡선과 표면 모두에 대한 매개변수는 연속적이며 지정된 형상의 모서리를 넘어 연장됩니다. 매개변수 공간을 정의하는 모양은 3D 표준 좌표계에 있기 때문에 파라메트릭 좌표를 항상 "표준" 좌표로 변환할 수 있습니다. 예를 들어 표면의 점 [0.2, 0.5]는 표준 좌표의 점 [1.8, 2.0, 4.1]과 같습니다.
 
-![](../images/5-2/3/points-xyzvscoordsysvsuv.jpg)
+\![](<../../.gitbook/assets/points - xyz vs coord sys vs uv.jpg>)
 
 > 1. 가정된 표준 XYZ 좌표의 점
 > 2. 지정된 좌표계(원통형)를 기준으로 하는 점
@@ -30,13 +30,13 @@ Dynamo의 2D 점에는 두 개의 좌표 [X,Y]가 있습니다.
 >
 > 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
-{% file src="../datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Points.dyn" %}
 
 ## 자세히 알아보기...
 
 형상이 모델의 언어라면 점은 알파벳이라고 할 수 있습니다. 점은 다른 모든 형상이 작성되는 토대가 됩니다. 곡선을 작성하려면 점이 두 개 이상 필요하며, 다각형이나 메쉬 면 등을 만들려면 점이 세 개 이상 필요합니다. 점 간의 관계, 순서 및 위치를 정의(사인 함수 사용)하면 원이나 곡선으로 인식되는 고차원적인 형상을 정의할 수 있습니다.
 
-![점 대 곡선](../images/5-2/3/PointsAsBuildingBlocks-1.jpg)
+![점 대 곡선](../../.gitbook/assets/PointsAsBuildingBlocks-1.jpg)
 
 > 1. 함수 `x=r*cos(t)` 및 `y=r*sin(t)`를 사용하는 원
 > 2. 함수 `x=(t)` 및 `y=r*sin(t)`을 사용하는 사인 곡선
@@ -45,7 +45,7 @@ Dynamo의 2D 점에는 두 개의 좌표 [X,Y]가 있습니다.
 
 점은 2D 좌표계에도 존재할 수 있습니다. 규칙은 작업 중인 공간의 종류에 따라 다른 문자 표기법을 가집니다. 평면에서는 [X,Y]를, 표면에 있는 경우에는 [U,V]를 사용할 수 있습니다.
 
-![좌표로서의 점](../images/5-2/3/Coordinates.jpg)
+![좌표로서의 점](../../.gitbook/assets/Coordinates.jpg)
 
 > 1. 유클리드 좌표계의 점: [X,Y,Z]
 > 2. 곡선 매개변수 좌표계의 점: [t]

@@ -10,20 +10,20 @@
 
 "If" 문은 프로그래밍의 기본 개념입니다. "_이것_ 이 true이면 _저것_ 이 발생하고, 그렇지 않으면 _다른 작업_ 이 발생합니다. 문의 결과 동작은 부울 값에 의해 구동됩니다. 다음과 같은 여러 가지 방법으로 Dynamo에서 "If" 문을 정의할 수 있습니다.
 
-| 아이콘                                             | 이름(구문)             | 입력            | 출력 |
-| ------------------------------------------------ | ------------------------- | ----------------- | ------- |
-| ![](../images/5-1/If.jpg)                        | If(**If**)               | test, true, false | 결과  |
-| ![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block(**(x?y:z);**) | x? y, z           | 결과  |
+| 아이콘                                     | 이름(구문)             | 입력            | 출력 |
+| ---------------------------------------- | ------------------------- | ----------------- | ------- |
+| ![](../../.gitbook/assets/If.jpg)        | If(**If**)               | test, true, false | 결과  |
+| ![](../../.gitbook/assets/CodeBlock.jpg) | Code Block(**(x?y:z);**) | x? y, z           | 결과  |
 
 조건문 "If"를 사용하여 이러한 세 가지 노드 각각의 동작에 대한 간단한 예를 살펴보겠습니다.
 
 이 이미지에서 _boolean_ 은 _true_ 로 설정되어 있습니다. 따라서 결과는 _"this is the result if true"_ 문자열이 됩니다. 여기서 _If_ 문을 작성하는 3개의 노드는 동일하게 작동합니다.
 
-![](../images/5-3/3/logic-conditionalstatements01false.jpg)
+\![](<../../.gitbook/assets/logic - conditional statements 01 false.jpg>)
 
 다시 한번 말씀드리지만 노드는 동일하게 작동합니다. _boolean_ 이 _false_ 로 변경되면 결과는 원래 _If_ 문에 정의된 대로 숫자 _Pi_ 가 됩니다.
 
-![](../images/5-3/3/logic-conditionalstatements02true.jpg)
+\![](<../../.gitbook/assets/logic - conditional statements 02 true.jpg>)
 
 ## 연습: 논리 및 형상
 
@@ -31,13 +31,13 @@
 >
 > 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
-{% file src="../datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
+{% file src="../../.gitbook/assets/Building Blocks of Programs - Logic (1).dyn" %}
 
 ### 파트 I: 리스트 필터링
 
 1. 논리를 사용하여 숫자 리스트를 짝수 리스트와 홀수 리스트로 구분해보겠습니다.
 
-![](../images/5-3/3/logic-exercisepartI-01.jpg)
+\![](<../../.gitbook/assets/logic - exercise part I-01.jpg>)
 
 > a. **Number Range -** 캔버스에 숫자 범위를 추가합니다.
 >
@@ -61,7 +61,7 @@
 
 2\. 동일한 노드를 사용하여 이전 연습에서 시작합니다. 유일한 예외는 다음과 같습니다(형식 변경 이외).
 
-![](../images/5-3/3/logic-exercisepartII-01.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-01.jpg>)
 
 > a. 이러한 입력 값과 함께 **Sequence** 노드를 사용합니다.
 >
@@ -69,7 +69,7 @@
 
 3\. 먼저 위의 이미지에 표시된 것처럼 별도의 그래프 그룹을 만들어 보겠습니다. 이 노드 그룹은 선 곡선을 정의하는 파라메트릭 방정식을 나타냅니다. 몇 가지 참고 사항은 다음과 같습니다.
 
-![](../images/5-3/3/logic-exercisepartII-02.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-02.jpg>)
 
 > a. 첫 번째 **Number Slider**는 파형의 주파수를 나타내며, Min은 1이고, Max는 4이고, Step은 0.01입니다.
 >
@@ -79,23 +79,23 @@
 
 입력 방법: 보다 정적인 특성에 대해서는 숫자 노드를 사용하고 보다 유동적인 특성에는 숫자 슬라이더를 사용합니다. 이 단계를 시작할 때 정의하는 원래 숫자 범위를 유지하겠습니다. 그러나 여기에서 작성하는 사인 곡선은 유동적이어야 합니다. 이러한 슬라이더를 이동하면서 곡선의 진동수와 진폭이 업데이트되는 것을 볼 수 있습니다.
 
-![](../images/5-3/3/logic-exercisepartII-03.gif)
+\![](<../../.gitbook/assets/logic - exercise part II-03.gif>)
 
 4\. 잠시 정의를 확인하기 위해 다음 작업 상황을 참조할 수 있도록 최종 결과를 살펴보겠습니다. 처음에 따로 생성된 두 단계를 이제 연결합니다. 기본 사인 곡선을 사용하여 지퍼 구성요소의 위치를 움직이고, true/false 논리를 사용하여 작은 상자와 큰 상자를 번갈아 표시합니다.
 
-![](../images/5-3/3/logic-exercisepartII-04.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-04.jpg>)
 
 > a. **Math.RemapRange** \- 02단계에서 작성한 숫자 시퀀스를 사용하여 범위를 다시 매핑함으로써 새로운 숫자 시리즈를 작성해 보겠습니다. 01단계의 원래 숫자 범위는 0~100입니다. 이러한 숫자의 범위는 각각 _newMin_ 및 _newMax_ 입력을 기준으로 0에서 1까지입니다.
 
 5\. **Curve.PointAtParameter** 노드를 작성한 다음, _param_ 입력으로 04단계의 **Math.RemapRange** 출력을 연결합니다.
 
-![](../images/5-3/3/logic-exercisepartII-05.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-05.jpg>)
 
 이 단계에서는 곡선을 따라 점을 작성합니다. _param_ 의 입력에서는 이 범위의 값을 찾으므로 숫자를 0에서 1로 다시 매핑했습니다. 값 _0_ 은 시작점을 나타내고 값 _1_ 은 끝점을 나타냅니다. 그 사이의 모든 숫자는 _[0,1]_ 범위 내에서 계산됩니다.
 
 6\. **Curve.PointAtParameter**의 출력을 **List.FilterByBoolMask**에 연결하여 홀수 및 짝수 색인 리스트를 구분합니다.
 
-![](../images/5-3/3/logic-exercisepartII-06.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-06.jpg>)
 
 > a. **List.FilterByBoolMask** \- 이전 단계의 **Curve.PointAtParameter**를 _list_ 입력에 연결합니다.
 >
@@ -105,7 +105,7 @@
 
 **Cuboid.ByLengths -** 위의 이미지에 나와 있는 연결을 다시 작성하여 사인 곡선을 따라 지퍼를 가져옵니다. 여기서 직육면체는 상자에 불과하며, 상자 중심의 곡선 점을 기준으로 해당 크기를 정의합니다. 이제 짝수/홀수 분할 논리가 모델에서 명확히 드러나야 합니다.
 
-![](../images/5-3/3/logic-exercisepartII-07.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-07.jpg>)
 
 > a. 짝수 색인의 직육면체 리스트.
 >

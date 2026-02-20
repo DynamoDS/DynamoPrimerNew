@@ -4,7 +4,7 @@
 
 지금까지 리스트가 무엇인지 확인했으므로 리스트에서 수행할 수 있는 작업에 대해 설명하겠습니다. 리스트가 하나의 게임 카드 세트라고 생각해 보십시오. 세트는 리스트이며, 각 카드는 하나의 항목을 나타냅니다.
 
-![카드](../images/5-4/2/Playing_cards_modified.jpg)
+![카드](../../.gitbook/assets/Playing_cards_modified.jpg)
 
 > 사진 출처: [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
@@ -39,11 +39,11 @@
 >
 > 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
-{% file src="../datasets/5-4/2/List-Operations.dyn" %}
+{% file src="../../.gitbook/assets/List-Operations (1).dyn" %}
 
 아래 이미지는 두 원 사이에 선을 그려 기본 리스트 작업을 표현하는 기준 그래프입니다. 리스트 내에서 데이터를 관리하는 방법을 살펴보고 아래의 리스트 작업을 통해 시각적 결과를 표시해 보겠습니다.
 
-![](../images/5-4/2/workingwithlist-listoperation.jpg)
+\![](<../../.gitbook/assets/working with list - list operation.jpg>)
 
 > 1. 값이 `500;`인 **Code Block**으로 시작합니다.
 > 2. **Point.ByCoordinates** 노드의 x 입력에 연결합니다.
@@ -61,11 +61,11 @@
 >
 > 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
-{% file src="../datasets/5-4/2/List-Count.dyn" %}
+{% file src="../../.gitbook/assets/List-Count (1).dyn" %}
 
 _List.Count_ 노드는 간단합니다. 리스트의 값 개수를 계산하고 해당 수를 반환합니다. 이 노드는 리스트의 리스트로 작업할 경우 미묘한 차이가 있으며, 이 내용은 다음 섹션에서 살펴보겠습니다.
 
-![개수](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
+\![개수](<../../.gitbook/assets/working with list - list operation - list count.jpg>)
 
 > 1. **List.Count** 노드는 **Line.ByStartPointEndPoint** 노드의 선 개수를 반환합니다. 이 경우 해당 값은 원래 **Code Block** 노드에서 작성된 점 수와 일치하는 10입니다.
 
@@ -75,18 +75,18 @@ _List.Count_ 노드는 간단합니다. 리스트의 값 개수를 계산하고 
 >
 > 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
-{% file src="../datasets/5-4/2/List-GetItemAtIndex.dyn" %}
+{% file src="../../.gitbook/assets/List-GetItemAtIndex.dyn" %}
 
 **List.GetItemAtIndex**는 기본적으로 리스트의 항목을 조회하는 기본적인 방법입니다.
 
-![연습](../images/5-4/2/workingwithlist-getitemindex01.jpg)
+\![Exercise](<../../.gitbook/assets/working with list - get item index 01.jpg>)
 
 > 1. 먼저 **Line.ByStartPointEndPoint** 노드를 마우스 오른쪽 버튼으로 클릭하여 해당 미리보기를 끕니다.
 > 2. **List.GetItemAtIndex** 노드를 사용하여 색인 _"0"_ 또는 줄 리스트의 첫 번째 항목을 선택합니다.
 
 슬라이더 값을 0에서 9 사이로 변경하여 **List.GetItemAtIndex**를 통해 다른 항목을 선택합니다.
 
-![](../images/5-4/2/workingwithlist-getitemindex02.gif)
+\![](<../../.gitbook/assets/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
@@ -94,11 +94,11 @@ _List.Count_ 노드는 간단합니다. 리스트의 값 개수를 계산하고 
 >
 > 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
-{% file src="../datasets/5-4/2/List-Reverse.dyn" %}
+{% file src="../../.gitbook/assets/List-Reverse (1).dyn" %}
 
 _List.Reverse_ 는 리스트의 모든 항목 순서를 반대로 합니다.
 
-![연습](../images/5-4/2/workingwithlist-listreverse.jpg)
+\![Exercise](<../../.gitbook/assets/working with list - list reverse.jpg>)
 
 > 1. 반전된 줄 리스트를 올바르게 시각화하려면 **Code Block**을 `0..1..#50;`으로 변경하여 더 많은 줄을 작성합니다.
 > 2. **Line.ByStartPointEndPoint** 노드를 복제하고 **Curve.PointAtParameter** 및 두 번째 **Line.ByStartPointEndPoint** 사이에 List.Reverse 노드를 삽입합니다.
@@ -110,11 +110,11 @@ _List.Reverse_ 는 리스트의 모든 항목 순서를 반대로 합니다.
 >
 > 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
-{% file src="../datasets/5-4/2/List-ShiftIndices.dyn" %}
+{% file src="../../.gitbook/assets/List-ShiftIndices (1).dyn" %}
 
 **List.ShiftIndices**는 틀기 또는 나선형 패턴이나 기타 유사한 데이터 조작을 작성하는 데 유용한 도구입니다. 이 노드에서는 리스트의 항목을 지정된 색인만큼 이동합니다.
 
-![연습](../images/5-4/2/workingwithlist-shiftIndices01.jpg)
+\![Exercise](<../../.gitbook/assets/working with list - shiftIndices 01.jpg>)
 
 > 1. 반전 리스트와 동일한 프로세스에서 **Curve.PointAtParameter** 및 **Line.ByStartPointEndPoint**에 **List.ShiftIndices**를 삽입합니다.
 > 2. **Code Block**을 사용하여 리스트를 1개 색인만큼 이동하기 위해 값 "1"을 지정했습니다.
@@ -122,7 +122,7 @@ _List.Reverse_ 는 리스트의 모든 항목 순서를 반대로 합니다.
 
 예를 들어 **Code Block**을 더 큰 값인 _"30"_ 으로 변경하면 대각선이 크게 달라진다는 것을 알 수 있습니다. 이 경우 이동은 카메라의 홍채처럼 작동하여 원래의 원통형 형식에서 틀기가 작성됩니다.
 
-![](../images/5-4/2/workingwithlist-shiftIndices02.jpg)
+\![](<../../.gitbook/assets/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -130,13 +130,13 @@ _List.Reverse_ 는 리스트의 모든 항목 순서를 반대로 합니다.
 >
 > 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
-{% file src="../datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
+{% file src="../../.gitbook/assets/List-FilterByBooleanMask.dyn" %}
 
-![](../images/5-4/2/ListFilterBool.png)
+![](../../.gitbook/assets/ListFilterBool.png)
 
 **List.FilterByBooleanMask**는 부울 리스트나 "true" 또는 "false" 값을 기준으로 특정 항목을 제거합니다.
 
-![연습](../images/5-4/2/workingwithlist-filterbyboolmask.jpg)
+\![Exercise](<../../.gitbook/assets/working with list - filter by bool mask.jpg>)
 
 "true" 또는 "false" 값 리스트를 작성하려면 좀 더 많은 작업이 필요합니다.
 

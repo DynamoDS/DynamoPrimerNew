@@ -16,7 +16,7 @@ p1에는 매개변수 u = 0 v = 0을 지정하고, p9에는 매개변수u = 1 v 
 
 곡선에는 0에서 1 사이의 단일 실수 인수를 사용하여 해당 매개변수에서 Point 객체를 반환하는 _PointAtParameter_ 메서드가 있습니다. 예를 들어 이 스크립트는 매개변수 0, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1에서 점을 찾습니다.
 
-![](../images/8-2/7/GeometricParameterization\_01.png)
+![](../../.gitbook/assets/GeometricParameterization_01.png)
 
 ```js
 pts = {};
@@ -41,7 +41,7 @@ lines = Line.ByStartPointEndPoint(pts_at_param,
 
 곡선과 표면의 개별 점을 추출하는 것이 유용할 수 있지만, 스크립트에서는 곡선 또는 표면이 향하는 방향과 같은 매개변수의 특정 기하학적 특성을 지정해야 하는 경우가 많습니다. _CoordinateSystemAtParameter_ 메서드는 해당 위치 뿐만 아니라 곡선이나 표면의 매개변수에서 방향이 지정된 CoordinateSystem을 찾습니다. 예를 들어 다음 스크립트는 회전된 표면을 따라 방향이 지정된 CoordinateSystem을 추출하고, CoordinateSystems의 방향을 사용하여 표면에 수직으로 진행되는 선을 생성합니다.
 
-![](../images/8-2/7/GeometricParameterization\_02.png)
+![](../../.gitbook/assets/GeometricParameterization_02.png)
 
 ```js
 pts = {};

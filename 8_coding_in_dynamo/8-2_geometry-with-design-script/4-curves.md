@@ -6,7 +6,7 @@ Dynamo에는 자유형 곡선을 만드는 두 가지 기본적인 방법이 있
 
 보간된 곡선을 작성하려면 점 모음을 _NurbsCurve.ByPoints_ 메서드에 전달하기만 하면 됩니다.
 
-![](../images/8-2/4/Curves\_01.png)
+![](../../.gitbook/assets/Curves_01.png)
 
 ```js
 num_pts = 6;
@@ -20,7 +20,7 @@ int_curve = NurbsCurve.ByPoints(pts);
 
 생성된 곡선은 각각 모음의 첫 번째 점과 마지막 점에서 시작하고 끝나는 각 입력 점과 교차합니다. 선택적 주기 매개변수를 사용하여 닫힌 주기 곡선을 작성할 수 있습니다. Dynamo가 누락된 세그먼트를 자동으로 채우므로 중복된 끝점(시작점과 동일)은 필요하지 않습니다.
 
-![](../images/8-2/4/Curves\_02.png)
+![](../../.gitbook/assets/Curves_02.png)
 
 ```js
 pts = Point.ByCoordinates(Math.Cos(0..350..#10),
@@ -38,7 +38,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 NurbsCurve는 많은 부분 동일한 방식으로 생성됩니다. 입력 점이 직선 세그먼트의 끝점을 나타내고, 두 번째 매개변수가 차수*라고 하는 곡선에 적용되는 다듬기의 정도와 유형을 지정합니다. 차수가 1인 곡선은 다듬기가 없고 폴리선이 됩니다.
 
-![](../images/8-2/4/Curves\_03.png)
+![](../../.gitbook/assets/Curves_03.png)
 
 ```js
 num_pts = 6;
@@ -52,7 +52,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 
 차수가 2인 곡선은 폴리선 세그먼트의 중간점과 교차하고 접하도록 매끄럽게 표시됩니다.
 
-![](../images/8-2/4/Curves\_04.png)
+![](../../.gitbook/assets/Curves_04.png)
 
 ```js
 num_pts = 6;
@@ -66,7 +66,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 
 Dynamo는 차수 20까지 NURBS(비균일 유리 B-스플라인) 곡선을 지원하며, 다음 스크립트는 다듬기 수준을 늘릴 경우 곡선 모양에 미치는 영향을 보여줍니다.
 
-![](../images/8-2/4/Curves\_05.png)
+![](../../.gitbook/assets/Curves_05.png)
 
 ```js
 num_pts = 6;
@@ -87,7 +87,7 @@ ctrl_crvs = create_curve(pts, 1..11);
 
 제어 정점으로 곡선을 생성할 때의 또 다른 이점은 개별 곡선 세그먼트 간에 접선을 유지할 수 있다는 것입니다. 마지막 두 제어점 사이의 방향을 추출하고, 다음 곡선의 처음 두 제어점으로 이 방향을 계속 진행하는 방식으로 이 작업을 수행할 수 있습니다. 다음 예에서는 곡선을 부드럽게 하여 별도의 NURBS 곡선을 두 개 작성합니다.
 
-![](../images/8-2/4/Curves\_06.png)
+![](../../.gitbook/assets/Curves_06.png)
 
 ```js
 pts_1 = {};

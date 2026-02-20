@@ -4,7 +4,7 @@
 
 리스트는 요소 또는 항목의 모음입니다. 예를 들어 바나나 묶음을 고려해보십시오. 각 바나나는 리스트(또는 묶음) 내의 항목입니다. 각 바나나를 따로 잡는 것보다 바나나 묶음을 잡는 것이 더 쉬운데, 이는 데이터 구조의 파라메트릭 관계에 따라 요소를 그룹화하는 경우에도 마찬가지입니다.
 
-![바나나](../images/5-4/1/Bananas_white_background_DS.jpg)
+![바나나](../../.gitbook/assets/Bananas_white_background_DS.jpg)
 
 > 사진 출처: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list)
 
@@ -20,7 +20,7 @@ Dynamo에서는 리스트 데이터가 정렬되고, 각 리스트의 첫 번째
 
 리스트에는 항목이 5개 있으며, 해당 리스트에서는 0부터 시작하는 계산 시스템을 사용합니다. 리스트에 저장되는 항목은 숫자일 필요가 없습니다. 점, 곡선, 표면, 패밀리 등 Dynamo에서 지원하는 어떤 데이터 유형도 될 수 있습니다.
 
-![](../images/5-4/1/what'salist-zerobasedindices.jpg)
+\![](<../../.gitbook/assets/what's a list - zero based indices.jpg>)
 
 > a. 색인
 >
@@ -36,7 +36,7 @@ Dynamo에서는 리스트 데이터가 정렬되고, 각 리스트의 첫 번째
 
 리스트와 관련해서, 입력 및 출력은 사용 중인 Dynamo 노드에 따라 달라집니다. 예를 들어 5개의 점 리스트를 사용하며, 이 출력을 두 개의 다른 Dynamo 노드인 **PolyCurve.ByPoints** 및 **Circle.ByCenterPointRadius**에 연결해 보겠습니다.
 
-![입력 예시](../images/5-4/1/what'salist-inputsandoutputs.jpg)
+\![입력 예제](<../../.gitbook/assets/what's a list - inputs and outputs.jpg>)
 
 > 1. **PolyCurve.ByPoints**의 _points_ 입력의 경우 _"Point[]"_ 를 찾습니다. 이것은 점 리스트를 나타냅니다.
 > 2. **PolyCurve.ByPoints**의 출력은 점 5개의 리스트에서 작성된 단일 PolyCurve입니다.
@@ -59,23 +59,23 @@ Dynamo에서는 리스트 데이터가 정렬되고, 각 리스트의 첫 번째
 
 가장 간단한 방법은 더 이상 짝을 지을 수 없을 때까지 입력을 일대일로 연결하는 것입니다. 이를 "최단 리스트" 알고리즘이라고 합니다. 다음은 Dynamo 노드의 기본 동작입니다.
 
-![](../images/5-4/1/what'salist-lacing-shortest.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - shortest.jpg>)
 
 #### 최장 리스트
 
 "최장 리스트" 알고리즘은 더 이상 짝을 지을 수 없을 때까지 입력을 계속 연결하고 요소를 재사용합니다.
 
-![](../images/5-4/1/what'salist-lacing-longest.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - longest.jpg>)
 
-#### 외적
+#### Cross Product
 
 마지막으로 “외적” 메서드는 가능한 모든 연결을 설정합니다.
 
-![](../images/5-4/1/what'salist-lacing-cross.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - cross.jpg>)
 
 보시다시피 이러한 점 세트 사이에 선을 그릴 수 있는 방법은 여러 가지가 있습니다. 레이싱 옵션은 노드의 중심을 마우스 오른쪽 버튼으로 클릭하고 "레이싱" 메뉴를 선택하여 찾을 수 있습니다.
 
-![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
+\![](<../../.gitbook/assets/what's a list - right click lacing opt.jpg>)
 
 ### 복제란?
 
@@ -111,7 +111,7 @@ Zip 복제는 약간 다르게 작동합니다. 과일 리스트(`{apple, orange
 >
 > 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
-{% file src="../datasets/5-4/1/Lacing.dyn" %}
+{% file src="../../.gitbook/assets/Lacing (1).dyn" %}
 
 아래의 레이싱 작업을 보여드리기 위해 이 기준 파일을 사용하여 최단 리스트, 최장 리스트 및 외적을 정의해 보겠습니다.
 
@@ -121,16 +121,16 @@ Zip 복제는 약간 다르게 작동합니다. 과일 리스트(`{apple, orange
 
 _최단 리스트_ 를 레이싱 옵션(기본 옵션)으로 선택하면 5개의 점으로 구성된 기본 대각선이 표시됩니다. 5개의 점은 더 짧은 리스트의 길이이므로 최단 리스트 레이싱은 한 리스트의 끝에 도달하면 중지됩니다.
 
-![입력 예시](../images/5-4/1/what'salist-lacingexercise01.jpg)
+\![입력 예제](<../../.gitbook/assets/what's a list - lacing exercise 01.jpg>)
 
 ### **최장 리스트**
 
 레이싱을 _최장 리스트_ 로 변경하면 수직으로 확장되는 대각선이 표시됩니다. 개념 다이어그램과 동일한 방법으로, 5개 항목 리스트의 마지막 항목이 반복되면서 더 긴 리스트의 길이에 도달합니다.
 
-![입력 예시](../images/5-4/1/what'salist-lacingexercise02.jpg)
+\![입력 예제](<../../.gitbook/assets/what's a list - lacing exercise 02.jpg>)
 
-### **외적**
+### **Cross Product**
 
 레이싱을 _외적_ 으로 변경하면 각 리스트 간에 모든 조합이 모여 5x10개의 점 그리드가 제공됩니다. 이는 현재 데이터가 리스트의 리스트라는 점을 제외하고, 위 개념 다이어그램에 표시된 것처럼 외적에 대한 동일한 데이터 구조입니다. polycurve를 연결하면 각 리스트가 X 값으로 정의되어 수직선의 행이 표시되는 것을 볼 수 있습니다.
 
-![입력 예시](../images/5-4/1/what'salist-lacingexercise03.jpg)
+\![입력 예제](<../../.gitbook/assets/what's a list - lacing exercise 03.jpg>)

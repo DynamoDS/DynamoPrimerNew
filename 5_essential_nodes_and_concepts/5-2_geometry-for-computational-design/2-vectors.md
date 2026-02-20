@@ -4,9 +4,9 @@
 
 ### 벡터
 
-[벡터](2-vectors.md#vector-1)는 크기 및 방향을 나타내는 것으로, 지정된 속도로 특정 방향을 향해 속도를 높이는 화살표라고 생각하면 됩니다. Dynamo에서 모델의 핵심 구성요소입니다. 추상적인 "도우미" 카테고리에 속하기 때문에 벡터를 작성할 때는 때 배경 미리보기에 아무것도 표시되지 않습니다.
+[벡터](2-vectors.md#vector-1)는 크기 및 방향을 나타내는 표현으로, 지정된 속도로 특정 방향으로 가속하는 화살표라고 생각하면 됩니다. Dynamo에서 모델의 핵심 구성요소입니다. 추상적인 "도우미" 카테고리에 속하기 때문에 벡터를 작성할 때는 때 배경 미리보기에 아무것도 표시되지 않습니다.
 
-![Dynamo의 벡터](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
+\![Dynamo의 벡터](<../../.gitbook/assets/Geometry for Computational Design - vectors.jpg>)
 
 > 1. 벡터 미리보기를 위한 자리 표시자로 선을 사용할 수 있습니다.
 
@@ -14,13 +14,13 @@
 >
 > 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
-{% file src="../datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Vectors (1).dyn" %}
 
 ### 평면
 
-[평면](2-vectors.md#plane-1)은 2D 표면으로, 무한하게 연장되는 평평한 표면이라고 생각하면 됩니다. 각 평면에는 원점, X 방향, Y 방향 및 Z(위쪽) 방향이 있습니다.
+[평면](2-vectors.md#plane-1)은 2차원 표면으로, 무한하게 확장되는 평평한 표면이라고 생각하면 됩니다. 각 평면에는 원점, X 방향, Y 방향 및 Z(위쪽) 방향이 있습니다.
 
-![Dynamo의 평면](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
+\![Dynamo의 평면](<../../.gitbook/assets/Geometry for Computational Design - plane.jpg>)
 
 > 1. 평면은 추상적이지만, 평면에는 원점 위치가 있어 이를 공간에서 찾을 수 있습니다.
 > 2. Dynamo에서 평면은 배경 미리보기에서 렌더링됩니다.
@@ -29,13 +29,13 @@
 >
 > 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
-{% file src="../datasets/5-2/2/Geometry for Computational Design - Plane.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Plane (1).dyn" %}
 
 ### 좌표계
 
 [좌표계](2-vectors.md#coordinate-system-1)는 점 또는 기타 형상 요소의 위치를 결정하는 체계입니다. 아래 이미지는 Dynamo에서 어떻게 보이는지와 각 색상이 무엇을 나타내는지 설명합니다.
 
-![Dynamo의 좌표계](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
+\![Dynamo의 좌표계](<../../.gitbook/assets/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. 평면은 추상적이지만, 좌표계에도 원점 위치가 있어 이를 공간에서 찾을 수 있습니다.
 > 2. Dynamo에서 좌표계는 배경 미리보기에서 축을 정의하는 점(원점)과 선으로 렌더링됩니다(규칙에 따라 X는 빨간색, Y는 초록색, Z는 파란색임).
@@ -44,25 +44,25 @@
 >
 > 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
-{% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Coordinate System.dyn" %}
 
 ## 자세히 알아보기...
 
 벡터, 평면 및 좌표계는 추상 형상 유형의 기본 그룹을 구성합니다. 이러한 항목은 모양을 나타내는 다른 형상의 위치, 방향 및 공간 컨텍스트를 정의하는 데 유용합니다. 예를 들어 New York City, 42nd Street 및 Broadway(좌표계)에서 지상층(평면)에 선 채 북쪽(벡터)을 바라보고 있다면 이러한 "도우미"를 사용하여 현재 위치를 정의할 수 있습니다. 휴대폰 케이스 제품이나 고층 건물의 경우도 마찬가지입니다. 모델을 개발하려면 이러한 컨텍스트가 필요합니다.
 
-![벡터, 평면 및 좌표](../images/5-2/2/VectorsPlanesCoodinates.jpg)
+![벡터, 평면 및 좌표](../../.gitbook/assets/VectorsPlanesCoodinates.jpg)
 
 ### 벡터
 
 벡터는 방향 및 크기를 설명하는 기하학적 수량입니다. 벡터는 추상적입니다. 즉, 기하학적 요소가 아니라 수량을 나타냅니다. 벡터와 점은 둘 다 값 리스트로 구성되기 때문에 벡터가 점으로 혼동되기 쉽습니다. 그러나 점은 지정된 좌표계에서의 위치를 나타내지만, 벡터는 "방향"과 같은 의미의 상대적인 위치 차이를 나타낸다는 점이 주요 차이점입니다.
 
-![벡터 상세 정보](../images/5-2/2/Vector-Detailed.jpg)
+![벡터 상세 정보](../../.gitbook/assets/Vector-Detailed.jpg)
 
 상대적 차이를 이해하는 것이 어렵다면, 벡터 AB를 "점 A에 서서 점 B 쪽을 바라보고 있는" 상태라고 생각해 보십시오. 여기(A)에서 저기(B)까지의 방향이 벡터입니다.
 
 동일한 AB 표기법을 사용하여 벡터를 좀 더 분석해 보겠습니다.
 
-![벡터](../images/5-2/2/Vector.jpg)
+![벡터](../../.gitbook/assets/Vector.jpg)
 
 > 1. 벡터의 **시작점**을 **기준**이라고 합니다.
 > 2. 벡터의 **끝점**을 **팁** 또는 **센스**라고 합니다.
@@ -76,7 +76,7 @@
 
 평면은 추상적인 2D "도우미"입니다. 보다 구체적으로 말하면 평면은 개념적으로 "평평하여" 두 방향으로 무한하게 확장되며, 일반적으로 원점 근처에서 좀 더 작은 사각형으로 렌더링됩니다.
 
-![평면](../images/5-2/2/Plane.jpg)
+![평면](../../.gitbook/assets/Plane.jpg)
 
 "잠깐! 원점이요? CAD 소프트웨어에서 모델링할 때 제가 사용하는 것과 같은 좌표계처럼 들리는데요."라는 생각이 드실 수 있습니다.
 
@@ -88,6 +88,6 @@
 
 하지만 원통형 또는 구형과 같은 대체 좌표계가 있습니다. 이후 섹션에서 살펴볼 텐데, 좌표계는 다른 형상 유형에 적용하여 해당 형상에서 위치를 정의할 수도 있습니다.
 
-![좌표계](../images/5-2/2/CoordinateSystem.jpg)
+![좌표계](../../.gitbook/assets/CoordinateSystem.jpg)
 
 > 대체 좌표계(원통형, 구형) 추가
