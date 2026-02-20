@@ -4,7 +4,7 @@
 
 リストとは、要素(項目)の集合です。例として、1 房のバナナを考えてみましょう。1 本のバナナが、リスト(房)内の 1 つの項目になります。それぞれのバナナをばらばらに取り上げるより、房をまとめて持ち上げる方が簡単です。同じことが、データ構造内のパラメータに基づく関係によって各要素をグループ化する場合についても当てはまります。
 
-![バナナ](../images/5-4/1/Bananas_white_background_DS.jpg)
+![バナナ](../../.gitbook/assets/Bananas_white_background_DS.jpg)
 
 > 写真: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list)
 
@@ -20,7 +20,7 @@ Dynamo では、リスト データには順序が付けられ、各リストの
 
 ここでも、引き続きリスト内に 5 つの項目が含まれています。ただし、最初の項目に 0 のインデックス値が割り当てられているものと仮定して説明を続けます。リストに格納できる項目は、数値だけではありません。Dynamo でサポートされているデータ タイプであれば、点、曲線、サーフェス、ファミリなど、任意のデータ タイプをリスト内に格納することができます。
 
-![](../images/5-4/1/what'salist-zerobasedindices.jpg)
+\![](<../../.gitbook/assets/what's a list - zero based indices.jpg>)
 
 > a.インデックス
 >
@@ -36,7 +36,7 @@ Dynamo では、リスト データには順序が付けられ、各リストの
 
 リストの入力と出力は、使用する Dynamo ノードによって異なります。例として、5 つの点を持つリストのノードの出力を **PolyCurve.ByPoints** ノードと **Circle.ByCenterPointRadius** ノードに接続してみましょう。
 
-![入力例](../images/5-4/1/what'salist-inputsandoutputs.jpg)
+\![入力例](<../../.gitbook/assets/what's a list - inputs and outputs.jpg>)
 
 > 1. **PolyCurve.ByPoints** ノードの _points_ 入力には、_Point[]_ が必要です。これは、点のリストを表しています。
 > 2. **PolyCurve.ByPoints** ノードの出力は、5 つの点を持つリストから作成された単一のポリカーブです。
@@ -59,23 +59,23 @@ Dynamo では、リスト データには順序が付けられ、各リストの
 
 最も単純な方法は、一方のリストが終了するまで、入力された点を 1 対 1 で接続していく方法です。これは、「最短リスト」アルゴリズムと呼ばれます。Dynamo ノードの既定の動作です。
 
-![](../images/5-4/1/what'salist-lacing-shortest.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - shortest.jpg>)
 
 #### 最長リスト
 
 「最長リスト」アルゴリズムの場合、すべてのリストの最後の項目に達するまで、同じ要素を繰り返し使用して入力が接続されたままの状態になります。
 
-![](../images/5-4/1/what'salist-lacing-longest.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - longest.jpg>)
 
 #### 直積
 
 最後に、「直積」方式について説明します。この方式では、考えられる接続がすべて生成されます。
 
-![](../images/5-4/1/what'salist-lacing-cross.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - cross.jpg>)
 
 これらの点の集まりの間に直線を描画する場合、いくつかの方法があります。レーシング オプションを使用するには、ノードの中心を右クリックして[レーシング]メニューを選択します。
 
-![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
+\![](<../../.gitbook/assets/what's a list - right click lacing opt.jpg>)
 
 ### 複製とは
 
@@ -109,9 +109,9 @@ Zip 複製は仕組みが少し異なります。フルーツ(`{apple, orange, p
 
 > 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> すべてのサンプルファイルの一覧については、付録を参照してください。
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
-{% file src="../datasets/5-4/1/Lacing.dyn" %}
+{% file src="../../.gitbook/assets/Lacing (1).dyn" %}
 
 次の図を使用して、レーシング操作について説明します。ここでは、上記の基準ファイルを使用して、最短リスト、最長リスト、直積を定義します。
 
@@ -121,16 +121,16 @@ Zip 複製は仕組みが少し異なります。フルーツ(`{apple, orange, p
 
 レーシング オプション(既定のオプションも同様)として_最短リスト_を選択すると、5 つのポイントで構成される基本的な対角線が得られます。最短リストのレーシングは、2 つのリストのうち短い方のリストの最後の項目に達した場合に動作が終了します。そのためこの例では、5 つの点が含まれているリストの最後に達すると、レーシング動作が停止します。
 
-![入力例](../images/5-4/1/what'salist-lacingexercise01.jpg)
+\![入力例](<../../.gitbook/assets/what's a list - lacing exercise 01.jpg>)
 
 ### **最長リスト**
 
 レーシングを[_最長リスト_]に変更すると、垂直方向に伸びる対角線が生成されます。上の概念図のように、長い方のリストの最後の項目に達するまで、短い方のリスト(項目数が 5 のリスト)の最後の項目が繰り返し使用されます。
 
-![入力例](../images/5-4/1/what'salist-lacingexercise02.jpg)
+\![入力例](<../../.gitbook/assets/what's a list - lacing exercise 02.jpg>)
 
 ### **直積**
 
 レーシングを[_直積_]に変更すると、各リスト間で考えられるすべての組み合わせの 5x10 の点のグリッドが生成されます。これは、上の概念図に示す直積に該当するデータ構造です。ただし、ここで使用しているデータは、「リストのリスト」です。ポリカーブを接続すると、各リストは X 値によって定義され、垂直な直線の列が生成されていることがわかります。
 
-![入力例](../images/5-4/1/what'salist-lacingexercise03.jpg)
+\![入力例](<../../.gitbook/assets/what's a list - lacing exercise 03.jpg>)

@@ -2,7 +2,7 @@
 
 次の Python スクリプトは、点の配列を生成する例をいくつか示しています。これらは、次のように、Python Script ノードに貼り付ける必要があります。
 
-![](../images/8-2/10/pythonpoints01.jpg)
+\![](<../../.gitbook/assets/python points 01.jpg>)
 
 **python_points_1**
 

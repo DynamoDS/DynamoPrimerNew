@@ -2,7 +2,7 @@
 
 Dynamo 2.0 では[Dictionary]カテゴリのさまざまなノードが公開されており、使用することができます。_作成、アクション、クエリー_ のノードがあります。
 
-![](../images/5-5/2/dictionarynodes-nodes.jpg)
+\![](<../../.gitbook/assets/dictionary nodes - nodes.jpg>)
 
 #### Create
 
@@ -18,7 +18,7 @@ Dynamo 2.0 では[Dictionary]カテゴリのさまざまなノードが公開さ
 
 5. `Dictionary.ValueAtKey` は、入力キーに対する値を返します。
 
-#### クエリー
+#### Query
 
 6. `Dictionary.Count` は、ディクショナリに含まれるキーと値のペア数を示します。
 

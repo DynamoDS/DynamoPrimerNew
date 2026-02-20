@@ -6,12 +6,12 @@
 
 演算子は、代数関数と 2 つの入力値を組み合わせて使用する一連のコンポーネントであり、1 つの出力値を生成します(加算、減産、乗算、除算など)。演算子は、[Operators] > [Actions]で使用できます。
 
-| アイコン                                                  | 名前(構文)     | 入力                     | 出力      |
-| ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | 加算(**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | 減算(**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | 乗算(*) | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | 除算(**/**)    | var[]...[], var[]...[] | var[]...[] |
+| アイコン                                                | 名前(構文)     | 入力                     | 出力      |
+| --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
+| \![](<../../.gitbook/assets/addition (1).jpg>)       | 加算(**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../../.gitbook/assets/Subtraction (1).jpg>)    | 減算(**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../../.gitbook/assets/Multiplication (2).jpg>) | 乗算( ***** ) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../../.gitbook/assets/Division (2).jpg>)       | 除算(**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## 演習: 黄金螺旋式
 
@@ -19,7 +19,7 @@
 >
 > すべてのサンプル ファイルの一覧については、付録を参照してください。
 
-{% file src="../datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
+{% file src="../../.gitbook/assets/Building Blocks of Programs - Math.dyn" %}
 
 ### パート I: パラメータ式
 
@@ -29,7 +29,7 @@
 
 **Number Sequence** ノードで、_start、amount_、_step_ という 3 つの入力に基づいて数列を定義します。
 
-![](../images/5-3/2/math-partI-01.jpg)
+\![](<../../.gitbook/assets/math - part I-01.jpg>)
 
 2\.上記の手順により、パラメータ領域を定義するための数値のリストが作成されます。次に、黄金螺旋式を表すノードのグループを作成します。
 
@@ -45,7 +45,7 @@ $$
 
 次の図は、ビジュアル プログラミング形式の黄金螺旋を表しています。ここからは、順を追ってノード グループを確認していきます。ビジュアル プログラムと記述形式の等式との相違点に注意してください。
 
-![](../images/5-3/2/math-partI-02.jpg)
+\![](<../../.gitbook/assets/math - part I-02.jpg>)
 
 > a.**Number Slider** ノードを使用して、キャンバスに 2 つの数値スライダを追加します。これらのスライダは、パラメータ式の変数である「_a_」と「_b_」を表します。これらの変数は、柔軟に変化する定数や、必要な結果に合わせて調整可能なパラメータを表します。
 >
@@ -65,11 +65,11 @@ $$
 
 **Point.ByCoordinates** ノードの _x_ 入力に上部の乗算ノードを接続し、_y_ 入力に下部の乗算ノードを接続します。この操作により、パラメータで制御された点群のらせん構造が画面上に表示されます。
 
-![](../images/5-3/2/math-partII-01.gif)
+\![](<../../.gitbook/assets/math - part II-01.gif>)
 
 **Polycurve.ByPoints** ノードは、前のステップの **Point.ByCoordinates** を _points_ に接続します。ここでは閉曲線は作成しないため、_connectLastToFirst_ 入力には何も接続しなくてかまいません。この操作により、前の手順で定義した各点を通過するらせん構造が作成されます。
 
-![](../images/5-3/2/math-partII-02.jpg)
+\![](<../../.gitbook/assets/math - part II-02.jpg>)
 
 これで、フィボナッチ曲線が作成されました。ここからは、2 つの演習で「オウムガイ」と「ヒマワリ」を作成してみましょう。これらは自然界にみられる形状を抽象的に表しているばかりではなく、フィボナッチ曲線の 2 つの異なる適用例を的確に表現しています。
 
@@ -77,13 +77,13 @@ $$
 
 円弧を作成するための **Circle.ByCenterPointRadius** ノードの入力ポートに、前の手順と同じ値を接続します。radius 入力の値は既定で _1.0_ に設定されているため、出力として円弧が即座に表示されます。点群が基準点から遠ざかっていく様子がよくわかります。
 
-![](../images/5-3/2/math-partIII-01.jpg)
+\![](<../../.gitbook/assets/math - part III-01.jpg>)
 
 **数列**のノード グループは「_t_」の元の配列です。これを **Circle.ByCenterPointRadius** の radius 入力に接続すると、円弧の中心は基準点から離れていきますが、円の半径は次第に長くなっていき、特長的な形状のらせん構造が作成されます。
 
 余裕があれば、これを 3D に変換してみてください。
 
-![](../images/5-3/2/math-partIII-02.gif)
+\![](<../../.gitbook/assets/math - part III-02.gif>)
 
 ### パート IV: オウムガイから螺旋葉序へ
 
@@ -91,15 +91,15 @@ $$
 
 最初に、前の演習と同じ手順を実行します。**Point.ByCoordinates** ノードを使用して、点群をらせん状に並べた配列を作成します。
 
-<figure><img src="../images/5-3/2/math-partIV-01.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/math - part IV-01.jpg" alt=""><figcaption></figcaption></figure>
 
 次に、これらの手順に従って、さまざまな回転の一連のらせんを生成します。
 
-![](../images/5-3/2/math-partIV-02.jpg)
+\![](<../../.gitbook/assets/math - part IV-02.jpg>)
 
 > a.**Geometry.Rotate** ノードには、同じ名前のノードが複数存在します。_geometry_、_basePlane_、_degrees_ という入力を持つ **Geometry.Rotate** ノードを選択してください。geometry 入力に **Point.ByCoordinates** ノードを接続します。このノードを右クリックして、レーシングが「直積」に設定されていることを確認します。
 >
-> <img src="../images/5-3/2/math-partIV-03crossproduct.jpg" alt="" data-size="original">
+> <img src="../../.gitbook/assets/math - part IV-03 cross product.jpg" alt="" data-size="original">
 >
 > b.**Plane.XY** ノードを _basePlane_ 入力に接続します。これにより、基準点に向かって回り込んでいくように点が描画されます。基準点の位置は、らせんの基準の位置と同じです。
 >
@@ -111,9 +111,8 @@ $$
 
 **Number Range** ノードの step の入力値を _120.0_ から _36.0_ に変更します。この操作により、巻き筋の数が増え、グリッドの密度が上がります
 
-![](../images/5-3/2/math-partIV-04.jpg)
+\![](<../../.gitbook/assets/math - part IV-04.jpg>)
 
 **Number Range** ノードの step の入力値を _36.0_ から _3.6_ に変更します。この操作により、グリッドの密度が大幅に上がり、螺旋の方向が不明瞭になります。これで、ヒマワリが完成しました。
 
-![](../images/5-3/2/math-partIV-05.jpg)
-
+\![](<../../.gitbook/assets/math - part IV-05.jpg>)

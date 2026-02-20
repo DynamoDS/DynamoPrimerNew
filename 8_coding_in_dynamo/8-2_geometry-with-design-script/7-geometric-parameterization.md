@@ -16,7 +16,7 @@ p1 のパラメータは u = 0 v = 0 で、p9 のパラメータは u = 1 v = 1 
 
 曲線には _PointAtParameter_ メソッドがあり、0 から 1 の double 型の引数を 1 つ使用して、そのパラメータの Point オブジェクトを返します。たとえば、このスクリプトでは、パラメータが 0、0.1、0.2、0.3、0.4、0.5、0.6、0.7、0.8、0.9、1 の点を見つけます。
 
-![](../images/8-2/7/GeometricParameterization\_01.png)
+![](../../.gitbook/assets/GeometricParameterization_01.png)
 
 ```js
 pts = {};
@@ -41,7 +41,7 @@ lines = Line.ByStartPointEndPoint(pts_at_param,
 
 曲線上およびサーフェス上の個々の点を抽出することは便利ですが、スクリプトでは通常、曲線やサーフェスが向いている方向など、パラメータの特定の幾何学的特性を知る必要があります。_CoordinateSystemAtParameter_ メソッドでは、曲線やサーフェスのパラメータでの位置だけでなく、方向が設定された座標系も見つかります。たとえば、次のスクリプトによって、回転サーフェスに沿って方向が設定された座標系が抽出され、その座標系の向きを使用して、サーフェスに垂直な線分が生成されます。
 
-![](../images/8-2/7/GeometricParameterization\_02.png)
+![](../../.gitbook/assets/GeometricParameterization_02.png)
 
 ```js
 pts = {};

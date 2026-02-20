@@ -10,17 +10,17 @@
 
 Dynamo で使用される最も一般的な種類の点は、3 次元のワールド座標系内に存在します。それらの点には、[X,Y,Z]の 3 つの座標があります(Dynamo の 3D 点)。
 
-![](../images/5-2/3/points-3dpointindynamo.jpg)
+\![](<../../.gitbook/assets/points - 3d point in dynamo.jpg>)
 
 Dynamo の 2D 点には 2 つの座標[X,Y]があります。
 
-![](../images/5-2/3/points-2dpointindynamo.jpg)
+\![](<../../.gitbook/assets/points - 2d point in dynamo.jpg>)
 
 ### 曲線とサーフェス上の点
 
 曲線とサーフェスのパラメータは連続しており、指定されたジオメトリのエッジを超えて拡張されます。パラメータ空間を定義する形状は 3 次元のワールド座標系内に存在しているため、パラメータ座標をいつでも「ワールド」座標に変換することができます。たとえば、サーフェス上の点[0.2, 0.5]は、ワールド座標系の点[1.8, 2.0, 4.1]と同一です。
 
-![](../images/5-2/3/points-xyzvscoordsysvsuv.jpg)
+\![](<../../.gitbook/assets/points - xyz vs coord sys vs uv.jpg>)
 
 > 1. ワールド XYZ 座標とみなされる座標で表された点
 > 2. 指定された座標系(円柱座標)で表された点
@@ -28,15 +28,15 @@ Dynamo の 2D 点には 2 つの座標[X,Y]があります。
 
 > 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> すべてのサンプルファイルの一覧については、付録を参照してください。
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
-{% file src="../datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Points.dyn" %}
 
-## 詳細を説明します。
+## 詳細
 
 ジオメトリがモデルの言語だと仮定すると、点はアルファベットにあたります。点は、点以外のすべてのジオメトリを作成するための基礎になります。たとえば、1 本の曲線を作成するには、少なくとも 2 つの点が必要です。また、1 つのポリゴンまたはメッシュ面を作成するには、少なくとも 3 つの点が必要です。正弦関数を使用して点群の位置、順序、関係を定義すると、円や曲線など、高次元のジオメトリを定義することができます。
 
-![点から曲線へ](../images/5-2/3/PointsAsBuildingBlocks-1.jpg)
+![点から曲線へ](../../.gitbook/assets/PointsAsBuildingBlocks-1.jpg)
 
 > 1. 関数 `x=r*cos(t)` と `y=r*sin(t)` を使用する円
 > 2. 関数 `x=(t)` と `y=r*sin(t)` を使用した正弦曲線
@@ -45,7 +45,7 @@ Dynamo の 2D 点には 2 つの座標[X,Y]があります。
 
 点は、2 次元の座標系内にも存在することができます。通常は、使用する空間に応じて異なる文字表記を使用します。この手引では、平面上では[X,Y]を使用し、サーフェス上では[U,V]を使用します。
 
-![座標としての点](../images/5-2/3/Coordinates.jpg)
+![座標としての点](../../.gitbook/assets/Coordinates.jpg)
 
 > 1. ユークリッド座標系上の点: [X,Y,Z]
 > 2. 曲線パラメータの座標系上の点: [t]

@@ -6,7 +6,7 @@
 
 補間されたサーフェスを作成するには、サーフェスの形状を近似する 2 次元の点の集合を生成するだけです。集合は、長方形であることが必要です。つまり、ギザギザではありません。_NurbsSurface.ByPoints_ メソッドで、これらの点からサーフェスが構築されます。
 
-![](../images/8-2/6/Surfaces\_01.png)
+![](../../.gitbook/assets/Surfaces_01.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -19,7 +19,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 
 フリーフォーム NURBS 曲面も、サーフェスの基礎となる制御点を指定することで作成できます。NURBS 曲線のように、制御点は直線セグメントによる四角形のメッシュを表すと考えることができ、このメッシュはサーフェスの次数に応じてスムージングされて最終的なサーフェス形状となります。NURBS 曲面を制御点によって作成するには、2 つのパラメータを _NurbsSurface.ByPoints_ に追加して、サーフェスの両方向での基礎となる曲線の次数を示します。
 
-![](../images/8-2/6/Surfaces\_02.png)
+![](../../.gitbook/assets/Surfaces_02.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -31,7 +31,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 
 NURBS 曲面の次数を増やして、結果として得られるサーフェス ジオメトリを変更できます。
 
-![](../images/8-2/6/Surfaces\_03.png)
+![](../../.gitbook/assets/Surfaces_03.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -45,7 +45,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 
 サーフェスは、一連の入力された点の間を補間することで作成できるのと同様に、一連のベースとなる曲線の間を補間することで作成できます。これをロフトと呼びます。ロフトによるサーフェスは、_Surface.ByLoft_ コンストラクタを使用して、入力された曲線の集合のみをパラメータとして作成されます。
 
-![](../images/8-2/6/Surfaces\_04.png)
+![](../../.gitbook/assets/Surfaces_04.png)
 
 ```js
 // python_points_2, 3, and 4 are generated with
@@ -64,7 +64,7 @@ loft = Surface.ByLoft([c1, c2, c3]);
 
 回転のサーフェスは、サーフェスの「エッジ」を表すベースとなる曲線、サーフェスの基点となる軸の原点、中心の「核」の方向となる軸方向、スイープの開始角度、およびスイープの終了角度によって指定されます。これらは _Surface.Revolve_ コンストラクタへの入力として使用されます。
 
-![](../images/8-2/6/Surfaces\_05.png)
+![](../../.gitbook/assets/Surfaces_05.png)
 
 ```js
 pts = {};

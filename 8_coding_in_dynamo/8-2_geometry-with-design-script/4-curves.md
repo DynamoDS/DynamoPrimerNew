@@ -6,7 +6,7 @@ Dynamo でのフリーフォーム曲線の作成には、基本的な方法が 
 
 補間された曲線を作成するには、点の集合を _NurbsCurve.ByPoints_ メソッドに渡すのみです。
 
-![](../images/8-2/4/Curves\_01.png)
+![](../../.gitbook/assets/Curves_01.png)
 
 ```js
 num_pts = 6;
@@ -20,7 +20,7 @@ int_curve = NurbsCurve.ByPoints(pts);
 
 生成された曲線は入力された点それぞれと交差し、集合の最初の点から始まり、最後の点で終わります。オプションの周期パラメータを使用すると、閉じた周期的な曲線を作成できます。Dynamo では欠落しているセグメントは自動的に入力されるので、重複する終了点(開始点と同一)は必要ありません。
 
-![](../images/8-2/4/Curves\_02.png)
+![](../../.gitbook/assets/Curves_02.png)
 
 ```js
 pts = Point.ByCoordinates(Math.Cos(0..350..#10),
@@ -38,7 +38,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 NURBS 曲線はほぼ同じ方法で生成され、入力された点は直線セグメントの端点を表し、次数と呼ばれる 2 番目のパラメータによって、曲線のスムージングの量とタイプが指定されます。* 次数が 1 の曲線はスムーズな部分がなく、ポリラインとなります。
 
-![](../images/8-2/4/Curves\_03.png)
+![](../../.gitbook/assets/Curves_03.png)
 
 ```js
 num_pts = 6;
@@ -52,7 +52,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 
 次数が 2 の曲線は、曲線が交差し、ポリライン セグメントの中点と正接するようにスムージングされます。
 
-![](../images/8-2/4/Curves\_04.png)
+![](../../.gitbook/assets/Curves_04.png)
 
 ```js
 num_pts = 6;
@@ -66,7 +66,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 
 Dynamo では、次数 20 までの NURBS (Non-Uniform Rational B Spline、非一様有理 B スプライン)曲線がサポートされます。次のスクリプトは、スムージング レベルの増加が曲線の形状に与える効果を示します。
 
-![](../images/8-2/4/Curves\_05.png)
+![](../../.gitbook/assets/Curves_05.png)
 
 ```js
 num_pts = 6;
@@ -87,7 +87,7 @@ ctrl_crvs = create_curve(pts, 1..11);
 
 制御頂点による曲線の構築には、個々の曲線セグメント間で正接状態を維持できるという利点もあります。最後の 2 つの制御点間の方向が抽出され、この方向がそれに続く曲線の最初の 2 つの制御点で継続されることによって正接を維持します。次の例では、別々であっても 1 つの曲線のようにスムーズな 2 つの NURBS 曲線が作成されます。
 
-![](../images/8-2/4/Curves\_06.png)
+![](../../.gitbook/assets/Curves_06.png)
 
 ```js
 pts_1 = {};

@@ -2,4 +2,4 @@
 
 Dynamo のノードのライブラリには、すぐに使用できる多くの機能が保存されています。頻繁に使用するルーチンや、コミュニティと共有する特殊なグラフがある場合は、カスタム ノードとパッケージによって Dynamo をさらに拡張できます。
 
-![](./images/customNodes\_cover01.jpg)
+![](../.gitbook/assets/customNodes_cover01.jpg)
