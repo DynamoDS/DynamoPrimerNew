@@ -12,7 +12,7 @@ Ce workflow vous apprendra à effectuer les actions suivantes :
 * Créer et modifier des éléments géométriques à l’aide de nœuds.
 * Visualiser les résultats de la conception en temps réel.
 
-![](../../1\_introduction/images/1-2/vase1.gif)
+![](../../.gitbook/assets/vase1.gif)
 
 ## Définition des objectifs
 
@@ -22,7 +22,7 @@ Imaginez que vous allez concevoir un vase en argile selon les pratiques de fabri
 
 Vous allez utiliser une méthodologie similaire pour définir notre vase. Vous allez créer 4 cercles à différentes hauteurs et de différents rayons, puis lisser ces cercles pour créer une surface.
 
-![](../images/10-1/1/vase2.png)
+![](../../.gitbook/assets/vase2.png)
 
 ## Mise en route
 
@@ -30,11 +30,11 @@ Vous allez utiliser une méthodologie similaire pour définir notre vase. Vous a
 >
 > Vous trouverez la liste complète des fichiers d’exemple dans l’annexe.
 
-{% file src="../datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
+{% file src="../../.gitbook/assets/DynamoSampleWorkflow-vase.dyn" %}
 
 Vous avez besoin des nœuds qui représenteront la séquence d’actions exécutée par Dynamo. Étant donné que vous essayez de créer un cercle, commencez par rechercher un nœud qui réalise cette action. Utilisez le **champ de recherche** ou parcourez la **bibliothèque** pour rechercher le nœud **Circle.ByCenterPointRadius** et l’ajouter à l’espace de travail
 
-![](../images/10-1/1/vase8.png)
+![](../../.gitbook/assets/vase8.png)
 
 > 1. Rechercher > « Circle… »
 > 2. Sélectionner > « ByCenterPointRadius »
@@ -42,25 +42,25 @@ Vous avez besoin des nœuds qui représenteront la séquence d’actions exécut
 
 Examinez ce nœud de plus près. Sur le côté gauche se trouvent les entrées du nœud (_centerPoint_ et _radius_) et sur le côté droit se trouve la sortie du nœud (Circle). Notez que les sorties sont identifiées par une ligne bleu clair. Cela signifie que l’entrée a une valeur par défaut. Pour plus d’informations sur l’entrée, placez le curseur sur son nom. L’entrée _radius_ requiert une double entrée et a une valeur par défaut de 1.
 
-![](../images/10-1/1/vase10.png)
+![](../../.gitbook/assets/vase10.png)
 
 Conservez la valeur par défaut de _centerPoint_, mais ajoutez un nœud **Number Slider** pour contrôler le rayon. Comme vous l’avez fait avec le nœud **Circle.ByCenterPointRadius**, utilisez la bibliothèque pour rechercher **Number Slider** et l’ajouter à votre graphique.
 
 Ce nœud est légèrement différent du nœud précédent, car il contient un curseur. Vous pouvez utiliser l’interface pour modifier la valeur de sortie du curseur.
 
-![](../images/10-1/1/vase13\(1\).gif)
+\![](<../../.gitbook/assets/vase13 (1).gif>)
 
 Le curseur peut être configuré à l’aide du bouton déroulant situé à gauche du nœud. Limitez le curseur à une valeur maximale de 15.
 
-![](../images/10-1/1/vase11.png)
+![](../../.gitbook/assets/vase11.png)
 
 Placez-le à gauche du nœud **Circle.ByCenterPointRadius** et connectez les deux nœuds en sélectionnant la sortie **Number Slider** et en la connectant à l’entrée Radius.
 
-![](../images/10-1/1/vase12.png)
+![](../../.gitbook/assets/vase12.png)
 
 Remplacez également le nom de Number Slider par « Top Radius » en double-cliquant sur le nom du nœud.
 
-![](../images/10-1/1/vase14.png)
+![](../../.gitbook/assets/vase14.png)
 
 ## Etapes suivantes
 
@@ -70,7 +70,7 @@ Continuons à ajouter des nœuds et des connexions à notre logique pour défini
 
 Copiez ces nœuds 4 fois pour que ces cercles définissent la surface et modifiez les noms de Number Slider comme illustré ci-dessous.
 
-![](<../images/10-1/1/vase4 (1).png>)
+\![](<../../.gitbook/assets/vase4 (1).png>)
 
 > 1. Les cercles sont créés à l’aide d’un point central et d’un rayon
 
@@ -78,11 +78,11 @@ Copiez ces nœuds 4 fois pour que ces cercles définissent la surface et modifi
 
 Il vous manque un paramètre clé pour votre vase, sa hauteur. Pour contrôler la hauteur du vase, vous allez créer un autre curseur de numérotation. Vous allez aussi ajouter un nœud **Code Block**. Les nœuds Code Block peuvent vous aider à ajouter des extraits de code personnalisés à votre workflow. Vous allez utiliser le nœud Code Block pour multiplier le curseur de hauteur par différents facteurs afin de pouvoir positionner nos cercles le long de la hauteur du vase.
 
-![](../images/10-1/1/vase15\(1\).png)
+\![](<../../.gitbook/assets/vase15 (1).png>)
 
 Vous allez ensuite utiliser un nœud **Geometry.Translate** pour placer des cercles à la hauteur souhaitée. Comme vous voulez distribuer vos cercles à travers le vase, utilisez des nœuds Code Block pour multiplier le paramètre de hauteur par un facteur.
 
-![](../images/10-1/1/vase5.png)
+![](../../.gitbook/assets/vase5.png)
 
 > 2\. Les cercles sont convertis (déplacés) par une variable dans l’axe Z.
 
@@ -92,7 +92,7 @@ Pour créer une surface à l’aide du nœud **Surface.ByLoft**, vous devez comb
 
 Désactivez également l’aperçu dans les autres nœuds pour afficher uniquement l’affichage Surface.ByLoft.
 
-![](<../images/10-1/1/vase6 (1).png>)
+![](../../.gitbook/assets/vase6.png)
 
 > 3\. Une surface est créée en lissant les cercles convertis.
 
@@ -100,6 +100,6 @@ Désactivez également l’aperçu dans les autres nœuds pour afficher uniqueme
 
 Votre workflow est prêt ! Vous pouvez désormais utiliser les **Number Sliders** définis dans votre script pour créer différents modèles de vases.
 
-![](../../1\_introduction/images/1-2/vase1.gif)
+![](../../.gitbook/assets/vase1.gif)
 
-![](../images/10-1/1/vase7.png)
+![](../../.gitbook/assets/vase7.png)

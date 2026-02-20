@@ -6,7 +6,7 @@ Les extensions sont un outil de développement puissant dans l’écosystème Dy
 
 En suivant l’exemple SampleViewExtension du dépôt DynamoSamples de Github, nous allons parcourir les étapes nécessaires à la création d’une simple fenêtre sans modèle qui affiche les nœuds actifs du graphique en temps réel. Une extension de vue nécessite la création d’une interface utilisateur pour la fenêtre et l’association de valeurs à un modèle de vue.
 
-![Fenêtre d’extension de vue](images/dyn-viewextension.jpg)
+![Fenêtre d’extension de vue](../../.gitbook/assets/dyn-viewextension.jpg)
 
 > 1. La fenêtre d’extension de vue a été développée en suivant l’exemple SampleViewExtension dans le dépôt de Github.
 
@@ -28,9 +28,9 @@ Une extension de vue comporte trois parties essentielles :
 
 Commencez par créer un projet `Class Library` nommé `SampleViewExtension`.
 
-![Création d’une bibliothèque de classes](images/vs-new-project-viewextension-1.jpg)
+![Création d’une bibliothèque de classes](../../.gitbook/assets/vs-new-project-viewextension-1.jpg)
 
-![Configuration d’un nouveau projet](images/vs-new-project-viewextension-2.jpg)
+![Configuration d’un nouveau projet](../../.gitbook/assets/vs-new-project-viewextension-2.jpg)
 
 > 1. Créez un projet en sélectionnant `File > New > Project`
 > 2. Sélectionnez `Class Library`
@@ -39,14 +39,14 @@ Commencez par créer un projet `Class Library` nommé `SampleViewExtension`.
 
 Dans ce projet, nous aurons besoin de deux classes. Une classe implémentera `IViewExtension` et une autre qui implémentera `NotificationObject.` `IViewExtension` contiendra toutes les informations sur la façon dont l’extension sera déployée, chargée, référencée et supprimée. `NotificationObject` fournira des notifications pour les modifications dans Dynamo et `IDisposable`. Lorsqu’un changement se produit, le compte sera mis à jour en conséquence.
 
-![Fichiers de classe d’extension de vue](images/vs-viewextension-classes.jpg)
+![Fichiers de classe d’extension de vue](../../.gitbook/assets/vs-viewextension-classes.jpg)
 
 > 1. Un fichier de classe nommé `SampleViewExtension.cs` qui implémentera `IViewExtension`
 > 2. Un fichier de classe nommé `SampleWindowViewMode.cs` qui implémentera `NotificationObject`
 
 Pour utiliser `IViewExtension`, nous aurons besoin du package NuGet WpfUILibrary. L’installation de ce package installera automatiquement les packages Core, Services et ZeroTouchLibrary.
 
-![Packages d’extension de vue](images/vs-viewextension-packages.jpg)
+![Packages d’extension de vue](../../.gitbook/assets/vs-viewextension-packages.jpg)
 
 > 1. Sélectionnez la bibliothèque WpfUILibrary
 > 2. Sélectionnez `Install` pour installer tous les packages dépendants
@@ -133,7 +133,7 @@ La classe `SampleViewExtension` crée un élément de menu cliquable pour ouvrir
 * `public class SampleViewExtension : IViewExtension` `SampleViewExtension` hérite de l’interface `IViewExtension` et fournit tout ce dont nous avons besoin pour créer l’élément de menu.
 * `sampleMenuItem = new MenuItem { Header = "Show View Extension Sample Window" };` crée un élément MenuItem et l’ajoute au menu `View`.
 
-![L’élément de menu](images/dyn-menuitem.jpg)
+![L’élément de menu](../../.gitbook/assets/dyn-menuitem.jpg)
 
 > 1. L’élément de menu
 
@@ -208,7 +208,7 @@ Cette implémentation de la classe de modèle de vue écoute le `CurrentWorkspac
 
 Une fois la logique principale de l’extension définie, vous allez maintenant spécifier les détails d’apparence de la fenêtre avec un fichier `.xaml`. Il suffit d’une simple fenêtre qui affiche la chaîne via la liaison de propriété `ActiveNodeTypes` dans le `TextBlock` `Text`.
 
-![Ajout d’une fenêtre](images/vs-window.jpg)
+![Ajout d’une fenêtre](../../.gitbook/assets/vs-window.jpg)
 
 > 1. Cliquez avec le bouton droit de la souris sur le projet et choisissez `Add > New Item...`
 > 2. Sélectionnez le modèle de contrôle utilisateur que vous allez modifier pour créer une fenêtre
@@ -259,7 +259,7 @@ namespace SampleViewExtension
 
 L’extension de vue est maintenant prête à être créée et ajoutée à Dynamo. Dynamo requiert un fichier `xml` pour enregistrer la sortie `.dll` en tant qu’extension.
 
-![Ajout d’un nouveau fichier XML](images/vs-viewextension-xml.jpg)
+![Ajout d’un nouveau fichier XML](../../.gitbook/assets/vs-viewextension-xml.jpg)
 
 > 1. Cliquez avec le bouton droit de la souris sur le projet et choisissez `Add > New Item...`
 > 2. Sélectionner un fichier XML
@@ -281,7 +281,7 @@ Dans le fichier `xml`, ajoutez le code suivant pour indiquer à Dynamo où reche
 
 La dernière étape consiste à copier le fichier `SampleViewExtension_ViewExtensionDefinition.xml` dans le dossier des extensions de vue de Dynamo situé dans le répertoire d’installation de Dynamo Core `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions`. Il est important de noter qu’il existe des dossiers distincts pour `extensions` et `viewExtensions`. Placer le fichier `xml` dans un dossier incorrect peut entraîner un échec du chargement au moment de l’exécution.
 
-![Fichier XML copié dans le dossier Extensions](images/fe-viewextension-xml.jpg)
+![Fichier XML copié dans le dossier Extensions](../../.gitbook/assets/fe-viewextension-xml.jpg)
 
 > 1. Le fichier `.xml` que nous avons copié dans le dossier des extensions de vue de Dynamo
 

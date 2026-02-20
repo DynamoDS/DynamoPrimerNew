@@ -2,15 +2,15 @@
 
 Avant de se lancer dans le développement, il est important d’établir des bases solides pour un nouveau projet. Il existe plusieurs modèles de projets dans la communauté des développeurs Dynamo qui sont d’excellents points de départ, mais il est encore plus utile de savoir comment démarrer un projet à partir de zéro. La génération d’un projet à partir de zéro permet de mieux comprendre le processus de développement.
 
-![Visual Studio](images/visual-studio.jpg)
+![Visual Studio](../../.gitbook/assets/visual-studio.jpg)
 
 ### Créer un projet Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 Visual Studio est un environnement IDE puissant dans lequel vous pouvez créer un projet, ajouter des références, générer des `.dlls` et déboguer. Lors de la création d’un projet, Visual Studio crée également une solution, une structure pour l’organisation des projets. Plusieurs projets peuvent exister au sein d’une même solution et peuvent être créés ensemble. Pour créer un nœud ZeroTouch, nous devons démarrer un nouveau projet Visual Studio dans lequel nous écrirons une bibliothèque de classes en C# et générerons un `.dll`.
 
-![Création d’un projet dans Visual Studio](images/vs-new-project-1.jpg)
+![Création d’un projet dans Visual Studio](../../.gitbook/assets/vs-new-project-1.jpg)
 
-![Configuration d’un nouveau projet dans Visual Studio](images/vs-new-project-2.jpg)
+![Configuration d’un nouveau projet dans Visual Studio](../../.gitbook/assets/vs-new-project-2.jpg)
 
 > La fenêtre Nouveau projet dans Visual Studio
 >
@@ -35,7 +35,7 @@ Visual Studio crée et ouvre automatiquement un fichier C#. Donnez-lui un nom 
  }
 ```
 
-![Utilisation de l’explorateur de solutions](images/vs-edit-class.jpg)
+![Utilisation de l’explorateur de solutions](../../.gitbook/assets/vs-edit-class.jpg)
 
 > 1. Ouvrez l’explorateur de solutions et les fenêtres de sortie à partir de `View`.
 > 2. Renommez le fichier `Class1.cs` en `SampleFunctions.cs` dans l’explorateur de solutions sur la droite.
@@ -45,7 +45,7 @@ Visual Studio crée et ouvre automatiquement un fichier C#. Donnez-lui un nom 
 
 L’étape suivante consiste à générer le projet, mais avant cela, nous devons vérifier quelques paramètres. Tout d’abord, assurez-vous que `Any CPU` ou `x64` est sélectionné comme plateforme cible et que la case `Prefer 32-bit` n’est pas cochée dans les propriétés du projet.
 
-![Paramètres de génération de Visual Studio](images/vs-build-settings.jpg)
+![Paramètres de génération de Visual Studio](../../.gitbook/assets/vs-build-settings.jpg)
 
 > 1. Ouvrez les propriétés du projet en sélectionnant `Project > "ProjectName" Properties`.
 > 2. Sélectionnez la page `Build`.
@@ -54,14 +54,14 @@ L’étape suivante consiste à générer le projet, mais avant cela, nous devon
 
 Nous pouvons maintenant générer le projet pour créer un `.dll`. Pour ce faire, sélectionnez `Build Solution` dans le menu `Build` ou utilisez le raccourci `CTRL+SHIFT+B`.
 
-![Génération d’une solution](images/vs-build.jpg)
+![Génération d’une solution](../../.gitbook/assets/vs-build.jpg)
 
 > 1. Sélectionnez `Build > Build Solution`.
 > 2. Vous pouvez déterminer si votre projet a été créé correctement en cochant la fenêtre Sortie.
 
 Si le projet a été créé correctement, un `.dll` nommé `MyCustomNode` figure dans le dossier `bin` du projet. Pour cet exemple, nous avons laissé le chemin d’accès au fichier du projet tel qu’il est défini par défaut par Visual Studio, à savoir `c:\users\username\documents\visual studio 2015\Projects`. Examinons la structure de fichiers du projet.
 
-![Structure des fichiers du projet](images/folder-structure.jpg)
+![Structure des fichiers du projet](../../.gitbook/assets/folder-structure.jpg)
 
 > 1. Le dossier `bin` contient le `.dll` créé à partir de Visual Studio.
 > 2. Le fichier du projet Visual Studio.
@@ -70,7 +70,7 @@ Si le projet a été créé correctement, un `.dll` nommé `MyCustomNode` figure
 
 Nous pouvons maintenant ouvrir Dynamo et importer le `.dll`. Avec la fonction Ajouter, accédez à l’emplacement `bin` du projet et sélectionnez le `.dll` à ouvrir.
 
-![Ouverture du fichier .dll du projet](images/dyn-import-dll.jpg)
+![Ouverture du fichier .dll du projet](../../.gitbook/assets/dyn-import-dll.jpg)
 
 > 1. Cliquez sur le bouton Ajouter pour importer un fichier `.dll`.
 > 2. Accédez à l’emplacement du projet. Notre projet se trouve dans le chemin d’accès par défaut de Visual Studio : `C:\Users\username\Documents\Visual Studio 2015\Projects\MyCustomNode`.
@@ -79,7 +79,7 @@ Nous pouvons maintenant ouvrir Dynamo et importer le `.dll`. Avec la fonction Aj
 
 Si une catégorie est créée dans la bibliothèque appelée `MyCustomNode`, le fichier .dll a été importé avec succès ! Cependant, Dynamo a créé deux nœuds alors que nous n’en voulions qu’un seul. Dans la section suivante, nous allons expliquer pourquoi cela se produit et comment Dynamo lit un fichier .dll.
 
-![Nœuds personnalisés](images/dyn-customnode.jpg)
+![Nœuds personnalisés](../../.gitbook/assets/dyn-customnode.jpg)
 
 > 1. MyCustomNode dans la bibliothèque Dynamo. La catégorie Bibliothèque est déterminée par le nom `.dll`.
 > 2. SampleFunctions.MultiplyByTwo dans la zone de dessin.
@@ -88,7 +88,7 @@ Si une catégorie est créée dans la bibliothèque appelée `MyCustomNode`, le 
 
 Lorsque Dynamo charge un fichier .dll, il expose toutes les méthodes statiques publiques sous forme de nœuds. Les constructeurs, les méthodes et les propriétés seront transformés respectivement en nœuds de création, d’action et de requête. Dans notre exemple de multiplication, la méthode `MultiplyByTwo()` devient un nœud d’action dans Dynamo. Ceci est dû au fait que le nœud a été nommé en fonction de sa méthode et de sa classe.
 
-![Noeud SampleFunction.MultiplyByTwo dans un graphique](images/multiplybytwo.png)
+![Noeud SampleFunction.MultiplyByTwo dans un graphique](../../.gitbook/assets/multiplybytwo.png)
 
 > 1. L’entrée est nommée `inputNumber` en fonction du nom du paramètre de la méthode.
 > 2. La sortie est nommée `double` par défaut, car il s’agit du type de données renvoyé.
@@ -115,7 +115,7 @@ namespace MyCustomNode
 }
 ```
 
-![Méthode importée en tant que nœud de création](images/private-constructor.jpg)
+![Méthode importée en tant que nœud de création](../../.gitbook/assets/private-constructor.jpg)
 
 > 1. Dynamo a importé notre méthode en tant que nœud de création
 
@@ -132,13 +132,13 @@ Le nœud de multiplication est très simple et aucune référence à Dynamo n’
 
 Pour référencer ces packages dans un projet Visual Studio, téléchargez le package à partir de NuGet à l’aide des liens ci-dessus et référencez manuellement les fichiers .dll ou utilisez le gestionnaire de package NuGet dans Visual Studio. Nous pouvons d’abord voir comment les installer avec NuGet dans Visual Studio.
 
-![Ouverture du gestionnaire de package NuGet](images/vs-nuget-package-manager2.jpg)
+![Ouverture du gestionnaire de package NuGet](../../.gitbook/assets/vs-nuget-package-manager2.jpg)
 
 > 1. Ouvrez le gestionnaire de package NuGet en sélectionnant `Tools > NuGet Package Manager > Manage NuGet Packages for Solution...`.
 
 Il s’agit du gestionnaire de package NuGet. Cette fenêtre indique les packages qui ont été installés pour le projet et permet à l’utilisateur d’en rechercher d’autres. Si une nouvelle version du package DynamoServices est publiée, les packages peuvent être mis à jour à partir d’ici ou rétablis à une version antérieure.
 
-![Gestionnaire de package NuGet](images/vs-nuget-package-manager.jpg)
+![Gestionnaire de package NuGet](../../.gitbook/assets/vs-nuget-package-manager.jpg)
 
 > 1. Sélectionnez Parcourir et recherchez DynamoVisualProgramming pour faire apparaître les packages Dynamo.
 > 2. Les packages Dynamo. En sélectionnant l’un d’entre eux, vous verrez sa version actuelle et une description de son contenu.
@@ -146,7 +146,7 @@ Il s’agit du gestionnaire de package NuGet. Cette fenêtre indique les package
 
 Pour ajouter manuellement un package téléchargé à partir du navigateur, ouvrez le gestionnaire des références à partir de l’explorateur de solutions et recherchez le package.
 
-![Gestionnaire des références](images/vs-manual-dynamo-package.jpg)
+![Gestionnaire des références](../../.gitbook/assets/vs-manual-dynamo-package.jpg)
 
 > 1. Cliquez avec le bouton droit de la souris sur `References` et sélectionnez `Add Reference`.
 > 2. Sélectionnez `Browse` pour accéder à l’emplacement du package.

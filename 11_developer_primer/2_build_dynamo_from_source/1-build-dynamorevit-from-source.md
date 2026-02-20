@@ -13,7 +13,7 @@ Pour ce guide, nous utiliserons ce qui suit :
 
 Pour assurer une génération réussie, nous allons cloner et générer les dépôts Dynamo et DynamoRevit pour les utiliser dans ce guide.
 
-_Remarque : générer Dynamo manuellement avant DynamoRevit n’est nécessaire que si vous générez Dynamo 1.x et DynamoRevit 1.x. Les versions plus récentes du dépôt DynamoRevit s’appuient sur le gestionnaire de package NuGet pour les dépendances de Dynamo nécessaires à la génération. Bien qu’une génération de DynamoRevit 2.x ne nécessite pas de tirer Dynamo manuellement, vous aurez toujours besoin du noyau `dlls` ailleurs pour exécuter DynamoRevit `add-in`. Il est donc préférable de tirer et de générer Dynamo. Pour en savoir plus, consultez la rubrique ci-dessous :_ [_Générer le dépôt avec Visual Studio_](#building-the-repository-using-Visual-Studio)
+_Remarque : générer Dynamo manuellement avant DynamoRevit n’est nécessaire que si vous générez Dynamo 1.x et DynamoRevit 1.x. Les versions plus récentes du dépôt DynamoRevit s’appuient sur le gestionnaire de package NuGet pour les dépendances de Dynamo nécessaires à la génération. Bien qu’une génération de DynamoRevit 2.x ne nécessite pas de tirer Dynamo manuellement, vous aurez toujours besoin du noyau `dlls` ailleurs pour exécuter DynamoRevit `add-in`. Il est donc préférable de tirer et de générer Dynamo. Pour en savoir plus, consultez la rubrique ci-dessous :_ [_Générer le dépôt avec Visual Studio_](1-build-dynamorevit-from-source.md#building-the-repository-using-Visual-Studio)
 
 ### Localiser le dépôt DynamoRevit sur Github <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
@@ -21,7 +21,7 @@ Le code du projet DynamoRevit se trouve dans un dépôt séparé sur GitHub du c
 
 La source de DynamoRevit est hébergée ici : [https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit)
 
-![DynamoRevit sur GitHub](images/github-dynamorevit.jpg)
+![DynamoRevit sur GitHub](../../.gitbook/assets/github-dynamorevit.jpg)
 
 > 1. Cloner ou télécharger le dépôt
 > 2. Les branches de DynamoRevit font référence aux versions de Revit
@@ -34,13 +34,13 @@ De la même manière que pour le dépôt Dynamo, nous allons utiliser la command
 
 > Remplacez `username` par votre nom d’utilisateur
 
-![Interface de ligne de commande](images/cli-cd-revit.jpg)
+![Interface de ligne de commande](../../.gitbook/assets/cli-cd-revit.jpg)
 
 Nous pouvons maintenant cloner le dépôt dans ce répertoire. Même si nous devons spécifier une branche du dépôt, nous pouvons basculer vers cette branche après le clonage.
 
 `git clone https://github.com/DynamoDS/DynamoRevit.git` clone le dépôt à partir d’une URL distante et bascule par défaut sur la branche master.
 
-![Interface en ligne de commande après clonage du dépôt](images/cli-clone-revit.jpg)
+![Interface en ligne de commande après clonage du dépôt](../../.gitbook/assets/cli-clone-revit.jpg)
 
 Une fois que le clonage du dépôt est terminé, changez le répertoire courant en dossier du dépôt et passez à la branche qui correspond à la version installée de Revit. Pour cet exemple, nous utilisons Revit RC2.13.1_Revit2023. Toutes les branches distantes peuvent être consultées sur la page Github dans le menu déroulant Branche.
 
@@ -48,7 +48,7 @@ Une fois que le clonage du dépôt est terminé, changez le répertoire courant 
 `git checkout RC2.13.1_Revit2023` définit la branche actuelle sur `RC2.13.1_Revit2023`.\
 `git branch` vérifie la branche sur laquelle nous nous trouvons et affiche les autres branches qui existent localement.
 
-![Répertoire basculé vers une branche](images/cli-branch-revit.jpg)
+![Répertoire basculé vers une branche](../../.gitbook/assets/cli-branch-revit.jpg)
 
 > La branche avec un astérisque est celle qui est en cours d’extraction. La branche `Revit2018` est affichée, car nous l’avons précédemment extraite, elle existe donc localement.
 
@@ -58,19 +58,19 @@ Il est important de choisir la bonne branche du dépôt pour s’assurer que lor
 
 Avant de générer le dépôt, nous devons restaurer les packages NuGet avec le fichier `restorepackages.bat` situé dans le dossier `src`. Ce fichier .bat utilise le gestionnaire de package [NuGet](https://www.nuget.org) pour tirer les fichiers binaires intégrés de Dynamo Core, dont DynamoRevit a besoin. Vous pouvez également choisir de les générer manuellement, à condition de ne faire que des changements dans DynamoRevit et non dans Dynamo Core. Cela permet de démarrer plus rapidement. Veillez à exécuter ce fichier en tant qu’administrateur.
 
-![Exécution en tant qu’Administrateur](images/fe-restorepackages.jpg)
+![Exécution en tant qu’Administrateur](../../.gitbook/assets/fe-restorepackages.jpg)
 
 > 1. Cliquez avec le bouton droit de la souris sur `restorepackages.bat` et sélectionnez `Run as administrator`.
 
 Si les packages sont restaurés avec succès, un dossier `packages` sera ajouté au dossier `src` avec les derniers packages NuGet bêta.
 
-![La dernière version bêta des packages Dynamo NuGet](images/fe-packages.jpg)
+![La dernière version bêta des packages Dynamo NuGet](../../.gitbook/assets/fe-packages.jpg)
 
 > 1. La dernière version bêta des packages Dynamo NuGet
 
 Une fois les packages restaurés, ouvrez le fichier de solution `DynamoRevit.All.sln` Visual Studio dans `src` et générez la solution. La génération peut initialement rencontrer des problèmes pour trouver `AssemblySharedInfo.cs`. Si c’est le cas, exécutez à nouveau la génération pour résoudre ce problème.
 
-![Génération d’une solution](images/vs-build-dynamorevit.jpg)
+![Génération d’une solution](../../.gitbook/assets/vs-build-dynamorevit.jpg)
 
 > 1. Sélectionnez `Build > Build Solution`.
 > 2. Vérifiez que la génération a réussi dans la fenêtre de sortie. Un message devrait indiquer `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`.
@@ -116,9 +116,9 @@ Nous pouvons également faire en sorte que le complément charge le sélecteur d
 * Définissez le chemin d’accès au fichier `<Assembly>...</Assembly>` sur `DynamoRevitVersionSelector.dll`.
 * `<FullClassName>...</FullClassName>` spécifie quelle classe doit être instanciée à partir de l’assemblage que nous avons pointé avec le chemin de l’élément d’assemblage ci-dessus. Cette classe sera le point d’entrée de notre complément.
 
-En outre, nous devons supprimer la version existante de Dynamo qui est livrée avec Revit. Pour ce faire, accédez à `C:\\Program Files\Autodesk\Revit 2023\AddIns ` et supprimez les deux dossiers qui contiennent **Dynamo** : `DynamoForRevit` et `DynamoPlayerForRevit`. Vous pouvez les supprimer ou les sauvegarder dans un dossier séparé si vous avez besoin de récupérer la version originale de Dynamo for Revit.
+En outre, nous devons supprimer la version existante de Dynamo qui est livrée avec Revit. Pour ce faire, accédez à `C:\\Program Files\Autodesk\Revit 2023\AddIns` et supprimez les deux dossiers qui contiennent **Dynamo** : `DynamoForRevit` et `DynamoPlayerForRevit`. Vous pouvez les supprimer ou les sauvegarder dans un dossier séparé si vous avez besoin de récupérer la version originale de Dynamo for Revit.
 
-![Dossiers DynamoForRevit et DynamoPlayerforRevit](images/fe-dynamo-folders-remove.jpg)
+![Dossiers DynamoForRevit et DynamoPlayerforRevit](../../.gitbook/assets/fe-dynamo-folders-remove.jpg)
 
 La deuxième étape consiste à ajouter un chemin d’accès au fichier `Dynamo.config` dans le dossier `bin` de DynamoRevit pour les assemblages de Dynamo Core. DynamoRevit les chargera lorsque le complément sera ouvert dans Revit. Ce fichier de configuration vous permet de faire pointer votre complément DynamoRevit vers différentes versions de Dynamo Core pour développer et tester des changements à la fois dans Dynamo Core et dans DynamoRevit.
 
@@ -139,7 +139,7 @@ Le code devrait ressembler à ceci :
 
 Désormais, lorsque nous ouvrons Revit, un complément Dynamo doit se trouver dans l’onglet Gérer.
 
-![Complément Dynamo situé dans l’onglet Gérer](images/revit-dynamo.jpg)
+![Complément Dynamo situé dans l’onglet Gérer](../../.gitbook/assets/revit-dynamo.jpg)
 
 > 1. Sélectionnez `Manage`
 > 2. Cliquez sur l’icône du complément Dynamo
@@ -160,13 +160,13 @@ Dans la section précédente, **Générer Dynamo à partir de la source**, nous 
 
 Le nœud **Wall.ByCurveAndHeight** lève une exception lorsqu’il reçoit une PolyCurve comme courbe d’entrée, avec le message suivant : _« To BSPlineCurve Not Implemented »_ (Vers BSPlineCurve, non implémenté). Avec le débogage, nous pouvons comprendre pourquoi exactement le nœud n’accepte pas ce type de géométrie comme entrée pour le paramètre de courbe. Pour cet exemple, nous supposons que DynamoRevit a été généré avec succès et qu’il peut être exécuté en tant que complément pour Revit.
 
-![Le nœud Wall.ByCurveAndHeight levant une exception](images/dyn-wallbycurveandheight.jpg)
+![Le nœud Wall.ByCurveAndHeight levant une exception](../../.gitbook/assets/dyn-wallbycurveandheight.jpg)
 
 > 1. Le nœud Wall.ByCurveAndHeight lève une exception
 
 Commencez par ouvrir le fichier de solution `DynamoRevit.All.sln`, démarrez Revit et démarrez le complément DynamoRevit. Attachez ensuite Visual Studio au processus Revit à l’aide de la fenêtre `Attach to Process`.
 
-![Fenêtre Attacher au processus](images/vs-debug-attachprocess.jpg)
+![Fenêtre Attacher au processus](../../.gitbook/assets/vs-debug-attachprocess.jpg)
 
 > Revit et DynamoRevit doivent être en cours d’exécution pour apparaître comme un processus disponible.
 >
@@ -177,21 +177,21 @@ Commencez par ouvrir le fichier de solution `DynamoRevit.All.sln`, démarrez Rev
 
 Visual Studio étant attaché à Revit, ouvrez le code source Wall.ByCurveAndHeight dans `Wall.cs`. Nous pouvons le trouver dans l’explorateur de solutions sous `Libraries > RevitNodes > Elements` dans la partie `Public static constructors` du fichier. Définissez un point d’arrêt dans le constructeur du type de mur de sorte que lorsque le nœud est exécuté dans Dynamo, le processus s’interrompt et nous pouvons parcourir chaque ligne de code individuellement. En général, les constructeurs du type Dynamo Zero-Touch commencent par `By<parameters>`.
 
-![Définition d’un point d’arrêt](images/vs-debugging-breakpoint.jpg)
+![Définition d’un point d’arrêt](../../.gitbook/assets/vs-debugging-breakpoint.jpg)
 
 > 1. Le fichier de classe avec le constructeur pour Wall.ByCurveAndHeight.
 > 2. Définissez un point d’arrêt en cliquant à gauche du numéro de ligne ou en cliquant avec le bouton droit de la souris sur la ligne de code et en sélectionnant `Breakpoint > Insert Breakpoint`.
 
 Une fois le point d’arrêt défini, nous devons exécuter le processus avec la fonction Wall.ByCurveAndHeight. La fonction peut être exécutée à nouveau dans Dynamo en reconnectant un fil à l’un de ses ports, ce qui forcera le nœud à s’exécuter à nouveau. Le point d’arrêt sera atteint dans Visual Studio.
 
-![Point d’arrêt atteint dans Visual Studio](images/vs-breakpoint.jpg)
+![Point d’arrêt atteint dans Visual Studio](../../.gitbook/assets/vs-breakpoint.jpg)
 
 > 1. L’icône du point d’arrêt change lorsqu’il est atteint
 > 2. La fenêtre de la pile d’exécution montre la méthode suivante
 
 Nous allons maintenant parcourir chaque ligne du constructeur jusqu’à ce que nous rencontrions l’exception. Le code surligné en jaune est la prochaine instruction à exécuter.
 
-![Parcourir dans Visual Studio](images/vs-stepover.jpg)
+![Parcourir dans Visual Studio](../../.gitbook/assets/vs-stepover.jpg)
 
 > 1. Les outils de débogage pour parcourir le code
 > 2. Appuyez sur `Step Over` pour exécuter le code en surbrillance, puis suspendez l’exécution après le retour de la fonction
@@ -199,16 +199,16 @@ Nous allons maintenant parcourir chaque ligne du constructeur jusqu’à ce que 
 
 Si nous continuons à parcourir la fonction, nous atteindrons l’exception qui s’est affichée dans la fenêtre DynamoRevit. En regardant la fenêtre de la pile d’exécution, nous pouvons voir que l’exception a été levée à l’origine à partir d’une méthode appelée `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve`. Heureusement, l’exception est gérée ici, de sorte que Dynamo ne se bloque pas. Le processus de débogage a permis de contextualiser le problème en nous amenant à une autre méthode dans le code source.
 
-Comme il ne s’agit pas d’une bibliothèque open source, nous ne pouvons pas y apporter de modifications. Maintenant que nous avons plus d’informations, nous pouvons signaler le problème avec plus de contexte en soumettant un [problème](https://guides.github.com/features/issues/) Git ou nous pouvons proposer une solution alternative pour résoudre ce problème en faisant une demande de tirage.
+Comme il ne s’agit pas d’une bibliothèque open source, nous ne pouvons pas y apporter de modifications. Maintenant que nous avons plus d’informations, nous pouvons signaler le problème avec plus de contexte en soumettant un [problème](https://docs.github.com/fr/issues/tracking-your-work-with-issues/about-issues) Git ou nous pouvons proposer une solution alternative pour résoudre ce problème en faisant une demande de tirage.
 
-![Exception dans Visual Studio](images/vs-exception.jpg)
+![Exception dans Visual Studio](../../.gitbook/assets/vs-exception.jpg)
 
 > 1. Lorsque nous atteignons l’instruction à l’origine de l’exception dans `Walls.cs`, le processus de débogage nous rapproche le plus possible de l’origine du problème dans le code utilisateur dans `ProtoToRevitCurve.cs`
 > 2. L’instruction à l’origine de l’exception dans `ProtoToRevitCurve.cs`
 > 3. Dans la pile d’exécution, nous pouvons voir que l’exception provient d’un code non-utilisateur
 > 4. Une fenêtre contextuelle nous donnant des informations sur l’exception
 
-Ce processus peut être appliqué à tous les fichiers sources avec lesquels nous travaillons. Si nous développons une bibliothèque de nœuds Zero-Touch pour Dynamo Studio, nous pouvons ouvrir la source de la bibliothèque et attacher un processus Dynamo pour déboguer la bibliothèque de nœuds. Même si vous ne rencontre pas de problème, le débogage est un excellent moyen d’explorer le code et de découvrir comment les choses fonctionnent.
+Ce processus peut être appliqué à tous les fichiers sources avec lesquels nous travaillons. Si nous développons une bibliothèque de nœuds Zero-Touch pour Dynamo, nous pouvons ouvrir la source de la bibliothèque et attacher un processus Dynamo pour déboguer la bibliothèque de nœuds. Même si vous ne rencontre pas de problème, le débogage est un excellent moyen d’explorer le code et de découvrir comment les choses fonctionnent.
 
 ### Tirer la dernière version <a href="#pull-latest-build" id="pull-latest-build"></a>
 
@@ -220,7 +220,7 @@ Ce processus est presque identique à celui du tirage de modifications pour Dyna
 
 L’origine pointe simplement vers l’url originale que nous avons clonée.
 
-![Définition d’un répertoire dans l’interface de ligne de commande](images/cli-pull-revit.jpg)
+![Définition d’un répertoire dans l’interface de ligne de commande](../../.gitbook/assets/cli-pull-revit.jpg)
 
 > Nous devons être attentifs à la branche actuelle et à la branche de tirage pour éviter de tirer les changements de `RC2.13.1_Revit2023` vers `Revit2018` par exemple.
 

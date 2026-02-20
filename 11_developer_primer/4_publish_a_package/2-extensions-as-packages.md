@@ -39,7 +39,7 @@ Une fois que vous avez un dossier contenant les sous-répertoires décrits ci-de
 
 À ce stade, vous devriez vous trouver dans la fenêtre normale de publication de package où vous saisirez tous les champs requis concernant votre package/extension. Il existe une étape supplémentaire **très importante** qui nécessite de s’assurer qu’aucun de vos fichiers d’assemblage n’est marqué comme bibliothèque de nœuds. Pour ce faire, cliquez avec le bouton droit de la souris sur les fichiers que vous avez importés (dossier de package créé ci-dessus). Un menu contextuel apparaît et vous permet de cocher (ou décocher) cette option. Tous les assemblages d’extension doivent être décochés.
 
-![Publier un package](images/ViewExtension_Search.png)
+![Publier un package](../../.gitbook/assets/ViewExtension_Search.png)
 
 Avant de publier publiquement, vous devez toujours publier localement pour vous assurer que tout fonctionne comme prévu. Une fois la vérification terminée, vous pouvez démarrer en ligne en sélectionnant Publier.
 
@@ -47,4 +47,4 @@ Avant de publier publiquement, vous devez toujours publier localement pour vous 
 
 Pour vérifier que votre package a été correctement téléchargé, vous devez être en mesure de le rechercher en fonction du nom et des mots-clés spécifiés lors de l’étape de publication. Enfin, il est important de noter que ces extensions nécessitent un redémarrage de Dynamo avant de fonctionner. En général, ces extensions requièrent des paramètres spécifiés lors du démarrage de Dynamo.
 
-![Rechercher des packages](images/ViewExtension_Search.jpg)
+![Rechercher des packages](../../.gitbook/assets/ViewExtension_Search.jpg)

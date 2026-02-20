@@ -2,7 +2,7 @@
 
 L'utilisation de scripts basés sur du texte dans l'environnement de script visuel permet d'établir des relations visuelles efficaces à l'aide de DesignScript, Python et ZeroTouch (C#). L'utilisateur peut exposer des éléments tels que des curseurs d'entrée, condenser des opérations importantes dans DesignScript et accéder à de puissants outils et bibliothèques via Python ou C#, le tout dans le même espace de travail. Si elle est gérée efficacement, la combinaison de ces stratégies peut améliorer significativement la personnalisation, la clarté et l'efficacité du programme global. Les instructions suivantes vous aideront à enrichir votre script visuel avec un script de texte.
 
-![](images/2/cad-chart-textual.jpg)
+![](../.gitbook/assets/cad-chart-textual.jpg)
 
 ### Quand écrire un script ?
 
@@ -23,9 +23,7 @@ Les scripts de texte peuvent établir des relations plus complexes que la progra
 | **Python**         | Oui         | Oui           | Partiellement          | Oui                | Non            |
 | **ZeroTouch (C#)** | Non          | Non            | Non                 | Oui                | Non            |
 
-{% hint style="info" %}
- Reportez-vous à la rubrique [Références concernant la création et la gestion des scripts](3-scripting-reference.md) pour obtenir une liste des éléments auxquels chaque bibliothèque Dynamo vous donne accès. 
-{% endhint %} 
+{% hint style="info" %} Reportez-vous à la rubrique [Références concernant la création et la gestion des scripts](3-scripting-reference.md) pour obtenir une liste des éléments auxquels chaque bibliothèque Dynamo vous donne accès. {% endhint %}
 
 ### Penser de manière paramétrique
 
@@ -37,9 +35,9 @@ Lorsque vous créez des scripts dans Dynamo, un environnement inévitablement pa
 * Avant d'écrire du code, identifiez les variables suivantes :
   * Un jeu minimal d'entrées
   * La sortie prévue
-  * Des constantes
+  * Constantes
 
-![](images/2/thinkparametrically01.jpg)
+\![](<../.gitbook/assets/think parametrically 01.jpg>)
 
 > Plusieurs variables ont été établies avant l’écriture du code.
 >
@@ -57,17 +55,15 @@ Lorsque vous créez des scripts dans Dynamo, un environnement inévitablement pa
 * Réduisez le nombre d'entrées en exposant uniquement les paramètres clés :
   * Si un jeu de paramètres peut provenir de plusieurs paramètres parent, affichez uniquement les paramètres parent sous forme d'entrées de script. Cela permet d’accroître la facilité d’utilisation de votre script tout en réduisant la complexité de son interface.
 
-![](images/2/thinkparametrically02.jpg)
+\![](<../.gitbook/assets/think parametrically 02.jpg>)
 
-> « Modules » de code issus de l’exemple dans [Nœud Python](../8\_coding\_in\_dynamo/8-3\_python/1-python.md).
+> « Modules » de code issus de l’exemple de [Nœud Python](../8_coding_in_dynamo/8-3_python/1-python.md).
 >
 > 1. Entrées.
 > 2. Variables internes au script.
 > 3. Boucle qui utilise ces entrées et variables pour exécuter sa fonction.
 
-{% hint style="info" %}
- Conseil : mettez l’accent sur le processus, comme vous le faites pour la solution. 
-{% endhint %} 
+{% hint style="info" %} Conseil : mettez l’accent sur le processus, comme vous le faites pour la solution. {% endhint %}
 
 ### **Ne vous répétez pas (principe DRY) :**
 
@@ -94,9 +90,7 @@ for i in range(count):
     points.append(point)
 ```
 
-{% hint style="info" %}
- Conseil : avant de dupliquer des entités dans votre script (par exemple, une constante dans l’exemple ci-dessus), demandez-vous si vous pouvez établir un lien vers la source. 
-{% endhint %} 
+{% hint style="info" %} Conseil : avant de dupliquer des entités dans votre script (par exemple, une constante dans l’exemple ci-dessus), demandez-vous si vous pouvez établir un lien vers la source. {% endhint %}
 
 ### Structurer de manière modulaire
 
@@ -108,7 +102,7 @@ Lorsque votre code devient de plus long et plus complexe, l'idée principale ou 
 * Il peut s'agir de tout ce qui doit être visuellement séparé du code adjacent (une fonction, une classe, un groupe d'entrées ou les bibliothèques que vous importez).
 * Le développement de code dans des modules exploite la qualité visuelle intuitive des nœuds, ainsi que les relations complexes que seuls les scripts de texte peuvent atteindre.
 
-![](images/2/thinkparametrically02.jpg)
+\![](<../.gitbook/assets/think parametrically 02.jpg>)
 
 > Ces boucles appellent une classe nommée « agent » que nous allons développer dans l’exercice.
 >
@@ -123,7 +117,7 @@ Lorsque votre code devient de plus long et plus complexe, l'idée principale ou 
 
 Dans cet exemple, des sphères sont créées avec des rayons et des couleurs basés sur la valeur Z des points centraux.
 
-![](images/2/spotcoderesuse.jpg)
+\![](<../.gitbook/assets/spot code resuse.jpg>)
 
 > 1. Deux fonctions parent « Exécutant » : une fonction qui crée des sphères avec des rayons et des couleurs d’affichage en fonction de la valeur Z du point central.
 > 2. Une fonction parent "Gestionnaire" qui combine les deux fonctions "Executant". L’appel de cette fonction appellera les deux fonctions qu’elle contient.
@@ -188,7 +182,7 @@ Lors du développement de scripts de texte dans Dynamo, il est préférable de s
   * Testez rapidement votre code pour vérifier qu'il renvoie des données "logiques".
 * Affectez les données les plus récentes que vous utilisez dans votre script comme sortie afin que le nœud génère toujours les données pertinentes lors de la mise à jour du script :
 
-![](images/2/flexcontinuously.jpg)
+\![](<../.gitbook/assets/flex continuously.jpg>)
 
 > 1. Vérifiez que toutes les arêtes du solide sont renvoyées en tant que courbes pour créer une zone de contour.
 > 2. Vérifiez que les entrées sous forme de nombres sont converties en intervalles.
@@ -201,9 +195,7 @@ Lors du développement de scripts de texte dans Dynamo, il est préférable de s
 * Parfois, les bogues et les erreurs qui révèlent un problème sous-jacent avec votre script ne se produiront que lors de ces cas extrêmes.
   * Trouvez la cause de l’erreur et déterminez si elle doit être corrigée en interne ou si un domaine de paramètre doit être redéfini pour éviter le problème.
 
-{% hint style="info" %}
- Conseil : supposez toujours que l’utilisateur utilise toutes les combinaisons de chaque valeur d’entrée qui lui a été exposée. Cela permettra d’éliminer les mauvaises surprises. 
-{% endhint %} 
+{% hint style="info" %} Conseil : supposez toujours que l’utilisateur utilise toutes les combinaisons de chaque valeur d’entrée qui lui a été exposée. Cela permettra d’éliminer les mauvaises surprises. {% endhint %}
 
 ### Débogage efficace
 
@@ -240,9 +232,9 @@ for i in range(xCount):
 * Lorsqu'un programme doit être modifié, le code développé dans les modules sera beaucoup plus facile à modifier :
   * Vous pouvez insérer des modules nouveaux ou débogués dans un programme existant avec la certitude que le reste du programme ne changera pas.
 
-![](images/2/leveragecode'smodularity.jpg)
+\![](<../.gitbook/assets/leverage code's modularity.jpg>)
 
-> Débogage du fichier d’exemple issu de [Nœud Python](../8\_coding\_in\_dynamo/8-3\_python/1-python.md).
+> Débogage du fichier d’exemple issu de [Nœud Python](../8_coding_in_dynamo/8-3_python/1-python.md).
 >
 > 1. Comme vous pouvez le voir lors de l’affectation de xDist et yDist à OUT, la géométrie d’entrée renvoie une zone de contour plus grande qu’elle.
 > 2. Les courbes d'arête de la géométrie d'entrée renvoient une zone de contour appropriée avec des distances correctes pour xDist et yDist.
@@ -258,19 +250,19 @@ Utilisons les meilleures pratiques en matière de script de texte pour écrire u
 
 Votre script s’applique à une surface déformée par l’attraction.
 
-![](images/2/scriptingstrategies-exercise-01.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 01.jpg>)
 
 La première chose à faire est d’importer les bibliothèques Dynamo nécessaires. Cette première opération permet d'accéder à la fonctionnalité Dynamo dans Python.
 
 Toutes les bibliothèques que vous voulez utiliser doivent être importées ici.
 
-![](images/2/scriptingstrategies-exercise-02.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 02.jpg>)
 
 Ensuite, vous devez définir les entrées et la sortie du script, qui s’afficheront comme ports d’entrée sur le nœud. Ces entrées externes constituent la base de votre script et la clé pour établir un environnement paramétrique.
 
 Vous devez définir des entrées qui correspondent aux variables du script Python et déterminer une sortie souhaitée :
 
-![](images/2/scriptingstrategies-exercise-03.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 03.jpg>)
 
 > 1. La surface à parcourir.
 > 2. Le nombre d'agents que nous voulons voir marcher.
@@ -283,7 +275,7 @@ Vous allez maintenant utiliser la modularité et créer le corps de votre script
 
 Vous devez définir une classe, ou un « plan », pour un agent avec l’intention de parcourir une surface en choisissant le déplacement dans la direction la plus abrupte possible à chaque fois qu’il fait un pas :
 
-![](images/2/scriptingstrategies-exercise-04.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 04.jpg>)
 
 > 1. Nom.
 > 2. Attributs globaux que tous les agents partagent.
@@ -295,7 +287,7 @@ Initialisez les agents en définissant leur emplacement de départ. C'est une bo
 
 Vous devez instancier tous les agents qui doivent parcourir la surface, et définir leurs attributs initiaux :
 
-![](images/2/scriptingstrategies-exercise-05.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 05.jpg>)
 
 > 1. Une nouvelle liste de trajectoires vide.
 > 2. Le point de départ de leur parcours sur la surface.
@@ -303,15 +295,15 @@ Vous devez instancier tous les agents qui doivent parcourir la surface, et défi
 
 Mettez à jour les agents à chaque pas. Vous devez ensuite entrer une boucle imbriquée où vous mettez à jour et enregistrez la position de chaque agent à chaque pas dans la liste de trajectoires correspondante. À chaque pas, vous allez également vous assurer que l'agent n'a pas atteint de point sur la surface où il ne peut plus descendre. Si cette condition est remplie, terminez le parcours de cet agent.
 
-![](images/2/scriptingstrategies-exercise-06.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 06.jpg>)
 
 Maintenant que les agents ont été entièrement mis à jour, revenez à la géométrie qui les représente. Une fois que tous les agents ont atteint leur limite de descente ou leur nombre maximal de pas, vous allez créer une polycourbe à l’aide des points de leur liste de trajectoires, et générer les trajectoires polycourbes.
 
-![](images/2/scriptingstrategies-exercise-07.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 07.jpg>)
 
 Votre script permettant de trouver les chemins les plus abrupts.
 
-![](images/2/scriptingstrategies-exercise-08.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 08.jpg>)
 
 > 1. Valeur prédéfinie qui simule l’eau de pluie sur la surface sous-jacente.
 > 2. Au lieu de trouver le chemin le plus abrupt, les agents peuvent être basculés pour parcourir la surface sous-jacente.

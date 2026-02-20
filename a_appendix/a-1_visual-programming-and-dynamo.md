@@ -8,7 +8,7 @@ L’activité de conception implique souvent l’établissement de relations vis
 
 Même s’il offre de puissantes opportunités, le terme **algorithme** peut véhiculer quelques idées fausses. Les algorithmes peuvent générer des éléments inattendus, imprévisibles ou sympas, mais ils ne sont pas magiques. Ils sont en réalité assez simples, tels qu'ils sont. Prenez un exemple concret comme une grue en origami. Tout d’abord, prenez une feuille de papier carrée (entrée), puis suivez une série d’étapes de pliage (actions de traitement) afin d’obtenir une grue (sortie).
 
-![Grue en origami](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
+![Grue en origami](https://primer.dynamobim.org/01_Introduction/images/1-1/00-OrigamiCrane.png)
 
 Où est l’algorithme ? Il s’agit de l’ensemble d’étapes abstrait qu’il est possible de représenter de deux façons : textuellement ou graphiquement.
 
@@ -30,7 +30,7 @@ Où est l’algorithme ? Il s’agit de l’ensemble d’étapes abstrait qu’
 
 **Instructions graphiques :**
 
-![Instructions relatives aux grues en origami](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![Instructions relatives aux grues en origami](https://primer.dynamobim.org/01_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
 #### Programmation définie <a href="#programming-defined" id="programming-defined"></a>
 
@@ -52,7 +52,7 @@ Si votre réponse contenait des graphiques, alors la **programmation visuelle** 
 
 **Programme visuel :**
 
-![](./images/a-1/visualProgramming(2).png)
+\![](<../.gitbook/assets/visualProgramming (2).png>)
 
 **Programme textuel :**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 Résultats de l’algorithme :
 
-![](./images/a-1/visualProgramming(1).png)
+\![](<../.gitbook/assets/visualProgramming (1).png>)
 
 La caractéristique visuelle de la programmation permet de réduire les obstacles à l’entrée et de communiquer fréquemment avec les concepteurs. Dynamo est intégré dans le paradigme de la programmation visuelle, mais vous verrez plus tard qu'il est également possible d'utiliser la programmation textuelle dans l'application.

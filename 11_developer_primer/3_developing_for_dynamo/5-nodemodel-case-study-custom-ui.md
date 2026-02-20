@@ -2,7 +2,7 @@
 
 Les nœuds basés sur NodeModel offrent beaucoup plus de flexibilité et de puissance que les nœuds Zero-Touch. Dans cet exemple, nous ferons passer le nœud de grille Zero-Touch au niveau supérieur en ajoutant un curseur intégré qui randomise la taille du rectangle.
 
-![Graphique de grille rectangulaire](images/cover-image-2.jpg)
+![Graphique de grille rectangulaire](../../.gitbook/assets/cover-image-2.jpg)
 
 > Le curseur met à l’échelle les cellules en fonction de leur taille, de sorte que l’utilisateur n’a pas besoin de fournir un curseur avec la plage correcte.
 
@@ -33,7 +33,7 @@ Un nœud NodeModel ne peut appeler que des fonctions, nous devons donc séparer 
 
 Créez deux projets de bibliothèque de classes C# dans la solution : un pour les fonctions et un pour la mise en œuvre de l’interface NodeModel.
 
-![Ajouter une nouvelle bibliothèque de classes](images/vs-new-class-projects.jpg)
+![Ajouter une nouvelle bibliothèque de classes](../../.gitbook/assets/vs-new-class-projects.jpg)
 
 > 1. Cliquez avec le bouton droit de la souris sur la solution et sélectionnez `Add > New Project`
 > 2. Choisissez une bibliothèque de classe
@@ -43,7 +43,7 @@ Créez deux projets de bibliothèque de classes C# dans la solution : un pour l
 
 Ensuite, nous devons renommer les bibliothèques de classes qui ont été créées automatiquement et en ajouter une au projet `CustomNodeModel`. La classe `GridNodeModel` implémente la classe abstraite NodeModel, `GridNodeView` est utilisée pour personnaliser la vue et `GridFunction` contient toutes les fonctions que nous devons appeler.
 
-![Explorateur de solutions](images/vs-new-class.jpg)
+![Explorateur de solutions](../../.gitbook/assets/vs-new-class.jpg)
 
 > 1. Ajoutez une autre classe en cliquant avec le bouton droit de la souris sur le projet `CustomNodeModel`, en sélectionnant `Add > New Item...` et en choisissant `Class`
 > 2. Dans le projet `CustomNodeModel`, nous avons besoin de `GridNodeModel.cs` et de `GridNodeView.cs`
@@ -51,14 +51,14 @@ Ensuite, nous devons renommer les bibliothèques de classes qui ont été créé
 
 Avant d’ajouter du code aux classes, ajoutez les packages nécessaires pour ce projet. `CustomNodeModel` aura besoin de ZeroTouchLibrary et de WpfUILibrary, et `CustomNodeModelFunction` n’aura besoin que de ZeroTouchLibrary. La bibliothèque WpfUILibrary sera utilisée dans la personnalisation de l’interface utilisateur que nous effectuerons ultérieurement, et la bibliothèque ZeroTouchLibrary sera utilisée pour la création de géométries. Les packages peuvent être ajoutés individuellement pour les projets. Comme ces packages ont des dépendances, Core et DynamoServices seront automatiquement installés.
 
-![Installer des packages](images/vs-add-packages.jpg)
+![Installer des packages](../../.gitbook/assets/vs-add-packages.jpg)
 
 > 1. Cliquez avec le bouton droit de la souris sur un projet et choisissez `Manage NuGet Packages`
 > 2. Installez uniquement les packages requis pour ce projet
 
 Visual Studio copie les packages NuGet référencés dans le répertoire de génération. Cette valeur peut être définie sur False pour éviter que le package ne contienne des fichiers inutiles.
 
-![Désactiver la copie locale du package](images/vs-disable-package-copying.jpg)
+![Désactiver la copie locale du package](../../.gitbook/assets/vs-disable-package-copying.jpg)
 
 > 1. Sélectionnez les packages Dynamo NuGet
 > 2. Définissez `Copy Local` sur False
@@ -199,7 +199,7 @@ Cette classe de fonction est très similaire à l’étude de cas Zero-Touch : 
 
 Tout comme nous avons ajouté des références pour les packages NuGet, `CustomNodeModel` devra faire référence à `CustomNodeModelFunction` pour appeler la fonction.
 
-![Ajouter une référence](images/vs-add-project-reference.jpg)
+![Ajouter une référence](../../.gitbook/assets/vs-add-project-reference.jpg)
 
 > L’instruction using pour CustomNodeModel sera inactive jusqu’à ce que nous référencions la fonction
 >
@@ -240,7 +240,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 Une fois la structure du projet mise en place, utilisez l’environnement de conception de Visual Studio pour générer un contrôle utilisateur et définir ses paramètres dans un fichier `.xaml`. Dans la boîte à outils, ajoutez un curseur à `<Grid>...</Grid>`.
 
-![Ajouter un nouveau curseur](images/vs-usercontrol.jpg)
+![Ajouter un nouveau curseur](../../.gitbook/assets/vs-usercontrol.jpg)
 
 > 1. Cliquez avec le bouton droit de la souris sur `CustomNodeModel` et sélectionnez `Add > New Item`
 > 2. Sélectionnez `WPF`
@@ -295,7 +295,7 @@ Le `GridNodeModel.cs` définit la logique de calcul du curseur.
 
 Avant de générer le projet, la dernière étape consiste à ajouter un fichier `pkg.json` pour que Dynamo puisse lire le package.
 
-![Ajout d’un fichier JSON](images/vs-pkg-json.jpg)
+![Ajout d’un fichier JSON](../../.gitbook/assets/vs-pkg-json.jpg)
 
 > 1. Cliquez avec le bouton droit de la souris sur `CustomNodeModel` et sélectionnez `Add > New Item`
 > 2. Sélectionnez `Web`
@@ -334,3 +334,21 @@ Avant de générer le projet, la dernière étape consiste à ajouter un fichier
 *   `"node_libraries": []` les bibliothèques associées au package
 
     La dernière étape consiste à générer la solution et à la publier en tant que package Dynamo. Consultez le chapitre Déploiement de package pour savoir comment créer un package local avant de publier en ligne et comment générer un package directement à partir de Visual Studio.
+
+#### Problèmes courants : <a href="#common-issues" id="common-issues"></a>
+
+1) Lors de l’ouverture d’un graphique, certains nœuds ont plusieurs ports portant le même nom, mais le graphique semble correct lors de l’enregistrement. Ce problème peut avoir plusieurs causes.
+
+La cause principale est que le nœud a été créé à l’aide d’un constructeur qui a recréé les ports. Au lieu de cela, il aurait fallu utiliser un constructeur capable de charger les ports. Ces constructeurs sont généralement marqués `[JsonConstructor]`. _Voir les exemples ci-dessous_
+
+\![JSON brisé](<../../.gitbook/assets/broken-json (1).jpg>)
+
+Cela peut se produire pour les raisons suivantes :
+
+* il n’y avait tout simplement pas de `[JsonConstructor]` correspondant, ou il n’a pas été transmis par les fichiers `Inports` et `Outports` du fichier JSON .dyn ;
+* deux versions de JSON.net ont été chargées simultanément dans le même processus, ce qui a entraîné une erreur au niveau de l’exécution .net, de sorte que l’attribut `[JsonConstructor]` n’a pas pu être utilisé correctement pour marquer le constructeur ;
+* une version de DynamoServices.dll différente de la version actuelle de Dynamo a été incluse dans le package et provoque l’échec de l’exécution .net à identifier l’attribut `[MultiReturn]`, de sorte que les nœuds Zero-Touch marqués avec divers attributs ne pourront pas être appliqués. Il se peut qu’un nœud renvoie une seule sortie de dictionnaire au lieu de plusieurs ports.
+
+2) Des nœuds sont complètement absents lors du chargement du graphique avec des erreurs dans la console.
+
+* Cela peut se produire si votre désérialisation a échoué pour une raison quelconque. Il est recommandé de ne sérialiser que les propriétés dont vous avez besoin. Nous pouvons utiliser `[JsonIgnore]` sur les propriétés complexes que vous n’avez pas besoin de charger ou d’enregistrer pour les ignorer. Il s’agit de propriétés telles que `function pointer, delegate, action,` ou `event` etc. Elles ne doivent pas être sérialisées car elles échoueront généralement à la désérialisation et provoqueront une erreur d’exécution.

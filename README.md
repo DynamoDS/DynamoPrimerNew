@@ -4,7 +4,7 @@
 
 ## Pour Dynamo v2.13 et plus récent
 
-![Dynamo Logo](images/dynamo_logo_dark-trim.jpg)
+![Dynamo Logo](.gitbook/assets/dynamo_logo_dark-trim.jpg)
 
 > Dynamo est une plate-forme de programmation visuelle open source pour les concepteurs.
 
@@ -37,19 +37,19 @@ Le guide Dynamo est un projet open source, initié par Matt Jezyk et l’équip
 
 **Mode Lab** a été chargé d’écrire la première édition du guide. Nous remercions l’équipe pour tous ses efforts afin d’établir cette précieuse ressource.
 
-![](images/MODELAB_Logo.png)
+![](.gitbook/assets/MODELAB_Logo.png)
 
 ***
 
 **John Pierson de Parallax Team** a été chargé de mettre à jour le guide pour qu’il contienne les révisions de Dynamo 2.0.
 
-![](images/PRLX_Logo.jpg)
+![](.gitbook/assets/PRLX_Logo.jpg)
 
 ***
 
 **Matterlab** a été chargé de mettre à jour le guide pour refléter les révisions de Dynamo 2.13.
 
-![](images/matterlab_final-07.jpg)
+\![](<.gitbook/assets/matterlab_final-07 (2).jpg>)
 
 ***
 

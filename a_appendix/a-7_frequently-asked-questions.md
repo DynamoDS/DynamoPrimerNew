@@ -19,10 +19,10 @@ Vous devriez être en mesure de lancer DynamoSandbox.exe dans le dossier extrait
 #### Composants requis
 
 | Version de Dynamo | Microsoft Visual C++ | DirectX                         |   |   |   |   |
-| --------------    | -------------------- | ------------------------------- | - | - | - | - |  
-| 2.0 à 2.6         | 2015 Redistribuable  | 10                              |   |   |   |   |   
-| 2.7               | 2019 Redistribuable  | 11/12 (inclus avec Windows 10   |   |   |   |   |  
-| >=2.8             | 2019 Redistribuable  | 11/12 (inclus avec Windows 10   |   |   |   |   | 
+| -------------- | -------------------- | ------------------------------- | - | - | - | - |
+| 2.0 - 2.6      | 2015 Redistributable | 10                              |   |   |   |   |
+| 2,7            | 2019 Redistributable | 11/12 (inclus avec Windows 10) |   |   |   |   |
+| >=2.8          | 2019 Redistributable | 11/12 (inclus avec Windows 10) |   |   |   |   |
 
 **Microsoft DirectX, qui est également disponible publiquement dans notre référentiel GitHub Dynamo** [**ici**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 
@@ -38,29 +38,29 @@ Bibliothèque de géométries (elle ne sera disponible qu’avec certains outils
 
 Si vous avez décompressé le build et que vous n’avez pas pu lancer DynamoSandbox.exe du tout, assurez-vous d’utiliser [7-zip](https://www.7-zip.fr/download.html) pour décompresser le build. Vous pouvez également débloquer manuellement l’archive .zip _avant_ de l’extraire, si vous disposez des autorisations nécessaires sur votre ordinateur.
 
-![](images/a-7/dynamo-builds-1.png)
+![](../.gitbook/assets/dynamo-builds-1.png)
 
 S’il vous manque l’un des composants requis, vous risquez de rencontrer des problèmes lors de l’utilisation de Dynamo et certaines parties de l’interface utilisateur peuvent ne pas se charger.
 
 D’après la capture d’écran suivante donnée à titre d’exemple, en décompressant notre build sur une machine virtuelle Windows 10 propre sans processeur graphique, il manque les deux composants requis sur cette machine. Cette information est indiquée sur la console Dynamo.
 
-![](images/a-7/dynamo-builds-2.png)
+![](../.gitbook/assets/dynamo-builds-2.png)
 
 **Installation de DirectX**
 
 Suivez les instructions de Microsoft ici pour vérifier si DirectX est déjà installé. Si ce n’est pas le cas, vous pouvez ouvrir DXSETUP.exe dans notre référentiel GitHub Dynamo [ici](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX). Une fois que la boîte de dialogue ci-dessous s’affiche, n’hésitez pas à cliquer sur Suivant pour installer DirectX à l’emplacement par défaut.
 
-![](images/a-7/dynamo-builds-3.png)
+![](../.gitbook/assets/dynamo-builds-3.png)
 
 **Installation de Microsoft Visual C++ 2015-2024 Redistributable (x64)**
 
 Veuillez télécharger la dernière version [ici](https://aka.ms/vs/17/release/vc_redist.x64.exe). Vous devriez alors être en mesure d’exécuter le programme d’installation nommé vc_redist.x64.exe dans l’emplacement de téléchargement de votre navigateur. Une fois que la boîte de dialogue ci-dessous s’affiche, n’hésitez pas à cliquer sur Installer pour placer ce composant à l’emplacement par défaut.
 
-![](images/a-7/dynamo-builds-4.png)
+![](../.gitbook/assets/dynamo-builds-4.png)
 
 Après avoir installé les deux composants requis à partir du lien ci-dessus, relancez DynamoSandbox.exe. Vous devriez obtenir le résultat suivant :
 
-![](images/a-7/dynamo-builds-5.png)
+![](../.gitbook/assets/dynamo-builds-5.png)
 
 **Graphiques 3D manquants**
 
@@ -72,7 +72,7 @@ En général, vous devrez probablement forcer le mode de processeur graphique ha
 
 _Exemple de panneau de configuration NVIDIA :_
 
-![](images/a-7/dynamo-builds-6.png)
+![](../.gitbook/assets/dynamo-builds-6.png)
 
 **Installation de WebView2 Runtime**
 
@@ -80,13 +80,13 @@ _Exemple de panneau de configuration NVIDIA :_
 
 Voici le lien pour installer le WebView2 Runtime : [https://developer.microsoft.com/fr-fr/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/fr-fr/microsoft-edge/webview2/?form=MA13LH#download-section)
 
-![](images/a-7/dynamo-builds-7.png)
+![](../.gitbook/assets/dynamo-builds-7.png)
 
 Ceux qui doivent être installés (un seul d’entre eux) sont Evergreen Bootstrapper ou Evergreen Standalone Installer, le premier télécharge un programme d’installation de 1,50 Mo et le second télécharge un programme d’installation de 130 Mo.
 
 Une fois le Runtime installé, les composants Dynamo suivants devraient fonctionner correctement :
 
-![](images/a-7/dynamo-builds-8.png)
+![](../.gitbook/assets/dynamo-builds-8.png)
 
 **Problèmes liés aux nœuds Dynamo Excel**
 
