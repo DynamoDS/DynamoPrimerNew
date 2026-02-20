@@ -8,7 +8,8 @@ Github 是一種以 [git](https://help.github.com/articles/git-and-github-learni
 
 Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo) 儲存庫
 
-![Dynamo 原始碼檔案](images/github.jpg)
+![Dynamo 原始碼檔案](../../.gitbook/assets/github.jpg)
+
 > Dynamo 原始碼檔案。
 >
 > 1. 複製或下載整個儲存庫
@@ -22,7 +23,8 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 我們需要 Dynamo 儲存庫的 URL 才能從中複製。您可以在儲存庫頁面的「Clone or download (複製或下載)」按鈕中找到。複製要貼至指令提示的 URL。
 
-![複製儲存庫](images/github-clone.png)
+![複製儲存庫](../../.gitbook/assets/github-clone.png)
+
 > 1. 選取「Clone or download」
 > 2. 複製 URL
 
@@ -32,17 +34,17 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 > 將「username」取代為您的使用者名稱
 
-![指令提示](images/cli-1.jpg)
+![指令提示](../../.gitbook/assets/cli-1.jpg)
 
 下一步，我們要執行 git 指令，將 Dynamo 儲存庫複製到我們指定的位置。在 Github 上按一下「Clone or Download」按鈕，取得指令中的 URL。在指令終端機中執行此指令。請注意，這會複製 Dynamo 儲存庫主分支，主分支是 Dynamo 最新的程式碼，包含最新版本的 Dynamo 程式碼。此分支每天都會變更。
 
 `git clone https://github.com/DynamoDS/Dynamo.git`
 
-![Git 複製作業的結果](images/cli-2.jpg)
+![Git 複製作業的結果](../../.gitbook/assets/cli-2.jpg)
 
 如果複製作業成功完成，我們就知道 git 正在運作。在檔案總管中，瀏覽到您複製的目錄以查看原始碼檔案。目錄結構應該與 Github 上 Dynamo 儲存庫的主分支相同。
 
-![Dynamo 的原始碼檔案](images/source-files.jpg)
+![Dynamo 的原始碼檔案](../../.gitbook/assets/source-files.jpg)
 
 > 1. Dynamo 的原始碼檔案
 > 2. Git 檔案
@@ -51,28 +53,29 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 將原始碼檔案複製到本端電腦後，我們可以建置 Dynamo 的可執行檔。要執行此作業，我們需要設定 Visual Studio IDE，並確保已安裝 .NET Framework 和 DirectX。
 
-* 下載並安裝 [Microsoft Visual Studio Community 2015](https://my.visualstudio.com/Downloads/Results)，這是一款免費且功能齊全的 IDE (整合式開發環境 - 更高版本也同樣能運作)
+* 下載並安裝 [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/vs/community/)，這是一款免費且功能齊全的 IDE (整合式開發環境 - 更高版本也同樣能運作)
 * 下載並安裝 [Microsoft .NET Framework 4.5](https://www.microsoft.com/zh-tw/download/details.aspx?id=30653) 或更高版本
 * 從本端 Dynamo 儲存庫安裝 Microsoft DirectX (`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`)
 
 > .NET 和 DirectX 可能已經安裝。
 
-> **注意：**重大變更 - 需要 **Visual Studio 2022 Preview/Visual Studio 2026 Insider**
-> 
+> **注意：**重大變更 - 需要 [**Visual Studio 2022**](https://visualstudio.microsoft.com/vs/community/) **/** [**Visual Studio 2026 Insider**](https://visualstudio.microsoft.com/insiders/)
+>
 > 從 2025 年底開始，Dynamo 將導入 `dotnet10.0` 架構。若要針對此架構進行開發，您需要 Visual Studio 2022 Preview 或 Visual Studio 2026 Insider (或更高版本)，因為穩定版本還不支援 .NET 10.0。
-> 
+>
 > **將 Visual Studio 2022 Preview/2026 Insider 與現有安裝內容一起安裝：**
+>
 > 1. 開啟 **Visual Studio 安裝程式** (在「開始」功能表中搜尋)
 > 2. 按一下**「更新」**確定您有最新的安裝程式版本
 > 3. 移至**「可用」**頁籤
 > 4. 尋找 **Visual Studio 2022 Preview/2026 Insider** (Community、Professional 或 Enterprise)
 > 5. 按一下**「安裝」**將它加入現有的 Visual Studio 安裝
-> 
-![Visual Studio Preview](images/vs-preview.png) ![Visual Studio 2026 Insider](images/vs-2026-insiders.png)
+
+\![Visual Studio 預覽](<../../.gitbook/assets/vs-preview (1).png>) \![Visual Studio 2026 Insider](<../../.gitbook/assets/vs-2026-insiders (1).png>)
 
 所有檔案安裝完成後，我們可以啟動 Visual Studio，並開啟位於 `Dynamo\src` 的 `Dynamo.All.sln` 方案。
 
-![開啟方案檔](images/vs-open-dynamo.jpg)
+![開啟方案檔](../../.gitbook/assets/vs-open-dynamo.jpg)
 
 > 1. 選取「`File > Open > Project/Solution`」
 > 2. 瀏覽至 Dynamo 儲存庫並開啟 `src` 資料夾
@@ -81,7 +84,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 在建置方案之前，必須先指定一些設定。我們要先建置 Dynamo 的除錯版本，讓 Visual Studio 在除錯時可以收集更多資訊協助我們開發，而且我們要以 AnyCPU 作為目標。
 
-![方案設定](images/vs-dynamo-build-settings.jpg)
+![方案設定](../../.gitbook/assets/vs-dynamo-build-settings.jpg)
 
 > 這些設定會變成 `bin` 資料夾內的資料夾
 >
@@ -90,7 +93,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 開啟專案後，我們可以建置方案。此處理序將會建立一個可以執行的 DynamoSandbox.exe 檔案。
 
-![建置方案](images/vs-build-dynamo.jpg)
+![建置方案](../../.gitbook/assets/vs-build-dynamo.jpg)
 
 > 建置專案會還原 NuGet 相依性。
 >
@@ -101,7 +104,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 如果 Dynamo 建置成功，Dynamo 儲存庫中會建立一個包含 DynamoSandbox.exe 檔案的 `bin` 資料夾。在我們的範例中，我們使用「Debug (除錯)」選項建置，因此可執行檔位於 `bin\AnyCPU\Debug`。執行此檔案將開啟 Dynamo 的本端建置版本。
 
-![DynamoSandbox 可執行檔](images/ex-dynamosandbox.jpg)
+![DynamoSandbox 可執行檔](../../.gitbook/assets/ex-dynamosandbox.jpg)
 
 > 1. 我們剛剛建置的 DynamoSandbox 可執行檔。執行此檔案以啟動 Dynamo。
 
@@ -120,7 +123,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 從 Visual Studio 啟動 Dynamo 時，如果需要，會為每個除錯階段作業重新建置方案，因此如果我們對原始碼做了變更，除錯時會納入這些變更。在 `Dynamo.All.sln` 方案仍開啟的情況下，從下拉功能表中選取「`Debug`」、「`AnyCPU`」和「`DynamoSandbox`」，然後按一下「`Start`」。這會建置 Dynamo 並啟動一個新的處理序 (DynamoSandbox.exe)，並將 Visual Studio 的除錯程式附加到該處理序。
 
-![從 Visual Studio 建置和啟動應用程式](images/vs-debug-options.jpg)
+![從 Visual Studio 建置和啟動應用程式](../../.gitbook/assets/vs-debug-options.jpg)
 
 > 直接從 Visual Studio 建置並啟動應用程式
 >
@@ -131,7 +134,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 或者，我們可能想要為已在執行的 Dynamo 處理序除錯，以疑難排解特定圖表開啟或套件的問題。基於這個原因，我們會在 Visual Studio 中開啟專案的原始碼檔案，並使用「`Attach to Process`」除錯功能表項目附加到執行中的 Dynamo 處理序。
 
-![「Attach to Process (附加至處理序)」對話方塊](images/vs-attach-dynamosandbox.jpg)
+![「Attach to Process (附加至處理序)」對話方塊](../../.gitbook/assets/vs-attach-dynamosandbox.jpg)
 
 > 將正在執行的處理序附加到 Visual Studio
 >
@@ -141,7 +144,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 在這兩種情況下，我們都會將除錯程式附加到要除錯的處理序。我們可以在啟動除錯程式之前或之後設定程式碼中的中斷點，這會導致處理序在執行該行程式碼之前立即暫停。如果在除錯時擲回未攔截的例外狀況，Visual Studio 會跳到原始程式碼中發生該例外狀況的位置。這是一種尋找簡單當機、未處理例外狀況，以及瞭解應用程式執行流的有效方法。
 
-![設定中斷點](images/vs-debug-dynamocore.jpg)
+![設定中斷點](../../.gitbook/assets/vs-debug-dynamocore.jpg)
 
 > 為 DynamoSandbox 除錯時，我們在 Color.ByARGB 節點的建構函式中設定一個中斷點，這會導致 Dynamo 處理序在節點具現化時暫停。如果此節點擲出例外狀況或導致 Dynamo 當機，我們可以逐步執行建構函式中的每一行，以尋找發生問題的位置。
 >
@@ -164,7 +167,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 `git pull origin master`
 
-![更新過的本端儲存庫](images/cli-pull-changes.jpg)
+![更新過的本端儲存庫](../../.gitbook/assets/cli-pull-changes.jpg)
 
 > 1. 在此，我們可以看到本端儲存庫已經以遠端的變更更新。
 

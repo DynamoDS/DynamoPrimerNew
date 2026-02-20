@@ -1,13 +1,16 @@
-# 定義自訂套件組織 (Dynamo 2.0+) 
+# 定義 Dynamo 2.0+ 的自訂套件組織
 
 套件是否能獲得想要的配置，取決於納入套件的節點類型。NodeModel 衍生的節點、ZeroTouch 節點和自訂節點，定義分類方式的程序都略有不同。您可以在同一個套件中混合使用這些節點類型，但需要結合使用下面概述的策略。
 
 ## NodeModel
+
 NodeModel 資源庫預設會根據類別結構進行整理。
-```C#
+
+```c#
 namespace SampleLibraryUI.Examples
 ```
-```C#
+
+```c#
 // Class Attribute
 [NodeName("MyNodeModel")]
 public class MyNewNodeModel : NodeModel
@@ -21,13 +24,16 @@ public ButtonCustomNodeModel()
 }
 
 ```
+
 節點將位於附加元件的以下位置：
+
 ```
 SampleLibraryUI/Examples/MyNodeModel
 ```
 
 您也可以在類別上或在建構函式中使用 NodeCategory 屬性來取代該品類，如下所示。
-```C#
+
+```c#
 // Class Attribute
 [NodeCategory("NewSampleLibraryUI.Examples")]
 
@@ -41,6 +47,7 @@ public ButtonCustomNodeModel()
 ```
 
 節點現在將位於附加元件中的以下位置：
+
 ```
 NewSampleLibraryUI/Examples/MyNodeModel
 ```
@@ -49,11 +56,11 @@ NewSampleLibraryUI/Examples/MyNodeModel
 
 ZeroTouch 資源庫預設也會根據類別結構進行整理。
 
-```C#
+```c#
 namespace MyZTLibrary
 ```
 
-```C#
+```c#
 public class Utilities
 {
     public double doubleValue(double num)
@@ -70,10 +77,11 @@ MyZTLibrary/Utilities/doubleValue
 ```
 
 您也可以使用 Dynamo 自訂 XML 檔案取代類別結構位置。
-- XML 檔案必須相應地命名，並放入套件的 `extra` 資料夾中
-    - `PackageName_DynamoCustomization.xml`
 
-```XML
+* XML 檔案必須相應地命名，並放入套件的 `extra` 資料夾中
+  * `PackageName_DynamoCustomization.xml`
+
+```xml
 <?xml version="1.0"?>
 <doc>
     <assembly>
@@ -99,16 +107,16 @@ MyZTLibrary/Utilities/doubleValue
 
 ## 自訂節點
 
-自訂節點是根據建立節點期間 (使用新的「自訂節點」對話方塊) 中指定的 `Category Name` 來進行整理。  
+自訂節點是根據建立節點期間 (使用新的「自訂節點」對話方塊) 中指定的 `Category Name` 來進行整理。
 
-**警告！**<br>
+**警告！**\
 在節點名稱或品類中使用點符號，將會產生額外的巢狀子品類。`.` 將用作分隔符號來決定其他階層。這是 Dynamo 2.0 資源庫中的新行為。
 
-![自訂節點性質](images/custom-node-properties.jpg)
+![自訂節點性質](../../.gitbook/assets/custom-node-properties.jpg)
 
 之後可在 .dyf 檔案 (XML 或 JSON) 中更新品類名稱
 
-```JSON
+```json
 {
   "Uuid": "85066088-1616-40b1-96e1-c33e685c6948",
   "IsCustomNode": true,
@@ -120,7 +128,7 @@ MyZTLibrary/Utilities/doubleValue
   },...
 ```
 
-```XML
+```xml
 <Workspace Version="1.3.0.0000" X="100" Y="100" zoom="1.0000000" Description="This is an example custom nodes." Category="MyCustomNodes.Utilities.Actions" Name="doubleValue" ID="85066088-1616-40b1-96e1-c33e685c6948">
 ```
 
@@ -131,7 +139,8 @@ MyZTLibrary/Utilities/doubleValue
 **ZeroTouch** 節點使用套件 `bin` 資料夾中的 `Namespace.Migrations.XML` 檔案，例如：
 
 `MyZeroTouchLib.MyNodes.SayHello` 變為 `MyZeroTouchLib.MyNodes.SayHelloRENAMED`
-```XML
+
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -144,7 +153,8 @@ MyZTLibrary/Utilities/doubleValue
 **NodeModel 衍生的節點**在類別上使用 `AlsoKnownAs` 屬性，例如：
 
 `SampleLibraryUI.Examples.DropDownExample` 變為 `SampleLibraryUI.Examples.DropDownExampleRENAMED`
-```C#
+
+```c#
 namespace SampleLibraryUI.Examples
 {
     [NodeName("Drop Down Example")]

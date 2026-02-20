@@ -6,7 +6,7 @@
 
 按照 DynamoSamples Github 儲存庫的 SampleViewExtension 範例，我們將逐步瞭解建立簡單的共存式視窗即時在圖表中顯示作用中節點所需的步驟。視圖延伸會要求我們為視窗建立使用者介面，並將值與視圖模型繫結。
 
-![視圖延伸視窗](images/dyn-viewextension.jpg)
+![視圖延伸視窗](../../.gitbook/assets/dyn-viewextension.jpg)
 
 > 1. 按照 Github 儲存庫中 SampleViewExtension 範例而開發的視圖延伸視窗。
 
@@ -28,9 +28,9 @@ DynamoSamples 儲存庫：[https://github.com/DynamoDS/DynamoSamples](https://gi
 
 首先，建立一個名為 `SampleViewExtension` 的新 `Class Library` 專案。
 
-![建立新類別資源庫](images/vs-new-project-viewextension-1.jpg)
+![建立新類別資源庫](../../.gitbook/assets/vs-new-project-viewextension-1.jpg)
 
-![設定新專案](images/vs-new-project-viewextension-2.jpg)
+![設定新專案](../../.gitbook/assets/vs-new-project-viewextension-2.jpg)
 
 > 1. 選取「`File > New > Project`」建立新專案
 > 2. 選取「`Class Library`」
@@ -39,14 +39,14 @@ DynamoSamples 儲存庫：[https://github.com/DynamoDS/DynamoSamples](https://gi
 
 在此專案中，我們需要兩個類別。一個類別將實作 `IViewExtension`，另一個類別將實作 `NotificationObject.`。`IViewExtension` 包含有關如何部署、載入、參考和處置延伸的所有資訊。`NotificationObject` 提供 Dynamo 和 `IDisposable` 中發生變更的通知。發生變更時，計數將相應更新。
 
-![視圖延伸類別檔案](images/vs-viewextension-classes.jpg)
+![視圖延伸類別檔案](../../.gitbook/assets/vs-viewextension-classes.jpg)
 
 > 1. 名為 `SampleViewExtension.cs` 的類別檔案，將實作 `IViewExtension`
 > 2. 名為 `SampleWindowViewMode.cs` 的類別檔案，將實作 `NotificationObject`
 
 若要使用 `IViewExtension`，我們需要 WpfUILibrary NuGet 套件。安裝此套件會自動安裝 Core、Services 和 ZeroTouchLibrary 等套件。
 
-![視圖延伸套件](images/vs-viewextension-packages.jpg)
+![視圖延伸套件](../../.gitbook/assets/vs-viewextension-packages.jpg)
 
 > 1. 選取 WpfUILibrary
 > 2. 選取「`Install`」以安裝所有相依套件
@@ -133,7 +133,7 @@ namespace SampleViewExtension
 * `public class SampleViewExtension : IViewExtension` `SampleViewExtension` 從 `IViewExtension` 介面繼承，提供建立功能表項目所需的一切。
 * `sampleMenuItem = new MenuItem { Header = "Show View Extension Sample Window" };` 建立 MenuItem，並加入「`View`」功能表。
 
-![功能表項目](images/dyn-menuitem.jpg)
+![功能表項目](../../.gitbook/assets/dyn-menuitem.jpg)
 
 > 1. 功能表項目
 
@@ -208,7 +208,7 @@ namespace SampleViewExtension
 
 定義延伸的核心邏輯後，我們現在將使用 `.xaml` 檔案指定視窗的外觀詳細資料。我們只需要一個簡單的視窗，透過 `TextBlock` `Text` 中的 `ActiveNodeTypes` 性質繫結顯示字串。
 
-![加入視窗](images/vs-window.jpg)
+![加入視窗](../../.gitbook/assets/vs-window.jpg)
 
 > 1. 在專案上按一下右鍵，然後選取「`Add > New Item...`」
 > 2. 選取我們將做變更以建立視窗的「使用者控制項」樣板
@@ -259,7 +259,7 @@ namespace SampleViewExtension
 
 視圖延伸現在已準備好建置並加到 Dynamo 中。Dynamo 需要 `xml` 檔案，才能將輸出 `.dll` 註冊為延伸。
 
-![新增 XML](images/vs-viewextension-xml.jpg)
+![新增 XML](../../.gitbook/assets/vs-viewextension-xml.jpg)
 
 > 1. 在專案上按一下右鍵，然後選取「`Add > New Item...`」
 > 2. 選取 XML 檔案
@@ -281,7 +281,7 @@ namespace SampleViewExtension
 
 最後一步是將 `SampleViewExtension_ViewExtensionDefinition.xml` 檔案複製到 Dynamo 位於 Dynamo Core 安裝目錄 `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions` 中的視圖延伸資料夾。請務必注意，`extensions` 和 `viewExtensions` 是不同的資料夾。將 `xml` 檔案放在不正確的資料夾中，可能會導致在執行時期無法正確載入。
 
-![XML 檔案已複製到延伸資料夾](images/fe-viewextension-xml.jpg)
+![XML 檔案已複製到延伸資料夾](../../.gitbook/assets/fe-viewextension-xml.jpg)
 
 > 1. 我們複製到 Dynamo 的視圖延伸資料夾中的 `.xml` 檔案
 

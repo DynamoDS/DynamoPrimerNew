@@ -2,7 +2,7 @@
 
 在此章節之前，本手冊已涵蓋如何實施 Dynamo 的強大視覺腳本撰寫功能。充分瞭解這些功能是重要的基礎，以及建置功能強大的視覺程式的第一步。當我們實際使用視覺程式、將其與同事共享、疑難排解錯誤或測試限制時，我們將需要處理其他問題。如果其他使用者將使用您的程式，或您預期六個月後將會打開它，程式則需要有直接、清晰的圖形和邏輯。Dynamo 有多個工具可管理程式的複雜性，本章將提供有關何時使用它們的準則。
 
-![群組](images/1/cad-chart-visual.jpg)
+![群組](../.gitbook/assets/cad-chart-visual.jpg)
 
 ## 減少複雜性
 
@@ -15,7 +15,7 @@
 * 您可以變更**群組的顏色來區分**群組執行的內容 (輸入與函數)
 * 您可以使用群組開始**組織圖表，以簡化自訂節點的建立**
 
-![](images/1/graphstrategy2.png)
+![](../.gitbook/assets/graphstrategy2.png)
 
 > 此程式中的顏色用於識別每個群組的目的。此策略可用於建立任何您開發的圖形標準或樣板裡的架構。
 >
@@ -23,21 +23,21 @@
 > 2. 輸入群組 (橘色)
 > 3. 腳本群組 (綠色)
 >
-> 若要瞭解如何使用群組，請參閱[管理您的程式](https://primer2.dynamobim.org/v/zh-tw/9_best_practices/4-managing-your-program)。
+> 若要瞭解如何使用群組，請參閱[管理您的程式](http://primer.dynamobim.org/en/03_Anatomy-of-a-Dynamo-Definition/3-4_best_practices.html)。
 
 ### **使用 Code Block 有效率地開發**
 
 * 有時，您可以使用 Code Block，以**快於搜尋的方式輸入數字或節點方法** (Point.ByCoordinates、Number、String、Formula)
 * **如果您要在 DesignScript 定義自訂函數以減少圖表中的節點數量**，Code Block 就非常好用
 
-![](images/1/graphstrategy3\(1\).png)
+![](../.gitbook/assets/graphstrategy3.png)
 
 > 1 和 2 均執行相同的功能。寫入數行程式碼遠遠比搜尋並加入每個個別節點更快。Code block 也會更精確。
 >
 > 1. 使用 Code Block 撰寫的 DesignScript
 > 2. 節點中的相等程式
 >
-> 若要瞭解如何使用 Code Block，請參閱[什麼是 Code Block](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md)。
+> 若要瞭解如何使用 Code Block，請參閱[什麼是 Code Block](../8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block.md)。
 
 ### **使用「將節點轉換為程式碼」進行濃縮**
 
@@ -47,32 +47,32 @@
   * 輕鬆地將程式碼濃縮為仍可編輯的元件
   * 可以簡化圖表的重要部分
   * 如果不會對「小型程式」進行頻密的編輯，它將會很有用處
-  * 適合用來整合其他程式碼區塊功能，例如函數
+  * 適合用來整合其他 Code Block 功能，例如函數
 * 以下是使用「將節點轉換為程式碼」的**缺點**：
   * 一般命名使其不易辨認
   * 其他使用者比較難以瞭解
   * 較難返回視覺程式版本
 
-![](images/1/graphstrategy3\_1.png)
+![](../.gitbook/assets/graphstrategy3_1.png)
 
 > 1. 既有的程式
 > 2. 從「將節點轉換為程式碼」建立的 Code Block
 >
-> 若要瞭解如何使用「將節點轉換為程式碼」，請參閱 [DesignScript 語法](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md)。
+> 若要瞭解如何使用「將節點轉換為程式碼」，請參閱 [DesignScript 語法](../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md)。
 
 ### **使用 List@Level 彈性存取資料**
 
 * 使用 List@Level 可以協助您**取代可能會佔用大量圖元區空間的 List.Map 和 List.Combine 節點，降低圖表的複雜性**。
 * List@Level 是比 List.Map/List.Combine **更快建構節點邏輯的方法**，可讓您直接從節點的輸入埠存取清單中任何層級的資料。
 
-![](<images/1/graphstrategy4 (1).png>)
+![](../.gitbook/assets/graphstrategy4.png)
 
 > 我們可以為 CountTrue 的 list 輸入啟用 List@Level，來確認 BoundingBox.Contains 在哪些清單中傳回多少 True 值。List@Level 可讓使用者決定輸入將在哪個層級取得資料。使用 List@Level 更為彈性、有效，強烈建議您以它來取代涉及 List.Map 和 List.Combine 的其他方式。
 >
 > 1. 計算 List Level 2 的 true 值
 > 2. 計算 List Level 3 的 true 值
 >
-> 若要瞭解如何使用 List@Level，請參閱[清單的清單](https://primer2.dynamobim.org/v/zh-tw/5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists)。
+> 若要瞭解如何使用 List@Level，請參閱[清單的清單](http://primer.dynamobim.org/en/06_Designing-with-Lists/6-3_lists-of-lists.html#list@level)。
 
 ## 保持可讀性
 
@@ -84,7 +84,7 @@
 * 如果其他人要處理您的圖表，您應該**確保節點線路的配置在傳輸前能夠輕鬆地流動**
 * 為了協助您對齊，**請使用「清理節點配置」功能自動對齊**圖表，即使它未能如您自己手動對齊般精確
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<../.gitbook/assets/graphstrategy5 (1).png>)
 
 > 1. 未排列過的圖表
 > 2. 對齊的圖表
@@ -96,7 +96,7 @@
 * 將輸入更名可協助他人輕鬆瞭解您的圖表，**尤其當他們插入的內容不在螢幕上顯示時**
 * **更名節點而非輸入時請小心。** 另一種替代方法是從節點叢集建立自訂節點並對其進行更名；這會讓人瞭解它包含其他內容
 
-![](images/1/graphstrategy6.png)
+![](../.gitbook/assets/graphstrategy6.png)
 
 > 1. 操控曲面的輸入
 > 2. 建築參數的輸入
@@ -109,12 +109,12 @@
 * 如果**圖表需要節點無法表達的普通語言說明**，您應該加入註釋
 * 如果**節點太多，或群組太大或太複雜，而無法輕鬆瞭解**，您應該加入註釋
 
-![](images/1/graphstrategy7.png)
+![](../.gitbook/assets/graphstrategy7.png)
 
 > 1. 描述傳回原始轉換距離的程式部分的註釋
 > 2. 描述將這些值對映至正弦波形的程式碼的註釋
 >
-> 若要瞭解如何加入註釋，請參閱[管理您的程式](https://primer2.dynamobim.org/v/zh-tw/9_best_practices/4-managing-your-program)。
+> 若要瞭解如何加入註釋，請參閱[管理您的程式](http://primer.dynamobim.org/en/03_Anatomy-of-a-Dynamo-Definition/3-4_best_practices.html)。
 
 ## 持續調整
 
@@ -124,14 +124,14 @@
 
 * 建立程式時，使用 Watch 或「預覽標示圈」**確認關鍵輸出傳回您預期的內容**
 
-![](images/1/graphstrategy8.png)
+![](../.gitbook/assets/graphstrategy8.png)
 
 > Watch 節點用於比較：
 >
 > 1. 原始轉換距離
 > 2. 通過正弦方程式的值
 >
-> 若要瞭解如何使用 Watch，請參閱[資源庫](../3\_user\_interface/2-library.md)。
+> 若要瞭解如何使用 Watch，請參閱[資源庫](../3_user_interface/2-library.md)。
 
 ## 確保可重複使用
 
@@ -155,14 +155,14 @@
 * **當圖表的一部分經常在其他程式中重複使用**，您應該使用自訂節點。
 * 如果您想要**與 Dynamo 社群分享功能**，您應該使用自訂節點。
 
-![](images/1/graphstrategy9.png)
+![](../.gitbook/assets/graphstrategy9.png)
 
 > 將點平移程式收集成一個自訂節點，可以建立一個功能強大、獨特、可攜式和更易於瞭解的程式。清晰地命名輸入埠將協助其他使用者瞭解如何使用節點。請記得為每個輸入加入描述和所需的資料類型。
 >
 > 1. 既有牽引程式
 > 2. 收集此程式 PointGrid 的自訂節點
 >
-> 若要瞭解如何使用自訂節點，請參閱[自訂節點簡介](../6\_custom\_nodes\_and\_packages/6-1\_custom-nodes/1-introduction.md)。
+> 若要瞭解如何使用自訂節點，請參閱[自訂節點簡介](../6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction.md)。
 
 ### **建立樣板**
 
@@ -170,7 +170,7 @@
 * 建立樣板時，您可以標準化**群組顏色和字體大小**，為工作流程類型或資料動作分類。
 * 建立樣板時，您甚至可以標準化您想要如何在圖表中**為前端與後端工作流程之間的差異進行標示、著色或設計型式**。
 
-![](images/1/graphstrategy10\(2\).png)
+![](../.gitbook/assets/graphstrategy10.png)
 
 > 1. 程式的使用者介面 (前端) 包括專案名稱、輸入滑棒和匯入幾何圖形。
 > 2. 程式的後端。
@@ -184,13 +184,13 @@
 
 現在我們已建立多個最佳作法，讓我們將它們套用至一個快速建置的程式。雖然程式成功產生屋頂，但圖表的狀態是作者的思維導圖。它缺少任何組織或有關使用它的說明。我們將逐步瞭解組織、描述和分析程式的最佳實踐，以便其他使用者可以瞭解如何使用它。
 
-![](images/1/graphstrategy11.png)
+![](../.gitbook/assets/graphstrategy11.png)
 
 > 程式正常運作，但圖表缺乏組織。
 
 我們先決定程式傳回的資料和幾何圖形。
 
-![](images/1/graphstrategy12.png)
+![](../.gitbook/assets/graphstrategy12.png)
 
 > 瞭解資料會在何時發生重大變化，對於建立邏輯劃分或模組性非常重要。請嘗試利用 Watch 節點來檢查程式的其餘部分，看看您是否可以先決定群組，然後才移至下一個步驟。
 >
@@ -199,7 +199,7 @@
 
 一旦我們瞭解程式的元素部分，就可將其分組。
 
-![](images/1/graphstrategy13.png)
+![](../.gitbook/assets/graphstrategy13.png)
 
 > 群組可讓使用者從視覺上區分程式的各個部分。
 >
@@ -211,13 +211,13 @@
 
 建立群組後，對齊節點以建立圖表的視覺連續性。
 
-![](images/1/graphstrategy14.png)
+![](../.gitbook/assets/graphstrategy14.png)
 
 > 視覺連續性可協助使用者查看程式流程和節點之間的隱含關係。
 
 透過加入另一層圖形改進來使程式更容易存取。加入註釋以描述程式中特定區域的運作方式、為輸入自訂名稱，以及對不同類型的群組指定顏色。
 
-![](images/1/graphstrategy15\(1\).png)
+![](../.gitbook/assets/graphstrategy15.png)
 
 > 這些圖形改進可讓使用者瞭解更多有關程式的執行。不同的群組顏色有助於區分輸入與函數。
 >
@@ -226,7 +226,7 @@
 
 在開始壓縮程式之前，讓我們先尋找關鍵位置引入 Python 指令碼排水模擬器。將第一個已調整比例的屋頂曲面的輸出插入各自的腳本輸入。
 
-![](images/1/graphstrategy16.png)
+![](../.gitbook/assets/graphstrategy16.png)
 
 > 我們選擇現在將腳本整合到程式，以便可以在原始、單一的屋頂曲面執行排水模擬。指定的曲面無法被預覽，但它可讓我們不必選取倒角 Polysurface 的頂部表面。
 >
@@ -237,7 +237,7 @@
 
 一切就緒，我們來簡化圖表。
 
-![](images/1/graphstrategy17.png)
+![](../.gitbook/assets/graphstrategy17.png)
 
 > 使用「將節點轉換為程式碼」和「自訂節點」濃縮程式，已經大幅減少圖表的大小。建立屋頂曲面和牆的群組已轉換為程式碼，因為它們特定於此程式。點轉換群組包含在自訂節點中，並且可以用於其他程式。在範例檔案中，從轉換點群組建立您的自訂節點。
 >
@@ -246,14 +246,14 @@
 
 最後一步是建立典型屋頂形狀的預置。
 
-![](images/1/graphstrategy18.png)
+![](../.gitbook/assets/graphstrategy18.png)
 
 > 這些輸入是屋頂形狀的主要驅動因素，將協助使用者發現程式的潛能。
 
 我們的程式有兩個預置視圖。
 
-![](images/1/graphstrategy19.png)
+![](../.gitbook/assets/graphstrategy19.png)
 
-![](images/1/graphstrategy20.png)
+![](../.gitbook/assets/graphstrategy20.png)
 
 > 屋頂排水模式提供使用者以解析分式檢視各個預置。

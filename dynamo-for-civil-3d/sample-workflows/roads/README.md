@@ -1,7 +1,7 @@
 ---
-cover: ../../../.gitbook/assets/Highway-617389822 (1).jpg
+cover: /broken/files/Nh1KI81V2EdmrOnIHeYw
 coverY: 0
 ---
 
-# 道路 
+# 道路
 

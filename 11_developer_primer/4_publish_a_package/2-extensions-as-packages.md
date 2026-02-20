@@ -39,7 +39,7 @@ C:\Users\User\AppData\Roaming\Dynamo\Dynamo Core\2.1\packages\Sample View Extens
 
 此時，您應該會在一般的發佈套件視窗中，您將在其中輸入有關套件/延伸的所有必要欄位。還有一個**非常重要**的額外步驟，您必須確保沒有任何組合檔被標記為節點資源庫。您可以在已匯入的檔案 (上面建立的套件資料夾) 上按一下右鍵確認。此時會顯示一個關聯式功能表，讓您勾選 (或取消勾選) 此選項。應取消勾選所有延伸組合。
 
-![發佈套件](images/ViewExtension_Search.png)
+![發佈套件](../../.gitbook/assets/ViewExtension_Search.png)
 
 在公開發佈之前，請您務必先在本端發佈，以確保所有內容都如預期般運作。確認之後，您就可以選取「發佈」讓套件上線。
 
@@ -47,4 +47,4 @@ C:\Users\User\AppData\Roaming\Dynamo\Dynamo Core\2.1\packages\Sample View Extens
 
 若要確認套件已成功上傳，您應該能夠透過在發佈步驟指定的名稱和關鍵字搜尋到套件。最後，請務必注意，您需要重新啟動 Dynamo，相同的延伸才能正常運作。這些延伸通常需要指定 Dynamo 啟動時的參數。
 
-![搜尋套件](images/ViewExtension_Search.jpg)
+![搜尋套件](../../.gitbook/assets/ViewExtension_Search.jpg)

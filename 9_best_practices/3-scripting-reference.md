@@ -6,7 +6,7 @@
 
 標準資源庫位於 Dynamo 外部，存在於 Python 和 C# (Zerotouch) 等程式設計語言。Dynamo 還具有自己的一組資源庫，直接對應其節點架構，可讓使用者在程式碼中建置任何利用節點和線路來建置的內容。以下指南包含每個 Dynamo 資源庫允許存取的內容以及何時使用標準的資源庫。
 
-![](images/3/textual-programming.jpg)
+![](../.gitbook/assets/textual-programming.jpg)
 
 **標準資源庫和 Dynamo 資源庫**
 
@@ -28,9 +28,7 @@
    * 功能：Excel。
    * 如何匯入：`import DSOffice`
 
-{% hint style="warning" %}
-\*注意：透過 Python 或 C# 使用 **ProtoGeometry** 時，您建立的是不受管理的物件，而這需要手動管理記憶體 - 請參閱以下一節：**不受管理的物件**，以取得更多資訊。
-{% endhint %}
+{% hint style="warning" %} *注意：透過 Python 或 C# 使用 **ProtoGeometry** 時，您建立的是不受管理的物件，而這需要手動管理記憶體 - 請參閱以下一節：**不受管理的物件**，以取得更多資訊。{% endhint %}
 
 ## 仔細標示
 
@@ -275,7 +273,7 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
 
 您只需要處置不傳入圖表或儲存參考的不受管理的資源。在本節其餘部分，我們會將這些物件稱為_中間幾何圖形_。您可以在以下的程式碼範例中查看有關此類別物件的範例。此 zero touch C# 函數 **singleCube** 會傳回一個立方塊，但在執行期間會額外建立 10000 個立方塊。我們可以假設這額外的幾何圖形是用作一些中間建構幾何圖形。
 
-**此 zero touch 功能很有可能會讓 Dynamo 當機。** 雖然我們建立了 10000 個實體，但只儲存其中一個並傳回這一個。我們應該改為處置所有中間立方塊，除了我們傳回的那一個。我們不想要處置我們傳回的內容，因為它會傳到圖表中並由其他節點使用。
+**此 zero touch 功能很有可能會讓 Dynamo 當機。**雖然我們建立了 10000 個實體，但只儲存其中一個並傳回這一個。我們應該改為處置所有中間立方塊，除了我們傳回的那一個。我們不想要處置我們傳回的內容，因為它會傳到圖表中並由其他節點使用。
 
 ```
 public Cuboid singleCube(){
@@ -310,5 +308,3 @@ public Cuboid singleCube(){
 ```
 
 通常，您只需要處置幾何圖形 (例如 `Surfaces`、`Curves` 和 `Solids`)。為了安全起見，您可以處置所有幾何圖形類型 (`Vectors`、`Points`、`CoordinateSystems`)。
-
-

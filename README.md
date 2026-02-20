@@ -4,7 +4,7 @@
 
 ## 適用於 Dynamo 2.13 版和更高版本 
 
-![Dynamo 標誌](images/dynamo_logo_dark-trim.jpg)
+![Dynamo 標誌](.gitbook/assets/dynamo_logo_dark-trim.jpg)
 
 > Dynamo 是一種適用於設計人員的開放原始碼視覺程式設計平台。
 
@@ -37,19 +37,19 @@ Dynamo Primer 是一個開放原始碼專案，由 Autodesk 的 Matt Jezyk 和 D
 
 **Mode Lab** 受託撰寫 Primer 的第一個版本。我們感謝他們為了建立這個寶貴資源付出的所有心力。
 
-![](images/MODELAB_Logo.png)
+![](.gitbook/assets/MODELAB_Logo.png)
 
 ***
 
 **Parallax Team 的 John Pierson** 受託更新 Primer 以反映 Dynamo 2.0 的修訂。
 
-![](images/PRLX_Logo.jpg)
+![](.gitbook/assets/PRLX_Logo.jpg)
 
 ***
 
 **Matterlab** 受託更新 Primer，以反映 Dynamo 2.13 的修訂。
 
-![](images/matterlab_final-07.jpg)
+\![](<.gitbook/assets/matterlab_final-07 (2).jpg>)
 
 ***
 

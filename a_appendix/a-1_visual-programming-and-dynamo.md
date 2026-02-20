@@ -8,7 +8,7 @@
 
 雖然**演算法**提供一些強大的機會，但這個詞也可能會帶來一些錯誤觀念。演算法可以產生非預期、瘋狂或很酷的結果，但並非無所不能。實際上，演算法本身很普通。接下來我們使用紙鶴的實際範例進行說明。我們先使用一張方形紙 (輸入)，然後按照一系列折紙步驟 (處理動作)，最後折成紙鶴 (輸出)。
 
-![紙鶴](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
+![紙鶴](https://primer.dynamobim.org/01_Introduction/images/1-1/00-OrigamiCrane.png)
 
 演算法在哪裡？演算法是一組抽象步驟，可以採用一系列方式 (文字或圖形) 來表示。
 
@@ -30,7 +30,7 @@
 
 **圖形說明：**
 
-![紙鶴說明](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![紙鶴說明](https://primer.dynamobim.org/01_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
 #### 定義的程式設計 <a href="#programming-defined" id="programming-defined"></a>
 
@@ -52,7 +52,7 @@
 
 **視覺程式：**
 
-![](./images/a-1/visualProgramming(2).png)
+\![](<../.gitbook/assets/visualProgramming (2).png>)
 
 **文字程式：**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 我們的演算法結果：
 
-![](./images/a-1/visualProgramming(1).png)
+\![](<../.gitbook/assets/visualProgramming (1).png>)
 
 採用視覺特性進行程式設計的方式，可減少入門以及與設計人員頻繁溝通的障礙。Dynamo 是視覺程式設計的範例，但我們稍後將看到，在設計應用程式時仍可使用文字程式設計方式。
