@@ -1,5 +1,5 @@
 # Introduzione ai workflow
 
-Questa sezione contiene semplici workflow per iniziare ad utilizzare Dynamo. 
+Questa sezione contiene semplici workflow per iniziare ad utilizzare Dynamo.
 
-![](../images/10-1/sampleWorkflows.gif)
+![](../../.gitbook/assets/sampleWorkflows.gif)

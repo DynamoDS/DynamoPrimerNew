@@ -2,7 +2,7 @@
 
 Dopo aver capito come si crea un progetto zero-touch, possiamo approfondire le specifiche della creazione di un nodo, illustrando l'esempio ZeroTouchEssentials nella pagina di Dynamo su Github.
 
-![Nodi zero-touch](images/ootbzerotouch.png)
+![Nodi zero-touch](../../.gitbook/assets/ootbzerotouch.png)
 
 > Molti dei nodi standard di Dynamo sono essenzialmente nodi zero-touch, come la maggior parte dei nodi Math, Color e DateTime riportati sopra.
 
@@ -10,7 +10,7 @@ Per iniziare, scaricare il progetto ZeroTouchEssentials da qui: [https://github.
 
 In Visual Studio, aprire il file della soluzione `ZeroTouchEssentials.sln` e creare la soluzione.
 
-![ZeroTouchEssentials in Visual Studio](images/vs-build-zte.jpg)
+![ZeroTouchEssentials in Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
 
 > Il file `ZeroTouchEssentials.cs` contiene tutti i metodi che importeremo in Dynamo.
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Valore di default](images/defaultval.jpg)
+![Valore di default](../../.gitbook/assets/defaultval.jpg)
 
 > 1. Il valore di default verrà mostrato quando si posiziona il cursore sulla porta di input del nodo.
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Un nodo che restituisce più output.
 
-![Più output](images/multipleoutputs.png)
+![Più output](../../.gitbook/assets/multipleoutputs.png)
 
 > 1. Notare che ora sono presenti due porte di output denominate in base alle stringhe immesse per le chiavi del dizionario.
 
@@ -90,7 +90,7 @@ Un nodo che restituisce più output.
   * Ad esempio: `/// <summary>...</summary>`
 * Attivare la documentazione XML in Visual Studio scegliendo `Project > [Project] Properties > Build > Output` e selezionando `Documentation file`.
 
-![Generazione di un file XML](images/vs-xml.jpg)
+![Generazione di un file XML](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Visual Studio genererà un file XML nella posizione specificata.
 
@@ -134,18 +134,18 @@ Notare che il codice per questo nodo di esempio contiene:
 > 2. Una descrizione dell'input
 > 3. Descrizione di un output
 
-#### Pratiche ottimali per le descrizioni dei nodi di Dynamo 
+#### Pratiche ottimali ottimali per le descrizioni dei nodi di Dynamo
 
 Le descrizioni dei nodi illustrano brevemente la funzione e l'output di un nodo. In Dynamo, vengono visualizzati in due posizioni:
 
-- Nella descrizione comando del nodo
-- Nel Browser della documentazione
+* Nella descrizione comando del nodo
+* Nel Browser della documentazione
 
-![Descrizione del nodo](images/node-description.png)
+![Descrizione del nodo](../../.gitbook/assets/node-description.png)
 
 Seguire queste linee guida per garantire la coerenza e risparmiare tempo durante la scrittura o l'aggiornamento delle descrizioni dei nodi.
 
-##### Panoramica
+**Panoramica**
 
 Le descrizioni dovrebbero essere composte da una o due frasi. Se sono necessarie ulteriori informazioni, includerle in In profondità nel Browser della documentazione.
 
@@ -155,17 +155,17 @@ Il linguaggio deve essere il più chiaro e semplice possibile. Definire gli acro
 
 Dare sempre priorità alla chiarezza, anche se ciò significa discostarsi da queste linee guida.
 
-##### Linee guida
+**Linee guida**
 
-| Cosa fare      | Cosa non fare |
-| ----------- | ----------- |
-| Iniziare la descrizione con un verbo in terza persona. <ul><li>Esempio: *Determina* se un oggetto geometrico interseca un altro</li></ul>      | Non iniziare con un verbo in seconda persona o con un sostantivo. <ul><li>Esempio: *Determinare* se un oggetto geometrico si interseca con un altro</li></ul>       |
-| Utilizzare "Restituisce", "Crea" o un altro verbo descrittivo invece di "Ottiene". <ul><li>Esempio: *Restituisce* una rappresentazione NURBS di una superficie</li></ul>   | Non utilizzare "Ottenere" o "Ottiene". È meno specifico e ha diverse possibili traduzioni. <ul><li>Esempio: *Ottiene* una rappresentazione NURBS della superficie</li></ul>        |
-| Quando si fa riferimento agli input, utilizzare "dato" o "input" invece di "specificato" o qualsiasi altro termine. Omettere "dato" o "input", quando possibile, per semplificare la descrizione e ridurre il numero di parole. <ul><li>Esempio: Elimina il file *dato*</li><li>Esempio: Proietta una curva lungo la direzione di proiezione *data* sulla geometria di base *data*</li></ul>È possibile utilizzare "specificato" quando non si fa riferimento diretto ad un input. <ul><li>Esempio: Scrive il contenuto di testo in un file *specificato* dal percorso dato.</li></ul>       | Quando si fa riferimento agli input, per garantire la coerenza, non utilizzare "specificato" o qualsiasi altro termine tranne "dato" o "input". Non combinare "dato" e "input" nella stessa descrizione, a meno che non sia necessario per motivi di chiarezza. <ul><li>Esempio: Elimina il file *specificato*</li><li>Esempio: Proietta una curva di *input* lungo una direzione di proiezione *data* su una geometria di base *specificata*</li></ul>      |
-| Utilizzare "un/uno" o "un'/una" quando si fa riferimento per la prima volta ad un input. Utilizzare "il dato" o "l'input" invece di "un/uno" o "un'/una", secondo necessità, per chiarezza.<ul><li>Esempio: Esegue l'estrusione su percorso di *una* curva lungo la traiettoria della curva</li></ul>      | Non utilizzare "questo/a" quando si fa riferimento per la prima volta ad un input. <ul><li>Esempio: Esegue l'estrusione su percorso di *questa* curva lungo la traiettoria della curva      |
-| Quando si fa riferimento per la prima volta ad un output o a un altro sostantivo che è la destinazione dell'operazione del nodo, utilizzare "un/uno" o "un'/una". Utilizzare solo " quando associato ad "input" o "dato". <ul><li>Esempio: Copia *un* file</li><li>Esempio: Copia *il dato* file</li></ul>      | Quando si fa riferimento per la prima volta ad un output o a un altro sostantivo che è la destinazione dell'operazione del nodo, non utilizzare "il/la" da solo. <ul><li>Esempio: Copia *il* file</li></ul>      |
-| Scrivere in maiuscolo la prima parola di una frase e tutti i nomi propri, come i nomi e i sostantivi tradizionalmente maiuscoli. <ul><li>Esempio: Restituisce l'intersezione di due *BoundingBox*</li></ul>      | Non scrivere in maiuscolo oggetti e concetti di geometria comuni a meno che non sia necessario per fare maggiore chiarezza. <ul><li>Esempio: Scala in modo non uniforme attorno al *Piano* dato      |
-| Scrivere in maiuscolo Booleano. Scrivere in maiuscolo True e False quando si fa riferimento all'output dei valori Booleani. <ul><li>Esempio: Restituisce *True* se i due valori sono diversi</li><li>Esempio: Converte una stringa in tutti caratteri maiuscoli o minuscoli in base ad un parametro *Booleano*      | Non scrivere in minuscolo Booleano. Non scrivere in minuscolo True e False in quando si fa riferimento all'output di valori Booleani. <ul><li>Esempio: Restituisce *True* se i due valori sono diversi</li><li>Esempio: Converte una stringa in tutti caratteri maiuscoli o minuscoli in base ad un parametro *booleano*</li></ul>
+| Cosa fare                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Cosa non fare                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>Iniziare la descrizione con un verbo in terza persona.</p><ul><li>Esempio: <em>Determina</em> se un oggetto geometrico interseca un altro</li></ul>                                                                                                                                                                                                                                                                                                                                                                                         | <p>Non iniziare con un verbo in seconda persona o con un sostantivo.</p><ul><li>Esempio: <em>Determinare</em> se un oggetto geometrico si interseca con un altro</li></ul>                                                                                                                                                                                                                                                      |
+| <p>Utilizzare "Restituisce", "Crea" o un altro verbo descrittivo invece di "Ottiene".</p><ul><li>Esempio: <em>Restituisce</em> una rappresentazione NURBS di una superficie</li></ul>                                                                                                                                                                                                                                                                                                                                                                              | <p>Non utilizzare "Ottenere" o "Ottiene". È meno specifico e ha diverse possibili traduzioni.</p><ul><li>Esempio: <em>Ottiene</em> una rappresentazione NURBS della superficie</li></ul>                                                                                                                                                                                                                                       |
+| <p>Quando si fa riferimento agli input, utilizzare "dato" o "input" invece di "specificato" o qualsiasi altro termine. Omettere "dato" o "input", quando possibile, per semplificare la descrizione e ridurre il numero di parole.</p><ul><li>Esempio: Elimina il file <em>dato</em></li><li>Esempio: Proietta una curva lungo la direzione di proiezione <em>data</em> sulla geometria di base <em>data</em></li></ul><p>È possibile utilizzare "specificato" quando non si fa riferimento diretto ad un input.</p><ul><li>Esempio: Scrive il contenuto di testo in un file <em>specificato</em> dal percorso dato</li></ul> | <p>Quando si fa riferimento agli input, per garantire la coerenza, non utilizzare "specificato" o qualsiasi altro termine tranne "dato" o "input". Non combinare "dato" e "input" nella stessa descrizione, a meno che non sia necessario per motivi di chiarezza.</p><ul><li>Esempio: Elimina il file <em>specificato</em></li><li>Esempio: Proietta una curva di <em>input</em> lungo una direzione di proiezione <em>data</em> su una geometria di base <em>specificata</em></li></ul> |
+| <p>Utilizzare "un/uno" o "un'/una" quando si fa riferimento per la prima volta ad un input. Utilizzare "il dato" o "l'input" invece di "un/uno" o "un'/una", secondo necessità, per chiarezza.</p><ul><li>Esempio: Esegue l'estrusione su percorso di <em>una</em> curva lungo la traiettoria della curva</li></ul>                                                                                                                                                                                                                                                                                                                                | <p>Non utilizzare "questo/a" quando si fa riferimento per la prima volta ad un input.</p><ul><li>Esempio: Esegue l'estrusione su percorso di <em>questa</em> curva lungo la traiettoria della curva</li></ul>                                                                                                                                                                                                                                                                             |
+| <p>Quando si fa riferimento per la prima volta ad un output o a un altro sostantivo che è la destinazione dell'operazione del nodo, utilizzare "un/uno" o "un'/una". Utilizzare solo " quando associato ad "input" o "dato".</p><ul><li>Esempio: Copia <em>un</em> file</li><li>Esempio: Copia <em>il dato</em> file</li></ul>                                                                                                                                                                                                                                                                   | <p>Quando si fa riferimento per la prima volta ad un output o a un altro sostantivo che è la destinazione dell'operazione del nodo, non utilizzare "il/la" da solo.</p><ul><li>Esempio: Copia <em>il</em> file</li></ul>                                                                                                                                                                                                                                  |
+| <p>Scrivere in maiuscolo la prima parola di una frase e tutti i nomi propri, come i nomi e i sostantivi tradizionalmente maiuscoli.</p><ul><li>Esempio: Restituisce l'intersezione di due <em>BoundingBox</em></li></ul>                                                                                                                                                                                                                                                                                                                                     | <p>Non scrivere in maiuscolo oggetti e concetti di geometria comuni a meno che non sia necessario per fare maggiore chiarezza.</p><ul><li>Esempio: Scala in modo non uniforme attorno al <em>Piano</em> dato</li></ul>                                                                                                                                                                                                                                          |
+| <p>Scrivere in maiuscolo Booleano. Scrivere in maiuscolo True e False quando si fa riferimento all'output dei valori Booleani.</p><ul><li>Esempio: Restituisce <em>True</em> se i due valori sono diversi</li><li>Esempio: Converte una stringa in tutti caratteri maiuscoli o minuscoli in base ad un parametro <em>Booleano</em></li></ul>                                                                                                                                                                                                                                        | <p>Non scrivere in minuscolo Booleano. Non scrivere in minuscolo True e False in quando si fa riferimento all'output di valori Booleani.</p><ul><li>Esempio: Restituisce <em>True</em> se i due valori sono diversi</li><li>Esempio: Converte una stringa in tutti caratteri maiuscoli o minuscoli in base ad un parametro <em>booleano</em></li></ul>                                                                                       |
 
 #### Avvisi ed errori relativi ai nodi di Dynamo
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 Dopo l'importazione del file .dll ZeroTouchEssentials, nella libreria sarà presente un nodo ZeroTouchEssentials. Questo oggetto può essere creato utilizzando il nodo `ByTwoDoubles`
 
-![Nodo ByTwoDoubles](images/dyn-constructor.jpg)
+![Nodo ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
 
 ### Utilizzo dei tipi di geometria di Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Un nodo che ottiene la lunghezza di una curva e la raddoppia.
 
-![Input curve](images/doublelength.png)
+![Input curve](../../.gitbook/assets/doublelength.png)
 
 > 1. Questo nodo accetta un tipo di geometria curve come input.
 
@@ -285,7 +285,7 @@ Quando si pubblica una versione più recente di una libreria, i nomi dei nodi po
 * All'interno dell'elemento migrations, creare elementi `<priorNameHint>...</priorNameHint>` per ogni modifica del nome.
 * Per ogni modifica del nome, fornire un elemento `<oldName>...</oldName>` e `<newName>...</newName>`.
 
-![File Migrations](images/vs-migrations-file.jpg)
+![File Migrations](../../.gitbook/assets/vs-migrations-file.jpg)
 
 > 1. Fare clic con il pulsante destro del mouse e selezionare `Aggiungi > Nuovo elemento`.
 > 2. Scegliere `File XML`.

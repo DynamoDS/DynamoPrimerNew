@@ -35,11 +35,11 @@ Esempio di file XML manifesto:
 
 ### Caricamento <a href="#uploading" id="uploading"></a>
 
-Una volta creata una cartella contenente le sottodirectory descritte in precedenza, è possibile eseguire il push (caricamento) nel gestore di pacchetti. Una cosa di cui tenere conto è che attualmente non è possibile pubblicare pacchetti da Dynamo Sandbox. Ciò significa che è necessario utilizzare Dynamo for Revit. Una volta all'interno di Dynamo for Revit, individuare Pacchetti => Pubblica nuovo pacchetto. In questo modo, l'utente dovrà accedere all'Autodesk Account a cui desidera associare il pacchetto.
+Una volta creata una cartella contenente le sottodirectory descritte in precedenza, è possibile eseguire il push (caricamento) nel gestore di pacchetti. Una cosa di cui tenere conto è che attualmente non è possibile pubblicare pacchetti da Dynamo Sandbox. Ciò significa che è necessario utilizzare DynamoRevit. Una volta all'interno di DynamoRevit, individuare Pacchetti => Pubblica nuovo pacchetto. In questo modo, l'utente dovrà accedere all'Autodesk Account a cui desidera associare il pacchetto.
 
 A questo punto dovrebbe comparire la normale finestra di pubblicazione del pacchetto, dove verranno compilati tutti i campi obbligatori relativi al pacchetto/all'estensione. Esiste un passaggio aggiuntivo **molto importante** che richiede di assicurarsi che nessuno dei file di assiemi sia contrassegnato come libreria di nodi. A tale scopo, fare clic con il pulsante destro del mouse sui file importati (la cartella del pacchetto creata in precedenza). Verrà visualizzato un menu contestuale che consente di selezionare (o deselezionare) questa opzione. Tutti gli assiemi dell'estensione dovrebbero essere deselezionati.
 
-![Pubblicazione di un pacchetto](images/ViewExtension_Search.png)
+![Pubblicazione di un pacchetto](../../.gitbook/assets/ViewExtension_Search.png)
 
 Prima di pubblicare in linea, si dovrebbe sempre pubblicare localmente per assicurarsi che tutto funzioni come previsto. Una volta verificato questo aspetto, si è pronti per l'attivazione selezionando Pubblica in linea.
 
@@ -47,4 +47,4 @@ Prima di pubblicare in linea, si dovrebbe sempre pubblicare localmente per assic
 
 Per verificare che il pacchetto sia stato caricato correttamente, si dovrebbe essere in grado di cercarlo in base alla denominazione e alle parole chiave specificate nel passaggio di pubblicazione. Infine, è importante notare che le stesse estensioni richiederanno un riavvio di Dynamo prima di funzionare. In genere, queste estensioni richiedono parametri specificati all'avvio di Dynamo.
 
-![Ricerca di pacchetti](images/ViewExtension_Search.jpg)
+![Ricerca di pacchetti](../../.gitbook/assets/ViewExtension_Search.jpg)

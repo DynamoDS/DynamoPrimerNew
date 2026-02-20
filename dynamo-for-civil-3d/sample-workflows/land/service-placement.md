@@ -2,7 +2,7 @@
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Dynamo (1).gif" alt=""><figcaption></figcaption></figure>
 
-La progettazione ingegneristica di un tipico complesso residenziale prevede prevede la collaborazione con diversi impianti di pubblica utilità sotterranei, come le fognature, lo scarico delle acque piovane, l'acqua potabile o altri. In questo esempio si dimostrerà come Dynamo può essere utilizzato per disegnare le connessioni dei servizi da una conduttura di distribuzione ad un determinato lotto (ad esempio, una particella). È frequente che ogni lotto richieda una connessione dei servizi, il che comporta un notevole e noioso lavoro di posizionamento di tutti i servizi. Dynamo può accelerare il processo disegnando automaticamente la geometria necessaria con precisione, oltre a fornire input flessibili che possono essere adattati agli standard delle agenzie locali.
+La progettazione ingegneristica di un tipico complesso residenziale prevede la collaborazione con diversi impianti di pubblica utilità sotterranei, come le fognature, lo scarico delle acque piovane, l'acqua potabile o altri. In questo esempio si dimostrerà come Dynamo può essere utilizzato per disegnare le connessioni dei servizi da una conduttura di distribuzione ad un determinato lotto (ad esempio, una particella). È frequente che ogni lotto richieda una connessione dei servizi, il che comporta un notevole e noioso lavoro di posizionamento di tutti i servizi. Dynamo può accelerare il processo disegnando automaticamente la geometria necessaria con precisione, oltre a fornire input flessibili che possono essere adattati agli standard delle agenzie locali.
 
 ## Scopo
 
@@ -14,13 +14,11 @@ La progettazione ingegneristica di un tipico complesso residenziale prevede prev
 > * Utilizzo dei sistemi di coordinate
 > * Utilizzo di operazioni geometriche quali **Geometry.DistanceTo** e **Geometry.ClosestPointTo**
 > * Creazione di riferimenti di blocco
-> * Controllo delle impostazioni di unione di oggetti
+> * Controllo delle impostazioni di binding di oggetti
 
 ## Compatibilità delle versioni
 
-{% hint style="success" %}
-Questo grafico verrà eseguito su **Civil 3D 2020** e versioni successive.
-{% endhint %}
+{% hint style="success" %} Questo grafico verrà eseguito su **Civil 3D 2020** e versioni successive. {% endhint %}
 
 ## Set di dati
 
@@ -46,9 +44,7 @@ Procediamo!
 
 Il primo passaggio consiste nel caricare la geometria per la conduttura di distribuzione in Dynamo. Anziché selezionare singole linee o polilinee, si otterranno tutti gli oggetti su un determinato layer e li si unirà come PolyCurve di Dynamo.
 
-{% hint style="info" %}
-Se non si conosce la geometria della curva di Dynamo, consultare la sezione [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention").
-{% endhint %}
+{% hint style="info" %} Se non si conosce la geometria della curva di Dynamo, consultare la sezione [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Recupero di oggetti da Civil 3D e unione di tutti gli elementi in un'unica PolyCurve</p></figcaption></figure>
 
@@ -68,9 +64,7 @@ Occorre anche gestire un potenziale problema che potrebbe sorgere. La linea del 
 
 È arrivato il momento di capire dove verranno posizionati i contatori. In genere, il posizionamento è determinato dai requisiti dell'agenzia locale, pertanto è sufficiente fornire valori di input che possono essere modificati in base alle diverse condizioni. Utilizzeremo un **sistema di coordinate** lungo la linea del lotto come riferimento per la creazione dei punti. In questo modo è molto semplice definire gli offset rispetto alla linea del lotto, indipendentemente dall'orientamento.
 
-{% hint style="info" %}
-Se non si conoscono i sistemi di coordinate, consultare la sezione [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention").
-{% endhint %}
+{% hint style="info" %} Se non si conoscono i sistemi di coordinate, consultare la sezione [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Creazione dei punti di inserimento per i contatori</p></figcaption></figure>
 
@@ -99,23 +93,19 @@ Quando si esegue il grafico, dovrebbero essere visualizzati nuovi riferimenti di
 
 Si può notare che dopo aver posizionato gli oggetti per una linea del lotto, selezionando una diversa gli oggetti vengono "spostati".
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Binding.gif" alt=""><figcaption><p>Funzionamento quando l'unione di oggetti è attivata</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Binding.gif" alt=""><figcaption><p>Funzionamento quando il binding di oggetti è attivato</p></figcaption></figure>
 
-Si tratta del funzionamento di default di Dynamo ed è molto utile in molti casi. Tuttavia, è possibile che si vogliano posizionare diverse connessioni dei servizi in sequenza e fare in modo che Dynamo crei nuovi oggetti ad ogni esecuzione anziché modificare quelle originali. È possibile controllare questo funzionamento modificando le impostazioni di unione di oggetti.
+Si tratta del funzionamento di default di Dynamo ed è molto utile in molti casi. Tuttavia, è possibile che si vogliano posizionare diverse connessioni dei servizi in sequenza e fare in modo che Dynamo crei nuovi oggetti ad ogni esecuzione anziché modificare quelle originali. È possibile controllare questo funzionamento modificando le impostazioni di binding di oggetti.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Impostazioni dell'unione di oggetti di Dynamo</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Impostazioni di binding di oggetti di Dynamo</p></figcaption></figure>
 
-{% hint style="info" %}
-Per ulteriori informazioni, consultare la sezione [object-binding.md](../../advanced-topics/object-binding.md "mention").
-{% endhint %}
+{% hint style="info" %} Per ulteriori informazioni, consultare la sezione [object-binding.md](../../advanced-topics/object-binding.md "mention"). {% endhint %}
 
-La modifica di questa impostazione forzerà Dynamo a "dimenticare" gli oggetti che crea ad ogni esecuzione. Di seguito è riportato un esempio di esecuzione del grafico con l'unionee di oggetti disattivata utilizzando il **Lettore Dynamo**.
+La modifica di questa impostazione forzerà Dynamo a "dimenticare" gli oggetti che crea ad ogni esecuzione. Di seguito è riportato un esempio di esecuzione del grafico con il binding di oggetti disattivato utilizzando il **Lettore Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Esecuzione del grafico mediante il Lettore Dynamo e visualizzazione dei risultati in Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %}
-Se non si conosce il Lettore Dynamo, consultare la sezione [dynamo-player.md](../../dynamo-player.md "mention").
-{% endhint %}
+{% hint style="info" %} Se non si conosce il Lettore Dynamo, consultare la sezione [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
 
 > :tada: Missione compiuta!
 
@@ -123,14 +113,8 @@ Se non si conosce il Lettore Dynamo, consultare la sezione [dynamo-player.md](..
 
 Ecco alcune idee su come espandere le funzionalità di questo grafico.
 
-{% hint style="info" %}
-Posizionare **più collegamenti dei servizi** contemporaneamente anziché selezionare ogni linea del lotto.
-{% endhint %}
+{% hint style="info" %} Posizionare **più collegamenti dei servizi** contemporaneamente anziché selezionare ogni linea del lotto. {% endhint %}
 
-{% hint style="info" %}
-Regolare gli input per posizionare invece **sportelli di ispezione per fognature** anziché i contatori del servizio idrico.
-{% endhint %}
+{% hint style="info" %} Regolare gli input per posizionare invece **sportelli di ispezione per fognature** anziché i contatori del servizio idrico. {% endhint %}
 
-{% hint style="info" %}
-**Aggiungere un pulsante di commutazione** per consentire il posizionamento di una singola connessione dei servizi su un lato particolare della linea del lotto anziché su entrambi i lati.
-{% endhint %}
+{% hint style="info" %} **Aggiungere un pulsante di commutazione** per consentire il posizionamento di una singola connessione dei servizi su un lato particolare della linea del lotto anziché su entrambi i lati. {% endhint %}

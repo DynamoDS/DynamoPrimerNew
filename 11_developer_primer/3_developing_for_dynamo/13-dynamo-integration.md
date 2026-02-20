@@ -8,8 +8,8 @@ Sommario:
 
 * [Questa introduzione](13-dynamo-integration.md#dynamo-integration): panoramica generale di ciò che questa guida include e di ciò che Dynamo rappresenta.
 * [Punto di ingresso personalizzato di Dynamo](13-dynamo-integration.md#dynamo-custom-entry-point): come creare DynamoModel e da dove iniziare.
-* [Binding di elementi e traccia](13-dynamo-integration.md#-element-binding-and-trace): utilizzo del meccanismo di traccia di Dynamo per unire i nodi nel grafico ai relativi risultati nell'host.
-* [Nodi Selection di Dynamo for Revit](13-dynamo-integration.md#-dynamo-revit-selection-nodes): come implementare nodi che consentono agli utenti di selezionare oggetti o dati dall'host e passarli come input al grafico di Dynamo.
+* [Binding di elementi e traccia](13-dynamo-integration.md#element-binding-and-trace): utilizzo del meccanismo di traccia di Dynamo per unire i nodi nel grafico ai relativi risultati nell'host.
+* [Nodi Selection di Dynamo for Revit](13-dynamo-integration.md#dynamo-revit-selection-nodes-what-are-they): come implementare nodi che consentono agli utenti di selezionare oggetti o dati dall'host e passarli come input al grafico di Dynamo.
 * [Panoramica dei pacchetti incorporati di Dynamo](13-dynamo-integration.md#dynamo-built-in-packages-overview): cos'è la libreria di standard di Dynamo e come utilizzare il meccanismo sottostante per inviare i pacchetti con l'integrazione.
 
 **Un po' di terminologia:**
@@ -309,9 +309,9 @@ Quando un grafico di Dynamo viene aperto dal disco, i dati di traccia salvati in
     * Funzione di DesignScript
     * Nodo personalizzato (funzione DS).
 * TraceSerializer
-  * Serializza le classi contrassegnate come `ISerializable` e `[Serializable]` nella traccia.
-  * Gestisce la serializzazione e la deserializzazione dei dati nella traccia.
-  * TraceBinder controlla il binding di dati deserializzati ad un tipo di runtime (crea l'istanza della classe reale).
+  * Gestisce la serializzazione e la deserializzazione dei dati nella traccia. Questo meccanismo segue un processo in più passaggi per gestore i dati di traccia:
+    * Quando si salva il grafico (serializzazione), i dati generati da nodi specifici vengono convertiti in una stringa JSON strutturata. Questi dati serializzati vengono compressi utilizzando gzip per ridurre le dimensioni del file, quindi codificati in Base64 per garantire un'archiviazione sicura. La stringa sicura risultante viene incorporata nella sezione del binding del file .dyn.
+    * Quando si apre il grafico (deserializzazione), la stringa codificata viene letta dalla sezione del binding del file .dyn. La stringa viene decodificata in Base64 nella sua forma binaria compressa originale e quindi decompressa utilizzando gzip. I dati strutturati ripristinati vengono riconvertiti in oggetti di runtime attivi.
 
 #### Qual è il loro formato?
 
@@ -334,11 +334,10 @@ I dati di traccia vengono serializzati nel file .dyn all'interno di una propriet
       }
     }
   ],
-
  
 ```
 
-Si consiglia di _NON_ dipendere dal formato dei dati serializzati con codifica base64.
+Si consiglia di NON dipendere dal formato dei dati serializzati con codifica base64.
 
 #### Quale problema si sta cercando di risolvere
 
@@ -378,7 +377,7 @@ Se è stato attivato il binding di elementi, è possibile mantenere il lavoro es
 
 ***
 
-![Creazione di muri](images/creates_walls.png)
+![Creazione di muri](../../.gitbook/assets/creates_walls.png)
 
 #### Confronto di binding di elementi e traccia
 
@@ -388,7 +387,7 @@ La traccia è un meccanismo di Dynamo Core: utilizza una variabile statica di Ca
 
 Consente inoltre di serializzare dati arbitrari nel file .dyn durante la scrittura di nodi zero-touch di Dynamo. In genere questa procedura non è consigliabile, in quanto significa che il codice zero-touch potenzialmente trasferibile ora ha una dipendenza da Dynamo Core.
 
-Non utilizzare il formato serializzato dei dati nel file .dyn, ma utilizzare l'interfaccia e l'attributo [Serializable].
+Non basarsi sul formato serializzato dei dati nel file .dyn. Non è consigliabile accedere direttamente ai dati serializzati, operazione che può essere eseguita solo tramite le API di traccia.
 
 ElementBinding, invece, è un elemento basato sulle API di traccia ed è implementato nell'integrazione di Dynamo _(DynamoRevit, Dynamo for Civil 3D e così via)._
 
@@ -397,10 +396,10 @@ ElementBinding, invece, è un elemento basato sulle API di traccia ed è impleme
 Alcune delle API di traccia di basso livello che vale la pena conoscere sono:
 
 ```c#
-public static ISerializable GetTraceData(string key)
+public static string GetTraceData(string key)
 ///Returns the data that is bound to a particular key
 
-public static void SetTraceData(string key, ISerializable value)
+public static void SetTraceData(string key, string value)
 ///Set the data bound to a particular key
 ```
 
@@ -413,9 +412,9 @@ Per interagire con i dati di traccia che Dynamo ha caricato da un file esistente
  GetTraceDataForNodes(IEnumerable<Guid> nodeGuids, Executable executable)
 ```
 
-[GetTraceDataForNodes](https://github.com/DynamoDS/Dynamo/blob/master/src/Engine/ProtoCore/RuntimeData.cs#L218)
+[GetTraceDataForNodes](https://github.com/DynamoDS/Dynamo/blob/RC4.0.0_master/src/Engine/ProtoCore/RuntimeData.cs#L212)
 
-[RuntimeTrace.cs](https://github.com/DynamoDS/Dynamo/blob/master/src/Engine/ProtoCore/RuntimeData.cs)
+[RuntimeTrace.cs](https://github.com/DynamoDS/Dynamo/blob/RC4.0.0_master/src/Engine/ProtoCore/RuntimeData.cs)
 
 #### Esempio di traccia semplice di un nodo
 
@@ -448,19 +447,16 @@ L'impostazione approssimativa è:
 
 Una classe di utilità statica `TraceExampleWrapper` viene importata come nodo in Dynamo. Contiene un singolo metodo `ByString`, che crea `TraceExampleItem`. Si tratta di oggetti .NET normali che contengono una proprietà `description`.
 
-Ogni `TraceExampleItem` viene serializzato in una traccia rappresentata come `TraceableId`, ovvero una classe contenente un `IntId` contrassegnato `[Serializeable]` in modo che possa essere serializzato con il formattatore `SOAP`. Per ulteriori informazioni sull'attributo serializzabile, vedere [qui](https://docs.microsoft.com/it-it/dotnet/api/system.serializableattribute?view=netframework-4.8).
-
-È inoltre necessario implementare l'interfaccia `ISerializable` definita [qui](https://learn.microsoft.com/it-it/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8).
+Ogni `TraceExampleItem` viene memorizzato in un TraceableObjectManager statico. TraceableObjectManager serializza e deserializza i record di traccia di Dynamo come stringa JSON. In questo modo i nodi possono trovare e aggiornare gli elementi creati in precedenza anziché ricrearli.
 
 ```c#
     [IsVisibleInDynamoLibrary(false)]
-    [Serializable]
-    public class TraceableId : ISerializable
+    public class TraceableId
     {
     }
 ```
 
-Questa classe viene creata per ogni `TraceExampleItem` che si desidera salvare nella traccia, serializzata, con codifica base64 e salvata su disco quando il grafico viene salvato, in modo che i binding possano essere riassociati, anche in un secondo momento quando il grafico viene riaperto su un dizionario esistente di elementi. Questo metodo non funzionerà correttamente nel caso di questo esempio, poiché il dizionario non è realmente persistente come un documento di Revit.
+La classe TraceableId viene creata per ogni `TraceExampleItem` che si desidera salvare nella traccia, serializzata, con codifica base64 e salvata su disco quando il grafico viene salvato, in modo che i binding possano essere riassociati, anche in un secondo momento quando il grafico viene riaperto su un dizionario esistente di elementi. Questo metodo non funzionerà correttamente nel caso di questo esempio, poiché il dizionario non è realmente persistente come un documento di Revit.
 
 Infine, l'ultima parte dell'equazione è `TraceableObjectManager`, che è simile a `ElementBinder` in `DynamoRevit`; gestisce la relazione tra gli oggetti presenti nel modello di documento dell'host e i dati memorizzati nella traccia di Dynamo.
 
@@ -470,15 +466,15 @@ Alla successiva esecuzione del grafico, esaminiamo la traccia, troviamo l'ID mem
 
 Il flusso di due esecuzioni consecutive del grafico che crea un singolo `TraceExampleItem` è simile al seguente:
 
-![Prima chiamata](images/Trace-first-call.png)
+![Prima chiamata](../../.gitbook/assets/Trace-first-call.png)
 
-![Seconda chiamata](images/Trace-second-call.png)
+![Seconda chiamata](../../.gitbook/assets/Trace-second-call.png)
 
 La stessa idea è illustrata nell'esempio successivo con un caso di utilizzo del nodo DynamoRevit più realistico.
 
 #### Diagramma della traccia
 
-![Passaggi della traccia](images/trace_diagram.png) ![Flusso della traccia](images/trace_alt_diagram.png)
+![Passaggi della traccia](../../.gitbook/assets/trace_diagram.png) ![Flusso della traccia](../../.gitbook/assets/trace_alt_diagram.png)
 
 #### NOTA
 
@@ -558,7 +554,13 @@ Le fasi importanti dell'esecuzione del costruttore in relazione al binding di el
 
 #### Efficienza
 
-* Attualmente ogni oggetto traccia di serializzazione viene serializzato utilizzando la formattazione XML SOAP, che è piuttosto dettagliata e duplica molte informazioni. Quindi i dati vengono codificati in base64 due volte. Questo non è efficiente in termini di serializzazione o deserializzazione. Questo aspetto può essere migliorato in futuro, se il formato interno non si basa su tale codifica. Anche in questo caso, ripetiamo, non fare affidamento sul formato dei dati serializzati inattivi.
+* Attualmente ogni stringa di traccia viene serializzata utilizzando la compressione gzip e la codifica base64. Questo è un miglioramento rispetto alla formattazione XML SOAP precedente.
+
+#### Compatibilità
+
+* Gli oggetti traccia salvati nelle versioni precedenti a Dynamo 3.0 vengono memorizzati utilizzando SOAP, pertanto non sono supportati nelle versioni più recenti. I dati sul binding degli elementi salvati in precedenza verranno ignorati e il messaggio seguente verrà visualizzato in Dynamo 3.0 e versioni successive. I dati sul binding degli elementi verranno salvati alla successiva esecuzione e al successivo salvataggio dell'area di lavoro.
+
+![Compatibilità del binding di elementi](../../.gitbook/assets/element_binding_compatibility_message.jpg)
 
 #### ElementBinding deve essere attivato per default?
 
@@ -572,7 +574,7 @@ A livello generale, **un buon modo per concettualizzare questi nodi è come una 
 
 In DynamoRevit sono presenti più nodi `Selection`. Possiamo suddividerli in almeno due gruppi:
 
-![Nodi Selection di Revit](images/revitSelectionNodes.png)
+![Nodi Selection di Revit](../../.gitbook/assets/revitSelectionNodes.png)
 
 1.  Selezione dell'interfaccia utente:
 
@@ -600,7 +602,7 @@ In DynamoRevit sono presenti più nodi `Selection`. Possiamo suddividerli in alm
 
 I workflow in Dynamo for Civil 3D sono molto simili alla descrizione precedente per Revit. Di seguito sono riportati due gruppi tipici di nodi Selection in Dynamo for Civil 3D:
 
-![Nodi Selection di Civil 3D](images/civilSelectionNodes.png)
+![Nodi Selection di Civil 3D](../../.gitbook/assets/civilSelectionNodes.png)
 
 ### Problemi:
 
@@ -611,9 +613,9 @@ I workflow in Dynamo for Civil 3D sono molto simili alla descrizione precedente 
 
 ### Diagrammi del flusso di dati
 
-![Flusso di selezione](images/selectModelElement.png)
+![Flusso di selezione](../../.gitbook/assets/selectModelElement.png)
 
-![Flusso di selezione2](images/selectElementFace.png)
+![Flusso di selezione2](../../.gitbook/assets/selectElementFace.png)
 
 ### Implementazione tecnica: (fare riferimento ai diagrammi precedenti):
 
@@ -622,7 +624,7 @@ I nodi Selection vengono implementati ereditando proprietà dai tipi `SelectionB
 * Implementazione di un metodo `BuildOutputAST`; questo metodo deve restituire un albero sintattico astratto (AST), che verrà eseguito in un certo momento in futuro, quando il nodo deve essere eseguito. Nel caso dei nodi Selection, dovrebbe restituire elementi o geometria dagli ID elemento. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * L'implementazione di `BuildOutputAST` è una delle parti più difficili dell'implementazione dei nodi `NodeModel`/dell'interfaccia utente. È consigliabile inserire quanta più logica possibile in una funzione C# e incorporare semplicemente un nodo di chiamata di funzione AST in AST. Si noti che qui `node` è un nodo AST nell'albero sintattico astratto, non è un nodo nel grafico di Dynamo.
 
-![Flusso di selezione2](images/selectionAST.png)
+![Flusso di selezione2](../../.gitbook/assets/selectionAST.png)
 
 * Serializzazione
   *   Poiché si tratta di tipi derivati da `NodeModel` espliciti (non ZeroTouch), richiedono anche l'implementazione di un [JsonConstructor] che verrà utilizzato durante la deserializzazione del nodo da un file .dyn.
@@ -635,9 +637,10 @@ I nodi Selection vengono implementati ereditando proprietà dai tipi `SelectionB
 #### Classi di base di DynamoCore:
 
 * [https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs](https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs)
-* [Case study NodeModel - Interfaccia utente personalizzata](11_developer_primer/3_developing_for_dynamo/5-nodemodel-case-study-custom-ui.md)
-* [Aggiornamento di pacchetti e librerie di Dynamo per Dynamo 2.x](11_developer_primer/3_developing_for_dynamo/6-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
-* [Aggiornamento di pacchetti e librerie di Dynamo per Dynamo 3.x](11_developer_primer/3_developing_for_dynamo/updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+* [Case study NodeModel - Interfaccia utente personalizzata](5-nodemodel-case-study-custom-ui.md)
+* [Aggiornamento di pacchetti e librerie di Dynamo per Dynamo 2.x](6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+* [Aggiornamento di pacchetti e librerie di Dynamo per Dynamo 3.x](6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+* [Aggiornamento di pacchetti e librerie di Dynamo per Dynamo 4.x](6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
 
 #### DynamoRevit:
 

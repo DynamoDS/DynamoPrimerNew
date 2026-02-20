@@ -24,7 +24,7 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![Spostamento dei file di progetto](images/fe-proj-directory.jpg)
+![Spostamento dei file di progetto](../../.gitbook/assets/fe-proj-directory.jpg)
 
 > 1. Spostare i file di progetto nella nuova cartella `src`
 
@@ -47,7 +47,7 @@ Ora che i file di origine si trovano in una cartella separata, aggiungere una de
   </Target>
 ```
 
-![Posizionamento della destinazione AfterBuild](images/atom-afterbuild.jpg)
+![Posizionamento della destinazione AfterBuild](../../.gitbook/assets/atom-afterbuild.jpg)
 
 > Sarà necessario verificare che la destinazione sia stata aggiunta al file `CustomNodeModel.csproj` (non ad un altro file di progetto) e che per il progetto non siano state definite impostazioni post-compilazione esistenti.
 >
@@ -75,7 +75,7 @@ I pacchetti di Dynamo in genere dispongono di una cartella `dyf` e `extra` per i
 
 Se si crea il progetto, la cartella di progetto dovrebbe ora avere una cartella `packages` accanto alla cartella `src` creata in precedenza. All'interno della directory `packages` è presente una cartella contenente tutti gli elementi necessari per il pacchetto. È inoltre necessario copiare il file `pkg.json` nella cartella del pacchetto in modo che Dynamo sappia di caricare il pacchetto.
 
-![Copia di file](images/fe-proj-directory-package.jpg)
+![Copia di file](../../.gitbook/assets/fe-proj-directory-package.jpg)
 
 > 1. La nuova cartella del pacchetto creata dalla destinazione AfterBuild
 > 2. La cartella src esistente con il progetto

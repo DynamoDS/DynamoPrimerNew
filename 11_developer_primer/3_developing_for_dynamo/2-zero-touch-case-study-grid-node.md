@@ -4,25 +4,25 @@ Con un progetto di Visual Studio attivo e funzionante, illustreremo come creare 
 
 Questo esempio riguarda alcune delle funzionalità e dei concetti di cui tenere conto durante la creazione di un nodo zero-touch. Dopo aver creato il nodo personalizzato e averlo aggiunto a Dynamo, assicurarsi di consultare la pagina Ulteriori informazioni sul concetto di zero-touch per esaminare in modo più approfondito valori di input di default, restituzione di più valori, documentazione, oggetti, utilizzo dei tipi di geometria di Dynamo e migrazioni.
 
-![Grafico a griglia rettangolare](images/cover-image.jpg)
+![Grafico a griglia rettangolare](../../.gitbook/assets/cover-image.jpg)
 
 ### Nodo griglia rettangolare personalizzata <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 Per iniziare a creare il nodo griglia, creare un nuovo progetto della libreria di classi di Visual Studio. Fare riferimento alla pagina Per iniziare per una simulazione dettagliata di come impostare un progetto.
 
-![Creazione di un nuovo progetto in Visual Studio](images/vs-new-project-1.jpg)
+![Creazione di un nuovo progetto in Visual Studio](../../.gitbook/assets/vs-new-project-1.jpg)
 
-![Configurazione di un nuovo progetto in Visual Studio](images/vs-new-project-2.jpg)
+![Configurazione di un nuovo progetto in Visual Studio](../../.gitbook/assets/vs-new-project-2.jpg)
 
 > 1. Scegliere `Class Library` per il tipo di progetto.
 > 2. Assegnare al progetto il nome `CustomNodes`.
 
 Poiché creeremo la geometria, dobbiamo fare riferimento al pacchetto NuGet appropriato. Installare il pacchetto ZeroTouchLibrary da Gestione pacchetti NuGet. Questo pacchetto è necessario per l'istruzione `using Autodesk.DesignScript.Geometry;`.
 
-![Pacchetto ZeroTouchLibrary](images/vs-nugetpackage.jpg)
+![Pacchetto ZeroTouchLibrary](../../.gitbook/assets/vs-nugetpackage.jpg)
 
 > 1. Cercare il pacchetto ZeroTouchLibrary.
-> 2. Utilizzeremo questo nodo nella build corrente di Dynamo Studio, ossia 1.3. Selezionare la versione del pacchetto corrispondente.
+> 2. Utilizzeremo questo nodo nella build corrente di Dynamo. Selezionare la versione del pacchetto che corrisponde alla versione di Dynamo in uso.
 > 3. Notare che è stato anche rinominato il file di classe in `Grids.cs`.
 
 Successivamente, dobbiamo stabilire uno spazio dei nomi e una classe in cui sarà presente il metodo RectangularGrid. Il nome del nodo verrà assegnato in Dynamo in base ai nomi del metodo e della classe. Non dobbiamo ancora copiare il file in Visual Studio.
@@ -84,13 +84,13 @@ namespace CustomNodes
 
 Se il progetto è simile a questo, procedere e provare a creare il file `.dll`.
 
-![Creazione di un file DLL](images/vs-grids.jpg)
+![Creazione di un file DLL](../../.gitbook/assets/vs-grids.jpg)
 
 > 1. Scegliere Build > Build Solution.
 
 Cercare un file `bin` nella cartella `.dll` del progetto. Se la creazione è stata eseguita correttamente, possiamo aggiungere il file `.dll` a Dynamo.
 
-![Nodi personalizzati in Dynamo](images/RectangularGrid-Dynamo.jpg)
+![Nodi personalizzati in Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
 
 > 1. Il nodo RectangularGrids personalizzato nella libreria di Dynamo
 > 2. Il nodo personalizzato nell'area di disegno
@@ -100,7 +100,7 @@ Cercare un file `bin` nella cartella `.dll` del progetto. Se la creazione è sta
 
 Nell'esempio precedente, abbiamo creato un nodo piuttosto semplice che non definiva molto altro al di fuori del metodo `RectangularGrids`. Tuttavia, potremmo voler creare delle descrizioni comandi per le porte di input o assegnare al nodo una sintesi come i nodi standard di Dynamo. L'aggiunta di queste funzionalità ai nodi personalizzati ne semplifica l'utilizzo, soprattutto se un utente desidera cercarle nella libreria.
 
-![Descrizione comando di input](images/nodemodification.png)
+![Descrizione comando di input](../../.gitbook/assets/nodemodification.png)
 
 > 1. Un valore di input di default
 > 2. Una descrizione comando per l'input xCount
@@ -155,7 +155,7 @@ namespace CustomNodes
 
 Per aggiungere descrizioni comandi, abbiamo bisogno di un file XML nella directory del progetto. Un file `.xml` può essere generato automaticamente da Visual Studio attivando l'opzione.
 
-![Attivazione della documentazione XML](images/vs-xml.jpg)
+![Attivazione della documentazione XML](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Attivare qui il file della documentazione XML e specificarne il percorso. In questo modo viene generato un file XML.
 

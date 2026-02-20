@@ -6,7 +6,7 @@ Le estensioni sono un potente strumento di sviluppo nell'ecosistema di Dynamo. C
 
 Seguendo l'esempio SampleViewExtension dal repository DynamoSamples su GitHub, illustreremo la procedura necessaria per creare una finestra non modale semplice che visualizzi i nodi attivi nel grafico in tempo reale. Per un'estensione della vista è necessario creare un'interfaccia utente per la finestra ed eseguire il binding dei valori ad un modello di vista.
 
-![Finestra dell'estensione della vista](images/dyn-viewextension.jpg)
+![Finestra dell'estensione della vista](../../.gitbook/assets/dyn-viewextension.jpg)
 
 > 1. La finestra dell'estensione della vista è stata sviluppata seguendo l'esempio SampleViewExtension nel repository su GitHub.
 
@@ -28,9 +28,9 @@ Un'estensione della vista è costituita da tre parti essenziali:
 
 Iniziare creando un nuovo progetto `Class Library` denominato `SampleViewExtension`.
 
-![Creare una nuova libreria di classi](images/vs-new-project-viewextension-1.jpg).
+![![Creare una nuova libreria di classi](../../.gitbook/assets/vs-new-project-viewextension-1.jpg).](../../.gitbook/assets/vs-new-project-viewextension-1.jpg)
 
-![Configurazione di un nuovo progetto](images/vs-new-project-viewextension-2.jpg)
+![Configurazione di un nuovo progetto](../../.gitbook/assets/vs-new-project-viewextension-2.jpg)
 
 > 1. Creare un nuovo progetto selezionando `File > New > Project`.
 > 2. Selezionare `Class Library`.
@@ -39,14 +39,14 @@ Iniziare creando un nuovo progetto `Class Library` denominato `SampleViewExtensi
 
 In questo progetto, avremo bisogno di due classi. Una classe implementerà `IViewExtension` e un'altra che implementerà `NotificationObject.` `IViewExtension` conterrà tutte le informazioni su come l'estensione verrà distribuita, caricata, utilizzata come riferimento ed eliminata. `NotificationObject` fornirà notifiche per le modifiche in Dynamo e `IDisposable`. Quando si verifica una modifica, il conteggio verrà aggiornato di conseguenza.
 
-![File di classe dell'estensione della vista](images/vs-viewextension-classes.jpg)
+![File di classe dell'estensione della vista](../../.gitbook/assets/vs-viewextension-classes.jpg)
 
 > 1. Un file di classe denominato `SampleViewExtension.cs` che implementerà `IViewExtension`
 > 2. Un file di classe denominato `SampleWindowViewMode.cs` che implementerà `NotificationObject`
 
 Per utilizzare `IViewExtension`, è necessario il pacchetto NuGet WpfUILibrary. L'installazione di questo pacchetto comporta l'installazione automatica dei pacchetti Core, Services e ZeroTouchLibrary.
 
-![Pacchetti dell'estensione della vista](images/vs-viewextension-packages.jpg)
+![Pacchetti dell'estensione della vista](../../.gitbook/assets/vs-viewextension-packages.jpg)
 
 > 1. Selezionare WpfUILibrary.
 > 2. Selezionare `Install` per installare tutti i pacchetti dipendenti.
@@ -133,7 +133,7 @@ La classe `SampleViewExtension` crea una voce di menu selezionabile per aprire l
 * La classe `public class SampleViewExtension : IViewExtension` `SampleViewExtension` ereditata dall'interfaccia `IViewExtension` fornisce tutto ciò che è necessario per creare la voce di menu.
 * `sampleMenuItem = new MenuItem { Header = "Show View Extension Sample Window" };` crea un elemento MenuItem e lo aggiunge al menu `View`.
 
-![La voce di menu](images/dyn-menuitem.jpg)
+![La voce di menu](../../.gitbook/assets/dyn-menuitem.jpg)
 
 > 1. La voce di menu
 
@@ -208,7 +208,7 @@ Questa implementazione della classe del modello di vista è in ascolto di `Curre
 
 Con la logica di base dell'estensione definita, ora specificheremo i dettagli dell'aspetto della finestra con un file `.xaml`. Tutto ciò che serve è una semplice finestra che visualizzi la stringa tramite il binding della proprietà `ActiveNodeTypes` in `TextBlock` `Text`.
 
-![Aggiunta di una finestra](images/vs-window.jpg)
+![Aggiunta di una finestra](../../.gitbook/assets/vs-window.jpg)
 
 > 1. Fare clic con il pulsante destro del mouse sul progetto e selezionare `Add > New Item...`.
 > 2. Selezionare il modello di controllo utente che verrà modificato per creare una finestra.
@@ -259,7 +259,7 @@ namespace SampleViewExtension
 
 L'estensione della vista è ora pronta per essere creata e aggiunta a Dynamo. Dynamo richiede un file `xml` per registrare il nostro output `.dll` come estensione.
 
-![Aggiunta di un nuovo file XML](images/vs-viewextension-xml.jpg)
+![Aggiunta di un nuovo file XML](../../.gitbook/assets/vs-viewextension-xml.jpg)
 
 > 1. Fare clic con il pulsante destro del mouse sul progetto e selezionare `Add > New Item...`.
 > 2. Selezionare il file XML.
@@ -281,7 +281,7 @@ Nel file `xml`, aggiungere il seguente codice per indicare a Dynamo dove cercare
 
 L'ultimo passaggio consiste nel copiare il file `SampleViewExtension_ViewExtensionDefinition.xml` nella cartella viewExtensions di Dynamo, che si trova nella directory di installazione di Dynamo Core `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions`. È importante notare che sono presenti cartelle separate per `extensions` e `viewExtensions`. Il posizionamento del file `xml` nella cartella errata potrebbe causare errori di caricamento in fase di esecuzione.
 
-![File XML copiato nella cartella viewExtensions](images/fe-viewextension-xml.jpg)
+![File XML copiato nella cartella viewExtensions](../../.gitbook/assets/fe-viewextension-xml.jpg)
 
 > 1. Il file `.xml` copiato nella cartella viewExtensions di Dynamo
 

@@ -2,15 +2,15 @@
 
 Prima di dedicarci al tema dello sviluppo, è importante costruire una solida base per un nuovo progetto. Nella comunità di sviluppatori di Dynamo sono disponibili diversi modelli di progetto che rappresentano ottimi punti di partenza, ma è ancora più importante comprendere come iniziare un progetto da zero. Creare un progetto dalle fondamenta consente di comprendere meglio il processo di sviluppo.
 
-![Visual Studio](images/visual-studio.jpg)
+![Visual Studio](../../.gitbook/assets/visual-studio.jpg)
 
 ### Creazione di un progetto di Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 Visual Studio è un potente IDE in cui è possibile creare un progetto, aggiungere riferimenti, creare file `.dlls` ed eseguire il debug. Quando si crea un nuovo progetto, in Visual Studio viene creata anche una soluzione, una struttura per l'organizzazione dei progetti. Più progetti possono coesistere all'interno di un'unica soluzione ed essere costruiti insieme. Per creare un nodo ZeroTouch, è necessario avviare un nuovo progetto di Visual Studio in cui scrivere una libreria di classi C# e creare un file `.dll`.
 
-![Creazione di un nuovo progetto in Visual Studio](images/vs-new-project-1.jpg)
+![Creazione di un nuovo progetto in Visual Studio](../../.gitbook/assets/vs-new-project-1.jpg)
 
-![Configurazione di un nuovo progetto in Visual Studio](images/vs-new-project-2.jpg)
+![Configurazione di un nuovo progetto in Visual Studio](../../.gitbook/assets/vs-new-project-2.jpg)
 
 > La finestra di un nuovo progetto in Visual Studio
 >
@@ -35,7 +35,7 @@ In Visual Studio si creerà e si aprirà automaticamente un file C#. Dobbiamo as
  }
 ```
 
-![Utilizzo di Esplora soluzioni](images/vs-edit-class.jpg)
+![Utilizzo di Esplora soluzioni](../../.gitbook/assets/vs-edit-class.jpg)
 
 > 1. Aprire le finestre Esplora soluzioni e Output da `Visualizza`.
 > 2. Rinominare il file `Class1.cs` con `SampleFunctions.cs` in Esplora soluzioni a destra.
@@ -45,7 +45,7 @@ In Visual Studio si creerà e si aprirà automaticamente un file C#. Dobbiamo as
 
 Il passaggio successivo consiste nella creazione del progetto, ma prima di procedere con questa operazione dobbiamo verificare alcune impostazioni. Assicurarsi innanzitutto che l'opzione `Any CPU` o `x64` sia selezionata in Platform target e che l'opzione `Prefer 32-bit` sia deselezionata in Project Properties.
 
-![Impostazioni di creazione di Visual Studio](images/vs-build-settings.jpg)
+![Impostazioni di creazione di Visual Studio](../../.gitbook/assets/vs-build-settings.jpg)
 
 > 1. Aprire le proprietà del progetto selezionando `Progetto > "NomeProgetto" > Properties`.
 > 2. Selezionare la pagina `Compilazione`.
@@ -54,14 +54,14 @@ Il passaggio successivo consiste nella creazione del progetto, ma prima di proce
 
 Ora possiamo realizzare il progetto per creare un file `.dll`. A tale scopo, selezionare `Compila soluzione` dal menu `Compilazione` o utilizzare il tasto di scelta rapida `CTRL+SHIFT+B`.
 
-![Creazione di una soluzione](images/vs-build.jpg)
+![Creazione di una soluzione](../../.gitbook/assets/vs-build.jpg)
 
 > 1. Selezionare `Compilazione > Compila soluzione`.
 > 2. È possibile determinare se il progetto è stato creato correttamente controllando la finestra Output.
 
 Se il progetto è stato creato correttamente, nella cartella `bin` del progetto sarà presente un file `.dll` denominato `MyCustomNode`. Per questo esempio abbiamo lasciato il percorso del file del progetto di default di Visual Studio: `c:\users\username\documents\visual studio 2015\Projects`. Diamo un'occhiata alla struttura dei file del progetto.
 
-![Struttura dei file del progetto](images/folder-structure.jpg)
+![Struttura dei file del progetto](../../.gitbook/assets/folder-structure.jpg)
 
 > 1. La cartella `bin` contiene il file `.dll` creato da Visual Studio.
 > 2. Il file del progetto di Visual Studio.
@@ -70,7 +70,7 @@ Se il progetto è stato creato correttamente, nella cartella `bin` del progetto 
 
 Ora possiamo aprire Dynamo e importare il file `.dll`. Con la funzione Add-ons, accedere alla posizione `bin` del progetto e selezionare il file `.dll` da aprire.
 
-![Apertura del file .dll del progetto](images/dyn-import-dll.jpg)
+![Apertura del file .dll del progetto](../../.gitbook/assets/dyn-import-dll.jpg)
 
 > 1. Selezionare il pulsante Add-ons per importare un file `.dll`.
 > 2. Individuare la posizione del progetto. Il nostro progetto si trova nel percorso dei file di default di Visual Studio: `C:\Users\username\Documents\Visual Studio 2015\Projects\MyCustomNode`.
@@ -79,7 +79,7 @@ Ora possiamo aprire Dynamo e importare il file `.dll`. Con la funzione Add-ons, 
 
 Se nella libreria viene creata una categoria denominata `MyCustomNode`, il file .dll è stato importato correttamente. Tuttavia, Dynamo ha creato due nodi da quello che voleva essere un singolo nodo. Nella sezione successiva spiegheremo perché ciò accade e come Dynamo legge un file .dll.
 
-![Nodi personalizzati](images/dyn-customnode.jpg)
+![Nodi personalizzati](../../.gitbook/assets/dyn-customnode.jpg)
 
 > 1. MyCustomNode nella libreria di Dynamo. La categoria Libreria è determinata dal nome `.dll`.
 > 2. SampleFunctions.MultiplyByTwo nell'area di disegno.
@@ -88,7 +88,7 @@ Se nella libreria viene creata una categoria denominata `MyCustomNode`, il file 
 
 Quando Dynamo carica un file .dll, espone tutti i metodi statici pubblici come nodi. I costruttori, i metodi e le proprietà verranno convertiti rispettivamente nei nodi Create, Action e Query. Nel nostro esempio di moltiplicazione, il metodo `MultiplyByTwo()` diventa un nodo Action in Dynamo. Ciò è dovuto al fatto che il nome del nodo è stato assegnato in base al metodo e alla classe corrispondenti.
 
-![Nodo SampleFunction.MultiplyByTwo in un grafico](images/multiplybytwo.png)
+![Nodo SampleFunction.MultiplyByTwo in un grafico](../../.gitbook/assets/multiplybytwo.png)
 
 > 1. L'input viene denominato `inputNumber` in base al nome del parametro del metodo.
 > 2. Per default, l'output viene denominato `double` perché è il tipo di dati restituito.
@@ -115,7 +115,7 @@ namespace MyCustomNode
 }
 ```
 
-![Metodo importato come nodo Create](images/private-constructor.jpg)
+![Metodo importato come nodo Create](../../.gitbook/assets/private-constructor.jpg)
 
 > 1. Dynamo ha importato il metodo come nodo Create.
 
@@ -132,13 +132,13 @@ Il nodo di moltiplicazione è molto semplice e non sono necessari riferimenti a 
 
 Per fare riferimento a questi pacchetti in un progetto di Visual Studio, scaricare il pacchetto da NuGet nei collegamenti precedenti e fare riferimento manualmente ai file .dll oppure utilizzare Gestione pacchetti NuGet in Visual Studio. Per prima cosa possiamo illustrare come installarli con NuGet in Visual Studio.
 
-![Apertura di Gestione pacchetti NuGet](images/vs-nuget-package-manager2.jpg)
+![Apertura di Gestione pacchetti NuGet](../../.gitbook/assets/vs-nuget-package-manager2.jpg)
 
 > 1. Aprire Gestione pacchetti NuGet selezionando `Strumenti > Gestione pacchetti NuGet > Gestione pacchetti NuGet per la soluzione`.
 
 È Gestione pacchetti NuGet. Questa finestra mostra i pacchetti installati per il progetto e consente all'utente di cercarne altri. Se viene rilasciata una nuova versione del pacchetto DynamoServices, è possibile aggiornare i pacchetti da questa posizione o ripristinare una versione precedente.
 
-![Gestione pacchetti NuGet](images/vs-nuget-package-manager.jpg)
+![Gestione pacchetti NuGet](../../.gitbook/assets/vs-nuget-package-manager.jpg)
 
 > 1. Selezionare Sfoglia e cercare DynamoVisualProgramming per visualizzare i pacchetti di Dynamo.
 > 2. I pacchetti di Dynamo. Selezionandone uno, verranno mostrate la versione corrente e la descrizione del loro contenuto.
@@ -146,7 +146,7 @@ Per fare riferimento a questi pacchetti in un progetto di Visual Studio, scarica
 
 Per aggiungere manualmente un pacchetto scaricato dal browser, aprire Gestione riferimenti da Esplora soluzioni e cercare il pacchetto.
 
-![Reference Manager](images/vs-manual-dynamo-package.jpg)
+![Reference Manager](../../.gitbook/assets/vs-manual-dynamo-package.jpg)
 
 > 1. Fare clic con il pulsante destro del mouse su `Riferimenti` e selezionare `Aggiungi riferimento`.
 > 2. Selezionare `Sfoglia` per accedere alla posizione del pacchetto.
