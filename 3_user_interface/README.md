@@ -4,7 +4,7 @@
 
 L’interface utilisateur de Dynamo est organisée en cinq zones principales. Nous allons faire ici une présentation succincte et expliquer plus en détail l’espace de travail et la bibliothèque dans les sections suivantes.
 
-![](images/userinterface-ui.jpg)
+\![](<../.gitbook/assets/user interface - ui.jpg>)
 
 > 1. Menus
 > 2. Barre d'outils
@@ -22,7 +22,7 @@ Voici les menus des fonctionnalités de base de l’application Dynamo. Comme la
 
 Des informations générales et des paramètres sont disponibles dans le menu déroulant **Dynamo**.
 
-![](images/userinterface-dynamomenu.jpg)
+\![](<../.gitbook/assets/user interface - dynamo menu.jpg>)
 
 > 1. À propos de : découvrez la version de Dynamo installée sur votre ordinateur.
 > 2. Accord sur la collecte des données d’utilisation : permet d’accepter ou de refuser le partage de vos données utilisateur pour améliorer Dynamo.
@@ -48,34 +48,33 @@ Si vous êtes bloqué, consultez le menu **Aide**. Vous pouvez accéder à l’u
 
 La barre d'outils de Dynamo contient une série de boutons permettant d'accéder rapidement aux fichiers et aux commandes Annuler [Ctrl + Z] et Rétablir [Ctrl + Y]. À l’extrémité droite se trouve un autre bouton qui permet d’exporter un cliché de l’espace de travail, ce qui est extrêmement utile pour la documentation et le partage.
 
-* ![](images/userinterface-newfile.jpg) Nouveau : permet de créer un fichier .dyn
-* ![](<images/userinterface-open(1) (1) (1).jpg>) Ouvrir : permet d’ouvrir un fichier .dyn (espace de travail) ou .dyf (nœud personnalisé).
-* ![](images/userinterface-save.jpg) Enregistrer/Enregistrer sous : permet d’enregistrer votre fichier .dyn ou .dyf actif
-* ![](images/userinterface-undo.jpg) Annuler : permet d’annuler la dernière action
-* ![](images/userinterface-redo.jpg) Rétablir : permet de rétablir la prochaine action
-* ![](images/userinterface-screenshot.jpg) Exporter l’espace de travail en tant qu’image : permet d’exporter l’espace de travail visible en tant que fichier PNG.
+* \![](<../.gitbook/assets/user interface - new file.jpg>) Nouveau : permet de créer un fichier .dyn.
+* \![](<../.gitbook/assets/user interface - open (1).jpg>) Ouvrir : permet d’ouvrir un fichier .dyn (espace de travail) ou .dyf (nœud personnalisé).
+* \![](<../.gitbook/assets/user interface - save.jpg>) Enregistrer/Enregistrer sous : permet d’enregistrer le fichier .dyn ou .dyf actif.
+* \![](<../.gitbook/assets/user interface - undo.jpg>) Annuler : permet d’annuler la dernière action.
+* \![](<../.gitbook/assets/user interface - redo.jpg>) Rétablir : permet de rétablir l’action suivante.
+* \![](<../.gitbook/assets/user interface - screenshot.jpg>) Exporter l’espace de travail en tant qu’image : permet d’exporter l’espace de travail visible au format de fichier PNG.
 
 ### Bibliothèque
 
 La bibliothèque Dynamo est un ensemble de bibliothèques fonctionnelles, chaque bibliothèque contenant des nœuds regroupés par catégorie. Elle se compose de bibliothèques de base qui sont ajoutées lors de l’installation par défaut de Dynamo. Au fur et à mesure de la présentation de son utilisation, vous allez découvrir comment étendre la fonctionnalité de base avec des nœuds personnalisés et d’autres packages. La section [2-library.md](2-library.md "mention") fournit des instructions plus détaillées sur son utilisation.
 
-![](images/userinterface-library.jpg)
+\![](<../.gitbook/assets/user interface - library (1).gif>)
 
 ### Espace de travail
 
 L’espace de travail est l’endroit où vous composez vos programmes visuels, vous pouvez également modifier son paramètre d’aperçu pour afficher les géométries 3D à partir d’ici. Pour plus d’informations, reportez-vous à [1-workspace.md](1-workspace.md "mention").
 
-![](images/userinterface-workspace.gif)
+\![](<../.gitbook/assets/user interface - workspace (1).gif>)
 
 ### Barre d’exécution
 
 Exécutez votre script Dynamo à partir d’ici. Cliquez sur l’icône déroulante du bouton Exécution pour passer d’un mode à l’autre.
 
-![](images/userinterface-executionbar.gif)
+\![](<../.gitbook/assets/user interface - execution bar.gif>)
 
 * Automatique : exécute votre script automatiquement. Les modifications sont mises à jour en temps réel.
 * Manuel : le script s’exécute uniquement lorsque vous cliquez sur le bouton « Exécuter ». Utile pour modifier des scripts complexes.
 * Périodique : cette option est grisée par défaut. Disponible uniquement lorsque le nœud _DateTime.Now_ est utilisé. Vous pouvez définir l’exécution automatique du graphique à un intervalle spécifié.
 
-![](images/userinterface-executionbarDateTimenode.jpg)
-
+\![](<../.gitbook/assets/user interface - execution bar DateTime node.jpg>)

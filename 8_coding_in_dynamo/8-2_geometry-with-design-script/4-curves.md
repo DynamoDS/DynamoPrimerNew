@@ -6,7 +6,7 @@ Il existe deux manières fondamentales de créer des courbes de forme libre dans
 
 Pour créer une courbe interpolée, il suffit de transférer un ensemble de points à la méthode _NurbsCurve.ByPoints_.
 
-![](../images/8-2/4/Curves\_01.png)
+![](../../.gitbook/assets/Curves_01.png)
 
 ```js
 num_pts = 6;
@@ -20,7 +20,7 @@ int_curve = NurbsCurve.ByPoints(pts);
 
 La courbe générée coupe chacun des points d’entrée, en commençant et en finissant respectivement au premier et au dernier point de l’ensemble. Un paramètre périodique facultatif peut être utilisé pour créer une courbe périodique fermée. Dynamo remplira automatiquement le segment manquant, de sorte qu’un point d’arrivée en double (identique au point de départ) n’est pas nécessaire.
 
-![](../images/8-2/4/Curves\_02.png)
+![](../../.gitbook/assets/Curves_02.png)
 
 ```js
 pts = Point.ByCoordinates(Math.Cos(0..350..#10),
@@ -38,7 +38,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 Les courbes NURBS sont générées de la même façon, les points d’entrée représentant les extrémités d’un segment de ligne droite, et un second paramètre spécifiant le degré et le type de lissage de la courbe, appelé degré. * Une courbe de degré 1 n’a pas de lissage ; il s’agit d’une polyligne.
 
-![](../images/8-2/4/Curves\_03.png)
+![](../../.gitbook/assets/Curves_03.png)
 
 ```js
 num_pts = 6;
@@ -52,7 +52,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 
 Une courbe de degré 2 est lissée de façon à ce que la courbe coupe et soit tangente au milieu des segments de polyligne :
 
-![](../images/8-2/4/Curves\_04.png)
+![](../../.gitbook/assets/Curves_04.png)
 
 ```js
 num_pts = 6;
@@ -66,7 +66,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 
 Dynamo prend en charge les courbes NURBS (Non-Uniform Rational B-spline) jusqu’au degré 20, et le script suivant illustre l’effet de l’augmentation des niveaux de lissage sur la forme d’une courbe :
 
-![](../images/8-2/4/Curves\_05.png)
+![](../../.gitbook/assets/Curves_05.png)
 
 ```js
 num_pts = 6;
@@ -87,7 +87,7 @@ Notez que vous devez disposer d’au moins un point de contrôle supplémentaire
 
 Un autre avantage de la construction de courbes par le biais de sommets de contrôle est la possibilité de conserver la tangence entre des segments de courbe individuels. Pour ce faire, il convient d'extraire la direction entre les deux derniers points de contrôle et de poursuivre dans cette direction avec les deux premiers points de contrôle de la courbe suivante. L’exemple suivant crée deux courbes NURBS distinctes qui sont néanmoins aussi lisses qu’une seule courbe :
 
-![](../images/8-2/4/Curves\_06.png)
+![](../../.gitbook/assets/Curves_06.png)
 
 ```js
 pts_1 = {};
@@ -115,4 +115,4 @@ pts_2[4] = Point.ByCoordinates(21, 0.5, 0);
 crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
-{% hint style="info" %}* Il s’agit d’une description très simplifiée de la géométrie des courbes NURBS. Pour obtenir des informations plus précises et détaillées, reportez-vous à Pottmann et al, 2007, dans les références. {% endhint %}
+{% hint style="info" %} *Il s’agit d’une description très simplifiée de la géométrie des courbes NURBS. Pour obtenir des informations plus précises et détaillées, reportez-vous à Pottmann et al, 2007, dans les références. {% endhint %}

@@ -2,7 +2,7 @@
 
 Dynamo offre un grand nombre de fonctionnalités prêtes à l’emploi et dispose également d’une bibliothèque de packages complète qui permet d’étendre considérablement les capacités de Dynamo. Un package est un ensemble de nœuds personnalisés ou de fonctionnalités supplémentaires. Le gestionnaire de package Dynamo est un portail permettant à la communauté de télécharger tout package publié en ligne. Ces jeux d’outils sont développés par des tiers afin d’étendre les fonctionnalités clés de Dynamo, accessibles à tous, et prêts à être téléchargés en un clic.
 
-![Site du gestionnaire de package](../images/6-2/1/dpm.jpg)
+![Site du gestionnaire de package](../../.gitbook/assets/dpm.jpg)
 
 Un projet Open Source comme Dynamo s’appuie sur ce type d’implication de la communauté. Avec ses développeurs tiers dédiés, Dynamo peut étendre sa portée aux workflows dans différents secteurs d’activité. Par conséquent, l'équipe de Dynamo a entrepris de rationaliser le développement et la publication des packages (sujets abordés plus en détail dans les sections suivantes).
 
@@ -22,11 +22,11 @@ Cliquez sur Installer pour ajouter ce package à votre bibliothèque, puis accep
 
 Vous avez maintenant un autre groupe appelé « buildz » dans la bibliothèque Dynamo. Son nom fait référence au développeur du package. Le nœud personnalisé est placé dans ce groupe. Vous pouvez commencer à l’utiliser immédiatement.
 
-![](../images/6-2/1/packageintroduction-installingapackage03.jpg)
+\![](<../../.gitbook/assets/package introduction - installing a package 03.jpg>)
 
 Utilisez un nœud **Code Block**pour définir rapidement une grille rectangulaire, générer le résultat sur un nœud **Polygon.ByPoints**, puis sur un nœud **Surface.ByPatch** pour afficher la liste des panneaux rectangulaires que vous venez de créer.
 
-![](../images/6-2/1/packageintroduction-installingapackage04.jpg)
+\![](<../../.gitbook/assets/package introduction - installing a package 04.jpg>)
 
 ### Installation du dossier de package – DynamoUnfold
 
@@ -40,19 +40,19 @@ Cette fois, recherchez _« DynamoUnfold »_, en un mot. Lorsque les packages s
 
 La bibliothèque Dynamo contient un groupe _DynamoUnfold_ avec plusieurs catégories et nœuds personnalisés.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
+\![](<../../.gitbook/assets/package introduction - installing package folder 02.jpg>)
 
 Examinez maintenant la structure de fichiers du package.
 
 1. Tout d’abord, accédez à Packages > Gestionnaire de package > Packages installés.
-2. À côté de DynamoUnfold, sélectionnez le menu d’options <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line">.
+2. À côté de DynamoUnfold, sélectionnez le menu d’options <img src="../../.gitbook/assets/package introduction - vertical dots menu.jpg" alt="" data-size="line">.
 3. Cliquez ensuite sur Afficher le répertoire racine pour ouvrir le dossier racine de ce package.
 
 <figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Cette action permet d’accéder au répertoire racine du package. Il contient trois dossiers et un fichier.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder05.jpg)
+\![](<../../.gitbook/assets/package introduction - installing package folder 05.jpg>)
 
 > 1. Le dossier _bin_ contient les fichiers .dll. Ce package Dynamo a été développé à l’aide de la commande Zero Touch, de sorte que les nœuds personnalisés sont conservés dans ce dossier.
 > 2. Le dossier _dyf_ contient les nœuds personnalisés. Ce package n’a pas été développé à l’aide de nœuds personnalisés Dynamo. Ce dossier est donc vide pour ce package.
@@ -63,11 +63,11 @@ Lorsque vous ouvrez le dossier "extra", vous découvrez la présence de fichiers
 
 Ouvrez « SphereUnfold ».
 
-![](../images/6-2/1/rd2.jpg)
+![](../../.gitbook/assets/rd2.jpg)
 
 Après avoir ouvert le fichier et cliqué sur « Exécuter » dans le solveur, vous obtenez une sphère dépliée. Les fichiers d’exemple comme ceux-ci sont utiles pour apprendre à utiliser un nouveau package Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../../.gitbook/assets/packageintroduction-installingpackagefolder07 (1).jpg>)
 
 ### Parcourir et afficher les informations sur le package
 
@@ -81,13 +81,13 @@ Vous pouvez également obtenir plus de détails sur chaque paquet en cliquant su
 
 Une autre façon de découvrir les packages Dynamo est d’explorer le site Web du [gestionnaire de package Dynamo](http://dynamopackages.com). Vous y trouverez les dépendances des packages et les informations sur la compatibilité hôte/version fournies par les auteurs de chaque package. Vous pouvez également télécharger les fichiers de package à partir du gestionnaire de package Dynamo, mais le processus de Dynamo est plus simple.
 
-![](../images/6-2/1/dpm2.jpg)
+![](../../.gitbook/assets/dpm2.jpg)
 
 ### Où sont les fichiers de package stockés localement ?
 
 Si vous souhaitez voir où vos fichiers de package sont conservés, dans la barre de navigation supérieure, cliquez sur Dynamo > Préférences > Paramètres de package > Emplacement des fichiers de nœuds et de packages. Vous pouvez trouver le répertoire de votre dossier racine actuel à partir d’ici.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
+\![](<../../.gitbook/assets/package introduction - installing package folder 08.jpg>)
 
 Par défaut, les packages sont installés dans un emplacement semblable à celui du dossier suivant : _C:/Utilisateurs/[nom d’utilisateur]/AppData/Itinérance/Dynamo/[Version Dynamo]_.
 

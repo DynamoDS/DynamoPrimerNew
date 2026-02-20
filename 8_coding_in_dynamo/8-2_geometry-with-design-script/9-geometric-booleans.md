@@ -6,7 +6,7 @@ Les méthodes _Intersect_, _Trim_ et _SelectTrim_ sont principalement utilisées
 
 La méthode _Union_ prend deux objets solides et crée un objet solide unique à partir de l’espace couvert par les deux objets. L’espace de chevauchement entre les objets est combiné dans la forme finale. Cet exemple combine une sphère et un cuboïde en une forme de sphère-cube solide unique :
 
-![](../images/8-2/9/GeometricBooleans\_01.png)
+![](../../.gitbook/assets/GeometricBooleans_01.png)
 
 ```js
 s1 = Sphere.ByCenterPointRadius(
@@ -23,7 +23,7 @@ combined = s1.Union(s2);
 
 La méthode _Difference_, comme _Trim_, soustrait le contenu du solide de l’outil d’entrée du solide de base. Dans cet exemple, nous allons creuser une petite indentation dans une sphère :
 
-![](../images/8-2/9/GeometricBooleans\_02.png)
+![](../../.gitbook/assets/GeometricBooleans_02.png)
 
 ```js
 s = Sphere.ByCenterPointRadius(
@@ -40,7 +40,7 @@ result = s.Difference(tool);
 
 La méthode _Intersect_ renvoie le solide se chevauchant entre deux entrées de solide. Dans l’exemple suivant, la méthode _Difference_ a été changée en _Intersect_ et le solide résultant correspond au vide manquant initialement creusé :
 
-![](../images/8-2/9/GeometricBooleans\_03.png)
+![](../../.gitbook/assets/GeometricBooleans_03.png)
 
 ```js
 s = Sphere.ByCenterPointRadius(

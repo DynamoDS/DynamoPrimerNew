@@ -4,7 +4,7 @@
 
 Une liste est un ensemble d'éléments. Par exemple, prenez une grappe de bananes. Chaque banane est un élément de la liste (ou grappe). Il est plus facile de ramasser une grappe de bananes plutôt que chaque banane individuellement. Il en est de même pour le regroupement d’éléments par relations paramétriques dans une structure de données.
 
-![Bananes](../images/5-4/1/Bananas_white_background_DS.jpg)
+![Bananes](../../.gitbook/assets/Bananas_white_background_DS.jpg)
 
 > Photo de [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
@@ -20,7 +20,7 @@ Par exemple, si vous comptez le nombre de doigts de votre main droite, il y a de
 
 La liste contient toujours 5 éléments : elle utilise un système de comptage de base 0. Les éléments stockés dans la liste ne sont pas nécessairement des nombres. Il peut s’agir de tout type de données pris en charge par Dynamo, tel que des points, des courbes, des surfaces, des familles, etc.
 
-![](../images/5-4/1/what'salist-zerobasedindices.jpg)
+\![](<../../.gitbook/assets/what's a list - zero based indices.jpg>)
 
 > a. Index
 >
@@ -36,7 +36,7 @@ Ces index sont un élément crucial lorsque vous travaillez avec des listes.
 
 En ce qui concerne les listes, les entrées et sorties varient en fonction du nœud Dynamo utilisé. Par exemple, utilisez une liste de 5 points et connectez cette sortie à deux nœuds Dynamo différents, **PolyCurve.ByPoints** et **Circle.ByCenterPointRadius** :
 
-![Exemples d’entrée](../images/5-4/1/what'salist-inputsandoutputs.jpg)
+\![Exemples d’entrée](<../../.gitbook/assets/what's a list - inputs and outputs.jpg>)
 
 > 1. L’entrée _points_ de **PolyCurve.ByPoints** recherche _« Point[] »_. Cela représente une liste de points.
 > 2. La sortie de **PolyCurve.ByPoints** est une simple polycourbe créée à partir d’une liste de cinq points.
@@ -59,23 +59,23 @@ Imaginez un nœud qui crée des segments de ligne entre les points (**Line.BySta
 
 La méthode la plus simple consiste à connecter les entrées une par une jusqu'à ce que l'un des flux soit épuisé. Cette méthode s'appelle l'algorithme "Liste la plus courte". Il s’agit du comportement par défaut des nœuds Dynamo :
 
-![](../images/5-4/1/what'salist-lacing-shortest.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - shortest.jpg>)
 
 #### Liste la plus longue
 
 L’algorithme « Liste la plus longue » continue à connecter les entrées, réutilisant les éléments, jusqu’à ce que tous les flux soient épuisés :
 
-![](../images/5-4/1/what'salist-lacing-longest.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - longest.jpg>)
 
 #### Produit cartésien
 
 Enfin, la méthode « Produit cartésien » permet d’établir toutes les connexions possibles :
 
-![](../images/5-4/1/what'salist-lacing-cross.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - cross.jpg>)
 
 Comme vous pouvez le voir, il existe différentes manières de dessiner des lignes entre ces jeux de points. Pour accéder aux options de combinaison, cliquez avec le bouton droit de la souris sur le centre d’un nœud et sélectionnez le menu « Combinaison ».
 
-![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
+\![](<../../.gitbook/assets/what's a list - right click lacing opt.jpg>)
 
 ### Qu’est-ce que la réplication ?
 
@@ -109,9 +109,9 @@ Pour en savoir plus sur ce fonctionnement, consultez les [Guides de réplication
 
 > Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
+> Vous trouverez la liste complète des fichiers d’exemple dans l’annexe.
 
-{% file src="../datasets/5-4/1/Lacing.dyn" %}
+{% file src="../../.gitbook/assets/Lacing (1).dyn" %}
 
 Pour découvrir les opérations de liaison ci-dessous, vous allez utiliser ce fichier de base afin de définir la liste la plus courte, la liste la plus longue et le produit cartésien.
 
@@ -121,16 +121,16 @@ Vous allez modifier la combinaison sur **Point.ByCoordinates**, mais sans modifi
 
 Si vous choisissez l’option de liaison _Liste la plus courte_ (également l’option par défaut), vous obtenez une ligne diagonale de base composée de cinq points. Étant donné que la liste la plus courte contient cinq points, la combinaison de la liste la plus courte s’arrête après avoir atteint la fin d’une liste.
 
-![Exemples d’entrée](../images/5-4/1/what'salist-lacingexercise01.jpg)
+\![Exemples d’entrée](<../../.gitbook/assets/what's a list - lacing exercise 01.jpg>)
 
 ### **Liste la plus longue**
 
 En définissant la combinaison sur _Le plus long_, vous obtenez une ligne diagonale qui s’étend verticalement. De la même façon que pour le diagramme de concept, le dernier élément de la liste des 5 éléments sera répété pour atteindre la longueur de la liste la plus longue.
 
-![Exemples d’entrée](../images/5-4/1/what'salist-lacingexercise02.jpg)
+\![Exemples d’entrée](<../../.gitbook/assets/what's a list - lacing exercise 02.jpg>)
 
 ### **Produit cartésien**
 
 En définissant la liaison sur _Produit cartésien_, vous obtenez toutes les combinaisons entre chaque liste, ce qui vous donne une grille de points de 5 x 10. Il s’agit d’une structure de données équivalente au produit cartésien, comme illustré dans le schéma de concept ci-dessus, sauf que vos données sont désormais une liste de listes. Lorsque vous connectez une polycourbe, vous pouvez voir que chaque liste est définie par sa valeur X, ce qui vous donne une rangée de lignes verticales.
 
-![Exemples d’entrée](../images/5-4/1/what'salist-lacingexercise03.jpg)
+\![Exemples d’entrée](<../../.gitbook/assets/what's a list - lacing exercise 03.jpg>)

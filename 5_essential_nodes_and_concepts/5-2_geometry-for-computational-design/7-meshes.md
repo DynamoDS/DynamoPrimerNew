@@ -12,7 +12,7 @@ Dynamo définit les maillages à l'aide d'une structure de données Face-Sommet.
 
 Pour créer un maillage, vous avez besoin d’une liste de sommets et d’un système de regroupement de ces sommets en faces appelé groupe d’index.
 
-![](../images/5-2/7/meshes-meshelements.jpg)
+\![](<../../.gitbook/assets/meshes - mesh elements.jpg>)
 
 > 1. Liste de sommets
 > 2. Liste des groupes d'index permettant de définir les faces.
@@ -25,7 +25,7 @@ La bibliothèque fournit également des outils permettant de modifier les mailla
 
 Consultez les [études de cas Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes) pour découvrir des exemples d’utilisation de ce package.
 
-![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
+\![Mesh Toolkit](<../../.gitbook/assets/meshes - mesh toolkit standford bunny.jpg>)
 
 ## Approfondir…
 
@@ -33,7 +33,7 @@ Consultez les [études de cas Mesh Toolkit](https://github.com/DynamoDS/Dynamo/w
 
 Un maillage est un ensemble de quadrilatères et de triangles représentant une géométrie de surface ou de solide. Comme pour les solides, la structure d'un objet maillé comprend des sommets, des arêtes et des faces. Il existe d’autres propriétés qui rendent les maillages uniques, telles que les normales.
 
-![Éléments maillage](../images/5-2/7/MeshElements2.jpg)
+![Éléments maillage](../../.gitbook/assets/MeshElements2.jpg)
 
 > 1. Sommets de maillage.
 > 2. Arêtes de maillage 
@@ -44,7 +44,7 @@ Un maillage est un ensemble de quadrilatères et de triangles représentant une 
 
 Les sommets d'un maillage sont simplement une liste de points. L'index des sommets est très important lors de la construction d'un maillage ou de l'obtention d'informations sur la structure d'un maillage. Pour chaque sommet, il existe également une normale de sommet (vecteur) correspondante qui décrit la direction moyenne des faces attachées et vous aide à comprendre l’orientation « intérieure » et « extérieure » du maillage.
 
-![Sommets + normales](../images/5-2/7/vertexNormals.jpg)
+![Sommets + normales](../../.gitbook/assets/vertexNormals.jpg)
 
 > 1. Sommets
 > 2. Normales de sommet
@@ -53,7 +53,7 @@ Les sommets d'un maillage sont simplement une liste de points. L'index des somme
 
 Une face est une liste ordonnée de trois ou quatre sommets. La représentation de la "surface" d'une face maillée est donc implicite en fonction de la position des sommets indexés. Étant donné que vous avez déjà la liste des sommets qui constituent le maillage, au lieu de fournir des points individuels pour définir une face, utilisez simplement l'index des sommets. Cela vous permet également d’utiliser le même sommet dans plusieurs faces.
 
-![](../images/5-2/7/meshFaces.jpg)
+![](../../.gitbook/assets/meshFaces.jpg)
 
 > 1. Une face quadrilatérale composée des index 0, 1, 2 et 3.
 > 2. Une face triangulaire composée des index 1, 4 et 2\. Les groupes d'index peuvent être modifiés dans leur ordre : tant que la séquence est ordonnée dans le sens trigonométrique, la face est correctement définie.
@@ -66,7 +66,7 @@ Quelles sont les différences entre la géométrie de maillage et la géométrie
 
 Dans le chapitre précédent, vous avez découvert que les surfaces NURBS sont définies par une série de courbes NURBS allant dans deux directions. Ces directions sont libellées `U` et `V`, et permettent de paramétrer une surface NURBS en fonction d’un domaine de surface 2D. Les courbes elles-mêmes sont stockées en tant qu'équations dans l'ordinateur, ce qui permet de calculer les surfaces qui en résultent dans un degré de précision arbitrairement petit. Il peut cependant être difficile de combiner plusieurs surfaces NURBS. La jonction de deux surfaces NURBS génère une polysurface, où différentes sections de la géométrie auront des définitions de courbe et des paramètres UV différents.
 
-![Points de contrôle](../images/5-2/7/NURBSvsMESH-01.jpg)
+![Points de contrôle](../../.gitbook/assets/NURBSvsMESH-01.jpg)
 
 > 1. Surface
 > 2. Courbe isoparamétrique (isoparm)
@@ -87,7 +87,7 @@ Les maillages, en revanche, sont constitués d'un nombre distinct de sommets et 
 
 Une autre différence importante est la mesure dans laquelle une modification locale de la géométrie de maillage ou NURBS affecte l'ensemble de la forme. Le déplacement d'un sommet d'un maillage affecte uniquement les faces adjacentes à ce sommet. Dans les surfaces NURBS, l'étendue de l'influence est plus complexe et dépend du degré de la surface ainsi que des poids et des noeuds des points de contrôle. En général, cependant, le déplacement d’un seul point de contrôle dans une surface NURBS crée un changement plus lisse et plus important de la géométrie.
 
-![Édition](../images/5-2/7/NURBSvsMESH-02.jpg)
+![Édition](../../.gitbook/assets/NURBSvsMESH-02.jpg)
 
 > 1. Surface NURBS : le déplacement d’un point de contrôle a une influence qui s’étend sur toute la forme.
 > 2. Géométrie de maillage : le déplacement d'un sommet a une influence uniquement sur les éléments adjacents.

@@ -6,7 +6,7 @@ Certains objets de géométrie peuvent être créés en spécifiant explicitemen
 
 La transformation géométrique la plus simple est une conversion qui permet de déplacer un objet d’un nombre donné d’unités dans les directions X, Y et Z.
 
-![](../images/8-2/5/Transformations\_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -22,7 +22,7 @@ p2 = p.Translate(10, -20, 50);
 
 Bien que tous les objets dans Dynamo puissent être convertis grâce à l’ajout de la méthode _.Translate_ à la fin du nom de l’objet, des transformations plus complexes requièrent la transformation de l’objet d’un CoordinateSystem sous-jacent en un nouveau CoordinateSystem. Par exemple, pour faire pivoter un objet de 45 degrés autour de l’axe X, transformez l’objet de son CoordinateSystem existant sans rotation en un CoordinateSystem qui a été pivoté de 45 degrés autour de l’axe X à l’aide de la méthode _.Transform_ :
 
-![](../images/8-2/5/Transformations\_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -42,7 +42,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Outre la conversion et la rotation, les CoordinateSystems peuvent également être créés à l’échelle ou coupés. Un CoordinateSystem peut être mis à l’échelle à l’aide de la méthode _.Scale_ :
 
-![](../images/8-2/5/Transformations\_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -58,7 +58,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Les CoordinateSystems coupés sont créés grâce à l’insertion de vecteurs non orthogonaux dans le constructeur CoordinateSystem.
 
-![](../images/8-2/5/Transformations\_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(

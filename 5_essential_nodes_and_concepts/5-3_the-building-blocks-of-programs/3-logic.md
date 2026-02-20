@@ -10,34 +10,34 @@ Les variables numériques peuvent stocker un intervalle entier de nombres diffé
 
 L’instruction « If » est un concept clé de la programmation : « If » cet _élément_ a la valeur True, voici le _résultat_, sinon _autre chose_ se produit. L’action résultant de l’instruction est déterminée par une valeur booléenne. Il existe plusieurs méthodes pour définir une instruction "If" dans Dynamo :
 
-| Icône                                             | Nom (Syntaxe)             | Entrées            | Sorties |
-| ------------------------------------------------ | ------------------------- | ----------------- | ------- |
-| ![](../images/5-1/If.jpg)                        | If (**If**)               | test, true, false | result  |
-| ![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block (**(x?y:z);**) | x ? y, z           | résultat  |
+| Icône                                     | Nom (Syntaxe)             | Entrées            | Sorties |
+| ---------------------------------------- | ------------------------- | ----------------- | ------- |
+| ![](../../.gitbook/assets/If.jpg)        | If (**If**)               | test, true, false | résultat  |
+| ![](../../.gitbook/assets/CodeBlock.jpg) | Code Block (**(x?y:z);**) | x ? y, z           | résultat  |
 
 Voici un bref exemple de chacun de ces trois nœuds en action à l’aide de l’instruction conditionnelle « If ».
 
 Dans cette image, la _valeur booléenne_ est définie sur _True_, ce qui signifie que le résultat est une chaîne indiquant : _« voici le résultat si True »_. Les trois nœuds qui créent l’instruction _If_ fonctionnent de la même manière ici.
 
-![](../images/5-3/3/logic-conditionalstatements01false.jpg)
+\![](<../../.gitbook/assets/logic - conditional statements 01 false.jpg>)
 
 Là encore, les nœuds fonctionnent de la même façon. Si la _valeur booléenne_ est définie sur _False_, le résultat est le nombre _Pi_, tel que défini dans l’instruction _If_ d’origine.
 
-![](../images/5-3/3/logic-conditionalstatements02true.jpg)
+\![](<../../.gitbook/assets/logic - conditional statements 02 true.jpg>)
 
 ## Exercice : Logique et géométrie
 
 > Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
+> Vous trouverez la liste complète des fichiers d’exemple dans l’annexe.
 
-{% file src="../datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
+{% file src="../../.gitbook/assets/Building Blocks of Programs - Logic (1).dyn" %}
 
 ### Partie I : Filtrage d’une liste
 
 1. Utilisez la logique pour séparer une liste de nombres en une liste de nombres pairs et une liste de nombres impairs.
 
-![](../images/5-3/3/logic-exercisepartI-01.jpg)
+\![](<../../.gitbook/assets/logic - exercise part I-01.jpg>)
 
 > a. **Number Range :** ajoutez un intervalle de nombres dans la zone de dessin.
 >
@@ -61,7 +61,7 @@ En partant de la logique établie dans le premier exercice, appliquez cette conf
 
 2\. Partez de l’exercice précédent avec les mêmes nœuds. Les seules exceptions (outre la modification du format) sont les suivantes :
 
-![](../images/5-3/3/logic-exercisepartII-01.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-01.jpg>)
 
 > a. Utilisez un nœud **Sequence** avec ces valeurs d’entrée.
 >
@@ -69,7 +69,7 @@ En partant de la logique établie dans le premier exercice, appliquez cette conf
 
 3\. Commencez par créer un groupe distinct de graphiques, comme illustré dans l’image ci-dessus. Ce groupe de nœuds représente une équation paramétrique permettant de définir une courbe de ligne. Remarques :
 
-![](../images/5-3/3/logic-exercisepartII-02.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-02.jpg>)
 
 > a. Le premier nœud **Number Slider** représente la fréquence de l’onde. Il doit avoir une valeur minimale de 1, une valeur maximale de 4 et un pas de 0,01.
 >
@@ -79,23 +79,23 @@ En partant de la logique établie dans le premier exercice, appliquez cette conf
 
 Méthode utilisée ici pour les entrées : utilisez des nœuds Number pour obtenir davantage de propriétés statiques et des curseurs de numérotation sur les valeurs plus flexibles. Conservez l'intervalle de nombres d'origine défini au début de cette étape. Toutefois, la courbe sinusoïdale créée ici doit garder une certaine flexibilité. Vous pouvez déplacer ces curseurs pour observer la fréquence et l’amplitude de la courbe se mettre à jour.
 
-![](../images/5-3/3/logic-exercisepartII-03.gif)
+\![](<../../.gitbook/assets/logic - exercise part II-03.gif>)
 
 4\. Vous allez désormais passer à la définition. Examinez le résultat final pour pouvoir référencer ce que vous obtenez. Les deux premières étapes sont effectuées séparément, mais vous devez maintenant les connecter. Utilisez la courbe sinusoïdale de base pour déterminer l’emplacement des composants de zipper, et utilisez la logique True/False pour alterner entre les petites boîtes et les grandes boîtes.
 
-![](../images/5-3/3/logic-exercisepartII-04.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-04.jpg>)
 
 > a. **Math.RemapRange :** à l’aide de la séquence de nombres créée à l’étape 02, créez une nouvelle série de nombres en remappant l’intervalle. Les nombres d’origine de l’étape 1 sont compris entre 0 et 100. Ces nombres sont compris entre 0 et 1, respectivement par les entrées _newMin_ et _newMax_.
 
 5\. Créez un nœud **Curve.PointAtParameter**, puis connectez la sortie **Math.RemapRange** de l’étape 4 en tant qu’entrée _param_.
 
-![](../images/5-3/3/logic-exercisepartII-05.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-05.jpg>)
 
 Cette étape permet de créer des points le long de la courbe. Remappez les nombres entre 0 et 1, car l’entrée _param_ recherche les valeurs dans cet intervalle. Une valeur de _0_ représente le point de départ, une valeur de _1_ représente les points de fin. Tous les nombres compris entre ces valeurs sont évalués dans l’intervalle _[0,1]_.
 
 6\. Connectez la sortie de **Curve.PointAtParameter** à **List.FilterByBoolMask** pour séparer la liste des index impairs et pairs.
 
-![](../images/5-3/3/logic-exercisepartII-06.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-06.jpg>)
 
 > a. **List.FilterByBoolMask :** connectez **Curve.PointAtParameter** de l’étape précédente à l’entrée _list_.
 >
@@ -105,7 +105,7 @@ Cette étape permet de créer des points le long de la courbe. Remappez les nomb
 
 **Cuboid.ByLengths :** recréez les connexions illustrées à l’image ci-dessus pour obtenir un zipper le long de la courbe sinusoïdale. Ici, un cuboïde ne représente qu’une boîte, et vous définissez sa taille en fonction du point de courbe au centre de la boîte. La logique de la division paire/impaire doit maintenant être claire dans le modèle.
 
-![](../images/5-3/3/logic-exercisepartII-07.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-07.jpg>)
 
 > a. Liste de cuboïdes à des index pairs.
 >

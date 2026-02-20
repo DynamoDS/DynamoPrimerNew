@@ -8,7 +8,7 @@ Bien qu'il ne s'agisse pas d'une partie de la géométrie à strictement parler,
 
 La création d’un CoordinateSystem centré sur un point avec x = 0, y = 0, z = 0, sans rotation ni transformation de transvection ni de mise à l’échelle, requiert simplement l’appel du constructeur Identity :
 
-![](../images/8-2/2/GeometricPrimitives\_01.png)
+![](../../.gitbook/assets/GeometricPrimitives_01.png)
 
 ```js
 // create a CoordinateSystem at x = 0, y = 0, z = 0,
@@ -19,7 +19,7 @@ cs = CoordinateSystem.Identity();
 
 Les CoordinateSystems avec transformations géométriques dépassent la portée de ce chapitre, bien qu’un autre constructeur vous permette de créer un système de coordonnées à un point spécifique, à savoir _CoordinateSystem.ByOriginVectors_ :
 
-![](../images/8-2/2/GeometricPrimitives\_02.png)
+![](../../.gitbook/assets/GeometricPrimitives_02.png)
 
 ```js
 // create a CoordinateSystem at a specific location,
@@ -41,7 +41,7 @@ La primitive géométrique la plus simple est un point, représentant un emplace
 
 Cet exemple montre des points créés sur différents systèmes de coordonnées :
 
-![](../images/8-2/2/GeometricPrimitives\_03.png)
+![](../../.gitbook/assets/GeometricPrimitives_03.png)
 
 ```js
 // create a point with x, y, and z coordinates
@@ -73,11 +73,11 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### Ligne 
+### Ligne
 
 La primitive Dynamo dimensionnelle supérieure suivante est un segment de ligne, représentant un nombre infini de points entre deux extrémités. Les lignes peuvent être créées en spécifiant explicitement les deux points de limite avec le constructeur _Line.ByStartPointEndPoint_, ou en spécifiant un point de départ, une direction et une longueur dans cette direction, _Line.ByStartPointDirectionLength_.
 
-![](../images/8-2/2/GeometricPrimitives\_04.png)
+![](../../.gitbook/assets/GeometricPrimitives_04.png)
 
 ```js
 p1 = Point.ByCoordinates(-2, -5, -10);
@@ -96,7 +96,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
 
 Dynamo comporte des objets représentant les principaux types de primitives géométriques de base en trois dimensions : des cuboïdes créés avec _Cuboid.ByLengths_ ; des cônes créés avec _Cone.ByPointsRadius_ et _Cone.ByPointsRadii_ ; des cylindres créés avec _Cylinder.ByRadiusHeight_ ; et des sphères créées avec _Sphere.ByCenterPointRadius_.
 
-![](../images/8-2/2/GeometricPrimitives\_05.png)
+![](../../.gitbook/assets/GeometricPrimitives_05.png)
 
 ```js
 // create a cuboid with specified lengths

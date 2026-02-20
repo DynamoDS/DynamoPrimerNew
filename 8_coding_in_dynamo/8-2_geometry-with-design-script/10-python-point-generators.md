@@ -2,7 +2,7 @@
 
 Les scripts Python suivants génèrent des réseaux de points pour plusieurs exemples. Ils doivent être collés dans un nœud de script Python comme suit :
 
-![](../images/8-2/10/pythonpoints01.jpg)
+\![](<../../.gitbook/assets/python points 01.jpg>)
 
 **python_points_1**
 

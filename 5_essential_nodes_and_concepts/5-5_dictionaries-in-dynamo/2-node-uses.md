@@ -2,7 +2,7 @@
 
 Dynamo 2.0 présente une variété de nœuds de dictionnaire à notre disposition. Cela inclut les nœuds _create, action et query_.
 
-![](../images/5-5/2/dictionarynodes-nodes.jpg)
+\![](<../../.gitbook/assets/dictionary nodes - nodes.jpg>)
 
 #### Créer
 

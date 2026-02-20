@@ -6,63 +6,63 @@
 
 Un [vecteur](2-vectors.md#vector-1) est une représentation de magnitude et de direction. Imaginez-vous une flèche accélérant vers une direction spécifique à une vitesse donnée. C’est un composant clé des modèles dans Dynamo. Dans la mesure où ils se trouvent dans la catégorie Abstract des « assistants », lorsque vous créez un vecteur, vous ne verrez rien dans l’aperçu en arrière-plan.
 
-![Vecteurs dans Dynamo](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
+\![Vecteurs dans Dynamo](<../../.gitbook/assets/Geometry for Computational Design - vectors.jpg>)
 
 > 1. Vous pouvez utiliser une ligne comme support pour un aperçu vectoriel.
 
 > Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
+> Vous trouverez la liste complète des fichiers d’exemple dans l’annexe.
 
-{% file src="../datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Vectors (1).dyn" %}
 
 ### Plan
 
 Un [plan](2-vectors.md#plane-1) est une surface bidimensionnelle. Imaginez-vous une surface plane qui s’étend indéfiniment. Chaque plan possède une origine, une direction X, une direction Y et une direction Z (vers le haut).
 
-![Plans dans Dynamo](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
+\![Plans dans Dynamo](<../../.gitbook/assets/Geometry for Computational Design - plane.jpg>)
 
 > 1. Bien qu’ils soient abstraits, les plans possèdent une position d’origine qui permet de les placer dans l’espace.
 > 2. Dans Dynamo, les plans sont rendus dans l'aperçu en arrière-plan.
 
 > Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
+> Vous trouverez la liste complète des fichiers d’exemple dans l’annexe.
 
-{% file src="../datasets/5-2/2/Geometry for Computational Design - Plane.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Plane (1).dyn" %}
 
 ### Système de coordonnées
 
 Le [système de coordonnées](2-vectors.md#coordinate-system-1) est un système permettant de déterminer l’emplacement des points ou d’autres éléments géométriques. L’image ci-dessous explique à quoi il ressemble dans Dynamo et à quoi correspond chaque couleur.
 
-![Système de coordonnées dans Dynamo](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
+\![Système de coordonnées dans Dynamo](<../../.gitbook/assets/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. Bien qu’ils soient abstraits, les systèmes de coordonnées possèdent également une position d’origine qui permet de les placer dans l’espace.
 > 2. Dans Dynamo, les systèmes de coordonnées sont rendus dans l'aperçu en arrière-plan en tant que point (origine) et lignes définissant les axes (X est rouge, Y est vert et Z est bleu suivant la convention).
 
 > Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
+> Vous trouverez la liste complète des fichiers d’exemple dans l’annexe.
 
-{% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Coordinate System.dyn" %}
 
-## Approfondir...
+## Approfondir…
 
 Les vecteurs, les plans et les systèmes de coordonnées constituent le groupe principal de types de géométrie abstraits. Ils vous aident à définir l'emplacement, l'orientation et le contexte spatial d'autres géométries décrivant des formes. Si vous dites que vous êtes à New York, au croisement de la 42e rue et de Broadway (système de coordonnées), debout au niveau de la rue (plan), regardant au nord (vecteur), vous venez d'utiliser ces "assistants" pour définir votre position. Il en va de même pour une coque de téléphone ou un gratte-ciel : vous avez besoin de ce contexte pour développer votre modèle.
 
-![Vecteurs, plans et coordonnées](../images/5-2/2/VectorsPlanesCoodinates.jpg)
+![Vecteurs, plans et coordonnées](../../.gitbook/assets/VectorsPlanesCoodinates.jpg)
 
 ### Vecteur
 
 Un vecteur est une quantité géométrique décrivant la direction et la magnitude. Les vecteurs sont abstraits, c’est-à-dire qu’ils représentent une quantité et non un élément géométrique. Les vecteurs peuvent être facilement confondus avec les points, car ils sont tous les deux composés d’une liste de valeurs. Il existe cependant une différence essentielle : les points décrivent une position dans un système de coordonnées donné, tandis que les vecteurs décrivent une différence par rapport à la position qui est la même que la « direction ».
 
-![Détails du vecteur](../images/5-2/2/Vector-Detailed.jpg)
+![Détails du vecteur](../../.gitbook/assets/Vector-Detailed.jpg)
 
 Si l’idée de différence relative est déroutante, envisagez le vecteur AB sous cet angle : « Je suis au point A, et je regarde vers le point B. » La direction, d’ici (A) à là (B), est notre vecteur.
 
 Décomposez davantage les vecteurs en parties en utilisant la même notation AB :
 
-![Vecteur](../images/5-2/2/Vector.jpg)
+![Vecteur](../../.gitbook/assets/Vector.jpg)
 
 > 1. Le **point de départ** du vecteur est appelé **base**.
 > 2. Le **point d’arrivée** du vecteur est appelé **pointe** ou **sens**.
@@ -76,7 +76,7 @@ Pour ajouter une touche de légèreté en ce qui concerne les vecteurs (et leur 
 
 Les plans sont des "assistants" abstraits 2D. Plus spécifiquement, les plans sont conceptuellement "plats", s'étendant de manière infinie dans deux directions. En général, ils sont rendus sous la forme d’un rectangle plus petit près de leur origine.
 
-![Plan](../images/5-2/2/Plane.jpg)
+![Plan](../../.gitbook/assets/Plane.jpg)
 
 Vous pensez peut-être, "Attendez ! Et l'origine ? Cela ressemble à un système de coordonnées... comme celui que j'utilise pour modéliser des éléments dans mon logiciel de CAO !"
 
@@ -88,6 +88,6 @@ Si vous maîtrisez parfaitement les plans, les systèmes de coordonnées ne vous
 
 Cependant, il existe d'autres systèmes de coordonnées, tels que les systèmes cylindriques ou sphériques. Comme vous le verrez dans les sections suivantes, les systèmes de coordonnées peuvent également être appliqués à d’autres types de géométrie afin de définir une position sur la géométrie en question.
 
-![Système de coordonnées](../images/5-2/2/CoordinateSystem.jpg)
+![Système de coordonnées](../../.gitbook/assets/CoordinateSystem.jpg)
 
 > Ajout de systèmes de coordonnées alternatifs : cylindrique, sphérique

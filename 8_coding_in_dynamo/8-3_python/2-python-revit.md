@@ -4,7 +4,7 @@
 
 Maintenant que vous savez comment utiliser les scripts Python dans Dynamo, découvrez comment connecter les bibliothèques Revit à l'environnement de script. Rappelez-vous que vous avez importé Python Standard et vos nœuds Dynamo Core avec les quatre premières lignes du bloc de code ci-dessous. Pour importer les nœuds Revit, les éléments Revit et le gestionnaire de documents Revit, il vous suffit d'ajouter quelques lignes supplémentaires :
 
-``` py
+```py
 import sys
 import clr
 clr.AddReference('ProtoGeometry')
@@ -27,7 +27,7 @@ import System
 
 Ces lignes vous donnent accès à l'API de Revit et vous offre des scripts personnalisés pour toutes les tâches Revit. La combinaison du processus de programmation visuelle et du script de l'API de Revit permet d'améliorer considérablement la collaboration et le développement des outils. Par exemple, un responsable BIM et un concepteur schématique peuvent travailler ensemble sur le même graphique. Dans le cadre de cette collaboration, ils peuvent améliorer la conception et l’exécution du modèle.
 
-![](../images/8-3/2/python&revit-01.jpg)
+\![](<../../.gitbook/assets/python & revit - 01 (1).jpg>)
 
 ### API spécifiques de la plate-forme
 
@@ -41,9 +41,9 @@ Les exemples ci-dessous montrent comment mettre en oeuvre des opérations spéci
 >
 > Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
+> Vous trouverez la liste complète des fichiers d’exemple dans l’annexe.
 
-{% file src="../datasets/8-2/2/Revit-Doc.dyn" %}
+{% file src="../../.gitbook/assets/Revit-Doc (1).dyn" %}
 
 Dans ces exercices, vous allez explorer les scripts élémentaires de Python dans Dynamo for Revit. Cet exercice est axé sur la gestion des fichiers et des éléments Revit, ainsi que sur la communication entre Revit et Dynamo.
 
@@ -51,11 +51,11 @@ Il s’agit d’une méthode de découpe et de séchage permettant de récupére
 
 Voici comment importer les services Revit et récupérer les données du document dans Dynamo.
 
-![](../images/8-3/2/python&revit-exercise01-01.jpg)
+\![](<../../.gitbook/assets/python & revit - exercise 01 - 01.jpg>)
 
 Examinez le nœud Python dans Dynamo. Vous pouvez également retrouver le code ci-dessous :
 
-``` py
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr
@@ -78,27 +78,27 @@ OUT = [doc,uiapp,app]
 
 > Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
+> Vous trouverez la liste complète des fichiers d’exemple dans l’annexe.
 
-{% file src="../datasets/8-2/2/Revit-ReferenceCurve.dyn" %}
+{% file src="../../.gitbook/assets/Revit-ReferenceCurve.dyn" %}
 
 Dans cet exercice, vous allez créer une courbe de modèle simple dans Revit à l'aide du nœud Dynamo Python.
 
 Commencez par créer une famille de volumes conceptuels dans Revit.
 
-![](../images/8-3/2/python&revit-exercise02-01.jpg)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 01.jpg>)
 
 Ouvrez le _dossier Volume conceptuel_ et utilisez le fichier gabarit _Metric Mass.rft_.
 
-![](../images/8-3/2/python&revit-exercise02-02.jpg)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 02.jpg>)
 
 Dans Revit, utilisez le raccourci clavier **`un`** pour afficher les paramètres Unité de projet et définir l’unité de longueur sur Mètres.
 
-![](../images/8-3/2/python&revit-exercise02-03.jpg)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 03.jpg>)
 
 Lancez Dynamo et créez le jeu de nœuds dans l’image ci-dessous. Vous allez d’abord créer deux points de référence dans Revit à partir de nœuds Dynamo.
 
-![](../images/8-3/2/python&revit-exercise02-04.jpg)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 04.jpg>)
 
 > 1. Créez un nœud **Code Block** et attribuez-lui la valeur de `"0;"`.
 > 2. Connectez cette valeur dans un nœud **ReferencePoint.ByCoordinates** pour les entrées X, Y et Z.
@@ -108,11 +108,11 @@ Lancez Dynamo et créez le jeu de nœuds dans l’image ci-dessous. Vous allez d
 
 Examinez le nœud Python dans Dynamo. Recherchez le code complet ci-dessous.
 
-![](../images/8-3/2/python&revit-exercise02-05.jpg)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 05.jpg>)
 
 > 1. **System.Array :** Revit requiert un **réseau système** comme entrée (et non une liste Python). Il s'agit juste d'une ligne de code supplémentaire, mais prêter attention aux types d'argument facilite la programmation Python dans Revit.
 
-``` py
+```py
 import sys
 import clr
 
@@ -136,25 +136,25 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 
 Dans Dynamo, vous avez créé deux points de référence avec une ligne les reliant à l’aide de Python. Le prochain exercice va vous permettre d’aller un peu plus loin.
 
-![](../images/8-3/2/python&revit-exercise02-06.jpg)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 06.jpg>)
 
 ## Exercice 3
 
 > Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
+> Vous trouverez la liste complète des fichiers d’exemple dans l’annexe.
 
-{% file src="../datasets/8-2/2/Revit-StructuralFraming.zip" %}
+{% file src="../../.gitbook/assets/Revit-StructuralFraming.zip" %}
 
 Cet exercice est simple, mais il illustre les rubriques de connexion de données et de géométrie de Revit à Dynamo et vice-versa. Commencez par ouvrir Revit-StructuralFraming.rvt. Une fois ouvert, lancez Dynamo et ouvrez le fichier Revit-StructuralFraming.dyn.
 
-![](../../.gitbook/assets/python&revit-exercise03-01.jpg)
+![](../../.gitbook/assets/python\&revit-exercise03-01.jpg)
 
 Ce fichier Revit est des plus basiques. Il comporte deux courbes de référence : une sur le niveau 1 et l'autre sur le niveau 2. Votre objectif est d'intégrer ces courbes dans Dynamo et de conserver un lien actif.
 
 Ce fichier contient un ensemble de nœuds connectés à cinq entrées d’un nœud Python.
 
-![](../images/8-3/2/python&revit-exercise03-02.jpg)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 02.jpg>)
 
 > 1. **Nœuds Select Model Element :** cliquez sur le bouton Sélectionner de chaque nœud et sélectionnez une courbe correspondante dans Revit.
 > 2. **Code Block :** à l'aide de la syntaxe `0..1..#x;`_,_ connectez un curseur de type entier compris entre 0 et 20 à l'entrée _x_. Celui-ci indique le nombre de poutres à dessiner entre les deux courbes.
@@ -163,9 +163,9 @@ Ce fichier contient un ensemble de nœuds connectés à cinq entrées d’un nœ
 
 Dans Python, ce code est un peu plus dense, mais les commentaires à l’intérieur du code décrivent ce qui se passe dans le processus :
 
-![](../images/8-3/2/python&revit-exercise03-03.jpg)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 03.jpg>)
 
-``` py
+```py
 import clr
 #import Dynamo Geometry
 clr.AddReference('ProtoGeometry')
@@ -204,7 +204,7 @@ Dans Revit, un réseau de poutres s’étend sur les deux courbes en tant qu’�
 
 Dans Dynamo, les résultats sont également visibles. Les poutres du nœud **Watch3D** font référence à la géométrie interrogée à partir des éléments Revit.
 
-![](../images/8-3/2/python&revit-exercise03-05.jpg)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 05.jpg>)
 
 Il existe un processus continu de conversion des données de l’environnement Revit vers l’environnement Dynamo. En résumé, voici comment le processus se déroule :
 
@@ -219,4 +219,4 @@ Ce processus peut sembler compliqué, mais grâce au script, il est aussi simple
 
 Avec une mise à jour des courbes de référence dans Revit, vous obtenez un nouveau réseau de poutres.
 
-![](../images/8-3/2/python&revit-ex03-06.gif)
+\![](<../../.gitbook/assets/python & revit - ex 03 - 06.gif>)

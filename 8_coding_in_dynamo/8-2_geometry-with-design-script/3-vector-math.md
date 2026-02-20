@@ -4,7 +4,7 @@ Les objets dans les conceptions de calcul sont rarement créés explicitement da
 
 Sous sa forme de base, un vecteur représente une position dans un espace 3D et est souvent considéré comme l’extrémité d’une flèche partant de la position (0, 0, 0) et allant jusqu’à cette position. Les vecteurs peuvent être créés avec le constructeur _ByCoordinates_, qui prend la position x, y et z de l’objet Vector venant d’être créé. Notez que les objets Vector ne sont pas des objets géométriques et n’apparaissent pas dans la fenêtre Dynamo. Toutefois, les informations sur un vecteur nouvellement créé ou modifié peuvent être imprimées dans la fenêtre de la console :
 
-![](../images/8-2/3/vectormath01.jpg)
+\![](<../../.gitbook/assets/vector math 01.jpg>)
 
 ```js
 // construct a Vector object
@@ -19,7 +19,7 @@ Un ensemble d’opérations mathématiques est défini sur des objets Vector, ce
 
 L’addition de vecteurs est définie comme la somme des composants de deux vecteurs. Elle peut être considérée comme le vecteur résultant si les deux flèches de vecteur des composants sont placées « bout à bout ». L’addition de vecteurs est effectuée à l’aide de la méthode _Add_ et est représentée par le diagramme sur la gauche.
 
-![](../images/8-2/3/VectorMath\_02.png)
+![](../../.gitbook/assets/VectorMath_02.png)
 
 ```js
 a = Vector.ByCoordinates(5, 5, 0);
@@ -33,7 +33,7 @@ c = a.Add(b);
 
 De même, deux objets Vector peuvent être soustraits l’un à l’autre à l’aide de la méthode _Subtract_. La soustraction de vecteurs peut être considérée comme la direction à partir du premier vecteur vers le second vecteur.
 
-![](../images/8-2/3/VectorMath\_03.png)
+![](../../.gitbook/assets/VectorMath_03.png)
 
 ```js
 a = Vector.ByCoordinates(5, 5, 0);
@@ -47,7 +47,7 @@ c = a.Subtract(b);
 
 La multiplication de vecteurs peut être considérée comme le déplacement de l’extrémité d’un vecteur dans sa propre direction en fonction d’un facteur d’échelle donné.
 
-![](../images/8-2/3/VectorMath\_04.png)
+![](../../.gitbook/assets/VectorMath_04.png)
 
 ```js
 a = Vector.ByCoordinates(4, 4, 0);
@@ -60,7 +60,7 @@ c = a.Scale(5);
 
 Souvent, lors de la mise à l'échelle d'un vecteur, on souhaite que la longueur du vecteur résultant soit exactement la même que la valeur mise à l'échelle. Pour ce faire, il faut d’abord normaliser un vecteur, c’est-à-dire définir la longueur du vecteur comme exactement égale à un.
 
-![](../images/8-2/3/vectormath05.jpg)
+\![](<../../.gitbook/assets/vector math 05.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 3);
@@ -80,7 +80,7 @@ c pointe toujours dans la même direction que a (1, 2, 3), bien qu’il ait main
 
 Deux autres méthodes, qui n'ont pas de similitudes avec les mathématiques 1D, existent en mathématiques vectorielles. Il s'agit du produit vectoriel et du produit scalaire. Le produit vectoriel permet de générer un vecteur orthogonal (de 90 degrés) par rapport à deux vecteurs existants. Par exemple, le produit vectoriel des axes x et y est l’axe z, bien que les deux vecteurs d’entrée n’aient pas besoin d’être orthogonaux les uns par rapport aux autres. Un vecteur de produit vectoriel est calculé avec la méthode _Cross_.
 
-![](../images/8-2/3/VectorMath\_06.png)
+![](../../.gitbook/assets/VectorMath_06.png)
 
 ```js
 a = Vector.ByCoordinates(1, 0, 1);
@@ -94,7 +94,7 @@ c = a.Cross(b);
 
 Le produit scalaire est une autre fonction plus avancée de calcul vectoriel. Le produit scalaire entre deux vecteurs est un nombre réel (et non un objet Vector) qui fait référence, mais ne correspond pas exactement, à l'angle entre deux vecteurs. L’une des propriétés utiles de cette fonction est que le produit scalaire entre deux vecteurs sera égal à 0 si ces derniers sont perpendiculaires (et uniquement à cette condition). Le produit scalaire est calculé à l’aide de la méthode _Dot_.
 
-![](../images/8-2/3/vectormath07.jpg)
+\![](<../../.gitbook/assets/vector math 07.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 1);
