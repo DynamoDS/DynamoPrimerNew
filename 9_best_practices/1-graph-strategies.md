@@ -2,7 +2,7 @@
 
 In den vorangegangenen Kapiteln dieses Handbuchs wurde bereits behandelt, wie Sie die leistungsstarken Funktionen zur visuellen Programmierung in Dynamo einsetzen können. Ein gutes Verständnis dieser Funktionen ist eine solide Grundlage und der erste Schritt bei der Erstellung zuverlässiger visueller Programme. Bei der Verwendung visueller Programme in der Praxis, der Weitergabe an Kollegen, der Behebung von Fehlern oder beim Testen von Grenzen müssen zusätzliche Aspekte berücksichtigt werden. Wenn andere Benutzer mit Ihrem Programm arbeiten sollen oder Sie damit rechnen, es z. B. sechs Monate später erneut zu öffnen, müssen seine Grafik und seine Logik unmittelbar verständlich sein. Dynamo stellt zahlreiche Werkzeuge zur Verfügung, die Ihnen helfen, die Komplexität Ihres Programms zu bewältigen. In diesem Kapitel finden Sie Richtlinien zu ihren Verwendungszwecken.
 
-![Gruppen](images/1/cad-chart-visual.jpg)
+![Gruppen](../.gitbook/assets/cad-chart-visual.jpg)
 
 ## Komplexität reduzieren
 
@@ -15,7 +15,7 @@ Während Sie Ihr Dynamo-Diagramm entwickeln und Ihre Ideen testen, kann es rasch
 * Sie können die **Farbe einer Gruppe zur Differenzierung** ihres Verwendungszwecks (Eingaben oder Funktionen) ändern.
 * Gruppen können als Ausgangspunkt beim **Organisieren des Diagramms zur Vereinfachung der Erstellung benutzerdefinierter Blöcke** verwendet werden.
 
-![](images/1/graphstrategy2.png)
+![](../.gitbook/assets/graphstrategy2.png)
 
 > Die Farben in diesem Programm kennzeichnen den Verwendungszweck der einzelnen Gruppen. Mithilfe dieses Verfahrens können Sie eine Hierarchie in den von Ihnen entwickelten Grafikstandards oder -vorlagen erstellen.
 >
@@ -23,21 +23,21 @@ Während Sie Ihr Dynamo-Diagramm entwickeln und Ihre Ideen testen, kann es rasch
 > 2. Eingabengruppe (orange)
 > 3. Skriptgruppe (grün)
 >
-> Informationen zur Verwendung von Gruppen finden Sie unter [Verwalten Ihres Programms](https://primer2.dynamobim.org/v/de/9_best_practices/4-managing-your-program).
+> Informationen zur Verwendung von Gruppen finden Sie unter [Verwalten Ihres Programms](http://primer.dynamobim.org/de/03_Anatomy-of-a-Dynamo-Definition/3-4_best_practices.html).
 
 ### **Effizientere Entwicklung mit Codeblöcken**
 
 * In manchen Fällen können Sie in einem Codeblock **eine Methode für eine Zahl oder einen Block schneller eingeben, als Sie nach ihr suchen könnten** (Point.ByCoordinates, Number, String, Formula).
 * Codeblöcke sind nützlich zum **Definieren benutzerdefinierter Funktionen in DesignScript, damit weniger Blöcke im Diagramm benötigt werden**.
 
-![](images/1/graphstrategy3\(1\).png)
+![](../.gitbook/assets/graphstrategy3.png)
 
 > 1 und 2 führen dieselbe Funktion aus. Dabei nahm das Schreiben einiger Codezeilen wesentlich weniger Zeit in Anspruch als das Suchen und Hinzufügen jedes einzelnen Blocks. Die Angaben im Codeblock sind darüber hinaus wesentlich prägnanter.
 >
 > 1. In Codeblock geschriebenes DesignScript
 > 2. Entsprechendes Programm in Blöcken
 >
-> Informationen zur Verwendung von Codeblöcken finden Sie unter [Was ist ein Codeblock?](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md)
+> Informationen zur Verwendung von Codeblöcken finden Sie unter [Was ist ein Codeblock?](../8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block.md)
 
 ### **Komprimieren mit Block zu Code**
 
@@ -53,26 +53,26 @@ Während Sie Ihr Dynamo-Diagramm entwickeln und Ihre Ideen testen, kann es rasch
   * Für andere Benutzer schwieriger zu verstehen
   * Keine einfache Möglichkeit, zur Version aus der visuellen Programmierung zurückzuwechseln
 
-![](images/1/graphstrategy3\_1.png)
+![](../.gitbook/assets/graphstrategy3_1.png)
 
 > 1. Vorhandenes Programm
 > 2. Mithilfe von Block zu Code erstellter Codeblock
 >
-> Informationen zur Verwendung von Block zu Code finden Sie unter [DesignScript-Syntax](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
+> Informationen zur Verwendung von Block zu Code finden Sie unter [DesignScript-Syntax](../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md).
 
 ### **Flexibler Zugriff auf Daten mit List@Level**
 
 * List@Level kann es Ihnen erleichtern, **Ihr Diagramm durch Ersetzen der Blöcke List.Map und List.Combine zu vereinfachen**, die viel Platz im Ansichtsbereich beanspruchen können.
-* List@Level bietet ein **schnelleres Verfahren zum Konstruieren von Blocklogik als List.Map/List.Combine**, indem es den Zugriff auf Daten auf einer beliebigen Ebene einer Liste direkt über den Eingabeanschluss eines Blocks ermöglicht.
+* List@Level bietet ein** schnelleres Verfahren zum Konstruieren von Blocklogik als List.Map/List.Combine**, indem es den Zugriff auf Daten auf einer beliebigen Ebene einer Liste direkt über den Eingabeanschluss eines Blocks ermöglicht.
 
-![](<images/1/graphstrategy4 (1).png>)
+![](../.gitbook/assets/graphstrategy4.png)
 
 > Sie können überprüfen, wie viele True-Werte BoundingBox.Contains zurückgibt und in welchen Listen diese enthalten sind, indem Sie List@Level für den list-Eingang von CountTrue aktivieren. List@Level ermöglicht es, die Ebene festzulegen, auf der die Eingabe Daten übernimmt. List@Level ist flexibel und effizient und wird gegenüber anderen Verfahren, die List.Map und List.Combine nutzen, dringend empfohlen.
 >
 > 1. Zählen der True-Werte auf Listenebene 2
 > 2. Zählen der True-Werte auf Listenebene 3
 >
-> Informationen zur Verwendung von List@Level finden Sie unter [Listen von Listen](https://primer2.dynamobim.org/v/de/5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists).
+> Informationen zur Verwendung von List@Level finden Sie unter [Listen von Listen](http://primer.dynamobim.org/de/06_Designing-with-Lists/6-3_lists-of-lists.html#list@level).
 
 ## Lesbarkeit gewährleisten
 
@@ -84,7 +84,7 @@ Gestalten Sie Ihr Diagramm nicht nur so einfach und effizient wie möglich, sond
 * Wenn andere Benutzer mit Ihrem Diagramm arbeiten sollen, **sorgen Sie vor der Bereitstellung für ein Layout mit einem leicht verständlichen Ablauf aus Blöcken und Drähten**.
 * Um die Ausrichtung zu erleichtern, **verwenden Sie die Funktion Blocklayout bereinigen zur automatischen Ausrichtung** des Diagramms. Durch manuelles Ausrichten erzielen Sie allerdings präzisere Ergebnisse.
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<../.gitbook/assets/graphstrategy5 (1).png>)
 
 > 1. Ungeordnetes Diagramm
 > 2. Ausgerichtetes Diagramm
@@ -96,7 +96,7 @@ Gestalten Sie Ihr Diagramm nicht nur so einfach und effizient wie möglich, sond
 * Durch Umbenennen von Eingaben machen Sie Ihr Diagramm für andere Benutzer leicht verständlich, **insbesondere, wenn Objekte, die sich außerhalb des Bildschirms befinden, verbunden werden sollen**.
 * **Benennen Sie nach Möglichkeit nicht Blöcke, sondern Eingaben um.** Als Alternative dazu können Sie einen benutzerdefinierten Block aus einer Gruppe von Blöcken erstellen und ihn umbenennen. Dabei ist ersichtlich, dass andere Elemente darin enthalten sind.
 
-![](images/1/graphstrategy6.png)
+![](../.gitbook/assets/graphstrategy6.png)
 
 > 1. Eingaben für die Bearbeitung der Oberfläche
 > 2. Eingaben für Architekturparameter
@@ -109,12 +109,12 @@ Gestalten Sie Ihr Diagramm nicht nur so einfach und effizient wie möglich, sond
 * Fügen Sie eine Anmerkung hinzu, wenn ein Bestandteil des **Diagramms eine Erläuterung in Klartext benötigt**, die nicht in den Blöcken selbst gegeben werden kann.
 * Fügen Sie eine Anmerkung hinzu, wenn eine Sammlung von **Blöcken oder eine Gruppe zu groß oder zu komplex ist und nicht direkt verstanden werden kann**.
 
-![](images/1/graphstrategy7.png)
+![](../.gitbook/assets/graphstrategy7.png)
 
 > 1. Anmerkung zur Beschreibung des Teils des Programms, der Rohwerte der Verschiebungsstrecken zurückgibt
 > 2. Anmerkung zur Beschreibung des Codes, der diese Werte einer Sinuswelle zuordnet
 >
-> Informationen zum Hinzufügen einer Anmerkung finden Sie unter [Verwalten von Programmen](https://primer2.dynamobim.org/v/de/9_best_practices/4-managing-your-program).
+> Informationen zum Hinzufügen einer Anmerkung finden Sie unter [Verwalten von Programmen](http://primer.dynamobim.org/de/03_Anatomy-of-a-Dynamo-Definition/3-4_best_practices.html).
 
 ## Laufendes Testen
 
@@ -124,14 +124,14 @@ Es ist wichtig, während der Entwicklung des visuellen Skripts zu überprüfen, 
 
 * Verwenden Sie während der Entwicklung des Programms Beobachtungs- oder Vorschaublöcke,** um zu überprüfen, ob wichtige Ausgaben das erwartete Ergebnis zurückgeben.**
 
-![](images/1/graphstrategy8.png)
+![](../.gitbook/assets/graphstrategy8.png)
 
 > Mithilfe der Beobachtungsblöcke werden verglichen:
 >
 > 1. Die Rohwerte der Verschiebungsstrecken
 > 2. Die durch die Sinusgleichung geleiteten Werte
 >
-> Informationen zur Verwendung der Beobachtungsfunktion finden Sie unter [Bibliothek](../3\_user\_interface/2-library.md).
+> Informationen zur Verwendung der Beobachtungsfunktion finden Sie unter [Bibliothek](../3_user_interface/2-library.md).
 
 ## Wiederverwendbarkeit sicherstellen
 
@@ -155,14 +155,14 @@ Ihr Programm wird sehr wahrscheinlich irgendwann auch von anderen Benutzern geö
 * Verwenden Sie einen benutzerdefinierten Block, **wenn ein Teil des Diagramms oft in anderen Programmen wiederverwendet werden soll**.
 * Verwenden Sie einen benutzerdefinierten Block, wenn Sie **eine Funktion für die Dynamo-Community bereitstellen** möchten.
 
-![](images/1/graphstrategy9.png)
+![](../.gitbook/assets/graphstrategy9.png)
 
 > Indem Sie das Programm zur Verschiebung von Punkten in einem benutzerdefinierten Block zusammenfassen, wird dieses zuverlässige, spezielle Programm portierbar und wesentlich leichter verständlich. Aussagekräftige Namen für die Eingabeanschlüsse erleichtern es anderen Benutzern, die Verwendungsweise des Blocks zu verstehen. Achten Sie darauf, für jede Eingabe eine Beschreibung und den erforderlichen Datentyp anzugeben.
 >
 > 1. Bestehendes Programm für Attraktor
 > 2. Benutzerdefinierter Block, in dem dieses Programm, PointGrid, enthalten ist
 >
-> Weitere Informationen zur Verwendung benutzerdefinierter Blöcke finden Sie unter [Einführung zu benutzerdefinierten Blöcken](../6\_custom\_nodes\_and\_packages/6-1\_custom-nodes/1-introduction.md).
+> Weitere Informationen zur Verwendung benutzerdefinierter Blöcke finden Sie unter [Einführung zu benutzerdefinierten Blöcken](../6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction.md).
 
 ### **Vorlagen erstellen**
 
@@ -170,7 +170,7 @@ Ihr Programm wird sehr wahrscheinlich irgendwann auch von anderen Benutzern geö
 * Beim Erstellen einer Vorlage können Sie **Gruppenfarben und Schriftgrößen** standardisieren, um Typen von Arbeitsabläufen oder Datenaktionen zu kategorisieren.
 * Sie können beim Erstellen einer Vorlage sogar **Beschriftung, Farbe oder Stil für die Unterscheidung zwischen Frontend- und Backend-Arbeitsabläufen** in Ihrem Diagramm standardisieren.
 
-![](images/1/graphstrategy10\(2\).png)
+![](../.gitbook/assets/graphstrategy10.png)
 
 > 1. Die Benutzeroberfläche (das Frontend) des Programms umfasst den Projektnamen, die Eingabe-Schieberegler und die Importgeometrie.
 > 2. Backend des Programms.
@@ -184,13 +184,13 @@ Ihr Programm wird sehr wahrscheinlich irgendwann auch von anderen Benutzern geö
 
 Sie haben eine Reihe optimaler Verfahren festgelegt und wenden diese jetzt auf ein rasch zusammengestelltes Programm an. Das Programm erstellt zwar wie vorgesehen das Dach, das Diagramm stellt jedoch eher eine „Mind-Map“ des Autors dar. Ihm fehlt die Struktur, und es gibt keine Beschreibung des Verwendungszwecks. Sie ordnen, beschreiben und analysieren das Programm unter Verwendung der optimalen Verfahren so, dass andere Benutzer seine Verwendungsweise verstehen.
 
-![](images/1/graphstrategy11.png)
+![](../.gitbook/assets/graphstrategy11.png)
 
 > Das Programm funktioniert, aber dem Diagramm fehlt Struktur.
 
 Bestimmen Sie als Erstes die Daten und die Geometrie, die das Programm zurückgibt.
 
-![](images/1/graphstrategy12.png)
+![](../.gitbook/assets/graphstrategy12.png)
 
 > Um logische Unterteilungen, d. h. Modularität zu erzielen, müssen Sie die Stellen kennen, an denen wesentliche Änderungen an den Daten erfolgen. Analysieren Sie den Rest des Programms mithilfe von Beobachtungsblöcken, um festzustellen, ob Gruppen erkennbar sind, bevor Sie mit dem nächsten Schritt fortfahren.
 >
@@ -199,7 +199,7 @@ Bestimmen Sie als Erstes die Daten und die Geometrie, die das Programm zurückgi
 
 Nachdem Sie die zugrunde liegenden Bestandteile des Programms verstanden haben, fassen Sie sie in Gruppen zusammen.
 
-![](images/1/graphstrategy13.png)
+![](../.gitbook/assets/graphstrategy13.png)
 
 > Gruppen ermöglichen dem Benutzer die visuelle Unterscheidung der Programmbestandteile.
 >
@@ -211,13 +211,13 @@ Nachdem Sie die zugrunde liegenden Bestandteile des Programms verstanden haben, 
 
 Nachdem Sie die Gruppen eingerichtet haben, richten Sie die Blöcke innerhalb des Diagramms auf einheitliche Weise aus.
 
-![](images/1/graphstrategy14.png)
+![](../.gitbook/assets/graphstrategy14.png)
 
 > Eine einheitliche Darstellung macht den Programmablauf und die impliziten Beziehungen zwischen den Blöcken für den Benutzer leichter erkennbar.
 
 Machen Sie das Programm noch leichter verständlich, indem Sie eine weitere Ebene grafischer Verbesserungen hinzufügen. Fügen Sie Anmerkungen hinzu, mit denen Sie die Funktionsweise eines bestimmten Programmteils beschreiben, geben Sie den Eingaben benutzerdefinierte Namen, und weisen Sie verschiedenen Typen von Gruppen Farben zu.
 
-![](images/1/graphstrategy15\(1\).png)
+![](../.gitbook/assets/graphstrategy15.png)
 
 > Diese grafischen Verbesserungen geben dem Benutzer genaueren Aufschluss über den Verwendungszweck des Programms. Die unterschiedlichen Farben der Gruppen helfen bei der Unterscheidung von Eingaben und Funktionen.
 >
@@ -226,7 +226,7 @@ Machen Sie das Programm noch leichter verständlich, indem Sie eine weitere Eben
 
 Bevor Sie damit beginnen, das Programm zusammenzufassen, suchen Sie nach einem geeigneten Platz für den Python-Skript-Entwässerungssimulator. Verbinden Sie die Ausgabe der ersten skalierten Dachoberfläche mit der dazugehörigen Skripteingabe.
 
-![](images/1/graphstrategy16.png)
+![](../.gitbook/assets/graphstrategy16.png)
 
 > Durch die Entscheidung, das Skript an dieser Stelle des Programms zu integrieren, wird erreicht, dass die Entwässerungssimulation für die einfache Originaloberfläche des Dachs durchgeführt wird. Diese spezielle Oberfläche wird nicht in der Vorschau angezeigt, aber durch diesen Schritt entfällt die separate Auswahl der oberen Fläche in der gefasten PolySurface.
 >
@@ -237,7 +237,7 @@ Bevor Sie damit beginnen, das Programm zusammenzufassen, suchen Sie nach einem g
 
 Damit befinden sich alle Elemente an ihrem Platz, und als Nächstes vereinfachen Sie das Diagramm.
 
-![](images/1/graphstrategy17.png)
+![](../.gitbook/assets/graphstrategy17.png)
 
 > Durch Zusammenfassen des Programms mit Block zu Code und benutzerdefinierten Blöcken haben Sie das Diagramm erheblich verkleinert. Die Gruppen für die Erstellung der Dachoberfläche und der Wände wurden in Code konvertiert, da sie für dieses Programm hochspezifisch sind. Die Gruppe zur Verschiebung von Punkten ist in einem benutzerdefinierten Block eingeschlossen, da sie auch in anderen Programmen verwendet werden könnte. Erstellen Sie in der Beispieldatei Ihren eigenen benutzerdefinierten Block aus der Gruppe zur Verschiebung von Punkten.
 >
@@ -246,14 +246,14 @@ Damit befinden sich alle Elemente an ihrem Platz, und als Nächstes vereinfachen
 
 Im letzten Schritt erstellen Sie Voreinstellungen für als Beispiele zu verwendende Dachformen.
 
-![](images/1/graphstrategy18.png)
+![](../.gitbook/assets/graphstrategy18.png)
 
 > Diese Eingaben sind die wesentlichen Angaben zum Steuern der Dachform und geben den Benutzern Hinweise auf die Möglichkeiten des Programms.
 
 Das Programm mit Ansichten zweier Voreinstellungen.
 
-![](images/1/graphstrategy19.png)
+![](../.gitbook/assets/graphstrategy19.png)
 
-![](images/1/graphstrategy20.png)
+![](../.gitbook/assets/graphstrategy20.png)
 
 > Die Muster der Dachentwässerung bieten dem Benutzer eine analytische Ansicht der jeweiligen Voreinstellungen.

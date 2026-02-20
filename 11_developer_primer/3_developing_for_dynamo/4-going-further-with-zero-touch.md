@@ -2,7 +2,7 @@
 
 Wenn wir wissen, wie wir ein Zero-Touch-Projekt erstellen, können wir uns die Details zum Erstellen eines Blocks anhand des Beispiels ZeroTouchEssentials im Dynamo-GitHub genauer ansehen.
 
-![Zero-Touch-Blöcke](images/ootbzerotouch.png)
+![Zero-Touch-Blöcke](../../.gitbook/assets/ootbzerotouch.png)
 
 > Viele der Standardblöcke von Dynamo sind im Wesentlichen Zero-Touch-Blöcke, wie die meisten der oben genannten Mathematik-, Farb- und DateTime-Blöcke.
 
@@ -10,7 +10,7 @@ Laden Sie zunächst hier das Projekt ZeroTouchEssentials herunter: [https://gith
 
 Öffnen Sie in Visual Studio die Projektmappendatei `ZeroTouchEssentials.sln`, und erstellen Sie die Projektmappe.
 
-![ZeroTouchEssentials in Visual Studio](images/vs-build-zte.jpg)
+![ZeroTouchEssentials in Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
 
 > Die Datei `ZeroTouchEssentials.cs` enthält alle Methoden, die wir in Dynamo importieren.
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Vorgabewert](images/defaultval.jpg)
+![Vorgabewert](../../.gitbook/assets/defaultval.jpg)
 
 > 1. Der Vorgabewert wird angezeigt, wenn Sie den Mauszeiger über den Eingabeanschluss des Blocks bewegen.
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Ein Block, der mehrere Ausgaben zurückgibt.
 
-![Mehrere Ausgaben](images/multipleoutputs.png)
+![Mehrere Ausgaben](../../.gitbook/assets/multipleoutputs.png)
 
 > 1. Beachten Sie, dass nun zwei Ausgabeanschlüsse vorhanden sind, die entsprechend den Zeichenfolgen benannt sind, die wir für die Wörterbuchschlüssel eingegeben haben.
 
@@ -90,7 +90,7 @@ Es wird empfohlen, Dynamo-Blöcken Dokumentation hinzuzufügen, die die Funktion
   * Beispiel: `/// <summary>...</summary>`
 * Aktivieren Sie die XML-Dokumentation in Visual Studio, indem Sie `Project > [Project] Properties > Build > Output` auswählen und `Documentation file` aktivieren.
 
-![Erstellen einer XML-Datei](images/vs-xml.jpg)
+![Erstellen einer XML-Datei](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Visual Studio generiert eine XML-Datei am angegebenen Speicherort.
 
@@ -134,18 +134,18 @@ Beachten Sie, dass der Code für diesen Beispielblock Folgendes enthält:
 > 2. Eine Eingabebeschreibung
 > 3. Eine Ausgabebeschreibung
 
-#### Optimale Verfahren für Dynamo-Blockbeschreibungen 
+#### Optimale Verfahren für Dynamo-Blockbeschreibungen
 
 Blockbeschreibungen erläutern kurz die Funktion und die Ausgabe eines Blocks. In Dynamo werden sie an zwei Stellen angezeigt:
 
-- In der QuickInfo des Blocks
-- Im Dokumentationsbrowser
+* In der QuickInfo des Blocks
+* Im Dokumentationsbrowser
 
-![Blockbeschreibung](images/node-description.png)
+![Blockbeschreibung](../../.gitbook/assets/node-description.png)
 
 Befolgen Sie diese Richtlinien, um beim Schreiben oder Aktualisieren von Blockbeschreibungen Konsistenz zu gewährleisten und Zeit zu sparen.
 
-##### Überblick
+**Überblick**
 
 Beschreibungen sollten aus ein bis zwei Sätzen bestehen. Wenn Sie weitere Informationen benötigen, fügen Sie diese im Dokumentationsbrowser unter Im Detail ein.
 
@@ -155,17 +155,17 @@ Die Sprache sollte so klar und einfach wie möglich sein. Definieren Sie Akronym
 
 Legen Sie immer Wert auf Klarheit, auch wenn das bedeutet, von diesen Richtlinien abzuweichen.
 
-##### Richtlinien
+**Richtlinien**
 
-| So sollten Sie vorgehen      | So sollten Sie nicht vorgehen |
-| ----------- | ----------- |
-| Beginnen Sie die Beschreibung mit einem Verb in der dritten Person. <ul><li>Beispiel: *Ermittelt*, ob sich ein Geometrieobjekt mit einem anderen schneidet.</li></ul>      | Beginnen Sie nicht mit einem Verb in der zweiten Person oder mit einem Substantiv. <ul><li>Beispiel: *Ermitteln*, ob sich ein Geometrieobjekt mit einem anderen schneidet</li></ul>       |
-| Verwenden Sie "Gibt zurück" oder "Erstellt" bzw. ein anderes beschreibendes Verb anstelle von "Holt". <ul><li>Beispiel: *Gibt eine NURBS-Darstellung einer Fläche zurück.*</li></ul>   | Verwenden Sie nicht "Holen" oder "Holt". Dieses Verb ist wenig spezifisch und kann sehr unterschiedlich übersetzt werden. <ul><li>Beispiel: *Holt* eine NURBS-Darstellung der Fläche.</li></ul>        |
-| Wenn Sie sich auf Eingaben beziehen, verwenden Sie "angegeben" oder "eingegeben" anstelle von "festgelegt" oder anderen Begriffen. Lassen Sie "angegeben" oder "eingegeben" nach Möglichkeit weg, um die Beschreibung zu vereinfachen und die Wortzahl zu reduzieren. <ul><li>Beispiel: Löscht die *angegebene* Datei.</li><li>Beispiel: Projiziert eine Kurve entlang der *angegebenen* Projektionsrichtung auf die *angegebene* Basisgeometrie.</li></ul>Sie können "festgelegt" verwenden, wenn Sie sich nicht direkt auf eine Eingabe beziehen. <ul><li>Beispiel: Schreibt Textinhalte in eine Datei, die durch den angegebenen Pfad *festgelegt* wird.</li></ul>       | Um die Konsistenz zu gewährleisten, sollten Sie bei Eingaben weder "festgelegt" noch einen anderen Begriff außer "angegeben" oder "eingegeben" verwenden. Mischen Sie "angegeben" und "eingegeben" nicht in derselben Beschreibung, es sei denn, dies ist aus Gründen der Übersichtlichkeit erforderlich. <ul><li>Beispiel: Löscht die *festgelegte* Datei.</li><li>Beispiel: Projiziert eine *eingegebene* Kurve entlang einer *angegebenen* Projektionsrichtung auf eine *festgelegte* Basisgeometrie.</li></ul>      |
-| Verwenden Sie "ein" oder "eine", wenn Sie sich zum ersten Mal auf eine Eingabe beziehen. Verwenden Sie aus Gründen der Übersichtlichkeit ggf. "der/die/das ein-/angegebene" anstelle von "ein" oder "eine".<ul><li>Beispiel: Sweept *eine* Kurve entlang der Pfadkurve.</li></ul>      | Verwenden Sie nicht "dies(e/r)", wenn Sie sich zum ersten Mal auf eine Eingabe beziehen. <ul><li>Beispiel: Sweept *diese* Kurve entlang der Pfadkurve.      |
-| Wenn Sie sich zum ersten Mal auf eine Ausgabe oder ein anderes Substantiv beziehen, das das Ziel der Blockoperation ist, verwenden Sie "ein" oder "eine". Verwenden Sie "der/die/das" nur, wenn Sie den Artikel zusammen mit "eingegeben" oder "angegeben" verwenden. <ul><li>Beispiel: Kopiert *eine* Datei.</li><li>Beispiel: Kopiert *die angegebene* Datei.</li></ul>      | Wenn Sie sich zum ersten Mal auf eine Ausgabe oder ein anderes Substantiv beziehen, das das Ziel der Blockoperation ist, verwenden Sie nicht "der/die/das" allein. <ul><li>Beispiel: Kopiert *die* Datei.</li></ul>      |
-| Schreiben Sie das erste Wort eines Satzes und alle Eigennamen, Substantive und Wörter, die im Allgemeinen groß geschrieben werden, groß. <ul><li>Beispiel: Gibt den Schnittpunkt zweier *Begrenzungsrahmen* zurück.</li></ul>      | Schreiben Sie gängige Geometrieobjekte und Konzepte nur groß, wenn dies aus Gründen der Übersichtlichkeit erforderlich ist. <ul><li>Beispiel: Skaliert ungleichmäßig um die angegebene *Ebene*.      |
-| Schreiben Sie Boolesch groß. Schreiben Sie True und False groß, wenn Sie sich auf die Ausgabe von Booleschen Werten beziehen. <ul><li>Beispiel: Gibt *True* zurück, wenn die beiden Werte unterschiedlich sind.</li><li>Beispiel: Wandelt eine Zeichenfolge basierend auf einem *Booleschen* Parameter in Groß- oder Kleinbuchstaben um.      | Boolesche Werte dürfen nicht klein geschrieben werden. Schreiben Sie True und False nicht klein, wenn Sie sich auf die Ausgabe von Booleschen Werten beziehen. <ul><li>Beispiel: Gibt *true* zurück, wenn die beiden Werte unterschiedlich sind.</li><li>Beispiel: Wandelt eine Zeichenfolge basierend auf einem *booleschen* Parameter in Groß- oder Kleinbuchstaben um.</li></ul>
+| So sollten Sie vorgehen                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | So sollten Sie nicht vorgehen                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>Beginnen Sie die Beschreibung mit einem Verb in der dritten Person.</p><ul><li>Beispiel: <em>Ermittelt</em>, ob sich ein Geometrieobjekt mit einem anderen schneidet.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                         | <p>Beginnen Sie nicht mit einem Verb in der zweiten Person oder mit einem Substantiv.</p><ul><li>Beispiel: <em>Ermittelt</em>, ob sich ein Geometrieobjekt mit einem anderen schneidet.</li></ul>                                                                                                                                                                                                                                                      |
+| <p>Verwenden Sie "Gibt zurück" oder "Erstellt" bzw. ein anderes beschreibendes Verb anstelle von "Holt".</p><ul><li>Beispiel: <em>Gibt eine NURBS-Darstellung einer Fläche zurück.</em></li></ul>                                                                                                                                                                                                                                                                                                                                                                              | <p>Verwenden Sie nicht "Holen" oder "Holt". Dieses Verb ist wenig spezifisch und kann sehr unterschiedlich übersetzt werden.</p><ul><li>Beispiel: <em>Holt</em> eine NURBS-Darstellung der Fläche.</li></ul>                                                                                                                                                                                                                                       |
+| <p>Wenn Sie sich auf Eingaben beziehen, verwenden Sie "angegeben" oder "eingegeben" anstelle von "festgelegt" oder anderen Begriffen. Lassen Sie "angegeben" oder "eingegeben" nach Möglichkeit weg, um die Beschreibung zu vereinfachen und die Wortzahl zu reduzieren.</p><ul><li>Beispiel: Löscht die <em>angegebene</em> Datei.</li><li>Beispiel: Projiziert eine Kurve entlang der <em>angegebenen</em> Projektionsrichtung auf die <em>angegebene</em> Basisgeometrie.</li></ul><p>Sie können "festgelegt" verwenden, wenn Sie sich nicht direkt auf eine Eingabe beziehen.</p><ul><li>Beispiel: Schreibt Textinhalte in eine Datei, die durch den angegebenen Pfad <em>festgelegt</em> wird.</li></ul> | <p>Um die Konsistenz zu gewährleisten, sollten Sie bei Eingaben weder "festgelegt" noch einen anderen Begriff außer "angegeben" oder "eingegeben" verwenden. Mischen Sie "angegeben" und "eingegeben" nicht in derselben Beschreibung, es sei denn, dies ist aus Gründen der Übersichtlichkeit erforderlich.</p><ul><li>Beispiel: Löscht die <em>festgelegte</em> Datei.</li><li>Beispiel: Projiziert eine <em>eingegebene</em> Kurve entlang einer <em>angegebenen</em> Projektionsrichtung auf eine <em>festgelegte</em> Basisgeometrie.</li></ul> |
+| <p>Verwenden Sie "ein" oder "eine", wenn Sie sich zum ersten Mal auf eine Eingabe beziehen. Verwenden Sie aus Gründen der Übersichtlichkeit ggf. "der/die/das ein-/angegebene" anstelle von "ein" oder "eine".</p><ul><li>Beispiel: Sweept <em>eine</em> Kurve entlang der Pfadkurve.</li></ul>                                                                                                                                                                                                                                                                                                                                | <p>Verwenden Sie nicht "dies(e/r)", wenn Sie sich zum ersten Mal auf eine Eingabe beziehen.</p><ul><li>Beispiel: Sweept <em>diese</em> Kurve entlang der Pfadkurve.</li></ul>                                                                                                                                                                                                                                                                             |
+| <p>Wenn Sie sich zum ersten Mal auf eine Ausgabe oder ein anderes Substantiv beziehen, das das Ziel der Blockoperation ist, verwenden Sie "ein" oder "eine". Verwenden Sie "der/die/das" nur, wenn Sie den Artikel zusammen mit "eingegeben" oder "angegeben" verwenden.</p><ul><li>Beispiel: Kopiert <em>eine</em> Datei.</li><li>Beispiel: Kopiert <em>die angegebene</em> Datei.</li></ul>                                                                                                                                                                                                                                                                   | <p>Wenn Sie sich zum ersten Mal auf eine Ausgabe oder ein anderes Substantiv beziehen, das das Ziel der Blockoperation ist, verwenden Sie nicht "der/die/das" allein.</p><ul><li>Beispiel: Kopiert <em>die</em> Datei.</li></ul>                                                                                                                                                                                                                                  |
+| <p>Schreiben Sie das erste Wort eines Satzes und alle Eigennamen, Substantive und Wörter, die im Allgemeinen groß geschrieben werden, groß.</p><ul><li>Beispiel: Gibt den Schnittpunkt zweier <em>Begrenzungsrahmen</em> zurück.</li></ul>                                                                                                                                                                                                                                                                                                                                     | <p>Schreiben Sie gängige Geometrieobjekte und Konzepte nur groß, wenn dies aus Gründen der Übersichtlichkeit erforderlich ist.</p><ul><li>Beispiel: Skaliert ungleichmäßig um die angegebene <em>Ebene</em>.</li></ul>                                                                                                                                                                                                                                          |
+| <p>Schreiben Sie Boolesch groß. Schreiben Sie True und False groß, wenn Sie sich auf die Ausgabe von Booleschen Werten beziehen.</p><ul><li>Beispiel: Gibt <em>True</em> zurück, wenn die beiden Werte unterschiedlich sind.</li><li>Beispiel: Wandelt eine Zeichenfolge basierend auf einem <em>Booleschen</em> Parameter in Groß- oder Kleinbuchstaben um.</li></ul>                                                                                                                                                                                                                                        | <p>Boolesche Werte dürfen nicht klein geschrieben werden. Schreiben Sie True und False nicht klein, wenn Sie sich auf die Ausgabe von Booleschen Werten beziehen.</p><ul><li>Beispiel: Gibt <em>True</em> zurück, wenn die beiden Werte unterschiedlich sind.</li><li>Beispiel: Wandelt eine Zeichenfolge basierend auf einem <em>Booleschen</em> Parameter in Groß- oder Kleinbuchstaben um.</li></ul>                                                                                       |
 
 #### Warnungen und Fehler in Dynamo-Blöcken
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 Nachdem die DLL-Datei ZeroTouchEssentials importiert wurde, befindet sich ein ZeroTouchEssentials-Block in der Bibliothek. Dieses Objekt kann mithilfe des Blocks `ByTwoDoubles` erstellt werden.
 
-![Block ByTwoDoubles](images/dyn-constructor.jpg)
+![Block ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
 
 ### Verwenden von Dynamo-Geometrietypen <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Ein Block, der die Länge einer Kurve abruft und diese verdoppelt.
 
-![Kurveneingabe](images/doublelength.png)
+![Kurveneingabe](../../.gitbook/assets/doublelength.png)
 
 > 1. Dieser Block akzeptiert einen Kurvengeometrietyp als Eingabe.
 
@@ -285,7 +285,7 @@ Beim Publizieren einer neueren Version einer Bibliothek können sich Blocknamen 
 * Erstellen Sie im migrations-Element für jede Namensänderung `<priorNameHint>...</priorNameHint>`-Elemente.
 * Geben Sie für jede Namensänderung ein `<oldName>...</oldName>`- und ein `<newName>...</newName>`-Element an.
 
-![Migrationsdatei](images/vs-migrations-file.jpg)
+![Migrationsdatei](../../.gitbook/assets/vs-migrations-file.jpg)
 
 > 1. Klicken Sie mit der rechten Maustaste, und wählen Sie `Add > New Item` aus.
 > 2. Wählen Sie `XML File`.

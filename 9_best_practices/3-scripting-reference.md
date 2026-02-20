@@ -6,7 +6,7 @@ Diese Referenzseite bietet ausführlichere Informationen zu Codebibliotheken, Be
 
 Standardbibliotheken sind außerhalb von Dynamo verfügbar und liegen in den Programmiersprachen Python und C# (Zerotouch) vor. Dynamo verfügt darüber hinaus über eigene Bibliotheken, die direkt seiner Blockhierarchie entsprechen und es dem Benutzer ermöglichen, alle Abläufe, die aus Blöcken und Drähten konstruiert werden können, auch in Form von Code zu erstellen. Der folgende Leitfaden zeigt, worauf Sie in den einzelnen Dynamo-Bibliotheken Zugriff erhalten und wann Sie eine Standardbibliothek verwenden sollten.
 
-![](images/3/textual-programming.jpg)
+![](../.gitbook/assets/textual-programming.jpg)
 
 **Standardbibliotheken und Dynamo-Bibliotheken**
 
@@ -28,9 +28,7 @@ Standardbibliotheken sind außerhalb von Dynamo verfügbar und liegen in den Pro
    * Funktion: Excel.
    * Importverfahren: `import DSOffice`
 
-{% hint style="warning" %}
-\*Anmerkung: Beachten Sie bei der Verwendung von **ProtoGeometry** in Python oder C#, dass Sie hierbei nicht verwaltete Objekte erstellen, deren Speicher manuell verwaltet werden muss, wie weiter unten im Abschnitt **Nicht verwaltete Objekte** genauer beschrieben.
-{% endhint %}
+{% hint style="warning" %} *Anmerkung: Beachten Sie bei der Verwendung von **ProtoGeometry** in Python oder C#, dass Sie hierbei nicht verwaltete Objekte erstellen, deren Speicher manuell verwaltet werden muss, wie weiter unten im Abschnitt **Nicht verwaltete Objekte** genauer beschrieben. {% endhint %}
 
 ## Sorgfältige Kennzeichnung
 
@@ -310,4 +308,3 @@ Der feste Code sieht ungefähr so aus:
 ```
 
 Im Allgemeinen müssen Sie nur Geometrie wie `Surfaces`, `Curves` und `Solids` entfernen. Um jedoch sicher zu sein, können Sie alle Geometrietypen (`Vectors`, `Points`, `CoordinateSystems`) entfernen.
-

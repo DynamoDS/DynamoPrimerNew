@@ -2,7 +2,7 @@
 
 Auf NodeModel basierende Blöcke bieten erheblich mehr Flexibilität und Leistung als Zero-Touch-Blöcke. In diesem Beispiel wird der Zero-Touch-Rasterblock weiter optimiert. Dazu wird ein integrierter Schieberegler hinzugefügt, mit dem die Größe des Rechtecks zufällig festgelegt wird.
 
-![Rechteckiges Rasterdiagramm](images/cover-image-2.jpg)
+![Rechteckiges Rasterdiagramm](../../.gitbook/assets/cover-image-2.jpg)
 
 > Der Schieberegler skaliert die Zellen relativ zu ihrer Größe, sodass der Benutzer keinen Schieberegler mit dem richtigen Bereich zur Verfügung stellen muss.
 
@@ -33,7 +33,7 @@ Ein NodeModel-Block kann nur Funktionen aufrufen. Daher müssen wir den Block No
 
 Erstellen Sie in der Projektmappe zwei C#-Klassenbibliotheksprojekte: eines für Funktionen und eines zur Implementierung der NodeModel-Schnittstelle.
 
-![Hinzufügen einer neuen Klassenbibliothek](images/vs-new-class-projects.jpg)
+![Hinzufügen einer neuen Klassenbibliothek](../../.gitbook/assets/vs-new-class-projects.jpg)
 
 > 1. Klicken Sie mit der rechten Maustaste auf die Projektmappe, und wählen Sie `Add > New Project`.
 > 2. Wählen Sie die Klassenbibliothek.
@@ -43,7 +43,7 @@ Erstellen Sie in der Projektmappe zwei C#-Klassenbibliotheksprojekte: eines für
 
 Als Nächstes müssen wir die automatisch erstellten Klassenbibliotheken umbenennen und dem Projekt `CustomNodeModel` eine der Bibliotheken hinzufügen. Die `GridNodeModel`-Klasse implementiert die abstrakte NodeModel-Klasse, `GridNodeView` wird zum Anpassen der Ansicht verwendet, und `GridFunction` enthält alle Funktionen, die aufgerufen werden müssen.
 
-![Projektmappen-Explorer](images/vs-new-class.jpg)
+![Projektmappen-Explorer](../../.gitbook/assets/vs-new-class.jpg)
 
 > 1. Fügen Sie eine weitere Klasse hinzu, indem Sie mit der rechten Maustaste auf das Projekt `CustomNodeModel` klicken, `Add > New Item...` auswählen und `Class` wählen.
 > 2. Im Projekt `CustomNodeModel` benötigen wir die Klassen `GridNodeModel.cs` und `GridNodeView.cs`.
@@ -51,14 +51,14 @@ Als Nächstes müssen wir die automatisch erstellten Klassenbibliotheken umbenen
 
 Bevor wir den Klassen Code hinzufügen, fügen wir die erforderlichen Pakete für dieses Projekt hinzu. `CustomNodeModel` benötigt ZeroTouchLibrary und WpfUILibrary, `CustomNodeModelFunction` benötigt nur ZeroTouchLibrary. WpfUILibrary wird später bei der Anpassung der Benutzeroberfläche verwendet, und ZeroTouchLibrary wird zum Erstellen von Geometrie verwendet. Pakete können einzeln für Projekte hinzugefügt werden. Da diese Pakete Abhängigkeiten aufweisen, werden Core und DynamoServices automatisch installiert.
 
-![Installation von Paketen](images/vs-add-packages.jpg)
+![Installation von Paketen](../../.gitbook/assets/vs-add-packages.jpg)
 
 > 1. Klicken Sie mit der rechten Maustaste auf ein Projekt, und wählen Sie `Manage NuGet Packages`.
 > 2. Installieren Sie nur die für dieses Projekt erforderlichen Pakete.
 
 Visual Studio kopiert die NuGet-Pakete, die im Build-Verzeichnis referenziert werden. Dies kann auf False gesetzt werden, damit keine unnötigen Dateien im Paket vorhanden sind.
 
-![Deaktivieren der lokalen Paketkopie](images/vs-disable-package-copying.jpg)
+![Deaktivieren der lokalen Paketkopie](../../.gitbook/assets/vs-disable-package-copying.jpg)
 
 > 1. Wählen Sie Dynamo-NuGet-Pakete aus.
 > 2. Legen Sie `Copy Local` auf False fest.
@@ -199,7 +199,7 @@ Diese Funktionsklasse ist der Zero-Touch-Rasterfallstudie sehr ähnlich, mit ein
 
 Genauso wie wir Referenzen für NuGet-Pakete hinzugefügt haben, muss `CustomNodeModel` auf `CustomNodeModelFunction` verweisen, um die Funktion aufzurufen.
 
-![Hinzufügen einer Referenz](images/vs-add-project-reference.jpg)
+![Hinzufügen einer Referenz](../../.gitbook/assets/vs-add-project-reference.jpg)
 
 > Die using-Anweisung für CustomNodeModel ist inaktiv, bis wir die Funktion referenzieren.
 >
@@ -240,7 +240,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 Nachdem die Struktur des Projekts eingerichtet wurde, verwenden Sie die Entwurfsumgebung von Visual Studio, um ein Benutzersteuerelement zu erstellen und dessen Parameter in einer `.xaml`-Datei zu definieren. Fügen Sie im Werkzeugkasten einen Schieberegler zu `<Grid>...</Grid>` hinzu.
 
-![Hinzufügen eines neuen Schiebereglers](images/vs-usercontrol.jpg)
+![Hinzufügen eines neuen Schiebereglers](../../.gitbook/assets/vs-usercontrol.jpg)
 
 > 1. Klicken Sie mit der rechten Maustaste auf `CustomNodeModel`, und wählen Sie `Add > New Item` aus.
 > 2. Wählen Sie `WPF` aus.
@@ -295,7 +295,7 @@ In `GridNodeModel.cs` wird die Berechnungslogik des Schiebereglers definiert.
 
 Bevor wir das Projekt erstellen, fügen wir im letzten Schritt eine `pkg.json`-Datei hinzu, damit Dynamo das Paket lesen kann.
 
-![Hinzufügen einer JSON-Datei](images/vs-pkg-json.jpg)
+![Hinzufügen einer JSON-Datei](../../.gitbook/assets/vs-pkg-json.jpg)
 
 > 1. Klicken Sie mit der rechten Maustaste auf `CustomNodeModel`, und wählen Sie `Add > New Item` aus.
 > 2. Wählen Sie `Web` aus.
@@ -334,3 +334,21 @@ Bevor wir das Projekt erstellen, fügen wir im letzten Schritt eine `pkg.json`-D
 *   `"node_libraries": []` Die mit dem Paket verknüpften Bibliotheken.
 
     Der letzte Schritt besteht darin, die Projektmappe zu erstellen und als Dynamo-Paket zu publizieren. Im Kapitel Paketbereitstellung finden Sie Informationen zum Erstellen eines lokalen Pakets vor der Online-Publizierung und zum Erstellen eines Pakets direkt in Visual Studio.
+
+#### Häufige Probleme: <a href="#common-issues" id="common-issues"></a>
+
+1) Beim Öffnen eines Diagramms haben einige Blöcke mehrere Anschlüsse mit demselben Namen, das Diagramm sah beim Speichern jedoch einwandfrei aus. Dieses Problem kann mehrere Ursachen haben.
+
+Die häufigste Fehlerursache ist, dass der Block mit einem Konstruktor erstellt wurde, der die Anschlüsse neu erstellt hat. Stattdessen hätte ein Konstruktor verwendet werden müssen, der die Anschlüsse geladen hat. Diese Konstruktoren sind gewöhnlich mit `[JsonConstructor]` gekennzeichnet. _Beispiele finden Sie unten_.
+
+\![Broken JSON](<../../.gitbook/assets/broken-json (1).jpg>)
+
+Dies kann folgende Ursachen haben:
+
+* Es gab einfach keinen passenden `[JsonConstructor]`, oder der Datei wurden `Inports` und `Outports` aus der JSON-DYN-Datei nicht übergeben.
+* Es wurden zwei Versionen von JSON.net gleichzeitig in denselben Prozess geladen, was einen .NET-Laufzeitfehler verursachte, sodass das Attribut `[JsonConstructor]` nicht ordnungsgemäß verwendet werden konnte, um den Konstruktor zu markieren.
+* Die Datei DynamoServices.dll mit einer anderen Version als die aktuelle Dynamo-Version wurde mit dem Paket gebündelt. Dadurch kann ein .NET-Laufzeitfehler beim Ermitteln des Attributs `[MultiReturn]` auftreten, sodass die mit verschiedenen Attributen markierten Zero-Touch-Blöcke diese nicht anwenden können. Sie werden möglicherweise feststellen, dass ein Block eine einzelne Wörterbuchausgabe anstelle mehrerer Anschlüsse zurückgibt.
+
+2) Beim Laden des Diagramms fehlen Blöcke vollständig, und es treten Fehler in der Konsole auf.
+
+* Dies kann auftreten, wenn die Deserialisierung aus irgendeinem Grund fehlgeschlagen ist. Es empfiehlt sich, nur die benötigten Eigenschaften zu serialisieren. Wir können `[JsonIgnore]` für komplexe Eigenschaften verwenden, die Sie nicht laden oder speichern müssen, um sie zu ignorieren. Eigenschaften wie `function pointer, delegate, action,` oder `event` usw. Diese sollten nicht serialisiert werden, da sie in der Regel nicht deserialisiert werden können und einen Laufzeitfehler verursachen.

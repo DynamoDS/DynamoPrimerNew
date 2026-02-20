@@ -4,11 +4,13 @@
 
 Wenn wir mit dem Schreiben von Skripts in Python vertraut sind und mehr Funktionen aus den Dynamo-Python-Standardblöcken herausholen möchten, können wir mit Zero-Touch eigene Blöcke erstellen. Beginnen wir mit einem einfachen Beispiel, in dem ein Python-Skript als Zeichenfolge an einen Zero-Touch-Block übergeben werden kann, in dem das Skript ausgeführt und ein Ergebnis zurückgegeben wird. Diese Fallstudie baut auf den exemplarischen Vorgehensweisen und Beispielen im Abschnitt Erste Schritte auf. Wenn Sie mit der Erstellung von Zero-Touch-Blöcken noch nicht vertraut sind, finden Sie dort weitere Informationen.
 
-![Ein Zero-Touch-Block, der eine Python-Skriptzeichenfolge ausführt](images/python-case-study.png)
+![Ein Zero-Touch-Block, der eine Python-Skriptzeichenfolge ausführt](../../.gitbook/assets/python-case-study.png)
 
 > Ein Zero-Touch-Block, der eine Python-Skriptzeichenfolge ausführt
 
 #### Python-Modul <a href="#python-engine" id="python-engine"></a>
+
+PythonNet3 ist jetzt die Vorgabe-Engine mit einer reibungsloseren Benutzererfahrung, wenn Sie von CPython migrieren. Alle neuen Python-Blöcke, die ab Dynamo 4.0 erstellt werden, beginnen mit PythonNet3.
 
 Dieser Block ist von einer Instanz des IronPython-Skriptmoduls abhängig. Dazu müssen wir einige zusätzliche Assemblys referenzieren. Führen Sie die folgenden Schritte aus, um eine grundlegende Vorlage in Visual Studio einzurichten:
 
@@ -50,7 +52,7 @@ namespace PythonLibrary
 }
 ```
 
-Das Python-Skript gibt die Variable `output` zurück, d. h., wir benötigen eine `output`-Variable im Python-Skript. Verwenden Sie dieses Beispielskript, um den Block in Dynamo zu testen. Wenn Sie den Python-Block schon einmal in Dynamo verwendet haben, sollte Ihnen die folgende Darstellung bekannt sein. Weitere Informationen finden Sie im [Primer-Abschnitt zu Python](https://primer2.dynamobim.org/v/de/8_coding_in_dynamo/8-3_python).
+Das Python-Skript gibt die Variable `output` zurück, d. h., wir benötigen eine `output`-Variable im Python-Skript. Verwenden Sie dieses Beispielskript, um den Block in Dynamo zu testen. Wenn Sie den Python-Block schon einmal in Dynamo verwendet haben, sollte Ihnen die folgende Darstellung bekannt sein. Weitere Informationen finden Sie im [Primer-Abschnitt zu Python](https://primer2.dynamobim.org/8_coding_in_dynamo/8-3_python/1-python).
 
 ```
 import clr
@@ -66,7 +68,7 @@ output = str(volume)
 
 Eine Einschränkung der Python-Standardblöcke besteht darin, dass sie nur einen einzigen Ausgabeanschluss haben. Wenn wir also mehrere Objekte zurückgeben möchten, müssen wir eine Liste erstellen und jedes Objekt abrufen. Wenn wir das obige Beispiel ändern, um ein Wörterbuch zurückzugeben, können wir beliebig viele Ausgabeanschlüsse hinzufügen. Weitere Informationen zu Wörterbüchern finden Sie im Abschnitt Zurückgeben mehrerer Werte unter Weitere Schritte mit Zero-Touch.
 
-![Mit diesem Block können wir sowohl das Volumen des Quaders als auch seinen Schwerpunkt zurückgeben.](images/python-multi-case-study.png)
+![Mit diesem Block können wir sowohl das Volumen des Quaders als auch seinen Schwerpunkt zurückgeben.](../../.gitbook/assets/python-multi-case-study.png)
 
 > Mit diesem Block können wir sowohl das Volumen des Quaders als auch seinen Schwerpunkt zurückgeben.
 
@@ -122,3 +124,48 @@ volume = cube.Volume
 output1 = str(volume)
 output2 = str(centroid)
 ```
+
+#### Bekannte Einschränkungen und Umgehungslösungen in PythonNet3<a href="#pythonnet3-known-Issues-Workarounds" id="pythonnet3-known-Issues-Workarounds"></a>
+
+Im Folgenden sind einige bekannte Einschränkungen und Umgehungslösungen bei der Verwendung von PythonNet3 aufgeführt.
+
+* .NET-Sammlungen werden nicht automatisch in Python-Listen konvertiert.
+    * Sie müssen ```.NET```-Arrays oder -Sammlungen explizit mit ```list(...)``` konvertieren, bevor Sie ```len()```, Indizierung oder Iteration verwenden können.
+* Allgemeine .NET-Methoden erfordern möglicherweise explizite Typparameter.
+    * Einige Methoden (z. B. ```GroupBy```) schlagen fehl, wenn Sie die allgemeinen Typen nicht manuell angeben und sich auf die automatische Ableitung verlassen.
+* Erweiterungsmethoden können nicht über ```dir()``` oder die automatische Vervollständigung gefunden werden.
+    * Erweiterungsmethoden funktionieren möglicherweise weiterhin, wenn sie explizit aufgerufen werden, sie werden jedoch nicht in der Introspektion oder Codevervollständigung angezeigt.
+* DataTable-Erweiterungsmethoden werden nicht unterstützt.
+    * Das Importieren von ```System.Data.DataTableExtensions``` schlägt fehl. Diese Hilfsmethoden können nicht direkt verwendet werden.
+* Einige Dynamo Core-Methoden verhalten sich in PythonNet3 anders.
+    * Bestimmte Funktionen (z. B. Listenvereinfachung) funktionieren aufgrund der strengeren Sammlungsverarbeitung möglicherweise nicht wie erwartet.
+* Python-Klassen können nicht zwischen Blöcken übergeben werden, wenn sie Informationen von .NET-Typen übernehmen.
+    * Klassen, die von .NET-Typen oder -Schnittstellen abgeleitet werden, können nicht sicher zwischen Python-Blöcken übertragen werden.
+* Die Python-Option ```set()``` akzeptiert einige .NET-Objekte nicht.
+    * Objekte wie ```InvalidElementId``` müssen stattdessen herausgefiltert oder mithilfe von .NET-Sammlungen verarbeitet werden.
+* Häufige ```print()```-Anrufe können zu großen Speichermengen führen.
+    * Vermeiden Sie die übermäßige Verwendung von ```print()``` in Schleifen oder Skripten mit langer Laufzeit.
+* Die Interoperabilität von Wörterbüchern zwischen Dynamo und Python ist begrenzt.
+    * Dynamo-Wörterbücher und Python-Wörterbücher sind nicht vollständig austauschbar und müssen möglicherweise manuell konvertiert werden.
+* Die ```Marshal.GetActiveObject()```-Methode zum Abrufen der ausgeführten COM-Instanz eines angegebenen Objekts ist nicht mehr verfügbar.
+    * Verwenden Sie ```BindToMoniker```, wenn Sie den Pfad der verwendeten Datei kennen.
+    * Codieren Sie eine Bibliothek in C# mithilfe der Klassenstruktur ```Marshal.GetActiveObject()```.
+
+#### Migrieren von CPython3 zu PythonNet3<a href="#migrating-from-cpython-pythonnet3" id="migrating-from-cpython-pythonnet3"></a>
+
+Dynamo migriert CPython-Blöcke automatisch zu PythonNet3. Dabei geschieht Folgendes:
+
+> 1. Es wird automatisch eine Sicherungskopie Ihrer ursprünglichen Datei erstellt.
+> 2. Alle CPython-Blöcke (einschließlich benutzerdefinierter Blöcke, die CPython verwenden) werden in PythonNet3 konvertiert. 
+> 3. Eine Popup-Benachrichtigung informiert Sie darüber, wie viele Blöcke migriert wurden.
+> 4. Beim Speichern wird eine Erinnerung darüber angezeigt, dass Ihre Python-Blöcke jetzt PythonNet3 verwenden. Informationen zur Abwärtskompatibilität: Wenn Sie in Umgebungen mit mehreren Versionen arbeiten (z. B. Revit oder Civil 3D 2025/2026), installieren Sie das PythonNet3 Engine-Paket in Dynamo 3.3–3.6, um die Kompatibilität zu gewährleisten. 
+
+#### Migrieren von IronPython2 zu PythonNet3<a href="#migrating-from-cpython-pythonnet3" id="migrating-from-cpython-pythonnet3"></a>
+
+Wenn Ihr Diagramm eine IronPython-Engine verwendet, wird keine automatische Migration durchgeführt. 
+
+Wenn das entsprechende IronPython-Paket installiert ist, wird das Diagramm normal ausgeführt. Wenn es fehlt, wird in der Erweiterung der Arbeitsbereichsreferenzen eine Abhängigkeitswarnung angezeigt, in der Sie aufgefordert werden, das Paket herunterzuladen. Sie können IronPython weiterhin verwenden, indem Sie das Paket neu installieren. Da IronPython jedoch seit Jahren nicht mehr aktualisiert wurde und Dynamo diese Engines seit geraumer Zeit nicht mehr aktiv in Dynamo unterstützt, empfehlen wir dringend die Migration zu PythonNet3, um sicherzustellen, dass Ihre Diagramme auch in Zukunft zuverlässig funktionieren. DynamoIronPython2.7 und DynamoIronPython3 bleiben zwar weiterhin als Pakete im Dynamo Package Manager verfügbar, werden jedoch nicht mehr vom Dynamo-Team betreut. 
+
+In diesem Fall besteht die Migrationsoption darin, die Blöcke einzeln mithilfe des Migrationsassistenten, der im Python-Editor verfügbar ist, zu migrieren.  
+
+Weitere Informationen zur Migration finden Sie in diesem [Blog](https://dynamobim.org/dynamo-pythonnet3-upgrade-a-practical-guide-to-migrating-your-dynamo-graphs/).

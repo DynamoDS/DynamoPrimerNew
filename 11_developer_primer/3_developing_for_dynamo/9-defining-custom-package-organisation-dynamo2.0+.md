@@ -1,13 +1,16 @@
-# Definieren einer benutzerdefinierten Paketorganisation (Dynamo 2.0+) 
+# Definieren einer benutzerdefinierten Paketorganisation für Dynamo 2.0+
 
 Das gewünschte Layout für Ihr Paket hängt von den Blocktypen ab, die Sie in das Paket aufnehmen. Vom Blockmodell abgeleitete Blöcke, ZeroTouch-Blöcke und benutzerdefinierte Blöcke weisen alle einen leicht unterschiedlichen Prozess zum Definieren der Kategorisierung auf. Sie können diese Blocktypen innerhalb desselben Pakets mischen und anpassen. Dies erfordert jedoch eine Kombination der unten beschriebenen Strategien.
 
 ## NodeModel
+
 NodeModel-Bibliotheken sind vorgabemäßig basierend auf der Klassenstruktur organisiert.
-```C#
+
+```c#
 namespace SampleLibraryUI.Examples
 ```
-```C#
+
+```c#
 // Class Attribute
 [NodeName("MyNodeModel")]
 public class MyNewNodeModel : NodeModel
@@ -21,13 +24,16 @@ public ButtonCustomNodeModel()
 }
 
 ```
+
 Der Block befindet sich in Add-Ons unter:
+
 ```
 SampleLibraryUI/Examples/MyNodeModel
 ```
 
 Sie können die Kategorie auch überschreiben, indem Sie das NodeCategory-Attribut für die Klasse oder im Konstruktor verwenden, wie unten gezeigt.
-```C#
+
+```c#
 // Class Attribute
 [NodeCategory("NewSampleLibraryUI.Examples")]
 
@@ -41,6 +47,7 @@ public ButtonCustomNodeModel()
 ```
 
 Der Block befindet sich nun in Add-Ons unter:
+
 ```
 NewSampleLibraryUI/Examples/MyNodeModel
 ```
@@ -49,11 +56,11 @@ NewSampleLibraryUI/Examples/MyNodeModel
 
 ZeroTouch-Bibliotheken sind vorgabemäßig ebenfalls basierend auf der Klassenstruktur organisiert.
 
-```C#
+```c#
 namespace MyZTLibrary
 ```
 
-```C#
+```c#
 public class Utilities
 {
     public double doubleValue(double num)
@@ -70,10 +77,11 @@ MyZTLibrary/Utilities/doubleValue
 ```
 
 Sie können den Speicherort der Klassenstruktur auch mithilfe einer XML-Datei für die Dynamo-Anpassung überschreiben.
-- Die XML-Datei muss entsprechend benannt und im Ordner `extra` des Pakets enthalten sein.
-    - `PackageName_DynamoCustomization.xml`
 
-```XML
+* Die XML-Datei muss entsprechend benannt und im Ordner `extra` des Pakets enthalten sein.
+  * `PackageName_DynamoCustomization.xml`
+
+```xml
 <?xml version="1.0"?>
 <doc>
     <assembly>
@@ -99,16 +107,16 @@ Sie können den Speicherort der Klassenstruktur auch mithilfe einer XML-Datei f�
 
 ## CustomNodes
 
-Benutzerdefinierte Blöcke werden während der Blockerstellung auf Grundlage des angegebenen `Category Name` organisiert (mithilfe des neuen Dialogfelds Benutzerdefinierter Block).  
+Benutzerdefinierte Blöcke werden während der Blockerstellung auf Grundlage des angegebenen `Category Name` organisiert (mithilfe des neuen Dialogfelds Benutzerdefinierter Block).
 
-**WARNUNG!** <br>
-Die Verwendung der Punktnotation in Blocknamen oder -kategorien führt zu zusätzlichen verschachtelten Unterkategorien. `.` dient als Trennzeichen, um die zusätzliche Hierarchie festzulegen. Dies ist ein neues Verhalten in der Bibliothek für Dynamo 2.0.
+**WARNUNG!**\
+ Die Verwendung der Punktnotation in Blocknamen oder -kategorien führt zu zusätzlichen verschachtelten Unterkategorien. `.` dient als Trennzeichen, um die zusätzliche Hierarchie festzulegen. Dies ist ein neues Verhalten in der Bibliothek für Dynamo 2.0.
 
-![Eigenschaften von benutzerdefinierten Blöcken](images/custom-node-properties.jpg)
+![Eigenschaften von benutzerdefinierten Blöcken](../../.gitbook/assets/custom-node-properties.jpg)
 
 Der Kategoriename kann später in der DYF-Datei (XML oder JSON) aktualisiert werden
 
-```JSON
+```json
 {
   "Uuid": "85066088-1616-40b1-96e1-c33e685c6948",
   "IsCustomNode": true,
@@ -120,7 +128,7 @@ Der Kategoriename kann später in der DYF-Datei (XML oder JSON) aktualisiert wer
   },...
 ```
 
-```XML
+```xml
 <Workspace Version="1.3.0.0000" X="100" Y="100" zoom="1.0000000" Description="This is an example custom nodes." Category="MyCustomNodes.Utilities.Actions" Name="doubleValue" ID="85066088-1616-40b1-96e1-c33e685c6948">
 ```
 
@@ -131,7 +139,8 @@ Wenn ein Paketautor beschließt, zuvor vorhandene Blöcke in einer neuen Version
 **ZeroTouch**-Blöcke verwenden eine `Namespace.Migrations.XML`-Datei, die sich im Ordner `bin` der Pakete befindet, z. B.:
 
 `MyZeroTouchLib.MyNodes.SayHello` bis `MyZeroTouchLib.MyNodes.SayHelloRENAMED`
-```XML
+
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -144,7 +153,8 @@ Wenn ein Paketautor beschließt, zuvor vorhandene Blöcke in einer neuen Version
 **Von NodeModel abgeleitete Blöcke** verwenden das `AlsoKnownAs`-Attribut für die Klasse, z. B.:
 
 `SampleLibraryUI.Examples.DropDownExample` bis `SampleLibraryUI.Examples.DropDownExampleRENAMED`
-```C#
+
+```c#
 namespace SampleLibraryUI.Examples
 {
     [NodeName("Drop Down Example")]

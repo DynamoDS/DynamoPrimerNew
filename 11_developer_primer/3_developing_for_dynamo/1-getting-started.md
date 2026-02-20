@@ -2,15 +2,15 @@
 
 Bevor wir mit der Entwicklung beginnen, ist es wichtig, ein solides Fundament für ein neues Projekt zu schaffen. Die Dynamo-Entwickler-Community verfügt über mehrere Projektvorlagen, die sich hervorragend als Ausgangspunkt eignen. Ein umfassendes Verständnis, wie Sie ein Projekt von Grund auf neu beginnen, ist jedoch noch wertvoller. Der Aufbau eines Projekts von Grund auf ermöglicht ein tieferes Verständnis des Entwicklungsprozesses.
 
-![Visual Studio](images/visual-studio.jpg)
+![Visual Studio](../../.gitbook/assets/visual-studio.jpg)
 
 ### Erstellen eines Visual Studio-Projekts <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 Visual Studio ist eine leistungsstarke IDE, in der wir ein Projekt erstellen, Referenzen hinzufügen, `.dll`-Dateien generieren und debuggen können. Beim Erstellen eines neuen Projekts erstellt Visual Studio außerdem eine Projektmappe, eine Struktur zum Organisieren von Projekten. In einer einzelnen Projektmappe können mehrere Projekte enthalten sein, die zusammen erstellt werden können. Um einen Zero-Touch-Block zu erstellen, müssen wir ein neues Visual Studio-Projekt starten, in im wir eine C#-Klassenbibliothek schreiben und eine `.dll`-Datei erstellen.
 
-![Erstellen eines neuen Projekts in Visual Studio](images/vs-new-project-1.jpg)
+![Erstellen eines neuen Projekts in Visual Studio](../../.gitbook/assets/vs-new-project-1.jpg)
 
-![Konfigurieren eines neuen Projekts in Visual Studio](images/vs-new-project-2.jpg)
+![Konfigurieren eines neuen Projekts in Visual Studio](../../.gitbook/assets/vs-new-project-2.jpg)
 
 > Fenster Neues Projekt in Visual Studio
 >
@@ -35,7 +35,7 @@ Visual Studio erstellt und öffnet automatisch eine C#-Datei. Sie sollten einen 
  }
 ```
 
-![Verwenden des Projektmappen-Explorers](images/vs-edit-class.jpg)
+![Verwenden des Projektmappen-Explorers](../../.gitbook/assets/vs-edit-class.jpg)
 
 > 1. Öffnen Sie den Projektmappen-Explorer und die Ausgabefenster über `View`.
 > 2. Benennen Sie die Datei `Class1.cs` im Projektmappen-Explorer auf der rechten Seite in `SampleFunctions.cs` um.
@@ -45,7 +45,7 @@ Visual Studio erstellt und öffnet automatisch eine C#-Datei. Sie sollten einen 
 
 Der nächste Schritt besteht darin, das Projekt zu erstellen. Zuvor müssen wir jedoch einige Einstellungen überprüfen. Stellen Sie zunächst sicher, dass `Any CPU` oder `x64` als Plattformziel ausgewählt und `Prefer 32-bit` in den Projekteigenschaften deaktiviert ist.
 
-![Build-Einstellungen in Visual Studio](images/vs-build-settings.jpg)
+![Build-Einstellungen in Visual Studio](../../.gitbook/assets/vs-build-settings.jpg)
 
 > 1. Öffnen Sie die Projekteigenschaften, indem Sie `Project > "ProjectName" Properties` auswählen.
 > 2. Wählen Sie die Seite `Build` aus.
@@ -54,14 +54,14 @@ Der nächste Schritt besteht darin, das Projekt zu erstellen. Zuvor müssen wir 
 
 Jetzt können wir das Projekt erstellen, um eine `.dll`-Datei zu generieren. Wählen Sie dazu entweder `Build Solution` aus dem Menü `Build` aus, oder verwenden Sie den Kurzbefehl `CTRL+SHIFT+B`.
 
-![Erstellen einer Projektmappe](images/vs-build.jpg)
+![Erstellen einer Projektmappe](../../.gitbook/assets/vs-build.jpg)
 
 > 1. Wählen Sie `Build > Build Solution` aus.
 > 2. Sie können feststellen, ob Ihr Projekt erfolgreich erstellt wurde, indem Sie das Ausgabefenster überprüfen.
 
 Wenn das Projekt erfolgreich erstellt wurde, wird im Ordner `bin` des Projekts eine `.dll`-Datei mit dem Namen `MyCustomNode` angezeigt. In diesem Beispiel haben wir die Visual Studio-Vorgabe für den Projektdateipfad `c:\users\username\documents\visual studio 2015\Projects` beibehalten. Sehen wir uns nun die Dateistruktur des Projekts an.
 
-![Dateistruktur des Projekts](images/folder-structure.jpg)
+![Dateistruktur des Projekts](../../.gitbook/assets/folder-structure.jpg)
 
 > 1. Der Ordner `bin` enthält die in Visual Studio erstellte `.dll`-Datei.
 > 2. Die Visual Studio-Projektdatei
@@ -70,7 +70,7 @@ Wenn das Projekt erfolgreich erstellt wurde, wird im Ordner `bin` des Projekts e
 
 Jetzt können wir Dynamo öffnen und die `.dll`-Datei importieren. Navigieren Sie mit der Funktion Hinzufügen zum `bin`-Speicherort des Projekts, und wählen Sie die zu öffnende `.dll`-Datei aus.
 
-![Öffnen der DLL-Datei des Projekts](images/dyn-import-dll.jpg)
+![Öffnen der DLL-Datei des Projekts](../../.gitbook/assets/dyn-import-dll.jpg)
 
 > 1. Wählen Sie die Schaltfläche Hinzufügen, um eine `.dll`-Datei zu importieren.
 > 2. Navigieren Sie zum Projektspeicherort. Das Projekt befindet sich unter dem Vorgabedateipfad von Visual Studio: `C:\Users\username\Documents\Visual Studio 2015\Projects\MyCustomNode`.
@@ -79,7 +79,7 @@ Jetzt können wir Dynamo öffnen und die `.dll`-Datei importieren. Navigieren Si
 
 Wenn eine Kategorie mit dem Namen `MyCustomNode` in der Bibliothek erstellt wird, wurde die DLL-Datei erfolgreich importiert. Dynamo hat jedoch zwei Blöcke erstellt, obwohl wir einen einzelnen Block erhalten wollten. Im nächsten Abschnitt werden wir erläutern, warum dies geschieht und wie Dynamo DLL-Dateien liest.
 
-![Benutzerdefinierte Blöcke](images/dyn-customnode.jpg)
+![Benutzerdefinierte Blöcke](../../.gitbook/assets/dyn-customnode.jpg)
 
 > 1. MyCustomNode in der Dynamo-Bibliothek. Die Bibliothekskategorie wird durch den Namen der `.dll`-Datei bestimmt.
 > 2. SampleFunctions.MultiplyByTwo im Ansichtsbereich.
@@ -88,7 +88,7 @@ Wenn eine Kategorie mit dem Namen `MyCustomNode` in der Bibliothek erstellt wird
 
 Wenn Dynamo eine DLL-Datei lädt, werden alle öffentlichen statischen Methoden als Blöcke angezeigt. Konstruktoren, Methoden und Eigenschaften werden in Erstellungs-, Aktions- und Abfrageblöcke umgewandelt. In unserem Multiplikationsbeispiel wird die Methode `MultiplyByTwo()` zu einem Aktionsblock in Dynamo. Dies liegt daran, dass der Block basierend auf der zugehörigen Methode und Klasse benannt wurde.
 
-![Block SampleFunction.MultiplyByTwo in einem Diagramm](images/multiplybytwo.png)
+![Block SampleFunction.MultiplyByTwo in einem Diagramm](../../.gitbook/assets/multiplybytwo.png)
 
 > 1. Die Eingabe erhält basierend auf dem Parameternamen der Methode den Namen `inputNumber`.
 > 2. Die Ausgabe erhält vorgabemäßig den Namen `double`, da es sich hierbei um den zurückgegebenen Datentyp handelt.
@@ -115,7 +115,7 @@ namespace MyCustomNode
 }
 ```
 
-![Methode als Erstellungsblock importiert](images/private-constructor.jpg)
+![Methode als Erstellungsblock importiert](../../.gitbook/assets/private-constructor.jpg)
 
 > 1. Dynamo hat unsere Methode als Erstellungsblock importiert.
 
@@ -132,13 +132,13 @@ Der Block für die Multiplikation ist sehr einfach, und es sind keine Referenzen
 
 Um diese Pakete in einem Visual Studio-Projekt zu referenzieren, laden Sie das Paket entweder von NuGet unter den oben genannten Links herunter und referenzieren die DLL-Dateien manuell, oder verwenden Sie den NuGet-Paket-Manager in Visual Studio. Zunächst gehen wir die Schritte zum Installieren mit NuGet in Visual Studio durch.
 
-![Öffnen des NuGet-Paket-Managers](images/vs-nuget-package-manager2.jpg)
+![Öffnen des NuGet-Paket-Managers](../../.gitbook/assets/vs-nuget-package-manager2.jpg)
 
 > 1. Öffnen Sie den NuGet-Paket-Manager, indem Sie `Tools > NuGet Package Manager > Manage NuGet Packages for Solution...` auswählen.
 
 Dies ist der NuGet-Paket-Manager. In diesem Fenster wird angezeigt, welche Pakete für das Projekt installiert wurden, und der Benutzer kann nach anderen Paketen suchen. Wenn eine neue Version des DynamoServices-Pakets veröffentlicht wird, können Pakete von hier aus aktualisiert oder auf eine frühere Version zurückgesetzt werden.
 
-![NuGet-Paket-Manager](images/vs-nuget-package-manager.jpg)
+![NuGet-Paket-Manager](../../.gitbook/assets/vs-nuget-package-manager.jpg)
 
 > 1. Wählen Sie Durchsuchen, und suchen Sie nach DynamoVisualProgramming, um die Dynamo-Pakete aufzurufen.
 > 2. Die Dynamo-Pakete. Wenn Sie eines auswählen, werden die aktuelle Version und eine Beschreibung des Inhalts angezeigt.
@@ -146,7 +146,7 @@ Dies ist der NuGet-Paket-Manager. In diesem Fenster wird angezeigt, welche Paket
 
 Um ein aus dem Browser heruntergeladenes Paket manuell hinzuzufügen, öffnen Sie den Verweis-Manager im Projektmappen-Explorer und suchen nach dem Paket.
 
-![Verweis-Manager](images/vs-manual-dynamo-package.jpg)
+![Verweis-Manager](../../.gitbook/assets/vs-manual-dynamo-package.jpg)
 
 > 1. Klicken Sie mit der rechten Maustaste auf `References`, und wählen Sie `Add Reference` aus.
 > 2. Wählen Sie `Browse` aus, um zum Paketspeicherort zu navigieren.

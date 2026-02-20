@@ -13,7 +13,7 @@ In diesem Handbuch verwenden wir folgende Versionen:
 
 Um einen erfolgreichen Build zu gewährleisten, werden sowohl das Dynamo- als auch das DynamoRevit-Repository, die für diese exemplarische Vorgehensweise verwendet werden, geklont und erstellt.
 
-_Anmerkung: Die manuelle Erstellung von Dynamo vor DynamoRevit ist nur erforderlich, wenn Sie Dynamo 1.x und DynamoRevit 1.x erstellen. Neuere Versionen des DynamoRevit-Repositorys basieren auf dem NuGet-Paket-Manager für die zum Erstellen erforderlichen Dynamo-Abhängigkeiten. Auch wenn beim Build DynamoRevit 2.x kein manueller Abruf von Dynamo erforderlich ist, benötigen Sie die `dlls`-Kerndateien dennoch an anderer Stelle, um das DynamoRevit-`add-in` auszuführen. Es lohnt sich also, Dynamo dennoch abzurufen und zu erstellen. Weitere Informationen finden Sie unten:_ [_Erstellen des Repositorys mit Visual Studio_](#building-the-repository-using-Visual-Studio)
+_Anmerkung: Die manuelle Erstellung von Dynamo vor DynamoRevit ist nur erforderlich, wenn Sie Dynamo 1.x und DynamoRevit 1.x erstellen. Neuere Versionen des DynamoRevit-Repositorys basieren auf dem NuGet-Paket-Manager für die zum Erstellen erforderlichen Dynamo-Abhängigkeiten. Auch wenn beim Build DynamoRevit 2.x kein manueller Abruf von Dynamo erforderlich ist, benötigen Sie die `dlls`-Kerndateien dennoch an anderer Stelle, um das DynamoRevit-`add-in` auszuführen. Es lohnt sich also, Dynamo dennoch abzurufen und zu erstellen. Weitere Informationen finden Sie unten:_ [_Erstellen des Repositorys mit Visual Studio_](1-build-dynamorevit-from-source.md#building-the-repository-using-Visual-Studio)
 
 ### Suchen des DynamoRevit-Repositorys auf GitHub <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
@@ -21,7 +21,7 @@ Der Code für das DynamoRevit-Projekt befindet sich in einem separaten Repositor
 
 Die DynamoRevit-Quelldateien befinden sich hier: [https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit).
 
-![DynamoRevit auf GitHub](images/github-dynamorevit.jpg)
+![DynamoRevit auf GitHub](../../.gitbook/assets/github-dynamorevit.jpg)
 
 > 1. Klonen oder laden Sie das Repository herunter.
 > 2. Die DynamoRevit-Verzweigungen referenzieren Revit-Versionen.
@@ -34,13 +34,13 @@ Die DynamoRevit-Quelldateien befinden sich hier: [https://github.com/DynamoDS/Dy
 
 > Ersetzen Sie `username` durch Ihren Benutzernamen.
 
-![Befehlszeilenschnittstelle](images/cli-cd-revit.jpg)
+![Befehlszeilenschnittstelle](../../.gitbook/assets/cli-cd-revit.jpg)
 
 Jetzt können wir das Repository in dieses Verzeichnis klonen. Wir müssen eine Verzweigung des Repositorys angeben. Wir können jedoch nach dem Klonen zu dieser Verzweigung wechseln.
 
 `git clone https://github.com/DynamoDS/DynamoRevit.git` klont das Repository von einer Remote-URL und wechselt vorgabemäßig zur Hauptverzweigung.
 
-![Befehlszeilenschnittstelle nach dem Klonen des Repositorys](images/cli-clone-revit.jpg)
+![Befehlszeilenschnittstelle nach dem Klonen des Repositorys](../../.gitbook/assets/cli-clone-revit.jpg)
 
 Nachdem das Klonen des Repositorys abgeschlossen ist, ändern Sie das aktuelle Verzeichnis in den Repository-Ordner, und wechseln Sie zu der Verzweigung, die der installierten Version von Revit entspricht. In diesem Beispiel wird Revit RC2.13.1_Revit2023 verwendet. Alle Remote-Verzweigungen können auf der GitHub-Seite im Dropdown-Menü Branch angezeigt werden.
 
@@ -48,7 +48,7 @@ Nachdem das Klonen des Repositorys abgeschlossen ist, ändern Sie das aktuelle V
  `git checkout RC2.13.1_Revit2023` setzt die aktuelle Verzweigung auf `RC2.13.1_Revit2023`.\
  `git branch` überprüft, in welcher Verzweigung wir uns befinden, und zeigt die anderen Verzweigungen an, die lokal verfügbar sind.
 
-![Verzeichnis in eine Verzweigung geändert](images/cli-branch-revit.jpg)
+![Verzeichnis in eine Verzweigung geändert](../../.gitbook/assets/cli-branch-revit.jpg)
 
 > Die Verzweigung mit einem Sternchen ist die derzeit ausgecheckte Verzweigung. Die Verzweigung `Revit2018` wird angezeigt, da wir diese zuvor ausgecheckt haben, sodass sie lokal verfügbar ist.
 
@@ -58,19 +58,19 @@ Es ist wichtig, die richtige Verzweigung des Repositorys zu wählen, um sicherzu
 
 Bevor wir das Repository erstellen, müssen wir die NuGet-Pakete mit der Datei `restorepackages.bat` im Ordner `src` wiederherstellen. Diese BAT-Datei verwendet den [NuGet](https://www.nuget.org) Package Manager, um die für DynamoRevit erforderlichen, erstellten Binärdateien von Dynamo Core abzurufen. Sie können diese auch manuell erstellen, aber nur, wenn Sie nur Änderungen an DynamoRevit und nicht an Dynamo Core vornehmen. So können Sie schneller durchstarten. Führen Sie diese Datei als Administrator aus.
 
-![Als Administrator ausführen](images/fe-restorepackages.jpg)
+![Als Administrator ausführen](../../.gitbook/assets/fe-restorepackages.jpg)
 
 > 1. Klicken Sie mit der rechten Maustaste auf `restorepackages.bat`, und wählen Sie `Run as administrator`.
 
 Wenn die Pakete erfolgreich wiederhergestellt wurden, wird ein `packages`-Ordner mit den neuesten NuGet-Beta-Paketen zum Ordner `src` hinzugefügt.
 
-![Die neuesten Dynamo-NuGet-Beta-Pakete](images/fe-packages.jpg)
+![Die neuesten Dynamo-NuGet-Beta-Pakete](../../.gitbook/assets/fe-packages.jpg)
 
 > 1. Die neuesten Dynamo-NuGet-Beta-Pakete
 
 Nachdem die Pakete wiederhergestellt wurden, öffnen Sie die Visual Studio-Projektmappendatei `DynamoRevit.All.sln` in `src`, und erstellen Sie die Projektmappe. Der Build kann `AssemblySharedInfo.cs` möglicherweise zunächst nicht finden. Wenn dies der Fall ist, kann dieses Problem durch erneutes Ausführen des Builds behoben werden.
 
-![Erstellen einer Projektmappe](images/vs-build-dynamorevit.jpg)
+![Erstellen einer Projektmappe](../../.gitbook/assets/vs-build-dynamorevit.jpg)
 
 > 1. Wählen Sie `Build > Build Solution` aus.
 > 2. Überprüfen Sie im Ausgabefenster, ob die Erstellung erfolgreich war. Es sollte eine Meldung ähnlich der folgenden angezeigt werden: `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`.
@@ -116,9 +116,9 @@ Alternativ können wir auch festlegen, dass das Zusatzmodul die Versionsauswahl 
 * Legen Sie den Dateipfad für `<Assembly>...</Assembly>` auf `DynamoRevitVersionSelector.dll` fest.
 * `<FullClassName>...</FullClassName>` gibt an, welche Klasse aus der Assembly instanziiert werden soll, auf die mit dem oben angegebenen Assembly-Elementpfad verwiesen wurde. Diese Klasse wird als Einstiegspunkt für das Zusatzmodul verwendet.
 
-Außerdem müssen wir die vorhandene Dynamo-Version entfernen, die im Lieferumfang von Revit enthalten ist. Wechseln Sie dazu zu `C:\\Program Files\Autodesk\Revit 2023\AddIns `, und entfernen Sie die beiden Ordner, die **Dynamo** enthalten: `DynamoForRevit` und `DynamoPlayerForRevit`. Sie können sie entweder löschen oder in einem separaten Ordner sichern, wenn Sie die Originalversion von Dynamo for Revit wiederherstellen müssen.
+Außerdem müssen wir die vorhandene Dynamo-Version entfernen, die im Lieferumfang von Revit enthalten ist. Wechseln Sie dazu zu `C:\\Program Files\Autodesk\Revit 2023\AddIns`, und entfernen Sie die beiden Ordner, die **Dynamo** enthalten: `DynamoForRevit` und `DynamoPlayerForRevit`. Sie können sie entweder löschen oder in einem separaten Ordner sichern, wenn Sie die Originalversion von Dynamo for Revit wiederherstellen müssen.
 
-![Ordner DynamoForRevit und DynamoPlayerforRevit](images/fe-dynamo-folders-remove.jpg)
+![Ordner DynamoForRevit und DynamoPlayerforRevit](../../.gitbook/assets/fe-dynamo-folders-remove.jpg)
 
 Der zweite Schritt besteht darin, einen Dateipfad für die Dynamo Core-Assemblys zur Datei `Dynamo.config` im Ordner `bin` von DynamoRevit hinzuzufügen. DynamoRevit lädt diese, wenn das Zusatzmodul in Revit geöffnet wird. In dieser Konfigurationsdatei können Sie Ihr DynamoRevit-Zusatzmodul auf verschiedene Versionen von Dynamo Core verweisen lassen, um Änderungen sowohl in Core als auch in DynamoRevit zu entwickeln und zu testen.
 
@@ -139,7 +139,7 @@ Der Code sollte wie folgt aussehen:
 
 Wenn wir jetzt Revit öffnen, sollte sich auf der Registerkarte Verwalten ein Dynamo-Zusatzmodul befinden.
 
-![Dynamo-Zusatzmodul auf der Registerkarte Verwalten](images/revit-dynamo.jpg)
+![Dynamo-Zusatzmodul auf der Registerkarte Verwalten](../../.gitbook/assets/revit-dynamo.jpg)
 
 > 1. Wählen Sie `Manage` aus.
 > 2. Klicken Sie auf das Symbol für das Dynamo-Zusatzmodul.
@@ -160,13 +160,13 @@ Im vorherigen Abschnitt **Erstellen von Dynamo aus Quelldateien** haben wir das 
 
 Der Block **Wall.ByCurveAndHeight** gibt eine Ausnahme mit der folgenden Meldung aus, wenn er eine PolyCurve als Kurveneingabe erhält: _To BSPlineCurve Not Implemented_. Durch das Debugging können wir herausfinden, warum genau der Block diesen Geometrietyp nicht als Eingabe für den Kurvenparameter akzeptiert. In diesem Beispiel wird davon ausgegangen, dass DynamoRevit erfolgreich erstellt wurde und als Zusatzmodul für Revit ausgeführt werden kann.
 
-![Der Block Wall.ByCurbeAndHeight löst eine Ausnahme aus.](images/dyn-wallbycurveandheight.jpg)
+![Der Block Wall.ByCurbeAndHeight löst eine Ausnahme aus.](../../.gitbook/assets/dyn-wallbycurveandheight.jpg)
 
 > 1. Der Block Wall.ByCurveAndHeight löst eine Ausnahme aus.
 
 Öffnen Sie zunächst die Projektmappendatei `DynamoRevit.All.sln`, starten Sie Revit, und starten Sie dann das DynamoRevit-Zusatzmodul. Hängen Sie anschließend im Fenster `Attach to Process` Visual Studio an den Revit-Prozess an.
 
-![Fenster zum Anhängen an den Prozess](images/vs-debug-attachprocess.jpg)
+![Fenster zum Anhängen an den Prozess](../../.gitbook/assets/vs-debug-attachprocess.jpg)
 
 > Revit und DynamoRevit müssen ausgeführt werden, um als verfügbare Prozesse angezeigt zu werden.
 >
@@ -177,21 +177,21 @@ Der Block **Wall.ByCurveAndHeight** gibt eine Ausnahme mit der folgenden Meldung
 
 Wenn Visual Studio an Revit angehängt ist, öffnen Sie den Wall.ByCurveAndHeight-Quellcode in `Wall.cs`. Wir finden diesen im Projektmappen-Explorer unter `Libraries > RevitNodes > Elements` im Bereich `Public static constructors` der Datei. Legen Sie im Konstruktor des Wandtyps einen Haltepunkt fest, sodass bei Ausführung eines Blocks in Dynamo der Prozess unterbrochen wird und wir die Codezeilen einzeln durchgehen können. Normalerweise beginnen Dynamo-Konstruktoren vom Typ Zero-Touch mit `By<parameters>`.
 
-![Festlegen eines Haltepunkts](images/vs-debugging-breakpoint.jpg)
+![Festlegen eines Haltepunkts](../../.gitbook/assets/vs-debugging-breakpoint.jpg)
 
 > 1. Die Klassendatei mit dem Konstruktor für Wall.ByCurveAndHeight.
 > 2. Legen Sie einen Haltepunkt fest, indem Sie entweder links neben die Zeilennummer klicken oder mit der rechten Maustaste auf die Codezeile klicken und `Breakpoint > Insert Breakpoint` auswählen.
 
 Nachdem der Haltepunkt festgelegt wurde, muss der Prozess durch die Funktion Wall.ByCurveAndHeight laufen. Die Funktion kann in Dynamo erneut ausgeführt werden, indem erneut eine Verbindung mit einem der Anschlüsse hergestellt wird. Dadurch wird eine erneute Ausführung des Blocks erzwungen. Der Haltepunkt wird in Visual Studio erreicht.
 
-![Haltepunkt in Visual Studio erreicht](images/vs-breakpoint.jpg)
+![Haltepunkt in Visual Studio erreicht](../../.gitbook/assets/vs-breakpoint.jpg)
 
 > 1. Das Symbol für den Haltepunkt ändert sich, wenn er erreicht wird.
 > 2. Das Fenster mit der Aufrufliste zeigt die als Nächstes angewendete Methode.
 
 Überspringen Sie nun die einzelnen Zeilen im Konstruktor, bis die Ausnahme erreicht wird. Der gelb hervorgehobene Code ist die nächste auszuführende Anweisung.
 
-![Überspringen in Visual Studio](images/vs-stepover.jpg)
+![Überspringen in Visual Studio](../../.gitbook/assets/vs-stepover.jpg)
 
 > 1. Die Debugging-Werkzeuge für die Navigation im Code.
 > 2. Drücken Sie `Step Over`, um den markierten Code auszuführen, und unterbrechen Sie dann die Ausführung, nachdem die Funktion zurückgegeben wurde.
@@ -201,14 +201,14 @@ Wenn wir weiter durch die Funktion gehen, erreichen wir die Ausnahme, die im Dyn
 
 Da dies keine Open-Source-Bibliothek ist, können wir dort keine Änderungen vornehmen. Jetzt, da wir über weitere Informationen verfügen, können wir das Problem mit mehr Kontext melden, indem wir eine GitHub-[Anfrage](https://docs.github.com/de/issues/tracking-your-work-with-issues/about-issues) übermitteln. Oder wir können eine Lösung für dieses Problem vorschlagen, indem wir eine Pull-Anforderung stellen.
 
-![Ausnahme in Visual Studio](images/vs-exception.jpg)
+![Ausnahme in Visual Studio](../../.gitbook/assets/vs-exception.jpg)
 
 > 1. Wenn wir in `Walls.cs` auf die Anweisung treffen, die die Ausnahme verursacht, gelangen wir durch den Debugging-Prozess so nah wie möglich an die Ursache des Problems im Benutzercode in `ProtoToRevitCurve.cs`.
 > 2. Die Anweisung, die die Ausnahme in `ProtoToRevitCurve.cs` verursacht.
 > 3. In der Aufrufliste sehen wir, dass die Ausnahme aus Nichtbenutzercode stammt.
 > 4. Ein Popup-Fenster mit Informationen zur Ausnahme.
 
-Dieser Vorgang kann auf alle Quelldateien angewendet werden, mit denen wir arbeiten. Wenn wir eine Bibliothek mit Zero-Touch-Blöcken für Dynamo Studio entwickeln, können wir die Quelle der Bibliothek öffnen und einen Dynamo-Prozess anhängen, um für die Blockbibliothek ein Debugging durchzuführen. Auch wenn alles perfekt funktioniert, ist das Debugging eine gute Möglichkeit, Code zu prüfen und herauszufinden, wie bestimmte Aspekte funktionieren.
+Dieser Vorgang kann auf alle Quelldateien angewendet werden, mit denen wir arbeiten. Wenn wir eine Bibliothek mit Zero-Touch-Blöcken für Dynamo entwickeln, können wir die Quelle der Bibliothek öffnen und einen Dynamo-Prozess anhängen, um für die Blockbibliothek ein Debugging durchzuführen. Auch wenn alles perfekt funktioniert, ist das Debugging eine gute Möglichkeit, Code zu prüfen und herauszufinden, wie bestimmte Aspekte funktionieren.
 
 ### Abrufen des neuesten Builds <a href="#pull-latest-build" id="pull-latest-build"></a>
 
@@ -220,7 +220,7 @@ Dieser Vorgang ist fast identisch mit dem Abrufen von Änderungen für Dynamo, m
 
 Der Ursprung verweist einfach auf die ursprüngliche URL, die wir geklont haben.
 
-![Festlegen eines Verzeichnisses über die Befehlszeilenschnittstelle](images/cli-pull-revit.jpg)
+![Festlegen eines Verzeichnisses über die Befehlszeilenschnittstelle](../../.gitbook/assets/cli-pull-revit.jpg)
 
 > Wir sollten hier sorgsam darauf achten, in welcher Verzweigung wir uns gerade befinden und von welcher Verzweigung wir Daten abrufen, um zu vermeiden, dass Änderungen beispielsweise von `RC2.13.1_Revit2023` in `Revit2018` abgerufen werden.
 

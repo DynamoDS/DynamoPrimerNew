@@ -4,25 +4,25 @@ Bei geöffnetem und gestartetem Visual Studio-Projekt werden Sie durch die Erste
 
 In diesem Beispiel werden einige der Funktionen und Konzepte behandelt, die Sie beim Erstellen eines Zero-Touch-Blocks beachten sollten. Nachdem wir den benutzerdefinierten Block erstellt und zu Dynamo hinzugefügt haben, informieren Sie sich auf der Seite Weitere Schritte mit Zero-Touch im Detail über die vorgegebenen Eingabewerte, das Zurückgeben mehrerer Werte, die Dokumentation, die Objekte, die Verwendung von Dynamo-Geometrietypen und Migrationen.
 
-![Rechteckiges Rasterdiagramm](images/cover-image.jpg)
+![Rechteckiges Rasterdiagramm](../../.gitbook/assets/cover-image.jpg)
 
 ### Benutzerdefinierter, rechteckiger Rasterblock <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 Um mit dem Erstellen des Rasterblocks zu beginnen, erstellen Sie ein neues Visual Studio-Klassenbibliotheksprojekt. Eine ausführliche exemplarische Vorgehensweise zum Einrichten eines Projekts finden Sie auf der Seite Erste Schritte.
 
-![Erstellen eines neuen Projekts in Visual Studio](images/vs-new-project-1.jpg)
+![Erstellen eines neuen Projekts in Visual Studio](../../.gitbook/assets/vs-new-project-1.jpg)
 
-![Konfigurieren eines neuen Projekts in Visual Studio](images/vs-new-project-2.jpg)
+![Konfigurieren eines neuen Projekts in Visual Studio](../../.gitbook/assets/vs-new-project-2.jpg)
 
 > 1. Wählen Sie `Class Library` für den Projekttyp.
 > 2. Geben Sie dem Projekt den Namen `CustomNodes`.
 
 Da wir Geometrie erstellen, müssen wir das entsprechende NuGet-Paket referenzieren. Installieren Sie das ZeroTouchLibrary-Paket über den NuGet Package Manager. Dieses Paket ist für die Anweisung `using Autodesk.DesignScript.Geometry;` erforderlich.
 
-![ZeroTouchLibrary-Paket](images/vs-nugetpackage.jpg)
+![ZeroTouchLibrary-Paket](../../.gitbook/assets/vs-nugetpackage.jpg)
 
 > 1. Suchen Sie nach dem ZeroTouchLibrary-Paket.
-> 2. Wir verwenden diesen Block im aktuellen Build von Dynamo Studio (Version 1.3). Wählen Sie die Paketversion aus, die dieser Version entspricht.
+> 2. Wir verwenden diesen Block im aktuellen Build von Dynamo. Wählen Sie die Paketversion aus, die Ihrer Dynamo-Version entspricht.
 > 3. Beachten Sie, dass wir auch die Klassendatei in `Grids.cs` umbenannt haben.
 
 Als Nächstes müssen wir einen Namensbereich und eine Klasse einrichten, in denen die Methode RectangularGrid gespeichert wird. Der Block wird in Dynamo entsprechend den Methoden- und Klassennamen benannt. Wir müssen diesen Vorgang noch nicht in Visual Studio kopieren.
@@ -84,13 +84,13 @@ namespace CustomNodes
 
 Wenn das Projekt ähnlich aussieht wie hier gezeigt, versuchen Sie, die `.dll`-Datei zu erstellen.
 
-![Erstellen einer DLL-Datei](images/vs-grids.jpg)
+![Erstellen einer DLL-Datei](../../.gitbook/assets/vs-grids.jpg)
 
 > 1. Wählen Sie Build > Projektmappe erstellen.
 
 Prüfen Sie, ob im Ordner `bin` des Projekts eine `.dll`-Datei enthalten ist. Wenn der Build erfolgreich war, können wir die `.dll`-Datei zu Dynamo hinzufügen.
 
-![Benutzerdefinierte Blöcke in Dynamo](images/RectangularGrid-Dynamo.jpg)
+![Benutzerdefinierte Blöcke in Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
 
 > 1. Der benutzerdefinierte Block RectangularGrids in der Dynamo-Bibliothek
 > 2. Der benutzerdefinierte Block im Ansichtsbereich
@@ -100,7 +100,7 @@ Prüfen Sie, ob im Ordner `bin` des Projekts eine `.dll`-Datei enthalten ist. We
 
 Im obigen Beispiel haben wir einen recht einfachen Block erstellt, der außerhalb der Methode `RectangularGrids` nicht viel mehr definiert hat. Es ist jedoch eventuell empfehlenswert, QuickInfos für Eingabeanschlüsse zu erstellen oder dem Block eine Zusammenfassung hinzuzufügen, wie bei den Dynamo-Standardblöcken. Das Hinzufügen dieser Elemente zu benutzerdefinierten Blöcken erleichtert deren Verwendung, insbesondere dann, wenn ein Benutzer in der Bibliothek nach ihnen suchen möchte.
 
-![Eingabe-QuickInfo](images/nodemodification.png)
+![Eingabe-QuickInfo](../../.gitbook/assets/nodemodification.png)
 
 > 1. Ein Vorgabe-Eingabewert
 > 2. Eine QuickInfo für die xCount-Eingabe
@@ -155,7 +155,7 @@ namespace CustomNodes
 
 Um QuickInfos hinzuzufügen, benötigen wir eine XML-Datei im Projektverzeichnis. Eine `.xml`-Datei kann automatisch von Visual Studio generiert werden, indem Sie die Option aktivieren.
 
-![Aktivieren der XML-Dokumentation](images/vs-xml.jpg)
+![Aktivieren der XML-Dokumentation](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Aktivieren Sie hier die XML-Dokumentationsdatei, und geben Sie einen Dateipfad an. Dadurch wird eine XML-Datei erstellt.
 

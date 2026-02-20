@@ -2,7 +2,7 @@
 
 Unabhängig vom Kenntnisstand ist die Dynamo-Plattform dafür konzipiert, dass alle Benutzer ihre Beiträge leisten können. Es gibt mehrere Entwicklungsoptionen, die auf unterschiedliche Fähigkeiten und Qualifikationen ausgerichtet sind und je nach Ziel alle ihre Stärken und Schwächen haben. Nachfolgend werden die verschiedenen Optionen und die Möglichkeiten zur Auswahl einer Option erläutert.
 
-![Drei Entwicklungsumgebungen](images/developing-for-dynamo.png)
+![Drei Entwicklungsumgebungen](../../.gitbook/assets/developing-for-dynamo.png)
 
 > Drei Entwicklungsumgebungen: Visual Studio, Python Editor und Code Block DesignScript
 
@@ -18,31 +18,31 @@ Diese Blöcke gestatten die größtmögliche Anpassung. Viele Pakete werden mit 
 * Von NodeModel abgeleitete Blöcke
 * Erweiterungen
 
-> Der Primer enthält eine Anleitung zum [Importieren von Zero-Touch-Bibliotheken](https://primer2.dynamobim.org/v/de/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
+> Der Primer enthält eine Anleitung zum [Importieren von Zero-Touch-Bibliotheken](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
 
 Für die folgende Beschreibung wird Visual Studio als Entwicklungsumgebung für Zero-Touch- und NodeModel-Blöcke verwendet.
 
-![Visual Studio-Benutzeroberfläche](images/vs-devenv.jpg)
+![Visual Studio-Benutzeroberfläche](../../.gitbook/assets/vs-devenv.jpg)
 
 > Visual Studio-Benutzeroberfläche mit einem Projekt, das wir entwickeln werden
 
 ### In Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
-Diese Prozesse befinden sich zwar im Arbeitsbereich für visuelle Programmierung und sind relativ einfach durchzuführen. Es handelt sich jedoch bei allen um realisierbare Optionen zur Anpassung von Dynamo. Der Primer behandelt diese Prozesse ausführlich und bietet im Kapitel [Vorgehensweisen zur Skripterstellung](../../9\_best\_practices/2-scripting-strategies.md) Tipps und Best Practices für die Skripterstellung.
+Diese Prozesse befinden sich zwar im Arbeitsbereich für visuelle Programmierung und sind relativ einfach durchzuführen. Es handelt sich jedoch bei allen um realisierbare Optionen zur Anpassung von Dynamo. Der Primer behandelt diese Prozesse ausführlich und bietet im Kapitel [Vorgehensweisen zur Skripterstellung](../../9_best_practices/2-scripting-strategies.md) Tipps und Best Practices für die Skripterstellung.
 
 *   Codeblöcke stellen DesignScript in der visuellen Programmierumgebung bereit und ermöglichen so flexible Text-Skript- und Block-Arbeitsabläufe. Eine Funktion in einem Codeblock kann von jedem beliebigen Element im Arbeitsbereich aufgerufen werden.
 
-    > Laden Sie ein Codeblock-Beispiel herunter (klicken Sie mit der rechten Maustaste und dann auf Speichern unter), oder sehen Sie sich im [Primer](https://primer2.dynamobim.org/v/de/8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block) eine detaillierte exemplarische Vorgehensweise an.
+    > Laden Sie ein Codeblock-Beispiel herunter (klicken Sie mit der rechten Maustaste und dann auf Speichern unter), oder sehen Sie sich im [Primer](https://primer.dynamobim.org/07_Code-Block/7-1_what-is-a-code-block.html) eine detaillierte exemplarische Vorgehensweise an.
 *   Benutzerdefinierte Blöcke sind Container für Sammlungen von Blöcken oder sogar ganzen Diagrammen. Sie stellen eine effektive Methode dar, um häufig verwendete Routinen zu sammeln und sie mit der Community zu teilen.
 
-    > Laden Sie ein Beispiel für einen benutzerdefinierten Block herunter (klicken Sie mit der rechten Maustaste und dann auf Speichern unter), oder sehen Sie sich im [Primer](https://primer2.dynamobim.org/v/de/6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction) eine detaillierte exemplarische Vorgehensweise an.
+    > Laden Sie ein Beispiel für einen benutzerdefinierten Block herunter (klicken Sie mit der rechten Maustaste und dann auf Speichern unter), oder sehen Sie sich im [Primer](https://primer.dynamobim.org/10_Custom-Nodes/10-1_Introduction.html) eine detaillierte exemplarische Vorgehensweise an.
 *   Python-Blöcke stellen eine Skripterstellungs-Schnittstelle im Arbeitsbereich für visuelle Programmierung dar, ähnlich wie Codeblöcke. Die Autodesk.DesignScript-Bibliotheken verwenden eine Punktnotation ähnlich der von DesignScript.
 
-    > Laden Sie ein Beispiel für einen Python-Block herunter (klicken Sie mit der rechten Maustaste und dann auf Speichern unter), oder sehen Sie sich im [Primer](https://primer2.dynamobim.org/v/de/8_coding_in_dynamo/8-3_python) eine detaillierte exemplarische Vorgehensweise an.
+    > Laden Sie ein Beispiel für einen Python-Block herunter (klicken Sie mit der rechten Maustaste und dann auf Speichern unter), oder sehen Sie sich im [Primer](https://primer.dynamobim.org/10_Custom-Nodes/10-4_Python.html) eine detaillierte exemplarische Vorgehensweise an.
 
 Die Entwicklung im Dynamo-Arbeitsbereich ist ein leistungsstarkes Werkzeug, um unmittelbar Feedback zu erhalten.
 
-![Entwickeln im Dynamo-Arbeitsbereich mit dem Python-Block](images/python-example.jpg)
+![Entwickeln im Dynamo-Arbeitsbereich mit dem Python-Block](../../.gitbook/assets/python-example.jpg)
 
 > Entwickeln im Dynamo-Arbeitsbereich mit dem Python-Block
 
@@ -54,7 +54,7 @@ Die Entwicklungsoptionen für Dynamo wurden speziell auf die Komplexität bei de
 
 Mit diesen Optionen können Sie sehr einfach Code in der visuellen Programmierumgebung von Dynamo schreiben. Der Arbeitsbereich für visuelle Programmierung in Dynamo bietet Zugriff auf Python und DesignScript und umfasst die Möglichkeit, mehrere Blöcke in einem benutzerdefinierten Block zu enthalten.
 
-![Codeblock, Python-Skript und benutzerdefinierter Block](images/Development-Icons.png)
+![Codeblock, Python-Skript und benutzerdefinierter Block](../../.gitbook/assets/Development-Icons.png)
 
 Mit diesen Methoden haben wir folgende Möglichkeiten:
 
@@ -66,11 +66,11 @@ Mit diesen Methoden haben wir folgende Möglichkeiten:
 
 Unter Zero-Touch versteht man ein einfaches Verfahren zum Importieren von C#-Bibliotheken durch Zeigen und Klicken. Dynamo liest die öffentlichen Methoden einer `.dll`-Datei und konvertiert sie in Dynamo-Blöcke. Sie können Zero-Touch verwenden, um Ihre eigenen benutzerdefinierten Blöcke und Pakete zu entwickeln.
 
-![Zero-Touch-Blöcke](images/ZTImport.png)
+![Zero-Touch-Blöcke](../../.gitbook/assets/ZTImport.png)
 
 Mit dieser Methode haben wir folgende Möglichkeiten:
 
-* Importieren von Bibliotheken, die nicht unbedingt für Dynamo entwickelt wurden, und automatisches Erstellen einer Suite mit neuen Blöcken, z. B. wie im [A-Forge-Beispiel](../../6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md#case-study-importing-aforge) im Primer beschrieben.
+* Importieren von Bibliotheken, die nicht unbedingt für Dynamo entwickelt wurden, und automatisches Erstellen einer Suite mit neuen Blöcken, z. B. wie im [A-Forge-Beispiel](../../6_custom_nodes_and_packages/6-2_packages/5-zero-touch.md#case-study-importing-aforge) im Primer beschrieben.
 * Schreiben von C#-Methoden und einfache Nutzung der Methoden als Blöcke in Dynamo
 * Gemeinsame Nutzung einer C#-Bibliothek als Blöcke mit der Dynamo-Community in einem Paket
 
@@ -78,7 +78,7 @@ Mit dieser Methode haben wir folgende Möglichkeiten:
 
 Diese Blöcke gehen ein Schritt tiefer in die Struktur von Dynamo. Sie basieren auf der `NodeModel`-Klasse und sind in C# geschrieben. Diese Methode bietet die größte Flexibilität und Leistung. Die meisten Aspekte des Blocks müssen jedoch explizit definiert werden, und Funktionen müssen in einer separaten Assembly ausgeführt werden.
 
-![Von NodeModel abgeleitete Blöcke](images/Development-Icons-NodeModel.png)
+![Von NodeModel abgeleitete Blöcke](../../.gitbook/assets/Development-Icons-NodeModel.png)
 
 Mit dieser Methode haben wir folgende Möglichkeiten:
 
@@ -93,13 +93,13 @@ Da Dynamo regelmäßig aktualisiert wird, können Änderungen an Teilen der API 
 
 Änderungen an der API werden im [Dynamo-GitHub-Wiki](https://github.com/DynamoDS/Dynamo/wiki/API-Changes) nachverfolgt. Hier werden Änderungen an DynamoCore, Bibliotheken und Arbeitsbereichen behandelt.
 
-![Dokument mit Dynamo-API-Änderungen](images/api-changes.jpg)
+![Dokument mit Dynamo-API-Änderungen](../../.gitbook/assets/api-changes.jpg)
 
 Ein Beispiel für eine bevorstehende, signifikante Änderung ist der Wechsel von XML zum JSON-Dateiformat in Version 2.0. Von NodeModel abgeleitete Blöcke benötigen jetzt einen [JSON-Konstruktor](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node), da sie sonst nicht in Dynamo 2.0 geöffnet werden können.
 
 Die API-Dokumentation von Dynamo deckt derzeit die Kernfunktionen ab: [http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI).
 
-![API-Dokumentation](images/api-docs.jpg)
+![API-Dokumentation](../../.gitbook/assets/api-docs.jpg)
 
 ### Berechtigung zum Verteilen von Binärdateien in einem Paket <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 
@@ -108,6 +108,7 @@ Achten Sie auf DLL-Dateien, die in einem Paket enthalten sind, das in den Packag
 Wenn ein Paket Binärdateien enthält, müssen die Benutzer beim Herunterladen darüber informiert werden, dass das Paket Binärdateien enthält.
 
 ### Überlegungen zur Leistung der Dynamo-Benutzeroberfläche
+
 Zum Zeitpunkt der Erstellung dieses Dokuments verwendet Dynamo hauptsächlich WPF (Windows Presentation Foundation), um die Benutzeroberfläche zu rendern. WPF ist ein komplexes und leistungsstarkes XAML-/bindungsbasiertes System. Da Dynamo über eine komplexe Benutzeroberfläche verfügt, werden leicht Probleme mit der Benutzeroberfläche oder Speicherverluste verursacht bzw. die Diagrammausführung und Aktualisierungen der Benutzeroberfläche so zusammengefasst, dass die Leistung beeinträchtigt wird.
 
 Weitere Informationen finden Sie auf der [Wiki-Seite zu den Überlegungen zur Leistung von Dynamo](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance). Hier finden Sie Hilfestellung, um einige häufige Fallstricke bei Änderungen am Code von Dynamo zu vermeiden.

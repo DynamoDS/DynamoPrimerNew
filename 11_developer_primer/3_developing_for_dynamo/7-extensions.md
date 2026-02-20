@@ -6,7 +6,7 @@ Erweiterungen sind ein leistungsstarkes Entwicklungswerkzeug im Dynamo-Ökosyste
 
 Im Anschluss an das Beispiel SampleViewExtension aus dem DynamoSamples-GitHub-Repository gehen wir die Schritte zum Erstellen eines einfachen, modusunabhängigen Fensters durch, in dem die aktiven Blöcke im Diagramm in Echtzeit angezeigt werden. Für eine Ansichtserweiterung müssen wir eine Benutzeroberfläche für das Fenster erstellen und Werte an ein Ansichtsmodell binden.
 
-![Fenster der Ansichtserweiterung](images/dyn-viewextension.jpg)
+![Fenster der Ansichtserweiterung](../../.gitbook/assets/dyn-viewextension.jpg)
 
 > 1. Das Fenster der Ansichtserweiterung, das nach dem Beispiel SampleViewExtension im GitHub-Repository entwickelt wurde.
 
@@ -28,9 +28,9 @@ Eine Ansichtserweiterung besteht aus drei wesentlichen Teilen:
 
 Erstellen Sie zunächst ein neues `Class Library`-Projekt mit dem Namen `SampleViewExtension`.
 
-![Erstellen einer neuen Klassenbibliothek](images/vs-new-project-viewextension-1.jpg)
+![Erstellen einer neuen Klassenbibliothek](../../.gitbook/assets/vs-new-project-viewextension-1.jpg)
 
-![Konfigurieren eines neuen Projekts](images/vs-new-project-viewextension-2.jpg)
+![Konfigurieren eines neuen Projekts](../../.gitbook/assets/vs-new-project-viewextension-2.jpg)
 
 > 1. Erstellen Sie ein neues Projekt, indem Sie `File > New > Project` auswählen.
 > 2. Wählen Sie `Class Library` aus.
@@ -39,14 +39,14 @@ Erstellen Sie zunächst ein neues `Class Library`-Projekt mit dem Namen `SampleV
 
 In diesem Projekt benötigen wir zwei Klassen. Eine Klasse, die `IViewExtension`, und eine andere, die `NotificationObject.` implementiert. `IViewExtension` enthält alle Informationen darüber, wie die Erweiterung bereitgestellt, geladen, referenziert und verworfen wird. `NotificationObject` informiert über Änderungen in Dynamo und `IDisposable`. Bei einer Änderung wird die Anzahl entsprechend aktualisiert.
 
-![Klassendateien für Ansichtserweiterungen](images/vs-viewextension-classes.jpg)
+![Klassendateien für Ansichtserweiterungen](../../.gitbook/assets/vs-viewextension-classes.jpg)
 
 > 1. Eine Klassendatei mit dem Namen `SampleViewExtension.cs`, die `IViewExtension` implementiert.
 > 2. Eine Klassendatei mit dem Namen `SampleWindowViewMode.cs`, die `NotificationObject` implementiert.
 
 Um `IViewExtension` verwenden zu können, benötigen wir das NuGet-Paket WpfUILibrary. Bei der Installation dieses Pakets werden automatisch die Pakete Core, Services und ZeroTouchLibrary installiert.
 
-![Ansichtserweiterungspakete](images/vs-viewextension-packages.jpg)
+![Ansichtserweiterungspakete](../../.gitbook/assets/vs-viewextension-packages.jpg)
 
 > 1. Wählen Sie WpfUILibrary aus.
 > 2. Wählen Sie `Install` aus, um alle abhängigen Pakete zu installieren.
@@ -133,7 +133,7 @@ Die `SampleViewExtension`-Klasse erstellt ein anklickbares Menüelement, um das 
 * `public class SampleViewExtension : IViewExtension` `SampleViewExtension` übernimmt Daten von der `IViewExtension`-Schnittstelle und stellt alles bereit, was wir zur Erstellung des Menüelements benötigen.
 * `sampleMenuItem = new MenuItem { Header = "Show View Extension Sample Window" };` erstellt ein MenuItem und fügt es dem Menü `View` hinzu.
 
-![Menüelement](images/dyn-menuitem.jpg)
+![Menüelement](../../.gitbook/assets/dyn-menuitem.jpg)
 
 > 1. Menüelement
 
@@ -208,7 +208,7 @@ Diese Implementierung der Ansichtsmodellklasse überwacht `CurrentWorkspaceModel
 
 Nachdem wir die Kernlogik der Erweiterung definiert haben, legen wir nun die Darstellungsdetails des Fensters mit einer `.xaml`-Datei fest. Wir benötigen lediglich ein einfaches Fenster, in dem die Zeichenfolge über die `ActiveNodeTypes`-Eigenschaftenbindung in `TextBlock` `Text` angezeigt wird.
 
-![Hinzufügen eines Fensters](images/vs-window.jpg)
+![Hinzufügen eines Fensters](../../.gitbook/assets/vs-window.jpg)
 
 > 1. Klicken Sie mit der rechten Maustaste auf das Projekt, und wählen Sie `Add > New Item...`.
 > 2. Wählen Sie die Vorlage des Benutzersteuerelements aus, die wir später zum Erstellen eines Fensters ändern werden.
@@ -259,7 +259,7 @@ namespace SampleViewExtension
 
 Die Ansichtserweiterung kann jetzt erstellt und zu Dynamo hinzugefügt werden. Dynamo benötigt eine `xml`-Datei, um die `.dll`-Ausgabedatei als Erweiterung zu registrieren.
 
-![Hinzufügen einer neuen XML-Datei](images/vs-viewextension-xml.jpg)
+![Hinzufügen einer neuen XML-Datei](../../.gitbook/assets/vs-viewextension-xml.jpg)
 
 > 1. Klicken Sie mit der rechten Maustaste auf das Projekt, und wählen Sie `Add > New Item...`.
 > 2. Wählen Sie die XML-Datei aus.
@@ -281,7 +281,7 @@ Fügen Sie in der `xml`-Datei den folgenden Code hinzu, um Dynamo anzuweisen, wo
 
 Der letzte Schritt besteht darin, die Datei `SampleViewExtension_ViewExtensionDefinition.xml` in den Ordner der Ansichtserweiterungen von Dynamo zu kopieren, der sich im Dynamo Core-Installationsverzeichnis `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions` befindet. Beachten Sie, dass separate Ordner für `extensions` und `viewExtensions` existieren. Wenn Sie die `xml`-Datei in den falschen Ordner verschieben, wird sie zur Laufzeit möglicherweise nicht ordnungsgemäß geladen.
 
-![XML-Datei in den Erweiterungsordner kopiert](images/fe-viewextension-xml.jpg)
+![XML-Datei in den Erweiterungsordner kopiert](../../.gitbook/assets/fe-viewextension-xml.jpg)
 
 > 1. Die `.xml`-Datei, die wir in den Dynamo-Ordner mit den Ansichtserweiterungen kopiert haben.
 

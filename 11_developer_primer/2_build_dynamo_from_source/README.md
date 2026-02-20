@@ -8,7 +8,8 @@ GitHub ist ein Hosting-Dienst, der auf [Git](https://docs.github.com/de/get-star
 
 Die Quelldateien von Dynamo werden im DynamoDS-GitHub im folgenden Repository gehostet: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo).
 
-![Dynamo-Quelldateien](images/github.jpg)
+![Dynamo-Quelldateien](../../.gitbook/assets/github.jpg)
+
 > Dynamo-Quelldateien
 >
 > 1. Klonen oder laden Sie das gesamte Repository herunter.
@@ -22,7 +23,8 @@ Bevor wir das Repository klonen können, müssen wir Git installieren. Befolgen 
 
 Wir benötigen eine URL für das Dynamo-Repository, von dem geklont werden soll. Sie finden diese auf der Repository-Seite unter der Schaltfläche Clone or Download. Kopieren Sie die URL zum Einfügen in die Befehlszeile.
 
-![Klonen eines Repositorys](images/github-clone.png)
+![Klonen eines Repositorys](../../.gitbook/assets/github-clone.png)
+
 > 1. Wählen Sie Clone or Download aus.
 > 2. Kopieren Sie die URL.
 
@@ -32,17 +34,17 @@ Wenn Git installiert ist, können wir das Dynamo-Repository klonen. Öffnen Sie 
 
 > Ersetzen Sie username durch Ihren Benutzernamen.
 
-![Eingabeaufforderung](images/cli-1.jpg)
+![Eingabeaufforderung](../../.gitbook/assets/cli-1.jpg)
 
 Im nächsten Schritt führen wir einen Git-Befehl aus, um das Dynamo-Repository an den angegebenen Speicherort zu klonen. Die URL im Befehl wird durch Klicken auf die Schaltfläche Clone or Download auf GitHub abgerufen. Führen Sie diesen Befehl im Befehlsterminal aus. Beachten Sie, dass dadurch die Hauptverzweigung für das Dynamo-Repository geklont wird, bei der es sich um den aktuellen Code für Dynamo handelt und der die neueste Version von Dynamo-Code enthält. Diese Verzweigung ändert sich täglich.
 
 `git clone https://github.com/DynamoDS/Dynamo.git`
 
-![Ergebnisse des Git-Klonvorgangs](images/cli-2.jpg)
+![Ergebnisse des Git-Klonvorgangs](../../.gitbook/assets/cli-2.jpg)
 
 Wir wissen, dass Git funktioniert, wenn der Klonvorgang erfolgreich abgeschlossen wurde. Navigieren Sie im Datei-Explorer zu dem Verzeichnis, in das Sie die Quelldateien geklont haben, um sie anzuzeigen. Die Verzeichnisstruktur sollte der Hauptverzweigung des Dynamo-Repositorys auf GitHub entsprechen.
 
-![Dynamo-Quelldateien](images/source-files.jpg)
+![Dynamo-Quelldateien](../../.gitbook/assets/source-files.jpg)
 
 > 1. Dynamo-Quelldateien
 > 2. Git-Dateien
@@ -51,28 +53,29 @@ Wir wissen, dass Git funktioniert, wenn der Klonvorgang erfolgreich abgeschlosse
 
 Nachdem die Quelldateien nun auf den lokalen Computer geklont wurden, können wir eine ausführbare Datei für Dynamo erstellen. Dazu müssen wir die Visual Studio-IDE einrichten und sicherstellen, dass .NET Framework und DirectX installiert sind.
 
-* Laden Sie die kostenlose, voll funktionsfähige IDE (Integrated Development Environment, integrierte Entwicklungsumgebung) [Microsoft Visual Studio Community 2015](https://my.visualstudio.com/Downloads/Results) herunter, und installieren Sie sie (spätere Versionen funktionieren möglicherweise ebenfalls).
+* Laden Sie die kostenlose, voll funktionsfähige IDE (Integrated Development Environment, integrierte Entwicklungsumgebung) [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/vs/community/) herunter, und installieren Sie sie (spätere Versionen funktionieren möglicherweise ebenfalls).
 * Laden Sie [Microsoft .NET Framework 4.5](https://www.microsoft.com/de-de/download/details.aspx?id=30653) oder höher herunter, und installieren Sie die Software.
 * Installieren Sie Microsoft DirectX aus dem lokalen Dynamo-Repository (`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`).
 
 > .NET und DirectX sind möglicherweise bereits installiert.
 
-> **Anmerkung:** Umfassende Änderung – **Visual Studio 2022 Preview/Visual Studio 2026 Insider** erforderlich
-> 
-> Ab Ende 2025 wird das `dotnet10.0`-Framework in Dynamo implementiert. Für die Entwicklung mit diesem Framework benötigen Sie Visual Studio 2022 Preview oder Visual Studio 2026 Insider (oder höher), da die stabilen Versionen .NET 10.0 noch nicht unterstützen.
-> 
+> **Anmerkung:** Umfassende Änderung – [**Visual Studio 2022**](https://visualstudio.microsoft.com/vs/community/)**/**[**Visual Studio 2026 Insider**](https://visualstudio.microsoft.com/insiders/) erforderlich
+>
+> Ab Ende 2025 wird das `dotnet10.0`-Framework in Dynamo implementiert. Für die Entwicklung mit diesem Framework benötigen Sie Visual Studio 2022 Preview oder Visual Studio 2026 Insider (oder höher), da die stabilen Versionen .NET 10.0 noch nicht unterstützen.
+>
 > **So installieren Sie Visual Studio 2022 Preview/2026 Insider neben Ihrer vorhandenen Installation**
+>
 > 1. Öffnen Sie das **Visual Studio-Installationsprogramm** (Sie finden es über das Startmenü).
 > 2. Klicken Sie auf **Update** um sicherzustellen, dass Sie über die neueste Version des Installationsprogramms verfügen.
 > 3. Wechseln Sie zur Registerkarte **Available**.
 > 4. Suchen Sie **Visual Studio 2022 Preview/2026 Insider** (Community, Professional oder Enterprise).
 > 5. Klicken Sie auf **Install**, um es parallel zu Ihrer vorhandenen Visual Studio-Installation hinzuzufügen.
-> 
-![Visual Studio Preview](images/vs-preview.png) ![Visual Studio 2026 Insider](images/vs-2026-insiders.png)
+
+\![Visual Studio-Vorschau](<../../.gitbook/assets/vs-preview (1).png>) \![Visual Studio 2026 Insider](<../../.gitbook/assets/vs-2026-insiders (1).png>)
 
 Sobald die Installation abgeschlossen ist, können wir Visual Studio starten und die Projektmappe `Dynamo.All.sln` unter `Dynamo\src` öffnen.
 
-![Öffnen der Projektmappendatei](images/vs-open-dynamo.jpg)
+![Öffnen der Projektmappendatei](../../.gitbook/assets/vs-open-dynamo.jpg)
 
 > 1. Wählen Sie `File > Open > Project/Solution` aus.
 > 2. Navigieren Sie zum Dynamo-Repository, und öffnen Sie den Ordner `src`.
@@ -81,7 +84,7 @@ Sobald die Installation abgeschlossen ist, können wir Visual Studio starten und
 
 Bevor wir die Projektmappe erstellen können, müssen einige Einstellungen angegeben werden. Zunächst sollten wir eine Debugversion von Dynamo erstellen, damit Visual Studio während des Debugging weitere Informationen sammeln kann, um uns bei der Entwicklung zu unterstützen. Außerdem sollten wir AnyCPU als Ziel verwenden.
 
-![Projektmappeneinstellungen](images/vs-dynamo-build-settings.jpg)
+![Projektmappeneinstellungen](../../.gitbook/assets/vs-dynamo-build-settings.jpg)
 
 > Diese werden zu Ordnern im Ordner `bin`.
 >
@@ -90,7 +93,7 @@ Bevor wir die Projektmappe erstellen können, müssen einige Einstellungen angeg
 
 Wenn das Projekt geöffnet ist, können wir die Projektmappe erstellen. Durch diesen Vorgang wird eine DynamoSandbox.exe-Datei erstellt, die ausgeführt werden kann.
 
-![Erstellen der Projektmappe](images/vs-build-dynamo.jpg)
+![Erstellen der Projektmappe](../../.gitbook/assets/vs-build-dynamo.jpg)
 
 > Durch das Erstellen des Projekts werden NuGet-Abhängigkeiten wiederhergestellt.
 >
@@ -101,7 +104,7 @@ Wenn das Projekt geöffnet ist, können wir die Projektmappe erstellen. Durch di
 
 Wenn Dynamo erfolgreich erstellt wurde, wird im Dynamo-Repository ein Ordner namens `bin` mit der Datei DynamoSandbox.exe erstellt. In unserem Fall verwenden wir die Option Debug für die Erstellung, sodass sich die ausführbare Datei unter `bin\AnyCPU\Debug` befindet. Durch Ausführen dieser Datei wird ein lokaler Build von Dynamo geöffnet.
 
-![Ausführbare DynamoSandbox-Datei](images/ex-dynamosandbox.jpg)
+![Ausführbare DynamoSandbox-Datei](../../.gitbook/assets/ex-dynamosandbox.jpg)
 
 > 1. Die ausführbare DynamoSandbox-Datei, die wir gerade erstellt haben. Führen Sie diese Datei aus, um Dynamo zu starten.
 
@@ -120,7 +123,7 @@ Für die eigenständige Dynamo-Anwendung DynamoSandbox werden zwei Optionen für
 
 Durch Starten von Dynamo über Visual Studio wird die Projektmappe ggf. für jede Debugging-Sitzung neu erstellt. Wenn wir also Änderungen an den Quelldateien vorgenommen haben, werden diese beim Debuggen berücksichtigt. Lassen Sie die Projektmappe `Dynamo.All.sln` geöffnet, wählen Sie `Debug`, `AnyCPU` und `DynamoSandbox` aus den Dropdown-Menüs aus, und klicken Sie dann auf `Start`. Dadurch wird Dynamo erstellt, ein neuer Prozess (DynamoSandbox.exe) gestartet und der Visual Studio-Debugger an diesen angehängt.
 
-![Erstellen und Starten der Anwendung über Visual Studio](images/vs-debug-options.jpg)
+![Erstellen und Starten der Anwendung über Visual Studio](../../.gitbook/assets/vs-debug-options.jpg)
 
 > Erstellen und starten Sie die Anwendung direkt über Visual Studio.
 >
@@ -131,7 +134,7 @@ Durch Starten von Dynamo über Visual Studio wird die Projektmappe ggf. für jed
 
 Alternativ können wir das Debugging auch für einen bereits ausgeführten Dynamo-Prozess durchführen, um ein Problem mit einem bestimmten geöffneten Diagramm oder Paket zu beheben. Zu diesem Zweck öffnen wir die Quelldateien des Projekts in Visual Studio und hängen sie mithilfe des Debug-Menüelements `Attach to Process` an einen laufenden Dynamo-Prozess an.
 
-![Dialogfeld zum Anhängen an den Prozess](images/vs-attach-dynamosandbox.jpg)
+![Dialogfeld zum Anhängen an den Prozess](../../.gitbook/assets/vs-attach-dynamosandbox.jpg)
 
 > Anhängen eines laufenden Prozesses an Visual Studio
 >
@@ -141,7 +144,7 @@ Alternativ können wir das Debugging auch für einen bereits ausgeführten Dynam
 
 In beiden Fällen hängen wir den Debugger an einen Prozess an, für den wir das Debugging ausführen möchten. Wir können vor oder nach dem Starten des Debuggers Haltepunkte im Code festlegen, die unmittelbar vor dem Ausführen dieser Codezeile eine Unterbrechung des Vorgangs bewirken. Wenn beim Debuggen eine nicht abgefangene Ausnahme ausgelöst wird, springt Visual Studio im Quellcode an die Stelle, an der diese aufgetreten ist. Dies ist eine effiziente Methode, um einfache Abstürze und nicht behandelte Ausnahmen zu finden und den Ausführungsablauf einer Anwendung zu verstehen.
 
-![Festlegen eines Haltepunkts](images/vs-debug-dynamocore.jpg)
+![Festlegen eines Haltepunkts](../../.gitbook/assets/vs-debug-dynamocore.jpg)
 
 > Beim Debuggen von DynamoSandbox legen wir im Konstruktor des Blocks Color.ByARGB einen Haltepunkt fest, der bewirkt, dass der Dynamo-Prozess angehalten wird, wenn der Block instanziiert wird. Wenn dieser Block eine Ausnahme ausgelöst hat oder zu einem Absturz von Dynamo führte, können wir die einzelnen Zeilen im Konstruktor durchgehen, um zu ermitteln, wo das Problem aufgetreten ist.
 >
@@ -164,7 +167,7 @@ Verwenden Sie den folgenden Befehl, um die neuesten Änderungen abzurufen:
 
 `git pull origin master`
 
-![Aktualisiertes lokales Repository](images/cli-pull-changes.jpg)
+![Aktualisiertes lokales Repository](../../.gitbook/assets/cli-pull-changes.jpg)
 
 > 1. Hier sehen wir, dass das lokale Repository mit Änderungen aus dem Remote-Repository aktualisiert wurde.
 

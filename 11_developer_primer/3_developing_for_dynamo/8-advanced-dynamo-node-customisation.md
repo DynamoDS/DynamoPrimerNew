@@ -49,7 +49,7 @@ Um `OnLogWarningMessage` in der Praxis zu demonstrieren, sehen Sie hier verschie
 
 In diesem Beispiel verwenden wir den benutzerdefinierten Block, der im vorherigen Abschnitt **Zero-Touch-Fallstudie - Rasterblock** erstellt wurde, eine Methode mit der Bezeichnung `RectangularGrid`, die basierend auf `xCount`\- und `yCount`-Eingaben ein Raster aus Rechtecken generiert. Wir gehen die Tests durch, wenn eine Eingabe ungültig ist, und verwenden dann `OnLogWarningMessage`, um eine Warnung zu protokollieren und die Verarbeitung zu stoppen.
 
-![OnLogWarningMessage - Beispiel 1](images/onlogwarningmessage-example-1.png)
+![OnLogWarningMessage - Beispiel 1](../../.gitbook/assets/onlogwarningmessage-example-1.png)
 
 **Verwenden von `OnLogWarningMessage` für die Eingabevalidierung**
 
@@ -137,7 +137,7 @@ namespace CustomNodes
 
 Wenn Ihre Methode eine Liste von Punkten erfordert, ein Benutzer jedoch eine leere oder Nullliste übergibt, können Sie `OnLogWarningMessage` verwenden, um ihn über das Problem zu informieren.
 
-![OnLogWarningMessage - Beispiel 2](images/onlogwarningmessage-example-2.png)
+![OnLogWarningMessage - Beispiel 2](../../.gitbook/assets/onlogwarningmessage-example-2.png)
 
 ```
 public static Polygon CreatePolygonFromPoints(List<Point> points)
@@ -164,7 +164,7 @@ Dadurch werden Benutzer gewarnt, dass sie eine gültige Liste mit mindestens dre
 
 Bei einem Block, der Dateipfade verarbeitet, sollten Sie sicherstellen, dass nur bestimmte Dateitypen zulässig sind. Wenn ein nicht unterstützter Dateityp erkannt wird, protokollieren Sie eine Warnung.
 
-![OnLogWarningMessage - Beispiel 3](images/onlogwarningmessage-example-3.png)
+![OnLogWarningMessage - Beispiel 3](../../.gitbook/assets/onlogwarningmessage-example-3.png)
 
 ```
 public static void ProcessFile(string filePath)
@@ -226,7 +226,7 @@ Im Folgenden finden Sie verschiedene Szenarien, um die Verwendung von `OnLogInfo
 
 In diesem Beispiel verwenden wir den benutzerdefinierten Block, der im vorherigen Abschnitt **Zero-Touch-Fallstudie - Rasterblock** erstellt wurde, eine Methode mit der Bezeichnung `RectangularGrid`, die basierend auf `xCount`\- und `yCount`-Eingaben ein Raster aus Rechtecken generiert. Wir werden die Tests durchgehen, wenn eine Eingabe ungültig ist, und dann `OnLogInfoMessage` verwenden, um Informationen bereitzustellen, nachdem der Block fertig ausgeführt wurde.
 
-![OnLogInfoMessage - Beispiel 1](images/onloginfomessage-example-1.png)
+![OnLogInfoMessage - Beispiel 1](../../.gitbook/assets/onloginfomessage-example-1.png)
 
 **Verwenden von `OnLogInfoMessage` für die Eingabevalidierung**
 
@@ -309,7 +309,7 @@ namespace CustomNodes
 
 Wenn Sie einen Block erstellen, der eine Liste von Punkten verarbeitet, können Sie protokollieren, wie viele Punkte erfolgreich verarbeitet wurden. Dies kann für große Datensätze nützlich sein.
 
-![OnLogInfoMessage - Beispiel 2](images/onloginfomessage-example-2.png)
+![OnLogInfoMessage - Beispiel 2](../../.gitbook/assets/onloginfomessage-example-2.png)
 
 ```
 public static List<Point> ProcessPoints(List<Point> points)
@@ -339,7 +339,7 @@ Diese Meldung hilft Benutzern, das Ergebnis der Verarbeitung nachzuvollziehen un
 
 In einigen Fällen ist es hilfreich, die Eingabeparameter zu bestätigen, die ein Block zum Abschließen einer Aktion verwendet hat. Wenn Ihr Block beispielsweise Daten in eine Datei exportiert, können Sie durch das Protokollieren des Dateinamens und -pfads Benutzern die Sicherheit geben, dass die richtige Datei verwendet wurde.
 
-![OnLogInfoMessage - Beispiel 3](images/onloginfomessage-example-3.png)
+![OnLogInfoMessage - Beispiel 3](../../.gitbook/assets/onloginfomessage-example-3.png)
 
 ```
 public static void ExportData(string filePath, List<string> data)
@@ -365,7 +365,7 @@ Mit dieser Meldung wird den Benutzern bestätigt, dass der Export erfolgreich wa
 
 In der Vergangenheit gab es in Dynamo Einschränkungen bei der Art und Weise, wie Paketautoren die Dokumentation für ihre Blöcke bereitstellen konnten. Autoren von benutzerdefinierten Blöcken konnten nur kurze Beschreibungen in der QuickInfo des Blocks angeben oder das Paket mit ausführlich kommentierten Beispieldiagrammen versenden.
 
-![Beschreibung in der Block-QuickInfo](images/customnodedocumentation-overloads.png)
+![Beschreibung in der Block-QuickInfo](../../.gitbook/assets/customnodedocumentation-overloads.png)
 
 ### Eine neue Möglichkeit
 
@@ -399,11 +399,11 @@ Führen Sie die folgenden Schritte aus, damit Ihre Markdown-Dateien in Dynamo an
 
 Dynamo verwendet die Ansichtserweiterung des Dokumentationsbrowsers, um die Dokumentation für Blöcke anzuzeigen. Um die Dokumentation eines Blocks zu öffnen, klicken Sie mit der rechten Maustaste auf den Block und wählen Hilfe. Dadurch wird der Dokumentationsbrowser geöffnet, und der mit diesem Block verknüpften Markdown-Code wird angezeigt, sofern vorhanden.
 
-![Dokumentationsbrowser](images/customnodedocumentation-no-documentation-provided.png)
+![Dokumentationsbrowser](../../.gitbook/assets/customnodedocumentation-no-documentation-provided.png)
 
 Die im Dokumentationsbrowser angezeigte Dokumentation besteht aus zwei Teilen. Der erste Teil ist der Abschnitt `Node Info`. Dieser wird automatisch aus den aus dem Block extrahierten Informationen generiert, wie z. B. Eingaben/Ausgaben, Blockkategorie, Blockname/Namensbereich und Kurzbeschreibung des Blocks. Im zweiten Teil wird die Dokumentation für benutzerdefinierte Blöcke angezeigt. Dabei handelt es sich um die Markdown-Datei, die zur Dokumentation des Blocks bereitgestellt wird.
 
-![Dokumentation für benutzerdefinierte Blöcke](images/customnodedocumentation-custom-node-documentation.png)
+![Dokumentation für benutzerdefinierte Blöcke](../../.gitbook/assets/customnodedocumentation-custom-node-documentation.png)
 
 #### doc-Ordner für Pakete
 
@@ -417,13 +417,13 @@ Dieser Namensbereich sollte der Name der Markdown-Datei für diesen bestimmten B
 
 In besonderen Fällen, in denen Überlastungen Ihrer Blöcke (Blöcke mit demselben Namen, aber unterschiedlichen Eingaben) vorhanden sind, müssen Sie die Eingabenamen in `()` nach dem Blocknamensbereich hinzufügen. Der integrierte Block `Geometry.Translate` weist beispielsweise mehrere Überlastungen auf. In diesem Fall würden wir die Markdown-Dateien für die Blöcke unten wie folgt benennen: `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction).md` `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction,distance).md`
 
-![Überlastete Blöcke](images/customnodedocumentation-overloads.png)
+![Überlastete Blöcke](../../.gitbook/assets/customnodedocumentation-overloads.png)
 
 #### Ändern von Markdown-Dateien, während sie in Dynamo geöffnet sind
 
 Um das Ändern von Dokumentationsdateien zu erleichtern, implementiert der Dokumentationsbrowser einen Dateibeobachter für die geöffnete Dokumentationsdatei. Dadurch können Sie Änderungen an der Markdown-Datei vornehmen, und die Änderungen werden sofort in Dynamo angezeigt.
 
-![Hot Reloading](images/customnodedocumentation-hot-reload.gif)
+![Hot Reloading](../../.gitbook/assets/customnodedocumentation-hot-reload.gif)
 
 Das Hinzufügen neuer Dokumentationsdateien ist auch möglich, während Dynamo geöffnet ist. Fügen Sie dem Ordner `/doc` einfach eine neue Markdown-Datei mit einem Namen hinzu, der dem dokumentierten Block entspricht.
 
@@ -441,9 +441,9 @@ In dieser Anleitung erfahren Sie, wie Sie Symbole zu Ihren Zero-Touch-Blöcken h
 
 Erstellen Sie zunächst ein Visual Studio-Klassenbibliotheksprojekt (.NET Framework) für Ihre Zero Touch-Blöcke. Wenn Sie noch kein Projekt haben, finden Sie im Abschnitt **Erste Schritte** eine Schritt-für-Schritt-Anleitung zum Erstellen eines Projekts.
 
-![Erstellen eines Visual Studio-Projekts](images/vs-new-project-1.jpg)
+![Erstellen eines Visual Studio-Projekts](../../.gitbook/assets/vs-new-project-1.jpg)
 
-![Konfigurieren eines neuen Projekts in Visual Studio](images/zerotouchicons-configure-new-project.jpg)
+![Konfigurieren eines neuen Projekts in Visual Studio](../../.gitbook/assets/zerotouchicons-configure-new-project.jpg)
 
 Stellen Sie sicher, dass Sie mindestens einen funktionalen Zero-Touch-Block haben, da Symbole nur zu vorhandenen Blöcken hinzugefügt werden können. Weitere Informationen finden Sie unter **Zero-Touch-Fallstudie - Rasterblock**.
 
@@ -475,36 +475,34 @@ Erstellen Sie eine Ressourcendatei, um Ihre Symbole in die `.dll` einzubetten:
 
 * Klicken Sie im **Solution Explorer** mit der rechten Maustaste auf das Projekt.
 
-![Hinzufügen eines neuen Elements](images/zerotouchicons-add-resources-file-1.jpg)
+![Hinzufügen eines neuen Elements](../../.gitbook/assets/zerotouchicons-add-resources-file-1.jpg)
 
 * Wechseln Sie zu **Add > New Item** und wählen Sie **Resources File** aus.
 
-![Hinzufügen einer Ressourcendatei](images/zerotouchicons-add-resources-file-2.jpg)
+![Hinzufügen einer Ressourcendatei](../../.gitbook/assets/zerotouchicons-add-resources-file-2.jpg)
 
 * Geben Sie der Datei den Namen `<ProjectName>Images.resx`. Beispielsweise `ZeroTouchNodeIconsImages.resx`.
 
 2. **Deaktivieren Sie die benutzerdefinierte Werkzeugeigenschaft**:
    * Wählen Sie die Ressourcendatei im **Solution Explorer** aus.
    * Löschen Sie in der Gruppe **Properties** das Feld `Custom Tool`, indem Sie den Wert `ResXFileCodeGenerator` entfernen.
-
 3. **Legen Sie Build Action auf None fest.**
-    * Da wir diese Ressource etwas weiter unten selbst erstellen werden, müssen wir sie nicht zusätzlich automatisch erstellen.
+   * Da wir diese Ressource etwas weiter unten selbst erstellen werden, müssen wir sie nicht zusätzlich automatisch erstellen.
 
-![Bereinigen der Eigenschaft von Custom Tool](images/zerotouchicons-custom-tool-property-update.png)
+![Bereinigen der Eigenschaft von Custom Tool](../../.gitbook/assets/zerotouchicons-custom-tool-property-update.png)
 
 > _ANMERKUNG: Wenn Sie das Feld Custom Tool nicht bereinigen, konvertiert Visual Studio Punkte in Ihren Ressourcennamen in Unterstriche. Vergewissern Sie sich vor der Erstellung, dass die Ressourcennamen anstelle von Unterstrichen Punkte als Trennzeichen für Klassennamen enthalten._
 
 #### Schritt 4: Fügen Sie Ihre Bilder als Ressourcen hinzu
 
 1. Doppelklicken Sie auf die erstellte Ressourcendatei:
-    * Fügen Sie jeweils ein Bild mit der Schaltfläche + hinzu. 
-    * Setzen Sie den Ressourcentyp auf **File**.
-    * Navigieren Sie zum Speicherort der Bilddatei, und fügen Sie die **großen** und **kleinen** Blocksymbole hinzu.
+   * Fügen Sie jeweils ein Bild mit der Schaltfläche + hinzu.
+   * Setzen Sie den Ressourcentyp auf **File**.
+   * Navigieren Sie zum Speicherort der Bilddatei, und fügen Sie die **großen** und **kleinen** Blocksymbole hinzu.
 
-![Ressourcen hinzufügen...](images/zerotouchicons-open-resource-editor-update.png)
+![Ressourcen hinzufügen...](../../.gitbook/assets/zerotouchicons-open-resource-editor-update.png)
 
 > _ANMERKUNG: Sie müssen Ihre Bilder nicht in einem **Ressourcenordner** oder Unterordnern **Large** und **Small** organisieren. Diese Methode hat sich jedoch bewährt._
-
 
 #### Schritt 5: Konvertieren des Projekts in den SDK-Stil (für ältere Projekte)
 
@@ -512,26 +510,26 @@ Wenn Ihr Projekt noch nicht im SDK-Stil vorliegt (erforderlich zum Einbetten von
 
 1. Installieren Sie die `.NET Upgrade Assistant`-Erweiterung über das Menü **Extensions > Manage Extensions** in Visual Studio.
 
-![Manage Extensions](images/zerotouchicons-manage-extensions-update.png)
+![Manage Extensions](../../.gitbook/assets/zerotouchicons-manage-extensions-update.png)
 
-![Installieren des .NET-Aktualisierungsassistenten](images/zerotouchicons-net-upgrade-assistant.jpg)
+![Installieren des .NET-Aktualisierungsassistenten](../../.gitbook/assets/zerotouchicons-net-upgrade-assistant.jpg)
 
 2. Klicken Sie im **Solution Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Upgrade > Convert project to SDK-style** aus.
 
-![Projekt aktualisieren](images/zerotouchicons-upgrade-project.jpg)
+![Projekt aktualisieren](../../.gitbook/assets/zerotouchicons-upgrade-project.jpg)
 
-![In SDK-Stil konvertieren](images/zerotouchicons-convert-to-sdk-style.jpg)
+![In SDK-Stil konvertieren](../../.gitbook/assets/zerotouchicons-convert-to-sdk-style.jpg)
 
 3. Warten Sie, bis die Konvertierung abgeschlossen ist.
 
-![Aktualisierung abgeschlossen](images/zerotouchicons-upgrade-complete.jpg)
+![Aktualisierung abgeschlossen](../../.gitbook/assets/zerotouchicons-upgrade-complete.jpg)
 
 #### Schritt 6: Hinzufügen eines After-Build-Skripts zum Einbetten von Ressourcen
 
 1. Beenden Sie das Projekt:
    * Klicken Sie im **Solution Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Unload Project** aus.
 
-![Projekt beenden](images/zerotouchicons-unload-project.jpg)
+![Projekt beenden](../../.gitbook/assets/zerotouchicons-unload-project.jpg)
 
 2. Bearbeiten Sie die Datei `.csproj`:
    * Fügen Sie das folgende `<Target>`-Element zwischen `</ItemGroup>` und `</Project>` hinzu:
@@ -552,26 +550,26 @@ Wenn Ihr Projekt noch nicht im SDK-Stil vorliegt (erforderlich zum Einbetten von
 	</Target>
 ```
 
-![Hinzufügen des After-Build-Codes](images/zerotouchicons-after-build.jpg)
+![Hinzufügen des After-Build-Codes](../../.gitbook/assets/zerotouchicons-after-build.jpg)
 
 1. Ersetzen Sie alle Instanzen von `ZeroTouchNodeIcons` durch Ihren Projektnamen.
 2. Laden Sie das Projekt neu:
    * Klicken Sie mit der rechten Maustaste auf das beendete Projekt, und wählen Sie **Reload Project**.
 
-![Projekt erneut laden](images/zerotouchicons-reload-project.jpg)
+![Projekt erneut laden](../../.gitbook/assets/zerotouchicons-reload-project.jpg)
 
 #### Schritt 7: Erstellen und Laden Ihrer .dll in Dynamo
 
 1. Erstellen Sie das Projekt:
    * Nachdem Sie das After-Build-Skript hinzugefügt haben, erstellen Sie Ihr Projekt in Visual Studio.
 
-![Lösung erstellen](images/zerotouchicons-build-solution.jpg)
+![Lösung erstellen](../../.gitbook/assets/zerotouchicons-build-solution.jpg)
 
 2. Suchen Sie nach Ausgabedateien:
    * Stellen Sie sicher, dass sich `.dll` und `.customization.dll` im Ordner `bin` befinden.
 3. Fügen Sie die `.dll` zu Dynamo hinzu:
    * Verwenden Sie in Dynamo die Schaltfläche Bibliothek importieren, um Ihre .dll in Dynamo zu importieren.
 
-![Schaltfläche Bibliothek importieren](images/zerotouchicons-icon-in-dynamo.jpg)
+![Schaltfläche Bibliothek importieren](../../.gitbook/assets/zerotouchicons-icon-in-dynamo.jpg)
 
 4. Ihre benutzerdefinierten Blöcke sollten nun mit den entsprechenden Symbolen angezeigt werden.

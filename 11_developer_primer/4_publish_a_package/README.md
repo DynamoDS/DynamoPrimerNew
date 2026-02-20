@@ -1,4 +1,4 @@
-# Publizieren eines Pakets 
+# Publizieren eines Pakets
 
 ### Publizieren eines Pakets <a href="#publish-a-package" id="publish-a-package"></a>
 
@@ -12,7 +12,7 @@ Suchen Sie im Browser nach Paketen, und zeigen Sie Statistiken an: [https://dyna
 
 * In Dynamo umfasst der Package Manager das Installieren, Publizieren und Aktualisieren von Paketen.
 
-![Suchen nach Paketen](images/dynamopackagemanager.jpg)
+![Suchen nach Paketen](../../.gitbook/assets/dynamopackagemanager.jpg)
 
 > 1. Online-Suche nach Paketen: `Packages > Search for a Package...`
 > 2. Anzeigen/Bearbeiten von installierten Paketen: `Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Pakete werden in Dynamo über den Package Manager publiziert. Es wird empfohlen,
 
 Starten Sie Dynamo, und wählen Sie `Packages > Publish New Package...`, um das Fenster `Publish a Package` zu öffnen.
 
-![Publizieren von Paketen](images/dyn-publish-package-add-files.jpg)
+![Publizieren von Paketen](../../.gitbook/assets/dyn-publish-package-add-files.jpg)
 
 > 1. Wählen Sie `Add file...`, um nach Dateien zu suchen, die dem Paket hinzugefügt werden sollen.
 > 2. Wählen Sie die beiden `.dll`-Dateien aus der NodeModel-Fallstudie aus.
@@ -32,7 +32,7 @@ Starten Sie Dynamo, und wählen Sie `Packages > Publish New Package...`, um das 
 
 Geben Sie dem Paket einen Namen, eine Beschreibung und eine Versionsbezeichnung, wenn die Dateien dem Paketinhalt hinzugefügt wurden. Beim Publizieren eines Pakets mit Dynamo wird automatisch eine `pkg.json`-Datei erstellt.
 
-![Paketeinstellungen](images/dyn-publish-package.jpg)
+![Paketeinstellungen](../../.gitbook/assets/dyn-publish-package.jpg)
 
 > Ein Paket, das bereit für die Publizierung ist
 >
@@ -41,13 +41,13 @@ Geben Sie dem Paket einen Namen, eine Beschreibung und eine Versionsbezeichnung,
 
 Nach dem Publizieren eines Pakets sind die Blöcke in der Dynamo-Bibliothek unter der Kategorie `CustomNodeModel` verfügbar.
 
-![Paket in der Dynamo-Bibliothek](images/dyn-publish-package-library.jpg)
+![Paket in der Dynamo-Bibliothek](../../.gitbook/assets/dyn-publish-package-library.jpg)
 
 > 1. Das soeben in der Dynamo-Bibliothek erstellte Paket.
 
 Wenn das Paket online publiziert werden kann, öffnen Sie den Package Manager, wählen Sie `Publish` und dann `Publish Online`.
 
-![Publizieren eines Pakets im Package Manager](images/dyn-publish-package-directory.jpg)
+![Publizieren eines Pakets im Package Manager](../../.gitbook/assets/dyn-publish-package-directory.jpg)
 
 > 1. Um zu sehen, wie Dynamo das Paket formatiert hat, klicken Sie auf die drei vertikalen Punkte rechts neben CustomNodeModel und wählen Stammverzeichnis anzeigen.
 > 2. Wählen Sie im Fenster zum Publizieren von Dynamo-Paketen `Publish` und dann `Publish Online` aus.
@@ -57,7 +57,7 @@ Wenn das Paket online publiziert werden kann, öffnen Sie den Package Manager, w
 
 Das Aktualisieren eines Pakets ist ein ähnlicher Vorgang wie das Publizieren. Öffnen Sie den Package Manager, wählen Sie `Publish Version...` für das Paket aus, das aktualisiert werden muss, und geben Sie eine höhere Version ein.
 
-![Publizieren einer Paketversion](images/dyn-publish-package-version.jpg)
+![Publizieren einer Paketversion](../../.gitbook/assets/dyn-publish-package-version.jpg)
 
 > 1. Wählen Sie `Publish Version`, um ein vorhandenes Paket mit neuen Dateien im Stammverzeichnis zu aktualisieren, und wählen Sie dann, ob es lokal oder online publiziert werden soll.
 
@@ -69,38 +69,38 @@ Weitere Informationen zu diesen Funktionen finden Sie im folgenden Blog-Post: [h
 
 Der Web-Client des Package Manager ist über folgenden Link verfügbar: [https://dynamopackages.com/](https://dynamopackages.com)
 
-![Web-Client des Package Manager](images/packagemanager-browser.jpg)
+![Web-Client des Package Manager](../../.gitbook/assets/packagemanager-browser.jpg)
 
-##### Aktualisieren von Paketdetails
+**Aktualisieren von Paketdetails**
 
-Autoren können ihre Paketbeschreibung, den Website-Link und den Repository-Link bearbeiten, indem sie die folgenden Schritte ausführen:  
+Autoren können ihre Paketbeschreibung, den Website-Link und den Repository-Link bearbeiten, indem sie die folgenden Schritte ausführen:
 
-> 1. Wählen Sie unter **Meine Pakete** das Paket aus, und klicken Sie auf **Paketdetails bearbeiten**.  
-> 2. Fügen Sie die Links für die **Website** und das **Repository** mithilfe der entsprechenden Felder hinzu, oder ändern Sie sie.  
-> 3. Aktualisieren Sie bei Bedarf die **Paketbeschreibung**.  
-> 4. Klicken Sie auf **Änderungen speichern**, um die Aktualisierungen anzuwenden.  
+> 1. Wählen Sie unter **Meine Pakete** das Paket aus, und klicken Sie auf **Paketdetails bearbeiten**.
+> 2. Fügen Sie die Links für die **Website** und das **Repository** mithilfe der entsprechenden Felder hinzu, oder ändern Sie sie.
+> 3. Aktualisieren Sie bei Bedarf die **Paketbeschreibung**.
+> 4. Klicken Sie auf **Änderungen speichern**, um die Aktualisierungen anzuwenden.
 
- **Anmerkung**: Die Aktualisierung im Package Manager in Dynamo kann bis zu 15 Minuten dauern, da Server-Updates einige Zeit in Anspruch nehmen. Wir arbeiten daran, um diese Zeit zu reduzieren.  
+**Anmerkung**: Die Aktualisierung im Package Manager in Dynamo kann bis zu 15 Minuten dauern, da Server-Updates einige Zeit in Anspruch nehmen. Wir arbeiten daran, um diese Zeit zu reduzieren.
 
- ![Neue Benutzeroberfläche zum Aktualisieren der Paketdetails für publizierte Pakete](images/Package-Manager_Image_5.png)
+![Neue Benutzeroberfläche zum Aktualisieren der Paketdetails für publizierte Pakete](../../.gitbook/assets/Package-Manager_Image_5.png)
 
-##### Bearbeiten von Kompatibilitätsinformationen für publizierte Paketversionen  
+**Bearbeiten von Kompatibilitätsinformationen für publizierte Paketversionen**
 
-Kompatibilitätsinformationen können rückwirkend für zuvor publizierte Paketversionen aktualisiert werden. Führen Sie die folgenden Schritte aus:  
+Kompatibilitätsinformationen können rückwirkend für zuvor publizierte Paketversionen aktualisiert werden. Führen Sie die folgenden Schritte aus:
 
-![Bearbeiten der Kompatibilitätsinformationen für publizierte Pakete – Schritt 1](images/Package-Manager_Image_6.png)
+![Bearbeiten der Kompatibilitätsinformationen für publizierte Pakete – Schritt 1](../../.gitbook/assets/Package-Manager_Image_6.png)
 
-**Schritt 1:**  
+**Schritt 1:**
 
-1. Klicken Sie auf die Paketversion, die Sie aktualisieren möchten.  
-2. Die Liste **Abhängig von** wird automatisch mit den Paketen gefüllt, von denen Ihr Paket abhängt.  
-3. Klicken Sie auf das Stiftsymbol neben **Kompatibilität**, um den Arbeitsablauf **Kompatibilitätsinformationen bearbeiten** zu öffnen.  
+1. Klicken Sie auf die Paketversion, die Sie aktualisieren möchten.
+2. Die Liste **Abhängig von** wird automatisch mit den Paketen gefüllt, von denen Ihr Paket abhängt.
+3. Klicken Sie auf das Stiftsymbol neben **Kompatibilität**, um den Arbeitsablauf **Kompatibilitätsinformationen bearbeiten** zu öffnen.
 
-**Schritt 2:**  
+**Schritt 2:**
 
 Folgen Sie dem Flussdiagramm unten, und prüfen Sie die folgende Tabelle, um zu ermitteln, welche Option für Ihr Paket am besten geeignet ist.
 
-![Welche Option sollte für den Arbeitsablauf Kompatibilitätsinformationen bearbeiten ausgewählt werden?](images/Package-Manager_Image_7.png)
+![Welche Option sollte für den Arbeitsablauf Kompatibilitätsinformationen bearbeiten ausgewählt werden?](../../.gitbook/assets/Package-Manager_Image_7.png)
 
 Sehen wir uns einige Szenarien anhand von Beispielen an:
 
@@ -110,8 +110,8 @@ Sehen wir uns einige Szenarien anhand von Beispielen an:
 
 **Beispielpaket Nr. 3** – Mesh Toolkit: Dieses Paket ist ein Dynamo Core-Paket, bei dem es sich um eine Sammlung von Geometrieblöcken ohne Host-Abhängigkeiten handelt. In diesem Fall wäre die ideale Option Option 3. Das Paket wird in Dynamo und allen Host-Umgebungen als kompatibel angezeigt, die dem Versionsbereich und/oder der Liste der einzelnen Versionen entsprechen.
 
-![Optionen zum Bearbeiten der Kompatibilitätsinformationen](images/Package-Manager_Image_8.png)
+![Optionen zum Bearbeiten der Kompatibilitätsinformationen](../../.gitbook/assets/Package-Manager_Image_8.png)
 
 Je nach ausgewählter Option werden Dynamo- und/oder Host-spezifische Felder eingeblendet, wie in der folgenden Abbildung gezeigt.
 
-![Kompatibilitätsinformationen bearbeiten – Schritt 2](images/Package-Manager_Image_9.png)
+![Kompatibilitätsinformationen bearbeiten – Schritt 2](../../.gitbook/assets/Package-Manager_Image_9.png)
