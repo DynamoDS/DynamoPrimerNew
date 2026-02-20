@@ -2,7 +2,7 @@
 
 Codeblöcke geben Zugang zu DesignScript, der Programmiersprache, die Dynamo zugrunde liegt. DesignScript ist eine völlig neu entwickelte, leicht lesbare und knappe Programmiersprache speziell für experimentelle Arbeitsabläufe, die sowohl sofortiges Feedback für kleine Codeabschnitte als auch Skalierungsmöglichkeiten für umfangreiche und komplexe Interaktionen bietet. DesignScript ist zugleich das Kernstück der Engine, die die meisten Funktionen von Dynamo "hinter den Kulissen" steuert. Für fast jede Funktion in Dynamo-Blöcken und -Interaktionen ist eine entsprechende Funktion in der Skriptsprache vorhanden. Aus diesem Grund stehen einzigartige Möglichkeiten für einen nahtlosen Übergang zwischen Block-Interaktionen und Skripterstellung zur Verfügung.
 
-![](../images/8-1/1/codeblock.jpg)
+![](../../.gitbook/assets/codeblock.jpg)
 
 Blöcke können automatisch in Textsyntax konvertiert werden, etwa um Anfängern den Einstieg in DesignScript zu erleichtern oder um ganz einfach größere Abschnitte eines Diagramms auf kleinerem Raum zusammenzufassen. Hierfür steht die Funktion Block zu Code zur Verfügung, die im Abschnitt [DesignScript-Syntax](2-design-script-syntax.md) genauer beschrieben wird. Benutzer mit umfassender Erfahrung können in Codeblöcken unter Verwendung vieler Standardparadigmen der Codeerstellung benutzerdefinierte Mashups bestehender Funktionen sowie eigene Beziehungen erstellen. Benutzer, die über einige Erfahrung verfügen, aber keine Experten sind, finden zahlreiche Shortcuts und Codeabschnitte, mit deren Hilfe sie schneller an ihren Entwürfen arbeiten können. Der Begriff "Codeblock" mag zwar für Benutzer ohne Programmierkenntnisse etwas zu fachspezifisch wirken, die Codeblöcke selbst sind jedoch benutzerfreundlich und robust. Für den Einstieg können Codeblöcke mit einem Minimum an Codeerstellung effizient eingesetzt werden, während Benutzer mit fortgeschrittenen Kenntnissen Skriptdefinitionen definieren und gegebenenfalls an anderer Stelle in einer Dynamo-Definition erneut aufrufen können.
 
@@ -12,7 +12,7 @@ Codeblöcke sind, kurz zusammengefasst, eine Oberfläche für Textskripts innerh
 
 Bei Codeblöcken kann der Benutzer flexibel entscheiden, wie die Eingaben festgelegt werden sollen. Die folgenden Abbildungen zeigen verschiedene Möglichkeiten zum Erstellen eines einfachen Punkts mit den Koordinaten _(10, 5, 0)_:
 
-![](../images/8-1/1/codeblockbriefoverview.jpg)
+\![](<../../.gitbook/assets/codeblock brief overview.jpg>)
 
 Während Sie weitere Funktionen aus der Bibliothek kennenlernen, erweist sich eventuell die Eingabe von "Point.ByCoordinates" als leichter und schneller als die Suche nach dem passenden Block in der Bibliothek. Wenn Sie beispielsweise _Point._ eingeben, zeigt Dynamo eine Liste möglicher Funktionen an, die für Punkte angewendet werden können. Dadurch gestaltet sich die Skripterstellung intuitiver und die Anwendung von Funktionen in Dynamo ist leichter zu erlernen.
 
@@ -20,7 +20,7 @@ Während Sie weitere Funktionen aus der Bibliothek kennenlernen, erweist sich ev
 
 Der Codeblock befindet sich unter _Core > Input > Actions > Code Block_. Sie können den Codeblock jedoch auch wesentlich schneller durch einfaches Doppelklicken im Ansichtsbereich aufrufen. Dieser Block wird so häufig verwendet, dass ihm uneingeschränkte Doppelklickfunktionen zugewiesen wurden.
 
-![](../images/8-1/1/creatingcodeblocknodes.jpg)
+\![](<../../.gitbook/assets/creating codeblock nodes.jpg>)
 
 ### Zahlen, Zeichenfolgen und Formeln
 
@@ -30,7 +30,7 @@ Die folgende Abbildung zeigt, dass der "herkömmliche" Ablauf für diese Angaben
 
 Die Nummern- und Zeichenfolgenblöcke sind zwei Beispiele für Dynamo-Blöcke, die im Vergleich zum Codeblock als veraltet betrachtet werden könnten.
 
-![](../images/8-1/1/oldschoolvscodeblocksnodes.jpg)
+\![](<../../.gitbook/assets/old school vs code blocks nodes.jpg>)
 
 > 1. Traditionell
 > 2. Codeblöcke

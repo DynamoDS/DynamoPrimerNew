@@ -2,7 +2,7 @@
 
 Die folgenden Python-Skripte erstellen Punktgruppen für verschiedene Beispiele. Fügen Sie sie wie folgt in einen Python-Skript-Block ein:
 
-![](../images/8-2/10/pythonpoints01.jpg)
+\![](<../../.gitbook/assets/python points 01.jpg>)
 
 **python_points_1**
 

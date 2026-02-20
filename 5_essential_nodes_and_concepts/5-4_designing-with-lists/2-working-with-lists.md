@@ -4,7 +4,7 @@
 
 Im vorigen Kapitel wurde definiert, was unter einer Liste zu verstehen ist. Thema des folgenden Kapitels sind die Vorgänge, die für Listen durchgeführt werden können. Eine Liste lässt sich mit einem Stapel Spielkarten vergleichen. Der Stapel ist die Liste und jede Spielkarte steht für ein Element.
 
-![Karten](../images/5-4/2/Playing_cards_modified.jpg)
+![Karten](../../.gitbook/assets/Playing_cards_modified.jpg)
 
 > Foto von [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg).
 
@@ -39,11 +39,11 @@ In Dynamo sind Blöcke vorhanden, die den oben genannten Vorgängen entsprechen 
 >
 > Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
-{% file src="../datasets/5-4/2/List-Operations.dyn" %}
+{% file src="../../.gitbook/assets/List-Operations (1).dyn" %}
 
 Die folgende Abbildung zeigt das Basisdiagramm, in dem Linien zwischen zwei Kreisen gezeichnet werden, um einfache Listenoperationen darzustellen. Wir werden die Verwaltung von Daten in einer Liste genauer betrachten und die visuellen Ergebnisse anhand der unten aufgeführten Aktionen veranschaulichen.
 
-![](../images/5-4/2/workingwithlist-listoperation.jpg)
+\![](<../../.gitbook/assets/working with list - list operation.jpg>)
 
 > 1. Beginnen Sie mit einem **Code Block** mit dem Wert `500;`.
 > 2. Verbinden Sie ihn mit der x-Eingabe eines **Point.ByCoordinates**-Blocks.
@@ -61,11 +61,11 @@ Die folgende Abbildung zeigt das Basisdiagramm, in dem Linien zwischen zwei Krei
 >
 > Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
-{% file src="../datasets/5-4/2/List-Count.dyn" %}
+{% file src="../../.gitbook/assets/List-Count (1).dyn" %}
 
 Der Block _List.Count_ ist einfach: Er zählt die in einer Liste enthaltenen Werte und gibt ihre Anzahl zurück. Bei der Arbeit mit Listen von Listen gestaltet sich die Verwendung dieses Blocks differenzierter. Dies wird in weiter unten folgenden Abschnitten gezeigt.
 
-![Anzahl](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
+\![Anzahl](<../../.gitbook/assets/working with list - list operation - list count.jpg>)
 
 > 1. Der **List.Count**-Block gibt die Anzahl der Linien aus dem **Line.ByStartPointEndPoint**-Block zurück. In diesem Fall beträgt dieser Wert 10\. Dies stimmt mit der Anzahl der Punkte überein, die mithilfe des ursprünglichen **Code Block**-Blocks erstellt wurden.
 
@@ -75,18 +75,18 @@ Der Block _List.Count_ ist einfach: Er zählt die in einer Liste enthaltenen Wer
 >
 > Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
-{% file src="../datasets/5-4/2/List-GetItemAtIndex.dyn" %}
+{% file src="../../.gitbook/assets/List-GetItemAtIndex.dyn" %}
 
 **List.GetItemAtIndex** ist ein grundlegendes Verfahren zum Abrufen von Elementen in der Liste.
 
-![Übung](../images/5-4/2/workingwithlist-getitemindex01.jpg)
+\![Übung](<../../.gitbook/assets/working with list - get item index 01.jpg>)
 
 > 1. Klicken Sie zuerst mit der rechten Maustaste auf den **Line.ByStartPointEndPoint**-Block, um dessen Vorschau zu deaktivieren.
 > 2. Mithilfe von **List.GetItemAtIndex** wird der Index _"0"_ bzw. das erste Element in der Liste der Linien ausgewählt.
 
 Ändern Sie den Schieberegler auf einen Wert zwischen 0 und 9, um mithilfe von **List.GetItemAtIndex** ein anderes Element auszuwählen.
 
-![](../images/5-4/2/workingwithlist-getitemindex02.gif)
+\![](<../../.gitbook/assets/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
@@ -94,11 +94,11 @@ Der Block _List.Count_ ist einfach: Er zählt die in einer Liste enthaltenen Wer
 >
 > Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
-{% file src="../datasets/5-4/2/List-Reverse.dyn" %}
+{% file src="../../.gitbook/assets/List-Reverse (1).dyn" %}
 
 _List.Reverse_ kehrt die Reihenfolge aller Elemente in der Liste um.
 
-![Übung](../images/5-4/2/workingwithlist-listreverse.jpg)
+\![Übung](<../../.gitbook/assets/working with list - list reverse.jpg>)
 
 > 1. Erstellen Sie für eine deutlichere Darstellung der Linienliste in umgekehrter Reihenfolge weitere Linien, indem Sie den **Code Block** in `0..1..#50;` ändern.
 > 2. Duplizieren Sie den **Line.ByStartPointEndPoint**-Block, und fügen Sie einen List.Reverse-Block zwischen **Curve.PointAtParameter** und dem zweiten **Line.ByStartPointEndPoint**-Block ein.
@@ -110,11 +110,11 @@ _List.Reverse_ kehrt die Reihenfolge aller Elemente in der Liste um.
 >
 > Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
-{% file src="../datasets/5-4/2/List-ShiftIndices.dyn" %}
+{% file src="../../.gitbook/assets/List-ShiftIndices (1).dyn" %}
 
 **List.ShiftIndices** ist ein geeignetes Werkzeug zum Erstellen verdrehter oder schraubenförmiger Muster oder für ähnliche Datenverarbeitungen. Dieser Block verschiebt die Elemente in einer Liste um die angegebene Anzahl von Indexpositionen.
 
-![Übung](../images/5-4/2/workingwithlist-shiftIndices01.jpg)
+\![Übung](<../../.gitbook/assets/working with list - shiftIndices 01.jpg>)
 
 > 1. Fügen Sie auf dieselbe Weise wie beim Umkehren der Liste einen **List.ShiftIndices**-Block zwischen **Curve.PointAtParameter** und **Line.ByStartPointEndPoint** ein.
 > 2. Verwenden Sie einen **Codeblock**, dem Sie den Wert "1" zuweisen, zum Verschieben der Liste um eine Indexposition.
@@ -122,7 +122,7 @@ _List.Reverse_ kehrt die Reihenfolge aller Elemente in der Liste um.
 
 Wenn Sie im **Codeblock** einen größeren Wert, z. B. _"30"_ festlegen, ist ein deutlicher Unterschied in den diagonalen Linien zu erkennen. Die Verschiebung hat in diesem Fall dieselbe Wirkung wie die Irisblende einer Kamera und bewirkt eine Verdrehung der ursprünglichen Zylinderform.
 
-![](../images/5-4/2/workingwithlist-shiftIndices02.jpg)
+\![](<../../.gitbook/assets/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -130,13 +130,13 @@ Wenn Sie im **Codeblock** einen größeren Wert, z. B. _"30"_ festlegen, ist ei
 >
 > Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
-{% file src="../datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
+{% file src="../../.gitbook/assets/List-FilterByBooleanMask.dyn" %}
 
-![](../images/5-4/2/ListFilterBool.png)
+![](../../.gitbook/assets/ListFilterBool.png)
 
 **List.FilterByBooleanMask** entfernt bestimmte Elemente anhand einer Liste boolescher Werte bzw. der Werte "true" oder "false".
 
-![Übung](../images/5-4/2/workingwithlist-filterbyboolmask.jpg)
+\![Übung](<../../.gitbook/assets/working with list - filter by bool mask.jpg>)
 
 Um eine Liste mit true- und false-Werten zu erstellen, sind einige weitere Schritte erforderlich.
 

@@ -6,7 +6,7 @@ _Intersect_, _Trim_ und _SelectTrim_ werden hauptsächlich für niedrigerdimensi
 
 Die Methode _Union_ nimmt zwei Volumenkörper-Objekte und erstellt ein einzelnes Volumenkörper-Objekt aus dem Raum, der von beiden Objekten abgedeckt wird. Der Überlappungsbereich zwischen den einzelnen Objekten wird zur endgültigen Form kombiniert. In diesem Beispiel werden eine Kugel und ein Quader in einer einzigen Volumenkörper-Kugel-Quader-Form kombiniert:
 
-![](../images/8-2/9/GeometricBooleans\_01.png)
+![](../../.gitbook/assets/GeometricBooleans_01.png)
 
 ```js
 s1 = Sphere.ByCenterPointRadius(
@@ -23,7 +23,7 @@ combined = s1.Union(s2);
 
 Die Methode _Difference_ subtrahiert ähnlich wie _Trim_ die Inhalte des eingegebenen Werkzeug-Volumenkörpers vom Basis-Volumenkörper. In diesem Beispiel kerben wir eine Kugel leicht ein:
 
-![](../images/8-2/9/GeometricBooleans\_02.png)
+![](../../.gitbook/assets/GeometricBooleans_02.png)
 
 ```js
 s = Sphere.ByCenterPointRadius(
@@ -40,7 +40,7 @@ result = s.Difference(tool);
 
 Die Methode _Intersect_ gibt den überlappenden Volumenkörper zwischen zwei Eingabe-Volumenkörpern zurück. Im folgenden Beispiel wurde _Difference_ in _Intersect_ geändert, und der resultierende Volumenkörper entspricht dem ursprünglich eingekerbten Leerraum:
 
-![](../images/8-2/9/GeometricBooleans\_03.png)
+![](../../.gitbook/assets/GeometricBooleans_03.png)
 
 ```js
 s = Sphere.ByCenterPointRadius(

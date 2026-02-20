@@ -4,7 +4,7 @@
 
 Das einfachste geometrische Objekt in der Dynamo-Bibliothek für Standardgeometrie ist ein Punkt. Jegliche Geometrie wird mit speziellen Funktionen namens Konstruktoren erstellt, die jeweils ein neues Exemplar dieses bestimmten Geometrietyps zurückgeben. In Dynamo beginnen Konstruktoren mit dem Namen des Objekttyps, in diesem Fall Point, gefolgt von der Konstruktionsmethode. Zum Erstellen eines dreidimensionalen Punkts, der durch die kartesischen Koordinaten x, y und z angegeben wird, verwenden Sie den Konstruktor _ByCoordinates_:
 
-![](../images/8-2/1/GeometryBasics\_01.png)
+![](../../.gitbook/assets/GeometryBasics_01.png)
 
 ```js
 // create a point with the following x, y, and z
@@ -20,7 +20,7 @@ Konstruktoren in Dynamo sind normalerweise mit dem Präfix _By_ gekennzeichnet, 
 
 Die meisten Objekte verfügen über viele verschiedene Konstruktoren, und mit dem Konstruktor _BySphericalCoordinates_ können wir einen Punkt erstellen, der auf einer Kugel liegt und durch den Radius der Kugel, einen ersten Drehwinkel sowie einen zweiten Drehwinkel (in Grad) angegeben wird:
 
-![](../images/8-2/1/GeometryBasics\_02.png)
+![](../../.gitbook/assets/GeometryBasics_02.png)
 
 ```js
 // create a point on a sphere with the following radius,
@@ -38,7 +38,7 @@ p = Point.BySphericalCoordinates(cs, radius, theta,
 
 Punkte können verwendet werden, um höherdimensionale Geometrien wie z. B. Linien zu erstellen. Mit dem Konstruktor _ByStartPointEndPoint_ können wir ein Linienobjekt zwischen zwei Punkten erstellen:
 
-![](../images/8-2/1/GeometryBasics\_03.png)
+![](../../.gitbook/assets/GeometryBasics_03.png)
 
 ```js
 // create two points:
@@ -53,7 +53,7 @@ l = Line.ByStartPointEndPoint(p1, p2);
 
 In ähnlicher Weise können mit Linien wiederum höherdimensionale Oberflächengeometrien erstellt werden, beispielsweise mit dem Konstruktor _Loft_, der aus einer Reihe von Linien oder Kurven eine Oberfläche zwischen diesen interpoliert.
 
-![](../images/8-2/1/GeometryBasics\_04.png)
+![](../../.gitbook/assets/GeometryBasics_04.png)
 
 ```js
 // create points:
@@ -79,7 +79,7 @@ surf = Surface.ByLoft([l1, l2, l3]);
 
 Auch Oberflächen können zum Erstellen höherdimensionaler Volumenkörper-Geometrien genutzt werden, zum Beispiel durch Verdicken der Oberfläche um einen gegebenen Abstand. Vielen Objekten sind Funktionen zugewiesen, die Methoden genannt werden, und mit denen Programmierer Befehle für das jeweilige Objekt ausführen können. Methoden, die allen Geometrien gemein sind, sind z. B. _Translate_ und _Rotate_, die die Geometrie um einen bestimmten Wert verschieben oder drehen. Oberflächen haben eine Methode namens _Thicken_, die einen einzelnen Eingabewert (Nummer) akzeptiert, der die neue Dicke der Oberfläche angibt.
 
-![](../images/8-2/1/GeometryBasics\_05.png)
+![](../../.gitbook/assets/GeometryBasics_05.png)
 
 ```js
 p1 = Point.ByCoordinates(3, 10, 2);
@@ -101,7 +101,7 @@ solid = surf.Thicken(4.75, true);
 
 Mit den _Intersection_-Befehlen können niedrigerdimensionale Geometrien aus höherdimensionalen Objekten extrahiert werden. Diese extrahierte niedrigerdimensionale Geometrie kann als Grundlage für eine höherdimensionale Geometrie in einem zyklischen Prozess des geometrischen Erstellens, Extrahierens und erneuten Erstellens dienen. In diesem Beispiel verwenden wir den generierten Volumenkörper, um eine Oberfläche zu erstellen, und nutzen anschließend die Oberfläche, um eine Kurve zu erstellen.
 
-![](../images/8-2/1/GeometryBasics\_06.png)
+![](../../.gitbook/assets/GeometryBasics_06.png)
 
 ```js
 p1 = Point.ByCoordinates(3, 10, 2);

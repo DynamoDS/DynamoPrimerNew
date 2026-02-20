@@ -4,7 +4,7 @@ Objekte in computergestützten Entwürfen werden selten explizit in ihrer endgü
 
 In seiner einfachsten Form stellt ein Vektor eine Position im dreidimensionalen Raum dar. Man stellt sich ihn oft als Endpunkt eines Pfeils zwischen der Position (0, 0, 0) und der gegebenen Position vor. Vektoren können unter Verwendung des Konstruktors _ByCoordinates_ erstellt werden, wobei die x-, y- und z-Position des neu erstellten Vektorobjekts angegeben wird. Beachten Sie, dass Vektoren keine geometrischen Objekte sind und nicht im Dynamo-Fenster angezeigt werden. Informationen zu einem neu erstellten oder geänderten Vektor können jedoch im Konsolenfenster gedruckt werden:
 
-![](../images/8-2/3/vectormath01.jpg)
+\![](<../../.gitbook/assets/vector math 01.jpg>)
 
 ```js
 // construct a Vector object
@@ -19,7 +19,7 @@ Für Vektoren ist ein Satz von mathematischen Operationen definiert, sodass Sie 
 
 Vektoraddition ist definiert als die Summe der Komponenten von zwei Vektoren. Man kann sie sich so vorstellen, dass der resultierende Vektor aus zwei mit der Spitze des einen am Ende des anderen platzierten Vektoren entsteht. Vektoraddition wird mit der Methode _Add_ durchgeführt und wird im Diagramm auf der linken Seite abgebildet.
 
-![](../images/8-2/3/VectorMath\_02.png)
+![](../../.gitbook/assets/VectorMath_02.png)
 
 ```js
 a = Vector.ByCoordinates(5, 5, 0);
@@ -33,7 +33,7 @@ c = a.Add(b);
 
 Gleichermaßen können zwei Vektorobjekte mit der Methode _Subtract_ voneinander subtrahiert werden. Vektorsubtraktion kann man sich als die Richtung vom ersten zum zweiten Vektor vorstellen.
 
-![](../images/8-2/3/VectorMath\_03.png)
+![](../../.gitbook/assets/VectorMath_03.png)
 
 ```js
 a = Vector.ByCoordinates(5, 5, 0);
@@ -47,7 +47,7 @@ c = a.Subtract(b);
 
 Vektormultiplikation kann man sich so vorstellen, dass der Endpunkt eines Vektors in seiner eigenen Richtung um einen angegebenen Skalierungsfaktor verschoben wird.
 
-![](../images/8-2/3/VectorMath\_04.png)
+![](../../.gitbook/assets/VectorMath_04.png)
 
 ```js
 a = Vector.ByCoordinates(4, 4, 0);
@@ -60,7 +60,7 @@ c = a.Scale(5);
 
 Häufig ist beim Skalieren eines Vektors erwünscht, dass die Länge des resultierenden Vektors genau gleich dem skalierten Betrag ist. Dies wird einfach erreicht, indem zuerst ein Vektor normalisiert wird, also die Länge des Vektors auf genau eins festgelegt wird.
 
-![](../images/8-2/3/vectormath05.jpg)
+\![](<../../.gitbook/assets/vector math 05.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 3);
@@ -80,7 +80,7 @@ c weist weiterhin in dieselbe Richtung wie (1, 2, 3), hat jetzt jedoch eine Län
 
 In der Vektormathematik gibt es zwei weitere Methoden, die keine eindeutigen Parallelen zur eindimensionalen Mathematik aufweisen, das Kreuzprodukt und das Skalarprodukt. Das Kreuzprodukt ist eine Methode zum Erstellen eines Vektors, der sich im rechten Winkel (90 Grad) zu zwei vorhandenen Vektoren befindet. Beispielsweise ist das Kreuzprodukt der x- und y-Achsen die Z-Achse, auch wenn die beiden Eingabevektoren nicht orthogonal zueinander sein müssen. Ein Kreuzproduktvektor wird mit der Methode _Cross_ berechnet.
 
-![](../images/8-2/3/VectorMath\_06.png)
+![](../../.gitbook/assets/VectorMath_06.png)
 
 ```js
 a = Vector.ByCoordinates(1, 0, 1);
@@ -94,7 +94,7 @@ c = a.Cross(b);
 
 Eine weitere, wenn auch fortgeschrittenere Funktion der Vektormathematik ist das Skalarprodukt. Das Skalarprodukt zwischen zwei Vektoren ist eine reelle Zahl (kein Vektorobjekt), die mit dem Winkel zwischen zwei Vektoren zusammenhängt, jedoch nicht exakt diesem Winkel entspricht. Ein hilfreiche Eigenschaft des Skalarprodukts besteht darin, dass das Skalarprodukt zweier Vektoren nur genau dann 0 ist, wenn sie lotrecht zueinander stehen. Das Skalarprodukt wird mit der Methode _Dot_ berechnet.
 
-![](../images/8-2/3/vectormath07.jpg)
+\![](<../../.gitbook/assets/vector math 07.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 1);

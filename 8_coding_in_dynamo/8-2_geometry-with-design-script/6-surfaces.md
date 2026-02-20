@@ -6,7 +6,7 @@ Die zweidimensionale Entsprechung zur NurbsCurve ist die NurbsSurface, und wie d
 
 Zum Erstellen einer interpolierten Oberfläche generieren Sie einfach eine zweidimensionale Punktsammlung als Annäherung an die Form einer Oberfläche. Die Sammlung muss rechteckig sein, also nicht gezackt. Die Methode _NurbsSurface.ByPoints_ erstellt eine Oberfläche aus diesen Punkten.
 
-![](../images/8-2/6/Surfaces\_01.png)
+![](../../.gitbook/assets/Surfaces_01.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -19,7 +19,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 
 Freiform-NurbsSurfaces können auch erstellt werden, indem die zugrunde liegenden Steuerpunkte einer Oberfläche angegeben werden. Wie bei NurbsCurves kann man sich die Steuerpunkte als Darstellung eines vierseitigen Netzes mit geraden Segmenten vorstellen, das je nach dem Grad der Oberfläche zur endgültigen Oberflächenform geglättet wird. Um eine NurbsSurface aus Steuerpunkten zu erstellen, schließen Sie zwei zusätzliche Parameter in _NurbsSurface.ByPoints_ ein, die den Grad der zugrunde liegenden Kurven in beide Richtungen der Oberfläche angeben.
 
-![](../images/8-2/6/Surfaces\_02.png)
+![](../../.gitbook/assets/Surfaces_02.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -31,7 +31,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 
 Wir können den Grad der NurbsSurface erhöhen, um die resultierende Oberflächengeometrie zu ändern:
 
-![](../images/8-2/6/Surfaces\_03.png)
+![](../../.gitbook/assets/Surfaces_03.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -45,7 +45,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 
 Genauso wie Oberflächen durch Interpolation zwischen einer Reihe eingegebener Punkte erstellt werden können, können sie auch durch Interpolation zwischen einem Satz von Basiskurven erstellt werden. Dieser Ansatz wird als Erhebung bezeichnet. Eine Erhebungskurve wird mit dem Konstruktor _Surface.ByLoft_ und einer Sammlung von Eingabekurven als einzigem Parameter erstellt.
 
-![](../images/8-2/6/Surfaces\_04.png)
+![](../../.gitbook/assets/Surfaces_04.png)
 
 ```js
 // python_points_2, 3, and 4 are generated with
@@ -64,7 +64,7 @@ Rotationsflächen sind ein weiterer Typ von Oberflächen, die durch Sweeping ein
 
 Rotationsflächen werden definiert durch eine Basiskurve, die die Kante der Oberfläche darstellt, einen Achsenursprung, der den Basispunkt der Oberfläche bildet, eine Achsenrichtung, die die Kernrichtung vorgibt, einen Sweeping-Startwinkel sowie einen Sweeping-Endwinkel. Diese Parameter werden als Eingabe für den Konstruktor _Surface.Revolve_ verwendet.
 
-![](../images/8-2/6/Surfaces\_05.png)
+![](../../.gitbook/assets/Surfaces_05.png)
 
 ```js
 pts = {};

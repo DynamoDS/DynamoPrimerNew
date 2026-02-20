@@ -10,20 +10,20 @@ Numerische Variablen können für eine Vielzahl unterschiedlicher Zahlen stehen.
 
 Die "If"-Anweisung ist ein wichtiges Konzept in der Programmierung: "Wenn _dies_ zutrifft (True), dann geschieht _das_, andernfalls geschieht _etwas anderes_. Die aus der Anweisung resultierende Aktion wird durch einen booleschen Wert gesteuert. In Dynamo stehen mehrere Möglichkeiten zum Definieren von If-Anweisungen zur Verfügung:
 
-| Symbol                                             | Name (Syntax)             | Eingaben            | Ausgaben |
-| ------------------------------------------------ | ------------------------- | ----------------- | ------- |
-| ![](../images/5-1/If.jpg)                        | Wenn (**If**)               | test, true, false | result  |
-| ![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Codeblock (**(x?y:z);**) | x? y, z           | result  |
+| Symbol                                     | Name (Syntax)             | Eingaben            | Ausgaben |
+| ---------------------------------------- | ------------------------- | ----------------- | ------- |
+| ![](../../.gitbook/assets/If.jpg)        | Wenn (**If**)               | test, true, false | result  |
+| ![](../../.gitbook/assets/CodeBlock.jpg) | Codeblock (**(x?y:z);**) | x? y, z           | result  |
 
 Die folgenden kurzen Beispiele zeigen die Funktionsweise dieser drei Blöcke in der If-Bedingungsanweisung.
 
 In dieser Abbildung wurde für _Boolean_ die Option _true_ eingestellt, d. h., das Ergebnis ist die Zeichenfolge: _"this is the result if true"._ Die drei möglichen Blöcke, mit deren Hilfe die _If_-Anweisung erstellt werden kann, funktionieren hier auf dieselbe Weise.
 
-![](../images/5-3/3/logic-conditionalstatements01false.jpg)
+\![](<../../.gitbook/assets/logic - conditional statements 01 false.jpg>)
 
 Auch in diesem Fall funktionieren die Blöcke auf dieselbe Weise. Wenn Sie den _Boolean_-Wert in _False_ ändern, wird als Ergebnis die Zahl _Pi_ ausgegeben, wie in der ursprünglichen _If_-Anweisung festgelegt.
 
-![](../images/5-3/3/logic-conditionalstatements02true.jpg)
+\![](<../../.gitbook/assets/logic - conditional statements 02 true.jpg>)
 
 ## Übung: Logik und Geometrie
 
@@ -31,13 +31,13 @@ Auch in diesem Fall funktionieren die Blöcke auf dieselbe Weise. Wenn Sie den _
 >
 > Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
-{% file src="../datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
+{% file src="../../.gitbook/assets/Building Blocks of Programs - Logic (1).dyn" %}
 
 ### Teil I: Filtern einer Liste
 
 1. In diesem Beispiel teilen Sie eine Liste von Zahlen in eine Liste mit geraden und eine Liste ungeraden Zahlen auf.
 
-![](../images/5-3/3/logic-exercisepartI-01.jpg)
+\![](<../../.gitbook/assets/logic - exercise part I-01.jpg>)
 
 > a. **Range**: Definieren Sie im Ansichtsbereich einen Zahlenbereich.
 >
@@ -61,7 +61,7 @@ In diesem Schritt wenden Sie die in der ersten Übung erstellte Logik auf einen 
 
 2\. Beginnen Sie mit den Blöcken aus der letzten Übung. Die einzigen Ausnahmen (zusätzlich zum Ändern des Formats) sind:
 
-![](../images/5-3/3/logic-exercisepartII-01.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-01.jpg>)
 
 > a. Verwenden Sie einen **Sequence**-Block mit diesen Eingabewerten.
 >
@@ -69,7 +69,7 @@ In diesem Schritt wenden Sie die in der ersten Übung erstellte Logik auf einen 
 
 3\. Erstellen Sie zunächst eine separate Gruppe von Diagrammen, wie in der Abbildung oben gezeigt. Diese Gruppe von Blöcken stellt eine parametrische Gleichung zum Definieren einer Sinuskurve dar. Einige Hinweise:
 
-![](../images/5-3/3/logic-exercisepartII-02.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-02.jpg>)
 
 > a. Der erste **Number Slider**-Block repräsentiert die Frequenz der Welle. Er sollte einen Mindestwert von 1, einen Höchstwert von 4 und eine Schrittweite von 0.01 haben.
 >
@@ -79,23 +79,23 @@ In diesem Schritt wenden Sie die in der ersten Übung erstellte Logik auf einen 
 
 Für die Eingaben gilt hier folgende Regel: Verwenden Sie Zahlenblöcke für statische und Schieberegler für veränderliche Eigenschaften. Der anfangs definierte ursprüngliche Zahlenbereich soll erhalten bleiben. Für die Sinuskurve, die hier erstellt werden soll, wird jedoch mehr Flexibilität benötigt. Mithilfe dieser Schieberegler können Sie die Frequenz und Amplitude der Kurve ändern.
 
-![](../images/5-3/3/logic-exercisepartII-03.gif)
+\![](<../../.gitbook/assets/logic - exercise part II-03.gif>)
 
 4\. Die Schritte dieser Definition werden hier nicht nacheinander beschrieben. Hier wird zunächst das Endergebnis gezeigt, um eine Vorstellung der fertigen Geometrie zu vermitteln. Die ersten beiden Schritte wurden separat durchgeführt und müssen jetzt zusammengeführt werden. Die Position der reißverschlussähnlichen Bauteile soll durch die zugrunde liegende Sinuskurve gesteuert werden, wobei mithilfe der True/False-Logik abwechselnd große und kleine Quader eingefügt werden.
 
-![](../images/5-3/3/logic-exercisepartII-04.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-04.jpg>)
 
 > a. **Math.RemapRange**: Erstellen Sie aus der in Schritt 02 erstellten Zahlenfolge eine neue Zahlenfolge, indem Sie den Bereich neu zuordnen. In Schritt 01 wurden Zahlen von 0 – 100 festgelegt. Diese Zahlen liegen zwischen 0 und 1, wie mithilfe der Eingaben _newMin_ und _newMax_ festgelegt.
 
 5\. Erstellen Sie einen **Curve.PointAtParameter**-Block, und verbinden Sie dann die **Math.RemapRange**-Ausgabe aus Schritt 04 als _param_-Eingabe.
 
-![](../images/5-3/3/logic-exercisepartII-05.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-05.jpg>)
 
 Mithilfe dieses Schritts erstellen Sie Punkte entlang der Kurve. Die Zahlen mussten dem Bereich 0 bis 1 neu zugeordnet werden, da als Eingabe für _param_ Werte in diesem Bereich verlangt werden. Der Wert _0_ steht für den Startpunkt, der Wert _1_ für die Endpunkte. Die Auswertung aller dazwischen liegenden Zahlen ergibt Werte im Bereich _[0,1]_.
 
 6\. Verbinden Sie die Ausgabe von **Curve.PointAtParameter** mit **List.FilterByBoolMask**, um die Liste der ungeraden und geraden Indizes zu trennen.
 
-![](../images/5-3/3/logic-exercisepartII-06.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-06.jpg>)
 
 > a. **List.FilterByBoolMask**: Verbinden Sie **Curve.PointAtParameter** aus dem vorigen Schritt mit der _list_-Eingabe.
 >
@@ -105,7 +105,7 @@ Mithilfe dieses Schritts erstellen Sie Punkte entlang der Kurve. Die Zahlen muss
 
 **Cuboid.ByLengths**: Stellen Sie die in der Abbildung oben gezeigten Verbindungen wieder her, um eine reißverschlussähnliche Struktur entlang der Kurve zu erhalten. Sie erstellen hier einfache Quader, deren Größe jeweils durch ihren auf der Kurve liegenden Mittelpunkt definiert wird. Die Logik der Aufteilung in gerade und ungerade Werte wird damit im Modell deutlich.
 
-![](../images/5-3/3/logic-exercisepartII-07.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-07.jpg>)
 
 > a. Liste der Quader mit geraden Indizes.
 >

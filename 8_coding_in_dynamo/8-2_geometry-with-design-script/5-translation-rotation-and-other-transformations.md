@@ -6,7 +6,7 @@ Bestimmte geometrische Objekte können erstellt werden, indem Sie die x-, y- und
 
 Die einfachste geometrische Transformation ist eine Verschiebung, bei der ein Objekt um eine bestimmte Anzahl von Einheiten in x-, y- und z-Richtung verschoben wird.
 
-![](../images/8-2/5/Transformations\_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -22,7 +22,7 @@ p2 = p.Translate(10, -20, 50);
 
 Zwar können alle Objekte in Dynamo durch Anhängen der Methode _.Translate_ ans Ende des Objektnamens verschoben werden, jedoch erfordern komplexere Transformationen, dass das Objekt von einem zugrunde liegenden Koordinatensystem in ein neues Koordinatensystem überführt wird. Um beispielsweise ein Objekt um 45 Grad um die X-Achse zu drehen, können wir das Objekt aus seinem bisherigen Koordinatensystem ohne Drehung in ein Koordinatensystem überführen, das mit der Methode _.Transform_ um 45 Grad um die X-Achse gedreht wurde:
 
-![](../images/8-2/5/Transformations\_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -42,7 +42,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Zusätzlich zu den Möglichkeiten, Koordinatensysteme zu verschieben und zu drehen, können sie auch skaliert oder geschert erstellt werden. Ein Koordinatensystem kann mit der Methode _.Scale_ skaliert werden:
 
-![](../images/8-2/5/Transformations\_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -58,7 +58,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Gescherte Koordinatensysteme werden erstellt, indem nicht-orthogonale Vektoren in den Konstruktor CoordinateSystem eingegeben werden.
 
-![](../images/8-2/5/Transformations\_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(

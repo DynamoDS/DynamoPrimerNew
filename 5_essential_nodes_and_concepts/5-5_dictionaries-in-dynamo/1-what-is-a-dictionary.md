@@ -20,11 +20,9 @@ Durch die Trennung von Wörterbüchern und Listen werden Wörterbücher zu wicht
   * Wörterbücher verwenden die folgende Syntax: `{key:value}`
   * Listen verwenden die folgende Syntax: `[value,value,value]`
 * Es wurden _neue Blöcke_ in der Bibliothek eingeführt, mit denen Sie einfacher Wörterbücher erstellen, ändern und abfragen können.
-*   Listen, die in v1.x-Codeblöcken erstellt wurden, werden automatisch beim Laden des Skripts zur neuen Listensyntax migriert, die eckige `[ ]` anstelle von geschweiften Klammern `{ }` verwendet. \\
+* Listen, die in v1.x-Codeblöcken erstellt wurden, werden automatisch beim Laden des Skripts zur neuen Listensyntax migriert, die eckige `[ ]` anstelle von geschweiften Klammern `{ }` verwendet. \\
 
-    ***
-
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
+\![](<../../.gitbook/assets/what is a dictionary - what are the changes (1) (4).jpg>)
 
 ***
 
@@ -34,7 +32,7 @@ In der Computerwissenschaft handelt es sich bei Wörterbüchern – wie bei Lis
 
 In der folgenden Abbildung sehen Sie eine mögliche Verwendung eines Wörterbuchs. Wörterbücher werden häufig genutzt, um zwei Teile von Daten zu verbinden, die vielleicht keine direkte Beziehung zueinander aufweisen. In unserem Fall verbinden wir die spanische Version eines Worts mit der englischen Version, so dass wir das Wort später nachschlagen können.
 
-![](../images/5-5/1/whatisadictionary-whatwouldyouusethesefor.jpg)
+\![](<../../.gitbook/assets/what is a dictionary - what would you use these for.jpg>)
 
 > 1. Erstellt ein Wörterbuch, um die beiden Daten miteinander zu verknüpfen.
 > 2. Ruft den Wert mit dem angegebenen Schlüssel ab.

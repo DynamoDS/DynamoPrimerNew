@@ -6,11 +6,11 @@
 
 Durch das Verstehen der Geometrietypen und der [Beziehungen, die sie zueinander aufweisen](1-geometry-overview.md#stepping-through-the-hierarchy), können Sie leichter durch die Sammlung der **Geometry-Blöcke** navigieren, die in der Bibliothek für Sie verfügbar sind. Die Geometrieblöcke sind in alphabetischer Reihenfolge im Gegensatz zu hierarchischen angeordnet. Sie werden hier also ähnlich wie in ihrem Layout in der Dynamo Benutzeroberfläche angezeigt.
 
-![](../images/5-2/1/geometryoverview-geometryindynamo.jpg)
+\![](<../../.gitbook/assets/geometry overview - geometry in dynamo.jpg>)
 
 Darüber hinaus sollte das Erstellen von Modellen in Dynamo und das Verbindung der Vorschau in der Hintergrundvorschau mit dem Datenstrom in unserem Diagramm im Laufe der Zeit intuitiver werden.
 
-![](../images/5-2/1/GeometryforComputationalDesign-Overview.jpg)
+\![](<../../.gitbook/assets/Geometry for Computational Design - Overview.jpg>)
 
 > 1. Beachten Sie das angenommene Koordinatensystem, das durch das Raster und die farbigen Achsen dargestellt wird.
 > 2. Die ausgewählten Knoten rendern die entsprechende Geometrie (wenn der Knoten Geometrie erstellt) im Hintergrund in der Hervorhebungsfarbe.
@@ -19,13 +19,13 @@ Darüber hinaus sollte das Erstellen von Modellen in Dynamo und das Verbindung d
 >
 > Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
-{% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Geometry Overview.dyn" %}
 
 ## Das Konzept der Geometrie
 
 Die Geometrie ist nach traditioneller Definition die Studie der Form, Größe, relativen Position von Zahlen und der Eigenschaften im Raum. Dieser Bereich weist eine reiche Geschichte auf, die Tausende von Jahren zurückreicht. Mit dem Aufkommen und der Verbreitung des Computers verfügen Sie über ein leistungsstarkes Werkzeug für die Definition, Erforschung und Generierung von Geometrie. Es ist heute ein Leichtes, das Ergebnis komplexer geometrischer Interaktionen zu berechnen. Die Tatsache, dass dies getan wird, ist fast transparent.
 
-![Stanford Bunny](../images/5-2/1/StanfordBunny.jpg)
+![Stanford Bunny](../../.gitbook/assets/StanfordBunny.jpg)
 
 > Wenn Sie neugierig sind und mithilfe Ihres Computers herausfinden wollen, wie vielfältig und komplex Geometrie sein kann, führen Sie eine schnelle Internetsuche nach dem Stanford Bunny durch – einem kanonischen Modell zum Testen von Algorithmen.
 
@@ -42,7 +42,7 @@ In der Praxis bedeutet dies, dass uns bewusst sein muss, womit wir arbeiten (wel
 
 Nehmen Sie sich etwas Zeit, um die Beziehung zwischen der abstrakten und hierarchischen Beschreibung von Geometrie näher zu betrachten. Da diese beiden Konzepte miteinander verbunden, aber nicht immer auf den ersten Blick ersichtlich sind, können Sie schnell in eine konzeptuelle Sackgasse gelangen, sobald Sie damit beginnen, tiefergehende Arbeitsabläufe oder Modelle zu entwickeln. Verwenden Sie zunächst Dimensionalität als eine einfache Beschreibung des "Zeugs", das Sie modellieren. Die Anzahl der Bemaßungen, die erforderlich sind, um eine Form zu beschreiben, verdeutlicht, wie Geometrie hierarchisch aufgebaut ist.
 
-![Rechnerische Geometrie](../images/5-2/1/GeometryDimensionality.jpg)
+\![Rechnerische Geometrie](<../../.gitbook/assets/Geometry for - GeometryDimensionality.jpg>)
 
 > 1. Ein **Punkt** (definiert durch Koordinaten) verfügt über keine Bemaßungen, sondern weist nur Zahlen auf, die die einzelnen Koordinaten beschreiben.
 > 2. Eine **Linie** (definiert durch zwei Punkte) verfügt jetzt über _eine_ Bemaßung – Sie können sich vorwärts (in positiver Richtung) oder rückwärts (in negativer Richtung) entlang der Linie bewegen.
@@ -51,7 +51,7 @@ Nehmen Sie sich etwas Zeit, um die Beziehung zwischen der abstrakten und hierarc
 
 Dimensionalität stellt eine praktische Möglichkeit zum Kategorisieren von Geometrie dar, jedoch nicht unbedingt die beste. Schließlich verwenden wir zum Modellieren nicht nur Punkte, Linien, Ebenen und Quader, sondern auch mal etwas Gekrümmtes? Darüber hinaus gibt es eine vollkommen andere Kategorie der geometrischen Typen, die vollständig abstrakt sind, d. h. die Eigenschaften wie Ausrichtung, Volumen und Beziehungen zwischen Bauteilen definieren. Ein Vektor ist nicht wirklich greifbar. Wie kann er also relativ zu dem definiert werden, was im Raum angezeigt wird? Eine detailliertere Kategorisierung der geometrischen Hierarchie sollte den Unterschied zwischen abstrakten Typen und "Helfern" berücksichtigen, die jeweils danach gruppiert werden können, welche Schritte sie unterstützen, und nach den Typen, die die Beschreibung der Form von Modellelementen unterstützen.
 
-![Geometriehierarchie](../images/5-2/1/GeometryHierarchy.jpg)
+![Geometriehierarchie](../../.gitbook/assets/GeometryHierarchy.jpg)
 
 ## Weitere Informationen zu Geometrie
 

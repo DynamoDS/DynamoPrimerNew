@@ -2,7 +2,7 @@
 
 In den vorigen Abschnitten wurde gezeigt, wie das _MapToSurface_-Paket sich aus benutzerdefinierten Blöcken und Beispieldateien zusammensetzt. Aber wie veröffentlichen Sie ein Paket, das lokal entwickelt wurde? Diese Fallstudie zeigt, wie Sie ein Paket aus einer Gruppe von Dateien in einem lokalen Ordner publizieren können.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../../.gitbook/assets/develop package - custom nodes 01 (1) (6).jpg>)
 
 Es gibt mehrere Möglichkeiten zum Publizieren von Paketen. Im Folgenden wird der von uns empfohlene Prozess beschrieben: **Sie publizieren lokal, entwickeln lokal und publizieren schließlich online**. Sie beginnen mit einem Ordner, der sämtliche Dateien im Paket enthält.
 
@@ -24,11 +24,11 @@ Starten Sie dann Dynamo erneut. Wenn Sie beim erneuten Öffnen das Fenster _Pake
 >
 > Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
-{% file src="../datasets/6-2/4/MapToSurface.zip" %}
+{% file src="../../.gitbook/assets/MapToSurface.zip" %}
 
 Sie übermitteln Ihr Paket zum ersten Mal und alle Beispieldateien und benutzerdefinierten Blöcke befinden sich im selben Ordner. Nachdem dieser Ordner vorbereitet ist, können Sie jetzt auf Dynamo Package Manager hochladen.
 
-![](../images/6-2/4/publishapackage-publishlocally01.jpg)
+\![](<../../.gitbook/assets/publish a package - publish locally 01.jpg>)
 
 > 1. Der Ordner enthält fünf benutzerdefinierte Blöcke (.dyf).
 > 2. Er enthält außerdem fünf Beispieldateien (.dyn) und eine importierte Vektordatei (.svg). Diese Dateien dienen als einführende Übungen, die dem Benutzer die Arbeit mit den benutzerdefinierten Blöcken erläutern sollen.
@@ -55,7 +55,7 @@ Publizieren Sie das Paket, indem Sie auf Lokal publizieren (1) klicken. Achten S
 
 Nach dem Publizieren werden die benutzerdefinierten Blöcke in der Gruppe DynamoPrimer oder in Ihrer Dynamo-Bibliothek angezeigt.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../../.gitbook/assets/develop package - install package 02 (1) (4).jpg>)
 
 Sehen wir jetzt im Stammverzeichnis nach, wie Dynamo das eben erstellte Paket formatiert hat. Navigieren Sie dazu zur Registerkarte Installierte Pakete, klicken Sie neben MapToSurface auf das Menü mit den drei Punkten, und wählen Sie Stammverzeichnis anzeigen aus.
 
@@ -63,7 +63,7 @@ Sehen wir jetzt im Stammverzeichnis nach, wie Dynamo das eben erstellte Paket fo
 
 Das Stammverzeichnis befindet sich am lokalen Speicherort des Pakets (da Sie es lokal veröffentlicht haben). Dynamo greift derzeit zum Lesen benutzerdefinierter Blöcke auf diesen Ordner zu. Aus diesem Grund müssen Sie das Verzeichnis lokal an einem dauerhaften Speicherort ablegen (d. h. nicht auf Ihrem Desktop). Der Ordner mit dem Dynamo-Paket ist wie folgt gegliedert.
 
-![](../images/6-2/4/publishapackage-publishlocally06.jpg)
+\![](<../../.gitbook/assets/publish a package - publish locally 06.jpg>)
 
 > 1. Im Ordner _bin_ befinden sich DLL-Dateien, die mit C#- oder Zero Touch-Bibliotheken erstellt wurden. Dieses Paket enthält keine solchen Dateien; dieser Ordner ist also in diesem Beispiel leer.
 > 2. Im Ordner _dyf_ befinden sich die benutzerdefinierten Blöcke. Wenn Sie ihn öffnen, werden alle benutzerdefinierten Blöcke (DYF-Dateien) für das Paket angezeigt.

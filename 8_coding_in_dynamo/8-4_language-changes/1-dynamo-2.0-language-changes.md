@@ -68,7 +68,7 @@ Im Folgenden werden die Änderungen in Version 2.0 erläutert:
 
 ## 1\. Vereinfachte List@Level-Syntax
 
-Neue Syntax für list@level, sodass `list@L1` anstelle von `list@-1` ![](../images/8-4/1/lang2_1.png) verwendet wird
+Neue Syntax für list@level, sodass `list@L1` anstelle von `list@-1` ![](../../.gitbook/assets/lang2_1.png) verwendet wird
 
 ## 2\. Überlastete Funktionen mit Parametern, die sich nur durch den Rang unterscheiden, sind unzulässig
 
@@ -85,7 +85,7 @@ BoundingBox BoundingBox.ByGeometry(geometry: Geometry) {...}
 BoundingBox BoundingBox.ByGeometry(geometry: Geometry[]) {...}
 ```
 
-Wenn der Benutzer den ersten Block im Ansichtsbereich abgelegt und eine Liste von Geometrien verbunden hat, erwartet er, dass die Replikation einsetzt, dies findet jedoch nie statt, da zur Laufzeit stattdessen die zweite Überlastung aufgerufen wird, wie hier gezeigt: ![](../images/8-4/1/lang2_2.png)
+Wenn der Benutzer den ersten Block im Ansichtsbereich abgelegt und eine Liste von Geometrien verbunden hat, erwartet er, dass die Replikation einsetzt, dies findet jedoch nie statt, da zur Laufzeit stattdessen die zweite Überlastung aufgerufen wird, wie hier gezeigt: ![](../../.gitbook/assets/lang2_2.png)
 
 Aus diesem Grund sind in Version 2.0 überlastete Funktionen nicht zulässig, die sich nur in der Parameterkardinalität unterscheiden. Dies bedeutet, dass bei überlasteten Funktionen, die über die gleiche Anzahl und die gleichen Typen von Parametern verfügen, aber einen oder mehrere Parameter aufweisen, die sich nur im Rang unterscheiden, immer die zuerst definierte Überlastung verwendet wird, während der Rest vom Compiler verworfen wird. Der Hauptvorteil liegt in der Vereinfachung der Methodenauflösungslogik, da ein schneller Pfad zur Auswahl von Funktionskandidaten zur Verfügung steht.
 
@@ -105,7 +105,7 @@ Im folgenden Beispiel wurden zwei Überlastungen von Funktion `foo` definiert. I
 
 In Version 2.0 wird immer die zuerst definierte Methode den anderen vorgezogen. Es gilt das Prinzip "Wer zuerst kommt, mahlt zuerst".
 
-![](../images/8-4/1/lang2_3.png)
+![](../../.gitbook/assets/lang2_3.png)
 
 Für jeden der folgenden Fälle wird die zuerst definierte Überlastung verwendet. Beachten Sie, dass dies ausschließlich auf der Reihenfolge basiert, in der die Funktionen definiert werden, und nicht auf den Parameterrängen. Es wird jedoch empfohlen, Methoden mit höher eingestuften Parametern bei benutzerdefinierten und Zero-Touch-Blöcken zu bevorzugen.
 
@@ -137,7 +137,7 @@ Wenn beispielsweise eine Listeneingabe mit den folgenden Typen `[Arc, Line]` an 
 
 ### Dynamo 1.x: Testet nur das erste Element der Eingabeliste in Bezug auf die Methodenauflösungsprüfung.
 
-![](../images/8-4/1/lang2_4.png)
+![](../../.gitbook/assets/lang2_4.png)
 
 ```
 x = [arc, line];
@@ -164,7 +164,7 @@ In Version 2.0 geschieht Folgendes:
 
 Dieses Beispiel funktionierte zuvor in Version 1.x, da das Diagramm zu `point.X;` kompiliert wurde und die `X`-Eigenschaft für das Punktobjekt gefunden wurde. Jetzt in Version 2.0 schlägt es fehl, da der kompilierte Code `Vector.X(point)` nur einen `Vector`-Typ erwartet:
 
-![](../images/8-4/1/lang2_5.png)
+![](../../.gitbook/assets/lang2_5.png)
 
 ### Vorteile:
 
@@ -176,7 +176,7 @@ Dieses Beispiel funktionierte zuvor in Version 1.x, da das Diagramm zu `point.X
 
 ### Einschränkung: Nicht aufgelöste Mehrdeutigkeiten mit überlasteten Methoden
 
-Da Dynamo Funktionsüberlastungen im Allgemeinen unterstützt, kann es dennoch zu Verwirrungen kommen, wenn eine weitere überlastete Funktion mit derselben Anzahl von Parametern vorhanden ist. Wenn Sie im folgenden Diagramm beispielsweise einen numerischen Wert mit der `direction`-Eingabe von `Curve.Extrude` und einen Vektor mit der `distance`-Eingabe von `Curve.Extrude` verbinden, funktionieren beide Blöcke weiterhin, was unerwartet ist. In diesem Fall kann die Engine zur Laufzeit keinen Unterschied erkennen, auch wenn die Blöcke zu statischen Methoden kompiliert werden, und wählt je nach Eingabetyp eine der beiden Methoden aus. ![](../images/8-4/1/lang2_6.png)
+Da Dynamo Funktionsüberlastungen im Allgemeinen unterstützt, kann es dennoch zu Verwirrungen kommen, wenn eine weitere überlastete Funktion mit derselben Anzahl von Parametern vorhanden ist. Wenn Sie im folgenden Diagramm beispielsweise einen numerischen Wert mit der `direction`-Eingabe von `Curve.Extrude` und einen Vektor mit der `distance`-Eingabe von `Curve.Extrude` verbinden, funktionieren beide Blöcke weiterhin, was unerwartet ist. In diesem Fall kann die Engine zur Laufzeit keinen Unterschied erkennen, auch wenn die Blöcke zu statischen Methoden kompiliert werden, und wählt je nach Eingabetyp eine der beiden Methoden aus. ![](../../.gitbook/assets/lang2_6.png)
 
 ### Behobene Probleme:
 
@@ -186,11 +186,11 @@ Die Umstellung auf statische Methodensemantik brachte die folgenden Nebeneffekte
 
 Betrachten wir ein Beispiel aus `TSpline`-Blöcken in `ProtoGeometry` (beachten Sie, dass `TSplineTopology` Werte vom Basistyp `Topology` übernimmt): Der Block `Topology.Edges`, der zuvor zur Instanzmethode `object.Edges` kompiliert wurde, wird jetzt zur statischen Methode `Topology.Edges(object)` kompiliert. Der vorherige Aufruf würde nach einem Methoden-Dispatch über den Laufzeittyp des Objekts polymorph in die abgeleitete Klassenmethode `TsplineTopology.Edges` aufgelöst.
 
-![](../images/8-4/1/lang2_7.png)
+![](../../.gitbook/assets/lang2_7.png)
 
 Beim neuen statischen Verhalten wurde hingegen erzwungen, dass die Basisklassenmethode `Topology.Edges` aufgerufen wird. Dieser Block gab daher die `Edge`-Objekte der Basisklasse anstelle der abgeleiteten Klassenobjekte des Typs `TSplineEdge` zurück.
 
-![](../images/8-4/1/lang2_8.png)
+![](../../.gitbook/assets/lang2_8.png)
 
 Dies war eine Regression, da nachgelagerte `TSpline`-Blöcke, die `TSplineEdges` erwarteten, fehlzuschlagen begannen.
 
@@ -198,13 +198,13 @@ Das Problem wurde behoben, indem in der Methoden-Dispatch-Logik eine Laufzeitüb
 
 **Neues polymorphes Verhalten in Version 2.0:**
 
-![](../images/8-4/1/lang2_9.png)
+![](../../.gitbook/assets/lang2_9.png)
 
 Da in diesem Fall das erste Element `a` ein `TSpline` ist, wird die abgeleitete Methode `TSplineTopology.Edges` zur Laufzeit aufgerufen. Als Ergebnis wird `null` für den `Topology`-Basistyp `b` zurückgegeben.
 
 Da im zweiten Fall der allgemeine `Topology`-Typ `b` das erste Element ist, wird die `Topology.Edges`-Basismethode aufgerufen. Da `Topology.Edges` auch den abgeleiteten `TSplineTopology`-Typ akzeptiert, gibt `a` als Eingabe `Edges` für beide Eingaben (`a` und `b`) zurück.
 
-![](../images/8-4/1/lang2_10.png)
+![](../../.gitbook/assets/lang2_10.png)
 
 **2\. Regressionen von der Erstellung redundanter äußerer Listen**
 
@@ -248,13 +248,13 @@ p = Point.ByCoordinates(x<1>, y<2>, z<3>); // cross-lacing
 
 ### Dynamo 1.x: 3D-Liste mit Punkten
 
-![](../images/8-4/1/lang2_11.png)
+![](../../.gitbook/assets/lang2_11.png)
 
 In Version 2.0 resultiert das Vorhandensein von Replikationsanleitungen für jedes der Einzelwertargumente `y` und `z` nicht in einer Hochstufung, was dazu führt, dass die Liste dieselbe Dimension wie die eingegebene 1D-Liste für `x` aufweist.
 
 ### Dynamo 2.0: 1D-Liste mit Punkten
 
-![](../images/8-4/1/lang2_12.png)
+![](../../.gitbook/assets/lang2_12.png)
 
 Die oben erwähnte Regression, die durch die statische Methodenkompilierung mit der Generierung redundanter äußerer Listen verursacht wurde, wurde durch diese Änderung der Sprache ebenfalls behoben.
 
@@ -268,7 +268,7 @@ in Dynamo 1.x eine 3D-Liste mit Punkten generiert hat. Dies geschah aufgrund de
 
 ### Dynamo 1.x: Listenhochstufung von Argumenten mit Replikationsanleitung
 
-![](../images/8-4/1/lang2_13.png)
+![](../../.gitbook/assets/lang2_13.png)
 
 In Version 2.0 wurde die Hochstufung von Einzelwertargumenten in Listen bei Verwendung mit Replikationsanleitungen oder Vergitterung deaktiviert. Nun gibt der Aufruf von
 
@@ -280,7 +280,7 @@ einfach eine 2D-Liste zurück, da surface nicht hochgestuft wird.
 
 ### Dynamo 2.0: Listenhochstufung von Einzelwertargumenten mit Replikationsanleitung deaktiviert
 
-![](../images/8-4/1/lang2_14.png)
+![](../../.gitbook/assets/lang2_14.png)
 
 Durch diese Änderung wird nun das Hinzufügen einer redundanten Listenebene verhindert, und außerdem wird die durch den Übergang zur statischen Methodenkompilierung verursachte Regression behoben.
 
@@ -295,7 +295,7 @@ Durch diese Änderung wird nun das Hinzufügen einer redundanten Listenebene ver
 * Instanzmethoden und statische Methoden sind konsistent (Probleme mit statischer Methodensemantik behoben).
 * Blöcke mit Eingaben und Vorgabeargumenten verhalten sich konsistent (siehe unten).
 
-![](../images/8-4/1/lang2_15.png)
+![](../../.gitbook/assets/lang2_15.png)
 
 ## 5\. Variablen in Codeblock-Blöcken sind unveränderlich, um eine assoziative Aktualisierung zu verhindern
 
@@ -336,7 +336,7 @@ a = 4;         // b = 10 or b = 7?
 
 Da der Würfel `b` in diesem Geometriebeispiel sowohl von sich selbst als auch vom Zylinder `a` abhängt, stellt sich die Frage, ob das Verschieben des Schiebereglers dazu führen soll, dass die Bohrung entlang des Blocks verschoben wird, oder dass bei jeder Aktualisierung der Position des Schiebereglers ein kumulativer Effekt erstellt wird, bei dem mehrere Löcher entlang des Pfads verteilt werden.
 
-![](../images/8-4/1/lang2_16.gif)
+![](../../.gitbook/assets/lang2_16.gif)
 
 **3\. Aktualisieren von Variableneigenschaften:**
 
@@ -359,7 +359,7 @@ Im Laufe der Zeit haben wir festgestellt, dass sich die assoziative Aktualisieru
 
 Wenn sie überhaupt von einigen Benutzern verwendet wurde, geschah dies höchstwahrscheinlich unwissentlich, was mehr Schaden als Nutzen angerichtet hat. Aus diesem Grund haben wir uns in Version 2.0 entschieden, die Assoziativität bei der Verwendung von Codeblock-Blöcken auszublenden, indem wir Variablen unveränderlich gemacht haben, während wir die assoziative Aktualisierung weiterhin nur als systemeigene Funktion der DS-Engine beibehalten. Dies ist eine weitere Änderung, mit der die Skripterstellung für Benutzer vereinfacht werden soll.
 
-**Die assoziative Aktualisierung wird in CBNs deaktiviert, indem die Neudefinition von Variablen verhindert wird:** ![](../images/8-4/1/lang2_17.png)
+**Die assoziative Aktualisierung wird in CBNs deaktiviert, indem die Neudefinition von Variablen verhindert wird:** ![](../../.gitbook/assets/lang2_17.png)
 
 **Listenindizierung in Codeblöcken weiterhin zulässig**
 
@@ -367,7 +367,7 @@ Eine Ausnahme wurde für die Listenindizierung gemacht, die in Version 2.0 mit 
 
 Im nächsten Beispiel sehen wir, dass die Liste `a` initialisiert wird, aber später mit einer Index-Operatorzuweisung überschrieben werden kann, und dass alle von `a` abhängigen Variablen assoziativ aktualisiert werden, wie aus dem Wert `c` hervorgeht. Die Blockvorschau zeigt außerdem die aktualisierten Werte von `a` nach der Neudefinition eines oder mehrerer der zugehörigen Elemente an.
 
-![](../images/8-4/1/lang2_18.png)
+![](../../.gitbook/assets/lang2_18.png)
 
 ## 6\. Variablen in imperativen Blöcken gelten für den imperativen Blockbereich lokal
 
@@ -483,11 +483,11 @@ dict = {<key> : <value>, …};
 
 verwendet werden, bei dem nur eine Zeichenfolge für `<key>` zulässig ist und mehrere Schlüssel-Wert-Paare durch Kommas getrennt werden.
 
-![](../images/8-4/1/lang2_19.png)
+![](../../.gitbook/assets/lang2_19.png)
 
 Die `Dictionary.ByKeysValues`-Zero-Touch-Methode kann als vielseitigere Methode zur Initialisierung eines Wörterbuchs verwendet werden, indem eine Liste von Schlüsseln bzw. Werten übergeben wird und alle Vorteile der Verwendung von Zero-Touch-Methoden wie Replikationsanleitungen usw. enthalten sind.
 
-![](../images/8-4/1/lang2_20.png)
+![](../../.gitbook/assets/lang2_20.png)
 
 ### Warum haben wir keine beliebigen Ausdrücke für die Syntax der Wörterbuchinitialisierung verwendet?
 
@@ -507,21 +507,21 @@ Wir _könnten_ Wörterbuchschlüssel in Zukunft erweitern, um beliebige Ausdrüc
 
 **1\. Zero-Touch-Block, der ein .NET-Wörterbuch zurückgibt, wird als Dynamo-Wörterbuch zurückgegeben.**
 
-**Betrachten Sie die folgende C#-Zero-Touch-Methode, die ein IDictionary zurückgibt:** ![](../images/8-4/1/lang2_21.png)
+**Betrachten Sie die folgende C#-Zero-Touch-Methode, die ein IDictionary zurückgibt:** ![](../../.gitbook/assets/lang2_21.png)
 
-**Der entsprechende Rückgabewert des ZT-Blocks wird als Dynamo-Wörterbuch arrangiert:** ![](../images/8-4/1/lang2_22.png)
+**Der entsprechende Rückgabewert des ZT-Blocks wird als Dynamo-Wörterbuch arrangiert:** ![](../../.gitbook/assets/lang2_22.png)
 
 **2\. Blöcke mit mehreren Rückgaben werden in der Vorschau als Wörterbücher angezeigt.**
 
-**Zero-Touch-Block, der IDictionary mit einem Attribut mit Mehrfachrückgabe zurückgibt, gibt ein Dynamo-Wörterbuch zurück:** ![](../images/8-4/1/lang2_23.png)
+**Zero-Touch-Block, der IDictionary mit einem Attribut mit Mehrfachrückgabe zurückgibt, gibt ein Dynamo-Wörterbuch zurück:** ![](../../.gitbook/assets/lang2_23.png)
 
-![](../images/8-4/1/lang2_24.png)
+![](../../.gitbook/assets/lang2_24.png)
 
 **3\. Das Dynamo-Wörterbuch kann als Eingabe für einen Zero-Touch-Block übergeben werden, der das .NET-Wörterbuch akzeptiert.**
 
-**ZT-Methode mit IDictionary-Parameter:** ![](../images/8-4/1/lang2_25.png)
+**ZT-Methode mit IDictionary-Parameter:** ![](../../.gitbook/assets/lang2_25.png)
 
-**ZT-Block akzeptiert Dynamo-Wörterbuch als Eingabe:** ![](../images/8-4/1/lang2_26.png)
+**ZT-Block akzeptiert Dynamo-Wörterbuch als Eingabe:** ![](../../.gitbook/assets/lang2_26.png)
 
 ### Wörterbuchvorschau in Blöcken mit mehreren Rückgaben
 
@@ -529,4 +529,4 @@ Wörterbücher sind ungeordnete Schlüssel-Wert-Paare. In Übereinstimmung mit d
 
 Wir haben jedoch eine Ausnahme für Blöcke mit Mehrfachrückgabe hinzugefügt, für die `MultiReturnAttribute`-Werte definiert sind. Im folgenden Beispiel ist der Block `DateTime.Components` ein Block mit Mehrfachrückgabe, und in der Blockvorschau werden die Schlüssel-Wert-Paare in derselben Reihenfolge wie bei den Ausgabeanschlüssen im Block angezeigt, was auch der Reihenfolge entspricht, in der die Ausgaben basierend auf den `MultiReturnAttribute`-Werten in der Blockdefinition angegeben werden.
 
-Beachten Sie außerdem, dass die Vorschau für Codeblöcke, anders als beim Benutzeroberflächen-Block, nicht angeordnet ist, da die Informationen zum Ausgabeanschluss (in Form eines Mehrfachrückgabe-Attributs) für den Codeblock-Block nicht vorhanden sind: ![](../images/8-4/1/lang2_27.png)
+Beachten Sie außerdem, dass die Vorschau für Codeblöcke, anders als beim Benutzeroberflächen-Block, nicht angeordnet ist, da die Informationen zum Ausgabeanschluss (in Form eines Mehrfachrückgabe-Attributs) für den Codeblock-Block nicht vorhanden sind: ![](../../.gitbook/assets/lang2_27.png)

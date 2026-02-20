@@ -6,7 +6,7 @@ Es gibt zwei grundlegende Methoden zum Erstellen von Freiform-Kurven in Dynamo: 
 
 Zum Erstellen einer interpolierten Kurve übergeben Sie einfach eine Sammlung von Punkten an die Methode _NurbsCurve.ByPoints_.
 
-![](../images/8-2/4/Curves\_01.png)
+![](../../.gitbook/assets/Curves_01.png)
 
 ```js
 num_pts = 6;
@@ -20,7 +20,7 @@ int_curve = NurbsCurve.ByPoints(pts);
 
 Die generierte Kurve schneidet jeden der eingegebenen Punkte und beginnt dabei am ersten und endet am letzten Punkt der Sammlung. Mit einem optionalen periodischen Parameter kann eine periodische Kurve erstellt werden, die geschlossen ist. Dynamo füllt das fehlende Segment automatisch aus, sodass kein duplizierter (mit dem Startpunkt identischer) Endpunkt erforderlich ist.
 
-![](../images/8-2/4/Curves\_02.png)
+![](../../.gitbook/assets/Curves_02.png)
 
 ```js
 pts = Point.ByCoordinates(Math.Cos(0..350..#10),
@@ -38,7 +38,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 NurbsCurves werden in ähnlicher Weise erstellt, wobei die Eingabepunkte die Endpunkte eines geraden Liniensegments darstellen und ein zweiter Parameter den Betrag und die Art der Glättung der Kurve angibt, was als Grad bezeichnet wird.* Eine Kurve mit dem Grad 1 ist nicht geglättet, sondern eine Polylinie.
 
-![](../images/8-2/4/Curves\_03.png)
+![](../../.gitbook/assets/Curves_03.png)
 
 ```js
 num_pts = 6;
@@ -52,7 +52,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 
 Eine Kurve mit dem Grad 2 wird so geglättet, dass die Kurve den Mittelpunkt der Polyliniensegmente schneidet und tangential zu diesem ist:
 
-![](../images/8-2/4/Curves\_04.png)
+![](../../.gitbook/assets/Curves_04.png)
 
 ```js
 num_pts = 6;
@@ -66,7 +66,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 
 Dynamo unterstützt NURBS-Kurven (Non-Uniform Rational B-Spline) bis zu 20 Grad. Das folgende Skript veranschaulicht die Auswirkungen steigender Glättungsstufen auf die Form einer Kurve:
 
-![](../images/8-2/4/Curves\_05.png)
+![](../../.gitbook/assets/Curves_05.png)
 
 ```js
 num_pts = 6;
@@ -87,7 +87,7 @@ Beachten Sie, dass Sie mindestens einen Steuerpunkt mehr angeben müssen als der
 
 Ein weiterer Vorteil der Kurvenerstellung mittels Steuerscheitelpunkten ist die Möglichkeit, Tangentialität zwischen einzelnen Kurvensegmenten beizubehalten. Dies erfolgt durch Extrahieren der Richtung zwischen den letzten beiden Steuerpunkten, und Fortsetzen dieser Richtung mit den ersten beiden Steuerpunkten der folgenden Kurve. Im folgenden Beispiel werden zwei getrennte NURBS-Kurven erstellt, die so glatt wie eine einzige Kurve sind:
 
-![](../images/8-2/4/Curves\_06.png)
+![](../../.gitbook/assets/Curves_06.png)
 
 ```js
 pts_1 = {};

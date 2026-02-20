@@ -12,7 +12,7 @@ Dynamo definiert Netze mit einer Flächen-Scheitelpunkt-Datenstruktur. Auf eleme
 
 Um ein Netz zu erstellen, benötigen Sie eine Liste von Scheitelpunkten und ein System für die Gruppierung dieser Scheitelpunkte in Flächen. Dies wird auch als Indexgruppe bezeichnet.
 
-![](../images/5-2/7/meshes-meshelements.jpg)
+\![](<../../.gitbook/assets/meshes - mesh elements.jpg>)
 
 > 1. Liste von Scheitelpunkten
 > 2. Liste von Indexgruppen zum Definieren von Flächen
@@ -25,7 +25,7 @@ Die Bibliothek enthält auch Werkzeuge zum Ändern und Reparieren von Netzen sow
 
 Ein Beispiel zur Verwendung dieses Pakets finden Sie in den [Fallstudien zu Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes).
 
-![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
+\![Mesh-Toolkit](<../../.gitbook/assets/meshes - mesh toolkit standford bunny.jpg>)
 
 ## Vertiefung...
 
@@ -33,7 +33,7 @@ Ein Beispiel zur Verwendung dieses Pakets finden Sie in den [Fallstudien zu Mesh
 
 Ein Netz ist eine Sammlung von Vierecken und Dreiecken, die eine Oberfläche oder einen Volumenkörper darstellt. Wie bei Volumenkörpern enthält auch die Struktur von Netzobjekten Scheitelpunkte, Kanten und Flächen. Darüber hinaus gibt es weitere Eigenschaften, die Netze eindeutig machen, z. B. Normalen.
 
-![Netzelemente](../images/5-2/7/MeshElements2.jpg)
+![Netzelemente](../../.gitbook/assets/MeshElements2.jpg)
 
 > 1. Netzscheitelpunkte
 > 2. Netzkanten 
@@ -44,7 +44,7 @@ Ein Netz ist eine Sammlung von Vierecken und Dreiecken, die eine Oberfläche ode
 
 Die Scheitelpunkte eines Netzes entsprechen einfach einer Liste von Punkten. Der Index der Scheitelpunkte ist beim Konstruieren eines Netzes oder Abrufen von Informationen über die Struktur eines Netzes sehr wichtig. Für jeden Scheitelpunkt gibt es auch eine entsprechende Scheitelpunktnormale (Vektor), die die durchschnittliche Richtung der verbundenen Flächen beschreibt und Sie dabei unterstützt, die nach innen und nach außen gerichtete Orientierung des Netzes zu verstehen.
 
-![Scheitelpunkte + Normalen](../images/5-2/7/vertexNormals.jpg)
+![Scheitelpunkte + Normalen](../../.gitbook/assets/vertexNormals.jpg)
 
 > 1. Scheitelpunkte
 > 2. Scheitelpunktnormalen
@@ -53,7 +53,7 @@ Die Scheitelpunkte eines Netzes entsprechen einfach einer Liste von Punkten. Der
 
 Eine Fläche ist eine geordnete Liste von drei oder vier Scheitelpunkten. Die "Oberflächendarstellung" einer Netzfläche ist deshalb gemäß der Position der indizierten Scheitelpunkte impliziert. Sie verfügen bereits über die Liste der Scheitelpunkte, die ein Netz bilden. Statt also individuelle Punkte anzugeben, um eine Fläche zu definieren, verwenden Sie einfach den Index der Scheitelpunkte. Dies ermöglicht Ihnen auch die Verwendung desselben Scheitelpunkts in weiteren Flächen.
 
-![](../images/5-2/7/meshFaces.jpg)
+![](../../.gitbook/assets/meshFaces.jpg)
 
 > 1. Quadratische Fläche, die aus den Indizes 0, 1, 2 und 3 erstellt wurde
 > 2. Dreieckige Fläche, die aus den Indizes 1, 4 und 2 erstellt wurde. Beachten Sie, dass die Indexgruppen in ihrer Reihenfolge verschoben werden können – solange die Sequenz gegen den Uhrzeigersinn angeordnet ist, ist die Fläche korrekt definiert
@@ -66,7 +66,7 @@ Welche Unterschiede bestehen zwischen Netz- und NURBS-Geometrie? Wann möchten S
 
 In einem früheren Kapitel haben wir gesehen, dass NURBS-Oberflächen durch eine Reihe von NURBS-Kurven in zwei Richtungen definiert werden. Diese Richtungen werden als `U` und `V` bezeichnet und ermöglichen, dass eine NURBS-Oberfläche gemäß einer zweidimensionalen Oberflächendomäne parametrisiert wird. Die Kurven selbst werden als Gleichungen im Computer gespeichert, sodass die resultierenden Oberflächen auf einen beliebigen, verhältnismäßig kleinen Genauigkeitsbereich berechnet werden können. Es kann jedoch schwierig sein, mehrere NURBS-Oberflächen miteinander zu kombinieren. Das Verbinden von zwei NURBS-Oberflächen führt zu einem Flächenverband, in dem verschiedene Bereiche der Geometrie unterschiedliche UV-Parameter und Kurvendefinitionen aufweisen.
 
-![Kontrollpunkte](../images/5-2/7/NURBSvsMESH-01.jpg)
+![Kontrollpunkte](../../.gitbook/assets/NURBSvsMESH-01.jpg)
 
 > 1. Oberfläche
 > 2. Isoparametrische (Isoparm) Kurve
@@ -87,7 +87,7 @@ Netze auf der anderen Seite bestehen aus einer diskreten Anzahl von genau defini
 
 Ein weiterer wichtiger Unterschied ist das Ausmaß, in dem sich eine lokale Änderung der Netz- oder NURBS-Geometrie auf die gesamte Form auswirkt. Das Verschieben von einem Scheitelpunkt eines Netzes wirkt sich nur auf die an diesen Scheitelpunkt angrenzenden Flächen aus. In NURBS-Oberflächen ist das Ausmaß des Einflusses wesentlich komplizierter und richtet sich sowohl nach dem Grad der Oberfläche als auch nach den Gewichtungen und Knoten der Steuerpunkte. Allgemein wird durch das Verschieben eines einzelnen Steuerpunkts in einer NURBS-Oberfläche eine glattere, umfassendere Änderungen in der Geometrie erzeugt.
 
-![Bearbeiten](../images/5-2/7/NURBSvsMESH-02.jpg)
+![Bearbeiten](../../.gitbook/assets/NURBSvsMESH-02.jpg)
 
 > 1. NURBS-Oberfläche: Das Verschieben eines Steuerpunkts wirkt sich über die Form hinaus aus.
 > 2. Netzgeometrie – Das Verschieben eines Scheitelpunkts wirkt sich nur auf die angrenzenden Elemente aus.
