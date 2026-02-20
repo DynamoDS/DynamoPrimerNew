@@ -4,7 +4,7 @@
 
 이 안내서의 목적은 Zero-Touch 노드를 만드는 방법부터 확장 기능 구축에 이르기까지 Dynamo의 다양한 C# 개발 가능성을 탐색하는 데 도움을 주기 위한 것입니다.
 
-![Github의 Dynamo 소스](../1-introduction/images/dynamogithub.jpg)
+![Github의 Dynamo 소스](../../.gitbook/assets/dynamogithub.jpg)
 
 > GitHub의 Dynamo 소스
 
@@ -40,7 +40,7 @@
 
 **DesignScript 언어 안내서** DesignScript 작성을 위한 PDF 안내서입니다.
 
-[PDF](https://dynamobim.org/wp-content/uploads/forum-assets/colin-mccroneautodesk-com/07/10/Dynamo\_language\_guide\_version\_1.pdf)
+[PDF](https://dynamobim.org/wp-content/uploads/forum-assets/colin-mccroneautodesk-com/07/10/Dynamo_language_guide_version_1.pdf)
 
 #### 이 안내서에 대한 변경 사항을 제안하려면 어떻게 해야 합니까? <a href="#how-can-i-suggest-changes-to-this-guide" id="how-can-i-suggest-changes-to-this-guide"></a>
 

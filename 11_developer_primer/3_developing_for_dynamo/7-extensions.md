@@ -6,7 +6,7 @@
 
 DynamoSamples Github 리포지토리의 SampleViewExtension 예제에 따라 그래프에 활성 노드를 실시간으로 표시하는 간단한 모델리스 창을 생성하는 데 필요한 단계를 살펴보겠습니다. 뷰 확장을 사용하려면 창에 대한 UI를 생성하고 뷰 모델에 값을 바인딩해야 합니다.
 
-![뷰 확장 창](images/dyn-viewextension.jpg)
+![뷰 확장 창](../../.gitbook/assets/dyn-viewextension.jpg)
 
 > 1. 뷰 확장 창은 Github 리포지토리의 SampleViewExtension 예제를 따라 개발되었습니다.
 
@@ -28,9 +28,9 @@ DynamoSamples 리포지토리: [https://github.com/DynamoDS/DynamoSamples](https
 
 먼저 이름이 `SampleViewExtension`인 새 `Class Library` 프로젝트를 생성합니다.
 
-![새 클래스 라이브러리 생성하기](images/vs-new-project-viewextension-1.jpg)
+![새 클래스 라이브러리 생성하기](../../.gitbook/assets/vs-new-project-viewextension-1.jpg)
 
-![새 프로젝트 구성하기](images/vs-new-project-viewextension-2.jpg)
+![새 프로젝트 구성하기](../../.gitbook/assets/vs-new-project-viewextension-2.jpg)
 
 > 1. `File > New > Project`를 선택하여 새 프로젝트를 생성합니다.
 > 2. `Class Library`를 선택합니다.
@@ -39,14 +39,14 @@ DynamoSamples 리포지토리: [https://github.com/DynamoDS/DynamoSamples](https
 
 이 프로젝트에는 두 개의 클래스가 필요합니다. 한 클래스는 `IViewExtension`을 구현하고, 다른 클래스는 `NotificationObject.`을 구현합니다. `IViewExtension`은 확장이 배포, 로드, 참조 및 삭제되는 방식에 대한 모든 정보를 포함하고 있습니다. `NotificationObject`는 Dynamo 및 `IDisposable`의 변경 사항에 대한 알림을 제공합니다. 변경이 이루어지면 그에 따라 개수가 업데이트됩니다.
 
-![뷰 확장 클래스 파일](images/vs-viewextension-classes.jpg)
+![뷰 확장 클래스 파일](../../.gitbook/assets/vs-viewextension-classes.jpg)
 
 > 1. `IViewExtension`을 구현할 `SampleViewExtension.cs`라는 이름의 클래스 파일
 > 2. `NotificationObject`를 구현할 `SampleWindowViewMode.cs`라는 이름의 클래스 파일
 
 `IViewExtension`을 사용하려면 WpfUILibrary NuGet 패키지가 필요합니다. 이 패키지를 설치하면 Core, Services 및 ZeroTouchLibrary 패키지가 자동으로 설치됩니다.
 
-![뷰 확장 패키지](images/vs-viewextension-packages.jpg)
+![뷰 확장 패키지](../../.gitbook/assets/vs-viewextension-packages.jpg)
 
 > 1. WpfUILibrary를 선택합니다.
 > 2. `Install`을 선택하여 모든 종속 패키지를 설치합니다.
@@ -133,7 +133,7 @@ namespace SampleViewExtension
 * `public class SampleViewExtension : IViewExtension` `SampleViewExtension`은 `IViewExtension` 인터페이스에서 상속되어 메뉴 항목을 생성하는 데 필요한 모든 것을 제공합니다.
 * `sampleMenuItem = new MenuItem { Header = "Show View Extension Sample Window" };`는 메뉴 항목을 생성하여 `View` 메뉴에 추가합니다.
 
-![메뉴 항목](images/dyn-menuitem.jpg)
+![메뉴 항목](../../.gitbook/assets/dyn-menuitem.jpg)
 
 > 1. 메뉴 항목
 
@@ -208,7 +208,7 @@ namespace SampleViewExtension
 
 확장의 핵심 논리가 정의되었으므로, 이제 `.xaml` 파일을 사용하여 창의 모양 세부 사항을 지정하겠습니다. `TextBlock` `Text`에서 `ActiveNodeTypes` 특성 바인딩을 통해 문자열을 표시하는 간단한 창만 있으면 됩니다.
 
-![창 추가하기](images/vs-window.jpg)
+![창 추가하기](../../.gitbook/assets/vs-window.jpg)
 
 > 1. 프로젝트를 마우스 오른쪽 버튼으로 클릭하고 `Add > New Item...`을 선택합니다.
 > 2. 창을 생성하기 위해 변경할 사용자 컨트롤 템플릿을 선택합니다.
@@ -259,7 +259,7 @@ namespace SampleViewExtension
 
 이제 뷰 확장을 빌드하고 Dynamo에 추가할 준비가 되었습니다. Dynamo에서 출력 `.dll`을 확장으로 등록하려면 `xml` 파일이 필요합니다.
 
-![새 XML 추가하기](images/vs-viewextension-xml.jpg)
+![새 XML 추가하기](../../.gitbook/assets/vs-viewextension-xml.jpg)
 
 > 1. 프로젝트를 마우스 오른쪽 버튼으로 클릭하고 `Add > New Item...`을 선택합니다.
 > 2. XML 파일을 선택합니다.
@@ -281,7 +281,7 @@ namespace SampleViewExtension
 
 마지막 단계는 `SampleViewExtension_ViewExtensionDefinition.xml` 파일을 Dynamo Core 설치 디렉토리 `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions`에 있는 Dynamo의 뷰 확장 폴더에 복사하는 것입니다. `extensions` 및 `viewExtensions`를 위한 별도의 폴더가 있습니다. `xml` 파일을 잘못된 폴더에 배치하면 런타임 시 제대로 로드되지 않을 수 있습니다.
 
-![확장 폴더에 복사된 XML 파일](images/fe-viewextension-xml.jpg)
+![확장 폴더에 복사된 XML 파일](../../.gitbook/assets/fe-viewextension-xml.jpg)
 
 > 1. Dynamo의 뷰 확장 폴더에 복사한 `.xml` 파일
 

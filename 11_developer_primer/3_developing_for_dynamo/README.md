@@ -2,7 +2,7 @@
 
 경험 수준에 관계없이 Dynamo 플랫폼은 모든 사용자가 기여할 수 있도록 설계되었습니다. 다양한 능력과 기술 수준을 대상으로 하는 여러 가지 개발 옵션이 있으며, 각 개발 옵션은 목표에 따라 장단점이 있습니다. 아래에서는 여러 옵션에 대해 간략하게 알아보고 하나의 옵션을 선택하는 방법에 대해 살펴보겠습니다.
 
-![세 가지 개발 환경](images/developing-for-dynamo.png)
+![세 가지 개발 환경](../../.gitbook/assets/developing-for-dynamo.png)
 
 > 세 가지 개발 환경: Visual Studio, Python 편집기 및 코드 블록 DesignScript
 
@@ -18,31 +18,31 @@ Dynamo의 개발 옵션은 주로 두 가지 카테고리인 _for_ Dynamo와 _in
 * NodeModel 파생 노드
 * 확장
 
-> 입문서에는 [Zero-Touch 라이브러리 가져오기](https://primer2.dynamobim.org/v/ko/6_custom_nodes_and_packages/6-2_packages/5-zero-touch)와 관련된 안내서가 있습니다.
+> 입문서에는 [Zero-Touch 라이브러리 가져오기](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch)에 대한 안내서가 있습니다.
 
 아래 설명에서는 Visual Studio를 Zero-Touch 및 NodeModel 노드의 개발 환경으로 사용합니다.
 
-![Visual Studio 인터페이스](images/vs-devenv.jpg)
+![Visual Studio 인터페이스](../../.gitbook/assets/vs-devenv.jpg)
 
 > Visual Studio 인터페이스와 개발 예정인 프로젝트
 
 ### In Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
-이러한 프로세스는 시각적 프로그래밍 작업공간에 존재하고 비교적 간단하지만, 모두 Dynamo를 사용자 지정하는 데 사용할 수 있는 옵션입니다. 입문서는 이러한 내용을 광범위하게 다루고 있으며 [스크립팅 전략](../../9\_best\_practices/2-scripting-strategies.md) 장에서 스크립팅 팁과 활용 사례를 제공합니다.
+이러한 프로세스는 시각적 프로그래밍 작업공간에 존재하고 비교적 간단하지만, 모두 Dynamo를 사용자 지정하는 데 사용할 수 있는 옵션입니다. 입문서는 이러한 내용을 광범위하게 다루고 있으며 [스크립팅 전략](../../9_best_practices/2-scripting-strategies.md) 장에서 스크립팅 팁과 활용 사례를 제공합니다.
 
 *   코드 블록은 시각적 프로그래밍 환경에서 DesignScript를 노출하여 유연한 텍스트 스크립트 및 노드 워크플로우를 지원합니다. 코드 블록의 함수는 작업공간의 모든 항목에서 호출할 수 있습니다.
 
-    > 코드 블록 예제를 다운로드하거나(마우스 오른쪽 버튼을 클릭하고 다른 이름으로 저장) [입문서](https://primer2.dynamobim.org/v/ko/8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block)에서 자세한 내용을 참조하십시오.
+    > 코드 블록 예제를 다운로드하거나(마우스 오른쪽 버튼을 클릭하고 다른 이름으로 저장) [입문서](https://primer.dynamobim.org/07_Code-Block/7-1_what-is-a-code-block.html)에서 자세한 내용을 확인하십시오.
 *   사용자 지정 노드는 노드 모음 또는 전체 그래프를 위한 컨테이너로, 자주 사용하는 루틴을 수집하고 커뮤니티와 공유하는 효과적인 방법입니다.
 
-    > 사용자 지정 노드 예제를 다운로드하거나(마우스 오른쪽 버튼을 클릭하고 다른 이름으로 저장) [입문서](https://primer2.dynamobim.org/v/ko/6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction)에서 자세한 내용을 참조하십시오.
+    > 사용자 지정 노드 예제를 다운로드하거나(마우스 오른쪽 버튼을 클릭하고 다른 이름으로 저장) [입문서](https://primer.dynamobim.org/10_Custom-Nodes/10-1_Introduction.html)에서 자세한 내용을 확인하십시오.
 *   Python 노드는 코드 블록과 유사한, 시각적 프로그래밍 작업공간의 스크립팅 인터페이스입니다. Autodesk.DesignScript 라이브러리는 DesignScript와 유사한 점 표기법을 사용합니다.
 
-    > Python 노드 예제를 다운로드하거나(마우스 오른쪽 버튼을 클릭하고 다른 이름으로 저장) [입문서](https://primer2.dynamobim.org/v/ko/8_coding_in_dynamo/8-3_python)에서 자세한 내용을 참조하십시오.
+    > Python 노드 예제를 다운로드하거나(마우스 오른쪽 버튼을 클릭하고 다른 이름으로 저장) [입문서](https://primer.dynamobim.org/10_Custom-Nodes/10-4_Python.html)에서 자세한 내용을 확인하십시오.
 
 Dynamo 작업공간을 통한 개발은 피드백을 즉각적으로 받을 수 있는 강력한 도구입니다.
 
-![Python 노드를 사용하여 Dynamo 작업공간에서 개발하기](images/python-example.jpg)
+![Python 노드를 사용하여 Dynamo 작업공간에서 개발하기](../../.gitbook/assets/python-example.jpg)
 
 > Python 노드를 사용하여 Dynamo 작업공간에서 개발하기
 
@@ -54,7 +54,7 @@ Dynamo의 개발 옵션은 복잡한 사용자 지정 요구 사항을 해결하
 
 아래에 Dynamo 시각적 프로그래밍 환경에서 코드를 작성할 수 있는 간단한 옵션이 나와 있습니다. Dynamo 시각적 프로그래밍 작업공간은 Python과 DesignScript에 대한 액세스와 사용자 지정 노드 안에 여러 노드를 포함할 수 있는 기능을 제공합니다.
 
-![코드 블록, Python 스크립트 및 사용자 지정 노드](images/Development-Icons.png)
+![코드 블록, Python 스크립트 및 사용자 지정 노드](../../.gitbook/assets/Development-Icons.png)
 
 이러한 방법을 사용하여 다음을 수행할 수 있습니다.
 
@@ -66,11 +66,11 @@ Dynamo의 개발 옵션은 복잡한 사용자 지정 요구 사항을 해결하
 
 Zero-Touch는 간단한 포인트 앤 클릭 방법으로 C# 라이브러리를 가져오는 것을 의미합니다. Dynamo에서는 `.dll`의 공용 메서드를 읽고 Dynamo 노드로 변환합니다. Zero-Touch를 사용하여 사용자 지정 노드 및 패키지를 개발할 수 있습니다.
 
-![Zero-Touch 노드](images/ZTImport.png)
+![Zero-Touch 노드](../../.gitbook/assets/ZTImport.png)
 
 이 방법을 사용하여 다음을 수행할 수 있습니다.
 
-* Dynamo용으로 개발되지 않았을 수 있는 라이브러리를 가져와서 입문서에 나와 있는 [A-Forge 예제](../../6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md#case-study-importing-aforge)와 같은 새로운 노드의 모음을 자동으로 작성합니다.
+* Dynamo용으로 개발되지 않았을 수 있는 라이브러리를 가져와서 입문서에 나와 있는 [A-Forge 예제](../../6_custom_nodes_and_packages/6-2_packages/5-zero-touch.md#case-study-importing-aforge)처럼 새로운 노드의 모음을 자동으로 작성합니다.
 * C# 메서드를 작성하고 Dynamo에서 메서드를 노드로 손쉽게 사용합니다.
 * C# 라이브러리를 패키지의 노드로 Dynamo 커뮤니티와 공유합니다.
 
@@ -78,7 +78,7 @@ Zero-Touch는 간단한 포인트 앤 클릭 방법으로 C# 라이브러리를 
 
 이러한 노드는 Dynamo 구조에서 한 단계 더 들어간 것으로, `NodeModel` 클래스를 기반으로 하며 C#으로 작성되었습니다. 이 방법이 가장 뛰어난 유연성과 강력한 성능을 제공하기는 하지만, 노드의 대부분의 측면을 명시적으로 정의해야 하고 함수는 별도의 어셈블리에 있어야 합니다.
 
-![NodeModel 파생 노드](images/Development-Icons-NodeModel.png)
+![NodeModel 파생 노드](../../.gitbook/assets/Development-Icons-NodeModel.png)
 
 이 방법을 사용하여 다음을 수행할 수 있습니다.
 
@@ -93,13 +93,13 @@ Dynamo는 정기적으로 업데이트되고 있으므로 패키지에서 사용
 
 API 변경 사항은 [Dynamo Github Wiki](https://github.com/DynamoDS/Dynamo/wiki/API-Changes)에서 추적할 수 있습니다. 이러한 변경 사항에는 DynamoCore, 라이브러리 및 작업공간에 대한 변경 사항이 포함됩니다.
 
-![Dynamo API 변경 사항 관련 문서](images/api-changes.jpg)
+![Dynamo API 변경 사항 관련 문서](../../.gitbook/assets/api-changes.jpg)
 
 버전 2.0에서 파일 형식이 XML에서 JSON으로 전환될 예정이며, 이는 예정된 중요 변경 사항 중 하나입니다. NodeModel 파생 노드에는 이제 [JSON 생성자](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node)가 필요하며, 이 생성자가 없으면 Dynamo 2.0에서 열리지 않습니다.
 
 현재 Dynamo의 API 문서([http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI))에는 핵심 기능에 대한 설명이 포함되어 있습니다.
 
-![API 문서](images/api-docs.jpg)
+![API 문서](../../.gitbook/assets/api-docs.jpg)
 
 ### 패키지에 바이너리를 배포할 수 있는 권한 <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 
@@ -108,6 +108,7 @@ API 변경 사항은 [Dynamo Github Wiki](https://github.com/DynamoDS/Dynamo/wik
 패키지에 바이너리가 포함되어 있는 경우 다운로드할 때 사용자에게 패키지에 바이너리가 포함되어 있다는 메시지가 표시되어야 합니다.
 
 ### Dynamo UI 성능 고려 사항
+
 이 문서를 작성할 당시 Dynamo는 주로 WPF(Windows Presentation Foundation)를 사용하여 UI를 렌더링합니다. WPF는 복잡하고 강력한 xaml/바인딩 기반 시스템입니다. Dynamo는 UI가 복잡하기 때문에 UI 중단이나 메모리 누수가 발생하기 쉬우며 성능이 저하되는 방식으로 그래프 실행과 UI 업데이트가 겹치기 쉽습니다.
 
 [Dynamo 성능 고려 사항 Wiki 페이지](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance)를 참조하면 Dynamo 코드를 변경할 때 흔히 발생하는 몇 가지 문제를 방지하는 데 도움을 얻을 수 있습니다.

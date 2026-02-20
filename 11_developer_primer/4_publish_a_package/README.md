@@ -1,4 +1,4 @@
-# 패키지 게시하기 
+# 패키지 게시하기
 
 ### 패키지 게시하기 <a href="#publish-a-package" id="publish-a-package"></a>
 
@@ -12,7 +12,7 @@ Dynamo 패키지 관리자는 Dynamo 또는 웹 브라우저에서 액세스할 
 
 * Dynamo의 패키지 관리자에서는 패키지 설치, 게시 및 업데이트를 수행할 수 있습니다.
 
-![패키지 검색하기](images/dynamopackagemanager.jpg)
+![패키지 검색하기](../../.gitbook/assets/dynamopackagemanager.jpg)
 
 > 1. 온라인으로 패키지 검색: `Packages > Search for a Package...`
 > 2. 설치된 패키지 보기/편집: `Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Dynamo 패키지 관리자는 Dynamo 또는 웹 브라우저에서 액세스할 
 
 Dynamo를 시작하고 `Packages > Publish New Package...`를 선택하여 `Publish a Package` 창을 엽니다.
 
-![패키지 게시하기](images/dyn-publish-package-add-files.jpg)
+![패키지 게시하기](../../.gitbook/assets/dyn-publish-package-add-files.jpg)
 
 > 1. `Add file...`을 선택하여 패키지에 추가할 파일을 찾습니다.
 > 2. NodeModel 사례 연구에서 두 개의 `.dll` 파일을 선택합니다.
@@ -32,7 +32,7 @@ Dynamo를 시작하고 `Packages > Publish New Package...`를 선택하여 `Publ
 
 패키지 콘텐츠에 파일을 추가한 상태에서 패키지에 이름, 설명 및 버전을 지정합니다. Dynamo를 사용하여 패키지를 게시하면 `pkg.json` 파일이 자동으로 생성됩니다.
 
-![패키지 설정](images/dyn-publish-package.jpg)
+![패키지 설정](../../.gitbook/assets/dyn-publish-package.jpg)
 
 > 게시할 준비가 된 패키지가 있습니다.
 >
@@ -41,13 +41,13 @@ Dynamo를 시작하고 `Packages > Publish New Package...`를 선택하여 `Publ
 
 패키지를 게시하면 Dynamo 라이브러리의 `CustomNodeModel` 카테고리 아래에서 노드를 사용할 수 있습니다.
 
-![Dynamo 라이브러리의 패키지](images/dyn-publish-package-library.jpg)
+![Dynamo 라이브러리의 패키지](../../.gitbook/assets/dyn-publish-package-library.jpg)
 
 > 1. Dynamo 라이브러리에서 방금 생성한 패키지
 
 패키지를 온라인에 게시할 준비가 되면 패키지 관리자를 열고 `Publish`를 선택한 다음 `Publish Online`을 선택합니다.
 
-![패키지 관리자에서 패키지 게시하기](images/dyn-publish-package-directory.jpg)
+![패키지 관리자에서 패키지 게시하기](../../.gitbook/assets/dyn-publish-package-directory.jpg)
 
 > 1. Dynamo가 패키지를 어떻게 포맷했는지 확인하려면 "CustomNodeModel" 오른쪽에 있는 세 개의 세로 점을 클릭하고 "루트 디렉토리 표시"를 선택합니다.
 > 2. "Dynamo 패키지 게시" 창에서 `Publish`를 선택한 다음 `Publish Online`을 선택합니다.
@@ -57,7 +57,7 @@ Dynamo를 시작하고 `Packages > Publish New Package...`를 선택하여 `Publ
 
 패키지 업데이트는 게시하는 것과 프로세스가 유사합니다. 패키지 관리자를 열고 업데이트해야 하는 패키지에 대해 `Publish Version...`을 선택한 후 상위 버전을 입력합니다.
 
-![패키지 버전 게시하기](images/dyn-publish-package-version.jpg)
+![패키지 버전 게시하기](../../.gitbook/assets/dyn-publish-package-version.jpg)
 
 > 1. `Publish Version`을 선택하여 루트 디렉토리의 새 파일로 기존 패키지를 업데이트한 다음 로컬에 게시할지 아니면 온라인에 게시할지 선택합니다.
 
@@ -69,38 +69,38 @@ Dynamo를 시작하고 `Packages > Publish New Package...`를 선택하여 `Publ
 
 패키지 관리자 웹 클라이언트는 [https://dynamopackages.com/](https://dynamopackages.com) 링크에서 액세스할 수 있습니다.
 
-![패키지 관리자 웹 클라이언트](images/packagemanager-browser.jpg)
+![패키지 관리자 웹 클라이언트](../../.gitbook/assets/packagemanager-browser.jpg)
 
-##### 패키지 정보 업데이트
+**패키지 정보 업데이트**
 
-작성자는 다음 단계에 따라 패키지 설명, 웹사이트 링크 및 리포지토리 링크를 편집할 수 있습니다.  
+작성자는 다음 단계에 따라 패키지 설명, 웹사이트 링크 및 리포지토리 링크를 편집할 수 있습니다.
 
-> 1. **내 패키지**에서 패키지를 선택하고 **패키지 정보 편집**을 클릭합니다.  
-> 2. 각 필드를 사용하여 **웹사이트** 및 **리포지토리** 링크를 추가하거나 수정합니다.  
-> 3. 필요에 따라 **패키지 설명**을 업데이트합니다.  
-> 4. **변경사항 저장**을 클릭하여 업데이트를 적용합니다.  
+> 1. **내 패키지**에서 패키지를 선택하고 **패키지 정보 편집**을 클릭합니다.
+> 2. 각 필드를 사용하여 **웹사이트** 및 **리포지토리** 링크를 추가하거나 수정합니다.
+> 3. 필요에 따라 **패키지 설명**을 업데이트합니다.
+> 4. **변경사항 저장**을 클릭하여 업데이트를 적용합니다.
 
- **참고**: 서버 업데이트에는 다소 시간이 걸리므로 Dynamo 내 Package Manager에서 업데이트를 새로 고치는 데 최대 15분이 걸릴 수 있습니다. 이러한 지연을 줄이기 위한 작업이 진행 중입니다.  
+**참고**: 서버 업데이트에는 다소 시간이 걸리므로 Dynamo 내 Package Manager에서 업데이트를 새로 고치는 데 최대 15분이 걸릴 수 있습니다. 이러한 지연을 줄이기 위한 작업이 진행 중입니다.
 
- ![게시된 패키지의 패키지 정보를 업데이트하기 위한 새로운 UI](images/Package-Manager_Image_5.png)
+![게시된 패키지의 패키지 정보를 업데이트하기 위한 새로운 UI](../../.gitbook/assets/Package-Manager_Image_5.png)
 
-##### 게시된 패키지 버전에 대한 호환성 정보 편집  
+**게시된 패키지 버전에 대한 호환성 정보 편집**
 
-호환성 정보는 이전에 게시된 패키지 버전에 대해 소급하여 업데이트할 수 있습니다. 다음 단계를 수행합니다.  
+호환성 정보는 이전에 게시된 패키지 버전에 대해 소급하여 업데이트할 수 있습니다. 다음 단계를 수행합니다.
 
-![게시된 패키지에 대한 호환성 정보 편집 - 1단계](images/Package-Manager_Image_6.png)
+![게시된 패키지에 대한 호환성 정보 편집 - 1단계](../../.gitbook/assets/Package-Manager_Image_6.png)
 
-**1단계:**  
+**1단계:**
 
-1. 업데이트하려는 패키지 버전을 클릭합니다.  
-2. **종속 대상** 리스트는 패키지가 종속된 패키지로 자동으로 채워집니다.  
-3. **호환성** 옆에 있는 연필 아이콘을 클릭하여 **호환성 정보 편집** 워크플로우를 엽니다.  
+1. 업데이트하려는 패키지 버전을 클릭합니다.
+2. **종속 대상** 리스트는 패키지가 종속된 패키지로 자동으로 채워집니다.
+3. **호환성** 옆에 있는 연필 아이콘을 클릭하여 **호환성 정보 편집** 워크플로우를 엽니다.
 
-**2단계:**  
+**2단계:**
 
 아래 순서도를 따르고 아래 표를 참조하면 패키지에 가장 적합한 옵션이 무엇인지 이해할 수 있습니다.
 
-!["호환성 정보 편집" 워크플로우에서 선택할 수 있는 옵션](images/Package-Manager_Image_7.png)
+!["호환성 정보 편집" 워크플로우에서 선택할 수 있는 옵션](../../.gitbook/assets/Package-Manager_Image_7.png)
 
 몇 가지 예를 사용하여 시나리오 몇 개를 살펴보겠습니다.
 
@@ -110,8 +110,8 @@ Dynamo를 시작하고 `Packages > Publish New Package...`를 선택하여 `Publ
 
 **예제 패키지 3** \- Mesh Toolkit: 이 패키지는 호스트 종속성이 없는 형상 노드의 모음인 Dynamo Core 패키지입니다. 따라서 이 경우 이상적인 옵션은 옵션 3입니다. 패키지는 Dynamo 및 모든 호스트 환경에서 버전 범위 및/또는 개별 버전 리스트와 일치하는 경우 호환 가능으로 표시됩니다
 
-![호환성 정보 옵션 편집](images/Package-Manager_Image_8.png)
+![호환성 정보 옵션 편집](../../.gitbook/assets/Package-Manager_Image_8.png)
 
 선택한 옵션에 따라 아래 이미지와 같이 Dynamo 및/또는 호스트별 필드가 팝업됩니다.
 
-![호환성 정보 편집 - 2단계](images/Package-Manager_Image_9.png)
+![호환성 정보 편집 - 2단계](../../.gitbook/assets/Package-Manager_Image_9.png)

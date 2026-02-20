@@ -24,7 +24,7 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![프로젝트 파일 이동하기](images/fe-proj-directory.jpg)
+![프로젝트 파일 이동하기](../../.gitbook/assets/fe-proj-directory.jpg)
 
 > 1. 프로젝트 파일을 새 `src` 폴더로 이동합니다.
 
@@ -47,7 +47,7 @@ CustomNodeModel
   </Target>
 ```
 
-![AfterBuild 대상 넣기](images/atom-afterbuild.jpg)
+![AfterBuild 대상 넣기](../../.gitbook/assets/atom-afterbuild.jpg)
 
 > 대상이 `CustomNodeModel.csproj` 파일(다른 프로젝트 파일 아님)에 추가되었고 프로젝트에 기존 빌드 후 설정이 없는지 확인해야 합니다.
 >
@@ -75,7 +75,7 @@ Dynamo 패키지에는 일반적으로 Dynamo 사용자 지정 노드 및 이미
 
 프로젝트를 빌드하면 이제 프로젝트 폴더에 이전에 생성한 `src` 폴더와 나란히 `packages` 폴더가 생성됩니다. `packages` 디렉토리 내에는 패키지에 필요한 모든 항목이 포함된 폴더가 있습니다. 또한 `pkg.json` 파일을 패키지 폴더에 복사하여 Dynamo가 패키지를 로드하도록 해야 합니다.
 
-![파일 복사하기](images/fe-proj-directory-package.jpg)
+![파일 복사하기](../../.gitbook/assets/fe-proj-directory-package.jpg)
 
 > 1. AfterBuild 대상이 생성한 새 패키지 폴더
 > 2. 프로젝트가 있는 기존 src 폴더
