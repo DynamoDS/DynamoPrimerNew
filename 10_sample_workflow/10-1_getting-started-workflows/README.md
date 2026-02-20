@@ -1,5 +1,5 @@
-# 快速入门工作流
+# 開始使用工作流程
 
-本部分包含简单的工作流，可帮助您开始使用 Dynamo。
+本節提供簡單的工作流程，可協助您開始使用 Dynamo。
 
-![](../images/10-1/sampleWorkflows.gif)
+![](../../.gitbook/assets/sampleWorkflows.gif)

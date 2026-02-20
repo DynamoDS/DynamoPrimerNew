@@ -1,113 +1,114 @@
-# 为 Dynamo 开发
+# 為 Dynamo 開發
 
-无论用户的经验水平如何，Dynamo 平台是专为所有用户设计的，旨在使他们都能够成为参与者。有多个针对不同能力和技能水平的开发选项，每个选项都有其优势和劣势，具体取决于目标。下面，我们将概述不同的选项以及如何选择其中一个。
+無論經驗程度為何，Dynamo 平台專為所有使用者成為貢獻者而設計。針對不同的能力和技能程度有幾種開發選項，每種能力和技能程度的優缺點視目標而定。下面我們將概述不同的選項，以及如何選擇。
 
-![三种开发环境](images/developing-for-dynamo.png)
+![三種開發環境](../../.gitbook/assets/developing-for-dynamo.png)
 
-> 三种开发环境：Visual Studio、Python 编辑器和代码块 DesignScript
+> 三種開發環境：Visual Studio、Python 編輯器和 Code Block DesignScript
 
-### 我有哪些选项？<a href="#what-are-my-options" id="what-are-my-options"></a>
+### 我有哪些選擇？<a href="#what-are-my-options" id="what-are-my-options"></a>
 
-Dynamo 的开发选项主要分为两类：_for_（面向）Dynamo 与 _in_（使用）Dynamo。可以将这两个类别视为如下所述：“in”Dynamo 表示使用 Dynamo IDE 创建要在 Dynamo 中使用的内容，而“for”Dynamo 表示使用外部工具创建要输入到 Dynamo 中以供使用的内容。尽管本手册重点介绍 _for_ Dynamo 开发，但下面介绍了适用于所有过程的资源。
+Dynamo 的開發選項主要分為兩個類別：_為_ Dynamo，以及 _在_ Dynamo。這兩個類別可視為：「在」Dynamo 表示使用 Dynamo IDE 建立要在 Dynamo 中使用的內容；「為」Dynamo 表示使用外部工具建立要匯入 Dynamo 中進行使用的內容。雖然本指南著重在 _為_ Dynamo 的開發，但下面會描述所有程序的資源。
 
-### For（面向）Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
+### 為 Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
 
-这些节点允许最高程度的自定义。许多软件包都是使用此方法构建的，它对于参与 Dynamo 的源代码而言必不可少。本手册将介绍构建这些软件包的过程。
+這些節點允許最高程度的自訂。許多套件都使用此方法建置，因此要對 Dynamo 的原始碼做出貢獻也需要此方法。本指南將涵蓋建置這些節點的程序。
 
-* Zero-Touch 节点
-* NodeModel 派生节点
-* 扩展
+* Zero-Touch 節點
+* NodeModel 衍生的節點
+* 延伸
 
-> 本 Primer 提供了有关[输入 Zero-Touch 库](https://primer2.dynamobim.org/v/zh-cn/6_custom_nodes_and_packages/6-2_packages/5-zero-touch)的指南。
+> Primer 在[匯入 Zero-Touch 資源庫](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch)提供了指南。
 
-在下面的讨论中，Visual Studio 将用作 Zero-Touch 和 NodeModel 节点的开发环境。
+下面的討論使用 Visual Studio 當作 Zero-Touch 和 NodeModel 節點的開發環境。
 
-![Visual Studio 界面](images/vs-devenv.jpg)
+![Visual Studio 介面](../../.gitbook/assets/vs-devenv.jpg)
 
-> 我们将要开发的项目的 Visual Studio 界面
+> Visual Studio 介面，以及我們將開發的專案
 
-### In（使用）Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
+### 在 Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
-尽管这些过程存在于可视化编程工作空间中并且相对简单，但它们都是用于自定义 Dynamo 的可行选项。本 Primer 涵盖了这些内容，并在[脚本编写策略](../../9\_best\_practices/2-scripting-strategies.md)一章中提供了脚本编写技巧和最佳实践。
+雖然這些程序都在視覺程式設計工作區中，相對而言也簡單易懂，但它們都是自訂 Dynamo 的可行選項。Primer 廣泛涵蓋這些內容，並在[指令碼撰寫策略](../../9_best_practices/2-scripting-strategies.md)一章中提供撰寫指令碼的秘訣和最佳實踐。
 
-*   代码块会在可视化编程环境中显示 DesignScript，从而支持灵活的文本脚本和节点工作流。代码块中的函数可由工作空间中的任何对象调用。
+*   Code Block 可在視覺程式設計環境中顯示 DesignScript，提供靈活的文字腳本和節點工作流程。Code Block 中的函數可被工作區中的任何內容呼叫。
 
-    > 下载代码块示例（单击鼠标右键，然后单击“另存为”），或在 [Primer](https://primer2.dynamobim.org/v/zh-cn/8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block) 中查看详细漫游。
-*   自定义节点是节点集合甚至整个图形的容器。它们是收集常用例程并与社区共享这些例程的有效方式。
+    > 下載 Code Block 範例 (按一下右鍵後另存)，或在 [Primer](https://primer.dynamobim.org/07_Code-Block/7-1_what-is-a-code-block.html) 中查看詳細的逐步解說。
+*   「自訂節點」是節點集合 (甚至整個圖表) 的容器。是收集常用常式並與社群分享的有效方式。
 
-    > 下载自定义节点示例（单击鼠标右键，然后单击“另存为”），或在 [Primer](https://primer2.dynamobim.org/v/zh-cn/6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction) 中查看详细漫游。
-*   Python 节点是可视化编程工作空间中的脚本接口，类似于代码块。Autodesk.DesignScript 库使用与 DesignScript 类似的点表示法。
+    > 下載自訂節點範例 (按一下右鍵後另存)，或在 [Primer](https://primer.dynamobim.org/10_Custom-Nodes/10-1_Introduction.html) 中查看詳細的逐步解說。
+*   「Python 節點」是視覺程式設計工作區中的腳本撰寫介面，與 Code Block 類似。Autodesk.DesignScript 資源庫使用與 DesignScript 類似的點標記法。
 
-    > 下载 Python 节点示例（单击鼠标右键，然后单击“另存为”），或在 [Primer](https://primer2.dynamobim.org/v/zh-cn/8_coding_in_dynamo/8-3_python) 中查看详细漫游。
+    > 下載 Python 節點範例 (按一下右鍵後另存)，或在 [Primer](https://primer.dynamobim.org/10_Custom-Nodes/10-4_Python.html) 中查看詳細的逐步解說。
 
-在 Dynamo 工作空间中开发是获得即时反馈的强大工具。
+在 Dynamo 工作區中開發是一個能立即得到回饋的強大工具。
 
-![在 Dynamo 工作空间中使用 Python 节点开发](images/python-example.jpg)
+![在 Dynamo 工作區中使用 Python 節點開發](../../.gitbook/assets/python-example.jpg)
 
-> 在 Dynamo 工作空间中使用 Python 节点开发
+> 在 Dynamo 工作區中使用 Python 節點開發
 
-### 每种方法有哪些优点/缺点？<a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
+### 每種方法有哪些優點/缺點？<a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
 
-Dynamo 的开发选项旨在解决自定义需求的复杂性。无论目标是在 Python 中编写递归脚本还是构建完全自定义的节点 UI，都有一些选项可用于实现仅涉及启动和运行所需内容的代码。
+Dynamo 的開發選項已設計為可解決自訂需求的複雜性。無論目標是以 Python 撰寫遞迴指令碼，還是建置一個完全自訂的節點使用者介面，都有一些選項可實作只包含啟動和執行所需的程式碼。
 
-**Dynamo 中的代码块、Python 节点和自定义节点**
+**Dynamo 中的 Code Block、Python 節點和自訂節點**
 
-这些都是用于在 Dynamo 可视化编程环境中编写代码的简单选项。通过 Dynamo 可视化编程工作空间，可访问 Python、DesignScript，还可以在自定义节点内包含多个节点。
+這些是在 Dynamo 視覺程式設計環境中撰寫程式碼的簡單選項。Dynamo 視覺程式設計工作區可讓您存取 Python、DesignScript，並且能在自訂節點內包含多個節點。
 
-![代码块、Python 脚本和自定义节点](images/Development-Icons.png)
+![Code Block、Python 指令碼和自訂節點](../../.gitbook/assets/Development-Icons.png)
 
-使用这些方法，我们可以：
+使用這些方法，我們可以：
 
-* 开始编写 Python 或 DesignScript，而几乎无需设置。
-* 将 Python 库输入到 Dynamo 中。
-* 将代码块、Python 节点和自定义节点作为软件包的一部分与 Dynamo 社区共享。
+* 開始撰寫 Python 或 DesignScript，幾乎不用進行設定。
+* 將 Python 資源庫匯入 Dynamo。
+* 將 Code Block、Python 節點和自訂節點做為套件的一部分與 Dynamo 社群分享。
 
-**Zero-Touch 节点**
+**Zero-Touch 節點**
 
-“Zero-Touch”是指一种用于输入 C# 库的简单点击方法。Dynamo 将读取 `.dll` 的公有方法，并将这些方法转换为 Dynamo 节点。可以使用 Zero-Touch 来开发您自己的自定义节点和软件包。
+「Zero-Touch」是指匯入 C# 資源庫所使用的一個簡易點選方法。Dynamo 將讀取 `.dll` 檔案的公開方法，並將其轉換為 Dynamo 節點。您可以使用 Zero-Touch 開發自己的自訂節點與套件
 
-![Zero-Touch 节点](images/ZTImport.png)
+![Zero-touch 節點](../../.gitbook/assets/ZTImport.png)
 
-使用此方法，我们可以：
+使用此方法，我們可以：
 
-* 输入一个不一定是为 Dynamo 开发的库，并自动创建一组新节点（如本 Primer 中的 [A-Forge 示例](../../6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md#case-study-importing-aforge)）
-* 编写 C# 方法，并在 Dynamo 中轻松将这些方法用作节点
-* 通过软件包将 C# 库作为节点与 Dynamo 社区共享
+* 匯入不一定是針對 Dynamo 開發的資源庫，並自動建立一組新節點，例如 Primer 中的 [A-Forge 範例](../../6_custom_nodes_and_packages/6-2_packages/5-zero-touch.md#case-study-importing-aforge)
+* 撰寫 C# 方法，並輕鬆使用這些方法做為 Dynamo 中的節點
+* 將 C# 資源庫以節點方式透過套件與 Dynamo 社群分享
 
-**NodeModel 派生节点**
+**NodeModel 衍生的節點**
 
-通过这些节点，可以更深入地了解 Dynamo 的结构。它们基于 `NodeModel` 类，并使用 C# 编写。尽管此方法提供了最大的灵活性和强大功能，但节点的大多数方面都必须明确定义，并且函数需要位于单独的程序集中。
+這些節點更深入 Dynamo 結構。它們以 `NodeModel` 類別為基礎，並以 C# 撰寫。雖然此方法提供最大的靈活性和功能，但節點的絕大多數層面必須明確定義，且函數必須位於單獨的組合中。
 
-![NodeModel 派生节点](images/Development-Icons-NodeModel.png)
+![NodeModel 衍生的節點](../../.gitbook/assets/Development-Icons-NodeModel.png)
 
-使用此方法，我们可以：
+使用此方法，我們可以：
 
-* 使用滑块、图像、颜色等创建完全可自定义的节点 UI（例如 ColorRange 节点）
-* 访问并影响 Dynamo 画布中发生的情况
-* 自定义连缀
-* 作为软件包载入到 Dynamo 中
+* 使用滑棒、影像、顏色等建立完全可自訂的節點使用者介面 (例如 ColorRange 節點)
+* 存取並影響 Dynamo 圖元區中發生的結果
+* 自訂交織
+* 載入 Dynamo 中成為套件
 
-### 了解 Dynamo 版本控制和 API 更改 (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
+### 瞭解 Dynamo 版本管理和 API 變更 (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
 
-由于 Dynamo 会定期更新，因此可能会对软件包使用的 API 的一部分进行更改。跟踪这些更改对于确保现有软件包继续正常工作而言非常重要。
+由於 Dynamo 會定期更新，因此可能會變更套件所使用的 API 部分。追蹤這些變更非常重要，以確保既有套件能持續正常運作。
 
-API 更改是在 [Dynamo Github Wiki](https://github.com/DynamoDS/Dynamo/wiki/API-Changes) 上进行跟踪的。这包括对 DynamoCore、库和工作空间的更改。
+[Dynamo Github Wiki](https://github.com/DynamoDS/Dynamo/wiki/API-Changes) 會追蹤 API 變更。這包括對 DynamoCore、資源庫和工作區的變更。
 
-![Dynamo API 更改文档](images/api-changes.jpg)
+![Dynamo API 變更文件](../../.gitbook/assets/api-changes.jpg)
 
-举例来说，2.0 版中即将发生的重大更改是从 XML 文件格式转换为 JSON 文件格式。NodeModel 派生节点现在需要 [JSON 构造函数](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node)，否则它们将无法在 Dynamo 2.0 中打开。
+一個即將實施的重大變更範例是，在 2.0 版中從 XML 檔案格式轉換為 JSON 檔案格式。NodeModel 衍生的節點現在需要 [JSON 建構函式](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node)，否則無法在 Dynamo 2.0 中開啟。
 
-Dynamo 的 API 文档目前涵盖了核心功能：[http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI)
+Dynamo 的 API 文件目前涵蓋核心功能：[http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI)
 
-![API 文档](images/api-docs.jpg)
+![API 文件](../../.gitbook/assets/api-docs.jpg)
 
-### 在软件包中分发二进制文件的权限 <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
+### 以套件散發二進位檔案的權限 <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 
-请注意，.dll 包含在要上传到软件包管理器的软件包中。如果软件包作者未创建 .dll，则他们必须有权共享它。
+請注意要上傳到 Package Manager 的套件中是否包含 .dll。如果套件作者未建立 .dll，他們必須具有分享該 .dll 的權限。
 
-如果软件包包含二进制文件，则在下载时必须提示用户该软件包包含二进制文件。
+如果套件包含二進位檔案，則必須在使用者下載包含二進位檔案的套件時加以提示。
 
-### Dynamo UI 性能注意事项
-在撰写本文时，Dynamo 主要使用 WPF（Windows 演示基础）来呈现其 UI。WPF 是一个复杂而强大的基于 xaml/绑定的系统。由于 Dynamo 具有复杂的 UI，因此很容易造成 UI 挂起、内存泄漏，或者以降低性能的方式将图形执行和 UI 更新包装在一起。
+### Dynamo UI 在效能方面的考慮事項
 
-请参考 [Dynamo 性能注意事项 Wiki 页面](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance)，该页面将帮助您避免在更改 Dynamo 代码时遇到的一些常见陷阱。
+在撰寫本文時，Dynamo 主要使用 WPF (Windows Presentation Foundation) 來呈現其 UI。WPF 是一個複雜而強大的 XAML/繫結型系統。由於 Dynamo 具有複雜的 UI，因此很容易發生 UI 當機、記憶體洩漏，或者以降低效能的方式將圖表執行與 UI 更新包裹在一起。
+
+請參閱 [Dynamo 效能考慮事項 Wiki 頁面](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance)，該頁面將協助您避免發生一些變更 Dynamo 程式碼的常見錯誤。

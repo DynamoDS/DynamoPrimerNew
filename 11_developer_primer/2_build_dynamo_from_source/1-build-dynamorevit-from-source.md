@@ -1,85 +1,85 @@
-# 从源代码构建 DynamoRevit
+# 從原始碼建置 DynamoRevit
 
-DynamoRevit 源文件也托管在 DynamoDS GitHub 上，可供开发人员参与修改并构建 Beta 版。从源代码构建 DynamoRevit 通常遵循与 Dynamo 相同的过程，但一些重要细节除外：
+DynamoRevit 原始碼檔案也託管在 DynamoDS Github 上，開發人員可以參與並建置 Beta 版本。從原始碼建置 DynamoRevit 的程序通常與 Dynamo 相同，但有一些重要的細節例外：
 
-* DynamoRevit 会参照 Dynamo 程序集，因此应使用匹配的 NuGet 软件包构建这些程序集。例如，DynamoRevit 2.x 不会载入到 Dynamo 1.3 中。
-* DynamoRevit 特定于 Revit 版本，例如：DynamoRevit 2018 分支应在 Revit 2018 上运行。
+* DynamoRevit 參考 Dynamo 組合，因此應使用相符的 NuGet 套件建置這些組合。例如，DynamoRevit 2.x 不會載入至 Dynamo 1.3。
+* DynamoRevit 與 Revit 版本有關，例如：DynamoRevit 2018 分支應在 Revit 2018 上執行。
 
-在本手册中，我们将使用以下内容：
+本指南將使用下列項目：
 
 * Revit 2023
-* 基于分支 `Revit2023` 的最新 DynamoRevit 构建
-* 最新 Dynamo 构建
+* 在分支 `Revit2023` 上的最新 DynamoRevit 建置版本
+* 最新的 Dynamo 建置版本
 
-为了确保构建成功，我们将克隆并构建要在本漫游中使用的 Dynamo 和 DynamoRevit 存储库。
+為確保能成功建置，我們將複製並建置 Dynamo 和 DynamoRevit 兩個儲存庫在此逐步解說中使用。
 
-_注意：仅当构建 Dynamo 1.x 和 DynamoRevit 1.x 时，才需要在 Dynamo 之前手动构建 Dynamo - 较新版本的 DynamoRevit 存储库依赖 NuGet 软件包管理器来构建所需的 Dynamo 依存关系。虽然 DynamoRevit 2.x 的构建不需要手动拉取 Dynamo，但仍需要在其他地方使用核心 `dlls` 来实际运行 DynamoRevit `add-in` \- 因此，无论如何，拉取和构建 Dynamo 都是值得的。详见下文：_ [_使用 Visual Studio 构建存储库_](#building-the-repository-using-Visual-Studio)
+_注意：只有當您建置 Dynamo 1.x 和 DynamoRevit 1.x 時，才需要在 DynamoRevit 之前手動建置 Dynamo - 較新版本的 DynamoRevit 儲存庫依賴 NuGet 套件管理員，才能獲得建置所需的 Dynamo 相依性。雖然 DynamoRevit 2.x 的建置版本不需要手動提取 Dynamo，但您在其他位置仍然需要核心 `dlls` 才能真正執行 DynamoRevit `add-in` \- 因此無論如何還是要提取和建置 Dynamo。參閱更多資訊：_ [_使用 Visual Studio 建置儲存庫_](1-build-dynamorevit-from-source.md#building-the-repository-using-Visual-Studio)
 
-### 在 GitHub 上查找 DynamoRevit 存储库 <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
+### 在 Github 上找出 DynamoRevit 儲存庫 <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
-DynamoRevit 项目的代码位于 GitHub 上独立于核心 Dynamo 源代码的存储库中。此存储库包含 Revit 特定节点的源文件和载入 Dynamo 的 Revit 附加模块。针对不同版本的 Revit（例如，2016、2017 或 2018）的 DynamoRevit 构建会在存储库中组织为分支。
+DynamoRevit 專案的程式碼與核心 Dynamo 原始程式碼在 Github 是位在不同的儲存庫中。此儲存庫包含 Revit 特定節點的原始碼檔案，以及載入 Dynamo 的 Revit 增益集。適用於不同 Revit 版本 (例如 2016、2017 或 2018) 的 DynamoRevit 建置版本在儲存庫中會整理成不同的分支。
 
-DynamoRevit 的源代码托管在此处：[https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit)
+DynamoRevit 的原始碼託管在此：[https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit)
 
-![GitHub 上的 DynamoRevit](images/github-dynamorevit.jpg)
+![GitHub 上的 DynamoRevit](../../.gitbook/assets/github-dynamorevit.jpg)
 
-> 1. 克隆或下载存储库
-> 2. DynamoRevit 的分支参照 Revit 版本
+> 1. 複製或下載儲存庫
+> 2. DynamoRevit 的分支參考 Revit 版本
 
-### 使用 git 克隆存储库 <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
+### 使用 git 複製儲存庫 <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
 
-在与拉取 Dynamo 存储库类似的过程中，我们将使用 git 克隆命令来克隆 DynamoRevit 并指定与我们的 Revit 版本匹配的分支。首先，我们将打开命令行界面，然后将当前目录设置为要将文件克隆到的位置。
+在與提取 Dynamo 儲存庫類似的過程中，我們將使用 git clone 指令來複製 DynamoRevit，並指定與 Revit 版本相符的分支。首先，我們開啟指令行介面，將目前目錄設定為要將檔案複製到的位置。
 
-`cd C:\Users\username\Documents\GitHub` 更改当前目录
+`cd C:\Users\username\Documents\GitHub` 會變更目前目錄
 
-> 将 `username` 替换为您的用户名
+> 將 `username` 取代為您的使用者名稱
 
-![命令行界面](images/cli-cd-revit.jpg)
+![指令行介面](../../.gitbook/assets/cli-cd-revit.jpg)
 
-现在，我们可以将存储库克隆到此目录中。尽管我们需要指定存储库的分支，但可以在克隆后切换到该分支。
+現在，我們可以將儲存庫複製到此目錄中。雖然我們需要指定儲存庫的分支，但可以在複製後切換到此分支。
 
-`git clone https://github.com/DynamoDS/DynamoRevit.git` 从远程 URL 克隆存储库，然后默认切换到主分支。
+`git clone https://github.com/DynamoDS/DynamoRevit.git` 會從遠端 URL 複製儲存庫，然後依預設切換到主分支。
 
-![克隆存储库后的命令行界面](images/cli-clone-revit.jpg)
+![複製儲存庫後的指令行介面](../../.gitbook/assets/cli-clone-revit.jpg)
 
-在存储库克隆完成后，将当前目录更改为存储库文件夹，然后切换到与已安装版本的 Revit 匹配的分支。在本例中，我们使用的是 Revit RC2.13.1_Revit2023。可以在 GitHub 页面上的“分支”下拉菜单中查看所有远程分支。
+儲存庫完成複製後，將目前目錄變更為儲存庫資料夾，並切換至與所安裝 Revit 版本相符的分支。在此範例中，我們使用 Revit RC2.13.1_Revit2023。在 Github 頁面上的「Branch」下拉式功能表中可以檢視所有遠端分支。
 
-`cd C:\Users\username\Documents\GitHub\DynamoRevit` 将目录更改为 DynamoRevit。\
- `git checkout RC2.13.1_Revit2023` 将当前分支设置为 `RC2.13.1_Revit2023`。\
- `git branch` 确认我们所在的分支，并显示本地存在的其他分支。
+`cd C:\Users\username\Documents\GitHub\DynamoRevit` 會將目錄變更為 DynamoRevit。\
+ `git checkout RC2.13.1_Revit2023` 會將目前分支設定為 `RC2.13.1_Revit2023`。\
+ `git branch` 會確認我們所在的分支，並顯示本端存在的其他分支。
 
-![目录已切换到分支](images/cli-branch-revit.jpg)
+![目錄已切換至某個分支](../../.gitbook/assets/cli-branch-revit.jpg)
 
-> 带星号的分支是当前已检出的分支。`Revit2018` 分支之所以显示，是因为我们之前已将其检出，所以它存在于本地。
+> 有星號的分支是目前出庫使用的分支。畫面顯示的是 `Revit2018` 分支，因為我們先前已將其出庫使用，因此它位於本端。
 
-请务必选择存储库的正确分支，以确保在 Visual Studio 中构建项目时，它将参照 Revit 安装目录的正确版本中的程序集，尤其是 `RevitAPI.dll` 和 `RevitAPIUI.dll`。
+選擇正確的儲存庫分支很重要，這樣才能確保專案在 Visual Studio 中建置時，會參考 Revit 安裝目錄正確版本 (尤其是 `RevitAPI.dll` 和 `RevitAPIUI.dll`) 中的組合。
 
-### 使用 Visual Studio 构建存储库 <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
+### 使用 Visual Studio 建置儲存庫 <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
 
-在构建存储库之前，我们需要使用 `src` 文件夹中的 `restorepackages.bat` 文件恢复 NuGet 软件包。该 bat 文件会使用 [NuGet](https://www.nuget.org) 软件包管理器来拉取 DynamoRevit 所需的 Dynamo 核心的已构建二进制文件。但如果您仅对 DynamoRevit 进行更改，而不是对 Dynamo 核心进行更改，也可以选择手动构建这些文件。这样可以更快地开始运行。确保以管理员身份运行此文件。
+在建置儲存庫之前，我們需要使用 `src` 資料夾中的 `restorepackages.bat` 檔案還原 NuGet 套件。此 bat 檔案使用 [NuGet](https://www.nuget.org) 套件管理員提取 DynamoRevit 所需的 Dynamo 核心已建置二進位檔案。您也可以選擇手動建置這些元件，但如果您只是對 DynamoRevit (而不是 Dynamo 核心) 進行變更，這樣可以更快開始。請務必以管理員身分執行此檔案。
 
-![以管理员身份运行](images/fe-restorepackages.jpg)
+![以系統管理員身分執行](../../.gitbook/assets/fe-restorepackages.jpg)
 
-> 1. 在 `restorepackages.bat` 上单击鼠标右键，然后选择 `Run as administrator`
+> 1. 以右鍵按一下 `restorepackages.bat`，然後選取「`Run as administrator`」
 
-如果软件包已成功恢复，则 `packages` 文件夹将添加到 `src` 文件夹（包含最新 Beta 版 NuGet 软件包）中。
+如果成功還原套件，則會在 `src` 資料夾中新增一個 `packages` 資料夾，當中包含最新的 Beta 版 NuGet 套件。
 
-![最新 Beta 版 Dynamo NuGet 软件包](images/fe-packages.jpg)
+![最新的 Beta 版 Dynamo NuGet 套件](../../.gitbook/assets/fe-packages.jpg)
 
-> 1. 最新 Beta 版 Dynamo NuGet 软件包
+> 1. 最新的 Beta 版 Dynamo NuGet 套件
 
-在软件包恢复后，打开 `src` 中的 `DynamoRevit.All.sln` Visual Studio 解决方案文件，然后构建解决方案。该构建最初可能难以找到 `AssemblySharedInfo.cs`。如果是这样，则重新运行构建即会解决该问题。
+還原套件後，開啟 `src` 中的 `DynamoRevit.All.sln` Visual Studio 方案檔，然後建置方案。建置作業一開始可能找不到 `AssemblySharedInfo.cs`。如果是，重新執行建置可以解決此問題。
 
-![构建解决方案](images/vs-build-dynamorevit.jpg)
+![建置方案](../../.gitbook/assets/vs-build-dynamorevit.jpg)
 
-> 1. 选择 `Build > Build Solution`
-> 2. 在“输出”窗口中确认构建是否已成功。消息应为 `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`。
+> 1. 選取「`Build > Build Solution`」
+> 2. 在「Output (輸出)」視窗中確認建置成功。訊息應為 `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`。
 
-### 在 Revit 中运行 DynamoRevit 的本地构建 <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
+### 在 Revit 中執行 DynamoRevit 的本端建置版本 <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
 
-Revit 需要一个附加模块文件来识别 DynamoRevit，[安装程序](http://dynamobim.org/download/)会自动创建该文件。在开发过程中，我们需要手动创建一个指向我们要使用的 DynamoRevit 构建的附加模块文件，尤其是 `DynamoRevitDS.dll` 程序集。我们还需要将 DynamoRevit 指向 Dynamo 的构建。
+Revit 需要增益集檔案才能辨識 DynamoRevit，[安裝程式](http://dynamobim.org/download/)會自動建立此檔案。在開發過程中，我們需要手動建立一個指向我們要使用的 DynamoRevit 建置版本的增益集檔案，明確來說是 `DynamoRevitDS.dll` 組合。我們還需要將 DynamoRevit 指向 Dynamo 的建置版本。
 
-在 Revit 的附加模块文件夹（位于 `C:\ProgramData\Autodesk\Revit\Addins\2023` 中）中创建 `Dynamo.addin` 文件。我们已安装了一个版本的 DynamoRevit，因此我们只需编辑现有文件以指向新构建。
+在 Revit 的增益集資料夾 `C:\ProgramData\Autodesk\Revit\Addins\2023` 中建立 `Dynamo.addin` 檔案。我們已經安裝 DynamoRevit 版本，因此我們只要編輯既有檔案以指向新的建置版本。
 
 ```
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
@@ -95,9 +95,9 @@ Revit 需要一个附加模块文件来识别 DynamoRevit，[安装程序](http:
 </RevitAddIns>
 ```
 
-* 在 `<Assembly>...</Assembly>` 内，指定 `DynamoRevitDS.dll` 的文件路径。
+* 在 `<Assembly>...</Assembly>` 內指定 `DynamoRevitDS.dll` 的檔案路徑。
 
-或者，我们可以让附加模块载入版本选择器，而不是特定的程序集。
+或者，我們可以使用增益集載入版本選取器，而非特定組合。
 
 ```
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
@@ -113,16 +113,16 @@ Revit 需要一个附加模块文件来识别 DynamoRevit，[安装程序](http:
 </RevitAddIns>
 ```
 
-* 将 `<Assembly>...</Assembly>` 文件路径设置为 `DynamoRevitVersionSelector.dll`
-* `<FullClassName>...</FullClassName>` 指定哪些类要从我们使用上述程序集元素路径指向的程序集实例化。此类将成为我们附加模块的入口点。
+* 將 `<Assembly>...</Assembly>` 檔案路徑設定為 `DynamoRevitVersionSelector.dll`
+* `<FullClassName>...</FullClassName>` 使用上面的組合元素路徑，指定要從我們所指向的組合實體化的類別。此類別將是我們增益集的進入點。
 
-此外，我们还需要删除 Revit 附带的现有 Dynamo。要执行此操作，请转到 `C:\\Program Files\Autodesk\Revit 2023\AddIns ` 并删除包含 **“Dynamo”** 的两个文件夹：`DynamoForRevit` 和 `DynamoPlayerForRevit`。如果需要恢复原始 Dynamo for Revit，可以删除它们，也可以将它们备份在单独的文件夹中。
+此外，我們需要移除 Revit 隨附的既有 Dynamo。若要執行，請移至 `C:\\Program Files\Autodesk\Revit 2023\AddIns` 並移除包含 **Dynamo** 的兩個資料夾 - `DynamoForRevit` 和 `DynamoPlayerForRevit`。如果需要恢復原始的 Dynamo for Revit，您可以刪除這兩個資料夾，或備份到單獨的資料夾中。
 
-![DynamoForRevit 和 DynamoPlayerforRevit 文件夹](images/fe-dynamo-folders-remove.jpg)
+![DynamoForRevit 和 DynamoPlayerforRevit 資料夾](../../.gitbook/assets/fe-dynamo-folders-remove.jpg)
 
-第二步是将 Dynamo 核心程序集的文件路径添加到 DynamoRevit 的 `bin` 文件夹中的 `Dynamo.config` 文件。当附加模块在 Revit 中打开时，DynamoRevit 将载入这些文件。通过此配置文件，可以将 DynamoRevit 附加模块指向不同版本的 Dynamo 核心，以在核心和 DynamoRevit 中开发和测试更改。
+第二步是在 DynamoRevit 的 `bin` 資料夾中的 `Dynamo.config` 檔案新增 Dynamo 核心組合的檔案路徑。在 Revit 中開啟增益集時，DynamoRevit 將載入這些組合。此規劃檔可讓您將 DynamoRevit 增益集指向不同版本的 Dynamo 核心，供您同時在核心和 DynamoRevit 中開發和測試變更。
 
-代码应如下所示：
+程式碼應如下所示：
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -133,95 +133,95 @@ Revit 需要一个附加模块文件来识别 DynamoRevit，[安装程序](http:
 </configuration>
 ```
 
-* 将 `bin` 文件夹的目录路径添加到 `<add key/>`
+* 將 `bin` 資料夾的目錄路徑加到 `<add key/>` 中
 
-> 我们在此漫游之前就已克隆并构建了 Dynamo，以确保它能够与 DynamoRevit 一起正常工作。目录路径指向此构建。
+> 我們在此逐步解說之前才複製並建置 Dynamo，確保能與 DynamoRevit 順利搭配運作。目錄路徑指向此建置版本。
 
-现在，当我们打开 Revit 时，“管理”选项卡中应该有一个 Dynamo 附加模块。
+現在開啟 Revit 時，「管理」頁籤中應該有 Dynamo 增益集。
 
-![位于“管理”选项卡中的 Dynamo 附加模块](images/revit-dynamo.jpg)
+![位於「管理」頁籤中的 Dynamo 增益集](../../.gitbook/assets/revit-dynamo.jpg)
 
-> 1. 选择 `Manage`
-> 2. 单击 Dynamo 附加模块图标
-> 3. 一个 DynamoRevit 的实例
+> 1. 選取「`Manage`」
+> 2. 按一下 Dynamo 增益集圖示
+> 3. 一個 DynamoRevit 例證
 
-如果出现一个错误对话框窗口（其中显示缺少的程序集），则很可能是您构建的 DynamoCore 版本与运行时载入的版本不匹配。例如，如果您尝试使用 Dynamo 1.3 dll 启动 DynamoRevit（其中包含 DynamoCore 的最新 2.0 Beta 版软件包），则它将无法工作。请确保两个存储库的版本相同，并且 DynamoRevit 拉取的是版本匹配的 NuGet 依存关系。在 DynamoRevit 存储库的 `package.json` 文件中定义这些依存关系。
+如果出現錯誤對話方塊視窗顯示缺少組合，可能是您建置所依據的 DynamoCore 版本與您在執行階段載入的 DynamoCore 版本不相符。例如，如果您嘗試使用 Dynamo 1.3 dll 啟動 DynamoCore，則 DynamoRevit 搭配最新的 DynamoCore 2.0 Beta 套件將無法運作。請確保兩個儲存庫的版本相同，且 DynamoRevit 提取的是相符版本的 NuGet 相依性。這些版本定義在 DynamoRevit 儲存庫的 `package.json` 檔案中。
 
-### 使用 Visual Studio 调试 DynamoRevit <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
+### 使用 Visual Studio 為 DynamoRevit 除錯 <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
 
-在上一节（**从源代码构建 Dynamo**）中，我们简要介绍了在 Visual Studio 中调试以及如何将 Visual Studio 附着到进程。以 Wall.ByCurveAndHeight 节点中的异常为例，我们将介绍如何附着到进程、设置断点、单步调试代码，以及使用调用堆栈来确定异常的来源。这些调试工具通常适用于 .net 开发工作流，值得在本手册之外进行探索。
+在上一節〈**從原始碼建置 Dynamo**〉中，我們簡單介紹了在 Visual Studio 中進行除錯，以及如何將 Visual Studio 附加到處理序。以 Wall.ByCurveAndHeight 節點中的例外狀況為例，我們將逐步瞭解如何附加到處理序、設定中斷點、逐步執行程式碼，以及使用呼叫堆疊來判斷例外狀況的來源。這些除錯工具通常適用於 .net 開發工作流程，值得您在參考本指南之餘進行探索。
 
-* **“附着到进程”** 会将正在运行的应用程序链接到 Visual Studio，以进行调试。如果我们要调试 DynamoRevit 构建中发生的行为，则我们可以在 Visual Studio 中打开 DynamoRevit 源文件，然后附着 `Revit.exe` 进程，该进程是 DynamoRevit 附加模块的父进程。Visual Studio 使用[符号文件](https://msdn.microsoft.com/en-us/library/ms241613.aspx) (`.pbd`)，以在 DynamoRevit 正在执行的程序集和源代码之间建立连接。
-* **“断点”** 会在源代码中建立应用程序将在执行之前暂停的代码行。如果某个节点导致 DynamoRevit 崩溃或返回意外结果，则我们可以向节点的源代码添加断点以暂停该过程、单步执行代码并检查变量的实时值，直到找到问题的根源。
-* **“单步调试代码”** 会逐行遍历源代码。我们可以逐个运行函数、单步执行函数调用，或跳出当前正在执行的函数。
-*   **“调用堆栈”** 会相对于涉及此函数调用的以前函数调用，显示进程当前正在运行的函数。Visual Studio 有一个“调用堆栈”窗口来显示此内容。例如，如果我们在源代码之外遇到异常，则我们可以在调用堆栈中查看调用代码的路径。
+* **附加至處理序**可將執行中的應用程式連結至 Visual Studio 進行除錯。如果我們要為 DynamoRevit 建置版本中發生的行為進行除錯，可以在 Visual Studio 中開啟 DynamoRevit 原始碼檔案，然後附加 `Revit.exe` 處理序，這是 DynamoRevit 增益集的父處理序。Visual Studio 使用[符號檔](https://msdn.microsoft.com/en-us/library/ms241613.aspx) (`.pbd`) 來連接 DynamoRevit 正在執行的組合與原始程式碼。
+* **中斷點**會在原始程式碼中建立幾行程式碼，應用程式會在這幾行暫停後再執行。如果某個節點導致 DynamoRevit 當機或傳回非預期結果，我們可以在節點的原始碼中加入中斷點暫停處理序、逐步檢查程式碼，以及檢查變數的即時值，直到找到問題的根本原因
+* **逐行執行程式碼**會逐行執行原始碼。我們可以逐一執行函數、逐步檢查函數呼叫，或跳出目前執行的函數。
+*   **呼叫堆疊**會顯示處理序目前正在執行且與叫用此函數呼叫的前一個函數呼叫相關的函數。Visual Studio 有一個「呼叫堆疊」視窗可顯示此內容。例如，如果在原始程式碼外遇到例外狀況，可以查看呼叫堆疊中呼叫程式碼的路徑。
 
-    > [2,000 Things You Should Know About C#](https://csharp.2000things.com/2013/05/20/847-how-the-call-stack-works/) 对调用堆栈进行了更深入的说明。
+    > [您應該瞭解 C# 的 2,000 件事](https://csharp.2000things.com/2013/05/20/847-how-the-call-stack-works/)對呼叫堆疊有更深入的說明
 
-当给定 PolyCurve 作为 **“Wall.ByCurveAndHeight”** 节点的曲线输入时，该节点会抛出异常，并显示消息：_“未实现 BSPlineCurve”_。通过调试，我们可以弄清楚节点不会接受此几何图形类型作为曲线参数的输入的确切原因。在本例中，我们假定 DynamoRevit 已成功构建，并可以作为 Revit 的附加模块运行。
+**Wall.ByCurveAndHeight** 節點在給定一條 PolyCurve 做為其曲線輸入時擲出例外狀況並顯示以下訊息：_「未實施目標 BSPlineCurve」_。透過除錯，我們可以找出節點為什麼不接受此幾何圖形類型做為曲線參數的輸入。在此範例中，我們假設 DynamoRevit 已成功建置，並可做為 Revit 的增益集執行。
 
-![Wall.ByCurbeAndHeight 节点抛出异常](images/dyn-wallbycurveandheight.jpg)
+![Wall.ByCurbeAndHeight 節點擲出例外狀況](../../.gitbook/assets/dyn-wallbycurveandheight.jpg)
 
-> 1. Wall.ByCurveAndHeight 节点抛出异常
+> 1. Wall.ByCurveAndHeight 節點擲出例外狀況
 
-首先打开 `DynamoRevit.All.sln` 解决方案文件、启动 Revit，然后启动 DynamoRevit 附加模块。然后，使用 `Attach to Process` 窗口将 Visual Studio 附着到 Revit 进程。
+首先開啟 `DynamoRevit.All.sln` 方案檔，啟動 Revit，然後啟動 DynamoRevit 增益集。然後使用「`Attach to Process`」視窗將 Visual Studio 附加到 Revit 處理序。
 
-![“附着到进程”窗口](images/vs-debug-attachprocess.jpg)
+![「Attach to Process (附加至處理序)」視窗](../../.gitbook/assets/vs-debug-attachprocess.jpg)
 
-> Revit 和 DynamoRevit 需要运行才能显示为可用进程
+> Revit 和 DynamoRevit 必須執行才能顯示為可用處理序
 >
-> 1. 通过选择 `Debug > Attach to Process...` 来打开 `Attach to Process` 窗口
-> 2. 将 `Transport` 设置为 `Default`
-> 3. 选择 `Revit.exe`
-> 4. 选择 `Attach`
+> 1. 選取「`Debug > Attach to Process...`」以開啟「`Attach to Process`」視窗
+> 2. 將「`Transport`」設定為「`Default`」
+> 3. 選取 `Revit.exe`
+> 4. 選取「`Attach`」
 
-在将 Visual Studio 附着到 Revit 后，打开 `Wall.cs` 中的 Wall.ByCurveAndHeight 源代码。我们可以在“解决方案资源管理器”的 `Libraries > RevitNodes > Elements` 下的文件的 `Public static constructors` 区域中找到此内容。在墙类型的构造函数中设置断点，以便在 Dynamo 中执行节点时，该进程会中断，然后我们可以分别单步调试每行代码。通常，Dynamo Zero Touch 类型构造函数以 `By<parameters>` 开头。
+將 Visual Studio 附加到 Revit 後，開啟 `Wall.cs` 中的 Wall.ByCurveAndHeight 原始程式碼。我們可以在「方案總管」的「`Libraries > RevitNodes > Elements`」下，在檔案的 `Public static constructors` 區域找到這段程式碼。在牆類型的建構函式中設定中斷點，以便在 Dynamo 中執行節點時，處理序會中斷，我們可以逐行執行程式碼。Dynamo zero touch 類型的建構函式通常以 `By<parameters>` 開頭。
 
-![设置断点](images/vs-debugging-breakpoint.jpg)
+![設定中斷點](../../.gitbook/assets/vs-debugging-breakpoint.jpg)
 
-> 1. 具有 Wall.ByCurveAndHeight 构造函数的类文件
-> 2. 设置断点，方法是单击行号的左侧，或者在代码行上单击鼠标右键并选择 `Breakpoint > Insert Breakpoint`。
+> 1. 具有 Wall.ByCurveAndHeight 建構函式的類別檔案
+> 2. 按一下行號的左側，或在程式碼行上按一下右鍵並選取「`Breakpoint > Insert Breakpoint`」可設定中斷點。
 
-在设置断点后，我们需要该进程运行穿过 Wall.ByCurveAndHeight 函数。通过将导线重新连接到 Dynamo 的一个端口（这将强制节点重新执行），可以在 Dynamo 中再次执行该函数。断点将在 Visual Studio 中命中。
+設定中斷點後，我們需要處理序逐步執行 Wall.ByCurveAndHeight 函數。在 Dynamo 中將配線重新連接至其中一個埠 (這會強制節點重新執行)，可再次執行此函數。在 Visual Studio 中會叫用中斷點。
 
-![Visual Studio 中的断点命中](images/vs-breakpoint.jpg)
+![在 Visual Studio 中叫用中斷點](../../.gitbook/assets/vs-breakpoint.jpg)
 
-> 1. 断点图标会在断点命中后发生变化
-> 2. 显示下一个方法的“调用堆栈”窗口
+> 1. 中斷點圖示在叫用時會變更
+> 2. 「呼叫堆疊」視窗顯示下一個即將執行的方法
 
-现在，单步执行构造函数中的每一行，直到我们遇到异常。以黄色亮显的代码是要运行的下一条语句。
+現在，請逐步檢查建構函式中的每一行，直到遇到例外狀況。以黃色亮顯的程式碼是下一個要執行的陳述式。
 
-![Visual Studio 中的单步执行](images/vs-stepover.jpg)
+![在 Visual Studio 中逐步執行](../../.gitbook/assets/vs-stepover.jpg)
 
-> 1. 用于导航代码的调试工具
-> 2. 按 `Step Over` 以运行亮显的代码，然后在函数返回后暂停执行
-> 3. 要运行的下一条语句由黄色亮显和箭头指示
+> 1. 用於瀏覽程式碼的除錯工具
+> 2. 按「`Step Over`」以執行亮顯的程式碼，然後在函數傳回後暫停執行
+> 3. 要執行的下一個陳述式，以黃色亮顯和箭頭指示
 
-如果我们继续单步调试该功能，我们将遇到在 DynamoRevit 窗口中显示的异常。在“调用堆栈”窗口中，我们可以看到异常最初抛出自名为 `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve` 的方法。值得庆幸的是，异常在此处得到处理，因此 Dynamo 未崩溃。调试过程通过将我们引入到源代码中的其他方法，来为问题提供上下文。
+如果我們繼續逐步執行函數，將會遇到 DynamoRevit 視窗中顯示的例外狀況。查看「呼叫堆疊」視窗，我們可以看到例外狀況一開始是從名為 `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve` 的方法所擲出。多虧這裡已經處理了例外狀況，因此 Dynamo 沒有當機。除錯程序將我們引導到原始式碼中的另一個方法，提供發生問題的脈絡。
 
-由于这不是一个开源库，因此我们无法在此处进行更改 - 由于我们有详细信息，因此我们可以通过填写 GitHub [问题](https://docs.github.com/zh/issues/tracking-your-work-with-issues/about-issues)来报告问题以及更多上下文，也可以针对此问题提出解决方案，以进行拉取请求。
+由於這不是開放原始碼資源庫，因此我們無法在該處進行變更 - 現在，我們擁有更多資訊，可以透過提交 Github [問題](https://guides.github.com/features/issues/)回報問題更多內容，或者我們可以針對此問題提出提取請求以提供解決方法。
 
-![Visual Studio 中的异常](images/vs-exception.jpg)
+![Visual Studio 中的例外狀況](../../.gitbook/assets/vs-exception.jpg)
 
-> 1. 当我们在 `Walls.cs` 中遇到导致异常的语句时，调试过程使我们尽可能接近 `ProtoToRevitCurve.cs` 中用户代码中问题的根源
-> 2. 在 `ProtoToRevitCurve.cs` 中导致异常的语句
-> 3. 在调用堆栈中，我们可以看到异常来自非用户代码
-> 4. 一个为我们提供有关异常的信息的弹出窗口
+> 1. 當我們叫用導致 `Walls.cs` 中發生例外狀況的陳述式時，除錯程序會盡可能將我們引導到使用者程式碼中 `ProtoToRevitCurve.cs` 內發生問題的根本所在位置
+> 2. 導致 `ProtoToRevitCurve.cs` 中例外狀況的陳述式
+> 3. 在「呼叫堆疊」中，我們可以看到例外狀況是來自非使用者程式碼
+> 4. 提供例外狀況相關資訊的快顯視窗
 
-此过程可应用于我们正在处理的任何源文件。如果我们正在为 Dynamo Studio 开发一个 Zero-Touch 节点库，则我们可以打开该库的源代码，然后附着一个 Dynamo 进程来调试节点库。即使一切正常，调试也是探索代码和了解工作原理的绝佳方法。
+此程序可套用至我們處理的任何原始碼檔案。如果我們要開發 Dynamo 的 Zero-Touch 節點資源庫，可以開啟資源庫的原始碼並附加 Dynamo 處理序，為節點資源庫除錯。即使一切正常，除錯也是探索程式碼並瞭解其運作方式的絕佳方式。
 
-### 拉取最新构建 <a href="#pull-latest-build" id="pull-latest-build"></a>
+### 提取最新建置版本 <a href="#pull-latest-build" id="pull-latest-build"></a>
 
-此过程与为 Dynamo 拉取更改几乎相同，但我们需要确保位于正确的分支上。使用 DynamoRevit 存储库中的 `git branch` 命令，可查看哪些分支在本地可用以及哪些分支当前已检出。
+此程序幾乎與提取 Dynamo 的變更相同，但是需要確保位於正確的分支。在 DynamoRevit 儲存庫中使用 `git branch` 指令，查看哪些分支可在本端使用，哪些分支目前已出庫使用。
 
-`cd C:\Users\username\Documents\GitHub\DynamoRevit` 将当前目录设置为 DynamoRevit 存储库。\
- `git branch` 确认我们位于正确的分支上，`RC2.13.1_Revit2023`.\
- `git pull origin RC2.13.1_Revit2023` 从远程来源 `RC2.13.1_Revit2023` 分支拉取更改。
+`cd C:\Users\username\Documents\GitHub\DynamoRevit` 將目前目錄設定為 DynamoRevit 儲存庫。\
+ `git branch` 確認我們位於正確的分支`RC2.13.1_Revit2023`。\
+ `git pull origin RC2.13.1_Revit2023` 會從遠端的原點 `RC2.13.1_Revit2023` 分支提取變更。
 
-来源仅指向我们克隆的原始 URL。
+原點只是指向我們複製的原始 URL。
 
-![在命令行界面中设置目录](images/cli-pull-revit.jpg)
+![在指令行介面中設定目錄](../../.gitbook/assets/cli-pull-revit.jpg)
 
-> 例如，我们需要注意当前位于哪个分支上，以及要从哪个分支拉取，从而避免将更改从 `RC2.13.1_Revit2023` 拉取到 `Revit2018` 中。
+> 我們希望在此注意目前所在的分支，以及我們要從哪個分支提取，以避免將變更從 `RC2.13.1_Revit2023` 提取到例如 `Revit2018`。
 
-如**从源代码构建 Dynamo** 中所述，当我们准备好向 DynamoRevit 存储库提交更改时，我们可以按照 Dynamo 团队在“拉取请求”部分中提供的准则来创建拉取请求。
+如〈**從原始碼建置　Dynamo**〉中所述，當我們準備好將變更提交到 DynamoRevit 儲存庫時，可以按照 Dynamo 團隊在〈提取請求〉一節所列的指導方針建立提取請求。

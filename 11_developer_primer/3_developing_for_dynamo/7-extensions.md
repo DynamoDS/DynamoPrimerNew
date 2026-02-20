@@ -1,59 +1,59 @@
-# 扩展
+# 延伸
 
-扩展是 Dynamo 生态系统中一款功能强大的开发工具。它们允许开发人员基于 Dynamo 交互和逻辑来派生自定义功能。扩展可以分为两大类：扩展和视图扩展。顾名思义，视图扩展框架允许您通过注册自定义菜单项来扩展 Dynamo UI。除了 UI 之外，常规扩展的运行方式非常相似。例如。我们可以构建一个将特定信息记录到 Dynamo 控制台的扩展。此场景不需要自定义 UI，因此也可以使用扩展完成。
+延伸是 Dynamo 生態系統中功能強大的開發工具。這些工具可讓開發人員根據 Dynamo 的互動和邏輯驅動自訂功能。延伸可以分為兩個主要品類：延伸和視圖延伸。如同字面意思，視圖延伸架構可讓您透過註冊自訂功能表項目的方式來延伸 Dynamo 使用者介面。一般延伸則以非常相似的方式 (除了使用者介面之外) 運作。例如，我們可以建置一個延伸，將特定資訊記錄到 Dynamo 主控台。此情況不需要自訂使用者介面，因此也可以使用延伸完成。
 
-#### 扩展案例研究 <a href="#extension-case-study" id="extension-case-study"></a>
+#### 延伸案例研究 <a href="#extension-case-study" id="extension-case-study"></a>
 
-按照 DynamoSamples Github 存储库中的 SampleViewExtension 示例，我们将逐步介绍创建一个实时显示图形中活动节点的简单无模式窗口所需的步骤。视图扩展要求我们为窗口创建 UI，并将值绑定到视图模型。
+按照 DynamoSamples Github 儲存庫的 SampleViewExtension 範例，我們將逐步瞭解建立簡單的共存式視窗即時在圖表中顯示作用中節點所需的步驟。視圖延伸會要求我們為視窗建立使用者介面，並將值與視圖模型繫結。
 
-![视图扩展窗口](images/dyn-viewextension.jpg)
+![視圖延伸視窗](../../.gitbook/assets/dyn-viewextension.jpg)
 
-> 1. 视图扩展窗口是按照 Github 存储库中的 SampleViewExtension 示例开发的。
+> 1. 按照 Github 儲存庫中 SampleViewExtension 範例而開發的視圖延伸視窗。
 
-尽管我们将从头开始构建示例，但您也可以下载并构建 DynamoSamples 存储库以用作参照。
+雖然我們將從頭開始建置範例，但您也可以下載並建置 DynamoSamples 儲存庫做為參考。
 
-DynamoSamples 存储库：[https://github.com/DynamoDS/DynamoSamples](https://github.com/DynamoDS/DynamoSamples)
+DynamoSamples 儲存庫：[https://github.com/DynamoDS/DynamoSamples](https://github.com/DynamoDS/DynamoSamples)
 
-> 此漫游将专门参照位于 `DynamoSamples/src/` 中名为 SampleViewExtension 的项目。
+> 此逐步解說將明確參考在 `DynamoSamples/src/` 中名為 SampleViewExtension 的專案。
 
-#### 如何实现视图扩展 <a href="#how-to-implement-a-view-extension" id="how-to-implement-a-view-extension"></a>
+#### 如何實作視圖延伸 <a href="#how-to-implement-a-view-extension" id="how-to-implement-a-view-extension"></a>
 
-视图扩展有三个基本部分：
+視圖延伸有三個基本部分：
 
-* 一个程序集，包含实现 `IViewExtension` 的类以及创建视图模型的类
-* 一个 `.xml` 文件，告知 Dynamo 在运行时应在何处查找此程序集以及扩展类型
-* 一个 `.xaml` 文件，将数据绑定到图形显示并确定窗口外观
+* 一個組合，其中包含實作 `IViewExtension` 的類別，以及建立視圖模型的類別
+* 一個 `.xml` 檔案，告訴 Dynamo 在執行時期應在何處尋找此組合，以及延伸的類型
+* 一個 `.xaml` 檔案，將資料與圖形顯示繫結，並決定視窗的外觀
 
-**1\.创建项目结构**
+**1\.建立專案結構**
 
-首先，创建一个名为 `SampleViewExtension` 的 `Class Library` 新项目。
+首先，建立一個名為 `SampleViewExtension` 的新 `Class Library` 專案。
 
-![创建新类库](images/vs-new-project-viewextension-1.jpg)
+![建立新類別資源庫](../../.gitbook/assets/vs-new-project-viewextension-1.jpg)
 
-![配置新项目](images/vs-new-project-viewextension-2.jpg)
+![設定新專案](../../.gitbook/assets/vs-new-project-viewextension-2.jpg)
 
-> 1. 通过选择 `File > New > Project` 来创建新项目
-> 2. 选择 `Class Library`
-> 3. 将项目命名为 `SampleViewExtension`
-> 4. 选择 `Ok`
+> 1. 選取「`File > New > Project`」建立新專案
+> 2. 選取「`Class Library`」
+> 3. 將專案命名為 `SampleViewExtension`
+> 4. 選取「`Ok`」
 
-在此项目中，我们需要两个类。一个类将实现 `IViewExtension`，另一个类将实现 `NotificationObject.`。`IViewExtension` 将包含有关如何展开、载入、参照和处理我们扩展的所有信息。`NotificationObject` 将为 Dynamo 和 `IDisposable` 中的更改提供通知；当发生更改时，计数将随之更新。
+在此專案中，我們需要兩個類別。一個類別將實作 `IViewExtension`，另一個類別將實作 `NotificationObject.`。`IViewExtension` 包含有關如何部署、載入、參考和處置延伸的所有資訊。`NotificationObject` 提供 Dynamo 和 `IDisposable` 中發生變更的通知。發生變更時，計數將相應更新。
 
-![视图扩展类文件](images/vs-viewextension-classes.jpg)
+![視圖延伸類別檔案](../../.gitbook/assets/vs-viewextension-classes.jpg)
 
-> 1. 一个名为 `SampleViewExtension.cs` 的类文件，将实现 `IViewExtension`
-> 2. 一个名为 `SampleWindowViewMode.cs` 的类文件，将实现 `NotificationObject`
+> 1. 名為 `SampleViewExtension.cs` 的類別檔案，將實作 `IViewExtension`
+> 2. 名為 `SampleWindowViewMode.cs` 的類別檔案，將實作 `NotificationObject`
 
-要使用 `IViewExtension`，我们需要 WpfUILibrary NuGet 软件包。安装此软件包将自动安装 Core、Services 和 ZeroTouchLibrary 软件包。
+若要使用 `IViewExtension`，我們需要 WpfUILibrary NuGet 套件。安裝此套件會自動安裝 Core、Services 和 ZeroTouchLibrary 等套件。
 
-![视图扩展包](images/vs-viewextension-packages.jpg)
+![視圖延伸套件](../../.gitbook/assets/vs-viewextension-packages.jpg)
 
-> 1. 选择 WpfUILibrary
-> 2. 选择 `Install` 以安装所有相关软件包
+> 1. 選取 WpfUILibrary
+> 2. 選取「`Install`」以安裝所有相依套件
 
-**2\.实现 IViewExtension 类**
+**2\.實作 IViewExtension 類別**
 
-在 `IViewExtension` 类中，我们将确定 Dynamo 启动、载入扩展以及 Dynamo 关闭时会出现的情况。在 `SampleViewExtension.cs` 类文件中，添加以下代码：
+從 `IViewExtension` 類別，我們將決定 Dynamo 啟動時、載入延伸時，以 及Dynamo 關閉時會發生什麼情況。在 `SampleViewExtension.cs` 類別檔案中，加入以下程式碼：
 
 ```
 using System;
@@ -128,23 +128,23 @@ namespace SampleViewExtension
 }
 ```
 
-`SampleViewExtension` 类创建用于打开窗口的可单击菜单项，并将其连接到视图模型和窗口。
+`SampleViewExtension` 類別建立可點選的功能表項目，以開啟視窗並連接至視圖模型和視窗。
 
-* `public class SampleViewExtension : IViewExtension` `SampleViewExtension` 继承自 `IViewExtension` 接口，提供我们创建菜单项所需的一切。
-* `sampleMenuItem = new MenuItem { Header = "Show View Extension Sample Window" };` 创建 MenuItem 并将其添加到 `View` 菜单。
+* `public class SampleViewExtension : IViewExtension` `SampleViewExtension` 從 `IViewExtension` 介面繼承，提供建立功能表項目所需的一切。
+* `sampleMenuItem = new MenuItem { Header = "Show View Extension Sample Window" };` 建立 MenuItem，並加入「`View`」功能表。
 
-![菜单项](images/dyn-menuitem.jpg)
+![功能表項目](../../.gitbook/assets/dyn-menuitem.jpg)
 
-> 1. 菜单项
+> 1. 功能表項目
 
-* `sampleMenuItem.Click += (sender, args)` 会触发在单击菜单项时将打开一个新窗口的事件
-* `MainGrid = { DataContext = viewModel }` 会为窗口中的主网格设置数据上下文，参考我们将创建的 `.xaml` 文件中的 `Main Grid`
-* `Owner = p.DynamoWindow` 会将我们弹出窗口的所有者设置为 Dynamo。这意味着新窗口依赖于 Dynamo，因此最小化、最大化和恢复 Dynamo 等操作将导致新窗口遵循此相同行为
-* `window.Show();` 会显示已设置其他窗口特性的窗口
+* `sampleMenuItem.Click += (sender, args)` 觸發在按一下功能表項目時將開啟新視窗的事件
+* `MainGrid = { DataContext = viewModel }` 參考我們將建立的 `.xaml` 檔案中的 `Main Grid`，設定視窗中主格線的資料內容
+* `Owner = p.DynamoWindow` 將彈出視窗的擁有者設定為 Dynamo。這表示新視窗依賴於 Dynamo，因此動作 (例如最小化、最大化和還原 Dynamo) 將導致新視窗遵循此相同行為
+* `window.Show();` 顯示已設定其他視窗性質的視窗
 
-**3\.实现视图模型**
+**3\.實作視圖模型**
 
-现在，我们已经建立了窗口的一些基本参数，我们将添加用于响应各种 Dynamo 相关事件的逻辑，并指示 UI 根据这些事件进行更新。将以下代码复制到 `SampleWindowViewModel.cs` 类文件：
+現在，我們已建立視窗的某些基本參數，我們將加入回應各種 Dynamo 相關事件的邏輯，並指示使用者介面根據這些事件進行更新。將以下程式碼複製到 `SampleWindowViewModel.cs` 類別檔案：
 
 ```
 using System;
@@ -204,18 +204,18 @@ namespace SampleViewExtension
 }
 ```
 
-视图模型类的此实现会侦听 `CurrentWorkspaceModel`，并会在工作空间添加或删除节点时触发事件。这将引发特性更改，通知 UI 或绑定图元：数据已更改并需要更新。`ActiveNodeTypes` getter 会被调用，它将在内部调用一个附加辅助函数 `getNodeTypes()`。此函数会遍历画布上的所有活动节点、填充包含这些节点名称的字符串，并将此字符串返回给 .xaml 文件中要在弹出窗口中显示的绑定。
+此視圖模型類別實作會監聽 `CurrentWorkspaceModel`，並在節點加入工作區或從工作區中移除時觸發事件。這會引發性質變更，通知使用者介面或已繫結的元素，資料已變更而需要更新。呼叫 `ActiveNodeTypes` getter，這會在內部呼叫其他協助函數 `getNodeTypes()`。此函數會逐一查看圖元區上所有作用中的節點，填入包含這些節點名稱的字串，然後將此字串傳回 .xaml 檔案中的繫結，以顯示在快顯視窗中。
 
-在定义扩展的核心逻辑后，我们现在将使用 `.xaml` 文件指定窗口的外观详细信息。我们所需要的只是一个简单的窗口，它将通过 `TextBlock` `Text` 中的 `ActiveNodeTypes` 特性绑定来显示字符串。
+定義延伸的核心邏輯後，我們現在將使用 `.xaml` 檔案指定視窗的外觀詳細資料。我們只需要一個簡單的視窗，透過 `TextBlock` `Text` 中的 `ActiveNodeTypes` 性質繫結顯示字串。
 
-![添加窗口](images/vs-window.jpg)
+![加入視窗](../../.gitbook/assets/vs-window.jpg)
 
-> 1. 在项目上单击鼠标右键，然后选择 `Add > New Item...`
-> 2. 选择我们将对其进行更改以创建窗口的“用户控制”模板
-> 3. 将新文件命名为 `SampleWindow.xaml`
-> 4. 选择 `Add`
+> 1. 在專案上按一下右鍵，然後選取「`Add > New Item...`」
+> 2. 選取我們將做變更以建立視窗的「使用者控制項」樣板
+> 3. 將新檔案命名為 `SampleWindow.xaml`
+> 4. 選取「`Add`」
 
-在 `.xaml` 窗口代码中，我们需要将 `SelectedNodesText` 绑定到文本块。将以下代码添加到 `SampleWindow.xaml`：
+在視窗 `.xaml` 程式碼中，我們需要將 `SelectedNodesText` 繫結到文字區塊。將以下程式碼加入 `SampleWindow.xaml`：
 
 ```
 <Window x:Class="SampleViewExtension.SampleWindow"
@@ -235,9 +235,9 @@ namespace SampleViewExtension
 </Window>
 ```
 
-* `Text="{Binding ActiveNodeTypes}"` 会将 `SampleWindowViewModel.cs` 中的 `ActiveNodeTypes` 特性值绑定到窗口中的 `TextBlock` `Text` 值。
+* `Text="{Binding ActiveNodeTypes}"` 將 `SampleWindowViewModel.cs` 中 `ActiveNodeTypes` 的性質值繫結到視窗中的 `TextBlock` `Text` 值。
 
-现在，我们将初始化 .xaml C# 备份文件 `SampleWindow.xaml.cs` 中的样例窗口。将以下代码添加到 `SampleWindow.xaml`：
+我們現在要初始化 .xaml C# 支援檔案 `SampleWindow.xaml.cs` 中的範例視窗。將以下程式碼加入 `SampleWindow.xaml`：
 
 ```
 using System.Windows;
@@ -257,18 +257,18 @@ namespace SampleViewExtension
 }
 ```
 
-视图扩展现在已准备好构建并添加到 Dynamo 中。Dynamo 需要一个 `xml` 文件，才能将我们的输出 `.dll` 注册为扩展。
+視圖延伸現在已準備好建置並加到 Dynamo 中。Dynamo 需要 `xml` 檔案，才能將輸出 `.dll` 註冊為延伸。
 
-![添加新 XML](images/vs-viewextension-xml.jpg)
+![新增 XML](../../.gitbook/assets/vs-viewextension-xml.jpg)
 
-> 1. 在项目上单击鼠标右键，然后选择 `Add > New Item...`
-> 2. 选择 XML 文件
-> 3. 将文件命名为 `SampleViewExtension_ViewExtensionDefinition.xml`
-> 4. 选择 `Add`
+> 1. 在專案上按一下右鍵，然後選取「`Add > New Item...`」
+> 2. 選取 XML 檔案
+> 3. 將檔案命名為 `SampleViewExtension_ViewExtensionDefinition.xml`
+> 4. 選取「`Add`」
 
-* 文件名遵循 Dynamo 标准，以便参照扩展程序集，如下所示：`"extensionName"_ViewExtensionDefinition.xml`
+* 檔名會遵循 Dynamo 標準，以參考如下的延伸組合：`"extensionName"_ViewExtensionDefinition.xml`
 
-在 `xml` 文件中，添加以下代码以告知 Dynamo 要在何处查找扩展程序集：
+在 `xml` 檔案中，加入以下程式碼，以告訴 Dynamo 在何處尋找延伸組合：
 
 ```
 <ViewExtensionDefinition>
@@ -277,16 +277,16 @@ namespace SampleViewExtension
 </ViewExtensionDefinition>
 ```
 
-* 在此示例中，我们已将程序集构建到默认的 Visual Studio 项目文件夹。将 `<AssemblyPath>...</AssemblyPath>` 目标替换为程序集的位置。
+* 在此範例中，我們將組合建置到預設的 Visual Studio 專案資料夾。將 `<AssemblyPath>...</AssemblyPath>` 目標取代為組合位置。
 
-最后一步是将 `SampleViewExtension_ViewExtensionDefinition.xml` 文件复制到 Dynamo 的视图扩展文件夹，该文件夹位于 Dynamo Core 安装目录 `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions` 中。请务必注意，`extensions` 和 `viewExtensions` 有单独的文件夹。将 `xml` 文件放置在不正确的文件夹中可能会导致在运行时无法正确载入。
+最後一步是將 `SampleViewExtension_ViewExtensionDefinition.xml` 檔案複製到 Dynamo 位於 Dynamo Core 安裝目錄 `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions` 中的視圖延伸資料夾。請務必注意，`extensions` 和 `viewExtensions` 是不同的資料夾。將 `xml` 檔案放在不正確的資料夾中，可能會導致在執行時期無法正確載入。
 
-![XML 文件已复制到 Extensions 文件夹](images/fe-viewextension-xml.jpg)
+![XML 檔案已複製到延伸資料夾](../../.gitbook/assets/fe-viewextension-xml.jpg)
 
-> 1. 我们已复制到 Dynamo 的视图扩展文件夹中的 `.xml` 文件
+> 1. 我們複製到 Dynamo 的視圖延伸資料夾中的 `.xml` 檔案
 
-这是对视图扩展的基本介绍。有关更复杂的案例研究，请参见 DynaShape 软件包，它是 Github 上的开源项目。该软件包使用支持在 Dynamo 模型视图中实时编辑的视图扩展。
+這是視圖延伸的基本簡介。如需更複雜的案例研究，請參閱 Github 上的開放原始碼專案 DynaShape 套件。該套件使用可在 Dynamo 模型視圖中進行即時編輯的視圖延伸。
 
-DynaShape 的软件包安装程序可以从 Dynamo 论坛下载：[https://forum.dynamobim.com/t/dynashape-published/11666](https://forum.dynamobim.com/t/dynashape-published/11666)
+從 Dynamo 論壇 [https://forum.dynamobim.com/t/dynashape-published/11666](https://forum.dynamobim.com/t/dynashape-published/11666) 可下載 DynamoShape 的套件安裝程式
 
-源代码可以从 Github 克隆：[https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape)
+從 Github [https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape) 可以複製原始程式碼

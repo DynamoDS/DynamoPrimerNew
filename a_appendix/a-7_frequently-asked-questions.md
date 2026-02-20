@@ -1,105 +1,105 @@
-# 常见问题解答
+# 常見問題
 
-## 如何使用 Dynamo 内部版本
+## 如何利用 Dynamo 建置版本
 
-### 每日构建与稳定构建
+### 每日建置版本與穩定建置版本
 
-按照传统，Autodesk 团队的 Dynamo 会通过在每次提交时发布每日内部版本，以及在系统测试和发布周期后发布稳定内部版本，来保持快速迭代的步伐。我们的团队希望重新启动每日稳定版，以便用户可以控制 DynamoCore 在其磁盘上的本地解压缩位置，这样用户可以放心使用它，而不会影响用于其他 ADSK 产品的 Dynamo。有一些自然的候选者可用于此目的，包括 .nupkg、.zip 文件，或用户可以选择安装路径或其他选项的专用安装程序。
+Autodesk 的 Dynamo 團隊傳統上會在每次提交時發佈每日建置版本，並在系統測試與發佈週期之後發佈穩定的建置版本，來維持快速的更迭步調。我們的團隊很樂意繼續提供每日與穩定的建置版本，讓使用者能控制 DynamoCore 在本機磁碟上的解壓縮位置，而使用者可以放心使用，不會影響其他 ADSK 產品的 Dynamo。基於這個原因有一些自然的候選者，包括 .nupkg、.zip檔或專用安裝程式，使用者可以在其中選擇安裝路徑或其他選項。
 
-考虑到我们的目标是以最简单的方式为用户提供最新代码，我们决定提供一个 .zip 文件，其中包含 DynamoCore 二进制文件和 Dynamo 沙盒，无需 Revit 即可使用（有一些约束）。
+我們的目標是盡可能以最簡單的方式讓使用者取得最新程式碼，因此我們決定提供一個 .zip 檔案，其中包含 DynamoCore 二進位檔案和可在沒有Revit 的情況下使用的 Dynamo Sandbox (但有一些限制)。
 
-### Dynamo Zip 内部版本
+### Dynamo Zip 建置版本
 
-#### 定义和来源
+#### 定義和來源
 
-DynamoCoreRuntime zip 版本是在自动生成期间创建的 DynamoCore 二进制文件的快照。
+DynamoCoreRuntime Zip 建置版本是在自動建置版本期間建立的 DynamoCore 二進位檔案的快照。
 
-您应该能够在解压缩的文件夹中启动 DynamoSandbox.exe，以便使用最少设置的 Dynamo。
+您應該可以在解壓縮的資料夾中啟動 DynamoSandbox.exe，以最少的設定使用 Dynamo。
 
-#### 所需组件
+#### 必要元件
 
-| Dynamo Version | Microsoft Visual C++ | DirectX                         |   |   |   |   |
+| Dynamo 版本 | Microsoft Visual C++ | DirectX                         |   |   |   |   |
 | -------------- | -------------------- | ------------------------------- | - | - | - | - |
-| 2.0 - 2.6      | 2015 Redistributable | 10                              |   |   |   |   |
-| 2.7            | 2019 Redistributable | 11/12 (included with windows 10 |   |   |   |   |
-| >=2.8          | 2019 Redistributable | 11/12 (included with windows 10 |   |   |   |   |
+| 2.0 - 2.6      | 2015 可轉散發套件 | 10                              |   |   |   |   |
+| 2.7            | 2019 可轉散發套件 | 11/12 (Windows 10 隨附) |   |   |   |   |
+| >=2.8          | 2019 可轉散發套件 | 11/12 (Windows 10 隨附) |   |   |   |   |
 
-**Microsoft DirectX，它也可以从我们的 Dynamo Github 存储库中公开获得** [**此处**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
+**Microsoft DirectX，在我們的 Dynamo Github 儲存庫中也能公開取得** [**此處**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 
-**7zip，用于解压缩软件包** [**此处**](https://sparanoid.com/lab/7z/download.html)
+**7zip，用於解壓縮套件** [**此處**](https://www.developershome.com/7-zip/download.asp)
 
-**Microsoft Visual C++ 2015-2024 Redistributable (x64)** [**链接**](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+**Microsoft Visual C++ 2015-2024 可轉散發套件 (x64)** [**連結**](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
-**可选组件**
+**選擇性元件**
 
-几何图形库（它仅适用于特定的 Autodesk 建模工具，如 Revit、Civil 3D、Advance Steel 等）
+幾何圖形資源庫 (只有特定的 Autodesk 塑型工具，如 Revit、Civil 3D、Advanced Steel 等才提供)
 
-### 疑难解答
+### 疑難排解
 
-如果解压缩内部版本后根本无法启动 DynamoSandbox.exe，请确保使用 [7zip](https://sparanoid.com/lab/7z/download.html) 解压缩内部版本。如果您对您的计算机有权限，也可以在提取它_之前_手动取消阻止 .zip 归档。
+如果您解壓縮了建置版本，卻完全無法啟動 DynamoSandbox.exe，請務必使用 [7zip](https://www.developershome.com/7-zip/download.asp) 解壓縮建置版本。如果您有電腦的權限，也可以在解壓縮_之前_ 手動解除封鎖 .zip 歸檔檔案。
 
-![](images/a-7/dynamo-builds-1.png)
+![](../.gitbook/assets/dynamo-builds-1.png)
 
-如果缺少任何必需的组件，使用 Dynamo 时可能会遇到问题，并且 UI 的某些部分可能无法加载。
+如果您缺少任何必要的元件，使用 Dynamo 時可能會遇到問題，UI 的某些部分可能無法載入。
 
-以下面的屏幕截图为例，在没有 GPU 的干净 Windows 10 VM 上解压缩我们的内部版本，计算机缺少两个必需的组件。这在 Dynamo 控制台中有所指示。
+以下列螢幕擷取畫面為例，在沒有 GPU 的全新安裝 Windows 10 VM 上解壓縮我們的建置版本，電腦缺少兩個必要元件。這在 Dynamo 主控台中有指示。
 
-![](images/a-7/dynamo-builds-2.png)
+![](../.gitbook/assets/dynamo-builds-2.png)
 
-**安装 DirectX**
+**安裝 DirectX**
 
-请按照此处的 Microsoft 说明检查是否已安装 DirectX。如果没有，可以在[此处](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)从 Dynamo Github 存储库打开 DXSETUP.exe。看到下面的对话框后，请随时单击“下一步”以将 DirectX 安装到默认位置。
+請按照此處的 Microsoft 指示，檢查是否已安裝 DirectX。如果沒有，您可以在我們[此處](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)的 Dynamo Github 儲存庫中開啟 DXSETUP.exe。看到下面的對話方塊後，請按「下一步」，將 DirectX 安裝到預設位置。
 
-![](images/a-7/dynamo-builds-3.png)
+![](../.gitbook/assets/dynamo-builds-3.png)
 
-**安装 Microsoft Visual C++ 2015-2024 Redistributable (x64)**
+**安裝 Microsoft Visual C++ 2015-2024 可轉散發套件 (x64)**
 
-请在[此处](https://aka.ms/vs/17/release/vc_redist.x64.exe)下载最新版本。然后您应该能够在浏览器下载位置中运行名为 vc_redist.x64.exe 的安装程序。看到以下对话框后，请随时单击“安装”以将此组件放置在默认位置。
+請在[此處](https://aka.ms/vs/17/release/vc_redist.x64.exe)下載最新版本。然後，您應該可以在瀏覽器下載位置中執行名為 vc_redist.x64.exe 的安裝程式。看到下面的對話方塊後，請按一下「安裝」，將此元件放在預設位置。
 
-![](images/a-7/dynamo-builds-4.png)
+![](../.gitbook/assets/dynamo-builds-4.png)
 
-从上面的链接安装两个必需的组件后，重新启动 DynamoSandbox.exe，您应该会看到以下结果：
+透過上面的連結安裝兩個必要元件後，重新啟動 DynamoSandbox.exe，您應該會看到以下結果：
 
-![](images/a-7/dynamo-builds-5.png)
+![](../.gitbook/assets/dynamo-builds-5.png)
 
-**缺少 3D 图形。**
+**缺少 3D 圖形。**
 
-在第一次运行沙盒时，您可能还会遇到图形问题，您可以按照此处的标准图形问题常见问题解答进行操作：
+您第一次執行 Sandbox 時可能還會遇到圖形問題，可以按照以下的標準圖形問題 FAQ 處理：
 
 [https://github.com/DynamoDS/Dynamo/wiki/Dynamo-FAQ](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-FAQ)
 
-通常，在使用 DynamoSandbox.exe 时，可能需要对显卡强制使用高性能 GPU 模式
+一般而言，使用 DynamoSandbox.exe 時，您可能需要為圖形卡強制使用高效能 GPU 模式
 
-_NVIDIA 控制面板示例：_
+_NVIDIA 控制台範例：_
 
-![](images/a-7/dynamo-builds-6.png)
+![](../.gitbook/assets/dynamo-builds-6.png)
 
-**安装 WebView2 运行时**
+**安裝 WebView2 Runtime**
 
-目前，后续 Dynamo 模块将使用 WebView2 组件：文档浏览器、导览和库，因此为了确保 Dynamo 的这一部分正确显示 Web 内容，我们需要安装 WebView2 Evergreen 运行时安装程序（您需要验证计算机中是否已安装或需要安装）。
+接下來這些 Dynamo 模組將會使用 WebView2 元件：文件瀏覽器、導覽和資源庫，因此為了確保 Dynamo 的這些部分能正確顯示網路內容，我們需要安裝 WebView2 Evergreen Runtime 安裝程式 (您需要驗證電腦中是否已安裝或需要安裝)。
 
-这是安装 WebView2 运行时的链接：[https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/?form=MA13LH#download-section)
+這是安裝 WebView2 Runtime 時的連結：[https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/zh-tw/microsoft-edge/webview2/?form=MA13LH#download-section)
 
-![](images/a-7/dynamo-builds-7.png)
+![](../.gitbook/assets/dynamo-builds-7.png)
 
-应该安装的（只是其中之一）是 Evergreen Bootstrapper 或 Evergreen Standalone Installer，第一个下载 1.50 MB 安装程序，第二个下载 130 MB 安装程序。
+應該安裝的 (只是其中之一) 是 Evergreen Bootstrapper 或 Evergreen Standalone Installer，第一個會下載一個 1.50 MB 安裝程式，第二個會下載一個 130 MB 安裝程式。
 
-在安装运行时后，Dynamo 的后续组件应该能够正常工作：
+安裝 Runtime 後，接下來的 Dynamo 元件應該都可以正常運作：
 
-![](images/a-7/dynamo-builds-8.png)
+![](../.gitbook/assets/dynamo-builds-8.png)
 
-**Dynamo Excel 节点问题**
+**Dynamo Excel 節點問題**
 
-可以参考此[文章](https://www.autodesk.com.cn/support/technical/article/caas/sfdcarticles/sfdcarticles/CHS/Warning-Data-ImportExcel-operation-failed-Could-not-load-file-or-assembly-Microsoft-Office-Interop-Excel-when-running-the-Dynamo-script-in-Revit.html)进行诊断。
+您可以參考此篇[文章](https://www.autodesk.com.cn/support/technical/article/caas/sfdcarticles/sfdcarticles/CHS/Warning-Data-ImportExcel-operation-failed-Could-not-load-file-or-assembly-Microsoft-Office-Interop-Excel-when-running-the-Dynamo-script-in-Revit.html)進行診斷。
 
-### Dynamo 内部版位置
+### Dynamo 建置版本位置
 
-稳定版本
+穩定發行版本
 
 [https://dynamobim.org/download/](https://dynamobim.org/download/)
 
 [https://github.com/DynamoDS/Dynamo/releases](https://github.com/DynamoDS/Dynamo/releases)
 
-每日内部版和稳定版本
+每日建置版本和穩定發行版本
 
 [https://dynamobuilds.com/](https://dynamobuilds.com/)

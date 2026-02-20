@@ -1,31 +1,31 @@
-# Zero-Touch 案例研究 - 网格节点
+# Zero-Touch 案例研究 - 網格節點
 
-在 Visual Studio 项目启动并运行后，我们将介绍如何构建一个自定义节点来创建一个单元的矩形网格。尽管我们可以使用多个标准节点创建该矩形网格，但它是一个非常有用的工具，可轻松包含在 Zero-Touch 节点中。与网格线不同，单元可以围绕其中心点进行单元、查询其角顶点，或将其构建到面中。
+在 Visual Studio 專案啟動並執行時，我們將逐步瞭解如何建置一個自訂節點來建立一個矩形的儲存格網格。雖然我們可以使用幾個標準節點建立此節點，但它是一個實用的工具，可以輕鬆包含在 Zero-Touch 節點中。與網格線相反，儲存格可以繞其中心點調整比例、查詢其角落頂點，或建置到面中。
 
-本例将介绍创建 Zero-Touch 节点时需要注意的一些功能和概念。在我们构建自定义节点并将其添加到 Dynamo 中后，请确保查看“进一步了解 Zero-Touch”页面，以更深入地了解默认输入值、返回多个值、文档、对象、使用 Dynamo 几何类型和移植。
+本範例將介紹建立 Zero-Touch 節點時要注意的一些功能和概念。建置自訂節點並加入 Dynamo 後，請務必檢閱「深入瞭解 Zero-Touch」頁面，以更深入地查看預設輸入值、傳回多個值、文件、物件、使用 Dynamo 幾何圖形類型，以及移轉。
 
-![矩形网格图形](images/cover-image.jpg)
+![矩形網格圖表](../../.gitbook/assets/cover-image.jpg)
 
-### 自定义矩形网格节点 <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
+### 自訂矩形網格節點 <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
-要开始构建网格节点，请创建一个新的 Visual Studio 类库项目。有关如何设置项目的深入介绍，请参见“快速入门”页面。
+若要開始建置網格節點，請建立新的 Visual Studio 類別資源庫專案。請參閱「入門」頁面，以取得如何設定專案的深入逐步解說。
 
-![在 Visual Studio 中创建新项目](images/vs-new-project-1.jpg)
+![在 Visual Studio 中建立新專案](../../.gitbook/assets/vs-new-project-1.jpg)
 
-![在 Visual Studio 中配置新项目](images/vs-new-project-2.jpg)
+![在 Visual Studio 中設定新專案](../../.gitbook/assets/vs-new-project-2.jpg)
 
-> 1. 选择 `Class Library` 作为项目类型
-> 2. 将项目命名为 `CustomNodes`
+> 1. 選擇「`Class Library`」做為專案類型
+> 2. 將專案命名為 `CustomNodes`
 
-由于我们将要创建几何图形，因此我们需要参照相应的 NuGet 软件包。通过 Nuget 软件包管理器安装 ZeroTouchLibrary 软件包。对于 `using Autodesk.DesignScript.Geometry;` 语句而言，此软件包是必需的。
+由於我們要建立幾何圖形，因此需要參考適當的 NuGet 套件。從 NuGet 套件管理員安裝 ZeroTouchLibrary 套件。`using Autodesk.DesignScript.Geometry;` 陳述式需要此套件。
 
-![ZeroTouchLibrary 软件包](images/vs-nugetpackage.jpg)
+![ZeroTouchLibrary 套件](../../.gitbook/assets/vs-nugetpackage.jpg)
 
-> 1. 浏览 ZeroTouchLibrary 软件包
-> 2. 我们将要在 Dynamo Studio 的当前版本（即 1.3）中使用此节点。选择与此版本匹配的软件包版本。
-> 3. 请注意，我们还将类文件重命名为 `Grids.cs`
+> 1. 瀏覽 ZeroTouchLibrary 套件
+> 2. 我們將在 Dynamo 的目前建置中使用此節點。請選取與您的 Dynamo 版本相符的套件版本。
+> 3. 請注意，我們也已將類別檔案更名為 `Grids.cs`
 
-接下来，我们需要建立 RectangularGrid 方法将在其中运行的名称空间和类。在 Dynamo 中，该节点将根据方法和类名进行命名。我们尚不需要将该节点复制到 Visual Studio 中。
+接下來，我們需要建立 RectangularGrid 方法將位於的命名空間和類別。節點會根據方法名稱和類別名稱在 Dynamo 中命名。我們還不需要將此內容複製到 Visual Studio。
 
 ```
 using Autodesk.DesignScript.Geometry;
@@ -43,9 +43,9 @@ namespace CustomNodes
 }
 ```
 
-> `Autodesk.DesignScript.Geometry;` 将参照创建列表时所需的 ZeroTouchLibrary 软件包 `System.Collections.Generic` 中的 ProtoGeometry.dll
+> `Autodesk.DesignScript.Geometry;` 參考 ZeroTouchLibrary 套件中的 ProtoGeometry.dll。建立清單需要 `System.Collections.Generic`
 
-现在，我们可以添加用于绘制矩形的方法。类文件应如下所示，并可以复制到 Visual Studio 中。
+現在，我們可以加入繪製矩形的方法。類別檔案應如下所示，可複製到 Visual Studio。
 
 ```
 using Autodesk.DesignScript.Geometry;
@@ -82,30 +82,30 @@ namespace CustomNodes
 }
 ```
 
-如果项目看起来与此类似，请继续并尝试构建 `.dll`。
+如果專案看起來與此類似，請繼續並嘗試建置 `.dll`。
 
-![构建 DLL](images/vs-grids.jpg)
+![建置 DLL](../../.gitbook/assets/vs-grids.jpg)
 
-> 1. 选择“构建”>“构建解决方案”
+> 1. 選擇「建置」>「建置方案」
 
-检查项目的 `bin` 文件夹以查找 `.dll`。在构建成功后，我们可以将 `.dll` 添加到 Dynamo 中。
+檢查專案的 `bin` 資料夾是否有 `.dll`。如果建置成功，我們可以將 `.dll` 加入 Dynamo。
 
-![Dynamo 中的自定义节点](images/RectangularGrid-Dynamo.jpg)
+![Dynamo 中的自訂節點](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
 
-> 1. Dynamo 库中的自定义 RectangularGrids 节点
-> 2. 画布上的自定义节点
-> 3. 用于将 `.dll` 添加到 Dynamo 中的“添加”按钮
+> 1. Dynamo 資源庫中的自訂 RectangularGrids 節點
+> 2. 圖元區上的自訂節點
+> 3. 將 `.dll` 加入 Dynamo 的「加入」按鈕
 
-### 自定义节点修改 <a href="#custom-node-modifications" id="custom-node-modifications"></a>
+### 修改自訂節點 <a href="#custom-node-modifications" id="custom-node-modifications"></a>
 
-在上例中，我们创建了一个非常简单的节点，该节点未定义 `RectangularGrids` 方法之外的太多其他内容。但是，我们可能要为输入端口创建工具提示，或者像标准 Dynamo 节点一样为该节点提供摘要。将这些功能添加到自定义节点会使其更易于使用，尤其是当用户要在库中搜索这些节点时。
+在以上範例中，我們建立了一個相當簡單的節點，此節點除了 `RectangularGrids` 方法外沒有定義太多其他內容。但是，我們也許需要建立輸入埠的工具提示，或為節點提供類似標準 Dynamo 節點的摘要。將這些功能加入自訂節點，可以讓使用者更輕鬆地使用這些節點，尤其是當使用者想要在資源庫中搜尋這些節點時。
 
-![输入工具提示](images/nodemodification.png)
+![輸入工具提示](../../.gitbook/assets/nodemodification.png)
 
-> 1. 默认输入值
-> 2. xCount 输入的工具提示
+> 1. 預設輸入值
+> 2. xCount 輸入的工具提示
 
-RectangularGrid 节点需要其中的一些基本功能。在下面的代码中，我们添加了输入和输出端口描述、摘要和默认输入值。
+RectangularGrid 節點需要某些基本功能。在以下程式碼中，我們加入了輸入埠和輸出埠的描述、摘要和預設輸入值。
 
 ```
 using Autodesk.DesignScript.Geometry;
@@ -150,13 +150,13 @@ namespace CustomNodes
 }
 ```
 
-* 通过为方法参数赋值，来为输入提供默认值：`RectangularGrid(int xCount = 10, int yCount = 10)`
-* 创建输入和输出工具提示、搜索关键字以及前面带有 `///` 的 XML 文档摘要。
+* 對方法參數指定值來提供輸入預設值：`RectangularGrid(int xCount = 10, int yCount = 10)`
+* 建立輸入和輸出的工具提示、搜尋關鍵字，以及 XML 文件前面有 `///` 的摘要。
 
-要添加工具提示，我们需要在项目目录中有一个 xml 文件。通过启用该选项，`.xml` 可以由 Visual Studio 自动生成。
+若要加入工具提示，專案目錄中需要一個 xml 檔案。透過啟用選項，Visual Studio 可以自動產生 `.xml`。
 
-![启用 XML 文档](images/vs-xml.jpg)
+![啟用 XML 文件](../../.gitbook/assets/vs-xml.jpg)
 
-> 1. 在此处启用 XML 文档文件，然后指定文件路径。这将生成一个 XML 文件。
+> 1. 在此啟用 XML 文件檔案並指定檔案路徑。這會產生 XML 檔案。
 
-大功告成！我们已创建了一个包含多个标准功能的新节点。以下“Zero-Touch 基础知识”章节将更详细地介绍 Zero-Touch 节点开发以及需要注意的问题。
+這樣就可以了！我們建立了一個有幾項標準功能的新節點。下一章〈Zero-Touch 基礎知識〉會更詳細介紹 Zero-Touch 節點開發及需要注意的問題。

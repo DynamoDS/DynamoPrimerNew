@@ -1,7 +1,5 @@
-# 附录
+# 附錄
 
-在本节中，您可以找到使 Dynamo 技能更进一步的资源。我们还在此 Primer 中添加了重要节点的索引、一组有用的软件包以及示例文件库。请随意添加到此部分...请记住，[Dynamo Primer](https://github.com/DynamoDS/DynamoPrimer) 是开源的！
+在本部分中，您可以找到有關 Dynamo 的其他資源。在本手冊中，我們還新增了重要節點的索引、有用套件的集合以及範例檔案的儲存庫。請隨時新增到這部分...記住，[Dynamo Primer](https://github.com/DynamoDS/DynamoPrimer) 是開放原始碼！
 
- 
-
-![](./images/a-cover.png)
+![](../.gitbook/assets/a-cover.png)

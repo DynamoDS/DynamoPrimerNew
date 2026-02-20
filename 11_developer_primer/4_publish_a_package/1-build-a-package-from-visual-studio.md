@@ -1,19 +1,19 @@
-# 从 Visual Studio 构建软件包
+# 從 Visual Studio 建置套件
 
-如果要开发要发布为 Dynamo 软件包的程序集，可以将项目配置为对所有必需资源进行分组，并将其放置在与软件包兼容的目录结构中。这将使项目能够作为软件包快速进行测试，并模拟用户体验。
+如果您正在開發要發佈為 Dynamo 套件的組合，可以將專案規劃為群組所有必要資產，並將這些資產放在與套件相容的目錄結構中。這可讓專案以套件方式進行快速測試，並模擬使用者的體驗。
 
-#### 如何直接构建到软件包文件夹 <a href="#how-to-build-directly-to-the-package-folder" id="how-to-build-directly-to-the-package-folder"></a>
+#### 如何直接建置到套件資料夾 <a href="#how-to-build-directly-to-the-package-folder" id="how-to-build-directly-to-the-package-folder"></a>
 
-在 Visual Studio 中构建软件包有两种方法：
+有兩種方法可以在 Visual Studio 中建置套件：
 
-* 通过“项目设置”对话框，添加使用 xcopy 或 Python 脚本复制必需文件的构建后事件
-* 在 `.csproj` 文件中，使用“AfterBuild”构建目标来创建文件和目录复制任务
+* 透過「專案設定」對話方塊，使用 xcopy 或 Python 指令碼複製必要檔案，加入建置後事件
+* 在 `.csproj` 檔案中使用「AfterBuild」建置目標，來建立檔案和目錄複製工作
 
-由于“AfterBuild”不依赖于可能在构建计算机上不可用的文件复制操作，因此“AfterBuild”是这些类型操作（以及本手册中介绍的操作）的首选方法。
+「AfterBuild」是這些類型作業 (以及本指南中介紹的作業) 的偏好方法，因為它不依賴在建置電腦上可能無法使用的檔案複製。
 
-#### 使用 AfterBuild 方法复制软件包文件 <a href="#copy-package-files-with-the-afterbuild-method" id="copy-package-files-with-the-afterbuild-method"></a>
+#### 使用 AfterBuild 方法複製套件檔案 <a href="#copy-package-files-with-the-afterbuild-method" id="copy-package-files-with-the-afterbuild-method"></a>
 
-在储存库中设置目录结构，以使源文件与软件包文件分开。使用 CustomNodeModel 案例研究时，将 Visual Studio 项目和所有关联文件放置到新的 `src` 文件夹中。您会将项目生成的所有软件包都存储在此文件夹中。文件夹结构现在应如下所示：
+在儲存庫中設定目錄結構，讓原始碼檔案與套件檔案分開。使用 CustomNodeModel 案例研究，將 Visual Studio 專案及所有關聯的檔案放到新的 `src` 資料夾中。您將會在此資料夾中儲存專案產生的所有套件。資料夾結構現在應如下所示：
 
 ```
 CustomNodeModel
@@ -24,11 +24,11 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![移动项目文件](images/fe-proj-directory.jpg)
+![移動專案檔](../../.gitbook/assets/fe-proj-directory.jpg)
 
-> 1. 将项目文件移动到新的 `src` 文件夹
+> 1. 將專案檔移到新的 `src` 資料夾
 
-由于源文件位于单独的文件夹中，因此在 Visual Studio 中将 `AfterBuild` 目标添加到 `CustomNodeModel.csproj` 文件。这应该会将必需文件复制到新的软件包文件夹中。在文本编辑器（我们使用的是 [Atom](https://atom.io)）中，打开 `CustomNodeModel.csproj` 文件，然后在结束标记 `</Project>` 之前放置构建目标。此 AfterBuild 目标会将所有 .dll、.pbd、.xml 和 .config 文件复制到新的 bin 文件夹中，并创建 dyf 文件夹和 extra 文件夹。
+由於原始碼檔案位於不同的資料夾，因此請在 Visual Studio 的 `CustomNodeModel.csproj` 檔案加入 `AfterBuild` 目標。這會將必要的檔案複製到新的套件資料夾中。在文字編輯器 (我們使用 [Atom](https://atom.io)) 中開啟 `CustomNodeModel.csproj` 檔案，在 `</Project>` 結束標籤之前放置建置目標。此 AfterBuild 目標會將所有 .dll、.pbd、.xml 和 .config 檔案複製到新的 bin 資料夾中，並建立 dyf 和 extra 資料夾。
 
 ```
   <Target Name="AfterBuild">
@@ -47,13 +47,13 @@ CustomNodeModel
   </Target>
 ```
 
-![放置 AfterBuild 目标](images/atom-afterbuild.jpg)
+![放置 AfterBuild 目標](../../.gitbook/assets/atom-afterbuild.jpg)
 
-> 我们需要确保目标已添加到 `CustomNodeModel.csproj` 文件（而非其他项目文件）中，并确保项目没有任何现有的“构建后”设置。
+> 我們需要確保目標已加到 `CustomNodeModel.csproj` 檔案 (而不是另一個專案檔) 中，而且專案沒有任何既有的「建置後」設定。
 >
-> 1. 将 AfterBuild 目标放置在结束标记 `</Project>` 之前。
+> 1. 在 `</Project>` 結束標籤前放置 AfterBuild 目標。
 
-在 `<ItemGroup>` 部分中，定义了许多变量来表示特定的文件类型。例如，`.dll` 变量表示输出目录中扩展名为 `Dll` 的所有文件。
+`<ItemGroup>` 區段中定義了許多變數來表示特定檔案類型。例如，`Dll` 變數表示輸出目錄中其副檔名為 `.dll` 的所有檔案。
 
 ```
 <ItemGroup>
@@ -61,25 +61,25 @@ CustomNodeModel
 </ItemGroup>
 ```
 
-`Copy` 任务是将所有 `.dll` 文件复制到某个目录，尤其是我们要构建到的软件包文件夹。
+`Copy` 工作是將所有 `.dll` 檔案複製到目錄，具體來說是要建置到的套件資料夾。
 
 ```
 <Copy SourceFiles="@(Dlls)" DestinationFolder="$(SolutionDir)..\packages\CustomNodeModel\bin\" />
 ```
 
-Dynamo 软件包通常有 `dyf` 和 `extra` 文件夹，用于 Dynamo 自定义节点和其他资源（如图像）。要创建这些文件夹，我们需要使用 `MakeDir` 任务。如果某个文件夹不存在，则此任务会创建该文件夹。可以手动将文件添加到此文件夹。
+Dynamo 套件通常會有 `dyf` 和 `extra` 資料夾，分別給 Dynamo 自訂節點和其他資產 (例如影像) 使用。若要建立這些資料夾，我們需要使用 `MakeDir` 工作。如果資料夾不存在，此工作會建立一個。您可以手動將檔案加到此資料夾中。
 
 ```
 <MakeDir Directories="$(SolutionDir)..\packages\CustomNodeModel\extra" />
 ```
 
-如果您构建项目，则项目文件夹现在应该有 `packages` 文件夹以及之前创建的 `src` 文件夹。`packages` 目录内是一个文件夹，其中包含软件包所需的所有内容。我们还需要将 `pkg.json` 文件复制到软件包文件夹中，以使 Dynamo 知道要载入软件包。
+如果您建置專案，現在專案資料夾在先前建立的 `src` 資料夾旁邊應該會有一個 `packages` 資料夾。`packages` 目錄內有一個資料夾，其中包含套件所需的所有內容。我們也需要將 `pkg.json` 檔案複製到套件資料夾，讓 Dynamo 知道要載入套件。
 
-![复制文件](images/fe-proj-directory-package.jpg)
+![複製檔案](../../.gitbook/assets/fe-proj-directory-package.jpg)
 
-> 1. AfterBuild 目标创建的新软件包文件夹
-> 2. 项目的现有 src 文件夹
-> 3. 从 AfterBuild 目标创建的 `dyf` 和 `extra` 文件夹
-> 4. 手动复制 `pkg.json` 文件。
+> 1. AfterBuild 目標建立的新套件資料夾
+> 2. 專案既有的 src 資料夾
+> 3. 從 AfterBuild 目標建立的 `dyf` 和 `extra` 資料夾
+> 4. 手動複製 `pkg.json` 檔案。
 
-现在，可以使用 Dynamo 的软件包管理器发布软件包，也可以直接将软件包复制到 Dynamo 的软件包目录：`<user>\AppData\Roaming\Dynamo\1.3\packages`。
+現在，您可以使用 Dynamo 的 Package Manager 發佈套件，或直接將套件複製到 Dynamo 的套件目錄：`<user>\AppData\Roaming\Dynamo\1.3\packages`。
