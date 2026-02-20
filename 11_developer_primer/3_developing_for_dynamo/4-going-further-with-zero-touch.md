@@ -1,28 +1,28 @@
-# 深入瞭解 Zero-Touch
+# 进一步了解 Zero-Touch
 
-瞭解如何建立 Zero-Touch 專案後，我們可以逐步瀏覽 Dynamo Github 上的 ZeroTouchEssentials 範例，更深入地瞭解建立節點的詳細資訊。
+在了解如何创建 Zero-Touch 项目后，我们可以通过浏览 Dynamo Github 中的 ZeroTouchEssentials 示例，来更深入地了解创建节点的具体细节。
 
-![Zero-touch 節點](../../.gitbook/assets/ootbzerotouch.png)
+![Zero-Touch 节点](../../.gitbook/assets/ootbzerotouch.png)
 
-> 許多 Dynamo 的標準節點本質上是 Zero-Touch 節點，如上面大多數的 Math、Color 和 DateTime 節點。
+> Dynamo 的许多标准节点本质上都是 Zero-Touch 节点，就像上面的大多数 Math、Color 和 DateTime 节点一样。
 
-若要開始，請從 [https://github.com/DynamoDS/ZeroTouchEssentials](https://github.com/DynamoDS/ZeroTouchEssentials) 下載 ZeroTouchEssentials 專案
+首先，从以下位置下载 ZeroTouchEssentials 项目：[https://github.com/DynamoDS/ZeroTouchEssentials](https://github.com/DynamoDS/ZeroTouchEssentials)
 
-在 Visual Studio 中，開啟 `ZeroTouchEssentials.sln` 方案檔並建置方案。
+在 Visual Studio 中，打开 `ZeroTouchEssentials.sln` 解决方案文件并构建解决方案。
 
 ![Visual Studio 中的 ZeroTouchEssentials](../../.gitbook/assets/vs-build-zte.jpg)
 
-> `ZeroTouchEssentials.cs` 檔案包含我們要匯入至 Dynamo 的所有方法。
+> `ZeroTouchEssentials.cs` 文件包含我们将要输入到 Dynamo 中的所有方法。
 
-開啟 Dynamo 並匯入 `ZeroTouchEssentials.dll`，以取得我們要在以下範例中參考的節點。
+打开 Dynamo 并输入 `ZeroTouchEssentials.dll`，以获取我们将要在以下示例中参照的节点。
 
-程式碼範例是從 [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/master/ZeroTouchEssentials/ZeroTouchEssentials.cs) 提取，通常與其相符。為了簡潔已移除 XML 文件，每個程式碼範例都會建立其上方影像中的節點。
+代码示例拉取自 [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/master/ZeroTouchEssentials/ZeroTouchEssentials.cs)，通常与之匹配。为了保持简洁，已删除 XML 文档；每个代码示例都会在其上方的图像中创建节点。
 
-### 預設輸入值 <a href="#default-input-values" id="default-input-values"></a>
+### 默认输入值 <a href="#default-input-values" id="default-input-values"></a>
 
-Dynamo 支援定義節點上輸入埠的預設值。如果埠沒有連接，則會對節點提供這些預設值。預設值使用在《[C# 程式設計手冊](https://msdn.microsoft.com/zh-tw/library/dd264739.aspx)》中指定可選引數的 C# 機制表示。預設值以下列方式指定：
+Dynamo 支持为节点上的输入端口定义默认值。如果端口没有连接，则这些默认值会提供给节点。默认值是使用[《C# 编程手册》](https://msdn.microsoft.com/en-us/library/dd264739.aspx)中指定可选参数的 C# 机制来表示的。通过以下方式指定默认值：
 
-* 將方法參數設定為預設值：`inputNumber = 2.0`
+* 将方法参数设置为默认值：`inputNumber = 2.0`
 
 ```
 namespace ZeroTouchEssentials
@@ -38,18 +38,18 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![預設值](../../.gitbook/assets/defaultval.jpg)
+![默认值](../../.gitbook/assets/defaultval.jpg)
 
-> 1. 將游標懸停在節點輸入埠上時，會出現預設值
+> 1. 将光标悬停在节点输入端口上方时，即会显示默认值
 
-### 傳回多個值 <a href="#returning-multiple-values" id="returning-multiple-values"></a>
+### 返回多个值 <a href="#returning-multiple-values" id="returning-multiple-values"></a>
 
-傳回多個值比建立多個輸入要複雜一些，因此需要使用字典傳回。字典的項目會成為節點輸出端的埠。透過以下方式可以建立多個傳回埠：
+返回多个值比创建多个输入要复杂得多，并且需要使用字典返回。字典的条目会成为节点输出端的端口。通过以下方式创建多个返回端口：
 
-* 加入 `using System.Collections.Generic;` 以使用 `Dictionary<>`。
-* 加入 `using Autodesk.DesignScript.Runtime;` 以使用 `MultiReturn` 屬性。這會參考 DynamoServices NuGet 套件中的「DynamoServices.dll」。
-* 在方法中加入 `[MultiReturn(new[] { "string1", "string2", ... more strings here })]` 屬性。字串會參考字典中的鍵，並成為輸出埠名稱。
-* 從函數傳回 `Dictionary<>`，其中的鍵與屬性中的參數名稱相符：`return new Dictionary<string, object>`
+* 添加 `using System.Collections.Generic;` 以使用 `Dictionary<>`。
+* 添加 `using Autodesk.DesignScript.Runtime;` 以使用 `MultiReturn` 属性。这会参照 DynamoServices NuGet 软件包中的“DynamoServices.dll”。
+* 将 `[MultiReturn(new[] { "string1", "string2", ... more strings here })]` 属性添加到方法。这些字符串会引用字典中的键，并会成为输出端口名称。
+* 从函数返回 `Dictionary<>`，其中包含与属性中的参数名称匹配的键：`return new Dictionary<string, object>`
 
 ```
 using System.Collections.Generic;
@@ -72,37 +72,37 @@ namespace ZeroTouchEssentials
 }
 ```
 
-> 請參閱 [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L70) 中的此程式碼範例
+> 请参见 [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L70) 中的此代码示例
 
-傳回多個輸出的節點。
+返回多个输出的节点。
 
-![多個輸出](../../.gitbook/assets/multipleoutputs.png)
+![多个输出](../../.gitbook/assets/multipleoutputs.png)
 
-> 1. 請注意，現在有兩個輸出埠，根據我們為字典的鍵輸入的字串進行命名。
+> 1. 请注意，现在有两个输出端口，它们是根据我们为字典的键输入的字符串命名的。
 
-### 文件、工具提示和搜尋 <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
+### 文档、工具提示和搜索 <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
 
-最佳實踐是在 Dynamo 節點中加入文件，描述節點的功能、輸入、輸出、搜尋標籤等。這可以透過 XML 文件標籤完成。透過以下方式可以建立 XML 文件：
+最佳做法是向 Dynamo 节点添加描述节点的功能、输入、输出、搜索标记等的文档。这是通过 XML 文档标记实现的。通过以下方式创建 XML 文档：
 
-* 前面有三條斜線的任何註解文字都會視為文件
+* 任何前面带有三个正斜杠的注释文字都会被视为文档
   * 例如：`/// Documentation text and XML goes here`
-* 三條斜線後，在 Dynamo 匯入 .dll 時將讀取的方法上方建立 XML 標籤
+* 在三个斜杠之后，在 Dynamo 输入 .dll 时将读取的方法上方创建 XML 标记
   * 例如：`/// <summary>...</summary>`
-* 在 Visual Studio 中選取「`Project > [Project] Properties > Build > Output`」並勾選「`Documentation file`」以啟用 XML 文件
+* 在 Visual Studio 中，通过选择 `Project > [Project] Properties > Build > Output` 并选中 `Documentation file` 来启用 XML 文档
 
-![產生 XML 檔案](../../.gitbook/assets/vs-xml.jpg)
+![生成 XML 文件](../../.gitbook/assets/vs-xml.jpg)
 
-> 1. Visual Studio 將在指定位置產生 XML 檔案
+> 1. Visual Studio 将在指定位置处生成 XML 文件
 
-標籤類型如下：
+标记的类型如下所示：
 
-* `/// <summary>...</summary>` 是節點的主文件，會以工具提示的形式出現在左側搜尋列中的節點上
-* `/// <param name="inputName">...</param>` 將建立特定輸入參數的文件
-* `/// <returns>...</returns>` 將建立輸出參數的文件
-* `/// <returns name = "outputName">...</returns>` 將建立多個輸出參數的文件
-* `/// <search>...</search>` 將根據逗號分隔清單將您的節點與搜尋結果比對。例如，如果我們建立細分網格的節點，我們可能要加入標籤，例如「網格」、「細分」和「catmull-clark」。
+* `/// <summary>...</summary>` 是节点的主文档，将在左侧搜索栏中作为工具提示显示在节点上方
+* `/// <param name="inputName">...</param>` 将为特定输入参数创建文档
+* `/// <returns>...</returns>` 将为输出参数创建文档
+* `/// <returns name = "outputName">...</returns>` 将为多个输出参数创建文档
+* `/// <search>...</search>` 将根据逗号分隔的列表将您的节点与搜索结果匹配。例如，如果我们创建一个细分网格的节点，则我们可能需要添加诸如“mesh”、“subdivision”和“catmull-clark”之类的标记。
 
-以下是包含輸入和輸出描述的範例節點，以及將顯示在資源庫中的摘要。
+以下是一个示例节点，其中包含输入和输出描述，以及将在库中显示的摘要。
 
 ```
 using Autodesk.DesignScript.Geometry;
@@ -126,61 +126,61 @@ namespace ZeroTouchEssentials
 }
 ```
 
-> 請參閱 [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L80) 中的此程式碼範例
+> 请参见 [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L80) 中的此代码示例
 
-請注意，此範例節點的程式碼包含：
+请注意，此示例节点的代码包含：
 
-> 1. 節點摘要
-> 2. 輸入描述
-> 3. 輸出描述
+> 1. 节点摘要
+> 2. 输入描述
+> 3. 输出描述
 
-#### Dynamo 節點描述最佳實踐
+#### Dynamo 节点描述最佳实践
 
-節點描述簡短描述節點的功能和輸出。在 Dynamo 中，節點描述會出現在兩個位置：
+节点描述简要介绍了节点的功能和输出。在 Dynamo 中，它们显示在两个位置：
 
-* 在節點工具提示中
-* 在文件瀏覽器中
+* 在节点工具提示中
+* 在文档浏览器中
 
-![節點描述](../../.gitbook/assets/node-description.png)
+![节点描述](../../.gitbook/assets/node-description.png)
 
-請按照這些準則，在編寫或更新節點描述時，可確保一致性並幫助節省時間。
+请遵循以下准则以确保一致性，并帮助在编写或更新节点描述时节省时间。
 
 **概述**
 
-描述應該是一到兩句話。如果需要更多資訊，請將其放在文件瀏覽器的「深入資訊」下。
+描述应该是一到两句话。如果需要更多信息，请将其包含在文档浏览器的“深度”下。
 
-句子大小寫 (將句子的第一個單字和任何專有名詞大寫)。句尾不用句點。
+句首字母大写（将句子的第一个单词和任何专有名词大写）。结束时没有句号。
 
-語言應盡可清楚、簡單。在第一次提到首字母縮寫字時加以定義，除非連非專業使用者也知道這些縮寫字。
+语言应尽可能清晰和简单。首次提及时应定义首字母缩略词，除非非专业用户也知道这些缩略词。
 
-一律以清楚明瞭為優先考量，即使可能偏離這些準則亦同。
+始终优先考虑明确性，即使这意味着偏离这些准则。
 
-**指南**
+**Guidelines**
 
-| 請遵循                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | 不要                                                                                                                                                                                                                                                                                                                                                                                                          |
+| 该做的事                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | 不该做的事                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>以第三人稱動詞開始描述。</p><ul><li>範例：<em>判定 (Determines)</em> 一個幾何圖形物件是否與另一個幾何圖形物件相交</li></ul>                                                                                                                                                                                                                                                                                                                                                                                         | <p>不要以第二人稱動詞或任何名詞開頭。</p><ul><li>範例：<em>判定 (Determine)</em> 一個幾何圖形物件是否與另一個幾何圖形物件相交</li></ul>                                                                                                                                                                                                                                                      |
-| <p>使用「傳回 (Returns)」、「建立 (Creates)」或其他描述性動詞代替「取得 (Gets)」。</p><ul><li>範例：<em>傳回 (Returns)</em> 曲面的 Nurbs 表現法</li></ul>                                                                                                                                                                                                                                                                                                                                                                              | <p>不要使用「取得」(Get 或 Gets)。它不太具體，可能會有幾種不同的翻譯。</p><ul><li>範例：<em>取得 (Gets)</em> 曲面的 Nurbs 表現法</li></ul>                                                                                                                                                                                                                                       |
-| <p>提到輸入時，請使用「給定 (given)」或「輸入 (input)」，而不要使用「指定 (specified)」或其他任何詞彙。盡可能省略「給定 (given)」或「輸入 (input)」，以簡化描述並減少字數。</p><ul><li>範例：刪除<em>給定 (given)</em> 的檔案</li><li>範例：將一條曲線沿著<em>給定 (given)</em> 的投影方向投影到<em>給定 (given)</em> 的基礎幾何圖形上</li></ul><p>如果不是直接提到輸入，可以使用「指定 (specified)」。</p><ul><li>範例：將文字內容寫入由給定路徑<em>指定 (specified)</em> 的檔案</li></ul> | <p>提到輸入時，為了確保一致性，請不要使用「指定 (specified)」或除了「給定 (given)」或「輸入 (input)」以外的其他任何詞彙。不要在同一個描述中混合「給定 (given)」和「輸入 (input)」，除非為了清楚起見需要。</p><ul><li>範例：刪除<em>指定 (specified)</em> 的檔案</li><li>範例：將一條<em>輸入 (input)</em> 曲線沿著<em>給定 (given)</em> 的投影方向投影到<em>指定 (specified)</em> 的基礎幾何圖形上</li></ul> |
-| <p>第一次提到輸入時，請使用「一個 (a 或 an)」。為清楚起見，請根據需要使用「給定 (the given)」或「輸入 (the input)」，而不是一個 (a 或 an)。</p><ul><li>範例：沿著路徑曲線掃掠<em>一條 (a)</em> 曲線</li></ul>                                                                                                                                                                                                                                                                                                                                | <p>第一次提到輸入時，不要使用「這 (this)」。</p><ul><li>範例：沿著路徑曲線掃掠<em>這條 (this)</em> 曲線</li></ul>                                                                                                                                                                                                                                                                             |
-| <p>第一次提到節點運算目標的輸出或其他名詞時，請使用「一個 (a 或 an)」。只有在與「輸入 (input)」或「給定 (given)」搭配使用時，才使用「這 (the)」。</p><ul><li>範例：複製<em>一個 (a)</em> 檔案</li><li>範例：複製<em>給定 (given)</em> 的檔案</li></ul>                                                                                                                                                                                                                                                                   | <p>第一次提到節點運算目標的輸出或其他名詞時，請不要單獨使用「這個 (the)」。</p><ul><li>範例：複製<em>這個 (the)</em> 檔案</li></ul>                                                                                                                                                                                                                                  |
-| <p>將句子的第一個單字和任何專有名詞 (例如名稱和傳統上大寫的名詞) 大寫。</p><ul><li>範例：傳回兩個<em>邊界框 (BoundingBoxe)</em> 的交點</li></ul>                                                                                                                                                                                                                                                                                                                                     | <p>除非為了清楚起見需要，否則請不要將常見的幾何圖形物件和概念大寫。</p><ul><li>範例：繞著給定的<em>平面 (Plane)</em> 非等比例調整</li></ul>                                                                                                                                                                                                                                          |
-| <p>將布林 (Boolean) 大寫。提到布林的輸出時，請將 True 和 False 大寫。</p><ul><li>範例：如果兩個值不同，則傳回 <em>True</em></li><li>範例：根據<em>布林 (Boolean)</em> 參數，將字串轉換為全部大寫或全部小寫的字元</li></ul>                                                                                                                                                                                                                                        | <p>不要將布林 (Boolean) 小寫。提到布林的輸出時，請不要將 True 和 False 小寫。</p><ul><li>範例：如果兩個值不同，則傳回 <em>true</em></li><li>範例：根據<em>布林 (boolean)</em> 參數，將字串轉換為全部大寫的字元或全部小寫的字元</li></ul>                                                                                       |
+| <p>以第三人称动词开始描述。</p><ul><li>示例：<em>确定</em>一个几何图形对象是否与另一个几何图形对象相交</li></ul>                                                                                                                                                                                                                                                                                                                                                                                         | <p>不要以第二人称动词或任何名词开头。</p><ul><li>示例：<em>确定</em>一个几何图形对象是否与另一个几何图形对象相交</li></ul>                                                                                                                                                                                                                                                      |
+| <p>使用“返回”、“创建”或其他描述性动词代替“获取”。</p><ul><li>示例：<em>返回</em>曲面的 Nurbs 表示</li></ul>                                                                                                                                                                                                                                                                                                                                                                              | <p>请勿使用“获取”。它不太具体，有几种可能的翻译。</p><ul><li>示例：<em>获取</em>曲面的 Nurbs 表示</li></ul>                                                                                                                                                                                                                                       |
+| <p>在引用输入时，请使用“给定”或“输入”，而不是“指定”或任何其他术语。尽可能省略“给定”或“输入”，以简化说明并减少字数。</p><ul><li>示例：删除<em>给定</em>文件</li><li>示例：沿<em>给定</em>投影方向将曲线投影到<em>给定</em>基础几何图形上</li></ul><p>当不直接引用输入时，可以使用“指定”。</p><ul><li>示例：按给定路径将文本内容写入<em>指定</em>的文件</li></ul> | <p>在引用输入时，为了确保一致性，请勿使用“指定”或除“给定”或“输入”以外的任何其他术语。不要在同一描述中混合使用“给定”和“输入”，除非需要澄清。</p><ul><li>示例：删除<em>指定</em>的文件</li><li>示例：沿<em>给定</em>投影方向将<em>输入</em>曲线投影到<em>指定</em>的基础几何图形上</li></ul> |
+| <p>首次引用输入时，请使用“一个”或“某个”。为清楚起见，根据需要使用“该给定”或“该输入”而不是“一个”或“某个”。</p><ul><li>示例：沿路径曲线扫掠<em>一条</em>曲线</li></ul>                                                                                                                                                                                                                                                                                                                                | <p>在第一次引用输入时，不要使用“此”。</p><ul><li>示例：沿路径曲线扫掠<em>此</em>曲线</li></ul>                                                                                                                                                                                                                                                                             |
+| <p>当第一次引用作为节点操作目标的输出或其他名词时，请使用“一个”或“某个”。仅当将其与“输入”或“给定”配对时，才使用“该”。</p><ul><li>示例：复制<em>一个</em>文件</li><li>示例：复制<em>该给定</em>文件</li></ul>                                                                                                                                                                                                                                                                   | <p>首次引用作为节点操作目标的输出或其他名词时，请勿单独使用“该”。</p><ul><li>示例：复制<em>该</em>文件</li></ul>                                                                                                                                                                                                                                  |
+| <p>将句子的第一个单词和任何专有名词（例如姓名和传统大写名词）大写。</p><ul><li>示例：返回两个 <em>BoundingBoxes</em> 的交点</li></ul>                                                                                                                                                                                                                                                                                                                                     | <p>不要将常见的几何图形对象和概念大写，除非需要澄清。</p><ul><li>示例：围绕给定<em>平面</em>非均匀缩放</li></ul>                                                                                                                                                                                                                                          |
+| <p>大写布尔值。当引用布尔值的输出时，请大写 True 和 False。</p><ul><li>示例：如果两个值不同，则返回 <em>True</em></li><li>示例：根据 <em>Boolean</em> 参数将字符串全部转换为大写或小写字符</li></ul>                                                                                                                                                                                                                                        | <p>不要小写布尔值。在引用布尔值的输出时，不要将 True 和 False 小写。</p><ul><li>示例：如果两个值不同，则返回 <em>true</em></li><li>示例：根据 <em>boolean</em> 参数将字符串全部转换为大写字符或小写字符</li></ul>                                                                                       |
 
-#### Dynamo 節點的警告和錯誤
+#### Dynamo 节点警告和错误
 
-節點的警告和錯誤會提醒使用者圖表有問題。通知使用者問題的方式，是在節點上方顯示圖示和展開的文字標示圈，來干擾正常的圖表運作。節點錯誤和警告的嚴重性可能有所不同：某些圖表還是能在有警告的情況下充分執行，但某些圖表卻可能無法獲得預期的結果。無論如何，節點的錯誤和警告都是重要的工具，可讓使用者隨時掌握圖表的問題。
+节点警告和错误警报用户有关图形的问题。它们通过在节点上方显示图标和展开的文本气泡来通知用户干扰正常图表操作的问题。节点错误和警告的严重性可能会有所不同：某些图形可以充分运行并显示警告，而另一些图形则会阻止预期结果。在所有情况下，节点错误和警告都是使用户及时了解其图形问题的重要工具。
 
-如需在寫入或更新節點警告和錯誤訊息時確保一致性並協助節省時間的準則，請參閱[內容模式：節點的警告與錯誤](https://github.com/DynamoDS/Dynamo/wiki/Content-Pattern:-Node-Warnings-and-Errors) Wiki 頁面。
+有关在编写或更新节点警告和错误消息时确保一致性并帮助节省时间的指南，请参见[内容模式：节点警告和错误](https://github.com/DynamoDS/Dynamo/wiki/Content-Pattern:-Node-Warnings-and-Errors) Wiki 页面。
 
-### 物件 <a href="#objects" id="objects"></a>
+### 对象 <a href="#objects" id="objects"></a>
 
-Dynamo 沒有 `new` 關鍵字，因此需要使用靜態建構方法建構物件。透過以下方式可以建構物件：
+Dynamo 没有 `new` 关键字，因此需要使用静态构造方法来构造对象。通过以下方式构造对象：
 
-* 除非另有要求，否則將建構函式設為內部的 `internal ZeroTouchEssentials()`
-* 使用靜態方法建構物件，例如 `public static ZeroTouchEssentials ByTwoDoubles(a, b)`
+* 除非另有要求，否则使构造函数成为内部构造函数 `internal ZeroTouchEssentials()`
+* 使用静态方法构造对象，例如 `public static ZeroTouchEssentials ByTwoDoubles(a, b)`
 
-> 注意：Dynamo 使用「By」字首指出靜態方法是建構函式，雖然這是選擇性的，但使用「By」可協助您的資源庫更符合既有的 Dynamo 型式。
+> 注意：Dynamo 使用“By”前缀来指示静态方法是构造函数；尽管这是可选方法，但使用“By”将帮助您的库更好地适应现有 Dynamo 样式。
 
 ```
 namespace ZeroTouchEssentials
@@ -206,20 +206,20 @@ namespace ZeroTouchEssentials
 }
 ```
 
-> 請參閱 [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L26) 中的此程式碼範例
+> 请参见 [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L26) 中的此代码示例
 
-匯入 ZeroTouchEssentials dll 後，資源庫中將會有 ZeroTouchEssentials 節點。使用 `ByTwoDoubles` 節點可以建立此物件。
+在已输入 ZeroTouchEssentials dll 后，库中会有一个 ZeroTouchEssentials 节点。可以使用 `ByTwoDoubles` 节点创建此对象。
 
-![ByTwoDoubles 節點](../../.gitbook/assets/dyn-constructor.jpg)
+![ByTwoDoubles 节点](../../.gitbook/assets/dyn-constructor.jpg)
 
-### 使用 Dynamo 幾何圖形類型 <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
+### 使用 Dynamo 几何图形类型 <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
-Dynamo 資源庫可以使用原生 Dynamo 幾何圖形類型做為輸入，並建立新幾何圖形做為輸出。透過以下方式可以建立幾何圖形類型：
+Dynamo 库可以使用原生 Dynamo 几何图形类型作为输入，并创建新的几何图形作为输出。通过以下方式创建几何图形类型：
 
-* 在專案中的 C# 檔案頂端包括 `using Autodesk.DesignScript.Geometry;` 參考「ProtoGeometry.dll」，並將 ZeroTouchLibrary NuGet 套件加入專案。
-* **重要事項：** 管理未從函數傳回的幾何圖形資源，請參閱下方的〈**Dispose/using 陳述式**〉一節。
+* 通过在 C# 文件顶部包含 `using Autodesk.DesignScript.Geometry;` 并将 ZeroTouchLibrary NuGet 软件包添加到项目中，可参照项目中的“ProtoGeometry.dll”。
+* **重要信息：** 管理未从函数中返回的几何图形资源，请参见下面的 **Dispose/using 语句**部分。
 
-> 注意：Dynamo 幾何圖形物件的使用方式與任何其他傳入函數的物件相同。
+> 注意：Dynamo 几何图形对象与传递给函数的任何其他对象一样使用。
 
 ```
 using Autodesk.DesignScript.Geometry;
@@ -238,19 +238,19 @@ namespace ZeroTouchEssentials
 }
 ```
 
-> 請參閱 [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L86) 中的此程式碼範例
+> 请参见 [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L86) 中的此代码示例
 
-取得曲線長度後加倍的節點。
+获取曲线长度并使其加倍的节点。
 
-![曲線輸入](../../.gitbook/assets/doublelength.png)
+![曲线输入](../../.gitbook/assets/doublelength.png)
 
-> 1. 此節點接受曲線幾何圖形類型做為輸入。
+> 1. 此节点接受曲线几何图形类型作为输入。
 
-### Dispose/using 陳述式 <a href="#disposeusing-statements" id="disposeusing-statements"></a>
+### Dispose/using 语句 <a href="#disposeusing-statements" id="disposeusing-statements"></a>
 
-除非您使用 Dynamo 2.5 版或更高版本，否則必須手動管理未從函數傳回的幾何圖形資源。在 Dynamo 2.5 和更高版本中，幾何圖形資源由系統內部處理，但是，如果您的使用案例較複雜，或者您必須在決定性時間減少消耗記憶體，您可能仍需要手動處置幾何圖形。Dynamo 引擎將處理從函數傳回的任何幾何圖形資源。透過以下方式可以手動處理未傳回的幾何圖形資源：
+除非您使用的是 Dynamo 2.5 版或更高版本，否则不会从函数中返回的几何图形资源需要进行手动管理。在 Dynamo 2.5 及更高版本中，几何图形资源由系统进行内部处理；但是，如果您有复杂的用例，或者您必须在确定时间减少内存，则可能仍需要手动处理几何图形。Dynamo 引擎将处理从函数中返回的任何几何图形资源。可以通过以下方式手动处理未返回的几何图形资源：
 
-*   使用 using 陳述式：
+*   使用 using 语句：
 
     ```
     using (Point p1 = Point.ByCoordinates(0, 0, 0))
@@ -262,10 +262,10 @@ namespace ZeroTouchEssentials
     }
     ```
 
-    > [此處](https://msdn.microsoft.com/zh-tw/library/yh598w02.aspx)說明 using 陳述式
+    > 在[此处](https://msdn.microsoft.com/zh-cn/library/yh598w02.aspx)介绍了 using 语句
     >
-    > 請參閱 [Dynamo 幾何圖形穩定性的改進](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297)，以進一步瞭解 Dynamo 2.5 中引入的新穩定性功能
-*   使用手動的 Dispose 呼叫：
+    > 请参见 [Dynamo 几何图形稳定性改进](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297)，以详细了解 Dynamo 2.5 中引入的新稳定性功能
+*   使用手动 Dispose 调用：
 
     ```
     Point p1 = Point.ByCoordinates(0, 0, 0);
@@ -276,22 +276,22 @@ namespace ZeroTouchEssentials
     return l;
     ```
 
-### 移轉 <a href="#migrations" id="migrations"></a>
+### 移植 <a href="#migrations" id="migrations"></a>
 
-發佈較新版本的資源庫時，節點名稱可能會變更。在移轉檔案中可以指定名稱變更，以便在更新時，以舊版資源庫建置的圖表可以持續正常運作。透過以下方式可以實作移轉：
+发布库的较新版本时，节点名称可能会更改。可以在移植文件中指定名称更改，以便在完成更新后，基于库的以前版本构建的图形可以继续正常使用。通过以下方式实现移植：
 
-* 使用以下格式，在與 `.dll` 相同的資料夾中建立 `.xml` 檔案：「BaseDLName」.Migrations.xml
-* 在 `.xml` 中，建立單一 `<migrations>...</migrations>` 元素
-* 在 migrations 元素內，為每個名稱變更建立 `<priorNameHint>...</priorNameHint>` 元素
-* 對每個名稱變更，提供 `<oldName>...</oldName>` 和 `<newName>...</newName>` 元素
+* 在与 `.dll` 所在的同一个文件夹中创建 `.xml` 文件，其格式如下所示："BaseDLLName".Migrations.xml
+* 在 `.xml` 中，创建单个 `<migrations>...</migrations>` 元素
+* 在移植元素内，为每个名称更改创建 `<priorNameHint>...</priorNameHint>` 元素
+* 对于每个名称更改，请提供 `<oldName>...</oldName>` 和 `<newName>...</newName>` 元素
 
-![移轉檔案](../../.gitbook/assets/vs-migrations-file.jpg)
+![移植文件](../../.gitbook/assets/vs-migrations-file.jpg)
 
-> 1. 按一下右鍵，然後選取「`Add > New Item`」
-> 2. 選擇 `XML File`
-> 3. 對於此專案，我們將移轉檔案命名為 `ZeroTouchEssentials.Migrations.xml`
+> 1. 单击鼠标右键，然后选择 `Add > New Item`
+> 2. 选择 `XML File`
+> 3. 对于此项目，我们会将移植文件命名为 `ZeroTouchEssentials.Migrations.xml`
 
-此範例程式碼告訴 Dynamo，任何名為 `GetClosestPoint` 的節點現在都命名為 `ClosestPointTo`。
+此示例代码会告知 Dynamo，任何名为 `GetClosestPoint` 的节点现在都已命名为 `ClosestPointTo`。
 
 ```
 <?xml version="1.0"?>
@@ -303,13 +303,13 @@ namespace ZeroTouchEssentials
 </migrations>
 ```
 
-> 請參閱 [ProtoGeometry.Migrations.xml](https://github.com/DynamoDS/Dynamo/blob/master/extern/ProtoGeometry/ProtoGeometry.Migrations.xml) 中的此程式碼範例
+> 请参见 [ProtoGeometry.Migrations.xml](https://github.com/DynamoDS/Dynamo/blob/master/extern/ProtoGeometry/ProtoGeometry.Migrations.xml) 中的此代码示例
 
 ### 泛型 <a href="#generics" id="generics"></a>
 
-Zero-Touch 目前不支援使用泛型。可以使用泛型，但不能在直接匯入且未設定類型的程式碼中使用。無法顯示屬於泛型且未設定類型的方法、性質或類別。
+Zero-Touch 当前不支持使用泛型。可以使用这些泛型，但无法在直接输入且未设置类型的代码中使用它们。不能公开属于泛型且未设置类型的方法、特性或类。
 
-在以下範例中，不會匯入類型為 `T` 的 Zero-Touch 節點。如果將剩餘的資源庫匯入至 Dynamo，則會發生缺少類型的例外狀況。
+在下面的示例中，将不会输入类型为 `T` 的 Zero-Touch 节点。如果库的其余部分输入到 Dynamo 中，则会出现丢失的类型异常。
 
 ```
 public class SomeGenericClass<T>
@@ -321,7 +321,7 @@ public class SomeGenericClass<T>
 }
 ```
 
-在此範例中設定類型的情況下使用泛型類型，將匯入至 Dynamo。
+使用在本例中所设置类型的泛型类型将输入到 Dynamo 中。
 
 ```
 public class SomeWrapper

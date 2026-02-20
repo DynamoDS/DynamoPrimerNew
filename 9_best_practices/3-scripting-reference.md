@@ -1,40 +1,40 @@
-# 指令碼撰寫參考
+# 脚本参考
 
-此參考頁面延伸〈指令碼撰寫策略〉中涵蓋的最佳實踐，提供更多有關程式碼資源庫、標示和型式設定的詳細資料。我們將使用 Python 來說明以下的概念，但相同的原則適用於 Python 和 C# (Zerotouch) (但不同的語法)。
+本参考页面扩展了脚本编写策略中涵盖的最佳实践，并对代码库、标签和样式进行了更加详细的介绍。我们将使用 Python 说明下面的概念，但相同原则在 Python 和 C#(Zerotouch) 中适用，语法却不同。
 
-## 要使用的資源庫
+## 要使用的库
 
-標準資源庫位於 Dynamo 外部，存在於 Python 和 C# (Zerotouch) 等程式設計語言。Dynamo 還具有自己的一組資源庫，直接對應其節點架構，可讓使用者在程式碼中建置任何利用節點和線路來建置的內容。以下指南包含每個 Dynamo 資源庫允許存取的內容以及何時使用標準的資源庫。
+标准库位于 Dynamo 外部，并以编程语言 Python 和 C# (Zerotouch) 呈现。Dynamo 还有自己的库集，这些库直接对应于其节点层次结构，使用户能够使用代码构建可以由节点和线生成的任何内容。下面介绍了每个 Dynamo 库对哪些内容提供访问以及何时使用标准库。
 
 ![](../.gitbook/assets/textual-programming.jpg)
 
-**標準資源庫和 Dynamo 資源庫**
+**标准库和 Dynamo 库**
 
-* Python 和 C# 的標準資源庫可用於在 Dynamo 環境中建置進階資料和流動結構。
-* Dynamo 資源庫直接對應用於建立幾何圖形和其他 Dynamo 物件的節點架構。
+* Python 和 C# 的标准库可用于在 Dynamo 环境中构建高级数据和流结构。
+* Dynamo 库直接对应于节点层次结构，用于创建几何图形和其他 Dynamo 对象。
 
-**Dynamo 資源庫**
+**Dynamo 库**
 
 1. ProtoGeometry*
-   * 功能：弧、邊界框、圓形、圓錐體、座標系統、立方體、曲線、圓柱邊、邊緣、橢圓、橢圓弧、面、幾何圖形、螺旋線、索引群組、線、網格、Nurbs 曲線、Nurbs 曲面、平面、點、多邊形、矩形、實體、圓球、曲面、拓樸、T 雲形線、UV、向量、頂點。
-   * 如何匯入：`import Autodesk.DesignScript.Geometry`
+   * 功能：圆弧、边界框、圆、圆锥体、坐标系、立方体、曲线、圆柱体、边、椭圆、椭圆弧、面、几何图形、螺旋、索引组、线、网格、Nurbs 曲线、Nurbs 曲面、平面、点、多边形、矩形、实体、球体、曲面、拓扑、T 样条曲线、UV、向量、顶点。
+   * 如何输入：`import Autodesk.DesignScript.Geometry`
 2. DSCoreNodes
-   * 功能：顏色、顏色範圍 2D、日期時間、時間跨距、IO、公式、邏輯、清單、數學、四元樹狀目錄、字串、螺紋。
-   * 如何匯入：`import DSCore`
-3. 鑲嵌
-   * 功能：凸面關聯線，Delaunay、Voronoi。
-   * 如何匯入：`import Tessellation`
+   * 功能：颜色、二维颜色范围、日期时间、时间跨度、IO、公式、逻辑、列表、数学、四元树、字符串、线程。
+   * 如何输入：`import DSCore`
+3. 细分
+   * 功能：凸面外壳、Delaunay、Voronoi。
+   * 如何输入：`import Tessellation`
 4. DSOffice
    * 功能：Excel。
-   * 如何匯入：`import DSOffice`
+   * 如何输入：`import DSOffice`
 
-{% hint style="warning" %} *注意：透過 Python 或 C# 使用 **ProtoGeometry** 時，您建立的是不受管理的物件，而這需要手動管理記憶體 - 請參閱以下一節：**不受管理的物件**，以取得更多資訊。{% endhint %}
+{% hint style="warning" %} *注意：通过 Python 或 C# 使用 **“ProtoGeometry”** 时，正在创建的是非托管对象，这些对象需要手动对其内存进行管理 - 请参见以下部分： **“非托管对象”** 以了解详细信息。{% endhint %}
 
-## 仔細標示
+## 小心标记
 
-撰寫指令碼時，我們持續使用識別碼來表示變數、類型、函數和其他圖元等。透過此系統的符號表現法，在建築演算法時我們可以方便地使用標示的方式參考資訊，而標示通常由一系列的字元組成。有效地進行命名至關重要，可讓其他人及將來的自己輕鬆閱讀並瞭解所撰寫的程式碼！以下是在指令碼中進行命名時需謹記的一些秘訣：
+在编写脚本时，我们会不断使用标识符来表示诸如变量、类型、函数和其他实体等内容。通过这种符号表示法，在构建算法时，我们可以通过标签（通常由字符序列组成）方便地引用信息。在编写易于他人以及您自己将来轻松阅读和理解的代码方面，命名内容也发挥着重要作用！以下是在脚本中命名内容时要牢记的一些技巧：
 
-**可以使用縮寫，但請加入註釋以解釋縮寫：**
+**可以使用缩写，但要用注释说明缩写：**
 
 ```
 ### BAD
@@ -51,7 +51,7 @@ csfY= 1.3
 csfZ = 1.0
 ```
 
-**避免多餘的標示：**
+**避免重复标记：**
 
 ```
 ### BAD
@@ -67,7 +67,7 @@ seat = car.Seat()
 tire = car.Tire()
 ```
 
-**變數名稱使用正邏輯而不是負邏輯：**
+**对变量名称使用正逻辑，而不是负逻辑：**
 
 ```
 ### BAD
@@ -87,7 +87,7 @@ else:
     print 'not found'
 ```
 
-**偏好「反轉標記法」：**
+**首选“反转符号”:**
 
 ```
 ### BAD
@@ -103,9 +103,9 @@ agents_active = …
 agents_dead = ...
 ```
 
-> 在結構而言比較合理。
+> 从结构角度来说，这显得更合理。
 
-**別名應用在縮短太長且經常重複的鏈：**
+**别名应用于缩短过长且经常重复的链：**
 
 ```
 ### BAD
@@ -125,9 +125,9 @@ doc = DM.Instance.CurrentDBDocument
 uiapp = DM.Instance.CurrentUIApplication
 ```
 
-> 使用別名可能很快會產生非常混亂且不標準的程式。
+> 使用别名可能会快速导致出现令人困惑且非标准程序。
 
-**只使用必要的文字：**
+**仅使用必要字词：**
 
 ```
 ### BAD
@@ -139,36 +139,36 @@ rotateToCoord = rotateFromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vect
 toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordinates(0,0,1),5)
 ```
 
-> 「所有事物都應該盡可能簡單，但不要太過於簡單。」– 愛因斯坦 (Albert Einstein)
+> “一切应尽可能简单，但不能为了简单而简单。”– Albert Einstein
 
-## 型式一致
+## 样式一致
 
-一般來說，程式設計有多種方法，因此您的「個人型式」的指令碼是無數個您選擇作出 (或不作出) 的小決定的結果。而您的程式碼的可讀性和可維護性碼是其內部一致性以及其遵循一般風格慣例的直接結果。基本原則是，在兩個位置看起來相同的程式碼亦應該擁有相同的工作方式。以下是撰寫清楚一致的程式碼的一些秘訣。
+一般来说，几乎所有内容都有一种以上的编程方法，因此您“个人风格”的脚本编写是您一路上选择做出（或不做出）无数小决定的结果。也就是说，您代码的可读性和可维护性直接源于其内部一致性以及其对常规样式约定的遵循。一般来说，在两个位置看起来相同的代码的作用也应该相同。下面是用于编写清晰且一致代码的一些技巧。
 
-**命名慣例：**(為程式碼的每種實體選擇以下其中一種慣例，而且不要更改！)
+**命名约定：**（为代码中每类实体选择以下约定之一并坚持使用！）
 
-* 變數、函數、方法、套件、模組：\
+* 变量、函数、方法、软件包、模块：\
  `lower_case_with_underscores`
-* 類別和例外情況：\
+* 类和例外：\
  `CapWords`
-* 受保護的方法和內部函數：\
+* 受保护的方法和内部函数：\
  `_single_leading_underscore(self, ...)`
-* 私用方法：\
+* 私有方法：\
  `__double_leading_underscore(self, ...)`
-* 常數：\
+* 常数：\
  `ALL_CAPS_WITH_UNDERSCORES`
 
-> 秘訣：除非是非常短的區塊，可直接從上下文清楚看出涵義，否則請避免使用一個字母的變數 (例如 l、O、I）。
+> 技巧：避免使用单字母变量（尤其是 l、O、I），但在非常短的块中，当其含义从即时上下文中清晰可见时除外。
 
-**使用空白行：**
+**使用空行：**
 
-* 用兩個空白行包圍頂層函數與類別定義。
-  * 類別中的方式定義被一個空白行包圍。
-  * 可以 (斟酌) 使用額外的空白行，來分隔有相關函數的群組。
+* 在顶级函数和类定义周围加上两个空行。
+  * 类内部的方法定义周围加上一个空行。
+  * 可以使用（谨慎）额外的空行分隔多组相关函数。
 
-**在下列位置避免出現多餘的空格：**
+**避免使用多余空格：**
 
-*   在括弧、方括弧或大括弧內：
+*   紧挨在圆括号、方括号或大括号内：
 
     ```
     ### BAD
@@ -179,7 +179,7 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
     ### GOOD:
     function(apples[1], {oranges: 2})
     ```
-*   在逗號、分號或冒號前：
+*   逗号、分号或冒号之前：
 
     ```
     ### BAD
@@ -190,7 +190,7 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
     ### GOOD
       if x == 2: print x, y; x, y = y, x
     ```
-*   在開始函數呼叫的引數清單之左括弧前：
+*   在开始函数调用的参数列表的左括号之前：
 
     ```
     ### BAD
@@ -201,7 +201,7 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
     ### GOOD
     function(1)
     ```
-*   在開始索引或切割之左括弧前：
+*   在开始索引或切片的左括号之前：
 
     ```
     ### BAD
@@ -212,7 +212,7 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
     ### GOOD
     dict['key'] = list[index]
     ```
-*   務必在這些二進位運算子的兩側加入一個空格：
+*   始终在这些二进制运算符周围的任一侧使用一个空格：
 
     ```
     assignment ( = )
@@ -221,16 +221,16 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
     Booleans ( and , or , not )
     ```
 
-**Watch 一行長度：**
+**观察行长度：**
 
-* 別擔心，有 ~ 79 個字元。
-* 限制所需編輯器視窗寬度可以同時開啟多個檔案，並且適合使用在相鄰的欄顯示兩個版本的程式碼檢閱工具。
-* 長的程式碼行可以使用括弧讓表示式換行而斷開成多行：
+* 请勿对其强加超过约 79 个字符。
+* 限制所需的编辑器窗口宽度可以并排打开多个文件，并且使用在相邻列中显示两个版本的代码审核工具时也可以正常工作。
+* 通过将表达式括在括号中，可以将较长行分成多行：
 
-**避免明顯和多餘的註釋：**
+**避免出现明显多余的注释：**
 
-* 有時更少的註釋使程式碼更容易閱讀，尤其是如果它強制您改用有意義的符號名稱。
-*   採用好的程式碼習慣可減少依賴註釋：
+* 有时，注释越少，代码越可读。尤其是当它强制您改用有意义的符号名称时。
+*   采用良好的编码习惯可减少对注释的依赖：
 
     ```
     ### BAD
@@ -251,29 +251,29 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
         print form_input_state()
     ```
 
-> 秘訣：註釋告知您「為什麼」，程式碼告知您「如何」。
+> 技巧：注释告诉您原因，而代码告诉您方法。
 
-**出庫使用開放原始碼：**
+**检出开源代码：**
 
-* 開放原始碼專案由大量開發人員協同合作建置。這些專案需要保持高度的程式碼可讀性，以便團隊可以盡可能地有效工作。因此，最好瀏覽這些專案的原始程式碼，以觀察這些開發人員的工作。
-* 改善慣例：
-  * 詢問自己，每個慣例是否能回應目前工作的需求。
-  * 功能/效率有否受到影響？
+* 开源项目建立在众多开发人员的协作基础之上。这些项目需要保持高水平的代码可读性，以便团队可以尽可能高效地协同工作。因此，最好浏览这些项目的源代码，以观察这些开发人员正在进行的工作。
+* 改善您的约定：
+  * 询问每个约定是否符合当前的需求。
+  * 功能/效率是否受到影响？
 
-## C# (Zerotouch) 標準
+## C# (Zerotouch) 标准
 
-**請造訪這些 Wiki 頁面，以取得有關為 Zerotouch 寫入 C# 及貢獻 Dynamo 的指導：**
+**查看这些 Wiki 页面，以了解有关为 Zerotouch 编写 C# 以及参与 Dynamo 的指南：**
 
-* 此 Wiki 包含一些記錄和測試程式碼的一般程式碼撰寫標準：[https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
-* 此 Wiki 特別包含資源庫、品類、節點名稱、埠名稱和縮寫的命名標準：[https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
+* 此 Wiki 介绍了一些用于记录和测试代码的常规编码标准：[https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
+* 此 Wiki 专门介绍了用于库、类别、节点名称、端口名称和缩写的命名标准：[https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
 
-**不受管理的物件：**
+**非托管对象：**
 
-從 Python 或 C# 使用 Dynamo 的幾何圖形資源庫_(ProtoGeometry)_ 時，您建立的幾何圖形物件不會受虛擬機器管理，而且許多物件的記憶體都需要手動進行清理。若要清理原生或不受管理的物件，您可以使用 **Dispose** 方法或 **using** 關鍵字。請參閱此 Wiki 項目的概述：[https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement)。
+从创建的 Python 或 C# 几何图形对象使用 Dynamo 的几何图形库 _(ProtoGeometry)_ 时将不由虚拟机进行托管，并且将需要手动清理其中许多对象的内存。要清理本地对象或非托管对象，可以使用 **“Dispose”** 方法或 **“using”** 关键字。请参见此 Wiki 条目以了解概述：[https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement)。
 
-您只需要處置不傳入圖表或儲存參考的不受管理的資源。在本節其餘部分，我們會將這些物件稱為_中間幾何圖形_。您可以在以下的程式碼範例中查看有關此類別物件的範例。此 zero touch C# 函數 **singleCube** 會傳回一個立方塊，但在執行期間會額外建立 10000 個立方塊。我們可以假設這額外的幾何圖形是用作一些中間建構幾何圖形。
+只需处理不返回到图形或存储对其参照的非托管资源。在本部分的其余部分中，我们将这些对象称为 _“中间几何图形”_。在下面的代码示例中，可以看到此类对象的示例。此 Zerotouch C# 函数 **“singleCube”** 会返回单个立方体，但在其执行期间会额外创建 10000 个立方体。我们可以假定该其他几何图形用作一些中间构造几何图形。
 
-**此 zero touch 功能很有可能會讓 Dynamo 當機。**雖然我們建立了 10000 個實體，但只儲存其中一個並傳回這一個。我們應該改為處置所有中間立方塊，除了我們傳回的那一個。我們不想要處置我們傳回的內容，因為它會傳到圖表中並由其他節點使用。
+**此 Zerotouch 函数最有可能导致 Dynamo 崩溃。** 由于我们创建了 10000 个实体，但仅存储其中的一个，并仅返回该实体。我们应该改为处理所有中间立方体，但要返回的立方体除外。我们不希望对返回的内容进行处理，因为它将传播到图形中并由其他节点使用。
 
 ```
 public Cuboid singleCube(){
@@ -287,7 +287,7 @@ public Cuboid singleCube(){
 }
 ```
 
-修正後的程式碼將如下所示：
+修复的代码将如下所示：
 
 ```
  public Cuboid singleCube(){
@@ -307,4 +307,4 @@ public Cuboid singleCube(){
  }
 ```
 
-通常，您只需要處置幾何圖形 (例如 `Surfaces`、`Curves` 和 `Solids`)。為了安全起見，您可以處置所有幾何圖形類型 (`Vectors`、`Points`、`CoordinateSystems`)。
+通常，只需处理几何图形，如 `Surfaces`、`Curves` 和 `Solids`。但是，为了安全起见，可以处理所有几何图形类型(`Vectors`、`Points`、`CoordinateSystems`)。

@@ -1,14 +1,14 @@
-# 將延伸當作套件
+# 软件包形式的扩展
 
-### 將延伸當作套件 <a href="#extensions-as-packages" id="extensions-as-packages"></a>
+### 软件包形式的扩展 <a href="#extensions-as-packages" id="extensions-as-packages"></a>
 
 ### 概述 <a href="#overview" id="overview"></a>
 
-Dynamo 延伸可以部署到 Package Manager，就像一般 Dynamo 節點資源庫一樣。如果安裝的套件包含視圖延伸，在 Dynamo 載入的執行時期會載入該延伸。您可以查看 Dynamo 主控台，以確認延伸已正確載入。
+Dynamo 扩展可以像常规 Dynamo 节点库一样展开到软件包管理器。如果安装的软件包包含视图扩展，则会在 Dynamo 载入时的运行时载入扩展。可以查看 Dynamo 控制台，以确认扩展是否已正确载入。
 
-### 套件結構 <a href="#package-structure" id="package-structure"></a>
+### 软件包结构 <a href="#package-structure" id="package-structure"></a>
 
-延伸套件的結構與一般套件的結構相同，其中包含...
+扩展包的结构与普通软件包相同，其中包含...
 
 ```
 C:\Users\User\AppData\Roaming\Dynamo\Dynamo Core\2.1\packages\Sample View Extension
@@ -20,11 +20,11 @@ C:\Users\User\AppData\Roaming\Dynamo\Dynamo Core\2.1\packages\Sample View Extens
         SampleViewExtension_ViewExtensionDefinition.xml
 ```
 
-假設您已建置延伸，您 (至少) 會有一個 .NET 組合和一個資訊清單檔案。組合應包含實作 `IViewExtension` 或 `IExtension` 的類別。資訊清單 .XML 檔案會告訴 Dynamo 要實體化哪個類別，以啟動您的延伸。為了讓 Package Manager 能正確找到延伸，資訊清單檔案應準確對應組合位置和命名。
+假定您已构建扩展，您将（至少）有一个 .NET 程序集和一个清单文件。该程序集应包含实现 `IViewExtension` 或 `IExtension` 的类。清单 .XML 文件会告知 Dynamo 要实例化哪个类才能启动扩展。为了使软件包管理器能够正确定位扩展，清单文件应准确对应于程序集位置和命名。
 
-將任何組合檔放在 `bin` 資料夾中，將資訊清單檔案放在 `extra` 資料夾中。此資料夾中也可以放置任何其他資產。
+将任何程序集文件放置在 `bin` 文件夹中，并将清单文件放置在 `extra` 文件夹中。任何其他资源也可以放置在此文件夹中。
 
-範例資訊清單 .XML 檔案：
+清单 .XML 文件示例：
 
 ```
 <ViewExtensionDefinition>
@@ -33,18 +33,18 @@ C:\Users\User\AppData\Roaming\Dynamo\Dynamo Core\2.1\packages\Sample View Extens
 </ViewExtensionDefinition>
 ```
 
-### 上傳 <a href="#uploading" id="uploading"></a>
+### 上传 <a href="#uploading" id="uploading"></a>
 
-一旦您有包含上述子目錄的資料夾，即可推送 (上傳) 到 Package Manager。需要注意的一點是，您目前無法從 Dynamo Sandbox 發佈套件。這表示您需要使用 Dynamo Revit。在 Dynamo Revit 內瀏覽到「套件」=>「發佈新套件」。這會提示使用者登入要與套件關聯的 Autodesk 帳戶。
+在您有包含上述子目录的文件夹后，即可将其推送（上传）到软件包管理器。需要注意的一点是，您当前无法从 Dynamo 沙箱发布软件包。这意味着您需要使用 Dynamo Revit。在进入 Dynamo Revit 后，导航到“软件包”=>“发布新软件包”。这将提示用户登录到其要与软件包关联的 Autodesk 帐户。
 
-此時，您應該會在一般的發佈套件視窗中，您將在其中輸入有關套件/延伸的所有必要欄位。還有一個**非常重要**的額外步驟，您必須確保沒有任何組合檔被標記為節點資源庫。您可以在已匯入的檔案 (上面建立的套件資料夾) 上按一下右鍵確認。此時會顯示一個關聯式功能表，讓您勾選 (或取消勾選) 此選項。應取消勾選所有延伸組合。
+此时，您应该位于常规发布软件包窗口，在该窗口中将输入有关软件包/扩展的所有必填字段。还有一个**非常重要**的附加步骤，要求您确保没有任何程序集文件标记为节点库。为此，请在已输入的文件（在上面创建的软件包文件夹）上单击鼠标右键。一个上下文菜单即会显示，让您可以选中（或取消选中）此选项。应取消选中所有扩展程序集。
 
-![發佈套件](../../.gitbook/assets/ViewExtension_Search.png)
+![发布软件包](../../.gitbook/assets/ViewExtension_Search.png)
 
-在公開發佈之前，請您務必先在本端發佈，以確保所有內容都如預期般運作。確認之後，您就可以選取「發佈」讓套件上線。
+在公开发布之前，应始终在本地发布，以确保一切正常。在确认一切正常后，即可通过选择“发布”来联机发布。
 
-### 提取 <a href="#pulling" id="pulling"></a>
+### 拉取 <a href="#pulling" id="pulling"></a>
 
-若要確認套件已成功上傳，您應該能夠透過在發佈步驟指定的名稱和關鍵字搜尋到套件。最後，請務必注意，您需要重新啟動 Dynamo，相同的延伸才能正常運作。這些延伸通常需要指定 Dynamo 啟動時的參數。
+要确认软件包是否已成功上传，您应该能够根据在发布步骤中指定的命名和关键字搜索到相应软件包。最后，请务必注意，相同的扩展需要重新启动 Dynamo，然后才能正常运行。通常，这些扩展需要在 Dynamo 启动时指定的参数。
 
-![搜尋套件](../../.gitbook/assets/ViewExtension_Search.jpg)
+![搜索软件包](../../.gitbook/assets/ViewExtension_Search.jpg)

@@ -1,73 +1,73 @@
-# NodeModel 案例研究 - 自訂使用者介面
+# NodeModel 案例研究 - 自定义 UI
 
-以 NodeModel 為基礎的節點提供的靈活性和功能比 Zero-Touch 節點要大得多。在此範例中，我們將加入一個可隨機顯示矩形大小的整合滑棒，將 Zero-Touch 網格節點提升到下一個層次。
+相较于 Zero-Touch 节点，基于 NodeModel 的节点提供了更大的灵活性和更强大的功能。在本例中，我们将通过添加一个随机化矩形大小的集成滑块，来将 Zero-Touch 网格节点提升到下一个级别。
 
-![矩形網格圖表](../../.gitbook/assets/cover-image-2.jpg)
+![矩形网格图形](../../.gitbook/assets/cover-image-2.jpg)
 
-> 滑棒會相對於儲存格的大小調整比例，因此使用者不必為滑棒提供正確範圍。
+> 滑块会相对于单元大小缩放单元，因此用户不必为滑块提供正确的范围。
 
-#### 模型-視圖-視圖模型模式 <a href="#the-model-view-viewmodel-pattern" id="the-model-view-viewmodel-pattern"></a>
+#### Model-View-Viewmodel 模式 <a href="#the-model-view-viewmodel-pattern" id="the-model-view-viewmodel-pattern"></a>
 
-Dynamo 以[模型-視圖-視圖模型](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) (MVVM) 軟體架構模式為基礎，讓使用者介面與後端保持獨立。建立 ZeroTouch 節點時，Dynamo 會在節點的資料與其使用者介面之間繫結資料。若要建立自訂使用者介面，我們必須加入資料繫結邏輯。
+Dynamo 基于 [model-view-viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) (MVVM) 软件体系结构模式，以使 UI 与后端保持分离。当创建 ZeroTouch 节点时，Dynamo 会在节点的数据与其 UI 之间绑定数据。要创建自定义 UI，我们必须添加数据绑定逻辑。
 
-在 Dynamo 較高的層次，有兩個部分可以建立模型-視圖關係：
+在较高级别上，在 Dynamo 中建立模型-视图关系有两个部分：
 
-* `NodeModel` 類別建立節點的核心邏輯 (「模型」)
-* `INodeViewCustomization` 類別自訂檢視 `NodeModel` 的方式 (「視圖」)
+* `NodeModel` 类用于建立节点的核心逻辑（“模型”）
+* `INodeViewCustomization` 类用于自定义如何查看 `NodeModel`（“视图”）
 
-> NodeModel 物件已經有一個關聯的視圖-模型 (NodeViewModel)，因此我們只需將焦點放在模型上，以及自訂使用者介面的視圖。
+> NodeModel 对象已有关联的视图-模型 (NodeViewModel)，因此我们可以仅关注自定义 UI 的模型和视图。
 
-#### 如何實作 NodeModel <a href="#how-to-implement-nodemodel" id="how-to-implement-nodemodel"></a>
+#### 如何实现 NodeModel <a href="#how-to-implement-nodemodel" id="how-to-implement-nodemodel"></a>
 
-NodeModel 節點與 Zero-Touch 節點有幾項顯著差異，我們將在此範例中進行介紹。在跳至使用者介面自訂之前，我們先建置 NodeModel 邏輯。
+NodeModel 节点与 Zero-Touch 节点有几个明显差异，我们将在本例中介绍这些差异。在我们进入 UI 自定义之前，让我们先构建 NodeModel 逻辑。
 
-**1\.建立專案結構：**
+**1\.创建项目结构：**
 
-NodeModel 節點只能呼叫函數，因此我們需要將 NodeModel 和函數分到不同的資源庫。對 Dynamo 套件執行此作業的標準方式是為每個套件建立單獨的專案。首先，建立新的方案以包含專案。
+NodeModel 节点只能调用函数，因此我们需要将 NodeModel 和函数分离到不同的库中。对 Dynamo 软件包执行此操作的标准方法是为每个软件包创建单独的项目。先创建一个新的解决方案来包含项目。
 
-> 1. 選取「`File > New > Project`」
-> 2. 選取「`Other Project Types`」以顯示方案選項
-> 3. 選取「`Blank Solution`」
-> 4. 將方案命名為 `CustomNodeModel`
-> 5. 選取「`Ok`」
+> 1. 选择 `File > New > Project`
+> 2. 选择 `Other Project Types` 以显示“解决方案”选项
+> 3. 选择 `Blank Solution`
+> 4. 将解决方案命名为 `CustomNodeModel`
+> 5. 选择 `Ok`
 
-在方案中建立兩個 C# 類別資源庫專案：一個用於函數，一個用於實作 NodeModel 介面。
+在解决方案中创建两个 C# 类库项目：一个用于函数，一个用于实现 NodeModel 接口。
 
-![新增類別資源庫](../../.gitbook/assets/vs-new-class-projects.jpg)
+![添加新类库](../../.gitbook/assets/vs-new-class-projects.jpg)
 
-> 1. 在「方案」上按一下右鍵，然後選取「`Add > New Project`」
-> 2. 選擇「類別庫」
-> 3. 將其命名為 `CustomNodeModel`
-> 4. 按一下「`Ok`」
-> 5. 重複此程序，加入另一個名為 `CustomNodeModelFunctions` 的專案
+> 1. 在解决方案上单击鼠标右键，然后选择 `Add > New Project`
+> 2. 选择类库
+> 3. 将它命名为 `CustomNodeModel`
+> 4. 单击 `Ok`
+> 5. 重复该过程以添加另一个名为 `CustomNodeModelFunctions` 的项目
 
-接下來，我們需要將自動建立的類別資源庫更名，並在 `CustomNodeModel` 專案中加入一個資源庫。`GridNodeModel` 類別實作抽象 NodeModel 類別，`GridNodeView` 用於自訂視圖，`GridFunction` 包含我們需要呼叫的任何函數。
+接下来，我们需要重命名自动创建的类库，然后将其添加到 `CustomNodeModel` 项目中。类 `GridNodeModel` 实现抽象的 NodeModel 类、`GridNodeView` 用于自定义视图，`GridFunction` 包含我们需要调用的任何函数。
 
-![方案總管](../../.gitbook/assets/vs-new-class.jpg)
+![解决方案资源管理器](../../.gitbook/assets/vs-new-class.jpg)
 
-> 1. 在 `CustomNodeModel` 專案上按一下右鍵，選取「`Add > New Item...`」並選擇「`Class`」，以加入其他類別。
-> 2. 在 `CustomNodeModel` 專案中，我們需要 `GridNodeModel.cs` 和 `GridNodeView.cs` 類別
-> 3. 在 `CustomNodeModelFunction` 專案中，我們需要 `GridFunctions.cs` 類別
+> 1. 添加另一个类，方法是在 `CustomNodeModel` 项目上单击鼠标右键、选择 `Add > New Item...`，然后选择 `Class`。
+> 2. 在 `CustomNodeModel` 项目中，我们需要 `GridNodeModel.cs` 和 `GridNodeView.cs` 类
+> 3. 在 `CustomNodeModelFunction` 项目中，我们需要 `GridFunctions.cs` 类
 
-在類別中加入任何程式碼之前，請先為此專案加入必要的套件。`CustomNodeModel` 需要 ZeroTouchLibrary 和 WpfUILibrary，`CustomNodeModelFunction` 只需要 ZeroTouchLibrary。WpfUILibrary 將用於我們稍後執行的使用者介面自訂，ZeroTouchLibrary 將用於建立幾何圖形。可以個別為專案加入套件。由於這些套件具有相依性，因此將自動安裝 Core 和 DynamoServices。
+在我们将任何代码添加到类之前，请为此项目添加必需的软件包。`CustomNodeModel` 将需要 ZeroTouchLibrary 和 WpfUILibrary，`CustomNodeModelFunction` 将仅需要 ZeroTouchLibrary。WpfUILibrary 将用于我们稍后进行操作的 UI 自定义，ZeroTouchLibrary 将用于创建几何图形。可以为项目单独添加软件包。由于这些软件包具有依存关系，因此将自动安装 Core 和 DynamoServices。
 
-![安裝套件](../../.gitbook/assets/vs-add-packages.jpg)
+![安装软件包](../../.gitbook/assets/vs-add-packages.jpg)
 
-> 1. 在專案上按一下右鍵，然後選取「`Manage NuGet Packages`」
-> 2. 只會為該專案安裝必要的套件
+> 1. 在项目上单击鼠标右键，然后选择 `Manage NuGet Packages`
+> 2. 仅安装该项目所需的软件包
 
-Visual Studio 會複製我們參考建置目錄的 NuGet 套件。這可以設定為 False，讓套件中沒有任何不必要的檔案。
+Visual Studio 会将我们参照的 NuGet 软件包复制到构建目录中。这可以设置为 false，这样一来软件包中就不会存在任何不必要的文件。
 
-![停用本端套件複本](../../.gitbook/assets/vs-disable-package-copying.jpg)
+![禁用本地软件包复制](../../.gitbook/assets/vs-disable-package-copying.jpg)
 
-> 1. 選取 Dynamo NuGet 套件
-> 2. 將 `Copy Local` 設定為 False
+> 1. 选择 Dynamo NuGet 软件包
+> 2. 将 `Copy Local` 设置为 false
 
-**2\.繼承 NodeModel 類別**
+**2\.继承 NodeModel 类**
 
-如前所述，NodeModel 節點與 ZeroTouch 節點不同的主要層面是對 `NodeModel` 類別的實作。NodeModel 節點需要此類別中的幾個函數，我們可以透過在類別名稱後加入 `:NodeModel` 來取得這些函數。
+如前所述，使 NodeModel 节点与 ZeroTouch 节点不同的主要方面是其对 `NodeModel` 类的实现。NodeModel 节点需要此类中的多个函数，我们可以通过在类名后添加 `:NodeModel` 来获取这些函数。
 
-將以下程式碼複製到 `GridNodeModel.cs`。
+将以下代码复制到 `GridNodeModel.cs` 中。
 
 ```
 using System;
@@ -124,25 +124,25 @@ namespace CustomNodeModel.CustomNodeModel
 }
 ```
 
-這與 Zero-Touch 節點不同。我們來瞭解每個部分在做什麼。
+这不同于 Zero-Touch 节点。让我们了解一下每个部分的作用。
 
-* 指定節點屬性，如名稱、品類、InPort/OutPort 名稱、InPort/OutPort 類型、描述。
-* `public class GridNodeModel : NodeModel` 是從 `Dynamo.Graph.Nodes` 繼承 `NodeModel` 類別的類別。
-* `public GridNodeModel() { RegisterAllPorts(); }` 是註冊節點輸入和輸出的建構函式。
-* `BuildOutputAst()` 傳回 AST (抽象語法樹)，這是從 NodeModel 節點傳回資料必要的結構。
-* `AstFactory.BuildFunctionCall()` 從 `GridFunctions.cs` 呼叫 RectangularGrid 函數。
-* `new Func<int, int, double, List<Rectangle>>(GridFunction.RectangularGrid)` 指定函數及其參數。
-* `new List<AssociativeNode> { inputAstNodes[0], inputAstNodes[1], sliderValue });` 將節點輸入對映至函數參數
-* 如果輸入埠未連接，`AstFactory.BuildNullNode()` 會建置空節點。這可避免在節點上顯示警告。
-* `RaisePropertyChanged("SliderValue")` 在滑棒值變更時通知使用者介面
-* `var sliderValue = AstFactory.BuildDoubleNode(SliderValue)` 在 AST 中建置表示滑棒值的節點
-* 在 functionCall 變數 `new List<AssociativeNode> { inputAstNodes[0], sliderValue });` 中將輸入變更為 `sliderValue` 變數
+* 指定节点属性，如名称、类别、InPort/OutPort 名称、InPort/OutPort 类型、描述。
+* `public class GridNodeModel : NodeModel` 是一个从 `Dynamo.Graph.Nodes` 中继承 `NodeModel` 类的类。
+* `public GridNodeModel() { RegisterAllPorts(); }` 是一个注册节点输入和输出的构造函数。
+* `BuildOutputAst()` 返回 AST（抽象语法树），这是从 NodeModel 节点返回数据所需的结构。
+* `AstFactory.BuildFunctionCall()` 调用 `GridFunctions.cs` 中的 RectangularGrid 函数。
+* `new Func<int, int, double, List<Rectangle>>(GridFunction.RectangularGrid)` 指定函数及其参数。
+* `new List<AssociativeNode> { inputAstNodes[0], inputAstNodes[1], sliderValue });` 将节点输入映射到函数参数。
+* 如果输入端口未连接，则 `AstFactory.BuildNullNode()` 会构建空节点。这是为了避免在节点上显示警告。
+* `RaisePropertyChanged("SliderValue")` 会在滑块值发生更改时通知 UI
+* `var sliderValue = AstFactory.BuildDoubleNode(SliderValue)` 在 AST 中构建表示滑块值的节点
+* 将输入更改为 functionCall 变量 `new List<AssociativeNode> { inputAstNodes[0], sliderValue });` 中的 `sliderValue` 变量
 
-**3\.呼叫函數**
+**3\.调用函数**
 
-`CustomNodeModelFunction` 專案將建置到與 `CustomNodeModel` 分開的組合中，以便能被呼叫。
+`CustomNodeModelFunction` 项目将构建到 `CustomNodeModel` 中的单独程序集，以便可以调用它。
 
-將以下程式碼複製到 `GridFunction.cs`。
+将以下代码复制到 `GridFunction.cs` 中。
 
 ```
 using Autodesk.DesignScript.Geometry;
@@ -193,26 +193,26 @@ namespace CustomNodeModel.CustomNodeModelFunction
 }
 ```
 
-此函數類別與 Zero-Touch 網格案例研究非常類似，但有一項差異：
+此函数类与 Zero-Touch 网格案例研究非常相似，但有一点不同：
 
-* `[IsVisibleInDynamoLibrary(false)]` 讓 Dynamo 看不到下列方法和類別，因為已經從 `CustomNodeModel` 呼叫函數。
+* 由于已从 `CustomNodeModel` 调用函数，因此 `[IsVisibleInDynamoLibrary(false)]` 会阻止 Dynamo“看到”以下方法和类。
 
-正如我們加入 NuGet 套件的參考一樣，`CustomNodeModel` 需要參考 `CustomNodeModelFunction` 才能呼叫函數。
+正如我们为 NuGet 软件包添加参照一样，`CustomNodeModel` 需要参照 `CustomNodeModelFunction` 才能调用函数。
 
-![加入參考](../../.gitbook/assets/vs-add-project-reference.jpg)
+![添加参照](../../.gitbook/assets/vs-add-project-reference.jpg)
 
-> CustomNodeModel 的 using 陳述式將處於非作用中狀態，直到我們參考該函數
+> 在我们参照函数之前，CustomNodeModel 的 using 语句将处于不活动状态
 >
-> 1. 在 `CustomNodeModel` 上按一下右鍵，然後選取「`Add > Reference`」
-> 2. 選擇「`Projects > Solution`」
-> 3. 勾選 `CustomNodeModelFunction`
-> 4. 按一下「`Ok`」
+> 1. 在 `CustomNodeModel` 上单击鼠标右键，然后选择 `Add > Reference`
+> 2. 选择 `Projects > Solution`
+> 3. 选中 `CustomNodeModelFunction`
+> 4. 单击 `Ok`
 
-**4\.自訂視圖**
+**4\.自定义视图**
 
-若要建立滑棒，我們需要透過實作 `INodeViewCustomization` 介面來自訂使用者介面。
+要创建滑块，我们需要通过实现 `INodeViewCustomization` 接口来自定义 UI。
 
-將以下程式碼複製到 `GridNodeView.cs`
+将以下代码复制到 `GridNodeView.cs` 中
 
 ```
 using Dynamo.Controls;
@@ -236,18 +236,18 @@ namespace CustomNodeModel.CustomNodeModel
 }
 ```
 
-* `public class CustomNodeModelView : INodeViewCustomization<GridNodeModel>` 定義自訂使用者介面必要的函數。
+* `public class CustomNodeModelView : INodeViewCustomization<GridNodeModel>` 定义自定义 UI 所需的功能。
 
-設定專案結構後，請使用 Visual Studio 的設計環境建置使用者控制項，並在 `.xaml` 檔案中定義其參數。從工具方塊中，將滑棒加入 `<Grid>...</Grid>`。
+在完成设置项目结构后，使用 Visual Studio 的设计环境构建用户控件并在 `.xaml` 文件中定义其参数。通过工具箱，将滑块添加到 `<Grid>...</Grid>`。
 
-![新增滑棒](../../.gitbook/assets/vs-usercontrol.jpg)
+![添加新滑块](../../.gitbook/assets/vs-usercontrol.jpg)
 
-> 1. 在 `CustomNodeModel` 上按一下右鍵，然後選取「`Add > New Item`」
-> 2. 選取「`WPF`」
-> 3. 將使用者控制項命名為 `Slider`
-> 4. 按一下「`Add`」
+> 1. 在 `CustomNodeModel` 上单击鼠标右键，然后选择 `Add > New Item`
+> 2. 选择 `WPF`
+> 3. 将用户控件命名为 `Slider`
+> 4. 单击 `Add`
 
-將以下程式碼複製到 `Slider.xaml`
+将以下代码复制到 `Slider.xaml` 中
 
 ```
 <UserControl x:Class="CustomNodeModel.CustomNodeModel.Slider"
@@ -264,10 +264,10 @@ namespace CustomNodeModel.CustomNodeModel
 </UserControl>
 ```
 
-* 滑棒控制項的參數定義在 `.xaml` 檔案中。_Minimum 和 Maximum_ 屬性定義此滑棒的數值範圍。
-* 在 `<Grid>...</Grid>` 內，我們可以從 Visual Studio 工具箱放置不同的使用者控制項
+* 在 `.xaml` 文件中定义滑块控件的参数。_Minimum 和 Maximum_ 属性定义此滑块的数值范围。
+* 在 `<Grid>...</Grid>` 中，我们可以通过 Visual Studio 工具箱放置不同的用户控件
 
-建立 `Slider.xaml` 檔案時，Visual Studio 會自動建立一個名為 `Slider.xaml.cs` 的 C# 檔案以初始化滑棒。變更此檔案中的名稱空間。
+当创建 `Slider.xaml` 文件时，Visual Studio 会自动创建一个名为 `Slider.xaml.cs` 的 C# 文件，用于初始化滑块。更改此文件中的名称空间。
 
 ```
 using System.Windows.Controls;
@@ -287,23 +287,23 @@ namespace CustomNodeModel.CustomNodeModel
 }
 ```
 
-* 名稱空間應為 `CustomNodeModel.CustomNodeModel`
+* 该名称空间应为 `CustomNodeModel.CustomNodeModel`
 
-`GridNodeModel.cs` 定義滑棒計算邏輯。
+`GridNodeModel.cs` 定义滑块计算逻辑。
 
-**5\.設定為套件**
+**5\.配置为软件包**
 
-在建置專案之前，最後一步是加入 `pkg.json` 檔案，讓 Dynamo 可以讀取套件。
+在我们构建项目之前，最后一步是添加一个 `pkg.json` 文件，以便 Dynamo 可以读取软件包。
 
-![加入 JSON 檔案](../../.gitbook/assets/vs-pkg-json.jpg)
+![添加 JSON 文件](../../.gitbook/assets/vs-pkg-json.jpg)
 
-> 1. 在 `CustomNodeModel` 上按一下右鍵，然後選取「`Add > New Item`」
-> 2. 選取「`Web`」
-> 3. 選取 `JSON File`
-> 4. 將檔案命名為 `pkg.json`
-> 5. 按一下「`Add`」
+> 1. 在 `CustomNodeModel` 上单击鼠标右键，然后选择 `Add > New Item`
+> 2. 选择 `Web`
+> 3. 选择 `JSON File`
+> 4. 将该文件命名为 `pkg.json`
+> 5. 单击 `Add`
 
-* 將以下程式碼複製到 `pkg.json`
+* 将以下代码复制到 `pkg.json` 中
 
 ```
 {
@@ -329,26 +329,26 @@ namespace CustomNodeModel.CustomNodeModel
 }
 ```
 
-* `"name":` 決定 Dynamo 資源庫中套件及其群組的名稱
-* `"keywords":` 提供搜尋 Dynamo 資源庫的搜尋術語
-*   `"node_libraries": []` 是與套件關聯的資源庫
+* `"name":` 确定软件包的名称及其在 Dynamo 库中的分组
+* `"keywords":` 提供用于搜索 Dynamo 库的搜索词
+*   `"node_libraries": []` 指示与软件包关联的库
 
-    最後一步是建置方案，並發佈為 Dynamo 套件。請參閱〈套件部署〉一章，以瞭解如何在線上發佈之前建立本端套件，以及如何直接從 Visual Studio 建置套件。
+    最后一步是构建解决方案并发布为 Dynamo 软件包。请参见“软件包展开”一章，以了解如何在联机发布之前创建本地软件包以及如何直接从 Visual Studio 构建软件包。
 
-#### 常見問題：<a href="#common-issues" id="common-issues"></a>
+#### 常见问题：<a href="#common-issues" id="common-issues"></a>
 
-1) 開啟圖表時，某些節點有多個埠具有相同名稱，但圖表在儲存時看起來正常。此問題可能有幾種原因。
+1) 打开图形时，一些节点有多个同名端口，但图形在保存时看起来正常。此问题可能有几个原因。
 
-常見的根本原因是，節點是使用重新建立埠的建構函式建立的。應該使用載入埠的建構函式。這些建構函式通常會標記 `[JsonConstructor]` _請參閱下方範例_
+常见的根本原因是，节点是使用重新创建端口的构造函数创建的。反之，应使用已载入端口的构造函数。这些构造函数通常标记为 `[JsonConstructor]` _参见下文以了解示例_
 
-\![損壞的 JSON](<../../.gitbook/assets/broken-json (1).jpg>)
+\![Broken JSON](<../../.gitbook/assets/broken-json (1).jpg>)
 
-這可能是因為：
+这可能是因为：
 
-* 沒有相符的 `[JsonConstructor]`，或未從 JSON .dyn 傳入 `Inports` 和 `Outports`。
-* 同時將兩個版本的 JSON.net 載入到同一個程序中，會導致 .net 執行階段失敗，因此無法正確使用 `[JsonConstructor]` 屬性來標記建構函式。
-* 與目前 Dynamo 版本不同的 DynamoServices.dll 與套件一起封裝，導致 .net 執行階段無法識別 `[MultiReturn]` 屬性，因此以各種屬性標記的 zero touch 節點無法套用這些屬性。您可能會發現節點傳回單一字典輸出，而不是多個埠。
+* 根本没有匹配的 `[JsonConstructor]`，或者未通过 JSON .dyn 给它传递 `Inports` 和 `Outports`。
+* 有两个版本的 JSON.net 同时载入到同一进程中导致 .net 运行时失败，因此无法正确使用 `[JsonConstructor]` 属性来标记构造函数。
+* 版本不同于当前 Dynamo 版本的 DynamoServices.dll 已与软件包捆绑在一起，并会导致 .net 运行时无法识别 `[MultiReturn]` 属性，因此标记有各种属性的 Zero Touch 节点将无法应用它们。您可能会发现，一个节点返回一个字典输出，而不是多个端口。
 
-2) 在主控台中載入帶有某些錯誤的圖表時，節點會完全遺失。
+2) 在将存在一些错误的图形载入控制台后，节点会完全丢失。
 
-* 如果還原序列化因某些原因失敗，則可能會發生此情況。最好只序列化您需要的性質。我們可以對您不需要載入或儲存的複雜性質使用 `[JsonIgnore]` 加以忽略。例如 `function pointer, delegate, action,` 或 `event` 等性質。這些性質不應該序列化，因為它們通常無法還原序列化而導致執行階段錯誤。
+* 如果反序列化因某种原因而失败，则可能会发生这种情况。最好仅序列化所需的特性。我们可以对不需要载入或保存的复杂特性使用 `[JsonIgnore]` 来忽略它们。诸如 `function pointer, delegate, action,` 或 `event` 之类的特性。由于这些特性通常无法反序列化并导致出现运行时错误，因此不应该对它们序列化。
