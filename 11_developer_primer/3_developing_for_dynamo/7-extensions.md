@@ -6,7 +6,7 @@ Rozšíření jsou v ekosystému aplikace Dynamo velmi účinným nástrojem pr
 
 S využitím příkladu SampleViewExtension z úložiště DynamoSamples na Githubu projdeme kroky potřebné k vytvoření jednoduchého nemodálního okna, které zobrazuje aktivní uzly v grafu v reálném čase Rozšíření pohledu vyžaduje, abychom pro okno vytvořili uživatelské rozhraní a svázali hodnoty s modelem pohledu.
 
-![Okno rozšíření pohledu](images/dyn-viewextension.jpg)
+![Okno rozšíření pohledu](../../.gitbook/assets/dyn-viewextension.jpg)
 
 > 1. Okno rozšíření pohledu vytvořené podle příkladu SampleViewExtension v úložišti na Githubu.
 
@@ -28,9 +28,9 @@ Rozšíření pohledu má tři základní součásti:
 
 Začněte vytvořením nového projektu `Class Library` s názvem `SampleViewExtension`.
 
-![Vytvoření nové knihovny tříd](images/vs-new-project-viewextension-1.jpg)
+![Vytvoření nové knihovny tříd](../../.gitbook/assets/vs-new-project-viewextension-1.jpg)
 
-![Konfigurace nového projektu](images/vs-new-project-viewextension-2.jpg)
+![Konfigurace nového projektu](../../.gitbook/assets/vs-new-project-viewextension-2.jpg)
 
 > 1. Vytvořte nový projekt výběrem možnosti `File > New > Project`.
 > 2. Vyberte `Class Library`.
@@ -39,14 +39,14 @@ Začněte vytvořením nového projektu `Class Library` s názvem `SampleViewEx
 
 V tomto projektu budeme potřebovat dvě třídy. Jedna třída implementuje `IViewExtension` a druhá implementuje `NotificationObject.`. `IViewExtension` bude obsahovat všechny informace o tom, jak bude rozšíření nasazeno, načteno, odkazováno a zrušeno. `NotificationObject` bude poskytovat oznámení o změnách v aplikaci Dynamo a `IDisposable`. Pokud dojde ke změně, počet se odpovídajícím způsobem aktualizuje.
 
-![Soubory tříd rozšíření pohledu](images/vs-viewextension-classes.jpg)
+![Soubory tříd rozšíření pohledu](../../.gitbook/assets/vs-viewextension-classes.jpg)
 
 > 1. Soubor třídy s názvem `SampleViewExtension.cs`, který implementuje `IViewExtension`.
 > 2. Soubor třídy s názvem `SampleWindowViewMode.cs`, který implementuje `NotificationObject`.
 
 K použití `IViewExtension` budeme potřebovat balíček NuGet WpfUILibrary. Instalace tohoto balíčku automaticky nainstaluje balíčky Core, Services a ZeroTouchLibrary.
 
-![Balíčky rozšíření pohledu](images/vs-viewextension-packages.jpg)
+![Balíčky rozšíření pohledu](../../.gitbook/assets/vs-viewextension-packages.jpg)
 
 > 1. Vyberte balíček WpfUILibrary.
 > 2. Kliknutím na tlačítko `Install` nainstalujte všechny závislé balíčky.
@@ -101,7 +101,7 @@ namespace SampleViewExtension
                 // Show a modeless window.
                 window.Show();
             };
-            p.AddMenuItem(MenuBarType.View, sampleMenuItem);
+            p.AddExtensionMenuItem(sampleMenuItem);
         }
 
         public void Shutdown()
@@ -133,7 +133,7 @@ Třída `SampleViewExtension` vytvoří položku nabídky pro otevření okna, n
 * `public class SampleViewExtension : IViewExtension` `SampleViewExtension` zdědí z rozhraní `IViewExtension` vše, co je k vytvoření položky nabídky potřeba.
 * `sampleMenuItem = new MenuItem { Header = "Show View Extension Sample Window" };` vytvoří objekt MenuItem a přidá jej do nabídky `View`.
 
-![Položka nabídky](images/dyn-menuitem.jpg)
+![Položka nabídky](../../.gitbook/assets/dyn-menuitem.jpg)
 
 > 1. Položka nabídky
 
@@ -208,7 +208,7 @@ Tato implementace třídy modelu pohledu naslouchá `CurrentWorkspaceModel` a ak
 
 Po definování základní logiky rozšíření nyní zadáme podrobnosti týkající se vzhledu okna pomocí souboru `.xaml`. Vše, co potřebujeme, je jednoduché okno, které zobrazí řetězec prostřednictvím vazby vlastnosti `ActiveNodeTypes` v `TextBlock` `Text`.
 
-![Přidání okna](images/vs-window.jpg)
+![Přidání okna](../../.gitbook/assets/vs-window.jpg)
 
 > 1. Klikněte pravým tlačítkem na projekt a vyberte `Add > New Item...`.
 > 2. Vyberte šablonu User Control, kterou změníme a vytvoříme okno.
@@ -259,7 +259,7 @@ namespace SampleViewExtension
 
 Rozšíření pohledu je nyní připraveno k sestavení a přidání do aplikace Dynamo. Aplikace Dynamo vyžaduje soubor `xml`, aby bylo možné zaregistrovat výstup `.dll` jako rozšíření.
 
-![Přidání nového souboru XML](images/vs-viewextension-xml.jpg)
+![Přidání nového souboru XML](../../.gitbook/assets/vs-viewextension-xml.jpg)
 
 > 1. Klikněte pravým tlačítkem na projekt a vyberte `Add > New Item...`.
 > 2. Vyberte soubor XML.
@@ -281,7 +281,7 @@ V souboru `xml` přidejte následující kód, který aplikaci Dynamo řekne, k
 
 Posledním krokem je zkopírování souboru `SampleViewExtension_ViewExtensionDefinition.xml` do složky rozšíření pohledů aplikace Dynamo, která se nachází v instalačním adresáři jádra aplikace Dynamo `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions`. Je důležité si uvědomit, že existují samostatné složky pro `extensions` a `viewExtensions`. Umístění souboru `xml` do nesprávné složky může způsobit nesprávné načtení za běhu.
 
-![Soubor XML zkopírovaný do složky rozšíření](images/fe-viewextension-xml.jpg)
+![Soubor XML zkopírovaný do složky rozšíření](../../.gitbook/assets/fe-viewextension-xml.jpg)
 
 > 1. Soubor `.xml`, který jsme zkopírovali do složky rozšíření pohledů aplikace Dynamo.
 

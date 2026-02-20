@@ -1,13 +1,16 @@
-# Definování vlastní organizace balíčků (Dynamo 2.0+) 
+# Definování vlastní organizace balíčků pro Dynamo 2.0+
 
 Dosažení požadovaného rozvržení balíčku závisí na typech uzlů, které do balíčku zahrnete. Uzly odvozené z uzlů NodeModel, uzly ZeroTouch a vlastní uzly mají mírně odlišný proces definování kategorizace. Tyto typy uzlů můžete kombinovat v rámci stejného balíčku, ale bude to vyžadovat kombinaci níže uvedených strategií.
 
 ## NodeModel
+
 Knihovny NodeModel jsou ve výchozím nastavení uspořádány na základě struktury tříd.
-```C#
+
+```c#
 namespace SampleLibraryUI.Examples
 ```
-```C#
+
+```c#
 // Class Attribute
 [NodeName("MyNodeModel")]
 public class MyNewNodeModel : NodeModel
@@ -21,13 +24,16 @@ public ButtonCustomNodeModel()
 }
 
 ```
+
 Uzel bude umístěn v doplňcích v následující cestě:
+
 ```
 SampleLibraryUI/Examples/MyNodeModel
 ```
 
 Kategorii můžete také přepsat pomocí atributu NodeCategory ve třídě nebo v konstruktoru, jak je zobrazeno níže.
-```C#
+
+```c#
 // Class Attribute
 [NodeCategory("NewSampleLibraryUI.Examples")]
 
@@ -41,6 +47,7 @@ public ButtonCustomNodeModel()
 ```
 
 Uzel se nyní bude nacházet v doplňcích v cestě:
+
 ```
 NewSampleLibraryUI/Examples/MyNodeModel
 ```
@@ -49,11 +56,11 @@ NewSampleLibraryUI/Examples/MyNodeModel
 
 Knihovny ZeroTouch jsou také ve výchozím nastavení uspořádány podle struktury tříd.
 
-```C#
+```c#
 namespace MyZTLibrary
 ```
 
-```C#
+```c#
 public class Utilities
 {
     public double doubleValue(double num)
@@ -70,10 +77,11 @@ MyZTLibrary/Utilities/doubleValue
 ```
 
 Umístění struktury třídy lze rovněž přepsat pomocí souboru XML Dynamo Customization.
-- Soubor XML musí mít odpovídající název a musí se nacházet ve složce `extra` balíčku.
-    - `PackageName_DynamoCustomization.xml`
 
-```XML
+* Soubor XML musí mít odpovídající název a musí se nacházet ve složce `extra` balíčku.
+  * `PackageName_DynamoCustomization.xml`
+
+```xml
 <?xml version="1.0"?>
 <doc>
     <assembly>
@@ -99,16 +107,16 @@ Umístění struktury třídy lze rovněž přepsat pomocí souboru XML Dynamo C
 
 ## Vlastní uzly
 
-Vlastní uzly jsou uspořádány na základě parametru `Category Name` zadaného během vytváření uzlů (v novém dialogu Vlastní uzel).  
+Vlastní uzly jsou uspořádány na základě parametru `Category Name` zadaného během vytváření uzlů (v novém dialogu Vlastní uzel).
 
-**UPOZORNĚNÍ** <br>
-Použití tečkové notace v názvech nebo kategoriích uzlů bude mít za následek vytvoření dalších vnořených podkategorií. Tečka `.` bude fungovat jako oddělovač určující další hierarchii. Jedná se o nové chování v knihovně v aplikaci Dynamo 2.0.
+**UPOZORNĚNÍ**\
+ Použití tečkové notace v názvech nebo kategoriích uzlů bude mít za následek vytvoření dalších vnořených podkategorií. Tečka `.` bude fungovat jako oddělovač určující další hierarchii. Jedná se o nové chování v knihovně v aplikaci Dynamo 2.0.
 
-![Vlastnosti vlastního uzlu](images/custom-node-properties.jpg)
+![Vlastnosti vlastního uzlu](../../.gitbook/assets/custom-node-properties.jpg)
 
 Název kategorie lze později aktualizovat v souboru .dyf (XML nebo JSON),
 
-```JSON
+```json
 {
   "Uuid": "85066088-1616-40b1-96e1-c33e685c6948",
   "IsCustomNode": true,
@@ -120,7 +128,7 @@ Název kategorie lze později aktualizovat v souboru .dyf (XML nebo JSON),
   },...
 ```
 
-```XML
+```xml
 <Workspace Version="1.3.0.0000" X="100" Y="100" zoom="1.0000000" Description="This is an example custom nodes." Category="MyCustomNodes.Utilities.Actions" Name="doubleValue" ID="85066088-1616-40b1-96e1-c33e685c6948">
 ```
 
@@ -131,7 +139,8 @@ Pokud se autor balíčku rozhodne v nové verzi přejmenovat dříve existujíc
 **Uzly ZeroTouch** používají soubor `Namespace.Migrations.XML` umístěný v balíčcích ve složce `bin`. Viz například:
 
 `MyZeroTouchLib.MyNodes.SayHello` na `MyZeroTouchLib.MyNodes.SayHelloRENAMED`
-```XML
+
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -144,7 +153,8 @@ Pokud se autor balíčku rozhodne v nové verzi přejmenovat dříve existujíc
 **Uzly odvozené z uzlů NodeModel** používají atribut `AlsoKnownAs` třídy. Viz například:
 
 `SampleLibraryUI.Examples.DropDownExample` na `SampleLibraryUI.Examples.DropDownExampleRENAMED`
-```C#
+
+```c#
 namespace SampleLibraryUI.Examples
 {
     [NodeName("Drop Down Example")]

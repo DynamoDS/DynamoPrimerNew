@@ -2,7 +2,7 @@
 
 Uzly založené na uzlech NodeModel poskytují podstatně větší flexibilitu a výkon než uzly Zero-Touch. V tomto příkladu posuneme uzel mřížky Zero-Touch na další úroveň přidáním integrovaného posuvníku, který náhodně nastaví velikost obdélníku.
 
-![Graf obdélníkové osnovy](images/cover-image-2.jpg)
+![Graf obdélníkové osnovy](../../.gitbook/assets/cover-image-2.jpg)
 
 > Posuvník změní měřítko buněk vzhledem k jejich velikosti, takže uživatel nemusí zadávat posuvník se správným rozsahem.
 
@@ -33,7 +33,7 @@ Uzel NodeModel může volat pouze funkce, takže je potřeba rozdělit uzel Node
 
 Vytvořte v řešení dva projekty knihovny třídy C#: jeden pro funkce a jeden pro implementaci rozhraní NodeModel.
 
-![Přidání nové knihovny tříd](images/vs-new-class-projects.jpg)
+![Přidání nové knihovny tříd](../../.gitbook/assets/vs-new-class-projects.jpg)
 
 > 1. Klikněte pravým tlačítkem na položku Řešení a vyberte `Add > New Project`.
 > 2. Vyberte knihovnu tříd.
@@ -43,7 +43,7 @@ Vytvořte v řešení dva projekty knihovny třídy C#: jeden pro funkce a jede
 
 Dále je nutné přejmenovat knihovny tříd, které byly automaticky vytvořeny, a jednu přidat do projektu `CustomNodeModel`. Třída `GridNodeModel` implementuje abstraktní třídu NodeModel, třída `GridNodeView` se používá k přizpůsobení pohledu a třída `GridFunction` obsahuje všechny funkce, které je nutné volat.
 
-![Průzkumník řešení](images/vs-new-class.jpg)
+![Průzkumník řešení](../../.gitbook/assets/vs-new-class.jpg)
 
 > 1. Klikněte pravým tlačítkem na projekt `CustomNodeModel`, vyberte položku `Add > New Item...` a výběrem položky `Class` přidejte další třídu.
 > 2. V projektu `CustomNodeModel` potřebujeme třídy `GridNodeModel.cs` a `GridNodeView.cs`.
@@ -51,14 +51,14 @@ Dále je nutné přejmenovat knihovny tříd, které byly automaticky vytvořeny
 
 Než přidáme kód do tříd, přidejte potřebné balíčky pro tento projekt. Projekt `CustomNodeModel` bude potřebovat ZeroTouchLibrary a WpfUILibrary a projekt `CustomNodeModelFunction` bude potřebovat pouze ZeroTouchLibrary. Balíček WpfUILibrary bude použit při pozdějším přizpůsobení uživatelského rozhraní a balíček ZeroTouchLibrary bude použit k vytvoření geometrie. Balíčky lze přidávat jednotlivě pro projekty. Protože tyto balíčky mají závislosti, budou automaticky nainstalovány knihovny Core a DynamoServices.
 
-![Instalace balíčků](images/vs-add-packages.jpg)
+![Instalace balíčků](../../.gitbook/assets/vs-add-packages.jpg)
 
 > 1. Klikněte pravým tlačítkem na projekt a vyberte `Manage NuGet Packages`.
 > 2. Nainstalujte pouze balíčky požadované pro daný projekt.
 
 Aplikace Visual Studio zkopíruje balíčky NuGet, na které jsme odkazovali v adresáři sestavení. Tuto možnost můžeme nastavit na hodnotu false, aby v balíčku nebyly žádné nepotřebné soubory.
 
-![Zakázání místní kopie balíčku](images/vs-disable-package-copying.jpg)
+![Zakázání místní kopie balíčku](../../.gitbook/assets/vs-disable-package-copying.jpg)
 
 > 1. Vyberte balíčky Dynamo NuGet.
 > 2. Nastavte `Copy Local` na hodnotu False.
@@ -199,7 +199,7 @@ Tato třída funkce je velmi podobná případové studii funkce Zero-Touch – 
 
 Stejně jako jsme přidali odkazy na balíčky NuGet, bude nutné `CustomNodeModel` odkazovat na `CustomNodeModelFunction`, aby bylo možné volat funkci.
 
-![Přidání reference](images/vs-add-project-reference.jpg)
+![Přidání reference](../../.gitbook/assets/vs-add-project-reference.jpg)
 
 > Příkaz using pro CustomNodeModel bude neaktivní, dokud neodkážeme na funkci.
 >
@@ -240,7 +240,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 Po nastavení struktury projektu vytvořte pomocí návrhového prostředí aplikace Visual Studio uživatelský ovládací prvek a definujte jeho parametry v souboru `.xaml`. Ze sady nástrojů přidejte posuvník do části `<Grid>...</Grid>`.
 
-![Přidání nového posuvníku](images/vs-usercontrol.jpg)
+![Přidání nového posuvníku](../../.gitbook/assets/vs-usercontrol.jpg)
 
 > 1. Klikněte pravým tlačítkem na `CustomNodeModel` a vyberte `Add > New Item`.
 > 2. Vyberte `WPF`.
@@ -295,7 +295,7 @@ Soubor `GridNodeModel.cs` definuje logiku výpočtu posuvníku.
 
 Před vytvořením projektu je posledním krokem přidání souboru `pkg.json`, aby aplikace Dynamo mohla načíst balíček.
 
-![Přidání souboru JSON](images/vs-pkg-json.jpg)
+![Přidání souboru JSON](../../.gitbook/assets/vs-pkg-json.jpg)
 
 > 1. Klikněte pravým tlačítkem na `CustomNodeModel` a vyberte `Add > New Item`.
 > 2. Vyberte `Web`.
@@ -334,3 +334,21 @@ Před vytvořením projektu je posledním krokem přidání souboru `pkg.json`, 
 *   `"node_libraries": []` definuje knihovny asociované s balíčkem.
 
     Posledním krokem je vytvoření řešení a publikování jako balíčku aplikace Dynamo. Informace o tom, jak vytvořit místní balíček před publikováním online a jak sestavit balíček přímo z aplikace Visual Studio, naleznete v kapitole Rozmístění balíčku.
+
+#### Běžné problémy: <a href="#common-issues" id="common-issues"></a>
+
+1) Po otevření grafu mají některé uzly více portů se stejným názvem, ale při uložení vypadal graf v pořádku. Tento problém může mít několik příčin.
+
+Obvyklou hlavní příčinou je, že uzel byl vytvořen pomocí konstruktoru, který znovu vytvořil porty. Místo toho měl být použit konstruktor, který porty načte. Tyto konstruktory jsou obvykle označeny `[JsonConstructor]` _viz příklady níže_.
+
+\![Poškozený JSON](<../../.gitbook/assets/broken-json (1).jpg>)
+
+K tomu může dojít z následujících důvodů:
+
+* Jednoduše nebyl nalezen odpovídající konstruktor `[JsonConstructor]` nebo mu nebyly předány `Inports` a `Outports` ze souboru .dyn JSON.
+* Do stejného procesu byly načteny dvě verze rozhraní JSON.net současně, což způsobilo chybu modulu runtime rozhraní .net, takže atribut `[JsonConstructor]` nebylo možné správně použít k označení konstruktoru.
+* K balíčku byl přibalen soubor DynamoServices.dll s jinou verzí, než je aktuální verze aplikace Dynamo, což způsobuje, že modul runtime rozhraní .net nedokáže identifikovat atribut `[MultiReturn]`, takže u uzlů Zero Touch označených různými atributy nebudou tyto atributy použity. Může se stát, že uzel vrací jeden výstup slovníku místo více portů.
+
+2) Při načítání grafu zcela chybí uzly a v konzoli se zobrazují chyby.
+
+* K tomu může dojít, pokud se z nějakého důvodu nezdařila deserializace. Je vhodné serializovat pouze vlastnosti, které potřebujete. Chcete-li ignorovat složité vlastnosti, které není nutné načíst nebo uložit, můžete použít `[JsonIgnore]`. Jedná se o vlastnosti jako `function pointer, delegate, action,` nebo `event` atd. Tyto vlastnosti by neměly být serializovány, protože se je obvykle nepodaří deserializovat a způsobí chybu za běhu.

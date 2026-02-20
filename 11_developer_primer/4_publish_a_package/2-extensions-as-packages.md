@@ -39,7 +39,7 @@ Jakmile máte složku obsahující výše uvedené podadresáře, můžete balí
 
 V tomto okamžiku byste měli být v běžném okně pro publikování balíčku, kde zadáte všechna požadovaná pole týkající se balíčku/rozšíření. Existuje jeden **velmi důležitý** další krok, který vyžaduje, abyste se ujistili, že žádný ze souborů sestavy není označen jako knihovna uzlů. To provedete kliknutím pravým tlačítkem na importované soubory (složka balíčku vytvořená výše). Zobrazí se místní nabídka, která vám umožní tuto možnost zaškrtnout (nebo zaškrtnutí zrušit). U všech sestav rozšíření by mělo být zaškrtnutí zrušeno.
 
-![Publikování balíčku](images/ViewExtension_Search.png)
+![Publikování balíčku](../../.gitbook/assets/ViewExtension_Search.png)
 
 Před veřejným publikováním byste měli vždy publikovat místně, abyste se ujistili, že vše funguje podle očekávání. Po ověření funkčnosti jste připraveni spustit živé publikování výběrem možnosti Publikovat.
 
@@ -47,4 +47,4 @@ Před veřejným publikováním byste měli vždy publikovat místně, abyste se
 
 Chcete-li ověřit, zda byl balíček úspěšně odeslán, měli byste jej vyhledat podle názvů a klíčových slov zadaných v kroku publikování. Je důležité poznamenat, že rozšíření budou před spuštěním vyžadovat restartování aplikace Dynamo. Obvykle tato rozšíření vyžadují parametry zadané při spuštění aplikace Dynamo.
 
-![Vyhledání balíčků](images/ViewExtension_Search.jpg)
+![Vyhledání balíčků](../../.gitbook/assets/ViewExtension_Search.jpg)

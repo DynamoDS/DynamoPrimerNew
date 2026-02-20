@@ -24,7 +24,7 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![Přesouvání souborů projektu](images/fe-proj-directory.jpg)
+![Přesouvání souborů projektu](../../.gitbook/assets/fe-proj-directory.jpg)
 
 > 1. Přesuňte soubory projektu do nové složky `src`.
 
@@ -47,7 +47,7 @@ Nyní, když jsou zdrojové soubory v samostatné složce, přidejte v aplikac
   </Target>
 ```
 
-![Umístění cíle AfterBuild](images/atom-afterbuild.jpg)
+![Umístění cíle AfterBuild](../../.gitbook/assets/atom-afterbuild.jpg)
 
 > Je třeba zajistit, aby byl cíl přidán do souboru `CustomNodeModel.csproj` (nikoli do jiného souboru projektu) a aby projekt neměl žádná existující nastavení po sestavení.
 >
@@ -75,7 +75,7 @@ Balíčky aplikace Dynamo obvykle obsahují složky `dyf` a `extra` pro vlastní
 
 Pokud projekt sestavíte, měla by se nyní ve složce projektu vedle dříve vytvořené složky `src` nacházet i složka `packages`. V adresáři `packages` je složka obsahující vše, co je pro balíček potřeba. Do složky balíčku je také nutné zkopírovat soubor `pkg.json`, aby aplikace Dynamo věděla, že má balíček načíst.
 
-![Kopírování souborů](images/fe-proj-directory-package.jpg)
+![Kopírování souborů](../../.gitbook/assets/fe-proj-directory-package.jpg)
 
 > 1. Nová složka packages vytvořená cílem AfterBuild.
 > 2. Existující složka src s projektem.

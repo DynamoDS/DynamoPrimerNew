@@ -1,5 +1,5 @@
 # Pracovní postupy Začínáme
 
-Tato část obsahuje jednoduché pracovní postupy, které vám pomohou začít používat aplikaci Dynamo. 
+Tato část obsahuje jednoduché pracovní postupy, které vám pomohou začít používat aplikaci Dynamo.
 
-![](../images/10-1/sampleWorkflows.gif)
+![](../../.gitbook/assets/sampleWorkflows.gif)

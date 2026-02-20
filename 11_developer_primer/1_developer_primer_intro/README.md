@@ -4,7 +4,7 @@
 
 Účelem této příručky je pomoci vám zorientovat se v možnostech vývoje aplikace Dynamo v jazyce C#, od vytváření uzlů Zero-Touch až po tvorbu rozšíření.
 
-![Zdroj pro aplikaci Dynamo na Githubu](../1-introduction/images/dynamogithub.jpg)
+![Zdroj pro aplikaci Dynamo na Githubu](../../.gitbook/assets/dynamogithub.jpg)
 
 > Zdroj pro aplikaci Dynamo na GitHubu
 
@@ -40,7 +40,7 @@
 
 **Příručka jazyka DesignScript**: Příručka ve formátu PDF pro psaní v jazyce DesignScript.
 
-[PDF](https://dynamobim.org/wp-content/uploads/forum-assets/colin-mccroneautodesk-com/07/10/Dynamo\_language\_guide\_version\_1.pdf)
+[PDF](https://dynamobim.org/wp-content/uploads/forum-assets/colin-mccroneautodesk-com/07/10/Dynamo_language_guide_version_1.pdf)
 
 #### Jak mohu navrhnout změny této příručky? <a href="#how-can-i-suggest-changes-to-this-guide" id="how-can-i-suggest-changes-to-this-guide"></a>
 

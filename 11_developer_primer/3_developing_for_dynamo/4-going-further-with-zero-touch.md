@@ -1,8 +1,8 @@
-# Další práce s funkcí Zero-Touch 
+# Další práce s funkcí Zero-Touch
 
 Když nyní víme, jak vytvořit projekt Zero-Touch, můžeme se podrobněji seznámit se specifiky vytváření uzlu a projít si příklad ZeroTouchEssentials na Githubu aplikace Dynamo.
 
-![Uzly Zero-Touch](images/ootbzerotouch.png)
+![Uzly Zero-Touch](../../.gitbook/assets/ootbzerotouch.png)
 
 > Mnoho standardních uzlů aplikace Dynamo jsou v podstatě uzly Zero-Touch, například většina výše uvedených uzlů Math, Color a DateTime.
 
@@ -10,7 +10,7 @@ Nejprve si stáhněte projekt ZeroTouchEssentials z tohoto umístění: [https:
 
 V aplikaci Visual Studio otevřete soubor řešení `ZeroTouchEssentials.sln` a sestavte řešení.
 
-![ZeroTouchEssentials v aplikaci Visual Studio](images/vs-build-zte.jpg)
+![ZeroTouchEssentials v aplikaci Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
 
 > Soubor `ZeroTouchEssentials.cs` obsahuje všechny metody, které budeme importovat do aplikace Dynamo.
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Výchozí hodnota](images/defaultval.jpg)
+![Výchozí hodnota](../../.gitbook/assets/defaultval.jpg)
 
 > 1. Výchozí hodnota se zobrazí, když umístíte kurzor nad vstupní port uzlu.
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Uzel, který vrací více výstupů.
 
-![Více výstupů](images/multipleoutputs.png)
+![Více výstupů](../../.gitbook/assets/multipleoutputs.png)
 
 > 1. Všimněte si, že nyní existují dva výstupní porty pojmenované podle řetězců, které jsme zadali pro klíče slovníku.
 
@@ -90,7 +90,7 @@ Osvědčeným postupem je přidat k uzlům aplikace Dynamo dokumentaci, která 
   * Například: `/// <summary>...</summary>`
 * Povolte dokumentaci XML v aplikaci Visual Studio výběrem možnosti `Project > [Project] Properties > Build > Output` a zaškrtnutím políčka `Documentation file`.
 
-![Generování souboru XML](images/vs-xml.jpg)
+![Generování souboru XML](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Aplikace Visual Studio vygeneruje soubor XML v zadaném umístění.
 
@@ -134,18 +134,18 @@ Všimněte si, že kód pro tento vzorový uzel obsahuje:
 > 2. Popis vstupu
 > 3. Popis výstupu
 
-#### Popisy uzlů aplikace Dynamo – osvědčené postupy 
+#### Popisy uzlů aplikace Dynamo – osvědčené postupy
 
 Popisy uzlů stručně popisují funkci a výstup uzlu. V aplikaci Dynamo se objevují na dvou místech:
 
-- V popisku nástroje uzlu.
-- V Prohlížeči dokumentace.
+* V popisku nástroje uzlu.
+* V Prohlížeči dokumentace.
 
-![Popis uzlu](images/node-description.png)
+![Popis uzlu](../../.gitbook/assets/node-description.png)
 
 Dodržováním těchto pokynů zajistíte konzistenci a ušetříte čas při psaní nebo aktualizaci popisů uzlů.
 
-##### Přehled
+**Přehled**
 
 Popis by měl obsahovat jednu až dvě věty. Pokud jsou potřeba další informace, uveďte je v Prohlížeči dokumentace v části Podrobnosti.
 
@@ -155,17 +155,17 @@ Jazyk by měl být co nejsrozumitelnější a nejjednodušší. Definujte zkratk
 
 Vždy upřednostněte srozumitelnost, i kdyby to mělo znamenat, že se odchýlíte od těchto pokynů.
 
-##### Pokyny
+**Pokyny**
 
-| Co dělat      | Co nedělat |
-| ----------- | ----------- |
-| Popis začínejte slovesem ve třetí osobě. <ul><li>Příklad: *Určuje*, zda se jeden geometrický objekt protíná s jiným.</li></ul>      | Nezačínejte slovesem ve druhé osobě ani žádným podstatným jménem. <ul><li>Příklad: *Určete*, zda se jeden geometrický objekt protíná s jiným.</li></ul>       |
-| Místo slovesa „Získá“ použijte „Vrátí“, „Vytvoří“ nebo jiné popisné sloveso. <ul><li>Příklad: *Vrátí* reprezentaci NURBS povrchu.</li></ul>   | Nepoužívejte sloveso „Získá“ (při psaní popisu v angličtině nepoužívejte slovesa „Get“ nebo „Gets“). Je to méně konkrétní a méně přesné. <ul><li>Příklad: *Získá* reprezentaci NURBS povrchu</li></ul>        |
-| Pokud píšete popis v angličtině a odkazujete na vstupy, použijte slovo „given“ nebo „input“ místo „specified“ nebo jiných výrazů. Pokud je to však možné, vynechejte i tato slova, abyste popis zjednodušili a snížili počet slov. <ul><li>Příklad: Deletes the *given* file</li><li>Příklad: Projects a curve along the *given* projection direction onto *given* base geometry</li></ul>Slovo „specified“ můžete použít v případě, že neodkazuje na vstup. <ul><li>Příklad: Writes text content to a file *specified* by the given path</li></ul>       | Při odkazování na vstupy nepoužívejte kvůli konzistenci výraz „specified“ ani žádný jiný výraz kromě „given“ nebo „input“. Nemíchejte výrazy „given“ a „input“ ve stejném popisu, pokud to není nutné kvůli srozumitelnosti. <ul><li>Příklad: Deletes the *specified* file</li><li>Příklad: Projects an *input* curve along a *given* projection direction onto a *specified* base geometry</li></ul>      |
-| Pokud píšete popis v angličtině, použijte při prvním odkazování na vstup člen „a“ nebo „an“. Místo slov „a“ nebo „an“ používejte v případě potřeby kvůli přehlednosti „the given“ nebo „the input“.<ul><li>Příklad: Sweeps *a* curve along the path curve</li></ul>      | Při prvním odkazu na vstup nepoužívejte v angličtině zájmeno „this“. <ul><li>Příklad: Sweeps *this* curve along the path curve      |
-| Při prvním odkazu na výstup nebo jiné podstatné jméno, které je cílem operace uzlu, použijte člen „a“ nebo „an“. Člen „the“ používejte pouze ve spojení se slovem „input“ nebo „given“. <ul><li>Příklad: Copies *a* file</li><li>Příklad: Copies *the given* file</li></ul>      | Při prvním odkazu na výstup nebo jiné podstatné jméno, které je cílem operace uzlu, nepoužívejte člen „the“ samostatně. <ul><li>Příklad: Copies *the* file</li></ul>      |
-| První slovo věty a všechna vlastní jména, jako jsou jména a tradičně psaná podstatná jména, pište s počátečním velkým písmenem. <ul><li>Příklad: Vrátí průsečík dvou objektů *BoundingBox*.</li></ul>      | U běžných geometrických objektů a pojmů nepoužívejte počáteční velká písmena, pokud to není nutné kvůli přehlednosti. <ul><li>Příklad: Upraví měřítko nerovnoměrně kolem dané *Roviny*.      |
-| Při psaní popisů v angličtině pište slovo Boolean s počátečním velkým písmenem. Při odkazování na výstup booleovských hodnot pište slova True a False s počátečním velkým písmenem. <ul><li>Příklad: Returns *True* if the two values are different</li><li>Příklad: Converts a string to all uppercase or all lowercase characters based on a *Boolean* parameter      | Při psaní popisů v angličtině nepište slovo Boolean s počátečním malým písmenem. Při odkazování na výstup booleovských hodnot nepište slova True a False s počátečním malým písmenem. <ul><li>Příklad: Returns *true* if the two values are different</li><li>Příklad: Converts a string to all uppercase characters or all lowercase characters based on a *boolean* parameter</li></ul>
+| Co dělat                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Co nedělat                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>Popis začínejte slovesem ve třetí osobě.</p><ul><li>Příklad: <em>Určuje</em>, zda se jeden geometrický objekt protíná s jiným.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                         | <p>Nezačínejte slovesem ve druhé osobě ani žádným podstatným jménem.</p><ul><li>Příklad: <em>Určete</em>, zda se jeden geometrický objekt protíná s jiným.</li></ul>                                                                                                                                                                                                                                                      |
+| <p>Místo slovesa „Získá“ použijte „Vrátí“, „Vytvoří“ nebo jiné popisné sloveso.</p><ul><li>Příklad: <em>Vrátí</em> reprezentaci NURBS povrchu.</li></ul>                                                                                                                                                                                                                                                                                                                                                                              | <p>Nepoužívejte sloveso „Získá“ (při psaní popisu v angličtině nepoužívejte slovesa „Get“ nebo „Gets“). Je to méně konkrétní a méně přesné.</p><ul><li>Příklad: <em>Získá</em> reprezentaci NURBS povrchu</li></ul>                                                                                                                                                                                                                                       |
+| <p>Pokud píšete popis v angličtině a odkazujete na vstupy, použijte slovo „given“ nebo „input“ místo „specified“ nebo jiných výrazů. Pokud je to však možné, vynechejte i tato slova, abyste popis zjednodušili a snížili počet slov.</p><ul><li>Příklad: Deletes the <em>given</em> file</li><li>Příklad: Projects a curve along the <em>given</em> projection direction onto <em>given</em> base geometry</li></ul><p>Slovo „specified“ můžete použít v případě, že neodkazuje na vstup.</p><ul><li>Příklad: Writes text content to a file <em>specified</em> by the given path</li></ul> | <p>Při odkazování na vstupy nepoužívejte kvůli konzistenci výraz „specified“ ani žádný jiný výraz kromě „given“ nebo „input“. Nemíchejte výrazy „given“ a „input“ ve stejném popisu, pokud to není nutné kvůli srozumitelnosti.</p><ul><li>Příklad: Deletes the <em>specified</em> file</li><li>Příklad: Projects an <em>input</em> curve along a <em>given</em> projection direction onto a <em>specified</em> base geometry</li></ul> |
+| <p>Pokud píšete popis v angličtině, použijte při prvním odkazování na vstup člen „a“ nebo „an“. Místo slov „a“ nebo „an“ používejte v případě potřeby kvůli přehlednosti „the given“ nebo „the input“.</p><ul><li>Příklad: Sweeps <em>a</em> curve along the path curve</li></ul>                                                                                                                                                                                                                                                                                                                                | <p>Při prvním odkazu na vstup nepoužívejte v angličtině zájmeno „this“.</p><ul><li>Příklad: Sweeps <em>this</em> curve along the path curve</li></ul>                                                                                                                                                                                                                                                                             |
+| <p>Při prvním odkazu na výstup nebo jiné podstatné jméno, které je cílem operace uzlu, použijte člen „a“ nebo „an“. Člen „the“ používejte pouze ve spojení se slovem „input“ nebo „given“.</p><ul><li>Příklad: Copies <em>a</em> file</li><li>Příklad: Copies <em>the given</em> file</li></ul>                                                                                                                                                                                                                                                                   | <p>Při prvním odkazu na výstup nebo jiné podstatné jméno, které je cílem operace uzlu, nepoužívejte člen „the“ samostatně.</p><ul><li>Příklad: Copies <em>the</em> file</li></ul>                                                                                                                                                                                                                                  |
+| <p>První slovo věty a všechna vlastní jména, jako jsou jména a tradičně psaná podstatná jména, pište s počátečním velkým písmenem.</p><ul><li>Příklad: Vrátí průsečík dvou objektů <em>BoundingBox</em>.</li></ul>                                                                                                                                                                                                                                                                                                                                     | <p>U běžných geometrických objektů a pojmů nepoužívejte počáteční velká písmena, pokud to není nutné kvůli přehlednosti.</p><ul><li>Příklad: Upraví měřítko nerovnoměrně kolem dané <em>Roviny</em>.</li></ul>                                                                                                                                                                                                                                          |
+| <p>Při psaní popisů v angličtině pište slovo Boolean s počátečním velkým písmenem. Při odkazování na výstup booleovských hodnot pište slova True a False s počátečním velkým písmenem.</p><ul><li>Příklad: Returns <em>true</em> if the two values are different</li><li>Příklad: Converts a string to all uppercase or all lowercase characters based on a <em>Boolean</em> parameter</li></ul>                                                                                                                                                                                                                                        | <p>Při psaní popisů v angličtině nepište slovo Boolean s počátečním malým písmenem. Při odkazování na výstup booleovských hodnot nepište slova True a False s počátečním malým písmenem.</p><ul><li>Příklad: Returns <em>true</em> if the two values are different</li><li>Příklad: Converts a string to all uppercase characters or all lowercase characters based on a <em>boolean</em> parameter</li></ul>                                                                                       |
 
 #### Upozornění a chyby uzlu v aplikaci Dynamo
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 Po importu knihovny dll ZeroTouchEssentials bude v knihovně uzel ZeroTouchEssentials. Tento objekt lze vytvořit pomocí uzlu `ByTwoDoubles`.
 
-![Uzel ByTwoDoubles](images/dyn-constructor.jpg)
+![Uzel ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
 
 ### Použití typů geometrie aplikace Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Uzel, který získá délku křivky a zdvojnásobí ji.
 
-![Vstup Křivka](images/doublelength.png)
+![Vstup Křivka](../../.gitbook/assets/doublelength.png)
 
 > 1. Tento uzel přijímá jako vstup typ geometrie Křivka.
 
@@ -285,7 +285,7 @@ Při publikování novější verze knihovny se mohou změnit názvy uzlů. Změ
 * V prvku migrace vytvořte prvky `<priorNameHint>...</priorNameHint>` pro každou změnu názvu.
 * Pro každou změnu názvu zadejte prvek `<oldName>...</oldName>` a `<newName>...</newName>`.
 
-![Soubor migrace](images/vs-migrations-file.jpg)
+![Soubor migrace](../../.gitbook/assets/vs-migrations-file.jpg)
 
 > 1. Klikněte pravým tlačítkem myši a vyberte příkaz `Add > New Item`.
 > 2. Zvolte `XML File`.

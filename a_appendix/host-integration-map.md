@@ -8,6 +8,9 @@ Níže je uveden seznam verzí aplikace Dynamo, které byly dodány s některý
 
 | Hostitelská verze | Dynamo       |
 | ------------ | ------------ |
+| 2026.3       | 3.6.0.9395   |
+| 2026.2       | 3.5.2.8914   |
+| 2026.1       | 3.5.0.8297   |
 | 2026         | 3.4.1.7055   |
 | 2025.4       | 3.3.0.6316   |
 | 2025.3       | 3.2.2.5494   |
@@ -35,7 +38,10 @@ Níže je uveden seznam verzí aplikace Dynamo, které byly dodány s některý
 
 | Hostitelská verze | Dynamo       |
 | ------------ | ------------ |
+| 2026.1       | 3.5.2.8914   |
 | 2026         | 3.4.1.7055   |
+| 2025.2.1     | 3.3.1.7726   |
+| 2025.2       | 3.3.0.6316   |
 | 2025.1       | 3.2.2.5494   |
 | 2025         | 3.0.3.7597   |
 | 2024.3       | 2,19         |
@@ -53,6 +59,8 @@ Níže je uveden seznam verzí aplikace Dynamo, které byly dodány s některý
 
 | Hostitelská verze | Dynamo      |
 | ------------ | ----------- |
+| 2026.1       | 3.6.0.9395  |
+| 2026         | 3.4.1.7055  |
 | 2025         | 3.0.4.7905  |
 | 2024.1       | 2.19.4.6671 |
 | 2024         | 2.17.4.5316 |

@@ -19,10 +19,10 @@ Měli byste být schopni spustit soubor DynamoSandbox.exe v extrahované složc
 #### Požadované komponenty
 
 | Verze aplikace Dynamo | Microsoft Visual C++ | DirectX                         |   |   |   |   |
-|    --------------     | -------------------- | ------------------------------- | - | - | - | - | 
-| 2.0 - 2.6             | 2015 Redistributable | 10                              |   |   |   |   | 
-| 2.7                   | 2019 Redistributable | 11/12 (součást Windows 10       |   |   |   |   | 
-| >=2.8                 | 2019 Redistributable | 11/12 (součást Windows 10       |   |   |   |   |
+| -------------- | -------------------- | ------------------------------- | - | - | - | - |
+| 2.0– 2.6      | 2015 Redistributable | 10                              |   |   |   |   |
+| 2.7            | 2019 Redistributable | 11/12 (součást systému Windows 10) |   |   |   |   |
+| >=2.8          | 2019 Redistributable | 11/12 (součást systému Windows 10) |   |   |   |   |
 
 **Rozhraní Microsoft DirectX, které je také veřejně dostupné v našem úložišti aplikace Dynamo na Githubu** – [**zde**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 
@@ -38,29 +38,29 @@ Knihovna geometrie (bude k dispozici pouze s určitými nástroji Autodesk pro 
 
 Pokud jste sestavení rozbalili a soubor DynamoSandbox.exe se vám vůbec nepodařilo spustit, použijte k rozbalení sestavení program 7zip. Archiv .zip můžete také ručně odblokovat _před_ extrahováním – pokud máte na svém počítači příslušná oprávnění.
 
-![](images/a-7/dynamo-builds-1.png)
+![](../.gitbook/assets/dynamo-builds-1.png)
 
 Jestliže vám některá z požadovaných komponent chybí, může při používání aplikace Dynamo dojít k problémům a některé části uživatelského rozhraní se nemusí načíst.
 
 Na následujícím snímku obrazovky je zobrazena situace, kdy bylo sestavení rozbaleno na virtuálním počítači s čistým systémem Windows 10 bez grafického procesoru a v počítači chybí obě požadované komponenty. Příslušné informace jsou uvedeny v konzole aplikace Dynamo.
 
-![](images/a-7/dynamo-builds-2.png)
+![](../.gitbook/assets/dynamo-builds-2.png)
 
 **Instalace rozhraní DirectX**
 
 Postupujte podle pokynů společnosti Microsoft a zkontrolujte, zda je již nainstalováno rozhraní DirectX. Pokud tomu tak není, můžete otevřít soubor DXSETUP.exe v našem úložišti aplikace Dynamo na Githubu [zde](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX). Poté, co se zobrazí níže uvedený dialog, můžete kliknout na tlačítko Další a nainstalovat rozhraní DirectX do výchozího umístění.
 
-![](images/a-7/dynamo-builds-3.png)
+![](../.gitbook/assets/dynamo-builds-3.png)
 
 **Instalace Microsoft Visual C++ 2015-2024 Redistributable (x64)**
 
 Nejnovější verzi si můžete stáhnout [zde](https://aka.ms/vs/17/release/vc_redist.x64.exe). Poté byste měli být schopni spustit instalační program s názvem vc_redist.x64.exe, který naleznete v umístění pro stahování nastaveném ve vašem prohlížeči. Poté, co se zobrazí následující dialog, můžete kliknout na tlačítko Instalovat a umístit tuto komponentu do výchozího umístění.
 
-![](images/a-7/dynamo-builds-4.png)
+![](../.gitbook/assets/dynamo-builds-4.png)
 
 Po instalaci obou požadovaných komponent z výše uvedeného odkazu a opětovném spuštění souboru DynamoSandbox.exe byste měli vidět následující výsledek:
 
-![](images/a-7/dynamo-builds-5.png)
+![](../.gitbook/assets/dynamo-builds-5.png)
 
 **Chybějící 3D grafika**
 
@@ -72,21 +72,21 @@ Obecně platí, že při použití souboru DynamoSandbox.exe budete pravděpodob
 
 _Příklad ovládacích panelů NVIDIA:_
 
-![](images/a-7/dynamo-builds-6.png)
+![](../.gitbook/assets/dynamo-builds-6.png)
 
 **Instalace WebView2 Runtime**
 
 V současné době následující moduly Dynamo používají komponentu WebView2: Prohlížeč dokumentace, Prohlídky s průvodcem a Knihovna. Abychom zajistili, že tyto části aplikace Dynamo správně zobrazují webový obsah, je nutné nainstalovat instalační program WebView2 Evergreen Runtime ( je třeba ověřit, zda je již v počítači nainstalován, nebo je třeba jej nainstalovat).
 
-Zde je odkaz pro instalaci WebView2 Runtime: [https://developer.microsoft.com/cs-cz/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/cs-cz/microsoft-edge/webview2/?form=MA13LH#download-section)
+Zde je odkaz pro instalaci WebView2 Runtime: [https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/cs-cz/microsoft-edge/webview2/?form=MA13LH#download-section)
 
-![](images/a-7/dynamo-builds-7.png)
+![](../.gitbook/assets/dynamo-builds-7.png)
 
 Měli byste nainstalovat instalační program Evergreen Bootstrapper nebo Evergreen Standalone Installer (stačí jeden z nich). První z těchto programů stáhne instalační program o velikosti 1.5 MB, druhý pak o velikosti 130 MB.
 
 Po instalaci modulu runtime by následující komponenty Dynamo měly fungovat správně:
 
-![](images/a-7/dynamo-builds-8.png)
+![](../.gitbook/assets/dynamo-builds-8.png)
 
 **Problémy s uzly Dynamo aplikace Excel**
 
