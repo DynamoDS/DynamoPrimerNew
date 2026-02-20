@@ -6,7 +6,7 @@ Metody _Intersect_, _Trim_ i _SelectTrim_ są używane przede wszystkim na geome
 
 Metoda _Union_ pobiera dwa obiekty brył i tworzy pojedynczy obiekt bryły z przestrzeni objętej tymi dwoma obiektami. Przestrzeń wspólna między obiektami jest łączona w postać końcową. W tym przykładzie kula i prostopadłościan łączą się w pojedynczy kształt bryły złożonej z kuli i sześcianu:
 
-![](../images/8-2/9/GeometricBooleans\_01.png)
+![](../../.gitbook/assets/GeometricBooleans_01.png)
 
 ```js
 s1 = Sphere.ByCenterPointRadius(
@@ -23,7 +23,7 @@ combined = s1.Union(s2);
 
 Metoda _Difference_, podobnie jak metoda _Trim_, odejmuje zawartość bryły wejściowej od bryły bazowej. W tym przykładzie tworzymy małe wcięcie w sferze:
 
-![](../images/8-2/9/GeometricBooleans\_02.png)
+![](../../.gitbook/assets/GeometricBooleans_02.png)
 
 ```js
 s = Sphere.ByCenterPointRadius(
@@ -40,7 +40,7 @@ result = s.Difference(tool);
 
 Metoda _Intersect_ zwraca bryłę wspólną między dwiema bryłami wejściowymi. W poniższym przykładzie metodę _Difference_ zmieniono na metodę _Intersect_, a wynikowa bryła to brakująca wcześniej wycięta pustka:
 
-![](../images/8-2/9/GeometricBooleans\_03.png)
+![](../../.gitbook/assets/GeometricBooleans_03.png)
 
 ```js
 s = Sphere.ByCenterPointRadius(

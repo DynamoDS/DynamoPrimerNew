@@ -15,7 +15,7 @@ Metoda _Intersect_ jest zdefiniowana dla wszystkich elementów geometrii w dodat
 
 Poniższy bardzo prosty przykład przedstawia przecięcie płaszczyzny z powierzchnią NurbsSurface. To przecięcie generuje szyk NurbsCurve, który może być używany jak każdy inny obiekt NurbsCurve.
 
-![](../images/8-2/8/IntersectionAndTrim\_01.png)
+![](../../.gitbook/assets/IntersectionAndTrim_01.png)
 
 ```js
 // python_points_5 is a set of Points generated with
@@ -47,7 +47,7 @@ Metoda _Trim_ jest bardzo podobna do metody Intersect pod tym względem, że jes
 
 W przypadku metod _Trim_ warto pamiętać o wymaganiu punktu „wyboru”, określającego, która geometria zostanie odrzucona, a które elementy zostaną zachowane. Dodatek Dynamo znajduje i odrzuca uciętą geometrię najbliżej wybranego punktu.
 
-![](../images/8-2/8/IntersectionAndTrim\_02.png)
+![](../../.gitbook/assets/IntersectionAndTrim_02.png)
 
 ```js
 // python_points_5 is a set of Points generated with

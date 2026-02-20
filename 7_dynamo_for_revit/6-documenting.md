@@ -6,7 +6,7 @@ Edytowanie parametrów na potrzeby dokumentacji odbywa się zgodnie z informacja
 
 W poniższym ćwiczeniu użyjemy podstawowego odchylenia od węzła płaszczyzny, aby utworzyć arkusz programu Revit do dokumentacji. Każdy panel w konstrukcji dachu zdefiniowanej parametrycznie ma inną wartość odchylenia. Chcemy odwoływać się do zakresu wartości za pomocą koloru i zestawiając punkty adaptacyjne w celu przekazania ich konsultantowi, inżynierowi lub wykonawcy fasady.
 
-![odchylenie](images/6/deviation.jpg)
+![odchylenie](../.gitbook/assets/deviation.jpg)
 
 > Odchylenie od węzła płaszczyzny spowoduje obliczenie odległości, o jaką zestaw czterech punktów odbiega od najlepiej dopasowanej płaszczyzny między nimi. Jest to szybki i łatwy sposób na zbadanie możliwości realizacji projektu.
 
@@ -18,16 +18,16 @@ W poniższym ćwiczeniu użyjemy podstawowego odchylenia od węzła płaszczyzny
 >
 > Pełna lista plików przykładowych znajduje się w załączniku.
 
-{% file src="datasets/6/Revit-Documenting.zip" %}
+{% file src="../.gitbook/assets/Revit-Documenting.zip" %}
 
 Rozpocznij od pliku programu Revit dla tej sekcji (lub kontynuuj pracę z plikiem z poprzedniej sekcji). Ten plik zawiera szyk paneli ETFE na dachu. W ramach tego ćwiczenia będziemy odwoływać się do tych paneli.
 
-![](images/6/documenting-exerciseI-01.jpg)
+\![](<../.gitbook/assets/documenting - exercise I - 01.jpg>)
 
 > 1. Dodaj węzeł _Family Types_ do obszaru rysunku i wybierz opcję _„ROOF-PANEL-4PT”_.
 > 2. Podłącz ten węzeł do węzła _Select All Elements of Family Type_, aby pobrać wszystkie elementy z programu Revit do dodatku Dynamo.
 
-![](images/6/documenting-exerciseI-02.jpg)
+\![](<../.gitbook/assets/documenting - exercise I - 02.jpg>)
 
 > 1. Za pomocą węzła _AdaptiveComponent.Locations_ sprawdź położenie poszczególnych punktów adaptacyjnych dla każdego elementu.
 > 2. Utwórz wielobok z tych czterech punktów za pomocą węzła _Polygon.ByPoints_. Zwróć uwagę, że obecnie w dodatku Dynamo jest dostępna abstrakcyjna wersja systemu panelowanego bez konieczności importowania pełnej geometrii elementu programu Revit.
@@ -35,35 +35,35 @@ Rozpocznij od pliku programu Revit dla tej sekcji (lub kontynuuj pracę z plikie
 
 Podobnie jak w poprzednim ćwiczeniu, w celu przeprowadzenia testu ustawmy współczynnik apertury każdego panelu na podstawie jego odchylenia od płaszczyzny.
 
-![](images/6/documenting-exerciseI-03.jpg)
+\![](<../.gitbook/assets/documenting - exercise I - 03.jpg>)
 
 > 1. Dodaj węzeł _Element.SetParameterByName_ do obszaru rysunku i połącz komponenty adaptacyjne z wejściem _element_. Węzeł _Code Block_ z ciągiem _„Aperture Ratio”_ połącz z wejściem _parameterName_.
 > 2. Nie można bezpośrednio połączyć wyników odchylenia z wejściem wartości, ponieważ należy ponownie odwzorować te wartości na zakres parametrów.
 
-![](images/6/documenting-exerciseI-04.jpg)
+\![](<../.gitbook/assets/documenting - exercise I - 04.jpg>)
 
 > 1. Za pomocą węzła _Math.RemapRange_ ponownie odwzoruj wartości odchylenia na domenę o zakresie od 0,15 do 0_,_45, wprowadzając `0.15; 0.45;` w węźle _Code Block_.
 > 2. Podłącz te wyniki do wejścia value węzła _Element.SetParameterByName_.
 
 W programie Revit można _w pewnym sensie_ zinterpretować zmianę apertury na całej powierzchni.
 
-![Ćwiczenie](images/6/13.jpg)
+![Ćwiczenie](../.gitbook/assets/13.jpg)
 
 Po powiększeniu staje się jasne, że panele zamknięte przeważają bliżej narożników powierzchni. Otwarte narożniki przeważają u góry. Narożniki reprezentują obszary o większym odchyleniu, podczas gdy wypukłość ma minimalną krzywiznę, więc ma to sens.
 
-![Ćwiczenie](images/6/13a.jpg)
+![Ćwiczenie](../.gitbook/assets/13a.jpg)
 
 ### Część II. Kolor i dokumentacja
 
 Ustawienie współczynnika apertury nie wykazuje wyraźnie odchylenia paneli na dachu, a zmieniamy również geometrię rzeczywistego elementu. Załóżmy, że chcemy tylko zbadać odchylenie z punktu widzenia wykonalności elementów produkcyjnych. Pomocne byłoby nadanie kolorów panelom na podstawie zakresu odchylenia dla dokumentacji. Możemy to zrobić za pomocą serii kroków poniżej i w bardzo podobnym procesie do przedstawionego w krokach powyżej.
 
-![](images/6/documenting-exerciseII-01.jpg)
+\![](<../.gitbook/assets/documenting - exercise II - 01.jpg>)
 
 > 1. Usuń węzeł _Element.SetParameterByName_ i jego węzły wejściowe, a następnie dodaj węzeł _Element.OverrideColorInView_.
 > 2. Dodaj węzeł _Color Range_ do obszaru rysunku. Następnie podłącz go do wejścia color węzła _Element.OverrideColorInView_. Nadal musimy połączyć wartości odchyleń z zakresem kolorów, aby utworzyć gradient.
 > 3. Po ustawieniu kursora na wejściu _value_ można zauważyć, że wartości dla tego wejścia muszą zawierać się między _0_ a _1_, aby można było odwzorować kolor na każdą z wartości. Musimy ponownie odwzorować wartości odchylenia na ten zakres.
 
-![](images/6/documenting-exerciseII-02.jpg)
+\![](<../.gitbook/assets/documenting - exercise II - 02.jpg>)
 
 > 1. Używając węzła _Math.RemapRange_, ponownie odwzoruj wartości odchylenia od płaszczyzny na zakres od* 0* do _1_ (uwaga: można również użyć węzła _„MapTo”_, aby zdefiniować domenę źródłową).
 > 2. Podłącz wyniki do węzła _Color Range_.
@@ -72,9 +72,9 @@ Ustawienie współczynnika apertury nie wykazuje wyraźnie odchylenia paneli na 
 
 W programie Revit widzimy znacznie czytelniejszy gradient, który reprezentuje odchylenie od płaszczyzny za pomocą zakresu kolorów. Jak jednak można dostosować te kolory? Minimalne wartości odchylenia są reprezentowane kolorem czerwonym, a więc odwrotnie do oczekiwań. Chcemy, aby maksymalne odchylenie miało kolor czerwony, a minimalne — kolor spokojniejszy. Wróćmy do dodatku Dynamo i poprawmy to.
 
-![](images/6/09.jpg)
+![](../.gitbook/assets/09.jpg)
 
-![](images/6/documenting-exerciseII-04.jpg)
+\![](<../.gitbook/assets/documenting - exercise II - 04.jpg>)
 
 > 1. Używając węzła _Code Block_, dodaj dwie liczby w dwóch różnych wierszach: `0;` i `255;`.
 > 2. Utwórz kolor czerwony i niebieski, podłączając odpowiednie wartości do dwóch węzłów _Color.ByARGB_.
@@ -83,25 +83,25 @@ W programie Revit widzimy znacznie czytelniejszy gradient, który reprezentuje o
 
 W programie Revit łatwiej jest teraz zrozumieć obszary maksymalnego odchylenia w narożnikach. Ten węzeł służy do nadpisywania koloru w widoku, więc dobrym rozwiązaniem jest używanie w zestawie rysunków określonych arkuszy poświęconych konkretnym typom analiz.
 
-![Ćwiczenie](images/6/07(6).jpg)
+\![Exercise](<../.gitbook/assets/07 (4).jpg>)
 
 ### Część III. Zestawienia
 
 Po wybraniu jednego panelu ETFE w programie Revit widoczne są cztery parametry wystąpienia: XYZ1, XYZ2, XYZ3 i XYZ4. Po utworzeniu wszystkie są puste. Są to parametry tekstowe i wymagają wartości. Użyjemy dodatku Dynamo do zapisania położeń punktów adaptacyjnych dla każdego parametru. Ułatwia to współdziałanie, jeśli geometrię trzeba wysłać do inżyniera na potrzeby doradztwa w sprawie fasady.
 
-![](images/6/documenting-exerciseIII-01.jpg)
+\![](<../.gitbook/assets/documenting - exercise III - 01.jpg>)
 
 W przykładowym arkuszu mamy duże, puste zestawienie. Parametry XYZ są współdzielone w pliku programu Revit, co pozwala dodać je do zestawienia.
 
-![Ćwiczenie](images/6/03(8).jpg)
+\![Exercise](<../.gitbook/assets/03 (8).jpg>)
 
 Po powiększeniu widzimy, że parametry XYZ nie są jeszcze wypełnione. Pierwsze dwa parametry są obsługiwane przez program Revit.
 
-![Ćwiczenie](images/6/02(9).jpg)
+\![Exercise](<../.gitbook/assets/02 (5).jpg>)
 
 Aby zapisać te wartości, wykonamy złożoną operację na liście. Sam wykres jest prosty, ale używane koncepcje opierają się w znacznym stopniu na odwzorowaniu listy omówionym w rozdziale poświęconym listom.
 
-![](images/6/documenting-exerciseIII-04.jpg)
+\![](<../.gitbook/assets/documenting - exercise III - 04.jpg>)
 
 > 1. Wybierz wszystkie komponenty adaptacyjne z dwoma węzłami.
 > 2. Wyodrębnij położenie każdego punktu za pomocą węzła _AdaptiveComponent.Locations_.
@@ -114,12 +114,12 @@ Tworzymy w tym miejscu odwzorowanie listy, ponieważ zapisujemy cztery wartości
 
 Po wybraniu panelu w programie Revit widać teraz, że dla każdego parametru istnieją wartości ciągów. W rzeczywistości utworzylibyśmy prostszy format do zapisania punktu (X, Y, Z). Można to zrobić za pomocą operacji na ciągach w dodatku Dynamo, ale pominiemy to tutaj, aby nie wykraczać poza zakres niniejszego rozdziału.
 
-![](../.gitbook/assets/04(5).jpg)
+![](../.gitbook/assets/04\(5\).jpg)
 
 Widok przykładowego zestawienia z wypełnionymi parametrami.
 
-![](../.gitbook/assets/01(9).jpg)
+![](../.gitbook/assets/01\(9\).jpg)
 
 Każdy panel ETFE ma teraz współrzędne XYZ zapisane dla każdego punktu adaptacyjnego, co reprezentuje narożniki każdego panelu na potrzeby produkcji.
 
-![Ćwiczenie](../.gitbook/assets/00(8).jpg)
+![Ćwiczenie](../.gitbook/assets/00\(8\).jpg)

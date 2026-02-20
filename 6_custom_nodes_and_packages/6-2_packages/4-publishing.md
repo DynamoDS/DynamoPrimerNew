@@ -2,7 +2,7 @@
 
 W poprzednich sekcjach omówiono szczegółowo skonfigurowanie pakietu _MapToSurface_ za pomocą węzłów niestandardowych i plików przykładowych. Jak jednak opublikować pakiet, który został utworzony lokalnie? W tej analizie przypadku pokazano sposób publikowania pakietu z zestawu plików w folderze lokalnym.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../../.gitbook/assets/develop package - custom nodes 01 (1) (6).jpg>)
 
 Istnieje wiele sposobów na opublikowanie pakietu. Poniżej przedstawiono zalecany przez nas proces: **publikowanie lokalne, opracowywanie lokalne, a następnie publikowanie online**. Rozpoczniemy od folderu zawierającego wszystkie pliki w pakiecie.
 
@@ -24,11 +24,11 @@ Następnie ponownie uruchom dodatek Dynamo. Po ponownym otwarciu w oknie _„Zar
 >
 > Pełna lista plików przykładowych znajduje się w załączniku.
 
-{% file src="../datasets/6-2/4/MapToSurface.zip" %}
+{% file src="../../.gitbook/assets/MapToSurface.zip" %}
 
 To jest pierwsze przesłanie pakietu i wszystkie pliki przykładowe i węzły niestandardowe zostały umieszczone w jednym folderze. Po przygotowaniu tego folderu można przekazać go do menedżera pakietów Dynamo.
 
-![](../images/6-2/4/publishapackage-publishlocally01.jpg)
+\![](<../../.gitbook/assets/publish a package - publish locally 01.jpg>)
 
 > 1. Ten folder zawiera pięć węzłów niestandardowych (.dyf).
 > 2. Ten folder zawiera także pięć przykładowych plików (.dyn) i jeden zaimportowany plik wektorowy (.svg). Te pliki będą służyły jako ćwiczenia wprowadzające, aby pokazać użytkownikowi, jak pracować z węzłami niestandardowymi.
@@ -55,7 +55,7 @@ Opublikuj, klikając przycisk „Opublikuj lokalnie” (1). Postępując zgodnie
 
 Po opublikowaniu węzły niestandardowe powinny być dostępne w grupie „DynamoPrimer” lub w bibliotece Dynamo.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../../.gitbook/assets/develop package - install package 02 (1) (4).jpg>)
 
 Teraz spójrzmy na katalog główny, aby sprawdzić, w jaki sposób dodatek Dynamo sformatował utworzony właśnie pakiet. W tym celu przejdź do karty Zainstalowane pakiety > obok pozycji MapToSurface kliknij menu w postaci pionowych kropek > wybierz opcję Pokaż katalog główny.
 
@@ -63,7 +63,7 @@ Teraz spójrzmy na katalog główny, aby sprawdzić, w jaki sposób dodatek Dyna
 
 Zwróć uwagę, że katalog główny znajduje się w lokalnym położeniu pakietu (pakiet został opublikowany lokalnie). Dodatek Dynamo aktualnie odwołuje się do tego folderu, aby odczytać węzły niestandardowe. Dlatego ważne jest, aby lokalnie opublikować katalog w trwałym położeniu folderu (czyli na przykład nie na pulpicie). Poniżej przedstawiono strukturę folderów pakietu Dynamo.
 
-![](../images/6-2/4/publishapackage-publishlocally06.jpg)
+\![](<../../.gitbook/assets/publish a package - publish locally 06.jpg>)
 
 > 1. Folder _bin_ zawiera pliki .dll utworzone za pomocą bibliotek C# lub Zero-Touch. W tym pakiecie ich nie ma, więc ten folder jest pusty dla tego przykładu.
 > 2. Folder _dyf_ zawiera węzły niestandardowe. Otwarcie tego folderu spowoduje wyświetlenie wszystkich węzłów niestandardowych (plików .dyf) dla tego pakietu.

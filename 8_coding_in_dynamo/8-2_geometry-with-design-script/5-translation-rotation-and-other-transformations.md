@@ -6,7 +6,7 @@ Niektóre obiekty geometrii mogą być tworzone przez jawne podanie współrzęd
 
 Najprostszą transformacją geometryczną jest przekształcenie, które przesuwa obiekt o określoną liczbę jednostek w kierunkach x, y i z.
 
-![](../images/8-2/5/Transformations\_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -22,7 +22,7 @@ p2 = p.Translate(10, -20, 50);
 
 Mimo że wszystkie obiekty w dodatku Dynamo mogą być przekształcane przez dołączenie metody _.Translate_ do końca nazwy obiektu, bardziej złożone transformacje wymagają przekształcenia obiektu z jednego źródłowego obiektu CoordinateSystem do nowego. Aby na przykład obrócić obiekt o 45 stopni wokół osi x, przekształcilibyśmy obiekt z jego istniejącego obiektu CoordinateSystem bez obrotu do obiektu CoordinateSystem, który został obrócony o 45 stopni wokół osi x za pomocą metody _.Transform_:
 
-![](../images/8-2/5/Transformations\_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -42,7 +42,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Poza przekształcaniem i obróceniem obiekty CoordinateSystem można również tworzyć skalowane i ścięte. Obiekt CoordinateSystem może być skalowany za pomocą metody _.Scale_:
 
-![](../images/8-2/5/Transformations\_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -58,7 +58,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Ścięte obiekty CoordinateSystem tworzy się przez przekazanie wektorów nieortogonalnych do konstruktora CoordinateSystem.
 
-![](../images/8-2/5/Transformations\_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(

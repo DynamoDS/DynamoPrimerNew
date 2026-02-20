@@ -12,7 +12,7 @@ Dodatek Dynamo definiuje siatki za pomocą struktury danych wierzchołek-powierz
 
 Aby utworzyć siatkę, potrzebna jest lista wierzchołków i system grupowania tych wierzchołków w powierzchnie zwany grupą indeksów.
 
-![](../images/5-2/7/meshes-meshelements.jpg)
+\![](<../../.gitbook/assets/meshes - mesh elements.jpg>)
 
 > 1. Lista wierzchołków
 > 2. Lista grup indeksów do zdefiniowania powierzchni
@@ -25,7 +25,7 @@ Ta biblioteka zawiera również narzędzia do modyfikowania siatek, naprawiania 
 
 Odwiedź [stronę analiz przypadków pakietu Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes), aby zapoznać się z przykładem korzystania z tego pakietu.
 
-![Zestaw Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
+\![Mesh Toolkit](<../../.gitbook/assets/meshes - mesh toolkit standford bunny.jpg>)
 
 ## Bliższe spojrzenie na...
 
@@ -33,7 +33,7 @@ Odwiedź [stronę analiz przypadków pakietu Mesh Toolkit](https://github.com/Dy
 
 Siatka jest zbiorem czworokątów i trójkątów reprezentujących geometrię powierzchni lub bryły. Podobnie jak w przypadku brył, struktura obiektu siatki zawiera wierzchołki, krawędzie i powierzchnie. Istnieją dodatkowe właściwości, dzięki którym siatki są niepowtarzalne, jak na przykład normalne.
 
-![Elementy siatki](../images/5-2/7/MeshElements2.jpg)
+![Elementy siatki](../../.gitbook/assets/MeshElements2.jpg)
 
 > 1. Wierzchołki siatki
 > 2. Krawędzie siatki 
@@ -44,7 +44,7 @@ Siatka jest zbiorem czworokątów i trójkątów reprezentujących geometrię po
 
 Wierzchołki siatki są po prostu listą punktów. Indeks wierzchołków jest bardzo ważny podczas tworzenia siatki oraz uzyskiwania informacji o strukturze siatki. Dla każdego wierzchołka istnieje również odpowiadająca mu normalna wierzchołka (wektor), która opisuje średni kierunek dołączonych powierzchni i pomaga zrozumieć orientację „do wewnątrz” i „na zewnątrz” siatki.
 
-![Wierzchołki i normalne](../images/5-2/7/vertexNormals.jpg)
+![Wierzchołki i normalne](../../.gitbook/assets/vertexNormals.jpg)
 
 > 1. Wierzchołki
 > 2. Normalne wierzchołków
@@ -53,7 +53,7 @@ Wierzchołki siatki są po prostu listą punktów. Indeks wierzchołków jest ba
 
 Powierzchnia stanowi uporządkowaną listę trzech lub czterech wierzchołków. Reprezentacja „powierzchni” siatki jest więc wnioskowana na podstawie położenia indeksowanych wierzchołków. Mamy już listę wierzchołków tworzących siatkę, więc zamiast udostępniać pojedyncze punkty w celu zdefiniowania powierzchni, wystarczy użyć indeksu wierzchołków. Dzięki temu możemy użyć tego samego wierzchołka w więcej niż jednej powierzchni.
 
-![](../images/5-2/7/meshFaces.jpg)
+![](../../.gitbook/assets/meshFaces.jpg)
 
 > 1. Czworokątna powierzchnia utworzona z indeksami 0, 1, 2 i 3
 > 2. Trójkątna powierzchnia utworzona z indeksami 1, 4 i 2 Uwaga: grupy indeksów mogą być przesunięte w kolejności — o ile kolejność jest ustawiona w kierunku przeciwnym do ruchu wskazówek zegara, powierzchnia zostanie zdefiniowana poprawnie
@@ -66,7 +66,7 @@ Czym różni się geometria siatki od geometrii NURBS? Kiedy można użyć jedne
 
 W poprzednim rozdziale pokazano, że powierzchnie NURBS są definiowane przez serię krzywych NURBS biegnących w dwóch kierunkach. Kierunki te są oznaczone jako `U` i `V`. Umożliwiają parametryzowanie powierzchni NURBS zgodnie z domeną powierzchni dwuwymiarowej. Same krzywe są przechowywane w postaci równań w komputerze, dzięki czemu wynikowe powierzchnie mogą być obliczane z dowolnym stopniem dokładności. Łączenie wielu powierzchni NURBS może być jednak trudne. Połączenie dwóch powierzchni NURBS spowoduje utworzenie polipowierzchni, w której różne przekroje geometrii będą miały różne parametry UV i definicje krzywych.
 
-![Punkty kontrolne](../images/5-2/7/NURBSvsMESH-01.jpg)
+![Punkty kontrolne](../../.gitbook/assets/NURBSvsMESH-01.jpg)
 
 > 1. Powierzchnia
 > 2. Krzywa izoparametryczna
@@ -87,7 +87,7 @@ Natomiast siatki składają się z określonej liczby dokładnie zdefiniowanych 
 
 Inną ważną różnicą jest zakres, w jakim zmiana lokalna w geometrii siatki lub NURBS wpływa na całą formę. Przesunięcie jednego wierzchołka siatki ma wpływ tylko na powierzchnie, które przylegają do tego wierzchołka. W powierzchniach NURBS stopień wpływu jest bardziej skomplikowany i zależy od stopnia powierzchni, jak również od wag i węzłów punktów kontrolnych. Jednak przesunięcie pojedynczego punktu kontrolnego w powierzchni NURBS powoduje gładsze, bardziej rozległe zmiany w geometrii.
 
-![Edytowanie](../images/5-2/7/NURBSvsMESH-02.jpg)
+![Edytowanie](../../.gitbook/assets/NURBSvsMESH-02.jpg)
 
 > 1. Powierzchnia NURBS — przesunięcie punktu kontrolnego ma wpływ, który rozciąga się na całą powierzchnię kształtu
 > 2. Geometria siatki — przesunięcie wierzchołka ma wpływ tylko na sąsiednie elementy

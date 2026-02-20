@@ -6,7 +6,7 @@ Dwuwymiarowym odpowiednikiem krzywej NurbsCurve jest powierzchnia NurbsSurface. 
 
 Aby utworzyć powierzchnię interpolowaną, wystarczy wygenerować dwuwymiarową kolekcję punktów przybliżających kształt powierzchni. Kolekcja musi być prostokątna, czyli nieposzarpana. Metoda _NurbsSurface.ByPoints_ tworzy powierzchnię z tych punktów.
 
-![](../images/8-2/6/Surfaces\_01.png)
+![](../../.gitbook/assets/Surfaces_01.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -19,7 +19,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 
 Swobodne powierzchnie NurbsSurface można również tworzyć przez określenie źródłowych punktów kontrolnych powierzchni. Podobnie jak w przypadku krzywych NurbsCurve punkty kontrolne reprezentują czworokątną siatkę z prostymi segmentami, które w zależności od stopnia powierzchni są wygładzane do końcowej postaci powierzchni. Aby utworzyć powierzchnię NurbsSurface za pomocą punktów kontrolnych, należy przekazać dwa dodatkowe parametry dla metody _NurbsSurface.ByPoints_, wskazując stopnie krzywych źródłowych w obu kierunkach powierzchni.
 
-![](../images/8-2/6/Surfaces\_02.png)
+![](../../.gitbook/assets/Surfaces_02.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -31,7 +31,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 
 Można zwiększyć stopień powierzchni NurbsSurface, aby zmienić wynikową geometrię powierzchni:
 
-![](../images/8-2/6/Surfaces\_03.png)
+![](../../.gitbook/assets/Surfaces_03.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -45,7 +45,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 
 Powierzchnie mogą być tworzone nie tylko przez interpolację między punktami z zestawu wejściowego — mogą one być też tworzone przez interpolację między zestawem krzywych bazowych. Jest to nazywane wyciągnięciem złożonym. Krzywa wyciągnięta jest tworzona za pomocą konstruktora _Surface.ByLoft_ z kolekcją krzywych wejściowych jako jedynym parametrem.
 
-![](../images/8-2/6/Surfaces\_04.png)
+![](../../.gitbook/assets/Surfaces_04.png)
 
 ```js
 // python_points_2, 3, and 4 are generated with
@@ -64,7 +64,7 @@ Powierzchnie obrotu są dodatkowym typem powierzchni tworzonym przez przeciągni
 
 Powierzchnie obrotu są określone przez krzywą bazową reprezentującą „krawędź” powierzchni; początek osi, punkt bazowy powierzchni; kierunek osi, „główny” kierunek środkowy; kąt początkowy przeciągnięcia; kąt końcowy przeciągnięcia. Są one używane jako dane wejściowe konstruktora _Surface.Revolve_.
 
-![](../images/8-2/6/Surfaces\_05.png)
+![](../../.gitbook/assets/Surfaces_05.png)
 
 ```js
 pts = {};

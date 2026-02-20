@@ -1,6 +1,6 @@
 # Połączenie programu Revit
 
-![](images/1/revitconnectionlink.jpg)
+\![](<../.gitbook/assets/revit connection link.jpg>)
 
 Dodatek Dynamo dla programu Revit rozszerza możliwości modelowania informacji o budynku (BIM) za pomocą środowiska danych i logiki graficznego edytora algorytmów. Jego elastyczność w połączeniu z solidną bazą danych programu Revit zapewnia nową perspektywę dla modelowania BIM.
 
@@ -10,20 +10,20 @@ W tym rozdziale omówiono procesy robocze dodatku Dynamo dla modelowania BIM. Po
 
 Ponieważ zarówno program Revit, jak i dodatek Dynamo wciąż ewoluują, może się okazać, że używana wersja programu Revit nie jest zgodna z zainstalowaną na komputerze wersją dodatku Dynamo dla programu Revit. Poniżej opisano, które wersje dodatku Dynamo dla programu Revit są zgodne z programem Revit.
 
-| Wersja programu Revit | Pierwsza stabilna wersja dodatku Dynamo                                                       | Ostatnia obsługiwana wersja dodatku Dynamo dla programu Revit                                                                                                                                |
-| ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2013          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe) | [0.6.3](https://downloads.dynamobuilds.com/DynamoInstall0.6.3.exe)                                                                                      |
-| 2014          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe) | [0.8.2](https://downloads.dynamobuilds.com/DynamoInstall0.8.2.exe)                                                                                      |
-| 2015          | [0.7.1](https://downloads.dynamobuilds.com/DynamoInstall0.7.1.exe) | [1.2.1](https://downloads.dynamobuilds.com/DynamoInstall1.2.1.exe)                                                                                      |
-| 2016          | [0.7.2](https://downloads.dynamobuilds.com/DynamoInstall0.7.2.exe) | [1.3.2](https://downloads.dynamobuilds.com/DynamoInstall1.3.2.exe)                                                                                      |
-| 2017          | [0.9.0](https://downloads.dynamobuilds.com/DynamoInstall0.9.0.exe) | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
-| 2018          | [1.3.0](https://downloads.dynamobuilds.com/DynamoInstall1.3.0.exe) | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
-| 2019          | [1.3.3](https://downloads.dynamobuilds.com/DynamoInstall1.3.3.exe) | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.4](https://downloads.dynamobuilds.com/DynamoInstall2.0.4.exe) |
-| 2020+         | 2.1.0 — program Revit od wersji 2020 zawiera teraz dodatek Dynamo, który jest aktualizowany razem z programem Revit.      | Nie dotyczy                                                                                                                                                                    |
+| Wersja programu Revit | Pierwsza stabilna wersja dodatku Dynamo                                                  | Ostatnia obsługiwana wersja dodatku Dynamo dla programu Revit                                                                                                 |
+| ------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 2013          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe)           | [0.6.3](https://downloads.dynamobuilds.com/DynamoInstall0.6.3.exe)                                                                      |
+| 2014          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe)           | [0.8.2](https://downloads.dynamobuilds.com/DynamoInstall0.8.2.exe)                                                                      |
+| 2015          | [0.7.1](https://downloads.dynamobuilds.com/DynamoInstall0.7.1.exe)           | [1.2.1](https://downloads.dynamobuilds.com/DynamoInstall1.2.1.exe)                                                                      |
+| 2016          | [0.7.2](https://downloads.dynamobuilds.com/DynamoInstall0.7.2.exe)           | [1.3.2](https://downloads.dynamobuilds.com/DynamoInstall1.3.2.exe)                                                                      |
+| 2017          | [0.9.0](https://downloads.dynamobuilds.com/DynamoInstall0.9.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
+| 2018          | [1.3.0](https://downloads.dynamobuilds.com/DynamoInstall1.3.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
+| 2019          | [1.3.3](https://downloads.dynamobuilds.com/DynamoInstall1.3.3.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.4](https://downloads.dynamobuilds.com/DynamoInstall2.0.4.exe) |
+| 2020+         | 2.1.0 — program Revit od wersji 2020 zawiera teraz dodatek Dynamo, który jest aktualizowany razem z programem Revit. | Nie dotyczy                                                                                                                                     |
 
 ### Historia dodatku Dynamo
 
-![Historia](images/1/earlyScreenshot.jpg)
+![Historia](../.gitbook/assets/earlyScreenshot.jpg)
 
 Dzięki dedykowanemu zespołowi programistów i pełnej zaangażowania społeczności ten projekt przebył długą drogę od skromnych początków.
 
@@ -35,27 +35,21 @@ Używając podstawowych węzłów Dynamo wraz z węzłami niestandardowymi progr
 
 W edytorze rodziny lub projekcie programu Revit przejdź do pozycji Dodatki i kliknij opcję Dynamo*.
 
-{% hint style="warning" %}
- *Dodatek Dynamo zostanie uruchomiony tylko w pliku, w którym został otwarty. 
-{% endhint %} 
+{% hint style="warning" %} *Dodatek Dynamo zostanie uruchomiony tylko w pliku, w którym został otwarty. {% endhint %}
 
-![](<images/1/launchdynamofromrevit (1).jpg>)
+\![](<../.gitbook/assets/launch dynamo from revit (1).jpg>)
 
 W przypadku otwarcia dodatku Dynamo w programie Revit dostępna jest nowa kategoria o nazwie „Revit”. Jest to kompleksowy dodatek do interfejsu użytkownika, który zawiera węzły opracowane konkretnie do procesów roboczych programu Revit*.
 
-{% hint style="warning" %}
-*W razie użycia rodziny węzłów charakterystycznej dla programu Revit wykres dodatku Dynamo będzie działać tylko po otwarciu w dodatku Dynamo dla programu Revit. Jeśli na przykład wykres dodatku Dynamo dla programu Revit zostanie otwarty w dodatku Dynamo w trybie „piaskownicy” (Sandbox), będzie brakować węzłów programu Revit. 
-{% endhint %} 
+{% hint style="warning" %}*W razie użycia rodziny węzłów charakterystycznej dla programu Revit wykres dodatku Dynamo będzie działać tylko po otwarciu w dodatku Dynamo dla programu Revit. Jeśli na przykład wykres dodatku Dynamo dla programu Revit zostanie otwarty w dodatku Dynamo w trybie „piaskownicy” (Sandbox), będzie brakować węzłów programu Revit. {% endhint %}
 
-![](images/1/revitconnection-runningdynamoinrevit02.jpg)
+\![](<../.gitbook/assets/revit connection - running dynamo in revit 02.jpg>)
 
 ### Blokowanie węzłów
 
 Ponieważ program Revit jest platformą zapewniającą zaawansowane zarządzanie projektem, operacje parametryczne w dodatku Dynamo mogą być skomplikowane, a ich obliczanie — powolne. Jeśli w dodatku Dynamo obliczanie węzłów trwa zbyt długo, można użyć funkcji zablokowania węzła, aby wstrzymać wykonywanie operacji programu Revit podczas tworzenia wykresu.
 
-{% hint style="info" %}
- Więcej informacji na temat blokowania węzłów można znaleźć w sekcji [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). 
-{% endhint %} 
+{% hint style="info" %} Więcej informacji na temat blokowania węzłów można znaleźć w sekcji [4_nodes_and_wires](../4_nodes_and_wires/ "mention"). {% endhint %}
 
 ### Społeczność i blog poświęcone dodatkowi Dynamo
 
@@ -65,4 +59,4 @@ Dynamo to projekt typu open source, który ciągle ewoluuje, a znaczna część 
 
 Z dodatkiem Dynamo związany jest też aktywny blog. Przeczytaj najnowsze wpisy, aby zapoznać się z nowościami i wiadomościami.
 
-![Blog](images/1/blog.png)
+![Blog](../.gitbook/assets/blog.png)

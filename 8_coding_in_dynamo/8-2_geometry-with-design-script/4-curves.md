@@ -6,7 +6,7 @@ W dodatku Dynamo istnieją dwa podstawowe sposoby tworzenia krzywych o dowolnych
 
 Aby utworzyć krzywą interpolowaną, wystarczy przekazać kolekcję punktów do metody _NurbsCurve.ByPoints_.
 
-![](../images/8-2/4/Curves\_01.png)
+![](../../.gitbook/assets/Curves_01.png)
 
 ```js
 num_pts = 6;
@@ -20,7 +20,7 @@ int_curve = NurbsCurve.ByPoints(pts);
 
 Wygenerowana krzywa przecina każdy z punktów wejściowych, zaczynając i kończąc odpowiednio na pierwszym i ostatnim punkcie w kolekcji. Opcjonalny parametr okresowy pozwala utworzyć krzywą okresową, która jest zamknięta. Dodatek Dynamo automatycznie wypełni brakujący segment, dlatego powielony punkt końcowy (identyczny z punktem początkowym) nie jest potrzebny.
 
-![](../images/8-2/4/Curves\_02.png)
+![](../../.gitbook/assets/Curves_02.png)
 
 ```js
 pts = Point.ByCoordinates(Math.Cos(0..350..#10),
@@ -38,7 +38,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 Krzywe NurbsCurve są generowane w ten sam sposób, przy czym punkty wejściowe reprezentują punkty końcowe segmentu linii prostej, a drugi parametr, nazywany stopniem, określa wielkość i typ wygładzania krzywej.* Krzywa stopnia 1\. nie ma wygładzenia; to polilinia.
 
-![](../images/8-2/4/Curves\_03.png)
+![](../../.gitbook/assets/Curves_03.png)
 
 ```js
 num_pts = 6;
@@ -52,7 +52,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 
 Krzywa stopnia 2\. zostaje wygładzona w taki sposób, że przecina i jest styczna do punktu środkowego segmentów polilinii:
 
-![](../images/8-2/4/Curves\_04.png)
+![](../../.gitbook/assets/Curves_04.png)
 
 ```js
 num_pts = 6;
@@ -66,7 +66,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 
 Dodatek Dynamo obsługuje krzywe NURBS (niejednorodne wymierne B-splajn) do 20\. stopnia, a poniższy skrypt ilustruje wpływ zwiększającego się poziomu wygładzania na kształt krzywej:
 
-![](../images/8-2/4/Curves\_05.png)
+![](../../.gitbook/assets/Curves_05.png)
 
 ```js
 num_pts = 6;
@@ -87,7 +87,7 @@ Należy zwrócić uwagę, że musi istnieć co najmniej jeden punkt kontrolny wi
 
 Inną zaletą tworzenia krzywych przez wierzchołki kontrolne jest możliwość utrzymania styczności między poszczególnymi segmentami krzywej. Odbywa się to przez wyodrębnienie kierunku między dwoma ostatnimi punktami kontrolnymi i kontynuowanie tego kierunku z dwoma pierwszymi punktami kontrolnymi kolejnej krzywej. W poniższym przykładzie tworzone są dwie oddzielne krzywe NURBS, które mimo to są gładkie jak jedna krzywa:
 
-![](../images/8-2/4/Curves\_06.png)
+![](../../.gitbook/assets/Curves_06.png)
 
 ```js
 pts_1 = {};

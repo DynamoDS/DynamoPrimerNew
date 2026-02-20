@@ -4,7 +4,7 @@
 
 Lista to zbiór elementów. Weźmy na przykład kiść bananów. Każdy banan jest elementem listy (czyli kiści). Łatwiej jest chwycić kiść bananów niż zbierać pojedyncze banany — i tak samo jest w przypadku grupowania elementów według zależności parametrycznych w strukturze danych.
 
-![Banany](../images/5-4/1/Bananas_white_background_DS.jpg)
+![Banany](../../.gitbook/assets/Bananas_white_background_DS.jpg)
 
 > Autor zdjęcia: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
@@ -20,7 +20,7 @@ Jeśli na przykład liczymy palce prawej dłoni, najprawdopodobniej ponumerujemy
 
 Należy pamiętać, że lista wciąż zawiera 5 elementów, po prostu korzystamy z systemu liczenia od zera. Elementy na liście nie muszą być liczbami. Mogą to być dane dowolnego typu obsługiwanego przez dodatek Dynamo, takie jak punkty, krzywe, powierzchnie, rodziny itp.
 
-![](../images/5-4/1/what'salist-zerobasedindices.jpg)
+\![](<../../.gitbook/assets/what's a list - zero based indices.jpg>)
 
 > a. Indeks
 >
@@ -36,7 +36,7 @@ Indeksy są kluczowym elementem podczas pracy z listami.
 
 W odniesieniu do list dane wejściowe i wyjściowe różnią się w zależności od używanego węzła Dynamo. Możemy na przykład użyć listy 5 punktów i połączyć jej elementy wyjściowe z dwoma różnymi węzłami Dynamo, **PolyCurve.ByPoints** i **Circle.ByCenterPointRadius**:
 
-![Przykłady danych wejściowych](../images/5-4/1/what'salist-inputsandoutputs.jpg)
+\![Przykłady danych wejściowych](<../../.gitbook/assets/what's a list - inputs and outputs.jpg>)
 
 > 1. Element wejściowy _points_ węzła **PolyCurve.ByPoints** wyszukuje wartości _„Point[]”_. Reprezentuje listę punktów.
 > 2. Elementem wyjściowym węzła **PolyCurve.ByPoints** jest jedna krzywa PolyCurve utworzona na podstawie listy pięciu punktów.
@@ -59,23 +59,23 @@ Wyobraź sobie węzeł służący do tworzenia odcinków między punktami (**Lin
 
 Najprostszym sposobem jest łączenie elementów wejściowych pojedynczo, aż jeden ze strumieni się wyczerpie. Jest to tak zwany algorytm „najkrótszej listy”. Jest to domyślne działanie węzłów Dynamo:
 
-![](../images/5-4/1/what'salist-lacing-shortest.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - shortest.jpg>)
 
 #### Najdłuższa lista
 
 Algorytm „najdłuższa lista” kontynuuje łączenie elementów wejściowych i ponownie używa elementów do momentu, aż wszystkie strumienie się wyczerpią:
 
-![](../images/5-4/1/what'salist-lacing-longest.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - longest.jpg>)
 
 #### Iloczyn wektorowy
 
 Metoda iloczynu wektorowego służy do wykonania wszystkich możliwych połączeń:
 
-![](../images/5-4/1/what'salist-lacing-cross.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - cross.jpg>)
 
 Jak widać, istnieją różne sposoby rysowania linii między tymi zbiorami punktów. Opcje skratowania można znaleźć, klikając prawym przyciskiem myszy środek węzła i wybierając menu „Skratowanie”.
 
-![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
+\![](<../../.gitbook/assets/what's a list - right click lacing opt.jpg>)
 
 ### Co to jest replikacja?
 
@@ -111,7 +111,7 @@ Aby dowiedzieć się więcej o tym, jak to działa, zapoznaj się z [przewodnika
 >
 > Pełna lista plików przykładowych znajduje się w załączniku.
 
-{% file src="../datasets/5-4/1/Lacing.dyn" %}
+{% file src="../../.gitbook/assets/Lacing (1).dyn" %}
 
 Aby zademonstrować poniżej operacje skratowania, użyjemy tego pliku bazowego do zdefiniowania najkrótszej listy, najdłuższej listy i iloczynu wektorowego.
 
@@ -121,16 +121,16 @@ Zmienimy skratowanie w węźle **Point.ByCoordinates**, ale nie zmienimy żadnyc
 
 Wybierając opcję _najkrótsza lista_ jako opcję skratowania (jest to również opcja domyślna), otrzymujemy podstawową linię ukośną złożoną z pięciu punktów. Pięć punktów to długość krótszej listy, a więc skratowanie według najkrótszej listy zatrzymuje się po dotarciu do końca tej listy.
 
-![Przykłady danych wejściowych](../images/5-4/1/what'salist-lacingexercise01.jpg)
+\![Przykłady danych wejściowych](<../../.gitbook/assets/what's a list - lacing exercise 01.jpg>)
 
 ### **Najdłuższa lista**
 
 Po zmianie skratowania na opcję _najdłuższa lista_ otrzymujemy linię ukośną, która dalej przebiega pionowo. Tak samo jak na diagramie koncepcyjnym, ostatni element z listy 5 elementów będzie używany ponownie do momentu osiągnięcia długości dłuższej listy.
 
-![Przykłady danych wejściowych](../images/5-4/1/what'salist-lacingexercise02.jpg)
+\![Przykłady danych wejściowych](<../../.gitbook/assets/what's a list - lacing exercise 02.jpg>)
 
 ### **Iloczyn wektorowy**
 
 Po zmianie opcji skratowania na _iloczyn wektorowy_ otrzymujemy wszystkie kombinacje wszystkich list, co daje siatkę punktów 5x10. Jest to struktura danych równoważna iloczynowi wektorowemu pokazanemu na powyższym diagramie koncepcyjnym, z tą różnicą, że dane stanowią teraz listę list. Po połączeniu w krzywą PolyCurve widzimy, że każda lista jest zdefiniowana przez wartość X, co daje rząd pionowych linii.
 
-![Przykłady danych wejściowych](../images/5-4/1/what'salist-lacingexercise03.jpg)
+\![Przykłady danych wejściowych](<../../.gitbook/assets/what's a list - lacing exercise 03.jpg>)

@@ -10,20 +10,20 @@ Zmienne liczbowe mogą przechowywać liczby z szerokiego zakresu. Zmienne logicz
 
 Instrukcja „If” (jeśli) stanowi kluczowe pojęcie w programowaniu: „Jeśli _to_ jest prawdą, wtedy _tak_ się stanie, w przeciwnym razie stanie się _coś innego_”. Wynikowa operacja tej instrukcji zależy od wartości logicznej. Istnieje wiele sposobów definiowania instrukcji „If” w dodatku Dynamo:
 
-| Ikona                                             | Nazwa (składnia)             | Dane wejściowe            | Dane wyjściowe |
-| ------------------------------------------------ | ------------------------- | ----------------- | ------- |
-| ![](../images/5-1/If.jpg)                        | Jeśli (**If**)               | test, prawda, fałsz | wynik  |
-| ![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | wynik  |
+| Ikona                                     | Nazwa (składnia)             | Dane wejściowe            | Dane wyjściowe |
+| ---------------------------------------- | ------------------------- | ----------------- | ------- |
+| ![](../../.gitbook/assets/If.jpg)        | Jeśli (**If**)               | test, prawda, fałsz | wynik  |
+| ![](../../.gitbook/assets/CodeBlock.jpg) | Code Block (**(x?y:z);**) | x? y, z           | wynik  |
 
 Przeanalizujmy krótki przykład dotyczący działania każdego z tych trzech węzłów z użyciem instrukcji warunkowej „If”.
 
 Na tej ilustracji _wartość logiczna_ jest ustawiona na _true_, co oznacza, że wynik jest ciągiem: _„this is the result if true”_ (to jest wynik, jeśli prawda). Trzy węzły tworzące instrukcję _If_ działają tu w ten sam sposób.
 
-![](../images/5-3/3/logic-conditionalstatements01false.jpg)
+\![](<../../.gitbook/assets/logic - conditional statements 01 false.jpg>)
 
 Węzły działają identycznie. Jeśli _wartość logiczna_ zostanie zmieniona na _false_, wynik będzie liczbą _Pi_, jak to zdefiniowano w oryginalnej instrukcji _If_.
 
-![](../images/5-3/3/logic-conditionalstatements02true.jpg)
+\![](<../../.gitbook/assets/logic - conditional statements 02 true.jpg>)
 
 ## Ćwiczenie: logika i geometria
 
@@ -31,13 +31,13 @@ Węzły działają identycznie. Jeśli _wartość logiczna_ zostanie zmieniona n
 >
 > Pełna lista plików przykładowych znajduje się w załączniku.
 
-{% file src="../datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
+{% file src="../../.gitbook/assets/Building Blocks of Programs - Logic (1).dyn" %}
 
 ### Część I: filtrowanie listy
 
 1. Użyjmy logiki, aby rozdzielić listę liczb na listę liczb parzystych i listę liczb nieparzystych.
 
-![](../images/5-3/3/logic-exercisepartI-01.jpg)
+\![](<../../.gitbook/assets/logic - exercise part I-01.jpg>)
 
 > a. **Number Range —** dodaj zakres liczb do obszaru rysunku.
 >
@@ -61,7 +61,7 @@ Bazując na logice ustanowionej w pierwszym ćwiczeniu, zastosujmy tę konfigura
 
 2\. Oprzemy się na poprzednim ćwiczeniu z tymi samymi węzłami. Jedyne wyjątki to (oprócz zmiany formatu):
 
-![](../images/5-3/3/logic-exercisepartII-01.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-01.jpg>)
 
 > a. Użyj węzła **Sequence** z tymi wartościami wejściowymi.
 >
@@ -69,7 +69,7 @@ Bazując na logice ustanowionej w pierwszym ćwiczeniu, zastosujmy tę konfigura
 
 3\. Zacznijmy od utworzenia oddzielnej grupy wykresu, jak pokazano na ilustracji powyżej. Ta grupa węzłów reprezentuje równanie parametryczne definiujące krzywą liniową. Kilka uwag:
 
-![](../images/5-3/3/logic-exercisepartII-02.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-02.jpg>)
 
 > a. Pierwszy suwak **Number Slider** reprezentuje częstotliwość fali. Powinien mieć wartość min. 1, maks. 4 i krok 0,01.
 >
@@ -79,23 +79,23 @@ Bazując na logice ustanowionej w pierwszym ćwiczeniu, zastosujmy tę konfigura
 
 Metoda stosowana tutaj dla wejść: użyj węzłów number dla bardziej statycznych właściwości i węzłów Number Slider dla właściwości bardziej elastycznych. Chcemy zachować oryginalny węzeł Number Range definiowany na początku tego kroku. Jednak tworzona tutaj krzywa sinusoidalna powinna mieć pewną elastyczność. Możemy przesunąć te suwaki, aby obserwować, jak aktualizowane są częstotliwość i amplituda krzywej.
 
-![](../images/5-3/3/logic-exercisepartII-03.gif)
+\![](<../../.gitbook/assets/logic - exercise part II-03.gif>)
 
 4\. Będziemy analizować definicję nie po kolei, więc spójrzmy na wynik końcowy, aby móc się odwoływać do tego, do czego dążymy. Pierwsze dwa kroki są wykonywane oddzielnie, chcemy je teraz połączyć. Użyjemy bazowej krzywej sinusoidalnej do sterowania położeniem komponentów zamka, a za pomocą logiki prawdy/fałszu będziemy przełączać się między małymi i większymi kostkami.
 
-![](../images/5-3/3/logic-exercisepartII-04.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-04.jpg>)
 
 > a. **Math.RemapRange** — za pomocą sekwencji liczb utworzonej w kroku 02 utwórzmy nową serię liczb poprzez ponowne odwzorowanie zakresu. Oryginalne liczby z zakresu od 0 do 100 z kroku 01. Te liczby mieszczą się w zakresie od 0 do 1 dla odpowiednio wejść _newMin_ i _newMax_.
 
 5\. Utwórz węzeł **Curve.PointAtParameter**, a następnie połącz wyjście **Math.RemapRange** z kroku 04 jako wejście _param_.
 
-![](../images/5-3/3/logic-exercisepartII-05.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-05.jpg>)
 
 W tym kroku tworzone są punkty wzdłuż krzywej. Ponownie odwzorowaliśmy liczby na wartości od 0 do 1, ponieważ wejście _param_ szuka wartości w tym zakresie. Wartość _0_ reprezentuje punkt początkowy, a wartość _1_ reprezentuje punkty końcowe. Wszystkie liczby między nimi są odwzorowane na wartości z zakresu _[0,1]_.
 
 6\. Połącz wyjście z węzła **Curve.PointAtParameter** z węzłem **List.FilterByBoolMask**, aby rozdzielić listę indeksów nieparzystych i nieparzystych.
 
-![](../images/5-3/3/logic-exercisepartII-06.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-06.jpg>)
 
 > a. **List.FilterByBoolMask** — podłącz węzeł **Curve.PointAtParameter** z poprzedniego kroku do wejścia _list_.
 >
@@ -105,7 +105,7 @@ W tym kroku tworzone są punkty wzdłuż krzywej. Ponownie odwzorowaliśmy liczb
 
 **Cuboid.ByLengths —** ponownie utwórz połączenia widoczne na ilustracji powyżej, aby uzyskać zamek wzdłuż krzywej sinusoidalnej. Prostopadłościan jest tutaj tylko kostką. Definiujemy jego rozmiar na podstawie punktu krzywej w środku kostki. Logika podziału na wartości parzyste/nieparzyste powinna być teraz czytelna w modelu.
 
-![](../images/5-3/3/logic-exercisepartII-07.jpg)
+\![](<../../.gitbook/assets/logic - exercise part II-07.jpg>)
 
 > a. Lista prostopadłościanów przy indeksach parzystych.
 >

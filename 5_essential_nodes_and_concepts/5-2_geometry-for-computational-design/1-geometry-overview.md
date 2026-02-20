@@ -6,11 +6,11 @@
 
 Zrozumienie typów geometrii i [ich zależności](1-geometry-overview.md#stepping-through-the-hierarchy) pozwala na nawigację w kolekcji **Węzły geometrii** dostępnej w bibliotece. Węzły geometrii są uporządkowane alfabetycznie (nie hierarchicznie) — tutaj są one wyświetlane podobnie do ich układu w interfejsie dodatku Dynamo.
 
-![](../images/5-2/1/geometryoverview-geometryindynamo.jpg)
+\![](<../../.gitbook/assets/geometry overview - geometry in dynamo.jpg>)
 
 Ponadto tworzenie modeli w dodatku Dynamo i łączenie podglądu elementów widocznych w podglądzie tła z przepływem danych na wykresie powinno stawać się w miarę upływu czasu bardziej intuicyjne.
 
-![](../images/5-2/1/GeometryforComputationalDesign-Overview.jpg)
+\![](<../../.gitbook/assets/Geometry for Computational Design - Overview.jpg>)
 
 > 1. Zwróć uwagę na zakładany układ współrzędnych renderowany przez siatkę i kolorowe osie
 > 2. Wybrane węzły spowodują renderowanie odpowiedniej geometrii (jeśli dany węzeł tworzy geometrię) w tle w kolorze wyróżnienia
@@ -19,13 +19,13 @@ Ponadto tworzenie modeli w dodatku Dynamo i łączenie podglądu elementów wido
 >
 > Pełna lista plików przykładowych znajduje się w załączniku.
 
-{% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Geometry Overview.dyn" %}
 
 ## Pojęcie geometrii
 
 Geometria, definiowana tradycyjnie, stanowi analizę kształtu, rozmiaru, względnego położenia figur i właściwości przestrzeni. Ta dziedzina ma bogatą historię obejmującą tysiące lat. Wraz z nadejściem i popularyzacją komputerów zyskaliśmy potężne narzędzie do definiowania, badania i generowania geometrii. Obecnie obliczenie wyniku złożonych interakcji geometrycznych jest tak łatwe, że nawet nie zauważamy, gdy to robimy.
 
-![Królik Stanford](../images/5-2/1/StanfordBunny.jpg)
+![Królik Stanford](../../.gitbook/assets/StanfordBunny.jpg)
 
 > Aby przekonać się, jak zróżnicowana i złożona może być geometria tworzona za pomocą komputera, szybko wyszukaj w Internecie królika Stanford — model kanoniczny używany do testowania algorytmów.
 
@@ -42,7 +42,7 @@ W praktyce zasady te oznaczają, że musimy mieć świadomość tego, z czym pra
 
 Przyjrzyjmy się zależności między abstrakcyjnym a hierarchicznym opisem geometrii. Ponieważ te dwie koncepcje są powiązane, ale nie zawsze są od razu oczywiste, już zaraz po rozpoczęciu tworzenia bardziej złożonych procesów roboczych lub modeli można natrafić na problemy związane z pojęciami. Na początek użyjmy wymiarowości jako łatwego deskryptora „przedmiotów”, które modelujemy. Liczba wymiarów wymaganych do opisania kształtu daje nam pogląd na hierarchiczne uporządkowanie geometrii.
 
-![Geometria obliczeniowa](../images/5-2/1/GeometryDimensionality.jpg)
+\![Geometria obliczeniowa](<../../.gitbook/assets/Geometry for - GeometryDimensionality.jpg>)
 
 > 1. **Punkt** (definiowany przez współrzędne) nie ma wymiarów — to tylko liczby opisujące poszczególne współrzędne
 > 2. **Linia** (definiowana przez dwa punkty) ma _jeden_ wymiar — po linii można podróżować do przodu (kierunek dodatni) lub do tyłu (kierunek ujemny)
@@ -51,7 +51,7 @@ Przyjrzyjmy się zależności między abstrakcyjnym a hierarchicznym opisem geom
 
 Wymiarowość jest wygodnym sposobem rozpoczęcia kategoryzowania geometrii, ale niekoniecznie jest najlepszym rozwiązaniem. W końcu nie modelujemy tylko za pomocą punktów, linii, płaszczyzn i prostopadłościanów — co jeśli chcemy użyć czegoś zakrzywionego? Ponadto istnieje cała inna kategoria typów geometrycznych, które są całkowicie abstrakcyjne. Oznacza to, że definiują one właściwości, takie jak orientacja, objętość lub zależności między częściami. Nie możemy dosłownie uchwycić wektora, więc jak zdefiniować go względem tego, co widzimy w przestrzeni? Bardziej szczegółowa kategoryzacja hierarchii geometrycznej powinna uwzględniać różnicę między typami abstrakcyjnymi („pomocniczymi”), które można pogrupować według tego, co pomagają osiągnąć, a typami, które pomagają opisać kształt elementów modelu.
 
-![Hierarchia geometrii](../images/5-2/1/GeometryHierarchy.jpg)
+![Hierarchia geometrii](../../.gitbook/assets/GeometryHierarchy.jpg)
 
 ## Dalsze kroki z geometrią
 

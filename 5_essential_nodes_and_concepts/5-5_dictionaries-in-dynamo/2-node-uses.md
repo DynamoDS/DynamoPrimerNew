@@ -2,7 +2,7 @@
 
 Dodatek Dynamo 2.0 udostępnia różne węzły słownika do wykorzystania. Obejmuje to węzły _tworzenia, operacji i zapytań_.
 
-![](../images/5-5/2/dictionarynodes-nodes.jpg)
+\![](<../../.gitbook/assets/dictionary nodes - nodes.jpg>)
 
 #### Tworzenie
 

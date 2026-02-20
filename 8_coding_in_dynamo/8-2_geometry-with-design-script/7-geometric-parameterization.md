@@ -16,7 +16,7 @@ Parametryzacja nie jest szczególnie przydatna podczas określania punktów uży
 
 Krzywe mają metodę _PointAtParameter_, która przyjmuje pojedynczy argument podwójny z zakresu od 0 do 1 i zwraca obiekt punktu o tym parametrze. Na przykład ten skrypt wyszukuje punkty o parametrach 0, 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 0,8, 0,9 i 1:
 
-![](../images/8-2/7/GeometricParameterization\_01.png)
+![](../../.gitbook/assets/GeometricParameterization_01.png)
 
 ```js
 pts = {};
@@ -41,7 +41,7 @@ Podobnie w przypadku powierzchni istnieje metoda _PointAtParameter_, która pobi
 
 Wyodrębnianie poszczególnych punktów na krzywej i powierzchni może być przydatne, ale skrypty często wymagają znajomości konkretnych cech geometrycznych przy danym parametrze, na przykład określających, w jakim kierunku skierowana jest krzywa lub powierzchnia. Metoda _CoordinateSystemAtParameter_ umożliwia nie tylko znalezienie położenia, ale również zorientowanego obiektu CoordinateSystem przy danym parametrze krzywej lub powierzchni. Na przykład poniższy skrypt wyodrębnia zorientowane obiekty CoordinateSystem wzdłuż obróconej powierzchni i używa orientacji obiektów CoordinateSystem do generowania linii, które są przylegające prostopadle do powierzchni:
 
-![](../images/8-2/7/GeometricParameterization\_02.png)
+![](../../.gitbook/assets/GeometricParameterization_02.png)
 
 ```js
 pts = {};
