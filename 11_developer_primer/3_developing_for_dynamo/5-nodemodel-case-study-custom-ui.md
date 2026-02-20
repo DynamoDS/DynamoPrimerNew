@@ -2,7 +2,7 @@
 
 Węzły oparte na klasie NodeModel zapewniają znacznie większą elastyczność i możliwości niż węzły Zero-Touch. W tym przykładzie przeniesiemy węzeł siatki Zero-Touch na następny poziom, dodając zintegrowany suwak losowo ustawiający rozmiar prostokąta.
 
-![Wykres siatki prostokątnej](images/cover-image-2.jpg)
+![Wykres siatki prostokątnej](../../.gitbook/assets/cover-image-2.jpg)
 
 > Ten suwak umożliwia skalowanie komórek względem ich rozmiaru, dzięki czemu użytkownik nie musi udostępniać suwaka z odpowiednim zakresem.
 
@@ -33,7 +33,7 @@ Węzeł NodeModel może tylko wywoływać funkcje, dlatego należy rozdzielić w
 
 Utwórz w rozwiązaniu dwa projekty biblioteki klas C#: jeden dla funkcji, a drugi dla interfejsu NodeModel.
 
-![Dodawanie nowej biblioteki klas](images/vs-new-class-projects.jpg)
+![Dodawanie nowej biblioteki klas](../../.gitbook/assets/vs-new-class-projects.jpg)
 
 > 1. Kliknij prawym przyciskiem myszy rozwiązanie i wybierz pozycję `Add > New Project`
 > 2. Wybierz bibliotekę klas
@@ -43,7 +43,7 @@ Utwórz w rozwiązaniu dwa projekty biblioteki klas C#: jeden dla funkcji, a dru
 
 Następnie należy zmienić nazwy automatycznie utworzonych bibliotek klas i dodać je do projektu `CustomNodeModel`. Klasa `GridNodeModel` służy do zaimplementowania klasy abstrakcyjnej NodeModel, a `GridNodeView` do dostosowania widoku. Natomiast klasa `GridFunction` ma zawierać wszystkie funkcje, które będą wywoływane.
 
-![Eksplorator rozwiązań](images/vs-new-class.jpg)
+![Eksplorator rozwiązań](../../.gitbook/assets/vs-new-class.jpg)
 
 > 1. Dodaj kolejną klasę, klikając prawym przyciskiem myszy projekt `CustomNodeModel`, wybierając polecenie `Add > New Item...` i wybierając opcję `Class`.
 > 2. W projekcie `CustomNodeModel` potrzebne są klasy `GridNodeModel.cs` i `GridNodeView.cs`
@@ -51,14 +51,14 @@ Następnie należy zmienić nazwy automatycznie utworzonych bibliotek klas i dod
 
 Przed dodaniem kodu do klas dodaj wymagane dla tego projektu pakiety. Projekt `CustomNodeModel` będzie wymagać bibliotek ZeroTouchLibrary i WpfUILibrary. Natomiast projekt `CustomNodeModelFunction` będzie wymagać tylko biblioteki ZeroTouchLibrary. Biblioteka WpfUILibrary zostanie użyta podczas dostosowywania interfejsu użytkownika, które wykonamy później, a biblioteka ZeroTouchLibrary — do tworzenia geometrii. Pakiety można dodawać dla projektów pojedynczo. Ponieważ te pakiety mają zależności, składniki Core i DynamoServices zostaną zainstalowane automatycznie.
 
-![Instalowanie pakietów](images/vs-add-packages.jpg)
+![Instalowanie pakietów](../../.gitbook/assets/vs-add-packages.jpg)
 
 > 1. Kliknij prawym przyciskiem myszy projekt i wybierz pozycję `Manage NuGet Packages`
 > 2. Zainstaluj tylko wymagane pakiety dla tego projektu
 
 Program Visual Studio skopiuje pakiety NuGet, do których dodaliśmy odwołania w katalogu kompilacji. Dla tej pozycji można ustawić wartość false (fałsz), aby w pakiecie nie było żadnych niepotrzebnych plików.
 
-![Wyłączanie kopii lokalnej pakietu](images/vs-disable-package-copying.jpg)
+![Wyłączanie kopii lokalnej pakietu](../../.gitbook/assets/vs-disable-package-copying.jpg)
 
 > 1. Wybierz pakiety NuGet dodatku Dynamo
 > 2. Ustaw wartość false (fałsz) dla pozycji `Copy Local`
@@ -199,7 +199,7 @@ Ta klasa funkcji jest bardzo podobna do tej z analizy przypadku siatki Zero-Touc
 
 Tak jak dodaliśmy odwołania do pakietów NuGet, projekt `CustomNodeModel` musi odwoływać się do projektu `CustomNodeModelFunction`, aby wywołać funkcję.
 
-![Dodawanie odwołania](images/vs-add-project-reference.jpg)
+![Dodawanie odwołania](../../.gitbook/assets/vs-add-project-reference.jpg)
 
 > Instrukcja using dla projektu CustomNodeModel będzie nieaktywna, dopóki nie będzie odwołania do tej funkcji
 >
@@ -240,7 +240,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 Po skonfigurowaniu struktury projektu należy za pomocą środowiska projektowego programu Visual Studio utworzyć element sterujący użytkownika i zdefiniować jego parametry w pliku `.xaml`. Z pola przybornika dodaj suwak do części `<Grid>...</Grid>`.
 
-![Dodawanie nowego suwaka](images/vs-usercontrol.jpg)
+![Dodawanie nowego suwaka](../../.gitbook/assets/vs-usercontrol.jpg)
 
 > 1. Kliknij prawym przyciskiem myszy pozycję `CustomNodeModel` i wybierz polecenie `Add > New Item`
 > 2. Wybierz opcję `WPF`
@@ -295,7 +295,7 @@ Plik `GridNodeModel.cs` definiuje logikę obliczeń suwaka.
 
 Ostatnią czynnością przed rozpoczęciem kompilowania projektu jest dodanie pliku `pkg.json`, aby umożliwić dodatkowi Dynamo odczytanie pakietu.
 
-![Dodawanie pliku JSON](images/vs-pkg-json.jpg)
+![Dodawanie pliku JSON](../../.gitbook/assets/vs-pkg-json.jpg)
 
 > 1. Kliknij prawym przyciskiem myszy pozycję `CustomNodeModel` i wybierz polecenie `Add > New Item`
 > 2. Wybierz opcję `Web`
@@ -334,3 +334,21 @@ Ostatnią czynnością przed rozpoczęciem kompilowania projektu jest dodanie pl
 *   `"node_libraries": []` biblioteki skojarzone z pakietem
 
     Ostatnią czynnością jest skompilowanie rozwiązania i opublikowanie go jako pakietu dodatku Dynamo. Zapoznaj się z rozdziałem dotyczącym wdrażania pakietów, aby dowiedzieć się, jak utworzyć pakiet lokalny przed opublikowaniem go online i jak skompilować pakiet bezpośrednio z programu Visual Studio.
+
+#### Typowe problemy: <a href="#common-issues" id="common-issues"></a>
+
+1) Po otwarciu wykresu niektóre węzły mają wiele portów o tej samej nazwie, mimo że wykres wyglądał dobrze podczas zapisywania. Ten problem może mieć kilka przyczyn.
+
+Typową przyczyną jest to, że węzeł utworzono za pomocą konstruktora ponownie tworzącego porty. Zamiast tego należało użyć konstruktora wczytującego porty. Te konstruktory mają zwykle oznaczenie `[JsonConstructor]` _zobacz przykłady poniżej_
+
+\![Broken JSON](<../../.gitbook/assets/broken-json (1).jpg>)
+
+Inna możliwa przyczyna:
+
+* Nie było zgodnych elementów `[JsonConstructor]` lub nie przekazano elementów `Inports` i `Outports` z pliku JSON.dyn.
+* W tym samym czasie do tego samego procesu wczytano dwie wersje JSON.net, co spowodowało błąd środowiska uruchomieniowego .NET, więc nie można było poprawnie użyć atrybutu `[JsonConstructor]` do oznaczenia konstruktora.
+* Do pakietu dołączono plik DynamoServices.dll w wersji innej niż bieżąca wersja dodatku Dynamo i powoduje to, że środowisko uruchomieniowe .NET nie może zidentyfikować atrybutu `[MultiReturn]`, więc dla węzłów Zero-Touch oznaczonych różnymi atrybutami nie można zastosować tych atrybutów. Może się okazać, że węzeł zwraca jeden słownik wyjściowy zamiast wielu portów.
+
+2) Całkowicie brakuje węzłów po wczytaniu wykresu z pewnymi błędami w konsoli.
+
+* Może tak się zdarzyć, jeśli z jakiegoś powodu nie powiedzie się deserializacja. Zaleca się serializowanie tylko potrzebnych właściwości. Można używać atrybutu `[JsonIgnore]` w przypadku złożonych właściwości, których nie trzeba wczytywać ani zapisywać, aby je zignorować. Chodzi o właściwości takie jak `function pointer, delegate, action,` czy `event`. Nie należy ich serializować, ponieważ zazwyczaj nie można ich zdeserializować i powodują one błąd w trakcie wykonywania.

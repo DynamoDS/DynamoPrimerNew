@@ -1,13 +1,16 @@
-# Definiowanie niestandardowej organizacji pakietów (Dynamo 2.0+) 
+# Definiowanie niestandardowej organizacji pakietów dla dodatku Dynamo 2.0+
 
 Osiągnięcie żądanego układu pakietu zależy od typów węzłów, które zostaną uwzględnione w pakiecie. Węzły pochodne Node Model, węzły ZeroTouch i węzły niestandardowe mają nieco inne procesy definiowania kategoryzacji. Możesz mieszać i zestawiać te typy węzłów w tym samym pakiecie, ale będzie to wymagało łączenia różnych strategii opisanych poniżej.
 
 ## NodeModel
+
 Biblioteki NodeModel są domyślnie zorganizowane w oparciu o strukturę klas.
-```C#
+
+```c#
 namespace SampleLibraryUI.Examples
 ```
-```C#
+
+```c#
 // Class Attribute
 [NodeName("MyNodeModel")]
 public class MyNewNodeModel : NodeModel
@@ -21,13 +24,16 @@ public ButtonCustomNodeModel()
 }
 
 ```
+
 Węzeł będzie zlokalizowany w obszarze dodatków w ścieżce:
+
 ```
 SampleLibraryUI/Examples/MyNodeModel
 ```
 
 Kategorię można również nadpisać, używając atrybutu NodeCategory w klasie lub w konstruktorze, jak pokazano poniżej.
-```C#
+
+```c#
 // Class Attribute
 [NodeCategory("NewSampleLibraryUI.Examples")]
 
@@ -41,6 +47,7 @@ public ButtonCustomNodeModel()
 ```
 
 Węzeł będzie teraz znajdował się w obszarze dodatków w ścieżce:
+
 ```
 NewSampleLibraryUI/Examples/MyNodeModel
 ```
@@ -49,11 +56,11 @@ NewSampleLibraryUI/Examples/MyNodeModel
 
 Biblioteki ZeroTouch są domyślnie organizowane w oparciu o strukturę klas.
 
-```C#
+```c#
 namespace MyZTLibrary
 ```
 
-```C#
+```c#
 public class Utilities
 {
     public double doubleValue(double num)
@@ -70,10 +77,11 @@ MyZTLibrary/Utilities/doubleValue
 ```
 
 Położenie struktury klas można również nadpisać za pomocą pliku XML dostosowywania dodatku Dynamo.
-- Plik XML musi mieć odpowiednią nazwę i być umieszczony w folderze `extra` pakietu
-    - `PackageName_DynamoCustomization.xml`
 
-```XML
+* Plik XML musi mieć odpowiednią nazwę i być umieszczony w folderze `extra` pakietu
+  * `PackageName_DynamoCustomization.xml`
+
+```xml
 <?xml version="1.0"?>
 <doc>
     <assembly>
@@ -99,16 +107,16 @@ Położenie struktury klas można również nadpisać za pomocą pliku XML dosto
 
 ## Węzły niestandardowe
 
-Węzły niestandardowe są organizowane na podstawie wartości `Category Name` określonej podczas ich tworzenia (za pomocą nowego okna dialogowego Węzeł niestandardowy).  
+Węzły niestandardowe są organizowane na podstawie wartości `Category Name` określonej podczas ich tworzenia (za pomocą nowego okna dialogowego Węzeł niestandardowy).
 
-**OSTRZEŻENIE!** <br>
-Użycie zapisu kropkowego w nazwach lub kategoriach węzłów spowoduje utworzenie dodatkowych podkategorii zagnieżdżonych. Kropka `.` będzie pełnić rolę separatora określającego dodatkową hierarchię. Jest to nowe zachowanie w bibliotece dodatku Dynamo 2.0.
+**OSTRZEŻENIE!**\
+ Użycie zapisu kropkowego w nazwach lub kategoriach węzłów spowoduje utworzenie dodatkowych podkategorii zagnieżdżonych. Kropka `.` będzie pełnić rolę separatora określającego dodatkową hierarchię. Jest to nowe zachowanie w bibliotece dodatku Dynamo 2.0.
 
-![Właściwości węzła niestandardowego](images/custom-node-properties.jpg)
+![Właściwości węzła niestandardowego](../../.gitbook/assets/custom-node-properties.jpg)
 
 Nazwę kategorii można później zaktualizować w pliku .dyf (XML lub JSON)
 
-```JSON
+```json
 {
   "Uuid": "85066088-1616-40b1-96e1-c33e685c6948",
   "IsCustomNode": true,
@@ -120,7 +128,7 @@ Nazwę kategorii można później zaktualizować w pliku .dyf (XML lub JSON)
   },...
 ```
 
-```XML
+```xml
 <Workspace Version="1.3.0.0000" X="100" Y="100" zoom="1.0000000" Description="This is an example custom nodes." Category="MyCustomNodes.Utilities.Actions" Name="doubleValue" ID="85066088-1616-40b1-96e1-c33e685c6948">
 ```
 
@@ -131,7 +139,8 @@ Gdy autor pakietu decyduje się zmienić nazwę wcześniej istniejącego węzła
 Węzły **ZeroTouch** używają pliku `Namespace.Migrations.XML` znajdującego się w folderze pakietów `bin`, na przykład:
 
 `MyZeroTouchLib.MyNodes.SayHello` na `MyZeroTouchLib.MyNodes.SayHelloRENAMED`
-```XML
+
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -144,7 +153,8 @@ Węzły **ZeroTouch** używają pliku `Namespace.Migrations.XML` znajdującego s
 **Węzły pochodne NodeModel** używają atrybutu `AlsoKnownAs` klasy, na przykład:
 
 `SampleLibraryUI.Examples.DropDownExample` na `SampleLibraryUI.Examples.DropDownExampleRENAMED`
-```C#
+
+```c#
 namespace SampleLibraryUI.Examples
 {
     [NodeName("Drop Down Example")]

@@ -8,8 +8,8 @@ Zawartość:
 
 * [To wprowadzenie](13-dynamo-integration.md#dynamo-integration) — ogólne omówienie tego, co zawiera ten podręcznik oraz czym jest i do czego służy dodatek Dynamo.
 * [Niestandardowy punkt wejścia dodatku Dynamo](13-dynamo-integration.md#dynamo-custom-entry-point) — jak utworzyć DynamoModel i od czego zacząć.
-* [Śledzenie i powiązywanie elementów](13-dynamo-integration.md#-element-binding-and-trace) — używanie mechanizmu śledzenia dodatku Dynamo do powiązywania węzłów na wykresie z ich wynikami w programie nadrzędnym.
-* [Węzły wyboru dodatku Dynamo Revit](13-dynamo-integration.md#-dynamo-revit-selection-nodes) — jak zaimplementować węzły umożliwiające użytkownikom wybieranie obiektów lub danych z programu nadrzędnego i przekazywanie ich jako danych wejściowych do wykresu Dynamo.
+* [Śledzenie i powiązywanie elementów](13-dynamo-integration.md#element-binding-and-trace) — używanie mechanizmu śledzenia dodatku Dynamo do powiązywania węzłów na wykresie z ich wynikami w programie nadrzędnym.
+* [Węzły wyboru dodatku Dynamo Revit](13-dynamo-integration.md#dynamo-revit-selection-nodes-what-are-they) — jak zaimplementować węzły umożliwiające użytkownikom wybieranie obiektów lub danych z programu nadrzędnego i przekazywanie ich jako danych wejściowych do wykresu Dynamo.
 * [Przegląd pakietów wbudowanych dodatku Dynamo](13-dynamo-integration.md#dynamo-built-in-packages-overview) — czym jest standardowa biblioteka dodatku Dynamo i jak używać tego mechanizmu źródłowego do dostarczania pakietów z integracją.
 
 **Informacje o terminologii:**
@@ -309,9 +309,9 @@ W razie otwarcia wykresu Dynamo z dysku zapisane w nim dane śledzenia zostają 
     * Funkcja DesignScript
     * Węzeł niestandardowy (funkcja DS)
 * TraceSerializer
-  * Serializuje oznaczone klasy `ISerializable` i `[Serializable]` do postaci śladu.
-  * Obsługuje serializację i deserializację danych do postaci śladu.
-  * Komponent TraceBinder steruje powiązywaniem zdeserializowanych danych z typem środowiska uruchomieniowego. (Tworzy wystąpienie klasy rzeczywistej)
+  * Obsługuje serializację i deserializację danych do postaci śladu. Mechanizm ten jest zgodny z wieloetapowym procesem obsługi danych śledzenia:
+    * Podczas zapisywania wykresu (serializacji) dane generowane przez określone węzły są konwertowane na ustrukturyzowany ciąg JSON. Te zserializowane dane są kompresowane przy użyciu narzędzia gzip w celu zmniejszenia rozmiaru pliku, a następnie kodowane w formacie Base64 w celu zapewnienia bezpiecznego przechowywania. Wynikowy bezpieczny ciąg jest osadzany w sekcji powiązań pliku .dyn.
+    * Podczas otwierania wykresu (deserializacji) zakodowany ciąg jest odczytywany z sekcji powiązań w pliku .dyn. Ciąg jest dekodowany Base64 z powrotem do oryginalnej skompresowanej postaci binarnej, a następnie dekompresowany za pomocą narzędzia gzip. Przywrócone dane ustrukturyzowane są przekształcane z powrotem w aktywne obiekty środowiska uruchomieniowego.
 
 #### Jak to wygląda?
 
@@ -334,11 +334,10 @@ Dane śledzenia są serializowane do pliku .dyn wewnątrz właściwości o nazwi
       }
     }
   ],
-
  
 ```
 
-_NIE_ zaleca się polegania na formacie zserializowanych danych Base64Encoded.
+NIE zaleca się polegania na formacie zserializowanych danych w formacie Base64.
 
 #### Jaki problem próbujemy rozwiązać.
 
@@ -378,7 +377,7 @@ Gdyby włączono powiązywanie elementów, można by było zachować dotychczaso
 
 ***
 
-![Tworzenie ścian](images/creates_walls.png)
+![Tworzenie ścian](../../.gitbook/assets/creates_walls.png)
 
 #### Powiązywanie elementów w porównaniu ze śledzeniem
 
@@ -388,7 +387,7 @@ Gdyby włączono powiązywanie elementów, można by było zachować dotychczaso
 
 Mechanizm ten umożliwia też serializację dowolnych danych do pliku .dyn podczas zapisywania węzłów Dynamo typu Zero Touch. Na ogół nie jest to zalecane, ponieważ oznacza to, że potencjalnie przenoszony kod Zero Touch staje się zależny od dodatku Dynamo Core.
 
-Nie należy polegać na serializowanym formacie danych w pliku .dyn — zamiast tego należy używać atrybutu [Serializable] oraz interfejsu
+Nie należy polegać na tym zserializowanym formacie danych w pliku .dyn. Dostęp do tych zserializowanych danych nie powinien być uzyskiwany bezpośrednio i można to zrobić tylko za pośrednictwem interfejsów API śledzenia.
 
 Natomiast mechanizm powiązywania elementów (ElementBinding) jest oparty na interfejsach API śledzenia i jest zaimplementowany w integracji dodatku Dynamo _(DynamoRevit, Dynamo4Civil itp.)_
 
@@ -397,10 +396,10 @@ Natomiast mechanizm powiązywania elementów (ElementBinding) jest oparty na int
 Niektóre z niskopoziomowych interfejsów API śledzenia, o których warto wiedzieć, to:
 
 ```c#
-public static ISerializable GetTraceData(string key)
+public static string GetTraceData(string key)
 ///Returns the data that is bound to a particular key
 
-public static void SetTraceData(string key, ISerializable value)
+public static void SetTraceData(string key, string value)
 ///Set the data bound to a particular key
 ```
 
@@ -413,9 +412,9 @@ Na potrzeby interakcji z danymi śledzenia wczytanymi przez dodatek Dynamo z ist
  GetTraceDataForNodes(IEnumerable<Guid> nodeGuids, Executable executable)
 ```
 
-[GetTraceDataForNodes](https://github.com/DynamoDS/Dynamo/blob/master/src/Engine/ProtoCore/RuntimeData.cs#L218)
+[GetTraceDataForNodes](https://github.com/DynamoDS/Dynamo/blob/RC4.0.0_master/src/Engine/ProtoCore/RuntimeData.cs#L212)
 
-[RuntimeTrace.cs](https://github.com/DynamoDS/Dynamo/blob/master/src/Engine/ProtoCore/RuntimeData.cs)
+[RuntimeTrace.cs](https://github.com/DynamoDS/Dynamo/blob/RC4.0.0_master/src/Engine/ProtoCore/RuntimeData.cs)
 
 #### Przykład prostego śledzenia z węzła
 
@@ -448,19 +447,16 @@ Ogólnie konfiguracja jest następująca:
 
 Statyczna klasa narzędziowa `TraceExampleWrapper` jest importowana jako węzeł do dodatku Dynamo. Zawiera pojedynczą metodę `ByString` tworzącą element `TraceExampleItem` — są to zwykłe obiekty .net, które zawierają właściwość `description`.
 
-Każdy obiekt `TraceExampleItem` jest serializowany do postaci śladu reprezentowanego za pomocą `TraceableId` — jest to po prostu klasa zawierająca `IntId` z oznaczeniem `[Serializeable]`, aby umożliwić serializację za pomocą elementu formatującego `SOAP`. [Tutaj można uzyskać więcej informacji na temat atrybutu serializable](https://docs.microsoft.com/pl-pl/dotnet/api/system.serializableattribute?view=netframework-4.8)
-
-Należy również zaimplementować interfejs `ISerializable` zdefiniowany [tutaj](https://docs.microsoft.com/pl-pl/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8)
+Każdy element `TraceExampleItem` jest przechowywany w obiekcie statycznym TraceableObjectManager. TraceableObjectManager serializuje i deserializuje rekordy śledzenia dodatku Dynamo jako ciąg JSON. Węzły mogą więc znajdować i aktualizować wcześniej utworzone elementy, zamiast tworzyć je ponownie.
 
 ```c#
     [IsVisibleInDynamoLibrary(false)]
-    [Serializable]
-    public class TraceableId : ISerializable
+    public class TraceableId
     {
     }
 ```
 
-Ta klasa jest tworzona dla każdego obiektu `TraceExampleItem`, który chcemy zapisać w postaci śladu, zserializować, zakodować w formacie base64 i zapisać na dysku podczas zapisywania wykresu, aby można było ponownie skojarzyć powiązania, nawet później, gdy wykres zostanie otwarty z powrotem na tle istniejącego słownika elementów. Nie będzie to działać poprawnie w tym przykładzie, ponieważ słownik nie jest tak naprawdę trwały, tak jak dokument programu Revit.
+Klasa TraceableId jest tworzona dla każdego obiektu `TraceExampleItem`, który chcemy zapisać w postaci śladu, zserializować, zakodować w formacie Base64 i zapisać na dysku podczas zapisywania wykresu, aby można było ponownie skojarzyć powiązania, nawet później, gdy wykres zostanie otwarty z powrotem na tle istniejącego słownika elementów. Nie będzie to działać poprawnie w tym przykładzie, ponieważ słownik nie jest tak naprawdę trwały, tak jak dokument programu Revit.
 
 Ostatnią częścią równania jest `TraceableObjectManager`, który jest podobny do `ElementBinder` w `DynamoRevit` — zarządza relacją między obiektami obecnymi w modelu dokumentu programu nadrzędnego a danymi przechowywanymi w śladzie dodatku Dynamo.
 
@@ -470,15 +466,15 @@ Przy następnym uruchomieniu wykresu szukamy w śladzie, znajdujemy zapisany tam
 
 Przepływ dwóch kolejnych wykonań wykresu, który tworzy pojedynczy obiekt `TraceExampleItem` wygląda następująco:
 
-![Pierwsze wywołanie](images/Trace-first-call.png)
+![Pierwsze wywołanie](../../.gitbook/assets/Trace-first-call.png)
 
-![Drugie wywołanie](images/Trace-second-call.png)
+![Drugie wywołanie](../../.gitbook/assets/Trace-second-call.png)
 
 Ten sam pomysł przedstawiono w następnym przykładzie z bardziej realistycznym przypadkiem użycia węzła DynamoRevit.
 
 #### Diagram śledzenia
 
-![Kroki śledzenia](images/trace_diagram.png) ![Przepływ śledzenia](images/trace_alt_diagram.png)
+![Kroki śledzenia](../../.gitbook/assets/trace_diagram.png) ![Przepływ śledzenia](../../.gitbook/assets/trace_alt_diagram.png)
 
 #### UWAGA:
 
@@ -558,7 +554,13 @@ Oto ważne etapy wykonywania konstruktora w odniesieniu do powiązywania element
 
 #### Sprawność
 
-* Obecnie każdy obiekt śledzenia z serializowaniem jest serializowany przy użyciu formatowania xml SOAP — jest to dość rozwlekłe i obejmuje powielanie dużej ilości informacji. Następnie dane są kodowane dwukrotnie do postaci base64 — nie jest to wydajne pod względem serializacji ani deserializacji. Może to zostać poprawione w przyszłości, jeśli format wewnętrzny nie jest oparty na innym. Jeszcze raz przypominamy, że nie należy polegać na formacie danych zserializowanych w spoczynku.
+* Obecnie każdy ciąg śledzenia jest serializowany przy użyciu kompresji gzip i kodowania Base64. Jest to ulepszenie w stosunku do starszego formatowania xml SOAP.
+
+#### Kompatybilność
+
+* Obiekty śledzenia zapisane w wersjach starszych niż Dynamo 3.0 są przechowywane przy użyciu protokołu SOAP, dlatego nie są obsługiwane w nowszych wersjach. Poprzednio zapisane dane powiązań elementów zostaną zignorowane, a poniższy komunikat będzie wyświetlany w dodatku Dynamo 3.0 i nowszych wersjach. Dane powiązań elementów zostaną zapisane następnym razem przy uruchomieniu i zapisaniu obszaru roboczego.
+
+![Zgodność powiązań elementów](../../.gitbook/assets/element_binding_compatibility_message.jpg)
 
 #### Czy powiązywanie elementów (ElementBinding) powinno być domyślnie włączone?
 
@@ -572,7 +574,7 @@ Ogólnie rzecz biorąc, **dobrym sposobem myślenia o tych węzłach jest trakto
 
 W dodatku DynamoRevit istnieje wiele węzłów wyboru (`Selection`). Można je podzielić na co najmniej dwie grupy:
 
-![Węzły wyboru programu Revit](images/revitSelectionNodes.png)
+![Węzły wyboru programu Revit](../../.gitbook/assets/revitSelectionNodes.png)
 
 1.  Wskazywanie w interfejsie użytkownika:
 
@@ -600,7 +602,7 @@ W dodatku DynamoRevit istnieje wiele węzłów wyboru (`Selection`). Można je p
 
 Procesy robocze w dodatku D4C są bardzo podobne do opisanych powyżej dla programu Revit. Poniżej przedstawiono dwa typowe zestawy węzłów wyboru w dodatku D4C:
 
-![Węzły wyboru programu Civil 3D](images/civilSelectionNodes.png)
+![Węzły wyboru programu Civil 3D](../../.gitbook/assets/civilSelectionNodes.png)
 
 ### Problemy:
 
@@ -611,9 +613,9 @@ Procesy robocze w dodatku D4C są bardzo podobne do opisanych powyżej dla progr
 
 ### Diagramy przepływu danych
 
-![Przepływ wyboru](images/selectModelElement.png)
+![Przepływ wyboru](../../.gitbook/assets/selectModelElement.png)
 
-![Przepływ wyboru2](images/selectElementFace.png)
+![Przepływ wyboru2](../../.gitbook/assets/selectElementFace.png)
 
 ### Implementacja techniczna: (patrz powyższe schematy):
 
@@ -622,7 +624,7 @@ Węzły wyboru są implementowane przez dziedziczenie z typów ogólnych `Select
 * Implementacja metody `BuildOutputAST`: ta metoda musi zwrócić drzewo AST, które zostanie wykonane w pewnym momencie w przyszłości, kiedy ma zostać wykonany węzeł. W przypadku węzłów wyboru (Selection) powinny zostać zwrócone elementy lub geometria na podstawie identyfikatorów elementów. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * Implementacja metody `BuildOutputAST` jest jedną z najtrudniejszych części implementacji węzłów `NodeModel`/interfejsu użytkownika. Najlepiej jest umieścić jak największą część logiki w funkcji C# i po prostu osadzić węzeł z wywołaniem funkcji AST w drzewie AST. Należy pamiętać, że w tym przypadku `node` jest węzłem AST w drzewie składni abstrakcyjnej, a nie węzłem wykresu Dynamo.
 
-![Przepływ wyboru2](images/selectionAST.png)
+![Przepływ wyboru2](../../.gitbook/assets/selectionAST.png)
 
 * Serializacja —
   *   Ponieważ są to jawne typy pochodne `NodeModel` (a nie ZeroTouch), wymagają one również zaimplementowania konstruktora [JsonConstructor], który będzie używany podczas deserializacji węzła z pliku .dyn.
@@ -635,9 +637,10 @@ Węzły wyboru są implementowane przez dziedziczenie z typów ogólnych `Select
 #### Klasy bazowe DynamoCore:
 
 * [https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs](https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs)
-* [Analiza przypadku NodeModel — niestandardowy interfejs użytkownika](11_developer_primer/3_developing_for_dynamo/5-nodemodel-case-study-custom-ui.md)
-* [Aktualizowanie pakietów i bibliotek dodatku Dynamo dla dodatku Dynamo 2.x](11_developer_primer/3_developing_for_dynamo/6-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
-* [Aktualizowanie pakietów i bibliotek dodatku Dynamo dla dodatku Dynamo 3.x](11_developer_primer/3_developing_for_dynamo/updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+* [Analiza przypadku NodeModel — niestandardowy interfejs użytkownika](5-nodemodel-case-study-custom-ui.md)
+* [Aktualizowanie pakietów i bibliotek dodatku Dynamo dla dodatku Dynamo 2.x](6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+* [Aktualizowanie pakietów i bibliotek dodatku Dynamo dla dodatku Dynamo 3.x](6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+* [Aktualizowanie pakietów i bibliotek dodatku Dynamo dla dodatku Dynamo 4.x](6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
 
 #### DynamoRevit:
 

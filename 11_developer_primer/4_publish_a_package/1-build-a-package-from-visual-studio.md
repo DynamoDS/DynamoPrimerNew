@@ -24,7 +24,7 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![Przenoszenie plików projektu](images/fe-proj-directory.jpg)
+![Przenoszenie plików projektu](../../.gitbook/assets/fe-proj-directory.jpg)
 
 > 1. Przenieś pliki projektu do nowego folderu `src`
 
@@ -47,7 +47,7 @@ Pliki źródłowe znajdują się już w oddzielnym folderze. Dodaj obiekt docelo
   </Target>
 ```
 
-![Umieszczanie obiektu docelowego AfterBuild](images/atom-afterbuild.jpg)
+![Umieszczanie obiektu docelowego AfterBuild](../../.gitbook/assets/atom-afterbuild.jpg)
 
 > Musimy upewnić się, że obiekt docelowy dodano do pliku `CustomNodeModel.csproj` (a nie innego pliku projektu) i że projekt nie ma żadnych istniejących ustawień po kompilacji (Post-Build).
 >
@@ -75,7 +75,7 @@ Pakiety dodatku Dynamo zazwyczaj zawierają foldery `dyf` i `extra` na węzły n
 
 W przypadku kompilowania projektu folder projektu powinien teraz zawierać folder `packages` obok utworzonego wcześniej folderu `src`. W katalogu `packages` znajduje się folder zawierający wszystkie elementy potrzebne do utworzenia pakietu. Musimy również skopiować plik `pkg.json` do folderu pakietu, aby dodatek Dynamo wiedział, że ma wczytać pakiet.
 
-![Kopiowanie plików](images/fe-proj-directory-package.jpg)
+![Kopiowanie plików](../../.gitbook/assets/fe-proj-directory-package.jpg)
 
 > 1. Nowy folder packages utworzony przez obiekt docelowy AfterBuild
 > 2. Istniejący folder src z projektem

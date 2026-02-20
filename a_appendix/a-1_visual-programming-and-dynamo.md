@@ -8,7 +8,7 @@ Często projektowanie obejmuje ustanowienie wizualnych, systemowych lub geometry
 
 Termin **algorytm** przedstawia olbrzymie możliwości, ale często jest błędnie rozumiany. Algorytmy mogą generować nieoczekiwane, przedziwne, a nawet niesamowite wyniki, ale nie są magicznym rozwiązaniem. W rzeczywistości same w sobie są całkiem proste. Przyjrzyjmy się namacalnemu przykładowi: żurawiowi origami. Rozpoczynamy od kwadratowego arkusza papieru (wejście), wykonujemy szereg zagięć (operacje przetwarzania) i otrzymujemy żurawia (wyjście).
 
-![Żuraw origami](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
+![Żuraw origami](https://primer.dynamobim.org/01_Introduction/images/1-1/00-OrigamiCrane.png)
 
 Gdzie tu jest algorytm? Stanowi on abstrakcyjny zestaw kroków, które możemy przedstawić na kilka sposobów — w sposób tekstowy lub graficzny.
 
@@ -30,7 +30,7 @@ Gdzie tu jest algorytm? Stanowi on abstrakcyjny zestaw kroków, które możemy p
 
 **Instrukcje graficzne:**
 
-![Żuraw origami — instrukcje](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![Żuraw origami — instrukcje](https://primer.dynamobim.org/01_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
 #### Definicja programowania <a href="#programming-defined" id="programming-defined"></a>
 
@@ -52,7 +52,7 @@ Jeśli Twoja odpowiedź obejmowała zastosowanie grafiki, **programowanie wizual
 
 **Program wizualny:**
 
-![](./images/a-1/visualProgramming(2).png)
+\![](<../.gitbook/assets/visualProgramming (2).png>)
 
 **Program tekstowy:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 Wyniki algorytmu:
 
-![](./images/a-1/visualProgramming(1).png)
+\![](<../.gitbook/assets/visualProgramming (1).png>)
 
 Wizualność programowania w taki sposób ułatwia rozpoczęcie korzystania z niego i często przemawia do projektantów. Dodatek Dynamo służy do programowania wizualnego, ale jak przekonamy się później, nadal umożliwia programowanie tekstowe w aplikacji.

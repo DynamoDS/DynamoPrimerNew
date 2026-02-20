@@ -1,8 +1,8 @@
-# Dalsze kroki z Zero-Touch 
+# Dalsze kroki z Zero-Touch
 
 Po omówieniu tworzenia projektu Zero-Touch możemy teraz lepiej zapoznać się z zagadnieniami dotyczącymi tworzenia węzła, analizując przykład ZeroTouchEssentials w witrynie dodatku Dynamo w serwisie Github.
 
-![Węzły Zero-Touch](images/ootbzerotouch.png)
+![Węzły Zero-Touch](../../.gitbook/assets/ootbzerotouch.png)
 
 > Wiele węzłów standardowych dodatku Dynamo to w zasadzie węzły Zero-Touch, takie jak większość węzłów Math, Color i DateTime powyżej.
 
@@ -10,7 +10,7 @@ Aby rozpocząć, pobierz projekt ZeroTouchEssentials stąd: [https://github.com/
 
 W programie Visual Studio otwórz plik rozwiązania `ZeroTouchEssentials.sln` i skompiluj to rozwiązanie.
 
-![Projekt ZeroTouchEssentials w programie Visual Studio](images/vs-build-zte.jpg)
+![Projekt ZeroTouchEssentials w programie Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
 
 > Plik `ZeroTouchEssentials.cs` zawiera wszystkie metody, które zaimportujemy do dodatku Dynamo.
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Wartość domyślna](images/defaultval.jpg)
+![Wartość domyślna](../../.gitbook/assets/defaultval.jpg)
 
 > 1. Po umieszczeniu kursora na porcie wejściowym węzła zostanie wyświetlona wartość domyślna
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Węzeł zwracający wiele pozycji danych wyjściowych.
 
-![Wiele pozycji danych wyjściowych](images/multipleoutputs.png)
+![Wiele pozycji danych wyjściowych](../../.gitbook/assets/multipleoutputs.png)
 
 > 1. Zwróć uwagę, że teraz istnieją dwa porty wyjściowe o nazwach zgodnych z ciągami wprowadzonymi dla kluczy słownika.
 
@@ -90,7 +90,7 @@ Do najlepszych rozwiązań należy dodawanie do węzłów dodatku Dynamo dokumen
   * Na przykład: `/// <summary>...</summary>`
 * Włącz dokumentację XML w programie Visual Studio, wybierając opcję `Project > [Project] Properties > Build > Output` i zaznaczając opcję `Documentation file`
 
-![Generowanie pliku XML](images/vs-xml.jpg)
+![Generowanie pliku XML](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Program Visual Studio wygeneruje plik XML w określonej lokalizacji
 
@@ -134,18 +134,18 @@ Należy zwrócić uwagę, że kod dla tego węzła przykładowego zawiera:
 > 2. Opis danych wejściowych
 > 3. Opis danych wyjściowych
 
-#### Opisy węzłów Dynamo — najlepsze praktyki 
+#### Opisy węzłów Dynamo — najlepsze praktyki
 
 Opisy węzłów to podsumowania funkcji węzła i danych wyjściowych. W dodatku Dynamo są one wyświetlane w dwóch miejscach:
 
-- W etykiecie narzędzia węzła
-- W przeglądarce dokumentacji
+* W etykiecie narzędzia węzła
+* W przeglądarce dokumentacji
 
-![Opis węzła](images/node-description.png)
+![Opis węzła](../../.gitbook/assets/node-description.png)
 
 Przestrzeganie tych wskazówek zapewnia spójność i pomaga zaoszczędzić czas podczas pisania oraz aktualizowania opisów węzłów.
 
-##### Przegląd
+**Przegląd**
 
 Opisy powinny składać się z jednego lub dwóch zdań. Jeśli potrzebnych jest więcej informacji, należy podać je w obszarze Szczegółowe informacje w przeglądarce dokumentacji.
 
@@ -155,17 +155,17 @@ Język powinien być tak jasny i prosty, jak to tylko możliwe. Zdefiniuj akroni
 
 Zawsze stawiaj na pierwszym miejscu jasność, nawet jeśli konieczne będzie odejście od tych wskazówek.
 
-##### Wskazówki
+**Wskazówki**
 
-| Co robić      | Czego nie robić |
-| ----------- | ----------- |
-| Rozpocznij opis od czasownika w trzeciej osobie. <ul><li>Przykład: *Określa*, czy dany obiekt geometrii przecina się z innym</li></ul>      | Nie zaczynaj od czasownika w drugiej osobie ani od żadnego rzeczownika. <ul><li>Przykład: *Określ*, czy dany obiekt geometrii przecina się z innym</li></ul>       |
-| Zamiast słowa „uzyskuje” (gets) używaj słowa „zwraca” (returns), słowa „tworzy” (creates) lub innego czasownika opisowego. <ul><li>Przykład: *Zwraca* reprezentację Nurbs powierzchni</li></ul>   | Nie używaj słów „uzyskaj” ani „uzyskuje” (get, gets). Te słowa są mniej konkretne (a słowo „get” ma kilka możliwych tłumaczeń). <ul><li>Przykład: *Uzyskuje* reprezentację Nurbs powierzchni</li></ul>        |
-| Odnosząc się do danych wejściowych, używaj słowa „dane” (given) albo „dane wejściowe” lub „wejściowe” (input) zamiast „określone” (specified) czy innych terminów. Jeśli to możliwe, pomijaj słowa „dane” (given) albo „dane wejściowe” lub „wejściowe” (input), aby uprościć opis i zmniejszyć liczbę słów. <ul><li>Przykład: Usuwa *dany* plik</li><li>Przykład: Rzutuje krzywą wzdłuż *danego* kierunku rzutowania na *daną* geometrię bazową</li></ul>Możesz używać słowa „określone” (specified), jeśli nie odnosi się ono bezpośrednio do danych wejściowych. <ul><li>Przykład: Zapisuje zawartość tekstową w pliku *określonym* za pomocą danej ścieżki</li></ul>       | Odnosząc się do danych wejściowych, aby zapewnić spójność, nie używaj słowa „określone” (specified) ani innych terminów z wyjątkiem „dane” (given) albo „dane wejściowe” lub „wejściowe” (input). Nie mieszaj słów „dane” (given) i„dane wejściowe” lub „wejściowe” (input) w tym samym opisie, chyba że jest to konieczne dla zapewnienia przejrzystości. <ul><li>Przykład: Usuwa *określony* plik</li><li>Przykład: Rzutuje krzywą *wejściową* wzdłuż *danego* kierunku rzutowania na *określoną* geometrię bazową</li></ul>      |
-| W języku angielskim w pierwszym odniesieniu do danych wejściowych używaj słowa „a” lub „an”. Używaj słów „the given” lub „the input” zamiast „a” lub „an” zgodnie z potrzebami w celu zachowania przejrzystości.<ul><li>Przykład: Sweeps *a* curve along the path curve</li></ul>      | W języku angielskim w pierwszym odniesieniu do danych wejściowych nie używaj słowa „ten” (this). <ul><li>Przykład: Sweeps *this* curve along the path curve      |
-| W języku angielskim w pierwszym odniesieniu do danych wejściowych lub innego rzeczownika, który jest elementem docelowym operacji węzła, używaj słowa „a” lub „an”. Słowa „the” używaj tylko razem ze słowami „given” lub „input”. <ul><li>Przykład: Copies *a* file</li><li>Przykład: Copies *the given* file</li></ul>      | W języku angielskim w pierwszym odniesieniu do danych wejściowych lub innego rzeczownika, który jest elementem docelowym operacji węzła, nie używaj samego słowa „the”. <ul><li>Przykład: Copies *the* file</li></ul>      |
-| Pierwsza litera pierwszego słowa zdania i pierwsza litera każdej nazwy własnej, takiej jak nazwa czy rzeczownik tradycyjnie pisany wielkimi literami, powinna być wielka (w języku angielskim wszystkie pierwsze litery nazwy własnej złożonej z wielu słów powinny być wielkie). <ul><li>Przykład: Zwraca przecięcie dwóch elementów *BoundingBox*</li></ul>      | Nie rozpoczynaj wielkimi literami słów opisujących typowe obiekty i pojęciach geometryczne, chyba że jest to konieczne dla zachowania przejrzystości. <ul><li>Przykład: Skaluje niejednorodnie wokół danej *Płaszczyzny*      |
-| Rozpoczynaj słowo Boolean wielką literą. Rozpoczynaj wielkimi literami wartości True (Prawda) i False (Fałsz) w odniesieniu do danych wyjściowych wartości logicznych (Boolean). <ul><li>Przykład: Zwraca wartość *True* (Prawda), jeśli dwie wartości są różne</li><li>Przykład: Konwertuje ciąg na ciąg napisany w całości wielkimi terami lub małymi literami na podstawie parametru w postaci wartości logicznej *Boolean*      | Nie rozpoczynaj słowa Boolean małą literą. Nie rozpoczynaj małymi literami wartości True (Prawda) ani False (Fałsz) w odniesieniu do danych wyjściowych wartości logicznych (Boolean). <ul><li>Przykład: Zwraca wartość *true* (prawda), jeśli dwie wartości są różne</li><li>Przykład: Konwertuje ciąg na ciąg napisany w całości wielkimi terami lub małymi literami na podstawie parametru w postaci wartości logicznej *boolean*</li></ul>
+| Co robić                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Czego nie robić                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>Rozpocznij opis od czasownika w trzeciej osobie.</p><ul><li>Przykład: <em>Określa</em>, czy dany obiekt geometrii przecina się z innym</li></ul>                                                                                                                                                                                                                                                                                                                                                                                         | <p>Nie zaczynaj od czasownika w drugiej osobie ani od żadnego rzeczownika.</p><ul><li>Przykład: <em>Określ</em>, czy dany obiekt geometrii przecina się z innym</li></ul>                                                                                                                                                                                                                                                      |
+| <p>Zamiast słowa „uzyskuje” (gets) używaj słowa „zwraca” (returns), słowa „tworzy” (creates) lub innego czasownika opisowego.</p><ul><li>Przykład: <em>Zwraca</em> reprezentację Nurbs powierzchni</li></ul>                                                                                                                                                                                                                                                                                                                                                                              | <p>Nie używaj słów „uzyskaj” ani „uzyskuje” (get, gets). Te słowa są mniej konkretne (a słowo „get” ma kilka możliwych tłumaczeń).</p><ul><li>Przykład: <em>Uzyskuje</em> reprezentację Nurbs powierzchni</li></ul>                                                                                                                                                                                                                                       |
+| <p>Odnosząc się do danych wejściowych, używaj słowa „dane” (given) albo „dane wejściowe” lub „wejściowe” (input) zamiast „określone” (specified) czy innych terminów. Jeśli to możliwe, pomijaj słowa „dane” (given) albo „dane wejściowe” lub „wejściowe” (input), aby uprościć opis i zmniejszyć liczbę słów.</p><ul><li>Przykład: Usuwa <em>dany</em> plik</li><li>Przykład: Rzutuje krzywą wzdłuż <em>danego</em> kierunku rzutowania na <em>daną</em> geometrię bazową</li></ul><p>Możesz używać słowa „określone” (specified), jeśli nie odnosi się ono bezpośrednio do danych wejściowych.</p><ul><li>Przykład: Zapisuje zawartość tekstową w pliku <em>określonym</em> za pomocą danej ścieżki</li></ul> | <p>Odnosząc się do danych wejściowych, aby zapewnić spójność, nie używaj słowa „określone” (specified) ani innych terminów z wyjątkiem „dane” (given) albo „dane wejściowe” lub „wejściowe” (input). Nie mieszaj słów „dane” (given) i„dane wejściowe” lub „wejściowe” (input) w tym samym opisie, chyba że jest to konieczne dla zapewnienia przejrzystości.</p><ul><li>Przykład: Usuwa <em>określony</em> plik</li><li>Przykład: Rzutuje krzywą <em>wejściową</em> wzdłuż <em>danego</em> kierunku rzutowania na <em>określoną</em> geometrię bazową</li></ul> |
+| <p>W języku angielskim w pierwszym odniesieniu do danych wejściowych używaj słowa „a” lub „an”. Używaj słów „the given” lub „the input” zamiast „a” lub „an” zgodnie z potrzebami w celu zachowania przejrzystości.</p><ul><li>Przykład: Sweeps <em>a</em> curve along the path curve</li></ul>                                                                                                                                                                                                                                                                                                                                | <p>W języku angielskim w pierwszym odniesieniu do danych wejściowych nie używaj słowa „ten” (this).</p><ul><li>Przykład: Sweeps <em>this</em> curve along the path curve</li></ul>                                                                                                                                                                                                                                                                             |
+| <p>W języku angielskim w pierwszym odniesieniu do danych wejściowych lub innego rzeczownika, który jest elementem docelowym operacji węzła, używaj słowa „a” lub „an”. Słowa „the” używaj tylko razem ze słowami „given” lub „input”.</p><ul><li>Przykład: Copies <em>a</em> file</li><li>Przykład: Copies <em>the given</em> file</li></ul>                                                                                                                                                                                                                                                                   | <p>W języku angielskim w pierwszym odniesieniu do danych wejściowych lub innego rzeczownika, który jest elementem docelowym operacji węzła, nie używaj samego słowa „the”.</p><ul><li>Przykład: Copies <em>the</em> file</li></ul>                                                                                                                                                                                                                                  |
+| <p>Pierwsza litera pierwszego słowa zdania i pierwsza litera każdej nazwy własnej, takiej jak nazwa czy rzeczownik tradycyjnie pisany wielkimi literami, powinna być wielka (w języku angielskim wszystkie pierwsze litery nazwy własnej złożonej z wielu słów powinny być wielkie).</p><ul><li>Przykład: Zwraca przecięcie dwóch elementów <em>BoundingBox</em></li></ul>                                                                                                                                                                                                                                                                                                                                     | <p>Nie rozpoczynaj wielkimi literami słów opisujących typowe obiekty i pojęciach geometryczne, chyba że jest to konieczne dla zachowania przejrzystości.</p><ul><li>Przykład: Skaluje niejednorodnie wokół danej <em>Płaszczyzny</em></li></ul>                                                                                                                                                                                                                                          |
+| <p>Rozpoczynaj słowo Boolean wielką literą. Rozpoczynaj wielkimi literami wartości True (Prawda) i False (Fałsz) w odniesieniu do danych wyjściowych wartości logicznych (Boolean).</p><ul><li>Przykład: Zwraca wartość <em>True</em> (Prawda), jeśli dwie wartości są różne</li><li>Przykład: Konwertuje ciąg na ciąg napisany w całości wielkimi terami lub małymi literami na podstawie parametru w postaci wartości logicznej <em>Boolean</em></li></ul>                                                                                                                                                                                                                                        | <p>Nie rozpoczynaj słowa Boolean małą literą. Nie rozpoczynaj małymi literami wartości True (Prawda) ani False (Fałsz) w odniesieniu do danych wyjściowych wartości logicznych (Boolean).</p><ul><li>Przykład: Zwraca wartość <em>true</em> (prawda), jeśli dwie wartości są różne</li><li>Przykład: Konwertuje ciąg na ciąg napisany w całości wielkimi terami lub małymi literami na podstawie parametru w postaci wartości logicznej <em>boolean</em></li></ul>                                                                                       |
 
 #### Ostrzeżenia i błędy węzła Dynamo
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 Po zaimportowaniu biblioteki DLL przykładu ZeroTouchEssentials w bibliotece będzie znajdował się węzeł ZeroTouchEssentials. Ten obiekt można utworzyć za pomocą węzła `ByTwoDoubles`.
 
-![Węzeł ByTwoDoubles](images/dyn-constructor.jpg)
+![Węzeł ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
 
 ### Używanie typów geometrii dodatku Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Węzeł, który pobiera długość krzywej i podwaja ją.
 
-![Dane wejściowe określające krzywą](images/doublelength.png)
+![Dane wejściowe określające krzywą](../../.gitbook/assets/doublelength.png)
 
 > 1. Ten węzeł przyjmuje jako dane wejściowe typ geometrii Curve (krzywa).
 
@@ -285,7 +285,7 @@ Wraz z opublikowaniem nowszej wersji biblioteki nazwy węzłów mogą ulec zmian
 * W tym elemencie migrations utwórz elementy `<priorNameHint>...</priorNameHint>` dla każdej zmiany nazwy
 * Dla każdej zmiany nazwy dodaj element `<oldName>...</oldName>` i element `<newName>...</newName>`
 
-![Plik migracji](images/vs-migrations-file.jpg)
+![Plik migracji](../../.gitbook/assets/vs-migrations-file.jpg)
 
 > 1. Kliknij prawym przyciskiem myszy i wybierz polecenie `Add > New Item`
 > 2. Wybierz opcję `XML File`

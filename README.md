@@ -4,7 +4,7 @@
 
 ## Dla dodatku Dynamo 2.13 i nowszych wersji
 
-![Logo dodatku Dynamo](images/dynamo_logo_dark-trim.jpg)
+![Logo dodatku Dynamo](.gitbook/assets/dynamo_logo_dark-trim.jpg)
 
 > Dynamo to platforma programowania wizualnego typu Open Source dla projektantów.
 
@@ -37,19 +37,19 @@ Przewodnik Dynamo Primer to projekt typu open source zainicjowany przez Matta Je
 
 Napisanie pierwszej wersji tego przewodnika Primer zlecono **Mode Lab**. Dziękujemy im za wszystkie starania mające na celu ustanowienie tego cennego zasobu.
 
-![](images/MODELAB_Logo.png)
+![](.gitbook/assets/MODELAB_Logo.png)
 
 ***
 
 Aktualizację przewodnika Primer w celu odzwierciedlenia zmian w dodatku Dynamo 2.0 zlecono **Johnowi Piersonowi z Parallax Team**.
 
-![](images/PRLX_Logo.jpg)
+![](.gitbook/assets/PRLX_Logo.jpg)
 
 ***
 
 Aktualizację przewodnika Primer w celu odzwierciedlenia zmian w dodatku Dynamo 2.13 zlecono **Matterlab**.
 
-![](images/matterlab_final-07.jpg)
+\![](<.gitbook/assets/matterlab_final-07 (2).jpg>)
 
 ***
 

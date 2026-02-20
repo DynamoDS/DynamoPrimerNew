@@ -2,7 +2,7 @@
 
 Przed tym rozdziałem w tym elementarzu omówiono sposób korzystania z zaawansowanych funkcji skryptów wizualnych dostępnych w dodatku Dynamo. Zrozumienie tego systemu jest ważnym wstępem do pracy nad niezawodnymi programami wizualnymi. Kiedy programy wizualne są używane w środowisku produkcyjnym, udostępniane współpracownikom oraz badane w celu usunięcia błędów lub zbadania ich ograniczeń, powstają dodatkowe problemy wymagające rozwiązania. Jeśli opracowany program będzie używany przez inne osoby lub zamierzasz go otworzyć za kilka miesięcy, jego układ graficzny i logika muszą być od razu czytelne. Dodatek Dynamo zawiera szereg narzędzi ułatwiających obsługę złożonych programów. W tym rozdziale wyjaśniono, kiedy należy ich używać.
 
-![grupy](images/1/cad-chart-visual.jpg)
+![grupy](../.gitbook/assets/cad-chart-visual.jpg)
 
 ## Ograniczanie złożoności
 
@@ -15,7 +15,7 @@ Podczas pracy w programie Dynamo i testowania pomysłów wykres może szybko prz
 * Można zmienić **kolor grupy, aby wyróżnić** grupy realizujące różne działania (obsługujące dane wejściowe lub funkcje).
 * Grupy pozwalają rozpocząć **porządkowanie wykresu w celu usprawnienia pracy nad węzłami niestandardowymi**.
 
-![](images/1/graphstrategy2.png)
+![](../.gitbook/assets/graphstrategy2.png)
 
 > Kolory w tym programie wskazują przeznaczenie poszczególnych grup. Ta strategia pozwala wprowadzić hierarchię opracowywanych standardów graficznych (szablonów).
 >
@@ -23,21 +23,21 @@ Podczas pracy w programie Dynamo i testowania pomysłów wykres może szybko prz
 > 2. Grupa danych wejściowych (pomarańczowe)
 > 3. Grupa skryptów (zielone)
 >
-> Informacje o korzystaniu z grup można znaleźć w artykule [Zarządzanie programem](https://primer2.dynamobim.org/v/pl/9_best_practices/4-managing-your-program).
+> Informacje o korzystaniu z grup można znaleźć w artykule [Zarządzanie programem](http://primer.dynamobim.org/en/03_Anatomy-of-a-Dynamo-Definition/3-4_best_practices.html).
 
 ### **Efektywne programowanie przy użyciu węzłów Code Block**
 
 * Czasami przy użyciu węzła Code Block można **szybko wpisać numer lub metodę węzła, zamiast wyszukiwać tę informację** (Point.ByCoordinates, Number, String, Formula).
 * Węzły Code Block są przydatne, **gdy trzeba zdefiniować funkcje niestandardowe w skrypcie DesignScript w celu ograniczenia liczby węzłów wykresu**.
 
-![](images/1/graphstrategy3\(1\).png)
+![](../.gitbook/assets/graphstrategy3.png)
 
 > Bloki 1 i 2 realizują tę samą funkcję. Szybciej jest napisać kilka wierszy kodu niż wyszukiwać i dodawać poszczególne węzły. Blok kodu jest też krótszy.
 >
 > 1. Kod DesignScript w bloku kodu
 > 2. Równoważny program w węzłach
 >
-> Informacje o korzystaniu z węzłów Code Block można znaleźć w artykule [Co to jest węzeł Code Block](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md).
+> Informacje o korzystaniu z węzłów Code Block można znaleźć w artykule [Co to jest węzeł Code Block](../8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block.md).
 
 ### **Kondensowanie przez konwersję węzłów na kod**
 
@@ -53,26 +53,26 @@ Podczas pracy w programie Dynamo i testowania pomysłów wykres może szybko prz
   * Utrudnia innym użytkownikom zrozumienie wykresu.
   * Nie można łatwo przywrócić wersji wizualnej programu.
 
-![](images/1/graphstrategy3\_1.png)
+![](../.gitbook/assets/graphstrategy3_1.png)
 
 > 1. Istniejący program
 > 2. Blok kodu utworzony przez konwersję węzłów na kod
 >
-> Informacje o konwersji węzłów na kod można znaleźć w artykule [Składnia języka DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
+> Informacje o konwersji węzłów na kod można znaleźć w artykule [Składnia języka DesignScript](../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md).
 
 ### **Elastyczny dostęp do danych przy użyciu funkcji List@Level**
 
 * Funkcja List@Level umożliwia **ograniczenie złożoności wykresu przez zastąpienie węzłów List.Map i List.Combine**, które mogą zajmować dużo miejsca na obszarze projektowania.
 * Funkcja List@Level oferuje** szybszą metodę tworzenia logiki węzłów niż węzły List.Map/List.Combine**. Umożliwia ona uzyskiwanie dostępu do danych na każdym poziomie listy wprost z poziomu portu wejściowego węzła.
 
-![](<images/1/graphstrategy4 (1).png>)
+![](../.gitbook/assets/graphstrategy4.png)
 
 > Można zweryfikować, ile wartości True z których list zwraca funkcja BoundingBox.Contains, aktywując funkcję List@Level dla wejścia „list” (lista) modułu CountTrue. Funkcja List@Level pozwala użytkownikowi określić, z jakiego poziomu danych wejściowych są pobierane dane. Korzystanie z funkcji List@Level jest elastyczne, efektywne i zalecane jako metoda skuteczniejsza niż stosowanie węzłów List.Map i List.Combine.
 >
 > 1. Liczenie wartości True na poziomie 2 listy
 > 2. Liczenie wartości True na poziomie 3 listy
 >
-> Sposób korzystania z funkcji List@Level omówiono w artykule [Listy list](https://primer2.dynamobim.org/v/pl/5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists).
+> Sposób korzystania z funkcji List@Level omówiono w artykule [Listy list](http://primer.dynamobim.org/en/06_Designing-with-Lists/6-3_lists-of-lists.html#list@level).
 
 ## Zachowywanie czytelności
 
@@ -84,7 +84,7 @@ Oprócz uproszczenia i poprawienia efektywności wykresu należy pamiętać o je
 * Jeśli inne osoby będą pracowały nad tym samym wykresem, należy **zagwarantować płynny przepływ połączeń między węzłami przed dostarczeniem wykresu**.
 * Aby w prosty sposób wyrównać wykres, **można użyć funkcji Wyczyść układ węzłów, która robi to automatycznie** (choć mniej dokładnie niż człowiek).
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<../.gitbook/assets/graphstrategy5 (1).png>)
 
 > 1. Nieuporządkowany wykres
 > 2. Wyrównany wykres
@@ -96,7 +96,7 @@ Oprócz uproszczenia i poprawienia efektywności wykresu należy pamiętać o je
 * Zmieniając nazwy danych wejściowych, można poprawić czytelność wykresu, **szczególnie jeśli elementy połączone z wejściami znajdują się poza ekranem**.
 * **Należy ostrożnie podchodzić do zmian nazw węzłów innych niż wejściowe.** Zamiast tego można utworzyć węzeł niestandardowy ze zbioru węzłów i zmienić jego nazwę. Pozwoli to wskazać, że ten węzeł zawiera coś innego.
 
-![](images/1/graphstrategy6.png)
+![](../.gitbook/assets/graphstrategy6.png)
 
 > 1. Dane wejściowe modyfikacji powierzchni
 > 2. Dane wejściowe parametrów architektonicznych
@@ -109,12 +109,12 @@ Oprócz uproszczenia i poprawienia efektywności wykresu należy pamiętać o je
 * Dodaj notatkę, jeśli **część wykresu wymaga wyjaśnienia prostym językiem**, a węzeł tego nie wyraża.
 * Dodaj notatkę, jeśli **zbiór lub grupa węzłów zawiera wiele elementów lub osiąga taką złożoność, że utrudnia szybkie zrozumienie programu**.
 
-![](images/1/graphstrategy7.png)
+![](../.gitbook/assets/graphstrategy7.png)
 
 > 1. Notatka opisująca część programu, która zwraca pierwotne odległości przekształcenia
 > 2. Notatka opisująca kod odwzorowujący te wartości na falę sinusoidalną
 >
-> Informacje o sposobie dodawania notatek można znaleźć w artykule [Zarządzanie programem](https://primer2.dynamobim.org/v/pl/9_best_practices/4-managing-your-program).
+> Informacje o sposobie dodawania notatek można znaleźć w artykule [Zarządzanie programem](http://primer.dynamobim.org/en/03_Anatomy-of-a-Dynamo-Definition/3-4_best_practices.html).
 
 ## Ciągłe sprawdzanie
 
@@ -124,14 +124,14 @@ Podczas tworzenia skryptu wizualnego ważne jest weryfikowanie, że zwracane dan
 
 * Węzły obserwacyjne (Watch) i podglądy pozwalają podczas tworzenia programu** weryfikować, że ważne dane wyjściowe są zwracane zgodnie z oczekiwaniami**
 
-![](images/1/graphstrategy8.png)
+![](../.gitbook/assets/graphstrategy8.png)
 
 > Węzły Watch umożliwiają porównywanie:
 >
 > 1. pierwotnych odległości przekształcenia,
 > 2. wartości przekazywanych przez równanie sinusoidy.
 >
-> Informacje o korzystaniu z węzła Watch można znaleźć w [Bibliotece](../3\_user\_interface/2-library.md).
+> Informacje o korzystaniu z węzła Watch można znaleźć w [Bibliotece](../3_user_interface/2-library.md).
 
 ## Gwarantowanie możliwości wielokrotnego użycia
 
@@ -155,14 +155,14 @@ Jest bardzo prawdopodobne, że kiedyś inna osoba otworzy nasz program, nawet je
 * Użyj węzła niestandardowego, **jeśli część wykresu będzie często używana ponownie** w innych programach.
 * Użyj węzła niestandardowego, jeśli **pewne funkcje mają być udostępniane w społeczności Dynamo**.
 
-![](images/1/graphstrategy9.png)
+![](../.gitbook/assets/graphstrategy9.png)
 
 > Umieszczenie całego programu przekształcającego punkty w węźle niestandardowym pozwala uzyskać niezawodny, unikalny i przenośny program, który jest o wiele łatwiejszy do zrozumienia. Odpowiednio nazwane porty wejściowe pomagają użytkownikom w zrozumieniu sposobu użycia węzła. Warto dodać opisy i podać wymagane typy poszczególnych wejść.
 >
 > 1. Istniejący program punktu przyciągania
 > 2. Węzeł niestandardowy zawierający ten program — PointGrid
 >
-> Informacje o korzystaniu z węzłów niestandardowych można znaleźć w artykule [Wstęp do węzłów niestandardowych](../6\_custom\_nodes\_and\_packages/6-1\_custom-nodes/1-introduction.md).
+> Informacje o korzystaniu z węzłów niestandardowych można znaleźć w artykule [Wstęp do węzłów niestandardowych](../6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction.md).
 
 ### **Tworzenie szablonów**
 
@@ -170,7 +170,7 @@ Jest bardzo prawdopodobne, że kiedyś inna osoba otworzy nasz program, nawet je
 * W ramach szablonu można ustalić **standardowe kolory i rozmiary czcionek grup, które ułatwiają klasyfikację typów procesów roboczych i działań na danych**.
 * Tworząc szablon, można nawet określić standardowe **etykiety, kolory lub różnice stylów między procesami roboczymi (dostępnymi dla użytkownika) a wewnętrznymi** na wykresie.
 
-![](images/1/graphstrategy10\(2\).png)
+![](../.gitbook/assets/graphstrategy10.png)
 
 > 1. Interfejs programu (elementy dostępne dla użytkownika) — nazwa projektu, suwaki danych wejściowych i importowana geometria.
 > 2. Elementy wewnętrzne programu.
@@ -184,13 +184,13 @@ Jest bardzo prawdopodobne, że kiedyś inna osoba otworzy nasz program, nawet je
 
 Ustaliliśmy kilka wzorców postępowania, które teraz zastosujemy do utworzonego naprędce programu. Choć program poprawnie generuje dach, jego wykres jest równie złożony jak myśli autora. Nie jest w żaden sposób uporządkowany i nie zawiera opisu sposobu użycia. Stosując wzorce postępowania, uporządkujemy, opiszemy i przeanalizujemy ten program, tak aby inni użytkownicy wiedzieli, jak z niego korzystać.
 
-![](images/1/graphstrategy11.png)
+![](../.gitbook/assets/graphstrategy11.png)
 
 > Program działa, ale jego wykres nie jest uporządkowany.
 
 Zaczniemy od określenia, jakie są dane i jaką geometrię zwraca program.
 
-![](images/1/graphstrategy12.png)
+![](../.gitbook/assets/graphstrategy12.png)
 
 > Zrozumienie najważniejszych zmian w danych jest kluczowe w celu ustalenia podziałów logicznych (podziału na moduły). Spróbuj zbadać resztę programu przy użyciu węzłów obserwacyjnych, aby ustalić podział na grupy przed kolejnym krokiem.
 >
@@ -199,7 +199,7 @@ Zaczniemy od określenia, jakie są dane i jaką geometrię zwraca program.
 
 Teraz wiemy, co robią podstawowe części programu. Umieścimy je w grupach.
 
-![](images/1/graphstrategy13.png)
+![](../.gitbook/assets/graphstrategy13.png)
 
 > Grupy pomagają użytkownikom wizualnie odróżniać części programu.
 >
@@ -211,13 +211,13 @@ Teraz wiemy, co robią podstawowe części programu. Umieścimy je w grupach.
 
 Po ustaleniu grup rozmieścimy węzły tak, aby wykres zawierał ciągły przepływ działań.
 
-![](images/1/graphstrategy14.png)
+![](../.gitbook/assets/graphstrategy14.png)
 
 > Ciągłość wizualna ułatwia użytkownikowi zrozumienie przepływu programu i domniemanych relacji między węzłami.
 
 Program będzie czytelniejszy, gdy dodamy kolejną warstwę ulepszeń graficznych. Dodaj notatki, aby opisać działanie danej części programu. Nadaj niestandardowe nazwy danym wejściowym. Przypisz kolory różnym typom grup.
 
-![](images/1/graphstrategy15\(1\).png)
+![](../.gitbook/assets/graphstrategy15.png)
 
 > Te ulepszenia graficzne powiedzą użytkownikom więcej o działaniu programu. Różne kolory grup ułatwiają odróżnianie danych wejściowych od funkcji.
 >
@@ -226,7 +226,7 @@ Program będzie czytelniejszy, gdy dodamy kolejną warstwę ulepszeń graficznyc
 
 Zanim przystąpimy do kondensowania programu, musimy wybrać strategiczną lokalizację, w której zostanie wstawiony skrypt Python symulujący odwadnianie. Podłącz dane wyjściowe pierwszej skalowanej powierzchni dachu do odpowiedniego wejścia skryptu.
 
-![](images/1/graphstrategy16.png)
+![](../.gitbook/assets/graphstrategy16.png)
 
 > Podjęliśmy decyzję, że skrypt zostanie zintegrowany z programem w tym miejscu, tak aby symulację odwadniania było można uruchamiać na oryginalnej, pojedynczej powierzchni dachu. Ta powierzchnia nie jest objęta podglądem, ale dzięki temu nie musimy wybierać górnej powierzchni z fazowanej polipowierzchni.
 >
@@ -237,7 +237,7 @@ Zanim przystąpimy do kondensowania programu, musimy wybrać strategiczną lokal
 
 Teraz mamy potrzebne informacje, więc możemy uprościć wykres.
 
-![](images/1/graphstrategy17.png)
+![](../.gitbook/assets/graphstrategy17.png)
 
 > Skondensowanie kodu przy użyciu konwersji węzłów na kod i węzłów niestandardowych pozwoliło znacznie zmniejszyć rozmiar wykresu. Grupy generujące powierzchnię dachu i ściany zostały przekonwertowane na kod, ponieważ są specyficzne dla tego programu. Grupa przekształcenia punktów jest zawarta w węźle niestandardowym, gdyż może zostać użyta w innym programie. W pliku przykładowym utwórz własny węzeł niestandardowy z grupy przekształcenia punktów.
 >
@@ -246,14 +246,14 @@ Teraz mamy potrzebne informacje, więc możemy uprościć wykres.
 
 W ostatnim kroku utwórz ustawienia wstępne przykładowych form dachu.
 
-![](images/1/graphstrategy18.png)
+![](../.gitbook/assets/graphstrategy18.png)
 
 > Przede wszystkim od tych danych wejściowych zależy forma dachu. Dzięki nim użytkownicy rozumieją potencjał programu.
 
 Nasz program z widokami przy dwóch ustawieniach wstępnych.
 
-![](images/1/graphstrategy19.png)
+![](../.gitbook/assets/graphstrategy19.png)
 
-![](images/1/graphstrategy20.png)
+![](../.gitbook/assets/graphstrategy20.png)
 
 > Wzory odwodnienia dachu udostępniają użytkownikom widok analityczny poszczególnych ustawień wstępnych.

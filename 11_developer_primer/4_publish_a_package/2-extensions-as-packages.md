@@ -39,7 +39,7 @@ Po utworzeniu folderu zawierającego podkatalogi opisane powyżej wszystko jest 
 
 W tym momencie powinno być wyświetlone normalne okno publikowania pakietu, w którym należy wypełnić wszystkie wymagane pola dotyczące pakietu/rozszerzenia. **Bardzo ważną** dodatkową czynnością jest upewnienie się, że żaden plik zespołu nie jest oznaczony jako biblioteka węzłów. W tym celu kliknij prawym przyciskiem myszy zaimportowane pliki (folder pakietu utworzony powyżej). Zostanie wyświetlone menu kontekstowe, które umożliwia zaznaczenie (lub cofnięcie zaznaczenia) tej opcji. Żadne zespoły rozszerzenia nie powinny być zaznaczone.
 
-![Publikowanie pakietu](images/ViewExtension_Search.png)
+![Publikowanie pakietu](../../.gitbook/assets/ViewExtension_Search.png)
 
 Przed opublikowaniem publicznie należy zawsze opublikować lokalnie, aby upewnić się, że wszystko działa zgodnie z oczekiwaniami. Gdy to zostanie już sprawdzone, możesz wysłać pakiet w świat, wybierając opcję publikowania.
 
@@ -47,4 +47,4 @@ Przed opublikowaniem publicznie należy zawsze opublikować lokalnie, aby upewni
 
 Aby upewnić się, że pakiet został pomyślnie przekazany, potwierdź, że możesz wyszukać go na podstawie nazw i słów kluczowych określonych w kroku publikowania. Na koniec należy pamiętać, że do działania niektórych rozszerzeń wymagane jest ponowne uruchomienie dodatku Dynamo. Zazwyczaj te rozszerzenia wymagają określenia parametrów podczas uruchamiania dodatku Dynamo.
 
-![Wyszukiwanie pakietów](images/ViewExtension_Search.jpg)
+![Wyszukiwanie pakietów](../../.gitbook/assets/ViewExtension_Search.jpg)

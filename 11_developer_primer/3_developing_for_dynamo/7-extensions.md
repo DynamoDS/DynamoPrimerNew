@@ -6,7 +6,7 @@ Rozszerzenia są zaawansowanym narzędziem programistycznym w ekosystemie dodatk
 
 Korzystając z przykładu SampleViewExtension z repozytorium DynamoSamples z serwisu Github, przeanalizujemy czynności niezbędne do utworzenia prostego okna niemodalnego, w którym wyświetlane są aktywne węzły na wykresie w czasie rzeczywistym. Rozszerzenie widoku wymaga utworzenia interfejsu użytkownika dla tego okna i powiązania wartości z modelem widoku.
 
-![Okno rozszerzenia widoku](images/dyn-viewextension.jpg)
+![Okno rozszerzenia widoku](../../.gitbook/assets/dyn-viewextension.jpg)
 
 > 1. To okno rozszerzenia widoku opracowano na podstawie przykładu SampleViewExtension z repozytorium Github.
 
@@ -28,9 +28,9 @@ Rozszerzenie widoku zawiera trzy zasadnicze części:
 
 Rozpocznij od utworzenia nowego projektu `Class Library` o nazwie `SampleViewExtension`.
 
-![Tworzenie nowej biblioteki klas](images/vs-new-project-viewextension-1.jpg)
+![Tworzenie nowej biblioteki klas](../../.gitbook/assets/vs-new-project-viewextension-1.jpg)
 
-![Konfigurowanie nowego projektu](images/vs-new-project-viewextension-2.jpg)
+![Konfigurowanie nowego projektu](../../.gitbook/assets/vs-new-project-viewextension-2.jpg)
 
 > 1. Utwórz nowy projekt, wybierając opcję `File > New > Project`
 > 2. Wybierz opcję `Class Library`
@@ -39,14 +39,14 @@ Rozpocznij od utworzenia nowego projektu `Class Library` o nazwie `SampleViewExt
 
 W tym projekcie będą potrzebne dwie klasy. W jednej klasie zostanie zaimplementowany interfejs `IViewExtension`, a w drugiej — klasa `NotificationObject.` Interfejs `IViewExtension` będzie zawierać wszystkie informacje o sposobie wdrażania, wczytywania, i usuwania rozszerzenia oraz odwoływania się do niego. Klasa `NotificationObject` będzie udostępniać powiadomienia o zmianach w dodatku Dynamo i interfejsie `IDisposable`. Po wprowadzeniu zmiany liczba zostanie odpowiednio zaktualizowana.
 
-![Wyświetlanie plików klas rozszerzeń](images/vs-viewextension-classes.jpg)
+![Wyświetlanie plików klas rozszerzeń](../../.gitbook/assets/vs-viewextension-classes.jpg)
 
 > 1. Plik klasy o nazwie `SampleViewExtension.cs`, w której zostanie zaimplementowany interfejs `IViewExtension`
 > 2. Plik klasy o nazwie `SampleWindowViewMode.cs`, w której zostanie zaimplementowana klasa `NotificationObject`
 
 Aby można było użyć interfejsu `IViewExtension`, potrzebny jest pakiet NuGet WpfUILibrary. Zainstalowanie tego pakietu spowoduje automatyczne zainstalowanie pakietów Core, Services i ZeroTouchLibrary.
 
-![Wyświetlanie pakietów rozszerzeń](images/vs-viewextension-packages.jpg)
+![Wyświetlanie pakietów rozszerzeń](../../.gitbook/assets/vs-viewextension-packages.jpg)
 
 > 1. Wybierz pakiet WpfUILibrary
 > 2. Wybierz opcję `Install`, aby zainstalować wszystkie pakiety zależne
@@ -133,7 +133,7 @@ Klasa `SampleViewExtension` tworzy element menu, który można kliknąć, służ
 * Instrukcja `public class SampleViewExtension : IViewExtension` `SampleViewExtension` powoduje dziedziczenie po interfejsie `IViewExtension` i udostępnia wszystkie funkcje potrzebne do utworzenia elementu menu.
 * Instrukcja `sampleMenuItem = new MenuItem { Header = "Show View Extension Sample Window" };` tworzy element MenuItem i dodaje go do menu `View`.
 
-![Element menu](images/dyn-menuitem.jpg)
+![Element menu](../../.gitbook/assets/dyn-menuitem.jpg)
 
 > 1. Element menu
 
@@ -208,7 +208,7 @@ Ta implementacja klasy modelu widoku nasłuchuje elementu `CurrentWorkspaceModel
 
 Po zdefiniowaniu logiki podstawowej rozszerzenia określimy teraz szczegóły wyglądu okna za pomocą pliku `.xaml`. Wystarczy proste okno, w którym ten ciąg będzie wyświetlany za pomocą powiązania właściwości `ActiveNodeTypes` w kontrolce `TextBlock` `Text`.
 
-![Dodawanie okna](images/vs-window.jpg)
+![Dodawanie okna](../../.gitbook/assets/vs-window.jpg)
 
 > 1. Kliknij prawym przyciskiem myszy projekt i wybierz pozycję `Add > New Item...`
 > 2. Wybierz szablon kontroli użytkownika, który zmienimy w celu utworzenia okna
@@ -259,7 +259,7 @@ namespace SampleViewExtension
 
 Rozszerzenie widoku jest teraz gotowe do skompilowania i dodania do dodatku Dynamo. Dodatek Dynamo wymaga pliku `xml`, aby zarejestrować wynikowy plik `.dll` jako rozszerzenie.
 
-![Dodawanie nowego pliku XML](images/vs-viewextension-xml.jpg)
+![Dodawanie nowego pliku XML](../../.gitbook/assets/vs-viewextension-xml.jpg)
 
 > 1. Kliknij prawym przyciskiem myszy projekt i wybierz pozycję `Add > New Item...`
 > 2. Wybierz plik XML
@@ -281,7 +281,7 @@ W pliku `xml` dodaj następujący kod, aby wskazać dodatkowi Dynamo, gdzie ma s
 
 Ostatnią czynnością jest skopiowanie pliku `SampleViewExtension_ViewExtensionDefinition.xml` do folderu rozszerzeń widoku dodatku Dynamo znajdującego się w katalogu instalacyjnym Dynamo Core `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions`. Należy pamiętać, że istnieją oddzielne foldery dla rozszerzeń `extensions` i `viewExtensions`. Umieszczenie pliku `xml` w niewłaściwym folderze może spowodować błąd podczas wczytywania pliku w trakcie wykonywania.
 
-![Plik XML skopiowany do folderu rozszerzeń](images/fe-viewextension-xml.jpg)
+![Plik XML skopiowany do folderu rozszerzeń](../../.gitbook/assets/fe-viewextension-xml.jpg)
 
 > 1. Plik `.xml` skopiowany do folderu rozszerzeń widoku dodatku Dynamo
 

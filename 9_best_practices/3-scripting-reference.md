@@ -6,7 +6,7 @@ Ta strona informacyjna stanowi rozszerzenie wzorców postępowania omówionych w
 
 Biblioteki standardowe są zewnętrzne wobec dodatku Dynamo i są obecne w językach programowania Python i C# (Zerotouch). Dodatek Dynamo zawiera również własny zestaw bibliotek bezpośrednio odpowiadających hierarchii węzłów, umożliwiając użytkownikowi tworzenie dowolnego kodu, który może zostać utworzony za pomocą węzłów i przewodów. Poniżej przedstawiono wskazówki na temat tego, do czego każda biblioteka Dynamo zapewnia dostęp i kiedy należy używać standardowej.
 
-![](images/3/textual-programming.jpg)
+![](../.gitbook/assets/textual-programming.jpg)
 
 **Biblioteki standardowe i biblioteki Dynamo**
 
@@ -28,9 +28,7 @@ Biblioteki standardowe są zewnętrzne wobec dodatku Dynamo i są obecne w języ
    * Funkcjonalność: Excel.
    * Sposób importowania: `import DSOffice`
 
-{% hint style="warning" %}
-\*Uwaga: podczas używania obiektu **ProtoGeometry** za pomocą języka Python lub C# tworzone są obiekty niezarządzane, które wymagają ręcznego zarządzania pamięcią — więcej informacji znajduje się w poniższej sekcji: **Obiekty niezarządzane**.
-{% endhint %}
+{% hint style="warning" %} *Uwaga: podczas używania obiektu **ProtoGeometry** za pomocą języka Python lub C# tworzone są obiekty niezarządzane, które wymagają ręcznego zarządzania pamięcią — więcej informacji znajduje się w poniższej sekcji: **Obiekty niezarządzane**. {% endhint %}
 
 ## Uważne etykietowanie
 
@@ -310,4 +308,3 @@ Kod stały może wyglądać następująco:
 ```
 
 Ogólnie rzecz biorąc, konieczność usuwania występuje tylko w przypadku takiej geometrii, jak `Surfaces`, `Curves` i `Solids`. Jednak najlepiej jest usuwać wszystkie typy geometrii (`Vectors`, `Points`, `CoordinateSystems`).
-

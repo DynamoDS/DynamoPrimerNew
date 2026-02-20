@@ -8,7 +8,8 @@ Github to usługa hostingu oparta na narzędziu [git](https://help.github.com/ar
 
 Źródło dodatku Dynamo jest hostowane w witrynie DynamoDS w serwisie GitHub w tym repozytorium: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
-![Pliki źródłowe dodatku Dynamo](images/github.jpg)
+![Pliki źródłowe dodatku Dynamo](../../.gitbook/assets/github.jpg)
+
 > Pliki źródłowe dodatku Dynamo.
 >
 > 1. Klonowanie lub pobieranie całego repozytorium
@@ -22,7 +23,8 @@ Zanim będzie można sklonować repozytorium, należy zainstalować narzędzie g
 
 Do sklonowania potrzebny jest adres URL repozytorium dodatku Dynamo. Można go znaleźć za pomocą przycisku „Clone or download” (Klonuj lub pobierz) na stronie repozytorium. Skopiuj adres URL, aby wkleić go do wiersza polecenia.
 
-![Klonowanie repozytorium](images/github-clone.png)
+![Klonowanie repozytorium](../../.gitbook/assets/github-clone.png)
+
 > 1. Wybierz przycisk „Clone or download” (Klonuj lub pobierz)
 > 2. Skopiuj adres URL
 
@@ -32,17 +34,17 @@ Po zainstalowaniu narzędzia git można sklonować repozytorium dodatku Dynamo. 
 
 > Zastąp ciąg „username” swoją nazwą użytkownika
 
-![Wiersz polecenia](images/cli-1.jpg)
+![Wiersz polecenia](../../.gitbook/assets/cli-1.jpg)
 
 W następnym kroku uruchomimy polecenie git, aby sklonować repozytorium dodatku Dynamo do określonego położenia. Adres URL do użycia w tym poleceniu można uzyskać, klikając przycisk „Clone or download” (Klonuj lub pobierz) w serwisie GitHub. Uruchom to polecenie w terminalu poleceń. Uwaga: spowoduje to sklonowanie gałęzi głównej repozytorium dodatku Dynamo, która jest najczęściej aktualizowanym kodem dodatku Dynamo i zawiera najnowszą wersję kodu dodatku Dynamo. Ta gałąź zmienia się codziennie.
 
 `git clone https://github.com/DynamoDS/Dynamo.git`
 
-![Wyniki operacji klonowania za pomocą narzędzia Git](images/cli-2.jpg)
+![Wyniki operacji klonowania za pomocą narzędzia Git](../../.gitbook/assets/cli-2.jpg)
 
 Jeśli operacja klonowania zakończyła się pomyślnie, oznacza to, że narzędzie git działa. W eksploratorze plików przejdź do katalogu, do którego sklonowano pliki źródłowe. Struktura katalogu powinna wyglądać tak samo jak gałąź główna repozytorium dodatku Dynamo w serwisie Github.
 
-![Pliki źródłowe dodatku Dynamo](images/source-files.jpg)
+![Pliki źródłowe dodatku Dynamo](../../.gitbook/assets/source-files.jpg)
 
 > 1. Pliki źródłowe dodatku Dynamo
 > 2. Pliki git
@@ -51,28 +53,29 @@ Jeśli operacja klonowania zakończyła się pomyślnie, oznacza to, że narzęd
 
 Po sklonowaniu plików źródłowych na komputer lokalny można utworzyć plik wykonywalny dla dodatku Dynamo. W tym celu należy skonfigurować środowisko IDE programu Visual Studio oraz upewnić się, że zainstalowano programy .NET Framework i DirectX.
 
-* Pobierz i zainstaluj oprogramowanie [Microsoft Visual Studio Community 2015](https://my.visualstudio.com/Downloads/Results) — bezpłatne i w pełni funkcjonalne środowisko IDE (czyli zintegrowane środowisko programistyczne — mogą się również sprawdzić nowsze wersje)
+* Pobierz i zainstaluj oprogramowanie [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/vs/community/) — bezpłatne i w pełni funkcjonalne środowisko IDE (czyli zintegrowane środowisko programistyczne — mogą się również sprawdzić nowsze wersje)
 * Pobierz i zainstaluj program [Microsoft .NET Framework 4.5](https://www.microsoft.com/pl-pl/download/details.aspx?id=30653) lub nowszy
 * Zainstaluj program Microsoft DirectX z lokalnego repozytorium dodatku Dynamo (`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`)
 
 > Programy .NET i DirectX mogą być już zainstalowane.
 
-> **Uwaga:** poważna zmiana — wymagany program **Visual Studio 2022 Preview / Visual Studio 2026 Insider**
-> 
+> **Uwaga:** poważna zmiana — wymagany program [**Visual Studio 2022**](https://visualstudio.microsoft.com/vs/community/) **/** [**Visual Studio 2026 Insider**](https://visualstudio.microsoft.com/insiders/)
+>
 > Pod koniec końca 2025 roku w dodatku Dynamo zostanie zaimplementowany program `dotnet10.0`. Aby programować w ramach tej platformy, jest potrzebny program Visual Studio 2022 Preview lub Visual Studio 2026 Insider (albo nowszy), ponieważ stabilne wersje nie obsługują jeszcze platformy .NET 10.0.
-> 
+>
 > **Instalowanie programu Visual Studio 2022 Preview / Visual Studio 2026 Insider równolegle z istniejącą instalacją:**
+>
 > 1. Otwórz narzędzie **Instalator programu Visual Studio** (wyszukaj je w menu Start).
 > 2. Kliknij przycisk **Aktualizuj**, aby upewnić się, że masz najnowszą wersję instalatora.
 > 3. Otwórz kartę **Dostępne**.
 > 4. Znajdź pozycję **Visual Studio 2022 Preview / 2026 Insider** (Community, Professional lub Enterprise).
 > 5. Kliknij przycisk **Zainstaluj**, aby dodać program równolegle do istniejącej instalacji programu Visual Studio.
-> 
-![Visual Studio Preview](images/vs-preview.png) ![Visual Studio 2026 insider](images/vs-2026-insiders.png)
+
+\![Visual Studio Preview](<../../.gitbook/assets/vs-preview (1).png>) \![Visual Studio 2026 Insider](<../../.gitbook/assets/vs-2026-insiders (1).png>)
 
 Po zakończeniu instalacji można uruchomić program Visual Studio i otworzyć rozwiązanie `Dynamo.All.sln` znajdujące się w folderze `Dynamo\src`.
 
-![Otwieranie pliku rozwiązania](images/vs-open-dynamo.jpg)
+![Otwieranie pliku rozwiązania](../../.gitbook/assets/vs-open-dynamo.jpg)
 
 > 1. Wybierz opcję `File > Open > Project/Solution`
 > 2. Przejdź do repozytorium dodatku Dynamo i otwórz folder `src`
@@ -81,7 +84,7 @@ Po zakończeniu instalacji można uruchomić program Visual Studio i otworzyć r
 
 Przed skompilowaniem rozwiązania należy określić kilka ustawień. Najpierw należy skompilować wersję dodatku Dynamo do debugowania, aby zebrać w programie Visual Studio więcej informacji w ramach debugowania na potrzeby programowania. Jako platformy docelowej należy użyć AnyCPU.
 
-![Ustawienia rozwiązania](images/vs-dynamo-build-settings.jpg)
+![Ustawienia rozwiązania](../../.gitbook/assets/vs-dynamo-build-settings.jpg)
 
 > Staną się one folderami w folderze `bin`
 >
@@ -90,7 +93,7 @@ Przed skompilowaniem rozwiązania należy określić kilka ustawień. Najpierw n
 
 Przy otwartym projekcie możemy skompilować rozwiązanie. W tym procesie zostanie utworzony plik DynamoSandbox.exe, który można uruchomić.
 
-![Kompilowanie rozwiązania](images/vs-build-dynamo.jpg)
+![Kompilowanie rozwiązania](../../.gitbook/assets/vs-build-dynamo.jpg)
 
 > Skompilowanie projektu spowoduje przywrócenie zależności NuGet.
 >
@@ -101,7 +104,7 @@ Przy otwartym projekcie możemy skompilować rozwiązanie. W tym procesie zostan
 
 Jeśli dodatek Dynamo zostanie skompilowany pomyślnie, w repozytorium dodatku Dynamo zostanie utworzony folder `bin` z plikiem DynamoSandbox.exe. W tym przypadku tworzymy plik wykonywalny za pomocą opcji Debug, dlatego znajduje się on w folderze `bin\AnyCPU\Debug`. Uruchomienie tego pliku spowoduje otwarcie kompilacji lokalnej dodatku Dynamo.
 
-![Plik wykonywalny DynamoSandbox](images/ex-dynamosandbox.jpg)
+![Plik wykonywalny DynamoSandbox](../../.gitbook/assets/ex-dynamosandbox.jpg)
 
 > 1. Nowo skompilowany plik wykonywalny DynamoSandbox. Uruchom ten plik, aby uruchomić dodatek Dynamo.
 
@@ -120,7 +123,7 @@ W przypadku autonomicznej aplikacji Dynamo, DynamoSandbox, omówimy dwie opcje d
 
 W przypadku uruchamiania dodatku Dynamo z programu Visual Studio rozwiązanie jest ponownie kompilowane dla każdej sesji debugowania, jeśli jest to wymagane. Jeśli więc wprowadzono zmiany w źródle, zostają one uwzględnione podczas debugowania. Przy otwartym rozwiązaniu `Dynamo.All.sln` wybierz z menu rozwijanego opcje `Debug`, `AnyCPU` i `DynamoSandbox`, a następnie kliknij opcję `Start`. Spowoduje to skompilowanie dodatku Dynamo i uruchomienie nowego procesu (DynamoSandbox.exe), a następnie dołączenie do niego debugera programu Visual Studio.
 
-![Kompilowanie i uruchamianie aplikacji z programu Visual Studio](images/vs-debug-options.jpg)
+![Kompilowanie i uruchamianie aplikacji z programu Visual Studio](../../.gitbook/assets/vs-debug-options.jpg)
 
 > Kompilowanie i uruchamianie aplikacji bezpośrednio z programu Visual Studio
 >
@@ -131,7 +134,7 @@ W przypadku uruchamiania dodatku Dynamo z programu Visual Studio rozwiązanie je
 
 Można również debugować proces dodatku Dynamo, który jest już uruchomiony, aby rozwiązać problem z określonym otwartym wykresem lub pakietem. W tym celu należy otworzyć pliki źródłowe projektu w programie Visual Studio i dołączyć program do uruchomionego procesu dodatku Dynamo za pomocą elementu menu debugowania `Attach to Process`.
 
-![Okno dialogowe dołączania do procesu](images/vs-attach-dynamosandbox.jpg)
+![Okno dialogowe dołączania do procesu](../../.gitbook/assets/vs-attach-dynamosandbox.jpg)
 
 > Dołączanie uruchomionego procesu do programu Visual Studio
 >
@@ -141,7 +144,7 @@ Można również debugować proces dodatku Dynamo, który jest już uruchomiony,
 
 W obu sytuacjach dołączamy debuger do procesu, który chcemy debugować. Przed lub po uruchomieniu debugera możemy ustawić punkty przerwania w kodzie, co spowoduje wstrzymanie procesu bezpośrednio przed wykonaniem danego wiersza kodu. Jeśli podczas debugowania zostanie zgłoszony nieprzechwycony wyjątek, program Visual Studio przeskoczy do miejsca, w którym ten wyjątek wystąpił w kodzie źródłowym. Jest to efektywna metoda wyszukiwania prostych awarii oraz nieobsługiwanych wyjątków i analizowania procesu wykonywania aplikacji.
 
-![Ustawianie punktu przerwania](images/vs-debug-dynamocore.jpg)
+![Ustawianie punktu przerwania](../../.gitbook/assets/vs-debug-dynamocore.jpg)
 
 > Podczas debugowania aplikacji DynamoSandbox ustawiamy punkt przerwania w konstruktorze węzła Colour.ByARGB, który powoduje wstrzymanie procesu dodatku Dynamo po utworzeniu wystąpienia węzła. Jeśli ten węzeł zgłaszał wyjątek lub powodował awarię dodatku Dynamo, można krokowo wykonywać poszczególne wiersze w konstruktorze, aby sprawdzić, gdzie wystąpił problem.
 >
@@ -164,7 +167,7 @@ Za pomocą następującego polecenia ściągnij najnowsze zmiany:
 
 `git pull origin master`
 
-![Zaktualizowane repozytorium lokalne](images/cli-pull-changes.jpg)
+![Zaktualizowane repozytorium lokalne](../../.gitbook/assets/cli-pull-changes.jpg)
 
 > 1. Widać tutaj, że repozytorium lokalne zostało zaktualizowane o zmiany wprowadzone zdalnie.
 
