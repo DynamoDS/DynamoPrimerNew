@@ -2,7 +2,7 @@
 
 En las secciones anteriores, examinamos cómo se configura el paquete de _MapToSurface_ con nodos personalizados y archivos de ejemplo. Pero, ¿cómo publicamos un paquete que se ha desarrollado localmente? En este caso real, se muestra cómo publicar un paquete a partir de un conjunto de archivos en una carpeta local.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../../.gitbook/assets/develop package - custom nodes 01 (1) (6).jpg>)
 
 Hay muchas formas de publicar un paquete. A continuación, se indica el proceso recomendado: **publique localmente, desarrolle localmente y, a continuación, publique en línea**. Comenzaremos con una carpeta que contiene todos los archivos del paquete.
 
@@ -24,11 +24,11 @@ A continuación, reinicie Dynamo. Al volver a abrirlo, cuando active la ventana 
 >
 > En el Apéndice, se incluye una lista completa de los archivos de ejemplo.
 
-{% file src="../datasets/6-2/4/MapToSurface.zip" %}
+{% file src="../../.gitbook/assets/MapToSurface.zip" %}
 
 Este es el primer envío del paquete y se han incluido todos los nodos personalizados y los archivos de ejemplo en una única carpeta. Con esta carpeta preparada, ya podemos realizar la carga en Dynamo Package Manager.
 
-![](../images/6-2/4/publishapackage-publishlocally01.jpg)
+\![](<../../.gitbook/assets/publish a package - publish locally 01.jpg>)
 
 > 1. Esta carpeta contiene cinco nodos personalizados (.dyf).
 > 2. Esta carpeta también contiene cinco archivos de ejemplo (.dyn) y un archivo de vectores importado (.svg). Estos archivos se utilizarán como ejercicios de introducción para mostrar al usuario cómo trabajar con los nodos personalizados.
@@ -55,7 +55,7 @@ Para la publicación, haga clic en "Publicar localmente" (1). Si sigue este proc
 
 Tras la publicación, los nodos personalizados deberían estar disponibles en el grupo "DynamoPrimer" o en la biblioteca de Dynamo.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../../.gitbook/assets/develop package - install package 02 (1) (4).jpg>)
 
 Ahora veamos el directorio raíz para comprobar cómo Dynamo ha aplicado formato al paquete que acabamos de crear. Para ello, vaya a la ficha Paquetes instalados > junto a MapToSurface, haga clic en el menú de puntos verticales > seleccione Mostrar directorio raíz.
 
@@ -63,7 +63,7 @@ Ahora veamos el directorio raíz para comprobar cómo Dynamo ha aplicado formato
 
 Observe que el directorio raíz se encuentra en la ubicación local del paquete (recuerde que hemos publicado el paquete "localmente"). Dynamo hace referencia a esta carpeta para leer nodos personalizados. Por lo tanto, es importante publicar localmente el directorio en una ubicación de carpeta permanente (es decir, no en el escritorio). A continuación, se desglosan las carpetas del paquete de Dynamo.
 
-![](../images/6-2/4/publishapackage-publishlocally06.jpg)
+\![](<../../.gitbook/assets/publish a package - publish locally 06.jpg>)
 
 > 1. La carpeta _bin_ contiene archivos .dll creados con bibliotecas de C# o Zero-Touch. No hay ninguna para este paquete, por lo que esta carpeta aparece vacía en este ejemplo.
 > 2. La carpeta _dyf_ contiene los nodos personalizados. Al abrir esta, se mostrarán todos los nodos personalizados (archivos .dyf) de este paquete.

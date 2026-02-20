@@ -6,11 +6,11 @@ La **geometría** es el idioma del diseño. Cuando un lenguaje o un entorno de p
 
 Conocer los tipos de geometría y [cómo se relacionan](1-geometry-overview.md#stepping-through-the-hierarchy) nos permitirá desplazarnos por la colección de **nodos de geometría** disponibles en la biblioteca. Los nodos de geometría se organizan alfabéticamente en lugar de jerárquicamente; aquí se muestran de forma similar a su presentación en la interfaz de Dynamo.
 
-![](../images/5-2/1/geometryoverview-geometryindynamo.jpg)
+\![](<../../.gitbook/assets/geometry overview - geometry in dynamo.jpg>)
 
 Además, la creación de modelos en Dynamo y la conexión de la vista preliminar de lo que aparece en la vista preliminar en segundo plano al flujo de datos del gráfico deberían ser procesos más intuitivos con el tiempo.
 
-![](../images/5-2/1/GeometryforComputationalDesign-Overview.jpg)
+\![](<../../.gitbook/assets/Geometry for Computational Design - Overview.jpg>)
 
 > 1. Observe el supuesto sistema de coordenadas renderizado por la rejilla y los ejes coloreados.
 > 2. Los nodos seleccionados renderizarán la geometría correspondiente (si el nodo crea la geometría) en segundo plano con el color resaltado.
@@ -19,13 +19,13 @@ Además, la creación de modelos en Dynamo y la conexión de la vista preliminar
 >
 > En el Apéndice, se incluye una lista completa de los archivos de ejemplo.
 
-{% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Geometry Overview.dyn" %}
 
 ## El concepto de geometría
 
 La geometría se define tradicionalmente como el estudio de la forma, el tamaño y la posición relativa de las figuras y las propiedades del espacio. Este campo tiene una historia muy rica que se remonta a miles de años. Con la llegada y la popularización de la informática, disponemos de una poderosa herramienta para definir, explorar y generar geometría. Ahora es muy fácil calcular el resultado de interacciones geométricas complejas y lo hacemos de forma casi transparente.
 
-![Conejito de Stanford](../images/5-2/1/StanfordBunny.jpg)
+![Conejito de Stanford](../../.gitbook/assets/StanfordBunny.jpg)
 
 > Si tiene curiosidad por comprobar lo diversa y compleja que puede ser la geometría mediante la potencia de su ordenador, realice una búsqueda rápida en la web del conejito de Stanford (o "Stanford Bunny"), un modelo canónico que se utiliza para probar algoritmos.
 
@@ -42,7 +42,7 @@ En la práctica, estos principios nos indican que debemos tener en cuenta con qu
 
 Dediquemos un momento a observar la relación entre las descripciones abstractas y jerárquicas de la geometría. Como estos dos conceptos están relacionados, pero esto no es siempre evidente al principio, podemos encontrarnos rápidamente con un bloqueo conceptual una vez que empezamos a desarrollar flujos de trabajo o modelos más profundos. Para empezar, vamos a usar la dimensionalidad como un sencillo descriptor del "material" que modelamos. El número de dimensiones necesarias para describir una forma nos muestra cómo organizar la forma en que la geometría se organiza jerárquicamente.
 
-![Geometría computacional](../images/5-2/1/GeometryDimensionality.jpg)
+\![Geometría computacional](<../../.gitbook/assets/Geometry for - GeometryDimensionality.jpg>)
 
 > 1. Un **punto** (definido por coordenadas) no tiene ninguna dimensión asociada; son solo números que describen cada coordenada.
 > 2. Una **línea** (definida por dos puntos) tiene ahora _una_ dimensión; podemos "recorrer" la línea hacia delante (dirección positiva) o hacia atrás (dirección negativa).
@@ -51,7 +51,7 @@ Dediquemos un momento a observar la relación entre las descripciones abstractas
 
 La dimensionalidad es un método práctico para empezar a organizar en categorías la geometría, pero no es necesariamente el mejor. Después de todo, no modelamos solo puntos, líneas, planos y cuadros, ¿qué ocurre si deseo utilizar un elemento curvado? Además, existe toda una categoría adicional de tipos geométricos que son totalmente abstractos; por ejemplo, definen propiedades como la orientación, el volumen o las relaciones entre las partes. No podemos realmente agarrar un vector, así que, ¿cómo lo definimos en relación con lo que vemos en el espacio? Una categorización más detallada de la jerarquía geométrica debería incluir la diferencia entre los tipos abstractos o "ayudas", que podemos agrupar por lo que ayudan a hacer, y los tipos que ayudan a describir la forma de los elementos del modelo.
 
-![Jerarquía de geometría](../images/5-2/1/GeometryHierarchy.jpg)
+![Jerarquía de geometría](../../.gitbook/assets/GeometryHierarchy.jpg)
 
 ## Uso de la geometría para ir al siguiente nivel
 

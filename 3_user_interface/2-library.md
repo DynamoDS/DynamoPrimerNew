@@ -2,7 +2,7 @@
 
 La biblioteca contiene todos los nodos cargados, incluidos los 10 nodos de categorías por defecto que se suministran con la instalación, así como los paquetes o los nodos personalizados cargados de forma adicional. Los nodos de la biblioteca se organizan jerárquicamente en bibliotecas, categorías y, si procede, subcategorías.
 
-![](images/3-2/library-libraryUI.jpg)
+\![](<../.gitbook/assets/library - library UI.jpg>)
 
 * Nodos básicos: se incluye con la instalación por defecto.
 * Nodos personalizados: almacene las rutinas o los gráficos especiales utilizados con frecuencia como nodos personalizados. También puede compartir los nodos personalizados con la comunidad.
@@ -18,22 +18,22 @@ Examine la biblioteca. Para ello, haga clic en los menús para expandir cada cat
 
 {% hint style="info" %} Núcleo y Geometría son excelentes menús para empezar a explorar, ya que contienen la mayor cantidad de nodos. {% endhint %}
 
-![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
+\![](<../.gitbook/assets/library - modified and resize library categories.jpg>)
 
 > 1. Biblioteca
 > 2. Categoría
 > 3. Subcategoría
 > 4. Nodo
 
-Estos clasifican aún más los nodos en la misma subcategoría en función si los nodos **crean** datos, ejecutan una **acción** o **consultan** datos.
+Estos clasifican aún más los nodos en la misma subcategoría en función de si los nodos **crean** datos, ejecutan una **acción** o **consultan** datos.
 
-* ![](<images/3-2/user interface - create.jpg>) **Crear**: cree o construya una geometría desde cero. Por ejemplo, un círculo.
-* ![](<images/3-2/user interface - action.jpg>) **Acción**: realice una acción en un objeto. Por ejemplo, ajuste la escala de un círculo.
-* ![](<images/3-2/user interface - query.jpg>) **Consulta**: obtenga una propiedad de un objeto existente. Por ejemplo, obtenga el radio de un círculo.
+* \![](<../.gitbook/assets/user interface - create.jpg>) **Crear**: cree o construya una geometría desde cero. Por ejemplo, un círculo.
+* \![](<../.gitbook/assets/user interface - action.jpg>) **Acción**: realice una acción en un objeto. Por ejemplo, ajuste la escala de un círculo.
+* \![](<../.gitbook/assets/user interface - query.jpg>) **Query**: obtenga una propiedad de un objeto existente. Por ejemplo, obtenga el radio de un círculo.
 
 Coloque el puntero en un nodo para visualizar información más detallada, además de su nombre e icono. Esto nos permite conocer rápidamente lo que realiza el nodo, lo que necesitará para las entradas y lo que proporcionará como salida.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<../.gitbook/assets/user interface - node description.jpg>)
 
 > 1. Descripción: descripción del nodo en lenguaje normal.
 > 2. Icono: versión más grande del icono en el menú Biblioteca.
@@ -46,7 +46,7 @@ Si sabe con precisión relativa qué nodo desea añadir al espacio de trabajo, e
 
 Haga clic en el nodo que desea añadir o pulse Intro para añadir los nodos resaltados al centro del espacio de trabajo.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<../.gitbook/assets/user interface - search.jpg>)
 
 #### Buscar por jerarquía
 
@@ -58,15 +58,15 @@ Al escribir distintas partes de la ubicación del nodo en la jerarquía de bibli
 
 * `library.category.nodeName`
 
-![](images/3-2/library-searchbyhierarchygeometrypointbycoordinates\(1\).jpg)
+\![](<../.gitbook/assets/library - search by hierarchy 1 geometry point by coordinates.jpg>)
 
 * `category.nodeName`
 
-![](images/3-2/library-searchbyhierarchy2pointbycoordinates.jpg)
+\![](<../.gitbook/assets/library - search by hierarchy 2 point by coordinates.jpg>)
 
 * `nodeName` o `keyword`
 
-![](images/3-2/library-searchbyhierarchy3bycoordinates.jpg)
+\![](<../.gitbook/assets/library - search by hierarchy 3 by coordinates.jpg>)
 
 Por lo general, el nombre del nodo en el espacio de trabajo se renderizará con el formato `category.nodeName`, con algunas excepciones destacadas, sobre todo, en las categorías de entrada y vista.
 
@@ -74,15 +74,15 @@ Tenga en cuenta la diferencia de categoría en nodos con nombres similares:
 
 * Los nodos de la mayoría de las bibliotecas incluirán el formato de categoría.
 
-![](images/3-2/library-nodecategorydifferences1.jpg)
+\![](<../.gitbook/assets/library - node category differences 1.jpg>)
 
 * `Point.ByCoordinates` y `UV.ByCoordinates` tienen el mismo nombre, pero proceden de diferentes categorías.
 
-![](images/3-2/library-nodecategorydifferences2.jpg)
+\![](<../.gitbook/assets/library - node category differences 2.jpg>)
 
 * Entre las excepciones destacables, se incluyen las funciones integradas, Core.Input, Core.View y los operadores.
 
-![](images/3-2/library-nodecategorydifferences3.jpg)
+\![](<../.gitbook/assets/library - node category differences 3.jpg>)
 
 ### Nodos utilizados frecuentemente
 
@@ -92,26 +92,26 @@ Con cientos de nodos incluidos en la instalación básica de Dynamo, ¿cuáles s
 
 Los nodos de entrada son el principal medio para que el usuario de nuestro programa visual (ya sea usted mismo u otro usuario) interactúe con los parámetros clave. A continuación, se muestran algunos de la biblioteca principal:
 
-| Nodo           |                                           | Nodo           |                                           |
-| -------------- | ----------------------------------------- | -------------- | ----------------------------------------- |
-| Booleano        | ![](images/3-2/library-boolean.jpg)       | Número         | ![](images/3-2/library-number.jpg)        |
-| Cadena         | ![](images/3-2/library-string.jpg)        | Control deslizante de número  | ![](images/3-2/library-numberslider.jpg)  |
-| Ruta de directorio | ![](images/3-2/library-directorypath.jpg) | Control deslizante de entero | ![](images/3-2/library-integerslider.jpg) |
-| Ruta de archivo      | ![](images/3-2/library-filepath.jpg)      |                |                                           |
+| Nodo           |                                                        | Nodo           |                                                        |
+| -------------- | ------------------------------------------------------ | -------------- | ------------------------------------------------------ |
+| Booleano        | \![](<../.gitbook/assets/library - boolean.jpg>)        | Número         | \![](<../.gitbook/assets/library - number.jpg>)         |
+| Cadena         | \![](<../.gitbook/assets/library - string.jpg>)         | Number Slider  | \![](<../.gitbook/assets/library - number slider.jpg>)  |
+| Directory Path | \![](<../.gitbook/assets/library - directory path.jpg>) | Integer Slider | \![](<../.gitbook/assets/library - integer slider.jpg>) |
+| File Path      | \![](<../.gitbook/assets/library - file path.jpg>)      |                |                                                        |
 
 #### Watch y Watch3D
 
 Los nodos de visualización, Watch, son esenciales para administrar los datos que se ejecutan a través del programa visual. Puede ver el resultado de un nodo a través de la **vista preliminar de datos del nodo**. Para ello, coloque el cursor sobre el nodo.
 
-![](images/3-2/library-nodepreview.jpg)
+\![](<../.gitbook/assets/library - node preview.jpg>)
 
 Será útil mantenerlo visible en un nodo **Watch**.
 
-![](images/3-2/library-watchnode.jpg)
+\![](<../.gitbook/assets/library - watch node.jpg>)
 
 O bien, consulte los resultados de la geometría a través de un nodo **Watch3D**.
 
-![](images/3-2/library-watch3dnode.gif)
+\![](<../.gitbook/assets/library - watch3d node.gif>)
 
 Ambos se encuentran en la categoría de vista de la biblioteca principal.
 
@@ -121,15 +121,14 @@ Ambos se encuentran en la categoría de vista de la biblioteca principal.
 
 Los nodos de bloque de código, Code Block, se pueden utilizar para definir un bloque de código con líneas separadas por signos de punto y coma. Esto puede ser tan sencillo como `X/Y`.
 
-También podemos utilizar bloques de código como un acceso directo para definir una entrada de número o una llamada a la función de otro nodo. La sintaxis para esta acción sigue la convención de nomenclatura del lenguaje textual de Dynamo, [DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
+También podemos utilizar bloques de código como un acceso directo para definir una entrada de número o una llamada a la función de otro nodo. La sintaxis para esta acción sigue la convención de nomenclatura del lenguaje textual de Dynamo, [DesignScript](../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md).
 
 A continuación, se muestra una sencilla demostración (con instrucciones) de uso del bloque de código en la secuencia de comandos.
 
-![](<images/3-2/library-code block demo.gif>)
+![](../.gitbook/assets/library-codeblockdemo.gif)
 
 1. Haga doble clic para crear un nodo de bloque de código.
 2. Escriba `Circle.ByCenterPointRadius(x,y);`
 3. Haga clic en el espacio de trabajo para borrar la selección; se añadirán automáticamente las entradas `x` y `y`.
 4. Cree un nodo Point.ByCoordinates y un control deslizante de número; a continuación, conecte las entradas al bloque de código.
 5. El resultado de la ejecución del programa visual se muestra como un círculo en la vista preliminar 3D.
-

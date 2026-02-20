@@ -6,7 +6,7 @@ Los métodos _Intersect_, _Trim_ y _SelectTrim_ se utilizan principalmente en ge
 
 El método _Union_ utiliza dos objetos sólidos para crear un único objeto sólido a partir del espacio cubierto por ambos objetos. El espacio solapado entre los objetos se combina en la forma final. Este ejemplo combina una esfera y un cubo en una forma de esfera-cubo sólida:
 
-![](../images/8-2/9/GeometricBooleans\_01.png)
+![](../../.gitbook/assets/GeometricBooleans_01.png)
 
 ```js
 s1 = Sphere.ByCenterPointRadius(
@@ -23,7 +23,7 @@ combined = s1.Union(s2);
 
 El método _Difference_, al igual que _Trim_, resta el contenido del sólido de la herramienta de entrada del sólido base. En este ejemplo, se extrae una pequeña hendidura de una esfera:
 
-![](../images/8-2/9/GeometricBooleans\_02.png)
+![](../../.gitbook/assets/GeometricBooleans_02.png)
 
 ```js
 s = Sphere.ByCenterPointRadius(
@@ -40,7 +40,7 @@ result = s.Difference(tool);
 
 El método _Intersect_ devuelve el sólido solapado entre dos entradas sólidas. En el siguiente ejemplo, _Difference_ se ha cambiado a _Intersect_ y el sólido resultante es el vacío que falta que se ha eliminado inicialmente:
 
-![](../images/8-2/9/GeometricBooleans\_03.png)
+![](../../.gitbook/assets/GeometricBooleans_03.png)
 
 ```js
 s = Sphere.ByCenterPointRadius(
