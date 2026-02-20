@@ -8,8 +8,8 @@ Contenido:
 
 * [Esta introducción](13-dynamo-integration.md#dynamo-integration) ofrece una descripción general de lo que incluye esta guía y de en qué consiste Dynamo.
 * [Punto de entrada personalizado de Dynamo](13-dynamo-integration.md#dynamo-custom-entry-point) describe cómo crear un modelo de Dynamo y por dónde empezar.
-* [Enlace y seguimiento de elementos](13-dynamo-integration.md#-element-binding-and-trace) describe el uso del mecanismo de seguimiento de Dynamo para unir nodos del gráfico a sus resultados en el anfitrión.
-* [Nodos de selección de Dynamo/Revit](13-dynamo-integration.md#-dynamo-revit-selection-nodes) describe cómo implementar nodos que permitan a los usuarios seleccionar objetos o datos del anfitrión y transferirlos como entradas al gráfico de Dynamo.
+* [Enlace y seguimiento de elementos](13-dynamo-integration.md#element-binding-and-trace) describe el uso del mecanismo de seguimiento de Dynamo para unir nodos del gráfico a sus resultados en el anfitrión.
+* [Nodos de selección de Dynamo/Revit](13-dynamo-integration.md#dynamo-revit-selection-nodes-what-are-they) Describe cómo implementar nodos que permitan a los usuarios seleccionar objetos o datos del anfitrión y transferirlos como entradas al gráfico de Dynamo.
 * [Descripción general de los paquetes integrados de Dynamo](13-dynamo-integration.md#dynamo-built-in-packages-overview) ofrece información sobre la biblioteca estándar de Dynamo y cómo utilizar el mecanismo subyacente para enviar paquetes con su integración.
 
 **Acerca de la terminología:**
@@ -309,9 +309,9 @@ Cuando se abre un gráfico de Dynamo desde el disco, los datos de seguimiento gu
     * Función de DesignScript
     * Nodo personalizado (función de DS)
 * TraceSerializer
-  * Serializa las clases `ISerializable` y `[Serializable]` marcadas en un seguimiento.
-  * Controla la serialización y la deserialización de datos en seguimiento.
-  * TraceBinder controla el enlace de los datos deserializados a un tipo en tiempo de ejecución. (Crea una instancia de clase real).
+  * Controla la serialización y la deserialización de datos en seguimiento. Este mecanismo sigue un proceso de varios pasos para gestionar datos de seguimiento:
+    * Al guardar el gráfico (serialización), los datos generados por nodos específicos se convierten en una cadena JSON estructurada. Estos datos serializados se comprimen mediante gzip para reducir el tamaño del archivo y, a continuación, se codifican en Base64 para garantizar un almacenamiento seguro. La cadena segura resultante se incrusta en la sección de enlaces del archivo .dyn.
+    * Al abrir el gráfico (deserialización), la cadena codificada se lee desde la sección de enlaces del archivo .dyn. La cadena se decodifica en Base64 para volver a su formato binario comprimido original y, a continuación, se descomprime con gzip. Los datos estructurados restaurados se vuelven a convertir en objetos activos en tiempo de ejecución.
 
 #### ¿Qué aspecto tiene?
 
@@ -334,11 +334,10 @@ Los datos de seguimiento se serializan en el archivo .dyn dentro de una propieda
       }
     }
   ],
-
  
 ```
 
-_NO_ es aconsejable depender del formato de los datos codificados en base64 serializados.
+NO es aconsejable depender del formato de los datos codificados en base64 serializados.
 
 #### ¿Qué problema estamos tratando de resolver?
 
@@ -378,7 +377,7 @@ Si se ha activado el enlace de elementos, podemos conservar el trabajo existente
 
 ***
 
-![Crear muros](images/creates_walls.png)
+![Crear muros](../../.gitbook/assets/creates_walls.png)
 
 #### Enlace de elementos en comparación con el seguimiento
 
@@ -388,7 +387,7 @@ El seguimiento es un mecanismo de Dynamo Core que utiliza una variable estática
 
 También permite serializar datos arbitrarios en el archivo .dyn al escribir nodos ZeroTouch de Dynamo. Esto no suele ser recomendable, ya que significa que el código Zero-Touch, potencialmente transferible ahora depende del núcleo de Dynamo.
 
-No confíe en el formato serializado de los datos del archivo .dyn; utilice en su lugar el atributo y la interfaz [Serializable].
+No confíe en el formato serializado de los datos del archivo .dyn. No se debe acceder directamente a los datos serializados, sino solo a través de las API de seguimiento.
 
 ElementBinding, por su parte, se basa en las API de seguimiento y se implementa en la integración de Dynamo _(DynamoRevit, Dynamo4Civil, etc.)_.
 
@@ -397,10 +396,10 @@ ElementBinding, por su parte, se basa en las API de seguimiento y se implementa 
 Algunas de las API de seguimiento de bajo nivel que vale la pena conocer son las siguientes:
 
 ```c#
-public static ISerializable GetTraceData(string key)
+public static string GetTraceData(string key)
 ///Returns the data that is bound to a particular key
 
-public static void SetTraceData(string key, ISerializable value)
+public static void SetTraceData(string key, string value)
 ///Set the data bound to a particular key
 ```
 
@@ -413,9 +412,9 @@ Para interactuar con los datos de seguimiento que Dynamo ha cargado desde un arc
  GetTraceDataForNodes(IEnumerable<Guid> nodeGuids, Executable executable)
 ```
 
-[GetTraceDataForNodes](https://github.com/DynamoDS/Dynamo/blob/master/src/Engine/ProtoCore/RuntimeData.cs#L218)
+[GetTraceDataForNodes](https://github.com/DynamoDS/Dynamo/blob/RC4.0.0_master/src/Engine/ProtoCore/RuntimeData.cs#L212)
 
-[RuntimeTrace.cs](https://github.com/DynamoDS/Dynamo/blob/master/src/Engine/ProtoCore/RuntimeData.cs)
+[RuntimeTrace.cs](https://github.com/DynamoDS/Dynamo/blob/RC4.0.0_master/src/Engine/ProtoCore/RuntimeData.cs)
 
 #### Ejemplo de seguimiento simple desde un nodo
 
@@ -448,19 +447,16 @@ Esta es la configuración aproximada:
 
 Se importa un `TraceExampleWrapper` de clase de utilidad estática como un nodo en Dynamo. Contiene un único método `ByString` que crea `TraceExampleItem`. Son objetos de .net normales que contienen una propiedad `description`.
 
-Cada `TraceExampleItem` se serializa en un seguimiento representado con un `TraceableId`; se trata simplemente de una clase que contiene un `IntId` que está marcado como `[Serializeable]` para que se pueda serializar con el formateador `SOAP`. Consulte la información mostrada [aquí](https://docs.microsoft.com/es-es/dotnet/api/system.serializableattribute?view=netframework-4.8) para obtener más información sobre el atributo serializable.
-
-También debe implementar la interfaz de `ISerializable` definida [aquí](https://docs.microsoft.com/es-es/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8).
+Cada `TraceExampleItem` se almacena en un TraceableObjectManager estático. TraceableObjectManager serializa y deserializa los registros de seguimiento de Dynamo como cadena JSON. De este modo, los nodos pueden buscar y actualizar elementos creados anteriormente en lugar de volver a crearlos.
 
 ```c#
     [IsVisibleInDynamoLibrary(false)]
-    [Serializable]
-    public class TraceableId : ISerializable
+    public class TraceableId
     {
     }
 ```
 
-Esta clase se crea para cada `TraceExampleItem` que deseemos guardar en el seguimiento, se serializa, se codifica en base64 y se guarda en el disco cuando se guarda el gráfico para que los enlaces se puedan volver a asociar, incluso más tarde, cuando el gráfico se vuelva a abrir sobre un diccionario de elementos existente. Esto no funcionará correctamente en el caso de este ejemplo, ya que el diccionario no es realmente persistente como lo es un documento de Revit.
+La clase TraceableId se crea para cada `TraceExampleItem` que deseemos guardar en el seguimiento, se serializa, se codifica en base64 y se guarda en el disco cuando se guarda el gráfico para que los enlaces se puedan volver a asociar, incluso más tarde, cuando el gráfico se vuelva a abrir sobre un diccionario de elementos existente. Esto no funcionará correctamente en el caso de este ejemplo, ya que el diccionario no es realmente persistente como lo es un documento de Revit.
 
 Por último, la última parte de la ecuación es el `TraceableObjectManager`, que es similar al `ElementBinder` en `DynamoRevit`, que administra la relación entre los objetos presentes en el modelo del documento del anfitrión y los datos que hemos almacenado en el seguimiento de Dynamo.
 
@@ -470,15 +466,15 @@ En la siguiente ejecución del gráfico, buscamos en el seguimiento y encontramo
 
 El flujo de dos ejecuciones consecutivas del gráfico que crea un único `TraceExampleItem` presenta el siguiente aspecto:
 
-![Primera llamada](images/Trace-first-call.png)
+![Primera llamada](../../.gitbook/assets/Trace-first-call.png)
 
-![Segunda llamada](images/Trace-second-call.png)
+![Segunda llamada](../../.gitbook/assets/Trace-second-call.png)
 
 La misma idea se muestra en el siguiente ejemplo con un caso de uso más realista de un nodo de DynamoRevit.
 
 #### Diagrama de seguimiento
 
-![Pasos de seguimiento](images/trace_diagram.png) ![Flujo de seguimiento](images/trace_alt_diagram.png)
+![Pasos de seguimiento](../../.gitbook/assets/trace_diagram.png) ![Flujo de seguimiento](../../.gitbook/assets/trace_alt_diagram.png)
 
 #### NOTA
 
@@ -558,7 +554,13 @@ Las fases importantes de la ejecución del constructor en relación con el enlac
 
 #### Rendimiento
 
-* Actualmente, cada objeto de seguimiento se serializa mediante el formato XML SOAP, que es bastante detallado y duplica mucha información. A continuación, los datos se codifican en base64 dos veces, lo que no es eficaz en términos de serialización o deserialización. Esto puede mejorarse en el futuro si no se construye sobre el formato interno. Repetimos; no confíe en el formato de los datos serializados en reposo.
+* Actualmente, cada cadena de seguimiento se serializa mediante compresión gzip y codificación en base64. Esto supone una mejora con respecto al formato XML SOAP existente.
+
+#### Compatibilidad
+
+* Los objetos de seguimiento guardados en versiones anteriores a Dynamo 3.0 se almacenan mediante SOAP, por lo que no son compatibles con las versiones más recientes. Los datos de enlace de elementos guardados anteriormente se omitirán y se mostrará el siguiente mensaje en Dynamo 3.0 y versiones posteriores. Los datos de enlace de elementos se guardarán la próxima vez que ejecute y guarde el espacio de trabajo.
+
+![Compatibilidad de enlaces de elementos](../../.gitbook/assets/element_binding_compatibility_message.jpg)
 
 #### ¿ElementBinding debería estar activado por defecto?
 
@@ -572,7 +574,7 @@ De forma general, **una buena forma de conceptualizar estos nodos es como una fu
 
 Hay varios nodos `Selection` en DynamoRevit. Podemos dividirlos en al menos los siguientes dos grupos:
 
-![Nodos de selección de Revit](images/revitSelectionNodes.png)
+![Nodos de selección de Revit](../../.gitbook/assets/revitSelectionNodes.png)
 
 1.  Selección de interfaz de usuario:
 
@@ -600,7 +602,7 @@ Hay varios nodos `Selection` en DynamoRevit. Podemos dividirlos en al menos los 
 
 Los flujos de trabajo de D4C son muy similares a la descripción anterior para Revit; aquí hay dos conjuntos típicos de nodos de selección en D4C:
 
-![Nodos de selección de Civil 3D](images/civilSelectionNodes.png)
+![Nodos de selección de Civil 3D](../../.gitbook/assets/civilSelectionNodes.png)
 
 ### Incidencias:
 
@@ -611,9 +613,9 @@ Los flujos de trabajo de D4C son muy similares a la descripción anterior para R
 
 ### Diagramas de flujo de datos
 
-![Flujo de selección](images/selectModelElement.png)
+![Flujo de selección](../../.gitbook/assets/selectModelElement.png)
 
-![Flujo de selección 2](images/selectElementFace.png)
+![Flujo de selección 2](../../.gitbook/assets/selectElementFace.png)
 
 ### Implementación técnica: (consulte los diagramas anteriores):
 
@@ -622,7 +624,7 @@ Los nodos de selección se implementan al heredar de los tipos de `SelectionBase
 * Implementación de un método `BuildOutputAST`: este método debe devolver un AST, que se ejecutará en algún momento en el futuro, cuando se vaya a ejecutar el nodo. En el caso de los nodos de selección, debe devolver elementos o geometría a partir de los ID de elemento. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * La implementación de `BuildOutputAST` es una de las partes más difíciles de la implementación de nodos de `NodeModel`/interfaz de usuario. Es mejor poner toda la lógica posible en una función de C# y simplemente incrustar un nodo de llamada de función AST en AST. Tenga en cuenta que aquí `node` hace referencia a un nodo AST en el árbol de sintaxis abstracta, no a un nodo en el gráfico de Dynamo.
 
-![Flujo de selección 2](images/selectionAST.png)
+![Flujo de selección 2](../../.gitbook/assets/selectionAST.png)
 
 * Serialización:
   *   Dado que se trata de tipos derivados de `NodeModel` explícitos (no ZeroTouch), también requieren la implementación de un [JsonConstructor] que se utilizará durante la deserialización del nodo a partir de un archivo .dyn.
@@ -635,9 +637,10 @@ Los nodos de selección se implementan al heredar de los tipos de `SelectionBase
 #### Clases base de DynamoCore:
 
 * [https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs](https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs)
-* [Caso real de NodeModel (interfaz de usuario personalizada)](11_developer_primer/3_developing_for_dynamo/5-nodemodel-case-study-custom-ui.md)
-* [Actualización de paquetes y bibliotecas de Dynamo para Dynamo 2.x](11_developer_primer/3_developing_for_dynamo/6-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
-* [Actualización de paquetes y bibliotecas de Dynamo para Dynamo 3.x](11_developer_primer/3_developing_for_dynamo/updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+* [Caso real de NodeModel (interfaz de usuario personalizada)](5-nodemodel-case-study-custom-ui.md)
+* [Actualización de paquetes y bibliotecas de Dynamo para Dynamo 2.x](6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+* [Actualización de paquetes y bibliotecas de Dynamo para Dynamo 3.x](6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+* [Actualización de paquetes y bibliotecas de Dynamo para Dynamo 4.x](6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
 
 #### DynamoRevit:
 

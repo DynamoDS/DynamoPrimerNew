@@ -6,7 +6,7 @@ Esta página de referencia amplía las prácticas recomendadas incluidas en las 
 
 Las bibliotecas estándar son externas a Dynamo y están presentes en los lenguajes de programación Python y C# (Zerotouch). Dynamo también tiene su propio conjunto de bibliotecas que corresponden directamente con su jerarquía de nodos, lo que permite al usuario crear mediante código cualquier elemento que se pueda crear con nodos y líneas. A continuación, se muestra una guía sobre los elementos a los que cada biblioteca de Dynamo proporciona acceso y cuándo utilizar una biblioteca estándar.
 
-![](images/3/textual-programming.jpg)
+![](../.gitbook/assets/textual-programming.jpg)
 
 **Bibliotecas estándar y bibliotecas de Dynamo**
 
@@ -28,9 +28,7 @@ Las bibliotecas estándar son externas a Dynamo y están presentes en los lengua
    * Función: Excel.
    * Cómo importar: `import DSOffice`
 
-{% hint style="warning" %}
-\*Nota: Tenga en cuenta que, al utilizar **ProtoGeometry** a través de Python o C#, se crean objetos no administrados, que requieren que la memoria se administre manualmente. Consulte la sección **Objetos no administrados** mostrada a continuación para obtener más información.
-{% endhint %}
+{% hint style="warning" %} *Nota: Tenga en cuenta que, al utilizar **ProtoGeometry** a través de Python o C#, se crean objetos no administrados, que requieren que la memoria se administre manualmente. Consulte la sección **Objetos no administrados** mostrada a continuación para obtener más información. {% endhint %}
 
 ## Atención en el uso de etiquetas
 
@@ -310,4 +308,3 @@ El código fijo tendría un aspecto similar al siguiente:
 ```
 
 Por lo general, solo es necesario eliminar geometría como `Surfaces`, `Curves` y `Solids`. No obstante, por seguridad, puede eliminar todos los tipos de geometría (`Vectors`, `Points` y `CoordinateSystems`).
-

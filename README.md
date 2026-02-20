@@ -4,7 +4,7 @@
 
 ## Para Dynamo v2.13 y versiones posteriores
 
-![Logotipo de Dynamo](images/dynamo_logo_dark-trim.jpg)
+![Logotipo de Dynamo](.gitbook/assets/dynamo_logo_dark-trim.jpg)
 
 > Dynamo es una plataforma de programación visual de código abierto para diseñadores.
 
@@ -37,19 +37,19 @@ Dynamo Primer es un proyecto de código abierto iniciado por Matt Jezyk y el equ
 
 **Mode Lab** recibió el encargo de escribir la primera edición del manual de introducción. Les agradecemos todos sus esfuerzos para establecer este valioso recurso.
 
-![](images/MODELAB_Logo.png)
+![](.gitbook/assets/MODELAB_Logo.png)
 
 ***
 
 A **John Pierson de Parallax Team** se le encargó actualizar el manual de introducción para incluir las revisiones de Dynamo 2.0.
 
-![](images/PRLX_Logo.jpg)
+![](.gitbook/assets/PRLX_Logo.jpg)
 
 ***
 
 A **Matterlab** se le encargó actualizar el manual de introducción para incluir las revisiones de Dynamo 2.13.
 
-![](images/matterlab_final-07.jpg)
+\![](<.gitbook/assets/matterlab_final-07 (2).jpg>)
 
 ***
 

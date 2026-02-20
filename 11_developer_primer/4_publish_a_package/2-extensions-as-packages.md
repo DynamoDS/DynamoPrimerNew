@@ -39,7 +39,7 @@ Una vez que tenga una carpeta que contenga los subdirectorios indicados anterior
 
 En este momento, debería encontrarse en la ventana normal de publicación de paquetes, donde introducirá todos los campos necesarios relativos a su paquete o extensión. Hay un paso adicional **muy importante** que requiere asegurarse de que ninguno de los archivos de montaje se marque como biblioteca de nodos. Para ello, haga clic con el botón derecho en los archivos que ha importado (la carpeta de paquetes creada anteriormente). Aparecerá un menú contextual que le permite activar (o desactivar) esta opción. Todos los montajes de extensión deben estar desactivados.
 
-![Publicar un paquete](images/ViewExtension_Search.png)
+![Publicar un paquete](../../.gitbook/assets/ViewExtension_Search.png)
 
 Antes de realizar la publicación pública, debe efectuarla siempre localmente para asegurarse de que todo funciona según lo previsto. Una vez que se haya verificado esto, puede seleccionar Publicar para llevar a cabo el proceso.
 
@@ -47,4 +47,4 @@ Antes de realizar la publicación pública, debe efectuarla siempre localmente p
 
 Para comprobar que el paquete se haya cargado correctamente, debe poder buscarlo con la nomenclatura y las palabras clave especificadas en el paso de publicación. Por último, es importante señalar que las mismas extensiones requerirán un reinicio de Dynamo antes de poder utilizarse. Por lo general, al iniciar Dynamo, se deben especificar parámetros para estas extensiones.
 
-![Buscar paquetes](images/ViewExtension_Search.jpg)
+![Buscar paquetes](../../.gitbook/assets/ViewExtension_Search.jpg)
