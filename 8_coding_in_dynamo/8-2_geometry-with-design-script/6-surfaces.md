@@ -6,7 +6,7 @@ NurbsCurve 的二維類比是 NurbsSurface，就像自由形式的 NurbsCurve，
 
 若要建立內插的曲面，只要產生一些近似曲面形狀的二維點即可。這些點必須是矩形，亦即不是鋸齒狀。_NurbsSurface.ByPoints_ 方法會從這些點建構一個曲面。
 
-![](../images/8-2/6/Surfaces\_01.png)
+![](../../.gitbook/assets/Surfaces_01.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -19,7 +19,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 
 指定曲面的基本控制點，也可以建立自由形式的 NurbsSurface。就像 NurbsCurve 一樣，控制點可以視為是代表一個有直線段的四邊形網格，這會根據曲面的次數，平滑化成最終的曲面形狀。若要使用控制點來建立 NurbsSurface，請在 _NurbsSurface.ByPoints_ 中包含另外兩個參數，指出基本曲線在曲面兩個方向的次數。
 
-![](../images/8-2/6/Surfaces\_02.png)
+![](../../.gitbook/assets/Surfaces_02.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -31,7 +31,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 
 我們可以增加 NurbsSurface 的次數，來變更產生的曲面幾何圖形：
 
-![](../images/8-2/6/Surfaces\_03.png)
+![](../../.gitbook/assets/Surfaces_03.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -45,7 +45,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 
 就像我們可以在一組輸入點之間內插來建立 Surface，也可以在一組基準曲線之間內插來建立 Surface。這稱為斷面混成。使用 _Surface.ByLoft_ 建構函式可以建立斷面混成的曲線，一組輸入曲線是唯一的參數。
 
-![](../images/8-2/6/Surfaces\_04.png)
+![](../../.gitbook/assets/Surfaces_04.png)
 
 ```js
 // python_points_2, 3, and 4 are generated with
@@ -64,7 +64,7 @@ loft = Surface.ByLoft([c1, c2, c3]);
 
 迴轉的曲面是由基準曲線 (代表曲面的「邊緣」)、軸原點 (曲面的基準點)、軸方向 (中央「核心」方向)、掃掠起始角度和掃掠結束角度指定。這些是用來做為 _Surface.Revolve_ 建構函式的輸入。
 
-![](../images/8-2/6/Surfaces\_05.png)
+![](../../.gitbook/assets/Surfaces_05.png)
 
 ```js
 pts = {};

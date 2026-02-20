@@ -6,13 +6,13 @@
 
 這通常如下所示 `( %appdata%\Dynamo\Dynamo Core\{version}\ )`。
 
-![](../images/8-3/3/pythontemplates-appdatafolderlocation.jpg)
+\![](<../../.gitbook/assets/python templates - appdata folder location.jpg>)
 
 ### 設置樣板
 
 若要使用此功能，我們必須在 `DynamoSettings.xml` 檔案中加入下列一行。_(以記事本編輯)_
 
-![](../images/8-3/3/pythontemplates-dynamosettingsxmlfile.png)
+\![](<../../.gitbook/assets/python templates -dynamo settings xml file.png>)
 
 我們會在當中看到 `<PythonTemplateFilePath />`，可以直接將它替換為以下內容：
 
@@ -22,9 +22,7 @@
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_注意：請使用您的使用者名稱替換 CURRENTUSER_
-{% endhint %}
+{% hint style="warning" %} _注意：請使用您的使用者名稱替換 CURRENTUSER_ {% endhint %}
 
 接下來，我們需要建置一個樣板，當中含有我們要使用的內建功能。在此範例中，我們嵌入 Revit 相關的匯入，和一些在處理 Revit 時的其他典型項目。
 
@@ -73,11 +71,10 @@ OUT = element
 
 定義 Python 樣板之後，每當放置了 Python 節點時，Dynamo 都會尋找這裡。如果找不到，看起來就會是預設的 Python 視窗。
 
-![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
+\![](<../../.gitbook/assets/python templates - before setup template.jpg>)
 
 如果發現 Python 樣板 (例如我們的 Revit)，您會看到您內建的所有預設項目。
 
-![](../images/8-3/3/pythontemplates-aftersetuptemplate.jpg)
+\![](<../../.gitbook/assets/python templates - after setup template.jpg>)
 
 您可以在下列位置找到有關此絕佳額外功能 (由 Radu Gidei 提供) 的其他資訊。https://github.com/DynamoDS/Dynamo/pull/8122
-

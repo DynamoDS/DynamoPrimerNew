@@ -16,15 +16,13 @@ Dynamo 2.0 引入將字典資料類型與清單資料類型分開的概念。此
 
 ### **有哪些變更？**
 
-* _語法_ 發生了變化，改變您在程式碼區塊中初始化和使用字典與清單的方式。
+* _語法_發生了變化，改變您在 Code Block 中初始化和使用字典與清單的方式。
   * 字典使用以下語法 `{key:value}`
   * 清單使用以下語法 `[value,value,value]`
 * 資源庫引入了 _新節點_，以協助您建立、修改和查詢字典。
-*   在 1.x 版的程式碼區塊中建立的清單，在載入腳本時會自動移轉成使用方括號 `[ ]` 而不是大括號 `{ }` 的新清單語法 \\
+* 在 1.x 版的 Code Block 中建立的清單，在載入腳本時會自動移轉成使用方括號 `[ ]` 而不是大括號 `{ }` 的新清單語法 \\
 
-    ***
-
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
+\![](<../../.gitbook/assets/what is a dictionary - what are the changes (1) (4).jpg>)
 
 ***
 
@@ -34,7 +32,7 @@ Dynamo 2.0 引入將字典資料類型與清單資料類型分開的概念。此
 
 在下面的影像中，我們示範字典的可能使用案例。字典通常是用來讓兩組可能沒有直接關聯的資料建立關係。在我們的範例中，我們要將西班牙版本的某個字連接到英文版本，以供稍後進行查詢。
 
-![](../images/5-5/1/whatisadictionary-whatwouldyouusethesefor.jpg)
+\![](<../../.gitbook/assets/what is a dictionary - what would you use these for.jpg>)
 
 > 1. 建置字典以關聯兩個資料。
 > 2. 取得具有給定索引的值。

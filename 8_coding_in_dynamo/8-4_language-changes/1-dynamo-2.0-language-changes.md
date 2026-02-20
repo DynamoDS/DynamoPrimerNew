@@ -68,7 +68,7 @@ lne = Autodesk.Line.ByStartPointEndPoint;
 
 ## 1\.簡化 list@level 語法
 
-list@level 的新語法是使用 `list@L1` 而不是 `list@-1` ![](../images/8-4/1/lang2_1.png)
+list@level 的新語法是使用 `list@L1` 而不是 `list@-1` ![](../../.gitbook/assets/lang2_1.png)
 
 ## 2\.其參數只有等級不同的多載函數是不合法的
 
@@ -85,7 +85,7 @@ BoundingBox BoundingBox.ByGeometry(geometry: Geometry) {...}
 BoundingBox BoundingBox.ByGeometry(geometry: Geometry[]) {...}
 ```
 
-如果使用者將第一個節點放在圖元區上並連接一個幾何圖形清單，他希望複製能夠啟動，但這永遠不會發生，因為在執行階段將改為呼叫第二個多載，如下所示：![](../images/8-4/1/lang2_2.png)
+如果使用者將第一個節點放在圖元區上並連接一個幾何圖形清單，他希望複製能夠啟動，但這永遠不會發生，因為在執行階段將改為呼叫第二個多載，如下所示：![](../../.gitbook/assets/lang2_2.png)
 
 在 2.0 中，我們不允許由於這個原因僅在參數基數上不同的多載函數。這表示，對於有相同數量和類型的參數但有一個或多個參數只是等級不同的多載函數，先定義的多載永遠優先，編譯器會捨棄其餘多載。進行這種簡化的主要優點是透過一個快速方式選擇候選函數，可以簡化方法解析邏輯。
 
@@ -105,7 +105,7 @@ BoundingBox.ByGeometry(geometry<1>);
 
 在 2.0 中，永遠是定義的第一種方法而不是其餘方法。先到先贏。
 
-![](../images/8-4/1/lang2_3.png)
+![](../../.gitbook/assets/lang2_3.png)
 
 對於以下每種情況，將採用定義的第一個多載。請注意，它純粹基於定義函數的順序，而不是參數等級，但建議針對使用者定義和 ZeroTouch 節點優先使用參數等級較高的方法。
 
@@ -137,7 +137,7 @@ foo(x: int[], y: int[]); ✕
 
 ### Dynamo 1.x：只測試輸入清單的第一個元素進行方法解析檢查
 
-![](../images/8-4/1/lang2_4.png)
+![](../../.gitbook/assets/lang2_4.png)
 
 ```
 x = [arc, line];
@@ -164,19 +164,19 @@ y = x.CenterPoint; // y = null ✕
 
 此範例先前在 1.x 中有作用，因為圖表將編譯為 `point.X;`，它會尋找點物件的 `X` 性質。它現在在 2.0 中失敗，因為編譯的程式碼 - `Vector.X(point)` 只需要一個 `Vector` 類型：
 
-![](../images/8-4/1/lang2_5.png)
+![](../../.gitbook/assets/lang2_5.png)
 
 ### 優點：
 
-**前後一致/可理解：** 靜態方法消除了哪個方法將在執行階段執行的任何不確定性。方法永遠與圖表中使用者預期會被呼叫的使用者介面節點一致。
+**前後一致/可理解：**靜態方法消除了哪個方法將在執行階段執行的任何不確定性。方法永遠與圖表中使用者預期會被呼叫的使用者介面節點一致。
 
-**相容：** 程式碼和視覺程式之間有更好的相關性。
+**相容：**程式碼和視覺程式之間有更好的相關性。
 
-**提供指導：** 將異質清單輸入傳入節點現在會導致節點接受的類型為非空值，而未實作節點的類型為空值。結果更可預測，且更清楚指出哪些是節點允許的類型。
+**提供指導：**將異質清單輸入傳入節點現在會導致節點接受的類型為非空值，而未實作節點的類型為空值。結果更可預測，且更清楚指出哪些是節點允許的類型。
 
 ### 警告：多載方法有無法解析的不明確性
 
-由於 Dynamo 通常支援函數多載，因此如果另一個多載函數有相同數量的參數，可能還是會讓人感到困惑。例如，在以下圖表中，如果我們將一個數值連接到 `Curve.Extrude` 的 `direction` 輸入，將一個向量連接到 `Curve.Extrude` 的 `distance` 輸入，兩個節點都會繼續運作，這不是預期的狀況。在這種情況下，即使節點編譯為靜態方法，引擎仍然無法在執行階段分辨出差異，並根據輸入類型選擇其中一種。![](../images/8-4/1/lang2_6.png)
+由於 Dynamo 通常支援函數多載，因此如果另一個多載函數有相同數量的參數，可能還是會讓人感到困惑。例如，在以下圖表中，如果我們將一個數值連接到 `Curve.Extrude` 的 `direction` 輸入，將一個向量連接到 `Curve.Extrude` 的 `distance` 輸入，兩個節點都會繼續運作，這不是預期的狀況。在這種情況下，即使節點編譯為靜態方法，引擎仍然無法在執行階段分辨出差異，並根據輸入類型選擇其中一種。![](../../.gitbook/assets/lang2_6.png)
 
 ### 解決的問題：
 
@@ -186,11 +186,11 @@ y = x.CenterPoint; // y = null ✕
 
 我們考慮 `ProtoGeometry` 中 `TSpline` 節點的範例 (請注意，`TSplineTopology` 繼承自基底 `Topology` 類型)：先前編譯為實體方法 `object.Edges` 的 `Topology.Edges` 節點現在編譯為靜態方法 `Topology.Edges(object)`。某個方法在執行階段分派物件類型後，先前的呼叫會以多型方式解析為衍生的類別方法 `TsplineTopology.Edges`。
 
-![](../images/8-4/1/lang2_7.png)
+![](../../.gitbook/assets/lang2_7.png)
 
 而新的靜態行為則被迫呼叫基底類別方法 `Topology.Edges`。結果，此節點傳回的是基底類別 `Edge` 物件，而不是類型為 `TSplineEdge` 的衍生類別物件。
 
-![](../images/8-4/1/lang2_8.png)
+![](../../.gitbook/assets/lang2_8.png)
 
 這是一種倒退的結果，因為預期是 `TSplineEdges` 的下游 `TSpline` 節點開始失敗。
 
@@ -198,13 +198,13 @@ y = x.CenterPoint; // y = null ✕
 
 **2.0 中新的多型行為：**
 
-![](../images/8-4/1/lang2_9.png)
+![](../../.gitbook/assets/lang2_9.png)
 
 在此案例中，由於第一個元素 `a` 是 `TSpline` ，因此在執行階段呼叫的是 `TSplineTopology.Edges` 衍生方法。結果它針對基底 `Topology` 類型 `b` 傳回 `null`。
 
 在第二個案例中，由於一般的 `Topology` 類型 `b` 是第一個元素，因此呼叫基底 `Topology.Edges` 方法。由於 `Topology.Edges` 也恰好接受衍生的 `TSplineTopology` 類型 `a` 當作輸入，因此它針對 `a` 和 `b` 兩個輸入都傳回 `Edges`。
 
-![](../images/8-4/1/lang2_10.png)
+![](../../.gitbook/assets/lang2_10.png)
 
 **2\.因為外層產生多餘的清單而導致倒退**
 
@@ -248,13 +248,13 @@ p = Point.ByCoordinates(x<1>, y<2>, z<3>); // cross-lacing
 
 ### Dynamo 1.x：3D 點清單
 
-![](../images/8-4/1/lang2_11.png)
+![](../../.gitbook/assets/lang2_11.png)
 
 在 2.0 中，每個單值引數 `y` 和 `z` 即使有複製指南也不會導致提升，因此清單維度與 `x` 的 1D 輸入清單相同。
 
 ### Dynamo 2.0：1D 點清單
 
-![](../images/8-4/1/lang2_12.png)
+![](../../.gitbook/assets/lang2_12.png)
 
 上述因靜態方法編譯而產生外層多餘清單的倒退，也透過這種語言變更而獲得解決。
 
@@ -268,7 +268,7 @@ Surface.PointAtParameter(surface<1>, u<2>, v<3>);
 
 ### Dynamo 1.x：使用複製指南時，引數提升為清單
 
-![](../images/8-4/1/lang2_13.png)
+![](../../.gitbook/assets/lang2_13.png)
 
 在 2.0 中，我們停用與複製指南或交織搭配使用時，將單值引數提升為清單的功能。所以現在呼叫：
 
@@ -280,22 +280,22 @@ Surface.PointAtParameter(surface<1>, u<2>, v<3>);
 
 ### Dynamo 2.0：使用複製指南時，停用將單值引數提升為清單
 
-![](../images/8-4/1/lang2_14.png)
+![](../../.gitbook/assets/lang2_14.png)
 
 這項變更現在移除額外多出的清單階層，也解決因為轉換為靜態方法編譯所導致的倒退問題。
 
 ### 優點：
 
-**清楚：** 結果符合使用者預期，也更容易理解
+**清楚：**結果符合使用者預期，也更容易理解
 
-**相容：** 使用者介面節點 (使用交織選項) 和使用複製指南的 CBN 會提供相容的結果
+**相容：**使用者介面節點 (使用交織選項) 和使用複製指南的 CBN 會提供相容的結果
 
 **一致：**
 
 * 實體方法和靜態方法一致 (修正靜態方法語義的問題)
 * 使用輸入和使用預設引數的節點行為一致 (請參閱下文)
 
-![](../images/8-4/1/lang2_15.png)
+![](../../.gitbook/assets/lang2_15.png)
 
 ## 5\.變數在 Code Block 節點中是不可變的，以防止關聯式更新
 
@@ -336,7 +336,7 @@ a = 4;         // b = 10 or b = 7?
 
 在此幾何圖形範例中，由於立方體 `b` 既相依於自己，也相依於圓柱 `a`，則移動滑棒應該要讓孔沿圖塊移動？還是應該針對每個滑棒位置更新，沿其路徑打出多個孔而產生一個累積性的效果？
 
-![](../images/8-4/1/lang2_16.gif)
+![](../../.gitbook/assets/lang2_16.gif)
 
 **3\.更新變數的性質：**
 
@@ -359,7 +359,7 @@ a = 4;         // b = 10 or b = 7?
 
 如果某些使用者真的使用變數，很可能他們是在不知不覺的情況下使用，而導致弊大於利。因此，我們決定在 2.0 的 Code Block 節點讓變數不變來隱藏關聯性，同時繼續讓關聯式更新只作為 DS 引擎的原生功能。這是為簡化使用者的腳本編寫體驗而進行的另一項變更。
 
-**透過阻止 CBN 中的變數重新定義，停用關聯式更新：** ![](../images/8-4/1/lang2_17.png)
+**透過阻止 CBN 中的變數重新定義，停用關聯式更新：** ![](../../.gitbook/assets/lang2_17.png)
 
 **在 Code Block 中仍允許使用清單編製索引**
 
@@ -367,7 +367,7 @@ a = 4;         // b = 10 or b = 7?
 
 在下一個範例中，我們會看到清單 `a` 已初始化，但之後可以指定索引運算子來覆寫，且任何相依於 `a` 的變數都會關聯地更新，如 `c` 的值所示。而且，在重新定義一個或多個元素之後，節點預覽會顯示 `a` 的更新值。
 
-![](../images/8-4/1/lang2_18.png)
+![](../../.gitbook/assets/lang2_18.png)
 
 ## 6\.指令式區塊中的變數對指令式區塊範圍是局部變數
 
@@ -483,11 +483,11 @@ dict = {<key> : <value>, …};
 
 的鍵值對格式，其中的 `<key>` 只能使用一個字串，而且以逗號分隔多個鍵值對。
 
-![](../images/8-4/1/lang2_19.png)
+![](../../.gitbook/assets/lang2_19.png)
 
 `Dictionary.ByKeysValues` zero-touch 方法可透過分別傳入鍵和值的清單，並使用 zero-touch 方法 (如複製指南等) 的所有花俏功能，當作初始化字典一個更多樣的方式。
 
-![](../images/8-4/1/lang2_20.png)
+![](../../.gitbook/assets/lang2_20.png)
 
 ### 為什麼沒有以任意表示式呈現字典初始化語法？
 
@@ -507,21 +507,21 @@ dict = {["foo", "bar"] : "baz" };
 
 **1\.傳回 .NET 字典的 Zero Touch 節點會傳回為 Dynamo 字典**
 
-**請考慮以下傳回 IDictionary 的 zero-touch C# 方法：** ![](../images/8-4/1/lang2_21.png)
+**請考慮以下傳回 IDictionary 的 zero-touch C# 方法：** ![](../../.gitbook/assets/lang2_21.png)
 
-**對應的 ZT 節點傳回值會編組成 Dynamo 字典：** ![](../images/8-4/1/lang2_22.png)
+**對應的 ZT 節點傳回值會編組成 Dynamo 字典：** ![](../../.gitbook/assets/lang2_22.png)
 
 **2\.多重傳回節點的預覽形式為字典**
 
-**以多重傳回屬性傳回 IDictionary 的 Zero Touch 節點會傳回 Dynamo 字典：** ![](../images/8-4/1/lang2_23.png)
+**以多重傳回屬性傳回 IDictionary 的 Zero Touch 節點會傳回 Dynamo 字典：** ![](../../.gitbook/assets/lang2_23.png)
 
-![](../images/8-4/1/lang2_24.png)
+![](../../.gitbook/assets/lang2_24.png)
 
 **3\.Dynamo 字典可作為輸入傳入接受 .NET 字典的 Zero-touch 節點**
 
-**具有 IDictionary 參數的 ZT 方法：** ![](../images/8-4/1/lang2_25.png)
+**具有 IDictionary 參數的 ZT 方法：** ![](../../.gitbook/assets/lang2_25.png)
 
-**ZT 節點接受 Dynamo 字典作為輸入：** ![](../images/8-4/1/lang2_26.png)
+**ZT 節點接受 Dynamo 字典作為輸入：** ![](../../.gitbook/assets/lang2_26.png)
 
 ### 多重傳回節點中的字典預覽
 
@@ -529,4 +529,4 @@ dict = {["foo", "bar"] : "baz" };
 
 但是，我們為已定義 `MultiReturnAttribute` 的多重傳回節點做出例外。在以下範例中，`DateTime.Components` 節點是一個「多重傳回」節點，節點預覽反映出其鍵值對與節點輸出埠的順序相同，這也是根據節點定義上的 `MultiReturnAttribute` 指定輸出的順序。
 
-另請注意，與使用者介面節點不同，Code Block 的預覽並未排序，因為 Code Block 節點沒有輸出埠資訊 (以多重傳回屬性的形式)： ![](../images/8-4/1/lang2_27.png)
+另請注意，與使用者介面節點不同，Code Block 的預覽並未排序，因為 Code Block 節點沒有輸出埠資訊 (以多重傳回屬性的形式)：![](../../.gitbook/assets/lang2_27.png)

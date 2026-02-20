@@ -10,7 +10,7 @@
 
 您可以使用[布林運算](6-solids.md#boolean-operations)來修改實體。讓我們使用幾個布林運算建立一個尖刺球。
 
-![](../images/5-2/6/solids-spikyball.jpg)
+\![](<../../.gitbook/assets/solids - spiky ball.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius**：建立基礎實體。
 > 2. **Topology.Faces**、**Face.SurfaceGeometry**：查詢實體的面並將其轉換為曲面幾何圖形 - 在此情況下，圓球只有一個面。
@@ -23,22 +23,20 @@
 >
 > 附錄中提供完整的範例檔案清單。
 
-{% file src="../datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Solids.dyn" %}
 
 ### 凍結
 
 布林運算很複雜，可能會減慢計算速度。您可以使用「凍結」功能暫停執行選取的節點和受影響的下游節點。
 
-![](../images/5-2/6/solids-freezenode.jpg)
+\![](<../../.gitbook/assets/solids - freeze node.jpg>)
 
 > 1. 使用右鍵關聯式功能表來凍結「實體聯集」作業。
 > 2. 選取的節點和所有下游節點將以淺灰色重影模式預覽，受影響的線路將以虛線顯示。受影響的幾何圖像預覽也將被重像。現在，您可以變更上游值，而不計算布林聯集。
 > 3. 若要解凍節點，請按一下右鍵，然後取消勾選「凍結」。
 > 4. 所有受影響的節點和關聯的幾何圖像預覽將更新並回復至標準預覽模式。
 
-{% hint style="info" %}
-您可以在[4_nodes_and_wires](../../4_nodes_and_wires/ "mention")一節閱讀有關凍結節點的更多資訊。
-{% endhint %}
+{% hint style="info" %} 您可以在[4_nodes_and_wires](../../4_nodes_and_wires/ "mention")一節閱讀有關凍結節點的更多資訊。{% endhint %}
 
 ## 深入探索...
 
@@ -46,7 +44,7 @@
 
 實體由一個或多個曲面組成，以定義「內」或「外」的封閉邊界表示其體積。無論有多少平面，它們必須形成一個「無縫」體積才會被視為實體。可透過連結平面或多面體來建立實體圖像，或透過使用作業 (例如，斷面混成、掃掠和迴轉) 來建立。圓球、立方體、圓錐與圓柱基本型也是實體。將立方塊至少一個面移除所得的圖像為 Polysurface，它有實體的某些相似性質，但不是實體。
 
-![實體](../images/5-2/6/Primitives.jpg)
+![實體](../../.gitbook/assets/Primitives.jpg)
 
 > 1. 平面是由單一曲面組成，不是實體。
 > 2. 圓球是由一個曲面組成，但 _是_ 實體。
@@ -58,7 +56,7 @@
 
 實體由三種類型的元素組成：頂點、邊和面。面是構成實體的平面。邊是定義相鄰面之間連結的曲線，頂點是這些曲線的起點和終點。這些元素可以使用拓樸節點進行查詢。
 
-![拓樸](../images/5-2/6/Solid-topology.jpg)
+![拓樸](../../.gitbook/assets/Solid-topology.jpg)
 
 > 1. 面
 > 2. 邊
@@ -68,7 +66,7 @@
 
 可透過對邊執行圓角或倒角作業來消除急轉角和角，從而對實體進行修改。「倒角」作業會在兩個面之間建立符合規則的曲面，而「圓角」作業會混合兩個面使其保持相切。
 
-![](../images/5-2/6/SolidOperations.jpg)
+![](../../.gitbook/assets/SolidOperations.jpg)
 
 > 1. 實體立方塊
 > 2. 倒角的立方塊
@@ -83,16 +81,15 @@
 3. **刪除**不需要的幾何圖形部分。
 4. 將所有物件重新**接合**在一起。
 
-這樣可使實體布林運算成為功能強大且節省時間的流程。有三種實體布林運算，可區分要保留幾何圖形的哪些部分。![實體布林運算](../images/5-2/6/SolidBooleans.jpg)
+這樣可使實體布林運算成為功能強大且節省時間的流程。有三種實體布林運算，可區分要保留幾何圖形的哪些部分。![實體布林運算](../../.gitbook/assets/SolidBooleans.jpg)
 
 > 1. **聯集：** 移除實體的重疊部分並將它們接合為單一實體。
 > 2. **差集：** 從一個實體減去另一個。要被減去的實體稱為工具。請注意，您可以切換作為工具的實體，以保留相反的部分。
 > 3. **交集：** 僅保留兩個實體的交集部分。
 
-除了這三個作業，Dynamo 有 **Solid.DifferenceAll** 和 **Solid.UnionAll** 節點用於對多個實體執行「差集」和「聯集」作業。![](../images/5-2/6/BooleanAll.jpg)
+除了這三個作業，Dynamo 有 **Solid.DifferenceAll** 和 **Solid.UnionAll** 節點用於對多個實體執行「差集」和「聯集」作業。![](../../.gitbook/assets/BooleanAll.jpg)
 
 > 1. **UnionAll：** 對球和向外圓錐進行「聯集」作業
 > 2. **DifferenceAll：** 對球和向內圓錐進行「差集」作業
 
 ##
-

@@ -4,7 +4,7 @@
 
 從最基礎來說，一個向量代表 3D 空間中的一個位置，而且通常視為從位置 (0,0,0) 到該位置的一個箭頭終點。向量可以使用 _ByCoordinates_ 建構函式建立，採用新建立的向量物件的 x、y、z 位置。請注意，向量物件不是幾何物件，不會出現在 Dynamo 視窗中。但是在主控台視窗中可以列印出新建立或修改過的向量的相關資訊：
 
-![](../images/8-2/3/vectormath01.jpg)
+\![](<../../.gitbook/assets/vector math 01.jpg>)
 
 ```js
 // construct a Vector object
@@ -19,7 +19,7 @@ s = v.X + " " + v.Y + " " + v.Z;
 
 向量相加是定義為兩個向量的分量總和，可以視為是兩個分量的向量箭頭以尖端接著尾端的方式放置而得到的向量。向量相加是使用 _Add_ 方法執行，以左圖表示。
 
-![](../images/8-2/3/VectorMath\_02.png)
+![](../../.gitbook/assets/VectorMath_02.png)
 
 ```js
 a = Vector.ByCoordinates(5, 5, 0);
@@ -33,7 +33,7 @@ c = a.Add(b);
 
 同樣的，兩個向量物件可以使用 _Subtract_ 方法相減。向量相減可以視為是從第一個向量到第二個向量的方向。
 
-![](../images/8-2/3/VectorMath\_03.png)
+![](../../.gitbook/assets/VectorMath_03.png)
 
 ```js
 a = Vector.ByCoordinates(5, 5, 0);
@@ -47,7 +47,7 @@ c = a.Subtract(b);
 
 向量相乘可以視為將一個向量的終點沿著自己的方向移動給定的比例係數。
 
-![](../images/8-2/3/VectorMath\_04.png)
+![](../../.gitbook/assets/VectorMath_04.png)
 
 ```js
 a = Vector.ByCoordinates(4, 4, 0);
@@ -60,7 +60,7 @@ c = a.Scale(5);
 
 如果要調整一個向量的大小，讓產生的向量長度完全等於調整的量，就經常會這樣做。只要先將一個向量正規化，也就是將向量的長度設定為等於 1，就可以輕鬆達成目標。
 
-![](../images/8-2/3/vectormath05.jpg)
+\![](<../../.gitbook/assets/vector math 05.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 3);
@@ -80,7 +80,7 @@ c 還是指向與 (1, 2, 3) 相同的方向，但是現在長度等於 5。
 
 向量數學中還有其他兩個與 1D 數學無關的方法，分別是外積和內積。外積是一種從兩個既有向量產生一個與這兩個向量成正交 (90 度) 的向量的方法。例如，x 軸和 y 軸的外積是 z 軸，不過兩個輸入向量不必然要互相正交。外積向量是透過 _Cross_ 方法計算。
 
-![](../images/8-2/3/VectorMath\_06.png)
+![](../../.gitbook/assets/VectorMath_06.png)
 
 ```js
 a = Vector.ByCoordinates(1, 0, 1);
@@ -94,7 +94,7 @@ c = a.Cross(b);
 
 向量數學另外一個更進階的函數是內積。二個向量的內積是一個與兩個向量之間的角度有關但不是完全相同的一個實數 (不是 Vector 物件)。內積一個有用的性質是，如果兩個向量互相垂直，則兩個向量之間的內積將為 0。內積使用 _Dot_ 方法計算。
 
-![](../images/8-2/3/vectormath07.jpg)
+\![](<../../.gitbook/assets/vector math 07.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 1);

@@ -4,7 +4,7 @@
 
 Dynamo 標準幾何圖形資源庫中最簡單的幾何圖形物件是一個點。所有幾何圖形都是使用稱作建構函式的特殊函數建立的，每個建構函式都會傳回一個該特定幾何圖形類型的新實體。在 Dynamo 中，建構函式以物件類型的名稱 (在此案例中為 Point) 為開頭，後接建構的方法。若要建立一個以 x、y、z 直角座標指定的三維點，請使用 _ByCoordinates_ 建構函式：
 
-![](../images/8-2/1/GeometryBasics\_01.png)
+![](../../.gitbook/assets/GeometryBasics_01.png)
 
 ```js
 // create a point with the following x, y, and z
@@ -20,7 +20,7 @@ Dynamo 中的建構函式通常以「_By_」字首指定，呼叫這些函數會
 
 大多數物件都有許多不同的建構函式，我們可以使用 _BySphericalCoordinates_ 建構函式，指定圓球的半徑、第一個旋轉角度和第二個旋轉角度 (以度為單位指定) 建立一個圓球上的點：
 
-![](../images/8-2/1/GeometryBasics\_02.png)
+![](../../.gitbook/assets/GeometryBasics_02.png)
 
 ```js
 // create a point on a sphere with the following radius,
@@ -38,7 +38,7 @@ p = Point.BySphericalCoordinates(cs, radius, theta,
 
 點可以用來建構更高維度的幾何圖形，例如直線。我們可以使用 _ByStartPointEndPoint_ 建構函式在兩個點之間建立一個 Line 物件：
 
-![](../images/8-2/1/GeometryBasics\_03.png)
+![](../../.gitbook/assets/GeometryBasics_03.png)
 
 ```js
 // create two points:
@@ -53,7 +53,7 @@ l = Line.ByStartPointEndPoint(p1, p2);
 
 同樣的，直線也可以用來建立更高維度的曲面幾何圖形，例如使用 _Loft_ 建構函式，用一系列直線或曲線，在這之間內插一個曲面。
 
-![](../images/8-2/1/GeometryBasics\_04.png)
+![](../../.gitbook/assets/GeometryBasics_04.png)
 
 ```js
 // create points:
@@ -79,7 +79,7 @@ surf = Surface.ByLoft([l1, l2, l3]);
 
 曲面也可以用來建立更高維度的實體幾何圖形，例如把曲面加厚指定的距離。許多物件都會附加稱為方法的函數，程式設計師可以對該特定物件執行指令。所有幾何圖形都通用的方法包括 _Translate_ 和 _Rotate_，分別將幾何圖形平移 (移動) 和旋轉指定的量。曲面有一個 _Thicken_ 方法，它採用一個單一的數字輸入，指定曲面的新厚度。
 
-![](../images/8-2/1/GeometryBasics\_05.png)
+![](../../.gitbook/assets/GeometryBasics_05.png)
 
 ```js
 p1 = Point.ByCoordinates(3, 10, 2);
@@ -101,7 +101,7 @@ solid = surf.Thicken(4.75, true);
 
 _Intersection_ 指令可以從較高維度的物件萃取出較低維度的幾何圖形。在建立、萃取和重新建立幾何圖形的循環過程中，萃取出的較低維度幾何圖形可以形成較高維度幾何圖形的基礎。在此範例中，我們使用產生的實體 (Solid) 來建立一個曲面 (Surface)，並使用曲面 (Surface) 來建立一條曲線 (Curve)。
 
-![](../images/8-2/1/GeometryBasics\_06.png)
+![](../../.gitbook/assets/GeometryBasics_06.png)
 
 ```js
 p1 = Point.ByCoordinates(3, 10, 2);

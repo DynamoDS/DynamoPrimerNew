@@ -8,7 +8,7 @@
 
 在 Dynamo 中，我們將資料加入/饋入節點的輸入埠 - 我們可以有資料而不採取動作，但必須有資料才能處理節點所代表的動作。將節點加入工作區後，如果未提供任何輸入，則結果將是函數，而不是動作本身的結果。
 
-![資料和動作](../images/5-3/1/data-whatisdata.jpg)
+\![資料與動作](<../../.gitbook/assets/data - what is data.jpg>)
 
 > 1. 簡單資料
 > 2. 資料與動作 (節點) 已成功執行
@@ -22,7 +22,7 @@
 
 | 圖示                                                  | 名稱/語法   | 輸入 | 輸出 |
 | ----------------------------------------------------- | ------------- | ------ | ------- |
-| ![](../images/5-3/1/data-objectIsNull.jpg) | Object.IsNull | obj    | 布林    |
+| \![](<../../.gitbook/assets/data - object IsNull.jpg>) | Object.IsNull | obj    | 布林    |
 
 ### 資料結構
 
@@ -35,7 +35,7 @@
 * 我的手 (_清單_) 有五根手指 (_項目_)。
 * 我所在的街道 (_清單_) 有十棟房子 (_項目_)。
 
-![清單分解](../images/5-3/1/data-datastructures.jpg)
+\![清單分解](<../../.gitbook/assets/data - data structures.jpg>)
 
 > 1. **Number Sequence** 節點使用 _start_、_amount_ 及 _step_ 輸入來定義數字清單。使用這些節點，我們已建立兩個包含十個數字的獨立清單，其中一個清單的範圍是 _100-109_，另一個的範圍是 _0-9_。
 > 2. **List.GetItemAtIndex** 節點會以特定的索引選取清單中的項目。若選擇 _0_，即可取得清單中的第一個項目 (在此案例中是 _100_)。
@@ -49,9 +49,9 @@
 
 > 按一下下方的連結下載範例檔案。
 >
-> 附錄中提供範例檔案的完整清單。
+> 附錄中提供完整的範例檔案清單。
 
-{% file src="../datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
+{% file src="../../.gitbook/assets/Building Blocks of Programs - Data.dyn" %}
 
 在這第一個範例中，我們將組裝薄殼圓柱，這將使用我們在本節中討論的幾何圖形階層。
 
@@ -59,25 +59,25 @@
 
 1\. 加入 **Point.ByCoordinates -** 在圖元區加入節點後，我們會在 Dynamo 預覽格線的原點看到某個點。_x、y_ 與 _z_ 輸入的預設值是 _0.0_，給我們此位置的點。
 
-![](../images/5-3/1/data-exercisestep1.jpg)
+\![](<../../.gitbook/assets/data - exercise step 1.jpg>)
 
 2\.**Plane.ByOriginNormal -** 幾何圖形階層的下一步是平面。有數種方式可以建構平面，我們將使用原點與法線作為輸入。原點是上一步驟中建立的點節點。
 
 **Vector.ZAxis -** 這是 z 方向的單位化向量。請注意，沒有輸入，只有值為 [0,0,1] 的向量。我們將此用作 **Plane.ByOriginNormal** 節點的 _normal_ 輸入。這會在 Dynamo 預覽中產生矩形平面。
 
-![](../images/5-3/1/data-exercisestep2.jpg)
+\![](<../../.gitbook/assets/data - exercise step 2.jpg>)
 
 3\.**Circle.ByPlaneRadius -** 接下來是階層，現在我們使用上一步驟中建立的平面來建立曲線。插入節點後，我們得到一個位於原點的圓。節點的預設半徑值為 _1_。
 
-![](../images/5-3/1/data-exercisestep3.jpg)
+\![](<../../.gitbook/assets/data - exercise step 3.jpg>)
 
 4\.**Curve.Extrude -** 現在我們指定深度與第三個延伸方向，讓其成為比較常見的形狀。此節點將以擠出方式根據曲線建立曲面。節點上的預設距離為 _1_，我們應該會在視埠中看到圓柱。
 
-![](../images/5-3/1/data-exercisestep4.jpg)
+\![](<../../.gitbook/assets/data - exercise step 4.jpg>)
 
-5\.**Surface.Thicken -** 此節點會將曲面偏移指定的距離並封閉外形，以產生封閉實體。預設厚度值為 _1_，我們應該會在視埠中看到符合這些值的薄殼圓柱。
+5\.**Surface.Thicken -** \- 此節點會將曲面偏移指定的距離並封閉外形，以產生封閉實體。預設厚度值為 _1_，我們應該會在視埠中看到符合這些值的薄殼圓柱。
 
-![](../images/5-3/1/data-exercisestep5.jpg)
+\![](<../../.gitbook/assets/data - exercise step 5.jpg>)
 
 6\.**Number Slider -** 我們接下來不使用所有這些輸入的預設值，而是對模型加入一些參數式控制。
 
@@ -85,21 +85,21 @@
 
 **Min/Max/Step -** 分別將 _min_、_max_ 與 _step_ 值變更為 _0_、_2_ 與 _0.01_。我們這樣做是為了控制整體幾何圖形的大小。
 
-![](../images/5-3/1/data-exercisestep6.gif)
+\![](<../../.gitbook/assets/data - exercise step 6.gif>)
 
 7\.**Number Sliders -** 在所有的預設輸入中，我們多次複製並貼上此數字滑棒 (選取滑棒，按一下 Ctrl+C，然後按一下 Ctrl+V)，直到具有預設值的所有輸入都改用滑棒為止。某些滑棒值必須大於零，以便讓定義生效 (例如：若要增厚曲面，需要有擠出深度)。
 
-![](../images/5-3/1/data-exercisestep7a.gif)
+\![](<../../.gitbook/assets/data - exercise step 7a.gif>)
 
-![](../images/5-3/1/data-exercisestep7b.gif)
+\![](<../../.gitbook/assets/data - exercise step 7b.gif>)
 
 8\.現在我們已使用這些滑棒建立參數式薄殼圓柱。嘗試調整其中某些參數，即可在 Dynamo 視埠中看到幾何圖形的動態更新。
 
-![](../images/5-3/1/data-exercisestep8a.gif)
+\![](<../../.gitbook/assets/data - exercise step 8a.gif>)
 
 **Number Sliders -** 在此基礎上更進一步，我們在圖元區上加入了許多滑棒，並需要清理剛剛建立的工具介面。在滑棒上按一下右鍵，選取「更名...」，然後變更每個滑棒的名稱以適當描述其參數 (厚度、半徑、高度等等)。
 
-![](../images/5-3/1/data-exercisestep8bstep.jpg)
+\![](<../../.gitbook/assets/data - exercise step 8b step.jpg>)
 
 ### 第 II 部分：從第 I 部分填入圓柱陣列
 
@@ -107,11 +107,11 @@
 
 **加 (+) -** 我們的目標是在已建立的圓柱旁，加入一列圓柱。若要在與目前圓柱相鄰的位置加入一個圓柱，需要考慮圓柱的半徑以及薄殼的厚度。我們將滑棒的兩個值相加，即可得到此數值。
 
-![](../images/5-3/1/data-exercisestep9.jpg)
+\![](<../../.gitbook/assets/data - exercise step 9.jpg>)
 
 10\.此步驟較複雜，接下來我們慢慢完成：最終目標是建立數字清單，這些數字會定義圓柱列中每個圓柱的位置。
 
-![](../images/5-3/1/data-exercisestep10.jpg)
+\![](<../../.gitbook/assets/data - exercise step 10.jpg>)
 
 > a.**乘 -** 首先，我們要將上一步驟中的值乘以 2。上一步驟中的值表示半徑，我們要將圓柱移動完整直徑的距離。
 >
@@ -123,8 +123,8 @@
 
 11\.此步驟足夠簡單 - 將上一步驟中定義的序列插入原始 **Point.ByCoordinates** 的 _x_ 輸入。這將取代我們可以刪除的 _pointX_ 滑棒。現在，我們將在視埠中看到一系列圓柱 (請確保整數滑棒大於 0)。
 
-![](../images/5-3/1/data-exercisestep11.gif)
+\![](<../../.gitbook/assets/data - exercise step 11.gif>)
 
-12\.圓柱鏈仍動態連結至所有滑棒。調整每個滑棒可以查看定義更新！
+12. 圓柱鏈仍動態連結至所有滑棒。調整每個滑棒可以查看定義更新！
 
-![](../images/5-3/1/data-exercisestep12.gif)
+\![](<../../.gitbook/assets/data - exercise step 12.gif>)

@@ -6,7 +6,7 @@
 
 最簡單的幾何轉換是平移，亦即將一個物件沿著 x、y、z 方向移動指定的單位數。
 
-![](../images/8-2/5/Transformations\_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -22,7 +22,7 @@ p2 = p.Translate(10, -20, 50);
 
 在 Dynamo 中，雖然可以在物件名稱的結尾附加 _.Translate_ 方法平移所有物件，但是還有更複雜的轉換需要將物件從一個基本的 CoordinateSystem 轉換到新的 CoordinateSystem。例如，若要讓物件繞 x 軸旋轉 45 度，我們要使用 _.Transform_ 方法，將物件從其既有無旋轉的 CoordinateSystem，轉換到一個已經繞 x 軸旋轉 45 度的 CoordinateSystem：
 
-![](../images/8-2/5/Transformations\_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -42,7 +42,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 除了平移和旋轉，也可以用調整比例或切變方式建立 CoordinateSystem。CoordinateSystem 可以使用 _.Scale_ 方法調整比例：
 
-![](../images/8-2/5/Transformations\_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -58,7 +58,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 在 CoordinateSystem 建構函式中輸入非正交的向量可以建立切變的 CoordinateSystem。
 
-![](../images/8-2/5/Transformations\_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(

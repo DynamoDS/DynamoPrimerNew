@@ -10,7 +10,7 @@
 
 在 Dynamo 中匯入曲面，並演算某個參數處的曲面，以瞭解我們可以擷取哪類資訊。
 
-![](../images/5-2/5/surfaces-surfaceindynamo.jpg)
+\![](<../../.gitbook/assets/surfaces - surface in dynamo.jpg>)
 
 > 1. _Surface.PointAtParameter_ 會傳回給定 UV 座標處的點
 > 2. _Surface.NormalAtParameter_ 會傳回給定 UV 座標處的法線向量
@@ -18,9 +18,9 @@
 
 > 按一下下方的連結下載範例檔案。
 >
-> 附錄中提供範例檔案的完整清單。
+> 附錄中提供完整的範例檔案清單。
 
-{% file src="../datasets/5-2/5/Surfaces.zip" %}
+{% file src="../../.gitbook/assets/Surfaces.zip" %}
 
 ## 深入探索...
 
@@ -28,7 +28,7 @@
 
 曲面是由函數與兩個參數定義的數學造型，我們不使用曲線的 `t`，而是使用 `U` 與 `V` 來描述對應的參數空間。這意味著我們使用此類型的幾何圖形時，需要提取更多的幾何資料。例如，曲線具有切線向量與法向平面 (可以沿曲線長度旋轉或扭轉)，而曲面具有方位一致的法線向量與相切平面。
 
-![曲面](../images/5-2/5/Surface.jpg)
+![曲面](../../.gitbook/assets/Surface.jpg)
 
 > 1. 曲面
 > 2. U 等角曲線
@@ -39,7 +39,7 @@
 
 **曲面範圍**：曲面範圍定義為對該曲面上的三維點進行演算的 (U,V) 參數的範圍。每個維度 (U 或 V) 的範圍通常描述為兩個數字，即 U 最小值到 U 最大值與 V 最小值到 V 最大值。
 
-![曲面](../images/5-2/5/SurfaceParameter.jpg)
+![曲面](../../.gitbook/assets/SurfaceParameter.jpg)
 
 雖然曲面的造型看上去可能不是「矩形」，而且局部可能存在更緊密或更鬆散的一組等角曲線，但曲面範圍所定義的「空間」始終是二維空間。在 Dynamo 中，我們都知道曲面範圍定義為在 U 與 V 兩個方向上從最小值 0.0 到最大值 1.0。平面曲面或修剪過的曲面可能有不同的範圍。
 
@@ -47,7 +47,7 @@
 
 **UV 座標**：UV 參數空間中由 U、V (有時還有 W) 定義的點。
 
-![曲面座標](../images/5-2/5/SurfaceCoordinate.jpg)
+![曲面座標](../../.gitbook/assets/SurfaceCoordinate.jpg)
 
 **互垂平面**：在給定 UV 座標處與 U 及 V 等角曲線互垂的平面。
 
@@ -57,11 +57,11 @@
 
 **NURBS 曲面**非常類似於 NURBS 曲線。您可以將 NURBS 曲面視為 NURBS 曲線在兩個方向構成的網格。NURBS 曲面的造型由許多控制點以及該曲面在 U 與 V 方向的度來定義。根據控制點、權重與次數來計算造型、法線、切線、曲率及其他性質採用的演算法相同。
 
-![NURBS 曲面](../images/5-2/5/NURBSsurface.jpg)
+![NURBS 曲面](../../.gitbook/assets/NURBSsurface.jpg)
 
 對於 NURBS 曲面，幾何圖形會指示兩個方向，因為 NURBS 曲面不論造型為何，都是控制點的矩形網格。即使這些方向相對於世界座標系統而言通常是任意方向，但我們可以頻繁使用這些方向來分析模型，或根據曲面產生其他幾何圖形。
 
-![NURBS 曲面](../images/5-2/5/NURBSsurface-Degree.jpg)
+![NURBS 曲面](../../.gitbook/assets/NURBSsurface-Degree.jpg)
 
 > 1. 次數 (U,V) = (3,3)
 > 2. 階數 (U,V) = (3,1)
@@ -74,6 +74,6 @@
 
 雖然「拓樸」通常描述有關部分如何連接及/或相關的概念，但 Dynamo 中的拓樸也是幾何圖形的類型。確切地說，它是曲面、Polysurface 及實體的父系品類。
 
-![PolySurface](../images/5-2/5/PolySurface.jpg)
+![PolySurface](../../.gitbook/assets/PolySurface.jpg)
 
 以有時稱為「修補」的方式接合曲面，我們可以製作更複雜的造型，並定義跨接縫的詳細資料。我們可以便利地將圓角或倒角作業套用至 PolySurface 的邊。

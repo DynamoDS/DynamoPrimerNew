@@ -2,7 +2,7 @@
 
 Dynamo 2.0 公開各種字典節點供我們使用。這包括 _建立、動作和查詢_ 節點。
 
-![](../images/5-5/2/dictionarynodes-nodes.jpg)
+\![](<../../.gitbook/assets/dictionary nodes - nodes.jpg>)
 
 #### 建立
 

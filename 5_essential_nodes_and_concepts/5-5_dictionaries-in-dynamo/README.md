@@ -6,6 +6,6 @@
 
 _雖然字典功能在 Dynamo 中已經存在好一段時間，但是 Dynamo 2.0 引入了新的方式來管理此資料類型。_
 
-![](../images/5-5/wildDictionary.png)
+![](../../.gitbook/assets/wildDictionary.png)
 
 原始影像由 [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/) 提供

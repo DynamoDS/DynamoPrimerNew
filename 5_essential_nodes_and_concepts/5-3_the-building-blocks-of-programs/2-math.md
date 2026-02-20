@@ -6,12 +6,12 @@
 
 運算子是一組元件 (加、減、乘、除等)，使用代數函數與兩個數字輸入值，產生一個輸出值。在「運算子」>「動作」下可以找到這些運算子。
 
-| 圖示                                                  | 名稱 (語法)     | 輸入                     | 輸出      |
-| ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | 加 (**+**)       | var[]...[]、var[]...[] | var[]...[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | 減 (**-**)  | var[]...[]、var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | 乘 (*) | var[]...[]、var[]...[] | var[]...[] |
-| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | 除 (**/**)    | var[]...[]、var[]...[] | var[]...[] |
+| 圖示                                                | 名稱 (語法)     | 輸入                     | 輸出      |
+| --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
+| \![](<../../.gitbook/assets/addition (1).jpg>)       | 加 (**+**)       | var[]...[]、var[]...[] | var[]...[] |
+| \![](<../../.gitbook/assets/Subtraction (1).jpg>)    | 減 (**-**)  | var[]...[]、var[]...[] | var[]...[] |
+| \![](<../../.gitbook/assets/Multiplication (2).jpg>) | 乘 (**\\***) | var[]...[]、var[]...[] | var[]...[] |
+| \![](<../../.gitbook/assets/Division (2).jpg>)       | 除 (**/**)    | var[]...[]、var[]...[] | var[]...[] |
 
 ## 練習：黃金螺旋線公式
 
@@ -19,7 +19,7 @@
 >
 > 附錄中提供完整的範例檔案清單。
 
-{% file src="../datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
+{% file src="../../.gitbook/assets/Building Blocks of Programs - Math.dyn" %}
 
 ### 第 I 部分：參數式公式
 
@@ -29,7 +29,7 @@
 
 **Number Sequence：** 根據以下三項輸入定義數字序列：_start、amount_ 與 _step_。
 
-![](../images/5-3/2/math-partI-01.jpg)
+\![](<../../.gitbook/assets/math - part I-01.jpg>)
 
 2\.上述步驟已建立用於定義參數範圍的數字清單。接下來，建立表示黃金螺旋線方程式的節點群組。
 
@@ -45,7 +45,7 @@ $$
 
 以下影像以視覺程式設計形式表示黃金螺旋線。逐步檢查節點群組時，請盡可能注意視覺程式與書寫方程式之間的對應。
 
-![](../images/5-3/2/math-partI-02.jpg)
+\![](<../../.gitbook/assets/math - part I-02.jpg>)
 
 > a.**Number Slider**：在圖元區加入兩個數字滑棒。這些滑棒代表參數式方程式中的 _a_ 與 _b_ 變數。這些表示彈性的常數，或表示我們可以針對所需結果進行調整的參數。
 >
@@ -65,11 +65,11 @@ $$
 
 **Point.ByCoordinates：** 將上方的相乘節點連接到「_x_」輸入，將下方的節點連接到「_y_」輸入。我們現在可以在螢幕上看到點的參數式螺旋線。
 
-![](../images/5-3/2/math-partII-01.gif)
+\![](<../../.gitbook/assets/math - part II-01.gif>)
 
 **Polycurve.ByPoints：** 將上一步的 **Point.ByCoordinates** 連接到 _points_。我們可以保留 _connectLastToFirst_ 無輸入，因為不打算繪製封閉曲線。這會建立一條穿過上一步定義的每個點的螺旋線。
 
-![](../images/5-3/2/math-partII-02.jpg)
+\![](<../../.gitbook/assets/math - part II-02.jpg>)
 
 我們現在完成了 Fibonacci 螺旋線！接下來進一步將此分為兩個單獨的練習，我們分別稱之為鸚鵡螺與向日葵。這些是自然系統的抽象名稱，但可以充分呈現 Fibonacci 螺旋線的兩種不同應用。
 
@@ -77,13 +77,13 @@ $$
 
 **Circle.ByCenterPointRadius：** 我們在此處將使用圓節點，採用與上一步相同的輸入。半徑的預設值為 _1.0_，所以我們可以立即看到輸出的圓。它會立即清晰展示點如何進一步偏離原點。
 
-![](../images/5-3/2/math-partIII-01.jpg)
+\![](<../../.gitbook/assets/math - part III-01.jpg>)
 
 **Number Sequence：** 這是「_t_」的原始陣列。將此序列插入 **Circle.ByCenterPointRadius** 的半徑值後，圓心仍會離原點越來越遠，但半徑會增加，因而產生很酷的 Fibonacci 圓形。
 
 如果您使用 3D 製作會更酷！
 
-![](../images/5-3/2/math-partIII-02.gif)
+\![](<../../.gitbook/assets/math - part III-02.gif>)
 
 ### 第 IV 部分：從鸚鵡螺到葉序
 
@@ -91,15 +91,15 @@ $$
 
 一開始，我們先執行上一個練習中的相同步驟：使用 **Point.ByCoordinates** 節點建立點的螺旋線陣列。
 
-<figure><img src="../images/5-3/2/math-partIV-01.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/math - part IV-01.jpg" alt=""><figcaption></figcaption></figure>
 
 接下來，依照這些小步驟，以各種旋轉產生一系列螺旋線。
 
-![](../images/5-3/2/math-partIV-02.jpg)
+\![](<../../.gitbook/assets/math - part IV-02.jpg>)
 
 > a.**Geometry.Rotate：** 有幾個 **Geometry.Rotate** 選項，請確保選擇以 _geometry_、_basePlane_ 和 _degrees_ 為輸入的節點。將 **Point.ByCoordinates** 連接至 geometry 輸入。在此節點上按一下右鍵，並確保將交織設定為「笛卡兒積」
 >
-> <img src="../images/5-3/2/math-partIV-03crossproduct.jpg" alt="" data-size="original">
+> <img src="../../.gitbook/assets/math - part IV-03 cross product.jpg" alt="" data-size="original">
 >
 > b.**Plane.XY：** 連接至 _basePlane_ 輸入。我們將繞原點旋轉，此原點的位置與螺旋線的基準位置相同。
 >
@@ -111,9 +111,8 @@ $$
 
 將 **Number Range** 節點的步長大小從 _120.0_ 變更為 _36.0_。請注意，這會建立更多旋轉，因此會產生更密的格線。
 
-![](../images/5-3/2/math-partIV-04.jpg)
+\![](<../../.gitbook/assets/math - part IV-04.jpg>)
 
 將 **Number Range** 節點的步長大小從 _36.0_ 變更為 _3.6_。現在，這會產生密度大得多的格線，螺旋線的方向性變得不清楚。各位，我們產生了一朵向日葵。
 
-![](../images/5-3/2/math-partIV-05.jpg)
-
+\![](<../../.gitbook/assets/math - part IV-05.jpg>)

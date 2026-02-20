@@ -6,7 +6,7 @@
 
 [向量](2-vectors.md#vector-1)是一種大小和方向的表現法，您可以將其視為以指定速度向特定方向加速的箭頭。在 Dynamo 中，向量是模型的關鍵元件。請注意，由於向量屬於「協助工具」抽象品類，因此我們在建立向量時，不會在背景預覽中看到任何內容。
 
-![Dynamo 中的向量](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
+\![Dynamo 中的向量](<../../.gitbook/assets/Geometry for Computational Design - vectors.jpg>)
 
 > 1. 進行向量預覽時，我們可以使用直線代替向量。
 
@@ -14,13 +14,13 @@
 >
 > 附錄中提供完整的範例檔案清單。
 
-{% file src="../datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Vectors (1).dyn" %}
 
-### 平面
+### Plane
 
 [平面](2-vectors.md#plane-1)是一個二維表面，您可以將其視為無限延伸的平面。每個平面都有原點、X 方向、Y 方向和 Z (向上) 方向。
 
-![Dynamo 中的平面](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
+\![Dynamo 中的平面](<../../.gitbook/assets/Geometry for Computational Design - plane.jpg>)
 
 > 1. 雖然平面是抽象的，但是具有原點位置，因此我們可以在空間中對其定位。
 > 2. 在 Dynamo 中，會在背景預覽中彩現平面。
@@ -29,13 +29,13 @@
 >
 > 附錄中提供完整的範例檔案清單。
 
-{% file src="../datasets/5-2/2/Geometry for Computational Design - Plane.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Plane (1).dyn" %}
 
 ### 座標系統
 
 [座標系統](2-vectors.md#coordinate-system-1)是一個決定點或其他幾何元素位置的系統。下圖說明座標系統在 Dynamo 中的外觀，以及每種顏色代表的意義。
 
-![Dynamo 中的座標系統](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
+\![Dynamo 中的座標系統](<../../.gitbook/assets/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. 雖然座標系統是抽象的，但是也具有原點位置，因此我們可以在空間中對其定位。
 > 2. 在 Dynamo 中，會在背景預覽中將座標系統彩現為一點 (原點) 與定義軸的直線 (遵循慣例，X 軸為紅色，Y 軸為綠色，Z 軸為藍色)。
@@ -44,25 +44,25 @@
 >
 > 附錄中提供完整的範例檔案清單。
 
-{% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Coordinate System.dyn" %}
 
 ## 深入探索...
 
 向量、平面與座標系統構成抽象幾何圖形類型的主要群組。它們能協助我們定義位置、方位以及對造型進行描述的其他幾何圖形空間環境。如果我說我在紐約城第 42 號街，位於百老匯 (座標系統)，站在街面上 (平面)，面向北方 (向量)，這是使用了「協助工具」以定義我的位置。這同樣適用於手機殼產品或摩天大樓 - 我們需要此環境來開發模型。
 
-![向量、平面與座標](../images/5-2/2/VectorsPlanesCoodinates.jpg)
+![向量、平面與座標](../../.gitbook/assets/VectorsPlanesCoodinates.jpg)
 
 ### 向量
 
 向量是描述方向與大小的幾何量。向量是抽象的；亦即，它們代表數量，而非幾何元素。向量與點很容易混淆，因為兩者都由一系列值構成。但是兩者之間存在關鍵差異：點描述的是指定座標系統中的位置，而向量描述的是位置的相對差異，與「方向」相同。
 
-![向量詳細資料](../images/5-2/2/Vector-Detailed.jpg)
+![向量詳細資料](../../.gitbook/assets/Vector-Detailed.jpg)
 
 若相對差異的概念讓您混淆，請將向量 AB 想像為「我站在 A 點，面向 B 點」。從這裡 (A) 到那裏 (B) 的方向就是向量。
 
 以下將使用上述 AB 表示法進一步詳細說明向量的各部分：
 
-![向量](../images/5-2/2/Vector.jpg)
+![向量](../../.gitbook/assets/Vector.jpg)
 
 > 1. 向量的**起點**稱為**底端**。
 > 2. 向量的**終點**稱為**頂端**或**指向**。
@@ -76,7 +76,7 @@
 
 平面是二維抽象「協助工具」。更具體地說，平面在概念上是「平」的，在兩個方向無限延伸。平面通常會以原點附近的小矩形呈現。
 
-![平面](../images/5-2/2/Plane.jpg)
+![平面](../../.gitbook/assets/Plane.jpg)
 
 您可能會想，「等等！原點？聽上去像是座標系統...就像我在 CAD 軟體中用於塑型的工具！」
 
@@ -88,6 +88,6 @@
 
 但是，還有其他替代座標系統，例如圓柱座標系統或圓球座標系統。在稍後各節中我們可以看到，也可以將座標系統套用至其他幾何圖形類型，以定義該幾何圖形上的位置。
 
-![座標系統](../images/5-2/2/CoordinateSystem.jpg)
+![座標系統](../../.gitbook/assets/CoordinateSystem.jpg)
 
 > 增加替代座標系統 - 圓柱座標系統，圓球座標系統

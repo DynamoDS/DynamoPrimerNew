@@ -2,4 +2,4 @@
 
 建立一些自訂節點後，下一步是以套件方式開始組織和發佈它們 - 這是一個很便利的方式來儲存您的節點並與 Dynamo 社群分享。
 
-![影像](../images/6-2/packagescover.jpg)
+\![影像](<../../.gitbook/assets/packages cover.jpg>)

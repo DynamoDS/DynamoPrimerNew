@@ -8,7 +8,7 @@
 
 建立一個中心點位於 x=0，y=0，z=0 的 CoordinateSystem (沒有旋轉、調整比例或切變轉換)，只需要呼叫 Identity 建構函式：
 
-![](../images/8-2/2/GeometricPrimitives\_01.png)
+![](../../.gitbook/assets/GeometricPrimitives_01.png)
 
 ```js
 // create a CoordinateSystem at x = 0, y = 0, z = 0,
@@ -19,7 +19,7 @@ cs = CoordinateSystem.Identity();
 
 具有幾何轉換的 CoordinateSystem 超出本章節的範圍，不過有另一個建構函式 _CoordinateSystem.ByOriginVectors_ 可以讓您在特定的點建立座標系統：
 
-![](../images/8-2/2/GeometricPrimitives\_02.png)
+![](../../.gitbook/assets/GeometricPrimitives_02.png)
 
 ```js
 // create a CoordinateSystem at a specific location,
@@ -41,7 +41,7 @@ cs = CoordinateSystem.ByOriginVectors(origin,
 
 本範例會顯示在各種座標系統建立的點：
 
-![](../images/8-2/2/GeometricPrimitives\_03.png)
+![](../../.gitbook/assets/GeometricPrimitives_03.png)
 
 ```js
 // create a point with x, y, and z coordinates
@@ -73,11 +73,11 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### 直線 (Line) 
+### 直線 (Line)
 
 下一個較高維度的 Dynamo 基本型是線段，代表兩個端點之間有無限個點。使用 _Line.ByStartPointEndPoint_ 建構函式明確指出兩個邊界點，或使用 _Line.ByStartPointDirectionLength_ 建構函式指定起點、方向和沿著該方向的長度，可以建立直線。
 
-![](../images/8-2/2/GeometricPrimitives\_04.png)
+![](../../.gitbook/assets/GeometricPrimitives_04.png)
 
 ```js
 p1 = Point.ByCoordinates(-2, -5, -10);
@@ -96,7 +96,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
 
 Dynamo 有幾個物件，代表三維的幾何基本型的最基本類型：使用 _Cuboid.ByLengths_ 建立的立方體 (Cuboid)；使用 _Cone.ByPointsRadius_ 和 _Cone.ByPointsRadii_ 建立的圓錐 (Cone)；使用 _Cylinder.ByRadiusHeight_ 建立的圓柱 (Cylinder)；以及使用 _Sphere.ByCenterPointRadius_ 建立的圓球 (Sphere)。
 
-![](../images/8-2/2/GeometricPrimitives\_05.png)
+![](../../.gitbook/assets/GeometricPrimitives_05.png)
 
 ```js
 // create a cuboid with specified lengths

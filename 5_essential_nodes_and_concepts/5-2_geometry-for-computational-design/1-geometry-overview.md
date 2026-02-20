@@ -6,11 +6,11 @@
 
 透過瞭解幾何圖形類型及[其相關方式](1-geometry-overview.md#stepping-through-the-hierarchy)，我們可以導覽資源庫中提供的**幾何圖形節點**集合。幾何圖形節點依字母順序排列，與階層順序 (其顯示類似於在 Dynamo 介面中的配置) 截然不同。
 
-![](../images/5-2/1/geometryoverview-geometryindynamo.jpg)
+\![](<../../.gitbook/assets/geometry overview - geometry in dynamo.jpg>)
 
 此外，在 Dynamo 中製作模型，以及將我們在背景預覽中看到的預覽連接至圖表中的資料流，這兩項功能隨時間演進將變得更直觀。
 
-![](../images/5-2/1/GeometryforComputationalDesign-Overview.jpg)
+\![](<../../.gitbook/assets/Geometry for Computational Design - Overview.jpg>)
 
 > 1. 請注意由格線與彩色軸呈現的假設座標系統
 > 2. 選取的節點會以亮顯顏色彩現背景中的對應幾何圖形 (若該節點建立幾何圖形)
@@ -19,13 +19,13 @@
 >
 > 附錄中提供完整的範例檔案清單。
 
-{% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Geometry Overview.dyn" %}
 
 ## 幾何圖形的概念
 
 幾何圖形一直以來的定義是對形狀、大小、圖形相對位置以及空間性質的研究。此領域具有數千年的悠久發展歷史。隨著電腦的問世與普及，我們在定義、探索及產生幾何圖形方面擁有了功能強大的工具。現在，可以很輕鬆地計算複雜幾何互動的結果，這種狀況幾乎隨處可見。
 
-![Stanford Bunny](../images/5-2/1/StanfordBunny.jpg)
+![Stanford Bunny](../../.gitbook/assets/StanfordBunny.jpg)
 
 > 如果您很想瞭解各種複雜幾何圖形在運用電腦的力量後可以得到的結果，請在網路上快速搜尋 Stanford Bunny，這是用於測試演算法的權威模型。
 
@@ -42,7 +42,7 @@
 
 接下來花一些時間看一下幾何圖形的抽象描述與階層描述之間的關係。由於這兩個概念彼此相關，但起初並不總是很明顯，因此我們在開始開發更深入的工作流程或模型後，會很快遇到概念障礙。對於初學者，接下來將使用維度來簡單描述模型的「內容」。透過描述一個形狀所需的維數，可以了解幾何圖形所屬的階層。
 
-![運算幾何圖形](../images/5-2/1/GeometryDimensionality.jpg)
+\![計算幾何圖形](<../../.gitbook/assets/Geometry for - GeometryDimensionality.jpg>)
 
 > 1. **點** (由座標定義) 沒有任何維度，它只是描述每個座標的數字
 > 2. **直線** (由兩個點定義) 現在有 _一個_ 維度 - 我們可以沿直線向前 (正方向) 或向後 (負方向)「行走」
@@ -51,7 +51,7 @@
 
 開始對幾何圖形分類時，維度是便利的方式，但不一定是最佳方式。畢竟我們不能只用點、直線、平面與方塊來塑型，如果需要彎曲的東西該怎麼辦呢？此外，還有其他完全抽象的幾何圖形類型品類。它們定義性質，例如方位、體積或零件之間的關係。我們無法真正抓住一個「向量」，那要如何相對於我們在空間中看到的東西來定義它呢？幾何階層的更詳細分類應考慮到抽象類型或「協助工具」之間的差異，我們可以根據協助行為以及對描述模型元素形狀進行協助的類型來對每種抽象類型或協助工具分組。
 
-![幾何圖形階層](../images/5-2/1/GeometryHierarchy.jpg)
+![幾何圖形階層](../../.gitbook/assets/GeometryHierarchy.jpg)
 
 ## 使用幾何圖形更進一步
 

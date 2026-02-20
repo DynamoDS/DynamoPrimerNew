@@ -10,17 +10,17 @@
 
 Dynamo 中最常見的一種點存在於我們的三維世界座標系統中，有三個座標 [X,Y,Z] (Dynamo 中的 3D 點)。
 
-![](../images/5-2/3/points-3dpointindynamo.jpg)
+\![](<../../.gitbook/assets/points - 3d point in dynamo.jpg>)
 
 Dynamo 中的 2D 點有兩個座標 [X,Y]。
 
-![](../images/5-2/3/points-2dpointindynamo.jpg)
+\![](<../../.gitbook/assets/points - 2d point in dynamo.jpg>)
 
 ### 曲線和曲面上的點
 
 曲線和曲面的參數是連續的，且會延伸到給定幾何圖形的邊緣之外。由於定義參數空間的形狀位於三維世界座標系統中，我們可以一律將參數式座標轉換為「世界」座標。例如，平面上的點 [0.2,0.5] 等同於世界座標中的點 [1.8,2.0,4.1]。
 
-![](../images/5-2/3/points-xyzvscoordsysvsuv.jpg)
+\![](<../../.gitbook/assets/points - xyz vs coord sys vs uv.jpg>)
 
 > 1. 假定世界 XYZ 座標中的點
 > 2. 相對於給定座標系統 (圓柱) 的點
@@ -30,13 +30,13 @@ Dynamo 中的 2D 點有兩個座標 [X,Y]。
 >
 > 附錄中提供完整的範例檔案清單。
 
-{% file src="../datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Points.dyn" %}
 
 ## 深入探索...
 
 如果幾何圖形是模型的語言，那麼點就是字母。點是建立所有其他幾何圖形的基礎 - 我們需要至少兩個點以建立曲線，我們需要至少三個點以使多邊形或網格面等。定義點之間位置、順序和關係 (嘗試正弦函數) 可讓我們定義高階的幾何圖形，例如圓或曲線。
 
-![點到曲線](../images/5-2/3/PointsAsBuildingBlocks-1.jpg)
+![點到曲線](../../.gitbook/assets/PointsAsBuildingBlocks-1.jpg)
 
 > 1. 使用函數 `x=r*cos(t)` 和 `y=r*sin(t)` 的圓
 > 2. 使用函數 `x=(t)` 和 `y=r*sin(t)` 的正弦曲線
@@ -45,7 +45,7 @@ Dynamo 中的 2D 點有兩個座標 [X,Y]。
 
 點也可以存在於二維座標系統中。根據我們處理的空間種類，依慣例具有不同的字母表示法，如果在平面上，我們可能會使用 [X,Y]，如果在曲面上，我們會使用 [U,V]。
 
-![以座標表示的點](../images/5-2/3/Coordinates.jpg)
+![以座標表示的點](../../.gitbook/assets/Coordinates.jpg)
 
 > 1. 歐幾里得座標系統中的點：[X,Y,Z]
 > 2. 曲線參數座標系統中的點：[t]

@@ -16,7 +16,7 @@ p1 會有 u = 0 v = 0 的參數，p9 會有 u = 1 v = 1 的參數。
 
 曲線 (Curve) 有一個 _PointAtParameter_ 方法，採用 0 到 1 之間的一個雙精確度引數，並傳回位於該參數的 Point 物件。例如，此腳本會找出參數 0、.1、.2、.3、.4、.5、.6、.7、.8、.9 和 1 的點 (Point)：
 
-![](../images/8-2/7/GeometricParameterization\_01.png)
+![](../../.gitbook/assets/GeometricParameterization_01.png)
 
 ```js
 pts = {};
@@ -41,7 +41,7 @@ lines = Line.ByStartPointEndPoint(pts_at_param,
 
 在萃取曲線和曲面上的各個點時雖然很好用，但是腳本通常需要知道位於某個參數的特定幾何特性，例如曲線或曲面是朝向哪個方向。_CoordinateSystemAtParameter_ 方法不只會找出位置，也會找出位於曲線或曲面的參數處有方向的 CoordinateSystem。例如，以下腳本會沿著一個迴轉的曲面 (Surface) 萃取出有方向的 CoordinateSystem，並使用 CoordinateSystem 的方位產生插在曲面法線方向上的線條：
 
-![](../images/8-2/7/GeometricParameterization\_02.png)
+![](../../.gitbook/assets/GeometricParameterization_02.png)
 
 ```js
 pts = {};
