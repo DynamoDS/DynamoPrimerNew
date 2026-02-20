@@ -4,9 +4,9 @@ As funções podem ser criadas em um Code Block e chamadas em outro lugar da def
 
 ### Principal
 
-A primeira linha tem a palavra-chave "def", depois o nome da função e, a seguir, os nomes das entradas entre parênteses. Os contraventamentos definem o corpo da função. Retorne um valor com "return =". Os Blocos de código que definem uma função não possuem portas de entrada ou saída porque eles são chamados de outros Blocos de código.
+A primeira linha tem a palavra-chave "def", depois o nome da função e, a seguir, os nomes das entradas entre parênteses. Os contraventamentos definem o corpo da função. Retorne um valor com "return =". Os Code Block que definem uma função não possuem portas de entrada ou saída porque eles são chamados de outros Code Blocks.
 
-![](../images/8-1/4/functionsparentdef.jpg)
+\![](<../../.gitbook/assets/functions parent def.jpg>)
 
 ```
 /*This is a multi-line comment,
@@ -22,9 +22,9 @@ return sum;
 
 ### Secundários
 
-Chame a função com outro Code Block no mesmo arquivo fornecendo o mesmo nome e o mesmo número de argumentos. Funciona da mesma forma que os nós prontos para uso da sua biblioteca.
+Chame a função com outro Code Block no mesmo arquivo fornecendo o mesmo nome e o mesmo número de argumentos. Funciona da mesma forma que os nós prontos para uso da biblioteca.
 
-![](../images/8-1/4/functionschildrencalldef.jpg)
+\![](<../../.gitbook/assets/functions children call def.jpg>)
 
 ```
 FunctionName(in1,in2);
@@ -36,17 +36,17 @@ FunctionName(in1,in2);
 >
 > É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
-{% file src="../datasets/8-1/4/Functions_SphereByZ.dyn" %}
+{% file src="../../.gitbook/assets/Functions_SphereByZ.dyn" %}
 
-Neste exercício, vamos criar uma definição genérica que irá criar esferas a partir de uma lista de entrada de pontos. O raio dessas esferas é conduzido pela propriedade Z de cada ponto.
+Neste exercício, vamos criar uma definição genérica que criará esferas com base em uma lista de entrada de pontos. O raio dessas esferas é conduzido pela propriedade Z de cada ponto.
 
 Vamos começar com um intervalo de números de dez valores , de 0 a 100. Conecte-os a um nó **Point.ByCoordinates** para criar uma linha diagonal.
 
-![](../images/8-1/4/functions-exercise-01.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 01.jpg>)
 
 Crie um **Bloco de código** e insira a nossa definição.
 
-![](../images/8-1/4/functions-exercise-02.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 02.jpg>)
 
 > 1.  Use estas linhas de código:
 >
@@ -59,9 +59,9 @@ Crie um **Bloco de código** e insira a nossa definição.
 >
 > O _inputPt_ é o nome que atribuímos para representar os pontos que guiarão a função. Por agora, a função não está fazendo nada, mas vamos desenvolver essa função nas etapas a seguir.
 
-![](../images/8-1/4/functions-exercise-03.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 03.jpg>)
 
-> 1. Quando a função **Bloco de código** é adicionada, colocamos um comentário e uma variável _sphereRadius_ que consulta a posição _Z_ de cada ponto. Lembre-se de que _inputPt.Z_ não precisa de parênteses como um método. Essa é uma _consulta_ das propriedades de um elemento existente; portanto, nenhuma entrada é necessária:
+> 1. Quando a função do **Code Block** é adicionada, colocamos um comentário e uma variável _sphereRadius_ que consulta a posição _Z_ de cada ponto. Lembre-se de que _inputPt.Z_ não precisa de parênteses como um método. Essa é uma _consulta_ das propriedades de um elemento existente; portanto, nenhuma entrada é necessária:
 >
 > ```
 > def sphereByZ(inputPt,radiusRatio)
@@ -71,11 +71,11 @@ Crie um **Bloco de código** e insira a nossa definição.
 > };
 > ```
 
-![](../images/8-1/4/functions-exercise-04.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 04.jpg>)
 
-> 1. Agora, vamos recordar a função que criamos em outro **Bloco de código**. Se clicarmos duas vezes na tela para criar um novo _bloco de código_ e digitarmos _sphereB_, notamos que o Dynamo sugere a função _sphereByZ_ que foi definida. A função foi adicionada à biblioteca intellisense. Muito legal.
+> 1. Agora, vamos recordar a função que criamos em outro **Code Block**. Se clicarmos duas vezes na tela para criar um novo _bloco de código_ e digitarmos _sphereB_, notamos que o Dynamo sugere a função _sphereByZ_ que foi definida. A função foi adicionada à biblioteca intellisense. Muito legal.
 
-![](../images/8-1/4/functions-exercise-05.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 05.jpg>)
 
 > 1.  Agora, chamamos a função e criamos uma variável chamada _Pt_ para conectar os pontos criados nas etapas anteriores:
 >
@@ -84,38 +84,38 @@ Crie um **Bloco de código** e insira a nossa definição.
 >     ```
 > 2. Observe que, na saída, temos todos os valores nulos. Por que isso ocorre? Quando definimos a função, estamos calculando a variável _sphereRadius_, mas não definimos o que a função deve ser _retornada_ como uma _saída_. Podemos corrigir isso na próxima etapa.
 
-![](../images/8-1/4/functions-exercise-06.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 06.jpg>)
 
 > 1. Uma etapa importante: é necessário definir a saída da função adicionando a linha `return = sphereRadius;` à função _sphereByZ_.
 > 2. Agora, vemos que a saída do Bloco de código nos fornece as coordenadas Z de cada ponto.
 
 Agora, vamos criar esferas reais editando a função _Principal_.
 
-![](../images/8-1/4/functions-exercise-07.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 07.jpg>)
 
 > 1. Primeiro definimos uma esfera com a linha de código: `sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);`
 > 2. Em seguida, alteramos o valor de retorno para _sphere_ em vez de _sphereRadius_: `return = sphere;` Isso nos fornece algumas esferas gigantes em nossa visualização do Dynamo.
 
-![](../images/8-1/4/functions-exercise-08.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 08.jpg>)
 
 > 1\. Para reduzir o tamanho dessas esferas, vamos atualizar o valor sphereRadius adicionando um divisor: `sphereRadius = inputPt.Z/20;` Agora podemos ver as esferas separadas e começar a entender a relação entre o raio e o valor Z.
 
-![](../images/8-1/4/functions-exercise-09.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 09.jpg>)
 
-> 1. No nó **Point.ByCoordinates**, alterando a amarra de Lista mais curta para Produto transversal, criamos uma grade de pontos. A função _sphereByZ_ ainda está em pleno efeito, de modo que todos os pontos criam esferas com raios com base em valores Z.
+> 1. No nó **Point.ByCoordinates**, alterando a amarra de Lista mais curta para Produto transversal, criamos um eixo de pontos. A função _sphereByZ_ ainda está em pleno efeito, de modo que todos os pontos criam esferas com raios com base em valores Z.
 
-![](../images/8-1/4/functions-exercise-10.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 10.jpg>)
 
 > 1. E apenas para efeitos de teste, conectamos a lista original de números à entrada X para **Point.ByCoordinates**. Agora temos um cubo de esferas.
 > 2. Observação: Se isso levar muito tempo para ser calculado no computador, tente alterar _\#10_ para algo como _\#5_.
 
-Lembre-se: A função _sphereByZ_ que foi criada é uma função genérica, para que possamos recuperar a hélice de uma lição anterior e aplicar a função a ela.
+Lembre-se: a função _sphereByZ_ que foi criada é uma função genérica, para que possamos recuperar a hélice de uma lição anterior e aplicar a função a ela.
 
-![](../images/8-1/4/functions-exercise-11.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 11.jpg>)
 
 Uma etapa final: vamos conduzir a relação do raio com um parâmetro definido pelo usuário. Para fazer isso, é necessário criar uma nova entrada para a função e também substituir o divisor _20_ por um parâmetro.
 
-![](../images/8-1/4/functions-exercise-12.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 12.jpg>)
 
 > 1.  Atualize a definição de _sphereByZ_ para:
 >

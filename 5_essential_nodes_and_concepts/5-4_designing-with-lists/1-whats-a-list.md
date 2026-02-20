@@ -4,7 +4,7 @@
 
 Uma lista é uma coleção de elementos ou de itens. Por exemplo, uma penca de bananas. Cada banana é um item na lista (ou penca). É mais fácil pegar uma penca de bananas em vez de cada banana individualmente, e o mesmo vale para agrupar elementos por relações paramétricas em uma estrutura de dados.
 
-![Bananas](../images/5-4/1/Bananas_white_background_DS.jpg)
+![Bananas](../../.gitbook/assets/Bananas_white_background_DS.jpg)
 
 > Foto de [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
@@ -20,7 +20,7 @@ Por exemplo, se você contasse o número de dedos que temos na mão direita, as 
 
 Observe que ainda temos cinco itens na lista; só que a lista está usando um sistema de contagem baseado em zero. E os itens que estão sendo armazenados na lista não precisam ser apenas números. Eles podem ser qualquer tipo de dados que o Dynamo suporta, como pontos, curvas, superfícies, famílias etc.
 
-![](../images/5-4/1/what'salist-zerobasedindices.jpg)
+\![](<../../.gitbook/assets/what's a list - zero based indices.jpg>)
 
 > a. Índice
 >
@@ -36,7 +36,7 @@ Esses índices são um elemento crucial ao trabalhar com listas.
 
 Nas listas, as entradas e as saídas variam de acordo com o nó do Dynamo que está sendo usado. Como exemplo, vamos usar uma lista de cinco pontos e conectar essa saída a dois nós diferentes do Dynamo: **PolyCurve.ByPoints** e **Circle.ByCenterPointRadius**:
 
-![Exemplos de entrada](../images/5-4/1/what'salist-inputsandoutputs.jpg)
+\![Exemplos de entrada](<../../.gitbook/assets/what's a list - inputs and outputs.jpg>)
 
 > 1. A entrada _pontos_ para **PolyCurve.ByPoints** está procurando _“Point[]”_. Isso representa uma lista de pontos.
 > 2. A saída para **PolyCurve.ByPoints** é uma policurva única criada com base em uma lista de cinco pontos.
@@ -59,23 +59,23 @@ Imagine um nó que cria segmentos de linha entre pontos (**Line.ByStartPointEndP
 
 A maneira mais simples é conectar as entradas individualmente até que um dos fluxos se esgote. Isso é denominado algoritmo “Lista mais curta”. Este é o comportamento padrão dos nós do Dynamo:
 
-![](../images/5-4/1/what'salist-lacing-shortest.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - shortest.jpg>)
 
 #### Lista mais longa
 
 O algoritmo “Lista mais longa” continua conectando entradas, reusando elementos, até que todos os fluxos se esgotem:
 
-![](../images/5-4/1/what'salist-lacing-longest.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - longest.jpg>)
 
 #### Produto transversal
 
 Por fim, o método “Produto transversal” torna todas as conexões possíveis:
 
-![](../images/5-4/1/what'salist-lacing-cross.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - cross.jpg>)
 
-Como você pode ver, há diferentes maneiras de desenhar linhas entre estes conjuntos de pontos. É possível encontrar as opções de amarra clicando com o botão direito do mouse no centro de um nó e selecionando o menu “Amarra”.
+Como você pode ver, há diferentes maneiras de desenhar linhas entre esses conjuntos de pontos. É possível encontrar as opções de amarra clicando com o botão direito do mouse no centro de um nó e selecionando o menu “Amarra”.
 
-![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
+\![](<../../.gitbook/assets/what's a list - right click lacing opt.jpg>)
 
 ### O que é replicação?
 
@@ -111,7 +111,7 @@ Para uma análise mais profunda sobre como isso funciona, confira os [Guias de r
 >
 > É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
-{% file src="../datasets/5-4/1/Lacing.dyn" %}
+{% file src="../../.gitbook/assets/Lacing (1).dyn" %}
 
 Para demonstrar as operações de amarra abaixo, vamos usar esse arquivo base para definir a lista mais curta, a lista mais longa e o produto transversal.
 
@@ -121,16 +121,16 @@ Vamos alterar a amarra em **Point.ByCoordinates**, mas não alteraremos mais nad
 
 Escolhendo _lista mais curta_ como a opção de amarra (também é a opção padrão), obtemos uma linha diagonal básica composta por cinco pontos. Cinco pontos são o comprimento da lista menor; portanto, a amarra da lista mais curta é interrompida após atingir o final de uma lista.
 
-![Exemplos de entrada](../images/5-4/1/what'salist-lacingexercise01.jpg)
+\![Exemplos de entrada](<../../.gitbook/assets/what's a list - lacing exercise 01.jpg>)
 
 ### **Lista mais longa**
 
 Alterando a amarra para _lista mais longa_, obtemos uma linha diagonal que se estende verticalmente. Pelo mesmo método que o diagrama conceitual, o último item na lista de cinco itens será repetido para alcançar o comprimento da lista mais longa.
 
-![Exemplos de entrada](../images/5-4/1/what'salist-lacingexercise02.jpg)
+\![Exemplos de entrada](<../../.gitbook/assets/what's a list - lacing exercise 02.jpg>)
 
 ### **Produto transversal**
 
-Alterando a amarra para _Produto transversal_, temos todas as combinações entre cada lista, dando-nos uma grade de pontos 5 x 10. Essa é uma estrutura de dados equivalente ao produto transversal, como mostrado no diagrama conceitual acima, exceto pelo fato de que nossos dados agora são uma lista de listas. Conectando uma policurva, podemos ver que cada lista é definida pelo seu valor X, dando-nos uma linha de linhas verticais.
+Alterando a amarra para _Produto transversal_, temos todas as combinações entre cada lista, dando-nos um eixo de pontos 5 x 10. Essa é uma estrutura de dados equivalente ao produto transversal, como mostrado no diagrama conceitual acima, exceto pelo fato de que nossos dados agora são uma lista de listas. Conectando uma policurva, podemos ver que cada lista é definida pelo seu valor X, dando-nos uma linha de linhas verticais.
 
-![Exemplos de entrada](../images/5-4/1/what'salist-lacingexercise03.jpg)
+\![Exemplos de entrada](<../../.gitbook/assets/what's a list - lacing exercise 03.jpg>)

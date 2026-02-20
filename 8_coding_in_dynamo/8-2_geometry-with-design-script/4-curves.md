@@ -6,7 +6,7 @@ Há duas maneiras fundamentais para criar curvas de forma livre no Dynamo: espec
 
 Para criar uma curva interpolada, basta passar um conjunto de pontos para o método _NurbsCurve.ByPoints_.
 
-![](../images/8-2/4/Curves\_01.png)
+![](../../.gitbook/assets/Curves_01.png)
 
 ```js
 num_pts = 6;
@@ -20,7 +20,7 @@ int_curve = NurbsCurve.ByPoints(pts);
 
 A curva gerada faz interseção com cada um dos pontos de entrada, começando e terminando no primeiro e último ponto da coleção, respectivamente. É possível usar um parâmetro periódico opcional para criar uma curva periódica que está fechada. O Dynamo automaticamente preencherá o segmento ausente, portanto, um ponto final duplicado (idêntico ao ponto inicial) não é necessário.
 
-![](../images/8-2/4/Curves\_02.png)
+![](../../.gitbook/assets/Curves_02.png)
 
 ```js
 pts = Point.ByCoordinates(Math.Cos(0..350..#10),
@@ -38,7 +38,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 As NurbsCurves são geradas da mesma forma, com os pontos de entrada que representam os pontos finais de um segmento de linha reta e um segundo parâmetro que especifica a quantidade e o tipo de suavização que a curva sofre, denominado grau.* Uma curva com grau 1 não tem suavização; é uma polilinha.
 
-![](../images/8-2/4/Curves\_03.png)
+![](../../.gitbook/assets/Curves_03.png)
 
 ```js
 num_pts = 6;
@@ -52,7 +52,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 
 Uma curva com grau 2 é suavizada de forma que a curva faça interseção e seja tangente ao ponto central dos segmentos de polilinha:
 
-![](../images/8-2/4/Curves\_04.png)
+![](../../.gitbook/assets/Curves_04.png)
 
 ```js
 num_pts = 6;
@@ -66,7 +66,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 
 O Dynamo suporta curvas NURBS (B-spline racional não uniforme) até o grau 20, e o seguinte script ilustra o efeito que o aumento dos níveis de suavização tem na forma de uma curva:
 
-![](../images/8-2/4/Curves\_05.png)
+![](../../.gitbook/assets/Curves_05.png)
 
 ```js
 num_pts = 6;
@@ -87,7 +87,7 @@ Observe que você deve ter pelo menos mais um ponto de controle que o grau da cu
 
 Outro benefício de construir curvas por vértices de controle é a capacidade de manter a tangência entre segmentos de curva individuais. Isso é feito extraindo a direção entre os últimos dois pontos de controle e continuando esta direção com os dois primeiros pontos de controle da curva a seguir. O exemplo a seguir cria duas curvas NURBS separadas que, mesmo assim, são tão suaves como uma curva:
 
-![](../images/8-2/4/Curves\_06.png)
+![](../../.gitbook/assets/Curves_06.png)
 
 ```js
 pts_1 = {};

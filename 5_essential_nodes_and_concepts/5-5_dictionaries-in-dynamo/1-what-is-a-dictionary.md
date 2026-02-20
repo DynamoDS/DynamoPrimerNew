@@ -20,11 +20,9 @@ A separação dos dicionários das listas apresenta os dicionários como um elem
   * Os dicionários usam a seguinte sintaxe `{key:value}`
   * As listas usam a seguinte sintaxe `[value,value,value]`
 * _Novos nós_ foram introduzidos na biblioteca para ajudar a criar, modificar e consultar dicionários.
-*   As listas criadas em blocos de código v1.x migrarão automaticamente durante o carregamento do script com a nova sintaxe de lista que usa colchetes `[ ]` em vez de chaves `{ }` \\
+* As listas criadas em blocos de código v1.x migrarão automaticamente durante o carregamento do script com a nova sintaxe de lista que usa colchetes `[ ]` em vez de chaves `{ }` \\
 
-    ***
-
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
+\![](<../../.gitbook/assets/what is a dictionary - what are the changes (1) (4).jpg>)
 
 ***
 
@@ -34,7 +32,7 @@ Em ciência de computação, os dicionários, como as listas, são conjuntos de 
 
 Na imagem abaixo, demonstramos um caso de uso potencial de um dicionário. Muitas vezes, os dicionários são usados para relacionar duas partes dos dados que podem não ter uma correlação direta. No nosso caso, estamos ligando a versão em espanhol de uma palavra à versão em inglês para uma pesquisa posterior.
 
-![](../images/5-5/1/whatisadictionary-whatwouldyouusethesefor.jpg)
+\![](<../../.gitbook/assets/what is a dictionary - what would you use these for.jpg>)
 
 > 1. Crie um dicionário para relacionar as duas partes dos dados.
 > 2. Obtenha o valor com a chave fornecida.

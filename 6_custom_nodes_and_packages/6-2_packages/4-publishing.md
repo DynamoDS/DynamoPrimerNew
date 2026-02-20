@@ -2,7 +2,7 @@
 
 Nas seções anteriores, analisamos os detalhes de como o pacote _MapToSurface_ é configurado com nós personalizados e arquivos de exemplo. Mas como publicamos um pacote que foi desenvolvido localmente? Este estudo de caso demonstra como publicar um pacote de um conjunto de arquivos em uma pasta local.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../../.gitbook/assets/develop package - custom nodes 01 (1) (6).jpg>)
 
 Há diversas formas de publicar um pacote. Confira abaixo o processo que aconselhamos: **publicar localmente, desenvolver localmente e publicar on-line**. Vamos começar com uma pasta contendo todos os arquivos do pacote.
 
@@ -24,11 +24,11 @@ Em seguida, reinicie o Dynamo. Depois de reabrir, quando você verificar a janel
 >
 > É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
-{% file src="../datasets/6-2/4/MapToSurface.zip" %}
+{% file src="../../.gitbook/assets/MapToSurface.zip" %}
 
 Este é o primeiro envio para o nosso pacote e colocamos todos os arquivos de exemplo e nós personalizados em uma pasta. Com essa pasta preparada, estamos prontos para carregar no Gerenciador de pacotes do Dynamo.
 
-![](../images/6-2/4/publishapackage-publishlocally01.jpg)
+\![](<../../.gitbook/assets/publish a package - publish locally 01.jpg>)
 
 > 1. Essa pasta contém cinco nós personalizados (.dyf).
 > 2. Essa pasta também contém cinco arquivos de exemplo (.dyn) e um arquivo de vetor importado (.svg). Esses arquivos servirão como exercícios introdutórios para mostrar ao usuário como trabalhar com os nós personalizados.
@@ -55,7 +55,7 @@ Publique clicando em “Publicar localmente” (1). Após completar esses passos
 
 Após a publicação, os nós personalizados devem estar disponíveis no grupo “DynamoPrimer” ou na Biblioteca do Dynamo.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../../.gitbook/assets/develop package - install package 02 (1) (4).jpg>)
 
 Agora, vamos examinar o diretório raiz para ver como o Dynamo formatou o pacote que acabamos de criar. Para fazer isso, vá para a guia Pacotes instalados > ao lado de MapToSurface, clique no menu de pontos verticais > selecione Mostrar diretório raiz.
 
@@ -63,7 +63,7 @@ Agora, vamos examinar o diretório raiz para ver como o Dynamo formatou o pacote
 
 Observe que o diretório raiz está na localização local do pacote (lembre-se de que publicamos o pacote “localmente”). O Dynamo está fazendo referência a esta pasta para ler nós personalizados. Portanto, é importante publicar localmente o diretório em uma localização de pasta permanente (ou seja, não na área de trabalho). Veja a seguir o detalhamento da pasta do pacote do Dynamo.
 
-![](../images/6-2/4/publishapackage-publishlocally06.jpg)
+\![](<../../.gitbook/assets/publish a package - publish locally 06.jpg>)
 
 > 1. A pasta _bin_ contém os arquivos .dll criados com bibliotecas C# ou Sem toque. Não temos nenhum arquivo desse tipo nesse pacote; portanto, a pasta está em branco neste exemplo.
 > 2. A pasta _dyf_ contém os nós personalizados. Depois de abrir essa pasta, serão exibidos todos os nós personalizados (arquivos .dyf) desse pacote.
@@ -77,7 +77,7 @@ Observe que o diretório raiz está na localização local do pacote (lembre-se 
 <figure><img src="../../.gitbook/assets/publish-version.png" alt=""><figcaption></figcaption></figure>
 
 1. Quando estiver pronto para publicar, na janela Pacotes > Package Manager > Pacotes instalados, selecione o botão à direita do pacote que deseja publicar e escolha Publicar.
-2. Se você estiver atualizando um pacote que já foi publicado, selecione “Publicar versão” e o Dynamo atualizará o pacote on-line com base nos novos arquivos no diretório raiz do pacote. Simples assim!
+2. Se você estiver atualizando um pacote que já foi publicado, selecione “Publicar versão” e o Dynamo atualizará o pacote on-line com base nos novos arquivos no diretório raiz do pacote. É tão simples quanto isso.
 
 ### Publicar versão...
 

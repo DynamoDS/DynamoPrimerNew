@@ -68,7 +68,7 @@ A seguir está a lista de alterações na versão 2.0 explicadas:
 
 ## 1\. Sintaxe de list@level simplificada
 
-Nova sintaxe para list@level, para usar `list@L1` em vez de `list@-1` ![](../images/8-4/1/lang2_1.png)
+Nova sintaxe para list@level, para usar `list@L1` em vez de `list@-1` ![](../../.gitbook/assets/lang2_1.png)
 
 ## 2\. As funções sobrecarregadas com parâmetros que se diferenciam apenas por classificação são inválidas
 
@@ -85,7 +85,7 @@ BoundingBox BoundingBox.ByGeometry(geometry: Geometry) {...}
 BoundingBox BoundingBox.ByGeometry(geometry: Geometry[]) {...}
 ```
 
-Se o usuário soltar o primeiro nó na tela e conectar uma lista de geometrias, ele esperará que a replicação entre em ação, mas isso nunca acontecerá, porque no tempo de execução a segunda sobrecarga será chamada em vez disso, conforme mostrado: ![](../images/8-4/1/lang2_2.png)
+Se o usuário soltar o primeiro nó na tela e conectar uma lista de geometrias, ele esperará que a replicação entre em ação, mas isso nunca acontecerá, porque no tempo de execução a segunda sobrecarga será chamada em vez disso, conforme mostrado: ![](../../.gitbook/assets/lang2_2.png)
 
 Na versão 2.0, não permitimos funções sobrecarregadas que só diferem na cardinalidade do parâmetro por esse motivo. Isso significa que para funções sobrecarregadas que têm o mesmo número e tipos de parâmetros, mas têm um ou mais parâmetros que diferem apenas na classificação, a sobrecarga que é definida primeiro sempre vence enquanto o resto é descartado pelo compilador. A principal vantagem de fazer essa simplificação é simplificar a lógica de resolução do método, tendo um caminho rápido para selecionar candidatos à função.
 
@@ -105,7 +105,7 @@ No exemplo a seguir, duas sobrecargas de função `foo` foram definidas. Na vers
 
 Na versão 2.0, é sempre o primeiro método definido que é escolhido sobre o resto. Prevalência por ordem de chegada.
 
-![](../images/8-4/1/lang2_3.png)
+![](../../.gitbook/assets/lang2_3.png)
 
 Para cada um dos casos a seguir, a primeira sobrecarga definida será considerada. Observe que ela é puramente baseada na ordem de definição das funções e não nas classificações de parâmetros, embora seja recomendável dar preferência a métodos com parâmetros de classificação mais altos para nós Sem toque e definidos pelo usuário.
 
@@ -125,7 +125,7 @@ foo(x: int[], y: int[]); ✕
 
 No Dynamo 1.x, os nós da interface do usuário (blocos sem código) foram compilados para métodos de instância e propriedades, respectivamente. Por exemplo, o nó `Point.X` foi compilado para `pt.X` e `Curve.PointAtParameter` foi compilado para `curve.PointAtParameter(param)`. Esse comportamento apresentava dois problemas:
 
-**A. A função que o nó da interface do usuário representava nem sempre era a mesma executada no tempo de execução**
+**A. A função que o nó da interface do usuário representava nem sempre era a mesma executada no tempo de execução **
 
 Um exemplo típico é o nó `Translate`. Há vários nós `Translate` que têm o mesmo número e tipos de argumentos como: `Geometry.Translate`, `Mesh.Translate` e `FamilyInstance.Translate`. Devido ao fato de que os nós eram compilados como métodos de instância, a transmissão de um `FamilyInstance` para um nó `Geometry.Translate` surpreendentemente ainda funcionava, pois no tempo de execução ele enviava a chamada para o método de instância `Translate` em um `FamilyInstance`. Isso era obviamente enganoso para os usuários, pois o nó não fazia o que dizia.
 
@@ -137,7 +137,7 @@ Por exemplo, se uma entrada de lista com os seguintes tipos `[Arc, Line]` fosse 
 
 ### Dynamo 1.x: testa somente o primeiro elemento da lista de entrada para verificação da resolução do método
 
-![](../images/8-4/1/lang2_4.png)
+![](../../.gitbook/assets/lang2_4.png)
 
 ```
 x = [arc, line];
@@ -164,7 +164,7 @@ Isto é o que acontece na versão 2.0:
 
 Esse exemplo funcionava anteriormente em 1.x, pois o gráfico compilava para `point.X;` e encontrava a propriedade `X` no objeto de ponto. Agora ocorre uma falha na versão 2.0 como o código compilado – `Vector.X(point)` espera apenas um tipo `Vector`:
 
-![](../images/8-4/1/lang2_5.png)
+![](../../.gitbook/assets/lang2_5.png)
 
 ### Vantagens:
 
@@ -176,7 +176,7 @@ Esse exemplo funcionava anteriormente em 1.x, pois o gráfico compilava para `po
 
 ### Advertência: Ambiguidades não resolvidas com métodos sobrecarregados
 
-Como o Dynamo aceita sobrecargas de função em geral, ainda poderá haver confusão se houver outra função sobrecarregada com o mesmo número de parâmetros. Por exemplo, no gráfico a seguir, se conectarmos um valor numérico à entrada `direction` de `Curve.Extrude` e um vetor à entrada `distance` de `Curve.Extrude`, ambos os nós continuarão a funcionar, o que é inesperado. Nesse caso, mesmo que os nós compilem para métodos estáticos, o mecanismo ainda será incapaz de perceber a diferença no tempo de execução e escolhe qualquer um dependendo do tipo de entrada. ![](../images/8-4/1/lang2_6.png)
+Como o Dynamo aceita sobrecargas de função em geral, ainda poderá haver confusão se houver outra função sobrecarregada com o mesmo número de parâmetros. Por exemplo, no gráfico a seguir, se conectarmos um valor numérico à entrada `direction` de `Curve.Extrude` e um vetor à entrada `distance` de `Curve.Extrude`, ambos os nós continuarão a funcionar, o que é inesperado. Nesse caso, mesmo que os nós compilem para métodos estáticos, o mecanismo ainda será incapaz de perceber a diferença no tempo de execução e escolhe qualquer um dependendo do tipo de entrada. ![](../../.gitbook/assets/lang2_6.png)
 
 ### Problemas solucionados:
 
@@ -186,11 +186,11 @@ A mudança para a semântica do método estático introduziu os seguintes efeito
 
 Vamos considerar um exemplo de nós `TSpline` em `ProtoGeometry` (observe que `TSplineTopology` herda do tipo de `Topology` base): o nó `Topology.Edges` que foi compilado anteriormente para o método de instância, `object.Edges`, agora é compilado para o método estático, `Topology.Edges(object)`. A chamada anterior resolveria polimorficamente para o método de classe derivada, `TsplineTopology.Edges` após um envio de método sobre o tipo de tempo de execução do objeto.
 
-![](../images/8-4/1/lang2_7.png)
+![](../../.gitbook/assets/lang2_7.png)
 
 Considerando que o novo comportamento estático foi forçado a chamar o método de classe base, `Topology.Edges`. Como resultado, esse nó retornou a classe base, os objetos `Edge` em vez dos objetos de classe derivados do tipo `TSplineEdge`.
 
-![](../images/8-4/1/lang2_8.png)
+![](../../.gitbook/assets/lang2_8.png)
 
 Essa foi uma regressão à medida que os nós de `TSpline` a jusante que esperavam o começo da falha do `TSplineEdges`.
 
@@ -198,13 +198,13 @@ O problema foi corrigido ao adicionar uma verificação de tempo de execução n
 
 **Novo comportamento polimórfico na versão 2.0:**
 
-![](../images/8-4/1/lang2_9.png)
+![](../../.gitbook/assets/lang2_9.png)
 
 Neste caso, como o primeiro elemento `a` é um `TSpline`, é o método derivado `TSplineTopology.Edges` que é chamado no tempo de execução. Como resultado, retorna `null` para o tipo de `Topology` `b` base.
 
 No segundo caso, como o tipo de `Topology` `b` geral é o primeiro elemento, o método de `Topology.Edges` base é chamado. Como `Topology.Edges` também aceita o tipo de `TSplineTopology` derivado, `a` como entrada, ele retorna `Edges` para ambas as entradas, `a` e `b`.
 
-![](../images/8-4/1/lang2_10.png)
+![](../../.gitbook/assets/lang2_10.png)
 
 **2\. Regressões na produção de listas externas redundantes**
 
@@ -248,13 +248,13 @@ p = Point.ByCoordinates(x<1>, y<2>, z<3>); // cross-lacing
 
 ### Dynamo 1.x: lista 3D de pontos
 
-![](../images/8-4/1/lang2_11.png)
+![](../../.gitbook/assets/lang2_11.png)
 
 Na versão 2.0, a presença de guias de replicação para cada um dos argumentos de valor único `y` e `z` não causa uma promoção, resultando em uma lista com a mesma cota que a lista 1D de entrada para `x`.
 
 ### Dynamo 2.0: lista 1D de pontos
 
-![](../images/8-4/1/lang2_12.png)
+![](../../.gitbook/assets/lang2_12.png)
 
 A regressão acima mencionada causada pela compilação do método estático com a geração de listas externas redundantes também foi abordada por essa alteração de linguagem.
 
@@ -268,7 +268,7 @@ produziu uma lista 3D de pontos no Dynamo 1.x. Isso aconteceu devido à promoç
 
 ### Dynamo 1.x: promoção de lista de argumento com guia de replicação
 
-![](../images/8-4/1/lang2_13.png)
+![](../../.gitbook/assets/lang2_13.png)
 
 Na versão 2.0, desativamos a promoção de argumentos de valor único a listas quando usadas com guias de replicação ou amarras. Então agora a chamada para:
 
@@ -280,7 +280,7 @@ simplesmente retorna uma lista 2D pois a superfície não é promovida.
 
 ### Dynamo 2.0: promoção de lista de argumento de valor único com guia de replicação desativada
 
-![](../images/8-4/1/lang2_14.png)
+![](../../.gitbook/assets/lang2_14.png)
 
 Essa alteração agora remove a adição de um nível de lista redundante e também resolve a regressão causada pela transição para a compilação de método estático.
 
@@ -295,7 +295,7 @@ Essa alteração agora remove a adição de um nível de lista redundante e tamb
 * Os métodos de instância e os métodos estáticos são consistentes (corrigem problemas com a semântica do método estático)
 * Os nós com entradas e com argumentos padrão se comportam de forma consistente (veja abaixo)
 
-![](../images/8-4/1/lang2_15.png)
+![](../../.gitbook/assets/lang2_15.png)
 
 ## 5\. As variáveis são imutáveis nos nós de bloco de código para impedir a atualização associativa
 
@@ -336,7 +336,7 @@ a = 4;         // b = 10 or b = 7?
 
 Neste exemplo de geometria, como o cubo `b` depende de si mesmo, bem como do cilindro, `a`, mover o controle deslizante deve fazer com que o furo se mova ao longo do bloco ou deve criar um efeito cumulativo de perfurar vários furos ao longo do caminho para cada atualização de posição do controle deslizante?
 
-![](../images/8-4/1/lang2_16.gif)
+![](../../.gitbook/assets/lang2_16.gif)
 
 **3\. Atualização de propriedades de variáveis:**
 
@@ -359,7 +359,7 @@ Com base na experiência, descobrimos que a atualização associativa não se mo
 
 Se de alguma forma ele foi usado por alguns usuários, provavelmente foi sem saber, causando mais danos do que benefícios. Portanto, decidimos na versão 2.0 ocultar a associatividade no uso de nós do bloco de código, tornando as variáveis imutáveis enquanto continuamos a manter a atualização associativa apenas como um recurso nativo do mecanismo DS. Essa é outra mudança feita com a ideia de simplificar a experiência dos scripts para os usuários.
 
-**A atualização associativa está desativada em CBNs impedindo a redefinição de variáveis:** ![](../images/8-4/1/lang2_17.png)
+**A atualização associativa está desativada em CBNs impedindo a redefinição de variáveis:** ![](../../.gitbook/assets/lang2_17.png)
 
 **A indexação de listas ainda é permitida em blocos de código**
 
@@ -367,7 +367,7 @@ Uma exceção foi feita para a indexação de listas e ainda é permitida na ver
 
 Neste próximo exemplo, vemos que a lista `a` é inicializada, mas pode ser posteriormente substituída por uma atribuição de operador de índice e que quaisquer variáveis dependentes de `a` seriam atualizadas associativamente conforme visto pelo valor de `c`. Além disso, a visualização do nó exibe os valores atualizados de `a` após a redefinição de um ou mais de seus elementos.
 
-![](../images/8-4/1/lang2_18.png)
+![](../../.gitbook/assets/lang2_18.png)
 
 ## 6\. As variáveis em blocos imperativos são locais para o escopo do bloco imperativo
 
@@ -483,11 +483,11 @@ dict = {<key> : <value>, …};
 
 em que apenas uma sequência de caracteres é permitida para `<key>` e vários pares chave-valor são separados por vírgulas.
 
-![](../images/8-4/1/lang2_19.png)
+![](../../.gitbook/assets/lang2_19.png)
 
 O método Sem toque `Dictionary.ByKeysValues` pode ser usado como uma maneira mais versátil de inicializar um dicionário, passando uma lista de chaves e valores, respectivamente, e tendo todos os recursos dos métodos Sem toque, como guias de replicação etc.
 
-![](../images/8-4/1/lang2_20.png)
+![](../../.gitbook/assets/lang2_20.png)
 
 ### Por que não usamos expressões arbitrárias para a sintaxe de inicialização do dicionário?
 
@@ -507,21 +507,21 @@ _Poderíamos_ estender chaves de dicionário para aceitar expressões arbitrári
 
 **1\. O nó sem toque que retorna um dicionário .NET é retornado como um dicionário do Dynamo**
 
-**Considere o seguinte método C# Sem toque que retorna um IDictionary:** ![](../images/8-4/1/lang2_21.png)
+**Considere o seguinte método C# sem toque que retorna um IDictionary:** ![](../../.gitbook/assets/lang2_21.png)
 
-**É realizado marshal do valor de retorno do nó ZT correspondente como um dicionário do Dynamo:** ![](../images/8-4/1/lang2_22.png)
+**É realizado marshal do valor de retorno do nó ZT correspondente como um dicionário do Dynamo:** ![](../../.gitbook/assets/lang2_22.png)
 
 **2\. Nós de múltiplos retornos são visualizados como dicionários**
 
-**O nó Sem toque que retorna o IDictionary com atributo de múltiplos retornos retorna um dicionário do Dynamo:** ![](../images/8-4/1/lang2_23.png)
+**O nó Sem toque que retorna o IDictionary com atributo de múltiplos retornos retorna um dicionário do Dynamo:** ![](../../.gitbook/assets/lang2_23.png)
 
-![](../images/8-4/1/lang2_24.png)
+![](../../.gitbook/assets/lang2_24.png)
 
 **3\. O dicionário do Dynamo pode ser passado como entrada no nó sem toque que aceita o dicionário .NET**
 
-**Método ZT com um parâmetro do IDictionary:** ![](../images/8-4/1/lang2_25.png)
+**Método ZT com um parâmetro do IDictionary:** ![](../../.gitbook/assets/lang2_25.png)
 
-**O nó ZT aceita o dicionário do Dynamo como entrada:** ![](../images/8-4/1/lang2_26.png)
+**O nó ZT aceita o dicionário do Dynamo como entrada:** ![](../../.gitbook/assets/lang2_26.png)
 
 ### Visualização de dicionário em nós de múltiplos retornos
 
@@ -529,4 +529,4 @@ Os dicionários são pares chave-valor não ordenados. Consistente com essa idei
 
 No entanto, abrimos uma exceção para nós com múltiplos retornos que tem`MultiReturnAttribute` definido. No exemplo a seguir, o nó `DateTime.Components` é um nó “de múltiplos retornos” e a visualização do nó reflete seus pares valor-chave para que fiquem na mesma ordem que a das portas de saída no nó, que também é a ordem em que as saídas são especificadas com base no`MultiReturnAttribute` na definição do nó.
 
-Observe também que as visualizações dos blocos de código não são ordenadas, ao contrário do nó da interface do usuário, pois as informações da porta de saída (na forma de um atributo de retorno múltiplo) não existem para o nó do bloco de código: ![](../images/8-4/1/lang2_27.png)
+Observe também que as visualizações dos blocos de código não são ordenadas, ao contrário do nó da interface do usuário, pois as informações da porta de saída (na forma de um atributo de retorno múltiplo) não existem para o nó do bloco de código: ![](../../.gitbook/assets/lang2_27.png)

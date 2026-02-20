@@ -8,13 +8,13 @@ No Dynamo, os **Nós** são os objetos que você conecta para formar um programa
 
 A maioria dos nós no Dynamo são compostos de cinco partes. Embora existam exceções, como os nós de entrada, a anatomia de cada nó pode ser descrita da seguinte maneira:
 
-![](images/nodesandwires-nodesanatomy.jpg)
+\![](<../.gitbook/assets/nodes and wires - nodes anatomy.jpg>)
 
 > 1. Nome – O nome do nó com uma convenção de nomenclatura `Category.Name`.
 > 2. Corpo principal – O corpo principal do nó: se clicar aqui com o botão direito do mouse, serão apresentadas opções de todo o nó
 > 3. Portas (entrada e saída) – Os destinatários dos fios que fornecem os dados de entrada para o nó, assim como os resultados da ação do nó
 > 4. Valor padrão – Clique com o botão direito do mouse em uma porta de entrada: alguns nós têm valores padrão que podem ser usados ou não.
-> 5. Ícone de amarra – Indica a [opção de amarra](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) especificada para as entradas de lista coincidentes (mais informações adiante)
+> 5. Ícone de amarra — Indica a [opção de amarra](../5_essential_nodes_and_concepts/5-4_designing-with-lists/1-whats-a-list.md#lacing) especificada para as entradas de lista coincidentes (mais informações adiante)
 
 ### Portas de entrada/saída de nós
 
@@ -24,7 +24,7 @@ As portas esperam receber dados de um determinado tipo. Por exemplo, ao conectar
 
 {% hint style="info" %} Dica: Passe o cursor do mouse sobre uma porta para ver uma dica de ferramenta contendo o tipo de dados esperado. {% endhint %}
 
-![](images/nodesandwires-nodesinputandtooltip.jpg)
+\![](<../.gitbook/assets/nodes and wires - nodes input and tooltip.jpg>)
 
 > 1. Legenda da porta
 > 2. Dica de ferramenta
@@ -44,18 +44,18 @@ Quando você passa o cursor do mouse ou clica com o botão direito do mouse sobr
 > 3. Função – Um nó que gera uma função e tem uma barra vertical cinza sobre uma porta de saída é um nó de função.
 > 4. Selecionado – Os nós atualmente selecionados têm um realce azul-claro em sua borda.
 > 5. Congelado – Um nó azul translúcido está congelado, suspendendo a execução do nó.
-> 6. Visualização desativada – Uma barra de status cinza abaixo do nó e um ícone de olho <img src="images/nodesandwires-previewoff.jpg" alt="" data-size="line"> indicam que a visualização da geometria do nó está desativada.
+> 6. Visualização desativada – Uma barra de status cinza abaixo do nó e um ícone de olho <img src="../.gitbook/assets/nodes and wires - preview off.jpg" alt="" data-size="line"> indicam que a visualização da geometria do nó está desativada.
 > 7. Aviso – Uma barra de status amarela abaixo do nó indica um estado de aviso, o que significa que o nó não tem dados de entrada ou pode ter tipos de dados incorretos.
 > 8. Erro – Uma barra de status vermelha abaixo do nó indica que o nó está em um estado de erro
 > 9. Informações – Uma barra de status azul abaixo do nó indica um estado de informações, que sinaliza informações úteis sobre os nós. Esse estado pode ser acionado ao se aproximar de um valor máximo suportado pelo nó, ao usar um nó de uma forma que tenha possíveis impactos no desempenho, etc.
 
 #### Como lidar com nós com estado de erro ou de aviso
 
-Se o programa visual tiver avisos ou erros, o Dynamo fornecerá informações adicionais sobre o problema. Qualquer nó exibido em amarelo também terá uma dica de ferramenta acima do nome. Passe o cursor do mouse sobre o ícone de dica de ferramenta de aviso ![](images/nodesandwires-nodewarningicon.png) ou erro ![](images/nodesandwires-nodeerroricon.png) para expandi-lo.
+Se o programa visual tiver avisos ou erros, o Dynamo fornecerá informações adicionais sobre o problema. Qualquer nó exibido em amarelo também terá uma dica de ferramenta acima do nome. Passe o cursor do mouse sobre o ícone de dica de ferramentas de aviso \![](<../.gitbook/assets/nodes and wires - node warning icon.png>) ou de erro \![](<../.gitbook/assets/nodes and wires - node error icon.png>) para expandi-lo.
 
 {% hint style="info" %} Dica: Com essa informação da dica de ferramenta, examine os nós a montante para ver se o tipo de dados ou a estrutura de dados necessários apresenta erro. {% endhint %}
 
-![](images/nodesandwires-nodeswithwarningtooltip.jpg)
+\![](<../.gitbook/assets/nodes and wires - nodes with warning tooltip.jpg>)
 
 > 1. Dica de ferramenta de aviso – “Nulo” ou nenhum dado não pode ser entendido como um Duplo, ou seja, um número
 > 2. Use o nó de inspeção para examinar os dados de entrada
@@ -81,7 +81,7 @@ Os fios conectam a porta de saída de um nó à porta de entrada de outro nó. E
 
 As portas de entrada estão no lado esquerdo e as portas de saída estão localizadas no lado direito dos nós; portanto, geralmente podemos dizer que o fluxo do programa se move da esquerda para a direita.
 
-![](images/nodesandwires-flowofdata.jpg)
+\![](<../.gitbook/assets/nodes and wires - flow of data (1).jpg>)
 
 ### Criar fios <a href="#creating-wires" id="creating-wires"></a>
 
@@ -89,7 +89,7 @@ Crie um fio clicando com o botão esquerdo do mouse em uma porta e, em seguida, 
 
 Os dados sempre fluirão por esse fio da saída para a entrada; no entanto, podemos criar o fio em qualquer direção em termos da sequência dos cliques nas portas conectadas.
 
-![](images/nodesandwires-creatingawire.gif)
+\![](<../.gitbook/assets/nodes and wires - creating a wire.gif>)
 
 ### Editar fios <a href="#editing-wires" id="editing-wires"></a>
 
@@ -97,25 +97,25 @@ Frequentemente, queremos ajustar o fluxo do programa em nosso programa visual ed
 
 * Para alterar a conexão em uma porta de entrada, clique com o botão esquerdo do mouse em outra porta de entrada
 
-![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+![](../.gitbook/assets/nodesandwires-editwirechangeport\(2\).gif)
 
 * Para remover o fio, afaste o fio e clique com o botão esquerdo do mouse no espaço de trabalho
 
-![](images/nodesandwires-editwiresremove.gif)
+\![](<../.gitbook/assets/nodes and wires - edit wires remove.gif>)
 
 * Reconecte vários fios usando Shift+clique com o botão esquerdo do mouse
 
-![](images/nodesandwires-editmultiports.gif)
+\![](<../.gitbook/assets/nodes and wires - edit multi ports.gif>)
 
 * Duplique um fio usando Ctrl+clique com o botão esquerdo do mouse
 
-![](images/nodesandwires-duplicatewire.gif)
+\![](<../.gitbook/assets/nodes and wires - duplicate wire.gif>)
 
 #### Fios padrão vs. realçados <a href="#wire-previews" id="wire-previews"></a>
 
 Por padrão, nossos fios serão visualizados com um traço cinza. Quando um nó é selecionado, ele vai renderizar qualquer fio de conexão com o mesmo realce azul-claro do nó.
 
-![](images/nodesandwires-defaultvshighlightedwires.jpg)
+\![](<../.gitbook/assets/nodes and wires - default vs highlighted wires.jpg>)
 
 > 1. Fio realçado
 > 2. Fio padrão
@@ -126,10 +126,10 @@ Caso você prefira ocultar os fios no gráfico, pode encontrar essa opção em V
 
 Com essa configuração, somente os nós selecionados e seus fios unidos serão mostrados no realce azul-claro.
 
-![](images/nodesandwires-hidewiressetting\(1\).gif)
+\![](<../.gitbook/assets/nodes and wires - hide wires setting (1).gif>)
 
 #### Ocultar somente fio individual
 
 Também é possível ocultar somente o fio selecionado clicando com o botão direito do mouse na saída Nós > e selecionando Ocultar fios
 
-![](images/nodesandwires-hideselectedwire.gif)
+\![](<../.gitbook/assets/nodes and wires - hide selected wire.gif>)

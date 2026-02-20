@@ -6,7 +6,7 @@ Determinados objetos de geometria podem ser criados explicitamente especificando
 
 A transformação geométrica mais simples é uma conversão, que move um objeto um número especificado de unidades nas direções x, y e z.
 
-![](../images/8-2/5/Transformations\_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -22,7 +22,7 @@ p2 = p.Translate(10, -20, 50);
 
 Embora todos os objetos no Dynamo possam ser convertidos anexando o método _.Translate_ ao final do nome do objeto, as transformações mais complexas exigem a transformação do objeto de um CoordinateSystem subjacente em um novo CoordinateSystem. Por exemplo, para rotacionar um objeto 45° em torno do eixo x, vamos transformar o objeto de seu CoordinateSystem existente sem rotação em um CoordinateSystem que foi rotacionado 45° em torno do eixo x com o método _.Transform_:
 
-![](../images/8-2/5/Transformations\_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -42,7 +42,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Além de serem convertidos e rotacionados, também é possível criar os CoordinateSystems com escala ou cisalhamento. Um CoordinateSystem pode ser dimensionado com o método _.Scale_:
 
-![](../images/8-2/5/Transformations\_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -58,7 +58,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Os CoordinateSystems de cisalhamento são criados inserindo vetores não ortogonais no construtor CoordinateSystem.
 
-![](../images/8-2/5/Transformations\_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(

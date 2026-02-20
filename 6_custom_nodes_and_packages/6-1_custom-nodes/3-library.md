@@ -12,15 +12,15 @@ Quando publicar um nó localmente, o nó estará acessível na biblioteca do Dyn
 >
 > É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
-{% file src="../datasets/6-1/3/PointsToSurface.dyf" %}
+{% file src="../../.gitbook/assets/PointsToSurface (1).dyf" %}
 
 Vamos avançar com o nó personalizado que criamos na seção anterior. Quando o nó personalizado PointsToSurface é aberto, vemos o gráfico no Editor de nós personalizados do Dynamo. Também é possível abrir um nó personalizado clicando duas vezes nele no Editor de gráficos do Dynamo.
 
-![](../images/6-1/3/publishcustomnodelocally01.jpg)
+\![](<../../.gitbook/assets/publish custom node exercise - 01.jpg>)
 
 Para publicar um nó personalizado localmente, basta clicar com o botão direito do mouse na tela e selecionar _“Publicar este nó personalizado...”_
 
-![](../images/6-1/3/publishcustomnodeexercise-02.jpg)
+\![](<../../.gitbook/assets/publish custom node exercise - 02.jpg>)
 
 Preencha as informações relevantes de forma similar à imagem acima e selecione _“Publicar localmente”_. Observe que o campo Grupo define o elemento principal acessível no menu do Dynamo.
 
@@ -28,7 +28,7 @@ Preencha as informações relevantes de forma similar à imagem acima e selecion
 
 Escolha uma pasta para armazenar todos os nós personalizados que você planeja publicar localmente. O Dynamo verificará essa pasta sempre que ela for carregada, portanto, certifique-se de que a pasta esteja em um local permanente. Navegue até essa pasta e escolha _“Selecionar pasta”_. O nó do Dynamo agora é publicado localmente e permanecerá na biblioteca do Dynamo cada vez que você carregar o programa.
 
-![](../images/6-1/3/publishcustomnodeexercise-04.jpg)
+\![](<../../.gitbook/assets/publish custom node exercise - 04 (1).jpg>)
 
 Para verificar a localização da pasta de nós personalizados, vá para _Dynamo > Preferências > Configurações do pacote > Caminhos de nós e pacotes._
 
@@ -46,10 +46,10 @@ Alteramos a ordem dos nomes de caminhos para que o caminho padrão do Dynamo sej
 
 <figure><img src="../../.gitbook/assets/updated-package-locations.png" alt=""><figcaption></figcaption></figure>
 
-Navegando para essa pasta local, poderemos encontrar o nó personalizado original na pasta _“.dyf”_, que é a extensão de arquivo de nós personalizados do Dynamo. Podemos editar o arquivo nessa pasta e o nó será atualizado na interface do usuário. Também é possível adicionar mais nós à pasta principal _DynamoCustomNode_ e o Dynamo os adicionará à biblioteca ao ser reiniciado.
+Navegando para essa pasta local, poderemos encontrar o nó personalizado original na pasta _“.dyf”_, que é a extensão de arquivo de nós personalizados do Dynamo. Podemos editar o arquivo nessa pasta e o nó será atualizado na interface do usuário. Também é possível adicionar mais nós à pasta principal _DynamoCustomNode_. O Dynamo os adicionará à biblioteca ao ser reiniciado.
 
-![](../images/6-1/3/publishcustomnodeexercise-08.jpg)
+\![](<../../.gitbook/assets/publish custom node exercise - 08.jpg>)
 
 O Dynamo agora será carregado sempre com “PointsToSurface” no grupo “DynamoPrimer” da biblioteca do Dynamo.
 
-![](../images/6-1/3/publishcustomnodeexercise-09.jpg)
+\![](<../../.gitbook/assets/publish custom node exercise - 09.jpg>)

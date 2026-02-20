@@ -6,13 +6,13 @@ A localização desse modelo está em `APPDATA` da instalação do Dynamo.
 
 Normalmente, é `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-![](../images/8-3/3/pythontemplates-appdatafolderlocation.jpg)
+\![](<../../.gitbook/assets/python templates - appdata folder location.jpg>)
 
 ### Configurar o modelo
 
 Para usar essa funcionalidade, é necessário adicionar a seguinte linha em nosso arquivo `DynamoSettings.xml`. _(Editar no bloco de notas)_
 
-![](../images/8-3/3/pythontemplates-dynamosettingsxmlfile.png)
+\![](<../../.gitbook/assets/python templates -dynamo settings xml file.png>)
 
 Onde vemos `<PythonTemplateFilePath />`, basta substituir por:
 
@@ -22,9 +22,7 @@ Onde vemos `<PythonTemplateFilePath />`, basta substituir por:
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_Observação: Substitua CURRENTUSER por seu nome de usuário_
-{% endhint %}
+{% hint style="warning" %} _Observação: Substitua CURRENTUSER por seu nome de usuário_ {% endhint %}
 
 Em seguida, precisamos criar um modelo com a funcionalidade que desejamos usar incorporada. Em nosso caso, vamos incorporar as importações relacionadas ao Revit e alguns dos outros itens típicos ao trabalhar com o Revit.
 
@@ -73,11 +71,10 @@ Uma vez feito isso, salve o arquivo como `PythonTemplate.py` na localização `A
 
 Após o modelo do Python ser definido, o Dynamo procurará esses dados sempre que um nó do Python for inserido. Se não forem encontrados, será semelhante à janela padrão do Python.
 
-![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
+\![](<../../.gitbook/assets/python templates - before setup template.jpg>)
 
 Se o modelo do Python for encontrado (como nosso modelo do Revit, por exemplo), será possível ver todos os itens padrão incorporados.
 
-![](../images/8-3/3/pythontemplates-aftersetuptemplate.jpg)
+\![](<../../.gitbook/assets/python templates - after setup template.jpg>)
 
 Você pode obter mais informações sobre esta grande inclusão (desenvolvida por Radu Gidei) aqui. https://github.com/DynamoDS/Dynamo/pull/8122
-

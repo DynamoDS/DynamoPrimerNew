@@ -7,33 +7,31 @@ Este manual inclui capítulos desenvolvidos com a Mode Lab. Esses capítulos tê
 Esse guia foi projetado para atender aos leitores de diferentes níveis de conhecimento e experiência. Uma introdução geral sobre a configuração do Dynamo, a interface do usuário e os principais conceitos pode ser encontrada nas seções a seguir. Recomendamos que os novos usuários consultem os seguintes tópicos:
 
 * [O que é o Dynamo e como ele funciona?](1-what-is-dynamo.md)
-* [Configuração do Dynamo](../2\_setup\_for\_dynamo/)
-* [Interface do usuário](../3\_user\_interface/)
-* [Nós e fios](../4\_nodes\_and\_wires/)
+* [Configuração do Dynamo](../2_setup_for_dynamo/)
+* [Interface do usuário](../3_user_interface/)
+* [Nós e fios](../4_nodes_and_wires/)
 
 Para os usuários que desejam desenvolver uma compreensão mais profunda de cada elemento, como um nó específico e o conceito por trás dele, abordamos os fundamentos em um capítulo próprio.
 
-* [Nós e conceitos essenciais](../5\_essential\_nodes\_and\_concepts/)
+* [Nós e conceitos essenciais](../5_essential_nodes_and_concepts/)
 
 Se você quiser ver a demonstração dos fluxos de trabalho do Dynamo, incluímos alguns gráficos na seção Exemplos de fluxos de trabalho. Siga as instruções anexadas para criar seus próprios gráficos do Dynamo.
 
-* [Vaso paramétrico](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
+* [Vaso paramétrico](../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.md)
 
-![](images/1-2/vase1.gif)
+![](../.gitbook/assets/vase1.gif)
 
-* [Pontos de atração](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
+* [Pontos de atração](../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.md)
 
-![](images/1-2/attractor1.gif)
+\![](<../.gitbook/assets/attractor1 (1).gif>)
 
-{% hint style="info" %}
-Há mais exercícios específicos de tópicos que podem ser encontrados em capítulos posteriores, pois abordamos diferentes tópicos sobre o Dynamo. Os **exercícios** podem ser encontrados normalmente na última seção de cada página.
-{% endhint %}
+{% hint style="info" %} Existem mais exercícios específicos sobre o tema nos capítulos posteriores, à medida que abordamos diferentes tópicos sobre o Dynamo. Os **exercícios** podem ser encontrados normalmente na última seção de cada página.
 
 ### A Comunidade
 
 O Dynamo não seria o que é sem um forte grupo de usuários ávidos e colaboradores ativos. Participe da comunidade seguindo o [blog](http://dynamobim.org/blog/), adicionando seu trabalho à galeria ou discutindo o Dynamo no [fórum](https://forum.dynamobim.com).
 
-![O fórum](images/1-2/02-Community.png)
+![O fórum](../.gitbook/assets/02-Community.png)
 
 ### A plataforma
 
@@ -41,6 +39,6 @@ O Dynamo é idealizado como uma ferramenta de programação visual para os desig
 
 O código-fonte do projeto é de código aberto, o que nos permite estender a funcionalidade conforme desejarmos. Confira o projeto no GitHub e procure os trabalhos em andamento dos usuários personalizando o Dynamo.
 
-![O repositório](images/1-2/03-TheRepo.png)
+![O repositório](../.gitbook/assets/03-TheRepo.png)
 
 > Pesquise e comece a estender o Dynamo de acordo com suas necessidades

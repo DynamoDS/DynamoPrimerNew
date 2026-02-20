@@ -2,7 +2,7 @@
 
 A biblioteca contém todos os nós carregados, incluindo os dez nós de categorias padrão que vêm com a instalação, bem como quaisquer nós ou pacotes personalizados carregados adicionalmente. Os nós na biblioteca são organizados hierarquicamente dentro de bibliotecas, categorias e, quando apropriado, subcategorias.
 
-![](images/3-2/library-libraryUI.jpg)
+\![](<../.gitbook/assets/library - library UI.jpg>)
 
 * Nós básicos: vêm com a instalação padrão.
 * Nós personalizados: armazene as rotinas ou gráficos especiais usados com frequência como nós personalizados. Também é possível compartilhar os nós personalizados com a comunidade
@@ -18,22 +18,22 @@ Navegue na biblioteca clicando nos menus para expandir cada categoria e suas sub
 
 {% hint style="info" %} Geometria oferece ótimos menus para começar a explorar, pois contêm a maior quantidade de nós. {% endhint %}
 
-![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
+\![](<../.gitbook/assets/library - modified and resize library categories.jpg>)
 
 > 1. Biblioteca
 > 2. Categoria
 > 3. Subcategoria
 > 4. Nó
 
-Essas opções categorizam os nós na mesma subcategoria com base na capacidade dos nós **criar** dados, executar uma **ação** ou **consultar** dados.
+Essas opções categorizam os nós na mesma subcategoria com base na capacidade de os nós conseguirem **criar** dados, executar uma **ação** ou **consultar** dados.
 
-* ![](<images/3-2/user interface - create.jpg>) **Criar**: criar ou construir uma geometria do zero. Por exemplo, um círculo.
-* ![](<images/3-2/user interface - action.jpg>) **Ação**: executar uma ação em um objeto. Por exemplo, dimensionar um círculo.
-* ![](<images/3-2/user interface - query.jpg>) **Consulta**: obter uma propriedade de um objeto que já existe. Por exemplo, obter o raio de um círculo.
+* \![](<../.gitbook/assets/user interface - create.jpg>) **Criar**: criar ou construir uma geometria do zero. Por exemplo, um círculo.
+* \![](<../.gitbook/assets/user interface - action.jpg>) **Ação**: realizar uma ação em um objeto. Por exemplo, dimensionar um círculo.
+* \![](<../.gitbook/assets/user interface - query.jpg>) **Consultar**: obter uma propriedade de um objeto que já existe. Por exemplo, obter o raio de um círculo.
 
 Passe o cursor do mouse sobre um nó para obter informações mais detalhadas além do nome e do ícone. Isso nos oferece uma maneira rápida de entender o que o nó faz, o que ele exigirá para as entradas e o que ele fornecerá como resultado.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<../.gitbook/assets/user interface - node description.jpg>)
 
 > 1. Descrição: descrição de texto simples do nó
 > 2. Ícone: versão maior do ícone no menu Biblioteca
@@ -46,7 +46,7 @@ Se você souber com algum grau de especificidade qual é o nó que deseja adicio
 
 Clique no nó que deseja adicionar ou pressione Enter para adicionar nós realçados ao centro do espaço de trabalho.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<../.gitbook/assets/user interface - search.jpg>)
 
 #### Pesquisar por hierarquia
 
@@ -58,15 +58,15 @@ Se inserir diferentes partes do local do nó na hierarquia da biblioteca no form
 
 * `library.category.nodeName`
 
-![](images/3-2/library-searchbyhierarchygeometrypointbycoordinates\(1\).jpg)
+\![](<../.gitbook/assets/library - search by hierarchy 1 geometry point by coordinates.jpg>)
 
 * `category.nodeName`
 
-![](images/3-2/library-searchbyhierarchy2pointbycoordinates.jpg)
+\![](<../.gitbook/assets/library - search by hierarchy 2 point by coordinates.jpg>)
 
 * `nodeName` ou `keyword`
 
-![](images/3-2/library-searchbyhierarchy3bycoordinates.jpg)
+\![](<../.gitbook/assets/library - search by hierarchy 3 by coordinates.jpg>)
 
 Normalmente, o nome do nó no espaço de trabalho será renderizado no formato `category.nodeName`, com algumas exceções notáveis, especialmente nas categorias de entrada e vista.
 
@@ -74,15 +74,15 @@ Tenha atenção aos nós de nome semelhante e observe a diferença de categoria:
 
 * Os nós da maioria das bibliotecas incluirão o formato da categoria
 
-![](images/3-2/library-nodecategorydifferences1.jpg)
+\![](<../.gitbook/assets/library - node category differences 1.jpg>)
 
 * `Point.ByCoordinates` e `UV.ByCoordinates` têm o mesmo nome, mas são provenientes de diferentes categorias
 
-![](images/3-2/library-nodecategorydifferences2.jpg)
+\![](<../.gitbook/assets/library - node category differences 2.jpg>)
 
 * Exceções notáveis incluem funções incorporadas, Core.Input, Core.View e Operators
 
-![](images/3-2/library-nodecategorydifferences3.jpg)
+\![](<../.gitbook/assets/library - node category differences 3.jpg>)
 
 ### Nós usados com frequência
 
@@ -92,44 +92,43 @@ Com centenas de nós incluídos na instalação básica do Dynamo, quais são es
 
 Os nós de entrada são os principais meios para o usuário do nosso Programa visual, seja você mesmo ou outra pessoa, fazer a interface com os parâmetros mais importantes. Confira alguns exemplos disponíveis na biblioteca principal:
 
-| Nó           |                                           | Nó           |                                           |
-| -------------- | ----------------------------------------- | -------------- | ----------------------------------------- |
-| Booleano        | ![](images/3-2/library-boolean.jpg)       | Número         | ![](images/3-2/library-number.jpg)        |
-| Sequência de caracteres         | ![](images/3-2/library-string.jpg)        | Controle deslizante de números  | ![](images/3-2/library-numberslider.jpg)  |
-| Caminho do diretório | ![](images/3-2/library-directorypath.jpg) | Controle deslizante de números inteiros | ![](images/3-2/library-integerslider.jpg) |
-| Caminho do arquivo      | ![](images/3-2/library-filepath.jpg)      |                |                                           |
+| Nó           |                                                        | Nó           |                                                        |
+| -------------- | ------------------------------------------------------ | -------------- | ------------------------------------------------------ |
+| Boolean        | \![](<../.gitbook/assets/library - boolean.jpg>)        | Number         | \![](<../.gitbook/assets/library - number.jpg>)         |
+| String         | \![](<../.gitbook/assets/library - string.jpg>)         | Number Slider  | \![](<../.gitbook/assets/library - number slider.jpg>)  |
+| Directory Path | \![](<../.gitbook/assets/library - directory path.jpg>) | Integer Slider | \![](<../.gitbook/assets/library - integer slider.jpg>) |
+| File Path      | \![](<../.gitbook/assets/library - file path.jpg>)      |                |                                                        |
 
-#### Inspeção e Watch3D
+#### Watch e Watch3D
 
-Os nós de inspeção são essenciais para gerenciar os dados que fluem através do Programa visual. É possível visualizar o resultado de um nó através da **visualização dos dados do nó** passando o cursor do mouse sobre o nó.
+Os nós Watch são essenciais para gerenciar os dados que fluem através do Programa visual. É possível visualizar o resultado de um nó através da **visualização dos dados do nó** passando o cursor do mouse sobre o nó.
 
-![](images/3-2/library-nodepreview.jpg)
+\![](<../.gitbook/assets/library - node preview.jpg>)
 
-É útil manter a exibição dessas informações em um nó de **Inspeção**
+É útil manter a exibição dessas informações em um nó **Watch**
 
-![](images/3-2/library-watchnode.jpg)
+\![](<../.gitbook/assets/library - watch node.jpg>)
 
 Ou consultar os resultados da geometria através de um nó **Watch3D**.
 
-![](images/3-2/library-watch3dnode.gif)
+\![](<../.gitbook/assets/library - watch3d node.gif>)
 
 Ambos são encontrados na categoria da vista na biblioteca principal.
 
 {% hint style="info" %} Dica: Às vezes, a visualização 3D pode causar distrações, quando o Programa visual contém muitos nós. Considere desmarcar a opção Exibir visualização de plano de fundo no menu Configurações e usar um nó Watch3D para visualizar a geometria. {% endhint %}
 
-#### Bloco de código
+#### Code Block
 
 Os nós Code Block podem ser utilizados para definir um Code Block com linhas separadas por ponto e vírgula. Isso pode ser tão simples quanto `X/Y`.
 
-Também é possível usar os blocos de código como um atalho para definir uma entrada de número ou acionar outra funcionalidade do nó. A sintaxe para fazer isso segue a convenção de nomenclatura da linguagem textual do Dynamo, [DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
+Também é possível usar os blocos de código como um atalho para definir uma entrada de número ou acionar outra funcionalidade do nó. A sintaxe para fazer isso segue a convenção de nomenclatura da linguagem textual do Dynamo, [DesignScript](../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md).
 
 Confira aqui uma demonstração simples (com instruções) para usar o Bloco de código no script.
 
-![](<images/3-2/library-code block demo.gif>)
+![](../.gitbook/assets/library-codeblockdemo.gif)
 
 1. Clique duas vezes para criar um nó de bloco de código
 2. Digite `Circle.ByCenterPointRadius(x,y);`
 3. Clique no espaço de trabalho para limpar a seleção e adicionar as entradas `x` e `y` automaticamente.
 4. Crie um nó Point.ByCoordinates e um controle deslizante de número e, em seguida, conecte-os às entradas do Bloco de código.
 5. O resultado da execução do Programa visual é mostrado como o círculo na visualização 3D
-

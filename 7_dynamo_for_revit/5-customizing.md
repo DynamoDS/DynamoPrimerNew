@@ -6,7 +6,7 @@ Apesar de anteriormente termos examinado a edição de uma massa de construção
 
 Suponha que criamos uma faixa de componentes adaptativos e que desejamos editar os parâmetros com base nas localizações dos pontos. Os pontos, por exemplo, podem determinar um parâmetro de espessura que está relacionado com a área do elemento. Ou, eles poderiam determinar um parâmetro de opacidade relacionado à exposição solar durante o ano. O Dynamo permite a conexão entre análise e parâmetros por meio de algumas etapas simples. Vamos explorar uma versão básica no exercício abaixo.
 
-![](images/5/customizing-pointlocation.jpg)
+\![](<../.gitbook/assets/customizing - point location.jpg>)
 
 > Consulte os pontos adaptativos de um componente adaptativo selecionado usando o nó **AdaptiveComponent.Locations**. Isso nos permite trabalhar com uma versão abstrata de um elemento do Revit para análise.
 
@@ -14,7 +14,7 @@ Ao extrair a localização dos pontos dos componentes adaptativos, podemos execu
 
 ### Análise da orientação solar
 
-![](images/5/customizing-solarorientationanalysis.jpg)
+\![](<../.gitbook/assets/customizing - solar orientation analysis.jpg>)
 
 > Use o remapeamento para mapear um conjunto de dados para um intervalo de parâmetros. Essa é uma ferramenta fundamental usada em um modelo paramétrico e vamos demonstrá-la no exercício abaixo.
 
@@ -26,44 +26,44 @@ Usando o Dynamo, é possível usar as localizações dos pontos dos componentes 
 >
 > É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
-{% file src="datasets/5/Revit-Customizing.zip" %}
+{% file src="../.gitbook/assets/Revit-Customizing.zip" %}
 
 Este exercício permite expandir as técnicas demonstradas na seção anterior. Neste caso, estamos definindo uma superfície paramétrica com base em elementos do Revit, instanciando componentes adaptativos de quatro pontos e, em seguida, editando-os com base na orientação em relação ao sol.
 
-![](images/5/customizing-exercise01.jpg)
+\![](<../.gitbook/assets/customizing - exercise 01.jpg>)
 
 > 1. Comece selecionando duas arestas com o nó _“Selecionar aresta”_. As duas arestas são os vãos longos do átrio.
 > 2. Combine as duas arestas em uma lista com o nó _List.Create_.
 > 3. Crie uma superfície entre as duas arestas com _Surface.ByLoft_.
 
-![](images/5/customizing-exercise02.jpg)
+\![](<../.gitbook/assets/customizing - exercise 02.jpg>)
 
 > 1. Usando o _bloco de código_, defina um intervalo de 0 a 1 com 10 valores uniformemente espaçados: `0..1..#10;`
-> 2. Conecte o _bloco de código_ às entradas *u* e _v_ de um nó _Surface.PointAtParameter_ e conecte o nó _Surface.ByLoft_ à entrada _superfície_. Clique com o botão direito do mouse no nó e altere a _amarra_ para _Produto transversal_. Isso fornecerá uma grade de pontos na superfície.
+> 2. Conecte o _bloco de código_ às entradas *u* e _v_ de um nó _Surface.PointAtParameter_ e conecte o nó _Surface.ByLoft_ à entrada _superfície_. Clique com o botão direito do mouse no nó e altere a _amarra_ para _Produto transversal_. Isso fornecerá um eixo de pontos na superfície.
 
-Essa grade de pontos serve como os pontos de controle para uma superfície definida parametricamente. Queremos extrair as posições “u” e “v” de cada um desses pontos para que possamos conectá-los em uma fórmula paramétrica e manter a mesma estrutura de dados. É possível fazer isso consultando as localizações dos parâmetros dos pontos que acabamos de criar.
+Esse eixo de pontos serve como os pontos de controle para uma superfície definida parametricamente. Queremos extrair as posições “u” e “v” de cada um desses pontos para que possamos conectá-los em uma fórmula paramétrica e manter a mesma estrutura de dados. É possível fazer isso consultando as localizações dos parâmetros dos pontos que acabamos de criar.
 
-![](images/5/customizing-exercise03.jpg)
+\![](<../.gitbook/assets/customizing - exercise 03.jpg>)
 
 > 1. Adicione um nó _Surface.ParameterAtPoint_ à tela e conecte as entradas como mostrado acima.
 > 2. Consulte os valores _u_ desses parâmetros com o nó UV.U.
 > 3. Consulte os valores _v_ desses parâmetros com o nó UV.V.
 > 4. Os resultados mostram os valores _u_ e _v_ correspondentes a cada ponto da superfície. Agora, temos um intervalo de _0_ a _1_ para cada valor, na estrutura de dados apropriada; portanto, estamos prontos para aplicar um algoritmo paramétrico.
 
-![](images/5/customizing-exercise04.jpg)
+\![](<../.gitbook/assets/customizing - exercise 04.jpg>)
 
 > 1. Adicione um _bloco de código_ à tela e insira o código: `Math.Sin(u*180)*Math.Sin(v*180)*w;` Essa é uma função paramétrica que cria um montículo senoidal de uma superfície plana.
 > 2. Conecta o _UV.U_ à entrada _u_ e o UV.V à entrada _v_.
 > 3. A entrada _w_ representa a _amplitude_ da forma; portanto, anexamos um _controle deslizante de número_ a ela.
 
-![](images/5/customizing-exercise05.jpg)
+\![](<../.gitbook/assets/customizing - exercise 05.jpg>)
 
 > 1. Agora, temos uma lista de valores conforme definido pelo algoritmo. Vamos usar essa lista de valores para mover os pontos para cima na direção _+Z_. Usando _Geometry.Translate_, conecte o *bloco de código* a _zTranslation_ e _Surface.PointAtParameter_ à entrada _geometria_. Você deve ver os novos pontos exibidos na visualização do Dynamo.
 > 2. Finalmente, criamos uma superfície com o nó _NurbsSurface.ByPoints_, conectando o nó da etapa anterior à entrada de pontos. Dessa forma, obtemos uma superfície paramétrica. Sinta-se à vontade para arrastar o controle deslizante para ver o encolhimento e aumento dos montículos.
 
 Com a superfície paramétrica, queremos definir uma forma de aplicar painéis para criar matrizes em quatro pontos de componentes adaptativos. O Dynamo não tem uma funcionalidade pronta para uso para aplicar painéis à superfície; portanto, podemos consultar a comunidade para obter pacotes úteis do Dynamo.
 
-![](images/5/customizing-exercise06.jpg)
+\![](<../.gitbook/assets/customizing - exercise 06.jpg>)
 
 > 1. Vá para _Pacotes>Procurar um pacote..._
 > 2. Procure _“LunchBox”_ e instale _“LunchBox for Dynamo”_. Esse pacote tem um conjunto de ferramentas muito útil para operações de geometria, como esta.

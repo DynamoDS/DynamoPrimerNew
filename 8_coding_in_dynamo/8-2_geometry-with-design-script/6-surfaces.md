@@ -6,7 +6,7 @@ O análogo bidimensional de uma NurbsCurve é a NurbsSurface e, tal como a Nurbs
 
 Para criar uma superfície interpolada, basta gerar uma coleção bidimensional de pontos aproximando a forma de uma superfície. A coleção deve ser retangular, isto é, não irregular. O método _NurbsSurface.ByPoints_ constrói uma superfície com base nesses pontos.
 
-![](../images/8-2/6/Surfaces\_01.png)
+![](../../.gitbook/assets/Surfaces_01.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -19,7 +19,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 
 Também é possível criar as NurbsSurfaces de forma livre ao especificar os pontos de controle subjacentes de uma superfície. Tal como as NurbsCurves, os pontos de controle podem ser considerados como representando uma malha quadrilateral com segmentos retos que, dependendo do grau da superfície, é suavizada na forma da superfície final. Para criar uma NurbsSurface por pontos de controle, inclua dois parâmetros adicionais para _NurbsSurface.ByPoints_, indicando os graus das curvas subjacentes em ambas as direções da superfície.
 
-![](../images/8-2/6/Surfaces\_02.png)
+![](../../.gitbook/assets/Surfaces_02.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -31,7 +31,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 
 É possível aumentar o grau da NurbsSurface para alterar a geometria da superfície resultante:
 
-![](../images/8-2/6/Surfaces\_03.png)
+![](../../.gitbook/assets/Surfaces_03.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -45,7 +45,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 
 Assim como as superfícies podem ser criadas por interpolação entre um conjunto de pontos de entrada, elas também podem ser criadas por interpolação entre um conjunto de curvas base. Isso é conhecido como elevação. Uma curva elevada é criada usando o construtor _Surface.ByLoft_, com um conjunto de curvas de entrada como o único parâmetro.
 
-![](../images/8-2/6/Surfaces\_04.png)
+![](../../.gitbook/assets/Surfaces_04.png)
 
 ```js
 // python_points_2, 3, and 4 are generated with
@@ -64,7 +64,7 @@ As superfícies de revolução são um tipo adicional de superfície criada arra
 
 As superfícies de revolução são especificadas por uma curva base, representando a “aresta” da superfície; uma origem de eixo, o ponto base da superfície; uma direção de eixo, a direção “principal” central; um ângulo inicial de varredura; e um ângulo final de varredura. Elas são usadas como a entrada para o construtor _Surface.Revolve_.
 
-![](../images/8-2/6/Surfaces\_05.png)
+![](../../.gitbook/assets/Surfaces_05.png)
 
 ```js
 pts = {};

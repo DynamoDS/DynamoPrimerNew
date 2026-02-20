@@ -4,7 +4,7 @@ Os objetos em projetos de cálculo raramente são criados explicitamente em sua 
 
 Em seu nível mais básico, um vetor representa uma posição no espaço 3D e, muitas vezes, é considerado como o ponto final de uma seta da posição (0, 0, 0) para essa posição. É possível criar vetores com o construtor _ByCoordinates_, usando as posições x, y e z do objeto Vector recém-criado. Observe que os objetos Vector não são objetos geométricos e não aparecem na janela do Dynamo. No entanto, as informações sobre um vetor recém-criado ou modificado podem ser impressas na janela do console:
 
-![](../images/8-2/3/vectormath01.jpg)
+\![](<../../.gitbook/assets/vector math 01.jpg>)
 
 ```js
 // construct a Vector object
@@ -13,13 +13,13 @@ v = Vector.ByCoordinates(1, 2, 3);
 s = v.X + " " + v.Y + " " + v.Z;
 ```
 
-Um conjunto de operações matemáticas é definido em objetos Vector, permitindo adicionar, subtrair, multiplicar e mover objetos no espaço 3D, como você moveria os números reais no espaço 1D em uma linha de números.
+Um conjunto de operações matemáticas é definido em objetos de vector, permitindo adicionar, subtrair, multiplicar e mover objetos no espaço 3D, como você moveria os números reais no espaço 1D em uma linha de números.
 
 ### Adição de vetor
 
 A adição de vetores é definida como a soma dos componentes de dois vetores e poderá ser considerada como o vetor resultante se as duas setas de vetor dos componentes forem inseridas “ponta a ponta”. A adição de vetores é realizada com o método _Add_ e é representada pelo diagrama à esquerda.
 
-![](../images/8-2/3/VectorMath\_02.png)
+![](../../.gitbook/assets/VectorMath_02.png)
 
 ```js
 a = Vector.ByCoordinates(5, 5, 0);
@@ -33,7 +33,7 @@ c = a.Add(b);
 
 De forma similar, dois objetos Vector podem ser subtraídos um do outro com o método _Subtract_. A subtração de vetores pode ser considerada como a direção do primeiro vetor para o segundo vetor.
 
-![](../images/8-2/3/VectorMath\_03.png)
+![](../../.gitbook/assets/VectorMath_03.png)
 
 ```js
 a = Vector.ByCoordinates(5, 5, 0);
@@ -47,7 +47,7 @@ c = a.Subtract(b);
 
 A multiplicação de vetores pode ser considerada como o ato de mover a extremidade de um vetor em sua própria direção com base em um determinado fator de escala.
 
-![](../images/8-2/3/VectorMath\_04.png)
+![](../../.gitbook/assets/VectorMath_04.png)
 
 ```js
 a = Vector.ByCoordinates(4, 4, 0);
@@ -60,7 +60,7 @@ c = a.Scale(5);
 
 Muitas vezes, ao dimensionar um vetor, é desejável que o comprimento resultante seja exatamente igual à quantidade dimensionada. Isso é facilmente conseguido pela normalização de um vetor, ou seja, definindo o comprimento do vetor como exatamente igual a um.
 
-![](../images/8-2/3/vectormath05.jpg)
+\![](<../../.gitbook/assets/vector math 05.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 3);
@@ -80,7 +80,7 @@ c ainda aponta na mesma direção que a (1, 2, 3), embora agora apresente compri
 
 Existem dois métodos adicionais na matemática de vetores que não têm paralelos claros com a matemática 1D, o produto vetorial e o produto escalar. O produto vetorial é um meio de gerar um vetor ortogonal (a 90 graus) a dois vetores existentes. Por exemplo, o produto vetorial dos eixos x e y é o eixo z, embora os dois vetores de entrada não precisem ser ortogonais entre si. Um vetor de produto vetorial é calculado com o método _Cross_.
 
-![](../images/8-2/3/VectorMath\_06.png)
+![](../../.gitbook/assets/VectorMath_06.png)
 
 ```js
 a = Vector.ByCoordinates(1, 0, 1);
@@ -94,7 +94,7 @@ c = a.Cross(b);
 
 Uma função adicional, embora um pouco mais avançada da matemática vetorial, é o produto escalar. O produto escalar entre dois vetores é um número real (não um objeto Vector) que se relaciona, mas não é exatamente, o ângulo entre dois vetores. Uma propriedade útil do produto escalar é que o produto escalar entre dois vetores será 0 somente se eles forem perpendiculares. O produto escalar é calculado com o método _Dot_.
 
-![](../images/8-2/3/vectormath07.jpg)
+\![](<../../.gitbook/assets/vector math 07.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 1);
