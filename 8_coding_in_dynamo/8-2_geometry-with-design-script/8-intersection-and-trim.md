@@ -15,7 +15,7 @@ Il metodo _Intersect_ è definito su tutti gli elementi della geometria in Dynam
 
 Nel semplicissimo esempio riportato di seguito è mostrata l'intersezione di un piano con una NurbsSurface. L'intersezione genera una serie di NurbsCurve, che può essere utilizzata come qualsiasi altra NurbsCurve.
 
-![](../images/8-2/8/IntersectionAndTrim\_01.png)
+![](../../.gitbook/assets/IntersectionAndTrim_01.png)
 
 ```js
 // python_points_5 is a set of Points generated with
@@ -47,7 +47,7 @@ Il metodo _Trim_ è molto simile al metodo Intersect, in quanto viene definito p
 
 Qualcosa da notare sui metodi _Trim_ è il requisito di un punto di "selezione", un punto che determina quale geometria eliminare e quali elementi mantenere. In Dynamo viene trovata ed eliminata la geometria ritagliata più vicina al punto di selezione.
 
-![](../images/8-2/8/IntersectionAndTrim\_02.png)
+![](../../.gitbook/assets/IntersectionAndTrim_02.png)
 
 ```js
 // python_points_5 is a set of Points generated with

@@ -68,7 +68,7 @@ Di seguito è riportato l'elenco delle modifiche apportate alla versione 2.0:
 
 ## 1\. Sintassi di list@level semplificata
 
-È stata progettata una nuova sintassi per list@level, per utilizzare `list@L1` invece di `list@-1` ![](../images/8-4/1/lang2_1.png)
+È stata progettata una nuova sintassi per list@level, per utilizzare `list@L1` invece di `list@-1` ![](../../.gitbook/assets/lang2_1.png).
 
 ## 2\. Le funzioni in overload con parametri che differiscono solo in base alla classificazione non sono valide
 
@@ -85,7 +85,7 @@ BoundingBox BoundingBox.ByGeometry(geometry: Geometry) {...}
 BoundingBox BoundingBox.ByGeometry(geometry: Geometry[]) {...}
 ```
 
-Se l'utente eliminava il primo nodo nell'area di disegno e collegava un elenco di geometrie, si aspettava che venisse avviata la replica, ma ciò non si verificava mai perché in fase di runtime veniva chiamato il secondo overload come mostrato qui: ![](../images/8-4/1/lang2_2.png)
+Se l'utente eliminava il primo nodo nell'area di disegno e collegava un elenco di geometrie, si aspettava che venisse avviata la replica, ma ciò non si verificava mai perché in fase di runtime veniva chiamato il secondo overload come mostrato qui: ![](../../.gitbook/assets/lang2_2.png)
 
 Nella versione 2.0 non sono consentite funzioni in overload che differiscono solo nella cardinalità dei parametri per questo motivo. Ciò significa che per le funzioni in overload che hanno lo stesso numero e gli stessi tipi di parametri ma hanno uno o più parametri che differiscono solo per la classificazione, l'overload definito per primo ha sempre la precedenza, mentre gli altri vengono scartati dal compilatore. Il vantaggio principale di questa operazione è quello di semplificare la logica di risoluzione del metodo disponendo di un percorso rapido per selezionare le funzioni candidate.
 
@@ -105,7 +105,7 @@ Nel seguente esempio sono stati definiti due overload della funzione `foo`. Nell
 
 Nella versione 2.0, è sempre il primo metodo definito che viene scelto rispetto agli altri. Vale il principio "primo arrivato, primo servito".
 
-![](../images/8-4/1/lang2_3.png)
+![](../../.gitbook/assets/lang2_3.png)
 
 Per ognuno dei seguenti casi, verrà utilizzato il primo overload definito. Si noti che si basa esclusivamente sull'ordine di definizione delle funzioni e non sulle classificazioni dei parametri, sebbene sia consigliabile dare la preferenza ai metodi con parametri con classificazione superiore per i nodi definiti dall'utente e zero-touch.
 
@@ -137,7 +137,7 @@ Ad esempio, se un input list con i seguenti tipi `[Arc, Line]` veniva passato in
 
 ### Dynamo 1.x: verifica solo il primo elemento dell'input list per la verifica della risoluzione del metodo
 
-![](../images/8-4/1/lang2_4.png)
+![](../../.gitbook/assets/lang2_4.png)
 
 ```
 x = [arc, line];
@@ -164,7 +164,7 @@ Ecco cosa succede nella versione 2.0:
 
 Questo esempio funzionava in precedenza nella versione 1.x, poiché il grafico veniva compilato come `point.X;` e veniva trovata la proprietà `X` nell'oggetto punto. Ora ha esito negativo nella versione 2.0 poiché il codice compilato `Vector.X(point)` prevede solo un tipo `Vector`:
 
-![](../images/8-4/1/lang2_5.png)
+![](../../.gitbook/assets/lang2_5.png)
 
 ### Vantaggi:
 
@@ -176,7 +176,7 @@ Questo esempio funzionava in precedenza nella versione 1.x, poiché il grafico v
 
 ### Avviso: ambiguità irrisolte con metodi in overload
 
-Poiché Dynamo supporta in generale gli overload di funzioni, si potrebbe comunque generare confusione se è presente un'altra funzione in overload con lo stesso numero di parametri. Ad esempio, nel seguente grafico, se colleghiamo un valore numerico all'input `direction` di `Curve.Extrude` e un vettore all'input `distance` di `Curve.Extrude`, entrambi i nodi continuano a funzionare, il che è imprevisto. In questo caso, anche se i nodi vengono compilati come metodi statici, il motore non è ancora in grado di distinguere la differenza in fase di runtime e ne seleziona uno a seconda del tipo di input. ![](../images/8-4/1/lang2_6.png)
+Poiché Dynamo supporta in generale gli overload di funzioni, si potrebbe comunque generare confusione se è presente un'altra funzione in overload con lo stesso numero di parametri. Ad esempio, nel seguente grafico, se colleghiamo un valore numerico all'input `direction` di `Curve.Extrude` e un vettore all'input `distance` di `Curve.Extrude`, entrambi i nodi continuano a funzionare, il che è imprevisto. In questo caso, anche se i nodi vengono compilati come metodi statici, il motore non è ancora in grado di distinguere la differenza in fase di runtime e ne seleziona uno a seconda del tipo di input. ![](../../.gitbook/assets/lang2_6.png)
 
 ### Problemi risolti:
 
@@ -186,11 +186,11 @@ Il passaggio alla semantica del metodo statico ha introdotto i seguenti effetti 
 
 Consideriamo un esempio di nodi `TSpline` in `ProtoGeometry` (si noti che `TSplineTopology` eredita dal tipo di `Topology` base): il nodo `Topology.Edges`, che è stato precedentemente compilato come metodo di istanza, `object.Edges`, è ora compilato come metodo statico, `Topology.Edges(object)`. La chiamata precedente si risolveva in modo polimorfico nel metodo della classe derivata `TsplineTopology.Edges` dopo l'invio di un metodo sul tipo di oggetto in fase di runtime.
 
-![](../images/8-4/1/lang2_7.png)
+![](../../.gitbook/assets/lang2_7.png)
 
 Il nuovo comportamento statico, invece, veniva forzato a chiamare il metodo della classe di base, `Topology.Edges`. Di conseguenza, questo nodo restituiva gli oggetti `Edge` della classe di base anziché gli oggetti della classe derivata di tipo `TSplineEdge`.
 
-![](../images/8-4/1/lang2_8.png)
+![](../../.gitbook/assets/lang2_8.png)
 
 Si trattava di una regressione perché i nodi `TSpline` a valle prevedevano che `TSplineEdges` iniziasse a non funzionare.
 
@@ -198,13 +198,13 @@ Il problema è stato risolto aggiungendo una verifica di runtime nella logica di
 
 **Nuovo comportamento polimorfico nella versione 2.0:**
 
-![](../images/8-4/1/lang2_9.png)
+![](../../.gitbook/assets/lang2_9.png)
 
 In questo caso, poiché il primo elemento `a` è `TSpline`, si tratta del metodo derivato `TSplineTopology.Edges` che viene richiamato in fase di runtime. Di conseguenza, restituisce `null` per `Topology` base di tipo `b`.
 
 Nel secondo caso, poiché `Topology` generale di tipo `b` è il primo elemento, viene chiamato il metodo `Topology.Edges` di base. Poiché `Topology.Edges` accetta anche il tipo `TSplineTopology` derivato, `a` come input restituisce `Edges` per entrambi gli input, `a` e `b`.
 
-![](../images/8-4/1/lang2_10.png)
+![](../../.gitbook/assets/lang2_10.png)
 
 **2\. Regressioni dovute alla produzione di elenchi esterni ridondanti**
 
@@ -248,13 +248,13 @@ p = Point.ByCoordinates(x<1>, y<2>, z<3>); // cross-lacing
 
 ### Dynamo 1.x: elenco 3D di punti
 
-![](../images/8-4/1/lang2_11.png)
+![](../../.gitbook/assets/lang2_11.png)
 
 Nella versione 2.0, la presenza di guide per la replica per ognuno degli argomenti a valore singolo `y` e `z` non causa un innalzamento di livello determinando un elenco con la stessa dimensione dell'elenco 1D di input per `x`.
 
 ### Dynamo 2.0: elenco 1D di punti
 
-![](../images/8-4/1/lang2_12.png)
+![](../../.gitbook/assets/lang2_12.png)
 
 La modifica del linguaggio ha risolto anche il problema della regressione di cui sopra, causata dalla compilazione come metodo statico e dalla generazione di elenchi esterni ridondanti.
 
@@ -268,7 +268,7 @@ produceva un elenco 3D di punti in Dynamo 1.x. Ciò si verificava a causa dell'i
 
 ### Dynamo 1.x: innalzamento di livello dell'argomento ad elenco con la guida per la replica
 
-![](../images/8-4/1/lang2_13.png)
+![](../../.gitbook/assets/lang2_13.png)
 
 Nella versione 2.0 è stato disattivato l'innalzamento al livello di elenchi degli argomenti a valore singolo quando vengono utilizzati con le guide per la replica o il collegamento. Quindi ora la chiamata a:
 
@@ -280,7 +280,7 @@ restituisce semplicemente un elenco 2D poiché l'input surface non viene alzato 
 
 ### Dynamo 2.0: disattivato l'innalzamento al livello di elenco dell'argomento a valore singolo, se utilizzato con una guida per la replica
 
-![](../images/8-4/1/lang2_14.png)
+![](../../.gitbook/assets/lang2_14.png)
 
 Questa modifica ora rimuove l'aggiunta di un livello di elenco ridondante e risolve anche la regressione causata dal passaggio alla compilazione come metodo statico.
 
@@ -295,7 +295,7 @@ Questa modifica ora rimuove l'aggiunta di un livello di elenco ridondante e riso
 * I metodi di istanza e quelli statici sono coerenti (si risolvono i problemi relativi alla semantica del metodo statico).
 * I nodi con input e con argomenti di default si comportano in modo coerente (vedere di seguito).
 
-![](../images/8-4/1/lang2_15.png)
+![](../../.gitbook/assets/lang2_15.png)
 
 ## 5\. Le variabili sono immutabili nei nodi di blocchi di codice per impedire l'aggiornamento associativo
 
@@ -336,7 +336,7 @@ a = 4;         // b = 10 or b = 7?
 
 In questo esempio di geometria, poiché il cubo `b` dipende da se stesso oltre che dal cilindro, `a`, lo spostamento del dispositivo di scorrimento dovrebbe far spostare il foro lungo il blocco o dovrebbe creare un effetto cumulativo di creazione di diversi fori lungo il suo percorso per ogni aggiornamento della posizione del dispositivo di scorrimento?
 
-![](../images/8-4/1/lang2_16.gif)
+![](../../.gitbook/assets/lang2_16.gif)
 
 **3\. Aggiornamento delle proprietà delle variabili:**
 
@@ -359,7 +359,7 @@ L'esperienza ci insegna che l'aggiornamento associativo non risulta utile nei no
 
 Se qualche utente l'ha utilizzato, è molto probabile che l'abbia fatto inconsapevolmente, causando più danni che benefici. Pertanto, nella versione 2.0 si è deciso di nascondere l'associatività nell'utilizzo dei nodi di blocchi di codice rendendo le variabili immutabili, pur continuando a mantenere l'aggiornamento associativo solo come funzionalità nativa del motore DesignScript. Questa è un'altra modifica apportata con l'idea di semplificare l'esperienza di scripting per gli utenti.
 
-**L'aggiornamento associativo è disattivato nei nodi di blocchi di codice impedendo la ridefinizione delle variabili:** ![](../images/8-4/1/lang2_17.png)
+**L'aggiornamento associativo è disattivato nei nodi di blocchi di codice impedendo la ridefinizione delle variabili:** ![](../../.gitbook/assets/lang2_17.png)
 
 **L'indicizzazione dell'elenco è ancora consentita nei blocchi di codice**
 
@@ -367,7 +367,7 @@ Se qualche utente l'ha utilizzato, è molto probabile che l'abbia fatto inconsap
 
 In questo esempio l'elenco `a` viene inizializzato ma può essere successivamente sovrascritto con l'assegnazione di un operatore index ed eventuali variabili dipendenti da `a` vengono aggiornate in modo associativo, come si vede dal valore di `c`. Inoltre, l'anteprima del nodo visualizza i valori aggiornati di `a` dopo la ridefinizione di uno o più dei suoi elementi.
 
-![](../images/8-4/1/lang2_18.png)
+![](../../.gitbook/assets/lang2_18.png)
 
 ## 6\. Le variabili dei blocchi imperativi sono collocate nell'ambito del blocco imperativo
 
@@ -483,11 +483,11 @@ dict = {<key> : <value>, …};
 
 dove è consentita solo una stringa per `<key>` e più coppie chiave-valore sono separate da virgole.
 
-![](../images/8-4/1/lang2_19.png)
+![](../../.gitbook/assets/lang2_19.png)
 
 Il metodo zero-touch `Dictionary.ByKeysValues` può essere utilizzato come un modo più versatile per inizializzare un dizionario passando rispettivamente un elenco di chiavi e valori e sfruttando tutti i vantaggi dei metodi zero-touch come le guide per la replica e così via.
 
-![](../images/8-4/1/lang2_20.png)
+![](../../.gitbook/assets/lang2_20.png)
 
 ### Perché non sono state utilizzate espressioni arbitrarie per la sintassi di inizializzazione del dizionario?
 
@@ -507,21 +507,21 @@ In futuro _potremmo_ estendere le chiavi del dizionario per supportare espressio
 
 **1\. Il nodo zero-touch che restituisce un dizionario .NET viene restituito come dizionario di Dynamo**
 
-**Si consideri il seguente metodo zero-touch C# che restituisce un IDictionary:** ![](../images/8-4/1/lang2_21.png)
+**Si consideri il seguente metodo zero-touch C# che restituisce un IDictionary:** ![](../../.gitbook/assets/lang2_21.png)
 
-**Viene eseguito il marshalling del valore restituito del nodo ZT corrispondente come dizionario di Dynamo:** ![](../images/8-4/1/lang2_22.png)
+**Viene eseguito il marshalling del valore restituito del nodo ZT corrispondente come dizionario di Dynamo:** ![](../../.gitbook/assets/lang2_22.png)
 
 **2\. I nodi a restituzione multipla vengono visualizzati in anteprima come dizionari**
 
-**Il nodo zero-touch che restituisce IDictionary con attributo a restituzione multipla restituisce un dizionario di Dynamo:** ![](../images/8-4/1/lang2_23.png)
+**Il nodo zero-touch che restituisce IDictionary con attributo a restituzione multipla restituisce un dizionario di Dynamo:** ![](../../.gitbook/assets/lang2_23.png)
 
-![](../images/8-4/1/lang2_24.png)
+![](../../.gitbook/assets/lang2_24.png)
 
 **3\. Il dizionario di Dynamo può essere passato come input nel nodo zero-touch che accetta il dizionario .NET**
 
-**Metodo ZT con un parametro IDictionary:** ![](../images/8-4/1/lang2_25.png)
+**Metodo ZT con un parametro IDictionary:** ![](../../.gitbook/assets/lang2_25.png)
 
-**Il nodo ZT accetta il dizionario di Dynamo come input:** ![](../images/8-4/1/lang2_26.png)
+**Il nodo ZT accetta il dizionario di Dynamo come input:** ![](../../.gitbook/assets/lang2_26.png)
 
 ### Anteprima del dizionario nei nodi a restituzione multipla
 
@@ -529,4 +529,4 @@ I dizionari sono coppie chiave-valore non ordinate. Coerentemente con questa ide
 
 È stata tuttavia fatta un'eccezione per i nodi a restituzione multipla con valori `MultiReturnAttribute` definiti. Nell seguente esempio, il nodo `DateTime.Components` è un nodo a restituzione multipla e l'anteprima del nodo riflette le relative coppie chiave-valore in modo che siano nello stesso ordine di quello delle porte di output nel nodo, che è anche l'ordine in cui gli output vengono specificati in base ai valori `MultiReturnAttribute` nella definizione del nodo.
 
-Si noti inoltre che le anteprime per i blocchi di codice non vengono ordinate diversamente dal nodo dell'interfaccia utente, poiché le informazioni sulla porta di output (sotto forma di un attributo a restituzione multipla) non esistono per il nodo del blocco di codice: ![](../images/8-4/1/lang2_27.png)
+Si noti inoltre che le anteprime per i blocchi di codice non vengono ordinate diversamente dal nodo dell'interfaccia utente, poiché le informazioni sulla porta di output (sotto forma di un attributo a restituzione multipla) non esistono per il nodo del blocco di codice: ![](../../.gitbook/assets/lang2_27.png)

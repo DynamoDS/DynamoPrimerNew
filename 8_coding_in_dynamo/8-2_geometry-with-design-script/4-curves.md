@@ -6,7 +6,7 @@ In Dynamo vi sono due metodi fondamentali per creare curve di forma libera: la s
 
 Per creare una curva interpolata, è sufficiente trasferire una raccolta di punti al metodo _NurbsCurve.ByPoints_.
 
-![](../images/8-2/4/Curves\_01.png)
+![](../../.gitbook/assets/Curves_01.png)
 
 ```js
 num_pts = 6;
@@ -20,7 +20,7 @@ int_curve = NurbsCurve.ByPoints(pts);
 
 La curva generata interseca ciascuno dei punti di input, iniziando e terminando rispettivamente nel primo e nell'ultimo punto della raccolta. È possibile utilizzare un parametro periodico facoltativo per creare una curva periodica chiusa. Dynamo inserirà automaticamente il segmento mancante, pertanto non è necessario un punto finale duplicato (identico al punto iniziale).
 
-![](../images/8-2/4/Curves\_02.png)
+![](../../.gitbook/assets/Curves_02.png)
 
 ```js
 pts = Point.ByCoordinates(Math.Cos(0..350..#10),
@@ -38,7 +38,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 Le NurbsCurve vengono generate in modo molto simile, con i punti di input che rappresentano i punti finali di un segmento di linea retta e un secondo parametro che specifica il livello e il tipo di levigatezza a cui è sottoposta la curva, denominati grado.* Una curva di grado 1 non ha alcuna levigatezza; è una polilinea.
 
-![](../images/8-2/4/Curves\_03.png)
+![](../../.gitbook/assets/Curves_03.png)
 
 ```js
 num_pts = 6;
@@ -52,7 +52,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 
 Una curva di grado 2 viene levigata in modo che si intersechi ed è tangente al punto medio dei segmenti della polilinea:
 
-![](../images/8-2/4/Curves\_04.png)
+![](../../.gitbook/assets/Curves_04.png)
 
 ```js
 num_pts = 6;
@@ -66,7 +66,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 
 Dynamo supporta curve NURBS (Non-Uniform Rational B-Spline) fino ad un massimo di 20 gradi. Nel seguente script è illustrato l'effetto che l'aumento dei livelli di levigatezza ha sulla forma di una curva:
 
-![](../images/8-2/4/Curves\_05.png)
+![](../../.gitbook/assets/Curves_05.png)
 
 ```js
 num_pts = 6;
@@ -87,7 +87,7 @@ Notare che è necessario disporre di almeno un altro punto di controllo rispetto
 
 Un altro vantaggio della costruzione delle curve tramite vertici di controllo è la possibilità di mantenere la tangenza tra singoli segmenti della curva. Per eseguire questa operazione, estrarre la direzione tra gli ultimi due punti di controllo e continuare in questa direzione con i primi due punti di controllo della curva seguente. Nel seguente esempio vengono create due curve NURBS separate, che sono tuttavia levigate come una curva:
 
-![](../images/8-2/4/Curves\_06.png)
+![](../../.gitbook/assets/Curves_06.png)
 
 ```js
 pts_1 = {};

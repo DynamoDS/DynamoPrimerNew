@@ -16,7 +16,7 @@ La parametrizzazione non è particolarmente utile per determinare i punti utiliz
 
 Le curve hanno un metodo _PointAtParameter_, che utilizza un singolo argomento doppio compreso tra 0 e 1 e restituisce l'oggetto Point in corrispondenza di tale parametro. Ad esempio, questo script trova i Point in corrispondenza dei parametri 0, .1, .2, .3, .4, .5, .6, .7, .8, .9 e 1:
 
-![](../images/8-2/7/GeometricParameterization\_01.png)
+![](../../.gitbook/assets/GeometricParameterization_01.png)
 
 ```js
 pts = {};
@@ -41,7 +41,7 @@ Analogamente, le superfici hanno un metodo _PointAtParameter_ che utilizza due a
 
 Sebbene l'estrazione di punti singoli su una curva e una superficie possa essere utile, gli script spesso richiedono la conoscenza delle particolari caratteristiche geometriche in corrispondenza di un parametro, ad esempio qual è la direzione della curva o della superficie. Il metodo _CoordinateSystemAtParameter_ non solo individua la posizione, ma anche un CoordinateSystem orientato in corrispondenza del parametro di una curva o superficie. Ad esempio, il seguente script estrae i CoordinateSystem orientati lungo una superficie di rivoluzione e utilizza l'orientamento dei CoordinateSystem per generare linee che si staccano dalla normale alla superficie:
 
-![](../images/8-2/7/GeometricParameterization\_02.png)
+![](../../.gitbook/assets/GeometricParameterization_02.png)
 
 ```js
 pts = {};

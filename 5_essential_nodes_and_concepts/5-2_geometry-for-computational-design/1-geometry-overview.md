@@ -6,11 +6,11 @@ La **geometria** è il linguaggio per la progettazione. Quando un ambiente o un 
 
 La comprensione dei tipi di geometria e della [relativa correlazione](1-geometry-overview.md#stepping-through-the-hierarchy) consente di spostarsi all'interno della raccolta di **nodi della geometria** disponibili nella libreria. I nodi della geometria sono organizzati in ordine alfabetico, anziché gerarchico. Qui vengono visualizzati in modo simile al loro layout nell'interfaccia di Dynamo.
 
-![](../images/5-2/1/geometryoverview-geometryindynamo.jpg)
+\![](<../../.gitbook/assets/geometry overview - geometry in dynamo.jpg>)
 
 Inoltre, la realizzazione di modelli in Dynamo e la connessione dell'anteprima di ciò che viene visualizzato nell'anteprima sfondo al flusso di dati nel grafico dovrebbero diventare più intuitive nel tempo.
 
-![](../images/5-2/1/GeometryforComputationalDesign-Overview.jpg)
+\![](<../../.gitbook/assets/Geometry for Computational Design - Overview.jpg>)
 
 > 1. Si noti il sistema di coordinate presunto sottoposto a rendering mediante griglia e assi colorati.
 > 2. I nodi selezionati eseguiranno il rendering della geometria corrispondente (se il nodo crea la geometria) nel colore di evidenziazione dello sfondo.
@@ -19,13 +19,13 @@ Inoltre, la realizzazione di modelli in Dynamo e la connessione dell'anteprima d
 >
 > Un elenco completo di file di esempio è disponibile nell'Appendice.
 
-{% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Geometry Overview.dyn" %}
 
 ## Il concetto di geometria
 
 La geometria, tradizionalmente definita, è lo studio della forma, della dimensione, della posizione relativa delle figure e delle proprietà dello spazio. Questo campo ha una ricca storia che risale a migliaia di anni fa. Con l'avvento e la diffusione del computer, si è ottenuto un potente strumento per definire, esplorare e generare la geometria. È ora così semplice calcolare il risultato di interazioni geometriche complesse; il fatto che lo stiamo facendo è quasi trasparente.
 
-![Coniglio Stanford](../images/5-2/1/StanfordBunny.jpg)
+![Coniglio Stanford](../../.gitbook/assets/StanfordBunny.jpg)
 
 > Se si è curiosi di vedere come la geometria complessa e diversificata possa utilizzare la potenza del computer, eseguire una rapida ricerca sul Web del coniglio Stanford, un modello canonico utilizzato per testare gli algoritmi.
 
@@ -42,7 +42,7 @@ In pratica, questi principi implicano che bisogna essere consapevoli di ciò che
 
 Sarà esaminata la relazione tra le descrizioni astratte e gerarchiche della geometria. Poiché questi due concetti sono correlati, ma non sempre ovvi all'inizio, è possibile arrivare rapidamente ad una barriera concettuale quando si iniziano a sviluppare modelli o workflow più profondi. Per i principianti, verrà utilizzata la dimensionalità come un facile descrittore del "materiale" che si modella. Il numero di dimensioni necessarie per descrivere una forma offre una finestra che mostra come la geometria è organizzata gerarchicamente.
 
-![Geometria computazionale](../images/5-2/1/GeometryDimensionality.jpg)
+\![Computational Geometry](<../../.gitbook/assets/Geometry for - GeometryDimensionality.jpg>)
 
 > 1. Un **punto** (definito dalle coordinate) non ha dimensioni; sono solo numeri che descrivono ogni coordinata.
 > 2. Una **linea** (definita da due punti) ora presenta _una_ dimensione: è possibile "percorrere" la linea in avanti (direzione positiva) o all'indietro (direzione negativa).
@@ -51,7 +51,7 @@ Sarà esaminata la relazione tra le descrizioni astratte e gerarchiche della geo
 
 La dimensionalità è un metodo comodo per iniziare a classificare la geometria, ma non è necessariamente il migliore. Dopotutto, non si modellano solo con punti, linee, piani e parallelepipedi. E se si desidera qualcosa di curvo? Inoltre, esiste un'altra categoria di tipi geometrici che sono completamente astratti, ossia definiscono proprietà quali l'orientamento, il volume o le relazioni tra le parti. Non è possibile afferrare un vettore in modo da definirlo rispetto a ciò che viene visualizzato nello spazio? Una categorizzazione più dettagliata della gerarchia geometrica dovrebbe riflettere la differenza tra tipi astratti o "helper", ognuno dei quali può essere raggruppato in base alle operazioni che essi consentono di fare e ai tipi che consentono di descrivere la forma degli elementi del modello.
 
-![Gerarchia della geometria](../images/5-2/1/GeometryHierarchy.jpg)
+![Gerarchia della geometria](../../.gitbook/assets/GeometryHierarchy.jpg)
 
 ## Ulteriori informazioni sulla geometria
 

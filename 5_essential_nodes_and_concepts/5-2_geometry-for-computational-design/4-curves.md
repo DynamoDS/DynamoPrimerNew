@@ -4,9 +4,9 @@
 
 ### Cos'è una curva?
 
-Le [curve ](4-curves.md#deep-dive-into...)sono il primo tipo di dati geometrici descritto e hanno un insieme più familiare di proprietà descrittive della forma. Quanto curve o diritte? Quanto lunghe o corte? Ricordarsi che i punti sono ancora i blocchi predefiniti per definire qualsiasi elemento da una linea ad una spline e tutti i tipi di curva compresi tra loro.
+Le [curve](4-curves.md#deep-dive-into...) sono il primo tipo di dati geometrici descritto e hanno un insieme più familiare di proprietà descrittive della forma. Quanto curve o diritte? Quanto lunghe o corte? Ricordarsi che i punti sono ancora i blocchi predefiniti per definire qualsiasi elemento da una linea ad una spline e tutti i tipi di curva compresi tra loro.
 
-![Tipi di raccordi](../images/5-2/4/CurveTypes.jpg)
+![Tipi di raccordi](../../.gitbook/assets/CurveTypes.jpg)
 
 > 1. Linea
 > 2. Polilinea
@@ -20,13 +20,13 @@ Le [curve ](4-curves.md#deep-dive-into...)sono il primo tipo di dati geometrici 
 
 La [linea](4-curves.md#lines) è costituita da un gruppo di punti; ogni linea ha almeno 2 punti. Uno dei metodi più comuni per creare una linea in Dynamo consiste nell'utilizzare `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) per creare una linea in Dynamo.
 
-![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+\![](<../../.gitbook/assets/curves - line by start point end point.jpg>)
 
 ### Curva NURBS
 
 [NURBS](4-curves.md#nurbs-+-polycurves) è un modello utilizzato per rappresentare in modo accurato curve e superfici. Si procederà con la creazione di una curva seno in Dynamo utilizzando due diversi metodi per creare curve NURBS e confrontare i risultati.
 
-![](../images/5-2/4/curves-NurbsCurves.jpg)
+\![](<../../.gitbook/assets/curves - Nurbs Curves.jpg>)
 
 > 1. _NurbsCurve.ByControlPoints_ utilizza l'elenco di punti come punti di controllo.
 > 2. _NurbsCurve.ByPoints_ disegna una curva attraverso l'elenco di punti.
@@ -35,7 +35,7 @@ La [linea](4-curves.md#lines) è costituita da un gruppo di punti; ogni linea ha
 >
 > Un elenco completo di file di esempio è disponibile nell'Appendice.
 
-{% file src="../datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Curves.dyn" %}
 
 ## Approfondimento su...
 
@@ -43,7 +43,7 @@ La [linea](4-curves.md#lines) è costituita da un gruppo di punti; ogni linea ha
 
 Il termine **curva** è generalmente un elemento interessante per tutte le diverse forme curve (anche se diritte). La Curva con la "C" maiuscola è la categorizzazione principale per tutti questi tipi di forma: linee, cerchi, spline e così via. Più tecnicamente, una curva descrive ogni possibile punto che si può trovare immettendo "t" in una raccolta di funzioni, che possono variare dal semplice (`x = -1.26*t, y = t`) alle funzioni che prevedono il calcolo infinitesimale. Indipendentemente dal tipo di curva utilizzata, questo **parametro** denominato "t" è una proprietà che è possibile valutare. Inoltre, indipendentemente dall'aspetto della forma, tutte le curve hanno anche un punto iniziale e un punto finale, che si allineano in modo coincidente con i valori t minimo e massimo utilizzati per creare la curva. Questo aiuta anche a capire la sua direzionalità.
 
-![Parametro della curva](../images/5-2/4/CurveParameter.jpg)
+![Parametro della curva](../../.gitbook/assets/CurveParameter.jpg)
 
 > È importante notare che Dynamo presuppone che il dominio dei valori "t" per una curva sia compreso tra 0.0 e 1.0.
 
@@ -53,23 +53,23 @@ Tutte le curve presentano inoltre diverse proprietà o caratteristiche che posso
 
 Le **linee** sono la forma più semplice di curve. Potrebbero non sembrare curve, ma in realtà sono curve, solo senza alcuna curvatura. Esistono diversi modi per creare linee, dove la più intuitiva è dal punto A al punto B. La forma della linea AB verrà disegnata tra i punti ma matematicamente si estende all'infinito in entrambe le direzioni.
 
-![Linea](../images/5-2/4/Line.jpg)
+![Linea](../../.gitbook/assets/Line.jpg)
 
 Quando si collegano due linee, è presente una **polilinea**. Di seguito è riportata una rappresentazione diretta di che cos'è un punto di controllo. La modifica di una qualsiasi di queste posizioni dei punti modificherà la forma della polilinea. Se la polilinea è chiusa, si ha un poligono. Se le lunghezze dei bordi del poligono sono tutte uguali, vengono descritte come normali.
 
-![Polilinea + poligono](../images/5-2/4/Polyline.jpg)
+![Polilinea + poligono](../../.gitbook/assets/Polyline.jpg)
 
 ### Archi, cerchi, archi di ellisse ed ellissi
 
 Man mano che si aggiunge maggiore complessità alle funzioni parametriche che definiscono una forma, è possibile fare un passo avanti rispetto ad una linea per creare un **arco**, un **cerchio**, un **arco di ellisse** o un'**ellisse** descrivendo uno o due raggi. Le differenze tra la versione dell'arco e il cerchio o l'ellisse sono solo se la forma è chiusa o meno.
 
-![Archi + cerchi](../images/5-2/4/Arcs+Circles.jpg)
+![Archi + cerchi](../../.gitbook/assets/Arcs+Circles.jpg)
 
 ### NURBS + PolyCurve
 
 **NURBS** (spline a base razionale non uniformi) sono rappresentazioni matematiche che consentono di modellare in modo accurato qualsiasi forma, da una semplice linea bidimensionale, un cerchio, un arco o un rettangolo, fino alla curva organica di forma libera tridimensionale più complessa. Grazie alla loro flessibilità (relativamente pochi punti di controllo, ma interpolazione uniforme basata sulle impostazioni dei gradi) e alla loro precisione (legata ad una matematica affidabile), i modelli NURBS possono essere utilizzati in qualsiasi processo, dall'illustrazione e dall'animazione fino alla produzione.
 
-![Curva NURBS](../images/5-2/4/NURBScurve.jpg)
+![Curva NURBS](../../.gitbook/assets/NURBScurve.jpg)
 
 **Grado**: il grado della curva determina l'intervallo di influenza dei punti di controllo su una curva; dove più alto è il grado, maggiore sarà l'intervallo. Il valore del grado è un numero intero positivo. Questo numero è in genere 1, 2, 3 o 5, ma può essere qualsiasi numero intero positivo. Le linee e le polilinee NURBS sono in genere di grado 1 e la maggior parte delle curve di forma libera è di grado 3 o 5.
 
@@ -79,7 +79,7 @@ Man mano che si aggiunge maggiore complessità alle funzioni parametriche che de
 
 **Nodi**: i nodi sono un elenco di numeri (grado+N-1), dove N è il numero di punti di controllo. I nodi vengono utilizzati insieme ai pesi per controllare l'influenza dei punti di controllo sulla curva risultante. Un uso per i nodi è creare deviazioni in determinati punti nella curva.
 
-![Grado della curva NURBS](../images/5-2/4/NURBScurve\_Degree.jpg)
+![Grado della curva NURBS](../../.gitbook/assets/NURBScurve_Degree.jpg)
 
 > 1. Grado = 1
 > 2. Grado = 2

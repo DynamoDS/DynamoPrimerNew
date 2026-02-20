@@ -2,7 +2,7 @@
 
 I seguenti script Python generano serie di punti per diversi esempi. È necessario incollarli in un nodo Python Script come segue:
 
-![](../images/8-2/10/pythonpoints01.jpg)
+\![](<../../.gitbook/assets/python points 01.jpg>)
 
 **python_points_1**
 

@@ -10,7 +10,7 @@ Si utilizza una [superficie](5-surfaces.md#surface) nel modello per rappresentar
 
 Importare e valutare una superficie in corrispondenza di un parametro in Dynamo per vedere il tipo di informazioni che è possibile estrarre.
 
-![](../images/5-2/5/surfaces-surfaceindynamo.jpg)
+\![](<../../.gitbook/assets/surfaces - surface in dynamo.jpg>)
 
 > 1. _Surface.PointAtParameter_ restituisce il punto in corrispondenza di una coordinata UV specificata.
 > 2. _Surface.NormalAtParameter_ restituisce il vettore normale in corrispondenza di una determinata coordinata UV.
@@ -20,7 +20,7 @@ Importare e valutare una superficie in corrispondenza di un parametro in Dynamo 
 >
 > Un elenco completo di file di esempio è disponibile nell'Appendice.
 
-{% file src="../datasets/5-2/5/Surfaces.zip" %}
+{% file src="../../.gitbook/assets/Surfaces.zip" %}
 
 ## Approfondimento su...
 
@@ -28,7 +28,7 @@ Importare e valutare una superficie in corrispondenza di un parametro in Dynamo 
 
 Una superficie è una forma matematica definita da una funzione e due parametri. Anziché `t` per le curve, si utilizzano `U` e `V` per descrivere lo spazio del parametro corrispondente. Ciò significa che sono presenti più dati geometrici in base a cui eseguire disegni quando si utilizza questo tipo di geometria. Ad esempio, le curve hanno vettori tangenti e piani normali (che possono ruotare o torcersi per la lunghezza della curva), mentre le superfici hanno vettori normali e piani tangenti che saranno coerenti nel loro orientamento.
 
-![Superficie](../images/5-2/5/Surface.jpg)
+![Superficie](../../.gitbook/assets/Surface.jpg)
 
 > 1. Superficie
 > 2. Isocurva U
@@ -39,7 +39,7 @@ Una superficie è una forma matematica definita da una funzione e due parametri.
 
 **Dominio di superficie**: un dominio di superficie viene definito come intervallo di parametri (U,V) che vengono valutati in un punto tridimensionale su tale superficie. Il dominio in ogni dimensione (U o V) viene in genere descritto come due numeri (U minimo a U massimo) e (V da minimo a V massimo).
 
-![Superficie](../images/5-2/5/SurfaceParameter.jpg)
+![Superficie](../../.gitbook/assets/SurfaceParameter.jpg)
 
 Sebbene la forma della superficie non sembri "rettangolare" e localmente potrebbe avere un insieme di isocurve più serrato o più ampio, lo "spazio" definito dal relativo dominio è sempre bidimensionale. In Dynamo, le superfici sono sempre note per aver un dominio definito da un minimo di 0.0 e un massimo di 1.0 in entrambe le direzioni U e V. Le superfici piane o tagliate possono avere domini diversi.
 
@@ -47,7 +47,7 @@ Sebbene la forma della superficie non sembri "rettangolare" e localmente potrebb
 
 **Coordinata UV**: il punto nello spazio del parametro UV definito da U, V e talvolta W.
 
-![Coordinata della superficie](../images/5-2/5/SurfaceCoordinate.jpg)
+![Coordinata della superficie](../../.gitbook/assets/SurfaceCoordinate.jpg)
 
 **Piano perpendicolare**: un piano perpendicolare ad entrambe le isocurve U e V in corrispondenza di una determinata coordinata UV.
 
@@ -57,11 +57,11 @@ Sebbene la forma della superficie non sembri "rettangolare" e localmente potrebb
 
 Le **superfici NURBS** sono molto simili alle curve NURBS. Le superfici NURBS possono essere considerate come una griglia di curve NURBS che vanno in due direzioni. La forma di una superficie NURBS è definita da diversi punti di controllo e dal grado di tale superficie nelle direzioni U e V. Gli stessi algoritmi vengono utilizzati per calcolare la forma, le normali, le tangenti, le curvature e altre proprietà mediante punti di controllo, spessori e grado.
 
-![Superficie NURBS](../images/5-2/5/NURBSsurface.jpg)
+![Superficie NURBS](../../.gitbook/assets/NURBSsurface.jpg)
 
 Nel caso delle superfici NURBS, vi sono due direzioni implicite nella geometria, poiché le superfici NURBS sono, indipendentemente dalla forma vista, griglie rettangolari dei punti di controllo. Anche se queste direzioni sono spesso arbitrarie rispetto al sistema di coordinate globale, verranno utilizzate di frequente per analizzare i modelli o generare altra geometria in base alla superficie.
 
-![Superficie NURBS](../images/5-2/5/NURBSsurface-Degree.jpg)
+![Superficie NURBS](../../.gitbook/assets/NURBSsurface-Degree.jpg)
 
 > 1. Grado (U,V) = (3,3)
 > 2. Grado (U,V) = (3,1)
@@ -74,6 +74,6 @@ Le **PolySurface** sono costituite da superfici unite su uno spigolo. Le PolySur
 
 Sebbene la "topologia" in genere descriva un concetto che illustra come le parti sono collegate e/o la topologia correlata, in Dynamo è anche un tipo di geometria. In particolare, si tratta di una categoria principale per superfici, PolySurface e solidi.
 
-![PolySurface](../images/5-2/5/PolySurface.jpg)
+![PolySurface](../../.gitbook/assets/PolySurface.jpg)
 
 Talvolta chiamate superfici chiuse, unire le superfici in questo modo consente di creare forme più complesse e definire i dettagli attraverso la giuntura. Comodamente è possibile applicare un'operazione di raccordo o smusso agli spigoli di una PolySurface.

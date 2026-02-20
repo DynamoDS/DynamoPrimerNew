@@ -2,9 +2,9 @@
 
 Dynamo 2.0 consente di visualizzare un'ampia varietà di nodi Dictionary da utilizzare. Ciò include i nodi di _Create, Action e Query_.
 
-![](../images/5-5/2/dictionarynodes-nodes.jpg)
+\![](<../../.gitbook/assets/dictionary nodes - nodes.jpg>)
 
-#### Create
+#### Crea
 
 1. `Dictionary.ByKeysValues` creerà un dizionario con le chiavi e i valori forniti. _(il numero di voci corrisponderà all'input più breve dell'elenco)._
 

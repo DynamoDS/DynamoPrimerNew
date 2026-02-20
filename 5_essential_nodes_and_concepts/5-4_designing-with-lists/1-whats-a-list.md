@@ -4,7 +4,7 @@
 
 Un elenco è una raccolta di elementi o voci. Si prenda, ad esempio, un casco di banane. Ogni banana è una voce all'interno dell'elenco (o del casco). È più semplice raccogliere un casco di banane piuttosto che ogni singola banana e ciò vale anche per il raggruppamento di elementi secondo relazioni parametriche in una struttura di dati.
 
-![Banane](../images/5-4/1/Bananas_white_background_DS.jpg)
+![Banane](../../.gitbook/assets/Bananas_white_background_DS.jpg)
 
 > Foto di [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
@@ -20,7 +20,7 @@ Ad esempio, se si dovesse contare il numero di dita della mano destra, è probab
 
 Nell'elenco sono ancora presenti 5 voci, questo perché l'elenco sta utilizzando un sistema di conteggio in base zero. E le voci memorizzate nell'elenco non devono essere solo numeri. Possono essere qualsiasi tipo di dati supportato da Dynamo, ad esempio punti, curve, superfici, famiglie e così via.
 
-![](../images/5-4/1/what'salist-zerobasedindices.jpg)
+\![](<../../.gitbook/assets/what's a list - zero based indices.jpg>)
 
 > a. Indice
 >
@@ -36,7 +36,7 @@ Questi indici sono un elemento fondamentale quando si utilizzano gli elenchi.
 
 Per quanto riguarda gli elenchi, input e output variano a seconda del nodo di Dynamo utilizzato. Ad esempio, è possibile utilizzare un elenco di 5 punti e collegare questo output a due diversi nodi di Dynamo: **PolyCurve.ByPoints** e **Circle.ByCenterPointRadius**:
 
-![Esempi di input](../images/5-4/1/what'salist-inputsandoutputs.jpg)
+\![Input Examples](<../../.gitbook/assets/what's a list - inputs and outputs.jpg>)
 
 > 1. L'input _points_ per **PolyCurve.ByPoints** cerca _“Point[]”_. Rappresenta un elenco di punti.
 > 2. L'output per **PolyCurve.ByPoints** è una PolyCurve singola creata da un elenco di cinque punti.
@@ -59,23 +59,23 @@ Si immagini un nodo che crea segmenti di linea tra punti (**Line.ByStartPointEnd
 
 Il modo più semplice consiste nel collegare gli input uno ad uno finché uno dei flussi non si esaurisce. Viene definito l'algoritmo "l'elenco più breve". Questo è il funzionamento di default per i nodi di Dynamo:
 
-![](../images/5-4/1/what'salist-lacing-shortest.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - shortest.jpg>)
 
 #### L'elenco più lungo
 
 L'algoritmo "l'elenco più lungo" continua a collegare gli input e a riutilizzare gli elementi, finché tutti i flussi non si esauriscono:
 
-![](../images/5-4/1/what'salist-lacing-longest.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - longest.jpg>)
 
 #### Globale
 
 Infine, il metodo Globale rende possibili tutti i collegamenti:
 
-![](../images/5-4/1/what'salist-lacing-cross.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - cross.jpg>)
 
 Come si può vedere, esistono diversi modi in cui è possibile disegnare linee tra questi gruppi di punti. Per trovare le opzioni del collegamento, fare clic con il pulsante destro del mouse sul centro di un nodo e scegliere il menu Collegamento.
 
-![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
+\![](<../../.gitbook/assets/what's a list - right click lacing opt.jpg>)
 
 ### Cos'è la replica?
 
@@ -111,7 +111,7 @@ Per ulteriori informazioni sul funzionamento, consultare la pagina [Replication 
 >
 > Un elenco completo di file di esempio è disponibile nell'Appendice.
 
-{% file src="../datasets/5-4/1/Lacing.dyn" %}
+{% file src="../../.gitbook/assets/Lacing (1).dyn" %}
 
 Per dimostrare le operazioni di collegamento riportate di seguito, si utilizzerà questo file di base per definire l'elenco più breve, l'elenco più lungo e il collegamento globale.
 
@@ -121,16 +121,16 @@ Si modificherà il collegamento in **Point.ByCoordinates**, ma non cambierà nie
 
 Scegliendo _Più breve_ come opzione di collegamento (anche l'opzione di default), si ottiene una linea diagonale di base composta da cinque punti. I cinque punti indicano la lunghezza dell'elenco minore, pertanto il collegamento con l'elenco più breve viene interrotto dopo che si è arrivati alla fine di un elenco.
 
-![Esempi di input](../images/5-4/1/what'salist-lacingexercise01.jpg)
+\![Input Examples](<../../.gitbook/assets/what's a list - lacing exercise 01.jpg>)
 
 ### **L'elenco più lungo**
 
 Modificando il collegamento in _Più lungo_, si ottiene una linea diagonale che si estende verticalmente. Con lo stesso metodo del diagramma concettuale, l'ultima voce nell'elenco di 5 voci verrà ripetuta per raggiungere la lunghezza dell'elenco più lungo.
 
-![Esempi di input](../images/5-4/1/what'salist-lacingexercise02.jpg)
+\![Input Examples](<../../.gitbook/assets/what's a list - lacing exercise 02.jpg>)
 
 ### **Globale**
 
 Modificando il collegamento in _Globale_, si ottiene ogni combinazione tra ciascun elenco, fornendo una griglia di punti 5 x 10. Si tratta di una struttura di dati equivalente secondo il metodo globale come mostrato nel diagramma concettuale riportato sopra, tranne per il fatto che i dati sono ora un elenco di elenchi. Collegando una PolyCurve, è possibile vedere che ogni elenco viene definito dal relativo valore X, restituendo una riga di linee verticali.
 
-![Esempi di input](../images/5-4/1/what'salist-lacingexercise03.jpg)
+\![Input Examples](<../../.gitbook/assets/what's a list - lacing exercise 03.jpg>)

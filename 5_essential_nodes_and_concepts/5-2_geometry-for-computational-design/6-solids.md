@@ -10,7 +10,7 @@ Se si desidera costruire modelli più complessi che non possono essere creati da
 
 Si possono utilizzare le [operazioni booleane](6-solids.md#boolean-operations) per modificare i solidi. Si utilizzeranno alcune operazioni booleane per creare una palla riccio.
 
-![](../images/5-2/6/solids-spikyball.jpg)
+\![](<../../.gitbook/assets/solids - spiky ball.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius**: creare il solido di base.
 > 2. **Topology.Faces**, **Face.SurfaceGeometry**: eseguire una query sulle facce del solido e convertirle in geometria di superficie. In questo caso, la sfera presenta un'unica faccia.
@@ -23,22 +23,20 @@ Si possono utilizzare le [operazioni booleane](6-solids.md#boolean-operations) p
 >
 > Un elenco completo di file di esempio è disponibile nell'Appendice.
 
-{% file src="../datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Solids.dyn" %}
 
 ### Congelamento
 
 Le operazioni booleane sono complesse e possono essere lente da calcolare. È possibile utilizzare la funzionalità Congela per sospendere l'esecuzione dei nodi selezionati e dei nodi a valle interessati.
 
-![](../images/5-2/6/solids-freezenode.jpg)
+\![](<../../.gitbook/assets/solids - freeze node.jpg>)
 
 > 1. Utilizzare il menu contestuale accessibile con il pulsante destro del mouse per congelare l'operazione di unione dei solidi.
 > 2. Il nodo selezionato e tutti i nodi a valle verranno visualizzati in anteprima in modalità semitrasparente di colore grigio chiaro e i fili interessati verranno visualizzati come linee tratteggiate. Anche l'anteprima della geometria interessata sarà semitrasparente. È ora possibile modificare i valori a monte senza calcolare l'unione booleana.
 > 3. Per scongelare i nodi, fare clic con il pulsante destro del mouse e deselezionare Congela.
 > 4. Tutti i nodi interessati e le anteprime della geometria associata verranno aggiornati e ripristineranno la modalità di anteprima standard.
 
-{% hint style="info" %}
-È possibile leggere ulteriori informazioni sul congelamento dei nodi nella sezione [4_nodes_and_wires](../../4_nodes_and_wires/ "mention").
-{% endhint %}
+{% hint style="info" %} È possibile leggere ulteriori informazioni sul congelamento dei nodi nella sezione [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
 
 ## Approfondimento su...
 
@@ -46,7 +44,7 @@ Le operazioni booleane sono complesse e possono essere lente da calcolare. È po
 
 I solidi sono costituiti da una o più superfici che contengono volume mediante un contorno chiuso che definisce l'"entrata" o l'"uscita". Indipendentemente dal numero di superfici presenti, è necessario che formino un volume "ermetico" per essere considerate un solido. È possibile creare solidi unendo superfici o PolySurface o utilizzando operazioni quali loft, sweep e rivoluzione. Anche le primitive sfera, cubo, cono e cilindro sono solidi. Un cubo con almeno una faccia rimossa viene considerato come PolySurface, che presenta proprietà simili, ma non è un solido.
 
-![Solidi](../images/5-2/6/Primitives.jpg)
+![Solidi](../../.gitbook/assets/Primitives.jpg)
 
 > 1. Un piano è composto da una singola superficie e non è un solido.
 > 2. Una sfera è costituita da una superficie, ma _è_ un solido.
@@ -58,7 +56,7 @@ I solidi sono costituiti da una o più superfici che contengono volume mediante 
 
 I solidi sono costituiti da tre tipi di elementi: vertici, spigoli e facce. Le facce sono le superfici che compongono il solido. Gli spigoli sono le curve che definiscono il collegamento tra facce adiacenti, mentre i vertici rappresentano i punti iniziale e finale di tali curve. Questi elementi possono essere sottoposti a query utilizzando i nodi della topologia.
 
-![Topologia](../images/5-2/6/Solid-topology.jpg)
+![Topologia](../../.gitbook/assets/Solid-topology.jpg)
 
 > 1. Facce
 > 2. Spigoli
@@ -68,7 +66,7 @@ I solidi sono costituiti da tre tipi di elementi: vertici, spigoli e facce. Le f
 
 I solidi possono essere modificati raccordando o smussando i loro spigoli per eliminare angoli acuti. L'operazione di smusso crea una superficie rigata tra due facce, mentre un raccordo si unisce tra le facce per mantenere la tangenza.
 
-![](../images/5-2/6/SolidOperations.jpg)
+![](../../.gitbook/assets/SolidOperations.jpg)
 
 > 1. Cubo
 > 2. Cubo smussato
@@ -83,16 +81,15 @@ Le operazioni booleane sui solidi sono metodi per combinare due o più solidi. U
 3. **Eliminare** le parti della geometria indesiderate.
 4. **Unire** tutto di nuovo insieme.
 
-Ciò rende le operazioni booleane sui solidi un potente processo che consente di risparmiare tempo. Sono disponibili tre operazioni booleane sui solidi che consentono di distinguere quali parti della geometria vengono mantenute. ![Operazione booleana sui solidi](../images/5-2/6/SolidBooleans.jpg)
+Ciò rende le operazioni booleane sui solidi un potente processo che consente di risparmiare tempo. Sono disponibili tre operazioni booleane sui solidi che consentono di distinguere quali parti della geometria vengono mantenute. ![Operazione booleana sui solidi](../../.gitbook/assets/SolidBooleans.jpg)
 
 > 1. **Unione:** consente di rimuovere le parti sovrapposte dei solidi e di unirle in un unico solido.
 > 2. **Differenza:** consente di sottrarre un solido da un altro. Il solido da sottrarre è noto come strumento. Si noti che è possibile cambiare il solido che costituisce lo strumento per mantenere il volume inverso.
 > 3. **Intersezione:** consente di mantenere solo il volume intersecante dei due solidi.
 
-Oltre a queste tre operazioni, in Dynamo sono disponibili i nodi **Solid.DifferenceAll** e **Solid.UnionAll** per l'esecuzione di operazioni di differenza e unione con più solidi. ![](../images/5-2/6/BooleanAll.jpg)
+Oltre a queste tre operazioni, in Dynamo sono disponibili i nodi **Solid.DifferenceAll** e **Solid.UnionAll** per l'esecuzione di operazioni di differenza e unione con più solidi. ![](../../.gitbook/assets/BooleanAll.jpg)
 
 > 1. **UnionAll:** operazione di unione con sfera e coni rivolti verso l'esterno.
 > 2. **DifferenceAll:** operazione di differenza con sfera e coni rivolti verso l'interno.
 
 ##
-

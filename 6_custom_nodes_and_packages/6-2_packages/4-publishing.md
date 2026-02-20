@@ -2,7 +2,7 @@
 
 Nelle sezioni precedenti, sono stati analizzati i dettagli su come il pacchetto _MapToSurface_ è configurato con nodi personalizzati e file di esempio. Ma com'è possibile pubblicare un pacchetto che è stato sviluppato localmente? Questo case study mostra come pubblicare un pacchetto da un gruppo di file in una cartella locale.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../../.gitbook/assets/develop package - custom nodes 01 (1) (6).jpg>)
 
 Esistono diversi modi per pubblicare un pacchetto. Di seguito è riportato il processo consigliato: **pubblicare localmente, sviluppare localmente, quindi pubblicare in linea**. Si inizierà con una cartella contenente tutti i file del pacchetto.
 
@@ -24,11 +24,11 @@ Quindi riavviare Dynamo. Alla riapertura, quando si seleziona la finestra _Gesti
 >
 > Un elenco completo di file di esempio è disponibile nell'Appendice.
 
-{% file src="../datasets/6-2/4/MapToSurface.zip" %}
+{% file src="../../.gitbook/assets/MapToSurface.zip" %}
 
 Questo è il primo invio per il pacchetto e tutti i file di esempio e i nodi personalizzati sono stati inseriti in una cartella. Una volta preparata questa cartella, è possibile caricarla in Dynamo Package Manager.
 
-![](../images/6-2/4/publishapackage-publishlocally01.jpg)
+\![](<../../.gitbook/assets/publish a package - publish locally 01.jpg>)
 
 > 1. Questa cartella contiene cinque nodi personalizzati (.dyf).
 > 2. Contiene inoltre cinque file di esempio (.dyn) e un file vettoriale importato (.svg). Questi file fungeranno da esercizi introduttivi per mostrare all'utente come utilizzare i nodi personalizzati.
@@ -55,7 +55,7 @@ Pubblicare facendo clic su Pubblica localmente (1). Se si sta seguendo questa pr
 
 Dopo la pubblicazione, i nodi personalizzati devono essere disponibili nel gruppo "DynamoPrimer" o nella libreria di Dynamo.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../../.gitbook/assets/develop package - install package 02 (1) (4).jpg>)
 
 Ora osservare la directory principale per vedere in che modo Dynamo ha formattato il pacchetto appena creato. A tale scopo, accedere alla scheda Pacchetti installati > accanto a MapToSurface, fare clic sul menu con i puntini verticali > selezionare Mostra directory principale.
 
@@ -63,7 +63,7 @@ Ora osservare la directory principale per vedere in che modo Dynamo ha formattat
 
 Si noti che la directory principale si trova nella posizione locale del pacchetto (tenere presente che il pacchetto è stato pubblicato "localmente"). Dynamo fa attualmente riferimento a questa cartella per la lettura di nodi personalizzati. È pertanto importante pubblicare la directory localmente in una posizione di cartella permanente (ad esempio, non sul desktop). Di seguito è riportata la suddivisione delle cartelle del pacchetto di Dynamo.
 
-![](../images/6-2/4/publishapackage-publishlocally06.jpg)
+\![](<../../.gitbook/assets/publish a package - publish locally 06.jpg>)
 
 > 1. La cartella _bin_ contiene i file .dll creati con le librerie C# o zero-touch. Non sono disponibili per questo pacchetto, pertanto questa cartella è vuota per questo esempio.
 > 2. La cartella _dyf_ contiene i nodi personalizzati. Se si apre questa finestra, verranno visualizzati tutti i nodi personalizzati (file .dyf) per questo pacchetto.

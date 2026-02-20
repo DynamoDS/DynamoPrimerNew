@@ -6,6 +6,6 @@ Essenzialmente, si può pensare ad un dizionario come ad uno strumento davvero i
 
 _Sebbene la funzionalità del dizionario sia disponibile da tempo in Dynamo, Dynamo 2.0 introduce un nuovo metodo di gestione di questo tipo di dati._
 
-![](../images/5-5/wildDictionary.png)
+![](../../.gitbook/assets/wildDictionary.png)
 
 Immagine gentilmente concessa da [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)

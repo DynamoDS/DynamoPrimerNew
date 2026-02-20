@@ -6,7 +6,7 @@ L'analogia bidimensionale con una NurbsCurve è la NurbsSurface e, come la Nurbs
 
 Per creare una superficie interpolata, è sufficiente generare una raccolta bidimensionale di punti che si avvicinano alla forma di una superficie. La raccolta deve essere rettangolare, ovvero non irregolare. Il metodo _NurbsSurface.ByPoints_ costruisce una superficie da questi punti.
 
-![](../images/8-2/6/Surfaces\_01.png)
+![](../../.gitbook/assets/Surfaces_01.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -19,7 +19,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 
 Le NurbsSurface di forma libera possono essere create anche specificando i punti di controllo sottostanti di una superficie. Come per le NurbsCurve, i punti di controllo possono essere considerati come la rappresentazione di una mesh quadrilatera con segmenti retti, che, a seconda del grado della superficie, viene levigata nella forma della superficie finale. Per creare una NurbsSurface tramite punti di controllo, includere due parametri aggiuntivi a _NurbsSurface.ByPoints_, indicando i gradi delle curve sottostanti in entrambe le direzioni della superficie.
 
-![](../images/8-2/6/Surfaces\_02.png)
+![](../../.gitbook/assets/Surfaces_02.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -31,7 +31,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 
 È possibile aumentare il grado della NurbsSurface per modificare la geometria della superficie risultante:
 
-![](../images/8-2/6/Surfaces\_03.png)
+![](../../.gitbook/assets/Surfaces_03.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -45,7 +45,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 
 Così come è possibile creare le superfici interpolando un insieme di punti di input, è possibile crearle interpolando un insieme di curve di base. Questa procedura è denominata loft. Viene creata una curva di loft utilizzando il costruttore _Surface.ByLoft_, con una raccolta di curve di input come unico parametro.
 
-![](../images/8-2/6/Surfaces\_04.png)
+![](../../.gitbook/assets/Surfaces_04.png)
 
 ```js
 // python_points_2, 3, and 4 are generated with
@@ -64,7 +64,7 @@ Le superfici di rivoluzione sono un tipo aggiuntivo di superficie creato tramite
 
 Le superfici di rivoluzione sono specificate da una curva di base, che rappresenta lo "spigolo" della superficie; l'origine di un asse, il punto base della superficie; la direzione di un asse, la direzione centrale; un angolo iniziale di sweep e un angolo finale di sweep. Questi vengono utilizzati come input per il costruttore _Surface.Revolve_.
 
-![](../images/8-2/6/Surfaces\_05.png)
+![](../../.gitbook/assets/Surfaces_05.png)
 
 ```js
 pts = {};

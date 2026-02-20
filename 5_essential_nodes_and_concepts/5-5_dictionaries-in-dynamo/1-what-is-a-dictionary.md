@@ -20,11 +20,9 @@ La separazione dei dizionari dagli elenchi introduce i dizionari come cittadino 
   * I dizionari utilizzano la seguente sintassi: `{key:value}`.
   * Gli elenchi utilizzano la seguente sintassi: `[value,value,value]`.
 * Nella libreria sono stati introdotti _nuovi nodi_ per aiutare a creare, modificare o sottoporre a query i dizionari.
-*   Gli elenchi creati nei blocchi di codice v1.x verranno migrati automaticamente al caricamento dello script nella nuova sintassi dell'elenco che utilizza parentesi quadre `[ ]` anziché parentesi graffe `{ }` \\.
+* Gli elenchi creati nei blocchi di codice v1.x verranno migrati automaticamente al caricamento dello script nella nuova sintassi dell'elenco che utilizza parentesi quadre `[ ]` anziché parentesi graffe `{ }` \\.
 
-    ***
-
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
+\![](<../../.gitbook/assets/what is a dictionary - what are the changes (1) (4).jpg>)
 
 ***
 
@@ -34,7 +32,7 @@ Nel settore scientifico dei computer, i dizionari, come gli elenchi, sono raccol
 
 Nella seguente immagine viene illustrato un caso di utilizzo potenziale di un dizionario. Spesso i dizionari vengono utilizzati per correlare due dati che potrebbero non avere una correlazione diretta. In questo caso, si sta collegando la versione spagnola di una parola alla versione inglese per una successiva ricerca.
 
-![](../images/5-5/1/whatisadictionary-whatwouldyouusethesefor.jpg)
+\![](<../../.gitbook/assets/what is a dictionary - what would you use these for.jpg>)
 
 > 1. Creare un dizionario per correlare i due dati.
 > 2. Ottenere il valore con la chiave specificata.

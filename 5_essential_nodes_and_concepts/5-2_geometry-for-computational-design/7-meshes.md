@@ -12,7 +12,7 @@ Dynamo definisce le mesh utilizzando una struttura di dati di faccia-vertice. Al
 
 Per creare una mesh, è necessario un elenco di vertici e un sistema per raggruppare tali vertici in facce denominate gruppo di indici.
 
-![](../images/5-2/7/meshes-meshelements.jpg)
+\![](<../../.gitbook/assets/meshes - mesh elements.jpg>)
 
 > 1. Elenco dei vertici
 > 2. Elenco dei gruppi di indici per definire le facce
@@ -25,7 +25,7 @@ La libreria fornisce inoltre strumenti per modificare e correggere la mesh o est
 
 Visitare i [case study di Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes), ad esempio sull'utilizzo di questo pacchetto.
 
-![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
+\![Mesh Toolkit](<../../.gitbook/assets/meshes - mesh toolkit standford bunny.jpg>)
 
 ## Approfondimento su...
 
@@ -33,7 +33,7 @@ Visitare i [case study di Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/
 
 Una mesh è una raccolta di quadrilateri e triangoli che rappresenta una geometria di superfici o solidi. Analogamente ai solidi, la struttura di un oggetto mesh include vertici, bordi e facce. Sono disponibili ulteriori proprietà che rendono anche univoche le mesh, come le normali.
 
-![Elementi della mesh](../images/5-2/7/MeshElements2.jpg)
+![Elementi della mesh](../../.gitbook/assets/MeshElements2.jpg)
 
 > 1. Vertici della mesh
 > 2. Bordi della mesh 
@@ -44,7 +44,7 @@ Una mesh è una raccolta di quadrilateri e triangoli che rappresenta una geometr
 
 I vertici di una mesh sono semplicemente un elenco di punti. L'indice dei vertici è molto importante quando si costruisce una mesh o si ottengono informazioni sulla struttura di una mesh. Per ogni vertice, esiste anche una normale del vertice corrispondente (vettore) che descrive la direzione media delle facce associate e consente di comprendere l'orientamento in ingresso e in uscita della mesh.
 
-![Vertici + normali](../images/5-2/7/vertexNormals.jpg)
+![Vertici + normali](../../.gitbook/assets/vertexNormals.jpg)
 
 > 1. Vertici
 > 2. Normali dei vertici
@@ -53,7 +53,7 @@ I vertici di una mesh sono semplicemente un elenco di punti. L'indice dei vertic
 
 Una faccia è un elenco ordinato di tre o quattro vertici. La rappresentazione della "superficie" di una faccia della mesh è pertanto implicita in base alla posizione dei vertici indicizzati. Si dispone già dell'elenco dei vertici che compongono la mesh, quindi, invece di fornire singoli punti per definire una faccia, si utilizza semplicemente l'indice dei vertici. Questo consente anche di utilizzare lo stesso vertice in più di una faccia.
 
-![](../images/5-2/7/meshFaces.jpg)
+![](../../.gitbook/assets/meshFaces.jpg)
 
 > 1. Una faccia quadrangolare composta con indici 0, 1, 2 e 3
 > 2. Una faccia triangolare composta con indici 1, 4 e 2; notare che i gruppi di indici possono essere spostati nel loro ordine - purché la sequenza sia ordinata in senso antiorario, la faccia verrà definita correttamente
@@ -66,7 +66,7 @@ Quali sono le differenze tra la geometria della mesh e la geometria NURBS? Quand
 
 In un capitolo precedente, si è visto che le superfici NURBS sono definite da una serie di curve NURBS che vanno in due direzioni. Queste direzioni sono etichettate `U` e `V` e consentono la parametrizzazione di una superficie NURBS in base ad un dominio di superficie bidimensionale. Le curve stesse sono memorizzate come equazioni nel computer, consentendo il calcolo delle superfici risultanti ad un grado di precisione arbitrariamente ridotto. Può essere difficile, tuttavia, combinare insieme più superfici NURBS. L'unione di due superfici NURBS determina una polisuperficie, in cui diverse sezioni della geometria avranno parametri UV e definizioni delle curve differenti.
 
-![Punti di controllo](../images/5-2/7/NURBSvsMESH-01.jpg)
+![Punti di controllo](../../.gitbook/assets/NURBSvsMESH-01.jpg)
 
 > 1. Superficie
 > 2. Curva isoparametrica (isoparm)
@@ -87,7 +87,7 @@ Le mesh, invece, sono costituite da un numero discreto di facce e vertici esatta
 
 Un'altra importante differenza è rappresentata dall'entità con cui una modifica locale nella geometria della mesh o NURBS influisce sull'intera forma. Lo spostamento di un vertice di una mesh influisce solo sulle facce adiacenti a tale vertice. Nelle superfici NURBS, l'entità dell'influenza è più complessa e dipende dal grado della superficie, nonché dai pesi e dai nodi dei punti di controllo. In generale, tuttavia, lo spostamento di un singolo punto di controllo in una superficie NURBS crea un cambiamento più uniforme e più esteso nella geometria.
 
-![Modifica](../images/5-2/7/NURBSvsMESH-02.jpg)
+![Modifica](../../.gitbook/assets/NURBSvsMESH-02.jpg)
 
 > 1. Superficie NURBS: lo spostamento di un punto di controllo ha un'influenza che si estende lungo la forma.
 > 2. Geometria della mesh: lo spostamento di un vertice influisce solo sugli elementi adiacenti.
