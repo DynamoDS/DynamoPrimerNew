@@ -2,7 +2,7 @@
 
 NodeModel ベースのノードは、Zero-Touch ノードよりも大幅に柔軟性に優れ強力です。この例では、矩形のサイズをランダム化する統合されたスライダを追加して、Zero-Touch グリッド ノードのレベルを高めます。
 
-![矩形グリッドのグラフ](images/cover-image-2.jpg)
+![矩形グリッドのグラフ](../../.gitbook/assets/cover-image-2.jpg)
 
 > スライダでセルのスケールをそのサイズに対して相対的に変更するため、スライダで正確な範囲を設定する必要はありません。
 
@@ -33,7 +33,7 @@ NodeModel ノードは関数のみを呼び出すことができるため、Node
 
 ソリューションで 2 つの C# クラス ライブラリ プロジェクトを作成します。関数用のプロジェクトと、NodeModel インタフェースを実装するためのプロジェクトです。
 
-![新しいクラス ライブラリを追加する](images/vs-new-class-projects.jpg)
+![新しいクラス ライブラリを追加する](../../.gitbook/assets/vs-new-class-projects.jpg)
 
 > 1. ソリューションを右クリックして、`Add > New Project` を選択します。
 > 2. クラス ライブラリを選びます。
@@ -43,7 +43,7 @@ NodeModel ノードは関数のみを呼び出すことができるため、Node
 
 次に、自動的に作成されたクラス ライブラリの名前を変更し、`CustomNodeModel` プロジェクトに追加する必要があります。クラス `GridNodeModel` は抽象クラス NodeModel を実装し、ビューのカスタマイズには `GridNodeView` が使用され、`GridFunction` には呼び出す必要のある関数が含まれています。
 
-![ソリューション エクスプローラ](images/vs-new-class.jpg)
+![ソリューション エクスプローラ](../../.gitbook/assets/vs-new-class.jpg)
 
 > 1. `CustomNodeModel` プロジェクトを右クリックして `Add > New Item...` を選択し、`Class` を選んで別のクラスを追加します。
 > 2. `CustomNodeModel` プロジェクトには `GridNodeModel.cs` クラスと `GridNodeView.cs` クラスが必要です
@@ -51,14 +51,14 @@ NodeModel ノードは関数のみを呼び出すことができるため、Node
 
 クラスにコードを追加する前に、このプロジェクトに必要なパッケージを追加します。`CustomNodeModel` には ZeroTouchLibrary と WpfUILibrary が必要で、`CustomNodeModelFunction` には ZeroTouchLibrary のみが必要です。WpfUILibrary は、後で説明する UI のカスタマイズに使用し、ZeroTouchLibrary はジオメトリの作成に使用します。パッケージは、プロジェクトに個別に追加できます。これらのパッケージには依存関係があるため、Core および DynamoServices が自動的にインストールされます。
 
-![パッケージをインストールする](images/vs-add-packages.jpg)
+![パッケージをインストールする](../../.gitbook/assets/vs-add-packages.jpg)
 
 > 1. プロジェクトを右クリックして、`Manage NuGet Packages` を選択します。
 > 2. そのプロジェクトに必要なパッケージのみをインストールします。
 
 Visual Studio は、参照した NuGet パッケージをビルド フォルダにコピーします。これを false に設定できるため、パッケージ内に不要なファイルはありません。
 
-![ローカルへのパッケージのコピーを無効にする](images/vs-disable-package-copying.jpg)
+![ローカルへのパッケージのコピーを無効にする](../../.gitbook/assets/vs-disable-package-copying.jpg)
 
 > 1. Dynamo NuGet パッケージを選択します。
 > 2. `Copy Local` を false に設定します。
@@ -199,7 +199,7 @@ namespace CustomNodeModel.CustomNodeModelFunction
 
 NuGet パッケージの参照の追加と同様に、`CustomNodeModel` は関数を呼び出すために `CustomNodeModelFunction` を参照する必要があります。
 
-![参照を追加する](images/vs-add-project-reference.jpg)
+![参照を追加する](../../.gitbook/assets/vs-add-project-reference.jpg)
 
 > CustomNodeModel の using ステートメントは、関数を参照するまで非アクティブになります。
 >
@@ -240,7 +240,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 プロジェクトの構造を設定したら、Visual Studio の設計環境を使用してユーザ コントロールを作成し、`.xaml` ファイルでそのパラメータを定義します。ツール ボックスから、`<Grid>...</Grid>` にスライダを追加します。
 
-![新規スライダを追加する](images/vs-usercontrol.jpg)
+![新規スライダを追加する](../../.gitbook/assets/vs-usercontrol.jpg)
 
 > 1. `CustomNodeModel` を右クリックして、`Add > New Item` を選択します。
 > 2. `WPF` を選択します。
@@ -264,7 +264,7 @@ namespace CustomNodeModel.CustomNodeModel
 </UserControl>
 ```
 
-* スライダ コントロールのパラメータは、`.xaml` ファイルの In で定義されています。_Minimum および Maximum_ の属性は、このスライダの数値範囲を定義します。
+* スライダ コントロールのパラメータは、`.xaml` ファイルの In で定義されています。Minimum および Maximum__ の属性は、このスライダの数値範囲を定義します。
 * `<Grid>...</Grid>` 内に、Visual Studio ツールボックスからさまざまなユーザ コントロールを配置できます。
 
 `Slider.xaml` ファイルを作成すると、Visual Studio によって自動的に `Slider.xaml.cs` という C# ファイルが作成され、スライダが初期化されます。このファイルの名前空間を変更します。
@@ -295,7 +295,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 プロジェクトをビルドする前に、最後の手順として、`pkg.json` ファイルを追加して Dynamo でパッケージの読み込みができるようにします。
 
-![JSON ファイルを追加する](images/vs-pkg-json.jpg)
+![JSON ファイルを追加する](../../.gitbook/assets/vs-pkg-json.jpg)
 
 > 1. `CustomNodeModel` を右クリックして、`Add > New Item` を選択します。
 > 2. `Web` を選択します。
@@ -334,3 +334,21 @@ namespace CustomNodeModel.CustomNodeModel
 *   `"node_libraries": []` は、パッケージに関連付けられているライブラリです。
 
     最後に、ソリューションをビルドし、Dynamo パッケージとしてパブリッシュします。オンラインでパブリッシュする前にローカル パッケージを作成する方法と、Visual Studio から直接パッケージをビルドする方法については、「パッケージの配置」の章を参照してください。
+
+#### 一般的な問題: <a href="#common-issues" id="common-issues"></a>
+
+1) グラフを開くと、一部のノードに同じ名前の複数のポートが存在するが、保存するとグラフは適切に表示される。この問題には、いくつかの原因が考えられます。
+
+一般的な原因は、ポートを再作成するコンストラクタを使用してノードを作成したことによるものです。その場合、ポートをロードしたコンストラクタを使用する必要があります。これらのコンストラクタには通常、`[JsonConstructor]` マークが付いています。_次のサンプルを参照してください_。
+
+\![破損した JSON](<../../.gitbook/assets/broken-json (1).jpg>)
+
+これは次のような場合に発生します。
+
+* 単に `[JsonConstructor]` と一致するものがなかったか、JSON .dyn から `Inports` と `Outports` が渡されなかった。
+* JSON.net の 2 つのバージョンが同時に同じプロセスにロードされ、.net ランタイム エラーが発生したため、コンストラクタをマークするための `[JsonConstructor]` 属性を正しく使用できなかった。
+* 現在の Dynamo バージョンとは異なるバージョンの DynamoServices.dll がパッケージにバンドルされており、.net ランタイムで `[MultiReturn]` 属性を識別できなくなっているために、さまざまな属性が設定されている Zero-Touch ノードを適用することができない。ノードは複数のポートではなく、単一のディクショナリ出力を返すことがあります。
+
+2) コンソールでいくつかのエラーが発生した状態でグラフをロードすると、ノードが完全に失われる。
+
+* これは、何らかの理由でシリアル化解除に失敗した場合に発生する可能性があります。必要なプロパティのみをシリアル化することをお勧めします。ロードや保存を必要としない複雑なプロパティに対して `[JsonIgnore]` を使用して、それらを無視することができます。`function pointer, delegate, action,` や `event` などのプロパティです。これらはシリアル化できないため、シリアル化解除に失敗し、ランタイム エラーが発生します。

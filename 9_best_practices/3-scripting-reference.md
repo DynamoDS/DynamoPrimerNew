@@ -6,7 +6,7 @@
 
 標準ライブラリは Dynamo の外部に存在し、プログラミング言語の Python や C# (Zerotouch)の内部で使用されます。Dynamo には、ノード階層に直接対応する専用のライブラリ セットも用意されています。これらの専用ライブラリにより、ノードとワイヤを使用して作成したコード内で、あらゆる処理を記述することができます。ここからは、各 Dynamo ライブラリの内容と、どのような場合に標準ライブラリを使用するかについて説明します。
 
-![](images/3/textual-programming.jpg)
+![](../.gitbook/assets/textual-programming.jpg)
 
 **標準ライブラリと Dynamo ライブラリ**
 
@@ -28,9 +28,7 @@
    * 機能: Excel。
    * 読み込み方法: `import DSOffice`
 
-{% hint style="warning" %}
-\*注: Python または C# で **ProtoGeometry** を使用すると、非管理オブジェクト(メモリを手動で管理する必要があるオブジェクト)が作成されることに注意してください。詳細については、「 **非管理オブジェクト** 」のセクションを参照してください。
-{% endhint %}
+{% hint style="warning" %} *注: Python または C# で **ProtoGeometry** を使用すると、非管理オブジェクト(メモリを手動で管理する必要があるオブジェクト)が作成されることに注意してください。詳細については、「 **非管理オブジェクト** 」のセクションを参照してください。 {% endhint %}
 
 ## 分かりやすい名前を付ける
 
@@ -310,4 +308,3 @@ public Cuboid singleCube(){
 ```
 
 通常、破棄する必要があるジオメトリは、`Surfaces`、`Curves`、`Solids` のみです。ただし、念のため、すべてのタイプのジオメトリ(`Vectors`、`Points`、`CoordinateSystems`)を破棄することをお勧めします。
-

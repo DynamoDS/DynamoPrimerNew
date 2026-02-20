@@ -18,15 +18,15 @@ DynamoCoreRuntime zip ビルドは、自動ビルド中に作成される Dynamo
 
 #### 必要なコンポーネント
 
-| Dynamo のバージョン | Microsoft Visual C++    | DirectX                         |   |   |   |   |
-| --------------     | --------------------    | ------------------------------- | - | - | - | - | 
-| 2.0 - 2.6          | 2015 再頒布可能パッケージ | 10                              |   |   |   |   | 
-| 2.7                | 2019 再頒布可能パッケージ | 11/12 (Windows 10 に付属        |   |   |   |   | 
-| >=2.8              | 2019 再頒布可能パッケージ | 11/12 (Windows 10 に付属        |   |   |   |   |
+| Dynamo バージョン | Microsoft Visual C++ | DirectX                         |   |   |   |   |
+| -------------- | -------------------- | ------------------------------- | - | - | - | - |
+| 2.0 - 2.6      | 2015 再頒布可能パッケージ | 10                              |   |   |   |   |
+| 2.7            | 2019 再頒布可能パッケージ | 11/12 (Windows 10 に付属 |   |   |   |   |
+| >=2.8          | 2019 再頒布可能パッケージ | 11/12 (Windows 10 に付属 |   |   |   |   |
 
 **Microsoft DirectX は、**[**こちら**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)の Dynamo Github リポジトリでも公開されています。
 
-**パッケージの解凍に使用する 7zip は**[**こちら**](https://7-zip.opensource.jp/download.html)
+**パッケージの解凍に使用する 7zip は**[**こちら**](https://www.7-zip.org/download.html)
 
 **Microsoft Visual C++ 2015-2024 再頒布可能パッケージ(x64)**[**リンク**](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
@@ -36,31 +36,31 @@ DynamoCoreRuntime zip ビルドは、自動ビルド中に作成される Dynamo
 
 ### トラブルシューティング
 
-ビルド解凍後、DynamoSandbox.exe をまったく起動できないという場合は、[7zip](https://7-zip.opensource.jp/download.html) を使用してビルドを解凍するようにしてください。使用するマシンの権限を持っている場合は、_抽出前に_ .zip アーカイブのブロックを手動で解除することもできます。
+ビルド解凍後、DynamoSandbox.exe をまったく起動できないという場合は、[7zip](https://www.7-zip.org/download.html) を使用してビルドを解凍するようにしてください。使用するマシンの権限を持っている場合は、_抽出前に_ .zip アーカイブのブロックを手動で解除することもできます。
 
-![](images/a-7/dynamo-builds-1.png)
+![](../.gitbook/assets/dynamo-builds-1.png)
 
 必要なコンポーネントが存在しない場合、Dynamo の使用中に問題が発生したり、UI の一部のロードに失敗することがあります。
 
 次のスクリーンショットの例では、GPU なしのクリーンな Windows 10 VM でのビルド解凍後、マシンに必要なコンポーネントが両方とも欠落しています。これは、Dynamo コンソールに表示されます。
 
-![](images/a-7/dynamo-builds-2.png)
+![](../.gitbook/assets/dynamo-builds-2.png)
 
 **DirectX をインストールする**
 
 DirectX が既にインストールされている場合は、こちらの Microsoft の指示に従ってください。まだインストールしていない場合は、[こちら](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)の Dynamo Github リポジトリを使用して DXSETUP.exe を開きます。以下のダイアログが表示されたら、[次へ]をクリックして DirectX を既定の場所にインストールしてください。
 
-![](images/a-7/dynamo-builds-3.png)
+![](../.gitbook/assets/dynamo-builds-3.png)
 
 **Microsoft Visual C++ 2015-2024 再頒布可能パッケージ(x64)のインストール**
 
 最新版は[こちら](https://aka.ms/vs/17/release/vc_redist.x64.exe)からダウンロードしてください。これで、ブラウザのダウンロード場所で vc_redist.x64.exe という名前のインストーラを実行できるようになります。以下のダイアログが表示されたら、[インストール]をクリックしてこのコンポーネントを既定の場所に配置してください。
 
-![](images/a-7/dynamo-builds-4.png)
+![](../.gitbook/assets/dynamo-builds-4.png)
 
 上記のリンクから両方の必要なコンポーネントをインストールした後、DynamoSandbox.exe を再起動すると、次の結果が表示されます。
 
-![](images/a-7/dynamo-builds-5.png)
+![](../.gitbook/assets/dynamo-builds-5.png)
 
 **3D グラフィックスが見つからない場合。**
 
@@ -72,7 +72,7 @@ DirectX が既にインストールされている場合は、こちらの Micro
 
 _NVIDIA コントロール パネルの例:_
 
-![](images/a-7/dynamo-builds-6.png)
+![](../.gitbook/assets/dynamo-builds-6.png)
 
 **WebView2 ランタイムのインストール**
 
@@ -80,13 +80,13 @@ _NVIDIA コントロール パネルの例:_
 
 WebView2 ランタイム インストール用のリンクはこちらです。[https://developer.microsoft.com/ja-jp/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/ja-jp/microsoft-edge/webview2/#download-section)
 
-![](images/a-7/dynamo-builds-7.png)
+![](../.gitbook/assets/dynamo-builds-7.png)
 
 インストール対象は、Evergreen Bootstrapper または Evergreen Standalone Installer のいずれか 1 つです。前者は 1.50 MB、後者は 130 MB のインストーラがダウンロードされます。
 
 ランタイムをインストールすると、Dynamo の次期コンポーネントが正しく動作するようになります。
 
-![](images/a-7/dynamo-builds-8.png)
+![](../.gitbook/assets/dynamo-builds-8.png)
 
 **Dynamo Excel ノードに関する問題**
 

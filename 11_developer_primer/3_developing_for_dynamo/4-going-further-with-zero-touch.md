@@ -1,8 +1,8 @@
-# Zero-Touch の詳細を確認する 
+# Zero-Touch の詳細を確認する
 
 Zero-Touch プロジェクトの作成方法を理解できたので、Dynamo GitHub にあるサンプル ZeroTouchEssentials を使用して、ノードの作成について詳しく説明します。
 
-![Zero-Touch ノード](images/ootbzerotouch.png)
+![Zero-Touch ノード](../../.gitbook/assets/ootbzerotouch.png)
 
 > Dynamo の標準ノードの多くは基本的な Zero-Touch ノードです。上記のほとんどの Math、Color、DateTime ノードと同様です。
 
@@ -10,7 +10,7 @@ Zero-Touch プロジェクトの作成方法を理解できたので、Dynamo Gi
 
 Visual Studio で、ソリューション ファイル `ZeroTouchEssentials.sln` を開いてソリューションをビルドします。
 
-![Visual Studio の ZeroTouchEssentials](images/vs-build-zte.jpg)
+![Visual Studio の ZeroTouchEssentials](../../.gitbook/assets/vs-build-zte.jpg)
 
 > `ZeroTouchEssentials.cs` ファイルには、Dynamo に読み込むメソッドがすべて含まれています。
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![既定値](images/defaultval.jpg)
+![既定値](../../.gitbook/assets/defaultval.jpg)
 
 > 1. ノードの入力ポートにカーソルを合わせると、既定値が表示されます。
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 複数の出力を返すノードです。
 
-![複数の出力](images/multipleoutputs.png)
+![複数の出力](../../.gitbook/assets/multipleoutputs.png)
 
 > 1. ディクショナリのキーに入力した文字列に従って、2 つの出力ポートに名前が付けられています。
 
@@ -90,7 +90,7 @@ namespace ZeroTouchEssentials
   * 例: `/// <summary>...</summary>`
 * `Project > [Project] Properties > Build > Output` を選択して `Documentation file` をオンにすることで、Visual Studio で XML ドキュメントを有効にします。
 
-![XML ファイルを生成する](images/vs-xml.jpg)
+![XML ファイルを生成する](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Visual Studio は、指定された場所に XML ファイルを生成します。
 
@@ -134,18 +134,18 @@ namespace ZeroTouchEssentials
 > 2. 入力の説明。
 > 3. 出力の説明。
 
-#### Dynamo ノードの説明のベスト プラクティス 
+#### Dynamo ノードの説明のベスト プラクティス
 
 ノードの説明には、ノードの機能と出力について簡潔に記述します。Dynamo でそれらの説明は、次の 2 つの場所に表示されます。
 
-- ノード ツールチップ内
-- ドキュメント ブラウザ内
+* ノード ツールチップ内
+* ドキュメント ブラウザ内
 
-![ノードの説明](images/node-description.png)
+![ノードの説明](../../.gitbook/assets/node-description.png)
 
 ここで説明するガイドラインに従うことで、一貫性を確保し、ノードの説明の作成または更新を効率的に行うことができます。
 
-##### 概要
+**概要**
 
 説明は 1 文から 2 文にする必要があります。さらに情報が必要な場合は、ドキュメント ブラウザの[詳細]に含めます。
 
@@ -155,17 +155,17 @@ namespace ZeroTouchEssentials
 
 ここで説明するガイドラインから逸脱するとしても、常に明確さを優先してください。
 
-##### ガイドライン
+**ガイドライン**
 
-| 遵守事項      | 禁止事項 |
-| ----------- | ----------- |
-| 説明文は三人称動詞で始めます。<ul><li>例: *Determines* if one geometry object intersects with another (あるジオメトリ オブジェクトが別のジオメトリ オブジェクトと交差するかどうかを「判断します」)</li></ul>      | 二人称動詞や名詞から始めないでください。<ul><li>例: *Determine* if one geometry object intersects with another (あるジオメトリ オブジェクトが別のジオメトリ オブジェクトと交差するかどうかを「判断してください」)</li></ul>       |
-| 「Gets」の使用は避け、「Returns」、「Creates」、あるいは他の説明的な動詞を使用します。<ul><li>例: *Returns* a Nurbs representation of a surface (サーフェスの NURBS 表現を「返します」)</li></ul>   | 「Get」や「Gets」は使用しないでください。表現の具体性に欠けること、また複数の意味を持つ可能性があります。<ul><li>例: *Gets* a Nurbs representation of the surface (サーフェスの NURBS 表現を「取ります」)</li></ul>        |
-| 入力に言及するときは、「given」または「input」を使用し、「specified」などに類する他の用語の使用を避けます。説明を単純化し、文字数を減らすために、可能な場合は「given」や「input」を省略します。<ul><li>例: Deletes the *given* file (「指定した」ファイルを削除します)</li><li>例: Projects a curve along the *given* projection direction onto *given* base geometry (「指定された」下部ジオメトリに、「指定された」投影方向に沿って曲線を投影します)</li></ul>入力を直接的に表現しない場合は、「specified」を使用することもできます。<ul><li>例: Writes text content to a file *specified* by the given path (指定のパスで「特定された」ファイルに文字コンテンツを書き込みます)</li></ul>       | 入力に言及するときは、一貫性を確保するために「given」または「input」を使用し、「specified」などに類する他の用語の使用を避けます。明確にするために必要な場合を除き、同じ説明に「given」と「input」を混在させないでください。<ul><li>例: Deletes the *specified* file (「特定した」ファイルを削除します)</li><li>例: Projects an *input* curve along a *given* projection direction onto a *specified* base geometry (「特定の」下部ジオメトリに、「指定された」投影方向に沿って「入力」曲線を投影します)</li></ul>      |
-| 任意の入力を参照するときは、「a」または「an」を使用します。わかりやすくするために、必要に応じて「a」や「an」の代わりに「the given」や「the input」を使用します。<ul><li>例: Sweeps *a* curve along the path curve (パス曲線に沿って曲線をスイープします)</li></ul>      | 入力を最初に参照するときに「this」を使用しないでください。<ul><li>例: Sweeps *this* curve along the path curve(パス曲線に沿って「この」曲線をスイープします)      |
-| ノード操作のターゲットである出力またはその他の名詞を最初に参照する場合は、「a」または「an」を使用します。「the」は「input」や「given」と組み合わせる場合にのみ使用します。<ul><li>例: Copies *a* file (ファイルをコピーします)</li><li>例: Copies *the given* file (「指定された」ファイルをコピーします)</li></ul>      | ノード操作のターゲットである出力やその他の名詞を最初に参照するときは、「the」を単独で使用しないでください。<ul><li>例: Copies *the* file (「この」ファイルをコピーします)</li></ul>      |
-| 文の最初の単語と、名前や伝統的に大文字の名詞などの固有名詞は大文字にします。<ul><li>例: Returns the intersection of two *BoundingBoxes* (2 つの「BoundingBox」の交点を返します)</li></ul>      | 明確にするために必要でない限り、一般的なジオメトリ、オブジェクト、および概念は、大文字にしないでください。<ul><li>例: Scales non-uniformly around the given *Plane* (指定された「Plane」を中心に不均等にスケールします)      |
-| Boolean は大文字にします。ブール値の出力を参照する場合は、True と False を大文字にしてください。<ul><li>例: Returns *True* if the two values are different (2 つの値が異なる場合は「True」を返します)</li><li>例: Converts a string to all uppercase or all lowercase characters based on a *Boolean* parameter (「Boolean」のパラメータに基づいて、文字列をすべて大文字またはすべて小文字に変換します)      | Boolean を小文字にしないでください。ブール値の出力を参照する場合は、True と False を小文字にしないでください。<ul><li>例: Returns *true* if the two values are different (2 つの値が異なる場合は「true」を返します)</li><li>例: Converts a string to all uppercase characters or all lowercase characters based on a *boolean* parameter (「boolean」のパラメータに基づいて、文字列をすべて大文字またはすべて小文字に変換します)</li></ul>
+| 遵守事項                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | 禁止事項                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>説明文は三人称動詞で始めます。</p><ul><li>例: <em>Determines</em> if one geometry object intersects with another (あるジオメトリ オブジェクトが別のジオメトリ オブジェクトと交差するかどうかを「判断します」)</li></ul>                                                                                                                                                                                                                                                                                                                                                                                         | <p>二人称動詞や名詞から始めないでください。</p><ul><li>例: <em>Determine</em> if one geometry object intersects with another (あるジオメトリ オブジェクトが別のジオメトリ オブジェクトと交差するかどうかを「判断してください」)</li></ul>                                                                                                                                                                                                                                                      |
+| <p>「Gets」の使用は避け、「Returns」、「Creates」、あるいは他の説明的な動詞を使用します。</p><ul><li>例: <em>Returns</em> a Nurbs representation of a surface (サーフェスの NURBS 表現を「返します」)</li></ul>                                                                                                                                                                                                                                                                                                                                                                              | <p>「Get」や「Gets」は使用しないでください。表現の具体性に欠けること、また複数の意味を持つ可能性があります。</p><ul><li>例: <em>Gets</em> a Nurbs representation of the surface (サーフェスの NURBS 表現を「取ります」)</li></ul>                                                                                                                                                                                                                                       |
+| <p>入力に言及するときは、「given」または「input」を使用し、「specified」などに類する他の用語の使用を避けます。説明を単純化し、文字数を減らすために、可能な場合は「given」や「input」を省略します。</p><ul><li>例: Deletes the <em>given</em> file (「指定した」ファイルを削除します)</li><li>例: Projects a curve along the <em>given</em> projection direction onto <em>given</em> base geometry (「指定された」下部ジオメトリに、「指定された」投影方向に沿って曲線を投影します)</li></ul><p>入力を直接的に表現しない場合は、「specified」を使用することもできます。</p><ul><li>例: Writes text content to a file <em>specified</em> by the given path (指定のパスで「特定された」ファイルに文字コンテンツを書き込みます)</li></ul> | <p>入力に言及するときは、一貫性を確保するために「given」または「input」を使用し、「specified」などに類する他の用語の使用を避けます。明確にするために必要な場合を除き、同じ説明に「given」と「input」を混在させないでください。</p><ul><li>例: Deletes the <em>specified</em> file (「特定した」ファイルを削除します)</li><li>例: Projects an <em>input</em> curve along a <em>given</em> projection direction onto a <em>specified</em> base geometry (「特定の」下部ジオメトリに、「指定された」投影方向に沿って「入力」曲線を投影します)</li></ul> |
+| <p>任意の入力を参照するときは、「a」または「an」を使用します。わかりやすくするために、必要に応じて「a」や「an」の代わりに「the given」や「the input」を使用します。</p><ul><li>例: Sweeps <em>a</em> curve along the path curve (パス曲線に沿って曲線をスイープします)</li></ul>                                                                                                                                                                                                                                                                                                                                | <p>入力を最初に参照するときに「this」を使用しないでください。</p><ul><li>例: Sweeps <em>this</em> curve along the path curve (パス曲線に沿って「この」曲線をスイープします)</li></ul>                                                                                                                                                                                                                                                                             |
+| <p>ノード操作のターゲットである出力またはその他の名詞を最初に参照する場合は、「a」または「an」を使用します。「the」は「input」や「given」と組み合わせる場合にのみ使用します。</p><ul><li>例: Copies <em>a</em> file (ファイルをコピーします)</li><li>例: Copies <em>the given</em> file (「指定された」ファイルをコピーします)</li></ul>                                                                                                                                                                                                                                                                   | <p>ノード操作のターゲットである出力やその他の名詞を最初に参照するときは、「the」を単独で使用しないでください。</p><ul><li>例: Copies <em>the</em> file (「この」ファイルをコピーします)</li></ul>                                                                                                                                                                                                                                  |
+| <p>文の最初の単語と、名前や伝統的に大文字の名詞などの固有名詞は大文字にします。</p><ul><li>例: Returns the intersection of two <em>BoundingBoxes</em> (2 つの「BoundingBox」の交点を返します)</li></ul>                                                                                                                                                                                                                                                                                                                                     | <p>明確にするために必要でない限り、一般的なジオメトリ、オブジェクト、および概念は、大文字にしないでください。</p><ul><li>例: Scales non-uniformly around the given <em>Plane</em> (指定された「Plane」を中心に不均等にスケールします)</li></ul>                                                                                                                                                                                                                                          |
+| <p>Boolean は大文字にします。ブール値の出力を参照する場合は、True と False を大文字にしてください。</p><ul><li>例: Returns <em>True</em> if the two values are different (2 つの値が異なる場合は「True」を返します)</li><li>例: Converts a string to all uppercase or all lowercase characters based on a <em>Boolean</em> parameter (「Boolean」のパラメータに基づいて、文字列をすべて大文字またはすべて小文字に変換します)</li></ul>                                                                                                                                                                                                                                        | <p>Boolean を小文字にしないでください。ブール値の出力を参照する場合は、True と False を小文字にしないでください。</p><ul><li>例: Returns <em>true</em> if the two values are different (2 つの値が異なる場合は「true」を返します)</li><li>例: Converts a string to all uppercase characters or all lowercase characters based on a <em>boolean</em> parameter (「boolean」のパラメータに基づいて、文字列をすべて大文字またはすべて小文字に変換します)</li></ul>                                                                                       |
 
 #### Dynamo ノードの警告とエラー
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 ZeroTouchEssentials dll が読み込まれると、ライブラリに ZeroTouchEssentials ノードが追加されます。このオブジェクトは、`ByTwoDoubles` ノードを使用して作成できます。
 
-![ByTwoDoubles ノード](images/dyn-constructor.jpg)
+![ByTwoDoubles ノード](../../.gitbook/assets/dyn-constructor.jpg)
 
 ### Dynamo のジオメトリ タイプを使用する <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 曲線の長さを取得し、その値を倍にするノード。
 
-![曲線の入力](images/doublelength.png)
+![曲線の入力](../../.gitbook/assets/doublelength.png)
 
 > 1. このノードは、入力として Curve ジオメトリタイプを受け取ります。
 
@@ -285,7 +285,7 @@ namespace ZeroTouchEssentials
 * マイグレーション要素内で、名前の変更ごとに `<priorNameHint>...</priorNameHint>` 要素を作成します。
 * 名前の変更ごとに、`<oldName>...</oldName>` および `<newName>...</newName>` 要素を指定します。
 
-![マイグレーション ファイル](images/vs-migrations-file.jpg)
+![マイグレーション ファイル](../../.gitbook/assets/vs-migrations-file.jpg)
 
 > 1. 右クリックして、`Add > New Item` を選択します。
 > 2. `XML File` を選びます。

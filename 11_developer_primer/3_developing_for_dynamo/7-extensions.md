@@ -6,7 +6,7 @@
 
 DynamoSamples GitHub リポジトリの SampleViewExtension のサンプルに従って、グラフ内のアクティブなノードをリアルタイムで表示する、簡易なモードレス ウィンドウを作成するために必要な手順を説明します。ビュー拡張機能には、ウィンドウの UI を作成し、ビュー モデルに値をバインドする必要があります。
 
-![ビュー拡張機能ウィンドウ](images/dyn-viewextension.jpg)
+![ビュー拡張機能ウィンドウ](../../.gitbook/assets/dyn-viewextension.jpg)
 
 > 1. GitHub リポジトリの SampleViewExtension のサンプルに従って開発された、ビュー拡張機能ウィンドウ。
 
@@ -28,9 +28,9 @@ DynamoSamples リポジトリの場所: [https://github.com/DynamoDS/DynamoSampl
 
 まず、新規の `Class Library` プロジェクトを `SampleViewExtension` という名前で作成します。
 
-![新しいクラス ライブラリを作成する](images/vs-new-project-viewextension-1.jpg)
+![新しいクラス ライブラリを作成する](../../.gitbook/assets/vs-new-project-viewextension-1.jpg)
 
-![新しいプロジェクトを設定する](images/vs-new-project-viewextension-2.jpg)
+![新しいプロジェクトを設定する](../../.gitbook/assets/vs-new-project-viewextension-2.jpg)
 
 > 1. `File > New > Project` を選択して新しいプロジェクトを作成します。
 > 2. `Class Library` を選択します。
@@ -39,14 +39,14 @@ DynamoSamples リポジトリの場所: [https://github.com/DynamoDS/DynamoSampl
 
 このプロジェクトでは、2 つのクラスが必要です。1 つのクラスが `IViewExtension` を実装し、別のクラスは `NotificationObject.` `IViewExtension` を実装して、拡張機能がどのように配置、ロード、参照、および破棄するか、すべての情報を含めます。`NotificationObject` は、Dynamo と `IDisposable` での変更に関する通知を提供します。変更が発生すると、それに応じてカウントが更新されます。
 
-![ビュー拡張機能クラス ファイル](images/vs-viewextension-classes.jpg)
+![ビュー拡張機能クラス ファイル](../../.gitbook/assets/vs-viewextension-classes.jpg)
 
 > 1. `SampleViewExtension.cs` というクラス ファイルは `IViewExtension` を実装します。
 > 2. `SampleWindowViewMode.cs` というクラス ファイルは `NotificationObject` を実装します。
 
 `IViewExtension` を使用するには WpfUILibrary NuGet パッケージが必要です。このパッケージをインストールすると、Core、Services、および ZeroTouchLibrary パッケージが自動的にインストールされます。
 
-![ビュー拡張機能パッケージ](images/vs-viewextension-packages.jpg)
+![ビュー拡張機能パッケージ](../../.gitbook/assets/vs-viewextension-packages.jpg)
 
 > 1. WpfUILibrary を選択します。
 > 2. `Install` を選択して、従属パッケージをすべてインストールします。
@@ -133,7 +133,7 @@ namespace SampleViewExtension
 * `public class SampleViewExtension : IViewExtension` `SampleViewExtension` は `IViewExtension` インタフェースから継承され、メニュー項目の作成に必要なものがすべて提供されます。
 * `sampleMenuItem = new MenuItem { Header = "Show View Extension Sample Window" };` は MenuItem を作成し、`View` メニューに追加します。
 
-![メニュー項目](images/dyn-menuitem.jpg)
+![メニュー項目](../../.gitbook/assets/dyn-menuitem.jpg)
 
 > 1. メニュー項目
 
@@ -208,7 +208,7 @@ namespace SampleViewExtension
 
 拡張機能のコア ロジックを定義したため、ウィンドウの外観の詳細を `.xaml` ファイルで指定できるようになりました。単に必要なのは、`TextBlock` `Text` にバインドされている `ActiveNodeTypes` プロパティを介して文字列を表示する、簡易なウィンドウです。
 
-![ウィンドウを追加する](images/vs-window.jpg)
+![ウィンドウを追加する](../../.gitbook/assets/vs-window.jpg)
 
 > 1. プロジェクトを右クリックして次を選択します: `Add > New Item...`
 > 2. ウィンドウを作成するために変更するユーザ コントロール テンプレートを選択します。
@@ -259,7 +259,7 @@ namespace SampleViewExtension
 
 ビュー拡張機能は、構築して Dynamo に追加する準備が整いました。Dynamo には、`xml` ファイルが必要です。出力を `.dll` 拡張子として登録するためのファイルです。
 
-![新しい XML を追加する](images/vs-viewextension-xml.jpg)
+![新しい XML を追加する](../../.gitbook/assets/vs-viewextension-xml.jpg)
 
 > 1. プロジェクトを右クリックして次を選択します: `Add > New Item...`
 > 2. XML ファイルを選択します。
@@ -281,7 +281,7 @@ namespace SampleViewExtension
 
 最後の手順では、`SampleViewExtension_ViewExtensionDefinition.xml` ファイルを Dynamo の Core インストール フォルダ `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions` にある Dynamo のビュー拡張機能フォルダにコピーします。`extensions` と `viewExtensions` には別々のフォルダが存在することに注意が必要です。`xml` ファイルを誤ったフォルダに配置すると、実行時に正しくロードされない可能性があります。
 
-![拡張機能フォルダにコピーされた XML ファイル](images/fe-viewextension-xml.jpg)
+![拡張機能フォルダにコピーされた XML ファイル](../../.gitbook/assets/fe-viewextension-xml.jpg)
 
 > 1. Dynamo のビュー拡張機能フォルダにコピーされた `.xml` ファイル
 

@@ -1,13 +1,16 @@
-# カスタム パッケージ編成を定義する(Dynamo 2.0+) 
+# Dynamo 2.0+ のカスタム パッケージ編成を定義する
 
 パッケージで目的のレイアウトを実現する方法は、パッケージに含めるノードのタイプによって異なります。ノード モデル派生ノード、ZeroTouch ノード、およびカスタム ノードでは、分類を定義するプロセスが若干異なります。これらのノード タイプは同じパッケージ内で混在させることができますが、以下に概説する戦略の組み合わせが必要になります。
 
 ## NodeModel
+
 NodeModel ライブラリは、既定ではクラス構造に基づいて編成されます。
-```C#
+
+```c#
 namespace SampleLibraryUI.Examples
 ```
-```C#
+
+```c#
 // Class Attribute
 [NodeName("MyNodeModel")]
 public class MyNewNodeModel : NodeModel
@@ -21,13 +24,16 @@ public ButtonCustomNodeModel()
 }
 
 ```
+
 ノードは、Add-ons の次の場所にあります。
+
 ```
 SampleLibraryUI/Examples/MyNodeModel
 ```
 
 下に示すように、クラスまたはコンストラクタで NodeCategory 属性を使用してカテゴリをオーバーライドすることもできます。
-```C#
+
+```c#
 // Class Attribute
 [NodeCategory("NewSampleLibraryUI.Examples")]
 
@@ -41,6 +47,7 @@ public ButtonCustomNodeModel()
 ```
 
 これで、ノードは Add-ons の次の場所に配置されます。
+
 ```
 NewSampleLibraryUI/Examples/MyNodeModel
 ```
@@ -49,11 +56,11 @@ NewSampleLibraryUI/Examples/MyNodeModel
 
 ZeroTouch ライブラリも、既定ではクラス構造に基づいて編成されています。
 
-```C#
+```c#
 namespace MyZTLibrary
 ```
 
-```C#
+```c#
 public class Utilities
 {
     public double doubleValue(double num)
@@ -70,10 +77,11 @@ MyZTLibrary/Utilities/doubleValue
 ```
 
 また、Dynamo カスタマイズ XML ファイルを使用して、クラス構造の場所をオーバーライドすることもできます。
-- XML ファイルには適切な名前を付け、パッケージの `extra` フォルダに含める必要があります。
-    - `PackageName_DynamoCustomization.xml`
 
-```XML
+* XML ファイルには適切な名前を付け、パッケージの `extra` フォルダに含める必要があります。
+  * `PackageName_DynamoCustomization.xml`
+
+```xml
 <?xml version="1.0"?>
 <doc>
     <assembly>
@@ -99,16 +107,16 @@ MyZTLibrary/Utilities/doubleValue
 
 ## CustomNodes
 
-カスタム ノードは、ノードの作成時に指定した `Category Name` に基づいて編成されます(新しい[カスタム ノード]ダイアログ ボックスを使用)。  
+カスタム ノードは、ノードの作成時に指定した `Category Name` に基づいて編成されます(新しい[カスタム ノード]ダイアログ ボックスを使用)。
 
-**警告:**<br>
+**警告!**\
 ノード名またはカテゴリにドット表記を使用すると、ネストされたサブカテゴリが追加されます。`.` は、追加の階層を決定するための区切り文字として機能します。これは、Dynamo 2.0 のライブラリの新しい動作です。
 
-![カスタム ノード プロパティ](images/custom-node-properties.jpg)
+![カスタム ノード プロパティ](../../.gitbook/assets/custom-node-properties.jpg)
 
 カテゴリ名は、.dyf ファイル(XML または JSON)で後から更新できます。
 
-```JSON
+```json
 {
   "Uuid": "85066088-1616-40b1-96e1-c33e685c6948",
   "IsCustomNode": true,
@@ -120,7 +128,7 @@ MyZTLibrary/Utilities/doubleValue
   },...
 ```
 
-```XML
+```xml
 <Workspace Version="1.3.0.0000" X="100" Y="100" zoom="1.0000000" Description="This is an example custom nodes." Category="MyCustomNodes.Utilities.Actions" Name="doubleValue" ID="85066088-1616-40b1-96e1-c33e685c6948">
 ```
 
@@ -131,7 +139,8 @@ MyZTLibrary/Utilities/doubleValue
 **ZeroTouch** ノードは、パッケージの `bin` フォルダにある次のような `Namespace.Migrations.XML` ファイルを使用します。
 
 `MyZeroTouchLib.MyNodes.SayHello` から `MyZeroTouchLib.MyNodes.SayHelloRENAMED`
-```XML
+
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -144,7 +153,8 @@ MyZTLibrary/Utilities/doubleValue
 **NodeModel 派生ノード**は、次のようにクラスで `AlsoKnownAs` 属性を使用します。
 
 `SampleLibraryUI.Examples.DropDownExample` から `SampleLibraryUI.Examples.DropDownExampleRENAMED`
-```C#
+
+```c#
 namespace SampleLibraryUI.Examples
 {
     [NodeName("Drop Down Example")]

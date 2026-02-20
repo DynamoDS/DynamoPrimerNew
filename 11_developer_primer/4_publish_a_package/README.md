@@ -1,4 +1,4 @@
-# パッケージをパブリッシュする 
+# パッケージをパブリッシュする
 
 ### パッケージをパブリッシュする <a href="#publish-a-package" id="publish-a-package"></a>
 
@@ -12,7 +12,7 @@ Dynamo Package Manager は、Dynamo または Web ブラウザからアクセス
 
 * Dynamo では、Package Manager にはパッケージのインストール、パブリッシュ、および更新が含まれます。
 
-![パッケージを検索する](images/dynamopackagemanager.jpg)
+![パッケージを検索する](../../.gitbook/assets/dynamopackagemanager.jpg)
 
 > 1. パッケージをオンラインで検索する: `Packages > Search for a Package...`
 > 2. インストールされたパッケージを表示/編集する: `Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Dynamo Package Manager は、Dynamo または Web ブラウザからアクセス
 
 Dynamo を起動して、`Packages > Publish New Package...` を選択し、`Publish a Package` ウィンドウを開きます。
 
-![パッケージをパブリッシュする](images/dyn-publish-package-add-files.jpg)
+![パッケージをパブリッシュする](../../.gitbook/assets/dyn-publish-package-add-files.jpg)
 
 > 1. `Add file...` を選択して、パッケージに追加するファイルを参照します。
 > 2. NodeModel ケース スタディから、2 つの `.dll` ファイルを選択します。
@@ -32,7 +32,7 @@ Dynamo を起動して、`Packages > Publish New Package...` を選択し、`Pub
 
 パッケージの内容にファイルを追加したら、パッケージに名前を付け、説明とバージョンを記入します。Dynamo を使用してパッケージをパブリッシュすると、自動的に `pkg.json` ファイルが作成されます。
 
-![パッケージの設定](images/dyn-publish-package.jpg)
+![パッケージの設定](../../.gitbook/assets/dyn-publish-package.jpg)
 
 > パッケージをパブリッシュする準備が整いました。
 >
@@ -41,13 +41,13 @@ Dynamo を起動して、`Packages > Publish New Package...` を選択し、`Pub
 
 パッケージをパブリッシュすると、ノードは Dynamo ライブラリのカテゴリ `CustomNodeModel` の下で使用できるようになります。
 
-![Dynamo ライブラリ内のパッケージ](images/dyn-publish-package-library.jpg)
+![Dynamo ライブラリ内のパッケージ](../../.gitbook/assets/dyn-publish-package-library.jpg)
 
 > 1. 先ほど Dynamo ライブラリで作成したパッケージ
 
 パッケージをオンラインでパブリッシュする準備ができたら、Package Manager を開いて `Publish` を選択し、続いて `Publish Online` を選択します。
 
-![Package Manager でパッケージをパブリッシュする](images/dyn-publish-package-directory.jpg)
+![Package Manager でパッケージをパブリッシュする](../../.gitbook/assets/dyn-publish-package-directory.jpg)
 
 > 1. Dynamo がパッケージをどのようにフォーマットしたかを確認するには、「CustomNodeModel」の右側にある 3 つの垂直ドットをクリックし、[ルート フォルダを表示]を選択します。
 > 2. `Publish` を選択し、[Dynamo パッケージをパブリッシュ]ウィンドウで `Publish Online` を選択します。
@@ -57,7 +57,7 @@ Dynamo を起動して、`Packages > Publish New Package...` を選択し、`Pub
 
 パッケージの更新プロセスは、パブリッシュと同様です。Package Manager を開いて、更新する必要のあるパッケージの `Publish Version...` を選択し、上位バージョンを指定します。
 
-![パッケージのバージョンをパブリッシュする](images/dyn-publish-package-version.jpg)
+![パッケージのバージョンをパブリッシュする](../../.gitbook/assets/dyn-publish-package-version.jpg)
 
 > 1. `Publish Version` を選択し、新しいファイルを使用してルート フォルダ内の既存のパッケージを更新します。次に、ローカルにパブリッシュするか、オンラインでパブリッシュするかを選択します。
 
@@ -69,38 +69,38 @@ Package Manager Web クライアントを使用すると、バージョン管理
 
 次のリンクから Package Manager Web クライアントにアクセスできます: [https://dynamopackages.com/](https://dynamopackages.com)
 
-![Package Manager Web クライアント](images/packagemanager-browser.jpg)
+![Package Manager Web クライアント](../../.gitbook/assets/packagemanager-browser.jpg)
 
-##### パッケージの詳細を更新する
+**パッケージの詳細を更新する**
 
-作成者は、次の手順に従って、パッケージの説明、Web サイト リンク、およびリポジトリ リンクを編集できます。  
+作成者は、次の手順に従って、パッケージの説明、Web サイト リンク、およびリポジトリ リンクを編集できます。
 
-> 1. [**マイ パッケージ**]でパッケージを選択し、[**パッケージ詳細を編集**]をクリックします。  
-> 2. それぞれのフィールドを使用して、[**Web サイト**]および[**リポジトリ**]のリンクを追加または変更します。  
-> 3. 必要に応じて、[**パッケージの説明**]を更新します。  
-> 4. [**変更を保存**]をクリックして更新を適用します。  
+> 1. [**マイ パッケージ**]でパッケージを選択し、[**パッケージ詳細を編集**]をクリックします。
+> 2. それぞれのフィールドを使用して、[**Web サイト**]および[**リポジトリ**]のリンクを追加または変更します。
+> 3. 必要に応じて、[**パッケージの説明**]を更新します。
+> 4. [**変更を保存**]をクリックして更新を適用します。
 
- **注**: サーバーの更新には時間がかかるため、Dynamo 内の Package Manager で更新が反映されるまでに最大 15 分かかる場合があります。この遅れを減らすための取り組みが進行中です。  
+**注**: サーバーの更新には時間がかかるため、Dynamo 内の Package Manager で更新が反映されるまでに最大 15 分かかる場合があります。この遅れを減らすための取り組みが進行中です。
 
- ![パブリッシュされたパッケージに関するパッケージの詳細を更新するための新しい UI](images/Package-Manager_Image_5.png)
+![パブリッシュされたパッケージに関するパッケージの詳細を更新するための新しい UI](../../.gitbook/assets/Package-Manager_Image_5.png)
 
-##### パブリッシュされたパッケージ バージョンの互換性情報を編集する  
+**パブリッシュされたパッケージ バージョンの互換性情報を編集する**
 
-互換性情報は、以前に公開されたパッケージ バージョンについて遡って更新できます。次の手順に従います。  
+互換性情報は、以前に公開されたパッケージ バージョンについて遡って更新できます。次の手順に従います。
 
-![パブリッシュされたパッケージの互換性情報を編集する - ステップ 1](images/Package-Manager_Image_6.png)
+![パブリッシュされたパッケージの互換性情報を編集する - ステップ 1](../../.gitbook/assets/Package-Manager_Image_6.png)
 
-**ステップ 1：**  
+**ステップ 1：**
 
-1. 更新するパッケージ バージョンをクリックします。  
-2. [**依存先**]のリストには、パッケージの依存先パッケージが自動的に入力されます。  
-3. [**互換性**]の横にある鉛筆アイコンをクリックして、[**互換性情報を編集**]ワークフローを開きます。  
+1. 更新するパッケージ バージョンをクリックします。
+2. [**依存先**]のリストには、パッケージの依存先パッケージが自動的に入力されます。
+3. [**互換性**]の横にある鉛筆アイコンをクリックして、[**互換性情報を編集**]ワークフローを開きます。
 
-**ステップ 2：**  
+**ステップ 2：**
 
 以下のフローチャートに従い、下の表を参照して、パッケージに最適なオプションの理解に役立ててください。
 
-![[互換性情報を編集]ワークフローで選択するオプション](images/Package-Manager_Image_7.png)
+![[互換性情報を編集]ワークフローで選択するオプション](../../.gitbook/assets/Package-Manager_Image_7.png)
 
 いくつかの例でシナリオを確認しましょう。
 
@@ -110,8 +110,8 @@ Package Manager Web クライアントを使用すると、バージョン管理
 
 **パッケージ例 #3** \- Mesh Toolkit: このパッケージは、ホスト依存関係を持たないジオメトリ ノードのコレクションである Dynamo Core パッケージです。したがって、この場合の理想的なオプションは、オプション 3 です。パッケージは、Dynamo およびバージョン範囲や個々のバージョン リストと一致するすべてのホスト環境で互換性ありと表示されます。
 
-![[互換性情報を編集]オプション](images/Package-Manager_Image_8.png)
+![[互換性情報を編集]オプション](../../.gitbook/assets/Package-Manager_Image_8.png)
 
 選択したオプションに応じて、下の画像に示すように、Dynamo やホスト固有のフィールドがポップアップ表示されます。
 
-![互換性情報を編集 - ステップ 2](images/Package-Manager_Image_9.png)
+![互換性情報を編集 - ステップ 2](../../.gitbook/assets/Package-Manager_Image_9.png)

@@ -4,7 +4,7 @@
 
 このガイドは、Dynamo で Zero-Touch ノードを作成する方法から、拡張機能を構築する方法まで、C# 開発のさまざまな可能性の概要を説明することを目的としています。
 
-![GitHub の Dynamo ソース](../1-introduction/images/dynamogithub.jpg)
+![GitHub の Dynamo ソース](../../.gitbook/assets/dynamogithub.jpg)
 
 > GitHub の Dynamo ソース
 
@@ -40,7 +40,7 @@
 
 **DesignScript 言語ガイド** DesignScript を記述するための PDF 形式のガイド
 
-[PDF](https://dynamobim.org/wp-content/uploads/forum-assets/colin-mccroneautodesk-com/07/10/Dynamo\_language\_guide\_version\_1.pdf)
+[PDF](https://dynamobim.org/wp-content/uploads/forum-assets/colin-mccroneautodesk-com/07/10/Dynamo_language_guide_version_1.pdf)
 
 #### このガイドに対する変更を提案したい場合<a href="#how-can-i-suggest-changes-to-this-guide" id="how-can-i-suggest-changes-to-this-guide"></a>
 

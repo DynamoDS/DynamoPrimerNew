@@ -2,6 +2,4 @@
 
 このセクションでは、Dynamo の理解をさらに深めるための追加のリソースを紹介します。さらに、重要なノードの索引、便利なパッケージのコレクション、この手引で使用しているサンプル ファイルのリポジトリも記載します。他にも必要なリソースがある場合は、このセクションに追加してください。[Dynamo Primer](https://github.com/DynamoDS/DynamoPrimer) は、オープン ソースのドキュメントです。
 
- 
-
-![](./images/a-cover.png)
+![](../.gitbook/assets/a-cover.png)

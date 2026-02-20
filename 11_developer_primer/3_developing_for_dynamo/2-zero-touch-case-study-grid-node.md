@@ -4,26 +4,26 @@ Visual Studio プロジェクトを開始できたので、セルの矩形グリ
 
 この例では、Zero-Touch ノードを作成する際に注意するべき機能と概念を紹介します。カスタム ノードをビルドして Dynamo に追加した後は、「Zero-Touch の詳細を確認する」ページの、「既定の入力値」、「複数の値を返す」、「ドキュメント」、「オブジェクト」、「Dynamo のジオメトリ タイプを使用する」、および「マイグレーション」セクションで詳細を確認してください。
 
-![矩形グリッドのグラフ](images/cover-image.jpg)
+![矩形グリッドのグラフ](../../.gitbook/assets/cover-image.jpg)
 
 ### カスタムの矩形グリッド ノード <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 グリッド ノードのビルドを開始するには、新しい Visual Studio クラス ライブラリ プロジェクトを作成します。プロジェクトの設定方法の詳細な説明については、「スタートアップ」ページを参照してください。
 
-![Visual Studio で新しいプロジェクトを作成する](images/vs-new-project-1.jpg)
+![Visual Studio で新しいプロジェクトを作成する](../../.gitbook/assets/vs-new-project-1.jpg)
 
-![Visual Studio で新しいプロジェクトを構成する](images/vs-new-project-2.jpg)
+![Visual Studio で新しいプロジェクトを構成する](../../.gitbook/assets/vs-new-project-2.jpg)
 
 > 1. プロジェクト タイプとして `Class Library` を選択します
 > 2. プロジェクトに `CustomNodes` という名前を付けます
 
 ジオメトリを作成するため、適切な NuGet パッケージを参照する必要があります。NuGet パッケージ マネージャから ZeroTouchLibrary パッケージをインストールします。このパッケージは、`using Autodesk.DesignScript.Geometry;` ステートメントに必要です。
 
-![ZeroTouchLibrary パッケージ](images/vs-nugetpackage.jpg)
+![ZeroTouchLibrary パッケージ](../../.gitbook/assets/vs-nugetpackage.jpg)
 
 > 1. ZeroTouchLibrary パッケージを参照します。
-> 2. このノードを Dynamo Studio の現在のビルド(1.3)で使用します。これに一致するパッケージ バージョンを選択します。
-> 3. クラス ファイルの名前を `Grids.cs` に変更しています。
+> 2. このノードを Dynamo の現在のビルドで使用します。Dynamo のバージョンと一致するパッケージのバージョンを選択します。
+> 3. クラス ファイルの名前が `Grids.cs` に変更されていることにもご注意ください。
 
 次に、RectangularGrid メソッドを配置する名前空間とクラスを設定する必要があります。Dynamo では、メソッド名とクラス名に基づいてノードに名前が付けられます。これを Visual Studio にコピーする必要はまだありません。
 
@@ -84,13 +84,13 @@ namespace CustomNodes
 
 プロジェクトが次のように表示されている場合は、先に進んで `.dll` をビルドしてみます。
 
-![DLL をビルドする](images/vs-grids.jpg)
+![DLL をビルドする](../../.gitbook/assets/vs-grids.jpg)
 
 > 1. Build > Build Solution を選択します。
 
 プロジェクトの `bin` フォルダに `.dll` があるか確認します。正常にビルドされている場合は、Dynamo に `.dll` を追加できます。
 
-![Dynamo のカスタム ノード](images/RectangularGrid-Dynamo.jpg)
+![Dynamo のカスタム ノード](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
 
 > 1. Dynamo ライブラリ内のカスタム RectangularGrids ノード。
 > 2. キャンバス上のカスタム ノード。
@@ -100,7 +100,7 @@ namespace CustomNodes
 
 上記の例では、`RectangularGrids` メソッド以外の定義があまりないかなり単純なノードを作成しました。しかし、入力ポートのツールチップを作成したり、標準の Dynamo ノードと同様にノードの概要を設定することができます。これらの機能をカスタム ノードに追加すると、特にライブラリで検索する場合に、そのカスタム ノードを簡単に使用できるようになります。
 
-![入力のツールチップ](images/nodemodification.png)
+![入力のツールチップ](../../.gitbook/assets/nodemodification.png)
 
 > 1. 既定の入力値
 > 2. xCount 入力のツールチップ
@@ -155,7 +155,7 @@ namespace CustomNodes
 
 ツールチップを追加するには、プロジェクト フォルダに xml ファイルが必要です。オプションを有効にすると、Visual Studio で `.xml` が自動的に生成されます。
 
-![XML ドキュメントを有効にする](images/vs-xml.jpg)
+![XML ドキュメントを有効にする](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. ここで XML ドキュメント ファイルを有効にして、ファイル パスを指定します。これにより、XML ファイルが生成されます。
 

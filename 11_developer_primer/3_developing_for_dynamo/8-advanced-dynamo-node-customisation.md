@@ -49,7 +49,7 @@ LogWarningMessageEvents.OnLogWarningMessage("Your warning message here.");
 
 この例では、以前の「**Zero-Touch ケース スタディ - グリッド ノード**」で作成したカスタム ノードに基づいてビルドします。`xCount` 入力と `yCount` 入力に基づいて長方形のグリッドを生成する `RectangularGrid` という名前のメソッドです。入力が無効かどうかをテストし、次に `OnLogWarningMessage` を使用して警告をログに記録し、処理を停止する手順を説明します。
 
-![OnLogWarningMessage の例 1](images/onlogwarningmessage-example-1.png)
+![OnLogWarningMessage の例 1](../../.gitbook/assets/onlogwarningmessage-example-1.png)
 
 **入力の検証に `OnLogWarningMessage` を使用する**
 
@@ -137,7 +137,7 @@ namespace CustomNodes
 
 点のリストが必要なメソッドであるにも関わらず、ユーザが空または null のリストを渡した場合は、`OnLogWarningMessage` を使用して問題を通知できます。
 
-![OnLogWarningMessage の例 2](images/onlogwarningmessage-example-2.png)
+![OnLogWarningMessage の例 2](../../.gitbook/assets/onlogwarningmessage-example-2.png)
 
 ```
 public static Polygon CreatePolygonFromPoints(List<Point> points)
@@ -164,7 +164,7 @@ public static Polygon CreatePolygonFromPoints(List<Point> points)
 
 ファイル・パスを処理するノードでは、特定のファイル・タイプのみが許可されるようにしたい場合があります。サポートされていないファイル タイプが検出された場合は、警告をログに記録します。
 
-![OnLogWarningMessage の例 3](images/onlogwarningmessage-example-3.png)
+![OnLogWarningMessage の例 3](../../.gitbook/assets/onlogwarningmessage-example-3.png)
 
 ```
 public static void ProcessFile(string filePath)
@@ -226,7 +226,7 @@ LogWarningMessageEvents.OnLogInfoMessage("Your info message here.");
 
 この例では、以前の「**Zero-Touch ケース スタディ - グリッド ノード**」で作成したカスタム ノードに基づいてビルドします。`xCount` 入力と `yCount` 入力に基づいて長方形のグリッドを生成する `RectangularGrid` という名前のメソッドです。入力が無効かどうかをテストし、ノードの実行が完了した後に、`OnLogInfoMessage` を使用して情報を提供する方法について説明します。
 
-![OnLogInfoMessage の例 1](images/onloginfomessage-example-1.png)
+![OnLogInfoMessage の例 1](../../.gitbook/assets/onloginfomessage-example-1.png)
 
 **入力の検証に `OnLogInfoMessage` を使用する**
 
@@ -309,7 +309,7 @@ namespace CustomNodes
 
 点のリストを処理するノードを作成するときに、正常に処理された点の数をログに記録したい場合があります。これは、大規模なデータセットに役立ちます。
 
-![OnLogInfoMessage の例 2](images/onloginfomessage-example-2.png)
+![OnLogInfoMessage の例 2](../../.gitbook/assets/onloginfomessage-example-2.png)
 
 ```
 public static List<Point> ProcessPoints(List<Point> points)
@@ -339,7 +339,7 @@ public static List<Point> ProcessPoints(List<Point> points)
 
 場合によっては、ノードがアクションを完了するために使用した入力パラメータを確認すると有効なことがあります。たとえば、ノードがデータをファイルにエクスポートする場合、ファイル名とパスをログに記録することで、正しいファイルが使用されたことをユーザに知らせることができます。
 
-![OnLogInfoMessage の例 3](images/onloginfomessage-example-3.png)
+![OnLogInfoMessage の例 3](../../.gitbook/assets/onloginfomessage-example-3.png)
 
 ```
 public static void ExportData(string filePath, List<string> data)
@@ -365,7 +365,7 @@ public static void ExportData(string filePath, List<string> data)
 
 これまで、Dynamo では、パッケージ作成者がノードのドキュメントを提供する方法に制限がありました。カスタム ノードの作成者は、ノードのツールチップに表示する簡単な説明のみが許可されていたり、大量の注釈が付いたサンプル グラフを含むパッケージを出荷するように制限されていました。
 
-![ノード ツールチップの説明](images/customnodedocumentation-overloads.png)
+![ノード ツールチップの説明](../../.gitbook/assets/customnodedocumentation-overloads.png)
 
 ### 新しい方式
 
@@ -399,11 +399,11 @@ Markdown ファイルを Dynamo 内に表示するには、次の手順に従い
 
 Dynamo では、ドキュメント ブラウザのビュー拡張機能を使用してノード ドキュメントを表示します。ノードのドキュメントを開くには、ノードを右クリックして[ヘルプ]を選択します。これによりドキュメント ブラウザが開き、そのノードに関連付けられている Markdown があれば表示されます。
 
-![ドキュメント ブラウザ](images/customnodedocumentation-no-documentation-provided.png)
+![ドキュメント ブラウザ](../../.gitbook/assets/customnodedocumentation-no-documentation-provided.png)
 
 ドキュメント ブラウザに表示されるドキュメントは 2 つの部分から構成されています。1 つ目は `Node Info` セクションで、入力/出力、ノード カテゴリ、ノード名/名前空間、ノードの簡単な説明など、ノードから抽出された情報から自動生成されます。2 つ目には、ノードをドキュメント化するために提供される Markdown ファイルであるカスタム ノードのドキュメントが表示されます。
 
-![カスタム ノードのドキュメント](images/customnodedocumentation-custom-node-documentation.png)
+![カスタム ノードのドキュメント](../../.gitbook/assets/customnodedocumentation-custom-node-documentation.png)
 
 #### パッケージのドキュメント フォルダ
 
@@ -417,13 +417,13 @@ Dynamo のノードにドキュメント ファイルを追加するには、パ
 
 ノード(同じ名前で入力が異なるノード)のオーバーロードがあるといった特殊なケースにおいては、ノードの名前空間の後に入力名を `()` で囲んで追加する必要があります。たとえば、組み込みノード `Geometry.Translate` に複数のオーバーロードがあるとします。この場合、以下に示すノードの Markdown ファイルの名前は次のようになります。`Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction).md` `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction,distance).md`
 
-![ノードのオーバーロード](images/customnodedocumentation-overloads.png)
+![ノードのオーバーロード](../../.gitbook/assets/customnodedocumentation-overloads.png)
 
 #### Dynamo で Markdown ファイルを開いているときに修正する
 
 ドキュメント ファイルを簡単に変更できるように、ドキュメント ブラウザには、開いているドキュメント ファイルに対するファイル ウォッチャーが実装されています。これにより、Markdown ファイルに変更を加え、その変更を Dynamo ですぐに確認できます。
 
-![ホット リローディング](images/customnodedocumentation-hot-reload.gif)
+![ホット リローディング](../../.gitbook/assets/customnodedocumentation-hot-reload.gif)
 
 新しいドキュメント ファイルの追加は、Dynamo が開いているときにも行うことができます。新しい Markdown ファイルを `/doc` フォルダに追加し、ドキュメント化されたノードに対応する名前を付けるだけです。
 
@@ -441,9 +441,9 @@ Dynamo の Zero-Touch ノードのカスタム アイコンを使用すると、
 
 まず、Zero-Touch ノード用の Visual Studio クラス ライブラリ(.NET Framework)プロジェクトを作成します。プロジェクトがまだ作成されていない場合は、「**スタートアップ**」セクションを参照して、プロジェクトを作成するための手順ごとの説明を確認してください。
 
-![新しい Visual Studio プロジェクトを作成する](images/vs-new-project-1.jpg)
+![新しい Visual Studio プロジェクトを作成する](../../.gitbook/assets/vs-new-project-1.jpg)
 
-![Visual Studio で新しいプロジェクトを構成する](images/zerotouchicons-configure-new-project.jpg)
+![Visual Studio で新しいプロジェクトを構成する](../../.gitbook/assets/zerotouchicons-configure-new-project.jpg)
 
 アイコンは既存のノードにのみ追加できるため、機能する Zero-Touch ノードが少なくとも 1 つあることを確認してください。ガイダンスについては、「**Zero-Touch ケース スタディ - グリッド ノード**」を参照してください。
 
@@ -475,36 +475,34 @@ Dynamo の Zero-Touch ノードのカスタム アイコンを使用すると、
 
 * [**ソリューション エクスプローラ**]でプロジェクトを右クリックします。
 
-![新規アイテムを追加する](images/zerotouchicons-add-resources-file-1.jpg)
+![新規アイテムを追加する](../../.gitbook/assets/zerotouchicons-add-resources-file-1.jpg)
 
 * **[追加] > [新規アイテム]** に移動し、[ **リソース ファイル** ]を選択します。
 
-![リソース ファイルを追加する](images/zerotouchicons-add-resources-file-2.jpg)
+![リソース ファイルを追加する](../../.gitbook/assets/zerotouchicons-add-resources-file-2.jpg)
 
 * ファイル名を `<ProjectName>Images.resx` にします。たとえば、`ZeroTouchNodeIconsImages.resx` などです。
 
 2. **カスタム ツールのプロパティをクリア**する:
    * [**ソリューション エクスプローラ**]でリソース ファイルを選択します。
    * [**プロパティ**]パネルで、`ResXFileCodeGenerator` 値を削除して `Custom Tool` フィールドをクリアします。
-
 3. **[ビルド アクション]を「なし」に設定する**
-    * このリソースはもう少し後で構築するため、自動的に構築する必要はありません。
+   * このリソースはもう少し後で構築するため、自動的に構築する必要はありません。
 
-![カスタム ツール プロパティをクリーンアップする](images/zerotouchicons-custom-tool-property-update.png)
+![カスタム ツール プロパティをクリーンアップする](../../.gitbook/assets/zerotouchicons-custom-tool-property-update.png)
 
 > _注: [カスタム ツール]フィールドをクリアしないと、Visual Studio によってリソース名のピリオドがアンダースコアに変換されます。ビルドする前に、リソース名にアンダースコアではなくクラス名を区切るピリオドが含まれていることを確認してください。_
 
 #### 手順 4: 画像をリソースとして追加する
 
 1. 作成したリソース ファイルをダブルクリックします。
-    * [+]ボタンを使用して、画像を 1 つずつ追加します 
-    * リソース タイプを**[ファイル]**に設定します
-    * 画像ファイルの場所を参照し、**大**および**小**のノード アイコンを追加します。
+   * [+]ボタンを使用して、画像を 1 つずつ追加します
+   * リソース タイプを**[ファイル]**に設定します
+   * 画像ファイルの場所を参照し、**大**および**小**のノード アイコンを追加します。
 
-![リソースを追加する...](images/zerotouchicons-open-resource-editor-update.png)
+![リソースを追加する...](../../.gitbook/assets/zerotouchicons-open-resource-editor-update.png)
 
 > _注: 画像を**リソース** フォルダや**大**および**小**のサブフォルダに整理する必要はありませんが、リソースを適切に整理しておくことをお勧めします。_
-
 
 #### 手順 5: プロジェクトを SDK スタイルに変換する(旧プロジェクトの場合)
 
@@ -512,26 +510,26 @@ Dynamo の Zero-Touch ノードのカスタム アイコンを使用すると、
 
 1. Visual Studio の **[拡張機能] > [拡張機能の管理]** メニューから `.NET Upgrade Assistant` 拡張機能をインストールします。
 
-![[拡張機能を管理]](images/zerotouchicons-manage-extensions-update.png)
+![[拡張機能を管理]](../../.gitbook/assets/zerotouchicons-manage-extensions-update.png)
 
-![.NET アップグレード アシスタントをインストールする](images/zerotouchicons-net-upgrade-assistant.jpg)
+![.NET アップグレード アシスタントをインストールする](../../.gitbook/assets/zerotouchicons-net-upgrade-assistant.jpg)
 
 2. [**ソリューション エクスプローラ**]でプロジェクトを右クリックし、[**アップグレード] > [プロジェクトを SDK スタイルに変換**]を選択します。
 
-![プロジェクトをアップグレードする](images/zerotouchicons-upgrade-project.jpg)
+![プロジェクトをアップグレードする](../../.gitbook/assets/zerotouchicons-upgrade-project.jpg)
 
-![SDK スタイルに変換する](images/zerotouchicons-convert-to-sdk-style.jpg)
+![SDK スタイルに変換する](../../.gitbook/assets/zerotouchicons-convert-to-sdk-style.jpg)
 
 3. 変換が完了するのを待ちます。
 
-![アップグレード完了](images/zerotouchicons-upgrade-complete.jpg)
+![アップグレード完了](../../.gitbook/assets/zerotouchicons-upgrade-complete.jpg)
 
 #### 手順 6: リソースを埋め込むためのビルド後スクリプトを追加する
 
 1. プロジェクトをロード解除します。
    * [**ソリューション エクスプローラ**]でプロジェクトを右クリックし、[**プロジェクトをロード解除**]を選択します。
 
-![プロジェクトをロード解除する](images/zerotouchicons-unload-project.jpg)
+![プロジェクトをロード解除する](../../.gitbook/assets/zerotouchicons-unload-project.jpg)
 
 2. `.csproj` ファイルを編集します。
    * `</ItemGroup>` と `</Project>` の間に次の `<Target>` 要素を追加します。
@@ -552,26 +550,26 @@ Dynamo の Zero-Touch ノードのカスタム アイコンを使用すると、
 	</Target>
 ```
 
-![ビルド後のコードを追加する](images/zerotouchicons-after-build.jpg)
+![ビルド後のコードを追加する](../../.gitbook/assets/zerotouchicons-after-build.jpg)
 
 1. `ZeroTouchNodeIcons` のすべてのインスタンスをプロジェクト名に置き換えます。
 2. プロジェクトを再ロードします。
    * ロードされていないプロジェクトを右クリックし、[**プロジェクトを再ロード**]を選択します。
 
-![プロジェクトを再ロード](images/zerotouchicons-reload-project.jpg)
+![プロジェクトを再ロード](../../.gitbook/assets/zerotouchicons-reload-project.jpg)
 
 #### 手順 7: .dll をビルドして Dynamo にロードする
 
 1. プロジェクトをビルドします。
    * ビルド後のスクリプトを追加したら、Visual Studio でプロジェクトをビルドします。
 
-![ビルド ソリューション](images/zerotouchicons-build-solution.jpg)
+![ビルド ソリューション](../../.gitbook/assets/zerotouchicons-build-solution.jpg)
 
 2. 出力ファイルを確認します。
    * `.dll` と `.customization.dll` が `bin` フォルダにあることを確認します。
 3. `.dll` を Dynamo に追加します。
    * Dynamo では、[ライブラリを読み込む]ボタンを使用して、.dll を Dynamo に読み込みます。
 
-![[ライブラリを読み込む]ボタン](images/zerotouchicons-icon-in-dynamo.jpg)
+![[ライブラリを読み込む]ボタン](../../.gitbook/assets/zerotouchicons-icon-in-dynamo.jpg)
 
 4. カスタム ノードがそれぞれのアイコンとともに表示されるはずです。

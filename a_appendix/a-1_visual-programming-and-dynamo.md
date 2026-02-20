@@ -8,7 +8,7 @@
 
 **アルゴリズム**は非常に便利な手法ですが、誤って理解される場合もあります。アルゴリズムは、予想もできない素晴らしいものを生み出す可能性を秘めていますが、決して魔法ではありません。実際に、アルゴリズム自体は非常に単純なものです。具体的な例として、折り鶴について考えてみましょう。最初に正方形の紙を用意します。これを一連の手順に従って折っていくと、折り鶴が出来上がります。この場合、紙が「入力」、折る手順が「処理」、出来上がった折り鶴が「出力」になります。
 
-![折り鶴](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
+![折り鶴](https://primer.dynamobim.org/01_Introduction/images/1-1/00-OrigamiCrane.png)
 
 では、折り鶴のどこにアルゴリズムがあるのでしょうか。アルゴリズムは一連の抽象的な手順であり、テキストとグラフィックスのどちらでも表現することができます。
 
@@ -30,7 +30,7 @@
 
 **グラフィックスによる手順の説明:**
 
-![折り鶴の手順](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![折り鶴の手順](https://primer.dynamobim.org/01_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
 #### プログラミングとは<a href="#programming-defined" id="programming-defined"></a>
 
@@ -42,7 +42,7 @@
 
 > 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> すべてのサンプルファイルの一覧については、付録を参照してください。
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
 {% file src="../.gitbook/assets/Visual Programming - Circle Through Point.dyn" %}
 
@@ -52,7 +52,7 @@
 
 **ビジュアル プログラミング:**
 
-![](./images/a-1/visualProgramming(2).png)
+\![](<../.gitbook/assets/visualProgramming (2).png>)
 
 **テキスト プログラム:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 このアルゴリズムの結果は、次のようになります。
 
-![](./images/a-1/visualProgramming(1).png)
+\![](<../.gitbook/assets/visualProgramming (1).png>)
 
 このように、ビジュアル プログラミングには、視覚的に理解しやすいという特徴があります。そのため、最初から簡単にプログラミングを実行することができ、設計者にとっても便利な仕様になっています。Dynamo はビジュアル プログラミングの範疇に分類されますが、アプリケーション内でテキストを使用してプログラミングを行うこともできます。これについては、後で説明します。
