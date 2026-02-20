@@ -1,68 +1,62 @@
-# Revit 连接
+# Revit 連接
 
-![](images/1/revitconnectionlink.jpg)
+\![](<../.gitbook/assets/revit connection link.jpg>)
 
-适用于 Revit 的 Dynamo 使用图形算法编辑器的数据和逻辑环境扩展建筑信息模型。它的灵活性与强大的 Revit 数据库相结合，可以提供全新的 BIM 视角。
+適用於 Revit 的 Dynamo 使用圖形演算法編輯器的資料和邏輯環境來延伸建築資訊模型。其靈活性以及功能強大的 Revit 資料庫，為 BIM 提供了新視角。
 
-本章着重介绍适用于 BIM 的 Dynamo 工作流。各部分主要基于练习，因为直接进入项目是熟悉 BIM 图形算法编辑器的最佳方式。首先，我们来谈谈程序的开头部分。
+本章的重點在於 BIM 的 Dynamo 工作流程。各小節主要基於練習，因為直接開始處理專案是熟悉 BIM 圖形算法編輯器的最佳方法。但是，首先讓我們來瞭解程式的開頭。
 
-### Revit 版本兼容性
+### Revit 版本相容性
 
-由于 Revit 和 Dynamo 都在不断发展，您可能会注意到，您使用的 Revit 版本与您计算机上安装的适用于 Revit 的 Dynamo 版本不兼容。下面概述了哪些适用于 Revit 的 Dynamo 版本与 Revit 兼容。
+隨著 Revit 和 Dynamo 兩者持續開發，您可能會發現，您使用的 Revit 版本與安裝在您電腦上的適用於 Revit 的 Dynamo 版本不相容。以下概述哪些版本的適用於 Revit 的 Dynamo 與 Revit 相容。
 
-| Revit 版本 | 第一个稳定的 Dynamo 版本                                                       | 上次支持的适用于 Revit 的 Dynamo 版本                                                                                                                                |
-| ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2013          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe) | [0.6.3](https://downloads.dynamobuilds.com/DynamoInstall0.6.3.exe)                                                                                      |
-| 2014          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe) | [0.8.2](https://downloads.dynamobuilds.com/DynamoInstall0.8.2.exe)                                                                                      |
-| 2015          | [0.7.1](https://downloads.dynamobuilds.com/DynamoInstall0.7.1.exe) | [1.2.1](https://downloads.dynamobuilds.com/DynamoInstall1.2.1.exe)                                                                                      |
-| 2016          | [0.7.2](https://downloads.dynamobuilds.com/DynamoInstall0.7.2.exe) | [1.3.2](https://downloads.dynamobuilds.com/DynamoInstall1.3.2.exe)                                                                                      |
-| 2017          | [0.9.0](https://downloads.dynamobuilds.com/DynamoInstall0.9.0.exe) | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
-| 2018          | [1.3.0](https://downloads.dynamobuilds.com/DynamoInstall1.3.0.exe) | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
-| 2019          | [1.3.3](https://downloads.dynamobuilds.com/DynamoInstall1.3.3.exe) | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.4](https://downloads.dynamobuilds.com/DynamoInstall2.0.4.exe) |
-| 2020+         | 2.1.0 - Revit 2020+ 现在包含 Dynamo，并像 Revit 一样接收更新。)      | 不适用                                                                                                                                                                    |
+| Revit 版本 | 第一個穩定的 Dynamo 版本                                                  | 最後一個支援的適用於 Revit 的 Dynamo 版本                                                                                                 |
+| ------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 2013          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe)           | [0.6.3](https://downloads.dynamobuilds.com/DynamoInstall0.6.3.exe)                                                                      |
+| 2014          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe)           | [0.8.2](https://downloads.dynamobuilds.com/DynamoInstall0.8.2.exe)                                                                      |
+| 2015          | [0.7.1](https://downloads.dynamobuilds.com/DynamoInstall0.7.1.exe)           | [1.2.1](https://downloads.dynamobuilds.com/DynamoInstall1.2.1.exe)                                                                      |
+| 2016          | [0.7.2](https://downloads.dynamobuilds.com/DynamoInstall0.7.2.exe)           | [1.3.2](https://downloads.dynamobuilds.com/DynamoInstall1.3.2.exe)                                                                      |
+| 2017          | [0.9.0](https://downloads.dynamobuilds.com/DynamoInstall0.9.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
+| 2018          | [1.3.0](https://downloads.dynamobuilds.com/DynamoInstall1.3.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
+| 2019          | [1.3.3](https://downloads.dynamobuilds.com/DynamoInstall1.3.3.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.4](https://downloads.dynamobuilds.com/DynamoInstall2.0.4.exe) |
+| 2020+         | 2.1.0 - Revit 2020+ 現在包含 Dynamo，而且會像 Revit 一樣收到更新。 | N/A                                                                                                                                     |
 
-### Dynamo 的历史
+### Dynamo 的歷史
 
-![历史记录](images/1/earlyScreenshot.jpg)
+![歷史](../.gitbook/assets/earlyScreenshot.jpg)
 
-该项目最初非常简单，但凭借专门的开发者团队和充满激情的社区，已经发生了很大变化。
+在專注投入的開發人員團隊和充滿熱情的社群的努力下，專案從一開始的微不足道獲得了長足的發展。
 
-最初，Dynamo 旨在简化 Revit 中的 AEC 工作流。尽管 Revit 为每个项目创建了一个强大的数据库，但普通用户可能难以在界面约束之外访问此信息。Revit 托管全面的 API（应用程序程序界面），使第三方开发者可以创建自定义工具。程序员多年来一直在使用此 API，但并非所有人都可以访问基于文本的脚本。Dynamo 希望通过易得到的图形算法编辑器使 Revit 数据大众化。
+Dynamo 最初建立的目的是為了簡化 Revit 中的 AEC 工作流程。雖然 Revit 為每個專案建立了功能強大的資料庫，但對於普通使用者來說，在介面約束外存取此資訊可能很困難。Revit 提供了全面的 API (應用程式介面)，讓協力廠商開發人員可建立自訂工具。雖然程式設計人員已使用此 API 多年，但並非所有人都能使用文字撰寫腳本。Dynamo 的目標是透過可訪問的圖形算法編輯器使 Revit 資料可供所有人存取。
 
-使用核心 Dynamo 节点与自定义 Revit 节点，用户可以显著扩展参数化工作流以实现互操作性、文档编制、分析和生成。使用 Dynamo，可以自动执行繁琐的工作流，同时设计探索可以蓬勃发展。
+將核心 Dynamo 節點與自訂 Revit 節點搭配使用，使用者可以大幅擴充參數式工作流程，以獲得互通性、製作文件、分析和產生。使用 Dynamo，繁瑣的工作流程可以自動化，設計探索領域可蓬勃發展。
 
-### 在 Revit 中运行 Dynamo
+### 在 Revit 中執行 Dynamo
 
-在 Revit 项目或族编辑器中，导航到“附加模块”，然后单击 Dynamo。*
+在 Revit 專案或族群編輯器中，導覽至「增益集」，然後按一下「Dynamo」。*
 
-{% hint style="warning" %}
-*Dynamo 仅在已打开的文件中运行。
-{% endhint %} 
+{% hint style="warning" %} *Dynamo 只會在開啟它的檔案中執行。{% endhint %}
 
-![](<images/1/launchdynamofromrevit (1).jpg>)
+\![](<../.gitbook/assets/launch dynamo from revit (1).jpg>)
 
-在 Revit 中打开 Dynamo 时，有一个名为“Revit”的新类别。这是对用户界面完全新增的功能，可提供专门针对 Revit 工作流的节点。*
+在 Revit 中開啟 Dynamo 時，會有一個稱為「Revit」的新品類。這是使用者介面的全面新增組件，其中提供了專用於 Revit 工作流程的節點。*
 
-{% hint style="warning" %}
-*通过使用 Revit 特定的节点族，Dynamo 图形将仅在适用于 Revit 的 Dynamo 中打开时可用。例如，如果在 Dynamo 沙盒中打开适用于 Revit 的 Dynamo 图形，Revit 节点将丢失。
-{% endhint %} 
+{% hint style="warning" %} *使用 Revit 特定的節點族群，Dynamo 圖表就只能在於適用於 Revit 的 Dynamo 中開啟時運作。例如，如果在 Dynamo Sandbox 中開啟適用於 Revit 的 Dynamo 圖表，則 Revit 節點將會遺失。{% endhint %}
 
-![](images/1/revitconnection-runningdynamoinrevit02.jpg)
+\![](<../.gitbook/assets/revit connection - running dynamo in revit 02.jpg>)
 
-### 冻结节点
+### 凍結節點
 
-由于 Revit 是一个提供强大项目管理的平台，因此 Dynamo 中的参数化操作可能非常复杂且计算速度缓慢。如果 Dynamo 计算节点需要较长时间，可能需要使用“冻结”节点功能，以便在开发图形时暂停执行 Revit 操作。
+由於 Revit 是功能強大的專案管理平台，Dynamo 中的參數式作業可能會很複雜且計算速度緩慢。若 Dynamo 花費很長時間來計算節點，您可能要在開發圖表時，使用「凍結」節點功能以暫停執行 Revit 作業。
 
-{% hint style="info" %}
-您可以在[4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention") 部分，阅读有关冻结节点的详细信息。 
-{% endhint %} 
+{% hint style="info" %} 您可以在[4_nodes_and_wires](../4_nodes_and_wires/ "mention")一節閱讀有關凍結節點的更多資訊。{% endhint %}
 
-### 社区和 Dynamo 博客
+### 社群與 Dynamo 部落格
 
-由于 Dynamo 最初是为 AEC 开发的，因此其庞大且不断壮大的社区是一个绝佳资源，可供从业内专家处学习并与之联系。Dynamo 的社区由那些热衷于分享和创作的建筑师、工程师、程序员以及设计师组成。
+由於 Dynamo 最初是為 AEC 建立，其大型且不斷成長的社區是一個向行業專家學習和連線至行業專家的很棒資源。Dynamo 的社群由樂於分享和創造的建築師、工程師、程式設計人員及設計師組成。
 
-Dynamo 是一个不断发展的开源项目，而且许多开发与 Revit 相关。如果您对于该游戏是新手，请访问论坛并开始[发布问题](http://dynamobim.org/forums/forum/dyn/)!如果您是程序员并想参与 Dynamo 开发，请查看 [GitHub 库](https://github.com/DynamoDS/Dynamo)。此外，[Dynamo 软件包管理器](http://dynamopackages.com)是第三方库的绝佳资源。其中许多软件包都是由 AEC 制作的，我们将在本章中查看用于镶板的第三方软件包。
+Dynamo 是不斷發展的開放程式碼專案，而且有大量的開發工作都與 Revit 相關。如果您是新使用者，可造訪「討論論壇」並開始[發問](http://dynamobim.org/forums/forum/dyn/)！如果您是程式設計人員並想要參與 Dynamo 開發，可造訪 [Github 儲存庫](https://github.com/DynamoDS/Dynamo)。另外，[Dynamo Package Manager](http://dynamopackages.com) 是協力廠商資源庫的絕佳資源。許多這些套件都是在 AEC 基礎上開發的，本章中我們將瞭解用於平板化的協力廠商套件。
 
-Dynamo 还维护着一个活跃的博客。阅读最近的帖子，了解最新进展！
+Dynamo 也會積極更新部落格。請閱讀最新的貼文以瞭解最新的開發工作！
 
-![博客](images/1/blog.png)
+![部落格](../.gitbook/assets/blog.png)

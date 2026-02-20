@@ -1,8 +1,8 @@
-# Python 点生成器
+# Python 點產生器
 
-以下 Python 脚本为几个示例生成点数组。应将它们粘贴到 Python 脚本节点，如下所示：
+以下 Python 指令碼會為多個範例產生點陣列。請將這些指令碼貼至 Python Script 節點，如下所示：
 
-![](../images/8-2/10/pythonpoints01.jpg)
+\![](<../../.gitbook/assets/python points 01.jpg>)
 
 **python_points_1**
 

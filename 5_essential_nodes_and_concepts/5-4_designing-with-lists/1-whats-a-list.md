@@ -1,136 +1,136 @@
-# 什么是列表
+# 什麼是清單
 
-### 什么是列表？
+### 什麼是清單？
 
-列表是元素或项目的集合。以一串香蕉为例。每个香蕉都是列表（或串）中的一个项目。拾取一串香蕉比单独拾取每个香蕉要容易得多，同样适用于通过数据结构中的参数化关系对元素进行分组。
+清單是元素 (即項目) 的集合。例如一束香蕉。每個香蕉都是清單 (即香蕉束) 中的項目。揀選一束香蕉比分別揀選每個香蕉更容易，依據資料結構中的參數式關係對元素進行分組也是如此。
 
-![香蕉](../images/5-4/1/Bananas_white_background_DS.jpg)
+![香蕉](../../.gitbook/assets/Bananas_white_background_DS.jpg)
 
-> 照片由 [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list) 提供。
+> 相片由 [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list) 拍攝。
 
-当我们购买生活用品时，我们会将所有购买物品放入一个袋子中。这个袋子也是一个列表。如果我们要制作香蕉面包，需要 3 束香蕉（我们要制作 _许多_ 香蕉面包）。袋子表示一列香蕉串，每串表示一列香蕉。袋子是一列列表（二维），香蕉串是一个列表（一维）。
+購買雜貨時，我們會將購買的所有商品放入袋中。這個袋子也是清單。如果要製作香蕉麵包，我們需要 3 束香蕉 (我們將製作 _大量_ 香蕉麵包)。袋子表示香蕉束的清單，而每束香蕉表示香蕉的清單。袋子是清單的清單 (二維)，而香蕉束是清單 (一維)。
 
-在 Dynamo 中，会对列表数据进行排序，并且每个列表中第一项的索引均为“0”。下面，我们将讨论如何在 Dynamo 中定义列表以及如何将多个列表相互关联。
+在 Dynamo 中，清單資料具有順序，每個清單中第一個項目的索引都是「0」。以下我們將討論在 Dynamo 中如何定義清單，以及多個清單如何彼此相關。
 
-### 基于零的索引
+### 從零開始的索引
 
-乍看起来可能有些奇怪的是，列表的第一个索引始终为 0，而不是 1。因此，当我们谈论列表的第一项时，实际上是指对应于索引 0 的项。
+起初有一點可能看起來很奇怪，那就是清單的第一個索引始終是 0，而不是 1。因此，在談到清單的第一個項目時，實際指的是索引 0 對應的項目。
 
-例如，如果要计算我们右手的手指数，则很有可能您的计数是 1 到 5。但是，如果要将手指放入列表，Dynamo 会为其指定索引 0 到 4。尽管这对于编程初学者来说似乎有些奇怪，但是从零开始的索引是大多数计算系统中的标准做法。
+例如，如果您數數右手手指的數量，很可能會從 1 數到 5。但是，如果將手指放在清單中，Dynamo 會為其指定從 0 至 4 的索引。雖然這對於程式設計的初學者而言可能有些奇怪，但從零開始的索引是多數運算系統中的標準做法。
 
-请注意，列表中仍有 5 个项目；只是列表使用的是基于零的计数系统。而且，列表中存储的项目并不仅限于数字。它们可以是 Dynamo 支持的任何数据类型，例如点、曲线、曲面、族等。
+請注意，我們的清單中仍有 5 個項目，清單恰好使用從零開始的計數系統。清單中正在儲存的項目不一定是數字。它們可以是 Dynamo 支援的任何資料類型，例如點、曲線、曲面、族群等。
 
-![](../images/5-4/1/what'salist-zerobasedindices.jpg)
+\![](<../../.gitbook/assets/what's a list - zero based indices.jpg>)
 
 > a.索引
 >
-> b.点
+> b.點
 >
-> c.项目
+> c.項目
 
-通常，查看列表中存储的数据类型的最简单方法是将“Watch”节点连接到另一个节点的输出。默认情况下，观察节点自动将所有索引显示在列表的左侧，并在右侧显示数据项。
+通常，查看清單中所儲存資料類型的最簡單方法，是將觀看節點連接至另一個節點的輸出。依預設，觀看節點會在清單的左側自動展示所有索引，並在右側展示資料項目。
 
-这些索引是使用列表时的关键元素。
+使用清單時，這些索引是非常重要的元素。
 
-### 输入和输出
+### 輸入與輸出
 
-与列表相关，输入和输出因使用的 Dynamo 节点而异。例如，我们使用一列 5 个点，并将该输出连接到两个不同的 Dynamo 节点：**”PolyCurve.ByPoints”**和**“Circle.ByCenterPointRadius”**：
+對清單而言，輸入與輸出視使用的 Dynamo 節點而有所不同。例如，接下來我們使用包含 5 個點的清單，並將此輸出連接至兩個不同的 Dynamo 節點：**PolyCurve.ByPoints** 與 **Circle.ByCenterPointRadius**：
 
-![输入示例](../images/5-4/1/what'salist-inputsandoutputs.jpg)
+\![輸入範例](<../../.gitbook/assets/what's a list - inputs and outputs.jpg>)
 
-> 1. **“PolyCurve.ByPoints”** 的 _“points”_ 输入正在查找 _“Point[]”_。这表示一列点
-> 2. **“PolyCurve.ByPoints”** 的输出是基于一列五个点所创建的一条复合线。
-> 3. **“Circle.ByCenterPointRadius”** 的 _“centerPoint”_ 输入要求提供 _“Point”_。
-> 4. **“Circle.ByCenterPointRadius”** 的输出是一列五个圆，其中心与点的原始列表相对应。
+> 1. **PolyCurve.ByPoints** 的 _points_ 輸入是尋找 _「Point[]」_。這表示點清單
+> 2. **PolyCurve.ByPoints** 的輸出是從一個包含五個點的清單建立的一條 PolyCurve。
+> 3. **Circle.ByCenterPointRadius** 的 _centerPoint_ 輸入要求 _「Point」_。
+> 4. **Circle.ByCenterPointRadius** 的輸出是一個包含五個圓的清單，其中圓的中心對應於點的原始清單。
 
-**“PolyCurve.ByPoints”** 和 **“Circle.ByCenterPointRadius”** 的输入数据相同，但 **“Polycurve.ByPoints”** 节点会提供一条复合线，而 **“Circle.ByCenterPointRadius”** 节点会提供 5 个圆（中心位于每个点处）。直观地讲，这很有意义：将复合线绘制为连接 5 个点的曲线，而圆在每个点处创建不同的圆。数据发生了什么变化？
+**PolyCurve.ByPoints** 與 **Circle.ByCenterPointRadius** 的輸入資料相同，但是 **Polycurve.ByPoints** 節點的結果是一條 PolyCurve，而 **Circle.ByCenterPointRadius** 節點的結果是中心位於每個點的 5 個圓。以直觀方式很容易理解這一點：polycurve 繪製為連接 5 個點的曲線，而圓會在每個點建立不同的圓。資料出現什麼情況？
 
-通过将光标悬停在 **“Polycurve.ByPoints”** 的 _“points”_ 输入上，我们会看到该输入正在查找 _“Point[]”_。请注意末端的括号。这表示一列点，并且要创建复合线，输入需要每个复合线是一个列表。因此，该节点会将每个列表压缩为一个复合线。
+將游標懸停在 **Polycurve.ByPoints** 的 _points_ 輸入上方，可以看到輸入在尋找 _「Point[]」_。注意末尾的中括號。這表示點的清單，若要建立 polycurve，輸入需要是每個 polycurve 的清單。因此，此節點會將每個清單濃縮到一條 polycurve 中。
 
-另一方面，**“Circle.ByCenterPointRadius”** 的 _“centerPoint”_ 输入要求提供 _“Point”_。此节点会查找一个点作为项目，以定义圆的圆心。这就是我们基于输入数据获得五个圆的原因。在 Dynamo 中识别输入的这些差异有助于在管理数据时更好地了解节点的运行方式。
+另一方面，**Circle.ByCenterPointRadius** 的 _centerPoint_ 輸入要求 _「Point」_。此節點會尋找一個點，做為項目以定義圓的中心點。因此輸入資料會產生五個圓。辨識 Dynamo 中這些輸入的差異可協助您更好地瞭解在管理資料時節點的作業方式。
 
-### 连缀
+### 交織
 
-在没有清晰解决方案的情况下，数据匹配会是一个问题。当节点有权访问不同大小的输入时，就会发生这种情况。更改数据匹配算法可能会导致结果差异极大。
+資料相符是沒有明確解決方案的問題。在節點對大小不同的輸入具有存取權時，會發生此問題。變更資料相符演算法會產生截然不同的結果。
 
-假定在各点之间创建线段的节点（**“Line.ByStartPointEndPoint”**）。它将有两个输入参数，两个输入参数均提供点坐标：
+想像在點之間建立直線段的節點 (**Line.ByStartPointEndPoint**)。它有兩個輸入參數，都提供點座標：
 
-#### 最短列表
+#### 最短清單
 
-最简单的方法是逐一连接输入，直到其中一个流运行干。这称为“最短列表”算法。这是 Dynamo 节点的默认行为：
+最簡單的方式是逐一連接輸入，直到其中一個串流結束為止。這稱為「最短清單」演算法。這是 Dynamo 節點的預設行為：
 
-![](../images/5-4/1/what'salist-lacing-shortest.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - shortest.jpg>)
 
-#### 最长列表
+#### 最長清單
 
-“最长列表”算法会一直连接输入、重用元素，直到所有流都流干为止：
+「最長清單」演算法會保持連接輸入，重複使用元素，直到所有串流結束為止：
 
-![](../images/5-4/1/what'salist-lacing-longest.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - longest.jpg>)
 
-#### 笛卡尔积
+#### 笛卡兒積
 
-最后，“笛卡尔积”方法可以建立所有可能的连接：
+最後，「笛卡兒積」方法會產生所有可能的連接：
 
-![](../images/5-4/1/what'salist-lacing-cross.jpg)
+\![](<../../.gitbook/assets/what's a list - lacing - cross.jpg>)
 
-如您所见，我们可以通过不同的方式在这些点集之间绘制直线。通过在某个节点的中心上单击鼠标右键并选择“连缀”菜单，即可找到连缀选项。
+您可以看到，可以採用不同方法在這組點之間繪製直線。在節點的中心按一下右鍵，然後選擇「交織」功能表，可以找到「交織」選項。
 
-![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
+\![](<../../.gitbook/assets/what's a list - right click lacing opt.jpg>)
 
-### 什么是复制？
+### 什麼是複製？
 
-想象一下你有一串葡萄。如果您想制作葡萄汁，您不会一颗一颗地榨葡萄——您会把它们一次全部放进榨汁机。Dynamo 中的数据同步工作方式类似：Dynamo 可以一次性将操作应用于整个列表，而不是一次将操作应用于一个条目。
+想像一下您有一串葡萄。如果您想做葡萄汁，不會一顆一顆壓榨 - 您會把它們全部都放入榨汁機。Dynamo 中的「複製」採用類似方式：Dynamo 可以將某個作業一次套用到整個清單，而不是一次套用到一個項目。
 
-Dynamo 节点会自动识别何时使用列表，并在多个图元之间应用其操作。这意味着您不必手动遍历条目 - 它会自行发生。但是，当存在多个列表时，Dynamo 决定如何处理列表？
+Dynamo 節點會自動辨識何時使用清單，並將作業套用到多個元素。這表示您不必手動處理所有項目 - 它會自己發生。但是，當有多個清單時，Dynamo 如何決定處理清單的方式？
 
-主要有两种方法：
+主要有兩種方式：
 
-#### 笛卡尔复制
+#### 笛卡兒複製
 
-假设您在厨房里制作果汁。您有一个水果清单：`{apple, orange, pear}` 和每种果汁的固定量的水：`1 cup`。您想用每种水果制作果汁，用相同量的水。在这种情况下，笛卡尔复制开始发挥作用。
+假設您在廚房裡做果汁。您有一個水果清單：`{apple, orange, pear}`，以及每種果汁的固定水量：`1 cup`。您想用每種水果做出相同水量的果汁。在這種情況下，「笛卡兒複製」開始發揮作用。
 
-在 Dynamo 中，这意味着将水果清单输入到 Juice.Maker 节点的水果输入，而水输入保持不变，为 1 杯。然后，该节点单独处理每个水果，将其与固定量的水混合。结果为：
+在 Dynamo 中，這表示您要將水果清單送入 Juice.Maker 節點的水果輸入中，而水量輸入固定為 1 杯。節點就會個別處理每種水果，與固定水量混合。結果為：
 
 `apple juice with 1 cup of water` `orange juice with 1 cup of water` `pear juice with 1 cup of water`
 
-每个水果都与相同数量的水配对。
+每種水果都搭配相同水量。
 
-#### Zip 复制
+#### Zip 複製
 
-Zip 复制的工作方式略有不同。如果您有两个列表，一个用于水果：`{apple, orange, pear}`，另一个用于糖量：`{2 tbsp, 3 tbsp, 1 tbsp}`，Zip 复制将合并每个列表中的相应项目。例如：
+Zip 複製的運作方式稍有不同。如果您有兩個清單，一個是水果：`{apple, orange, pear}`，另一個是糖量：`{2 tbsp, 3 tbsp, 1 tbsp}`，「Zip 複製」會結合每個清單中的對應項目。例如：
 
 `apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
 
-每个水果都搭配其相应数量的糖。
+每種水果都搭配對應的糖量。
 
-要更深入地了解其工作原理，请查看[复制和连缀手册](https://github.com/DynamoDS/Dynamo/wiki/Replication-and-Replication-Guide-Part-1)。
+如需更深入的運作方式，請查看[複製與交織指南](https://github.com/DynamoDS/Dynamo/wiki/Replication-and-Replication-Guide-Part-1)。
 
-## 练习
+## 練習
 
-> 单击下面的链接下载示例文件。
+> 按一下下方的連結下載範例檔案。
 >
-> 可以在附录中找到示例文件的完整列表。
+> 附錄中提供完整的範例檔案清單。
 
-{% file src="../datasets/5-4/1/Lacing.dyn" %}
+{% file src="../../.gitbook/assets/Lacing (1).dyn" %}
 
-为了演示下面的连缀操作，我们将使用此基础文件定义最短列表、最长列表和笛卡尔积。
+為了示範下面的交織作業，我們將使用此基準檔案來定義最短清單、最長清單及笛卡兒積。
 
-我们将更改 **“Point.ByCoordinates”** 上的连缀，但不会更改有关上图的其他任何内容。
+我們將變更 **Point.ByCoordinates** 的交織，但不會變更上述圖表的任何其他內容。
 
-### 最短列表
+### 最短清單
 
-通过选择 _“最短列表”_ 作为连缀选项（也是默认选项），我们会得到一条由五个点组成的基本对角线。五个点是较小列表的长度，因此最短列表连缀在到达一个列表的末尾后即停止。
+選擇 _最短清單_ 做為交織選項 (也是預設選項)，我們會得到一條由五個點組成的基本對角線。五個點是較短清單的長度，因此最短清單交織會在到達一個清單的結尾後停止。
 
-![输入示例](../images/5-4/1/what'salist-lacingexercise01.jpg)
+\![輸入範例](<../../.gitbook/assets/what's a list - lacing exercise 01.jpg>)
 
-### **最长列表**
+### **最長清單**
 
-通过将连缀更改为 _“最长列表”_，我们得到一条垂直延伸的对角线。采用与概念图相同的方法，将重复该列表的 5 个项目中的最后一项，以达到较长列表的长度。
+如果將交織變更為 _最長清單_，我們會得到一條垂直延伸的對角線。運用與概念圖相同的方法，含 5 個項目的清單中的最後一個項目將重複，以達到較長清單的長度。
 
-![输入示例](../images/5-4/1/what'salist-lacingexercise02.jpg)
+\![輸入範例](<../../.gitbook/assets/what's a list - lacing exercise 02.jpg>)
 
-### **笛卡尔积**
+### **笛卡兒積**
 
-通过将连缀更改为 _“笛卡尔积”_，我们得到每个列表之间的每个组合，从而获得 5x10 点栅格。这是与上述概念图中所示的笛卡尔积等效的数据结构，但数据现在是一列列表。通过连接复合线，我们可以看到每个列表均由其 X 值定义，从而得到一行垂直线。
+如果將交織變更為 _笛卡兒積_，我們會得到各個清單之間的每種組合，產生一個 5x10 的點格線。這個資料結構等同於上面的概念圖顯示的笛卡兒積，只是現在資料是一個清單的清單。如果連接 polycurve，我們可以看到每個清單都由其 X 值定義，因此產生一列垂直線。
 
-![输入示例](../images/5-4/1/what'salist-lacingexercise03.jpg)
+\![輸入範例](<../../.gitbook/assets/what's a list - lacing exercise 03.jpg>)

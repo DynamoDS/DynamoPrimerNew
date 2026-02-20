@@ -1,12 +1,12 @@
-# Functions
+# 函數
 
-函数可以在代码块中创建，并在 Dynamo 定义中的其他位置进行调用。这将在参数化文件中创建另一层控制，并且可以作为基于文本版本的自定义节点进行查看。在这种情况下，“父”代码块可以随时访问，并且可以位于图形上的任意位置。不需要引线！
+可以在程式碼塊中建立函數，然後在 Dynamo 定義中的其他位置重新呼叫函數。此作業會在參數式檔案中建立另一個控制層，可視為自訂節點的文字版本。在此案例中，「父系」Code Block 可隨時存取，可在圖表中的任何位置找到。無需使用線路！
 
-### 父对象
+### 父系
 
-第一行包含关键字“def”，接着是函数名称，然后是括号中的输入名称。大括号定义函数的主体。使用“return =”返回值。定义函数的代码块没有输入或输出端口，因为它们是从其他代码块调用的。
+第一行包含關鍵字「def」，然後依次是函數名稱與輸入的名稱 (在括號中)。大括號定義函數的本體。使用「return =」傳回值。定義函數的 Code Block 沒有輸入或輸出埠，因為會從其他 Code Block 呼叫。
 
-![](../images/8-1/4/functionsparentdef.jpg)
+\![](<../../.gitbook/assets/functions parent def.jpg>)
 
 ```
 /*This is a multi-line comment,
@@ -20,35 +20,35 @@ return sum;
 };
 ```
 
-### 子项
+### 子系
 
-通过提供名称和相同数量的参数，调用同一文件中具有另一代码块的函数。其工作原理与库中现成的节点一样。
+使用同一檔案中的其他 Code Block，只需提供名稱與相同數量的引數即可呼叫函數。其工作方式類似於資源庫中的現成節點。
 
-![](../images/8-1/4/functionschildrencalldef.jpg)
+\![](<../../.gitbook/assets/functions children call def.jpg>)
 
 ```
 FunctionName(in1,in2);
 ```
 
-## 练习：球体（按 Z）
+## 練習：透過 Z 建立圓球
 
-> 单击下面的链接下载示例文件。
+> 按一下下方的連結下載範例檔案。
 >
-> 可以在附录中找到示例文件的完整列表。
+> 附錄中提供完整的範例檔案清單。
 
-{% file src="../datasets/8-1/4/Functions_SphereByZ.dyn" %}
+{% file src="../../.gitbook/assets/Functions_SphereByZ.dyn" %}
 
-在本练习中，我们将创建一个通用定义，该定义将通过输入的点列表创建球体。这些球体的半径由每个点的 Z 特性驱动。
+在本練習中，我們將進行根據輸入點清單建立圓球的一般定義。這些圓球的半徑由每個點的 Z 性質驅動。
 
-首先从 0 到 100 的十个值范围开始。将这些值插入到 **“Point.ByCoordinates”** 节点，以创建对角线。
+接下來先建立介於 0 到 100 之間的一系列十個值。將這些值插入 **Point.ByCoordinates** 節點，以建立對角線。
 
-![](../images/8-1/4/functions-exercise-01.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 01.jpg>)
 
-创建 **“代码块”**，然后引入我们的定义。
+建立 **Code Block** 並介紹我們的定義。
 
-![](../images/8-1/4/functions-exercise-02.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 02.jpg>)
 
-> 1.  使用以下代码行：
+> 1.  使用以下程式碼行：
 >
 >     ```
 >     def sphereByZ(inputPt)
@@ -57,11 +57,11 @@ FunctionName(in1,in2);
 >     };
 >     ```
 >
-> _“inputPt”_ 是我们提供的名称，用于表示将驱动函数的点。目前，该函数不会执行任何操作，但我们会在后续步骤中构建此函数。
+> _inputPt_ 是我們為了表示驅動函數的點而提供的名稱。到現在為止，函數不會執行任何作業，但我們將在後續步驟中建置此函數。
 
-![](../images/8-1/4/functions-exercise-03.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 03.jpg>)
 
-> 1. 通过添加到 **“代码块”** 函数，我们放置注释和 _“sphereRadius”_ 变量（该变量会查询每个点的 _“Z”_ 位置）。请记住，_“inputPt.Z”_不需要圆括号用作方法。这是对现有图元特性的_“查询”_，因此不需要输入：
+> 1. 加入 **Code Block** 函數後，我們加上註解和 _sphereRadius_ 變數，它會查詢每個點的 _Z_ 位置。請記住，_inputPt.Z_ 是一個方法，不需要括號。這是 _查詢_ 既有元素的性質，因此不需要任何輸入：
 >
 > ```
 > def sphereByZ(inputPt,radiusRatio)
@@ -71,53 +71,53 @@ FunctionName(in1,in2);
 > };
 > ```
 
-![](../images/8-1/4/functions-exercise-04.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 04.jpg>)
 
-> 1. 现在，我们再次调用在另一个 **“代码块”** 中创建的函数。如果双击画布以创建新的 _“代码块”_，然后键入 _“sphereB”_，我们会注意到 Dynamo 建议使用已定义的 _“sphereByZ”_ 函数。您的函数已添加到智能库！非常棒。
+> 1. 現在，我們呼叫在另一個 **Code Block** 中建立的函數。如果在圖元區上按兩下以建立新的 _Code Block_，然後鍵入 _sphereB_，我們發現 Dynamo 建議使用我們定義的 _sphereByZ_ 函數。您的函數已加入 intellisense 資源庫！太酷了。
 
-![](../images/8-1/4/functions-exercise-05.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 05.jpg>)
 
-> 1.  现在，我们调用相应函数并创建一个名为 _“Pt”_ 的变量，以连接在之前步骤中创建的点：
+> 1.  現在，我們呼叫函數，並建立一個稱為 _Pt_ 的變數以插入先前步驟中建立的點：
 >
 >     ```
 >     sphereByZ(Pt)
 >     ```
-> 2. 在输出中，我们注意到所有值都为空值。这是为什么呢？在定义函数后，我们会计算 _“sphereRadius”_ 变量，但是我们未定义函数应 _“返回”_ 为 _“输出”_ 的内容。可以在下一个步骤中修复该问题。
+> 2. 我們看到輸出全部都是空值。為何會發生這種情況？定義函數時，我們會計算 _sphereRadius_ 變數，但沒有定義函數應 _傳回_ 哪些項目做為 _輸出_。我們可以在下一步修正此問題。
 
-![](../images/8-1/4/functions-exercise-06.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 06.jpg>)
 
-> 1. 一个重要步骤是，我们需要定义函数的输出，方法是将一行代码 `return = sphereRadius;` 添加到 _“sphereByZ”_ 函数。
-> 2. 现在，我们看到“代码块”的输出为我们提供了每个点的 Z 坐标。
+> 1. 我們需要在 _sphereByZ_ 函數中加入 `return = sphereRadius;` 行定義函數的輸出，這是重要的步驟。
+> 2. 現在，我們可以看到 Code Block 的輸出提供每個點的 Z 座標。
 
-现在，让我们通过编辑 _“父”_ 函数，来创建实际球体。
+現在，我們要編輯 _父系_ 函數以建立實際的圓球。
 
-![](../images/8-1/4/functions-exercise-07.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 07.jpg>)
 
-> 1. 首先，我们使用代码行定义一个球体：`sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);`
-> 2. 接下来，我们将返回值更改为 _“sphere”_，而不是 _“sphereRadius”_：`return = sphere;`。这会在 Dynamo 预览中为我们提供一些巨大的球体！
+> 1. 我們首先使用以下程式碼行定義圓球：`sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);`
+> 2. 接下來，我們將傳回值變更為 _sphere_，而不是 _sphereRadius_：`return = sphere;` 這會在 Dynamo 預覽中產生一些巨大的圓球！
 
-![](../images/8-1/4/functions-exercise-08.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 08.jpg>)
 
-> 1\.要调整这些球体的大小，我们通过添加分隔器来更新“sphereRadius”值：`sphereRadius = inputPt.Z/20;`。现在，我们可以看到单独的球体，然后开始了解半径和 Z 值之间的关系。
+> 1\.若要調整這些圓球的大小，我們加入圓規來更新圓球半徑值：`sphereRadius = inputPt.Z/20;` 現在，我們可以看到分開的圓球，並開始了解半徑與 Z 值之間的關係。
 
-![](../images/8-1/4/functions-exercise-09.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 09.jpg>)
 
-> 1. 在 **“Point.ByCoordinates”** 节点上，通过将连缀从“最短列表”更改为“叉积”，我们将创建点栅格。_“sphereByZ”_ 函数仍然完全有效，因此所有点都会使用基于 Z 值的半径创建球体。
+> 1. 在 **Point.ByCoordinates** 節點上，透過將交織從「最短清單」變更為「笛卡兒積」，我們建立點的格線。_sphereByZ_ 函數仍完全有效，因此所有點會建立半徑以 Z 值為基礎的圓球。
 
-![](../images/8-1/4/functions-exercise-10.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 10.jpg>)
 
-> 1. 仅是为了测试水域，我们将原始数字列表连接到 **“Point.ByCoordinates”** 的 X 输入。现在，我们得到了一个球体的立方体。
-> 2. 注意：如果在计算机上的计算需要较长时间，请尝试将 _“#10”_ 更改为 _“#5”_ 之类的值。
+> 1. 為了進行測試，我們將原始數字清單插入 **Point.ByCoordinates** 的 X 輸入。我們現在有一個立方塊的圓球。
+> 2. 注意：如果在您的電腦上需要花很長時間執行此計算，請嘗試將 _\#10_ 變更為諸如 _\#5_ 等數字。
 
-请记住，我们创建的 _“sphereByZ”_ 函数是一个通用函数，因此我们可以调用前一课中的螺旋，然后对其应用该函数。
+請記住，我們建立的 _sphereByZ_ 函數是一般函數，因此可以回顧先前課程中的螺旋線，並對其套用函數。
 
-![](../images/8-1/4/functions-exercise-11.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 11.jpg>)
 
-最后一步：使用用户定义的参数来控制半径比。为此，我们需要为该函数创建新输入，并将 _“20”_ 除数替换为参数。
+最後一步：運用使用者定義的參數驅動半徑比。若要執行，我們需要為函數建立新輸入，並使用參數取代除數 _20_。
 
-![](../images/8-1/4/functions-exercise-12.jpg)
+\![](<../../.gitbook/assets/functions - exercise - 12.jpg>)
 
-> 1.  将 _“sphereByZ”_ 定义更新为以下内容：
+> 1.  將 _sphereByZ_ 定義更新為：
 >
 >     ```
 >     def sphereByZ(inputPt,radiusRatio)
@@ -130,4 +130,4 @@ FunctionName(in1,in2);
 >     return sphere;
 >     };
 >     ```
-> 2. 通过向输入中添加“ratio”变量来更新子 **“代码块”**：`sphereByZ(Pt,ratio);`。将滑块插入到新创建的 **“代码块”** 输入中，并根据半径比改变半径大小。
+> 2. 在輸入 `sphereByZ(Pt,ratio);` 中加入 ratio 變數以更新子系 **Code Block**。將滑棒插入新建立的 **Code Block** 輸入，並根據半徑比變更半徑的大小。

@@ -1,21 +1,21 @@
-# 相交和修剪
+# 交集和修剪
 
-目前，许多示例都关注从较少维的对象构造较多维的几何体。相交方法允许此较高维度的几何图形生成较低维度的对象，而“修剪”和“选择修剪”命令允许脚本在创建几何形状后对其进行大量修改。
+到目前為止，許多範例都將重點放在從較低維度的物件建構較高維度的幾何圖形。交集的方法允許這種較高維度的幾何圖形產生較低維度的物件，而修剪和選取修剪的指令則允許腳本在建立幾何圖形後大幅修改幾何形狀。
 
-_Intersect_ 方法在 Dynamo 中的所有几何图形上定义，这意味着理论上，任何几何图形都可以与任何其他几何图形相交。通常，由于结果对象将始终是输入点本身，因此某些交点没有意义（例如涉及点的交点）。下图概述了对象之间可能存在的交点组合。下图概述了各种相交操作的结果：
+Dynamo 針對所有幾何圖形都定義了 _Intersect_ 方法，表示理論上，任何幾何圖形部分都可以與其他任何幾何圖形部分相交。某些交集本來就沒有意義，例如牽涉到點 (Point) 的交集，因為產生的物件永遠都是輸入點本身。下表概述物件之間其他可能的交集組合。下表概述各種交集運算的結果：
 
-### **交集**
+### **Intersect** (交集)
 
-| _其中：_     | 曲面 | 曲线 | 平面        | 实体   |
+| _與：_     | Surface | Curve | Plane        | Solid   |
 | ----------- | ------- | ----- | ------------ | ------- |
-| **曲面** | 曲线   | 点 | 点，曲线 | 曲面 |
-| **曲线**   | 点   | 点 | 点        | 曲线   |
-| **平面**   | 曲线   | 点 | 曲线        | 曲线   |
-| **实体**   | 曲面 | 曲线 | 曲线        | 实体   |
+| **Surface** | Curve   | Point | Point、Curve | Surface |
+| **Curve**   | Point   | Point | Point        | Curve   |
+| **Plane**   | Curve   | Point | Curve        | Curve   |
+| **Solid**   | Surface | Curve | Curve        | Solid   |
 
-下面非常简单的示例演示了平面与 NurbsSurface 的交集。该交集会生成 NurbsCurve 数组，可像使用任何其他 NurbsCurve 一样使用。
+下面這個非常簡單的範例示範一個平面與一個 NurbsSurface 的交集。交集產生一個 NurbsCurve 陣列，可以像任何其他 NurbsCurve 一樣使用這個陣列。
 
-![](../images/8-2/8/IntersectionAndTrim\_01.png)
+![](../../.gitbook/assets/IntersectionAndTrim_01.png)
 
 ```js
 // python_points_5 is a set of Points generated with
@@ -34,20 +34,20 @@ crvs = surf.Intersect(pl);
 crvs_moved = crvs.Translate(0, 0, 10);
 ```
 
-_Trim_ 方法与“Intersect”方法非常相似，因为它几乎为每个几何图形都定义了该方法。但是，与 _Intersect_ 相比，_Trim_ 存在更多限制。
+_Trim_ 方法與 Intersect 方法非常類似之處在於幾乎是針對每個幾何圖形定義。不過，_Trim_ 的限制遠比 _Intersect_ 還多。
 
-### **修剪**
+### **Trim** (修剪)
 
-|             | _使用：_ 点 | 曲线 | 平面 | 曲面 | 实体 |
+|             | _使用：_Point | Curve | Plane | Surface | Solid |
 | ----------- | -------------- | ----- | ----- | ------- | ----- |
-| _开：_ 曲线 | 是            | 否    | 否    | 否      | 否    |
-| 多边形     | -              | 否    | 是   | 否      | 否    |
-| 曲面     | -              | 是   | 是   | 是     | 是   |
-| 实体       | -              | -     | 是   | 是     | 是   |
+| _對：_Curve | 是            | 否    | 否    | 否      | 否    |
+| Polygon     | -              | 否    | 是   | 否      | 否    |
+| Surface     | -              | 是   | 是   | 是     | 是   |
+| Solid       | -              | -     | 是   | 是     | 是   |
 
-关于 _Trim_ 方法需要注意的是，需要“选择”点、确定要丢弃哪些几何图形的点以及要保留哪些部分。Dynamo 会查找并放弃与选择点最近的已修剪几何图形。
+請注意，_Trim_ 方法一定要有「選取」點，這個點決定要捨棄哪個幾何圖形，要保留哪些部份。Dynamo 會找出並捨棄最接近選取點且經過修剪的幾何圖形。
 
-![](../images/8-2/8/IntersectionAndTrim\_02.png)
+![](../../.gitbook/assets/IntersectionAndTrim_02.png)
 
 ```js
 // python_points_5 is a set of Points generated with

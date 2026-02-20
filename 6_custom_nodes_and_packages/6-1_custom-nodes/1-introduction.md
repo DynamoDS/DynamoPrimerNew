@@ -1,50 +1,50 @@
-# 自定义节点简介
+# 自訂節點簡介
 
-自定义节点通过在“Dynamo 自定义节点”内嵌套其他节点和自定义节点来构建，我们可以从概念上将其看作容器。在图形中执行该容器节点时，将执行其中的所有内容，以允许您重用和共享有用的节点组合。
+自訂節點的構成方式是在「Dynamo 自訂節點」中嵌套其他節點和自訂節點， 我們可以將「Dynamo 自訂節點」從概念上理解為容器。當在圖中執行此容器節點時，將執行其所有內部節點以允許您重複使用和共用一個有用的節點。
 
-### 适应变化
+### 適應變更
 
-如果图形中有自定义节点的多个副本，可以通过编辑基础自定义节点更新所有副本。这样，您可以通过适应工作流或设计中可能发生的任何更改来无缝更新图形。
+當您在圖中有多個自訂節點副本時，您可以透過編輯基礎自訂節點來更新所有副本。這容許您透過採用工作流程或設計中可能發生的任何變更來順暢地更新您的圖形。
 
-### 工作共享
+### 工作共用
 
-可以说，自定义节点的最佳功能是其工作共享功能。如果“超级用户”创建复杂的 Dynamo 图形，并将其交给 Dynamo 的新手设计师，则他/她可以将图形压缩为用于设计交互的基本要素。可以打开自定义节点来编辑内部图形，但“容器”可以保持简单。借助此过程，自定义节点可让 Dynamo 用户设计清晰且直观的图形。
+雖然有爭議，但是一般認為自訂節點的最佳功能是其工作共用功能。如果「經驗豐富的使用者」建立了複雜的 Dynamo 圖形，並將其傳遞給不太熟悉 Dynamo 的新使用者，則他/她可壓縮圖形為最基本的內容以進行設計互動。可開啟自訂節點以編輯內部圖形，但「容器」可以保持簡單。使用此程序，自訂節點允許 Dynamo 使用者設計簡潔、直觀的圖表。
 
-![](../images/6-1/1/customnodeintro-worksharing01.jpg)
+\![](<../../.gitbook/assets/custom node intro - work sharing 01.jpg>)
 
-### 构建节点的多种方法
+### 有許多方式可建置節點
 
-在 Dynamo 中，有多种方法可构建自定义节点。在本章的示例中，我们将直接从 Dynamo 用户界面创建自定义节点。如果您是程序员并且对 C# 或 Zero-Touch 格式感兴趣，可以参见 Dynamo Wiki 上的[此页面](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)进行更深入的了解。
+有多種方法可在 Dynamo 中建置自訂節點。在本章的範例中，我們將直接從 Dynamo 使用者介面建立自訂節點。如果您是程式設計人員且您對 C# 或「零接觸」格式感興趣，您可以參考 Dynamo Wiki 的[這一頁](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)更深入瞭解。
 
-### 自定义节点环境和创建第一个自定义节点
+### 自訂節點環境和建立第一個自訂節點
 
-我们跳到自定义节点环境，并创建一个简单节点来计算百分比。自定义节点环境与 Dynamo 图形环境不同，但交互基本相同。说到这里，让我们创建第一个自定义节点！
+讓我們跳至自訂節點環境，並建立一個簡單的節點來計算百分比。自訂節點環境不同於 Dynamo 圖形環境，但其互動根本相同。在此基礎上，讓我們建立第一個自訂節點！
 
-要从头开始创建自定义节点，请启动 Dynamo 并选择“自定义节点”,或者从画布键入 Ctrl + Shift + N。
+若要從頭開始建立自訂節點，請啟動 Dynamo，然後選取「自訂節點」，或在圖元區鍵入 Ctrl + Shift + N。
 
-![](../images/6-1/1/customnodeintro-customnodeenvironment01.jpg)
+\![](<../../.gitbook/assets/custom node intro - custom node environment 01.jpg>)
 
-在“自定义节点特性”对话框中指定名称、说明和类别。
+在「自訂節點性質」對話方塊中指定名稱、描述和品類。
 
-![](../images/6-1/1/customnodeintro-customnodeenvironment02.jpg)
+\![](<../../.gitbook/assets/custom node intro - custom node environment 02.jpg>)
 
-> 1. **名称**：百分比
-> 2. **说明**：计算一个值相对于另一个值的百分比。
-> 3. **类别**：Math.Functions
+> 1. **名稱：** Percentage
+> 2. **描述**：計算一個值相對於另一個值的百分比。
+> 3. **品類：** Math.Functions
 
-这将打开一个带黄色背景的画布，表示您正在自定义节点内部工作。在此画布中，您可以访问所有核心 Dynamo 节点，以及“输入”和“输出”节点，这些节点标记自定义节点的数据流入和流出。它们位于“输入”>“基本”中。
+這將開啟一個具有黃色背景的圖元區，表示您正在自訂節點內工作。在此畫布上，您可以存取所有核心 Dynamo 節點，以及 Input 和 Output 節點，其標示資料流進和流出自訂節點。您可以在「Input」>「Basic」中找到它們。
 
-![](../images/6-1/1/customnodeintro-customnodeenvironment03.jpg)
+\![](<../../.gitbook/assets/custom node intro - custom node environment 03.jpg>)
 
-![](../images/6-1/1/customnodeintro-customnodeenvironment04.jpg)
+\![](<../../.gitbook/assets/custom node intro - custom node environment 04.jpg>)
 
-> 1. **输入**：输入节点在自定义节点上创建输入端口。输入节点的语法为 _“input_name : datatype = default_value(optional)”_。
-> 2. **输出**：与输入类似，这些输出将在自定义节点上创建和命名输出端口。考虑将 **“自定义注释”** 添加到输入和输出端口，以提示输入和输出类型。这将在[“创建自定义节点”](2-creating.md)部分中详细介绍。
+> 1. **Input：** Input 節點在自訂節點上建立輸入埠。Input 節點的語法為 _input_name : datatype = default_value(選擇性)_。
+> 2. **Output：** 類似於 Input，將在自訂節點上建立和命名輸出埠。請考慮對輸入埠和輸出埠新增**自訂註解**，以提示輸入和輸出類型。在[建立自訂節點一節](2-creating.md)將會更詳細討論此問題。
 
-可以将此自定义节点另存为“.dyf”（与标准“.dyn”相反）文件，并且该文件将自动添加到您的会话和将来的会话中。您会在库的“附加模块”部分中找到自定义节点。
+您可以將此自訂節點儲存為 .dyf (而非標準 .dyn) 檔案，它將會自動新增至您的階段作業和將來的階段作業中。您將在資源庫的「Add-ons」區段中找到自訂節點。
 
-![](../images/6-1/1/customnodeintro-customnodeenvironment05.jpg)
+\![](<../../.gitbook/assets/custom node intro - custom node environment 05.jpg>)
 
-### 前进
+### 繼續向前
 
-现在，我们已创建了第一个自定义节点，接下来的部分将更深入地介绍自定义节点功能以及如何发布常规工作流。在以下部分中，我们将介绍如何开发将几何体从一个曲面传输到另一个曲面的自定义节点。
+現在，我們建立了第一個自訂節點，下一部分將深入瞭解自訂節點功能以及如何發佈一般工作流程。在以下部分中，我們將瞭解如何開發可將幾何圖形從一個平面轉移至另一個平面的自訂節點。

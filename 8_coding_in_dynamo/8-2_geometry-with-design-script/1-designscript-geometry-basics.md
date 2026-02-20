@@ -1,10 +1,10 @@
-# DesignScript 几何体基础知识
+# DesignScript 幾何圖形基礎知識
 
-### 点
+### 點 (Point)
 
-Dynamo 标准几何体库中最简单的几何对象是一个点。所有几何体均使用称为构造函数的特殊函数创建，每个函数都返回该特定几何体类型的新实例。在 Dynamo 中，构造函数以对象类型的名称（在本例中为“Point”）开始，然后是构造方法。要创建由 x、y 和 z 笛卡尔坐标指定的三维点，请使用 _ByCoordinates_ 构造函数：
+Dynamo 標準幾何圖形資源庫中最簡單的幾何圖形物件是一個點。所有幾何圖形都是使用稱作建構函式的特殊函數建立的，每個建構函式都會傳回一個該特定幾何圖形類型的新實體。在 Dynamo 中，建構函式以物件類型的名稱 (在此案例中為 Point) 為開頭，後接建構的方法。若要建立一個以 x、y、z 直角座標指定的三維點，請使用 _ByCoordinates_ 建構函式：
 
-![](../images/8-2/1/GeometryBasics\_01.png)
+![](../../.gitbook/assets/GeometryBasics_01.png)
 
 ```js
 // create a point with the following x, y, and z
@@ -16,11 +16,11 @@ z = -6;
 p = Point.ByCoordinates(x, y, z);
 ```
 
-Dynamo 中的构造函数通常使用前缀为“_By_”指定，调用这些函数将返回该类型的新创建对象。此新创建的对象存储在等号左侧命名的变量中。
+Dynamo 中的建構函式通常以「_By_」字首指定，呼叫這些函數會傳回該類型新建立的物件。這個新建立的物件以等號左邊命名的變數儲存。
 
-大多数对象都有许多不同的构造函数，我们可以使用 _BySphericalCoordinates_ 构造函数创建位于球体上的点，由球体的半径、第一个旋转角度和第二个旋转角度（以度为单位指定）指定：
+大多數物件都有許多不同的建構函式，我們可以使用 _BySphericalCoordinates_ 建構函式，指定圓球的半徑、第一個旋轉角度和第二個旋轉角度 (以度為單位指定) 建立一個圓球上的點：
 
-![](../images/8-2/1/GeometryBasics\_02.png)
+![](../../.gitbook/assets/GeometryBasics_02.png)
 
 ```js
 // create a point on a sphere with the following radius,
@@ -34,11 +34,11 @@ p = Point.BySphericalCoordinates(cs, radius, theta,
     phi);
 ```
 
-### 从点到线
+### 從點到線
 
-点可用于构造更大尺寸的几何图形（例如直线）。我们可以使用 _ByStartPointEndPoint_ 构造函数在两点之间创建“直线”对象：
+點可以用來建構更高維度的幾何圖形，例如直線。我們可以使用 _ByStartPointEndPoint_ 建構函式在兩個點之間建立一個 Line 物件：
 
-![](../images/8-2/1/GeometryBasics\_03.png)
+![](../../.gitbook/assets/GeometryBasics_03.png)
 
 ```js
 // create two points:
@@ -49,11 +49,11 @@ p2 = Point.ByCoordinates(-15, 7, 0.5);
 l = Line.ByStartPointEndPoint(p1, p2);
 ```
 
-### 从线到曲面
+### 從直線到曲面
 
-同样，直线可用于创建更多维的曲面几何体，例如使用 _Loft_ 构造函数，该构造函数可获取一系列直线或曲线，并在它们之间内插曲面。
+同樣的，直線也可以用來建立更高維度的曲面幾何圖形，例如使用 _Loft_ 建構函式，用一系列直線或曲線，在這之間內插一個曲面。
 
-![](../images/8-2/1/GeometryBasics\_04.png)
+![](../../.gitbook/assets/GeometryBasics_04.png)
 
 ```js
 // create points:
@@ -75,11 +75,11 @@ l3 = Line.ByStartPointEndPoint(p5, p6);
 surf = Surface.ByLoft([l1, l2, l3]);
 ```
 
-### 从曲面到实体
+### 從曲面到實體
 
-曲面也可用于创建更多维的实体几何体，例如通过按指定距离加厚曲面。许多对象都附加了函数（称为方法），程序员可以对该特定对象执行命令。所有几何图形通用的方法包括 _Translate_ 和 _Rotate_，分别按指定的量平移（移动）和旋转几何图形。曲面具有 _Thicken_ 方法，该方法采用单个输入，即指定曲面的新厚度的数字。
+曲面也可以用來建立更高維度的實體幾何圖形，例如把曲面加厚指定的距離。許多物件都會附加稱為方法的函數，程式設計師可以對該特定物件執行指令。所有幾何圖形都通用的方法包括 _Translate_ 和 _Rotate_，分別將幾何圖形平移 (移動) 和旋轉指定的量。曲面有一個 _Thicken_ 方法，它採用一個單一的數字輸入，指定曲面的新厚度。
 
-![](../images/8-2/1/GeometryBasics\_05.png)
+![](../../.gitbook/assets/GeometryBasics_05.png)
 
 ```js
 p1 = Point.ByCoordinates(3, 10, 2);
@@ -97,11 +97,11 @@ surf = Surface.ByLoft([l1, l2]);
 solid = surf.Thicken(4.75, true);
 ```
 
-### 交集
+### 相交
 
-_交点_ 命令可以从较高维度的对象提取较低维度的几何图形。提取的较低纬度几何图形可以在几何图形创建、提取和重建的循环过程中形成较高维度几何图形的基础。在本示例中，我们使用生成的实体来创建曲面，并使用曲面来创建曲线。
+_Intersection_ 指令可以從較高維度的物件萃取出較低維度的幾何圖形。在建立、萃取和重新建立幾何圖形的循環過程中，萃取出的較低維度幾何圖形可以形成較高維度幾何圖形的基礎。在此範例中，我們使用產生的實體 (Solid) 來建立一個曲面 (Surface)，並使用曲面 (Surface) 來建立一條曲線 (Curve)。
 
-![](../images/8-2/1/GeometryBasics\_06.png)
+![](../../.gitbook/assets/GeometryBasics_06.png)
 
 ```js
 p1 = Point.ByCoordinates(3, 10, 2);

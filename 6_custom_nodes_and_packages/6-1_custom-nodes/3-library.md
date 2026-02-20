@@ -1,55 +1,55 @@
-# 发布到库
+# 發佈至資源庫
 
-我们刚创建了一个自定义节点，并将它应用到 Dynamo 图形中的特定流程。我们非常喜欢这个节点，我们想将它保留在 Dynamo 库中，以便在其他图形中引用。为此，我们将本地发布节点。这与发布软件包的过程类似，我们将在下一章中详细介绍。
+我們剛剛建立了自訂節點並將其套用至 Dynamo 圖形中的特定程序。我們非常喜歡此節點，因此，我們要將其保留在我們的 Dynamo 資源庫以在其他圖形中進行參考。若要執行此作業，我們將在本端發佈此節點。此程序與發佈套件的程序類似，我們將在下一個章節中進行詳細討論。
 
-通过本地发布节点，可以在打开新会话时在 Dynamo 库中访问该节点。如果不发布节点，则引用自定义节点的 Dynamo 图形也必须在其文件夹中具有该自定义节点（或必须使用 _“文件”>“输入库”_ 将自定义节点输入到 Dynamo 中）。
+透過在本端發佈節點，當您開啟一個新的階段作業時該節點將可在 Dynamo 資源庫中存取。如果不發佈節點，參照自訂節點的 Dynamo 圖表也必須在其資料夾中具有該自訂節點 (或必須使用 _「檔案」>「匯入資源庫」_ 將自訂節點匯入 Dynamo 中)。
 
-{% hint style="warning" %}只要 Dynamo Sandbox 2.17 及更高版本中的自定义节点和软件包没有宿主 API 依存关系，就可以发布它们。在早期版本中，只能在适用于 Revit 的 Dynamo 和 Dynamo for Civil 3D 中发布自定义节点和软件包。{% endhint %}
+{% hint style="warning" %} 在 Dynamo Sandbox 2.17 版及更新版本中，只要自訂節點和套件沒有主 API 相依性，即可加以發佈。在較舊版中，只有 Dynamo for Revit 和 Dynamo for Civil 3D 中可發佈自訂節點和套件。{% endhint %}
 
-## 练习：本地发布自定义节点
+## 練習：在本端發佈自訂節點
 
-> 单击下面的链接下载示例文件。
+> 按一下下方的連結下載範例檔案。
 >
-> 可以在附录中找到示例文件的完整列表。
+> 附錄中提供完整的範例檔案清單。
 
-{% file src="../datasets/6-1/3/PointsToSurface.dyf" %}
+{% file src="../../.gitbook/assets/PointsToSurface (1).dyf" %}
 
-让我们继续处理上一节中创建的自定义节点。打开“PointsToSurface”自定义节点后，我们会在 Dynamo 自定义节点编辑器中看到该图形。还可以在 Dynamo 图形编辑器中双击自定义节点来打开它。
+讓我們繼續瞭解在前一個部份中建立的自訂節點。開啟 PointsToSurface 自訂節點後，我們會在 Dynamo 自訂節點編輯器中看到圖表。您也可以在「Dynamo 圖表編輯器」中按兩下自訂節點來開啟。
 
-![](../images/6-1/3/publishcustomnodelocally01.jpg)
+\![](<../../.gitbook/assets/publish custom node exercise - 01.jpg>)
 
-要在本地发布自定义节点，只需在画布上单击鼠标右键，然后选择 _“发布此自定义节点...”_ 。
+若要在本端發佈自訂節點，只需在圖元區上按一下右鍵，然後選取 _「發佈此自訂節點...」_
 
-![](../images/6-1/3/publishcustomnodeexercise-02.jpg)
+\![](<../../.gitbook/assets/publish custom node exercise - 02.jpg>)
 
-填写与上图类似的相关信息，然后选择 _“本地发布”_ 。请注意，“组”字段定义可从 Dynamo 菜单访问的主图元。
+參照上圖填寫相關資訊，並選取 _「本端發佈」_。請注意，「群組」欄位定義可從 Dynamo 功能表存取的主要元素。
 
 <figure><img src="../../.gitbook/assets/publish_a_package.png" alt=""><figcaption></figcaption></figure>
 
-选择一个文件夹以容纳计划在本地发布的所有自定义节点。Dynamo 每次加载时都会检查该文件夹，因此请确保该文件夹处于永久位置。导航到此文件夹，然后选择 _“选择文件夹”_ 。现在，Dynamo 节点在本地发布，每次加载程序时都会保留在 Dynamo 库中！
+選擇資料夾，以容納所有您打算在本端發佈的自訂節點。Dynamo 每次載入時都會檢查此資料夾，因此請確認該資料夾位於固定位置。導覽至此資料夾，然後選擇 _「選擇資料夾」_。Dynamo 節點現已在本端發佈，每次您載入程式時，該節點都會在您的 Dynamo 資源庫中！
 
-![](../images/6-1/3/publishcustomnodeexercise-04.jpg)
+\![](<../../.gitbook/assets/publish custom node exercise - 04 (1).jpg>)
 
-要检查自定义节点文件夹位置，请转到 _“Dynamo”>“首选项”>“软件包设置”>“节点和软件包路径”_ 。
+若要查看自訂節點的資料夾位置，請前往 _「Dynamo」>「偏好」>「套件設定」>「節點和套件路徑」。_
 
 <figure><img src="../../.gitbook/assets/settings.png" alt="" width="520"><figcaption></figcaption></figure>
 
-在此窗口中，我们会看到路径列表。
+在此視窗中，我們看到路徑清單。
 
 <figure><img src="../../.gitbook/assets/package-locations.png" alt=""><figcaption></figcaption></figure>
 
-> 1. _“Documents\\DynamoCustomNodes...”_ 是指我们已本地发布的自定义节点的位置。
-> 2. _“AppData\\Roaming\\Dynamo...”_ 是指联机安装的 Dynamo 软件包的默认位置。
-> 3. 您可能希望按照列表顺序将本地文件夹路径下移（通过单击路径名左侧的向下箭头）。顶层文件夹是安装软件包的默认路径。因此，通过保留默认的 Dynamo 软件包安装路径作为默认文件夹，联机软件包将与本地发布的节点分离。
+> 1. _Documents\\DynamoCustomNodes..._ 是本端發佈之自訂節點的位置。
+> 2. _AppData\\Roaming\\Dynamo..._ 是線上安裝的 Dynamo 套件的預設位置。
+> 3. 您可能想要在清單中將本端資料夾路徑的順序下移，只要按一下路徑名稱左側的向下箭頭即可。頂層資料夾是套件安裝的預設路徑。因此，透過將預設 Dynamo 套件安裝路徑保留為預設資料夾，線上套件將與本端發佈的節點分離。
 
-我们切换了路径名称的顺序，以便让 Dynamo 的默认路径作为软件包安装位置。
+我們已切換路徑名稱的順序，以將 Dynamo 的預設路徑作為套件的安裝位置。
 
 <figure><img src="../../.gitbook/assets/updated-package-locations.png" alt=""><figcaption></figcaption></figure>
 
-导航到此本地文件夹，我们可以在 _“.dyf”_ 文件夹中找到原始自定义节点，该文件夹是 Dynamo 自定义节点文件的扩展名。我们可以编辑此文件夹中的文件，并且节点将在 UI 中更新。我们还可以向 _“DynamoCustomNode”_ 主文件夹添加更多节点，Dynamo 会在重新启动时将它们添加到您的库中！
+導覽至此本端資料夾，我們可以在 _「.dyf」_ 資料夾中找到原始自訂節點，.dyf 是 Dynamo 自訂節點檔案的副檔名。我們可以編輯此資料夾中的檔案，節點將在使用者介面中更新。我們還可以新增更多節點至主要的 _DynamoCustomNode_ 資料夾，Dynamo 會在重新啟動時將其新增到您的資源庫！
 
-![](../images/6-1/3/publishcustomnodeexercise-08.jpg)
+\![](<../../.gitbook/assets/publish custom node exercise - 08.jpg>)
 
-现在，每次使用 Dynamo 库的“DynamoPrimer”组中的“PointsToSurface”时，Dynamo 都会载入。
+Dynamo 現在每次都會將「PointsToSurface」載入到 Dynamo 資源庫的「DynamoPrimer」群組中。
 
-![](../images/6-1/3/publishcustomnodeexercise-09.jpg)
+\![](<../../.gitbook/assets/publish custom node exercise - 09.jpg>)

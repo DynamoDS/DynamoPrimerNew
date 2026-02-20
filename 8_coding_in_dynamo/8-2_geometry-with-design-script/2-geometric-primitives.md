@@ -1,14 +1,14 @@
-# 几何基本体
+# 幾何基本型
 
-### 坐标系
+### 座標系統 (CoordinateSystem)
 
-尽管 Dynamo 能够创建各种复杂的几何形状，但简单的几何基本体构成任何计算设计的支柱：直接以最终设计形式表示或用作生成更复杂几何体的脚手架。
+雖然 Dynamo 能夠建立各種複雜幾何形狀，但是簡單的幾何基本型是構成任何計算設計的骨架：無論是以最終設計的形式直接表示，或是用來做為產生更複雜幾何圖形的鷹架。
 
-虽然不是严格的一块几何体，但 CoordinateSystem 是构建几何体的重要工具。CoordinateSystem 对象可记录位置和几何变换（如旋转、调节和缩放）。
+雖然 CoordinateSystem 嚴格來說不算是一個幾何圖形，但卻是建構幾何圖形的一個重要工具。一個 CoordinateSystem 物件可以同時追蹤位置和幾何的轉換，例如旋轉、切變和調整比例。
 
-以 x = 0、y = 0、z = 0 的点为中心创建 CoordinateSystem，不进行旋转、缩放或调节变换，只需调用 Identity 构造函数：
+建立一個中心點位於 x=0，y=0，z=0 的 CoordinateSystem (沒有旋轉、調整比例或切變轉換)，只需要呼叫 Identity 建構函式：
 
-![](../images/8-2/2/GeometricPrimitives\_01.png)
+![](../../.gitbook/assets/GeometricPrimitives_01.png)
 
 ```js
 // create a CoordinateSystem at x = 0, y = 0, z = 0,
@@ -17,9 +17,9 @@
 cs = CoordinateSystem.Identity();
 ```
 
-具有几何变换的 CoordinateSystems 超出本章的范围，但另一个构造函数允许您在特定点 _CoordinateSystem.ByOriginVectors_ 创建坐标系：
+具有幾何轉換的 CoordinateSystem 超出本章節的範圍，不過有另一個建構函式 _CoordinateSystem.ByOriginVectors_ 可以讓您在特定的點建立座標系統：
 
-![](../images/8-2/2/GeometricPrimitives\_02.png)
+![](../../.gitbook/assets/GeometricPrimitives_02.png)
 
 ```js
 // create a CoordinateSystem at a specific location,
@@ -35,13 +35,13 @@ cs = CoordinateSystem.ByOriginVectors(origin,
     identity.XAxis, identity.YAxis, identity.ZAxis);
 ```
 
-### 点
+### 點 (Point)
 
-最简单的几何基本体是一个点，表示三维空间中的零维位置。如前所述，可以通过几种不同的方式在特定坐标系中创建点：_Point.ByCoordinates_ 使用指定的 x、y 和 z 坐标创建点；_Point.ByCartesianCoordinates_ 使用指定的 x、y 和 z 坐标在特定坐标系中创建点；_Point.ByCylindricalCoordinates_ 使用半径、旋转角度和高度创建位于圆柱体上的点；_Point.BySphericalCoordinates_ 使用半径和两个旋转角度创建位于球体上的点。
+最簡單的幾何基本型是一個點 (Point)，代表三維空間中的一個零維位置。如先前所述，在特定座標系統中建立一個點有幾種不同的方式：_Point.ByCoordinates_ 以指定的 x、y、z 座標建立一個點；_Point.ByCartesianCoordinates_ 在特定座標系統中以指定的 x、y、z 座標建立一個點；_Point.ByCylindricalCoordinates_ 在有半徑、旋轉角度和高度的圓柱上建立一個點；_Point.BySphericalCoordinates_ 在有半徑和兩個旋轉角度的圓球上建立一個點。
 
-本例说明在各种坐标系中创建的点：
+本範例會顯示在各種座標系統建立的點：
 
-![](../images/8-2/2/GeometricPrimitives\_03.png)
+![](../../.gitbook/assets/GeometricPrimitives_03.png)
 
 ```js
 // create a point with x, y, and z coordinates
@@ -73,11 +73,11 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### 线 
+### 直線 (Line)
 
-下一个较高维度的 Dynamo 基本体是一条线段，表示两个端点之间的无限多个点。可以通过构造函数 _Line.ByStartPointEndPoint_ 明确指定两个边界点，或者通过 _Line.ByStartPointDirectionLength_ 在该方向指定起点、方向和长度来创建直线。
+下一個較高維度的 Dynamo 基本型是線段，代表兩個端點之間有無限個點。使用 _Line.ByStartPointEndPoint_ 建構函式明確指出兩個邊界點，或使用 _Line.ByStartPointDirectionLength_ 建構函式指定起點、方向和沿著該方向的長度，可以建立直線。
 
-![](../images/8-2/2/GeometricPrimitives\_04.png)
+![](../../.gitbook/assets/GeometricPrimitives_04.png)
 
 ```js
 p1 = Point.ByCoordinates(-2, -5, -10);
@@ -92,11 +92,11 @@ lDir = Line.ByStartPointDirectionLength(p1,
     Vector.ByCoordinates(1, 1, 1), 10);
 ```
 
-### 三维基本体 - 立方体、圆锥体、圆柱体、球体等
+### 3D 基本型 - 立方體、圓錐、圓柱、圓球等
 
-Dynamo 有表示三维中大多数基本类型的几何基本体的对象：立方体，使用 _Cuboid.ByLengths_ 创建；圆锥体，使用 _Cone.ByPointsRadius_ 和 _Cone.ByPointsRadii_ 创建；圆柱体，使用 _Cylinder.ByRadiusHeight_ 创建；球体，使用 _Sphere.ByCenterPointRadius_ 创建。
+Dynamo 有幾個物件，代表三維的幾何基本型的最基本類型：使用 _Cuboid.ByLengths_ 建立的立方體 (Cuboid)；使用 _Cone.ByPointsRadius_ 和 _Cone.ByPointsRadii_ 建立的圓錐 (Cone)；使用 _Cylinder.ByRadiusHeight_ 建立的圓柱 (Cylinder)；以及使用 _Sphere.ByCenterPointRadius_ 建立的圓球 (Sphere)。
 
-![](../images/8-2/2/GeometricPrimitives\_05.png)
+![](../../.gitbook/assets/GeometricPrimitives_05.png)
 
 ```js
 // create a cuboid with specified lengths
