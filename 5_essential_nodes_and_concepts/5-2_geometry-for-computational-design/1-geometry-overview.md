@@ -6,11 +6,11 @@
 
 Porozumění typům geometrie a [jejich vzájemným vztahům](1-geometry-overview.md#stepping-through-the-hierarchy) nám umožní orientovat se v kolekci **uzlů geometrie**, která je pro nás k dispozici v knihovně. Uzly geometrie jsou uspořádány abecedně a ne hierarchicky – zde jsou zobrazeny podobně jako jejich rozvržení v rozhraní aplikace Dynamo.
 
-![](../images/5-2/1/geometryoverview-geometryindynamo.jpg)
+\![](<../../.gitbook/assets/geometry overview - geometry in dynamo.jpg>)
 
 Navíc by se vytváření modelů v aplikaci Dynamo a připojení náhledu toho, co vidíme v náhledu pozadí, k toku dat v grafu mělo časem stát více intuitivní.
 
-![](../images/5-2/1/GeometryforComputationalDesign-Overview.jpg)
+\![](<../../.gitbook/assets/Geometry for Computational Design - Overview.jpg>)
 
 > 1. Všimněte si předpokládaného souřadnicového systému vykresleného pomocí rastru a barevných os
 > 2. Vybrané uzly rendrují odpovídající geometrii (pokud uzel vytvoří geometrii) na pozadí, přičemž barva zvýraznění je stejná
@@ -19,13 +19,13 @@ Navíc by se vytváření modelů v aplikaci Dynamo a připojení náhledu toho
 >
 > Úplný seznam vzorových souborů najdete v dodatku.
 
-{% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Geometry Overview.dyn" %}
 
 ## Koncept geometrie
 
 Geometrie je tradičně definována jako studium tvaru, velikosti, relativní polohy tvarů a vlastností prostoru. Toto pole má bohatou historii sahající tisíce let. S příchodem a popularizací počítače jsme získali mocný nástroj pro definování, zkoumání a generování geometrie. Nyní je tak snadné vypočítat výsledek složitých geometrických interakcí, že téměř nevnímáme, že to děláme.
 
-![Stanfordský zajíček](../images/5-2/1/StanfordBunny.jpg)
+![Stanfordský zajíček](../../.gitbook/assets/StanfordBunny.jpg)
 
 > Pokud chcete zjistit, jak může být diverzní a složitá geometrie využívána silou vašeho počítače, proveďte rychlé webové vyhledávání Stanford Bunny (Stanfordský zajíček) – kanonického modelu použitého k testování algoritmů.
 
@@ -42,7 +42,7 @@ V praxi tyto zásady znamenají, že je nutné vědět, s čím pracujeme (jak
 
 Věnujme chvíli času sledování vztahu mezi abstraktním a hierarchickým popisem geometrie. Protože tyto dva koncepty spolu souvisí, ale ne vždy zjevně, můžeme se rychle dostat do koncepčních problémů, jakmile začneme vyvíjet hlubší pracovní postupy nebo modely. Pro začátek používáme dimenzionalitu jako jednoduchý popis toho, co vytváříme. Počet kót potřebných k popisu tvaru nám dává vědět, jak je geometrie uspořádána hierarchicky.
 
-![Výpočetní geometrie](../images/5-2/1/GeometryDimensionality.jpg)
+\![Výpočetní geometrie](<../../.gitbook/assets/Geometry for - GeometryDimensionality.jpg>)
 
 > 1. **Bod** (definovaný souřadnicemi) nemá žádné kóty – jsou to jen čísla popisující jednotlivé souřadnice
 > 2. **Úsečka** (definovaná dvěma body) má nyní _jednu_ kótu – úsečku lze „procházet“ dopředu (kladný směr), nebo dozadu (záporný směr)
@@ -51,7 +51,7 @@ Věnujme chvíli času sledování vztahu mezi abstraktním a hierarchickým pop
 
 Dimenzionalita je pohodlný způsob, jak začít kategorizovat geometrii, ale nemusí být nutně nejlepší. Nakonec, nemodelujeme jen body, čáry, roviny a kvádry – co když chceme provést něco s křivkami? Dále existuje celá další kategorie geometrických typů, které jsou zcela abstraktní a definují vlastnosti, například orientaci, objem nebo vztahy mezi součástmi. Nemůžeme uchopit vektor, tak jak ho definujeme vzhledem k tomu, co vidíme v prostoru? Podrobnější kategorizace geometrické hierarchie by měla rozlišovat rozdíl mezi abstraktními typy nebo „pomocnými objekty“, z nichž každý můžeme seskupovat podle toho, s čím pomáhají, a typy, které pomáhají popisovat tvar prvků modelu.
 
-![Hierarchie geometrie](../images/5-2/1/GeometryHierarchy.jpg)
+![Hierarchie geometrie](../../.gitbook/assets/GeometryHierarchy.jpg)
 
 ## Další práce s geometrií
 

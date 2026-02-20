@@ -6,7 +6,7 @@ Určité geometrické objekty je možné vytvářet přímým zadáním souřadn
 
 Nejjednodušší geometrickou transformací je posunutí, čímž se objekt posune o zadaný počet jednotek ve směru X, Y a Z.
 
-![](../images/8-2/5/Transformations\_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -22,7 +22,7 @@ p2 = p.Translate(10, -20, 50);
 
 Ačkoliv lze všechny objekty v aplikaci Dynamo posunout připojením metody _.Translate_ na konec názvu objektu, pro složitější transformace je nutné provést transformaci souvisejícího objektu CoordinateSystem na nový. Například pro otočení objektu o 45 stupňů okolo osy Z je nutné pomocí metody _.Transform_ provést transformaci existujícího objektu CoordinateSystem bez otočení na objekt CoordinateSystem s otočením 45 stupňů kolem osy X:
 
-![](../images/8-2/5/Transformations\_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -42,7 +42,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Kromě posunutí a otočení lze u objektů CoordinateSystem také měnit měřítko nebo provádět kolmý posun. Měřítko objektu CoordinateSystem lze změnit metodou _.Scale_:
 
-![](../images/8-2/5/Transformations\_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -58,7 +58,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Objekty CoordinateSystem s kolmým posunem lze vytvořit zadáním neortogonálních vektorů jako vstup konstruktoru CoordinateSystem.
 
-![](../images/8-2/5/Transformations\_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(

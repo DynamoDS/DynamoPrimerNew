@@ -4,7 +4,7 @@
 
 Teď, když jsme stanovili, co je to seznam, pojďme si promluvit o operacích, které s ním můžeme provádět. Představte si seznam jako balíček karet. Seznam je balíček a každá karta představuje položku.
 
-![karty](../images/5-4/2/Playing_cards_modified.jpg)
+![karty](../../.gitbook/assets/Playing_cards_modified.jpg)
 
 > Autor fotografie: [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
@@ -39,11 +39,11 @@ Všechny výše uvedené operace mají analogické uzly aplikace Dynamo pro prá
 >
 > Úplný seznam vzorových souborů najdete v dodatku.
 
-{% file src="../datasets/5-4/2/List-Operations.dyn" %}
+{% file src="../../.gitbook/assets/List-Operations (1).dyn" %}
 
 Obrázek níže je základní graf, ve kterém nakreslíme čáry mezi dvěma kružnicemi, které představují základní operace se seznamy. Prozkoumáme, jak spravovat data v seznamu a jak prezentovat vizuální výsledky pomocí akcí v seznamu níže.
 
-![](../images/5-4/2/workingwithlist-listoperation.jpg)
+\![](<../../.gitbook/assets/working with list - list operation.jpg>)
 
 > 1. Začněte uzlem **Code Block** s hodnotou `500;`.
 > 2. Propojte jej se vstupem x uzlu **Point.ByCoordinates**.
@@ -61,11 +61,11 @@ Obrázek níže je základní graf, ve kterém nakreslíme čáry mezi dvěma kr
 >
 > Úplný seznam vzorových souborů najdete v dodatku.
 
-{% file src="../datasets/5-4/2/List-Count.dyn" %}
+{% file src="../../.gitbook/assets/List-Count (1).dyn" %}
 
 Uzel _List.Count_ je jednoduchý: spočítá počet hodnot v seznamu a vrátí výsledné číslo. Tento uzel je při práci se seznamy seznamů složitější, ale to si předvedeme v následujících částech.
 
-![Počet](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
+\![Počet](<../../.gitbook/assets/working with list - list operation - list count.jpg>)
 
 > 1. Uzel **List.Count** vrací počet řádků v uzlu **Line.ByStartPointEndPoint**. V tomto případě je to hodnota 10, která souhlasí s počtem bodů vytvořených z původního uzlu **Code Block**.
 
@@ -75,18 +75,18 @@ Uzel _List.Count_ je jednoduchý: spočítá počet hodnot v seznamu a vrátí 
 >
 > Úplný seznam vzorových souborů najdete v dodatku.
 
-{% file src="../datasets/5-4/2/List-GetItemAtIndex.dyn" %}
+{% file src="../../.gitbook/assets/List-GetItemAtIndex.dyn" %}
 
 **List.GetItemAtIndex** je základní způsob, jak dotazovat položku v seznamu.
 
-![Cvičení](../images/5-4/2/workingwithlist-getitemindex01.jpg)
+\![Exercise](<../../.gitbook/assets/working with list - get item index 01.jpg>)
 
 > 1. Nejprve kliknutím pravým tlačítkem myši na uzel **Line.ByStartPointEndPoint** vypněte jeho náhled.
 > 2. Pomocí uzlu **List.GetItemAtIndex** vybereme index _0_ nebo první položku v seznamu řádků.
 
 Chcete-li pomocí uzlu **List.GetItemAtIndex** vybrat jinou položku, změňte hodnotu posuvníku v rozmezí od 0 do 9.
 
-![](../images/5-4/2/workingwithlist-getitemindex02.gif)
+\![](<../../.gitbook/assets/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
@@ -94,11 +94,11 @@ Chcete-li pomocí uzlu **List.GetItemAtIndex** vybrat jinou položku, změňte h
 >
 > Úplný seznam vzorových souborů najdete v dodatku.
 
-{% file src="../datasets/5-4/2/List-Reverse.dyn" %}
+{% file src="../../.gitbook/assets/List-Reverse (1).dyn" %}
 
 Možnost _List.Reverse_ obrátí pořadí všech položek v seznamu.
 
-![Cvičení](../images/5-4/2/workingwithlist-listreverse.jpg)
+\![Cvičení](<../../.gitbook/assets/working with list - list reverse.jpg>)
 
 > 1. Chcete-li správně zobrazit obrácený seznam čar, vytvořte více čar změnou uzlu **Code Block** na `0..1..#50;`.
 > 2. Duplikujte uzel **Line.ByStartPointEndPoint**, vložte uzel List.Reverse mezi uzel **Curve.PointAtParameter** a druhý uzel **Line.ByStartPointEndPoint**.
@@ -110,11 +110,11 @@ Možnost _List.Reverse_ obrátí pořadí všech položek v seznamu.
 >
 > Úplný seznam vzorových souborů najdete v dodatku.
 
-{% file src="../datasets/5-4/2/List-ShiftIndices.dyn" %}
+{% file src="../../.gitbook/assets/List-ShiftIndices (1).dyn" %}
 
 **List.ShiftIndices** je dobrý nástroj ke tvorbě zkroucení, šroubovicových vzorů nebo jiných podobných manipulací s daty. Tento uzel přemístí položky v seznamu do daného počtu indexů.
 
-![Cvičení](../images/5-4/2/workingwithlist-shiftIndices01.jpg)
+\![Cvičení](<../../.gitbook/assets/working with list - shiftIndices 01.jpg>)
 
 > 1. Stejným postupem jako při otáčení seznamu připojte uzel **List.ShiftIndices** k uzlu **Curve.PointAtParameter** a **Line.ByStartPointEndPoint**.
 > 2. Pomocí uzlu **Code Block** s hodnotou 1 posuňte seznam o jeden index.
@@ -122,7 +122,7 @@ Možnost _List.Reverse_ obrátí pořadí všech položek v seznamu.
 
 Pokud například změníme uzel **Code Block** na větší hodnotu, například _30_, všimneme si významného rozdílu mezi příčnými čarami. V tomto případě funguje posun jako čočka kamery, což vytváří v původní válcové formě otočení.
 
-![](../images/5-4/2/workingwithlist-shiftIndices02.jpg)
+\![](<../../.gitbook/assets/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -130,13 +130,13 @@ Pokud například změníme uzel **Code Block** na větší hodnotu, například
 >
 > Úplný seznam vzorových souborů najdete v dodatku.
 
-{% file src="../datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
+{% file src="../../.gitbook/assets/List-FilterByBooleanMask.dyn" %}
 
-![](../images/5-4/2/ListFilterBool.png)
+![](../../.gitbook/assets/ListFilterBool.png)
 
 Uzel **List.FilterByBooleanMask** odebere určité položky podle seznamu logických hodnot nebo podle hodnot true nebo false.
 
-![Cvičení](../images/5-4/2/workingwithlist-filterbyboolmask.jpg)
+\![Cvičení](<../../.gitbook/assets/working with list - filter by bool mask.jpg>)
 
 Aby bylo možné vytvořit seznam hodnot true nebo false, je třeba ještě trochu pracovat...
 

@@ -15,7 +15,7 @@ Metoda _Průnik_ je definována u všech geometrií aplikace Dynamo, teoreticky
 
 Následující velmi jednoduchý příklad ukazuje průnik roviny s plochou Nurbs. Průnik vygeneruje pole objektů NurbsCurve, které lze používat jako kterékoliv jiné objekty NurbsCurve.
 
-![](../images/8-2/8/IntersectionAndTrim\_01.png)
+![](../../.gitbook/assets/IntersectionAndTrim_01.png)
 
 ```js
 // python_points_5 is a set of Points generated with
@@ -47,7 +47,7 @@ Metoda _Oříznutí_ je velmi podobná metodě Průnik v tom, že je definován
 
 U metody _Oříznutí_ je nutné zadat výběrový bod, který určuje, která geometrie má být zahozena a která má být zachována. Aplikace vyhledá a zahodí oříznutou geometrii, která bude výběrovému bodu nejblíže.
 
-![](../images/8-2/8/IntersectionAndTrim\_02.png)
+![](../../.gitbook/assets/IntersectionAndTrim_02.png)
 
 ```js
 // python_points_5 is a set of Points generated with

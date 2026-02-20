@@ -2,7 +2,7 @@
 
 Aplikace Dynamo nabízí velké množství funkcí, které jsou k dispozici ihned po instalaci, a také spravuje rozsáhlou knihovnu balíčků, která může možnosti aplikace Dynamo podstatně rozšířit. Balíček je kolekce vlastních uzlů nebo dalších funkcí. Nástroj Dynamo Package Manager je portál pro komunitu, kde lze stáhnout všechny balíčky, které byly publikovány online. Tyto sady nástrojů jsou vyvinuty třetími stranami, aby bylo možné rozšířit základní funkce aplikace Dynamo, jsou přístupné všem a připraveny ke stažení kliknutím na tlačítko.
 
-![Web Package Manager](../images/6-2/1/dpm.jpg)
+![Web Package Manager](../../.gitbook/assets/dpm.jpg)
 
 Projektu s otevřeným zdrojovým kódem, jako je Dynamo, tento druh zapojení komunity prospívá. Díky specializovaným vývojářům třetích stran je aplikace Dynamo schopna rozšířit svůj dosah na pracovní postupy napříč různými odvětvími. Z tohoto důvodu tým aplikace Dynamo vyvinul společné úsilí, aby zefektivnil vývoj a zveřejňování balíčků (které budou podrobněji popsány v následujících částech).
 
@@ -22,11 +22,11 @@ Kliknutím na tlačítko Instalovat přidejte tento balíček do knihovny a potv
 
 Všimněte si, že v knihovně aplikace Dynamo je nyní k dispozici další skupina s názvem „buildz“. Tento název odkazuje na vývojáře balíčku a uživatelský uzel je umístěn do této skupiny. Můžete ji začít ihned používat.
 
-![](../images/6-2/1/packageintroduction-installingapackage03.jpg)
+\![](<../../.gitbook/assets/package introduction - installing a package 03.jpg>)
 
 Pomocí uzlu **Code Block** rychle definujte pravoúhlou osnovu, výsledek odešlete do uzlu **Polygon.ByPoints** a následně do uzlu **Surface.ByPatch**, čímž zobrazíte seznam právě vytvořených obdélníkových panelů.
 
-![](../images/6-2/1/packageintroduction-installingapackage04.jpg)
+\![](<../../.gitbook/assets/package introduction - installing a package 04.jpg>)
 
 ### Instalace složky balíčku – DynamoUnfold
 
@@ -40,19 +40,19 @@ Tentokrát vyhledáme výraz _DynamoUnfold_. Jedná se o jedno slovo. Když se 
 
 V knihovně aplikace Dynamo je k dispozici skupina aplikace _DynamoUnfold_ s více kategoriemi a s vlastními uzly.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
+\![](<../../.gitbook/assets/package introduction - installing package folder 02.jpg>)
 
 Nyní se podíváme na strukturu souborů balíčku.
 
 1. Nejprve přejděte do nabídky Balíčky > Package Manager > Instalované balíčky.
-2. Vedle položky DynamoUnfold vyberte nabídku možností <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line">.
+2. Vedle položky DynamoUnfold vyberte nabídku možností <img src="../../.gitbook/assets/package introduction - vertical dots menu.jpg" alt="" data-size="line">.
 3. Poté kliknutím na možnost Zobrazit kořenový adresář otevřete kořenovou složku pro tento balíček.
 
 <figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Tak se dostaneme do kořenového adresáře balíčku. Všimněte si, že máme tři složky a soubor.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder05.jpg)
+\![](<../../.gitbook/assets/package introduction - installing package folder 05.jpg>)
 
 > 1. Složka _bin_ slouží k ukládání souborů .dll. Tento balíček Dynamo byl vyvinut pomocí možnosti Zero-Touch, proto jsou vlastní uzly uloženy v této složce.
 > 2. Složka _dyf_ slouží k umístění vlastních uzlů. Tento balíček nebyl vytvořen pomocí vlastních uzlů aplikace Dynamo, proto je tato složka pro tento balíček prázdná.
@@ -63,11 +63,11 @@ Při otevření složky extra se zobrazí několik vzorových souborů, které b
 
 Otevřeme položku SphereUnfold.
 
-![](../images/6-2/1/rd2.jpg)
+![](../../.gitbook/assets/rd2.jpg)
 
 Po otevření souboru a stisknutí tlačítka Spustit na řešiči máme rozvinutou kouli. Ukázkové soubory, jako jsou tyto, jsou užitečné při studiu práce s novým balíčkem Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../../.gitbook/assets/packageintroduction-installingpackagefolder07 (1).jpg>)
 
 ### Procházení a zobrazení informací o balíčku
 
@@ -81,13 +81,13 @@ Další podrobnosti o jednotlivých balíčcích můžete také zobrazit kliknu
 
 Další způsob, jak objevovat balíčky aplikace Dynamo, je prozkoumat web nástroje nástroj [Dynamo Package Manager](http://dynamopackages.com). Zde najdete závislosti balíčků a informace o kompatibilitě hostitelů a verzí, které poskytují autoři balíčků. Soubory balíčku můžete také stáhnout z aplikace Dynamo Package Manager, ale přímo z aplikace Dynamo je proces jednodušší.
 
-![](../images/6-2/1/dpm2.jpg)
+![](../../.gitbook/assets/dpm2.jpg)
 
 ### Kde jsou soubory balíčků uloženy místně?
 
 Pokud chcete zjistit, kde jsou uloženy soubory balíčku, klikněte v horní části navigace na možnosti Dynamo > Předvolby > Nastavení balíčku > Umístění souborů uzlů a balíčků, kde najdete aktuální adresář kořenové složky.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
+\![](<../../.gitbook/assets/package introduction - installing package folder 08.jpg>)
 
 Ve výchozím nastavení jsou balíčky nainstalovány do umístění podobného této cestě: _C:/Users/[uživatelské jméno]/AppData/Roaming/Dynamo/[verze aplikace Dynamo]_.
 

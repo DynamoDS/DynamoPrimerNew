@@ -6,7 +6,7 @@ Tato referenční stránka rozšiřuje doporučené postupy popsané ve skriptov
 
 Standardní knihovny jsou externí pro aplikaci Dynamo a jsou k dispozici v programovacích jazycích Python a C# (Zerotouch). Aplikace Dynamo má také vlastní sadu knihoven, které přímo odpovídají hierarchii uzlu aplikace Dynamo, což uživateli umožňuje vytvořit v kódu cokoliv, co by mohlo být vytvořeno pomocí uzlů a drátů. V následující části je uveden postup, jak jednotlivé knihovny aplikace Dynamo poskytují přístup a kdy mají používat standardní knihovnu.
 
-![](images/3/textual-programming.jpg)
+![](../.gitbook/assets/textual-programming.jpg)
 
 **Standardní knihovny a knihovny aplikace Dynamo**
 
@@ -28,9 +28,7 @@ Standardní knihovny jsou externí pro aplikaci Dynamo a jsou k dispozici v pr
    * Funkce: Excel.
    * Způsob importu: `import DSOffice`
 
-{% hint style="warning" %}
-\*Poznámka: Při použití knihovny **protoGeometry** prostřednictvím jazyka Python nebo C# vytváříte nespravované objekty, které vyžadují ruční správu paměti. Další informace najdete níže v části **Nespravované objekty**.
-{% endhint %}
+{% hint style="warning" %} *Poznámka: Při použití knihovny **protoGeometry** prostřednictvím jazyka Python nebo C# vytváříte nespravované objekty, které vyžadují ruční správu paměti. Další informace najdete níže v části **Nespravované objekty**. {% endhint %}
 
 ## Pečlivé použití popisků
 
@@ -310,4 +308,3 @@ Opravený kód by vypadal jako:
 ```
 
 Obecně platí, že je nutné pouze odstranit geometrii, jako je `Surfaces`, `Curves` a `Solids`. Pro jistotu však můžete odstranit všechny typy geometrie (`Vectors`, `Points`, `CoordinateSystems`).
-

@@ -2,7 +2,7 @@
 
 Následující skripty jazyka Python vytvářejí pole bodů pro několik příkladů. Vložte je do uzlu skriptu jazyka Python následovně:
 
-![](../images/8-2/10/pythonpoints01.jpg)
+\![](<../../.gitbook/assets/python points 01.jpg>)
 
 **python_points_1**
 

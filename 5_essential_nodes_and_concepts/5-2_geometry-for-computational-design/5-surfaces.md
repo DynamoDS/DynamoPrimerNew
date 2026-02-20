@@ -10,7 +10,7 @@ Pomocí [plochy](5-surfaces.md#surface) v modelu reprezentujeme objekty, které
 
 Importujme plochu do aplikace Dynamo a vyhodnoťme ji v daných parametrech, abychom zjistili, jaká data můžeme získat.
 
-![](../images/5-2/5/surfaces-surfaceindynamo.jpg)
+\![](<../../.gitbook/assets/surfaces - surface in dynamo.jpg>)
 
 > 1. _Surface.PointAtParameter_ vrací bod na zadané souřadnici UV
 > 2. _Surface.NormalAtParameter_ vrací normálový vektor v zadané souřadnici UV
@@ -20,7 +20,7 @@ Importujme plochu do aplikace Dynamo a vyhodnoťme ji v daných parametrech, ab
 >
 > Úplný seznam vzorových souborů najdete v dodatku.
 
-{% file src="../datasets/5-2/5/Surfaces.zip" %}
+{% file src="../../.gitbook/assets/Surfaces.zip" %}
 
 ## Podrobné informace...
 
@@ -28,7 +28,7 @@ Importujme plochu do aplikace Dynamo a vyhodnoťme ji v daných parametrech, ab
 
 Plocha je matematický útvar definovaný funkcí a dvěma parametry. Místo parametru `t` u křivek se k popisu parametrického prostoru u ploch používají parametry `U` a `V`. To znamená, že při práci s tímto typem geometrie můžeme odvodit více geometrických dat. Křivky například nabízejí tečné vektory a normálové roviny (které lze otáčet nebo kroutit po délce křivky), zatímco plochy nabízejí normálové vektory a tečné roviny, které jsou konzistentní s jejich orientací.
 
-![Povrch](../images/5-2/5/Surface.jpg)
+![Povrch](../../.gitbook/assets/Surface.jpg)
 
 > 1. Povrch
 > 2. Izokřivka U
@@ -39,7 +39,7 @@ Plocha je matematický útvar definovaný funkcí a dvěma parametry. Místo par
 
 **Doména plochy**: Doména plochy je definována jako rozsah parametrů (U,V), pro které lze vypočítat trojrozměrnou polohu bodu ležícího v této ploše. Doména v každém rozměru (U nebo V) je obvykle popisována dvěma čísly (od U Min do U Max) a (od V Min do V Max).
 
-![Povrch](../images/5-2/5/SurfaceParameter.jpg)
+![Povrch](../../.gitbook/assets/SurfaceParameter.jpg)
 
 Ačkoliv tvar plochy nemusí vždy připomínat obdélník a některé její izokřivky mohou být utaženější nebo uvolněnější než jiné, prostor definovaný její doménou je vždy dvourozměrný. Doména ploch je v aplikaci Dynamo definována minimem 0.0 a maximem 1.0 ve směrech U i V. Rovinné nebo oříznuté plochy mohou mít různé domény.
 
@@ -47,7 +47,7 @@ Ačkoliv tvar plochy nemusí vždy připomínat obdélník a některé její izo
 
 **Souřadnice UV**: Bod v parametrickém prostoru UV, definovaný souřadnicemi U, V a někdy W.
 
-![Souřadnice plochy](../images/5-2/5/SurfaceCoordinate.jpg)
+![Souřadnice plochy](../../.gitbook/assets/SurfaceCoordinate.jpg)
 
 **Kolmá rovina**: Rovina, která je kolmá k izokřivkám U a V v dané souřadnici UV.
 
@@ -57,11 +57,11 @@ Ačkoliv tvar plochy nemusí vždy připomínat obdélník a některé její izo
 
 **Plochy NURBS** jsou velmi podobné křivkám NURBS. Plochy NURBS si lze představit jako mřížku křivek NURBS, které směřují dvěma směry. Tvar plochy NURBS je definován řídicími body a stupněm plochy ve směrech U a V. Stejný algoritmus, tedy řídicí body, váhy a stupeň, se používá k výpočtu tvaru, normál, tečen, křivosti a dalších vlastností.
 
-![Plocha NURBS](../images/5-2/5/NURBSsurface.jpg)
+![Plocha NURBS](../../.gitbook/assets/NURBSsurface.jpg)
 
 Geometrie plochy NURBS naznačuje dva směry, protože plochy NURBS jsou (nezávisle na tvaru) obdélníkové mřížky řídicích bodů. Ačkoliv tyto směry často nesouvisí s globálním systémem souřadnic, často je budeme používat k analýze modelů nebo generování dalších geometrií podle této plochy.
 
-![Plocha NURBS](../images/5-2/5/NURBSsurface-Degree.jpg)
+![Plocha NURBS](../../.gitbook/assets/NURBSsurface-Degree.jpg)
 
 > 1. Stupeň (U,V) = (3,3)
 > 2. Stupeň (U,V) = (3,1)
@@ -74,6 +74,6 @@ Geometrie plochy NURBS naznačuje dva směry, protože plochy NURBS jsou (nezáv
 
 Ačkoliv topologie popisuje pouze způsob, jakým jsou jednotlivé části propojeny, topologie v aplikaci Dynamo představuje také typ geometrie. Konkrétně se jedná o nadřazenou kategorii pro plochy, polyplochy a tělesa.
 
-![Polyplocha](../images/5-2/5/PolySurface.jpg)
+![Polyplocha](../../.gitbook/assets/PolySurface.jpg)
 
 Spojené plochy (někdy nazývané záplaty) umožňují vytvářet složitější tvary a definovat detaily ve švech. Na hrany polyplochy je možné použít operaci zaoblení nebo zkosení.

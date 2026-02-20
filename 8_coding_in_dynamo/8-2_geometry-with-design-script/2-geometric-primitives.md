@@ -8,7 +8,7 @@ Ačkoliv se nejedná o geometrii, objekt CoordinateSystem je důležitým nást
 
 Chcete-li vytvořit objekt CoordinateSystem na souřadnicích X = 0, Y = 0, Z = 0 bez otočení, změny měřítka nebo kolmého posunu, jednoduše zavolejte konstruktor Identity:
 
-![](../images/8-2/2/GeometricPrimitives\_01.png)
+![](../../.gitbook/assets/GeometricPrimitives_01.png)
 
 ```js
 // create a CoordinateSystem at x = 0, y = 0, z = 0,
@@ -19,7 +19,7 @@ cs = CoordinateSystem.Identity();
 
 Objekty CoordinateSystems s geometrickými transformacemi jsou mimo rozsah této kapitoly, nicméně souřadnicový systém v zadaném bodě je možné vytvořit pomocí konstruktoru _CoordinateSystem.ByOriginVectors_:
 
-![](../images/8-2/2/GeometricPrimitives\_02.png)
+![](../../.gitbook/assets/GeometricPrimitives_02.png)
 
 ```js
 // create a CoordinateSystem at a specific location,
@@ -41,7 +41,7 @@ Nejjednodušším geometrickým primitivem je bod, který představuje bezrozmě
 
 Tento příklad ukazuje body vytvořené v různých souřadnicových systémech:
 
-![](../images/8-2/2/GeometricPrimitives\_03.png)
+![](../../.gitbook/assets/GeometricPrimitives_03.png)
 
 ```js
 // create a point with x, y, and z coordinates
@@ -73,11 +73,11 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### Čára 
+### Čára
 
 Primitivum s vyšším rozměrem v aplikaci Dynamo je úsečka, která představuje nekonečné množství bodů mezi dvěma koncovými body. Čáry lze vytvořit explicitním zadáním dvou okrajových bodů do konstruktoru _Line.ByStartPointEndPoint_ nebo zadáním počátečního bodu, směru a délky v tomto směru do konstruktoru _Line.ByStartPointDirectionLength_.
 
-![](../images/8-2/2/GeometricPrimitives\_04.png)
+![](../../.gitbook/assets/GeometricPrimitives_04.png)
 
 ```js
 p1 = Point.ByCoordinates(-2, -5, -10);
@@ -96,7 +96,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
 
 Aplikace Dynamo nabízí objekty reprezentující nejzákladnější trojrozměrná geometrická primitiva: kvádry vytvářené konstruktorem _Cuboid.ByLengths_, kužely vytvářené konstruktory _Cone.ByPointsRadius_ a _Cone.ByPointsRadii_, válce vytvářené konstruktorem _Cylinder.ByRadiusHeight_ a koule vytvářené konstruktorem _Sphere.ByCenterPointRadius_.
 
-![](../images/8-2/2/GeometricPrimitives\_05.png)
+![](../../.gitbook/assets/GeometricPrimitives_05.png)
 
 ```js
 // create a cuboid with specified lengths

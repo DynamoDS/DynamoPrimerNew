@@ -6,7 +6,7 @@ Dvourozměrná varianta objektu NurbsCurve je objekt NurbsSurface, který lze st
 
 Chcete-li vytvořit interpolovanou plochu, jednoduše vygenerujte dvourozměrnou kolekci bodů s přibližným tvarem plochy. Kolekce musí mít rovné, nezubaté hrany. Plochu z těchto bodů lze vytvořit metodou _NurbsSurface.ByPoints_.
 
-![](../images/8-2/6/Surfaces\_01.png)
+![](../../.gitbook/assets/Surfaces_01.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -19,7 +19,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 
 Plochu Nurbs volného tvaru lze vytvořit také určením řídicích bodů plochy. Podobně jako u křivek Nurbs, řídicí body si lze představit jako reprezentaci čtyřúhelníkové sítě s rovnými segmenty, která bude v závislosti na stupni plochy vyhlazena do konečné podoby. Chcete-li vytvořit plochu Nurbs pomocí řídicích bodů, zadejte do metody _NurbsSurface.ByPoints_ další dva parametry, které budou naznačovat stupně podřazených křivek v obou směrech plochy.
 
-![](../images/8-2/6/Surfaces\_02.png)
+![](../../.gitbook/assets/Surfaces_02.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -31,7 +31,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 
 Stupeň objektu NurbsSurface lze zvýšit a změnit tím výslednou geometrii plochy:
 
-![](../images/8-2/6/Surfaces\_03.png)
+![](../../.gitbook/assets/Surfaces_03.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -45,7 +45,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 
 Podobně jako lze plochy vytvářet interpolací mezi sadou vstupních bodů, lze je vytvářet také interpolací mezi sadou základních křivek. Tomu se říká šablonování. Šablonovanou křivku lze vytvořit pomocí konstruktoru _Surface.ByLoft_, jediným jeho parametrem je kolekce vstupních křivek.
 
-![](../images/8-2/6/Surfaces\_04.png)
+![](../../.gitbook/assets/Surfaces_04.png)
 
 ```js
 // python_points_2, 3, and 4 are generated with
@@ -64,7 +64,7 @@ Plochy rotace jsou dalším typem ploch vytvořených tažením základní křiv
 
 Plochy rotace se určují pomocí základní křivky, která reprezentuje „hranu“ plochy, dále pomocí počátku osy, základního bodu plochy, směru osy, středního „hlavního“ směru a počátečního a koncového úhlu tažení. Tyto parametry se zadávají jako vstup do konstruktoru _Surface.Revolve_.
 
-![](../images/8-2/6/Surfaces\_05.png)
+![](../../.gitbook/assets/Surfaces_05.png)
 
 ```js
 pts = {};
