@@ -1,10 +1,10 @@
-# 幾何布林運算
+# 几何布尔
 
-_Intersect_、_Trim_ 和 _SelectTrim_ 主要是用在較低維度的幾何圖形 (例如點、曲線和曲面)。而立體幾何圖形則有額外的一組方法，可以透過類似 _Trim_ 的方法減去材料，然後將元素合併在一起形成較大的元素，在建構幾何圖形後修改形狀。
+_Intersect_、_Trim_ 和 _SelectTrim_ 主要用于较低维度的几何图形，例如点、曲线和曲面。另一方面，实体几何图形还有一组附加方法用于在构造后修改形状，方法是以与 _Trim_ 类似的方式减去材质，并将图元合并到一起以形成更大的整体。
 
-### Union (聯集)
+### 并集
 
-_Union_ 方法使用兩個實體物件，從兩個物件都涵蓋到的空間建立單一實體物件。物件之間重疊的空間會合併成最終的形狀。此範例將一個圓球和一個立方體合併成一個單一的立體圓球-立方塊造型：
+_Union_ 方法可获取两个实体对象，并在两个对象覆盖的空间之外创建单个实体对象。对象之间的重叠空间会合并为最终形式。本例将球体和立方体合并为单个实体球体-立方体形状：
 
 ![](../../.gitbook/assets/GeometricBooleans_01.png)
 
@@ -19,9 +19,9 @@ s2 = Sphere.ByCenterPointRadius(
 combined = s1.Union(s2);
 ```
 
-### Difference (差集)
+### 差异
 
-_Difference_ 方法與 _Trim_ 類似，從基準實體減去輸入工具實體的內容。在此範例中，我們從一個圓球切掉一個小凹口：
+_Difference_ 方法类似 _Trim_，从基础实体中减去输入工具实体的内容。在本例中，我们从球体中穿凿出一个小凹穴：
 
 ![](../../.gitbook/assets/GeometricBooleans_02.png)
 
@@ -36,9 +36,9 @@ tool = Sphere.ByCenterPointRadius(
 result = s.Difference(tool);
 ```
 
-### Intersect (交集)
+### 交集
 
-_Intersect_ 方法傳回兩個實體輸入之間重疊的實體。在以下範例中，_Difference_ 已變成 _Intersect_，產生的實體是一開始切掉不見的空洞：
+_Intersect_ 方法会返回两个实体输入之间的重叠实体。在以下示例中，_Difference_ 已更改为 _Intersect_，并且生成的实体是最初穿凿的缺失空心：
 
 ![](../../.gitbook/assets/GeometricBooleans_03.png)
 

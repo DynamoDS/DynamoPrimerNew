@@ -1,39 +1,39 @@
-# 數學
+# 数学
 
-如果資料最簡單的形式是數字，則關聯這些數字最簡單的方式就是透過數學運算。從諸如除號等簡單運算子到三角函數，再到更複雜的公式，數學是開始探索數字關係與樣式的良好方式。
+如果最简单的数据形式是数字，则将这些数字关联起来的最简单方法是通过数学。从除法等简单的运算符到三角函数，再到更复杂的公式，Math 是开始探索数值关系和模式的好方法。
 
-### 算術運算子
+### 算术运算符
 
-運算子是一組元件 (加、減、乘、除等)，使用代數函數與兩個數字輸入值，產生一個輸出值。在「運算子」>「動作」下可以找到這些運算子。
+运算符是一组组件，这些组件使用具有两个数字输入值的代数函数，这些结果产生一个输出值（加、减、乘、除等）。这些可在“运算符”>“操作”下找到。
 
-| 圖示                                                | 名稱 (語法)     | 輸入                     | 輸出      |
+| 图标                                                | 名称（语法）     | 输入                     | 输出      |
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../../.gitbook/assets/addition (1).jpg>)       | 加 (**+**)       | var[]...[]、var[]...[] | var[]...[] |
-| \![](<../../.gitbook/assets/Subtraction (1).jpg>)    | 減 (**-**)  | var[]...[]、var[]...[] | var[]...[] |
-| \![](<../../.gitbook/assets/Multiplication (2).jpg>) | 乘 (**\\***) | var[]...[]、var[]...[] | var[]...[] |
-| \![](<../../.gitbook/assets/Division (2).jpg>)       | 除 (**/**)    | var[]...[]、var[]...[] | var[]...[] |
+| \![](<../../.gitbook/assets/addition (1).jpg>)       | 相加 (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../../.gitbook/assets/Subtraction (1).jpg>)    | 相减 (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../../.gitbook/assets/Multiplication (2).jpg>) | 相乘 (*****) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../../.gitbook/assets/Division (2).jpg>)       | 相除 (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
-## 練習：黃金螺旋線公式
+## 练习：黄金螺旋公式
 
-> 按一下下方的連結下載範例檔案。
+> 单击下面的链接下载示例文件。
 >
-> 附錄中提供完整的範例檔案清單。
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../../.gitbook/assets/Building Blocks of Programs - Math.dyn" %}
 
-### 第 I 部分：參數式公式
+### 第 I 部分：参数公式
 
-透過**公式**結合運算子和變數，以構成更複雜的關係。使用滑棒建立可透過輸入參數控制的公式。
+通过**公式**将运算符和变量组合在一起以形成更复杂的关系。使用滑块来创建可由输入参数控制的公式。
 
-1. 建立表示參數式方程式中「t」的數字序列，因此，我們希望使用大到足以定義螺旋線的清單。
+1. 创建表示参数方程中“t”的数字序列，因此我们要使用足够大的列表来定义螺旋。
 
-**Number Sequence：** 根據以下三項輸入定義數字序列：_start、amount_ 與 _step_。
+**Number Sequence**：基于以下三个输入定义数字序列：_start、amount_ 和 _step_。
 
 \![](<../../.gitbook/assets/math - part I-01.jpg>)
 
-2\.上述步驟已建立用於定義參數範圍的數字清單。接下來，建立表示黃金螺旋線方程式的節點群組。
+2\.上述步骤已创建一列数字，来定义参数化域。接下来，创建表示黄金螺旋方程的节点组。
 
-定義黃金螺旋線的方程式如下：
+黄金螺旋定义为以下方程：
 
 $$
 x = r cos θ = a cos θ e^{bθ}
@@ -43,76 +43,76 @@ $$
 y = r sin θ = a sin θe^{bθ}
 $$
 
-以下影像以視覺程式設計形式表示黃金螺旋線。逐步檢查節點群組時，請盡可能注意視覺程式與書寫方程式之間的對應。
+下图以可视化编程形式呈现了黄金螺旋。在逐步查看节点组时，请尝试注意可视化程序和编写方程之间的平行性。
 
 \![](<../../.gitbook/assets/math - part I-02.jpg>)
 
-> a.**Number Slider**：在圖元區加入兩個數字滑棒。這些滑棒代表參數式方程式中的 _a_ 與 _b_ 變數。這些表示彈性的常數，或表示我們可以針對所需結果進行調整的參數。
+> a.**Number Slider**：向画布添加两个数字滑块。这些滑块将表示参数方程的 _“a”_ 和 _“b”_ 变量。这些表示灵活的常量，或我们可以根据所需结果调整的参数。
 >
-> b.**相乘 (*)**：相乘節點由星號表示。我們會重複使用此符號連接相乘的變數
+> b.**相乘 (*)**：乘法节点由星号表示。我们将反复使用它来连接乘法变量
 >
-> c.**Math.RadiansToDegrees**：「_t_」值需要轉換為度，才能在三角函數中演算。請記住，Dynamo 預設使用度來運算這些函數。
+> c.**Math.RadiansToDegrees**：“_t_”值需要转换为度数，以便在三角函数中进行求值。请记住，Dynamo 默认使用度数来对这些函数求值。
 >
-> d.**Math.Pow**：以「_t_」與數字「_e_」表示的函數，此函數會建立 Fibonacci 序列。
+> d.**Math.Pow**：作为“_t_”和数字“_e_”的函数，这将创建 Fibonacci 数列。
 >
-> e.**Math.Cos 與 Math.Sin**：這兩個三角函數將分別區分每個參數式點的 X 座標與 Y 座標。
+> e.**Math.Cos 和 Math.Sin**：这两个三角函数将分别区分每个参数点的 x 坐标和 y 坐标。
 >
-> f.**Watch**：現在可以看到輸出是兩個清單，分別是產生螺旋線所用點的 _x_ 與 _y_ 座標。
+> f.**Watch**：现在，我们看到输出为两个列表，它们将是用于生成螺旋的点的 _x_ 和 _y_ 坐标。
 
-### 第 II 部分：從公式到幾何圖形
+### 第 II 部分：从公式到几何图形
 
-現在，上一步的眾多節點都沒問題，但工作量很大。若要建立更有效率的工作流程，請參閱 [DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md) 將 Dynamo 表示式的字串定義為一個節點。在接下來的一系列步驟中，我們將瞭解使用參數式方程式來繪製 Fibonacci 螺旋線。
+现在，上一步中的大部分节点都可以正常工作，但这种工作量很大。要创建更高效的工作流，请查看[“DesignScript”](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md)，以将 Dynamo 表达式的字符串定义到一个节点中。在接下来的一系列步骤中，我们将了解如何使用参数方程绘制 Fibonacci 螺旋。
 
-**Point.ByCoordinates：** 將上方的相乘節點連接到「_x_」輸入，將下方的節點連接到「_y_」輸入。我們現在可以在螢幕上看到點的參數式螺旋線。
+**Point.ByCoordinates**：将上乘法节点连接到 _“x”_ 输入，将下乘法节点连接到 _“y”_ 输入。现在，我们在屏幕上会看到点的参数化螺旋。
 
 \![](<../../.gitbook/assets/math - part II-01.gif>)
 
-**Polycurve.ByPoints：** 將上一步的 **Point.ByCoordinates** 連接到 _points_。我們可以保留 _connectLastToFirst_ 無輸入，因為不打算繪製封閉曲線。這會建立一條穿過上一步定義的每個點的螺旋線。
+**Polycurve.ByPoints**：将上一步的 **“Point.ByCoordinates”** 连接到 _“points”_。我们可以不输入而保留 _“connectLastToFirst”_，因为我们不会绘制闭合曲线。这将创建穿过上一步中定义的每个点的螺旋。
 
 \![](<../../.gitbook/assets/math - part II-02.jpg>)
 
-我們現在完成了 Fibonacci 螺旋線！接下來進一步將此分為兩個單獨的練習，我們分別稱之為鸚鵡螺與向日葵。這些是自然系統的抽象名稱，但可以充分呈現 Fibonacci 螺旋線的兩種不同應用。
+我们现在已完成 Fibonacci 螺旋！让我们从此处开始进一步研究两个独立的练习，我们称之为 Nautilus 和 Sunflower。这些是自然系统的抽象表示，但 Fibonacci 螺旋的两种不同应用将得到充分体现。
 
-### 第 III 部分：從螺旋線到鸚鵡螺
+### 第 III 部分：从螺旋到 Nautilus
 
-**Circle.ByCenterPointRadius：** 我們在此處將使用圓節點，採用與上一步相同的輸入。半徑的預設值為 _1.0_，所以我們可以立即看到輸出的圓。它會立即清晰展示點如何進一步偏離原點。
+**Circle.ByCenterPointRadius**：我们将在此处使用“Circle”节点，其输入与上一步相同。半径值默认为 _“1.0”_，因此可以看到圆即时输出。这些点与原点之间的分离程度立即清晰可辩。
 
 \![](<../../.gitbook/assets/math - part III-01.jpg>)
 
-**Number Sequence：** 這是「_t_」的原始陣列。將此序列插入 **Circle.ByCenterPointRadius** 的半徑值後，圓心仍會離原點越來越遠，但半徑會增加，因而產生很酷的 Fibonacci 圓形。
+**Number Sequence**：这是 _“t”_ 的原始数组。通过将其连接到 **“Circle.ByCenterPointRadius”** 的半径值，圆心仍会与原点进一步偏离，但圆的半径不断增大，从而创建一个时髦的 Fibonacci 圆图形。
 
-如果您使用 3D 製作會更酷！
+如果使其成为三维形式，可获得奖励积分！
 
 \![](<../../.gitbook/assets/math - part III-02.gif>)
 
-### 第 IV 部分：從鸚鵡螺到葉序
+### 第 IV 部分：从 Nautilus 到 Phyllotaxis
 
-現在我們已經建立圓形的鸚鵡螺殼，接下來使用參數式格線。我們將對 Fibonacci 螺旋線使用基本旋轉，以建立 Fibonacci 格線，並在[向日葵種子長大後](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/)對結果進行塑型。
+现在的情况是，我们已创建一个圆形 Nautilus 壳，接下来我们转到参数化栅格。我们将在 Fibonacci 螺旋上使用基本旋转来创建 Fibonacci 栅格，然后在[向日葵种子生长](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/)后对结果进行建模。
 
-一開始，我們先執行上一個練習中的相同步驟：使用 **Point.ByCoordinates** 節點建立點的螺旋線陣列。
+作为一个跳跃点，我们从上一练习的相同步骤开始：使用 **“Point.ByCoordinates”** 节点创建点的螺旋阵列。
 
 <figure><img src="../../.gitbook/assets/math - part IV-01.jpg" alt=""><figcaption></figcaption></figure>
 
-接下來，依照這些小步驟，以各種旋轉產生一系列螺旋線。
+接下来，按照这些小步骤操作以生成一系列不同旋转的螺旋。
 
 \![](<../../.gitbook/assets/math - part IV-02.jpg>)
 
-> a.**Geometry.Rotate：** 有幾個 **Geometry.Rotate** 選項，請確保選擇以 _geometry_、_basePlane_ 和 _degrees_ 為輸入的節點。將 **Point.ByCoordinates** 連接至 geometry 輸入。在此節點上按一下右鍵，並確保將交織設定為「笛卡兒積」
+> a.**Geometry.Rotate**：有多个 **“Geometry.Rotate”** 选项；请务必选择将 _“geometry”_ 、 _“basePlane”_ 和 _“degrees”_ 作为其输入的节点。将 **“Point.ByCoordinates”** 连接到几何图形输入。在该节点上单击鼠标右键，并确保将连缀设置为“叉积”
 >
 > <img src="../../.gitbook/assets/math - part IV-03 cross product.jpg" alt="" data-size="original">
 >
-> b.**Plane.XY：** 連接至 _basePlane_ 輸入。我們將繞原點旋轉，此原點的位置與螺旋線的基準位置相同。
+> b.**Plane.XY**：连接到 _“basePlane”_ 输入。我们将绕原点旋转，该原点与螺旋的底部位置相同。
 >
-> c.**Number Range：** 對於角度輸入，我們希望建立多個旋轉。使用 **Number Range** 元件可以快速達成。將其連接至 _degrees_ 輸入。
+> c.**Number Range**：对于度数输入，我们要创建多个旋转。我们可以使用 **“Number Range”** 组件快速完成此操作。将其连接到 _“degrees”_ 输入。
 >
-> d.**Number：** 為了定義數字範圍，在圖元區以垂直順序加入三個數字節點。從上到下分別指定值為 _0.0、360.0_ 與 _120.0_。這些值將驅動螺旋線旋轉。請注意將三個數字節點連接至 **Number Range** 節點後的輸出結果。
+> d.**Number**：要定义数字范围，请按垂直顺序将三个数字节点添加到画布。从上到下，分别指定值 _“0.0,360.0,”_ 和 _“120.0”_。这些驱动螺旋的旋转。将三个数字节点连接到相应节点后，请注意 **“Number Range”** 节点的输出结果。
 
-輸出開始形成一個漩渦。接下來調整某些 **Number Range** 參數，並查看結果的變化。
+我们的输出开始类似于旋涡。我们调整一些 **“Number Range”** 参数，看一看结果如何变化。
 
-將 **Number Range** 節點的步長大小從 _120.0_ 變更為 _36.0_。請注意，這會建立更多旋轉，因此會產生更密的格線。
+将 **“Number Range”** 节点的步长从 _“120.0”_ 更改为 _“36.0”_。请注意，这将创建更多旋转，因此会为我们提供更密集的栅格。
 
 \![](<../../.gitbook/assets/math - part IV-04.jpg>)
 
-將 **Number Range** 節點的步長大小從 _36.0_ 變更為 _3.6_。現在，這會產生密度大得多的格線，螺旋線的方向性變得不清楚。各位，我們產生了一朵向日葵。
+将 **“Number Range”** 节点的步长从 _“36.0”_ 更改为 _“3.6”_。现在，我们得到更密集的栅格，但螺旋的方向性尚不清楚。女士们，先生们：我们创建了一颗向日葵。
 
 \![](<../../.gitbook/assets/math - part IV-05.jpg>)

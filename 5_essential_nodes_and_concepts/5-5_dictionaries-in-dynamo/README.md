@@ -1,11 +1,11 @@
-# Dynamo 中的字典
+# Dynamo 中的词典
 
-字典代表與另外一組資料 (稱為鍵) 相關的資料集合。字典可讓您搜尋資料、刪除資料，以及將資料插入集合。
+词典表示与另一数据（称为主键）相关的数据集合。词典可以搜索、删除数据并将数据插入到集合中。
 
-基本上，我們可以將字典想成是一種查詢內容相當聰明的方法。
+我们基本上可以将词典看作真正智能的查找内容的方式。
 
-_雖然字典功能在 Dynamo 中已經存在好一段時間，但是 Dynamo 2.0 引入了新的方式來管理此資料類型。_
+_虽然在 Dynamo 中提供词典功能有一段时间了，但 Dynamo 2.0 引入了管理此数据类型的新方式。_
 
 ![](../../.gitbook/assets/wildDictionary.png)
 
-原始影像由 [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/) 提供
+原始图片来源：[_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)

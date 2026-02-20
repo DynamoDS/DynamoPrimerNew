@@ -1,108 +1,108 @@
-# 套件簡介
+# 软件包简介
 
-Dynamo 提供大量即裝即用的功能，並維護了豐富的套件資源庫，可顯著擴充 Dynamo 的功能。套件是自訂節點或其他功能的集合。Dynamo Package Manager 是一個入口網站，可讓社群下載已在線上發佈的套件。這些工具集由協力廠商開發，可擴充 Dynamo 的核心功能，任何人都能存取，按一下按鈕即可下載。
+Dynamo 提供了大量现成功能，还维护了一个丰富的软件包库，可显著扩展 Dynamo 的功能。软件包是自定义节点或附加功能的集合。Dynamo Package Manager 是一个社区门户，用于下载已在线发布的任何软件包。这些工具集由第三方开发，用于扩展 Dynamo 的核心功能、可供所有人访问，只需单击相应按钮即可下载。
 
-![Package Manager 網站](../../.gitbook/assets/dpm.jpg)
+![Package Manager 站点](../../.gitbook/assets/dpm.jpg)
 
-開放原始碼專案 (例如 Dynamo) 在此類型的社群參與下蓬勃發展。使用專屬的協力廠商開發人員，Dynamo 可以將其適用範圍延伸到一系列產業的工作流程中。因此，Dynamo 團隊齊心協力簡化套件的開發與發佈 (在後續各節中將更詳細地討論這一點)。
+诸如 Dynamo 之类的开源项目通过此类社区参与有了蓬勃发展。借助专门的第三方开发人员，Dynamo 能够将其应用范围扩展到各行各业的工作流。因此，Dynamo 团队已共同努力来简化软件包的开发和发布（将在以下各节中详细讨论）。
 
-### 安裝套件
+### 安装软件包
 
-最簡易的套件安裝方式是使用 Dynamo 介面中的「套件」功能表選項。現在，讓我們直接開始安裝套件。在此簡單範例中，我們將安裝某個常見套件，在格線上建立四邊形板。
+安装软件包的最简单方法是使用 Dynamo 界面中的“软件包”菜单选项。现在，让我们直接跳转到该菜单选项并安装软件包。在本快速示例中，我们将安装一个常用软件包，用于在栅格上创建四边形嵌板。
 
-在 Dynamo 中，前往 _「套件」>「Package Manager...」_
+在 Dynamo 中，转到 _“软件包”>“软件包管理器...”_。
 
 <figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
-在搜尋列中，我們搜尋「quads from rectangular grid」。片刻之後，您應該會看到符合此搜尋查詢的所有套件。我們要選取具有相符名稱的第一個套件。
+在搜索栏中，让我们搜索“quads from rectangular grid”。片刻之后，您应该会看到与此搜索查询匹配的所有软件包。我们想要选择具有匹配名称的第一个软件包。
 
-按一下「安裝」，將此套件加入至您的資源庫，系統請您確認時，請接受。完成！
+单击“安装”以将此软件包添加到库，然后接受确认。完成！
 
 <figure><img src="../../.gitbook/assets/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
 
-請注意，Dynamo 資源庫中現在有另一個群組稱為「buildz」。此名稱是指套件的開發人員，此群組中已放置自訂節點。我們可以立即開始使用。
+请注意，现在 Dynamo 库中有另一个名为“buildz”的组。该名称指代软件包的开发人员，并且自定义节点将放置在此组中。我们可以立即开始使用此组。
 
 \![](<../../.gitbook/assets/package introduction - installing a package 03.jpg>)
 
-使用 **Code Block** 可快速定義矩形格線，將結果輸出至 **Polygon.ByPoints** 節點，然後輸出至 **Surface.ByPatch** 節點，以檢視您剛剛建立的矩形板清單。
+使用 **“代码块”** 以快速定义矩形栅格、将结果输出到 **“Polygon.ByPoints”** 节点，然后输出到 **“Surface.ByPatch”** 节点以查看刚创建的矩形嵌板列表。
 
 \![](<../../.gitbook/assets/package introduction - installing a package 04.jpg>)
 
-### 安裝套件資料夾 - DynamoUnfold
+### 安装软件包文件夹 - DynamoUnfold
 
-上述範例著重針對具有一個自訂節點的套件，不過您可以使用相同程序下載具有多個自訂節點的套件並支援資料檔案。現在使用更全面的套件 DynamoUnfold 示範。
+上述示例重点介绍内含一个自定义节点的软件包，但相同过程可用于下载内含多个自定义节点的软件包以及支持数据文件。现在，我们通过一个更全面的软件包来进行演示：Dynamo Unfold。
 
-如同上述範例，首先請選取 _「套件」>「Package Manager...」_。
+如上例中所示，首先选择 _“软件包”>“软件包管理器...”_。
 
-這次我們要搜尋 _「DynamoUnfold」_，這是一個字，沒有空格。當我們看到套件時，按一下「安裝」下載，將 DynamoUnfold 加入您的 Dynamo 資源庫。
+这次，我们将搜索 _“DynamoUnfold”_ 一词。当我们看到该软件包时，请通过单击“安装”下载，以将“Dynamo Unfold”添加到 Dynamo 库中。
 
 <figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
 
-在 Dynamo 資源庫中，我們有一個 _DynamoUnfold_ 群組，當中有多個品類和自訂節點。
+在 Dynamo 库中，我们有一个 _“DynamoUnfold”_ 组，其中包含多个类别和自定义节点。
 
 \![](<../../.gitbook/assets/package introduction - installing package folder 02.jpg>)
 
-現在，我們看一下套件的檔案結構。
+现在，让我们来看一下软件包的文件结构。
 
-1. 請先前往「套件」>「Package Manager」>「已安裝的套件」。
-2. 在 DynamoUnfold 旁邊，選取選項功能表 <img src="../../.gitbook/assets/package introduction - vertical dots menu.jpg" alt="" data-size="line">。
-3. 然後按一下「展示根目錄」，以開啟此套件的根資料夾。
+1. 首先，转到“软件包”>“软件包管理器”>“已安装的软件包”。
+2. 在“DynamoUnfold”的旁边，选择菜单菜单 <img src="../../.gitbook/assets/package introduction - vertical dots menu.jpg" alt="" data-size="line">。
+3. 然后，单击“显示根目录”以打开此软件包的根文件夹。
 
 <figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
 
-這會將我們帶到套件的根目錄。請注意，我們有 3 個資料夾和 1 個檔案。
+这会转到该软件包的根目录。请注意，我们有 3 个文件夹和一个文件。
 
 \![](<../../.gitbook/assets/package introduction - installing package folder 05.jpg>)
 
-> 1. _bin_ 資料夾包含 .dll 檔案。此 Dynamo 套件使用 Zero-Touch 進行開發，因此自訂節點保留在此資料夾中。
-> 2. _dyf_ 資料夾包含自訂節點。此套件不是使用 Dynamo 自訂節點進行開發，所以此套件的此資料夾是空的。
-> 3. extra 資料夾包含所有其他檔案 (包括範例檔案)。
-> 4. pkg 檔案是定義套件設定的基本文字檔案。現在我們可以忽略該檔案。
+> 1. _“bin”_ 文件夹中存储了 .dll 文件。此 Dynamo 软件包使用 Zero-Touch 开发，因此自定义节点保存在此文件夹中。
+> 2. _“dyf”_ 文件夹中存储了自定义节点。此软件包不是使用 Dynamo 自定义节点开发的，因此此软件包的该文件夹为空。
+> 3. “extra”文件夹中存储了所有附加文件，包括我们的示例文件。
+> 4. pkg 文件是一个基本文本文件，用于定义软件包设置。我们现在可以忽略该文件。
 
-開啟「extra」資料夾，我們可以看到隨安裝而下載的一系列範例檔案。並非所有套件都有範例檔案，但此若套件有範例檔案，您可以在此處找到這些檔案。
+打开“extra”文件夹，我们会在其中看到随安装下载的一系列示例文件。并非所有软件包中都有示例文件，如果示例文件是软件包的一部分，那么就可以在该位置找到它们。
 
-接下來開啟「SphereUnfold」。
+让我们打开“SphereUnfold”。
 
 ![](../../.gitbook/assets/rd2.jpg)
 
-開啟檔案並按一下求解器上的「執行」後，就會看到一個展開的圓球！諸如此類的範例檔案有助於學習如何使用新的 Dynamo 套件。
+在打开该文件并点击求解器上的“运行”后，我们会得到一个展开的球体！此类示例文件有助于了解如何使用新的 Dynamo 软件包。
 
 \![](<../../.gitbook/assets/packageintroduction-installingpackagefolder07 (1).jpg>)
 
-### 瀏覽和檢視套件資訊
+### 浏览和查看软件包信息
 
-在「Package Manager」中，您可以使用「搜尋套件」頁籤中的排序和篩選選項來瀏覽套件。該頁籤提供數種篩選，包含主程式、狀態 (新的、已棄用或取消棄用)，以及套件是否具有相依性。
+在软件包管理器中，可以在“搜索软件包”选项卡中使用排序和过滤选项浏览软件包。有若干过滤器可用于查找宿主程序、状态（新的、已弃用或未弃用），以及软件包是否具有依存关系。
 
-透過排序套件，您可以找出高評等或下載次數最多的套件，或尋找最近更新的套件。
+通过对软件包进行排序，可以识别评分较高或下载次数最多的软件包，也可以查找包含最新更新的软件包。
 
-您也可以按一下「檢視詳細資料」，針對每個套件取得更多詳細資料。這會開啟 Package Manager 中的側面板，您可以在其中尋找資訊，例如版本管理和相依性、網站或儲存庫 URL、授權資訊等。
+还可以通过单击“查看详细信息”，来访问每个软件包的更多详细信息。这将在“软件包管理器”中打开一个侧面板，在其中可以查找版本控制和依存关系、网站或存储库 URL、许可信息等信息。
 
-### Dynamo Package Manager 網站
+### Dynamo Package Manager 网站
 
-探索 Dynamo 套件的另一種方式是探索 [Dynamo Package Manager](http://dynamopackages.com) 網站。您在這裡可以找到套件作者提供的套件相依性和主體程式/版本相容性資訊。您也可以從 Dynamo Package Manager 下載套件檔案，但是從 Dynamo 直接執行會更順暢。
+了解 Dynamo 软件包的另一种方法是浏览 [Dynamo Package Manager](http://dynamopackages.com) 网站。在此处，您可以找到软件包作者提供的软件包依赖项和主机/版本兼容性信息。还可以从 Dynamo Package Manager 下载软件包文件，但直接在 Dynamo 中进行下载是一个更无缝的过程。
 
 ![](../../.gitbook/assets/dpm2.jpg)
 
-### 套件儲存在本端的什麼位置？
+### 软件包文件存储在本地何处？
 
-如果您想要查看套件檔案的儲存位置，請在頂端導覽中按一下「Dynamo」>「偏好」>「套件設定」>「節點和套件檔案位置」。您可以在這裡找到您目前的根資料夾目錄。
+如果要查看软件包文件的保存位置，请在顶部导航中，依次单击“Dynamo”>“首选项”>“软件包设置”>“节点和软件包文件位置”，可以在此处查找当前根文件夹目录。
 
 \![](<../../.gitbook/assets/package introduction - installing package folder 08.jpg>)
 
-套件預設安裝在與以下資料夾路徑類似的位置：_C:/Users/[使用者名稱]/AppData/Roaming/Dynamo/[Dynamo 版本]_。
+默认情况下，软件包安装在与以下文件夹路径类似的位置：_C:/Users/[用户名]/AppData/Roaming/Dynamo/[Dynamo 版本]_。
 
-### 在辦公室中設定套件的共用位置
+### 在办公室中为软件包设置共享位置
 
-對於詢問是否可以使用預先附加的套件 (以任何形式) 部署 Dynamo 的使用者：解決此問題並允許所有安裝 Dynamo 的使用者在一個中央位置進行控制的方法，是為每個安裝增加一個自訂的套件路徑。
+对于询问是否可以部署具有预附着软件包的 Dynamo（以任何形式）的用户：解决此问题并允许安装了 Dynamo 的所有用户在中心位置进行控制的方法是将自定义软件包路径添加到每个安装。
 
-**增加一個網路資料夾，BIM 管理員或其他人可以監督包含辦公室核准套件的資料夾儲存過程**
+**添加网络文件夹，以便 BIM 经理或其他人可以使用办公室批准的软件包监督文件夹的存放情况**
 
-在個別應用程式的使用者介面中，移至_「Dynamo」->「偏好」->「套件設定」->「節點和套件檔案位置」_。在對話方塊中，按「加入路徑」按鈕並瀏覽到共用套件資源的網路位置。
+在单个应用程序的 UI 中，转到 _Dynamo -> 首选项 -> 软件包设置 -> 节点和软件包文件位置_。在对话框中，按“添加路径”按钮，然后浏览到共享软件包资源的网络位置。
 
-自動程序會將資訊加到隨 Dynamo 安裝的規劃檔中：\
+作为一个自动化过程，它将涉及将信息添加到随 Dynamo 一起安装的配置文件：\
  `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
 
-Dynamo for Revit 的規劃預設為：
+默认情况下，适用于 Revit 的 Dynamo 的配置为：
 
 `<CustomPackageFolders>`
 
@@ -110,7 +110,7 @@ Dynamo for Revit 的規劃預設為：
 
 `</CustomPackageFolders>`
 
-新增自訂位置將如下所示：
+添加自定义位置将如下所示：
 
 `<CustomPackageFolders>`
 
@@ -120,22 +120,22 @@ Dynamo for Revit 的規劃預設為：
 
 `</CustomPackageFolders>`
 
-也可以透過將資料夾設定為唯讀，來控制此資料夾的集中管理。
+也可以通过简单地将文件夹设为只读来控制此文件夹的集中管理。
 
-### 從網路位置載入包含二進位檔的套件
+### 从网络位置加载包含二进制文件的软件包
 
-#### 情境
+#### 场景
 
-組織可能希望將不同工作站和使用者安裝的套件標準化。達成此目標的一種方法，是從_「Dynamo」->「偏好」->「套件設定」->「節點和套件檔案位置」_安裝這些套件，選取網路資料夾作為安裝位置，然後讓工作站將該路徑加到「`Manage Node and Package Paths`」中。
+组织可能希望标准化由不同工作站和用户安装的包。执行此操作的一种方法是从 _Dynamo -> 首选项 -> 软件包设置 -> 节点和软件包文件位置_安装这些软件包，选择网络文件夹作为安装位置，然后让工作站将该路径添加到 `Manage Node and Package Paths`。
 
-#### 問題
+#### 问题
 
-雖然此情境適用於只包含自訂節點的套件，但可能不適用於包含二進位檔的套件 (例如 zero-touch 節點)。此問題是 .NET Framework 在針對載入網路位置的組合時採取的[安全措施](https://stackoverflow.com/questions/5328274/load-assembly-from-network-location)所導致。遺憾的是，按照連結討論串中的建議，使用 `loadFromRemoteSources` 規劃元素不是適用於 Dynamo 的可能解決方案，因為它是以元件而不是以應用程式分發。
+虽然该方案适用于仅包含自定义节点的软件包，但它可能不适用于包含二进制文件的软件包，例如 Zero-Touch 节点。此问题是由[安全措施](https://stackoverflow.com/questions/5328274/load-assembly-from-network-location)引起的，当程序集来自网络位置时，.NET Framework 会过度加载程序集。遗憾的是，使用链接线程中建议的 `loadFromRemoteSources` 配置元素对 Dynamo 来说不是一个可行的解决方案，因为它是作为组件而不是应用程序分发的。
 
-#### 解決方法
+#### 解决方法
 
-一種可能的權宜辦法是，使用指向網路位置的對應網路磁碟機，讓工作站改為參考該路徑。[這裡](https://support.microsoft.com/zh-tw/help/4026635/windows-10-map-a-network-drive)介紹建立對應網路磁碟機的步驟。
+一种可能的解决方法是使用指向网络位置的映射网络驱动器，并让工作站引用该路径。创建映射网络驱动器的步骤在[此处](https://support.microsoft.com/zh-cn/help/4026635/windows-10-map-a-network-drive)描述。
 
-### 進一步使用套件
+### 进一步了解软件包
 
-Dynamo 社群在不斷成長與發展。透過不時地探索 Dynamo Package Manager，您會發現一些激動人心的新開發功能。在以下各節，我們將從終端使用者的視角到建立您自己的 Dynamo 套件，更深入地查看套件。
+Dynamo 社区不断发展壮大。通过不时浏览 Dynamo Package Manager，您会发现一些令人兴奋的新进展。在以下各部分中，我们将更深入地探索软件包，从最终用户角度到您自己的 Dynamo 软件包制作。

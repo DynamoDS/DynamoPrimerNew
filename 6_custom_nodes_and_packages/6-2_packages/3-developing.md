@@ -1,115 +1,115 @@
-# 開發套件
+# 开发软件包
 
-Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群分享。在以下案例研究中，我們將瞭解如何透過解構既有的套件以設置套件。此案例研究以上一章的課程為基礎，會提供一組自訂節點，以便在 Dynamo 曲面之間依 UV 座標對映幾何圖形。
+Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo 社区共享。在下面的案例研究中，我们将通过解构现有软件包来逐步介绍如何创建一个软件包。本案例研究基于上一章的课程构建，提供一组自定义节点用于按 UV 坐标映射几何图形（从一个 Dynamo 曲面到另一个 Dynamo 曲面）。
 
-## MapToSurface 套件
+## MapToSurface 软件包
 
-我們將使用的範例套件會演示曲面之間點的 UV 對映。我們已在此手冊的[建立自訂節點](../6-1_custom-nodes/2-creating.md)一節中建置了工具的基礎內容。以下檔案將示範我們如何利用 UV 對映的概念，以及如何為可發佈資源庫開發一組工具。
+我们将使用一个示例包，演示点从一个曲面到另一个曲面的 UV 映射。我们已在本 Primer 的[创建自定义节点](../6-1_custom-nodes/2-creating.md)部分中构建了该工具的基础知识。下面的文件演示了如何理解 UV 映射的概念，并为可发布库开发一组工具。
 
-在此影像中，我們將使用 UV 座標在曲面之間對映點。套件以此概念為基礎，但具有更複雜的幾何圖形。
+在此图像中，我们使用 UV 坐标将点从一个曲面映射到另一个曲面。软件包基于此概念，但有更加复杂的几何图形。
 
 ![](../../.gitbook/assets/uvMap.jpg)
 
-### 安裝套件
+### 安装软件包
 
-在上一章中，我們探索了根據 XY 平面中定義的曲線在 Dynamo 中將曲面面板化的方式。此案例研究將針對幾何圖形的更多標註延伸這些概念。我們會將此套件安裝為已建置的套件，以演示其開發方式。在下一節，我們將示範此套件的發佈方式。
+在前一章中，我们探讨了在 Dynamo 中基于在 XY 平面中定义的曲线为曲面镶板的方法。本案例研究扩展了这些概念，以获得更多几何图形尺寸。我们将以内置方式安装此软件包，以演示其开发方式。在下一节中，我们将演示如何发布此软件包。
 
-在 Dynamo 中，按一下「套件」>「Package Manager」，然後搜尋套件「MapToSurface」(全部一個字，無空格)。按一下「安裝」以開始下載，並將套件加入您的資源庫。
+在 Dynamo 中，依次单击“软件包”>“软件包管理器”，然后搜索软件包“MapToSurface”（全部写为一个单词）。单击“安装”以开始下载，并将软件包添加到库。
 
 <figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
-安裝後，「Add-ons」>「DynamoPrimer」區段下應該會顯示自訂節點。
+完成安装后，自定义节点应位于“附加模块”>“DynamoPrimer”部分下。
 
 \![](<../../.gitbook/assets/publish a package - publish locally 04.jpg>)
 
-現在已安裝套件，接下來瞭解其設置方式。
+现在，软件包已完成安装，我们来介绍其设置方式。
 
-### 自訂節點
+### 自定义节点
 
-我們將建立的套件會使用已建置供參考的五個自訂節點。接下來瞭解每個節點的行為。某些自訂節點會建置其他自訂節點，圖表的配置可供其他使用者以簡單的方式進行瞭解。
+我们正在创建的软件包使用我们为参照而构建的五个自定义节点。下面，我们来介绍每个节点的作用。某些自定义节点基于其他自定义节点构建，图表具有布局，供其他用户直接理解。
 
-這是具有五個自訂節點的簡單套件。在以下步驟中，我們將簡要討論每個自訂節點的設置。
+这是一个包含五个自定义节点的简单软件包。在下面的步骤中，我们将简要介绍每个自定义节点的设置。
 
 \![](<../../.gitbook/assets/develop package - custom nodes 01 (1) (3).jpg>)
 
 #### **PointsToSurface**
 
-這是一個基本自訂節點，是其他所有對映節點的基礎。簡言之，節點會將來源曲面 UV 座標的點對映至目標曲面 UV 座標的位置。由於點是最基本的幾何圖形，以此為基礎會建置更複雜的幾何圖形，因此我們可以使用此邏輯在曲面之間對映 2D 甚至 3D 幾何圖形。
+这是一个基本自定义节点，所有其他映射节点均基于该节点。只需放置，该节点会将某个点从源曲面 UV 坐标映射到目标曲面 UV 坐标的位置。由于点是最基本的几何图形，基于它可构建更复杂的几何图形，因此我们可以使用此逻辑将二维几何图形（甚至三维几何图形）从一个曲面映射到另一个曲面。
 
 \![](<../../.gitbook/assets/develop package -pointToSurface.jpg>)
 
 #### **PolygonsToSurface**
 
-只需使用這裡的多邊形，即可示範將對映點從 1D 幾何圖形延伸至 2D 幾何圖形的邏輯。請注意，我們已將 _PointsToSurface_ 節點巢狀插入此自訂節點中。使用此方式，我們可以將每個多邊形的點對映到曲面，然後從這些對映的點重新產生多邊形。透過保持正確的資料結構 (點清單的清單)，我們可以在多邊形精簡為一組點後保持多邊形的獨立性。
+仅使用此处的多边形，可演示将映射点从一维几何图形扩展到二维几何图形的逻辑。请注意，我们已将 _“PointsToSurface”_ 节点嵌套到此自定义节点中。这样，我们就可以将每个多边形的点映射到曲面，然后基于这些映射点重新生成多边形。通过保持正确的数据结构（一列点列表），我们可以在多边形简化为一组点后，使多边形保持分离。
 
 \![](<../../.gitbook/assets/develop package -polygonsToSurface.jpg>)
 
 #### **NurbsCrvtoSurface**
 
-這裡套用的邏輯與 _PolygonsToSurface_ 節點中相同。但不是對映多邊形點，而是對映 NURBS 曲線的控制點。
+此处应用的逻辑与 _“PolygonsToSurface”_ 节点中的逻辑相同。但是，我们不是映射多边形点，而是映射 NURBS 曲线的控制点。
 
 \![](<../../.gitbook/assets/develop package -nurbsCrvtoSurface.jpg>)
 
 **OffsetPointsToSurface**
 
-此節點稍微複雜一些，但概念很簡單：此節點與 _PointsToSurface_ 節點類似，可在曲面之間對映點。但是，它也會考慮到不在原始來源曲面上的點，會取得這些點距最近 UV 參數的距離，並將此距離對映到對應 UV 座標處的目標曲面法線。如果查看範例檔案，會比較有感覺。
+此节点变得更加复杂，但概念非常简单：与 _“PointsToSurface”_ 节点类似，此节点会将点从一个曲面映射到另一个曲面。但是，它还会考虑不在原始源曲面上的点，获取其与最近 UV 参数的距离，并将此距离映射到相应 UV 坐标处的目标曲面法线。在查看示例文件时，这会更有意义。
 
 \![](<../../.gitbook/assets/develop package -OffsetPointsToSurface.jpg>)
 
 #### **SampleSrf**
 
-這個簡單節點會建立一個參數式曲面，從來源格線對映到範例檔案中的波浪曲面。
+这是一个简单节点，用于创建参数化曲面以从源栅格映射到示例文件中的波状曲面。
 
 \![](<../../.gitbook/assets/develop package -sampleSrf.jpg>)
 
-### 範例檔案
+### 示例文件
 
-範例檔案可在套件的根資料夾中找到。按一下「Package Manager」>「安裝的套件」頁籤。
+示例文件位于软件包的根文件夹中。依次单击“软件包管理器”>“已安装的软件包”选项卡。
 
-按一下「MapToSurface」旁的垂直圓點功能表 >「展示根目錄」。
+在“MapToSurface”的旁边，依次单击垂直点菜单 >“显示根目录”。
 
 <figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
-接著開啟 _「extra」_ 資料夾，此資料夾包含套件中不是自訂節點的所有檔案。這是 Dynamo 套件的範例檔案 (若存在) 的儲存位置。以下螢幕擷取畫面討論每個範例檔案中示範的概念。
+接着，打开 _“extra”_ 文件夹，该文件夹存储软件包中所有非自定义节点的文件。这是存储 Dynamo 软件包示例文件（如果存在）的位置。下面的屏幕截图介绍每个示例文件中演示的概念。
 
 #### **01-PanelingWithPolygons**
 
-此範例檔案示範如何根據矩形的格線使用 _PointsToSurface_ 將曲面平板化。這看起來應該很熟悉，因為我們在[上一章](../6-1_custom-nodes/2-creating.md)示範了類似的工作流程。
+此示例文件演示了如何使用 _“PointsToSurface”_ 来根据矩形栅格为曲面镶板。这应该看起来很熟悉，如我们在[上一章](../6-1_custom-nodes/2-creating.md)中演示的类似工作流。
 
 \![](<../../.gitbook/assets/develop package -sample file 01.jpg>)
 
 #### **02-PanelingWithPolygons-II**
 
-此練習檔案使用類似的工作流程，展示在從一個曲面將圓 (或表示圓的多邊形) 對映到另一個曲面的設置。此練習檔案使用 _PolygonsToSurface_ 節點。
+使用类似的工作流，本练习文件显示用于将圆（或表示圆的多边形）从一个曲面映射到另一个曲面的设置。这将使用 _“PolygonsToSurface”_ 节点。
 
 \![](<../../.gitbook/assets/develop package -sample file 02.jpg>)
 
 #### **03-NurbsCrvsAndSurface**
 
-此範例檔案使用「NurbsCrvToSurface」節點，因此複雜性更高。會將目標曲面偏移指定的距離，並將 NURBS 曲線對映至原始目標曲面與偏移曲面。由此對對映的兩條曲線執行斷面混成以建立曲面，然後增厚該曲面。產生的這個實體具有代表目標曲面法線的波浪線。
+此示例文件通过使用“NurbsCrvToSurface”节点增加了一些复杂性。目标曲面偏移给定距离，且 NURBS 曲线映射到原始目标曲面和偏移曲面。从这里，将放样两条映射曲线以创建曲面，然后加厚该曲面。此结果实体有表示目标曲面法线的波动。
 
 \![](<../../.gitbook/assets/develop package -sample file 03.jpg>)
 
 #### **04-PleatedPolysurface-OffsetPoints**
 
-此範例檔案示範如何將褶狀的 PolySurface 從來源曲面對映到目標曲面。來源曲面與目標曲面分別是跨越格線的矩形曲面與旋轉曲面。
+此示例文件演示如何将褶皱多重曲面从源曲面映射到目标曲面。源曲面和目标曲面是分别跨栅格和旋转曲面的矩形曲面。
 
 \![](<../../.gitbook/assets/develop package -sample file 04a.jpg>)
 
-來源 PolySurface 從來源曲面對映到目標曲面。
+源多重曲面从源曲面映射到目标曲面。
 
 \![](<../../.gitbook/assets/develop package -sample file 04b.jpg>)
 
 #### **05-SVG-Import**
 
-由於自訂節點可以對映不同類型的曲線，因此這最後一個檔案參考從 Illustrator 匯出的 SVG 檔案，並將匯入的曲線對映到目標曲面。
+由于自定义节点能够映射不同类型的曲线，因此最后这个文件会引用从 Illustrator 输出的 SVG 文件，并将输入的曲线映射到目标曲面。
 
 \![](<../../.gitbook/assets/develop package -sample file 05a.jpg>)
 
-剖析整個 .svg 檔案的語法，將曲線從 .xml 格式轉換為 Dynamo polycurve。
+通过解析 .svg 文件的语法，曲线将从 .xml 格式转换为 Dynamo 复合线。
 
 \![](<../../.gitbook/assets/develop package -sample file 05b.jpg>)
 
-將匯入的曲線對映到目標曲面。我們可藉此以明確方式 (點選) 在 Illustrator 中設計一個平板化物件，匯入至 Dynamo，然後套用到目標曲面。
+输入的曲线将映射到目标曲面。这样，我们可以在 Illustrator 中显式（点击）设计镶板、输入 Dynamo，然后应用于目标曲面。
 
 \![](<../../.gitbook/assets/develop package -sample file 05c.jpg>)

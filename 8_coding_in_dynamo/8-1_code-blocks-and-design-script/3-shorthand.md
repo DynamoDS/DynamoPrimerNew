@@ -1,145 +1,145 @@
-# 速寫
+# 简写
 
-### 速寫
+### 简写
 
-Code Block 有一些基本的速寫方法，簡言之，這些方法可以_顯著_降低資料管理的難度。以下我們將分類講解基本知識，並討論如何使用此速寫來建立與查詢資料。
+简单来说，代码块中有一些基本的简写方法，这些方法使数据管理 _更加_ 容易。我们将详细介绍下面的基础知识，并讨论如何使用此简写来创建和查询数据。
 
-| **資料類型**          | **標準 Dynamo**                                      | **Code Block 對等項**                                     |
+| **数据类型**          | **标准 Dynamo**                                      | **等效代码块**                                     |
 | ---------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
-| 數字                | \![](<../../.gitbook/assets/01 node - numbers.jpg>)       | \![](<../../.gitbook/assets/01 codeblock - numbers.jpg>)       |
-| 字串                | \![](<../../.gitbook/assets/02 node - string.jpg>)        | \![](<../../.gitbook/assets/02 codeblock- string.jpg>)         |
+| 数字                | \![](<../../.gitbook/assets/01 node - numbers.jpg>)       | \![](<../../.gitbook/assets/01 codeblock - numbers.jpg>)       |
+| 字符串                | \![](<../../.gitbook/assets/02 node - string.jpg>)        | \![](<../../.gitbook/assets/02 codeblock- string.jpg>)         |
 | 序列              | \![](<../../.gitbook/assets/03 node- sequence.jpg>)       | \![](<../../.gitbook/assets/03 codeblock- sequence.jpg>)       |
-| 範圍                 | \![](<../../.gitbook/assets/04 node- range.jpg>)          | \![](<../../.gitbook/assets/04 codeblock - range.jpg>)         |
-| 取得索引處的項目      | \![](<../../.gitbook/assets/05 node - list get item.jpg>) | \![](<../../.gitbook/assets/05 codeblock - list get item.jpg>) |
-| 建立清單            | \![](<../../.gitbook/assets/06 node - list create.jpg>)   | \![](<../../.gitbook/assets/image (17).png>)                   |
-| 連接字串    | \![](<../../.gitbook/assets/07 node - string concat.jpg>) | \![](<../../.gitbook/assets/07 codeblock - string concat.jpg>) |
-| 條件陳述式 | \![](<../../.gitbook/assets/08 node - conditional.jpg>)   | \![](<../../.gitbook/assets/08 codeblock - conditional.jpg>)   |
+| 范围                 | \![](<../../.gitbook/assets/04 node- range.jpg>)          | \![](<../../.gitbook/assets/04 codeblock - range.jpg>)         |
+| 获取索引处的项目      | \![](<../../.gitbook/assets/05 node - list get item.jpg>) | \![](<../../.gitbook/assets/05 codeblock - list get item.jpg>) |
+| 创建列表            | \![](<../../.gitbook/assets/06 node - list create.jpg>)   | \![](<../../.gitbook/assets/image (17).png>)                   |
+| 连接字符串    | \![](<../../.gitbook/assets/07 node - string concat.jpg>) | \![](<../../.gitbook/assets/07 codeblock - string concat.jpg>) |
+| 条件语句 | \![](<../../.gitbook/assets/08 node - conditional.jpg>)   | \![](<../../.gitbook/assets/08 codeblock - conditional.jpg>)   |
 
-### 其他語法
+### 其他语法
 
 |                                     |                           |                                                                                          |
 | ----------------------------------- | ------------------------- | ---------------------------------------------------------------------------------------- |
-| **節點**                         | **Code Block 對等項** | **附註**                                                                                 |
-| 任何運算子 (+、&&、>=、Not... 等等) | +、&&、>=、!... 等等        | 請注意，「Not」變成「！」，但節點稱為「Not」以便與「階乘」區分 |
-| Boolean True                        | true;                     | 請注意小寫                                                                          |
-| Boolean False                       | false;                    | 請注意小寫                                                                          |
+| **节点**                         | **等效代码块** | **注释**                                                                                 |
+| 任何运算符（+、&&、>=、Not 等） | +、&&、>=、! 等        | 请注意，“Not”变为“!”，但该节点被称为“Not”以区分“阶乘” |
+| 布尔值 True                        | true;                     | 注意小写                                                                          |
+| 布尔值 False                       | false;                    | 注意小写                                                                          |
 
-### 範圍和序列
+### 范围和序列
 
-定義範圍與序列的方法可以精簡為基本速寫。使用以下影像作為「..」語法的指南，以使用 Code Block 定義一系列數值資料。瞭解此標記法後，建立數值資料就會非常有效率：
+定义范围和序列的方法可缩减为基本简写。使用下图作为“..”语法的指导，以使用代码块定义数值数据列表。在完成此标记法后，创建数值数据是一个非常有效的过程：
 
 \![](<../../.gitbook/assets/shorthand - ranges and sequences.jpg>)
 
-> 1. 在此範例中，數字範圍由定義 `beginning..end..step-size;` 的基本 **Code Block** 語法所取代。以數字方式表示，我們得到：`0..10..1;`
-> 2. 請注意，語法 `0..10..1;` 相當於 `0..10;` 步長大小 1 是速寫標記法的預設值。因此 `0..10;` 將產生從 0 到 10 且步長大小為 1 的序列。
-> 3. _序列_ 範例很類似，只是我們使用「#」來說明希望清單包含 15 個值，而非清單中的值不超過 15。在此範例中，我們將定義：`beginning..#ofSteps..step-size:` 序列的實際語法為 `0..#15..2`
-> 4. 使用上一步的 _#_，現在將其放在語法的 _step-size_ 部分。現在，我們產生一個從 _beginning_ 到 _end_ 的 _數字範圍_，_step-size_ 標記將許多值均勻分佈在這兩個值之間：`beginning..end..#ofSteps`
+> 1. 在本例中，数字范围会替换为定义 `beginning..end..step-size;` 的基本 **“代码块”** 语法。通过以数字表示，可以得到：`0..10..1;`
+> 2. 请注意，语法 `0..10..1;` 等同于 `0..10;`，步长 1 是简写表示法的默认值。因此，`0..10;` 将给出一个从 0 到 10 的序列（步长为 1）。
+> 3. _“序列”_ 示例类似，除了我们使用“#”来指明我们希望列表中包含 15 个值，而不是列表中的最大值为 15。在本例中，我们将定义：`beginning..#ofSteps..step-size:`。序列的实际语法为 `0..#15..2`
+> 4. 使用上一步中的 _“#”_，我们现在将其放置在语法的 _“step-size”_ 部分中。现在，我们有一个 _数字范围_，从 _“beginning”_ 到 _“end”_，_“step-size”_ 表示法指示两者之间均匀分布多个值：`beginning..end..#ofSteps`
 
-### 進階範圍
+### 高级范围
 
-藉由建立進階範圍，我們能以簡單方式使用清單的清單。在以下範例中，我們將隔離變數與主要範圍標記，並建立該清單的另一個範圍。
+创建高级范围后，我们即可简单地处理列表的列表。在下面的示例中，我们将隔离主要范围表示法的变量，并创建该列表的另一个范围。
 
 \![](<../../.gitbook/assets/shorthand - advance range 01.jpg>)
 
-> 1\.建立巢狀範圍，對含與不含「#」的標記進行比較。套用基本範圍內的相同邏輯，只是變得稍複雜一些。
+> 1\.创建嵌套范围，将带“#”的表示法与不带符号的表示法进行比较。相同逻辑在基本范围中都适用，但它稍显复杂。
 >
-> 2\.可以在主要範圍內的任何位置定義子範圍，請注意我們可以有兩個子範圍。
+> 2\.我们可以在主范围内的任意位置处定义子范围；请注意，我们也可以有两个子范围。
 >
-> 3\.透過控制範圍內的「end」值，我們可以建立長度不同的多個範圍。
+> 3\.通过控制范围中的“end”值，我们可以创建多个长度不同的的范围。
 
-比較以上兩個速寫，並嘗試剖析 _子範圍_ 與 _#_ 標記如何產生結果輸出，來作為邏輯練習。
+作为逻辑练习，请比较上述两个简写，并尝试解析 _“subranges”_ 和 _“#”_ 表示法如何驱动结果输出。
 
 \![](<../../.gitbook/assets/shorthand - advance range 02.jpg>)
 
-### 建立清單與取得清單中的項目
+### 生成列表并从列表中获取项目
 
-除了使用速寫建立清單外，我們也可以快速建立清單。這些清單可以包含多種元素類型，也可以進行查詢 (請記住，清單本身就是物件)。總而言之，使用 Code Block，您將使用括號 (方括號) 建立清單和查詢清單中的項目：
+除了使用简写生成列表外，我们还可以即时创建列表。这些列表可以包含多种元素类型，也可以进行查询（请记住，列表本身就是对象）。总之，使用代码块时，可以创建列表，并从带括号的列表中查询项目（即“方括号”）：
 
 \![](<../../.gitbook/assets/shorthand - list & get from list 01.jpg>)
 
-> 1\.使用字串快速建立清單，並使用項目索引查詢清單。
+> 1\.使用字符串快速创建列表，并使用项目索引进行查询。
 >
-> 2\.使用變數建立清單，並使用範圍速寫標記查詢清單。
+> 2\.使用变量创建列表，并使用范围简写表示法进行查询。
 
-使用巢狀清單進行管理是類似的程序。請注意清單順序，並使用多組方括號呼叫：
+管理嵌套列表的过程类似。请注意列表顺序，并使用多组方括号进行调用：
 
 \![](<../../.gitbook/assets/shorthand - list & get from list 02.jpg>)
 
-> 1\.定義清單的清單。
+> 1\.定义一列列表。
 >
-> 2\.使用單邊括號查詢清單。
+> 2\.使用单括号表示法查询列表。
 >
-> 3\.使用雙邊括號查詢項目。
+> 3\.使用双括号表示法查询项目。
 
-## 練習：正弦曲面
+## 练习：正弦曲面
 
-> 按一下下方的連結下載範例檔案。
+> 单击下面的链接下载示例文件。
 >
-> 附錄中提供完整的範例檔案清單。
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../../.gitbook/assets/Obsolete-Nodes_Sine-Surface.dyn" %}
 
-在本練習中，我們將靈活運用新的速寫技能，以建立由範圍與公式定義的炫酷蛋殼曲面。在本練習中，請注意我們如何搭配使用 Code Block 與既有 Dynamo 節點：我們對處理大量資料的工作使用 Code Block，而以視覺方式配置 Dynamo 節點以實現定義的易讀性。
+在本练习中，我们将调整新的简写技能，以创建由范围和公式定义的精美蛋壳曲面。在本练习中，请注意我们如何串联使用代码块和现有 Dynamo 节点：我们将代码块用于繁重的数据提升，而 Dynamo 节点以可视方式布局来使定义清晰易读。
 
-首先，透過連接以上節點以建立曲面。不是使用數字節點來定義寬度與長度，而是按兩下圖元區，然後在 Code Block 中輸入 `100;`。
+首先，通过连接上述节点创建曲面。请勿使用数字节点定义宽度和长度，而是双击画布并在代码块中键入 `100;`
 
 \![](<../../.gitbook/assets/shorthand - exercise 01.jpg>)
 
 \![](<../../.gitbook/assets/shorthand - exercise 02.jpg>)
 
-> 1. 在 **Code Block** 中輸入 `0..1..#50`，定義介於 0 至 1 之間且分為 50 份的範圍。
-> 2. 將該範圍連接至 **Surface.PointAtParameter**，這會在曲面內為 u 與 v 指定介於 0 與 1 之間的值。請記得在 **Surface.PointAtParameter** 節點上按一下右鍵，將「交織」變更為「笛卡兒積」。
+> 1. 通过在 **“代码块”** 中键入 `0..1..#50`，定义一个介于 0 和 1 之间的范围（其中包含 50 个划分）。
+> 2. 将该范围连接到 **“Surface.PointAtParameter”**，它会在曲面上提取介于 0 和 1 之间的 u 和 v 值。请记得通过在 **“Surface.PointAtParameter”** 节点上单击鼠标右键，将“连缀”更改为“叉积”。
 
-在此步驟中，我們使用第一個函數在 Z 方向將點的格線上移。此格線將根據基本函數驅動產生的曲面。如以下影像所示新增節點
+在此步骤中，我们会使用第一个函数以在 Z 方向上向上移动点栅格。此栅格将基于底层函数驱动生成的曲面。添加新节点，如下图所示
 
 \![](<../../.gitbook/assets/shorthand - exercise 03.jpg>)
 
-> 1. 我們使用包含 `(0..Math.Sin(x*360)..#50)*5;` 這一行的 **Code Block**。為了快速詳細說明這一點，我們將定義內含公式的範圍。此公式是正弦函數。正弦函數會接收 Dynamo 中輸入的角度，因此為了取得完整的正弦波形，我們將 x 值 (這是 0 到 1 的範圍輸入) 乘以 360。接下來，我們希望份數與每列的控制格線點數量相同，所以使用 #50 定義五十份。最後，乘數 5 只是為了增加平移的振幅，方便我們在 Dynamo 預覽中查看效果。
+> 1. 我们使用带有以下行的**码块**：`(0..Math.Sin(x*360)..#50)*5;`。为了对该内容快速详细介绍，我们定义了一个内部带有公式的范围。此公式为正弦函数。在 Dynamo 中，正弦函数接收度数输入，因此为了获得完整正弦波，我们将x 值（这一范围输入介于 0 到 1 之间）乘以 360。接下来，我们希望每行都具有与控制栅格点相同数量的划分，因此我们用 #50 定义了 50 个细分。最后，乘数 5 只会增加平移幅度，因此我们可以在 Dynamo 预览中查看效果。
 
 \![](<../../.gitbook/assets/shorthand - exercise 04.jpg>)
 
-> 1. 雖然上一個 **Code Block** 運作地很好，但它並非完全是參數式方法。我們要動態驅動其參數，因此我們將上一步的程式碼行取代為 `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`。藉此我們能根據輸入定義這些值。
+> 1. 虽然上一个 **“代码块”** 正常工作，但它并非完全参数化。我们希望动态驱动其参数，因此我们会将上一步中的代码行替换为 `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`。这使我们可以根据输入定义这些值。
 
-透過變更滑棒 (範圍從 0 到 10)，我們得到一些有趣的結果。
+通过更改滑块（范围介于 0 到 10 之间），我们会得到一些有趣的结果。
 
 \![](<../../.gitbook/assets/shorthand - exercise 05.gif>)
 
 \![](<../../.gitbook/assets/shorthand - exercise 06.jpg>)
 
-> 1. 透過對數字範圍執行轉置，我們反轉窗簾波浪的方向：`transposeList = List.Transpose(sineList);`
+> 1. 通过对数字范围执行转置，我们会反转幕墙波的方向：`transposeList = List.Transpose(sineList);`
 
 \![](<../../.gitbook/assets/shorthand - exercise 07.jpg>)
 
-> 1. 加入 sineList 與 transposeList 後會得到一個扭曲的蛋殼曲面：`eggShellList = sineList+transposeList;`
+> 1. 如果添加 sineList 和 tranposeList，我们会得到一个扭曲的蛋壳曲面：`eggShellList = sineList+transposeList;`
 
-變更下面指定的滑棒值，將此演算法「變平靜」。
+我们会更改下面指定的滑块值，以“平静地控制”该算法。
 
 \![](<../../.gitbook/assets/shorthand - exercise 08.jpg>)
 
-最後，我們使用 Code Block 查詢資料的隔離部分。若要重新產生具有特定範圍點的曲面，請在 **Geometry.Translate** 與 **NurbsSurface.ByPoints** 節點之間加入以上 Code Block。這包括文字行：`sineStrips[0..15..1];`。這將選取前 16 列的點 (從 50 個點中)。重新建立曲面，我們可以看到已產生點格線的隔離部分。
+最后，让我们使用“代码块”查询数据的隔离部分。要使用特定范围的点重新生成曲面，请在 **“Geometry.Translate”** 和 **“NurbsSurface.ByPoints”** 节点之间添加上述代码块。这包含以下文本行：`sineStrips[0..15..1];`。这将选择前 16 行点（共 50 行）。通过重新创建曲面，可以看到我们已生成点栅格的隔离部分。
 
 \![](<../../.gitbook/assets/shorthand - exercise 09.jpg>)
 
 \![](<../../.gitbook/assets/shorthand - exercise 10.jpg>)
 
-> 1. 在最後一個步驟中，為了讓此 **Code Block** 的參數式程度更高，我們使用範圍從 0 至 1 的滑棒來驅動該查詢。我們使用這一行程式碼執行此作業：`sineStrips[0..((List.Count(sineStrips)-1)*u)];`。這可能有些混亂，但使用該行程式碼可以快速運用介於 0 和 1 之間的乘數來擴充清單長度。
+> 1. 在最后一步中，为了提高此 **“代码块”** 的参数化，我们使用介于 0 到 1 之间的滑块来驱动查询。我们使用以下代码行来执行此操作：`sineStrips[0..((List.Count(sineStrips)-1)*u)];`。这看起来可能会令人困惑，但代码行提供的方法让我们可以快速地将列表的长度缩放为 0 到 1 之间的乘数。
 
-若使用滑棒值 `0.53`，會建立一個剛好通過格線中點的曲面。
+滑块上的值 `0.53` 会创建刚好经过栅格中点的曲面。
 
 \![](<../../.gitbook/assets/shorthand - exercise 11.jpg>)
 
-與預期一致，使用滑棒值 `1` 時，會從完整的點格線建立一個曲面。
+如预期的一样，值为 `1` 的滑块会基于完整的栅格点创建曲面。
 
 \![](<../../.gitbook/assets/shorthand - exercise 12.jpg>)
 
-查看視覺圖表，我們可以亮顯 Code Block，並查看其中的每項函數。
+通过查看可视图形，我们可以亮显代码块并查看其每个函数。
 
 \![](<../../.gitbook/assets/shorthand - exercise 13.jpg>)
 
-> 1\.第一個 **Code Block** 取代 **Number** 節點。
+> 1\.第一个 **“代码块”** 替换 **“Number”** 节点。
 >
-> 2\.第二個 **Code Block** 取代 **Number Range** 節點。
+> 2\.第二个 **“代码块”** 替换 **“Number Range”** 节点。
 >
-> 3\.第三個 **Code Block** 取代 **List.Transpose**、**List.Count** 和 **Number Range** 節點。
+> 3\.第三个**代码块**替换 **List.Transpose**、**List.Count** 和 **Number Range** 节点。
 >
-> 4\.第四個 **Code Block** 查詢清單的清單，取代 **List.GetItemAtIndex** 節點。
+> 4\.第四个 **“代码块”** 查询一列列表，以便替换 **“List.GetItemAtIndex”** 节点。

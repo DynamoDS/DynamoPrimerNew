@@ -1,5 +1,5 @@
-# 簡介
+# 简介
 
-Dynamo 最初作為 Revit 中「建築資訊模型」的附加程式提供，現已成熟演變為許多產品。最重要的是，它是一個平台，支援設計人員探索視覺程式設計、解決問題以及製作自己的工具。我們透過設定一些環境 (這是什麼以及如何使用它？) 來開始我們的 Dynamo 旅程
+从最开始作为 Revit 中建筑信息模型 (BIM) 的附加模块，Dynamo 已逐渐成熟，可提供诸多功能。除此之外，它还是一个平台，使设计师能够探索可视化编程、解决问题并自行制作工具。通过设置一些环境让我们开始 Dynamo 探索之旅 - 它是什么？我如何使用它？
 
-\![Dynamo 生態系統](<../.gitbook/assets/intro dynamo cover.jpg>)
+\![Dynamo Ecosystem](<../.gitbook/assets/intro dynamo cover.jpg>)

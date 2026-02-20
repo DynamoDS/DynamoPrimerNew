@@ -1,103 +1,103 @@
-# 建立自訂節點
+# 创建自定义节点
 
-Dynamo 提供自訂節點的多種不同建立方法。您可以從頭開始建置自訂節點、從既有圖表建置自訂節點，或使用 C# 明確建置自訂節點。在本節中，我們將討論在 Dynamo 使用者介面內透過既有圖表建置自訂節點。此方法非常適用於清理工作區，以及封裝一系列節點以供在其他位置重複使用。
+Dynamo 提供了几种不同方法来创建自定义节点。可以从头开始构建自定义节点、从现有图形构建自定义节点，也可以在 C# 中显式构建自定义节点。在本节中，我们将介绍如何在 Dynamo UI 中基于现有图形构建自定义节点。此方法非常适用于清理工作空间，以及打包一系列节点以在其他位置重用。
 
-## 練習：UV 對映的自訂節點
+## 练习：UV 映射的自定义节点
 
-### 第 I 部分：以圖表開始
+### 第 I 部分：从图形开始
 
-在以下影像中，我們將使用 UV 座標在曲面之間對映點。我們將使用此概念建立對 XY 平面中的曲線進行參考的面板化曲面。在此，我們將建立四邊形面板以進行面板化，但運用相同邏輯，我們可以使用 UV 對映建立多種面板。這是開發自訂節點的好機會，因為我們在此圖表或在其他 Dynamo 工作流程中，可以更輕鬆地重複使用類似程序。
+在下图中，我们使用 UV 坐标将某个点从一个曲面映射到另一个曲面。我们将利用此概念创建镶板曲面，该曲面参照 XY 平面中的曲线。我们将在此处创建四边形嵌板以进行镶板，但是使用相同的逻辑，我们可以使用 UV 映射创建各种嵌板。这是开发自定义节点的绝佳机会，因为我们将能够在此图形或其他 Dynamo 工作流中更轻松地重复类似过程。
 
 \![](<../../.gitbook/assets/custom node for uv mapping pt I - 01.jpg>)
 
-> 按一下下方的連結下載範例檔案。
+> 单击下面的链接下载示例文件。
 >
-> 附錄中提供完整的範例檔案清單。
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../../.gitbook/assets/UV-CustomNode.zip" %}
 
-接下來先建立我們希望巢狀插入到自訂節點中的圖表。在此範例中，我們將建立使用 UV 座標將多邊形從基準曲面對映至目標曲面的圖表。我們會經常使用此 UV 對映程序，因此該程序是建立自訂節點的良好備用程序。如需曲面和 UV 空間的更多資訊，請參閱[曲面](../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/5-surfaces.md)頁面。從上面下載的 .zip 檔案中，完整的圖表為 _UVmapping_Custom-Node.dyn_。
+首先，我们创建一个要嵌套到自定义节点的图形。在本示例中，我们将使用 UV 坐标创建一个图形，该图形会将多边形从基础曲面映射到目标曲面。我们经常使用此 UV 映射过程，使其成为用于自定义节点的理想候选过程。有关曲面和 UV 空间的详细信息，请参见[曲面](../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/5-surfaces.md)页面。完整图形是来自上面下载的 .zip 文件中的 _“UVmapping_Custom-Node.dyn”_。
 
 \![](<../../.gitbook/assets/custom node for uv mapping pt I - 02.jpg>)
 
-> 1. **Code Block：** 使用此行建立範圍介於 -45 到 45 之間的 10 個數字 `45..45..#10;`
-> 2. **Point.ByCoordinates：** 將 **Code Block** 的輸出連接至「x」與「y」輸入，並將交織設定為交互參考。現在應該已建立點的格線。
-> 3. **Plane.ByOriginNormal：** 將 _Point_ 輸出連接至 _origin_ 輸入，以便在每個點處建立平面。將使用預設的法線向量 (0,0,1)。
-> 4. **Rectangle.ByWidthLength：** 將上一步中的平面連接至 _plane_ 輸入，並使用 **Code Block** 以值 _10_ 指定寬度與長度。
+> 1. **代码块**：使用以下代码行可创建一系列介于 -45 和 45 之间的 10 个数字：`45..45..#10;`
+> 2. **Point.ByCoordinates**：将 **“代码块”** 的输出连接到“x”和“y”输入，并将连缀设置为“交互参照”。现在，您应该有了点栅格。
+> 3. **Plane.ByOriginNormal**：将 _“Point”_ 输出连接到 _“origin”_ 输入，以在每个点处创建一个平面。将使用默认法向向量 (0,0,1)。
+> 4. **Rectangle.ByWidthLength**：将上一步中的平面连接到 _“plane”_ 输入，并使用值为 _“10”_ 的 **“代码块”** 指定宽度和长度。
 
-現在應該能看到矩形的格線。接下來使用 UV 座標將這些矩形對映到目標曲面。
+现在，您应该会看到矩形栅格。让我们使用 UV 坐标将这些矩形映射到目标曲面。
 
 \![](<../../.gitbook/assets/custom node for uv mapping pt I - 03.jpg>)
 
-> 1. **Polygon.Points：** 將上一步中的 **Rectangle.ByWidthLength** 輸出連接至 _polygon_ 輸入，以擷取每個矩形的角點。這些是將要對映到目標曲面的點。
-> 2. **Rectangle.ByWidthLength：** 使用 **Code Block** 以值 _100_ 指定矩形的長度與寬度。這將是基準曲面的邊界。
-> 3. **Surface.ByPatch：** 將上一步中的 **Rectangle.ByWidthLength** 連接至 _closedCurve_ 輸入，以建立基準曲面。
-> 4. **Surface.UVParameterAtPoint：** 連接 **Polygon.Points** 節點的 _Point_ 輸出與 **Surface.ByPatch** 節點的 _Surface_ 輸出，以傳回每個點處的 UV 參數。
+> 1. **Polygon.Points**：将上一步中的 **“Rectangle.ByWidthLength”** 输出连接到 _“polygon”_ 输入以提取每个矩形的角点。这些点是我们要映射到目标曲面的点。
+> 2. **Rectangle.ByWidthLength**：使用值为 _“100”_ 的 **“代码块”** 指定矩形的宽度和长度。这将是基础曲面的边界。
+> 3. **Surface.ByPatch**：将上一步中的 **“Rectangle.ByWidthLength”** 连接到 _“closedCurve”_ 输入以创建基础曲面。
+> 4. **Surface.UVParameterAtPoint**：连接 **“Polygon.Points”** 节点的 _“Point”_ 输出和 **“Surface.ByPatch”** 节点的 _“Surface”_ 输出，以返回每个点处的 UV 参数。
 
-現在，我們已建立基準曲面與一組 UV 座標，可以匯入目標曲面並在曲面之間對映點。
+现在，我们已拥有一个基础曲面和一组 UV 坐标，可以输入目标曲面并在曲面之间映射点。
 
 \![](<../../.gitbook/assets/custom node for uv mapping pt I - 04.jpg>)
 
-> 1. **File Path：** 選取要匯入的曲面的檔案路徑。檔案類型應是 .SAT。按一下 _「瀏覽...」_ 按鈕，導覽至上面所下載 .zip 檔案中的 _UVmapping_srf.sat_ 檔案。
-> 2. **Geometry.ImportFromSAT：** 連接檔案路徑以匯入曲面。您在幾何圖形預覽中應該能看到匯入的曲面。
-> 3. **UV：** 將 UV 參數輸出連接至 _UV.U_ 與 _UV.V_ 節點。
-> 4. **Surface.PointAtParameter：** 連接匯入的曲面以及 u 與 v 座標。現在，您應該能看到目標曲面上 3D 點的格線。
+> 1. **文件路径**：选择要输入的曲面的文件路径。文件类型应为“.SAT”。单击 _“浏览...”_ 按钮，然后导航到来自上面下载的 .zip 文件中的 _“UVmapping_srf.sat”_ 文件。
+> 2. **Geometry.ImportFromSAT**：连接文件路径以输入曲面。您应该会在几何图形预览中看到输入的曲面。
+> 3. **UV**：将 UV 参数输出连接到 _“UV.U”_ 和 _“UV.V”_ 节点。
+> 4. **Surface.PointAtParameter**：连接输入的曲面以及 u 和 v 坐标。现在，您应该会在目标曲面上看到三维点栅格。
 
-最後一步是使用 3D 點來建構矩形曲面修補。
+最后一步是使用三维点来构造矩形曲面修补。
 
 \![](<../../.gitbook/assets/custom node for uv mapping pt I - 05.jpg>)
 
-> 1. **PolyCurve.ByPoints：**連接曲面上的點以建構通過這些點的 PolyCurve。
-> 2. **Boolean：**在工作區中加入 **Boolean**，將其連接至 _connectLastToFirst_ 輸入，並切換至「True」以封閉 polycurve。現在，您應該能看到對映到曲面的矩形。
-> 3. **Surface.ByPatch：**將 polycurve 連接至 _closedCurve_ 輸入，以建構曲面修補。
+> 1. **PolyCurve.ByPoints**：连接曲面上的点，以通过这些点构造复合线。
+> 2. **Boolean**：将 **“Boolean”** 添加到工作空间，然后将其连接到 _“connectLastToFirst”_ 输入并切换到 True 以关闭复合线。现在，您应该会看到映射到曲面的矩形。
+> 3. **Surface.ByPatch**：将复合线连接到 _“closedCurve”_ 输入以构建曲面修补。
 
-### 第 II 部分：從圖表到自訂節點
+### 第 II 部分：从图形到自定义节点
 
-現在選取要巢狀插入至自訂節點的節點，同時考慮希望採用的節點輸入與輸出。我們希望自訂節點盡可能靈活，因此該自訂節點應該能對映任何多邊形，而不僅僅是矩形。
+现在，我们选择要嵌套到自定义节点中的节点，以考虑我们希望哪些内容作为节点的输入和输出。我们希望自定义节点尽可能灵活，以便它应该能够映射任何多边形，而不仅仅是矩形。
 
-選取以下節點 (從 Polygon.Points 開始)，在工作區上按一下右鍵，然後選取「建立自訂節點」。
+选择以下节点（从“Polygon.Points”开始），在工作空间上单击鼠标右键，然后选择“创建自定义节点”。
 
 \![](<../../.gitbook/assets/custom node for uv mapping pt II - 01.jpg>)
 
-在「自訂節點性質」對話方塊中，指定自訂節點的名稱、描述及品類。
+在“自定义节点特性”对话框中，为“自定义节点”指定名称、描述和类别。
 
 \![](<../../.gitbook/assets/custom node for uv mapping pt II - 02.jpg>)
 
-> 1. 名稱：MapPolygonsToSurface
-> 2. 描述：將多邊形從基礎曲面對映至目標曲面
-> 3. 附加元件品類：Geometry.Curve
+> 1. 名称：MapPolygonsToSurface
+> 2. 描述：将多边形从基础曲面映射到目标曲面
+> 3. 附加模块类别：Geometry.Curve
 
-自訂節點已顯著清理工作區。請注意，已根據原始節點命名輸入與輸出。接下來編輯自訂節點，以便讓名稱更具描述性。
+“自定义节点”已显着清理工作空间。请注意，已基于原始节点命名输入和输出。让我们编辑“自定义节点”，以使名称更具描述性。
 
 \![](<../../.gitbook/assets/custom node for uv mapping pt II - 03.jpg>)
 
-按兩下「自訂節點」以對其進行編輯。這將開啟工作區，並以黃色背景表示節點內部。
+双击“自定义节点”以对其进行编辑。这将打开一个工作空间，该工作空间有表示节点内部的黄色背景。
 
 \![](<../../.gitbook/assets/custom node for uv mapping pt II - 04.jpg>)
 
-> 1. **Input：** 將輸入名稱變更為 _baseSurface_ 與 _targetSurface_。
-> 2. **Output：** 為對映的多邊形加入其他輸出。
+> 1. **输入**：将输入名称更改为 _“baseSurface”_ 和 _“targetSurface”_。
+> 2. **输出**：为映射的多边形添加附加输出。
 
-儲存自訂節點，然後返回首頁工作區。請注意 **MapPolygonsToSurface** 節點反映我們剛剛所做的變更。
+保存自定义节点，然后返回到主工作空间。请注意，**“MapPolygonsToSurface”** 节点反映了我们刚才所做的更改。
 
 \![](<../../.gitbook/assets/custom node for uv mapping pt II - 05.jpg>)
 
-我們也可以在**自訂註解**中加入內容，以提高自訂節點的堅實性。註解有助於提示輸入與輸出類型，或說明節點的功能。使用者將游標懸停在自訂節點的輸入或輸出上方時，將顯示註釋。
+我们还可以通过添加 **“自定义注释”** 来增加“自定义节点”的稳定性。注释有助于提示输入和输出类型或解释节点的功能。用户将光标悬停在“自定义节点”的输入或输出上时，将显示注释。
 
-按兩下「自訂節點」以對其進行編輯。這會重新開啟黃色背景工作區。
+双击“自定义节点”以对其进行编辑。这将重新打开黄色背景的工作空间。
 
 \![](<../../.gitbook/assets/custom node for uv mapping pt II - 06.jpg>)
 
-> 1. 開始編輯 Input **Code Block**。若要開始註解，請在註解文字之前鍵入「//」。鍵入有助於說明節點的任何內容 - 在此我們將描述 _targetSurface_。
-> 2. 接下來還要設定輸入類型等於某個值，以設定 _inputSurface_ 的預設值。在此，我們將預設值設定為原始 **Surface.ByPatch** 設定。
+> 1. 开始编辑输入 **“代码块”**。要开始注释，请键入“//”，后跟注释文字。键入可能有助于阐明节点的任何内容 - 在此处，我们将介绍 _“targetSurface”_。
+> 2. 我们还将通过设置输入类型等于某个值，来设置 _“inputSurface”_ 的默认值。在此处，我们会将默认值设置为原始 **“Surface.ByPatch”** 集。
 
-也可以將註解套用到 Output。
+注释也可以应用于输出。
 
 \![](<../../.gitbook/assets/custom node for uv mapping pt II - 07.jpg>)
 
-> 編輯 Output Code Block 中的文字。在註解文字前鍵入「//」。在此，我們將加入更深入的描述，以說明 _Polygons_ 與 _surfacePatches_ 輸出。
+> 编辑输出“代码块”中的文字。键入“//”，后跟注释文字。在此处，我们将通过添加更深入的描述来阐明 _“Polygons”_ 和 _“surfacePatches”_ 输出。
 
 \![](<../../.gitbook/assets/custom node for uv mapping pt II - 08.jpg>)
 
-> 1. 將游標懸停在自訂節點輸入上方可查看註解。
-> 2. 設定 _inputSurface_ 的預設值後，我們也可以執行定義，而不提供曲面輸入。
+> 1. 将光标悬停在“自定义节点输入”上可查看注释。
+> 2. 在对 _“inputSurface”_ 设置默认值后，我们还可以运行定义，无需输入曲面。

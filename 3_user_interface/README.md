@@ -1,80 +1,80 @@
-# 使用者介面
+# 用户界面
 
-### 使用者介面概述
+### 用户界面概述
 
-Dynamo 的使用者介面 (UI) 分為五個主要區域。我們在此將簡要概述，並在以下幾節進一步說明工作區和資源庫。
+Dynamo 的用户界面 (UI) 分为五个主要区域。我们将在此简要介绍概述，然后在以下各部分中进一步介绍工作空间和库。
 
 \![](<../.gitbook/assets/user interface - ui.jpg>)
 
-> 1. 功能表
-> 2. 工具列
-> 3. 資源庫
-> 4. 工作區
-> 5. 執行列
+> 1. 菜单
+> 2. 工具栏
+> 3. 库
+> 4. 工作空间
+> 5. 执行栏
 
-### 功能表
+### 菜单
 
 ![](../.gitbook/assets/userinterface-menu\(1\).jpg)
 
-以下是 Dynamo 應用程式的基本功能功能表。與大多數 Windows 軟體一樣，前兩個功能表與管理檔案、選取作業和編輯內容相關。其餘的功能表包含 Dynamo 更具體的功能。
+以下是 Dynamo 应用程序基本功能的菜单。与大多数 Windows 软件一样，前两个菜单涉及文件管理、选择操作和内容编辑。其余菜单则更加特定于 Dynamo。
 
-#### Dynamo 功能表
+#### Dynamo 菜单
 
-在 **Dynamo** 下拉式功能表上可以找到一般資訊和設定。
+常规信息和设置位于 **“Dynamo”** 下拉菜单中。
 
 \![](<../.gitbook/assets/user interface - dynamo menu.jpg>)
 
-> 1. 關於 - 瞭解您電腦上安裝的 Dynamo 版本。
-> 2. 收集使用狀況資料的合約 - 這可讓您選擇是否分享您的使用者資料來改善 Dynamo。
-> 3. 偏好 - 包括各項設定，例如定義應用程式的小數點精確度和幾何圖形彩現品質。
-> 4. 結束 Dynamo
+> 1. 关于 - 了解计算机上安装的 Dynamo 版本。
+> 2. 同意收集可用性数据 - 这允许您选择加入或退出共享您的用户数据以改进 Dynamo。
+> 3. 首选项 - 包括定义应用程序的小数点精度和几何图形渲染质量等设置。
+> 4. 退出 Dynamo
 
-#### 說明
+#### 帮助
 
-如果您遇到問題，請查閱 **「說明」** 功能表。您可以透過網際網路瀏覽器存取其中一個 Dynamo 參考網站。
+如果遇到问题，请查看 **“帮助”** 菜单。可以通过 Internet 浏览器访问其中一个 Dynamo 参考网站。
 
 ![](../.gitbook/assets/help-menu.png)
 
-> 1. 互動式指南 - 逐步引導您瞭解各種 Dynamo 功能的導覽。
-> 2. 範例 - 參考範例檔案。僅適用於主體程式，包括 Revit 和 Civil 3D。
-> 3. Dynamo 字典 - 所有節點上具備文件的資源。
-> 4. Dynamo 網站 - 提供有關 Dynamo 的資訊以及論壇、部落格等資源連結的網站。
-> 5. Dynamo 儲存庫 - 在 GitHub 上檢視 Dynamo 專案。
-> 6. Dynamo 專案 Wiki - 造訪 Wiki，以學習使用 Dynamo API 進行開發，支援資源庫與工具。
-> 7. 顯示開始頁面 - 返回至文件中的 Dynamo 開始頁面。
-> 8. 報告錯誤 - 在 Github 開啟問題。
+> 1. 交互式手册 - 指导您逐步了解各种 Dynamo 功能的导览。
+> 2. 样例 - 参考示例文件。仅在主机程序（包括 Revit 和 Civil 3D）中可用。
+> 3. Dynamo 词典 - 包含所有节点文档的资源。
+> 4. Dynamo 网站 - 该网站提供有关 Dynamo 的信息以及指向论坛、博客等资源的链接。
+> 5. Dynamo 存储库 - 在 GitHub 上查看 Dynamo 项目。
+> 6. Dynamo Project Wiki - 访问 Wiki 以了解如何使用 Dynamo API、支持库和工具进行开发。
+> 7. 显示开始页面 - 在文档内时返回 Dynamo 开始页面。
+> 8. 报告错误 - 在 GitHub 上打开问题。
 
-### 工具列
+### 工具栏
 
-Dynamo 的工具列包含一系列按鈕，可快速存取以使用檔案及退回 [Ctrl + Z] 與重做 [Ctrl + Y] 指令。最右側是另一個按鈕，可以匯出工作區的快照，這對於製作文件及分享非常有用。
+Dynamo 工具栏包含一系列按钮，可快速处理文件以及访问“Undo [Ctrl + Z]”和“Redo [Ctrl + Y]”命令。最右侧是另一个按钮，它将输出工作空间快照，这对于文档编制和共享非常重要。
 
-* \![](<../.gitbook/assets/user interface - new file.jpg>) 新建 - 建立新的 .dyn 檔案
-* \![](<../.gitbook/assets/user interface - open (1).jpg>) 開啟 - 開啟既有的 .dyn (工作區) 或 .dyf (自訂節點) 檔案
-* \![](<../.gitbook/assets/user interface - save.jpg>) 儲存/另存新檔 - 儲存使用中的 .dyn 或 .dyf 檔案
-* \![](<../.gitbook/assets/user interface - undo.jpg>) 退回 - 退回上一個動作
-* \![](<../.gitbook/assets/user interface - redo.jpg>) 重做 - 重做下一個動作
-* \![](<../.gitbook/assets/user interface - screenshot.jpg>) 匯出工作區做為影像 - 將可見工作區匯出為 PNG 檔案
+* \![](<../.gitbook/assets/user interface - new file.jpg>) New - Create a new .dyn file
+* \![](<../.gitbook/assets/user interface - open (1).jpg>) 打开 - 打开现有的 .dyn（工作空间）或 .dyf（自定义节点）文件
+* \![](<../.gitbook/assets/user interface - save.jpg>) 保存/另存为 - 保存活动的 .dyn 或 .dyf 文件
+* \![](<../.gitbook/assets/user interface - undo.jpg>) 撤消 - 撤消上一个操作
+* \![](<../.gitbook/assets/user interface - redo.jpg>) 重做 - 重做下一个操作
+* \![](<../.gitbook/assets/user interface - screenshot.jpg>) 将工作空间输出为图像 - 将可见工作空间输出为 PNG 文件
 
-### 資源庫
+### 库
 
-Dynamo 資源庫是一個功能資源庫的集合，每個資源庫都包含依品類分組的節點。它包含在 Dynamo 預設安裝期間加入的基本資源庫，隨著我們繼續介紹用法，我們將示範如何使用自訂節點和其他套件來延伸基本功能。[2-library.md](2-library.md "mention")一節將涵蓋使用資源庫更詳細的指導。
+Dynamo 库是功能库的集合，每个库都包含按类别分组的节点。它包含在默认安装 Dynamo 期间添加的基本库，随着我们继续介绍其用法，我们将演示如何通过自定义节点和其他软件包扩展基本功能。[2-library.md](2-library.md "mention")部分将介绍有关如何使用它的更详细指导。
 
 \![](<../.gitbook/assets/user interface - library (1).gif>)
 
-### 工作區
+### 工作空间
 
-「工作區」是我們建構視覺程式的位置，您也可以變更其「預覽」設定，以從此處檢視 3D 幾何圖形。請參閱[1-workspace.md](1-workspace.md "mention")，以取得更多詳細資料。
+在工作空间中，我们可以编写可视化程序，您还可以更改其“预览”设置以从此处查看三维几何图形。有关更多详细信息，请参见 [1-workspace.md](1-workspace.md "mention")。
 
 \![](<../.gitbook/assets/user interface - workspace (1).gif>)
 
-### 執行列
+### 执行栏
 
-從此處執行 Dynamo 腳本。按一下「執行」按鈕上的下拉式圖示，可在不同模式之間進行變更。
+从此处运行 Dynamo 脚本。单击“执行”按钮上的下拉图标，可在不同模式之间切换。
 
 \![](<../.gitbook/assets/user interface - execution bar.gif>)
 
-* 自動：自動執行腳本。變更會即時更新。
-* 手動：只在按一下「執行」按鈕時才執行腳本。在變更複雜繁重的腳本時，此功能非常有用。
-* 周期性：此選項預設會灰顯。只有在使用 _DateTime.Now_ 節點時才能使用。您可以將圖表設定為以指定間隔自動執行。
+* 自动：自动运行脚本。更改会实时更新。
+* 手动：仅当单击“运行”按钮时，脚本才会运行。对更改复杂且“繁重”的脚本很有用。
+* 周期：默认情况下，此选项灰显。仅当使用 _DateTime.Now_ 节点时可用。可以将图形设置为按指定的间隔自动运行。
 
 \![](<../.gitbook/assets/user interface - execution bar DateTime node.jpg>)

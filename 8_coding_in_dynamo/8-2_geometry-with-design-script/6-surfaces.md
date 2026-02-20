@@ -1,10 +1,10 @@
-# 曲面：內插、控制點、斷面混成、迴轉
+# 曲面：内插、控制点、放样、旋转
 
-NurbsCurve 的二維類比是 NurbsSurface，就像自由形式的 NurbsCurve，您可以使用兩種基本方法建構 NurbsSurface：一個是輸入一組基準點，讓 Dynamo 在這些點之間內插，另一個是明確指定曲面的控制點。就像自由形式的曲線，如果設計師很清楚知道要產生的曲面形狀，或如果設計需要曲面通過約束點，內插的曲面會很好用。相反地，如果是要探索各種平滑程度的設計，透過控制點建立的曲面就比較有用。
+对 NurbsCurve 的二维模拟是 NurbsSurface，与自由形式的 NurbsCurve 一样，可以使用两种基本方法构建 NurbsSurface：输入一组基点并在它们之间内插 Dynamo，然后明确指定曲面的控制点。当设计师确切知道曲面需要的形状或者设计需要曲面通过约束点时，内插曲面也与自由曲线一样非常有用。另一方面，由控制点创建的曲面对于各种平滑级别的探索式设计更为有用。
 
-### 內插曲面
+### 插值曲面
 
-若要建立內插的曲面，只要產生一些近似曲面形狀的二維點即可。這些點必須是矩形，亦即不是鋸齒狀。_NurbsSurface.ByPoints_ 方法會從這些點建構一個曲面。
+要创建插值曲面，只需生成与曲面形状近似的点的二维集合即可。集合必须是矩形，即不能出现锯齿。_NurbsSurface.ByPoints_ 方法通过这些点构造曲面。
 
 ![](../../.gitbook/assets/Surfaces_01.png)
 
@@ -15,9 +15,9 @@ NurbsCurve 的二維類比是 NurbsSurface，就像自由形式的 NurbsCurve，
 surf = NurbsSurface.ByPoints(python_points_1);
 ```
 
-### 控制點曲面
+### 控制点曲面
 
-指定曲面的基本控制點，也可以建立自由形式的 NurbsSurface。就像 NurbsCurve 一樣，控制點可以視為是代表一個有直線段的四邊形網格，這會根據曲面的次數，平滑化成最終的曲面形狀。若要使用控制點來建立 NurbsSurface，請在 _NurbsSurface.ByPoints_ 中包含另外兩個參數，指出基本曲線在曲面兩個方向的次數。
+也可以通过指定曲面的基本控制点来创建自由形式的 NurbsSurfaces。与 NurbsCurves 一样，控制点可以看作是表示具有直线段的四边形网格，这可以平滑到最终的曲面形式（取决于曲面的阶数）。要通过控制点创建 NurbsSurface，请为 _NurbsSurface.ByPoints_ 添加两个附加参数，以指示基本曲线在曲面两个方向上的角度。
 
 ![](../../.gitbook/assets/Surfaces_02.png)
 
@@ -29,7 +29,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 ```
 
-我們可以增加 NurbsSurface 的次數，來變更產生的曲面幾何圖形：
+我们可以增加 NurbsSurface 的阶数，来更改生成的曲面几何图形：
 
 ![](../../.gitbook/assets/Surfaces_03.png)
 
@@ -41,9 +41,9 @@ surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 ```
 
-### 斷面混成曲面
+### 放样曲面
 
-就像我們可以在一組輸入點之間內插來建立 Surface，也可以在一組基準曲線之間內插來建立 Surface。這稱為斷面混成。使用 _Surface.ByLoft_ 建構函式可以建立斷面混成的曲線，一組輸入曲線是唯一的參數。
+就像可以通过在一组输入点之间内插来创建曲面一样，可以通过在一组基础曲线之间内插来创建曲面。这称为“放样”。放样曲线是使用 _Surface.ByLoft_ 构造函数创建的，其中输入曲线集合作为唯一参数。
 
 ![](../../.gitbook/assets/Surfaces_04.png)
 
@@ -58,11 +58,11 @@ c3 = NurbsCurve.ByPoints(python_points_4);
 loft = Surface.ByLoft([c1, c2, c3]);
 ```
 
-### 迴轉曲面
+### 旋转曲面
 
-迴轉的曲面是另外一種曲面類型，環繞一個中心軸掃掠一條基準曲線可以建立這種曲面。如果內插曲面是內插曲線的二維類比，則迴轉的曲面就是圓和弧的二維類比。
+旋转曲面是通过绕中心轴扫掠基础曲线创建的附加类型的曲面。如果插值曲面是对插值曲线的二维模拟，则旋转曲面是对圆和圆弧的二维模拟。
 
-迴轉的曲面是由基準曲線 (代表曲面的「邊緣」)、軸原點 (曲面的基準點)、軸方向 (中央「核心」方向)、掃掠起始角度和掃掠結束角度指定。這些是用來做為 _Surface.Revolve_ 建構函式的輸入。
+旋转曲面由基本曲线指定，表示曲面的“边”；轴原点、曲面的基点；轴方向、中心“核心”方向；扫掠开始角；以及扫掠结束角。这些曲面用作 _Surface.Revolve_ 构造函数的输入。
 
 ![](../../.gitbook/assets/Surfaces_05.png)
 

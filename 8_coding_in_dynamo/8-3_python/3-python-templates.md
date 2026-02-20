@@ -1,20 +1,20 @@
-# 設定您自己的 Python 樣板
+# 设置自己的 Python 模板
 
-在 Dynamo 2.0 中，我們可以在第一次開啟 Python 視窗時，指定要使用的預設樣板 `(.py extension)`。這是一個大家期待已久的功能，因為可以加快在 Dynamo 中使用 Python 的速度。使用樣板，可以讓我們在想要開發自訂 Python 指令碼時，有預設的匯入值可以隨時開始。
+使用 Dynamo 2.0，我们可以指定在首次打开 Python 窗口时要使用的默认模板 `(.py extension)`。这是一个渴望已久的请求，因为这可加快 Dynamo 内 Python 的使用。通过使用模板，我们可以在计划开发自定义 Python 脚本时准备好默认导入。
 
-此樣板的位置位於 Dynamo 安裝的 `APPDATA` 位置。
+此模板的位置位于 Dynamo 安装的 `APPDATA` 位置。
 
-這通常如下所示 `( %appdata%\Dynamo\Dynamo Core\{version}\ )`。
+这通常如下所示：`( %appdata%\Dynamo\Dynamo Core\{version}\ )`。
 
 \![](<../../.gitbook/assets/python templates - appdata folder location.jpg>)
 
-### 設置樣板
+### 设置模板
 
-若要使用此功能，我們必須在 `DynamoSettings.xml` 檔案中加入下列一行。_(以記事本編輯)_
+为了能够利用此功能，我们需要在 `DynamoSettings.xml` 文件中添加以下行。_（在记事本中编辑）_
 
 \![](<../../.gitbook/assets/python templates -dynamo settings xml file.png>)
 
-我們會在當中看到 `<PythonTemplateFilePath />`，可以直接將它替換為以下內容：
+在我们看到 `<PythonTemplateFilePath />` 的位置，只需将其替换为以下内容：
 
 ```
 <PythonTemplateFilePath>
@@ -22,11 +22,11 @@
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} _注意：請使用您的使用者名稱替換 CURRENTUSER_ {% endhint %}
+{% hint style="warning" %} _注意：将 CURRENTUSER 替换为您的用户名_ {% endhint %}
 
-接下來，我們需要建置一個樣板，當中含有我們要使用的內建功能。在此範例中，我們嵌入 Revit 相關的匯入，和一些在處理 Revit 時的其他典型項目。
+接下来，我们需要使用要内置的功能构建模板。在本例中，我们在使用 Revit 时嵌入 Revit 相关的导入和一些其他典型项目。
 
-您可以開啟一份空白的記事本文件，在當中貼上以下程式碼：
+您可以开始一个空白记事本文档，并在其中粘贴以下代码：
 
 ```py
 import clr
@@ -65,16 +65,16 @@ TransactionManager.Instance.TransactionTaskDone()
 OUT = element
 ```
 
-完成後，請在 `APPDATA` 位置將此檔案儲存為 `PythonTemplate.py`。
+完成后，将此文件在 `APPDATA` 位置中另存为 `PythonTemplate.py`。
 
-### 之後的 Python Script 行為
+### 之后的 Python 脚本行为
 
-定義 Python 樣板之後，每當放置了 Python 節點時，Dynamo 都會尋找這裡。如果找不到，看起來就會是預設的 Python 視窗。
+定义了 Python 模板后，在每次放置 Python 节点时，Dynamo 都会查找该模板。如果找不到，它将看起来像默认的 Python 窗口。
 
 \![](<../../.gitbook/assets/python templates - before setup template.jpg>)
 
-如果發現 Python 樣板 (例如我們的 Revit)，您會看到您內建的所有預設項目。
+如果找到 Python 模板（如我们的 Revit 模板），则您会看到所有内置的默认项目。
 
 \![](<../../.gitbook/assets/python templates - after setup template.jpg>)
 
-您可以在下列位置找到有關此絕佳額外功能 (由 Radu Gidei 提供) 的其他資訊。https://github.com/DynamoDS/Dynamo/pull/8122
+有关此出色附加功能（由 Radu Gidei 提供）的其他信息可以在此处找到。https://github.com/DynamoDS/Dynamo/pull/8122

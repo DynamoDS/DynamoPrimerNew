@@ -1,9 +1,9 @@
-# 在 Dynamo 中撰寫程式碼
+# 在 Dynamo 中编码
 
-Dynamo 是 AEC 領域開始撰寫程式碼的絕佳之門。您可以從以下各節開始撰寫程式碼：
+Dynamo 是开始为 AEC 世界编码的绝佳起点。您可能对其中一些部分感兴趣，以开始您的编码之旅：
 
-* [程式碼區塊和 DesignScript](8-1_code-blocks-and-design-script/)
-* [使用 DesignScript 的幾何圖形](8-2_geometry-with-design-script/)
+* [代码块和 DesignScript](8-1_code-blocks-and-design-script/)
+* [使用 DesignScript 的几何图形](8-2_geometry-with-design-script/)
 * [Python](8-3_python/)
 
 ![](../.gitbook/assets/image.png)

@@ -1,69 +1,69 @@
-# 套件案例研究 - Mesh Toolkit
+# 软件包案例研究 - Mesh Toolkit
 
-Dynamo Mesh Toolkit 可提供工具，以匯入外部檔案格式的網格、根據 Dynamo 幾何圖形物件建立網格，並根據網格的頂點與索引手動建置網格。資源庫還提供工具來修改網格、修復網格，或萃取水平切片，以用於加工。
+Dynamo Mesh Toolkit 包提供了多种工具，可从外部文件格式输入网格、从 Dynamo 几何体对象创建网格，以及按顶点和索引手动构建网格。该库还提供了一些工具，可用于修改网格、修复网格或提取水平切片以在制造中使用。
 
 \![](<../../.gitbook/assets/meshToolkit case study 01.jpg>)
 
-Dynamo Mesh Toolkit 是 Autodesk 持續進行網格研究的一部分，因此在未來的幾年將繼續成長。該工具箱將頻繁推出新方法，請隨時與 Dynamo 團隊聯繫以提供註解、錯誤以及新功能的建議。
+Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未来几年内将继续增长。希望新方法经常出现在工具包中，您可以随时与 Dynamo 团队联系并提供评论、错误和新功能建议。
 
-### 網格與實體
+### 网格与实体
 
-下面的練習演示了使用 Mesh Toolkit 可執行的一些基本網格作業。在此練習中，我們將網格與一系列的平面相交，如果使用實體執行此作業，則運算成本很高。與實體不同，網格具有一組「解析度」，不以數學方式定義，而是以拓樸方式定義，我們可根據要執行的作業來定義此解析度。有關網格與實體關係的詳細資訊，您可以參考此手冊的[用於計算設計的幾何圖形](../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/)一章。有關 Mesh Toolkit 的更詳細資訊，您可以參考 [Dynamo Wiki 頁面](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit)。我們利用下面的練習來瞭解此套件。
+以下练习演示了使用 Mesh Toolkit 的一些基本网格操作。在该练习中，我们将网格与一系列平面相交，这可能需要使用实体进行大量的计算。与实体不同，网格有设置的“分辨率”，且不是以数学方式而是以拓扑方式定义，我们可以基于手头的任务定义此分辨率。有关网格与实体关系的详细信息，可参考本 Primer 中的[“用于计算设计的几何图形”](../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/)一章。要更全面的了解 Mesh Toolkit，可以参见 [Dynamo Wiki 页面](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit)。接下来，我们跳至下面练习中的软件包。
 
-### 安裝 Mesh Toolkit
+### 安装 Mesh Toolkit
 
-在 Dynamo 中，前往頂部功能表列中的「套件」>「Package Manager...」。在搜尋欄位中，鍵入 MeshToolkit (全部一個字，無空格)。按一下「安裝」，系統請您確認時，請接受，即可開始下載。非常簡單！
+在 Dynamo 中，转到顶部菜单栏中的“软件包”>“软件包管理器...”。在搜索字段中，键入“MeshToolkit”，全部写为一个单词。单击“安装”并接受确认以开始下载。就这么简单！
 
 <figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
-## 練習：網格相交
+## 练习：使网格相交
 
-> 按一下下方的連結下載範例檔案。
+> 单击下面的链接下载示例文件。
 >
-> 附錄中提供完整的範例檔案清單。
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../../.gitbook/assets/MeshToolkit.zip" %}
 
-在此範例中，我們將瞭解 Mesh Toolkit 的 Intersect 節點。我們將匯入網格並將其與一系列輸入平面相交以建立切片。這是準備模型以使用鐳射切割、水刀切割或數控機床進行加工的起點。
+在此示例中，我们将查看网格工具包中的“相交”节点。我们将导入网格并与一系列输入平面相交以创建切片。这是准备模型以在激光刀具、水射流刀具或 CNC 铣削上进行加工的起点。
 
-首先，_在 Dynamo 中開啟 Mesh-Toolkit_Intersect-Mesh.dyn_。
+首先，在 Dynamo 中打开 _“Mesh-Toolkit_Intersect-Mesh.dyn”_。
 
 \![](<../../.gitbook/assets/meshToolkit case study - exercise 01.jpg>)
 
-> 1. **檔案路徑：** 找到要匯入的網格檔案 (_stanford_bunny_tri.obj_)。支援的檔案類型為 .mix 和 .obj
-> 2. **Mesh.ImportFile：** 連接檔案路徑以匯入網格
+> 1. **File Path**：找到要输入的网格文件（_“stanford_bunny_tri.obj”_）。支持的文件类型包括 .mix 和 .obj
+> 2. **Mesh.ImportFile**：连接文件路径以输入网格
 
 \![](<../../.gitbook/assets/meshToolkit case study - exercise 02.jpg>)
 
-> 1. **Point.ByCoordinates：** 建構一個點 - 這將是弧的中心。
-> 2. **Arc.ByCenterPointRadiusAngle：** 在該點週圍建構一個弧。這條曲線將用來定位一系列平面。 __設定如下： __ `radius: 40, startAngle: -90, endAngle:0`
+> 1. **Point.ByCoordinates**：构造点 - 这将是圆弧的中心。
+> 2. **Arc.ByCenterPointRadiusAngle**：围绕点构造圆弧。此曲线将用于定位一系列平面。设置如下所示：`radius: 40, startAngle: -90, endAngle:0`
 
-建立一系列沿著弧轉向的平面。
+创建一系列沿圆弧定向的平面。
 
 \![](<../../.gitbook/assets/meshToolkit case study - exercise 03.jpg>)
 
-> 1. **Code Block**：建立 25 個介於 0 和 1 之間的數字。
-> 2. **Curve.PointAtParameter：** 將弧連接到 _curve_ 輸入並將 Code Block 輸出連接至 _param_ 輸入以擷取出一系列沿著曲線的點。
-> 3. **Curve.TangentAtParameter：** 連接與前一個節點相同的輸入。
-> 4. **Plane.ByOriginNormal：** 將點連接至 _origin_ 輸入並將 vector 連接至 _normal_ 輸入，在每個點建立一系列平面。
+> 1. **代码块**：创建 25 个介于 0 和 1 之间的数字。
+> 2. **Curve.PointAtParameter**：将圆弧连接到 _“curve”_ 输入，将代码块输出连接到 _“param”_ 输入以沿曲线提取一系列点。
+> 3. **Curve.TangentAtParameter**：连接与上一个节点相同的输入。
+> 4. **Plane.ByOriginNormal**：将点连接到 _“origin”_ 输入并将向量连接到 _“normal”_ 输入，以在每个点处创建一系列平面。
 
-接下來，我們將使用這些平面與網格相交。
+接下来，我们将使用这些平面来与网格相交。
 
 \![](<../../.gitbook/assets/meshToolkit case study - exercise 04.jpg>)
 
-> 1. **Mesh.Intersect：** 將這些平面與匯入的網格相交，建立一系列 PolyCurve 輪廓線。在節點上按一下右鍵，並將交織設定為最長
-> 2. **PolyCurve.Curves：** 將 PolyCurve 切斷為曲線段。
-> 3. **Curve.EndPoint：** 擷取每條曲線的端點。
-> 4. **NurbsCurve.ByPoints：** 使用點來建構 NURBS 曲線。使用設定為 _True_ 的 Boolean 節點，以封閉曲線。
+> 1. **Mesh.Intersect**：使平面与输入的网格相交，从而创建一系列复合线轮廓。在节点上单击鼠标右键并将连缀设置为最长
+> 2. **PolyCurve.Curves**：将复合线断开为其曲线片段。
+> 3. **Curve.EndPoint**：提取每条曲线的端点。
+> 4. **NurbsCurve.ByPoints**：使用点来构建 NURBS 曲线。使用设定为 _True_ 的布尔节点闭合曲线。
 
-在繼續之前，請關閉某些節點 (例如：Mesh.ImportFile、Curve.EndPoint、Plane.ByOriginNormal 以及 Arc.ByCenterPointRadiusAngle) 的預覽，以更清楚地查看結果。
+在继续操作之前，请关闭某些节点（例如：Mesh.ImportFile、Curve.EndPoint、Plane.ByOriginNormal 和 Arc.ByCenterPointRadiusAngle）的预览，以便更好地查看结果。
 
 \![](<../../.gitbook/assets/meshToolkit case study - exercise 05.jpg>)
 
-> 1. **Surface.ByPatch：** 為每條輪廓線建構曲面修補，以便建立網格的「切片」。
+> 1. **Surface.ByPatch**：为每个轮廓构造曲面面片以创建网格的“切片”。
 
-新增第二組切片，產生格子/蛋盒的效果。
+为一个格子/卵形木箱效果添加第二组切片。
 
 \![](<../../.gitbook/assets/meshToolkit case study - exercise 06.jpg>)
 
-您可能會發現與一個差不多的實體相比，網格相交作業的計算速度更快。例如本練習中示範的工作流程非常適合用於網格。
+您可能已注意到，相交操作通过网格与类似实体进行更快的计算。此练习中演示的工作流适合于与网格结合使用。

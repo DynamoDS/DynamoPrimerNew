@@ -1,23 +1,23 @@
-# 什麼是 Dynamo？它如何運作？
+# 什么是 Dynamo 以及它是如何工作的？
 
-Dynamo 是一種[視覺程式設計](https://primer2.dynamobim.org/v/zh-tw/a_appendix/a-1_visual-programming-and-dynamo)應用程式，可以獨立的「沙箱」模式，或以其他軟體 (例如 Revit、FormIt 或 Civil 3D) 的外掛程式下載並執行。
+Dynamo 是一款[可视化编程](https://primer2.dynamobim.org/v/zh-cn/a_appendix/a-1_visual-programming-and-dynamo)应用程序，可以下载并在单独的“沙盒”模式下运行，也可以下载并作为 Revit、FormIt 或 Civil 3D 等其他软件的插件运行。
 
-{% hint style="info" %} 進一步瞭解 [**Dynamo Core**/**Revit**/**Sandbox** 之間的差異。](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/) {% endhint %}
+{% hint style="info" %}详细了解 [ **Dynamo 核心** / **Revit** / **沙盒** 之间的差异。](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/){% endhint %}
 
-### 流程
+### 过程
 
-Dynamo 能讓我們在視覺程式設計流程中工作，在此流程中，我們將多個元素連接在一起以定義關係，和組成自訂演算法的動作序列。我們可以將演算法用於一系列廣泛的應用程式，從處理資料到產生幾何圖形，所有動作都是即時動作而不需要編寫 `code`。
+Dynamo 将使我们能够在可视化编程过程中工作，从而将各元素连接在一起以定义关系和构成自定义算法的操作序列。我们可以使用算法来处理各种应用程序（从处理数据到生成几何图形），所有操作均可实时完成，无需编写任何 `code`。
 
 \![](<../.gitbook/assets/nodes and wires - flow of data.jpg>)
 
-### 連接節點和線路
+### 连接节点和导线
 
-節點和線路是 Dynamo 中支援[視覺程式設計](../a_appendix/a-1_visual-programming-and-dynamo.md)流程的關鍵元件。它有助於在設計的零件之間建立牢固的視覺和系統關係。在開發和最佳化設計工作流程時，只需按一下滑鼠即可輕鬆連接節點。
+节点和导线是 Dynamo 中支持[可视化编程](../a_appendix/a-1_visual-programming-and-dynamo.md)过程的关键组件。它有助于在设计的各个部分之间建立强大的视觉和系统关系。在开发和优化设计工作流时，使用简单的鼠标单击即可轻松连接节点。
 
 \![](<../.gitbook/assets/what is dynamo - connecting nodes with wires.gif>)
 
-## Dynamo 可以達成什麼目標？
+## Dynamo 有哪些用途？
 
-Dynamo 可對專案工作流程使用視覺程式設計以及開發自訂工具，可整合各種令人興奮的應用程式的各個面向。
+从对项目工作流使用可视化编程到开发自定义工具，Dynamo 是各种令人兴奋的应用程序不可或缺的一部分。
 
-[在 Pinterest 上關注「Dynamo in Action」圖版。](http://www.pinterest.com/modelabnyc/dynamo-in-action/)
+[关注 Pinterest 上的“Dynamo 操作”讨论板。](http://www.pinterest.com/modelabnyc/dynamo-in-action/)

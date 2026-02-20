@@ -1,13 +1,13 @@
-# Code Block 中的字典
+# 代码块中的词典
 
-Dynamo 2.0 不只為字典引入先前討論的節點，Code Block 中也同樣有針對字典的新功能！
+Dynamo 2.0 不仅引入之前针对词典讨论的节点，还在代码块中提供了新功能！
 
-您可以使用類似於下方的語法，或節點的 DesignScript 式表現法。
+可以使用如下所示的语法或基于 DesignScript 的节点表示。
 
 ![](../../.gitbook/assets/dictionariesincb-syntax\(1\).jpg)
 
-由於字典在 Dynamo 中是一種物件類型，因此我們可以對其執行以下動作。
+由于词典是 Dynamo 中的对象类型，因此我们可以对其执行以下操作。
 
 \![](<../../.gitbook/assets/dictionaries in cb - actions with code blocks.jpg>)
 
-維持這類互動在將 Revit 資料與字串建立關係時會特別有用。接著，我們來看看一些 Revit 使用情況。
+在将 Revit 数据与字符串相关联时，保持这些交互类型尤其有用。接下来，我们将了解一些 Revit 使用案例。

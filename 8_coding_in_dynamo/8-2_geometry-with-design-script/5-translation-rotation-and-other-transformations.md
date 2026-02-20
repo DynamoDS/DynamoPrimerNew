@@ -1,10 +1,10 @@
-# 平移、旋轉和其他轉換
+# 平移、旋转和其他变换
 
-透過在三維空間中明確指出 x、y、z 座標，可以建立某些幾何圖形物件。但是，我們更常對物件本身或對其基本的 CoordinateSystem 使用幾何轉換，將幾何圖形移動到最終位置。
+通过在三维空间中明确指出 x、y 和 z 坐标，可以创建特定的几何体对象。但是，通常在对象本身或其基本 CoordinateSystem 上使用几何变换将几何体移动到其最终位置。
 
-### 翻譯
+### 平移
 
-最簡單的幾何轉換是平移，亦即將一個物件沿著 x、y、z 方向移動指定的單位數。
+最简单的几何变换是平移，可在 x、y 和 z 方向上将对象移动指定的单位数。
 
 ![](../../.gitbook/assets/Transformations_01.png)
 
@@ -18,9 +18,9 @@ p = Point.ByCoordinates(1, 2, 3);
 p2 = p.Translate(10, -20, 50);
 ```
 
-### 旋轉
+### 旋转
 
-在 Dynamo 中，雖然可以在物件名稱的結尾附加 _.Translate_ 方法平移所有物件，但是還有更複雜的轉換需要將物件從一個基本的 CoordinateSystem 轉換到新的 CoordinateSystem。例如，若要讓物件繞 x 軸旋轉 45 度，我們要使用 _.Transform_ 方法，將物件從其既有無旋轉的 CoordinateSystem，轉換到一個已經繞 x 軸旋轉 45 度的 CoordinateSystem：
+虽然 Dynamo 中的所有对象均可通过在对象名称末尾附加 _.Translate_ 方法进行转换，但更复杂的变换需要将对象从一个基础坐标系变换到新坐标系。例如，要绕 x 轴将对象旋转 45 度，我们将对象从其现有 CoordinateSystem（不旋转）变换为 CoordinateSystem（已使用 _.Transform_ 方法绕 x 轴旋转 45 度）：
 
 ![](../../.gitbook/assets/Transformations_02.png)
 
@@ -38,9 +38,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-### 調整比例
+### 缩放
 
-除了平移和旋轉，也可以用調整比例或切變方式建立 CoordinateSystem。CoordinateSystem 可以使用 _.Scale_ 方法調整比例：
+除了平移和旋转外，还可以缩放或剪切 CoordinateSystems。可以使用 _.Scale_ 方法缩放 CoordinateSystem：
 
 ![](../../.gitbook/assets/Transformations_03.png)
 
@@ -56,7 +56,7 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-在 CoordinateSystem 建構函式中輸入非正交的向量可以建立切變的 CoordinateSystem。
+通过将非正交向量输入 CoordinateSystem 构造函数，可以创建剪切的 CoordinateSystem。
 
 ![](../../.gitbook/assets/Transformations_04.png)
 
@@ -74,18 +74,18 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-比起旋轉和平移，調整比例和切變是相對比較複雜的幾何轉換，所以並非每個 Dynamo 物件都能經過這些轉換。下表概述哪些 Dynamo 物件可以有非等比例調整的 CoordinateSystem，以及切變的 CoordinateSystem。
+缩放和剪切是比旋转和平移更复杂的几何变换，因此并非每个 Dynamo 对象都能进行这些变换。下表概述了 Dynamo 对象可以具有非统一比例缩放的 CoordinateSystems 和剪切的 CoordinateSystems。
 
-| 類別        | 非等比例調整的 CoordinateSystem | 切變的 CoordinateSystem |
+| 类        | 非统一比例缩放的 CoordinateSystem | 剪切的 CoordinateSystem |
 | ------------ | ------------------------------------- | ------------------------ |
-| Arc          | 否                                    | 否                       |
+| 弧          | 否                                    | 否                       |
 | NurbsCurve   | 是                                   | 是                      |
-| NurbsSurface | 否                                    | 否                       |
-| Circle       | 否                                    | 否                       |
-| Line         | 是                                   | 是                      |
-| Plane        | 否                                    | 否                       |
-| Point        | 是                                   | 是                      |
-| Polygon      | 否                                    | 否                       |
-| Solid        | 否                                    | 否                       |
-| Surface      | 否                                    | 否                       |
-| Text         | 否                                    | 否                       |
+| Nurbs 曲面 | 否                                    | 否                       |
+| 圆       | 否                                    | 否                       |
+| 直线         | 是                                   | 是                      |
+| 平面        | 否                                    | 否                       |
+| 点        | 是                                   | 是                      |
+| 多边形      | 否                                    | 否                       |
+| 实体        | 否                                    | 否                       |
+| 曲面      | 否                                    | 否                       |
+| 文本         | 否                                    | 否                       |

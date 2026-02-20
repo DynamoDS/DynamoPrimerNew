@@ -1,161 +1,161 @@
-# 顏色
+# 颜色
 
-對於營造引人注目的視覺效果以及彩現視覺程式輸出的差異而言，顏色是很棒的資料類型。使用抽象資料及不同的數字時，有時很難查看變更的項目與變更程度。顏色在這裡大有用武之地。
+颜色是用于在可视化程序中创建引入注目的视觉效果以及渲染输出差异的绝佳数据类型。处理抽象数据和改变数字时，有时难以了解变化内容以及变化程度。这是颜色的绝佳应用。
 
-### 建立顏色
+### 创建颜色
 
-在 Dynamo 中使用 ARGB 輸入建立顏色。這對應於 Alpha、紅色、綠色與藍色通道。Alpha 代表顏色的 _透明度_，而其他三項用作主要顏色以協同產生顏色的整個光譜。
+Dynamo 中的颜色是使用 ARGB 输入创建的。这对应于 Alpha、红、绿和蓝通道。Alpha 表示颜色的 _透明度_，而其他三种颜色用作原色来协调生成整个色谱。
 
-| 圖示                                          | 名稱 (語法)                 | 輸入  | 輸出 |
+| 图标                                          | 名称（语法）                 | 输入  | 输出 |
 | --------------------------------------------- | ----------------------------- | ------- | ------- |
-| \![](<../../.gitbook/assets/Color byARGB.jpg>) | ARGB 顏色 (**Color.ByARGB**) | A、R、G、B | color   |
+| \![](<../../.gitbook/assets/Color byARGB.jpg>) | ARGB 颜色 (**Color.ByARGB**) | A,R,G,B | 颜色   |
 
-### 查詢顏色值
+### 查询颜色值
 
-以下表格中的顏色會查詢用於定義顏色的性質：Alpha、紅色、綠色與藍色。請注意，Color.Components 節點會提供所有四項作為不同輸出，因此該節點更適合查詢顏色的性質。
+下表中的颜色查询用于定义相应颜色的特性：Alpha、红、绿和蓝。请注意，Color.Components 节点给出全部四个不同输出，这使得该节点更适合查询颜色的特性。
 
-| 圖示                                             | 名稱 (語法)                     | 輸入 | 輸出    |
+| 图标                                             | 名称（语法）                     | 输入 | 输出    |
 | ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| \![](<../../.gitbook/assets/Color Alpha.jpg>)     | Alpha (**Color.Alpha**)           | color  | A          |
-| \![](<../../.gitbook/assets/Color Red.jpg>)       | 紅色 (**Color.Red**)               | color  | R          |
-| \![](<../../.gitbook/assets/Color Green.jpg>)     | 綠色 (**Color.Green**)           | color  | G          |
-| \![](<../../.gitbook/assets/Color Blue.jpg>)      | 藍色 (**Color.Blue**)             | color  | B          |
-| \![](<../../.gitbook/assets/Color Component.jpg>) | 組成 (**Color.Components**) | color  | A、R、G、B |
+| \![](<../../.gitbook/assets/Color Alpha.jpg>)     | Alpha (**Color.Alpha**)           | 颜色  | A          |
+| \![](<../../.gitbook/assets/Color Red.jpg>)       | 红色 (**Color.Red**)               | 颜色  | R          |
+| \![](<../../.gitbook/assets/Color Green.jpg>)     | 绿色 (**Color.Green**)           | 颜色  | G          |
+| \![](<../../.gitbook/assets/Color Blue.jpg>)      | 蓝色 (**Color.Blue**)             | 颜色  | B          |
+| \![](<../../.gitbook/assets/Color Component.jpg>) | 组件 (**Color.Components**) | 颜色  | A,R,G,B |
 
-以下表格中的顏色對應於 **HSB 顏色空間**。將顏色分為色相、飽和度與亮度可以更直觀地解譯顏色：顏色應該是怎樣的？顏色是什麼色彩？顏色的明暗程度應該是怎樣的？這是分別劃分的色相、飽和度與亮度。
+下表中的颜色对应于 **HSB 颜色空间**。对于我们如何解释颜色，将颜色分为色调、饱和度和亮度无疑更加直观：应该是什么颜色？应该如何呈现多彩？颜色应该如何变亮或变暗？这分别是色调、饱和度和亮度的细分。
 
-| 圖示                                                  | 名稱 (語法)                     | 輸入 | 輸出    |
+| 图标                                                  | 名称（语法）                     | 输入 | 输出    |
 | ----------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| \![](<../../.gitbook/assets/Color Hue.jpg>)            | 色相 (**Color.Hue**)               | color  | 色相        |
-| \![](<../../.gitbook/assets/Color Saturation (1).jpg>) | 飽和度 (**Color.Saturation**) | color  | 飽和度 |
-| \![](<../../.gitbook/assets/Color Brightness.jpg>)     | 亮度 (**Color.Brightness**) | color  | 亮度 |
+| \![](<../../.gitbook/assets/Color Hue.jpg>)            | 色调 (**Color.Hue**)               | 颜色  | 色调        |
+| \![](<../../.gitbook/assets/Color Saturation (1).jpg>) | 饱和度 (**Color.Saturation**) | 颜色  | 饱和度 |
+| \![](<../../.gitbook/assets/Color Brightness.jpg>)     | 亮度 (**Color.Brightness**) | 颜色  | 亮度 |
 
-### Color Range
+### 颜色范围
 
-顏色範圍類似於[\#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention")練習的 **Remap Range** 節點：可將數字清單重新對映到其他範圍。但它並非對映到 _數字_ 範圍，而是根據介於 0 至 1 的輸入數字對映到 _顏色漸層_。
+颜色范围类似于 [\#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention")练习中的**“Remap Range”**节点：它将数字列表重新映射到其他域。但它不会映射到 _“数字”_ 域，而是基于 0 到 1 范围的输入数字映射到 _“颜色渐变”_。
 
-目前的節點運作正常，但第一次就要讓所有內容正常運作可能會有些困難。熟悉顏色漸層的最佳方式是以互動方式對其進行測試。接下來我們進行快速練習，以檢閱如何設置輸出顏色對應於數字的漸層。
+当前节点运作良好，但第一次就使一切正常工作可能会有点勉强。熟悉颜色渐变的最佳方法是以交互方式对其进行测试。让我们快速练习，了解如何使用与数字对应的输出颜色设置渐变。
 
 \![](<../../.gitbook/assets/color - color range.jpg>)
 
-> 1. 定義三種顏色：使用 **Code Block** 節點，透過插入 _0_ 與 _255_ 的適當組合來定義 _red、green_ 與 _blue_。
-> 2. **建立清單：** 將三種顏色合併到一個清單中。
-> 3. 定義索引：建立清單以定義每種顏色的掣點位置 (從 0 至 1)。請注意值 0.75 為綠色。這會在顏色範圍滑棒上，將綠色置於水平漸層長度的 3/4 處。
-> 4. **Code Block**：要轉換為顏色的輸入值 (介於 0 至 1 之間)。
+> 1. 定义三种颜色：使用 **“Code Block”** 节点，通过插入相应的 _“0”_ 和 _“255”_ 组合来定义 _红色、绿色_ 和 _蓝色_。
+> 2. **创建列表**：将三种颜色合并到一个列表中。
+> 3. 定义索引：创建列表以定义每种颜色的夹点位置（范围从 0 到 1）。请注意，值 0.75 表示绿色。这会将绿颜色 3/4 置于颜色范围滑块中水平渐变的位置。
+> 4. **代码块**：输入值（介于 0 和 1 之间）以转换为颜色。
 
-### 顏色預覽
+### 颜色预览
 
-使用 **Display.ByGeometry** 節點可以在 Dynamo 視埠中查看顏色幾何圖形。這有助於區分不同類型的幾何圖形、展示參數式概念，或定義模擬的分析圖例。輸入很簡單：幾何圖形與顏色。若要建立類似上面影像的漸層，請將顏色輸入連接至 **Color** **Range** 節點。
+**“Display.ByGeometry”** 节点使我们能够在 Dynamo 视口中为几何图形着色。这有助于分离不同类型的几何图形、演示参数化概念或定义用于模拟的分析图例。输入很简单：几何图形和颜色。要创建与上图类似的渐变，请将颜色输入连接到 **“Color** **Range”** 节点。
 
 \![](<../../.gitbook/assets/color - color preview.jpg>)
 
-### 曲面上的顏色
+### 曲面上的颜色
 
-透過 **Display.BySurfaceColors** 節點，我們可以使用顏色對映整個曲面上的資料！此功能帶來某些振奮人心的可能性，可以對透過離散分析 (例如日光、能源及鄰近) 取得的資料進行視覺化。在 Dynamo 中將顏色套用至曲面類似於在其他 CAD 環境中將材質套用至材料。接下來在以下簡短練習中示範如何使用此工具。
+**“Display.BySurfaceColors”** 节点使我们能够使用颜色在整个曲面上映射数据！此功能为可视化通过离散分析（例如日光、能量和接近度）获得的数据引入了一些令人兴奋的可能性。在 Dynamo 中将颜色应用于曲面类似于在其他 CAD 环境中将纹理应用于材质。在下面的简短练习中，我们来演示如何使用此工具。
 
 \![](<../../.gitbook/assets/12 (1).jpg>)
 
-## 練習
+## 练习
 
-### 有顏色的基本螺旋線
+### 基本螺旋线（带颜色）
 
-> 按一下下方的連結下載範例檔案。
+> 单击下面的链接下载示例文件。
 >
-> 附錄中提供完整的範例檔案清單。
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../../.gitbook/assets/Building Blocks of Programs - Color (1).dyn" %}
 
-本練習的內容主要是以參數式方法控制顏色及幾何圖形。幾何圖形是一個基本螺旋線，我們下面使用 **Code Block** 定義。這是快速輕鬆的參數式函數建立方式，由於我們的焦點是顏色 (而不是幾何圖形)，因此我們使用 Code Block 高效建立螺旋線，而不贅述圖元區。隨著手冊改用更先進的材料，我們將更頻繁地使用 Code Block。
+本练习重点介绍如何以参数方式控制与几何图形平行的颜色。该几何图形是基本螺旋线，我们在下面使用 **“代码块”** 对其进行定义。这是一种用于创建参数化函数的快速而简单的方法；由于我们的重点是颜色（而不是几何图形），因此我们使用代码块来有效地创建螺旋线，而不会使画布变得混乱。随着底漆迁移到更高级的材质，我们会更频繁地使用代码块。
 
 \![](<../../.gitbook/assets/color - basic helix with colors 01.jpg>)
 
-> 1. **Code Block：** 定義包含上述公式的兩個 Code Block。這是快速建立螺旋線的參數式方法。
-> 2. **Point.ByCoordinates**：將 Code Block 的三項輸出插入節點的座標。
+> 1. **代码块**：使用上述公式定义两个代码块。这是用于创建螺旋的快速参数化方法。
+> 2. **Point.ByCoordinates**：将代码块的三个输出连接到该节点的坐标。
 
-現在我們可以看到建立螺旋線的一系列點。下一步是建立通過這些點的曲線，以便能看到螺旋。
+现在，我们会看到创建螺旋线的一组点。下一步是通过这些点创建曲线，以便我们可以可视化螺旋线。
 
 \![](<../../.gitbook/assets/color - basic helix with colors 02.jpg>)
 
-> 1. **PolyCurve.ByPoints：** 將 **Point.ByCoordinates** 輸出連接至節點的 _points_ 輸入。我們會得到一條螺旋曲線。
-> 2. **Curve.PointAtParameter：** 將 **PolyCurve.ByPoints** 輸出連接至 _curve_ 輸入。此步驟的目的是建立沿曲線滑動的參數式牽引點。由於曲線透過參數對點進行演算，因此我們需要輸入 0 與 1 之間的 _param_ 值。
-> 3. **Number Slider：** 加入圖元區後，將 _min_ 值變更為 _0.0_，_max_ 值變更為 _1.0_，_step_ 值變更為 _0.01_。將滑棒輸出插入 **Curve.PointAtParameter** 的 _param_ 輸入。現在，我們將看到沿螺旋線的長度由滑棒的百分比表示的點 (0 表示起點，1 表示終點)。
+> 1. **PolyCurve.ByPoints**：将 **“Point.ByCoordinates”** 输出连接到节点的 _“points”_ 输入。我们会得到螺旋曲线。
+> 2. **Curve.PointAtParameter**：将 **“PolyCurve.ByPoints”** 输出连接到 _“curve”_ 输入。此步骤的目的是创建一个沿曲线滑动的参数化吸引器点。由于曲线将计算参数处的点，因此我们需要输入一个介于 0 和 1 之间的 _参数_ 值。
+> 3. **数字滑块**：添加到画布后，将 _最小_ 值更改为 _0.0_、将 _最大_ 值更改为 _1.0_、将 _步长_ 值更改为 _.01_。将滑块输出插入 **“Curve.PointAtParameter”** 的 _“param”_ 输入。现在，我们会沿螺旋线长度看到一个点，由滑块的百分比表示（起点处为 0，终点处为 1）。
 
-建立參考點後，現在我們比較從參考點到螺旋原始定義點的距離。此距離值將驅動幾何圖形與顏色。
+创建参照点后，我们现在将比较参照点与定义螺旋线的原始点之间的距离。此距离值将驱动几何图形以及颜色。
 
 \![](<../../.gitbook/assets/color - basic helix with colors 03.jpg>)
 
-> 1. **Geometry.DistanceTo：** 將 **Curve.PointAtParameter** 輸出連接至 _輸入_。將 **Point.ByCoordinates** 連接至 geometry 輸入。
-> 2. **Watch：** 產生的結果將顯示從每個螺旋點至曲線上參考點之距離的清單。
+> 1. **Geometry.DistanceTo**：将 **“Curve.PointAtParameter”** 输出连接到 _“input”_。将 **“Point.ByCoordinates”** 连接到几何图形输入。
+> 2. **Watch**：结果输出会显示沿曲线从每个螺旋点到参照点的距离列表。
 
-下一步驟是使用從螺旋點至參考點之距離的清單來驅動參數。我們將使用這些距離值來定義曲線上一系列圓球的半徑。若要讓圓球保持合適的大小，我們需要 _重新對映_ 距離值。
+下一步是通过从螺旋点到参照点的距离列表来驱动参数。我们使用这些距离值来沿曲线定义一系列球体的半径。为了使球体保持合适大小，我们需要 _重映射_ 距离值。
 
 \![](<../../.gitbook/assets/color - basic helix with colors 04.jpg>)
 
-> 1. **Math.RemapRange：** 將 **Geometry.DistanceTo** 輸出連接至數字輸入。
-> 2. **Code Block：**將值為 _0.01_ 的 Code Block 連接至 _newMin_ 輸入，將值為 _1_ 的 Code Block 連接至 _newMax_ 輸入。
-> 3. **Watch：** 將 **Math.RemapRange** 輸出連接至一個節點，將 **Geometry.DistanceTo** 輸出連接至另一個節點。比較結果。
+> 1. **Math.RemapRange**：将 **“Geometry.DistanceTo”** 输出连接到数字输入。
+> 2. **代码块**：将值为 _0.01_ 的代码块连接到 _“newMin”_ 输入，将值为 _1_ 的代码块连接到 _“newMax”_ 输入。
+> 3. **Watch**：将 **“Math.RemapRange”** 输出连接到一个节点，并将 **“Geometry.DistanceTo”** 输出连接到另一个节点。比较结果。
 
-此步驟已將距離清單重新對映到較小的範圍。我們可以採用合適的任何方式編輯 _newMin_ 與 _newMax_ 值。這些值將重新對映，並在整個範圍內具有相同的 _分配比率_
+此步骤已将距离列表重新映射为较小的范围。我们可以编辑 _“newMin”_ 和 _“newMax”_ 值，但我们认为合适。这些值将重新映射并在整个域中具有相同的 _分布率_。
 
 \![](<../../.gitbook/assets/color - basic helix with colors 05.jpg>)
 
-> 1. **Sphere.ByCenterPointRadius：** 將 **Math.RemapRange** 輸出連接至 _radius_ 輸入，將原始 **Point.ByCoordinates** 輸出連接至 _centerPoint_ 輸入。
+> 1. **Sphere.ByCenterPointRadius**：将 **“Math.RemapRange”** 输出连接到 _“radius”_ 输入，将原始 **“Point.ByCoordinates”** 输出连接到 _“centerPoint”_ 输入。
 
-變更數字滑棒的值，查看圓球大小更新。我們現在有一個參數式波浪
+更改数字滑块的值，并观察球体更新的大小。现在，我们有了一个参数化夹具
 
 \![](<../../.gitbook/assets/color - basic helix with colors 06.gif>)
 
-圓球的大小展示出由曲線上的參考點定義的參數式陣列。接下來我們應用相同的概念，使用圓球半徑來驅動其顏色。
+球体的大小演示了由沿曲线的参照点定义的参数化阵列。让我们对球体半径使用相同的概念来驱动其颜色。
 
 \![](<../../.gitbook/assets/color - basic helix with colors 07.jpg>)
 
-> 1. **Color Range：** 加入圖元區頂部。懸停在 _value_ 輸入上時，我們會注意到要求的數字介於 0 與 1 之間。我們需要重新對映 **Geometry.DistanceTo** 輸出中的數字，以便其與此範圍相容。
-> 2. **Sphere.ByCenterPointRadius：** 我們暫時停用此節點的預覽 (_按一下右鍵 >「預覽」_)
+> 1. **Color Range**：在画布顶部添加。将光标悬停在 _“value”_ 输入上时，我们注意到请求的数字介于 0 和 1 之间。我们需要重新映射 **“Geometry.DistanceTo”** 输出中的数字，以便它们与此域兼容。
+> 2. **Sphere.ByCenterPointRadius**：目前，我们禁用此节点上的预览（_单击鼠标右键 >“预览”_）
 
 \![](<../../.gitbook/assets/color - basic helix with colors 08.jpg>)
 
-> 1. **Math.RemapRange：** 此程序似乎應該很熟悉。將 **Geometry.DistanceTo** 輸出連接至數字輸入。
-> 2. **Code Block：** 與之前的步驟類似，為 _newMin_ 輸入建立值 _0_，為 _newMax_ 輸入建立值 _1_。請注意，在此案例中，我們可以從一個 Code Block 定義兩個輸出。
-> 3. **Color Range：** 將 **Math.RemapRange** 輸出連接至 _value_ 輸入。
+> 1. **Math.RemapRange**：此过程看起来很熟悉。将 **“Geometry.DistanceTo”** 输出连接到数字输入。
+> 2. **Code Block**：与之前的步骤类似，为 _“newMin”_ 输入创建值 _0_，为 _“newMax”_ 输入创建值 _1_。注意，在这种情况下，我们能够在一个代码块中定义两个输出。
+> 3. **Color Range**：将 **“Math.RemapRange”** 输出连接到 _“value”_ 输入。
 
 \![](<../../.gitbook/assets/color - basic helix with colors 09.jpg>)
 
-> 1. **Color.ByARGB：** 這是我們為了建立兩種顏色將執行的作業。雖然此程序可能貌似有些難，但是它與其他軟體中的 RGB 顏色相同，我們只是剛剛使用視覺程式設計來執行此作業而已。
-> 2. **Code Block：** 建立 _0_ 與 _255_ 兩個值。將兩個輸出插入與以上影像相同的兩個 **Color.ByARGB** 輸入 (或建立您最愛的兩種顏色)。
-> 3. **Color Range：**_colors_ 輸入要求提供顏色清單。我們需要使用上一步驟中建立的兩種顏色建立此清單。
-> 4. **List.Create：** 將兩種顏色合併到一個清單中。將輸出插入 **Color Range** 的 _colors_ 輸入。
+> 1. **Color.ByARGB**：这是我们要为创建两种颜色所执行的操作。尽管此过程看起来可能有些古怪，但它与其他软件中的 RGB 颜色相同，我们只需使用可视化编程即可实现。
+> 2. **Code Block**：创建由 _0_ 和 _255_ 组成的两个值。将两个输出连接到与上图一致的两个 **“Color.ByARGB”** 输入（或创建您最喜欢的两种颜色）。
+> 3. **Color Range**： _“colors”_ 输入要求一列颜色。我们需要基于上一步中创建的两种颜色创建此列表。
+> 4. **List.Create**：将两种颜色合并到一个列表中。将输出连接到 **“Color Range”** 的 _“colors”_ 输入。
 
 \![](<../../.gitbook/assets/color - basic helix with colors 10.jpg>)
 
-> 1. **Display.ByGeometryColor：** 將 **Sphere.ByCenterPointRadius** 連接至 _geometry_ 輸入，將 _Color Range_ 連接至 _color_ 輸入。現在，我們已在整個曲線範圍內建立平滑的漸層。
+> 1. **Display.ByGeometryColor**：将 **“Sphere.ByCenterPointRadius”** 连接到 _“geometry”_ 输入，将 _“Color Range”_ 连接到 _“color”_ 输入。现在，我们在曲线域上具有平滑渐变。
 
-如果我們變更之前定義中 **Number Slider** 的值，顏色與大小就會更新。在此案例中，顏色與半徑大小直接相關：我們現在已在兩個參數之間建立視覺連結！
+如果我们之前在定义中更改了 **“Number Slider”** 的值，则颜色和尺寸会更新。在这种情况下，颜色和半径大小直接相关：我们现在在两个参数之间有视觉链接！
 
 \![](<../../.gitbook/assets/color - basic helix with colors 11.gif>)
 
-### 曲面上的顏色練習
+### “曲面上的颜色”练习
 
-> 按一下下方的連結下載範例檔案。
+> 单击下面的链接下载示例文件。
 >
-> 附錄中提供完整的範例檔案清單。
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../../.gitbook/assets/BuildingBlocks of Programs - ColorOnSurface.zip" %}
 
-首先，我們需要建立 (或參考) 將用作 **Display.BySurfaceColors** 節點輸入的曲面。在此範例中，我們將在正弦及餘弦曲線之間進行斷面混成。
+首先，我们需要创建（或引用）一个曲面以用作 **“Display.BySurfaceColors”** 节点的输入。在此示例中，我们将在正弦和余弦曲线之间放样。
 
 \![](<../../.gitbook/assets/color - color on surface 01.jpg>)
 
-> 1. 此節點群組將沿 Z 軸建立點，然後根據正弦及餘弦函數將其取代。然後，使用兩點清單產生 NURBS 曲線。
-> 2. **Surface.ByLoft**：在清單的 NURBS 曲線之間產生內插曲面。
+> 1. 该组节点将沿 Z 轴创建点，然后基于正弦和余弦函数置换它们。然后，使用这两个点列表生成 NURBS 曲线。
+> 2. **Surface.ByLoft**：在 NURBS 曲线列表之间生成插值曲面。
 
 \![](<../../.gitbook/assets/color - color on surface 02.jpg>)
 
-> 1. **File Path**：選取將針對下游像素資料進行取樣的影像檔案
-> 2. 使用 **File.FromPath** 將檔案路徑轉換為檔案，然後傳送至 **Image.ReadFromFile** 以輸出供取樣的影像
-> 3. **Image.Pixels**：輸入影像，並提供沿影像的 x 和 y 維度將使用的取樣值。
-> 4. **滑棒**：提供 **Image.Pixels** 的取樣值
-> 5. **Display.BySurfaceColors**：分別沿 X 與 Y 軸在整個曲面內對映一系列顏色值
+> 1. **File Path**：选择要取样的图像文件以获取下游像素数据
+> 2. 使用 **“File.FromPath”** 将文件路径转化为某个文件，然后传递给 **“Image.ReadFromFile”** 以输出图像进行采样
+> 3. **Image.Pixels**：输入某个图像并提供要沿图像的 X 和 Y 标注使用的样例值。
+> 4. **Slider**：为 **“Image.Pixels”** 提供样例值
+> 5. **Display.BySurfaceColors**：在整个曲面上分别沿 X 和 Y 映射颜色值数组
 
-取樣解析度為 400x300 之輸出曲面的特寫預覽
+输出曲面的特写预览，分辨率为 400x300 样例
 
 \![](<../../.gitbook/assets/color - color on surface 03.jpg>)

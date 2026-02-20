@@ -1,152 +1,152 @@
-# 選取
+# 选择
 
-### 選取 Revit 元素
+### 选择 Revit 图元
 
-Revit 是資料豐富的環境。這能為我們提供許多選取功能，而不僅僅是「點選」。我們可以查詢 Revit 資料庫，並將 Revit 元素動態連結至 Dynamo 幾何圖形，同時執行參數式作業。
+Revit 是一个数据丰富的环境。这为我们提供了一系列选择功能，使其远超“点击”范围。我们可以查询 Revit 数据库，以及在执行参数化操作的同时将 Revit 图元动态链接到 Dynamo 几何图形。
 
-使用者介面中的 Revit 資源庫提供「Selection」品類，藉此可採用許多方式選取幾何圖形。
+UI 中的 Revit 库提供了“选择”类别，该类别允许通过多种方式选择几何图形。
 
 ![](../.gitbook/assets/select_revit_elements_01.jpg)
 
-### Revit 階層
+### Revit 层次结构
 
-若要正確選取 Revit 元素，請務必全面理解 Revit 元素階層。要選取專案中所有的牆嗎？請依品類選取。要選取中世紀現代大廳中的每把 Eames 椅子嗎？請依族群選取。
+要正确选择 Revit 图元，请务必全面了解 Revit 图元层次结构。要选择项目中的所有墙？选择“按类别”。要选择您中世纪风格大厅中的每把埃姆斯椅？选择“按族”。
 
-我們來快速複習 Revit 階層。
+我们快速回顾一下 Revit 层次结构。
 
 ![](../.gitbook/assets/hierarchy.png)
 
-記得生物學的分類法嗎？界、門、綱、目、科、屬、種？Revit 元素的分類方式與此類似。在基本層級，可將 Revit 階層分為不同的品類、族群、類型*及例證。例證是個別模型元素 (具有唯一的 ID)，而品類可定義一般群組 (例如「牆」或「地板」)。以此方式組織 Revit 資料庫後，我們可以選取一個元素，然後根據階層中的指定層級選擇所有類似元素。
+还记得生物学的分类法吗？界、门类、类别、等级、族、属、种？Revit 图元以类似方式分类。在基本级别上，Revit 层次结构可以分解为“类别”、“族”、“类型*”和“实例”。实例是一个模型图元（具有唯一 ID），而类别则定义常规组（如“墙”或“楼板”）。通过这种方式组织 Revit 数据库，我们可以选择一个图元，并根据层次结构中的指定级别选择所有相似图元。
 
-{% hint style="warning" %} *Revit 中類型的定義與程式設計中的類型不同。在 Revit 中，類型是指階層的分支，而非「資料類型」。{% endhint %}
+{% hint style="warning" %} *Revit 中的类型定义与编程中的类型不同。在 Revit 中，类型是指层次结构的分支，而不是“数据类型”。{% endhint %}
 
-### 使用 Dynamo 節點進行資料庫導覽
+### 使用 Dynamo 节点进行数据库导航
 
-以下三個影像分別展示了 Dynamo 中 Revit 元素選取的主要品類。這些工具十分適合互相搭配使用，在後續練習中會研究其中部分工具。
+下面的三幅图像对 Dynamo 中 Revit 图元选择的主要类别进行了细分。这些是可结合使用的优秀工具，我们将在以下练习中介绍其中一些工具。
 
-_點選_ 是直接選取 Revit 元素最簡單的方式。您可以選取完整的模型元素，也可以選取其拓樸的一部分 (例如一個面或一條邊)。這會與該 Revit 物件保持動態連結，因此在 Revit 檔案更新其位置或參數時，參考的 Dynamo 元素在圖表中也將更新。
+_“点击”_ 是直接选择 Revit 图元的最简单方法。可以选择完整的模型图元或其一部分拓扑（如面或边）。这会保持与该 Revit 对象的动态链接，因此，当 Revit 文件更新其位置或参数时，参照的 Dynamo 图元将在图形中更新。
 
 ![](../.gitbook/assets/selecting_database_navigation_with_dynamo_nodes_01.jpg)
 
-_下拉式功能表_ 會建立 Revit 專案中所有可存取元素的清單。您可以使用下拉式功能表參考視圖中不一定可見的 Revit 元素。這是非常強大的工具，可用於在 Revit 專案或族群編輯器中查詢既有元素或建立新元素。
+_“下拉”菜单_ 在 Revit 项目中创建所有可访问图元的列表。可以使用此选项来参照在视图中不一定可见的 Revit 图元。这是一款优秀的工具，可用于查询现有图元或者在 Revit 项目或族编辑器中创建新图元。
 
 \![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
-您也可以依 _Revit 階層_中的特定層級選取 Revit 元素。這是一個功能強大的選項，可自訂大型資料陣列，以準備進行記錄或生產實體化及客製化。
+还可以在 _Revit 层次结构_ 中按特定层级选择 Revit 图元。这是一个功能强大的选项，可用于自定义大型数据阵列，以准备文档或衍生式实例化和自定义。
 
 \![UI](<../.gitbook/assets/allelements (1).jpg>)
 
-記住以上三個影像，接下來深入練習，練習會選取基本 Revit 專案中的元素，為我們將在本章其餘各節建立的參數式應用程式做好準備。
+在上述三幅图中，我们将深入探讨一个练习，该练习从基本 Revit 项目中选择图元，为我们将在本章的其余部分创建的参数化应用程序做好准备。
 
-## 練習
+## 练习
 
-> 按一下下方的連結下載範例檔案。
+> 单击下面的链接下载示例文件。
 >
-> 附錄中提供完整的範例檔案清單。
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../.gitbook/assets/Revit-Selecting.zip" %}
 
-在此範例 Revit 檔案中，包含一個簡單建築的三種元素類型。我們將以此為例，在 Revit 階層的環境中選取 Revit 元素。
+在此 Revit 文件示例中，我们有三种图元类型的简单建筑。我们将以此为例，在 Revit 层次结构的上下文中选择 Revit 图元。
 
 \![](<../.gitbook/assets/selecting_exercise_01 (1) (2).jpg>)
 
-> 1. 建築量體
-> 2. 樑 (結構框架)
-> 3. 桁架 (自適應元件)
+> 1. 建筑体量
+> 2. 梁（结构框架）
+> 3. 桁架（自适应构件）
 
-根據 Revit 專案視圖中目前存在的元素，我們可以做出哪些結論？若要選取適當的元素，我們需要在階層中下移多遠？處理大型專案時，這無疑會變為更複雜的工作。有許多選項可供使用，選取元素時可依據品類、層級、族群、例證等。
+基于 Revit 项目视图中当前的图元，我们可以得出哪些结论？我们需要在层次结构中向下行进多远来选择相应图元？当然，在处理大型项目时，这将成为一项更为复杂的任务。有许多可用选项：我们可以按“类别”、“标高”、“族”、“实例”等选择图元。
 
-### 選取量體和表面
+### 选择体量和曲面
 
 ![](../.gitbook/assets/selecting_exercise_02.jpg)
 
-> 1. 由於我們使用基本設置，因此我們在「Categories」下拉式節點中選擇 _「Mass」_ 來選取建築量體。您可以在「Revit」>「Selection」頁籤中找到。
-> 2. 「Mass」品類的輸出是品類自身。我們需要選取元素。為了執行此作業，我們使用 _All Elements of Category_ 節點。
+> 1. 由于我们使用的是基本设置，因此我们选择“Categories”下拉节点中的 _“Mass”_ 来选择建筑体量。这可在“Revit”>“选择”选项卡中找到。
+> 2. “Mass”类别的输出只是类别本身。我们需要选择相应图元。为此，我们使用 _“All Elements of Category”_ 节点。
 
-此時請注意，我們在 Dynamo 中看不到任何幾何圖形。我們已選取 Revit 元素，但尚未將該元素轉換為 Dynamo 幾何圖形。這是重要的區分。選取大量元素時，不建議在 Dynamo 中預覽所有元素，因為這樣會拖慢所有作業的速度。Dynamo 這個工具無需執行幾何運算，即可管理 Revit 專案。本章的下一節會進一步說明該功能。
+请注意，此时我们在 Dynamo 中看不到任何几何图形。我们已选择 Revit 图元，但尚未将该图元转换为 Dynamo 几何图形。这是非常重要的差异。如果要选择大量图元，您不会希望在 Dynamo 中预览所有这些图元，因为这会降低所有操作的速度。Dynamo 是一款用于管理 Revit 项目的工具（无需执行几何图形操作），我们将在本章的下一部分中进行介绍。
 
-在此案例中，我們將使用簡單的幾何圖形，因此希望將幾何圖形引入 Dynamo 預覽。上面 Watch 節點中的「BldgMass」旁有一個綠色數字。這代表該元素的 ID，可看出我們目前在處理 Revit 元素，而不是 Dynamo 幾何圖形。下一步是將此 Revit 元素轉換為 Dynamo 中的幾何圖形。
+在本例中，我们使用的是简单几何图形，因此我们希望将几何图形输入 Dynamo 预览。上述“Watch”节点中的“BldgMass”旁边有一个绿色数字。这表示该图元的 ID，指示处理的是 Revit 图元，而不是 Dynamo 几何图形。下一步是在 Dynamo 中将此 Revit 图元转换为几何图形。
 
 ![](../.gitbook/assets/selecting_exercise_03.jpg)
 
-> 1. 使用 _Element.Faces_ 節點，可取得一份曲面清單，代表 Revit 量體的每一個面。我們現在可以在 Dynamo 視埠中看到幾何圖形，可以開始參考用於參數式作業的面。
+> 1. 使用 _“Element.Faces”_ 节点，我们会得到一个包含曲面的列表，表示 Revit 体量的每个面。现在，我们可以在 Dynamo 视口中看到几何图形，然后开始参照相应面进行参数化操作。
 
-以下是替代方法。在此案例中，我們不是透過 Revit 階層選取 _(「All Elements of Category」)_，而是選擇在 Revit 中明確選取幾何圖形。
+以下是另一种方法。在这种情况下，我们将不会通过 Revit 层次结构 _（“All Elements of Category”）_进行选择，而是改为在 Revit 中明确选择几何图形。
 
 ![](../.gitbook/assets/selecting_exercise_04.jpg)
 
-> 1. 使用 _Select Model Element_ 節點，按一下「選取」(或 _「變更」_) 按鈕。在 Revit 視埠中，選取所需的元素。在此案例中，我們將選取建築量體，
-> 2. 我們可以使用 _Element.Geometry_ 選取完整量體作為一個實體幾何圖形，而非 _Element.Faces_。這會選取該量體內包含的所有幾何圖形。
-> 3. 我們可以使用 _Geometry.Explode_ 再次得到曲面清單。這兩個節點的運作方式與 _Element.Faces_ 相同，但是提供其他選項用於探究 Revit 元素的幾何圖形。
+> 1. 使用 _“Select Model Element”_ 节点，单击*“select”*（或 _“change”_ ）按钮。在 Revit 视口中，选择所需的图元。在本例中，我们选择的是建筑体量。
+> 2. 我们可以使用 _“Element.Geometry”_ 将完整体量作为一个实体几何图形进行选择，而不是使用 _“Element.Faces”_。这将选择该体量中包含的所有几何图形。
+> 3. 使用 _“Geometry.Explode”_ ，我们可以再次获得包含曲面的列表。这两个节点的工作方式与 _“Element.Faces”_ 相同，但提供了用于深入到 Revit 图元的几何图形的替代选项。
 
-使用一些基本清單作業，我們可以查詢感興趣的面。
+使用一些基本列表操作，我们可以查询关注的面。
 
 \![](images/2/selecting - exercise 05.jpg)
 
-> 1. 首先，將前面選取的元素輸出至 Element.Faces 節點。
-> 2. 接著，使用 _List.Count_ 節點顯示出我們正在處理量體中的 23 個曲面。
-> 3. 參考此數量，我們將 *Integer Slider* 的最大值變更為 _「22」_ 。
-> 4. 使用 _List.GetItemAtIndex_，我們輸入清單和 *Integer Slider* 以提供 _index_。在選取的值之間滑動，到達 _index 9_ 時停止，如此就隔離了支撐桁架的主要正面。
+> 1. 首先，将之前选定的图元输出到“Element.Faces”节点。
+> 2. 接着，_“List.Count”_ 节点会显示我们正在处理体量中的 23 个曲面。
+> 3. 参照此数字，我们将*整数滑块*的最大值更改为 _“22”_。
+> 4. 使用 _“List.GetItemAtIndex”_，我们为 _“index”_ 输入列表和*整数滑块*。在选定内容之间滑动，当到达 _“索引 9”_ 并隔离将桁架用作主要外立面时，便会停止。
 
-上一個步驟稍顯繁瑣。使用 _Select Face_ 節點可以更快執行此作業。藉此可以隔離 Revit 專案中並非元素本身的面。互動方式與 _Select Model Element_ 相同，只是選取的是曲面，而不是完整的元素。
+上一步有点麻烦。我们可以使用 _“Select Face”_ 节点更快地完成此操作。这样，我们便可以隔离 Revit 项目中本身不是图元的面。除了我们选择曲面而非完整图元之外，与 _“Select Model Element”_ 相同的交互也适用。
 
 ![](../.gitbook/assets/selecting_exercise_06.jpg)
 
-假設我們要隔離建築的主要正面牆。我們可以使用 _Select Faces_ 節點執行此作業。請按一下「選取」按鈕，然後在 Revit 中選取四個主要正面。
+假定我们要隔离建筑的主要外立面墙。我们可以使用 _“Select Faces”_ 节点来执行此操作。单击“Select”按钮，然后在 Revit 中选择四个主要外立面。
 
 ![](../.gitbook/assets/selecting_exercise_07.jpg)
 
-選取四面牆後，務必在 Revit 中按一下「完成」按鈕。
+选择四面墙后，确保在 Revit 中单击“完成”按钮。
 
 ![](../.gitbook/assets/selecting_exercise_08.jpg)
 
-現在，這些面已匯入 Dynamo 成為曲面。
+现在，面作为曲面输入到 Dynamo 中。
 
 ![](../.gitbook/assets/selecting_exercise_09.jpg)
 
-### 選取樑
+### 选择梁
 
-現在，我們看看中庭上方的樑。
+现在，我们看一下横跨中庭的梁。
 
 ![](../.gitbook/assets/selecting_exercise_10.jpg)
 
-> 1. 使用 _Select Model Element_ 節點，選取其中一根樑。
-> 2. 將樑元素插入 _Element.Geometry_ 節點，現在可在 Dynamo 視埠中看到樑。
-> 3. 可以使用 _Watch3D_ 節點拉近幾何圖形 (若未在 Watch 3D 中看到樑，請按一下右鍵，然後按一下「縮放至佈滿」)。
+> 1. 使用 _“Select Model Element”_ 节点，选择其中一个梁。
+> 2. 将梁图元连接到 _“Element.Geometry”_ 节点，现在在 Dynamo 视口中便有了梁。
+> 3. 我们可以使用 _“Watch3D”_ 节点放大几何图形（如果在“Watch 3D”中看不到梁，请单击鼠标右键，然后点击“zoom to fit”）。
 
-Revit/Dynamo 工作流程中可能經常會遇到以下問題：如何選取一個元素並取得所有類似元素？由於選取的 Revit 元素包含其所有階層資訊，因此我們可以查詢其族群類型，並選取該類型的所有元素。
+Revit/Dynamo 工作流中可能经常遇到的问题：如何选择一个图元并获取所有相似图元？由于选定的 Revit 图元中包含其所有层次结构信息，因此我们可以查询其族类型并选择该类型的所有图元。
 
 ![](../.gitbook/assets/selecting_exercise_11.jpg)
 
-> 1. 將樑元素插入 _Element.ElementType_ 節點。
-> 2. _Watch_ 節點顯示現在輸出是族群符號，而不是 Revit 元素。
-> 3. _Element.ElementType_ 是個簡單的查詢，因此我們在 Code Block 執行時可以像使用 `x.ElementType;` 一樣輕鬆，並得到相同結果。
+> 1. 将梁图元连接到 _“Element.ElementType”_ 节点。
+> 2. _“Watch”_ 节点显示，输出现在是族符号，而不是 Revit 图元。
+> 3. _“Element.ElementType”_ 是一个简单查询，因此我们可以在代码块中执行此操作（就像使用 `x.ElementType;` 一样简单）并获得相同的结果。
 
 ![](../.gitbook/assets/selecting_exercise_12.jpg)
 
-> 1. 為了選取其餘的樑，需使用 _All Elements of Family Type_ 節點。
-> 2. Watch 節點顯示我們已選取五個 Revit 元素。
+> 1. 要选择其余梁，我们使用 _“All Elements of Family Type”_ （所有族类型的图元）节点。
+> 2. “Watch”节点显示我们已选择了五个 Revit 图元。
 
 ![](../.gitbook/assets/selecting_exercise_13.jpg)
 
-> 1. 我們也可以將所有這五個元素轉換為 Dynamo 幾何圖形。
+> 1. 我们也可以将所有这五个图元都转换为 Dynamo 几何图形。
 
-如果有 500 根樑會怎樣呢？將所有這些元素轉換為 Dynamo 幾何圖形會非常慢。若 Dynamo 花費很長時間來計算節點，您可能要在開發圖表時，使用「凍結」節點功能以暫停執行 Revit 作業。如需有關凍結節點的更多資訊，請參閱〈實體〉一章中的[凍結](../essential-nodes-and-concepts/5_geometry-for-computational-design/5-6_solids.md#freezing)一節。
+如果我们有 500 个梁，该怎样办？将所有这些图元都转换为 Dynamo 几何图形会非常慢。如果 Dynamo 计算节点需要较长时间，可能需要使用“冻结”节点功能，以便在开发图形时暂停执行 Revit 操作。有关冻结节点的详细信息，请查看“实体”章节中的“[冻结](../essential-nodes-and-concepts/5_geometry-for-computational-design/5-6_solids.md#freezing)”部分。
 
-是否不論何種情況，若要匯入 500 根樑，所有曲面都需要執行所需的參數運算？還是其實可以擷取樑的基本資訊，並使用基本幾何圖形執行生成工作？在逐步瞭解本章內容的過程中，需要隨時考慮這個問題。例如，我們接下來看看桁架系統。
+在任何情况下，如果要输入 500 个梁，我们是否需要将所有曲面都用来执行所需的参数化操作？或者，我们是否可以从梁中提取基本信息，并使用基本几何图元执行衍生式任务？在学习本章时，我们要牢记这个问题。例如，接下来让我们看一下桁架系统。
 
-### 選取桁架
+### 选择桁架
 
-使用相同的節點圖表，選取桁架元素而不是樑元素。執行此作業之前，刪除上一步驟中的 Element.Geometry。
+使用相同的节点图，选择桁架图元而不是梁图元。在执行此操作之前，请在上一步中删除“Element.Geometry”。
 
 ![](../.gitbook/assets/selecting_exercise_14.jpg)
 
-接下來，我們準備從桁架族群類型擷取一些基本資訊。
+接下来，我们准备从桁架族类型中提取一些基本信息。
 
 ![](../.gitbook/assets/selecting_exercise_15.jpg)
 
-> 1. 在 _Watch_ 節點中，可以看到我們從 Revit 中選取的自適應元件清單。我們希望擷取基本資訊，因此從自適應點開始。
-> 2. 將 _All Elements of Family Type_ 節點插入 _AdaptiveComponent.Location_ 節點。這會產生一個清單的清單，其中每個清單都包含三點，表示自適應點的位置。
-> 3. 若連接 _Polygon.ByPoints_ 節點，即會傳回 polycurve，可以在 Dynamo 視埠中看到。透過此方法，我們看到了一個元素的幾何圖形，並提取了其餘一系列元素 (數量可能多於此範例) 的幾何圖形。
+> 1. 在 _“Watch”_ 节点中，我们可以看到从 Revit 中选择的自适应构件列表。我们要提取基本信息，因此我们从自适应点开始操作。
+> 2. 将 _“All Elements of Family Type”_ （所有族类型的图元）节点连接到 _“AdaptiveComponent.Location”_ 节点。这样，我们就得到了一个包含列表的列表，每个列表都有三个点，这三个点代表自适应点的位置。
+> 3. 连接 _“Polygon.ByPoints”_ 节点会返回一条复合线。我们可以在 Dynamo 视口中看到这一结果。通过此方法，我们已可视化了一个图元的几何图形，并对其余图元阵列的几何图形进行了抽象处理（其数量可能大于本示例）。
 
-{% hint style="info" %} 秘訣：若在 Dynamo 中按一下 Revit 元素的綠色數字，Revit 視埠將縮放至該元素。{% endhint %}
+{% hint style="info" %}提示：如果在 Dynamo 中单击 Revit 图元的绿色数字，则 Revit 视口将缩放到该图元。{% endhint %}
