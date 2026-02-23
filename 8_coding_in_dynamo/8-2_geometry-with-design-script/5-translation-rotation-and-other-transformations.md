@@ -6,7 +6,7 @@
 
 Простейшим геометрическим преобразованием является перенос, в результате которого объект перемещается на заданное число делений вдоль осей X, Y и Z.
 
-![](../images/8-2/5/Transformations\_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -22,7 +22,7 @@ p2 = p.Translate(10, -20, 50);
 
 Любой объект в Dynamo можно перенести, просто добавив метод _.Translate_ после имени объекта, однако более сложные преобразования требуют изменения базовой системы координат объекта (CoordinateSystem). Например, чтобы повернуть объект на 45 градусов вокруг оси X, потребуется заменить существующую систему координат (без поворота) на систему координат, повернутую на 45 градусов вокруг оси X с помощью метода _.Transform_.
 
-![](../images/8-2/5/Transformations\_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -42,7 +42,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Помимо операций переноса и поворота к объектам CoordinateSystem также можно применять операции масштабирования и сдвига. Для масштабирования объектов CoordinateSystem используется метод _.Scale_.
 
-![](../images/8-2/5/Transformations\_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -58,7 +58,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Для сдвига объекта CoordinateSystem используется конструктор CoordinateSystem, в который нужно ввести неортогональные векторы.
 
-![](../images/8-2/5/Transformations\_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(

@@ -4,7 +4,7 @@
 
 Определившись с тем, что такое список, поговорим о том, какие операции можно выполнять с ним. Представим список в виде колоды карт. Колода — это список, а каждая карта — элемент.
 
-![карты](../images/5-4/2/Playing_cards_modified.jpg)
+![карты](../../.gitbook/assets/Playing_cards_modified.jpg)
 
 > Фото предоставлено [Кристианом Гидлефом (Christian Gidlöf)](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
@@ -37,13 +37,13 @@
 
 > Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> Полный список файлов с примерами можно найти в приложении.
+> Полный список файлов примеров можно найти в приложении.
 
-{% file src="../datasets/5-4/2/List-Operations.dyn" %}
+{% file src="../../.gitbook/assets/List-Operations (1).dyn" %}
 
 На изображении ниже показан базовый график для построения линий между двумя окружностями с целью представления основных операций со списками. Далее рассматривается управление данными в списке и демонстрируются визуальные результаты с помощью действий со списком.
 
-![](../images/5-4/2/workingwithlist-listoperation.jpg)
+\![](<../../.gitbook/assets/working with list - list operation.jpg>)
 
 > 1. Начните с узла **Code Block** со значением `500;`.
 > 2. Соедините его с входным параметром «x» узла **Point.ByCoordinates**.
@@ -59,13 +59,13 @@
 
 > Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> Полный список файлов с примерами можно найти в приложении.
+> Полный список файлов примеров можно найти в приложении.
 
-{% file src="../datasets/5-4/2/List-Count.dyn" %}
+{% file src="../../.gitbook/assets/List-Count (1).dyn" %}
 
 Узел _List.Count_ сравнительно прост: он подсчитывает количество значений в списке и возвращает это число. При работе со списками списков в использовании этого узла появляются дополнительные нюансы. О них мы поговорим в следующих разделах.
 
-![Количество](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
+\![Количество](<../../.gitbook/assets/working with list - list operation - list count.jpg>)
 
 > 1. Узел **List.Count** возвращает количество линий в узле **Line.ByStartPointEndPoint**. В данном случае значение равно 10, что соответствует количеству точек, созданных с помощью исходного узла **Code Block**.
 
@@ -73,32 +73,32 @@
 
 > Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> Полный список файлов с примерами можно найти в приложении.
+> Полный список файлов примеров можно найти в приложении.
 
-{% file src="../datasets/5-4/2/List-GetItemAtIndex.dyn" %}
+{% file src="../../.gitbook/assets/List-GetItemAtIndex.dyn" %}
 
 **List.GetItemAtIndex** — основной способ запроса элемента в списке.
 
-![Упражнение](../images/5-4/2/workingwithlist-getitemindex01.jpg)
+\![Упражнение](<../../.gitbook/assets/working with list - get item index 01.jpg>)
 
 > 1. Сначала щелкните правой кнопкой мыши узел **Line.ByStartPointEndPoint**, чтобы отключить его предварительный просмотр.
 > 2. С помощью узла **List.GetItemAtIndex** выбираем индекс _0_ или первый элемент в списке линий.
 
 Измените значение регулятора от 0 до 9, чтобы выбрать другой элемент с помощью **List.GetItemAtIndex**.
 
-![](../images/5-4/2/workingwithlist-getitemindex02.gif)
+\![](<../../.gitbook/assets/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
 > Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> Полный список файлов с примерами можно найти в приложении.
+> Полный список файлов примеров можно найти в приложении.
 
-{% file src="../datasets/5-4/2/List-Reverse.dyn" %}
+{% file src="../../.gitbook/assets/List-Reverse (1).dyn" %}
 
 Узел _List.Reverse_ располагает все элементы в списке в обратном порядке.
 
-![Упражнение](../images/5-4/2/workingwithlist-listreverse.jpg)
+\![Упражнение](<../../.gitbook/assets/working with list - list reverse.jpg>)
 
 > 1. Для корректной визуализации обращенного списка линий создайте дополнительные линии, изменив значение узла **Code Block** на `0..1..#50;`.
 > 2. Создайте копию узла **Line.ByStartPointEndPoint**, вставьте узел List.Reverse между узлом **Curve.PointAtParameter** и вторым узлом **Line.ByStartPointEndPoint**.
@@ -108,13 +108,13 @@
 
 > Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> Полный список файлов с примерами можно найти в приложении.
+> Полный список файлов примеров можно найти в приложении.
 
-{% file src="../datasets/5-4/2/List-ShiftIndices.dyn" %}
+{% file src="../../.gitbook/assets/List-ShiftIndices (1).dyn" %}
 
 **List.ShiftIndices** — это удобный инструмент для создания скручиваний или спиралей и других подобных манипуляций с данными. Этот узел смещает элементы в списке на заданное количество индексов.
 
-![Упражнение](../images/5-4/2/workingwithlist-shiftIndices01.jpg)
+\![Упражнение](<../../.gitbook/assets/working with list - shiftIndices 01.jpg>)
 
 > 1. В том же сценарии, где был создан обращенный список, вставьте узел **List.ShiftIndices** между узлами **Curve.PointAtParameter** и **Line.ByStartPointEndPoint**.
 > 2. С помощью узла **Code Block** укажите значение 1 для сдвига списка на один индекс.
@@ -122,21 +122,21 @@
 
 Если увеличить значение в узле **Block Code**, например, до _30_, в диагональных линиях появляется существенное различие. В данном случае сдвиг работает аналогично диафрагме камеры, закручивая исходную цилиндрическую форму.
 
-![](../images/5-4/2/workingwithlist-shiftIndices02.jpg)
+\![](<../../.gitbook/assets/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
 > Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> Полный список файлов с примерами можно найти в приложении.
+> Полный список файлов примеров можно найти в приложении.
 
-{% file src="../datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
+{% file src="../../.gitbook/assets/List-FilterByBooleanMask.dyn" %}
 
-![](../images/5-4/2/ListFilterBool.png)
+![](../../.gitbook/assets/ListFilterBool.png)
 
 Узел **List.FilterByBooleanMask** удаляет определенные элементы на основе списка логических операций или значений «Истина»/«Ложь».
 
-![Упражнение](../images/5-4/2/workingwithlist-filterbyboolmask.jpg)
+\![Упражнение](<../../.gitbook/assets/working with list - filter by bool mask.jpg>)
 
 Чтобы создать список значений «Истина» или «Ложь», необходимо выполнить несколько дополнительных действий.
 

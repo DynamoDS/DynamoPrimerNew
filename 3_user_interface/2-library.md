@@ -2,7 +2,7 @@
 
 Библиотека содержит все загруженные узлы, включая десять узлов по умолчанию, входящих в установочный пакет, а также все дополнительно загруженные пользовательские узлы и пакеты. Узлы в библиотеке организованы иерархически в виде библиотек, категорий и подкатегорий (если это необходимо).
 
-![](images/3-2/library-libraryUI.jpg)
+\![](<../.gitbook/assets/library - library UI.jpg>)
 
 * Основные узлы: входят в установку по умолчанию.
 * Пользовательские узлы: сохраняйте часто используемые процедуры или специальные графики в качестве пользовательских узлов. Ими также можно поделиться с сообществом.
@@ -18,7 +18,7 @@
 
 {% hint style="info" %} Начинать знакомство с программой рекомендуется с меню Geometry, так как в них представлено наибольшее количество узлов. {% endhint %}
 
-![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
+\![](<../.gitbook/assets/library - modified and resize library categories.jpg>)
 
 > 1. Библиотека
 > 2. Категория
@@ -27,13 +27,13 @@
 
 Далее внутри подкатегории выполняется распределение узлов в зависимости от их функции: **создание** данных, выполнение **действия** или **запрос** данных.
 
-* ![](<images/3-2/user interface - create.jpg>) **Create**: создание или построение геометрии с нуля. Например, окружности.
-* ![](<images/3-2/user interface - action.jpg>) **Action**: выполнение действия с объектом. Например, масштабирование окружности.
-* ![](<images/3-2/user interface - query.jpg>) **Query**: получение свойства уже существующего объекта. Например, получение радиуса окружности.
+* \![](<../.gitbook/assets/user interface - create.jpg>) **Create**: создание и построение геометрии с нуля. Например, окружности.
+* \![](<../.gitbook/assets/user interface - action.jpg>) **Action**: выполнение действия с объектом. Например, масштабирование окружности.
+* \![](<../.gitbook/assets/user interface - query.jpg>) **Query**: получение свойства уже существующего объекта. Например, получение радиуса окружности.
 
 Наведите указатель на узел, чтобы посмотреть подробные сведения, помимо его имени и значка. Такие подсказки позволяют быстро определить функции, выполняемые узлом, какие данные ему требуются на входе, и что он выдает на выходе.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<../.gitbook/assets/user interface - node description.jpg>)
 
 > 1. Описание: описание узла на обычном языке.
 > 2. Значок: увеличенная версия значка, используемого в меню библиотеки.
@@ -46,7 +46,7 @@
 
 Щелчком выберите необходимый узел или нажмите клавишу ENTER, чтобы добавить выделенные узлы в центр рабочего пространства.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<../.gitbook/assets/user interface - search.jpg>)
 
 #### Поиск по иерархии
 
@@ -58,15 +58,15 @@
 
 * `library.category.nodeName`
 
-![](images/3-2/library-searchbyhierarchygeometrypointbycoordinates\(1\).jpg)
+\![](<../.gitbook/assets/library - search by hierarchy 1 geometry point by coordinates.jpg>)
 
 * `category.nodeName`
 
-![](images/3-2/library-searchbyhierarchy2pointbycoordinates.jpg)
+\![](<../.gitbook/assets/library - search by hierarchy 2 point by coordinates.jpg>)
 
 * `nodeName` или `keyword`
 
-![](images/3-2/library-searchbyhierarchy3bycoordinates.jpg)
+\![](<../.gitbook/assets/library - search by hierarchy 3 by coordinates.jpg>)
 
 В рабочем пространстве имя узла обычно представлено в формате `category.nodeName`. Есть некоторые исключения, в частности, узлы категорий Input и View.
 
@@ -74,15 +74,15 @@
 
 * Узлы из большинства библиотек содержат формат категории.
 
-![](images/3-2/library-nodecategorydifferences1.jpg)
+\![](<../.gitbook/assets/library - node category differences 1.jpg>)
 
 * Узлы `Point.ByCoordinates` и `UV.ByCoordinates` имеют одинаковое имя, но относятся к разным категориям.
 
-![](images/3-2/library-nodecategorydifferences2.jpg)
+\![](<../.gitbook/assets/library - node category differences 2.jpg>)
 
 * К исключениям относятся встроенные функции, узлы Core.Input, Core.View и логические операторы.
 
-![](images/3-2/library-nodecategorydifferences3.jpg)
+\![](<../.gitbook/assets/library - node category differences 3.jpg>)
 
 ### Часто используемые узлы
 
@@ -92,26 +92,26 @@
 
 Узлы Input — это ключевой инструмент, благодаря которому пользователи визуальных программ могут работать с основными параметрами. Ниже перечислены некоторые узлы, доступные в основной библиотеке.
 
-| Узел           |                                           | Узел           |                                           |
-| -------------- | ----------------------------------------- | -------------- | ----------------------------------------- |
-| Логический        | ![](images/3-2/library-boolean.jpg)       | Количество         | ![](images/3-2/library-number.jpg)        |
-| String         | ![](images/3-2/library-string.jpg)        | Number Slider  | ![](images/3-2/library-numberslider.jpg)  |
-| Directory Path | ![](images/3-2/library-directorypath.jpg) | Integer Slider | ![](images/3-2/library-integerslider.jpg) |
-| File Path      | ![](images/3-2/library-filepath.jpg)      |                |                                           |
+| Узел           |                                                        | Узел           |                                                        |
+| -------------- | ------------------------------------------------------ | -------------- | ------------------------------------------------------ |
+| Логическое        | \![](<../.gitbook/assets/library - boolean.jpg>)        | Number         | \![](<../.gitbook/assets/library - number.jpg>)         |
+| String         | \![](<../.gitbook/assets/library - string.jpg>)         | Number Slider  | \![](<../.gitbook/assets/library - number slider.jpg>)  |
+| Directory Path | \![](<../.gitbook/assets/library - directory path.jpg>) | Integer Slider | \![](<../.gitbook/assets/library - integer slider.jpg>) |
+| File Path      | \![](<../.gitbook/assets/library - file path.jpg>)      |                |                                                        |
 
 #### Узлы Watch и Watch3D
 
 Узлы Watch играют важную роль в управлении потоком данных в визуальной программе. Результат работы узла можно увидеть в окне **предварительного просмотра данных узла**, наведя курсор на узел.
 
-![](images/3-2/library-nodepreview.jpg)
+\![](<../.gitbook/assets/library - node preview.jpg>)
 
 Элемент удобно просматривать в узле **Watch**.
 
-![](images/3-2/library-watchnode.jpg)
+\![](<../.gitbook/assets/library - watch node.jpg>)
 
 Кроме того, результаты геометрии можно просмотреть с помощью узла **Watch3D**.
 
-![](images/3-2/library-watch3dnode.gif)
+\![](<../.gitbook/assets/library - watch3d node.gif>)
 
 Оба этих узла находятся в категории видов основной библиотеки.
 
@@ -121,15 +121,14 @@
 
 Узлы Code Block позволяют создавать блоки кода, состоящие из строк, разделенных запятыми. Это так же просто, как и с узлом `X/Y`.
 
-Кроме того, узлы Code Block можно использовать как горячую клавишу для ввода чисел или вызова другой функции узла. Для этого используется синтаксис, соответствующий соглашению об именовании для текстового языка Dynamo — [DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
+Кроме того, узлы Code Block можно использовать как горячую клавишу для ввода чисел или вызова другой функции узла. Для этого используется синтаксис, соответствующий соглашению об именовании для текстового языка Dynamo — [DesignScript](../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md).
 
 Ниже приведен простой пример (с инструкциями) по использованию Code Block в сценарии.
 
-![](<images/3-2/library-code block demo.gif>)
+![](../.gitbook/assets/library-codeblockdemo.gif)
 
 1. Дважды щелкните мышью для создания узла Code Block.
 2. Введите `Circle.ByCenterPointRadius(x,y);`.
 3. Щелкните в рабочем пространстве, чтобы отменить выбор и автоматически добавить входные порты `x` и `y`.
 4. Создайте узлы Point.ByCoordinates и Number Slider, затем соедините их с портами ввода в узле Code Block.
 5. Результат выполнения визуальной программы отображается в виде окружности в окне 3D-просмотра.
-

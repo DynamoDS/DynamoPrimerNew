@@ -2,7 +2,7 @@
 
 В Dynamo 2.0 доступны различные узлы Dictionary для работы со словарями. К ним относятся узлы _создания, действия и запроса_.
 
-![](../images/5-5/2/dictionarynodes-nodes.jpg)
+\![](<../../.gitbook/assets/dictionary nodes - nodes.jpg>)
 
 #### Создание
 

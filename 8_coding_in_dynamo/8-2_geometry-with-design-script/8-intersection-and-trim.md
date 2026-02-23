@@ -15,7 +15,7 @@
 
 Приведенный ниже пример иллюстрирует пересечение плоскости с поверхностью NurbsSurface. В результате пересечения получается массив NurbsCurve, который можно использовать как любой другой объект NurbsCurve.
 
-![](../images/8-2/8/IntersectionAndTrim\_01.png)
+![](../../.gitbook/assets/IntersectionAndTrim_01.png)
 
 ```js
 // python_points_5 is a set of Points generated with
@@ -47,7 +47,7 @@ crvs_moved = crvs.Translate(0, 0, 10);
 
 Особенностью методов _Trim_ является обязательное наличие точки «выбора», определяющей, какая геометрия будет обрезана, а какая сохранена. Dynamo использует точку выбора для выявления геометрии, находящейся ближе всего к этой точке, и затем обрезает эту геометрию.
 
-![](../images/8-2/8/IntersectionAndTrim\_02.png)
+![](../../.gitbook/assets/IntersectionAndTrim_02.png)
 
 ```js
 // python_points_5 is a set of Points generated with

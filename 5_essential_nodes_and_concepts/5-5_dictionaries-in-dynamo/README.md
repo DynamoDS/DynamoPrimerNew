@@ -6,6 +6,6 @@
 
 _Функции работы со словарями присутствовали во многих версиях Dynamo. В приложении Dynamo 2.0 представлен новый способ управления данными этого типа_.
 
-![](../images/5-5/wildDictionary.png)
+![](../../.gitbook/assets/wildDictionary.png)
 
 Изображение предоставлено [sixtysecondrevit.com](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)
