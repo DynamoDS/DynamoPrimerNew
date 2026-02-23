@@ -6,7 +6,7 @@
 
 Мы возьмем пример SampleViewExtension из репозитория DynamoSamples на Github и выполним действия, необходимые для создания простого немодального окна, в котором отображаются активные узлы на графике в реальном времени. Для расширения вида требуется создать пользовательский интерфейс для окна и привязать значения к модели вида.
 
-![Окно расширения вида](images/dyn-viewextension.jpg)
+![Окно расширения вида](../../.gitbook/assets/dyn-viewextension.jpg)
 
 > 1. Окно расширения вида, созданное в соответствии с примером SampleViewExtension в репозитории Github.
 
@@ -28,9 +28,9 @@
 
 Начните с создания нового проекта `Class Library` (Библиотека классов) с именем `SampleViewExtension`.
 
-![Создание новой библиотеки классов](images/vs-new-project-viewextension-1.jpg)
+![Создание новой библиотеки классов](../../.gitbook/assets/vs-new-project-viewextension-1.jpg)
 
-![Настройка нового проекта](images/vs-new-project-viewextension-2.jpg)
+![Настройка нового проекта](../../.gitbook/assets/vs-new-project-viewextension-2.jpg)
 
 > 1. Создайте новый проект, выбрав `File > New > Project` (Файл > Создать > Проект).
 > 2. Выберите `Class Library` (Библиотека классов).
@@ -39,14 +39,14 @@
 
 В этом проекте нам потребуется два класса. Один класс будет реализовывать `IViewExtension`, а другой, который реализует `NotificationObject.` `IViewExtension`, будет содержать все сведения о развертывании, загрузке, ссылке и удалении расширения. `NotificationObject` будет предоставлять уведомления об изменениях в Dynamo, а `IDisposable` будет обновлять количество при внесении изменений.
 
-![Файлы классов расширений вида](images/vs-viewextension-classes.jpg)
+![Файлы классов расширений вида](../../.gitbook/assets/vs-viewextension-classes.jpg)
 
 > 1. Файл класса с именем `SampleViewExtension.cs`, который будет реализовывать `IViewExtension`.
 > 2. Файл класса с именем `SampleWindowViewMode.cs`, который будет реализовывать `NotificationObject`.
 
 Для использования `IViewExtension` нам потребуется пакет NuGet WpfUILibrary. При установке этого пакета будут автоматически установлены пакеты Core, Services и ZeroTouchLibrary.
 
-![Пакеты расширений вида](images/vs-viewextension-packages.jpg)
+![Пакеты расширений вида](../../.gitbook/assets/vs-viewextension-packages.jpg)
 
 > 1. Выберите библиотеку WpfUILibrary.
 > 2. Нажмите `Install` (Установить) для установки всех зависимых пакетов.
@@ -133,7 +133,7 @@ namespace SampleViewExtension
 * `public class SampleViewExtension : IViewExtension` `SampleViewExtension` наследуется из интерфейса `IViewExtension` и предоставляет все необходимое для создания пункта меню.
 * `sampleMenuItem = new MenuItem { Header = "Show View Extension Sample Window" };` создает MenuItem (Пункт меню) и добавляет его в меню `View` (Вид).
 
-![Пункт меню](images/dyn-menuitem.jpg)
+![Пункт меню](../../.gitbook/assets/dyn-menuitem.jpg)
 
 > 1. Пункт меню
 
@@ -208,7 +208,7 @@ namespace SampleViewExtension
 
 Теперь, когда определена основная логика расширения, мы зададим параметры отображения окна с помощью файла `.xaml`. Нам нужно простое окно, в котором будет отображаться строка с помощью привязки свойства `ActiveNodeTypes` в `TextBlock` `Text`.
 
-![Добавление окна](images/vs-window.jpg)
+![Добавление окна](../../.gitbook/assets/vs-window.jpg)
 
 > 1. Щелкните проект правой кнопкой мыши и выберите `Add > New Item...` (Добавить > Новый элемент).
 > 2. Выберите шаблон пользовательского элемента управления, который будет изменен для создания окна.
@@ -259,7 +259,7 @@ namespace SampleViewExtension
 
 Теперь можно приступать к сборке и добавлению расширения вида в Dynamo. Для регистрации выходного файла `.dll` в качестве расширения Dynamo требуется файл `xml`.
 
-![Добавление нового XML](images/vs-viewextension-xml.jpg)
+![Добавление нового XML](../../.gitbook/assets/vs-viewextension-xml.jpg)
 
 > 1. Щелкните проект правой кнопкой мыши и выберите `Add > New Item...` (Добавить > Новый элемент).
 > 2. Выберите файл XML.
@@ -281,7 +281,7 @@ namespace SampleViewExtension
 
 Наконец, скопируйте файл `SampleViewExtension_ViewExtensionDefinition.xml` в папку расширений видов Dynamo, расположенную в каталоге установки Dynamo Core `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions`. Важно отметить, что для `extensions` и `viewExtensions` существуют отдельные папки. Если разместить файл `xml` в неправильной папке, во время выполнения может произойти сбой загрузки.
 
-![Файл XML, скопированный в папку Extensions](images/fe-viewextension-xml.jpg)
+![Файл XML, скопированный в папку Extensions](../../.gitbook/assets/fe-viewextension-xml.jpg)
 
 > 1. Файл `.xml`, скопированный в папку расширений видов Dynamo.
 

@@ -4,7 +4,7 @@
 
 ## Для Dynamo 2.13 и более поздних версий
 
-![Логотип Dynamo](images/dynamo_logo_dark-trim.jpg)
+![Логотип Dynamo](.gitbook/assets/dynamo_logo_dark-trim.jpg)
 
 > Dynamo — это платформа визуального программирования с открытым исходным кодом для проектировщиков.
 
@@ -37,19 +37,19 @@ Dynamo Primer — это проект с открытым исходным ко
 
 Первая версия этого руководства была составлена специалистами **Mode Lab**. Мы выражаем им благодарность за то, что положили начало этому ценному ресурсу.
 
-![](images/MODELAB_Logo.png)
+![](.gitbook/assets/MODELAB_Logo.png)
 
 ***
 
 Обновление этого руководства в соответствии с изменениями, внесенными в Dynamo 2.0, было выполнено **Джоном Пирсоном (John Pierson) из компании Parallax Team**.
 
-![](images/PRLX_Logo.jpg)
+![](.gitbook/assets/PRLX_Logo.jpg)
 
 ***
 
 Обновление этого руководства в соответствии с изменениями, внесенными в Dynamo 2.13, было выполнено специалистами **Matterlab**.
 
-![](images/matterlab_final-07.jpg)
+\![](<.gitbook/assets/matterlab_final-07 (2).jpg>)
 
 ***
 

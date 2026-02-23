@@ -1,8 +1,8 @@
-# Дальнейшая работа с Zero-Touch 
+# Дальнейшая работа с Zero-Touch
 
 Понимая, как создать проект Zero-Touch, мы можем подробно рассмотреть особенности создания узла, изучив пример ZeroTouchEssentials на Dynamo Github.
 
-![Узлы Zero-Touch](images/ootbzerotouch.png)
+![Узлы Zero-Touch](../../.gitbook/assets/ootbzerotouch.png)
 
 > Многие стандартные узлы Dynamo, по сути, являются узлами Zero-Touch, как и большинство узлов Math, Color и DateTime.
 
@@ -10,7 +10,7 @@
 
 В Visual Studio откройте файл решения `ZeroTouchEssentials.sln` и выполните сборку.
 
-![ZeroTouchEssentials в Visual Studio](images/vs-build-zte.jpg)
+![ZeroTouchEssentials в Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
 
 > Файл `ZeroTouchEssentials.cs` содержит все методы, которые будут импортированы в Dynamo.
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Значение по умолчанию](images/defaultval.jpg)
+![Значение по умолчанию](../../.gitbook/assets/defaultval.jpg)
 
 > 1. Значение по умолчанию отображается при наведении курсора на входной порт узла.
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Узел, возвращающий несколько выходных данных.
 
-![Несколько выходных данных](images/multipleoutputs.png)
+![Несколько выходных данных](../../.gitbook/assets/multipleoutputs.png)
 
 > 1. Обратите внимание, что теперь существует два выходных порта, названных в соответствии с указанными ключами словаря.
 
@@ -84,13 +84,13 @@ namespace ZeroTouchEssentials
 
 Рекомендуется прикреплять к узлам Dynamo документацию, описывающую функции узла, входные и выходные данные, теги поиска и т. д. Для этого используются теги XML-документации. XML-документация создается следующим образом.
 
-* Документацией считается любой текст комментария после значка «///» (три наклонные черты), 
+* Документацией считается любой текст комментария после значка «///» (три наклонные черты),
   * Например: `/// Documentation text and XML goes here` (Текст документации и XML размещается здесь)
 * После трех наклонных черт создайте теги XML над методами, которые Dynamo будет считывать при импорте DLL-файла.
   * Например: `/// <summary>...</summary>`
 * Включите XML-документацию в Visual Studio, выбрав `Project > [Project] Properties > Build > Output` и установив флажок `Documentation file` (Файл XML-документации).
 
-![Создание XML-файла](images/vs-xml.jpg)
+![Создание XML-файла](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Visual Studio создаст XML-файл в указанной папке.
 
@@ -134,18 +134,18 @@ namespace ZeroTouchEssentials
 > 2. Описание входных данных.
 > 3. Описание выходных данных.
 
-#### Практические советы по работе с описаниями узлов Dynamo 
+#### Практические советы по работе с описаниями узлов Dynamo
 
 В описаниях узлов содержатся краткие описания функций и выходных данных узла. В Dynamo они отображаются в двух местах:
 
-- во всплывающей подсказке для узла;
-- в обозревателе документации.
+* во всплывающей подсказке для узла;
+* в обозревателе документации.
 
-![Описание узла](images/node-description.png)
+![Описание узла](../../.gitbook/assets/node-description.png)
 
 Ниже представлены рекомендации, которые позволят обеспечить единообразие и сэкономить время при составлении или обновлении описаний узлов.
 
-##### Обзор
+**Обзор**
 
 Описание должно состоять из одного-двух предложений. Если требуется дополнительная информация, добавьте ее в раздел «Подробности» в обозревателе документации.
 
@@ -155,17 +155,17 @@ namespace ZeroTouchEssentials
 
 Всегда уделяйте первостепенное внимание ясности, даже если это означает отклонение от этих рекомендаций.
 
-##### Рекомендации
+**Рекомендации**
 
-| Можно      | Нельзя |
-| ----------- | ----------- |
-| Начинайте описание с глагола в третьем лице. <ul><li>Пример: *Determines* if one geometry object intersects with another</li></ul>      | Не используйте глаголы во втором лице или существительные. <ul><li>Пример: *Determine* if one geometry object intersects with another</li></ul>       |
-| Используйте Returns, Creates или другой описательный глагол вместо Gets. <ul><li>Пример: *Returns* a Nurbs representation of a surface</li></ul>   | Не используйте слова Get или Gets. Они менее специфичны и могут быть интерпретированы по-разному. <ul><li>Пример: *Gets* a Nurbs representation of the surface</li></ul>        |
-| Когда речь идет о входных данных, используйте given или input либо другие термины вместо specified. По возможности опускайте слова given и input, чтобы упростить описание и уменьшить количество слов. <ul><li>Пример: Deletes the *given* file</li><li>Пример: Projects a curve along the *given* projection direction onto *given* base geometry</li></ul>Можно использовать слово specified, если оно не ссылается непосредственно на входные данные. <ul><li>Пример: Writes text content to a file *specified* by the given path</li></ul>       | Когда речь идет о входных данных, чтобы обеспечить единообразие, не используйте слово specified или любой другой термин, кроме given или input. Не смешивайте слова given и input в одном и том же описании, если только это не требуется для ясности. <ul><li>Пример: Deletes the *specified* file</li><li>Пример: Projects an *input* curve along a *given* projection direction onto a *specified* base geometry</li></ul>      |
-| При первом упоминании входных данных используйте артикль a или an. Используйте the given или the input вместо a или an по мере необходимости для ясности.<ul><li>Пример: Sweeps *a* curve along the path curve</li></ul>      | Не используйте слово this, когда впервые ссылаетесь на входные данные. <ul><li>Пример: Sweeps *this* curve along the path curve      |
-| При первом упоминании выходных данных или другого существительного, которое обозначает цель операции узла, используйте a или an. Используйте слово the только в сочетании с input или given. <ul><li>Пример: Copies *a* file</li><li>Пример: Copies *the given* file</li></ul>      | При первом упоминании выходных данных или другого существительного, которое обозначает цель операции узла, не используйте слово the самостоятельно. <ul><li>Пример: Copies *the* file</li></ul>      |
-| Пишите с заглавной буквы первое слово в предложении, имена собственные и другие существительные, которые обычно начинаются с прописной буквы. <ul><li>Пример: Returns the intersection of two *BoundingBoxes*</li></ul>      | Не используйте прописные буквы для общих геометрических объектов и понятий, если в этом нет необходимости. <ul><li>Пример: Scales non-uniformly around the given *Plane*      |
-| Пишите слово Boolean с заглавной буквы. Пишите слова True и False с заглавной буквы, если речь идет о выводе логических значений. <ul><li>Пример: Returns *True* if the two values are different</li><li>Пример: Converts a string to all uppercase or all lowercase characters based on a *Boolean* parameter      | Не используйте нижний регистр для слова Boolean. Не пишите слова True и False со строчной буквы, если речь идет о выводе логических значений. <ul><li>Пример: Returns *true* if the two values are different</li><li>Пример: Converts a string to all uppercase characters or all lowercase characters based on a *boolean* parameter</li></ul>
+| Можно                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Нельзя                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>Начинайте описание с глагола в третьем лице.</p><ul><li>Пример: <em>Determines</em> if one geometry object intersects with another</li></ul>                                                                                                                                                                                                                                                                                                                                                                                         | <p>Не используйте глаголы во втором лице или существительные.</p><ul><li>Пример: <em>Determine</em> if one geometry object intersects with another</li></ul>                                                                                                                                                                                                                                                      |
+| <p>Используйте Returns, Creates или другой описательный глагол вместо Gets.</p><ul><li>Пример: <em>Returns</em> a Nurbs representation of a surface</li></ul>                                                                                                                                                                                                                                                                                                                                                                              | <p>Не используйте слова Get или Gets. Они менее специфичны и могут быть интерпретированы по-разному.</p><ul><li>Пример: <em>Gets</em> a Nurbs representation of the surface</li></ul>                                                                                                                                                                                                                                       |
+| <p>Когда речь идет о входных данных, используйте given или input либо другие термины вместо specified. По возможности опускайте слова given и input, чтобы упростить описание и уменьшить количество слов.</p><ul><li>Пример: Deletes the <em>given</em> file</li><li>Пример: Projects a curve along the <em>given</em> projection direction onto <em>given</em> base geometry</li></ul><p>Можно использовать слово specified, если оно не ссылается непосредственно на входные данные.</p><ul><li>Пример: Writes text content to a file <em>specified</em> by the given path</li></ul> | <p>Когда речь идет о входных данных, чтобы обеспечить единообразие, не используйте слово specified или любой другой термин, кроме given или input. Не смешивайте слова given и input в одном и том же описании, если только это не требуется для ясности.</p><ul><li>Пример: Deletes the <em>specified</em> file</li><li>Пример: Projects an <em>input</em> curve along a <em>given</em> projection direction onto a <em>specified</em> base geometry</li></ul> |
+| <p>При первом упоминании входных данных используйте артикль a или an. Используйте the given или the input вместо a или an по мере необходимости для ясности.</p><ul><li>Пример: Sweeps <em>a</em> curve along the path curve</li></ul>                                                                                                                                                                                                                                                                                                                                | <p>Не используйте слово this, когда впервые ссылаетесь на входные данные.</p><ul><li>Пример: Sweeps <em>this</em> curve along the path curve</li></ul>                                                                                                                                                                                                                                                                             |
+| <p>При первом упоминании выходных данных или другого существительного, которое обозначает цель операции узла, используйте a или an. Используйте слово the только в сочетании с input или given.</p><ul><li>Пример: Copies <em>a</em> file</li><li>Пример: Copies <em>the given</em> file</li></ul>                                                                                                                                                                                                                                                                   | <p>При первом упоминании выходных данных или другого существительного, которое обозначает цель операции узла, не используйте слово the самостоятельно.</p><ul><li>Пример: Copies <em>the</em> file</li></ul>                                                                                                                                                                                                                                  |
+| <p>Пишите с заглавной буквы первое слово в предложении, имена собственные и другие существительные, которые обычно начинаются с прописной буквы.</p><ul><li>Пример: Returns the intersection of two <em>BoundingBoxes</em></li></ul>                                                                                                                                                                                                                                                                                                                                     | <p>Не используйте прописные буквы для общих геометрических объектов и понятий, если в этом нет необходимости.</p><ul><li>Пример: Scales non-uniformly around the given <em>Plane</em></li></ul>                                                                                                                                                                                                                                          |
+| <p>Пишите слово Boolean с заглавной буквы. Пишите слова True и False с заглавной буквы, если речь идет о выводе логических значений.</p><ul><li>Пример: Returns <em>true</em> if the two values are different</li><li>Пример: Converts a string to all uppercase or all lowercase characters based on a <em>Boolean</em> parameter</li></ul>                                                                                                                                                                                                                                        | <p>Не используйте нижний регистр для слова Boolean. Не пишите слова True и False со строчной буквы, если речь идет о выводе логических значений.</p><ul><li>Пример: Returns <em>true</em> if the two values are different</li><li>Пример: Converts a string to all uppercase characters or all lowercase characters based on a <em>boolean</em> parameter</li></ul>                                                                                       |
 
 #### Предупреждения и ошибки узлов Dynamo
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 После импорта DLL-файла ZeroTouchEssentials в библиотеке появится узел ZeroTouchEssentials. Этот объект можно создать с помощью узла `ByTwoDoubles`.
 
-![Узел ByTwoDoubles](images/dyn-constructor.jpg)
+![Узел ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
 
 ### Использование типов геометрии Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Узел, который получает длину кривой и удваивает ее.
 
-![Входные данные кривой](images/doublelength.png)
+![Входные данные кривой](../../.gitbook/assets/doublelength.png)
 
 > 1. В качестве входных данных для этого узла можно использовать геометрию кривой.
 
@@ -285,7 +285,7 @@ namespace ZeroTouchEssentials
 * Внутри элемента миграции создайте элементы `<priorNameHint>...</priorNameHint>` для каждого изменения имени.
 * При каждом изменении имени укажите `<oldName>...</oldName>` и `<newName>...</newName>`
 
-![Файл миграции](images/vs-migrations-file.jpg)
+![Файл миграции](../../.gitbook/assets/vs-migrations-file.jpg)
 
 > 1. Щелкните правой кнопкой мыши и выберите `Add > New Item` (Добавить > Новый элемент).
 > 2. Выберите `XML File` (XML-файл).

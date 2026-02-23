@@ -24,7 +24,7 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![Перемещение файлов проекта](images/fe-proj-directory.jpg)
+![Перемещение файлов проекта](../../.gitbook/assets/fe-proj-directory.jpg)
 
 > 1. Переместите файлы проекта в новую папку `src`.
 
@@ -47,7 +47,7 @@ CustomNodeModel
   </Target>
 ```
 
-![Размещение целевого объекта AfterBuild](images/atom-afterbuild.jpg)
+![Размещение целевого объекта AfterBuild](../../.gitbook/assets/atom-afterbuild.jpg)
 
 > Необходимо убедиться, что целевой объект добавлен в файл `CustomNodeModel.csproj` (а не в другой файл проекта) и что в проекте нет параметров, заданных после сборки.
 >
@@ -75,7 +75,7 @@ CustomNodeModel
 
 Теперь при построении проекта в папке проекта будет находится папка `packages` рядом с ранее созданной папкой `src`. В каталоге `packages` находится папка, содержащая все необходимые для пакета компоненты. Также необходимо скопировать файл `pkg.json` в папку пакета, чтобы сообщить Dynamo о необходимости загрузки пакета.
 
-![Копирование файлов](images/fe-proj-directory-package.jpg)
+![Копирование файлов](../../.gitbook/assets/fe-proj-directory-package.jpg)
 
 > 1. Новая папка пакетов, созданная целевым объектом AfterBuild.
 > 2. Существующая папка src с проектом.

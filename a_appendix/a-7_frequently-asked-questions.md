@@ -18,11 +18,11 @@ ZIP-сборка DynamoCoreRuntime — это моментальный сним
 
 #### Требуемые компоненты
 
-| Версия Dynamo  | Microsoft Visual C++        | DirectX                            |   |   |   |   |
-| -------------- | --------------------        | -------------------------------    | - | - | - | - | 
-| 2.0–2.6        | Распространяемый пакет 2015 | 10                                 |   |   |   |   | 
-| 2.7            | Распространяемый пакет 2019 | 11/12 (входит в состав Windows 10) |   |   |   |   | 
-| >=2.8          | Распространяемый пакет 2019 | 11/12 (входит в состав Windows 10) |   |   |   |   |
+| Версия Dynamo | Microsoft Visual C++ | DirectX                         |   |   |   |   |
+| -------------- | -------------------- | ------------------------------- | - | - | - | - |
+| 2.0–2.6      | Распространяемый пакет 2015 | 10                              |   |   |   |   |
+| 2.7            | Распространяемый пакет 2019 | 11/12 (входит в ОС Windows 10) |   |   |   |   |
+| >=2.8          | Распространяемый пакет 2019 | 11/12 (входит в ОС Windows 10) |   |   |   |   |
 
 **Файл Microsoft DirectX, который также доступен в репозитории Dynamo на Github** [**здесь**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 
@@ -38,29 +38,29 @@ ZIP-сборка DynamoCoreRuntime — это моментальный сним
 
 Если вы распаковали сборку и не смогли запустить DynamoSandbox.exe, используйте [7zip](https://www.7-zip.org/download.html) для распаковки. Вы также можете вручную разблокировать архив ZIP _перед_ его извлечением, если у вас есть соответствующие права на компьютере.
 
-![](images/a-7/dynamo-builds-1.png)
+![](../.gitbook/assets/dynamo-builds-1.png)
 
 Если какой-либо из необходимых компонентов отсутствует, могут возникнуть проблемы с Dynamo и может произойти сбой загрузки некоторых частей пользовательского интерфейса.
 
 На следующем снимке экрана приведен пример распаковки нашей сборки на чистой виртуальной машине Windows 10 без GPU, на компьютере отсутствуют оба необходимых компонента. Это указано в консоли Dynamo.
 
-![](images/a-7/dynamo-builds-2.png)
+![](../.gitbook/assets/dynamo-builds-2.png)
 
 **Установка DirectX**
 
 Следуйте инструкциям Microsoft, приведенным здесь, чтобы проверить, установлен ли у вас программный продукт DirectX. Если это не так, можете открыть DXSETUP.exe в репозитории Dynamo на Github [здесь](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX). При появлении приведенного ниже диалогового окна нажмите кнопку «Далее», чтобы установить DirectX в папку по умолчанию.
 
-![](images/a-7/dynamo-builds-3.png)
+![](../.gitbook/assets/dynamo-builds-3.png)
 
 **Установка распространяемого пакета Microsoft Visual C++ 2015–2024 (x64)**
 
 Скачайте последнюю версию [здесь](https://aka.ms/vs/17/release/vc_redist.x64.exe). После этого вы сможете запустить установщик с именем vc_redist.x64.exe в папке загрузок браузера. При появлении приведенного ниже диалогового окна нажмите кнопку «Установить», чтобы поместить этот компонент в папку по умолчанию.
 
-![](images/a-7/dynamo-builds-4.png)
+![](../.gitbook/assets/dynamo-builds-4.png)
 
 После установки обоих необходимых компонентов по ссылке выше, перезапустите DynamoSandbox.exe. Должен отобразиться следующий результат:
 
-![](images/a-7/dynamo-builds-5.png)
+![](../.gitbook/assets/dynamo-builds-5.png)
 
 **Отсутствует 3D-графика.**
 
@@ -72,7 +72,7 @@ ZIP-сборка DynamoCoreRuntime — это моментальный сним
 
 _Пример панели управления NVIDIA:_
 
-![](images/a-7/dynamo-builds-6.png)
+![](../.gitbook/assets/dynamo-builds-6.png)
 
 **Установка среды выполнения WebView2**
 
@@ -80,13 +80,13 @@ _Пример панели управления NVIDIA:_
 
 Ниже приведена ссылка для установки среды выполнения WebView2: [https://developer.microsoft.com/ru-ru/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/ru-ru/microsoft-edge/webview2/#download-section)
 
-![](images/a-7/dynamo-builds-7.png)
+![](../.gitbook/assets/dynamo-builds-7.png)
 
 Компоненты, которые должны быть установлены (только один из них), — это загрузчик Evergreen Bootstrapper или автономный установщик Evergreen. Первый загружает установщик на 1,50 МБ, а второй загружает установщик на 130 МБ.
 
 После установки среды выполнения следующие компоненты Dynamo должны работать правильно.
 
-![](images/a-7/dynamo-builds-8.png)
+![](../.gitbook/assets/dynamo-builds-8.png)
 
 **Проблемы с узлами Excel в Dynamo**
 

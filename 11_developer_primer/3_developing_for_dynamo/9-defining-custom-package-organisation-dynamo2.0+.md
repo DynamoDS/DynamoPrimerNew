@@ -1,13 +1,16 @@
-# Определение пользовательской организации пакетов (Dynamo 2.0 или более поздней версии) 
+# Определение пользовательской организации пакетов для Dynamo 2.0 или более поздней версии
 
 Требуемая компоновка пакета зависит от типов узлов, которые будут включены в пакет. Существуют различия в процессах упорядочивания производных узлов NodeModel, узлов ZeroTouch и пользовательских узлов. В один пакет могут входить разные типы узлов, но для этого потребуется комбинация стратегий, описанных ниже.
 
 ## NodeModel
+
 По умолчанию библиотеки NodeModel организованы на основе структуры классов.
-```C#
+
+```c#
 namespace SampleLibraryUI.Examples
 ```
-```C#
+
+```c#
 // Class Attribute
 [NodeName("MyNodeModel")]
 public class MyNewNodeModel : NodeModel
@@ -21,13 +24,16 @@ public ButtonCustomNodeModel()
 }
 
 ```
+
 Узел будет расположен в разделе «Надстройки» по пути:
+
 ```
 SampleLibraryUI/Examples/MyNodeModel
 ```
 
 Кроме того, категорию можно переопределить с помощью атрибута NodeCategory в классе или в конструкторе, как показано ниже.
-```C#
+
+```c#
 // Class Attribute
 [NodeCategory("NewSampleLibraryUI.Examples")]
 
@@ -41,6 +47,7 @@ public ButtonCustomNodeModel()
 ```
 
 Теперь узел будет располагаться в разделе «Надстройки» по пути:
+
 ```
 NewSampleLibraryUI/Examples/MyNodeModel
 ```
@@ -49,11 +56,11 @@ NewSampleLibraryUI/Examples/MyNodeModel
 
 Библиотеки ZeroTouch также по умолчанию организуются на основе структуры классов.
 
-```C#
+```c#
 namespace MyZTLibrary
 ```
 
-```C#
+```c#
 public class Utilities
 {
     public double doubleValue(double num)
@@ -70,10 +77,11 @@ MyZTLibrary/Utilities/doubleValue
 ```
 
 Кроме того, можно также переопределить расположение структуры классов с помощью файла XML адаптации Dynamo.
-- Файл XML должен иметь соответствующее имя и содержаться в папке `extra` пакета
-    - `PackageName_DynamoCustomization.xml`
 
-```XML
+* Файл XML должен иметь соответствующее имя и содержаться в папке `extra` пакета
+  * `PackageName_DynamoCustomization.xml`
+
+```xml
 <?xml version="1.0"?>
 <doc>
     <assembly>
@@ -99,16 +107,16 @@ MyZTLibrary/Utilities/doubleValue
 
 ## Пользовательские узлы
 
-Пользовательские узлы организуются на основе имени категории `Category Name`, указанного при создании с помощью нового диалогового окна «Пользовательский узел».  
+Пользовательские узлы организуются на основе имени категории `Category Name`, указанного при создании с помощью нового диалогового окна «Пользовательский узел».
 
-**ПРЕДУПРЕЖДЕНИЕ** <br>
-Запись через точку в именах или категориях узлов приведет к созданию дополнительных вложенных подкатегорий. В качестве разделителя для определения дополнительной иерархии будет использоваться `.`. Это новое поведение в библиотеке для Dynamo 2.0.
+**ПРЕДУПРЕЖДЕНИЕ**\
+ Запись через точку в именах или категориях узлов приведет к созданию дополнительных вложенных подкатегорий. В качестве разделителя для определения дополнительной иерархии будет использоваться `.`. Это новое поведение в библиотеке для Dynamo 2.0.
 
-![Свойства пользовательского узла](images/custom-node-properties.jpg)
+![Свойства пользовательского узла](../../.gitbook/assets/custom-node-properties.jpg)
 
 Имя категории можно будет позже изменить в файле DYF (XML или JSON)
 
-```JSON
+```json
 {
   "Uuid": "85066088-1616-40b1-96e1-c33e685c6948",
   "IsCustomNode": true,
@@ -120,7 +128,7 @@ MyZTLibrary/Utilities/doubleValue
   },...
 ```
 
-```XML
+```xml
 <Workspace Version="1.3.0.0000" X="100" Y="100" zoom="1.0000000" Description="This is an example custom nodes." Category="MyCustomNodes.Utilities.Actions" Name="doubleValue" ID="85066088-1616-40b1-96e1-c33e685c6948">
 ```
 
@@ -131,7 +139,8 @@ MyZTLibrary/Utilities/doubleValue
 В узлах **ZeroTouch** используется файл `Namespace.Migrations.XML`, расположенный в папке `bin` пакета, например:
 
 `MyZeroTouchLib.MyNodes.SayHello` в `MyZeroTouchLib.MyNodes.SayHelloRENAMED`
-```XML
+
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -144,7 +153,8 @@ MyZTLibrary/Utilities/doubleValue
 **Производные узлы NodeModel** используют атрибут `AlsoKnownAs` класса следующим образом:
 
 `SampleLibraryUI.Examples.DropDownExample` в `SampleLibraryUI.Examples.DropDownExampleRENAMED`
-```C#
+
+```c#
 namespace SampleLibraryUI.Examples
 {
     [NodeName("Drop Down Example")]
