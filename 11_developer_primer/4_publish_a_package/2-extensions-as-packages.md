@@ -39,7 +39,7 @@ Depois que você tiver uma pasta contendo os subdiretórios descritos acima, est
 
 Neste ponto, você deve estar na janela normal do pacote de publicação, onde será necessário inserir todos os campos obrigatórios relativos ao pacote/extensão. Há uma etapa adicional **muito importante** que requer que você assegure que nenhum dos arquivos de montagem esteja marcado como uma biblioteca de nós. Isso é feito clicando com o botão direito do mouse nos arquivos importados (a pasta de pacotes criada acima). Um menu de contexto será exibido, o que lhe dá a opção de marcar (ou desmarcar) essa opção. Todas as montagens de extensão devem estar desmarcadas.
 
-![Publicar um pacote](images/ViewExtension_Search.png)
+![Publicar um pacote](../../.gitbook/assets/ViewExtension_Search.png)
 
 Antes de publicar de forma pública, você deve sempre publicar localmente para assegurar que tudo funcione como esperado. Uma vez que isso tenha sido verificado, você estará pronto para entrar em ação selecionando Publicar.
 
@@ -47,4 +47,4 @@ Antes de publicar de forma pública, você deve sempre publicar localmente para 
 
 Para verificar se o pacote foi carregado com êxito, você deverá conseguir pesquisá-lo com base na nomeação e nas palavras-chave especificadas na etapa de publicação. Por fim, é importante observar que as mesmas extensões exigirão uma reinicialização do Dynamo antes de funcionar. Normalmente, essas extensões exigem parâmetros especificados quando o Dynamo é inicializado.
 
-![Procurar pacotes](images/ViewExtension_Search.jpg)
+![Procurar pacotes](../../.gitbook/assets/ViewExtension_Search.jpg)

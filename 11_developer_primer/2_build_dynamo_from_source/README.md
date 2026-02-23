@@ -8,11 +8,12 @@ O Github é um serviço de hospedagem baseado no [git](https://docs.github.com/p
 
 A origem do Dynamo está hospedada no DynamoDS Github neste repositório: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
-![Arquivos de origem do Dynamo](images/github.jpg)
+![Arquivos de origem do Dynamo](../../.gitbook/assets/github.jpg)
+
 > Arquivos de origem do Dynamo.
 >
-> 1. Clone ou faça o download de todo o repositório
-> 2. Visualize os outros repositórios do DynamoDS
+> 1. Clonar ou fazer o download de todo o repositório
+> 2. Visualizar outros repositórios do DynamoDS
 > 3. Arquivos de origem do Dynamo
 > 4. Arquivos específicos do Git
 
@@ -20,29 +21,30 @@ A origem do Dynamo está hospedada no DynamoDS Github neste repositório: [https
 
 Antes de clonar o repositório, precisamos instalar o git. Siga este [breve guia](https://docs.github.com/pt/get-started/quickstart/set-up-git#setting-up-git) para ver as etapas de instalação e como configurar um nome de usuário e e-mail no GitHub. Neste exemplo, usaremos o git na linha de comando. Este guia pressupõe que você esteja usando o Windows, mas também pode usar o git no Mac ou Linux para clonar a origem do Dynamo.
 
-Precisamos de uma URL para o repositório do Dynamo para clonar. Essa URL pode ser encontrada no botão “Clonar ou fazer o download” na página do repositório. Copie a URL para colar no prompt do comando.
+Precisamos de uma URL para o repositório do Dynamo para clonar. Essa URL pode ser encontrada no botão “Clonar ou fazer o download” na página do repositório. Copie a URL para colar no prompt de comando.
 
-![Clonar um repositório](images/github-clone.png)
-> 1. Selecione “Clonar ou fazer o download”
-> 2. Copie a URL
+![Clonar um repositório](../../.gitbook/assets/github-clone.png)
 
-Com o git instalado, podemos clonar o repositório do Dynamo. Comece abrindo o prompt do comando. Em seguida, use o comando de alteração de diretório `cd` para navegar até a pasta na qual desejamos que os arquivos de origem sejam clonados. Neste caso, criamos uma pasta chamada `Github` em `Documents`.
+> 1. Selecionar “Clonar ou fazer o download”
+> 2. Copiar a URL
+
+Com o git instalado, podemos clonar o repositório do Dynamo. Comece abrindo o prompt de comando. Em seguida, use o comando de alteração de diretório `cd` para navegar até a pasta na qual desejamos que os arquivos de origem sejam clonados. Neste caso, criamos uma pasta chamada `Github` em `Documents`.
 
 `cd C:\Users\username\Documents\GitHub`
 
 > Substitua “username” por seu nome de usuário
 
-![Prompt do comando](images/cli-1.jpg)
+![Prompt de comando](../../.gitbook/assets/cli-1.jpg)
 
 Na próxima etapa, executaremos um comando git para clonar o repositório do Dynamo para o local que especificamos. A URL no comando é obtida clicando no botão “Clonar ou fazer o download” no Github. Execute esse comando no terminal de comando. Observe que isso clonará a ramificação mestre de repositório do Dynamo, que é o código mais atualizado do Dynamo, e conterá a versão mais recente do código do Dynamo. Essa ramificação muda diariamente.
 
 `git clone https://github.com/DynamoDS/Dynamo.git`
 
-![Resultados da operação de clonagem do Git](images/cli-2.jpg)
+![Resultados da operação de clonagem do Git](../../.gitbook/assets/cli-2.jpg)
 
 Saberemos que o git está funcionando se a operação de clonagem tiver sido concluída com êxito. No gerenciador de arquivos, navegue até o diretório onde você clonou para ver os arquivos de origem. A estrutura de diretórios deve ser idêntica à ramificação mestre do repositório do Dynamo no Github.
 
-![Arquivos de origem do Dynamo](images/source-files.jpg)
+![Arquivos de origem do Dynamo](../../.gitbook/assets/source-files.jpg)
 
 > 1. Arquivos de origem do Dynamo
 > 2. Arquivos do Git
@@ -51,63 +53,64 @@ Saberemos que o git está funcionando se a operação de clonagem tiver sido con
 
 Com os arquivos de origem agora clonados em nosso computador local, podemos compilar um arquivo executável para o Dynamo. Para fazer isso, precisamos configurar o Visual Studio IDE e assegurar que o .NET Framework e o DirectX estejam instalados.
 
-* Faça o download e instale o [Microsoft Visual Studio Community 2015](https://my.visualstudio.com/Downloads/Results), um IDE gratuito e completo (ambiente de desenvolvimento integrado – as versões posteriores também podem funcionar)
-* Faça o download e instale o [Microsoft .NET Framework 4.5](https://www.microsoft.com/pt-br/download/details.aspx?id=30653) ou posterior
+* Faça o download e instale o [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/pt-br/vs/community/), um IDE (ambiente de desenvolvimento integrado — as versões posteriores também podem funcionar) gratuito e completo
+* Faça o download e instale o [Microsoft .NET Framework 4.5](https://www.microsoft.com/pt-br/download/details.aspx?id=30653) ou posterior
 * Instale o Microsoft DirectX do repositório local do Dynamo (`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`)
 
 > O .NET e o DirectX podem já estar instalados.
 
-> **Observação:** Alteração significativa – **Visual Studio 2022 Preview/Visual Studio 2026 Insider** necessário
-> 
-> A partir do final de 2025, a Dynamo implementará a estrutura `dotnet10.0`. Para desenvolver nessa estrutura, será necessário o Visual Studio 2022 Preview ou o Visual Studio 2026 Insider (ou posterior), pois as versões estáveis ainda não dão suporte ao .NET 10.0.
-> 
+> **Observação:** Alteração significativa — [**Visual Studio 2022**](https://visualstudio.microsoft.com/vs/community/)**/**[**Visual Studio 2026 Insider**](https://visualstudio.microsoft.com/insiders/) necessários
+>
+> A partir do final de 2025, o Dynamo implementará a estrutura `dotnet10.0`. Para desenvolver nessa estrutura, será necessário o Visual Studio 2022 Preview ou o Visual Studio 2026 Insider (ou posterior), pois as versões estáveis ainda não dão suporte ao .NET 10.0.
+>
 > **Instalar o Visual Studio 2022 Preview/2026 Insider junto com a instalação existente:**
+>
 > 1. Abra o **Instalador do Visual Studio** (procure-o no menu Iniciar)
 > 2. Clique em **Atualizar** para garantir que você tenha a versão mais recente do instalador
 > 3. Vá para a guia **Disponível**
-> 4. Encontre **Visual Studio 2022 Preview/2026 Insider** (Comunidade, Professional ou Empresarial)
+> 4. Localize o **Visual Studio 2022 Preview/2026 Insider** (Comunidade, Professional ou Empresarial)
 > 5. Clique em **Instalar** para adicioná-lo junto com a instalação existente do Visual Studio
-> 
-![Visual Studio Preview](images/vs-preview.png) ![Visual Studio 2026 insider](images/vs-2026-insiders.png)
+
+\![Visualização do Visual Studio](<../../.gitbook/assets/vs-preview (1).png>) \![Visual Studio 2026 insider](<../../.gitbook/assets/vs-2026-insiders (1).png>)
 
 Quando tudo estiver pronto, podemos iniciar o Visual Studio e abrir a solução `Dynamo.All.sln` localizada em `Dynamo\src`.
 
-![Abrir o arquivo da solução](images/vs-open-dynamo.jpg)
+![Abrir o arquivo da solução](../../.gitbook/assets/vs-open-dynamo.jpg)
 
-> 1. Selecione `File > Open > Project/Solution`
-> 2. Navegue até o repositório do Dynamo e abra a pasta `src`
-> 3. Selecione o arquivo da solução `Dynamo.All.sln`
-> 4. Selecione `Open`
+> 1. Selecionar `File > Open > Project/Solution`
+> 2. Navegar até o repositório do Dynamo e abrir a pasta `src`
+> 3. Selecionar o arquivo da solução `Dynamo.All.sln`
+> 4. Selecionar `Open`
 
 Antes de podermos compilar a solução, algumas configurações devem ser especificadas. Primeiro, devemos compilar uma versão de depuração do Dynamo para que o Visual Studio possa coletar mais informações durante a depuração para nos ajudar a desenvolver, e queremos a AnyCPU como destino.
 
-![Configurações da solução](images/vs-dynamo-build-settings.jpg)
+![Configurações da solução](../../.gitbook/assets/vs-dynamo-build-settings.jpg)
 
 > Elas se tornarão pastas dentro da pasta `bin`
 >
 > 1. Para este exemplo, escolhemos `Debug` como a Configuração da solução
-> 2. Defina a Plataforma de soluções como `Any CPU`
+> 2. Definir a Plataforma de soluções como `Any CPU`
 
 Com o projeto aberto, podemos compilar a solução. Esse processo criará um arquivo DynamoSandbox.exe que podemos executar.
 
-![Compilar a solução](images/vs-build-dynamo.jpg)
+![Compilar a solução](../../.gitbook/assets/vs-build-dynamo.jpg)
 
 > A compilação do projeto restaurará as dependências do NuGet.
 >
-> 1. Selecione `Build > Build Solution`.
-> 2. Verifique se a compilação foi bem-sucedida na janela Saída. Deve ser semelhante a `==== Build: 69 succeeded, 0 failed, 0 up-to-date, 0 skipped ====`
+> 1. Selecionar `Build > Build Solution`
+> 2. Verificar se a compilação foi bem-sucedida na janela Saída. Deve ser semelhante a `==== Build: 69 succeeded, 0 failed, 0 up-to-date, 0 skipped ====`
 
 ### Executar uma compilação local <a href="#running-a-local-build" id="running-a-local-build"></a>
 
 Se o Dynamo for compilado com êxito, uma pasta `bin` será criada no repositório do Dynamo com o arquivo DynamoSandbox.exe. No nosso caso, estamos compilando com a opção Depurar, portanto, o arquivo executável estará localizado em `bin\AnyCPU\Debug`. A execução dessa ação abrirá uma compilação local do Dynamo.
 
-![Executável do DynamoSandbox](images/ex-dynamosandbox.jpg)
+![Executável do DynamoSandbox](../../.gitbook/assets/ex-dynamosandbox.jpg)
 
 > 1. O executável do DynamoSandbox que acabamos de criar. Execute isso para iniciar o Dynamo.
 
 Agora estamos quase totalmente preparados para começar a desenvolver o Dynamo.
 
-Para obter instruções sobre como compilar o Dynamo para outras plataformas (por exemplo, Linux ou OS X), visite esta [página wiki](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-on-Linux,-Mac).
+Para obter instruções sobre como compilar o Dynamo para outras plataformas (por exemplo, Linux ou OS X), consulte esta [página wiki](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-on-Linux,-Mac).
 
 ### Depurar uma compilação local usando o Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
@@ -120,28 +123,28 @@ Para o aplicativo independente do Dynamo, DynamoSandbox, abordaremos duas opçõ
 
 Iniciar o Dynamo no Visual Studio recompila a solução para cada sessão de depuração, se necessário; portanto, se fizermos alterações na origem, elas serão incorporadas ao depurar. Com a solução `Dynamo.All.sln` ainda aberta, selecione `Debug`, `AnyCPU` e `DynamoSandbox` nos menus suspensos e clique em `Start`. Isso compilará o Dynamo, iniciará um novo processo (DynamoSandbox.exe) e anexará o depurador do Visual Studio a ele.
 
-![Compilar e iniciar o aplicativo no Visual Studio](images/vs-debug-options.jpg)
+![Compilar e iniciar o aplicativo no Visual Studio](../../.gitbook/assets/vs-debug-options.jpg)
 
 > Compilar e iniciar o aplicativo diretamente no Visual Studio
 >
-> 1. Defina a configuração como `Debug`
-> 2. Defina a plataforma como `Any CPU`
-> 3. Defina o projeto de inicialização como `DynamoSandbox`
-> 4. Clique em `Start` para iniciar o processo de depuração
+> 1. Definir a configuração como `Debug`
+> 2. Definir a plataforma como `Any CPU`
+> 3. Definir o projeto de inicialização como `DynamoSandbox`
+> 4. Clicar em `Start` para iniciar o processo de depuração
 
 Como alternativa, podemos desejar depurar um processo do Dynamo que já está em execução para solucionar um problema com um gráfico ou pacote específico aberto. Para essa finalidade, abriríamos os arquivos de origem do projeto no Visual Studio e anexaríamos a um processo do Dynamo em execução usando o item de menu de depuração `Attach to Process`.
 
-![Caixa de diálogo Anexar ao processo](images/vs-attach-dynamosandbox.jpg)
+![Caixa de diálogo Anexar ao processo](../../.gitbook/assets/vs-attach-dynamosandbox.jpg)
 
 > Anexar um processo em execução ao Visual Studio
 >
-> 1. Selecione `Debug > Attach to Process...`
-> 2. Escolha `DynamoSandbox.exe`
-> 3. Selecione `Attach`
+> 1. Selecionar `Debug > Attach to Process...`
+> 2. Escolher `DynamoSandbox.exe`
+> 3. Selecionar `Attach`
 
 Em ambas as situações, estamos anexando o depurador a um processo que desejamos depurar. Podemos definir pontos de quebra no código antes ou após iniciar o depurador que fará com que o processo pause imediatamente antes de executar essa linha de código. Se uma exceção não capturada for gerada durante a depuração, o Visual Studio pulará para onde ela ocorreu no código-fonte. Esse é um método eficiente para localizar falhas simples e exceções não tratadas e também para entender o fluxo de execução de um aplicativo.
 
-![Definir um ponto de quebra](images/vs-debug-dynamocore.jpg)
+![Definir um ponto de quebra](../../.gitbook/assets/vs-debug-dynamocore.jpg)
 
 > Durante a depuração do DynamoSandbox, definimos um ponto de quebra no construtor do nó Color.ByARGB que faz com que o processo do Dynamo pause quando o nó é instanciado. Se esse nó estava gerando uma exceção ou causando um erro fatal no Dynamo, poderíamos passar por cada linha no construtor para descobrir onde o problema estava ocorrendo.
 >
@@ -164,7 +167,7 @@ Use o seguinte comando para extrair as alterações mais recentes:
 
 `git pull origin master`
 
-![Repositório local atualizado](images/cli-pull-changes.jpg)
+![Repositório local atualizado](../../.gitbook/assets/cli-pull-changes.jpg)
 
 > 1. Aqui podemos ver que o repositório local foi atualizado com as alterações do remoto.
 

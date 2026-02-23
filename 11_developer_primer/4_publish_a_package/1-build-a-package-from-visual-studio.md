@@ -1,4 +1,4 @@
-# Compilar um pacote no Visual Studio
+# Compilar um pacote do Visual Studio
 
 Se você estiver desenvolvendo montagens a serem publicadas como um pacote do Dynamo, o projeto poderá ser configurado para agrupar todos os recursos necessários e colocá-los em uma estrutura de diretório compatível com o pacote. Isso permitirá que o projeto seja rapidamente testado como um pacote e simulará a experiência do usuário.
 
@@ -24,7 +24,7 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![Mover os arquivos de projeto](images/fe-proj-directory.jpg)
+![Mover os arquivos de projeto](../../.gitbook/assets/fe-proj-directory.jpg)
 
 > 1. Mover os arquivos de projeto para a nova pasta `src`
 
@@ -47,7 +47,7 @@ Agora que os arquivos de origem estão em uma pasta separada, adicione um destin
   </Target>
 ```
 
-![Colocar o destino AfterBuild](images/atom-afterbuild.jpg)
+![Colocar o destino AfterBuild](../../.gitbook/assets/atom-afterbuild.jpg)
 
 > Precisamos ter certeza de que o destino foi adicionado ao arquivo `CustomNodeModel.csproj` (não a outro arquivo de projeto) e que o projeto não tem nenhuma configuração Pós-compilação existente.
 >
@@ -75,7 +75,7 @@ Os pacotes do Dynamo normalmente têm uma pasta `dyf` e `extra` para os nós per
 
 Se você compilar o projeto, a pasta do projeto agora deverá ter uma pasta `packages` junto com a pasta `src` criada anteriormente. Dentro do diretório `packages`, há uma pasta que contém tudo o que é necessário para o pacote. Também precisamos copiar o arquivo `pkg.json` para a pasta do pacote para que o Dynamo saiba como carregar o pacote.
 
-![Copiar arquivos](images/fe-proj-directory-package.jpg)
+![Copiar arquivos](../../.gitbook/assets/fe-proj-directory-package.jpg)
 
 > 1. A nova pasta de pacotes que o destino AfterBuild criou
 > 2. A pasta src existente com o projeto

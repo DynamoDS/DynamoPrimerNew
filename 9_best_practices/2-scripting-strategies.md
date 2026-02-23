@@ -2,7 +2,7 @@
 
 Os scripts baseados em texto no ambiente de scripts visuais permitem relacionamentos visuais avançados usando o DesignScript, o Python e o ZeroTouch (C#). O usuário pode expor elementos como os controles deslizantes de entrada, condensar grandes operações no DesignScript e acessar ferramentas e bibliotecas avançadas por meio do Python ou do C#, tudo isso no mesmo espaço de trabalho. Se gerenciada de forma eficaz, a combinação dessas estratégias pode fornecer uma grande quantidade de personalização, clareza e eficiência a todo o programa. A seguir, há um conjunto de diretrizes para ajudar a ampliar o script visual com script de texto.
 
-![](images/2/cad-chart-textual.jpg)
+![](../.gitbook/assets/cad-chart-textual.jpg)
 
 ### Como saber quando criar scripts
 
@@ -21,11 +21,9 @@ Os scripts de texto podem estabelecer relacionamentos de maior complexidade do q
 |                    | **Loops** | **Recursão** | **Condensar nós** | **Ext. Bibliotecas** | **Abreviação** |
 | **DesignScript**   | Sim         | Sim           | Sim                | Não                 | Sim           |
 | **Python**         | Sim         | Sim           | Parcialmente          | Sim                | Não            |
-| **ZeroTouch (C#))** | Não          | No            | Não                 | Sim                | Não            |
+| **ZeroTouch (C#))** | Não          | Não            | Não                 | Sim                | Não            |
 
-{% hint style="info" %}
-Consulte [Referência de scripts](3-scripting-reference.md) para obter uma lista dos itens aos quais cada biblioteca do Dynamo fornece acesso.
-{% endhint %}
+{% hint style="info" %} Consulte [Referência de scripts](3-scripting-reference.md) para obter uma lista dos itens aos quais cada biblioteca do Dynamo fornece acesso. {% endhint %}
 
 ### Pensar de forma paramétrica
 
@@ -39,7 +37,7 @@ Ao criar scripts no Dynamo, um ambiente inevitavelmente paramétrico, é aconsel
   * A saída pretendida
   * Constantes
 
-![](images/2/thinkparametrically01.jpg)
+\![](<../.gitbook/assets/think parametrically 01.jpg>)
 
 > Diversas variáveis foram estabelecidas antes de escrever o código.
 >
@@ -57,9 +55,9 @@ Ao criar scripts no Dynamo, um ambiente inevitavelmente paramétrico, é aconsel
 * Minimize o número de entradas expondo somente os parâmetros chave:
   * Se for possível derivar um conjunto de parâmetros de mais parâmetros principais, somente exponha os parâmetros principais como entradas de script. Isso aumenta a usabilidade reduzindo a complexidade da interface do script.
 
-![](images/2/thinkparametrically02.jpg)
+\![](<../.gitbook/assets/think parametrically 02.jpg>)
 
-> Os “módulos” do código com base no exemplo no [Nó do Python](../8\_coding\_in\_dynamo/8-3\_python/1-python.md).
+> Os “módulos” do código com base no exemplo no [Nó do Python](../8_coding_in_dynamo/8-3_python/1-python.md).
 >
 > 1. Entradas.
 > 2. Variáveis internas do script.
@@ -104,7 +102,7 @@ Conforme seu código fica cada vez mais complexo, a “ideia geral”, ou o algo
 * Isso pode ser qualquer item que deva ser visualmente separada do código adjacente (uma função, uma classe, um grupo de entradas ou as bibliotecas que você esteja importando).
 * O desenvolvimento de código em módulos aproveita a característica visual e intuitiva dos nós, bem como as relações complexas que somente os scripts de texto podem obter.
 
-![](images/2/thinkparametrically02.jpg)
+\![](<../.gitbook/assets/think parametrically 02.jpg>)
 
 > Esses loops chamam uma classe nomeada “agente” que desenvolveremos no exercício.
 >
@@ -119,7 +117,7 @@ Conforme seu código fica cada vez mais complexo, a “ideia geral”, ou o algo
 
 Este exemplo cria esferas com raios e cores com base no valor Z dos pontos centrais.
 
-![](images/2/spotcoderesuse.jpg)
+\![](<../.gitbook/assets/spot code resuse.jpg>)
 
 > 1. Duas funções principais de “trabalho”: uma que cria esferas com raios e exibe cores com base no valor Z do ponto central.
 > 2. Uma função principal de “gerenciador” que combina as duas funções de trabalho. Chamar essa função chamará as duas funções no interior dela.
@@ -184,7 +182,7 @@ Ao desenvolver scripts de texto no Dynamo, é recomendável garantir constanteme
   * Teste rapidamente para garantir que ele esteja retornando dados que “façam sentido”.
 * Atribua os dados mais recentes com os quais você está trabalhando em seu script como a saída, de forma que o nó sempre produza dados relevantes quando o script for atualizado:
 
-![](images/2/flexcontinuously.jpg)
+\![](<../.gitbook/assets/flex continuously.jpg>)
 
 > 1. Verifique se todas as arestas do sólido estão sendo retornadas como curvas para criar uma caixa delimitadora em torno dele.
 > 2. Verifique se nossas entradas de contagem estão sendo convertidas com êxito em intervalos.
@@ -234,9 +232,9 @@ for i in range(xCount):
 * Quando um programa precisa ser modificado, é muito mais fácil alterar o código que foi desenvolvido nos módulos:
   * É possível inserir módulos novos ou depurados em um programa existente com a segurança de que o restante do programa não será alterado.
 
-![](images/2/leveragecode'smodularity.jpg)
+\![](<../.gitbook/assets/leverage code's modularity.jpg>)
 
-> Depurar o arquivo de exemplo do [Nó do Python](../8\_coding\_in\_dynamo/8-3\_python/1-python.md).
+> Depurar o arquivo de exemplo do [Nó do Python](../8_coding_in_dynamo/8-3_python/1-python.md).
 >
 > 1. A geometria de entrada está retornando uma caixa delimitadora maior que ela mesma, como podemos ver ao atribuir xDist e yDist a OUT.
 > 2. As curvas de aresta da geometria de entrada retornam uma caixa delimitadora apropriada com as distâncias corretas para xDist e yDist.
@@ -252,19 +250,19 @@ Considerando as nossas melhores práticas para os scripts de texto, vamos escrev
 
 Nosso script aplicado a uma superfície deformada por atrativos.
 
-![](images/2/scriptingstrategies-exercise-01.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 01.jpg>)
 
 A primeira coisa que precisamos fazer é importar as bibliotecas do Dynamo necessárias. Fazer isso fornecerá acesso global à funcionalidade do Dynamo no Python.
 
 Todas as bibliotecas que pretendemos usar precisam ser importadas aqui.
 
-![](images/2/scriptingstrategies-exercise-02.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 02.jpg>)
 
 Em seguida, precisamos definir as entradas e a saída do script, que serão exibidas como portas de entrada no nó. Essas entradas externas são a base do nosso script e a chave para estabelecer um ambiente paramétrico.
 
 Precisamos definir entradas que correspondam a variáveis no script do Python e determinar a saída desejada:
 
-![](images/2/scriptingstrategies-exercise-03.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 03.jpg>)
 
 > 1. A superfície que queremos percorrer.
 > 2. O número de agentes pelos quais queremos percorrer.
@@ -277,7 +275,7 @@ Agora, vamos empregar a prática da modularidade e criar o corpo do nosso script
 
 Precisaremos definir uma classe ou blueprint para um agente com a intenção de percorrer uma superfície, escolhendo o deslocamento na direção mais inclinada possível sempre que ele assumir uma etapa:
 
-![](images/2/scriptingstrategies-exercise-04.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 04.jpg>)
 
 > 1. Nome.
 > 2. Atributos globais compartilhados por todos os agentes.
@@ -289,7 +287,7 @@ Vamos inicializar os agentes definindo sua localização inicial. Esta é uma bo
 
 Precisaremos instanciar todos os agentes que desejamos observar pela superfície e definir seus atributos iniciais:
 
-![](images/2/scriptingstrategies-exercise-05.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 05.jpg>)
 
 > 1. Uma nova lista de rastros vazia.
 > 2. Onde eles iniciarão sua jornada na superfície.
@@ -297,15 +295,15 @@ Precisaremos instanciar todos os agentes que desejamos observar pela superfície
 
 Atualize cada agente em cada etapa. Em seguida, precisaremos inserir um ciclo aninhado onde, para cada agente e para cada etapa, atualizamos e registramos sua posição na lista de rastros. Em cada etapa, também garantiremos que o agente não tenha alcançado um ponto na superfície em que ele não possa avançar mais uma etapa, o que lhe permitirá descer. Se essa condição for atendida, encerraremos o percurso do agente.
 
-![](images/2/scriptingstrategies-exercise-06.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 06.jpg>)
 
 Agora que nossos agentes foram totalmente atualizados, vamos retornar a geometria que os representa. Depois que todos os agentes tiverem atingido seu limite de descida ou o número máximo de etapas, criaremos uma policurva pelos pontos da lista de rastros e geraremos os rastros da policurva.
 
-![](images/2/scriptingstrategies-exercise-07.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 07.jpg>)
 
 Nosso script para encontrar os caminhos mais inclinados.
 
-![](images/2/scriptingstrategies-exercise-08.jpg)
+\![](<../.gitbook/assets/scripting strategies - exercise - 08.jpg>)
 
 > 1. Uma predefinição que simula as águas pluviais na superfície subjacente.
 > 2. Em vez de encontrar o caminho mais inclinado, é possível alternar os agentes para percorrer a superfície subjacente.

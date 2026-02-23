@@ -4,7 +4,7 @@
 
 O objetivo deste guia é ajudar você a navegar pela gama de possibilidades de desenvolvimento em C# para o Dynamo, desde como criar nós sem toque até extensões de compilação.
 
-![Origem do Dynamo no Github](../1-introduction/images/dynamogithub.jpg)
+![Origem do Dynamo no Github](../../.gitbook/assets/dynamogithub.jpg)
 
 > Origem do Dynamo no GitHub
 
@@ -40,7 +40,7 @@ O objetivo deste guia é ajudar você a navegar pela gama de possibilidades de d
 
 **Guia da Linguagem DesignScript**: um guia em PDF para escrever em DesignScript
 
-[PDF](https://dynamobim.org/wp-content/uploads/forum-assets/colin-mccroneautodesk-com/07/10/Dynamo\_language\_guide\_version\_1.pdf)
+[PDF](https://dynamobim.org/wp-content/uploads/forum-assets/colin-mccroneautodesk-com/07/10/Dynamo_language_guide_version_1.pdf)
 
 #### Como posso sugerir alterações a este guia? <a href="#how-can-i-suggest-changes-to-this-guide" id="how-can-i-suggest-changes-to-this-guide"></a>
 

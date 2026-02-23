@@ -6,7 +6,7 @@ As extensões são uma poderosa ferramenta de desenvolvimento no ecossistema do 
 
 Seguindo o exemplo SampleViewExtension do repositório Github do DynamoSamples, vamos percorrer as etapas necessárias para criar uma janela simples sem janela restrita que exibe os nós ativos no gráfico em tempo real. Uma extensão de vista requer que criemos uma interface do usuário para a janela e vinculemos valores a um modelo de vista.
 
-![Janela de extensão da vista](images/dyn-viewextension.jpg)
+![Janela de extensão da vista](../../.gitbook/assets/dyn-viewextension.jpg)
 
 > 1. A janela de extensão da vista foi desenvolvida seguindo o exemplo SampleViewExtension no repositório Github.
 
@@ -28,9 +28,9 @@ Uma extensão de vista tem três partes essenciais:
 
 Comece criando um novo projeto `Class Library` chamado `SampleViewExtension`.
 
-![Criar uma nova biblioteca de classes](images/vs-new-project-viewextension-1.jpg)
+![Criar uma nova biblioteca de classes](../../.gitbook/assets/vs-new-project-viewextension-1.jpg)
 
-![Configurar um novo projeto](images/vs-new-project-viewextension-2.jpg)
+![Configurar um novo projeto](../../.gitbook/assets/vs-new-project-viewextension-2.jpg)
 
 > 1. Criar um novo projeto selecionando `File > New > Project`
 > 2. Selecionar `Class Library`
@@ -39,14 +39,14 @@ Comece criando um novo projeto `Class Library` chamado `SampleViewExtension`.
 
 Neste projeto, precisaremos de duas classes. Uma classe implementará `IViewExtension` e a outra que implementará `NotificationObject.` `IViewExtension` conterá todas as informações sobre como nossa extensão será implantada, carregada, referenciada e eliminada. `NotificationObject` fornecerá notificações de alterações no Dynamo e `IDisposable` quando ocorrer uma alteração, a contagem será atualizada de acordo.
 
-![Visualizar os arquivos de classe de extensão](images/vs-viewextension-classes.jpg)
+![Visualizar os arquivos de classe de extensão](../../.gitbook/assets/vs-viewextension-classes.jpg)
 
 > 1. Um arquivo de classe denominado `SampleViewExtension.cs` que implementará `IViewExtension`
 > 2. Um arquivo de classe denominado `SampleWindowViewMode.cs` que implementará `NotificationObject`
 
 Para usar o `IViewExtension`, precisaremos do pacote WpfUILibrary NuGet. A instalação desse pacote instalará automaticamente os pacotes Core, Services e ZeroTouchLibrary.
 
-![Visualizar os pacotes de extensão](images/vs-viewextension-packages.jpg)
+![Visualizar os pacotes de extensão](../../.gitbook/assets/vs-viewextension-packages.jpg)
 
 > 1. Selecionar a biblioteca WpfUIL
 > 2. Selecionar `Install` para instalar todos os pacotes dependentes
@@ -133,7 +133,7 @@ A classe `SampleViewExtension` cria um item de menu clicável para abrir a janel
 * `public class SampleViewExtension : IViewExtension` `SampleViewExtension` herda da interface do `IViewExtension` e fornece tudo o que precisamos para criar o item de menu.
 * `sampleMenuItem = new MenuItem { Header = "Show View Extension Sample Window" };` cria um MenuItem e o adiciona ao menu `View`.
 
-![O item de menu](images/dyn-menuitem.jpg)
+![O item de menu](../../.gitbook/assets/dyn-menuitem.jpg)
 
 > 1. O item de menu
 
@@ -208,7 +208,7 @@ Essa implementação da classe de modelo de vista ouve o `CurrentWorkspaceModel`
 
 Com a lógica principal da extensão definida, agora vamos especificar os detalhes de aparência da janela com um arquivo `.xaml`. Tudo que precisamos é uma janela simples que exiba a sequência de caracteres usando a associação de propriedade `ActiveNodeTypes` no`TextBlock` `Text`.
 
-![Adicionar uma janela](images/vs-window.jpg)
+![Adicionar uma janela](../../.gitbook/assets/vs-window.jpg)
 
 > 1. Clicar com o botão direito do mouse no projeto e selecionar `Add > New Item...`
 > 2. Selecionar o modelo Controle de usuário que vamos alterar para criar uma janela
@@ -259,7 +259,7 @@ namespace SampleViewExtension
 
 A extensão da vista agora está pronta para ser criada e adicionada ao Dynamo. O Dynamo requer um arquivo `xml` para registrar nossa saída `.dll` como uma extensão.
 
-![Adicionar um novo XML](images/vs-viewextension-xml.jpg)
+![Adicionar um novo XML](../../.gitbook/assets/vs-viewextension-xml.jpg)
 
 > 1. Clicar com o botão direito do mouse no projeto e selecionar `Add > New Item...`
 > 2. Selecionar o arquivo XML
@@ -281,7 +281,7 @@ No arquivo `xml`, adicione o seguinte código para informar ao Dynamo onde procu
 
 A última etapa é copiar o arquivo `SampleViewExtension_ViewExtensionDefinition.xml` para a pasta de extensões de vista do Dynamo localizada no diretório de instalação `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions` do Dynamo Core. É importante observar que há pastas separadas para `extensions` e `viewExtensions`. Colocar o arquivo `xml` na pasta incorreta pode causar falha ao carregar corretamente no tempo de execução.
 
-![Arquivo XML copiado para a pasta Extensões](images/fe-viewextension-xml.jpg)
+![Arquivo XML copiado para a pasta Extensões](../../.gitbook/assets/fe-viewextension-xml.jpg)
 
 > 1. O arquivo `.xml` que copiamos para a pasta de extensões de vista do Dynamo
 

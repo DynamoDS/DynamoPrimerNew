@@ -1,13 +1,16 @@
-# Definir a organização de pacotes personalizados (Dynamo 2.0 e superior)
+# Definir a organização de pacotes personalizados no Dynamo 2.0 e superior
 
 A obtenção de um layout desejado para o pacote depende dos tipos de nós que você incluirá no pacote. Os nós derivados do modelo de nó, os nós ZeroTouch e os nós personalizados têm um processo ligeiramente diferente para definir a categorização. É possível misturar e combinar esses tipos de nó dentro do mesmo pacote, mas isso exigirá uma combinação das estratégias descritas abaixo.
 
 ## NodeModel
+
 Por padrão, as bibliotecas NodeModel são organizadas com base na estrutura de classes.
-```C#
+
+```c#
 namespace SampleLibraryUI.Examples
 ```
-```C#
+
+```c#
 // Class Attribute
 [NodeName("MyNodeModel")]
 public class MyNewNodeModel : NodeModel
@@ -21,13 +24,16 @@ public ButtonCustomNodeModel()
 }
 
 ```
+
 O nó ficará localizado em Complementos em:
+
 ```
 SampleLibraryUI/Examples/MyNodeModel
 ```
 
 Também é possível substituir a categoria usando o atributo NodeCategory na classe ou no construtor, como mostrado abaixo.
-```C#
+
+```c#
 // Class Attribute
 [NodeCategory("NewSampleLibraryUI.Examples")]
 
@@ -41,6 +47,7 @@ public ButtonCustomNodeModel()
 ```
 
 O nó agora ficará localizado em Complementos em:
+
 ```
 NewSampleLibraryUI/Examples/MyNodeModel
 ```
@@ -49,11 +56,11 @@ NewSampleLibraryUI/Examples/MyNodeModel
 
 As bibliotecas ZeroTouch também são organizadas com base na estrutura de classes por padrão.
 
-```C#
+```c#
 namespace MyZTLibrary
 ```
 
-```C#
+```c#
 public class Utilities
 {
     public double doubleValue(double num)
@@ -70,10 +77,11 @@ MyZTLibrary/Utilities/doubleValue
 ```
 
 Também é possível substituir a localização da estrutura da classe usando um arquivo XML de personalização do Dynamo.
-- O arquivo XML deve ser nomeado adequadamente e ser incluído na pasta `extra` do pacote
-    - `PackageName_DynamoCustomization.xml`
 
-```XML
+* O arquivo XML deve ser nomeado adequadamente e ser incluído na pasta `extra` do pacote
+  * `PackageName_DynamoCustomization.xml`
+
+```xml
 <?xml version="1.0"?>
 <doc>
     <assembly>
@@ -99,16 +107,16 @@ Também é possível substituir a localização da estrutura da classe usando um
 
 ## CustomNodes
 
-Os nós personalizados são organizados com base no `Category Name` especificado durante a criação dos nós (usando a caixa de diálogo Novo nó personalizado).  
+Os nós personalizados são organizados com base no `Category Name` especificado durante a criação dos nós (usando a caixa de diálogo Novo nó personalizado).
 
-**AVISO** <br>
-O uso da notação de ponto em nomes de nós ou categorias resultará em subcategorias aninhadas adicionais. O `.` funcionará como um delimitador para determinar a hierarquia adicional. Esse é um novo comportamento na biblioteca para o Dynamo 2.0.
+**AVISO**\
+ O uso da notação de ponto em nomes de nós ou categorias resultará em subcategorias aninhadas adicionais. O `.` funcionará como um delimitador para determinar a hierarquia adicional. Esse é um novo comportamento na biblioteca para o Dynamo 2.0.
 
-![Propriedades do nó personalizado](images/custom-node-properties.jpg)
+![Propriedades do nó personalizado](../../.gitbook/assets/custom-node-properties.jpg)
 
 O nome da categoria pode ser atualizado posteriormente no arquivo .dyf (XML ou JSON)
 
-```JSON
+```json
 {
   "Uuid": "85066088-1616-40b1-96e1-c33e685c6948",
   "IsCustomNode": true,
@@ -120,7 +128,7 @@ O nome da categoria pode ser atualizado posteriormente no arquivo .dyf (XML ou J
   },...
 ```
 
-```XML
+```xml
 <Workspace Version="1.3.0.0000" X="100" Y="100" zoom="1.0000000" Description="This is an example custom nodes." Category="MyCustomNodes.Utilities.Actions" Name="doubleValue" ID="85066088-1616-40b1-96e1-c33e685c6948">
 ```
 
@@ -131,7 +139,8 @@ Quando o autor de um pacote decide renomear um nó existente anterior em uma nov
 Os nós **ZeroTouch** usam um arquivo `Namespace.Migrations.XML` localizado na pasta `bin` dos pacotes, como:
 
 `MyZeroTouchLib.MyNodes.SayHello` para `MyZeroTouchLib.MyNodes.SayHelloRENAMED`
-```XML
+
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -144,7 +153,8 @@ Os nós **ZeroTouch** usam um arquivo `Namespace.Migrations.XML` localizado na p
 Os **nós derivados do NodeModel** usam o atributo `AlsoKnownAs` na classe, como:
 
 `SampleLibraryUI.Examples.DropDownExample` para `SampleLibraryUI.Examples.DropDownExampleRENAMED`
-```C#
+
+```c#
 namespace SampleLibraryUI.Examples
 {
     [NodeName("Drop Down Example")]

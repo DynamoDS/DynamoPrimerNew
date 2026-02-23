@@ -2,7 +2,7 @@
 
 Os nós baseados no NodeModel fornecem significativamente mais flexibilidade e potência do que os nós Sem toque. Neste exemplo, levaremos o nó de grade Sem toque para o próximo nível ao adicionar um controle deslizante integrado que randomiza o tamanho do retângulo.
 
-![Gráfico de grade retangular](images/cover-image-2.jpg)
+![Gráfico de grade retangular](../../.gitbook/assets/cover-image-2.jpg)
 
 > O controle deslizante dimensiona as células em relação a seu tamanho, de modo que o usuário não precise fornecer um controle deslizante com o intervalo correto.
 
@@ -33,7 +33,7 @@ Um nó NodeModel pode chamar somente funções, portanto, precisamos separar o N
 
 Crie dois projetos de biblioteca de classes C# na solução: um para as funções e outro para implementar a interface NodeModel.
 
-![Adicionar uma nova biblioteca de classes](images/vs-new-class-projects.jpg)
+![Adicionar uma nova biblioteca de classes](../../.gitbook/assets/vs-new-class-projects.jpg)
 
 > 1. Clicar com o botão direito do mouse na Solução e selecionar `Add > New Project`
 > 2. Escolher a biblioteca de classes
@@ -43,7 +43,7 @@ Crie dois projetos de biblioteca de classes C# na solução: um para as funçõe
 
 Em seguida, precisamos renomear as bibliotecas de classes que foram criadas automaticamente e adicionar uma ao projeto `CustomNodeModel`. A classe `GridNodeModel` implementa a classe NodeModel abstrata, `GridNodeView` é usada para personalizar a vista e `GridFunction` contém as funções que precisamos chamar.
 
-![Gerenciador de soluções](images/vs-new-class.jpg)
+![Gerenciador de soluções](../../.gitbook/assets/vs-new-class.jpg)
 
 > 1. Adicionar outra classe clicando com o botão direito do mouse no projeto `CustomNodeModel`, selecionando `Add > New Item...` e escolhendo `Class`.
 > 2. No projeto `CustomNodeModel`, precisamos das classes `GridNodeModel.cs` e `GridNodeView.cs`
@@ -51,14 +51,14 @@ Em seguida, precisamos renomear as bibliotecas de classes que foram criadas auto
 
 Antes de adicionarmos qualquer código às classes, adicione os pacotes necessários para este projeto. `CustomNodeModel` precisará de ZeroTouchLibrary e WpfUILibrary e `CustomNodeModelFunction` só precisará de ZeroTouchLibrary. A biblioteca WpfUIL será usada na personalização da interface do usuário que faremos mais tarde, e a biblioteca ZeroTouchLibrary será usada para criar a geometria. É possível adicionar os pacotes individualmente para os projetos. Como esses pacotes têm dependências, o Core e o DynamoServices serão instalados automaticamente.
 
-![Instalar os pacotes](images/vs-add-packages.jpg)
+![Instalar os pacotes](../../.gitbook/assets/vs-add-packages.jpg)
 
 > 1. Clicar com o botão direito do mouse em um projeto e selecionar `Manage NuGet Packages`
 > 2. Instalar somente os pacotes necessários para aquele projeto
 
 O Visual Studio copiará os pacotes NuGet aos quais fizemos referência para o diretório de compilação. Isso pode ser definido como false, para que não tenhamos arquivos desnecessários no pacote.
 
-![Desativar a cópia do pacote local](images/vs-disable-package-copying.jpg)
+![Desativar a cópia do pacote local](../../.gitbook/assets/vs-disable-package-copying.jpg)
 
 > 1. Selecionar pacotes do Dynamo NuGet
 > 2. Definir `Copy Local` como false
@@ -199,7 +199,7 @@ Essa classe de função é muito similar ao estudo de caso de Grade sem Toque, c
 
 Assim como adicionamos referências para pacotes NuGet, `CustomNodeModel` precisará fazer referência a `CustomNodeModelFunction` para chamar a função.
 
-![Adicionar uma referência](images/vs-add-project-reference.jpg)
+![Adicionar uma referência](../../.gitbook/assets/vs-add-project-reference.jpg)
 
 > A declaração de uso para CustomNodeModel estará inativa até que a função seja referenciada
 >
@@ -240,7 +240,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 Após a estrutura do projeto ter sido configurada, use o ambiente de projeto do Visual Studio para compilar um controle de usuário e definir seus parâmetros em um arquivo `.xaml`. Na caixa de ferramentas, adicione um controle deslizante a `<Grid>...</Grid>`.
 
-![Adicionar um novo controle deslizante](images/vs-usercontrol.jpg)
+![Adicionar um novo controle deslizante](../../.gitbook/assets/vs-usercontrol.jpg)
 
 > 1. Clicar com o botão direito do mouse em `CustomNodeModel` e selecionar `Add > New Item`
 > 2. Selecionar `WPF`
@@ -295,7 +295,7 @@ O `GridNodeModel.cs` define a lógica de cálculo do controle deslizante.
 
 Antes de compilarmos o projeto, a etapa final é adicionar um arquivo `pkg.json` para que o Dynamo possa ler o pacote.
 
-![Adicionar um arquivo JSON](images/vs-pkg-json.jpg)
+![Adicionar um arquivo JSON](../../.gitbook/assets/vs-pkg-json.jpg)
 
 > 1. Clicar com o botão direito do mouse em `CustomNodeModel` e selecionar `Add > New Item`
 > 2. Selecionar `Web`
@@ -334,3 +334,21 @@ Antes de compilarmos o projeto, a etapa final é adicionar um arquivo `pkg.json`
 *   `"node_libraries": []` as bibliotecas associadas ao pacote
 
     A última etapa é compilar a solução e publicar como um pacote do Dynamo. Consulte o capítulo Implantação do pacote para saber como criar um pacote local antes de publicar on-line e como compilar um pacote diretamente do Visual Studio.
+
+#### Problemas comuns: <a href="#common-issues" id="common-issues"></a>
+
+1) Durante a abertura de um gráfico, alguns nós têm várias portas com o mesmo nome, mas o gráfico parecia correto ao salvar. Esse problema pode ter algumas causas.
+
+A causa raiz comum é porque o nó foi criado usando um construtor que recriou as portas. Em vez disso, o construtor que carregou as portas deveria ter sido usado. Esses construtores são geralmente marcados `[JsonConstructor]`_veja exemplos abaixo_
+
+\![Broken JSON](<../../.gitbook/assets/broken-json (1).jpg>)
+
+Isso pode ocorrer porque:
+
+* Não havia nenhum `[JsonConstructor]` correspondente ou ele não foi passado de `Inports` e `Outports` do .dyn JSON.
+* Havia duas versões do JSON.net carregadas no mesmo processo ao mesmo tempo, causando falha de tempo de execução .net, de modo que o atributo `[JsonConstructor]` não podia ser usado corretamente para marcar o construtor.
+* O DynamoServices.dll com uma versão diferente da versão atual do Dynamo foi fornecido com o pacote e está causando a falha do tempo de execução .net ao identificar o atributo `[MultiReturn]`; portanto, os nós Sem toque marcados com vários atributos não terão sido aplicados. Você pode descobrir que um nó retorna uma única saída de dicionário em vez de várias portas.
+
+2) Os nós estão completamente ausentes ao carregar o gráfico com alguns erros no console.
+
+* Isso pode ocorrer se a desserialização falhar por algum motivo. É uma boa prática serializar somente as propriedades que você precisa. Podemos usar `[JsonIgnore]` em propriedades complexas que não precisam ser carregadas ou salvas para serem ignoradas. Propriedades como `function pointer, delegate, action,` ou `event` etc. Elas não devem ser serializadas, pois normalmente falharão ao desserializar e causarão um erro de tempo de execução.

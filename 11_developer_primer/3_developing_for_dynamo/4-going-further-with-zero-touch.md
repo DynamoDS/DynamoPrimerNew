@@ -2,7 +2,7 @@
 
 Com um entendimento de como criar um projeto Sem toque, podemos nos aprofundar nos detalhes específicos da criação de um nó ao navegar pelo exemplo ZeroTouchEssentials no Dynamo Github.
 
-![Nós Sem toque](images/ootbzerotouch.png)
+![Nós Sem toque](../../.gitbook/assets/ootbzerotouch.png)
 
 > Muitos dos nós padrão do Dynamo são essencialmente nós Sem toque, como a maioria dos nós matemáticos, de cor e de data e hora acima.
 
@@ -10,7 +10,7 @@ Para iniciar, faça o download do projeto ZeroTouchEssentials aqui: [https://git
 
 No Visual Studio, abra o arquivo de solução `ZeroTouchEssentials.sln` e compile a solução.
 
-![ZeroTouchEssentials no Visual Studio](images/vs-build-zte.jpg)
+![ZeroTouchEssentials no Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
 
 > O arquivo `ZeroTouchEssentials.cs` contém todos os métodos que iremos importar para o Dynamo.
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Valor padrão](images/defaultval.jpg)
+![Valor padrão](../../.gitbook/assets/defaultval.jpg)
 
 > 1. O valor padrão será exibido quando você passar o cursor sobre a porta de entrada do nó
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Um nó que retorna várias saídas.
 
-![Várias saídas](images/multipleoutputs.png)
+![Várias saídas](../../.gitbook/assets/multipleoutputs.png)
 
 > 1. Observe que agora há duas portas de saída nomeadas de acordo com as sequências que inserimos para as chaves do dicionário.
 
@@ -90,7 +90,7 @@ Um nó que retorna várias saídas.
   * Por exemplo: `/// <summary>...</summary>`
 * Ative a documentação XML no Visual Studio selecionando `Project > [Project] Properties > Build > Output` e marcando `Documentation file`
 
-![Gerar um arquivo XML](images/vs-xml.jpg)
+![Gerar um arquivo XML](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. O Visual Studio gerará um arquivo XML na localização especificada
 
@@ -134,18 +134,18 @@ Observe que o código para esse nó de exemplo contém:
 > 2. Uma descrição de entrada
 > 3. Uma descrição de saída
 
-#### Práticas recomendadas para as descrições dos nós do Dynamo 
+#### Práticas recomendadas para as descrições dos nós do Dynamo
 
 As descrições dos nós descrevem brevemente a função e a saída de um nó. No Dynamo, elas aparecem em dois locais:
 
-- Na dica de ferramenta do nó
-- No navegador de documentação
+* Na dica de ferramenta do nó
+* No navegador de documentação
 
-![Descrição do nó](images/node-description.png)
+![Descrição do nó](../../.gitbook/assets/node-description.png)
 
 Siga estas diretrizes para garantir a consistência e ajudar a economizar tempo ao escrever ou atualizar as descrições dos nós.
 
-##### Visão geral
+**Visão geral**
 
 As descrições devem ter uma a duas frases. Se for necessário incluir mais informações, inclua-as no navegador de documentação na opção Em profundidade.
 
@@ -153,19 +153,19 @@ Maiúsculas e minúsculas da frase (coloque em maiúsculas a primeira palavra de
 
 A linguagem deve ser o mais clara e simples possível. Defina os acrônimos na primeira vez que forem mencionadas, a menos que sejam conhecidos até mesmo por usuários não especialistas.
 
-Sempre priorize a clareza, mesmo que isso signifique desviar-se dessas diretrizes.
+Sempre priorize a clareza, mesmo que isso signifique desviar-se destas diretrizes.
 
-##### Diretrizes
+**Diretrizes**
 
-| O que fazer      | O que não fazer |
-| ----------- | ----------- |
-| Inicie a descrição com um verbo em terceira pessoa. <ul><li>Exemplo: *Determina* se um objeto de geometria faz intersecção com outro</li></ul>      | Não comece com um verbo no infinitivo nem com substantivos. <ul><li>Exemplo: *Determinar* se um objeto de geometria faz intersecção com outro</li></ul>       |
-| Use “Retorna”, “Cria” ou outro verbo descritivo em vez de “Obtém”. <ul><li>Exemplo: *Retorna* uma representação Nurbs de uma superfície</li></ul>   | Não use “Obter” ou “Obtém”. É menos específico e tem várias possíveis traduções. <ul><li>Exemplo: *Obtém* uma representação Nurbs da superfície</li></ul>        |
-| Ao se referir a entradas, use “fornecido(a)” ou “entrada” em vez de “especificado(a)” ou outros termos. Omita “fornecido(a)” ou “entrada” quando possível para simplificar a descrição e reduzir a contagem de palavras. <ul><li>Exemplo: Exclui o arquivo *fornecido*</li><li>Exemplo: Projeta uma curva ao longo da direção de projeção *fornecida* na geometria base *fornecida*</li></ul>Você pode usar “especificado(a)” quando não se referir diretamente a uma entrada. <ul><li>Exemplo: Grava o conteúdo do texto em um arquivo *especificado* pelo caminho fornecido</li></ul>       | Ao se referir a entradas, para garantir a consistência, não use “especificado(a)” ou qualquer outro termo, exceto “fornecido(a)” ou “entrada”. Não misture “fornecido(a)” e “entrada” na mesma descrição, a menos que seja necessário para clareza. <ul><li>Exemplo: Exclui o arquivo *especificado*</li><li>Exemplo: Projeta uma curva de *entrada* ao longo de uma direção de projeção *fornecida* em uma geometria base *especificada*</li></ul>      |
-| Use “um” ou “uma” ao se referir pela primeira vez a uma entrada. Use “fornecido(a)” ou “a entrada” em vez de “um” ou “uma”, conforme necessário para maior clareza.<ul><li>Exemplo: Faz varreduras em *uma* curva ao longo da curva do caminho</li></ul>      | Não use “este(a)” ou “neste(a)”ao se referir a uma entrada pela primeira vez. <ul><li>Exemplo: Faz varredura *nesta* curva ao longo da curva do caminho      |
-| Ao se referir pela primeira vez a uma saída ou outro substantivo que seja o alvo da operação do nó, use “um” ou “uma”. Use apenas “o(a)” ao combinar com “entrada” ou “fornecido(a)”. <ul><li>Exemplo: Copia *um* arquivo</li><li>Exemplo: Copia *o arquivo fornecido*</li></ul>      | Ao se referir pela primeira vez a uma saída ou outro substantivo que é o alvo da operação do nó, não use “o(a)” sozinho. <ul><li>Exemplo: Copia *o* arquivo</li></ul>      |
-| Coloque a primeira palavra de uma frase em maiúsculas e os nomes próprios, como nomes e substantivos tradicionalmente em maiúsculas. <ul><li>Exemplo: Retorna a intersecção de duas *BoundingBoxes*</li></ul>      | Não coloque objetos e conceitos de geometria comuns em maiúsculas, a menos que seja necessário para maior clareza. <ul><li>Exemplo: Dimensiona de forma não uniforme em torno do *plano* fornecido      |
-| Use maiúsculas em Booleano. Use maiúsculas em True e False ao se referir à saída de Booleanos. <ul><li>Exemplo: Retornará *True* se os dois valores forem diferentes</li><li>Exemplo: Converte uma sequência de caracteres em todos os caracteres maiúsculos ou minúsculos com base em um parâmetro *Booleano*      | Não coloque Booleano em minúsculas. Não coloque True e False em minúsculas ao se referir à saída de Booleanos. <ul><li>Exemplo: Retornará *true* se os dois valores forem diferentes</li><li>Exemplo: Converte uma sequência de caracteres em todos os caracteres maiúsculos ou todos os caracteres minúsculos com base em um parâmetro *Booleano*</li></ul>
+| O que fazer                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | O que não fazer                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>Inicie a descrição com um verbo na terceira pessoa.</p><ul><li>Exemplo: <em>Determina</em> se um objeto de geometria faz intersecção com outro</li></ul>                                                                                                                                                                                                                                                                                                                                                                                         | <p>Não comece com um verbo na segunda pessoa nem com substantivos.</p><ul><li>Exemplo: <em>Determine</em> se um objeto de geometria faz intersecção com outro</li></ul>                                                                                                                                                                                                                                                      |
+| <p>Use “Retorna”, “Cria” ou outro verbo descritivo em vez de “Obtém”.</p><ul><li>Exemplo: <em>Retorna</em> uma representação Nurbs de uma superfície</li></ul>                                                                                                                                                                                                                                                                                                                                                                              | <p>Não use “Obter” ou “Obtém”. É menos específico e tem várias possíveis traduções.</p><ul><li>Exemplo: <em>Obtém</em> uma representação Nurbs da superfície</li></ul>                                                                                                                                                                                                                                       |
+| <p>Ao se referir a entradas, use “fornecido(a)” ou “entrada” em vez de “especificado(a)” ou outros termos. Omita “fornecido(a)” ou “entrada” quando possível para simplificar a descrição e reduzir a contagem de palavras.</p><ul><li>Exemplo: Exclui o arquivo <em>fornecido</em></li><li>Exemplo: Projeta uma curva ao longo da direção de projeção <em>fornecida</em> na geometria base <em>fornecida</em></li></ul><p>Você pode usar “especificado(a)” quando não se referir diretamente a uma entrada.</p><ul><li>Exemplo: Escreve o conteúdo do texto em um arquivo <em>especificado</em> pelo caminho fornecido</li></ul> | <p>Ao se referir a entradas, para garantir a consistência, não use “especificado(a)” ou qualquer outro termo, exceto “fornecido(a)” ou “entrada”. Não misture “fornecido(a)” e “entrada” na mesma descrição, a menos que seja necessário para clareza.</p><ul><li>Exemplo: Exclui o arquivo <em>especificado</em></li><li>Exemplo: Projeta uma curva de <em>entrada</em> ao longo de uma direção de projeção <em>fornecida</em> em uma geometria base <em>especificada</em></li></ul> |
+| <p>Use “um” ou “uma” ao se referir pela primeira vez a uma entrada. Use “fornecido(a)” ou “a entrada” em vez de “um” ou “uma”, conforme necessário para maior clareza.</p><ul><li>Exemplo: Faz varreduras em <em>uma</em> curva ao longo da curva do caminho</li></ul>                                                                                                                                                                                                                                                                                                                                | <p>Não use “este(a)” ou “neste(a)”ao se referir a uma entrada pela primeira vez.</p><ul><li>Exemplo: Faz varredura <em>nesta</em> curva ao longo da curva do caminho</li></ul>                                                                                                                                                                                                                                                                             |
+| <p>Ao se referir pela primeira vez a uma saída ou outro substantivo que seja o alvo da operação do nó, use “um” ou “uma”. Use apenas “o(a)” ao combinar com “entrada” ou “fornecido(a)”.</p><ul><li>Exemplo: copia <em>um</em> arquivo</li><li>Exemplo: Copia o arquivo <em>fornecido</em></li></ul>                                                                                                                                                                                                                                                                   | <p>Ao se referir pela primeira vez a uma saída ou outro substantivo que é o alvo da operação do nó, não use “o(a)” sozinho.</p><ul><li>Exemplo: Copia <em>o</em> arquivo</li></ul>                                                                                                                                                                                                                                  |
+| <p>Coloque a primeira palavra de uma frase em maiúsculas e os nomes próprios, como nomes e substantivos tradicionalmente em maiúsculas.</p><ul><li>Exemplo: Retorna a intersecção de duas <em>BoundingBoxes</em></li></ul>                                                                                                                                                                                                                                                                                                                                     | <p>Não coloque objetos e conceitos de geometria comuns em maiúsculas, a menos que seja necessário para maior clareza.</p><ul><li>Exemplo: Dimensiona de forma não uniforme em torno do <em>plano</em> fornecido</li></ul>                                                                                                                                                                                                                                          |
+| <p>Use maiúsculas em Booleano. Use maiúsculas em True e False ao se referir à saída de Booleanos.</p><ul><li>Exemplo: retornará <em>True</em> se os dois valores forem diferentes</li><li>Exemplo: Converte uma sequência de caracteres em todos os caracteres maiúsculos ou minúsculos com base em um parâmetro <em>Booleano</em></li></ul>                                                                                                                                                                                                                                        | <p>Não coloque Booleano em minúsculas. Não coloque True e False em minúsculas ao se referir à saída de Booleanos.</p><ul><li>Exemplo: retornará <em>true</em> se os dois valores forem diferentes</li><li>Exemplo: Converte uma sequência de caracteres em todos os caracteres maiúsculos ou todos os caracteres minúsculos com base em um parâmetro <em>Booleano</em></li></ul>                                                                                       |
 
 #### Avisos e erros dos nós do Dynamo
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 Após a importação do dll ZeroTouchEssentials, haverá um nó ZeroTouchEssentials na biblioteca. É possível criar esse objeto usando o nó `ByTwoDoubles`.
 
-![Nó ByTwoDoubles](images/dyn-constructor.jpg)
+![Nó ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
 
 ### Usar tipos de geometria do Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Um nó que obtém o comprimento de uma curva e o duplica.
 
-![Entrada de curva](images/doublelength.png)
+![Entrada de curva](../../.gitbook/assets/doublelength.png)
 
 > 1. Esse nó aceita um tipo de geometria de curva como uma entrada.
 
@@ -285,7 +285,7 @@ Ao publicar uma versão mais recente de uma biblioteca, os nomes de nós podem s
 * Dentro do elemento de migrações, crie os elementos `<priorNameHint>...</priorNameHint>` para cada alteração de nome
 * Para cada alteração de nome, forneça um elemento `<oldName>...</oldName>` e `<newName>...</newName>`
 
-![Arquivo de migração](images/vs-migrations-file.jpg)
+![Arquivo de migração](../../.gitbook/assets/vs-migrations-file.jpg)
 
 > 1. Clicar com o botão direito do mouse e selecionar `Add > New Item`
 > 2. Escolher `XML File`

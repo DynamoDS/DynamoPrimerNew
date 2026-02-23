@@ -2,15 +2,15 @@
 
 Antes de entrar no desenvolvimento, é importante compilar uma base sólida para um novo projeto. Há vários modelos de projeto na comunidade de desenvolvedores do Dynamo que são excelentes locais para começar, mas uma compreensão de como iniciar um projeto do zero é ainda mais valiosa. A compilação de um projeto desde o início proporcionará uma compreensão mais profunda do processo de desenvolvimento.
 
-![Visual Studio](images/visual-studio.jpg)
+![Visual Studio](../../.gitbook/assets/visual-studio.jpg)
 
 ### Criar um projeto do Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 O Visual Studio é um IDE poderoso, onde podemos criar um projeto, adicionar referências, compilar `.dlls` e depurar. Ao criar um novo projeto, o Visual Studio também criará uma Solução, uma estrutura para organizar projetos. Vários projetos podem existir em uma única solução e podem ser compilados juntos. Para criar um nó Sem toque, precisaremos iniciar um novo projeto do Visual Studio no qual gravaremos uma biblioteca de classe C# e compilaremos um `.dll`.
 
-![Criar um novo projeto no Visual Studio](images/vs-new-project-1.jpg)
+![Criar um novo projeto no Visual Studio](../../.gitbook/assets/vs-new-project-1.jpg)
 
-![Configurar um novo projeto no Visual Studio](images/vs-new-project-2.jpg)
+![Configurar um novo projeto no Visual Studio](../../.gitbook/assets/vs-new-project-2.jpg)
 
 > Janela Novo projeto no Visual Studio
 >
@@ -35,7 +35,7 @@ O Visual Studio criará e abrirá automaticamente um arquivo C#. Deve ser atribu
  }
 ```
 
-![Usar o Gerenciador de soluções](images/vs-edit-class.jpg)
+![Usar o Gerenciador de soluções](../../.gitbook/assets/vs-edit-class.jpg)
 
 > 1. Abrir o Gerenciador de soluções e as janelas Saída em `View`.
 > 2. Renomear o arquivo `Class1.cs` `SampleFunctions.cs` no Gerenciador de soluções à direita.
@@ -45,7 +45,7 @@ O Visual Studio criará e abrirá automaticamente um arquivo C#. Deve ser atribu
 
 A próxima etapa é compilar o projeto, mas antes de fazer isso, há algumas configurações que precisamos verificar. Primeiro, assegure-se de que `Any CPU` ou `x64` esteja selecionado como o destino da plataforma e que `Prefer 32-bit` esteja desmarcado nas Propriedades do projeto.
 
-![Configurações de compilação do Visual Studio](images/vs-build-settings.jpg)
+![Configurações de compilação do Visual Studio](../../.gitbook/assets/vs-build-settings.jpg)
 
 > 1. Abrir as propriedades do projeto selecionando `Project > "ProjectName" Properties`
 > 2. Selecionar a página `Build`
@@ -54,14 +54,14 @@ A próxima etapa é compilar o projeto, mas antes de fazer isso, há algumas con
 
 Agora podemos compilar o projeto para criar um `.dll`. Para isso, selecione `Build Solution` no menu `Build` ou use o atalho `CTRL+SHIFT+B`.
 
-![Compilar uma solução](images/vs-build.jpg)
+![Compilar uma solução](../../.gitbook/assets/vs-build.jpg)
 
 > 1. Selecionar `Build > Build Solution`
 > 2. É possível determinar se o projeto foi compilado com êxito verificando a janela Saída
 
 Se o projeto tiver sido compilado com êxito, haverá um `.dll` nomeado `MyCustomNode` na pasta do projeto `bin`. Para este exemplo, deixamos o caminho de arquivo do projeto como padrão do Visual Studio em `c:\users\username\documents\visual studio 2015\Projects`. Vamos dar uma olhada na estrutura de arquivos do projeto.
 
-![Estrutura de arquivos do projeto](images/folder-structure.jpg)
+![Estrutura de arquivos do projeto](../../.gitbook/assets/folder-structure.jpg)
 
 > 1. A pasta `bin` contém o `.dll` criado no Visual Studio.
 > 2. O arquivo de projeto do Visual Studio.
@@ -70,7 +70,7 @@ Se o projeto tiver sido compilado com êxito, haverá um `.dll` nomeado `MyCusto
 
 Agora, podemos abrir o Dynamo e importar o `.dll`. Com o recurso Adicionar, navegue até a localização do projeto `bin` e selecione o `.dll` que deseja abrir.
 
-![Abrir o arquivo dll do projeto](images/dyn-import-dll.jpg)
+![Abrir o arquivo dll do projeto](../../.gitbook/assets/dyn-import-dll.jpg)
 
 > 1. Selecionar o botão Adicionar para importar um `.dll`
 > 2. Navegar até a localização do projeto. Nosso projeto está localizado no caminho de arquivo padrão do Visual Studio: `C:\Users\username\Documents\Visual Studio 2015\Projects\MyCustomNode`
@@ -79,7 +79,7 @@ Agora, podemos abrir o Dynamo e importar o `.dll`. Com o recurso Adicionar, nave
 
 Se uma categoria for criada na biblioteca chamada `MyCustomNode`, significa que o .dll foi importado com êxito. No entanto, o Dynamo criou dois nós do que queríamos ser um nó único. Na próxima seção, explicaremos por que isso acontece e como o Dynamo lê um .dll.
 
-![Nós personalizados](images/dyn-customnode.jpg)
+![Nós personalizados](../../.gitbook/assets/dyn-customnode.jpg)
 
 > 1. MyCustomNode na biblioteca do Dynamo. A categoria da biblioteca é determinada pelo nome `.dll`.
 > 2. SampleFunctions.MultiplyByTwo na tela.
@@ -88,7 +88,7 @@ Se uma categoria for criada na biblioteca chamada `MyCustomNode`, significa que 
 
 Quando o Dynamo carrega um .dll, ele expõe todos os métodos estáticos públicos como nós.  Construtores, métodos e propriedades serão transformados em nós Criar, Ação e Consulta, respectivamente. No nosso exemplo de multiplicação, o método `MultiplyByTwo()` se torna num nó Ação no Dynamo. Isso ocorre porque o nó foi nomeado com base em seu método e classe.
 
-![Nó SampleFunction.MultiplyByTwo em um gráfico](images/multiplybytwo.png)
+![Nó SampleFunction.MultiplyByTwo em um gráfico](../../.gitbook/assets/multiplybytwo.png)
 
 > 1. A entrada é nomeada `inputNumber` com base no nome do parâmetro do método.
 > 2. A saída é nomeada `double` por padrão porque esse é o tipo de dados que está sendo retornado.
@@ -115,7 +115,7 @@ namespace MyCustomNode
 }
 ```
 
-![Método importado como um nó de criação](images/private-constructor.jpg)
+![Método importado como um nó de criação](../../.gitbook/assets/private-constructor.jpg)
 
 > 1. O Dynamo importou nosso método como um nó Criar
 
@@ -132,13 +132,13 @@ O nó de multiplicação é muito simples e não é necessário fazer referênci
 
 Para fazer referência a esses pacotes em um projeto do Visual Studio, faça o download do pacote NuGet nos links acima e faça referência manualmente aos .dlls ou use o Gerenciador de pacotes NuGet no Visual Studio. Primeiro, podemos analisar como instalá-los com o NuGet no Visual Studio.
 
-![Abrir o gerenciador de pacotes NuGet](images/vs-nuget-package-manager2.jpg)
+![Abrir o gerenciador de pacotes NuGet](../../.gitbook/assets/vs-nuget-package-manager2.jpg)
 
 > 1. Abra o Gerenciador de pacotes NuGet selecionando `Tools > NuGet Package Manager > Manage NuGet Packages for Solution...`
 
 Esse é o Gerenciador de pacotes NuGet. Essa janela mostra quais pacotes foram instalados para o projeto e permite que o usuário procure outros. Se uma nova versão do pacote DynamoServices for liberada, os pacotes poderão ser atualizados daqui ou revertidos para uma versão anterior.
 
-![Gerenciador de pacotes NuGet](images/vs-nuget-package-manager.jpg)
+![Gerenciador de pacotes NuGet](../../.gitbook/assets/vs-nuget-package-manager.jpg)
 
 > 1. Selecionar Procurar e pesquisar DynamoVisualProgramming para ativar os pacotes do Dynamo.
 > 2. Pacotes do Dynamo. Selecionar um mostrará a versão atual e a descrição do que está dentro.
@@ -146,7 +146,7 @@ Esse é o Gerenciador de pacotes NuGet. Essa janela mostra quais pacotes foram i
 
 Para adicionar manualmente um pacote transferido por download do navegador, abra o Gerenciador de referências no Gerenciador de soluções e procure o pacote.
 
-![Gerenciador de referências](images/vs-manual-dynamo-package.jpg)
+![Gerenciador de referências](../../.gitbook/assets/vs-manual-dynamo-package.jpg)
 
 > 1. Clicar com o botão direito do mouse em `References` e selecionar `Add Reference`.
 > 2. Selecionar `Browse` para navegar para a localização do pacote.

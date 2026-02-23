@@ -2,7 +2,7 @@
 
 Independentemente do nível de experiência, a plataforma do Dynamo foi projetada para que todos os usuários sejam colaboradores. Há diversas opções de desenvolvimento voltadas para diferentes capacidades e níveis de habilidades, cada uma com seus pontos fortes e fracos, dependendo do objetivo. Abaixo, descreveremos as diferentes opções e como escolher uma em detrimento de outra.
 
-![Três ambientes de desenvolvimento](images/developing-for-dynamo.png)
+![Três ambientes de desenvolvimento](../../.gitbook/assets/developing-for-dynamo.png)
 
 > Três ambientes de desenvolvimento: Visual Studio, Editor do Python e DesignScript com Blocos de código
 
@@ -18,31 +18,31 @@ Estes nós permitem o maior grau de personalização. Muitos pacotes são criado
 * Nós derivados do NodeModel
 * Extensões
 
-> O Manual tem um guia sobre como [importar bibliotecas Sem toque](https://primer2.dynamobim.org/v/pt-br/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
+> O Manual tem um guia sobre como [Importar bibliotecas Sem toque](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
 
 Para a discussão abaixo, o Visual Studio é usado como o ambiente de desenvolvimento para os nós Sem toque e NodeModel.
 
-![Interface do Visual Studio](images/vs-devenv.jpg)
+![Interface do Visual Studio](../../.gitbook/assets/vs-devenv.jpg)
 
 > A interface do Visual Studio com um projeto que desenvolveremos
 
 ### No Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
-Embora esses processos existam no espaço de trabalho de programação visual e sejam relativamente diretos, todos eles são opções viáveis para personalizar o Dynamo. O Manual cobre esses tópicos extensivamente e fornece dicas de scripts e as práticas recomendadas no capítulo [Estratégias de script](../../9\_best\_practices/2-scripting-strategies.md).
+Embora esses processos existam no espaço de trabalho de programação visual e sejam relativamente diretos, todos eles são opções viáveis para personalizar o Dynamo. O Manual cobre esses tópicos extensivamente e fornece dicas de scripts e as práticas recomendadas no capítulo [Estratégias de script](../../9_best_practices/2-scripting-strategies.md).
 
 *   Os Blocos de código expõem o DesignScript no ambiente de programação visual, permitindo fluxos de trabalho flexíveis de scripts de texto e nós. Uma função em um bloco de código pode ser chamada por qualquer item no espaço de trabalho.
 
-    > Faça o download de um exemplo de bloco de código (clique com o botão direito do mouse e salve como) ou veja um percurso virtual detalhado no [Manual](https://primer2.dynamobim.org/v/pt-br/8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block).
+    > Faça o download de um exemplo de bloco de código (clique com o botão direito do mouse e salve como) ou veja um percurso virtual detalhado no [Manual](https://primer.dynamobim.org/07_Code-Block/7-1_what-is-a-code-block.html).
 *   Os nós personalizados são contêineres para coleções de nós ou até mesmo gráficos inteiros. Eles são uma forma eficaz de coletar rotinas usadas com frequência e compartilhá-las com a comunidade.
 
-    > Faça o download de um exemplo de nó personalizado (clique com o botão direito do mouse e salve como) ou veja um percurso virtual detalhado no [Manual](https://primer2.dynamobim.org/v/pt-br/6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction).
+    > Faça o download de um exemplo de nó personalizado (clique com o botão direito do mouse e salve como) ou veja um percurso virtual detalhado no [Manual](https://primer.dynamobim.org/10_Custom-Nodes/10-1_Introduction.html).
 *   Os nós Python são uma interface de scripts no espaço de trabalho de programação visual, semelhante aos blocos de código. As bibliotecas Autodesk.DesignScript usam uma notação de ponto similar ao DesignScript.
 
-    > Faça o download de um exemplo de nó Python (clique com o botão direito do mouse e salve como) ou veja um percurso virtual detalhado no [Manual](https://primer2.dynamobim.org/v/pt-br/8_coding_in_dynamo/8-3_python)
+    > Faça o download de um exemplo de nó Python (clique com o botão direito do mouse e salve como) ou veja um percurso virtual detalhado no [Manual](https://primer.dynamobim.org/10_Custom-Nodes/10-4_Python.html)
 
 O desenvolvimento no espaço de trabalho do Dynamo é uma ferramenta poderosa para obter feedback imediato.
 
-![Desenvolvimento no espaço de trabalho do Dynamo com o nó Python](images/python-example.jpg)
+![Desenvolvimento no espaço de trabalho do Dynamo com o nó Python](../../.gitbook/assets/python-example.jpg)
 
 > Desenvolvimento no espaço de trabalho do Dynamo com o nó Python
 
@@ -54,7 +54,7 @@ As opções de desenvolvimento do Dynamo foram projetadas para lidar com a compl
 
 Essas são opções simples para escrever código no ambiente de programação visual do Dynamo. O espaço de trabalho de programação visual do Dynamo fornece acesso ao Python, ao DesignScript e à capacidade de conter vários nós dentro de um nó personalizado.
 
-![Bloco de código, script Python e nó personalizado](images/Development-Icons.png)
+![Bloco de código, script Python e nó personalizado](../../.gitbook/assets/Development-Icons.png)
 
 Com esses métodos, podemos:
 
@@ -66,11 +66,11 @@ Com esses métodos, podemos:
 
 O nó Sem toque é um método simples de apontar e clicar para importar bibliotecas C#. O Dynamo lê os métodos públicos de um `.dll` e os converte em nós do Dynamo. É possível usar o nó Sem toque para desenvolver seus próprios nós e pacotes personalizados.
 
-![Nós Sem toque](images/ZTImport.png)
+![Nós Sem toque](../../.gitbook/assets/ZTImport.png)
 
 Com esse método, podemos:
 
-* Importar uma biblioteca que não foi necessariamente desenvolvida para o Dynamo e criar automaticamente um conjunto de novos nós, como o [exemplo A-Forge](../../6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md#case-study-importing-aforge) no Manual
+* Importar uma biblioteca que não foi necessariamente desenvolvida para o Dynamo e criar automaticamente um conjunto de novos nós, como o [exemplo A-Forge](../../6_custom_nodes_and_packages/6-2_packages/5-zero-touch.md#case-study-importing-aforge) no Manual
 * Escrever métodos C# e usar facilmente os métodos como nós no Dynamo
 * Compartilhar uma biblioteca C# como nós com a comunidade do Dynamo em um pacote
 
@@ -78,7 +78,7 @@ Com esse método, podemos:
 
 Esses nós são um passo mais profundo na estrutura do Dynamo. Eles são baseados na classe `NodeModel` e escritos em C#. Embora esse método forneça a maior flexibilidade e potência, a maioria dos aspectos do nó precisa ser explicitamente definida e as funções precisam residir em uma montagem separada.
 
-![Nós derivados do NodeModel](images/Development-Icons-NodeModel.png)
+![Nós derivados do NodeModel](../../.gitbook/assets/Development-Icons-NodeModel.png)
 
 Com esse método, podemos:
 
@@ -93,13 +93,13 @@ Como o Dynamo está sendo atualizado regularmente, as alterações podem ser fei
 
 As alterações da API são rastreadas no [Wiki do Dynamo Github](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). Isso abrange as alterações no DynamoCore, nas bibliotecas e nos espaços de trabalho.
 
-![A API do Dynamo altera o documento](images/api-changes.jpg)
+![A API do Dynamo altera o documento](../../.gitbook/assets/api-changes.jpg)
 
 Um exemplo de uma mudança significativa futura é a transição do formato de arquivo XML para o formato JSON na versão 2.0. Os nós derivados do NodeModel agora precisarão de um [construtor JSON](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node); caso contrário, eles não serão abertos no Dynamo 2.0.
 
 A documentação da API do Dynamo atualmente cobre a funcionalidade principal: [http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI)
 
-![Documentação da API](images/api-docs.jpg)
+![Documentação da API](../../.gitbook/assets/api-docs.jpg)
 
 ### Permissão para distribuir binários em um pacote <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 
@@ -108,6 +108,7 @@ Esteja ciente de que os .dll estão incluídos em um pacote que está sendo carr
 Se um pacote incluir binários, os usuários deverão ser informados, ao fazer o download, de que o pacote contém binários.
 
 ### Considerações sobre o desempenho da interface do usuário do Dynamo
+
 No momento em que este artigo foi escrito, o Dynamo usava principalmente o WPF (Windows Presentation Foundation) para renderizar sua interface do usuário. O WPF é um sistema baseado em xaml/binding complexo e poderoso. Como o Dynamo tem uma interface do usuário complexa, é fácil criar travamentos da interface do usuário, vazamentos de memória ou agrupar a execução do gráfico e as atualizações da interface do usuário de maneiras que degradam o desempenho.
 
 Consulte a [Página Wiki de Considerações de desempenho do Dynamo](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance), que ajudará você a evitar algumas armadilhas comuns ao fazer alterações no código do Dynamo.

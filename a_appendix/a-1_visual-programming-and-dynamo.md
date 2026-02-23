@@ -8,7 +8,7 @@ A criação de projetos frequentemente envolve o estabelecimento de relações v
 
 Apesar de oferecer algumas ótimas oportunidades, o termo **Algoritmo** pode levar a alguns equívocos sobre o assunto. Os algoritmos podem gerar coisas inesperadas ou maravilhosas, mas eles não são mágicos. Na verdade, são bem simples. Vamos usar um exemplo prático como um origami em formato de pássaro. Começamos com um pedaço de papel quadrado (entrada), seguimos uma série de etapas de dobra (ações de processamento) e temos o resultado de um origami em formato de pássaro (saída).
 
-![Origami em formato de pássaro](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
+![Origami em formato de pássaro](https://primer.dynamobim.org/01_Introduction/images/1-1/00-OrigamiCrane.png)
 
 Então, onde está o algoritmo? Trata-se do conjunto abstrato de etapas, que podemos representar de duas maneiras: textualmente ou graficamente.
 
@@ -30,7 +30,7 @@ Então, onde está o algoritmo? Trata-se do conjunto abstrato de etapas, que pod
 
 **Instruções gráficas:**
 
-![Instruções do Origami em formato de pássaro](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![Instruções do Origami em formato de pássaro](https://primer.dynamobim.org/01_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
 #### Definição de programação <a href="#programming-defined" id="programming-defined"></a>
 
@@ -52,7 +52,7 @@ Se sua resposta for gráficos, a **Programação visual** será definitivamente 
 
 **Programa visual:**
 
-![](./images/a-1/visualProgramming(2).png)
+\![](<../.gitbook/assets/visualProgramming (2).png>)
 
 **Programa textual:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 Os resultados de nosso algoritmo:
 
-![](./images/a-1/visualProgramming(1).png)
+\![](<../.gitbook/assets/visualProgramming (1).png>)
 
 A característica visual da programação diminui a barreira de iniciar as atividades e frequentemente é bem compreendida pelos designers. O Dynamo se encaixa no paradigma de programação visual, mas como veremos mais tarde, ainda podemos usar a programação textual no aplicativo.

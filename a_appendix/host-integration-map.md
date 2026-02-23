@@ -59,6 +59,8 @@ Veja a seguir uma lista de qual versão do Dynamo foi fornecida com alguns dos p
 
 | Versão do hospedeiro | Dynamo      |
 | ------------ | ----------- |
+| 2026.1       | 3.6.0.9395  |
+| 2026         | 3.4.1.7055  |
 | 2025         | 3.0.4.7905  |
 | 2024.1       | 2.19.4.6671 |
 | 2024         | 2.17.4.5316 |
