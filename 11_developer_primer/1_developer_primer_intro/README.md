@@ -4,7 +4,7 @@
 
 Esta guía tiene como finalidad ayudarle a navegar por la gama de posibilidades de desarrollo de C# para Dynamo, desde cómo crear nodos Zero-Touch hasta cómo generar extensiones.
 
-![El código fuente de Dynamo en GitHub](../../.gitbook/assets/dynamogithub.jpg)
+[El código fuente de Dynamo en GitHub](../../.gitbook/assets/dynamogithub.jpg)
 
 > Código fuente de Dynamo en GitHub
 
