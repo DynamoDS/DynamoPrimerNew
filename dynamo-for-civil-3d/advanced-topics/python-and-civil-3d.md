@@ -31,7 +31,7 @@ As you move through this section, there may be some concepts that you are unfami
 
 When you first edit a new Python node, it will be pre-populated with template code to get you started. Here's a breakdown of the template with explanations about each block.
 
-<figure><img src="../../.gitbook/assets/Python_Template (1).png" alt=""><figcaption><p>The default Python template in Civil 3D</p></figcaption></figure>
+<figure><img src="../images/Python_Template (1).png" alt=""><figcaption><p>The default Python template in Civil 3D</p></figcaption></figure>
 
 > 1. Imports the `sys` and `clr` modules, both of which are necessary for the Python interpreter to function properly. In particular, the `clr` module enables .NET namespaces to be treated essentially as Python packages.
 > 2. Loads the standard assemblies (i.e., DLLs) for working with the managed .NET APIs for AutoCAD and Civil 3D.
@@ -84,7 +84,7 @@ Before we start building our graph and writing code, it's a good idea to take a 
 
 Now we can start building our graph logic. The first thing to do is get a list of all the Catchments in the Document. There are nodes available for this, so we don't need to include it in the Python script. Using nodes provides better visibility for someone else that might read the graph (versus burying lots of code in a Python script), and it also keeps the Python script focused on one thing: returning the boundary points of the Catchments.
 
-<figure><img src="../../.gitbook/assets/Python_Get_Catchments.png" alt=""><figcaption><p>Getting all of the Catchments in the Document by layer</p></figcaption></figure>
+<figure><img src="../images/Python_Get_Catchments.png" alt=""><figcaption><p>Getting all of the Catchments in the Document by layer</p></figcaption></figure>
 
 Note here that the output from the **All Objects on Layer** node is a list of CivilObjects. This is because Dynamo for Civil 3D doesn't currently have any nodes for working with Catchments, which is the whole reason why we need to access the API through Python.
 
@@ -179,13 +179,13 @@ As a rule of thumb, it is a best practice to include the bulk of your script log
 
 At this stage, the Python script should output a list of Dynamo points that you can see in the background preview. The last step is to simply create PolyCurves from the points. Note that this could also be accomplished directly in the Python script, but we've intentionally put it outside the script in a node so that it is more visible. Here's what the final graph looks like.
 
-<figure><img src="../../.gitbook/assets/Python_Final_Script (1).png" alt=""><figcaption><p>The final graph</p></figcaption></figure>
+<figure><img src="../images/Python_Final_Script (1).png" alt=""><figcaption><p>The final graph</p></figcaption></figure>
 
 ### Result
 
 And here's the final Dynamo geometry.
 
-<figure><img src="../../.gitbook/assets/Python_Dynamo_Curves.png" alt=""><figcaption><p>The resulting Dynamo PolyCurves for the Catchment boundaries</p></figcaption></figure>
+<figure><img src="../images/Python_Dynamo_Curves.png" alt=""><figcaption><p>The resulting Dynamo PolyCurves for the Catchment boundaries</p></figcaption></figure>
 
 > :tada: Mission accomplished!
 

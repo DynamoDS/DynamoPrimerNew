@@ -377,7 +377,7 @@ If element binding had been enabled we can retain the existing work that was don
 
 ***
 
-![Create Walls](../../.gitbook/assets/creates_walls.png)
+![Create Walls](../images/creates_walls.png)
 
 #### Element binding compared to trace
 
@@ -466,15 +466,15 @@ On the next run of the graph - we look in trace, find the ID we stored there, fi
 
 The flow of two consecutive executions of graph that creates a single `TraceExampleItem` looks like this:
 
-![First Call](../../.gitbook/assets/Trace-first-call.png)
+![First Call](../images/Trace-first-call.png)
 
-![Second Call](../../.gitbook/assets/Trace-second-call.png)
+![Second Call](../images/Trace-second-call.png)
 
 The same idea is illustrated in the next example with a more realistic DynamoRevit node use case.
 
 #### Trace Diagram
 
-![Trace Steps](../../.gitbook/assets/trace_diagram.png) ![Trace Flow](../../.gitbook/assets/trace_alt_diagram.png)
+![Trace Steps](../images/trace_diagram.png) ![Trace Flow](../images/trace_alt_diagram.png)
 
 #### NOTE :
 
@@ -560,7 +560,7 @@ The important phases of the constructor's execution as they relate to element bi
 
 * The trace objects saved in versions earlier than Dynamo 3.0 are stored using SOAP so they are not supported on newer versions. The previously saved element binding data will be ignored and the below message will be displayed in Dynamo 3.0 and higher versions. Element binding data will be saved next time when you run and save the workspace.
 
-![Element Binding Compatibility](../../.gitbook/assets/element_binding_compatibility_message.jpg)
+![Element Binding Compatibility](../images/element_binding_compatibility_message.jpg)
 
 #### Should ElementBinding be on by default?
 
@@ -574,7 +574,7 @@ At a high level, **a good way to conceptualize these nodes is as a function whic
 
 There are multiple `Selection` Nodes in DynamoRevit. We can break them into at least two groups:
 
-![Revit Selection Nodes](../../.gitbook/assets/revitSelectionNodes.png)
+![Revit Selection Nodes](../images/revitSelectionNodes.png)
 
 1.  User UI pick:
 
@@ -602,7 +602,7 @@ There are multiple `Selection` Nodes in DynamoRevit. We can break them into at l
 
 The workflows in D4C is very similar to the description above for Revit, here are two typical sets of selection nodes in D4C:
 
-![Civil 3D Selection Nodes](../../.gitbook/assets/civilSelectionNodes.png)
+![Civil 3D Selection Nodes](../images/civilSelectionNodes.png)
 
 ### Issues:
 
@@ -613,9 +613,9 @@ The workflows in D4C is very similar to the description above for Revit, here ar
 
 ### Data Flow Diagrams
 
-![Selection Flow](../../.gitbook/assets/selectModelElement.png)
+![Selection Flow](../images/selectModelElement.png)
 
-![Selection Flow2](../../.gitbook/assets/selectElementFace.png)
+![Selection Flow2](../images/selectElementFace.png)
 
 ### Technical Implementation: (refer to above diagrams):
 
@@ -624,7 +624,7 @@ Selection nodes are implemented by inheriting from the generic `SelectionBase` t
 * Implementation of a `BuildOutputAST` Method: This method needs to return an AST, which will be executed at some point in the future, when the node is to be executed. In the case of Selection nodes, it should return elements or geometry from the element ids. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * Implementing `BuildOutputAST` is one of the most difficult parts of implementing `NodeModel` / UI nodes. It is best to put as much logic as you can into a c# function, and simply embed an AST function call node into the AST. Note that here `node` is an AST node in the abstract syntax tree, not a Node in the Dynamo graph.
 
-![Selection Flow2](../../.gitbook/assets/selectionAST.png)
+![Selection Flow2](../images/selectionAST.png)
 
 * Serialization -
   *   Because these are explicit `NodeModel` derived types (not ZeroTouch) they also require implementing a \[JsonConstructor] that will be used during deserialization of the node from a .dyn file.

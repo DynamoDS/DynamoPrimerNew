@@ -6,7 +6,7 @@ We mentioned earlier that **nodes** are the core building blocks of a Dynamo gra
 Check out the [2-library.md](../3\_user\_interface/2-library.md "mention") section for more information about how the nodes in the core Dynamo library are organized.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/c3d-node-library.png" alt="" width="563"><figcaption><p>The node library in Dynamo for Civil 3D</p></figcaption></figure>
+<figure><img src="images/c3d-node-library.png" alt="" width="563"><figcaption><p>The node library in Dynamo for Civil 3D</p></figcaption></figure>
 
 > 1. Specific nodes for working with AutoCAD and Civil 3D objects
 > 2. General-purpose nodes
@@ -30,11 +30,11 @@ In order to work with the AutoCAD and Civil 3D nodes, it's important to have a s
 
 Let's use an Alignment as an example.
 
-<figure><img src="../.gitbook/assets/c3d-node-library-alignment.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/c3d-node-library-alignment.png" alt=""><figcaption></figcaption></figure>
 
 Say your goal is to change the name of the Alignment. From here, the next node you would add is a **CivilObject.SetName** node.
 
-<figure><img src="../.gitbook/assets/c3d-node-library-alignment-set-name (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/c3d-node-library-alignment-set-name (1).png" alt=""><figcaption></figcaption></figure>
 
 At first, this may not seem very intuitive. What is a **CivilObject**, and why does the library not have an **Alignment.SetName** node? The answer is related to _reusability_ and _simplicity._ If you think about it, the process of changing the name of a Civil 3D object is the same whether the object is an Alignment, Corridor, Profile, or something else. So instead of having repetitive nodes that essentially all do the same thing (e.g., **Alignment.SetName, Corridor.SetName, Profile.SetName**, etc.), it would make sense to wrap up that functionality into a single node. That's exactly what **CivilObject.SetName** does!
 
@@ -44,7 +44,7 @@ Another way to think about this is in terms of _relationships_. An Alignment and
 
 Now, let's take this one step further. Say you want to change the layer of the Alignment. The node you would use is the **Object.SetLayer** node.
 
-<figure><img src="../.gitbook/assets/c3d-node-library-alignment-set-layer.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/c3d-node-library-alignment-set-layer.png" alt=""><figcaption></figcaption></figure>
 
 Why isn't there a node called **CivilObject.SetLayer**? The same principles of reusability and simplicity that we discussed earlier apply here. The _layer_ property is something that is common to any object in AutoCAD that can be drawn or inserted, such a Line, Polyline, Text, Block Reference, etc. Civil 3D objects like Alignments and Corridors fall under the same category, and so any node that applies to an **Object** can also be used with any **Civil Object**.
 

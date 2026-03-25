@@ -8,6 +8,6 @@ You can use syntax like below or DesignScript-based representations of the nodes
 
 Since a dictionary is an object type in Dynamo we can commit the following actions upon it.
 
-![](<../../.gitbook/assets/dictionaries in cb - actions with code blocks.jpg>)
+![](<../images/dictionaries in cb - actions with code blocks.jpg>)
 
 Maintaining these sort of interactions becomes especially useful when relating Revit data to strings. Next, we will look at some Revit use-cases.

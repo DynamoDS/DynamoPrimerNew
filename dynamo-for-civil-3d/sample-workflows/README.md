@@ -6,4 +6,4 @@ Civil infrastructure is all of these things, and more! This section contains sev
 
 Furthermore, these examples embody time-tested best practices for building strong graphs. As you work through the examples, we encourage you to also familiarize yourself with the [9\_best\_practices](../../9\_best\_practices/ "mention") section for more ideas on how to build powerful, flexible, and maintainable graphs.
 
-<figure><img src="../../.gitbook/assets/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>

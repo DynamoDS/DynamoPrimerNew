@@ -4,19 +4,19 @@
 
 Dynamo is an active open-source development project. Find out the [list of software that supports Dynamo](http://dynamobim.org/download/).
 
-![](<../.gitbook/assets/setup for dynamo - dynamo revit.png>) 
-![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>) 
-![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>) 
-![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>) 
-![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>) 
-![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>) 
-![](<../.gitbook/assets/setup for dynamo - dynamo forma.png>)
+![](<images/setup for dynamo - dynamo revit.png>) 
+![](<images/setup for dynamo - dynamo civil 3D.png>) 
+![](<images/setup for dynamo - dynamo alias design.png>) 
+![](<images/setup for dynamo - dynamo formit.png>) 
+![](<images/setup for dynamo - dynamo advance steel.png>) 
+![](<images/setup for dynamo - dynamo robot structural analysis.png>) 
+![](<images/setup for dynamo - dynamo forma.png>)
 
 ### Launch Dynamo as Extension
 
 Dynamo comes pre-installed with software such as **Revit3D**, **FormIt**, **Civil3D** and etc.
 
-To start using, launch it from your toolbar panel. Depends on which software you are using, the launch icon can usually be found from the Menu > **Manage** Tab. Click on Dynamo icon ![](../.gitbook/assets/dynamoCore-halfSize.png) to launch it.
+To start using, launch it from your toolbar panel. Depends on which software you are using, the launch icon can usually be found from the Menu > **Manage** Tab. Click on Dynamo icon ![](images/dynamoCore-halfSize.png) to launch it.
 
 ![](<../.gitbook/assets/launch dynamo from revit (1).jpg>)
 
@@ -33,11 +33,11 @@ If you would like to use Dynamo as a standalone application. Continue reading fo
 
 The Dynamo application is available from the [Dynamo website](http://dynamobim.com). Both official, past or pre-released versions are available from the download page. Visit [Get Dynamo](http://dynamobim.org/download/) page and Click **Download** for the official released version.
 
-![](<../.gitbook/assets/image (4).png>)
+![](<images/image (4).png>)
 
 If you are looking for previous or 'bleeding edge' development releases, all versions can be found in the lower section from the same page.
 
-![](<../.gitbook/assets/03-02 Dynamo Sandbox All builds.png>)
+![](<images/03-02 Dynamo Sandbox All builds.png>)
 
 {% hint style="info" %}
 'Bleeding edge' development may include some new and experimental features that are yet to be fully tested, hence may be unstable. By using this, you may discover bugs or issues, help us improve the application by reporting issues to our team.
@@ -53,21 +53,21 @@ Download and install [7zip](https://www.7-zip.org/download.html) to your compute
 
 Right-click on the zip file and select **Extract All**...
 
-![](<../.gitbook/assets/03-03 Extract zip file.png>)
+![](<images/03-03 Extract zip file.png>)
 
 Choose a destination to unzip all the files.
 
-![](<../.gitbook/assets/03-04 Extract destination folder (1).png>)
+![](<images/03-04 Extract destination folder (1).png>)
 
 #### Launching
 
 In your destination folder, double-click on **DynamoSandbox.exe** to launch it
 
-![](<../.gitbook/assets/03-05 Dynamo exe.jpg>)
+![](<images/03-05 Dynamo exe.jpg>)
 
 You will see the DynamoSandbox startup screen as follow.
 
-![](<../.gitbook/assets/03-06 Dynamo startup screen.png>)
+![](<images/03-06 Dynamo startup screen.png>)
 
 Congratulations, you have now finished the setup for using DynamoSandbox!
 

@@ -2,7 +2,7 @@
 
 Regardless of experience level, the Dynamo platform is designed for all users to be contributors. There are several development options that target different abilities and skill levels, each with its strengths and weaknesses depending on the goal. Below we will outline the different options and how to choose one over another.
 
-![Three development environments](../../.gitbook/assets/developing-for-dynamo.png)
+![Three development environments](../images/developing-for-dynamo.png)
 
 > Three development environments: Visual Studio, Python Editor, and Code Block DesignScript
 
@@ -22,7 +22,7 @@ These nodes allow for the highest degree of customization. Many packages are bui
 
 For the discussion below Visual Studio is used as the development environment for Zero-Touch and NodeModel nodes.
 
-![Visual Studio interface](../../.gitbook/assets/vs-devenv.jpg)
+![Visual Studio interface](../images/vs-devenv.jpg)
 
 > The Visual Studio interface with a project that we will be developing
 
@@ -42,7 +42,7 @@ Though these processes exist in the visual programming workspace and are relativ
 
 Developing in the Dynamo workspace is a powerful tool for getting immediate feedback.
 
-![Developing in the Dynamo workspace with the Python node](../../.gitbook/assets/python-example.jpg)
+![Developing in the Dynamo workspace with the Python node](../images/python-example.jpg)
 
 > Developing in the Dynamo workspace with the Python Node
 
@@ -54,7 +54,7 @@ Development options for Dynamo have been designed to address the complexity of a
 
 These are straightforward options for writing code in the Dynamo visual programming environment. The Dynamo visual programming workspace provides access to Python, DesignScript, and the ability to contain multiple nodes inside of a Custom Node.
 
-![Code block, Python script, and custom  node](../../.gitbook/assets/Development-Icons.png)
+![Code block, Python script, and custom  node](../images/Development-Icons.png)
 
 With these methods we can:
 
@@ -66,7 +66,7 @@ With these methods we can:
 
 Zero-Touch refers to a simple point-and-click method for importing C# libraries. Dynamo will read the public methods of a `.dll` and convert them to Dynamo nodes. You can use Zero-Touch to develop your own custom nodes and packages.
 
-![Zero-touch nodes](../../.gitbook/assets/ZTImport.png)
+![Zero-touch nodes](../images/ZTImport.png)
 
 With this method we can:
 
@@ -78,7 +78,7 @@ With this method we can:
 
 These nodes are a step deeper into the structure of Dynamo. They are based on the `NodeModel` class and written in C#. While this method provides the most flexibility and power, most aspects of the node have to be explicitly defined and functions need to live in a separate assembly.
 
-![NodeModel derived nodes](../../.gitbook/assets/Development-Icons-NodeModel.png)
+![NodeModel derived nodes](../images/Development-Icons-NodeModel.png)
 
 With this method we can:
 
@@ -93,13 +93,13 @@ Since Dynamo is being regularly updated, changes might be made to part of the AP
 
 API changes are tracked on the [Dynamo GitHub Wiki](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). This covers changes to DynamoCore, Libraries, and Workspaces.
 
-![Dynamo API changes document](../../.gitbook/assets/api-changes.png)
+![Dynamo API changes document](../images/api-changes.png)
 
 An example of an upcoming, significant change is the transition from XML to JSON file format in version 2.0. NodeModel derived nodes will now need a [JSON constructor](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node) otherwise they won't open in Dynamo 2.0.
 
 Dynamo's API documentation currently covers the core functionality: [http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI)
 
-![API documentation](../../.gitbook/assets/api-docs.jpg)
+![API documentation](../images/api-docs.jpg)
 
 ### Permission to distribute binaries in a package <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 
