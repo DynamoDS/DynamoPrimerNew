@@ -1,5 +1,13 @@
 # Updating your Packages and Dynamo Libraries for Dynamo 3.x and NET8
 
+{% hint style="info" %}
+**Applies to**: Dynamo 3.x (3.0 - 3.6)  
+**Target Runtime**: .NET 8  
+**Key Changes**: Runtime migration from .NET 4.8, Python engine updates
+
+For other versions, see: [Dynamo 2.x Migration](6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md) | [Dynamo 4.x Migration](6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
+{% endhint %}
+
 ### Introduction <a href="#introduction" id="introduction"></a>
 
 This section contains information on issues you may encounter while migrating your graphs, packages, and libraries to Dynamo 3.x.

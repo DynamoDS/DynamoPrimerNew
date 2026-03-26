@@ -1,5 +1,13 @@
 # Updating your Packages and Dynamo Libraries for Dynamo 4.x
 
+{% hint style="info" %}
+**Applies to**: Dynamo 4.x (4.0+)  
+**Target Runtime**: .NET 10  
+**Key Changes**: PythonNet3 default, .NET 10 migration, obsolete API removal, significant performance improvements
+
+For other versions, see: [Dynamo 2.x Migration](6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md) | [Dynamo 3.x Migration](6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+{% endhint %}
+
 ### Introduction <a href="#introduction" id="introduction"></a>
 
 This section contains information on issues you may encounter while migrating your graphs, packages and libraries to Dynamo 4.x.

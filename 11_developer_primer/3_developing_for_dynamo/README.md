@@ -1,5 +1,14 @@
 # Developing for Dynamo
 
+{% hint style="warning" %}
+**Important for Package Developers**: API compatibility varies significantly across Dynamo versions. See version-specific migration guides:
+- [Dynamo 2.x Migration](6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+- [Dynamo 3.x Migration](6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+- [Dynamo 4.x Migration](6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
+
+For general version guidance, see the [Version Guide](../../VERSION_GUIDE.md).
+{% endhint %}
+
 Regardless of experience level, the Dynamo platform is designed for all users to be contributors. There are several development options that target different abilities and skill levels, each with its strengths and weaknesses depending on the goal. Below we will outline the different options and how to choose one over another.
 
 ![Three development environments](../../.gitbook/assets/developing-for-dynamo.png)

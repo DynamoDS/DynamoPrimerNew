@@ -1,5 +1,10 @@
 # Useful Packages
 
+{% hint style="info" %}
+**Package Version Compatibility**: Many packages listed here support multiple Dynamo versions, but some may only work with specific versions due to .NET runtime changes. Always check the package's compatibility information before installation. See [Version Guide](../VERSION_GUIDE.md) for details on package compatibility.
+{% endhint %}
+
+
 Here are a list of some of the more popular packages in the Dynamo community. Developers, please add to the list! Remember, the [Dynamo Primer](https://github.com/DynamoDS/DynamoPrimer) is open-source!
 
 | ![](../.gitbook/assets/archilab_L.jpg)**ARCHI-LAB**                                                                                                                                                                                                                                                | [Visit the Official archi-lab Site](http://archi-lab.net) |

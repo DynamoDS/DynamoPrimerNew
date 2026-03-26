@@ -1,5 +1,10 @@
 # Package Introduction
 
+{% hint style="warning" %}
+**Package Compatibility**: Packages built for different Dynamo versions may not be compatible across all versions due to runtime changes (.NET 4.8 → .NET 8 → .NET 10). When installing packages, check for version-specific builds. See [Version Guide](../../VERSION_GUIDE.md) for details on package compatibility across versions.
+{% endhint %}
+
+
 Dynamo offers a vast number of features out of the box and also maintains an extensive package library that can significantly extend Dynamo’s capability. A package is a collection of custom nodes or additional functionality. The Dynamo Package Manager is a portal for the community to download any package that has been published online. These toolsets are developed by third parties to extend Dynamo's core functionality, accessible to all, and ready to download at the click of the button.
 
 ![Package Manager Site](../../.gitbook/assets/dpm.jpg)

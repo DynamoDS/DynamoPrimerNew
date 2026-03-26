@@ -1,5 +1,9 @@
 # Setup for Dynamo
 
+{% hint style="info" %}
+**Version Compatibility**: This guide applies to all Dynamo versions (2.13+). For version-specific installation notes, see the [Version Guide](../VERSION_GUIDE.md).
+{% endhint %}
+
 ### Dynamo as Extension vs Dynamo Sandbox
 
 Dynamo is an active open-source development project. Find out the [list of software that supports Dynamo](http://dynamobim.org/download/).
