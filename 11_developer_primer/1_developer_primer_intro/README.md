@@ -4,7 +4,7 @@
 
 Lo scopo di questa guida è quello di aiutare l'utente a navigare tra le varie possibilità di sviluppo in C# per Dynamo, da come creare nodi zero-touch alla compilazione di estensioni.
 
-![La sorgente di Dynamo su GitHub](../../.gitbook/assets/dynamogithub.jpg)
+![La sorgente di Dynamo su GitHub](../../.gitbook/assets/dynamogithub.png)
 
 > La sorgente di Dynamo su GitHub
 

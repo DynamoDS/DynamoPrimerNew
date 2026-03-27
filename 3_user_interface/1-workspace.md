@@ -4,7 +4,7 @@
 
 L'area di lavoro di Dynamo è costituita da quattro elementi principali.
 
-\![](<../.gitbook/assets/workspace - ui.jpg>)
+\![](<../.gitbook/assets/workspace - ui.png>)
 
 > 1. Tutte le schede attive.
 > 2. Modalità anteprima
@@ -15,11 +15,11 @@ L'area di lavoro di Dynamo è costituita da quattro elementi principali.
 
 Quando si apre un nuovo file, per default, viene aperta una nuova area di lavoro iniziale.
 
-\![](<../.gitbook/assets/workspace - home tab.jpg>)
+\![](<../.gitbook/assets/workspace - home tab.png>)
 
 È possibile creare un nodo personalizzato e aprirlo in un'area di lavoro del nodo personalizzato.
 
-\![](<../.gitbook/assets/workspace - custom node tab.jpg>)
+\![](<../.gitbook/assets/workspace - custom node tab.png>)
 
 {% hint style="info" %} È consentita una sola area di lavoro iniziale in ogni finestra di Dynamo, ma è possibile avere più aree di lavoro del nodo personalizzato aperte nelle schede. {% endhint %}
 

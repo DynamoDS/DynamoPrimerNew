@@ -22,7 +22,7 @@ Si passerà all'ambiente dei nodi personalizzati e si creerà un nodo semplice p
 
 Per creare un nodo personalizzato da zero, avviare Dynamo e selezionare Nodo personalizzato oppure digitare CTRL+MAIUSC+N nell'area di disegno.
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 01.jpg>)
+\![](<../../.gitbook/assets/custom node intro - custom node environment 01.png>)
 
 Assegnare un nome, una descrizione e una categoria nella finestra di dialogo Proprietà nodo personalizzato.
 

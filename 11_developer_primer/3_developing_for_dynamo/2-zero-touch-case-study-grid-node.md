@@ -90,7 +90,7 @@ Se il progetto è simile a questo, procedere e provare a creare il file `.dll`.
 
 Cercare un file `bin` nella cartella `.dll` del progetto. Se la creazione è stata eseguita correttamente, possiamo aggiungere il file `.dll` a Dynamo.
 
-![Nodi personalizzati in Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
+![Nodi personalizzati in Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.png)
 
 > 1. Il nodo RectangularGrids personalizzato nella libreria di Dynamo
 > 2. Il nodo personalizzato nell'area di disegno
