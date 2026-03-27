@@ -36,7 +36,7 @@ La section Changements relatifs au langage fournit un aperçu des mises à jour 
 
 Problèmes identifiés :
 
-* Les conflits d’espaces de noms dans les blocs impératifs provoquent l’apparition imprévue de ports d’entrée. Pour plus d’informations, consultez le [problème Github](https://github.com/DynamoDS/Dynamo/issues/8796). Pour contourner ce problème, définissez la fonction en dehors du bloc impératif comme suit :
+* Les conflits d’espaces de noms dans les blocs impératifs provoquent l’apparition imprévue de ports d’entrée. Pour plus d’informations, consultez le [problème GitHub](https://github.com/DynamoDS/Dynamo/issues/8796). Pour contourner ce problème, définissez la fonction en dehors du bloc impératif comme suit :
 
 ```
 pnt = Autodesk.Point.ByCoordinates;

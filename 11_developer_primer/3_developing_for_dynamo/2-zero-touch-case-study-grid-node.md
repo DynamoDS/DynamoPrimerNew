@@ -90,7 +90,7 @@ Si le projet ressemble à ceci, essayez de générer le `.dll`.
 
 Vérifiez si le dossier `bin` du projet contient un `.dll`. Si la génération est réussie, nous pouvons ajouter le `.dll` à Dynamo.
 
-![Nœuds personnalisés dans Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
+![Nœuds personnalisés dans Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.png)
 
 > 1. Le nœud RectangularGrids personnalisé dans la bibliothèque Dynamo
 > 2. Le nœud personnalisé sur la zone de dessin

@@ -12,7 +12,7 @@ Dans le navigateur, recherchez des packages et consultez les statistiques : [ht
 
 * Dans Dynamo, le gestionnaire de package inclut les packages d’installation, de publication et de mise à jour.
 
-![Recherche de packages](../../.gitbook/assets/dynamopackagemanager.jpg)
+![Recherche de packages](../../.gitbook/assets/dynamopackagemanager.png)
 
 > 1. Rechercher des packages en ligne : `Packages > Search for a Package...`
 > 2. Afficher/modifier les packages installés : `Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Les packages sont publiés à partir du gestionnaire de package dans Dynamo. Le 
 
 Lancez Dynamo et sélectionnez `Packages > Publish New Package...` pour ouvrir la fenêtre `Publish a Package`.
 
-![Publier un package](../../.gitbook/assets/dyn-publish-package-add-files.jpg)
+![Publier un package](../../.gitbook/assets/dyn-publish-package-add-files.png)
 
 > 1. Sélectionnez `Add file...` pour rechercher les fichiers à ajouter au package
 > 2. Sélectionnez les deux fichiers `.dll` dans l’étude de cas NodeModel
@@ -32,7 +32,7 @@ Lancez Dynamo et sélectionnez `Packages > Publish New Package...` pour ouvrir l
 
 Une fois les fichiers ajoutés au contenu du package, donnez-lui un nom, une description et une version. Publier un package avec Dynamo crée automatiquement un fichier `pkg.json`.
 
-![Paramètres du package](../../.gitbook/assets/dyn-publish-package.jpg)
+![Paramètres du package](../../.gitbook/assets/dyn-publish-package.png)
 
 > Un package prêt à être publié.
 >

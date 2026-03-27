@@ -1,6 +1,6 @@
 # Aller plus loin avec le Zero-Touch
 
-Après avoir appris à créer un projet Zero-Touch, nous pouvons approfondir les spécificités de la création d’un nœud en parcourant l’exemple ZeroTouchEssentials sur Dynamo Github.
+Après avoir appris à créer un projet Zero-Touch, nous pouvons approfondir les spécificités de la création d’un nœud en parcourant l’exemple ZeroTouchEssentials sur Dynamo GitHub.
 
 ![Nœuds Zero-Touch](../../.gitbook/assets/ootbzerotouch.png)
 

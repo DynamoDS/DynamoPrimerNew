@@ -22,7 +22,7 @@ Passez maintenant à l'environnement de nœud personnalisé et créez un nœud s
 
 Pour créer un nœud personnalisé à partir de zéro, lancez Dynamo et choisissez Nœud personnalisé, ou tapez Ctrl + Maj + N dans la zone de dessin.
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 01.jpg>)
+\![](<../../.gitbook/assets/custom node intro - custom node environment 01.png>)
 
 Ajoutez un nom, une description et une catégorie dans la boîte de dialogue Propriétés du nœud personnalisé.
 

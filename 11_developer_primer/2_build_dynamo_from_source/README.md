@@ -1,12 +1,12 @@
 # Générer Dynamo à partir de la source
 
-La source de Dynamo est hébergée sur Github pour que tout le monde puisse la cloner et y apporter sa contribution. Dans ce chapitre, nous verrons comment cloner le dépôt à l’aide de git, compiler les fichiers sources avec Visual Studio, exécuter et déboguer une génération locale, et extraire toutes les nouvelles modifications de Github.
+La source de Dynamo est hébergée sur GitHub pour que tout le monde puisse la cloner et y apporter sa contribution. Dans ce chapitre, nous verrons comment cloner le dépôt à l’aide de git, compiler les fichiers sources avec Visual Studio, exécuter et déboguer une génération locale, et extraire toutes les nouvelles modifications de GitHub.
 
-### Localiser les dépôts Dynamo sur Github <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
+### Localiser les dépôts Dynamo sur GitHub <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
-Github est un service d’hébergement basé sur [git](https://docs.github.com/fr/get-started/quickstart/git-and-github-learning-resources), un système de contrôle de version permettant de suivre les modifications et de coordonner le travail entre les personnes. Git est un outil que nous pouvons utiliser pour télécharger les fichiers sources de Dynamo, et les maintenir à jour avec quelques commandes. L’utilisation de cette méthode permet d’éviter le travail fastidieux et inutile consistant à télécharger et à remplacer manuellement les fichiers sources à chaque mise à jour. Le système de contrôle de version git suit toutes les différences entre un dépôt de code local et un dépôt de code distant.
+GitHub est un service d’hébergement basé sur [git](https://help.github.com/articles/git-and-github-learning-resources/), un système de contrôle de version permettant de suivre les modifications et de coordonner le travail entre les personnes. Git est un outil que nous pouvons utiliser pour télécharger les fichiers sources de Dynamo, et les maintenir à jour avec quelques commandes. L’utilisation de cette méthode permet d’éviter le travail fastidieux et inutile consistant à télécharger et à remplacer manuellement les fichiers sources à chaque mise à jour. Le système de contrôle de version git suit toutes les différences entre un dépôt de code local et un dépôt de code distant.
 
-La source de Dynamo est hébergée sur Github DynamoDS dans ce dépôt : [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
+La source de Dynamo est hébergée sur GitHub DynamoDS dans ce dépôt : [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
 ![Les fichiers sources de Dynamo](../../.gitbook/assets/github.jpg)
 
@@ -28,7 +28,7 @@ Nous avons besoin d’une URL pour le dépôt Dynamo à cloner. Celle-ci se trou
 > 1. Sélectionnez « Cloner ou télécharger »
 > 2. Copiez l’URL
 
-Une fois git installé, nous pouvons cloner le dépôt Dynamo. Commencez par ouvrir l’invite de commande. Utilisez ensuite la commande de changement de répertoire `cd` pour naviguer jusqu’au dossier dans lequel les fichiers sources doivent être clonés. Dans ce cas, nous avons créé un dossier appelé `Github` dans `Documents`.
+Une fois git installé, nous pouvons cloner le dépôt Dynamo. Commencez par ouvrir l’invite de commande. Utilisez ensuite la commande de changement de répertoire `cd` pour naviguer jusqu’au dossier dans lequel les fichiers sources doivent être clonés. Dans ce cas, nous avons créé un dossier appelé `Documents` dans `GitHub`.
 
 `cd C:\Users\username\Documents\GitHub`
 
@@ -36,13 +36,13 @@ Une fois git installé, nous pouvons cloner le dépôt Dynamo. Commencez par ouv
 
 ![Invite de commande](../../.gitbook/assets/cli-1.jpg)
 
-Dans l’étape suivante, nous allons lancer une commande git pour cloner le dépôt Dynamo à l’emplacement que nous avons spécifié. L’URL de la commande est obtenue en cliquant sur le bouton « Cloner ou télécharger » sur Github. Exécutez cette commande dans le terminal de commande. Notez que cela clonera la branche master du dépôt Dynamo qui est le code le plus à jour de Dynamo, et contiendra la dernière version du code de Dynamo. Cette branche change quotidiennement.
+Dans l’étape suivante, nous allons lancer une commande git pour cloner le dépôt Dynamo à l’emplacement que nous avons spécifié. L’URL de la commande est obtenue en cliquant sur le bouton « Cloner ou télécharger » sur GitHub. Exécutez cette commande dans le terminal de commande. Notez que cela clonera la branche master du dépôt Dynamo qui est le code le plus à jour de Dynamo, et contiendra la dernière version du code de Dynamo. Cette branche change quotidiennement.
 
 `git clone https://github.com/DynamoDS/Dynamo.git`
 
 ![Résultats de l’opération de clonage de Git](../../.gitbook/assets/cli-2.jpg)
 
-Nous savons que git fonctionne si l’opération de clonage s’est terminée avec succès. Dans l’explorateur de fichiers, naviguez jusqu’au répertoire où vous avez cloné pour voir les fichiers sources. La structure du répertoire doit être identique à la branche master du dépôt Dynamo sur Github.
+Nous savons que git fonctionne si l’opération de clonage s’est terminée avec succès. Dans l’explorateur de fichiers, naviguez jusqu’au répertoire où vous avez cloné pour voir les fichiers sources. La structure du répertoire doit être identique à la branche master du dépôt Dynamo sur GitHub.
 
 ![Fichiers source de Dynamo](../../.gitbook/assets/source-files.jpg)
 
@@ -53,13 +53,13 @@ Nous savons que git fonctionne si l’opération de clonage s’est terminée av
 
 Les fichiers sources étant maintenant clonés sur notre machine locale, nous pouvons générer un fichier exécutable pour Dynamo. Pour ce faire, nous devons configurer l’IDE Visual Studio et nous assurer que le .NET Framework et DirectX sont installés.
 
-* Téléchargez et installez [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/fr/vs/community/), un IDE (environnement de développement intégré) gratuit et complet (les versions ultérieures peuvent également fonctionner).
-* Téléchargez et installez [Microsoft .NET Framework 4.5](https://www.microsoft.com/fr-fr/download/details.aspx?id=30653) ou une version ultérieure.
+* Téléchargez et installez [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/vs/community/), un IDE (environnement de développement intégré) gratuit et complet (les versions ultérieures peuvent également fonctionner).
+* Téléchargez et installez [Microsoft .NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) ou une version ultérieure.
 * Installez Microsoft DirectX à partir du dépôt local Dynamo (`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`).
 
 > .NET et DirectX peuvent être déjà installés.
 
-> **Remarque :** changement majeur : [**Visual Studio 2022**](https://visualstudio.microsoft.com/fr/vs/community/) **/** [**Visual Studio 2026 Insider**](https://visualstudio.microsoft.com/insiders/) requis
+> **Remarque :** changement majeur : [**Visual Studio 2022**](https://visualstudio.microsoft.com/vs/community/) **/** [**Visual Studio 2026 Insider**](https://visualstudio.microsoft.com/insiders/) requis
 >
 > À partir de la fin de 2025, Dynamo mettra en œuvre la structure `dotnet10.0`. Pour développer dans cette structure, vous aurez besoin de Visual Studio 2022 Preview ou Visual Studio 2026 Insider (ou versions ultérieures), car les versions stables ne prennent pas encore en charge .NET 10.0.
 >
@@ -155,7 +155,7 @@ Dans la section suivante, **Générer DynamoRevit à partir de la source**, nous
 
 ### Tirer la dernière version<a href="#pulling-latest-build" id="pulling-latest-build"></a>
 
-Puisque la source de Dynamo est hébergée sur Github, la façon la plus simple de garder les fichiers source locaux à jour est de tirer les changements en utilisant les commandes git.
+Puisque la source de Dynamo est hébergée sur GitHub, la façon la plus simple de garder les fichiers source locaux à jour est de tirer les changements en utilisant les commandes git.
 
 En utilisant la ligne de commande, définissez le répertoire courant du dépôt Dynamo :
 
@@ -173,7 +173,7 @@ Utilisez la commande suivante pour tirer les dernières modifications :
 
 En plus de tirer des mises à jour, il y a quatre autres flux de travail git avec lesquels il faut se familiariser.
 
-* **Dupliquer** le dépôt Dynamo permet de créer une copie séparée de l’original. Tout changement effectué ici n’affectera pas le dépôt original et les mises à jour peuvent être récupérées ou soumises avec des demandes de tirage. Dupliquer n’est pas une commande git, mais un flux de travail que github ajoute. Le modèle de duplication et de tirage est l’un des flux de travail les plus courants pour contribuer à des projets open source en ligne. Cela vaut la peine de l’apprendre si vous voulez contribuer à Dynamo.
+* **Dupliquer** le dépôt Dynamo permet de créer une copie séparée de l’original. Tout changement effectué ici n’affectera pas le dépôt original et les mises à jour peuvent être récupérées ou soumises avec des demandes de tirage. Dupliquer n’est pas une commande git, mais un flux de travail que GitHub ajoute. Le modèle de duplication et de tirage est l’un des flux de travail les plus courants pour contribuer à des projets open source en ligne. Cela vaut la peine de l’apprendre si vous voulez contribuer à Dynamo.
 * Une **branche** permet de travailler sur des expériences ou de nouvelles fonctionnalités isolées des autres travaux dans les branches. Cela facilite l’envoi de demandes de tirage.
 * Effectuez des **commits** fréquemment, après avoir terminé une unité de travail et après une modification qui pourrait être annulée. Un commit enregistre les changements dans le dépôt et sera visible lors d’une demande de tirage dans le dépôt principal de Dynamo.
 * Créez des **demandes de tirage** lorsque les changements sont prêts à être officiellement proposés au dépôt principal de Dynamo.
