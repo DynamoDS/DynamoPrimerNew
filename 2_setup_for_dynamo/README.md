@@ -4,7 +4,7 @@
 
 Dynamo 是進行中的開放原始碼開發專案。瞭解[支援 Dynamo 的軟體清單](http://dynamobim.org/download/)。
 
-\![](<../.gitbook/assets/setup for dynamo - dynamo revit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>)
+\![](<../.gitbook/assets/setup for dynamo - dynamo revit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo forma.png>)
 
 ### 以延伸模組形式啟動 Dynamo
 
@@ -31,7 +31,7 @@ Dynamo 隨附於如 **Revit3D**、**FormIt**、**Civil3D** 等軟體而預先安
 
 如果您要尋找舊版或「最尖端」的開發版本，在同一頁面的下半部分可以找到所有版本。
 
-\![](<../.gitbook/assets/03-02 Dynamo Sandbox All builds.jpg>)
+\![](<../.gitbook/assets/03-02 Dynamo Sandbox All builds.png>)
 
 {% hint style="info" %}「最尖端」的開發內容可能包含一些尚未完全測試的新功能和實驗性功能，因此或許不太穩定。使用這類版本，您可能會發現錯誤或問題，請向我們的團隊回報問題，協助我們改善應用程式。
 
@@ -45,11 +45,11 @@ Dynamo 隨附於如 **Revit3D**、**FormIt**、**Civil3D** 等軟體而預先安
 
 在壓縮檔案上按一下右鍵，然後選取 **「解壓縮全部...」**
 
-\![](<../.gitbook/assets/03-03 Extract zip file.jpg>)
+\![](<../.gitbook/assets/03-03 Extract zip file.png>)
 
 選擇要解壓縮所有檔案的目的地。
 
-\![](<../.gitbook/assets/03-04 Extract destination folder (1).jpg>)
+\![](<../.gitbook/assets/03-04 Extract destination folder (1).png>)
 
 #### 啟動
 
@@ -59,7 +59,7 @@ Dynamo 隨附於如 **Revit3D**、**FormIt**、**Civil3D** 等軟體而預先安
 
 您會看到下面的 DynamoSandbox 啟動畫面。
 
-\![](<../.gitbook/assets/03-06 Dynamo startup screen.jpg>)
+\![](<../.gitbook/assets/03-06 Dynamo startup screen.png>)
 
 恭喜您，您現在已經完成使用 DynamoSandbox 的設定！
 

@@ -90,7 +90,7 @@ namespace CustomNodes
 
 檢查專案的 `bin` 資料夾是否有 `.dll`。如果建置成功，我們可以將 `.dll` 加入 Dynamo。
 
-![Dynamo 中的自訂節點](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
+![Dynamo 中的自訂節點](../../.gitbook/assets/RectangularGrid-Dynamo.png)
 
 > 1. Dynamo 資源庫中的自訂 RectangularGrids 節點
 > 2. 圖元區上的自訂節點

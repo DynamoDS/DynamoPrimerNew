@@ -24,7 +24,7 @@ DynamoCoreRuntime Zip 建置版本是在自動建置版本期間建立的 Dynamo
 | 2.7            | 2019 可轉散發套件 | 11/12 (Windows 10 隨附) |   |   |   |   |
 | >=2.8          | 2019 可轉散發套件 | 11/12 (Windows 10 隨附) |   |   |   |   |
 
-**Microsoft DirectX，在我們的 Dynamo Github 儲存庫中也能公開取得** [**此處**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
+**Microsoft DirectX，在我們的 Dynamo GitHub 儲存庫中也能公開取得** [**此處**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 
 **7zip，用於解壓縮套件** [**此處**](https://www.developershome.com/7-zip/download.asp)
 
@@ -48,7 +48,7 @@ DynamoCoreRuntime Zip 建置版本是在自動建置版本期間建立的 Dynamo
 
 **安裝 DirectX**
 
-請按照此處的 Microsoft 指示，檢查是否已安裝 DirectX。如果沒有，您可以在我們[此處](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)的 Dynamo Github 儲存庫中開啟 DXSETUP.exe。看到下面的對話方塊後，請按「下一步」，將 DirectX 安裝到預設位置。
+請按照此處的 Microsoft 指示，檢查是否已安裝 DirectX。如果沒有，您可以在我們[此處](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)的 Dynamo GitHub 儲存庫中開啟 DXSETUP.exe。看到下面的對話方塊後，請按「下一步」，將 DirectX 安裝到預設位置。
 
 ![](../.gitbook/assets/dynamo-builds-3.png)
 

@@ -1,6 +1,6 @@
 # 從原始碼建置 DynamoRevit
 
-DynamoRevit 原始碼檔案也託管在 DynamoDS Github 上，開發人員可以參與並建置 Beta 版本。從原始碼建置 DynamoRevit 的程序通常與 Dynamo 相同，但有一些重要的細節例外：
+DynamoRevit 原始碼檔案也託管在 DynamoDS GitHub 上，開發人員可以參與並建置 Beta 版本。從原始碼建置 DynamoRevit 的程序通常與 Dynamo 相同，但有一些重要的細節例外：
 
 * DynamoRevit 參考 Dynamo 組合，因此應使用相符的 NuGet 套件建置這些組合。例如，DynamoRevit 2.x 不會載入至 Dynamo 1.3。
 * DynamoRevit 與 Revit 版本有關，例如：DynamoRevit 2018 分支應在 Revit 2018 上執行。
@@ -13,11 +13,11 @@ DynamoRevit 原始碼檔案也託管在 DynamoDS Github 上，開發人員可以
 
 為確保能成功建置，我們將複製並建置 Dynamo 和 DynamoRevit 兩個儲存庫在此逐步解說中使用。
 
-_注意：只有當您建置 Dynamo 1.x 和 DynamoRevit 1.x 時，才需要在 DynamoRevit 之前手動建置 Dynamo - 較新版本的 DynamoRevit 儲存庫依賴 NuGet 套件管理員，才能獲得建置所需的 Dynamo 相依性。雖然 DynamoRevit 2.x 的建置版本不需要手動提取 Dynamo，但您在其他位置仍然需要核心 `dlls` 才能真正執行 DynamoRevit `add-in` \- 因此無論如何還是要提取和建置 Dynamo。參閱更多資訊：_ [_使用 Visual Studio 建置儲存庫_](1-build-dynamorevit-from-source.md#building-the-repository-using-Visual-Studio)
+_注意事項：只有當您建置 Dynamo 1.x 和 DynamoRevit 1.x 時，才需要在 DynamoRevit 之前手動建置 Dynamo - 較新版本的 DynamoRevit 儲存庫依賴 NuGet 套件管理員，才能獲得建置所需的 Dynamo 相依性。雖然 DynamoRevit 2.x 的建置版本不需要手動提取 Dynamo，但您在其他位置仍然需要核心 `dlls` 才能真正執行 DynamoRevit `add-in` \- 因此無論如何還是要提取和建置 Dynamo。參閱更多資訊：_ [_使用 Visual Studio 建置儲存庫_](1-build-dynamorevit-from-source.md#building-the-repository-using-Visual-Studio)
 
-### 在 Github 上找出 DynamoRevit 儲存庫 <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
+### 在 GitHub 上找出 DynamoRevit 儲存庫 <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
-DynamoRevit 專案的程式碼與核心 Dynamo 原始程式碼在 Github 是位在不同的儲存庫中。此儲存庫包含 Revit 特定節點的原始碼檔案，以及載入 Dynamo 的 Revit 增益集。適用於不同 Revit 版本 (例如 2016、2017 或 2018) 的 DynamoRevit 建置版本在儲存庫中會整理成不同的分支。
+DynamoRevit 專案的程式碼與核心 Dynamo 原始程式碼在 GitHub 是位在不同的儲存庫中。此儲存庫包含 Revit 特定節點的原始碼檔案，以及載入 Dynamo 的 Revit 增益集。適用於不同 Revit 版本 (例如 2016、2017 或 2018) 的 DynamoRevit 建置版本在儲存庫中會整理成不同的分支。
 
 DynamoRevit 的原始碼託管在此：[https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit)
 
@@ -42,7 +42,7 @@ DynamoRevit 的原始碼託管在此：[https://github.com/DynamoDS/DynamoRevit]
 
 ![複製儲存庫後的指令行介面](../../.gitbook/assets/cli-clone-revit.jpg)
 
-儲存庫完成複製後，將目前目錄變更為儲存庫資料夾，並切換至與所安裝 Revit 版本相符的分支。在此範例中，我們使用 Revit RC2.13.1_Revit2023。在 Github 頁面上的「Branch」下拉式功能表中可以檢視所有遠端分支。
+儲存庫完成複製後，將目前目錄變更為儲存庫資料夾，並切換至與所安裝 Revit 版本相符的分支。在此範例中，我們使用 Revit RC2.13.1_Revit2023。在 GitHub 頁面上的「Branch」下拉式功能表中可以檢視所有遠端分支。
 
 `cd C:\Users\username\Documents\GitHub\DynamoRevit` 會將目錄變更為 DynamoRevit。\
  `git checkout RC2.13.1_Revit2023` 會將目前分支設定為 `RC2.13.1_Revit2023`。\
@@ -145,7 +145,7 @@ Revit 需要增益集檔案才能辨識 DynamoRevit，[安裝程式](http://dyna
 > 2. 按一下 Dynamo 增益集圖示
 > 3. 一個 DynamoRevit 例證
 
-如果出現錯誤對話方塊視窗顯示缺少組合，可能是您建置所依據的 DynamoCore 版本與您在執行階段載入的 DynamoCore 版本不相符。例如，如果您嘗試使用 Dynamo 1.3 dll 啟動 DynamoCore，則 DynamoRevit 搭配最新的 DynamoCore 2.0 Beta 套件將無法運作。請確保兩個儲存庫的版本相同，且 DynamoRevit 提取的是相符版本的 NuGet 相依性。這些版本定義在 DynamoRevit 儲存庫的 `package.json` 檔案中。
+如果出現錯誤對話方塊視窗顯示缺少組合，可能是您建置所依據的 DynamoCore 版本與您在執行時期載入的 DynamoCore 版本不相符。例如，如果您嘗試使用 Dynamo 1.3 dll 啟動 DynamoCore，則 DynamoRevit 搭配最新的 DynamoCore 2.0 Beta 套件將無法運作。請確保兩個儲存庫的版本相同，且 DynamoRevit 提取的是相符版本的 NuGet 相依性。這些版本定義在 DynamoRevit 儲存庫的 `package.json` 檔案中。
 
 ### 使用 Visual Studio 為 DynamoRevit 除錯 <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
 
@@ -172,7 +172,7 @@ Revit 需要增益集檔案才能辨識 DynamoRevit，[安裝程式](http://dyna
 >
 > 1. 選取「`Debug > Attach to Process...`」以開啟「`Attach to Process`」視窗
 > 2. 將「`Transport`」設定為「`Default`」
-> 3. 選取 `Revit.exe`
+> 3. 選取「`Revit.exe`」
 > 4. 選取「`Attach`」
 
 將 Visual Studio 附加到 Revit 後，開啟 `Wall.cs` 中的 Wall.ByCurveAndHeight 原始程式碼。我們可以在「方案總管」的「`Libraries > RevitNodes > Elements`」下，在檔案的 `Public static constructors` 區域找到這段程式碼。在牆類型的建構函式中設定中斷點，以便在 Dynamo 中執行節點時，處理序會中斷，我們可以逐行執行程式碼。Dynamo zero touch 類型的建構函式通常以 `By<parameters>` 開頭。
@@ -199,7 +199,7 @@ Revit 需要增益集檔案才能辨識 DynamoRevit，[安裝程式](http://dyna
 
 如果我們繼續逐步執行函數，將會遇到 DynamoRevit 視窗中顯示的例外狀況。查看「呼叫堆疊」視窗，我們可以看到例外狀況一開始是從名為 `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve` 的方法所擲出。多虧這裡已經處理了例外狀況，因此 Dynamo 沒有當機。除錯程序將我們引導到原始式碼中的另一個方法，提供發生問題的脈絡。
 
-由於這不是開放原始碼資源庫，因此我們無法在該處進行變更 - 現在，我們擁有更多資訊，可以透過提交 Github [問題](https://guides.github.com/features/issues/)回報問題更多內容，或者我們可以針對此問題提出提取請求以提供解決方法。
+由於這不是開放原始碼資源庫，因此我們無法在該處進行變更 - 現在，我們擁有更多資訊，可以透過提交 GitHub [問題](https://guides.github.com/features/issues/)回報問題更多內容，或者我們可以針對此問題提出提取請求以提供解決方法。
 
 ![Visual Studio 中的例外狀況](../../.gitbook/assets/vs-exception.jpg)
 

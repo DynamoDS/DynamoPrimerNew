@@ -4,7 +4,7 @@
 
 本指南的目的是協助您瀏覽使用 C# 開發 Dynamo 的可能範圍，從如何建立 zero-touch 節點到建立延伸。
 
-![Github 上的 Dynamo 原始碼](../../.gitbook/assets/dynamogithub.jpg)
+![GitHub 上的 Dynamo 原始碼](../../.gitbook/assets/dynamogithub.png)
 
 > GitHub 上的 Dynamo 原始碼
 
@@ -14,11 +14,11 @@
 
 [https://dynamobuilds.com/](https://dynamobuilds.com/)
 
-**Dynamo GitHub**：Dynamo 是 Github 上的一個開放原始碼開發專案。
+**Dynamo GitHub**：Dynamo 是 GitHub 上的一個開放原始碼開發專案。
 
 [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
-**Dynamo Github Wiki**：這是開發人員文件的主要資源。
+**Dynamo GitHub Wiki**：這是開發人員文件的主要資源。
 
 [https://github.com/DynamoDS/Dynamo/wiki](https://github.com/DynamoDS/Dynamo/wiki)
 
@@ -44,4 +44,4 @@
 
 #### 如何對本指南提出變更的建議？<a href="#how-can-i-suggest-changes-to-this-guide" id="how-can-i-suggest-changes-to-this-guide"></a>
 
-本文件開放提供建議。您可以直接在 Github 中建立變更請求來進行。
+本文件開放提供建議。您可以直接在 GitHub 中建立變更請求來進行。

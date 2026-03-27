@@ -1,12 +1,12 @@
 # 從原始碼建置 Dynamo
 
-Dynamo 的原始碼託管在 Github，可供任何人複製並提出貢獻。在本章中，我們將逐步瞭解如何使用 git 複製儲存庫、使用 Visual Studio 編譯原始碼檔案、執行本端建置版本並除錯，以及從 Github 提取任何新變更。
+Dynamo 的原始碼託管在 GitHub，可供任何人複製並提出貢獻。在本章中，我們將逐步瞭解如何使用 git 複製儲存庫、使用 Visual Studio 編譯原始碼檔案、執行本端建置版本並除錯，以及從 GitHub 提取任何新變更。
 
-### 在 Github 上找出 Dynamo 儲存庫 <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
+### 在 GitHub 上找出 Dynamo 儲存庫 <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
-Github 是一種以 [git](https://help.github.com/articles/git-and-github-learning-resources/) 為基礎的託管服務，是一種可追蹤變更並協調不同使用者工作的版本控制系統。Git 是一種工具，我們可以利用它來下載 Dynamo 的原始碼檔案，並透過一些指令保持更新。使用此方法可避免每次更新時都要手動下載和取代原始碼檔案這些不必要且繁雜的工作。Git 版本控制系統會追蹤本端和遠端程式碼儲存庫之間的任何差異。
+GitHub 是一種以 [git](https://help.github.com/articles/git-and-github-learning-resources/) 為基礎的託管服務，是一種可追蹤變更並協調不同使用者工作的版本控制系統。Git 是一種工具，我們可以利用它來下載 Dynamo 的原始碼檔案，並透過一些指令保持更新。使用此方法可避免每次更新時都要手動下載和取代原始碼檔案這些不必要且繁雜的工作。Git 版本控制系統會追蹤本端和遠端程式碼儲存庫之間的任何差異。
 
-Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo) 儲存庫
+Dynamo 的原始碼託管在 DynamoDS GitHub 上的 [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo) 儲存庫
 
 ![Dynamo 原始碼檔案](../../.gitbook/assets/github.jpg)
 
@@ -28,7 +28,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 > 1. 選取「Clone or download」
 > 2. 複製 URL
 
-安裝 git 後，我們可以複製 Dynamo 儲存庫。先開啟指令提示。然後，使用變更目錄指令 `cd` 瀏覽到要將原始碼檔案複製到的資料夾。在此範例中，我們在 `Documents` 中建立了一個名為 `Github` 的資料夾。
+安裝 git 後，我們可以複製 Dynamo 儲存庫。先開啟指令提示。然後，使用變更目錄指令 `cd` 瀏覽到要將原始碼檔案複製到的資料夾。在此範例中，我們在 `Documents` 中建立了一個名為 `GitHub` 的資料夾。
 
 `cd C:\Users\username\Documents\GitHub`
 
@@ -36,13 +36,13 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 ![指令提示](../../.gitbook/assets/cli-1.jpg)
 
-下一步，我們要執行 git 指令，將 Dynamo 儲存庫複製到我們指定的位置。在 Github 上按一下「Clone or Download」按鈕，取得指令中的 URL。在指令終端機中執行此指令。請注意，這會複製 Dynamo 儲存庫主分支，主分支是 Dynamo 最新的程式碼，包含最新版本的 Dynamo 程式碼。此分支每天都會變更。
+下一步，我們要執行 git 指令，將 Dynamo 儲存庫複製到我們指定的位置。在 GitHub 上按一下「Clone or Download」按鈕，取得指令中的 URL。在指令終端機中執行此指令。請注意，這會複製 Dynamo 儲存庫主分支，主分支是 Dynamo 最新的程式碼，包含最新版本的 Dynamo 程式碼。此分支每天都會變更。
 
 `git clone https://github.com/DynamoDS/Dynamo.git`
 
 ![Git 複製作業的結果](../../.gitbook/assets/cli-2.jpg)
 
-如果複製作業成功完成，我們就知道 git 正在運作。在檔案總管中，瀏覽到您複製的目錄以查看原始碼檔案。目錄結構應該與 Github 上 Dynamo 儲存庫的主分支相同。
+如果複製作業成功完成，我們就知道 git 正在運作。在檔案總管中，瀏覽到您複製的目錄以查看原始碼檔案。目錄結構應該與 GitHub 上 Dynamo 儲存庫的主分支相同。
 
 ![Dynamo 的原始碼檔案](../../.gitbook/assets/source-files.jpg)
 
@@ -155,7 +155,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 ### 提取最新建置版本 <a href="#pulling-latest-build" id="pulling-latest-build"></a>
 
-由於 Dynamo 原始碼託管在 Github 上，因此讓本端原始碼檔案保持更新最簡單的方式是使用 git 指令提取變更。
+由於 Dynamo 原始碼託管在 GitHub 上，因此讓本端原始碼檔案保持更新最簡單的方式是使用 git 指令提取變更。
 
 使用指令行，將目前目錄設定為 Dynamo 儲存庫：
 
@@ -173,7 +173,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 除了提取更新，還有四個 git 工作流程需要熟悉。
 
-* **Fork (分岔)** Dynamo 儲存庫，建立一份與原始儲存庫分開的複本。此處所做的任何變更都不會影響原始儲存庫，也可以從中擷取更新或利用提取請求來提交更新。Fork 不是 git 指令，而是 github 新增的一個工作流程 - 分岔-提取請求模型是參與線上開放原始碼專案其中一個最常見的工作流程。如果您想要為 Dynamo 做出貢獻，請學習這項功能。
+* **Fork (分岔)** Dynamo 儲存庫，建立一份與原始儲存庫分開的複本。此處所做的任何變更都不會影響原始儲存庫，也可以從中擷取更新或利用提取請求來提交更新。Fork 不是 git 指令，而是 GitHub 新增的一個工作流程 - 分岔-提取請求模型是參與線上開放原始碼專案其中一個最常見的工作流程。如果您想要為 Dynamo 做出貢獻，請學習這項功能。
 * **Branch (分支)** \- 在分支內容中獨立於其他工作進行實驗或新功能。這可讓您更輕鬆地傳送提取請求。
 * 在完成一部分工作之後，以及做了可能想要退回的變更之後，請經常進行 **commit (認可)**。認可動作會記錄對儲存庫的變更，在對主要 Dynamo 儲存庫提出提取請求時，也會看到該筆認可內容。
 * 當準備好正式將變更提出到主要 Dynamo 儲存庫時，請建立 **pull request (提取請求)**。

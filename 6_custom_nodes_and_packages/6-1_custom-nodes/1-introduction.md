@@ -22,7 +22,7 @@
 
 若要從頭開始建立自訂節點，請啟動 Dynamo，然後選取「自訂節點」，或在圖元區鍵入 Ctrl + Shift + N。
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 01.jpg>)
+\![](<../../.gitbook/assets/custom node intro - custom node environment 01.png>)
 
 在「自訂節點性質」對話方塊中指定名稱、描述和品類。
 

@@ -4,7 +4,7 @@
 
 Dynamo 工作區由四個主要元素組成。
 
-\![](<../.gitbook/assets/workspace - ui.jpg>)
+\![](<../.gitbook/assets/workspace - ui.png>)
 
 > 1. 所有作用中的頁籤。
 > 2. 預覽模式
@@ -15,11 +15,11 @@ Dynamo 工作區由四個主要元素組成。
 
 當您開啟新檔案時，預設會開啟新的「首頁」工作區。
 
-\![](<../.gitbook/assets/workspace - home tab.jpg>)
+\![](<../.gitbook/assets/workspace - home tab.png>)
 
 您可以在自訂節點工作區中建立自訂節點並開啟它。
 
-\![](<../.gitbook/assets/workspace - custom node tab.jpg>)
+\![](<../.gitbook/assets/workspace - custom node tab.png>)
 
 {% hint style="info" %} 每個 Dynamo 視窗只允許一個首頁工作區，但您可以用頁籤開啟多個自訂節點工作區。{% endhint %}
 

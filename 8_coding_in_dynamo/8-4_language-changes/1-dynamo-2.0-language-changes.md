@@ -36,7 +36,7 @@
 
 已知問題：
 
-* 指令式區塊中的名稱空間衝突會導致出現意外的輸入埠。請參閱 [Github 問題](https://github.com/DynamoDS/Dynamo/issues/8796)以取得更多資訊。若要解決此問題，請如下所示定義指令式區塊外部的函數：
+* 指令式區塊中的名稱空間衝突會導致出現意外的輸入埠。請參閱 [GitHub 問題](https://github.com/DynamoDS/Dynamo/issues/8796)以取得更多資訊。若要解決此問題，請如下所示定義指令式區塊外部的函數：
 
 ```
 pnt = Autodesk.Point.ByCoordinates;

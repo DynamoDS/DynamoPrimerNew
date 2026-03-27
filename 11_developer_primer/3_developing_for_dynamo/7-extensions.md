@@ -4,11 +4,11 @@
 
 #### 延伸案例研究 <a href="#extension-case-study" id="extension-case-study"></a>
 
-按照 DynamoSamples Github 儲存庫的 SampleViewExtension 範例，我們將逐步瞭解建立簡單的共存式視窗即時在圖表中顯示作用中節點所需的步驟。視圖延伸會要求我們為視窗建立使用者介面，並將值與視圖模型繫結。
+按照 DynamoSamples GitHub 儲存庫的 SampleViewExtension 範例，我們將逐步瞭解建立簡單的共存式視窗即時在圖表中顯示作用中節點所需的步驟。視圖延伸會要求我們為視窗建立使用者介面，並將值與視圖模型繫結。
 
-![視圖延伸視窗](../../.gitbook/assets/dyn-viewextension.jpg)
+![視圖延伸視窗](../../.gitbook/assets/dyn-viewextension.png)
 
-> 1. 按照 Github 儲存庫中 SampleViewExtension 範例而開發的視圖延伸視窗。
+> 1. 按照 GitHub 儲存庫中 SampleViewExtension 範例而開發的視圖延伸視窗。
 
 雖然我們將從頭開始建置範例，但您也可以下載並建置 DynamoSamples 儲存庫做為參考。
 
@@ -285,8 +285,8 @@ namespace SampleViewExtension
 
 > 1. 我們複製到 Dynamo 的視圖延伸資料夾中的 `.xml` 檔案
 
-這是視圖延伸的基本簡介。如需更複雜的案例研究，請參閱 Github 上的開放原始碼專案 DynaShape 套件。該套件使用可在 Dynamo 模型視圖中進行即時編輯的視圖延伸。
+這是視圖延伸的基本簡介。如需更複雜的案例研究，請參閱 GitHub 上的開放原始碼專案 DynaShape 套件。該套件使用可在 Dynamo 模型視圖中進行即時編輯的視圖延伸。
 
 從 Dynamo 論壇 [https://forum.dynamobim.com/t/dynashape-published/11666](https://forum.dynamobim.com/t/dynashape-published/11666) 可下載 DynamoShape 的套件安裝程式
 
-從 Github [https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape) 可以複製原始程式碼
+從 GitHub [https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape) 可以複製原始程式碼
