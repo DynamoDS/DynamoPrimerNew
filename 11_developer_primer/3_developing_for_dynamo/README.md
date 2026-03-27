@@ -91,9 +91,9 @@ Com esse método, podemos:
 
 Como o Dynamo está sendo atualizado regularmente, as alterações podem ser feitas em parte da API que um pacote usa. O rastreamento dessas alterações é importante para garantir que os pacotes existentes continuem a funcionar corretamente.
 
-As alterações da API são rastreadas no [Wiki do Dynamo Github](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). Isso abrange as alterações no DynamoCore, nas bibliotecas e nos espaços de trabalho.
+As alterações da API são rastreadas no [Wiki do Dynamo no GitHub](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). Isso abrange as alterações no DynamoCore, nas bibliotecas e nos espaços de trabalho.
 
-![A API do Dynamo altera o documento](../../.gitbook/assets/api-changes.jpg)
+![A API do Dynamo altera o documento](../../.gitbook/assets/api-changes.png)
 
 Um exemplo de uma mudança significativa futura é a transição do formato de arquivo XML para o formato JSON na versão 2.0. Os nós derivados do NodeModel agora precisarão de um [construtor JSON](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node); caso contrário, eles não serão abertos no Dynamo 2.0.
 

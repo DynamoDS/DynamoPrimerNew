@@ -1,6 +1,6 @@
 # Sobre
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Vídeo promocional do Dynamo {% endembed %}
+{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %} Vídeo promocional do Dynamo {% endembed %}
 
 ## Para o Dynamo v2.13 e mais recente
 
@@ -81,7 +81,7 @@ Obrigado a Matt Jezyk, Ian Keough, Zach Kron, Racel Amour e Colin McCrone pela c
 
 [https://dynamobim.org](https://dynamobim.org/)
 
-**Dynamo GitHub** O Dynamo é um projeto de desenvolvimento de código aberto no GitHub. Para contribuir, confira o DynamoDS.
+**Dynamo no GitHub** O Dynamo é um projeto de desenvolvimento de código aberto no GitHub. Para contribuir, confira o DynamoDS.
 
 [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 

@@ -2,7 +2,7 @@
 
 A biblioteca contém todos os nós carregados, incluindo os dez nós de categorias padrão que vêm com a instalação, bem como quaisquer nós ou pacotes personalizados carregados adicionalmente. Os nós na biblioteca são organizados hierarquicamente dentro de bibliotecas, categorias e, quando apropriado, subcategorias.
 
-\![](<../.gitbook/assets/library - library UI.jpg>)
+\![](<../.gitbook/assets/library - library UI.png>)
 
 * Nós básicos: vêm com a instalação padrão.
 * Nós personalizados: armazene as rotinas ou gráficos especiais usados com frequência como nós personalizados. Também é possível compartilhar os nós personalizados com a comunidade
@@ -35,7 +35,7 @@ Passe o cursor do mouse sobre um nó para obter informações mais detalhadas al
 
 \![](<../.gitbook/assets/user interface - node description.jpg>)
 
-> 1. Descrição: descrição de texto simples do nó
+> 1. Descrição: descrição em texto simples do nó
 > 2. Ícone: versão maior do ícone no menu Biblioteca
 > 3. Entrada(s): nome, tipo de dados e estrutura de dados
 > 4. Saída(s): tipo de dados e estrutura
@@ -101,7 +101,7 @@ Os nós de entrada são os principais meios para o usuário do nosso Programa vi
 
 #### Watch e Watch3D
 
-Os nós Watch são essenciais para gerenciar os dados que fluem através do Programa visual. É possível visualizar o resultado de um nó através da **visualização dos dados do nó** passando o cursor do mouse sobre o nó.
+Os nós de inspeção são essenciais para gerenciar os dados que fluem através do Programa visual. É possível visualizar o resultado de um nó através da **visualização dos dados do nó** passando o cursor do mouse sobre o nó.
 
 \![](<../.gitbook/assets/library - node preview.jpg>)
 
@@ -117,7 +117,7 @@ Ambos são encontrados na categoria da vista na biblioteca principal.
 
 {% hint style="info" %} Dica: Às vezes, a visualização 3D pode causar distrações, quando o Programa visual contém muitos nós. Considere desmarcar a opção Exibir visualização de plano de fundo no menu Configurações e usar um nó Watch3D para visualizar a geometria. {% endhint %}
 
-#### Code Block
+#### Bloco de código
 
 Os nós Code Block podem ser utilizados para definir um Code Block com linhas separadas por ponto e vírgula. Isso pode ser tão simples quanto `X/Y`.
 

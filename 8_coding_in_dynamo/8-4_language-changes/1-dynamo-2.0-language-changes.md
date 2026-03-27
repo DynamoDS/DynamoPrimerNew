@@ -36,7 +36,7 @@ A seção Alterações de linguagem fornece uma visão geral das atualizações 
 
 Problemas conhecidos:
 
-* Os conflitos de namespace em blocos imperativos causam o aparecimento de portas de entrada inesperadas. Consulte o [problema do Github](https://github.com/DynamoDS/Dynamo/issues/8796) para obter mais informações. Para resolver isso, defina a função fora do Bloco imperativo assim:
+* Os conflitos de namespace em blocos imperativos causam o aparecimento de portas de entrada inesperadas. Consulte o [problema do GitHub](https://github.com/DynamoDS/Dynamo/issues/8796) para obter mais informações. Para resolver isso, defina a função fora do Bloco imperativo assim:
 
 ```
 pnt = Autodesk.Point.ByCoordinates;

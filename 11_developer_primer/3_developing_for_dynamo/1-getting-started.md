@@ -79,7 +79,7 @@ Agora, podemos abrir o Dynamo e importar o `.dll`. Com o recurso Adicionar, nave
 
 Se uma categoria for criada na biblioteca chamada `MyCustomNode`, significa que o .dll foi importado com êxito. No entanto, o Dynamo criou dois nós do que queríamos ser um nó único. Na próxima seção, explicaremos por que isso acontece e como o Dynamo lê um .dll.
 
-![Nós personalizados](../../.gitbook/assets/dyn-customnode.jpg)
+![Nós personalizados](../../.gitbook/assets/dyn-customnode.png)
 
 > 1. MyCustomNode na biblioteca do Dynamo. A categoria da biblioteca é determinada pelo nome `.dll`.
 > 2. SampleFunctions.MultiplyByTwo na tela.

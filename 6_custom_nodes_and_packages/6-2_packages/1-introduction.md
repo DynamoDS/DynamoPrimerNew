@@ -14,7 +14,7 @@ No Dynamo, vá para _Pacotes > Package Manager..._
 
 <figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
-Na barra de pesquisa, vamos procurar “quadrados no eixo retangular”. Após alguns momentos, você deverá ver todos os pacotes que correspondem a essa consulta de pesquisa. Queremos selecionar o primeiro pacote com o nome correspondente.
+Na barra de pesquisa, vamos procurar “quadrados na grade retangular”. Após alguns momentos, você deverá ver todos os pacotes que correspondem a essa consulta de pesquisa. Queremos selecionar o primeiro pacote com o nome correspondente.
 
 Clique em Instalar para adicionar esse pacote à biblioteca e, em seguida, aceite a confirmação. Concluído.
 
@@ -45,7 +45,7 @@ Na biblioteca do Dynamo, temos um grupo _DynamoUnfold_ com várias categorias e 
 Agora, vamos analisar a estrutura de arquivos do pacote.
 
 1. Primeiro, vá para Pacotes > Package Manager > Pacotes instalados.
-2. Ao lado de DynamoUnfold, selecione o menu de opções <img src="../../.gitbook/assets/package introduction - vertical dots menu.jpg" alt="" data-size="line">.
+2. Ao lado de DynamoUnfold, selecione o menu de opções <img src="../../.gitbook/assets/package introduction - vertical dots menu.png" alt="" data-size="line">.
 3. Em seguida, clique em Mostrar diretório raiz para abrir a pasta raiz desse pacote.
 
 <figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
@@ -87,7 +87,7 @@ Outra forma de descobrir pacotes do Dynamo é explorar o site do [Dynamo Package
 
 Se você quiser ver onde os arquivos dos pacotes estão armazenados, na parte superior da navegação, clique em Dynamo > Preferências > Configurações do pacote > Localizações dos arquivos de nós e pacotes. Você poderá encontrar o diretório da pasta raiz atual aqui.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 08.jpg>)
+\![](<../../.gitbook/assets/package introduction - installing package folder 08.png>)
 
 Por padrão, os pacotes são instalados em uma localização similar a este caminho de pasta: _C:/Usuários/[nome de usuário]/AppData/Roaming/Dynamo/[versão do Dynamo]_.
 
@@ -102,7 +102,7 @@ Na interface do usuário de um aplicativo individual, vá para _Dynamo -> Prefer
 Como um processo automatizado, isso envolveria adicionar informações ao arquivo de configuração instalado com o Dynamo:\
  `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
 
-Por padrão, a configuração do Dynamo for Revit é:
+Por padrão, a configuração do Dynamo para Revit é:
 
 `<CustomPackageFolders>`
 

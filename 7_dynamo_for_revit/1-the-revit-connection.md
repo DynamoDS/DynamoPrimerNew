@@ -8,9 +8,9 @@ Este capítulo é voltado para os fluxos de trabalho do Dynamo para o BIM. As se
 
 ### Compatibilidade com a versão do Revit
 
-À medida que o Revit e o Dynamo continuam a evoluir, você poderá notar que a versão do Revit com a qual você está trabalhando não é compatível com a versão do Dynamo for Revit instalada em seu computador. Abaixo estão descritas quais versões do Dynamo for Revit são compatíveis com o Revit.
+À medida que o Revit e o Dynamo continuam a evoluir, você poderá notar que a versão do Revit com a qual você está trabalhando não é compatível com a versão do Dynamo para Revit instalada em seu computador. Abaixo estão descritas quais versões do Dynamo para Revit são compatíveis com o Revit.
 
-| Versão do Revit | Primeira versão estável do Dynamo                                                  | Última versão suportada do Dynamo for Revit                                                                                                 |
+| Versão do Revit | Primeira versão estável do Dynamo                                                  | Última versão suportada do Dynamo para Revit                                                                                                 |
 | ------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | 2013          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe)           | [0.6.3](https://downloads.dynamobuilds.com/DynamoInstall0.6.3.exe)                                                                      |
 | 2014          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe)           | [0.8.2](https://downloads.dynamobuilds.com/DynamoInstall0.8.2.exe)                                                                      |
@@ -41,7 +41,7 @@ Em um editor de família ou um projeto do Revit, navegue para Complementos e cli
 
 Quando o Dynamo é aberto no Revit, há uma nova categoria chamada “Revit”. Essa é uma adição abrangente à interface de usuário, oferecendo nós especificamente voltados para os fluxos de trabalho do Revit.*
 
-{% hint style="warning" %} *Usando a família de nós específica do Revit, o gráfico do Dynamo só funcionará quando for aberto no Dynamo for Revit. Se um gráfico do Dynamo for Revit for aberto no Dynamo Sandbox, por exemplo, os nós do Revit estarão ausentes. {% endhint %}
+{% hint style="warning" %} *Usando a família de nós específica do Revit, o gráfico do Dynamo só funcionará quando for aberto no Dynamo para Revit. Se um gráfico do Dynamo for Revit for aberto no Dynamo Sandbox, por exemplo, os nós do Revit estarão ausentes. {% endhint %}
 
 \![](<../.gitbook/assets/revit connection - running dynamo in revit 02.jpg>)
 
@@ -55,7 +55,7 @@ Como o Revit é uma plataforma que fornece um gerenciamento robusto de projetos,
 
 Desde que o Dynamo foi originalmente criado para o AEC, sua grande e crescente comunidade é um grande recurso para aprender e entrar em contato com especialistas no setor. A comunidade do Dynamo é formada por arquitetos, engenheiros, programadores e designers, apaixonados por compartilhar e criar.
 
-O Dynamo é um projeto de código aberto que está em constante evolução e muitos desenvolvimentos são relacionados ao Revit. Se você não estiver familiarizado com essa área, entre no fórum de discussão e comece a [fazer perguntas](http://dynamobim.org/forums/forum/dyn/). Se você for um programador e quiser participar do desenvolvimento do Dynamo, confira o [repositório do Github](https://github.com/DynamoDS/Dynamo). Além disso, o [gerenciador de pacotes do Dynamo](http://dynamopackages.com) é um ótimo recurso para as bibliotecas de terceiros. Muitos desses pacotes são feitos com o AEC em mente. Vamos também analisar os pacotes de terceiros para obter uma panorâmica neste capítulo.
+O Dynamo é um projeto de código aberto que está em constante evolução e muitos desenvolvimentos são relacionados ao Revit. Se você não estiver familiarizado com essa área, entre no fórum de discussão e comece a [fazer perguntas](http://dynamobim.org/forums/forum/dyn/). Se você for um programador e quiser participar do desenvolvimento do Dynamo, confira o [repositório do GitHub](http://dynamobim.org/forums/forum/dyn/). Além disso, o [gerenciador de pacotes do Dynamo](http://dynamopackages.com) é um ótimo recurso para as bibliotecas de terceiros. Muitos desses pacotes são feitos com o AEC em mente. Vamos também analisar os pacotes de terceiros para obter uma panorâmica neste capítulo.
 
 O Dynamo também mantém um blog ativo. Leia os artigos recentes para saber mais sobre os últimos acontecimentos.
 

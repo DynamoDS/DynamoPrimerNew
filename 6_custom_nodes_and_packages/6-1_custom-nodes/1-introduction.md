@@ -22,7 +22,7 @@ Vamos para o ambiente de nó personalizado e criar um nó simples para calcular 
 
 Para criar um nó personalizado do zero, inicie o Dynamo e selecione Nó personalizado ou digite Ctrl + Shift + N na tela.
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 01.jpg>)
+\![](<../../.gitbook/assets/custom node intro - custom node environment 01.png>)
 
 Atribua um nome, uma descrição e uma categoria na caixa de diálogo Propriedades de nó personalizado.
 

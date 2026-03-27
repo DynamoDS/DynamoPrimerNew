@@ -1,12 +1,12 @@
 # Estudo de caso sem toque – Nó de grade
 
-Com um projeto do Visual Studio ativo e em execução, vamos analisar como compilar um nó personalizado que cria um eixo retangular de células. Embora possamos criar isso com vários nós padrão, é uma ferramenta útil que pode ser facilmente contida em um nó Sem toque. Ao contrário das linhas de grade, as células podem ser dimensionadas em torno de seus pontos centrais, consultadas para seus vértices de canto ou incorporadas em faces.
+Com um projeto do Visual Studio ativo e em execução, vamos analisar como compilar um nó personalizado que cria uma grade retangular de células. Embora possamos criar isso com vários nós padrão, é uma ferramenta útil que pode ser facilmente contida em um nó Sem toque. Ao contrário das linhas de grade, as células podem ser dimensionadas em torno de seus pontos centrais, consultadas para seus vértices de canto ou incorporadas em faces.
 
 Este exemplo abordará alguns dos recursos e conceitos a serem considerados ao criar um nó Sem toque. Depois de compilarmos o nó personalizado e adicioná-lo ao Dynamo, verifique se a página “Aprofundar o conhecimento sobre o nó Sem Toque” fornece uma visão mais profunda dos valores de entrada padrão, retornando vários valores, documentação, objetos, usando tipos de geometria do Dynamo e migrações.
 
-![Gráfico de eixo retangular](../../.gitbook/assets/cover-image.jpg)
+![Gráfico de grade retangular](../../.gitbook/assets/cover-image.jpg)
 
-### Nó de eixo retangular personalizado <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
+### Nó de grade retangular personalizado <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 Para começar a compilar o nó de grade, crie um novo projeto de biblioteca de classes do Visual Studio. Consulte a página Introdução para obter uma visão geral detalhada de como configurar um projeto.
 
@@ -90,7 +90,7 @@ Se o projeto for semelhante a este, vá em frente e tente compilar o `.dll`.
 
 Verifique a pasta `bin` do projeto para obter um `.dll`. Se a compilação tiver sido bem-sucedida, poderemos adicionar o `.dll` ao Dynamo.
 
-![Nós personalizados no Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
+![Nós personalizados no Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.png)
 
 > 1. O nó personalizado RectangularGrids na Biblioteca do Dynamo
 > 2. O nó personalizado na tela

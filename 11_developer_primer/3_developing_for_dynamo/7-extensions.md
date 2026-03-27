@@ -2,13 +2,13 @@
 
 As extensões são uma poderosa ferramenta de desenvolvimento no ecossistema do Dynamo. Elas permitem que os desenvolvedores direcionem a funcionalidade personalizada com base nas interações e lógica do Dynamo. As extensões podem ser divididas em duas categorias principais, extensões e extensões de vista. Como a nomenclatura indica, a estrutura de extensão da vista permite estender a interface do usuário do Dynamo registrando itens de menu personalizados. As extensões regulares operam de forma muito semelhante, exceto a interface do usuário. Por exemplo, podemos compilar uma extensão que registra informações específicas no console do Dynamo. Esse cenário não requer uma interface do usuário personalizada e, portanto, também pode ser realizado usando uma extensão.
 
-#### Estudo de caso de extensão <a href="#extension-case-study" id="extension-case-study"></a>
+#### Estudo de caso da extensão <a href="#extension-case-study" id="extension-case-study"></a>
 
-Seguindo o exemplo SampleViewExtension do repositório Github do DynamoSamples, vamos percorrer as etapas necessárias para criar uma janela simples sem janela restrita que exibe os nós ativos no gráfico em tempo real. Uma extensão de vista requer que criemos uma interface do usuário para a janela e vinculemos valores a um modelo de vista.
+Seguindo o exemplo SampleViewExtension do repositório DynamoSamples do GitHub, vamos percorrer as etapas necessárias para criar uma janela simples sem janela restrita que exibe os nós ativos no gráfico em tempo real. Uma extensão de vista requer que criemos uma interface do usuário para a janela e vinculemos valores a um modelo de vista.
 
-![Janela de extensão da vista](../../.gitbook/assets/dyn-viewextension.jpg)
+![Janela de extensão da vista](../../.gitbook/assets/dyn-viewextension.png)
 
-> 1. A janela de extensão da vista foi desenvolvida seguindo o exemplo SampleViewExtension no repositório Github.
+> 1. A janela de extensão da vista foi desenvolvida seguindo o exemplo SampleViewExtension no repositório do GitHub.
 
 Embora possamos compilar o exemplo desde o início, também é possível fazer o download e criar o repositório DynamoSamples para servir como referência.
 
@@ -285,8 +285,8 @@ A última etapa é copiar o arquivo `SampleViewExtension_ViewExtensionDefinition
 
 > 1. O arquivo `.xml` que copiamos para a pasta de extensões de vista do Dynamo
 
-Esta é uma introdução básica às extensões da vista. Para um estudo de caso mais sofisticado, consulte o pacote DynaShape, um projeto de código aberto no Github. O pacote usa uma extensão de vista que permite a edição ao vivo na vista do modelo do Dynamo.
+Esta é uma introdução básica às extensões da vista. Para um estudo de caso mais sofisticado, consulte o pacote DynaShape, um projeto de código aberto no GitHub. O pacote usa uma extensão de vista que permite a edição ao vivo na vista do modelo do Dynamo.
 
-É possível fazer o download de um instalador de pacote para o DynamoShape do Fórum do Dynamo: [https://forum.dynamobim.com/t/dynashape-published/11666](https://forum.dynamobim.com/t/dynashape-published/11666)
+É possível fazer o download de um instalador de pacote para o DynamoShape no Fórum do Dynamo: [https://forum.dynamobim.com/t/dynashape-published/11666](https://forum.dynamobim.com/t/dynashape-published/11666)
 
-O código-fonte pode ser clonado do Github: [https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape)
+O código-fonte pode ser clonado do GitHub: [https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape)

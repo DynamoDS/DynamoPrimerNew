@@ -1,6 +1,6 @@
 # Compilar o DynamoRevit da origem
 
-Os arquivos de origem do DynamoRevit também estão hospedados no DynamoDS Github para que os desenvolvedores façam contribuições e compilem versões beta. A compilação do DynamoRevit da origem geralmente segue o mesmo processo que o Dynamo, com exceção de alguns detalhes importantes:
+Os arquivos de origem do DynamoRevit também estão hospedados no DynamoDS GitHub para que os desenvolvedores façam contribuições e compilem versões beta. A compilação do DynamoRevit da origem geralmente segue o mesmo processo que o Dynamo, com exceção de alguns detalhes importantes:
 
 * O DynamoRevit faz referência a montagens do Dynamo, portanto, elas devem ser compiladas com pacotes NuGet correspondentes. Por exemplo, o DynamoRevit 2.x não será carregado no Dynamo 1.3.
 * O DynamoRevit é específico para as versões do Revit, por exemplo: a ramificação do DynamoRevit 2018 deve ser executada no Revit 2018.
@@ -15,9 +15,9 @@ Para garantir uma compilação bem-sucedida, clonaremos e compilaremos os reposi
 
 _Observação: A compilação manual do Dynamo antes do DynamoRevit só será necessária se você estiver compilando o Dynamo 1.x e o DynamoRevit 1.x – as versões mais recentes do repositório do DynamoRevit dependem do gerenciador de pacotes do NuGet para as dependências do Dynamo necessárias para a compilação. Embora uma compilação do DynamoRevit 2.x não exija a extração manual do Dynamo, você ainda precisará do `add-in` principal em outro lugar para realmente executar os `dlls` do DynamoRevit. Portanto, vale a pena extrair e compilar o Dynamo. Veja mais abaixo:_ [_Compilar o repositório usando o Visual Studio_](1-build-dynamorevit-from-source.md#building-the-repository-using-Visual-Studio)
 
-### Localização do repositório do DynamoRevit no Github <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
+### Localização do repositório do DynamoRevit no GitHub <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
-O código do projeto DynamoRevit reside em um repositório separado no Github do código-fonte do Dynamo principal. Esse repositório contém os arquivos de origem para nós específicos do Revit e o complemento do Revit que carrega o Dynamo. As compilações do DynamoRevit para diferentes versões do Revit (2016, 2017 ou 2018, por exemplo) são organizadas como ramificações no repositório.
+O código do projeto DynamoRevit reside em um repositório no GitHub separado do código-fonte do Dynamo Core. Esse repositório contém os arquivos de origem para nós específicos do Revit e o complemento do Revit que carrega o Dynamo. As compilações do DynamoRevit para diferentes versões do Revit (2016, 2017 ou 2018, por exemplo) são organizadas como ramificações no repositório.
 
 A origem do DynamoRevit está hospedada aqui: [https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit)
 
@@ -42,7 +42,7 @@ Agora podemos clonar o repositório para esse diretório. Embora precisemos espe
 
 ![Interface de linha de comando após a clonagem do repositório](../../.gitbook/assets/cli-clone-revit.jpg)
 
-Quando o repositório tiver terminado a clonagem, altere o diretório atual para a pasta do repositório e alterne para a ramificação que corresponde à versão instalada do Revit. Neste exemplo, estamos usando o Revit RC2.13.1_Revit2023. Todas as ramificações remotas podem ser visualizadas na página do Github no menu suspenso Ramificações.
+Quando o repositório tiver terminado a clonagem, altere o diretório atual para a pasta do repositório e alterne para a ramificação que corresponde à versão instalada do Revit. Neste exemplo, estamos usando o Revit RC2.13.1_Revit2023. Todas as ramificações remotas podem ser visualizadas no menu suspenso Ramificações da página do GitHub.
 
 `cd C:\Users\username\Documents\GitHub\DynamoRevit` altera o diretório para DynamoRevit. \
 `git checkout RC2.13.1_Revit2023` define a ramificação atual como `RC2.13.1_Revit2023`.\
@@ -199,7 +199,7 @@ Agora, passe o cursor sobre cada linha no construtor até que a exceção seja a
 
 Se continuarmos a percorrer a função, veremos a exceção exibida na janela do DynamoRevit. Observando a janela Pilha de chamadas, poderemos ver que a exceção foi originalmente acionada com base em um método chamado `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve`. Felizmente, a exceção é tratada aqui, portanto, o Dynamo não teve um erro fatal. O processo de depuração forneceu contexto para o problema, trazendo-nos para outro método no código-fonte.
 
-Como não é uma biblioteca de código aberto, não poderemos fazer alterações. Agora que temos mais informações, poderemos relatar o problema com mais contexto preenchendo um [problema](https://docs.github.com/pt/issues/tracking-your-work-with-issues/about-issues) do github ou poderemos propor uma solução alternativa para esse problema, fazendo uma solicitação de extração.
+Como não é uma biblioteca de código aberto, não poderemos fazer alterações. Agora que temos mais informações, poderemos relatar o problema com mais contexto preenchendo um [problema](https://guides.github.com/features/issues/) do GitHub ou poderemos propor uma solução alternativa para esse problema, fazendo uma solicitação de extração.
 
 ![Exceção no Visual Studio](../../.gitbook/assets/vs-exception.jpg)
 

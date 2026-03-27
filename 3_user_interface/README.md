@@ -4,12 +4,12 @@
 
 A interface do usuário (IU) do Dynamo é organizada em cinco regiões principais. Abordaremos brevemente a visão geral aqui e explicaremos melhor sobre o espaço de trabalho e a biblioteca nas seções a seguir.
 
-\![](<../.gitbook/assets/user interface - ui.jpg>)
+\![](<../.gitbook/assets/user interface - ui.png>)
 
 > 1. Menus
 > 2. Barra de ferramentas
 > 3. Biblioteca
-> 4. Espaço de trabalho
+> 4. Área de trabalho
 > 5. Barra de execução
 
 ### Menus
@@ -40,7 +40,7 @@ Se você tiver dúvidas, confira o menu **Ajuda**. Você pode acessar um dos sit
 > 3. Dicionário do Dynamo – Recurso com a documentação sobre todos os nós.
 > 4. Site do Dynamo – Um site de informações sobre o Dynamo e links para recursos como o fórum, o blog etc.
 > 5. Repositório do Dynamo – Visualize o projeto do Dynamo no GitHub. 
-> 6. Wiki do projeto do Dynamo – Consulte a wiki para saber como desenvolver usando a API do Dynamo, com suporte a bibliotecas e ferramentas.
+> 6. Wiki do projeto do Dynamo – Visite a wiki para saber como desenvolver usando a API do Dynamo, com suporte a bibliotecas e ferramentas.
 > 7. Exibir a página inicial – Retorna para a página inicial do Dynamo quando dentro de um documento.
 > 8. Relatório de um bug – Abre um problema no GitHub.
 
@@ -48,12 +48,12 @@ Se você tiver dúvidas, confira o menu **Ajuda**. Você pode acessar um dos sit
 
 A barra de ferramentas do Dynamo contém uma série de botões para acesso rápido ao trabalho com arquivos, bem como os comandos Desfazer [Ctrl + Z] e Refazer [Ctrl + Y]. Na parte mais à direita, há outro botão que exporta um instantâneo do espaço de trabalho, o que é extremamente útil para fins de documentação e compartilhamento.
 
-* \![](<../.gitbook/assets/user interface - new file.jpg>) Novo – Criar um novo arquivo .dyn
-* \![](<../.gitbook/assets/user interface - open (1).jpg>) Abrir – Abrir um arquivo .dyn (espaço de trabalho) ou .dyf (nó personalizado) existente
-* \![](<../.gitbook/assets/user interface - save.jpg>) Salvar/Salvar como – Salvar o arquivo .dyn ou .dyf ativo
+* gitbook/assets/user interface - new file.jpg>) Novo – Criar um novo arquivo .dyn
+* \![](<../.gitbook/assets/user interface - open (1).png>) Abrir – Abrir um arquivo.dyn (workspace) existente ou um arquivo .dyf (nó personalizado)
+* ! [](<../.gitbook/assets/user interface - save.png>) Salvar/Salvar como – Salvar o arquivo .dyn ou .dyf ativo
 * \![](<../.gitbook/assets/user interface - undo.jpg>) Desfazer – Desfazer a última ação
 * \![](<../.gitbook/assets/user interface - redo.jpg>) Refazer – Refazer a última ação
-* \![](<../.gitbook/assets/user interface - screenshot.jpg>) Exportar espaço de trabalho como imagem – Exportar o espaço de trabalho visível como um arquivo PNG
+* [](<../.gitbook/assets/user interface - screenshot.png>) Exportar espaço de trabalho como imagem – Exportar o espaço de trabalho visível como um arquivo PNG
 
 ### Biblioteca
 

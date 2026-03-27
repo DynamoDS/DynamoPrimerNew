@@ -1,10 +1,10 @@
-# Espaço de trabalho
+# Área de trabalho
 
 ### Espaço de trabalho principal
 
 O espaço de trabalho do Dynamo consiste em quatro elementos principais.
 
-\![](<../.gitbook/assets/workspace - ui.jpg>)
+\![](<../.gitbook/assets/workspace - ui.png>)
 
 > 1. Todas as guias ativas.
 > 2. Modo de visualização
@@ -15,11 +15,11 @@ O espaço de trabalho do Dynamo consiste em quatro elementos principais.
 
 Quando você abre um novo arquivo, um novo espaço de trabalho inicial será aberto por padrão.
 
-\![](<../.gitbook/assets/workspace - home tab.jpg>)
+\![](<../.gitbook/assets/workspace - home tab.png>)
 
 Você pode criar um nó personalizado e abri-lo em um espaço de trabalho de nó personalizado.
 
-\![](<../.gitbook/assets/workspace - custom node tab.jpg>)
+\![](<../.gitbook/assets/workspace - custom node tab.png>)
 
 {% hint style="info" %} Somente um espaço de trabalho inicial é permitido em cada janela do Dynamo, mas você pode ter vários espaços de trabalho de nós personalizados abertos em guias. {% endhint %}
 
@@ -75,7 +75,7 @@ b. No modo de **Visualização 3D**
 * Com o mouse:
   * Role com botão do meio do mouse para cima e para baixo – Aproximar/afastar o zoom
   * Clique com o botão do meio do mouse e arraste – Pan
-  * Clique com o botão direito do mouse e arraste – Orbitar
+  * Clique com o botão direito do mouse e arraste – Órbita
 
 ### Nó no espaço de trabalho
 

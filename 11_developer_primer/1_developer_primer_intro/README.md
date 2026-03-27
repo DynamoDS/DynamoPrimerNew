@@ -4,7 +4,7 @@
 
 O objetivo deste guia é ajudar você a navegar pela gama de possibilidades de desenvolvimento em C# para o Dynamo, desde como criar nós sem toque até extensões de compilação.
 
-![Origem do Dynamo no Github](../../.gitbook/assets/dynamogithub.jpg)
+![Origem do Dynamo no GitHub](../../.gitbook/assets/dynamogithub.png)
 
 > Origem do Dynamo no GitHub
 
@@ -14,11 +14,11 @@ O objetivo deste guia é ajudar você a navegar pela gama de possibilidades de d
 
 [https://dynamobuilds.com/](https://dynamobuilds.com/)
 
-**Dynamo GitHub**: o Dynamo é um projeto de desenvolvimento de código aberto no GitHub.
+**Dynamo mo GitHub**: o Dynamo é um projeto de desenvolvimento de código aberto no GitHub.
 
 [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
-**Wiki do Dynamo Github**: esse foi o recurso principal para a documentação do desenvolvedor.
+**Wiki do Dynamo no GitHub**: esse foi o recurso principal para a documentação do desenvolvedor.
 
 [https://github.com/DynamoDS/Dynamo/wiki](https://github.com/DynamoDS/Dynamo/wiki)
 
@@ -44,4 +44,4 @@ O objetivo deste guia é ajudar você a navegar pela gama de possibilidades de d
 
 #### Como posso sugerir alterações a este guia? <a href="#how-can-i-suggest-changes-to-this-guide" id="how-can-i-suggest-changes-to-this-guide"></a>
 
-Esta documentação está aberta a sugestões. Elas podem ser feitas diretamente no Github, criando solicitações de alterações.
+Esta documentação está aberta a sugestões. Elas podem ser feitas diretamente no GitHub, criando solicitações de alterações.

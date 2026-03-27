@@ -4,7 +4,7 @@
 
 O Dynamo é um projeto ativo de desenvolvimento de código aberto. Descubra a [lista de softwares compatíveis com o Dynamo](http://dynamobim.org/download/).
 
-\![](<../.gitbook/assets/setup for dynamo - dynamo revit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>)
+\![](<../.gitbook/assets/setup for dynamo - dynamo revit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo forma.png>)
 
 ### Iniciar o Dynamo como extensão
 
@@ -16,7 +16,7 @@ Para começar a usar, inicie-o no painel da barra de ferramentas. Dependendo do 
 
 Para obter mais orientações sobre o uso do Dynamo com um software específico, recomendamos consultar as seções a seguir:
 
-* [Dynamo for Revit](../7_dynamo_for_revit/)
+* [Dynamo para Revit](../7_dynamo_for_revit/)
 * [Dynamo for Civil 3D](../dynamo-for-civil-3d/)
 
 Se você desejar usar o Dynamo como um aplicativo independente, continue lendo para obter orientações sobre como fazer o download do Sandbox.
@@ -31,7 +31,7 @@ O aplicativo do Dynamo está disponível no [site do Dynamo](http://dynamobim.co
 
 Se você estiver procurando versões de desenvolvimento anteriores ou as mais avançadas, todas as versões poderão ser encontradas na seção inferior da mesma página.
 
-\![](<../.gitbook/assets/03-02 Dynamo Sandbox All builds.jpg>)
+\![](<../.gitbook/assets/03-02 Dynamo Sandbox All builds.png>)
 
 {% hint style="info" %} O desenvolvimento mais avançado pode incluir alguns recursos novos e experimentais que ainda não foram totalmente testados; portanto, pode ser instável. Se você usar esse desenvolvimento, poderá detectar erros ou problemas, e poderá nos ajudar a aprimorar o aplicativo informando os problemas à nossa equipe.
 
@@ -45,11 +45,11 @@ Faça o download e instale o [7zip](https://www.7-zip.org/download.html) no comp
 
 Clique com o botão direito do mouse no arquivo zip e selecione **Extrair tudo**...
 
-\![](<../.gitbook/assets/03-03 Extract zip file.jpg>)
+\![](<../.gitbook/assets/03-03 Extract zip file.png>)
 
 Escolha um destino para descompactar todos os arquivos.
 
-\![](<../.gitbook/assets/03-04 Extract destination folder (1).jpg>)
+\![](<../.gitbook/assets/03-04 Extract destination folder (1).png>)
 
 #### Iniciar
 
@@ -59,8 +59,8 @@ Na pasta de destino, clique duas vezes em **DynamoSandbox.exe** para iniciá-lo
 
 Você verá a tela de inicialização do DynamoSandbox, como mostrado a seguir.
 
-\![](<../.gitbook/assets/03-06 Dynamo startup screen.jpg>)
+\![](<../.gitbook/assets/03-06 Dynamo startup screen.png>)
 
 Parabéns. Você terminou a configuração para usar o DynamoSandbox.
 
-{% hint style="info" %} **Geometria** é uma funcionalidade adicional no Dynamo Sandbox que está disponível somente para usuários que têm uma assinatura ou licença atual para os seguintes softwares Autodesk: Revit, Robot Structural Analysis, FormIt e Civil 3D. A funcionalidade **Geometria** permite que os usuários importem, criem, editem e exportem a geometria do Dynamo Sandbox. {% endhint %}
+{% hint style="info" %} **Geometria** é uma funcionalidade adicional no Dynamo Sandbox que está disponível somente para usuários que têm uma assinatura ou licença atual para os seguintes softwares da Autodesk: Revit, Robot Structural Analysis, FormIt e Civil 3D. A funcionalidade **Geometria** permite que os usuários importem, criem, editem e exportem a geometria do Dynamo Sandbox. {% endhint %}
