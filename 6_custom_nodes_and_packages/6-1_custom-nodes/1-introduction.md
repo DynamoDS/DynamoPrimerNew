@@ -22,7 +22,7 @@ Pasemos al entorno de nodos personalizados y creemos un nodo sencillo para calcu
 
 Para crear un nodo personalizado desde cero, inicie Dynamo y seleccione Nodo personalizado o pulse Ctrl + Mayús + N en el lienzo.
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 01.jpg>)
+\![](<../../.gitbook/assets/custom node intro - custom node environment 01.png>)
 
 Asigne un nombre, una descripción y una categoría en el cuadro de diálogo Propiedades de nodo personalizado.
 

@@ -2,7 +2,7 @@
 
 La biblioteca contiene todos los nodos cargados, incluidos los 10 nodos de categorías por defecto que se suministran con la instalación, así como los paquetes o los nodos personalizados cargados de forma adicional. Los nodos de la biblioteca se organizan jerárquicamente en bibliotecas, categorías y, si procede, subcategorías.
 
-\![](<../.gitbook/assets/library - library UI.jpg>)
+\![](<../.gitbook/assets/library - library UI.png>)
 
 * Nodos básicos: se incluye con la instalación por defecto.
 * Nodos personalizados: almacene las rutinas o los gráficos especiales utilizados con frecuencia como nodos personalizados. También puede compartir los nodos personalizados con la comunidad.

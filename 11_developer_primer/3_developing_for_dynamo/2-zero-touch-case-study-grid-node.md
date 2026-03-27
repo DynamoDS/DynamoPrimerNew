@@ -1,6 +1,6 @@
 # Caso real de Zero-Touch (nodo de rejilla)
 
-Con un proyecto de Visual Studio en ejecución, veremos cómo generar un nodo personalizado que cree una rejilla rectangular de celdas. Aunque podríamos crear esto con varios nodos estándar, se trata de una herramienta útil que se puede incluir fácilmente en un nodo Zero-Touch. A diferencia de las líneas de rejilla, las celdas se pueden consultar para determinar sus vértices de esquina o convertir en caras, o se puede ajustar su escala en relación con sus centros.
+Con un proyecto de Visual Studio en ejecución, veremos cómo generar un nodo personalizado que cree una rejilla rectangular de celdas. Aunque podríamos crear esto con varios nodos estándar, se trata de una herramienta útil que se puede incluir fácilmente en un nodo Zero-Touch. A diferencia de las líneas de rejilla, las celdas se pueden consultar para determinar su vértices de esquina o convertir en caras, o se puede ajustar su escala en relación con sus centros.
 
 En este ejemplo, se abordarán algunas de las funciones y los conceptos que deben tenerse en cuenta al crear un nodo Zero-Touch. Después de generar el nodo personalizado y añadirlo a Dynamo, asegúrese de consultar la página Conceptos avanzados de Zero-Touch para obtener una visión más detallada de los valores de entrada por defecto, la devolución de varios valores, la documentación, los objetos, el uso de tipos de geometría de Dynamo y las migraciones.
 
@@ -90,7 +90,7 @@ Si el proyecto presenta un aspecto similar al siguiente, continúe e intente com
 
 En la carpeta `bin` del proyecto, busque un archivo `.dll`. Si la compilación se ha realizado correctamente, podemos añadir el archivo `.dll` a Dynamo.
 
-![Nodos personalizados de Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
+![Nodos personalizados de Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.png)
 
 > 1. El nodo personalizado RectangularGrids de la biblioteca de Dynamo
 > 2. El nodo personalizado en el lienzo

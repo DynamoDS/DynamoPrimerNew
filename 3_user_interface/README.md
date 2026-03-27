@@ -4,7 +4,7 @@
 
 La interfaz de usuario (IU) de Dynamo se organiza en cinco regiones principales. Aquí se ofrecerá una breve descripción general; analizaremos más detalladamente el espacio de trabajo y la biblioteca en las siguientes secciones.
 
-\![](<../.gitbook/assets/user interface - ui.jpg>)
+\![](<../.gitbook/assets/user interface - ui.png>)
 
 > 1. Menús
 > 2. Barra de herramientas
@@ -48,12 +48,12 @@ Si no sabe cómo continuar, consulte el menú de **Ayuda**. Puede acceder a uno 
 
 La barra de herramientas de Dynamo contiene una serie de botones para acceder rápidamente a los archivos, así como a los comandos Deshacer (Ctrl + Z) y Rehacer (Ctrl + Y). En el extremo derecho, hay otro botón que exporta una instantánea del espacio de trabajo, lo que resulta muy útil para la documentación y el uso compartido.
 
-* \![](<../.gitbook/assets/user interface - new file.jpg>) New - Create a new .dyn file
-* \![](<../.gitbook/assets/user interface - open (1).jpg>) Abrir: abra un archivo .dyn existente (espacio de trabajo) o un archivo .dyf (nodo personalizado).
-* \![](<../.gitbook/assets/user interface - save.jpg>) Guardar/guardar como: guarde el archivo -dyn o .dyf activo.
+* \![](<../.gitbook/assets/user interface - new file.jpg>) Nuevo: cree un nuevo archivo .dyn.
+* \![](<../.gitbook/assets/user interface - open (1).png>) Abrir: abra un archivo .dyn existente (espacio de trabajo) o un archivo .dyf (nodo personalizado).
+* \![](<../.gitbook/assets/user interface - save.png>) Guardar/guardar como: guarde el archivo -dyn o .dyf activo.
 * \![](<../.gitbook/assets/user interface - undo.jpg>) Deshacer: deshaga la última acción.
 * \![](<../.gitbook/assets/user interface - redo.jpg>) Rehacer: vuelva a realizar la siguiente acción.
-* \![](<../.gitbook/assets/user interface - screenshot.jpg>) Exportar espacio de trabajo como imagen: exporte el espacio de trabajo visible como archivo PNG.
+* \![](<../.gitbook/assets/user interface - screenshot.png>) Exportar espacio de trabajo como imagen: exporte el espacio de trabajo visible como archivo PNG.
 
 ### Biblioteca
 

@@ -1,10 +1,10 @@
 # Compilar Dynamo a partir del código fuente
 
-El código fuente de Dynamo está alojado en GitHub para que cualquiera pueda clonarlo y contribuir a él. En este capítulo, veremos cómo clonar el repositorio mediante git, compilar los archivos de código fuente con Visual Studio, ejecutar y depurar una compilación local, y extraer todos los nuevos cambios de GitHub.
+El código fuente de Dynamo está alojado en GitHub para que cualquiera pueda clonarlo y contribuir a él. En este capítulo, veremos cómo clonar el repositorio mediante git, compilar los archivos de código fuente con Visual Studio, ejecutar y depurar una compilación local y extraer todos los nuevos cambios de GitHub.
 
 ### Ubicación de los repositorios de Dynamo en GitHub <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
-GitHub es un servicio de alojamiento basado en [git](https://docs.github.com/es/get-started/quickstart/git-and-github-learning-resources), un sistema de control de versiones para el seguimiento de cambios y la coordinación del trabajo entre personas. Git es una herramienta que podemos aprovechar para descargar los archivos de código fuente de Dynamo y mantenerlos actualizados con unos pocos comandos. Este método evitará el trabajo innecesario e intrínsecamente engorroso de descargar y sustituir manualmente los archivos de código fuente en cada actualización. El sistema de control de versiones de git identificará cualquier diferencia entre un repositorio de código local y uno remoto.
+GitHub es un servicio de alojamiento basado en [git](https://help.github.com/articles/git-and-github-learning-resources/), un sistema de control de versiones para el seguimiento de cambios y la coordinación del trabajo entre personas. Git es una herramienta que podemos aprovechar para descargar los archivos de código fuente de Dynamo y mantenerlos actualizados con unos pocos comandos. Este método evitará el trabajo innecesario e intrínsecamente engorroso de descargar y sustituir manualmente los archivos de código fuente en cada actualización. El sistema de control de versiones de git identificará cualquier diferencia entre un repositorio de código local y uno remoto.
 
 El código fuente de Dynamo está alojado en el GitHub de DynamoDS, en este repositorio: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo).
 
@@ -28,7 +28,7 @@ Necesitamos una dirección URL desde la que clonar el repositorio de Dynamo. Par
 > 1. Seleccione la opción para clonar o descargar.
 > 2. Copie la dirección URL.
 
-Con git instalado, podemos clonar el repositorio de Dynamo. Abra primero la solicitud de comando. A continuación, utilice el comando de cambio de directorio `cd` para desplazarse a la carpeta en la que desea clonar los archivos de código fuente. En este caso, hemos creado una carpeta denominada `Github` en `Documents`.
+Con git instalado, podemos clonar el repositorio de Dynamo. Abra primero la solicitud de comando. A continuación, utilice el comando de cambio de directorio `cd` para desplazarse a la carpeta en la que desea clonar los archivos de código fuente. En este caso, hemos creado una carpeta denominada `GitHub` en `Documents`.
 
 `cd C:\Users\username\Documents\GitHub`
 

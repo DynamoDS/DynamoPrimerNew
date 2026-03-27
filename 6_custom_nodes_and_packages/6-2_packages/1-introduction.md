@@ -45,7 +45,7 @@ En la biblioteca de Dynamo, tenemos un grupo de _DynamoUnfold_ con varias catego
 Ahora, veamos la estructura de archivos del paquete.
 
 1. Vaya primero a Paquetes > Package Manager > Paquetes instalados.
-2. Junto a DynamoUnfold, seleccione el menú de opciones <img src="../../.gitbook/assets/package introduction - vertical dots menu.jpg" alt="" data-size="line">.
+2. Junto a DynamoUnfold, seleccione el menú de opciones <img src="../../.gitbook/assets/package introduction - vertical dots menu.png" alt="" data-size="line">.
 3. A continuación, haga clic en Mostrar directorio raíz para abrir la carpeta raíz de este paquete.
 
 <figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
@@ -87,7 +87,7 @@ Otra forma de descubrir los paquetes de Dynamo es explorar el sitio web de [Dyna
 
 Si desea ver dónde se guardan los archivos de los paquetes, en el panel de navegación superior haga clic en Dynamo > Preferencias > Configuración de paquetes > Ubicaciones de archivo de nodos y paquetes, donde podrá encontrar el directorio de la carpeta raíz actual.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 08.jpg>)
+\![](<../../.gitbook/assets/package introduction - installing package folder 08.png>)
 
 Por defecto, los paquetes se instalan en una ubicación similar a esta ruta de carpeta: _C:/Usuarios/[nombre de usuario]/AppData/Roaming/Dynamo/[Versión de Dynamo]_.
 

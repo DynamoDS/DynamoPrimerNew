@@ -36,7 +36,7 @@ La sección Cambios en el lenguaje proporciona una descripción general de las a
 
 Problemas conocidos:
 
-* Los conflictos de espacio de nombres en los bloques imperativos provocan la aparición de puertos de entrada inesperados. Consulte el [problema de GitHub](https://github.com/DynamoDS/Dynamo/issues/8796) para obtener más información. Para evitar esto, defina la función fuera del bloque imperativo de la siguiente manera:
+* Los conflictos de espacio de nombres en los bloques imperativos provocan la aparición de puertos de entrada inesperados. Consulte la [incidencia de GitHub](https://github.com/DynamoDS/Dynamo/issues/8796) para obtener más información. Para evitar esto, defina la función fuera del bloque imperativo de la siguiente manera:
 
 ```
 pnt = Autodesk.Point.ByCoordinates;

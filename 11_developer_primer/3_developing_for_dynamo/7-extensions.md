@@ -6,7 +6,7 @@ Las extensiones son una eficaz herramienta de desarrollo en el ecosistema de Dyn
 
 Siguiendo el ejemplo SampleViewExtension del repositorio DynamoSamples de GitHub, recorreremos los pasos necesarios para crear una sencilla ventana sin modo que muestre los nodos activos del gráfico en tiempo real. Una extensión de vista requiere que creemos una interfaz de usuario para la ventana y que vinculemos valores a un modelo de vista.
 
-![Ventana de extensión de vista](../../.gitbook/assets/dyn-viewextension.jpg)
+![Ventana de extensión de vista](../../.gitbook/assets/dyn-viewextension.png)
 
 > 1. La ventana de extensión de vista desarrollada siguiendo el ejemplo SampleViewExtension en el repositorio de GitHub.
 

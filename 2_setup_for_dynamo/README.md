@@ -4,7 +4,7 @@
 
 Dynamo es un proyecto activo de desarrollo de código abierto. Obtenga la [lista de software compatible con Dynamo](http://dynamobim.org/download/).
 
-\![](<../.gitbook/assets/setup for dynamo - dynamo revit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>)
+\![](<../.gitbook/assets/setup for dynamo - dynamo revit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo forma.png>)
 
 ### Iniciar Dynamo como extensión
 
@@ -31,7 +31,7 @@ La aplicación Dynamo está disponible en el [sitio web de Dynamo](http://dynamo
 
 Si busca versiones anteriores o de desarrollo de "vanguardia", todas las versiones se pueden encontrar en la sección inferior de la misma página.
 
-\![](<../.gitbook/assets/03-02 Dynamo Sandbox All builds.jpg>)
+\![](<../.gitbook/assets/03-02 Dynamo Sandbox All builds.png>)
 
 {% hint style="info" %} El desarrollo de "vanguardia" puede incluir algunas funciones nuevas y experimentales que aún no se han probado completamente, por lo que pueden ser inestables. Al utilizar esta opción, puede detectar errores o problemas y ayudarnos a mejorar la aplicación informando de los problemas a nuestro equipo.
 
@@ -45,11 +45,11 @@ Descargue e instale [7zip](https://www.7-zip.org/download.html) en el equipo par
 
 Haga clic con el botón derecho en el archivo ZIP y seleccione **Extraer todo**.
 
-\![](<../.gitbook/assets/03-03 Extract zip file.jpg>)
+\![](<../.gitbook/assets/03-03 Extract zip file.png>)
 
 Elija un destino para descomprimir todos los archivos.
 
-\![](<../.gitbook/assets/03-04 Extract destination folder (1).jpg>)
+\![](<../.gitbook/assets/03-04 Extract destination folder (1).png>)
 
 #### Inicio
 
@@ -59,7 +59,7 @@ En la carpeta de destino, haga doble clic en **DynamoSandbox.exe** para iniciarl
 
 Aparecerá la pantalla de inicio de Dynamo Sandbox, como se muestra a continuación.
 
-\![](<../.gitbook/assets/03-06 Dynamo startup screen.jpg>)
+\![](<../.gitbook/assets/03-06 Dynamo startup screen.png>)
 
 Enhorabuena, ya ha finalizado la configuración para utilizar Dynamo Sandbox.
 

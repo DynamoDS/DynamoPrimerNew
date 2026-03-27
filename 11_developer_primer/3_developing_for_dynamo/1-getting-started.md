@@ -79,7 +79,7 @@ Ahora podemos abrir Dynamo e importar el archivo `.dll`. Con la función Agregar
 
 Si se ha creado una categoría en la biblioteca denominada `MyCustomNode`, el archivo .dll se ha importado correctamente. Sin embargo, Dynamo ha creado dos nodos a partir de lo que deseábamos que fuera un único nodo. En la siguiente sección, explicaremos por qué sucede esto y cómo Dynamo lee un archivo .dll.
 
-![Nodos personalizados](../../.gitbook/assets/dyn-customnode.jpg)
+![Nodos personalizados](../../.gitbook/assets/dyn-customnode.png)
 
 > 1. "MyCustomNode" en la biblioteca de Dynamo. La categoría Biblioteca viene determinada por el nombre del archivo `.dll`.
 > 2. SampleFunctions.MultiplyByTwo en el lienzo.

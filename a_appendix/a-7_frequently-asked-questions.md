@@ -24,7 +24,7 @@ Debería poder ejecutar DynamoSandbox.exe en la carpeta extraída para utilizar 
 | 2.7            | 2019 Redistributable | 11/12 (incluido con Windows 10 |   |   |   |   |
 | >=2.8          | 2019 Redistributable | 11/12 (incluido con Windows 10 |   |   |   |   |
 
-**Microsoft DirectX, que también está disponible públicamente en nuestro repositorio de Github Dynamo** [**aquí**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
+**Microsoft DirectX, que también está disponible públicamente en nuestro repositorio de GitHub Dynamo** [**aquí**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 
 **7zip utilizado para descomprimir el paquete** [**aquí**](https://www.7-zip.org/download.html)
 
@@ -48,7 +48,7 @@ Con la siguiente captura de pantalla como ejemplo, al descomprimir nuestra compi
 
 **Instalación de DirectX**
 
-Siga las instrucciones de Microsoft aquí para comprobar si ya tiene instalado DirectX. Si no es así, puede abrir DXSETUP.exe en nuestro repositorio de Github para Dynamo [aquí](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX). Una vez que vea el cuadro de diálogo que aparece a continuación, no dude en pulsar Siguiente para instalar DirectX en la ubicación por defecto.
+Siga las instrucciones de Microsoft aquí para comprobar si ya tiene instalado DirectX. Si no es así, puede abrir DXSETUP.exe en nuestro repositorio de GitHub para Dynamo [aquí](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX). Una vez que vea el cuadro de diálogo que aparece a continuación, no dude en pulsar Siguiente para instalar DirectX en la ubicación por defecto.
 
 ![](../.gitbook/assets/dynamo-builds-3.png)
 

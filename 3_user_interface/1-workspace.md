@@ -4,7 +4,7 @@
 
 El espacio de trabajo de Dynamo consta de cuatro elementos principales.
 
-\![](<../.gitbook/assets/workspace - ui.jpg>)
+\![](<../.gitbook/assets/workspace - ui.png>)
 
 > 1. Todas las fichas activas
 > 2. Modo de vista preliminar
@@ -15,11 +15,11 @@ El espacio de trabajo de Dynamo consta de cuatro elementos principales.
 
 Al abrir un nuevo archivo, se abrirá por defecto un nuevo espacio de trabajo de inicio.
 
-\![](<../.gitbook/assets/workspace - home tab.jpg>)
+\![](<../.gitbook/assets/workspace - home tab.png>)
 
 Puede crear un nodo personalizado y abrirlo en un espacio de trabajo de nodos personalizados.
 
-\![](<../.gitbook/assets/workspace - custom node tab.jpg>)
+\![](<../.gitbook/assets/workspace - custom node tab.png>)
 
 {% hint style="info" %} En cada ventana de Dynamo, solo se permite un espacio de trabajo de inicio, pero puede tener abiertos varios espacios de trabajo de nodos personalizados en las fichas. {% endhint %}
 

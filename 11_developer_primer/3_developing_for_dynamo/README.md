@@ -93,7 +93,7 @@ Dado que Dynamo se actualiza periódicamente, es posible que se realicen cambios
 
 Se realiza un seguimiento de los cambios en las API en la página [wiki de Dynamo de GitHub](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). Aquí se abordan los cambios realizados en DynamoCore, las bibliotecas y los espacios de trabajo.
 
-![Documento de cambios en las API de Dynamo](../../.gitbook/assets/api-changes.jpg)
+![Documento de cambios en las API de Dynamo](../../.gitbook/assets/api-changes.png)
 
 Un ejemplo de un cambio significativo que se producirá próximamente es la transición del formato de archivo XML al formato de archivo JSON en la versión 2.0. Los nodos derivados de NodeModel necesitarán un [constructor JSON](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node); de lo contrario, no se abrirán en Dynamo 2.0.
 
