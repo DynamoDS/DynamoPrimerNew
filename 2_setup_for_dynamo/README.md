@@ -4,21 +4,21 @@
 
 Dynamo es un proyecto activo de desarrollo de código abierto. Obtenga la [lista de software compatible con Dynamo](http://dynamobim.org/download/).
 
-![](<images/setup for dynamo - dynamo revit.png>)
-![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>)
-![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>)
-![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>)
-![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>)
-![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>)
-![](<../.gitbook/assets/setup for dynamo - dynamo forma.png>)
+![](<images/setup for dynamo - dynamo revit.png>) 
+![](<images/setup for dynamo - dynamo civil 3D.png>) 
+![](<images/setup for dynamo - dynamo alias design.png>) 
+![](<images/setup for dynamo - dynamo formit.png>) 
+![](<images/setup for dynamo - dynamo advance steel.png>) 
+![](<images/setup for dynamo - dynamo robot structural analysis.png>) 
+![](<images/setup for dynamo - dynamo forma.png>)
 
 ### Iniciar Dynamo como extensión
 
 Dynamo viene preinstalado en software como **Revit3D**, **FormIt**, **Civil3D**, etc.
 
-Para empezar a utilizarlo, inícielo desde el panel de la barra de herramientas. Aunque su posición varía en función del software utilizado, el icono de inicio se suele encontrar en el menú > ficha **Administrar**. Haga clic en el icono de Dynamo ![](../.gitbook/assets/dynamoCore-halfSize.png) para iniciarlo.
+Para empezar a utilizarlo, inícielo desde el panel de la barra de herramientas. Aunque su posición varía en función del software utilizado, el icono de inicio se suele encontrar en el menú > ficha **Administrar**. Haga clic en el icono de Dynamo z[](images/dynamoCore-halfSize.png) para iniciarlo.
 
-\![](<../.gitbook/assets/launch dynamo from revit (1).jpg>)
+\![](images/launchdynamofromrevit.jpg)
 
 Para obtener más información sobre el uso de Dynamo con un software específico, es recomendable consultar las siguientes secciones:
 
@@ -33,11 +33,11 @@ Si desea utilizar Dynamo como una aplicación independiente, siga leyendo para o
 
 La aplicación Dynamo está disponible en el [sitio web de Dynamo](http://dynamobim.com). Tanto las versiones oficiales como las preliminares o las anteriores están disponibles en la página de descarga. Visite la página [Get Dynamo](http://dynamobim.org/download/) y haga clic en **Download** para obtener la versión oficial publicada.
 
-\![](<../.gitbook/assets/image (4).png>)
+\![](<images/image.png>)
 
 Si busca versiones anteriores o de desarrollo de "vanguardia", todas las versiones se pueden encontrar en la sección inferior de la misma página.
 
-\![](<../.gitbook/assets/03-02 Dynamo Sandbox All builds.png>)
+\![](<images/03-02 Dynamo Sandbox All builds.png>)
 
 {% hint style="info" %} El desarrollo de "vanguardia" puede incluir algunas funciones nuevas y experimentales que aún no se han probado completamente, por lo que pueden ser inestables. Al utilizar esta opción, puede detectar errores o problemas y ayudarnos a mejorar la aplicación informando de los problemas a nuestro equipo.
 
