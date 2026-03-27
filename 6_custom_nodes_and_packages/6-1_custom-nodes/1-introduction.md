@@ -22,7 +22,7 @@ Im Folgenden erstellen Sie in der Umgebung für benutzerdefinierte Blöcke einen
 
 Um einen neuen benutzerdefinierten Block zu erstellen, starten Sie Dynamo und wählen Sie Benutzerdefinierter Block oder geben Sie Strg + Umschalt + N im Ansichtsbereich ein.
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 01.jpg>)
+\![](<../../.gitbook/assets/custom node intro - custom node environment 01.png>)
 
 Weisen Sie im Dialogfeld Eigenschaften für benutzerdefinierten Block einen Namen, eine Beschreibung und eine Kategorie zu.
 

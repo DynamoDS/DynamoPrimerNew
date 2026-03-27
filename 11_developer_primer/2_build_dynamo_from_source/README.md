@@ -4,7 +4,7 @@ Die Quelldateien von Dynamo werden auf GitHub gehostet, sodass jeder sie klonen 
 
 ### Suchen der Dynamo-Repositorys auf GitHub <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
-GitHub ist ein Hosting-Dienst, der auf [Git](https://docs.github.com/de/get-started/quickstart/git-and-github-learning-resources), einem Versionskontrollsystem zur Änderungsverfolgung und Koordination der Arbeit zwischen verschiedenen Personen, basiert. Git ist ein Werkzeug, mit dem wir die Quelldateien von Dynamo herunterladen und mit ein paar Befehlen auf dem neuesten Stand halten können. Mit dieser Methode vermeiden wir die unnötige und von Natur aus unübersichtliche Arbeit des Herunterladens und manuellen Ersetzens der Quelldateien bei jedem Update. Das Git-Versionskontrollsystem verfolgt alle Unterschiede zwischen einem lokalen und einem Remote-Code-Repository.
+GitHub ist ein Hosting-Dienst, der auf [Git](https://help.github.com/articles/git-and-github-learning-resources/), einem Versionskontrollsystem zur Änderungsverfolgung und Koordination der Arbeit zwischen verschiedenen Personen, basiert. Git ist ein Werkzeug, mit dem wir die Quelldateien von Dynamo herunterladen und mit ein paar Befehlen auf dem neuesten Stand halten können. Mit dieser Methode vermeiden wir die unnötige und von Natur aus unübersichtliche Arbeit des Herunterladens und manuellen Ersetzens der Quelldateien bei jedem Update. Das Git-Versionskontrollsystem verfolgt alle Unterschiede zwischen einem lokalen und einem Remote-Code-Repository.
 
 Die Quelldateien von Dynamo werden im DynamoDS-GitHub im folgenden Repository gehostet: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo).
 
@@ -28,7 +28,7 @@ Wir benötigen eine URL für das Dynamo-Repository, von dem geklont werden soll.
 > 1. Wählen Sie Clone or Download aus.
 > 2. Kopieren Sie die URL.
 
-Wenn Git installiert ist, können wir das Dynamo-Repository klonen. Öffnen Sie zunächst die Eingabeaufforderung. Navigieren Sie dann unter Verwendung des Befehls zum Ändern des Verzeichnisses `cd` zu dem Ordner, in den die Quelldateien geklont werden sollen. In diesem Fall haben wir unter `Documents` einen Ordner mit dem Namen `Github` erstellt.
+Wenn Git installiert ist, können wir das Dynamo-Repository klonen. Öffnen Sie zunächst die Eingabeaufforderung. Navigieren Sie dann unter Verwendung des Befehls zum Ändern des Verzeichnisses `cd` zu dem Ordner, in den die Quelldateien geklont werden sollen. In diesem Fall haben wir unter `Documents` einen Ordner mit dem Namen `GitHub` erstellt.
 
 `cd C:\Users\username\Documents\GitHub`
 

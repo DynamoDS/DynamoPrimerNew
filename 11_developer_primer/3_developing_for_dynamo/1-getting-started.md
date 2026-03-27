@@ -79,7 +79,7 @@ Jetzt können wir Dynamo öffnen und die `.dll`-Datei importieren. Navigieren Si
 
 Wenn eine Kategorie mit dem Namen `MyCustomNode` in der Bibliothek erstellt wird, wurde die DLL-Datei erfolgreich importiert. Dynamo hat jedoch zwei Blöcke erstellt, obwohl wir einen einzelnen Block erhalten wollten. Im nächsten Abschnitt werden wir erläutern, warum dies geschieht und wie Dynamo DLL-Dateien liest.
 
-![Benutzerdefinierte Blöcke](../../.gitbook/assets/dyn-customnode.jpg)
+![Benutzerdefinierte Blöcke](../../.gitbook/assets/dyn-customnode.png)
 
 > 1. MyCustomNode in der Dynamo-Bibliothek. Die Bibliothekskategorie wird durch den Namen der `.dll`-Datei bestimmt.
 > 2. SampleFunctions.MultiplyByTwo im Ansichtsbereich.

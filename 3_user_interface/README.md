@@ -4,7 +4,7 @@
 
 Die Benutzeroberfläche (UI) für Dynamo ist in fünf Hauptbereiche unterteilt. Wir verschaffen uns hier kurz einen Überblick und erläutern den Arbeitsbereich und die Bibliothek in den folgenden Abschnitten näher.
 
-\![](<../.gitbook/assets/user interface - ui.jpg>)
+\![](<../.gitbook/assets/user interface - ui.png>)
 
 > 1. Menüs
 > 2. Werkzeugkasten
@@ -49,11 +49,11 @@ Wenn Sie nicht weiterkommen, verwenden Sie das Menü **Hilfe**. Sie können übe
 Der Werkzeugkasten von Dynamo enthält eine Reihe von Schaltflächen für den Schnellzugriff zum Arbeiten mit Dateien sowie die Befehle Rückgängig [Ctrl + Z] und Wiederholen [Ctrl + Y]. Ganz rechts befindet sich eine weitere Schaltfläche, über die Sie einen Snapshot des Arbeitsbereichs exportieren können. Dies ist für die Dokumentation und die gemeinsame Bearbeitung mit anderen äußerst nützlich.
 
 * \![](<../.gitbook/assets/user interface - new file.jpg>) Neu – Erstellt eine neue DYN-Datei.
-* \![](<../.gitbook/assets/user interface - open (1).jpg>) Öffnen – Öffnet eine vorhandene DYN-Datei (Arbeitsbereich) oder DYF-Datei (benutzerdefinierter Block).
-* \![](<../.gitbook/assets/user interface - save.jpg>) Speichern/Speichern unter – Speichert die aktive DYN- oder DYF-Datei.
+* \![](<../.gitbook/assets/user interface - open (1).png>) Öffnen – Öffnet eine vorhandene DYN-Datei (Arbeitsbereich) oder DYF-Datei (benutzerdefinierter Block).
+* \![](<../.gitbook/assets/user interface - save.png>) Speichern/Speichern unter – Speichert die aktive DYN- oder DYF-Datei.
 * \![](<../.gitbook/assets/user interface - undo.jpg>) Rückgängig – Macht die letzte Aktion rückgängig.
 * \![](<../.gitbook/assets/user interface - redo.jpg>) Wiederherstellen – Stellt die nächste Aktion wieder her.
-* \![](<../.gitbook/assets/user interface - screenshot.jpg>) Arbeitsbereich als Bild exportieren – Exportiert den angezeigten Arbeitsbereich als PNG-Datei.
+* \![](<../.gitbook/assets/user interface - screenshot.png>) Arbeitsbereich als Bild exportieren – Exportiert den angezeigten Arbeitsbereich als PNG-Datei.
 
 ### Bibliothek
 

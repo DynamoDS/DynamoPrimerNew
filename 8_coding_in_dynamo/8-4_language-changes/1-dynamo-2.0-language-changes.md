@@ -36,7 +36,7 @@ Der Abschnitt Änderungen der Sprache bietet einen Überblick über die Aktualis
 
 Bekannte Probleme:
 
-* Namensbereichskonflikte in imperativen Blöcken führen dazu, dass unerwartete Eingabeanschlüsse angezeigt werden. Weitere Informationen finden Sie unter [Github-Problem](https://github.com/DynamoDS/Dynamo/issues/8796). Um dies zu umgehen, definieren Sie die Funktion wie folgt außerhalb des imperativen Blocks:
+* Namensbereichskonflikte in imperativen Blöcken führen dazu, dass unerwartete Eingabeanschlüsse angezeigt werden. Weitere Informationen finden Sie unter [GitHub-Problem](https://github.com/DynamoDS/Dynamo/issues/8796). Um dies zu umgehen, definieren Sie die Funktion wie folgt außerhalb des imperativen Blocks:
 
 ```
 pnt = Autodesk.Point.ByCoordinates;

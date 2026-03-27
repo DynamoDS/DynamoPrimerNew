@@ -4,7 +4,7 @@
 
 Der Dynamo-Arbeitsbereich besteht aus vier Hauptelementen.
 
-\![](<../.gitbook/assets/workspace - ui.jpg>)
+\![](<../.gitbook/assets/workspace - ui.png>)
 
 > 1. Alle aktiven Registerkarten.
 > 2. Vorschaumodus
@@ -15,11 +15,11 @@ Der Dynamo-Arbeitsbereich besteht aus vier Hauptelementen.
 
 Wenn Sie eine neue Datei öffnen, wird vorgabemäßig ein neuer Start-Arbeitsbereich geöffnet.
 
-\![](<../.gitbook/assets/workspace - home tab.jpg>)
+\![](<../.gitbook/assets/workspace - home tab.png>)
 
 Sie können einen benutzerdefinierten Block erstellen und ihn in einem Arbeitsbereich für benutzerdefinierte Blöcke öffnen.
 
-\![](<../.gitbook/assets/workspace - custom node tab.jpg>)
+\![](<../.gitbook/assets/workspace - custom node tab.png>)
 
 {% hint style="info" %} In jedem Dynamo-Fenster ist nur ein Start-Arbeitsbereich zulässig, auf den Registerkarten können jedoch mehrere Arbeitsbereiche für benutzerdefinierte Blöcke geöffnet sein. {% endhint %}
 
