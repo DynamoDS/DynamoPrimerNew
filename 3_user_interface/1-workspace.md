@@ -4,7 +4,7 @@
 
 Dynamo 작업공간은 네 가지 기본 요소로 구성되어 있습니다.
 
-\![](<../.gitbook/assets/workspace - ui.jpg>)
+\![](<../.gitbook/assets/workspace - ui.png>)
 
 > 1. 모든 활성 탭
 > 2. 미리보기 모드
@@ -15,11 +15,11 @@ Dynamo 작업공간은 네 가지 기본 요소로 구성되어 있습니다.
 
 새 파일을 열면 기본적으로 새 홈 작업공간이 열립니다.
 
-\![](<../.gitbook/assets/workspace - home tab.jpg>)
+\![](<../.gitbook/assets/workspace - home tab.png>)
 
 사용자 노드를 작성하여 사용자 노드 작업공간에서 열 수 있습니다.
 
-\![](<../.gitbook/assets/workspace - custom node tab.jpg>)
+\![](<../.gitbook/assets/workspace - custom node tab.png>)
 
 {% hint style="info" %} 각 Dynamo 창에는 하나의 홈 작업공간만 허용되지만 탭에는 여러 개의 사용자 노드 작업공간이 열려 있을 수 있습니다. {% endhint %}
 

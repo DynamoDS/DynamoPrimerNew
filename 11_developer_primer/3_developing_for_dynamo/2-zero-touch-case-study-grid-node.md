@@ -90,7 +90,7 @@ namespace CustomNodes
 
 프로젝트의 `bin` 폴더에 `.dll`이 있는지 확인합니다. 빌드가 성공하면 Dynamo에 `.dll`을 추가할 수 있습니다.
 
-![Dynamo의 사용자 지정 노드](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
+![Dynamo의 사용자 지정 노드](../../.gitbook/assets/RectangularGrid-Dynamo.png)
 
 > 1. Dynamo 라이브러리의 사용자 지정 RectangularGrids 노드
 > 2. 캔버스의 사용자 지정 노드

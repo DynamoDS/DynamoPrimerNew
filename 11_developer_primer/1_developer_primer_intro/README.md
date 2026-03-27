@@ -4,7 +4,7 @@
 
 이 안내서의 목적은 Zero-Touch 노드를 만드는 방법부터 확장 기능 구축에 이르기까지 Dynamo의 다양한 C# 개발 가능성을 탐색하는 데 도움을 주기 위한 것입니다.
 
-![Github의 Dynamo 소스](../../.gitbook/assets/dynamogithub.jpg)
+![GitHub의 Dynamo 소스](../../.gitbook/assets/dynamogithub.png)
 
 > GitHub의 Dynamo 소스
 
@@ -18,7 +18,7 @@
 
 [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
-**Dynamo Github Wiki**: 개발자 문서를 위한 기본 리소스였습니다.
+**Dynamo GitHub Wiki**: 개발자 문서를 위한 기본 리소스로 활용되어 왔습니다.
 
 [https://github.com/DynamoDS/Dynamo/wiki](https://github.com/DynamoDS/Dynamo/wiki)
 
@@ -44,4 +44,4 @@
 
 #### 이 안내서에 대한 변경 사항을 제안하려면 어떻게 해야 합니까? <a href="#how-can-i-suggest-changes-to-this-guide" id="how-can-i-suggest-changes-to-this-guide"></a>
 
-이 문서에 제안 사항을 적용할 수 있습니다. 변경 요청을 생성하여 Github에서 직접 변경하면 됩니다.
+이 문서에 제안 사항을 적용할 수 있습니다. 변경 요청을 생성하여 GitHub에서 바로 적용할 수 있습니다.

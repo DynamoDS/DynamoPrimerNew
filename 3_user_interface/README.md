@@ -4,7 +4,7 @@
 
 Dynamo의 UI(사용자 인터페이스)는 5개의 주요 영역으로 구성되어 있습니다. 여기에서 개요를 간략하게 설명하고 다음 섹션에서 작업공간 및 라이브러리에 대해 자세히 살펴보겠습니다.
 
-\![](<../.gitbook/assets/user interface - ui.jpg>)
+\![](<../.gitbook/assets/user interface - ui.png>)
 
 > 1. 메뉴
 > 2. 도구막대
@@ -49,11 +49,11 @@ Dynamo의 UI(사용자 인터페이스)는 5개의 주요 영역으로 구성되
 Dynamo의 도구막대에는 파일 작업에 빠르게 액세스할 수 있는 일련의 버튼과 실행취소[Ctrl + Z] 및 재실행[Ctrl + Y] 명령이 포함되어 있습니다. 맨 오른쪽에는 작업공간의 스냅샷을 내보내는 또 다른 버튼이 있습니다. 이 버튼은 문서화 및 공유에 매우 유용합니다.
 
 * \![](<../.gitbook/assets/user interface - new file.jpg>) 새로 작성 - 새 .dyn 파일을 작성합니다.
-* \![](<../.gitbook/assets/user interface - open (1).jpg>) 열기 - 기존 .dyn(작업공간) 또는 .dyf(사용자 지정 노드) 파일을 엽니다.
-* \![](<../.gitbook/assets/user interface - save.jpg>) 저장/다른 이름으로 저장 - 활성 .dyn 또는 .dyf 파일을 저장합니다.
+* \![](<../.gitbook/assets/user interface - open (1).png>) 열기 - 기존 .dyn(작업공간) 또는 .dyf(사용자 지정 노드) 파일을 엽니다.
+* \![](<../.gitbook/assets/user interface - save.png>) 저장/다른 이름으로 저장 - 활성 .dyn 또는 .dyf 파일을 저장합니다.
 * \![](<../.gitbook/assets/user interface - undo.jpg>) 실행취소 - 마지막 작업을 실행취소합니다.
 * \![](<../.gitbook/assets/user interface - redo.jpg>) 재실행 - 다음 작업을 재실행합니다.
-* \![](<../.gitbook/assets/user interface - screenshot.jpg>) 작업공간을 이미지로 내보내기 - 표시되는 작업공간을 PNG 파일로 내보냅니다.
+* \![](<../.gitbook/assets/user interface - screenshot.png>) 작업공간을 이미지로 내보내기 - 표시되는 작업공간을 PNG 파일로 내보냅니다.
 
 ### 도서관
 

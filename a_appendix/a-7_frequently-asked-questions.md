@@ -24,7 +24,7 @@ DynamoCoreRuntime zip 빌드는 자동화된 빌드 중에 만들어지는 Dynam
 | 2.7            | 2019 재배포 가능 요소 | 11/12(Windows 10에 포함) |   |   |   |   |
 | >=2.8          | 2019 재배포 가능 요소 | 11/12(Windows 10에 포함) |   |   |   |   |
 
-**Dynamo Github 리포지토리에서도 공개적으로 사용할 수 있는 Microsoft DirectX**([**여기에서 다운로드 가능**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX))
+**Dynamo GitHub 리포지토리에서도 공개적으로 사용할 수 있는 Microsoft DirectX**([**여기에서 다운로드 가능**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX))
 
 **패키지의 압축을 푸는 데 사용되는 7zip**([**여기에서 다운로드 가능**](https://www.7-zip.org/download.html))
 
@@ -48,7 +48,7 @@ DynamoCoreRuntime zip 빌드는 자동화된 빌드 중에 만들어지는 Dynam
 
 **DirectX 설치**
 
-Microsoft 지침에 따라 DirectX가 이미 설치되어 있는지 확인하십시오. 설치되어 있는지 않으면 Dynamo Github 리포지토리([여기](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX))에서 DXSETUP.exe를 열 수 있습니다. 아래 대화상자가 표시되면 다음을 눌러 기본 위치에 DirectX를 설치합니다.
+Microsoft 지침에 따라 DirectX가 이미 설치되어 있는지 확인하십시오. 설치되어 있는지 않으면 Dynamo GitHub 리포지토리([여기](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX))에서 DXSETUP.exe를 열 수 있습니다. 아래 대화상자가 표시되면 다음을 눌러 기본 위치에 DirectX를 설치합니다.
 
 ![](../.gitbook/assets/dynamo-builds-3.png)
 

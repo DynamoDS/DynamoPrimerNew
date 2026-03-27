@@ -4,11 +4,11 @@
 
 #### 확장 사례 연구 <a href="#extension-case-study" id="extension-case-study"></a>
 
-DynamoSamples Github 리포지토리의 SampleViewExtension 예제에 따라 그래프에 활성 노드를 실시간으로 표시하는 간단한 모델리스 창을 생성하는 데 필요한 단계를 살펴보겠습니다. 뷰 확장을 사용하려면 창에 대한 UI를 생성하고 뷰 모델에 값을 바인딩해야 합니다.
+DynamoSamples GitHub 리포지토리의 SampleViewExtension 예제에 따라 그래프에 활성 노드를 실시간으로 표시하는 간단한 모델리스 창을 작성하는 데 필요한 단계를 살펴보겠습니다. 뷰 확장을 사용하려면 창에 대한 UI를 생성하고 뷰 모델에 값을 바인딩해야 합니다.
 
-![뷰 확장 창](../../.gitbook/assets/dyn-viewextension.jpg)
+![뷰 확장 창](../../.gitbook/assets/dyn-viewextension.png)
 
-> 1. 뷰 확장 창은 Github 리포지토리의 SampleViewExtension 예제를 따라 개발되었습니다.
+> 1. 뷰 확장 창은 GitHub 리포지토리의 SampleViewExtension 예제를 따라 개발되었습니다.
 
 예제를 처음부터 빌드할 예정이지만, 참조하기 위해 DynamoSamples 리포지토리를 다운로드하고 빌드할 수도 있습니다.
 
@@ -285,8 +285,8 @@ namespace SampleViewExtension
 
 > 1. Dynamo의 뷰 확장 폴더에 복사한 `.xml` 파일
 
-여기에는 뷰 확장에 대한 기본적인 소개만 나와 있습니다. 보다 정교한 사례 연구는 Github의 오픈 소스 프로젝트인 DynaShape 패키지를 참조하십시오. 이 패키지는 Dynamo 모델 뷰에서 실시간으로 편집할 수 있는 뷰 확장을 사용합니다.
+여기에는 뷰 확장에 대한 기본적인 소개만 나와 있습니다. 보다 정교한 사례 연구는 GitHub의 오픈 소스 프로젝트인 DynaShape 패키지를 참조하십시오. 이 패키지는 Dynamo 모델 뷰에서 실시간으로 편집할 수 있는 뷰 확장을 사용합니다.
 
 DynaShape용 패키지 설치 프로그램은 Dynamo 포럼([https://forum.dynamobim.com/t/dynashape-published/11666](https://forum.dynamobim.com/t/dynashape-published/11666))에서 다운로드할 수 있습니다.
 
-소스 코드는 Github([https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape))에서 복제할 수 있습니다.
+소스 코드는 GitHub([https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape))에서 복제할 수 있습니다.

@@ -45,7 +45,7 @@ Dynamo 라이브러리에는 여러 카테고리와 사용자 노드가 있는 _
 이제 패키지의 파일 구조를 살펴보겠습니다.
 
 1. 먼저 패키지 > Package Manager > 설치된 패키지로 이동합니다.
-2. DynamoUnfold 옆의 옵션 메뉴 <img src="../../.gitbook/assets/package introduction - vertical dots menu.jpg" alt="" data-size="line">를 선택합니다.
+2. DynamoUnfold 옆의 옵션 메뉴 <img src="../../.gitbook/assets/package introduction - vertical dots menu.png" alt="" data-size="line">를 선택합니다.
 3. 그런 다음 루트 디렉토리 표시를 클릭하여 이 패키지의 루트 폴더를 엽니다.
 
 <figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
@@ -87,7 +87,7 @@ Dynamo 패키지를 찾는 또 다른 방법은 [Dynamo Package Manager](http://
 
 패키지 파일이 저장되는 위치를 확인하려면 상단 탐색에서 Dynamo > 기본 설정 > 패키지 설정 > 노드 및 패키지 파일 위치를 클릭합니다. 여기에서 현재 루트 폴더 디렉토리를 찾을 수 있습니다.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 08.jpg>)
+\![](<../../.gitbook/assets/package introduction - installing package folder 08.png>)
 
 기본적으로 패키지는 _C:/Users/[사용자 이름]/AppData/Roaming/Dynamo/[Dynamo 버전]_ 폴더 경로와 비슷한 위치에 설치됩니다.
 

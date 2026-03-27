@@ -79,7 +79,7 @@ Visual Studio에서 자동으로 C# 파일을 생성하고 엽니다. 적절한 
 
 `MyCustomNode`라는 라이브러리에 카테고리가 생성되면 .dll을 성공적으로 가져온 것입니다. 하지만, 우리는 하나의 노드만 만들려고 했는데 Dynamo에서 두 개의 노드를 만들었습니다. 다음 섹션에서는 이러한 상황이 발생하는 이유와 Dynamo에서 .dll을 읽는 방법에 대해 설명합니다.
 
-![사용자 지정 노드](../../.gitbook/assets/dyn-customnode.jpg)
+![사용자 지정 노드](../../.gitbook/assets/dyn-customnode.png)
 
 > 1. Dynamo 라이브러리의 MyCustomNode. 라이브러리 범주는 `.dll` 이름에 따라 결정됩니다.
 > 2. 캔버스의 SampleFunctions.MultiplyByTwo

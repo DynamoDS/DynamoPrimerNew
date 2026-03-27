@@ -36,7 +36,7 @@
 
 알려진 문제:
 
-* 명령형 블록의 네임스페이스 충돌로 인해 예기치 않은 입력 포트가 나타날 수 있습니다. 자세한 내용은 [Github 문제](https://github.com/DynamoDS/Dynamo/issues/8796)를 참고하십시오. 이 문제를 해결하려면 다음과 같이 함수를 명령형 블록 외부에 정의합니다.
+* 명령형 블록의 네임스페이스 충돌로 인해 예기치 않은 입력 포트가 나타날 수 있습니다. 자세한 내용은 [GitHub 문제](https://github.com/DynamoDS/Dynamo/issues/8796)를 참고하십시오. 이 문제를 해결하려면 다음과 같이 함수를 명령형 블록 외부에 정의합니다.
 
 ```
 pnt = Autodesk.Point.ByCoordinates;

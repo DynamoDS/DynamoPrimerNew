@@ -91,9 +91,9 @@ Zero-Touch는 간단한 포인트 앤 클릭 방법으로 C# 라이브러리를 
 
 Dynamo는 정기적으로 업데이트되고 있으므로 패키지에서 사용하는 API의 일부가 변경될 수 있습니다. 기존 패키지가 계속 제대로 작동하도록 하려면 이러한 변경 사항을 추적하는 것이 중요합니다.
 
-API 변경 사항은 [Dynamo Github Wiki](https://github.com/DynamoDS/Dynamo/wiki/API-Changes)에서 추적할 수 있습니다. 이러한 변경 사항에는 DynamoCore, 라이브러리 및 작업공간에 대한 변경 사항이 포함됩니다.
+API 변경 사항은 [Dynamo GitHub Wiki](https://github.com/DynamoDS/Dynamo/wiki/API-Changes)에서 추적할 수 있습니다. 이러한 변경 사항에는 DynamoCore, 라이브러리 및 작업공간에 대한 변경 사항이 포함됩니다.
 
-![Dynamo API 변경 사항 관련 문서](../../.gitbook/assets/api-changes.jpg)
+![Dynamo API 변경 사항 관련 문서](../../.gitbook/assets/api-changes.png)
 
 버전 2.0에서 파일 형식이 XML에서 JSON으로 전환될 예정이며, 이는 예정된 중요 변경 사항 중 하나입니다. NodeModel 파생 노드에는 이제 [JSON 생성자](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node)가 필요하며, 이 생성자가 없으면 Dynamo 2.0에서 열리지 않습니다.
 

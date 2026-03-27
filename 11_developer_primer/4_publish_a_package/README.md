@@ -12,7 +12,7 @@ Dynamo 패키지 관리자는 Dynamo 또는 웹 브라우저에서 액세스할 
 
 * Dynamo의 패키지 관리자에서는 패키지 설치, 게시 및 업데이트를 수행할 수 있습니다.
 
-![패키지 검색하기](../../.gitbook/assets/dynamopackagemanager.jpg)
+![패키지 검색하기](../../.gitbook/assets/dynamopackagemanager.png)
 
 > 1. 온라인으로 패키지 검색: `Packages > Search for a Package...`
 > 2. 설치된 패키지 보기/편집: `Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Dynamo 패키지 관리자는 Dynamo 또는 웹 브라우저에서 액세스할 
 
 Dynamo를 시작하고 `Packages > Publish New Package...`를 선택하여 `Publish a Package` 창을 엽니다.
 
-![패키지 게시하기](../../.gitbook/assets/dyn-publish-package-add-files.jpg)
+![패키지 게시하기](../../.gitbook/assets/dyn-publish-package-add-files.png)
 
 > 1. `Add file...`을 선택하여 패키지에 추가할 파일을 찾습니다.
 > 2. NodeModel 사례 연구에서 두 개의 `.dll` 파일을 선택합니다.
@@ -32,7 +32,7 @@ Dynamo를 시작하고 `Packages > Publish New Package...`를 선택하여 `Publ
 
 패키지 콘텐츠에 파일을 추가한 상태에서 패키지에 이름, 설명 및 버전을 지정합니다. Dynamo를 사용하여 패키지를 게시하면 `pkg.json` 파일이 자동으로 생성됩니다.
 
-![패키지 설정](../../.gitbook/assets/dyn-publish-package.jpg)
+![패키지 설정](../../.gitbook/assets/dyn-publish-package.png)
 
 > 게시할 준비가 된 패키지가 있습니다.
 >
