@@ -90,7 +90,7 @@ Wenn das Projekt ähnlich aussieht wie hier gezeigt, versuchen Sie, die `.dll`-D
 
 Prüfen Sie, ob im Ordner `bin` des Projekts eine `.dll`-Datei enthalten ist. Wenn der Build erfolgreich war, können wir die `.dll`-Datei zu Dynamo hinzufügen.
 
-![Benutzerdefinierte Blöcke in Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
+![Benutzerdefinierte Blöcke in Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.png)
 
 > 1. Der benutzerdefinierte Block RectangularGrids in der Dynamo-Bibliothek
 > 2. Der benutzerdefinierte Block im Ansichtsbereich

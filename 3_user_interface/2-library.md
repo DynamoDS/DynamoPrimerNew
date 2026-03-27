@@ -2,7 +2,7 @@
 
 Die Bibliothek enthält alle geladenen Blöcke, einschließlich der zehn vorgabemäßigen Kategorieblöcke, die zum Lieferumfang gehören, sowie der zusätzlich geladenen benutzerdefinierten Blöcke und Pakete. Die Blöcke in der Bibliothek sind hierarchisch in Bibliotheken, Kategorien und gegebenenfalls Unterkategorien angeordnet.
 
-\![](<../.gitbook/assets/library - library UI.jpg>)
+\![](<../.gitbook/assets/library - library UI.png>)
 
 * Basisblöcke: Im Lieferumfang der Vorgabeinstallation enthalten.
 * Benutzerdefinierte Blöcke: Speichern Sie häufig verwendete Routinen oder spezielle Diagramme als benutzerdefinierte Blöcke. Sie können Ihre benutzerdefinierten Blöcke auch für die Community freigeben.

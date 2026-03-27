@@ -4,7 +4,7 @@
 
 In diesem Handbuch erfahren Sie, wie Sie die verschiedenen C#-Entwicklungsmöglichkeiten für Dynamo verwenden - vom Erstellen von Zero-Touch-Blöcken bis hin zum Erstellen von Erweiterungen.
 
-![Dynamo-Quelldateien auf GitHub](../../.gitbook/assets/dynamogithub.jpg)
+![Dynamo-Quelldateien auf GitHub](../../.gitbook/assets/dynamogithub.png)
 
 > Dynamo-Quelldateien auf GitHub
 
@@ -14,7 +14,7 @@ In diesem Handbuch erfahren Sie, wie Sie die verschiedenen C#-Entwicklungsmögli
 
 [https://dynamobuilds.com/](https://dynamobuilds.com/)
 
-**Dynamo-GitHub**: Dynamo ist ein Open-Source-Entwicklungsprojekt auf GitHub.
+**Dynamo GitHub**: Dynamo ist ein Open-Source-Entwicklungsprojekt auf GitHub.
 
 [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 

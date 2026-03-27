@@ -45,7 +45,7 @@ Die Dynamo-Bibliothek enthält jetzt die Gruppe _DynamoUnfold_ mit mehreren Kate
 Als Nächstes betrachten Sie die Dateistruktur des Pakets genauer.
 
 1. Navigieren Sie zunächst zu Pakete > Package Manager > Installierte Pakete.
-2. Wählen Sie neben DynamoUnfold das Optionsmenü <img src="../../.gitbook/assets/package introduction - vertical dots menu.jpg" alt="" data-size="line"> aus.
+2. Wählen Sie neben DynamoUnfold das Optionsmenü <img src="../../.gitbook/assets/package introduction - vertical dots menu.png" alt="" data-size="line"> aus.
 3. Klicken Sie anschließend auf Stammverzeichnis anzeigen, um den Stammordner für dieses Paket zu öffnen.
 
 <figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
@@ -87,7 +87,7 @@ Sie können auch auf der [Dynamo Package Manager-Website](http://dynamopackages.
 
 Wenn Sie wissen möchten, wo Ihre Paketdateien gespeichert sind, klicken Sie in der oberen Navigationsleiste auf Dynamo > Voreinstellungen > Paketeinstellungen > Dateispeicherorte für Blöcke und Pakete. Hier finden Sie das aktuelle Stammordnerverzeichnis.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 08.jpg>)
+\![](<../../.gitbook/assets/package introduction - installing package folder 08.png>)
 
 Pakete werden vorgabemäßig unter einem Speicherort ähnlich dem folgenden installiert: _C:/Benutzer/[Benutzername]/AppData/Roaming/Dynamo/[Dynamo-Version]_.
 

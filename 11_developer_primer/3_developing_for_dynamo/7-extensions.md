@@ -6,7 +6,7 @@ Erweiterungen sind ein leistungsstarkes Entwicklungswerkzeug im Dynamo-Ökosyste
 
 Im Anschluss an das Beispiel SampleViewExtension aus dem DynamoSamples-GitHub-Repository gehen wir die Schritte zum Erstellen eines einfachen, modusunabhängigen Fensters durch, in dem die aktiven Blöcke im Diagramm in Echtzeit angezeigt werden. Für eine Ansichtserweiterung müssen wir eine Benutzeroberfläche für das Fenster erstellen und Werte an ein Ansichtsmodell binden.
 
-![Fenster der Ansichtserweiterung](../../.gitbook/assets/dyn-viewextension.jpg)
+![Fenster der Ansichtserweiterung](../../.gitbook/assets/dyn-viewextension.png)
 
 > 1. Das Fenster der Ansichtserweiterung, das nach dem Beispiel SampleViewExtension im GitHub-Repository entwickelt wurde.
 
