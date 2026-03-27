@@ -24,7 +24,7 @@ Měli byste být schopni spustit soubor DynamoSandbox.exe v extrahované složc
 | 2.7            | 2019 Redistributable | 11/12 (součást systému Windows 10) |   |   |   |   |
 | >=2.8          | 2019 Redistributable | 11/12 (součást systému Windows 10) |   |   |   |   |
 
-**Rozhraní Microsoft DirectX, které je také veřejně dostupné v našem úložišti aplikace Dynamo na Githubu** – [**zde**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
+**Rozhraní Microsoft DirectX, které je také veřejně dostupné v našem úložišti aplikace Dynamo na GitHubu** – [**zde**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 
 **Program 7zip slouží k rozbalení balíčku** – [**zde**](https://www.7-zip.org/download.html)
 
@@ -48,7 +48,7 @@ Na následujícím snímku obrazovky je zobrazena situace, kdy bylo sestavení r
 
 **Instalace rozhraní DirectX**
 
-Postupujte podle pokynů společnosti Microsoft a zkontrolujte, zda je již nainstalováno rozhraní DirectX. Pokud tomu tak není, můžete otevřít soubor DXSETUP.exe v našem úložišti aplikace Dynamo na Githubu [zde](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX). Poté, co se zobrazí níže uvedený dialog, můžete kliknout na tlačítko Další a nainstalovat rozhraní DirectX do výchozího umístění.
+Postupujte podle pokynů společnosti Microsoft a zkontrolujte, zda je již nainstalováno rozhraní DirectX. Pokud tomu tak není, můžete otevřít soubor DXSETUP.exe v našem úložišti aplikace Dynamo na GitHubu [zde](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX). Poté, co se zobrazí níže uvedený dialog, můžete kliknout na tlačítko Další a nainstalovat rozhraní DirectX do výchozího umístění.
 
 ![](../.gitbook/assets/dynamo-builds-3.png)
 

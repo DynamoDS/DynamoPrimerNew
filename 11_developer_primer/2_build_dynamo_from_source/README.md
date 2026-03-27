@@ -1,12 +1,12 @@
 # Sestavení aplikace Dynamo ze zdroje
 
-Zdroj aplikace Dynamo je hostován na Githubu, kde jej může kdokoli klonovat a přispívat do něj. V této kapitole si ukážeme, jak klonovat úložiště pomocí gitu, kompilovat zdrojové soubory pomocí aplikace Visual Studio, spustit a ladit místní sestavení a získat všechny nové změny z Githubu.
+Zdroj aplikace Dynamo je hostován na GitHubu, kde jej může kdokoli klonovat a přispívat do něj. V této kapitole si ukážeme, jak klonovat úložiště pomocí gitu, kompilovat zdrojové soubory pomocí aplikace Visual Studio, spustit a ladit místní sestavení a získat všechny nové změny z GitHubu.
 
-### Vyhledání úložišť aplikace Dynamo na Githubu <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
+### Vyhledání úložišť aplikace Dynamo na GitHubu <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
-Github je hostovací služba založená na [gitu](https://help.github.com/articles/git-and-github-learning-resources/), systému pro správu verzí, který slouží ke sledování změn a koordinaci práce mezi lidmi. Git je nástroj, který můžeme využít ke stažení zdrojových souborů aplikace Dynamo a jejich aktualizaci pomocí několika příkazů. Použitím této metody se vyhnete zbytečné a nepřehledné práci se stahováním a ručním nahrazováním zdrojových souborů při každé aktualizaci. Systém správy verzí git bude sledovat veškeré rozdíly mezi místním a vzdáleným úložištěm kódů.
+GitHub je hostovací služba založená na [gitu](https://help.github.com/articles/git-and-github-learning-resources/), systému pro správu verzí, který slouží ke sledování změn a koordinaci práce mezi lidmi. Git je nástroj, který můžeme využít ke stažení zdrojových souborů aplikace Dynamo a jejich aktualizaci pomocí několika příkazů. Použitím této metody se vyhnete zbytečné a nepřehledné práci se stahováním a ručním nahrazováním zdrojových souborů při každé aktualizaci. Systém správy verzí git bude sledovat veškeré rozdíly mezi místním a vzdáleným úložištěm kódů.
 
-Zdroj aplikace Dynamo je hostován na Githubu DynamoDS v tomto úložišti: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo).
+Zdroj aplikace Dynamo je hostován na GitHubu DynamoDS v tomto úložišti: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo).
 
 ![Zdrojové soubory aplikace Dynamo](../../.gitbook/assets/github.jpg)
 
@@ -28,7 +28,7 @@ Potřebujeme adresu URL úložiště aplikace Dynamo, ze kterého se bude klonov
 > 1. Vyberte možnost Clone or download (Klonovat nebo stáhnout).
 > 2. Zkopírujte adresu URL.
 
-S nainstalovaným gitem můžeme klonovat úložiště aplikace Dynamo. Začněte otevřením příkazového řádku. Poté pomocí příkazu pro změnu adresáře `cd` přejděte do složky, do které chcete zdrojové soubory klonovat. V tomto případě jsme vytvořili složku s názvem `Github` ve složce `Documents`.
+S nainstalovaným gitem můžeme klonovat úložiště aplikace Dynamo. Začněte otevřením příkazového řádku. Poté pomocí příkazu pro změnu adresáře `cd` přejděte do složky, do které chcete zdrojové soubory klonovat. V tomto případě jsme vytvořili složku s názvem `GitHub` ve složce `Documents`.
 
 `cd C:\Users\username\Documents\GitHub`
 
@@ -36,13 +36,13 @@ S nainstalovaným gitem můžeme klonovat úložiště aplikace Dynamo. Začně
 
 ![Příkazový řádek](../../.gitbook/assets/cli-1.jpg)
 
-V dalším kroku spustíme příkaz gitu, který naklonuje úložiště aplikace Dynamo do zadaného umístění. Adresu URL v příkazu získáte kliknutím na tlačítko Clone or download (Klonovat nebo stáhnout) na Githubu. Tento příkaz spusťte v příkazovém řádku. Tímto příkazem se naklonuje hlavní větev úložiště aplikace Dynamo, která obsahuje nejaktuálnější verzi kódu aplikace Dynamo. Tato větev se denně mění.
+V dalším kroku spustíme příkaz gitu, který naklonuje úložiště aplikace Dynamo do zadaného umístění. Adresu URL v příkazu získáte kliknutím na tlačítko Clone or download (Klonovat nebo stáhnout) na GitHubu. Tento příkaz spusťte v příkazovém řádku. Tímto příkazem se naklonuje hlavní větev úložiště aplikace Dynamo, která obsahuje nejaktuálnější verzi kódu aplikace Dynamo. Tato větev se denně mění.
 
 `git clone https://github.com/DynamoDS/Dynamo.git`
 
 ![Výsledky operace klonování příkazem git clone](../../.gitbook/assets/cli-2.jpg)
 
-Pokud byla operace klonování úspěšně dokončena, víme, že git funguje. V Průzkumníku souborů přejděte do adresáře, do kterého jste klonovali, a zobrazte zdrojové soubory. Struktura adresáře by měla vypadat stejně jako hlavní větev úložiště aplikace Dynamo na Githubu.
+Pokud byla operace klonování úspěšně dokončena, víme, že git funguje. V Průzkumníku souborů přejděte do adresáře, do kterého jste klonovali, a zobrazte zdrojové soubory. Struktura adresáře by měla vypadat stejně jako hlavní větev úložiště aplikace Dynamo na GitHubu.
 
 ![Zdrojové soubory aplikace Dynamo](../../.gitbook/assets/source-files.jpg)
 
@@ -114,7 +114,7 @@ Pokyny k vytváření aplikace Dynamo pro další platformy (například Linux 
 
 ### Ladění místního sestavení pomocí aplikace Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
-Ladění je proces identifikace, izolování a opravy chyby nebo problému. Po úspěšném sestavení aplikace Dynamo ze zdroje můžeme pomocí několika nástrojů v aplikaci Visual Studio ladit spuštěnou aplikaci, například doplněk DynamoRevit. Můžeme analyzovat jeho zdrojový kód a najít příčinu problému nebo sledovat aktuálně prováděný kód. Podrobnější informace o tom, jak ladit a procházet kód v aplikaci Visual Studio, naleznete v [dokumentaci k aplikaci Visual Studio](https://docs.microsoft.com/cs-cz/visualstudio/debugger/navigating-through-code-with-the-debugger).
+Ladění je proces identifikace, izolování a opravy chyby nebo problému. Po úspěšném sestavení aplikace Dynamo ze zdroje můžeme pomocí několika nástrojů v aplikaci Visual Studio ladit spuštěnou aplikaci, například doplněk DynamoRevit. Můžeme analyzovat jeho zdrojový kód a najít příčinu problému nebo sledovat aktuálně prováděný kód. Podrobnější informace o tom, jak ladit a procházet kód v aplikaci Visual Studio, naleznete v [dokumentaci k aplikaci Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
 V případě samostatné aplikace Dynamo, DynamoSandbox, se budeme zabývat dvěma možnostmi ladění:
 
@@ -155,7 +155,7 @@ V další části **Sestavení doplňku DynamoRevit ze zdroje** si ukážeme ko
 
 ### Získání nejnovějšího sestavení <a href="#pulling-latest-build" id="pulling-latest-build"></a>
 
-Protože je zdroj aplikace Dynamo hostován na Githubu, nejjednodušším způsobem, jak aktualizovat místní zdrojové soubory, je získávání změn pomocí příkazů git.
+Protože je zdroj aplikace Dynamo hostován na GitHubu, nejjednodušším způsobem, jak aktualizovat místní zdrojové soubory, je získávání změn pomocí příkazů git.
 
 Pomocí příkazového řádku nastavte aktuální adresář na úložiště aplikace Dynamo:
 
@@ -173,7 +173,7 @@ K získání nejnovějších změn použijte následující příkaz:
 
 Kromě získávání aktualizací je třeba znát další čtyři pracovní postupy gitu.
 
-* **Rozvětvením** úložiště aplikace Dynamo vytvoříte kopii oddělenou od originálu. Jakékoli změny zde provedené nebudou mít vliv na původní úložiště a aktualizace mohou být získávány z úložiště nebo do něj odesílány pomocí žádostí o přijetí změn. Rozvětvení (fork) není příkaz gitu. Je to pracovní postup, který přidává github – rozvětvení a žádost o přijetí změn je jedním z nejběžnějších pracovních postupů pro přispívání do projektů s otevřeným zdrojovým kódem online. Chcete-li přispívat do aplikace Dynamo, je vhodné se ho naučit.
+* **Rozvětvením** úložiště aplikace Dynamo vytvoříte kopii oddělenou od originálu. Jakékoli změny zde provedené nebudou mít vliv na původní úložiště a aktualizace mohou být získávány z úložiště nebo do něj odesílány pomocí žádostí o přijetí změn. Rozvětvení (fork) není příkaz gitu. Je to pracovní postup, který přidává GitHub – rozvětvení a žádost o přijetí změn je jedním z nejběžnějších pracovních postupů pro přispívání do projektů s otevřeným zdrojovým kódem online. Chcete-li přispívat do aplikace Dynamo, je vhodné se ho naučit.
 * **Větev** (branch) – umožňuje pracovat na experimentech nebo nových prvcích izolovaně od ostatní práce ve větvích. Díky tomu je odesílání žádostí o přijetí změn jednodušší.
 * Často provádějte **zápisy** (commit), zejména po dokončení pracovní jednotky a po změně, kterou možná budete chtít vrátit zpět. Zápis zaznamenává změny v úložišti a bude viditelný při zadávání žádosti o přijetí změn do hlavního úložiště aplikace Dynamo.
 * Vytvářejte **žádosti o přijetí změn** (pull request), když jsou změny připraveny k oficiálnímu navržení do hlavního úložiště aplikace Dynamo.

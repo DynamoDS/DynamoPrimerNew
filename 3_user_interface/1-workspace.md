@@ -4,7 +4,7 @@
 
 Pracovní prostor aplikace Dynamo se skládá ze čtyř hlavních prvků.
 
-\![](<../.gitbook/assets/workspace - ui.jpg>)
+\![](<../.gitbook/assets/workspace - ui.png>)
 
 > 1. Všechny aktivní karty
 > 2. Režim náhledu
@@ -15,11 +15,11 @@ Pracovní prostor aplikace Dynamo se skládá ze čtyř hlavních prvků.
 
 Při otevření nového souboru se ve výchozím nastavení otevře nový domovský pracovní prostor.
 
-\![](<../.gitbook/assets/workspace - home tab.jpg>)
+\![](<../.gitbook/assets/workspace - home tab.png>)
 
 Můžete vytvořit vlastní uzel a otevřít jej v pracovním prostoru vlastního uzlu.
 
-\![](<../.gitbook/assets/workspace - custom node tab.jpg>)
+\![](<../.gitbook/assets/workspace - custom node tab.png>)
 
 {% hint style="info" %} V každém okně aplikace Dynamo je povolen pouze jeden domovský pracovní prostor, ale na kartách můžete mít otevřeno více pracovních prostorů vlastních uzlů. {% endhint %}
 

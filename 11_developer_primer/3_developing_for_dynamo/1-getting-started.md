@@ -79,7 +79,7 @@ Nyní můžeme otevřít aplikaci Dynamo a importovat knihovnu `.dll`. Pomocí f
 
 Pokud je v knihovně vytvořena kategorie s názvem `MyCustomNode`, byla knihovna .dll úspěšně importována! Aplikace Dynamo však vytvořila dva uzly, přičemž my jsme chtěli mít pouze jeden uzel. V další části vysvětlíme, proč k tomu dochází a jak aplikace Dynamo načítá knihovnu .dll.
 
-![Vlastní uzly](../../.gitbook/assets/dyn-customnode.jpg)
+![Vlastní uzly](../../.gitbook/assets/dyn-customnode.png)
 
 > 1. Kategorie MyCustomNode v knihovně aplikace Dynamo. Kategorie knihovny je určena názvem knihovny `.dll`.
 > 2. Uzel SampleFunctions.MultiplyByTwo na kreslicí ploše.

@@ -55,7 +55,7 @@ Protože Revit je platforma s robustními funkcemi pro správu projektů, výpo
 
 Aplikace Dynamo byla původně vytvořena pro AEC a její velká a rostoucí komunita nabízí skvělou příležitost spojit se a učit se od expertů z oboru. Komunitu aplikace Dynamo tvoří architekti, inženýři, programátoři a konstruktéři, kteří rádi sdílejí a tvoří.
 
-Aplikace Dynamo je projekt s otevřeným zdrojovým kódem, která se neustále vyvíjí, přičemž velké množství vývoje souvisí také s aplikací Revit. Pokud s aplikací začínáte, neváhejte a [ptejte se](http://dynamobim.org/forums/forum/dyn/) na diskuzním fóru! Pokud jste programátor a chcete se zapojit do vývoje aplikace Dynamo, přejděte na [úložiště na Githubu](https://github.com/DynamoDS/Dynamo). Skvělým zdrojem knihoven třetích stran je také nástroj [Dynamo Package Manager](http://dynamopackages.com). Mnoho z těchto balíčků bylo vyvinuto s ohledem na AEC a v této kapitole budou probrány balíčky třetích stran pro panelizaci.
+Aplikace Dynamo je projekt s otevřeným zdrojovým kódem, která se neustále vyvíjí, přičemž velké množství vývoje souvisí také s aplikací Revit. Pokud s aplikací začínáte, neváhejte a [ptejte se](http://dynamobim.org/forums/forum/dyn/) na diskuzním fóru! Pokud jste programátor a chcete se zapojit do vývoje aplikace Dynamo, přejděte na [úložiště na GitHubu](https://github.com/DynamoDS/Dynamo). Skvělým zdrojem knihoven třetích stran je také nástroj [Dynamo Package Manager](http://dynamopackages.com). Mnoho z těchto balíčků bylo vyvinuto s ohledem na AEC a v této kapitole budou probrány balíčky třetích stran pro panelizaci.
 
 Aplikace Dynamo také provozuje aktivní blog. Přečtěte si nejnovější příspěvky z vývoje.
 

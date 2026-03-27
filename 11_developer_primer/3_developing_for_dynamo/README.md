@@ -91,9 +91,9 @@ Pomocí této metody můžeme:
 
 Protože je aplikace Dynamo pravidelně aktualizována, mohou být provedeny změny v části rozhraní API, které jsou používány v balíčku. Sledování těchto změn je důležité pro zajištění správné funkce stávajících balíčků.
 
-Změny rozhraní API jsou sledovány na [stránce Wiki aplikace Dynamo na Githubu](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). Sledovány jsou změny v jádru aplikace Dynamo, knihovnách a pracovních prostorech.
+Změny rozhraní API jsou sledovány na [stránce Wiki aplikace Dynamo na GitHubu](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). Sledovány jsou změny v jádru aplikace Dynamo, knihovnách a pracovních prostorech.
 
-![Dokument změn rozhraní API aplikace Dynamo](../../.gitbook/assets/api-changes.jpg)
+![Dokument změn rozhraní API aplikace Dynamo](../../.gitbook/assets/api-changes.png)
 
 Příkladem nadcházející významné změny je přechod z formátu XML na formátu souboru JSON ve verzi 2.0. Uzly odvozené z uzlu NodeModel nyní potřebují [konstruktor JSON](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node), jinak se neotevřou v aplikaci Dynamo 2.0.
 

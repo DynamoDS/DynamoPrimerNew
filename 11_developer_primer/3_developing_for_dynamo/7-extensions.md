@@ -4,11 +4,11 @@ Rozšíření jsou v ekosystému aplikace Dynamo velmi účinným nástrojem pr
 
 #### Případová studie rozšíření <a href="#extension-case-study" id="extension-case-study"></a>
 
-S využitím příkladu SampleViewExtension z úložiště DynamoSamples na Githubu projdeme kroky potřebné k vytvoření jednoduchého nemodálního okna, které zobrazuje aktivní uzly v grafu v reálném čase Rozšíření pohledu vyžaduje, abychom pro okno vytvořili uživatelské rozhraní a svázali hodnoty s modelem pohledu.
+S využitím příkladu SampleViewExtension z úložiště DynamoSamples na GitHubu projdeme kroky potřebné k vytvoření jednoduchého nemodálního okna, které zobrazuje aktivní uzly v grafu v reálném čase Rozšíření pohledu vyžaduje, abychom pro okno vytvořili uživatelské rozhraní a svázali hodnoty s modelem pohledu.
 
-![Okno rozšíření pohledu](../../.gitbook/assets/dyn-viewextension.jpg)
+![Okno rozšíření pohledu](../../.gitbook/assets/dyn-viewextension.png)
 
-> 1. Okno rozšíření pohledu vytvořené podle příkladu SampleViewExtension v úložišti na Githubu.
+> 1. Okno rozšíření pohledu vytvořené podle příkladu SampleViewExtension v úložišti na GitHubu.
 
 Ačkoliv budeme tento příklad vytvářet od základů, můžete si také stáhnout a vytvořit úložiště DynamoSamples, které vám poslouží jako reference.
 
@@ -285,8 +285,8 @@ Posledním krokem je zkopírování souboru `SampleViewExtension_ViewExtensionDe
 
 > 1. Soubor `.xml`, který jsme zkopírovali do složky rozšíření pohledů aplikace Dynamo.
 
-Toto je základní úvod k rozšířením pohledu. Propracovanější případovou studii naleznete v balíčku DynaShape, projektu s otevřeným zdrojovým kódem na Githubu. Tento balíček používá rozšíření pohledu, které umožňuje živé úpravy v pohledu modelu aplikace Dynamo.
+Toto je základní úvod k rozšířením pohledu. Propracovanější případovou studii naleznete v balíčku DynaShape, projektu s otevřeným zdrojovým kódem na GitHubu. Tento balíček používá rozšíření pohledu, které umožňuje živé úpravy v pohledu modelu aplikace Dynamo.
 
 Instalační program balíčku DynaShape lze stáhnout z fóra aplikace Dynamo: [https://forum.dynamobim.com/t/dynashape-published/11666](https://forum.dynamobim.com/t/dynashape-published/11666)
 
-Zdrojový kód lze klonovat z Githubu: [https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape)
+Zdrojový kód lze klonovat z GitHubu: [https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape)

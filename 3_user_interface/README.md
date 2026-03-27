@@ -4,7 +4,7 @@
 
 Uživatelské rozhraní aplikace Dynamo je uspořádáno do pěti hlavních oblastí. Níže naleznete jeho stručný přehled a v následujících částech naleznete informace o pracovním prostoru a knihovně.
 
-\![](<../.gitbook/assets/user interface - ui.jpg>)
+\![](<../.gitbook/assets/user interface - ui.png>)
 
 > 1. Nabídky
 > 2. Panel nástrojů
@@ -48,12 +48,12 @@ Pokud máte problém, podívejte se do nabídky **Nápověda**. Prostřednictví
 
 Panel nástrojů aplikace Dynamo obsahuje řadu tlačítek pro rychlý přístup k práci se soubory a také příkazy Zpět [Ctrl+Z] a Znovu [Ctrl+Y]. Zcela vpravo je další tlačítko, které umožňuje exportovat snímek pracovního prostoru, což je mimořádně užitečné pro dokumentaci a sdílení.
 
-* \![](<../.gitbook/assets/user interface - new file.jpg>) Nový – Vytvoří nový soubor .dyn.
-* \![](<../.gitbook/assets/user interface - open (1).jpg>) Otevřít – Otevře existující soubor .dyn (pracovní prostor) nebo .dyf (vlastní uzel).
-* \![](<../.gitbook/assets/user interface - save.jpg>) Uložit / Uložit jako – Uloží aktivní soubor .dyn nebo .dyf.
+* \![](<../.gitbook/assets/user interface - new file.jpg>) Vytvoří nový soubor .dyn.
+* \![](<../.gitbook/assets/user interface - open (1).png>) Otevřít – Otevře existující soubor .dyn (pracovní prostor) nebo .dyf (vlastní uzel).
+* \![](<../.gitbook/assets/user interface - save.png>) Uložit / Uložit jako – Uloží aktivní soubor .dyn nebo .dyf.
 * \![](<../.gitbook/assets/user interface - undo.jpg>) Zpět – Vrátí zpět poslední akci.
 * \![](<../.gitbook/assets/user interface - redo.jpg>) Znovu – Zopakuje další akci.
-* \![](<../.gitbook/assets/user interface - screenshot.jpg>) Exportovat pracovní prostor jako obrázek – Exportuje viditelný pracovní prostor jako soubor PNG.
+* \![](<../.gitbook/assets/user interface - screenshot.png>) Exportovat pracovní prostor jako obrázek – Exportuje viditelný pracovní prostor jako soubor PNG.
 
 ### Knihovna
 

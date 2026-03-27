@@ -90,7 +90,7 @@ Pokud projekt vypadá podobně jako tento, pokračujte a zkuste sestavit knihovn
 
 Zkontrolujte složku projektu `bin` pro knihovnu `.dll`. Pokud bylo sestavení úspěšné, můžeme přidat knihovnu `.dll` do aplikace Dynamo.
 
-![Vlastní uzly v aplikaci Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
+![Vlastní uzly v aplikaci Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.png)
 
 > 1. Vlastní uzel RectangularGrids v knihovně aplikace Dynamo
 > 2. Vlastní uzel na kreslicí ploše

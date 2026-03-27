@@ -45,7 +45,7 @@ V knihovně aplikace Dynamo je k dispozici skupina aplikace _DynamoUnfold_ s 
 Nyní se podíváme na strukturu souborů balíčku.
 
 1. Nejprve přejděte do nabídky Balíčky > Package Manager > Instalované balíčky.
-2. Vedle položky DynamoUnfold vyberte nabídku možností <img src="../../.gitbook/assets/package introduction - vertical dots menu.jpg" alt="" data-size="line">.
+2. Vedle položky DynamoUnfold vyberte nabídku možností <img src="../../.gitbook/assets/package introduction - vertical dots menu.png" alt="" data-size="line">.
 3. Poté kliknutím na možnost Zobrazit kořenový adresář otevřete kořenovou složku pro tento balíček.
 
 <figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
@@ -87,7 +87,7 @@ Další způsob, jak objevovat balíčky aplikace Dynamo, je prozkoumat web nás
 
 Pokud chcete zjistit, kde jsou uloženy soubory balíčku, klikněte v horní části navigace na možnosti Dynamo > Předvolby > Nastavení balíčku > Umístění souborů uzlů a balíčků, kde najdete aktuální adresář kořenové složky.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 08.jpg>)
+\![](<../../.gitbook/assets/package introduction - installing package folder 08.png>)
 
 Ve výchozím nastavení jsou balíčky nainstalovány do umístění podobného této cestě: _C:/Users/[uživatelské jméno]/AppData/Roaming/Dynamo/[verze aplikace Dynamo]_.
 
@@ -134,7 +134,7 @@ I když tento scénář funguje správně pro balíčky, které obsahují pouze
 
 #### Řešení
 
-Jedním z možných alternativních řešení je použít namapovanou síťovou jednotku odkazující na síťové umístění a nechat pracovní stanice odkazovat na tuto cestu. Postup vytvoření mapované síťové jednotky je popsán [zde](https://support.microsoft.com/cs-cz/help/4026635/windows-10-map-a-network-drive).
+Jedním z možných alternativních řešení je použít namapovanou síťovou jednotku odkazující na síťové umístění a nechat pracovní stanice odkazovat na tuto cestu. Postup vytvoření mapované síťové jednotky je popsán [zde](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive).
 
 ### Další práce s balíčky
 

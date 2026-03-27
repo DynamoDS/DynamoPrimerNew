@@ -36,7 +36,7 @@ V části Změny jazyka je uveden přehled aktualizací a úprav jazyka použív
 
 Známé problémy:
 
-* Konflikty jmenného prostoru v imperativních blocích způsobují zobrazení neočekávaných vstupních portů. Další informace najdete v tomto článku popisujícím [problém na Githubu](https://github.com/DynamoDS/Dynamo/issues/8796). Chcete-li tento problém obejít, definujte funkci mimo imperativní blok takto:
+* Konflikty jmenného prostoru v imperativních blocích způsobují zobrazení neočekávaných vstupních portů. Další informace najdete v tomto článku popisujícím [problém na GitHubu](https://github.com/DynamoDS/Dynamo/issues/8796). Chcete-li tento problém obejít, definujte funkci mimo imperativní blok takto:
 
 ```
 pnt = Autodesk.Point.ByCoordinates;

@@ -12,7 +12,7 @@ V prohlížeči si můžete vyhledat balíčky a zobrazit statistiku: [https://
 
 * Nástroj Package Manager v aplikaci Dynamo umožňuje instalaci, publikování a aktualizaci balíčků.
 
-![Vyhledání balíčků](../../.gitbook/assets/dynamopackagemanager.jpg)
+![Vyhledání balíčků](../../.gitbook/assets/dynamopackagemanager.png)
 
 > 1. Vyhledejte balíčky online: `Packages > Search for a Package...`
 > 2. Zobrazte nebo upravte nainstalované balíčky: `Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Balíčky jsou publikovány pomocí nástroje Package Manager v aplikaci Dynamo
 
 Spusťte aplikaci Dynamo a výběrem možnosti `Packages > Publish New Package...` otevřete okno `Publish a Package`.
 
-![Publikování balíčku](../../.gitbook/assets/dyn-publish-package-add-files.jpg)
+![Publikování balíčku](../../.gitbook/assets/dyn-publish-package-add-files.png)
 
 > 1. Vyberte `Add file...` a vyhledejte soubory, které chcete přidat do balíčku.
 > 2. Vyberte dva soubory `.dll` z případové studie uzlu NodeModel.
@@ -32,7 +32,7 @@ Spusťte aplikaci Dynamo a výběrem možnosti `Packages > Publish New Package..
 
 Po přidání souborů do obsahu balíčku zadejte název, popis a verzi balíčku. Publikováním balíčku pomocí aplikace Dynamo se automaticky vytvoří soubor `pkg.json`.
 
-![Nastavení balíčku](../../.gitbook/assets/dyn-publish-package.jpg)
+![Nastavení balíčku](../../.gitbook/assets/dyn-publish-package.png)
 
 > Balíček připravený k publikování.
 >

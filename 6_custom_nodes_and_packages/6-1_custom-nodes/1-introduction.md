@@ -22,7 +22,7 @@ V této části přejdeme do prostředí vlastního uzlu a vytvoříme jednoduc
 
 Chcete-li vytvořit nový vlastní uzel, spusťte aplikaci Dynamo a vyberte možnost Vlastní uzel, případně na pracovní ploše stiskněte kombinaci kláves Ctrl+Shift+N.
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 01.jpg>)
+\![](<../../.gitbook/assets/custom node intro - custom node environment 01.png>)
 
 V dialogu Vlastnosti vlastního uzlu zadejte název, popis a kategorii.
 

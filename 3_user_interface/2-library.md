@@ -2,7 +2,7 @@
 
 Knihovna obsahuje všechny načtené uzly, včetně výchozích kategorií uzlů, které jsou dodávány s instalací, a všech dalších načtených vlastních uzlů nebo balíčků. Uzly v knihovně jsou hierarchicky uspořádány v rámci knihoven, kategorií a případně podkategorií.
 
-\![](<../.gitbook/assets/library - library UI.jpg>)
+\![](<../.gitbook/assets/library - library UI.png>)
 
 * Základní uzly: Dodávány s výchozí instalací.
 * Vlastní uzly: Často používané postupy nebo speciální graf si můžete uložit jako vlastní uzly. Vlastní uzly můžete také sdílet s komunitou.
