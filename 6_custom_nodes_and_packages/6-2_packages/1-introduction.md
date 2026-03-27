@@ -45,7 +45,7 @@ La bibliothèque Dynamo contient un groupe _DynamoUnfold_ avec plusieurs catégo
 Examinez maintenant la structure de fichiers du package.
 
 1. Tout d’abord, accédez à Packages > Gestionnaire de package > Packages installés.
-2. À côté de DynamoUnfold, sélectionnez le menu d’options <img src="../../.gitbook/assets/package introduction - vertical dots menu.jpg" alt="" data-size="line">.
+2. À côté de DynamoUnfold, sélectionnez le menu d’options <img src="../../.gitbook/assets/package introduction - vertical dots menu.png" alt="" data-size="line">.
 3. Cliquez ensuite sur Afficher le répertoire racine pour ouvrir le dossier racine de ce package.
 
 <figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
@@ -87,7 +87,7 @@ Une autre façon de découvrir les packages Dynamo est d’explorer le site Web 
 
 Si vous souhaitez voir où vos fichiers de package sont conservés, dans la barre de navigation supérieure, cliquez sur Dynamo > Préférences > Paramètres de package > Emplacement des fichiers de nœuds et de packages. Vous pouvez trouver le répertoire de votre dossier racine actuel à partir d’ici.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 08.jpg>)
+\![](<../../.gitbook/assets/package introduction - installing package folder 08.png>)
 
 Par défaut, les packages sont installés dans un emplacement semblable à celui du dossier suivant : _C:/Utilisateurs/[nom d’utilisateur]/AppData/Itinérance/Dynamo/[Version Dynamo]_.
 

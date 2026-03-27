@@ -26,7 +26,7 @@ Vous devriez être en mesure de lancer DynamoSandbox.exe dans le dossier extrait
 
 **Microsoft DirectX, qui est également disponible publiquement dans notre référentiel GitHub Dynamo** [**ici**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 
-**7-zip utilisé pour décompresser le package** [**ici**](https://www.7-zip.fr/download.html)
+**7-zip utilisé pour décompresser le package** [**ici**](https://www.7-zip.org/download.html)
 
 **Microsoft Visual C++ 2015-2024 Redistributable (x64)** [**ici**](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 

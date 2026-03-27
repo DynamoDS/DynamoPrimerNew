@@ -91,9 +91,9 @@ Avec cette méthode, vous pouvez :
 
 Comme Dynamo est régulièrement mis à jour, des modifications peuvent être apportées à une partie de l’API utilisée par un package. Il est important de suivre ces modifications pour s’assurer que les packages existants continuent à fonctionner correctement.
 
-Les modifications de l’API sont répertoriées sur le [Wiki de Github sur Dynamo](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). Cela couvre les modifications apportées à DynamoCore, aux bibliothèques et aux espaces de travail.
+Les modifications de l’API sont répertoriées sur le [Wiki de GitHub sur Dynamo](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). Cela couvre les modifications apportées à DynamoCore, aux bibliothèques et aux espaces de travail.
 
-![Document des modifications de l’API Dynamo](../../.gitbook/assets/api-changes.jpg)
+![Document des modifications de l’API Dynamo](../../.gitbook/assets/api-changes.png)
 
 Le passage du format de fichier XML au format JSON dans la version 2.0 est un exemple de changement important à venir. Les nœuds dérivés de NodeModel auront désormais besoin d’un [constructeur JSON](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node), sinon ils ne s’ouvriront pas dans Dynamo 2.0.
 

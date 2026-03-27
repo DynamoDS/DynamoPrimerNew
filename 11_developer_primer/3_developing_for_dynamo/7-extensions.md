@@ -4,11 +4,11 @@ Les extensions sont un outil de développement puissant dans l’écosystème Dy
 
 #### Étude de cas sur les extensions <a href="#extension-case-study" id="extension-case-study"></a>
 
-En suivant l’exemple SampleViewExtension du dépôt DynamoSamples de Github, nous allons parcourir les étapes nécessaires à la création d’une simple fenêtre sans modèle qui affiche les nœuds actifs du graphique en temps réel. Une extension de vue nécessite la création d’une interface utilisateur pour la fenêtre et l’association de valeurs à un modèle de vue.
+En suivant l’exemple SampleViewExtension du dépôt DynamoSamples de GitHub, nous allons parcourir les étapes nécessaires à la création d’une simple fenêtre sans modèle qui affiche les nœuds actifs du graphique en temps réel. Une extension de vue nécessite la création d’une interface utilisateur pour la fenêtre et l’association de valeurs à un modèle de vue.
 
-![Fenêtre d’extension de vue](../../.gitbook/assets/dyn-viewextension.jpg)
+![Fenêtre d’extension de vue](../../.gitbook/assets/dyn-viewextension.png)
 
-> 1. La fenêtre d’extension de vue a été développée en suivant l’exemple SampleViewExtension dans le dépôt de Github.
+> 1. La fenêtre d’extension de vue a été développée en suivant l’exemple SampleViewExtension dans le dépôt de GitHub.
 
 Bien que nous allons générer l’exemple à partir de zéro, vous pouvez également télécharger et générer le dépôt DynamoSamples comme référence.
 
@@ -285,8 +285,8 @@ La dernière étape consiste à copier le fichier `SampleViewExtension_ViewExten
 
 > 1. Le fichier `.xml` que nous avons copié dans le dossier des extensions de vue de Dynamo
 
-Il s’agit d’une introduction sommaire aux extensions de vues. Pour une étude de cas plus sophistiquée, consultez le package DynaShape, un projet open source sur Github. Le package utilise une extension de vue qui permet de modifier en direct la vue du modèle Dynamo.
+Il s’agit d’une introduction sommaire aux extensions de vues. Pour une étude de cas plus sophistiquée, consultez le package DynaShape, un projet open source sur GitHub. Le package utilise une extension de vue qui permet de modifier en direct la vue du modèle Dynamo.
 
 Un programme d’installation du package pour Dynamo Shape peut être téléchargé à partir du forum Dynamo : [https://forum.dynamobim.com/t/dynashape-published/11666](https://forum.dynamobim.com/t/dynashape-published/11666)
 
-Le code source peut être cloné à partir de Github : [https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape)
+Le code source peut être cloné à partir de GitHub : [https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape)

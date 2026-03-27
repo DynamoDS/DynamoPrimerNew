@@ -4,7 +4,7 @@
 
 L’espace de travail de Dynamo se compose de quatre éléments principaux.
 
-\![](<../.gitbook/assets/workspace - ui.jpg>)
+\![](<../.gitbook/assets/workspace - ui.png>)
 
 > 1. Tous les onglets actifs.
 > 2. Mode aperçu
@@ -15,11 +15,11 @@ L’espace de travail de Dynamo se compose de quatre éléments principaux.
 
 Lorsque vous ouvrez un nouveau fichier, un nouvel espace de travail d’accueil s’ouvre par défaut.
 
-\![](<../.gitbook/assets/workspace - home tab.jpg>)
+\![](<../.gitbook/assets/workspace - home tab.png>)
 
 Vous pouvez créer un nœud personnalisé et l’ouvrir dans un espace de travail de nœud personnalisé.
 
-\![](<../.gitbook/assets/workspace - custom node tab.jpg>)
+\![](<../.gitbook/assets/workspace - custom node tab.png>)
 
 {% hint style="info" %} Vous ne pouvez ouvrir qu’un seul espace de travail d’accueil dans chaque fenêtre Dynamo, mais vous pouvez ouvrir plusieurs espaces de travail de nœud personnalisé dans les onglets. {% endhint %}
 

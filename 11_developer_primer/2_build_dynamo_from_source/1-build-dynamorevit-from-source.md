@@ -1,6 +1,6 @@
 # Générer DynamoRevit à partir de la source
 
-Les fichiers sources de DynamoRevit sont également hébergés sur DynamoDS Github pour que les développeurs puissent apporter des contributions et générer des versions bêta. Générer DynamoRevit à partir des sources suit généralement le même processus que Dynamo à l’exception de quelques détails importants :
+Les fichiers sources de DynamoRevit sont également hébergés sur DynamoDS GitHub pour que les développeurs puissent apporter des contributions et générer des versions bêta. Générer DynamoRevit à partir des sources suit généralement le même processus que Dynamo à l’exception de quelques détails importants :
 
 * DynamoRevit fait référence aux assemblages Dynamo, qui doivent donc être générés avec les packages NuGet correspondants. Par exemple, DynamoRevit 2.x ne se chargera pas dans Dynamo 1.3.
 * DynamoRevit est spécifique aux versions de Revit, par exemple, la branche DynamoRevit 2018 devrait fonctionner sur Revit 2018.
@@ -15,7 +15,7 @@ Pour assurer une génération réussie, nous allons cloner et générer les dép
 
 _Remarque : générer Dynamo manuellement avant DynamoRevit n’est nécessaire que si vous générez Dynamo 1.x et DynamoRevit 1.x. Les versions plus récentes du dépôt DynamoRevit s’appuient sur le gestionnaire de package NuGet pour les dépendances de Dynamo nécessaires à la génération. Bien qu’une génération de DynamoRevit 2.x ne nécessite pas de tirer Dynamo manuellement, vous aurez toujours besoin du noyau `dlls` ailleurs pour exécuter DynamoRevit `add-in`. Il est donc préférable de tirer et de générer Dynamo. Pour en savoir plus, consultez la rubrique ci-dessous :_ [_Générer le dépôt avec Visual Studio_](1-build-dynamorevit-from-source.md#building-the-repository-using-Visual-Studio)
 
-### Localiser le dépôt DynamoRevit sur Github <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
+### Localiser le dépôt DynamoRevit sur GitHub <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
 Le code du projet DynamoRevit se trouve dans un dépôt séparé sur GitHub du code source principal de Dynamo. Ce dépôt contient les fichiers sources pour les nœuds spécifiques à Revit et le complément Revit qui charge Dynamo. Les générations de DynamoRevit pour différentes versions de Revit (2016, 2017 ou 2018, par exemple) sont organisées comme des branches dans le dépôt.
 
@@ -42,7 +42,7 @@ Nous pouvons maintenant cloner le dépôt dans ce répertoire. Même si nous dev
 
 ![Interface en ligne de commande après clonage du dépôt](../../.gitbook/assets/cli-clone-revit.jpg)
 
-Une fois que le clonage du dépôt est terminé, changez le répertoire courant en dossier du dépôt et passez à la branche qui correspond à la version installée de Revit. Pour cet exemple, nous utilisons Revit RC2.13.1_Revit2023. Toutes les branches distantes peuvent être consultées sur la page Github dans le menu déroulant Branche.
+Une fois que le clonage du dépôt est terminé, changez le répertoire courant en dossier du dépôt et passez à la branche qui correspond à la version installée de Revit. Pour cet exemple, nous utilisons Revit RC2.13.1_Revit2023. Toutes les branches distantes peuvent être consultées sur la page GitHub dans le menu déroulant Branche.
 
 `cd C:\Users\username\Documents\GitHub\DynamoRevit` change le répertoire en DynamoRevit. \
 `git checkout RC2.13.1_Revit2023` définit la branche actuelle sur `RC2.13.1_Revit2023`.\
@@ -199,7 +199,7 @@ Nous allons maintenant parcourir chaque ligne du constructeur jusqu’à ce que 
 
 Si nous continuons à parcourir la fonction, nous atteindrons l’exception qui s’est affichée dans la fenêtre DynamoRevit. En regardant la fenêtre de la pile d’exécution, nous pouvons voir que l’exception a été levée à l’origine à partir d’une méthode appelée `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve`. Heureusement, l’exception est gérée ici, de sorte que Dynamo ne se bloque pas. Le processus de débogage a permis de contextualiser le problème en nous amenant à une autre méthode dans le code source.
 
-Comme il ne s’agit pas d’une bibliothèque open source, nous ne pouvons pas y apporter de modifications. Maintenant que nous avons plus d’informations, nous pouvons signaler le problème avec plus de contexte en soumettant un [problème](https://docs.github.com/fr/issues/tracking-your-work-with-issues/about-issues) Git ou nous pouvons proposer une solution alternative pour résoudre ce problème en faisant une demande de tirage.
+Comme il ne s’agit pas d’une bibliothèque open source, nous ne pouvons pas y apporter de modifications. Maintenant que nous avons plus d’informations, nous pouvons signaler le problème avec plus de contexte en soumettant un [problème](https://guides.github.com/features/issues/) GitHub ou nous pouvons proposer une solution alternative pour résoudre ce problème en faisant une demande de tirage.
 
 ![Exception dans Visual Studio](../../.gitbook/assets/vs-exception.jpg)
 

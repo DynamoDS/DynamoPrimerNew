@@ -79,7 +79,7 @@ Nous pouvons maintenant ouvrir Dynamo et importer le `.dll`. Avec la fonction Aj
 
 Si une catégorie est créée dans la bibliothèque appelée `MyCustomNode`, le fichier .dll a été importé avec succès ! Cependant, Dynamo a créé deux nœuds alors que nous n’en voulions qu’un seul. Dans la section suivante, nous allons expliquer pourquoi cela se produit et comment Dynamo lit un fichier .dll.
 
-![Nœuds personnalisés](../../.gitbook/assets/dyn-customnode.jpg)
+![Nœuds personnalisés](../../.gitbook/assets/dyn-customnode.png)
 
 > 1. MyCustomNode dans la bibliothèque Dynamo. La catégorie Bibliothèque est déterminée par le nom `.dll`.
 > 2. SampleFunctions.MultiplyByTwo dans la zone de dessin.
