@@ -48,7 +48,7 @@ Przyjrzyjmy się poniższemu zrzutowi ekranu z przykładem: po rozpakowaniu plik
 
 **Instalowanie programu DirectX**
 
-Postępuj zgodnie z instrukcjami firmy Microsoft, aby sprawdzić, czy masz już zainstalowany program DirectX. Jeśli nie, możesz otworzyć program DXSETUP.exe z naszego repozytorium dodatku Dynamo w serwisie Github [tutaj](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX). Gdy zobaczysz poniższe okno dialogowe, możesz kliknąć przycisk Dalej, aby zainstalować program DirectX w lokalizacji domyślnej.
+Postępuj zgodnie z instrukcjami firmy Microsoft, aby sprawdzić, czy masz już zainstalowany program DirectX. Jeśli nie, możesz otworzyć program DXSETUP.exe z naszego repozytorium dodatku Dynamo w serwisie GitHub [tutaj](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX). Gdy zobaczysz poniższe okno dialogowe, możesz kliknąć przycisk Dalej, aby zainstalować program DirectX w lokalizacji domyślnej.
 
 ![](../.gitbook/assets/dynamo-builds-3.png)
 

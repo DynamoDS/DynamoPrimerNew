@@ -1,10 +1,10 @@
 # Kompilowanie dodatku Dynamo ze źródła
 
-Źródło dodatku Dynamo jest hostowane w serwisie Github, w którym każdy może je klonować i współtworzyć. W tym rozdziale omówimy sposób klonowania repozytorium za pomocą narzędzia git, kompilowania plików źródłowych za pomocą programu Visual Studio, uruchamiania i debugowania kompilacji lokalnej oraz ściągania (pull) nowych zmian z serwisu Github.
+Źródło dodatku Dynamo jest hostowane w serwisie GitHub, w którym każdy może je klonować i współtworzyć. W tym rozdziale omówimy sposób klonowania repozytorium za pomocą narzędzia git, kompilowania plików źródłowych za pomocą programu Visual Studio, uruchamiania i debugowania kompilacji lokalnej oraz ściągania (pull) nowych zmian z serwisu GitHub.
 
-### Znajdowanie repozytorium dodatku Dynamo w serwisie Github <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
+### Znajdowanie repozytorium dodatku Dynamo w serwisie GitHub <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
-Github to usługa hostingu oparta na narzędziu [git](https://help.github.com/articles/git-and-github-learning-resources/), systemie kontroli wersji umożliwiającym śledzenie zmian i koordynowanie pracy wielu osób. Git to narzędzie, za pomocą którego można pobierać pliki źródłowe dodatku Dynamo i aktualizować je przy użyciu kilku poleceń. Stosowanie tej metody pozwala uniknąć niepotrzebnego i nieuporządkowanego pobierania i ręcznego zastępowania plików źródłowych przy każdej aktualizacji. System kontroli wersji git śledzi wszelkie różnice między lokalnym i zdalnym repozytorium kodu.
+GitHub to usługa hostingu oparta na narzędziu [git](https://help.github.com/articles/git-and-github-learning-resources/), systemie kontroli wersji umożliwiającym śledzenie zmian i koordynowanie pracy wielu osób. Git to narzędzie, za pomocą którego można pobierać pliki źródłowe dodatku Dynamo i aktualizować je przy użyciu kilku poleceń. Stosowanie tej metody pozwala uniknąć niepotrzebnego i nieuporządkowanego pobierania i ręcznego zastępowania plików źródłowych przy każdej aktualizacji. System kontroli wersji git śledzi wszelkie różnice między lokalnym i zdalnym repozytorium kodu.
 
 Źródło dodatku Dynamo jest hostowane w witrynie DynamoDS w serwisie GitHub w tym repozytorium: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
@@ -28,7 +28,7 @@ Do sklonowania potrzebny jest adres URL repozytorium dodatku Dynamo. Można go z
 > 1. Wybierz przycisk „Clone or download” (Klonuj lub pobierz)
 > 2. Skopiuj adres URL
 
-Po zainstalowaniu narzędzia git można sklonować repozytorium dodatku Dynamo. Rozpocznij od otwarcia wiersza polecenia. Następnie za pomocą polecenia do zmiany katalogu, `cd`, przejdź do folderu, do którego mają zostać sklonowane pliki źródłowe. W tym przypadku utworzyliśmy folder o nazwie `Github` w folderze `Documents`.
+Po zainstalowaniu narzędzia git można sklonować repozytorium dodatku Dynamo. Rozpocznij od otwarcia wiersza polecenia. Następnie za pomocą polecenia do zmiany katalogu, `cd`, przejdź do folderu, do którego mają zostać sklonowane pliki źródłowe. W tym przypadku utworzyliśmy folder o nazwie `cd` w folderze `GitHub`.
 
 `cd C:\Users\username\Documents\GitHub`
 
@@ -42,7 +42,7 @@ W następnym kroku uruchomimy polecenie git, aby sklonować repozytorium dodatku
 
 ![Wyniki operacji klonowania za pomocą narzędzia Git](../../.gitbook/assets/cli-2.jpg)
 
-Jeśli operacja klonowania zakończyła się pomyślnie, oznacza to, że narzędzie git działa. W eksploratorze plików przejdź do katalogu, do którego sklonowano pliki źródłowe. Struktura katalogu powinna wyglądać tak samo jak gałąź główna repozytorium dodatku Dynamo w serwisie Github.
+Jeśli operacja klonowania zakończyła się pomyślnie, oznacza to, że narzędzie git działa. W eksploratorze plików przejdź do katalogu, do którego sklonowano pliki źródłowe. Struktura katalogu powinna wyglądać tak samo jak gałąź główna repozytorium dodatku Dynamo w serwisie GitHub.
 
 ![Pliki źródłowe dodatku Dynamo](../../.gitbook/assets/source-files.jpg)
 
@@ -155,7 +155,7 @@ W następnej sekcji **Kompilowanie dodatku DynamoRevit ze źródła** omówimy k
 
 ### Ściąganie (pull) najnowszej kompilacji <a href="#pulling-latest-build" id="pulling-latest-build"></a>
 
-Ponieważ źródło dodatku Dynamo znajduje się w serwisie Github, najprostszym sposobem zaktualizowania lokalnych plików źródłowych jest ściągnięcie (pull) zmian za pomocą poleceń git.
+Ponieważ źródło dodatku Dynamo znajduje się w serwisie GitHub, najprostszym sposobem zaktualizowania lokalnych plików źródłowych jest ściągnięcie (pull) zmian za pomocą poleceń git.
 
 Za pomocą tego wiersza polecenia ustaw repozytorium dodatku Dynamo jako katalog bieżący:
 

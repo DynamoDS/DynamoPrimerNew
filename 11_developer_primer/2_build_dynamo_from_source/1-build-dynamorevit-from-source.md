@@ -15,9 +15,9 @@ Aby zapewnić pomyślną kompilację, sklonujemy i skompilujemy repozytoria doda
 
 _Uwaga: ręczne skompilowanie dodatku Dynamo przed rozpoczęciem kompilowania dodatku DynamoRevit jest wymagane tylko w przypadku kompilowania dodatków Dynamo 1.x i DynamoRevit 1.x — nowsze wersje repozytorium DynamoRevit używają Menedżera pakietów NuGet do obsługi zależności dodatku Dynamo wymaganych do skompilowania. Mimo że skompilowanie dodatku DynamoRevit 2.x nie wymaga ręcznego ściągnięcia (pull) dodatku Dynamo, nadal są potrzebne podstawowe biblioteki (`dlls`) w innym miejscu, aby faktycznie uruchomić składnik `add-in` dodatku DynamoRevit — warto więc jednak ściągnąć i skompilować dodatek Dynamo. Zobacz więcej poniżej:_ [_Kompilowanie repozytorium za pomocą programu Visual Studio_](1-build-dynamorevit-from-source.md#building-the-repository-using-Visual-Studio)
 
-### Znajdowanie repozytorium DynamoRevit w serwisie Github <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
+### Znajdowanie repozytorium DynamoRevit w serwisie GitHub <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
-Kod projektu DynamoRevit znajduje się w serwisie Github w repozytorium oddzielnym od podstawowego kodu źródłowego dodatku Dynamo. To repozytorium zawiera pliki źródłowe dla węzłów charakterystycznych dla programu Revit i dodatek programu Revit, który wczytuje dodatek Dynamo. Kompilacje dodatku DynamoRevit dla różnych wersji programu Revit (na przykład 2016, 2017 lub 2018) są zorganizowane jako gałęzie w repozytorium.
+Kod projektu DynamoRevit znajduje się w serwisie GitHub w repozytorium oddzielnym od podstawowego kodu źródłowego dodatku Dynamo. To repozytorium zawiera pliki źródłowe dla węzłów charakterystycznych dla programu Revit i dodatek programu Revit, który wczytuje dodatek Dynamo. Kompilacje dodatku DynamoRevit dla różnych wersji programu Revit (na przykład 2016, 2017 lub 2018) są zorganizowane jako gałęzie w repozytorium.
 
 Źródło dodatku DynamoRevit znajduje się tutaj: [https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit)
 
@@ -42,7 +42,7 @@ Polecenie `git clone https://github.com/DynamoDS/DynamoRevit.git` klonuje repozy
 
 ![Interfejs wiersza polecenia po sklonowaniu repozytorium](../../.gitbook/assets/cli-clone-revit.jpg)
 
-Po zakończeniu klonowania repozytorium zmień katalog bieżący na folder repozytorium i przełącz na gałąź odpowiadającą zainstalowanej wersji programu Revit. W tym przykładzie używamy programu Revit RC2.13.1_Revit2023. Wszystkie gałęzie zdalne można wyświetlić na stronie serwisu Github w menu rozwijanym Branch (Gałąź).
+Po zakończeniu klonowania repozytorium zmień katalog bieżący na folder repozytorium i przełącz na gałąź odpowiadającą zainstalowanej wersji programu Revit. W tym przykładzie używamy programu Revit RC2.13.1_Revit2023. Wszystkie gałęzie zdalne można wyświetlić na stronie serwisu GitHub w menu rozwijanym Branch (Gałąź).
 
 Polecenie `cd C:\Users\username\Documents\GitHub\DynamoRevit` zmienia katalog na DynamoRevit.\
 Polecenie `git checkout RC2.13.1_Revit2023` ustawia bieżącą gałąź `RC2.13.1_Revit2023`.\

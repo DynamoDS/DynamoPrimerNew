@@ -4,7 +4,7 @@
 
 Obszar roboczy dodatku Dynamo składa się z czterech głównych elementów.
 
-\![](<../.gitbook/assets/workspace - ui.jpg>)
+\![](<../.gitbook/assets/workspace - ui.png>)
 
 > 1. Wszystkie aktywne karty.
 > 2. Tryb podglądu
@@ -15,11 +15,11 @@ Obszar roboczy dodatku Dynamo składa się z czterech głównych elementów.
 
 Po otwarciu nowego pliku zostanie domyślnie otwarty nowy główny obszar roboczy.
 
-\![](<../.gitbook/assets/workspace - home tab.jpg>)
+\![](<../.gitbook/assets/workspace - home tab.png>)
 
 Można utworzyć węzeł niestandardowy i otworzyć go w obszarze roboczym węzła niestandardowego.
 
-\![](<../.gitbook/assets/workspace - custom node tab.jpg>)
+\![](<../.gitbook/assets/workspace - custom node tab.png>)
 
 {% hint style="info" %} W każdym oknie dodatku Dynamo jest dozwolony tylko jeden główny obszar roboczy, ale na kartach może być otwartych wiele obszarów roboczych węzłów niestandardowych. {% endhint %}
 

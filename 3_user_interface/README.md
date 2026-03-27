@@ -4,7 +4,7 @@
 
 Interfejs użytkownika (UI) aplikacji Dynamo jest podzielony na pięć głównych regionów. Krótko je tutaj omówimy i objaśnimy dokładniej obszar roboczy oraz bibliotekę w kolejnych sekcjach.
 
-\![](<../.gitbook/assets/user interface - ui.jpg>)
+\![](<../.gitbook/assets/user interface - ui.png>)
 
 > 1. Menu
 > 2. Pasek narzędzi
@@ -48,12 +48,12 @@ Jeśli nie wiesz, co zrobić dalej, skorzystaj z menu **Pomoc**. Możesz odwiedz
 
 Pasek narzędzi Dynamo zawiera szereg przycisków umożliwiających szybki dostęp do plików oraz polecenia Cofnij [Ctrl+Z] i Ponów [Ctrl+Y]. Po skrajnej prawej stronie znajduje się kolejny przycisk, który umożliwia wyeksportowanie migawki obszaru roboczego. Jest on wyjątkowo przydatny do tworzenia dokumentacji i udostępniania.
 
-* \![](<../.gitbook/assets/user interface - new file.jpg>) Nowy — utwórz nowy plik .dyn
-* \![](<../.gitbook/assets/user interface - open (1).jpg>) Otwórz — otwórz istniejący plik .dyn (obszar roboczy) lub .dyf (węzeł niestandardowy)
-* \![](<../.gitbook/assets/user interface - save.jpg>) Zapisz/Zapisz jako — zapisz aktywny plik .dyn lub .dyf
-* \![](<../.gitbook/assets/user interface - undo.jpg>) Cofnij — cofnij ostatnią operację
-* \![](<../.gitbook/assets/user interface - redo.jpg>) Ponów — ponów następną operację
-* \![](<../.gitbook/assets/user interface - screenshot.jpg>) Eksportuj obszar roboczy jako obraz — eksportuj widoczny obszar roboczy jako plik PNG
+* \![](<../.gitbook/assets/user interface - new file.jpg>) Nowy — utwórz nowy plik DYN.
+* \![](<../.gitbook/assets/user interface - open (1).png>) Otwórz — otwórz istniejący plik DYN (obszar roboczy) lub DYF (węzeł niestandardowy).
+* \![](<../.gitbook/assets/user interface - save.png>) Zapisz/Zapisz jako — zapisz aktywny plik DYN lub DTF.
+* \![](<../.gitbook/assets/user interface - undo.jpg>) Cofnij — cofnij ostatnią operację.
+* \![](<../.gitbook/assets/user interface - redo.jpg>) Ponów — ponów następną operację.
+* \![](<../.gitbook/assets/user interface - screenshot.png>) Eksportuj obszar roboczy jako obraz — eksportuj widoczny obszar roboczy jako plik PNG.
 
 ### Library
 

@@ -2,7 +2,7 @@
 
 Biblioteka zawiera wszystkie wczytane węzły, w tym dziesięć domyślnych kategorii węzłów dołączonych do instalacji oraz dodatkowo wczytane węzły niestandardowe lub pakiety. Węzły w bibliotece są zorganizowane hierarchicznie w obrębie bibliotek, kategorii i, w razie potrzeby, podkategorii.
 
-\![](<../.gitbook/assets/library - library UI.jpg>)
+\![](<../.gitbook/assets/library - library UI.png>)
 
 * Węzły podstawowe: dostarczane z instalacją domyślną.
 * Węzły niestandardowe: zapisz często używane procedury lub wykres specjalny jako węzły niestandardowe. Węzły niestandardowe można również udostępniać społeczności

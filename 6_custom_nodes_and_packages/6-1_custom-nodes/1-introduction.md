@@ -22,7 +22,7 @@ Przejdźmy do środowiska węzłów niestandardowych i utwórzmy prosty węzeł,
 
 Aby utworzyć węzeł niestandardowy od podstaw, uruchom dodatek Dynamo i wybierz opcję Węzeł niestandardowy lub naciśnij kombinację klawiszy Ctrl+Shift+N w obszarze rysunku.
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 01.jpg>)
+\![](<../../.gitbook/assets/custom node intro - custom node environment 01.png>)
 
 W oknie dialogowym Właściwości węzła niestandardowego przypisz nazwę, opis i kategorię.
 

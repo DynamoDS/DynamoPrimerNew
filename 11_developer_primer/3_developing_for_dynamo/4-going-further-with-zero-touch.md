@@ -1,6 +1,6 @@
 # Dalsze kroki z Zero-Touch
 
-Po omówieniu tworzenia projektu Zero-Touch możemy teraz lepiej zapoznać się z zagadnieniami dotyczącymi tworzenia węzła, analizując przykład ZeroTouchEssentials w witrynie dodatku Dynamo w serwisie Github.
+Po omówieniu tworzenia projektu Zero-Touch możemy teraz lepiej zapoznać się z zagadnieniami dotyczącymi tworzenia węzła, analizując przykład ZeroTouchEssentials w witrynie dodatku Dynamo w serwisie GitHub.
 
 ![Węzły Zero-Touch](../../.gitbook/assets/ootbzerotouch.png)
 

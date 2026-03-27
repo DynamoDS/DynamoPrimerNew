@@ -45,7 +45,7 @@ W bibliotece Dynamo dostępna jest grupa _DynamoUnfold_ z wieloma kategoriami i 
 Spójrzmy teraz na strukturę plików pakietu.
 
 1. Najpierw przejdź do obszaru Pakiety > Menedżer pakietów > Zainstalowane pakiety.
-2. Obok węzła DynamoUnfold wybierz menu opcji <img src="../../.gitbook/assets/package introduction - vertical dots menu.jpg" alt="" data-size="line">.
+2. Obok węzła DynamoUnfold wybierz menu opcji <img src="../../.gitbook/assets/package introduction - vertical dots menu.png" alt="" data-size="line">.
 3. Następnie kliknij opcję Pokaż katalog główny, aby otworzyć folder główny dla tego pakietu.
 
 <figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
@@ -87,7 +87,7 @@ Innym sposobem odkrywania pakietów Dynamo jest przeglądanie witryny [Dynamo Pa
 
 Jeśli chcesz zobaczyć, gdzie przechowywane są pliki pakietu, w górnym obszarze nawigacji kliknij kolejno opcje Dynamo > Preferencje > Ustawienia pakietów > Lokalizacje plików węzłów i pakietów. Tutaj znajdziesz bieżący katalog główny.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 08.jpg>)
+\![](<../../.gitbook/assets/package introduction - installing package folder 08.png>)
 
 Domyślnie pakiety są instalowane w położeniu podobnym do tej ścieżki folderu: _C:/Users/[nazwa_użytkownika]/AppData/Roaming/Dynamo/[wersja dodatku Dynamo]_.
 

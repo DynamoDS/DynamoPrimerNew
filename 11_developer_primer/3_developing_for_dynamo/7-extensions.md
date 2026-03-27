@@ -4,11 +4,11 @@ Rozszerzenia są zaawansowanym narzędziem programistycznym w ekosystemie dodatk
 
 #### Analiza przypadku rozszerzenia <a href="#extension-case-study" id="extension-case-study"></a>
 
-Korzystając z przykładu SampleViewExtension z repozytorium DynamoSamples z serwisu Github, przeanalizujemy czynności niezbędne do utworzenia prostego okna niemodalnego, w którym wyświetlane są aktywne węzły na wykresie w czasie rzeczywistym. Rozszerzenie widoku wymaga utworzenia interfejsu użytkownika dla tego okna i powiązania wartości z modelem widoku.
+Korzystając z przykładu SampleViewExtension z repozytorium DynamoSamples z serwisu GitHub, przeanalizujemy czynności niezbędne do utworzenia prostego okna niemodalnego, w którym wyświetlane są aktywne węzły na wykresie w czasie rzeczywistym. Rozszerzenie widoku wymaga utworzenia interfejsu użytkownika dla tego okna i powiązania wartości z modelem widoku.
 
-![Okno rozszerzenia widoku](../../.gitbook/assets/dyn-viewextension.jpg)
+![Okno rozszerzenia widoku](../../.gitbook/assets/dyn-viewextension.png)
 
-> 1. To okno rozszerzenia widoku opracowano na podstawie przykładu SampleViewExtension z repozytorium Github.
+> 1. To okno rozszerzenia widoku opracowano na podstawie przykładu SampleViewExtension z repozytorium GitHub.
 
 Mimo że utworzymy tu ten przykład od podstaw, można również pobrać i skompilować repozytorium DynamoSamples, a następnie używać go jako odniesienia.
 

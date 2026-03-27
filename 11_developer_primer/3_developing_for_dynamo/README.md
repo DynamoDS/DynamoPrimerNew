@@ -93,7 +93,7 @@ Ponieważ dodatek Dynamo jest regularnie aktualizowany, w części interfejsu AP
 
 Zmiany interfejsu API są śledzone na [stronie wiki dodatku Dynamo w serwisie GitHub](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). Obejmuje to zmiany wprowadzone w pakiecie DynamoCore, bibliotekach i obszarach roboczych.
 
-![Dokument zmian w interfejsie API dodatku Dynamo](../../.gitbook/assets/api-changes.jpg)
+![Dokument zmian w interfejsie API dodatku Dynamo](../../.gitbook/assets/api-changes.png)
 
 Przykładem nadchodzącej istotnej zmiany jest przejście z formatu pliku XML na format pliku JSON w wersji 2.0. Węzły pochodne od klasy NodeModel będą teraz wymagać [konstruktora JSON](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node). W przeciwnym razie nie będą otwierane w dodatku Dynamo 2.0.
 

@@ -12,7 +12,7 @@ W przeglądarce wyszukaj pakiety i wyświetl statystyki: [https://dynamopackages
 
 * W dodatku Dynamo Menedżer pakietów umożliwia instalowanie, publikowanie i aktualizowanie pakietów.
 
-![Wyszukiwanie pakietów](../../.gitbook/assets/dynamopackagemanager.jpg)
+![Wyszukiwanie pakietów](../../.gitbook/assets/dynamopackagemanager.png)
 
 > 1. Wyszukaj pakiety online: `Packages > Search for a Package...`
 > 2. Wyświetl/edytuj zainstalowane pakiety: `Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Pakiety publikuje się z poziomu Menedżera pakietów w dodatku Dynamo. Zalecany
 
 Uruchom dodatek Dynamo i wybierz opcję `Packages > Publish New Package...`, aby otworzyć okno `Publish a Package`.
 
-![Publikowanie pakietu](../../.gitbook/assets/dyn-publish-package-add-files.jpg)
+![Publikowanie pakietu](../../.gitbook/assets/dyn-publish-package-add-files.png)
 
 > 1. Wybierz opcję `Add file...`, aby wyszukać pliki, które mają zostać dodane do pakietu
 > 2. Wybierz dwa pliki `.dll` z analizy przypadku NodeModel
@@ -32,7 +32,7 @@ Uruchom dodatek Dynamo i wybierz opcję `Packages > Publish New Package...`, aby
 
 Po dodaniu plików do zawartości pakietu nadaj pakietowi nazwę oraz dodaj do niego opis i wersję. Opublikowanie pakietu przy użyciu dodatku Dynamo powoduje automatyczne utworzenie pliku `pkg.json`.
 
-![Ustawienia pakietu](../../.gitbook/assets/dyn-publish-package.jpg)
+![Ustawienia pakietu](../../.gitbook/assets/dyn-publish-package.png)
 
 > Pakiet gotowy do opublikowania.
 >

@@ -79,7 +79,7 @@ Teraz możemy otworzyć dodatek Dynamo i zaimportować plik `.dll`. Za pomocą f
 
 Jeśli w bibliotece o nazwie `MyCustomNode` została utworzona kategoria, plik .dll został zaimportowany pomyślnie. Dodatek Dynamo utworzył jednak dwa węzły z tego, co powinno być jednym węzłem. W następnej sekcji wyjaśnimy, dlaczego tak się dzieje i jak dodatek Dynamo odczytuje plik .dll.
 
-![Węzły niestandardowe](../../.gitbook/assets/dyn-customnode.jpg)
+![Węzły niestandardowe](../../.gitbook/assets/dyn-customnode.png)
 
 > 1. Węzeł MyCustomNode w bibliotece dodatku Dynamo. Kategoria biblioteki jest określana przez nazwę pliku `.dll`.
 > 2. Węzeł SampleFunctions.MultiplyByTwo w obszarze rysunku.

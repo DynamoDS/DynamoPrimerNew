@@ -90,7 +90,7 @@ Jeśli projekt wygląda podobnie do tego, spróbuj skompilować plik `.dll`.
 
 Sprawdź, czy w folderze `bin` projektu znajduje się plik `.dll`. Jeśli kompilacja się powiodła, można dodać plik `.dll` do dodatku Dynamo.
 
-![Węzły niestandardowe w dodatku Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
+![Węzły niestandardowe w dodatku Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.png)
 
 > 1. Węzeł niestandardowy RectangularGrids w bibliotece Dynamo
 > 2. Węzeł niestandardowy w obszarze rysunku

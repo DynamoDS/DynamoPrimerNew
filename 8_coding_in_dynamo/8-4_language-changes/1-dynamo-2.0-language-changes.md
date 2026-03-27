@@ -36,7 +36,7 @@ Sekcja Zmiany języka zawiera przegląd aktualizacji i modyfikacji wprowadzonych
 
 Znane problemy:
 
-* Konflikty przestrzeni nazw w blokach imperatywnych powodują pojawienie się nieoczekiwanych portów wejściowych. Zobacz temat [Problem z serwisem Github](https://github.com/DynamoDS/Dynamo/issues/8796), aby uzyskać więcej informacji. Aby obejść ten problem, zdefiniuj funkcję poza blokiem imperatywnym w następujący sposób:
+* Konflikty przestrzeni nazw w blokach imperatywnych powodują pojawienie się nieoczekiwanych portów wejściowych. Zobacz temat [Problem z serwisem GitHub](https://github.com/DynamoDS/Dynamo/issues/8796), aby uzyskać więcej informacji. Aby obejść ten problem, zdefiniuj funkcję poza blokiem imperatywnym w następujący sposób:
 
 ```
 pnt = Autodesk.Point.ByCoordinates;
