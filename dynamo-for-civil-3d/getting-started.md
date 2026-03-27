@@ -10,7 +10,7 @@ This is a simple example that is meant to demonstrate basic Dynamo functionality
 
 The first thing to do is open up an empty document in Civil 3D. Once you're there, navigate to the **Manage** tab in the Civil 3D ribbon and look for the **Visual Programming** panel.
 
-![](<../.gitbook/assets/image (7).png>)
+![](<images/image.png>)
 
 Click on the **Dynamo** button, which will launch Dynamo in a separate window.
 
@@ -26,7 +26,7 @@ Head to the [dynamo-player.md](dynamo-player.md "mention") section when you're r
 
 Once Dynamo is open, you'll see the start screen. Click on **New** to open up a blank workspace.
 
-<figure><img src="../.gitbook/assets/c3d-start.png" alt=""><figcaption><p>Dynamo start screen</p></figcaption></figure>
+<figure><img src="images/c3d-start.png" alt=""><figcaption><p>Dynamo start screen</p></figcaption></figure>
 
 {% hint style="info" %}
 **What about the samples?**
@@ -56,11 +56,11 @@ Some of this might be pretty new for you, and that's OK! These sections will hel
 
 OK, let's build our graph. Here's a list of all the nodes that we'll need.
 
-<figure><img src="../.gitbook/assets/c3d-create-text-node-list.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/c3d-create-text-node-list.png" alt=""><figcaption></figcaption></figure>
 
 You can find these nodes by typing their names into the search bar in the library, or by right-clicking anywhere in the canvas and searching there.
 
-<figure><img src="../.gitbook/assets/c3d-create-text-node-placement.gif" alt=""><figcaption><p>Nodes can be placed from the library, or by right-clicking in the canvas</p></figcaption></figure>
+<figure><img src="images/c3d-create-text-node-placement.gif" alt=""><figcaption><p>Nodes can be placed from the library, or by right-clicking in the canvas</p></figcaption></figure>
 
 {% hint style="info" %}
 **How do I know which nodes to use and where to find them?**
@@ -70,7 +70,7 @@ Nodes in the library are grouped into logical categories based on what they do. 
 
 Here's what your final graph should look like.
 
-<figure><img src="../.gitbook/assets/c3d-text-create-final (2).png" alt=""><figcaption><p>The finished graph</p></figcaption></figure>
+<figure><img src="images/c3d-text-create-final.png" alt=""><figcaption><p>The finished graph</p></figcaption></figure>
 
 Let's summarize what we've done here:
 
@@ -92,7 +92,7 @@ Back in Civil 3D, make sure that the **Model** tab is selected. You should see t
 If you can't see the Text, you may need to run the ZOOM -> EXTENTS command to zoom to the right spot.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/c3d-create-text-result.png" alt="" width="413"><figcaption></figcaption></figure>
+<figure><img src="images/c3d-create-text-result.png" alt="" width="413"><figcaption></figcaption></figure>
 
 Cool! Now let's make some updates to the Text.
 
@@ -100,7 +100,7 @@ Back in your Dynamo graph, go ahead and change a few of the input values, such a
 
 <div data-full-width="false">
 
-<figure><img src="../.gitbook/assets/c3d-create-text.gif" alt=""><figcaption><p>The finished graph in action</p></figcaption></figure>
+<figure><img src="images/c3d-create-text.gif" alt=""><figcaption><p>The finished graph in action</p></figcaption></figure>
 
 </div>
 

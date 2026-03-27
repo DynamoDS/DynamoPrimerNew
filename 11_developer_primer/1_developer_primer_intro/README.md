@@ -4,7 +4,7 @@
 
 The purpose of this guide is to help you navigate the range of C# development possibilities for Dynamo from how to create zero-touch nodes to building extensions.
 
-![The Dynamo source on GitHub](../../.gitbook/assets/dynamogithub.png)
+![The Dynamo source on GitHub](../images/dynamogithub.png)
 
 > The Dynamo source on GitHub
 

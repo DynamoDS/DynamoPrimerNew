@@ -10,13 +10,13 @@ Learn more about the [difference between **Dynamo Core**/**Revit**/**Sandbox**.]
 
 Dynamo enables us to work within a Visual Programming process wherein we connect elements together to define the relationships and the sequences of actions that compose custom algorithms. We can use our algorithms for a wide array of applications, from processing data to generating geometry, all in real-time and without writing a lick of `code`.
 
-![](<../.gitbook/assets/nodes and wires - flow of data.jpg>)
+![](<images/nodes and wires - flow of data.jpg>)
 
 ### Connecting Nodes and Wires
 
 Nodes and Wires are the key components in Dynamo to support a [visual programming](../a_appendix/a-1_visual-programming-and-dynamo.md) process. It help establish strong visual and systemic relationships between the parts of a design. Using simple mouse-click to connect the Nodes easily while developing and optimizing your design workflow.
 
-![](<../.gitbook/assets/what is dynamo - connecting nodes with wires.gif>)
+![](<images/what is dynamo - connecting nodes with wires.gif>)
 
 ## What can Dynamo Achieve?
 

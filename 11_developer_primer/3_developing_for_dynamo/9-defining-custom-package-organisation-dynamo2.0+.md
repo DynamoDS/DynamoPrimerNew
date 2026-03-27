@@ -112,7 +112,7 @@ Custom nodes are organized based on the specified `Category Name` during the nod
 **WARNING!**\
 Using dot-notation in node Names or Categories will result in additional nested sub-categories. The `.` will work as a delimiter to determine the additional hierarchy. This is new behavior in the library for Dynamo 2.0.
 
-![Custom Node Properties](../../.gitbook/assets/custom-node-properties.jpg)
+![Custom Node Properties](../images/custom-node-properties.jpg)
 
 The Category Name can later be updated in the .dyf file (XML or JSON)
 

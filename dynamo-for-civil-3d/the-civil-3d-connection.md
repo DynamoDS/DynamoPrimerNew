@@ -1,6 +1,6 @@
 # The Civil 3D Connection
 
-<figure><img src="../.gitbook/assets/DynamoSwissKnife-WhiteBackground_edit (2).jpg" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="images/DynamoSwissKnife-WhiteBackground_edit.jpg" alt="" width="563"><figcaption></figcaption></figure>
 
 Dynamo for Civil 3D brings the _visual programming_ paradigm to engineers and designers working on civil infrastructure projects. You can think of Dynamo as a sort of digital multi-tool for Civil 3D users - whatever the task, it has just the right tool for the job. Its intuitive interface enables you to create powerful and customizable routines without writing a single line of code. You don't need to _be_ a programmer to use Dynamo, but you do need to be able to _think_ with the logic of a programmer. Coupled with the other chapters in the Primer, this chapter will help you build your logic skills so that you can tackle any task with a computational design mindset.
 
@@ -8,9 +8,9 @@ Dynamo for Civil 3D brings the _visual programming_ paradigm to engineers and de
 
 Dynamo was first introduced in Civil 3D 2020 and has continued to evolve since that time. Initially installed separately via a software update, it now comes bundled with all versions of Civil 3D. Depending on which version of Civil 3D you are using, you may notice that the Dynamo interface looks slightly different than the examples you see in this chapter. This is because there was a significant overhaul to the interface in Civil 3D 2023.
 
-<figure><img src="../.gitbook/assets/c3d-ui-old.png" alt=""><figcaption><p>Dynamo interface, Civil 3D 2020 - 2022</p></figcaption></figure>
+<figure><img src="images/c3d-ui-old.png" alt=""><figcaption><p>Dynamo interface, Civil 3D 2020 - 2022</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/c3d-ui-new.png" alt=""><figcaption><p>Dynamo interface, Civil 3D 2023 - present</p></figcaption></figure>
+<figure><img src="images/c3d-ui-new.png" alt=""><figcaption><p>Dynamo interface, Civil 3D 2023 - present</p></figcaption></figure>
 
 It is recommended to take a look at the [Dynamo Blog](https://dynamobim.org/blog/) for the most up-to-date info regarding Dynamo's development. The table below summarizes the key milestones in the lifespan of Dynamo for Civil 3D.&#x20;
 
