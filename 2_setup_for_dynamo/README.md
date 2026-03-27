@@ -4,7 +4,7 @@
 
 Dynamo — это активный проект разработки с открытым исходным кодом. Ознакомьтесь со [списком программ, поддерживающих Dynamo](http://dynamobim.org/download/)
 
-\![](<../.gitbook/assets/setup for dynamo - dynamo revit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>)
+\![](<../.gitbook/assets/setup for dynamo - dynamo revit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo forma.png>)
 
 ### Запуск Dynamo как расширения
 
@@ -31,7 +31,7 @@ Dynamo поставляется в комплекте с таким програ
 
 Чтобы получить предшествующую или последнюю версию, перейдите в нижний раздел на той же странице.
 
-\![](<../.gitbook/assets/03-02 Dynamo Sandbox All builds.jpg>)
+\![](<../.gitbook/assets/03-02 Dynamo Sandbox All builds.png>)
 
 {% hint style="info" %} Новейшие разработки включают в себя новые экспериментальные возможности, которые еще не прошли полную проверку, поэтому могут функционировать нестабильно. С помощью этой версии можно обнаружить ошибки или проблемы, помочь нам улучшить приложение, сообщив о проблемах нашей команде.
 
@@ -45,11 +45,11 @@ Dynamo поставляется в комплекте с таким програ
 
 Щелкните правой кнопкой мыши файл ZIP и выберите **Извлечь все**.
 
-\![](<../.gitbook/assets/03-03 Extract zip file.jpg>)
+\![](<../.gitbook/assets/03-03 Extract zip file.png>)
 
 Выберите папку для распаковки всех файлов.
 
-\![](<../.gitbook/assets/03-04 Extract destination folder (1).jpg>)
+\![](<../.gitbook/assets/03-04 Extract destination folder (1).png>)
 
 #### Запуск
 
@@ -59,7 +59,7 @@ Dynamo поставляется в комплекте с таким програ
 
 Отображается следующий экран запуска DynamoSandbox.
 
-\![](<../.gitbook/assets/03-06 Dynamo startup screen.jpg>)
+\![](<../.gitbook/assets/03-06 Dynamo startup screen.png>)
 
 Поздравляем! Настройка DynamoSandbox завершена.
 

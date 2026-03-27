@@ -12,7 +12,7 @@
 
 * В Dynamo диспетчер пакетов обеспечивает установку, публикацию и обновление пакетов.
 
-![Поиск пакетов](../../.gitbook/assets/dynamopackagemanager.jpg)
+![Поиск пакетов](../../.gitbook/assets/dynamopackagemanager.png)
 
 > 1. Поиск пакетов в Интернете: `Packages > Search for a Package...` (Пакеты > Поиск пакета).
 > 2. Просмотр/редактирование установленных пакетов: `Packages > Manage Packages...` (Пакеты > Управлять пакетами).
@@ -24,7 +24,7 @@
 
 Запустите Dynamo и выберите `Packages > Publish New Package...` (Пакеты > Опубликовать новый пакет), чтобы открыть окно `Publish a Package` (Опубликовать пакет).
 
-![Публикация пакетов](../../.gitbook/assets/dyn-publish-package-add-files.jpg)
+![Публикация пакетов](../../.gitbook/assets/dyn-publish-package-add-files.png)
 
 > 1. Выберите `Add file...` (Добавить файл) для поиска файлов, которые требуется добавить в пакет.
 > 2. Выберите два файла `.dll` из примера NodeModel.
@@ -32,7 +32,7 @@
 
 После добавления файлов в содержимое пакета присвойте пакету имя, описание и версию. При публикации пакета с помощью Dynamo автоматически создается файл `pkg.json`.
 
-![Параметры пакета](../../.gitbook/assets/dyn-publish-package.jpg)
+![Параметры пакета](../../.gitbook/assets/dyn-publish-package.png)
 
 > Пакет готов к публикации.
 >

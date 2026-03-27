@@ -90,7 +90,7 @@ namespace CustomNodes
 
 Проверьте папку проекта `bin` на наличие файла `.dll`. Если сборка прошла успешно, можно добавить `.dll` в Dynamo.
 
-![Пользовательские узлы в Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
+![Пользовательские узлы в Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.png)
 
 > 1. Пользовательский узел RectangularGrids в библиотеке Dynamo.
 > 2. Пользовательский узел в рабочей области.

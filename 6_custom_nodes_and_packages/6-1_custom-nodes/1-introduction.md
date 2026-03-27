@@ -22,7 +22,7 @@
 
 Чтобы создать пользовательский узел с нуля, запустите Dynamo и выберите «Пользовательский узел» или используйте сочетание клавиш CTRL + SHIFT + N в рабочей области.
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 01.jpg>)
+\![](<../../.gitbook/assets/custom node intro - custom node environment 01.png>)
 
 Задайте имя, описание и категорию в диалоговом окне «Свойства пользовательского узла».
 

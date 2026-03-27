@@ -24,7 +24,7 @@ ZIP-сборка DynamoCoreRuntime — это моментальный сним
 | 2.7            | Распространяемый пакет 2019 | 11/12 (входит в ОС Windows 10) |   |   |   |   |
 | >=2.8          | Распространяемый пакет 2019 | 11/12 (входит в ОС Windows 10) |   |   |   |   |
 
-**Файл Microsoft DirectX, который также доступен в репозитории Dynamo на Github** [**здесь**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
+**Файл Microsoft DirectX, который также доступен в репозитории Dynamo на GitHub** [**здесь**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 
 **Компонент 7zip, используемый для распаковки пакета:** [**здесь**](https://www.7-zip.org/download.html)
 
@@ -48,7 +48,7 @@ ZIP-сборка DynamoCoreRuntime — это моментальный сним
 
 **Установка DirectX**
 
-Следуйте инструкциям Microsoft, приведенным здесь, чтобы проверить, установлен ли у вас программный продукт DirectX. Если это не так, можете открыть DXSETUP.exe в репозитории Dynamo на Github [здесь](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX). При появлении приведенного ниже диалогового окна нажмите кнопку «Далее», чтобы установить DirectX в папку по умолчанию.
+Следуйте инструкциям Microsoft, приведенным здесь, чтобы проверить, установлен ли у вас программный продукт DirectX. Если это не так, можете открыть DXSETUP.exe в репозитории Dynamo на GitHub [здесь](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX). При появлении приведенного ниже диалогового окна нажмите кнопку «Далее», чтобы установить DirectX в папку по умолчанию.
 
 ![](../.gitbook/assets/dynamo-builds-3.png)
 

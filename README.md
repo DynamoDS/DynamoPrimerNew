@@ -1,6 +1,6 @@
 # Об этом руководстве
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Трейлер к Dynamo {% endembed %}
+{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %} Трейлер к Dynamo {% endembed %}
 
 ## Для Dynamo 2.13 и более поздних версий
 

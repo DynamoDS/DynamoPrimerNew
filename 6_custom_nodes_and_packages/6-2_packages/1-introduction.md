@@ -45,7 +45,7 @@
 Рассмотрим структуру файлов и папок пакета.
 
 1. Сначала выберите «Пакеты» > «Package Manager» > «Установленные пакеты».
-2. Рядом с DynamoUnfold выберите меню параметров <img src="../../.gitbook/assets/package introduction - vertical dots menu.jpg" alt="" data-size="line">.
+2. Рядом с DynamoUnfold выберите меню параметров <img src="../../.gitbook/assets/package introduction - vertical dots menu.png" alt="" data-size="line">.
 3. Затем нажмите «Показать корневую папку», чтобы открыть корневую папку для этого пакета.
 
 <figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
@@ -87,7 +87,7 @@
 
 Если требуется узнать, где хранятся файлы пакетов, в верхней части окна навигации выберите «Dynamo» > «Настройки» > «Параметры пакета» > «Пути к узлу и файлу пакета», чтобы найти текущую корневую папку.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 08.jpg>)
+\![](<../../.gitbook/assets/package introduction - installing package folder 08.png>)
 
 По умолчанию пакеты устанавливаются в следующей папке: _C:/Users/[имя пользователя]/AppData/Roaming/Dynamo/[версия Dynamo_.
 

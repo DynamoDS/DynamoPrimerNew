@@ -4,7 +4,7 @@
 
 Это руководство поможет вам освоить различные возможности разработки на языке C# для Dynamo — от создания узлов Zero-Touch до сборки расширений.
 
-![Репозиторий Dynamo на Github](../../.gitbook/assets/dynamogithub.jpg)
+![Репозиторий Dynamo на GitHub](../../.gitbook/assets/dynamogithub.png)
 
 > Репозиторий Dynamo на GitHub
 
@@ -14,11 +14,11 @@
 
 [https://dynamobuilds.com/](https://dynamobuilds.com/)
 
-**Репозиторий Dynamo на GitHub**. Dynamo — это проект разработки с открытым исходным кодом, размещенный на GitHub.
+**Страница Dynamo на GitHub**. Dynamo — это проект разработки с открытым исходным кодом, размещенный на GitHub.
 
 [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
-**Вики-страница Dynamo на Github** — это основной источник документации для разработчиков.
+**Wiki-страница Dynamo на Github** — основной источник документации для разработчиков.
 
 [https://github.com/DynamoDS/Dynamo/wiki](https://github.com/DynamoDS/Dynamo/wiki)
 
