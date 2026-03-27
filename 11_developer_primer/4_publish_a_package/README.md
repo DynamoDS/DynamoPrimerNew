@@ -12,7 +12,7 @@ Dynamo Package Manager は、Dynamo または Web ブラウザからアクセス
 
 * Dynamo では、Package Manager にはパッケージのインストール、パブリッシュ、および更新が含まれます。
 
-![パッケージを検索する](../../.gitbook/assets/dynamopackagemanager.jpg)
+![パッケージを検索する](../../.gitbook/assets/dynamopackagemanager.png)
 
 > 1. パッケージをオンラインで検索する: `Packages > Search for a Package...`
 > 2. インストールされたパッケージを表示/編集する: `Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Dynamo Package Manager は、Dynamo または Web ブラウザからアクセス
 
 Dynamo を起動して、`Packages > Publish New Package...` を選択し、`Publish a Package` ウィンドウを開きます。
 
-![パッケージをパブリッシュする](../../.gitbook/assets/dyn-publish-package-add-files.jpg)
+![パッケージをパブリッシュする](../../.gitbook/assets/dyn-publish-package-add-files.png)
 
 > 1. `Add file...` を選択して、パッケージに追加するファイルを参照します。
 > 2. NodeModel ケース スタディから、2 つの `.dll` ファイルを選択します。
@@ -32,7 +32,7 @@ Dynamo を起動して、`Packages > Publish New Package...` を選択し、`Pub
 
 パッケージの内容にファイルを追加したら、パッケージに名前を付け、説明とバージョンを記入します。Dynamo を使用してパッケージをパブリッシュすると、自動的に `pkg.json` ファイルが作成されます。
 
-![パッケージの設定](../../.gitbook/assets/dyn-publish-package.jpg)
+![パッケージの設定](../../.gitbook/assets/dyn-publish-package.png)
 
 > パッケージをパブリッシュする準備が整いました。
 >

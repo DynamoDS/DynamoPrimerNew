@@ -1,6 +1,6 @@
 # この Web サイトについて
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
+{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
 
 ## Dynamo v2.13 以降の場合
 

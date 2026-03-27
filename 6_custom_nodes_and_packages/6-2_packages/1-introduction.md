@@ -45,7 +45,7 @@ Dynamo ライブラリに _DynamoUnfold_ グループが表示されます。こ
 ここで、パッケージのファイル構造を確認しましょう。
 
 1. まず、[パッケージ] > [Package Manager] > [インストール済みパッケージ]に移動します。
-2. DynamoUnfold の横にあるオプション メニュー <img src="../../.gitbook/assets/package introduction - vertical dots menu.jpg" alt="" data-size="line"> を選択します。
+2. DynamoUnfold の横にあるオプション メニュー <img src="../../.gitbook/assets/package introduction - vertical dots menu.png" alt="" data-size="line"> を選択します。
 3. 次に、[ルート フォルダを表示]をクリックして、このパッケージのルート フォルダを開きます。
 
 <figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
@@ -87,7 +87,7 @@ Dynamo パッケージの仕組みを理解する別の方法として、[Dynamo
 
 パッケージ ファイルの保存場所を確認する場合は、一番上のナビゲーションで[Dynamo] > [基本設定] > [パッケージ設定] > [ノードとパッケージ ファイルの場所]をクリックします。ここから現在のルート フォルダを見つけることができます。
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 08.jpg>)
+\![](<../../.gitbook/assets/package introduction - installing package folder 08.png>)
 
 既定では、パッケージは _C:/Users/[ユーザ名]/AppData/Roaming/Dynamo/[Dynamo バージョン]_ というフォルダ パスにインストールされます。
 

@@ -93,7 +93,7 @@ Dynamo は定期的に更新されるため、パッケージが使用する API
 
 API の変更は、[Dynamo GitHub Wiki](https://github.com/DynamoDS/Dynamo/wiki/API-Changes) で確認できます。ここでは DynamoCore、ライブラリ、ワークスペースの変更点について調べることができます。
 
-![Dynamo API の変更点に関するドキュメント](../../.gitbook/assets/api-changes.jpg)
+![Dynamo API の変更点に関するドキュメント](../../.gitbook/assets/api-changes.png)
 
 今後予定されている重要な変更の例として、バージョン 2.0 でファイル形式が XML から JSON に移行することが挙げられます。NodeModel 派生ノードには、[JSON コンストラクタ](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node)が必要になります。これがない場合、Dynamo 2.0 で開きません。
 

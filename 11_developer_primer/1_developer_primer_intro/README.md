@@ -4,7 +4,7 @@
 
 このガイドは、Dynamo で Zero-Touch ノードを作成する方法から、拡張機能を構築する方法まで、C# 開発のさまざまな可能性の概要を説明することを目的としています。
 
-![GitHub の Dynamo ソース](../../.gitbook/assets/dynamogithub.jpg)
+![GitHub の Dynamo ソース](../../.gitbook/assets/dynamogithub.png)
 
 > GitHub の Dynamo ソース
 
@@ -14,7 +14,7 @@
 
 [https://dynamobuilds.com/](https://dynamobuilds.com/)
 
-**Dynamo GitHub**: Dynamo は、GitHub 上で開発されたオープン ソースのプロジェクトです。
+**Dynamo GitHub**: Dynamo は、GitHub 上で開発されたオープンソース プロジェクトです。
 
 [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 

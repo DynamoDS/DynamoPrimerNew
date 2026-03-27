@@ -4,7 +4,7 @@
 
 Dynamo のユーザ インタフェース(UI)は、5 つの主要な領域に分かれています。ここでは、概要について簡単に説明し、次のセクションでワークスペースとライブラリについて詳しく説明します。
 
-\![](<../.gitbook/assets/user interface - ui.jpg>)
+\![](<../.gitbook/assets/user interface - ui.png>)
 
 > 1. メニュー
 > 2. ツールバー
@@ -49,11 +49,11 @@ Dynamo のユーザ インタフェース(UI)は、5 つの主要な領域に分
 Dynamo ツールバーには、[元に戻す][Ctrl + Z]コマンドと[やり直し][Ctrl + Y]コマンドの他に、ファイルに関する作業に役立つ一連のクイック アクセス ボタンが用意されています。右端にあるボタンを使用すると、ワークスペースのスナップショットを書き出すことができます。このボタンは、ドキュメントの作成や共有を行う場合に特に便利です。
 
 * \![](<../.gitbook/assets/user interface - new file.jpg>) 新規作成 - 新規 .dyn ファイルを作成します
-* \![](<../.gitbook/assets/user interface - open (1).jpg>) 開く - 既存の .dyn (ワークスペース)または .dyf (カスタム ノード)ファイルを開きます
-* \![](<../.gitbook/assets/user interface - save.jpg>) 保存/名前を付けて保存 - アクティブな .dyn または .dyf ファイルを保存します
+* \![](<../.gitbook/assets/user interface - open (1).png>) 開く - 既存の .dyn (ワークスペース)または .dyf (カスタム ノード)ファイルを開きます
+* \![](<../.gitbook/assets/user interface - save.png>) 保存/名前を付けて保存 - アクティブな .dyn または .dyf ファイルを保存します
 * \![](<../.gitbook/assets/user interface - undo.jpg>) 元に戻す - 最後に行った操作を元に戻します
 * \![](<../.gitbook/assets/user interface - redo.jpg>) やり直し - 次のアクションをやり直します
-* \![](<../.gitbook/assets/user interface - screenshot.jpg>) ワークスペースをイメージとして書き出し - 表示されているワークスペースを PNG ファイルとして書き出します
+* \![](<../.gitbook/assets/user interface - screenshot.png>) ワークスペースをイメージとして書き出し - 表示されているワークスペースを PNG ファイルとして書き出します
 
 ### ライブラリ
 

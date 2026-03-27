@@ -6,7 +6,7 @@
 
 DynamoSamples GitHub リポジトリの SampleViewExtension のサンプルに従って、グラフ内のアクティブなノードをリアルタイムで表示する、簡易なモードレス ウィンドウを作成するために必要な手順を説明します。ビュー拡張機能には、ウィンドウの UI を作成し、ビュー モデルに値をバインドする必要があります。
 
-![ビュー拡張機能ウィンドウ](../../.gitbook/assets/dyn-viewextension.jpg)
+![ビュー拡張機能ウィンドウ](../../.gitbook/assets/dyn-viewextension.png)
 
 > 1. GitHub リポジトリの SampleViewExtension のサンプルに従って開発された、ビュー拡張機能ウィンドウ。
 

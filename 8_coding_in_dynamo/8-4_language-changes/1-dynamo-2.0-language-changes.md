@@ -36,7 +36,7 @@
 
 既知の問題:
 
-* 命令型ブロック内の名前空間の競合が原因で予期しない入力ポートが表示されます。詳細については、[Github の問題](https://github.com/DynamoDS/Dynamo/issues/8796)を参照してください。これを回避するには、命令型ブロックの外側で関数を次のように定義します。
+* 命令型ブロック内の名前空間の競合が原因で予期しない入力ポートが表示されます。詳細については、[GitHub の問題](https://github.com/DynamoDS/Dynamo/issues/8796)を参照してください。これを回避するには、命令型ブロックの外側で関数を次のように定義します。
 
 ```
 pnt = Autodesk.Point.ByCoordinates;

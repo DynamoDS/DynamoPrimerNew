@@ -48,7 +48,7 @@ DynamoCoreRuntime zip ビルドは、自動ビルド中に作成される Dynamo
 
 **DirectX をインストールする**
 
-DirectX が既にインストールされている場合は、こちらの Microsoft の指示に従ってください。まだインストールしていない場合は、[こちら](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)の Dynamo Github リポジトリを使用して DXSETUP.exe を開きます。以下のダイアログが表示されたら、[次へ]をクリックして DirectX を既定の場所にインストールしてください。
+DirectX が既にインストールされている場合は、こちらの Microsoft の指示に従ってください。まだインストールしていない場合は、[こちら](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)の Dynamo GitHub リポジトリを使用して DXSETUP.exe を開きます。以下のダイアログが表示されたら、[次へ]をクリックして DirectX を既定の場所にインストールしてください。
 
 ![](../.gitbook/assets/dynamo-builds-3.png)
 

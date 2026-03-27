@@ -22,7 +22,7 @@ Dynamo では、さまざまな方法でカスタム ノードを作成するこ
 
 カスタム ノードを一から作成するには、Dynamo を起動して[カスタム ノード]を選択するか、キャンバスで[Ctrl]+[Shift]+[N]を押します。
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 01.jpg>)
+\![](<../../.gitbook/assets/custom node intro - custom node environment 01.png>)
 
 [カスタム ノード プロパティ]ダイアログ ボックスで、カスタム ノードの名前、説明、カテゴリを入力します。
 

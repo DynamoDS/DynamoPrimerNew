@@ -90,7 +90,7 @@ namespace CustomNodes
 
 プロジェクトの `bin` フォルダに `.dll` があるか確認します。正常にビルドされている場合は、Dynamo に `.dll` を追加できます。
 
-![Dynamo のカスタム ノード](../../.gitbook/assets/RectangularGrid-Dynamo.jpg)
+![Dynamo のカスタム ノード](../../.gitbook/assets/RectangularGrid-Dynamo.png)
 
 > 1. Dynamo ライブラリ内のカスタム RectangularGrids ノード。
 > 2. キャンバス上のカスタム ノード。
