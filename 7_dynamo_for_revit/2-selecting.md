@@ -32,11 +32,11 @@ _Point-and-click_ is the easiest way to directly select a Revit element. You can
 
 _Dropdown menus_ create a list of all accessible elements in a Revit project. You can use this to reference Revit elements which are not necessarily visible in a view. This is a great tool for querying existing elements or creating new ones in a Revit project or family editor.
 
-!\[]\(../.gitbook/assets/selecting \_database\_navigation\_with\_dynamo\_nodes\_02.png)
+![](<images/2/selecting - database navigation with dynamo nodes 02.jpg>)
 
 You can also select Revit element by specific tiers in the _Revit hierarchy_. This is a powerful option for customizing large arrays of data in preparation for documentation or generative instantiation and customization.
 
-![UI](<images/allelements (1).jpg>)
+![UI](<images/allelements.jpg>)
 
 With the three images above in mind, let's dive into an exercise which selects elements from a basic Revit project in preparation for the parametric applications we'll create in the remaining sections of this chapter.
 
@@ -50,7 +50,7 @@ With the three images above in mind, let's dive into an exercise which selects e
 
 In this example Revit file, we have three element types of a simple building. We're going to use this as an example for selecting Revit elements within the context of the Revit hierarchy.
 
-![](<images/selecting_exercise_01 (1) (2).jpg>)
+![](<images/selecting_exercise_01.jpg>)
 
 > 1. Building Mass
 > 2. Beams (Structural Framing)

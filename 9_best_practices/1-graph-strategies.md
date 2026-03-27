@@ -84,7 +84,7 @@ In addition to making your graph as simple and efficient as possible, strive for
 * If others are going to be working with your graph, you should **ensure that your node-wire layout flows easily before shipping**
 * To help you with alignment, **use the "Cleanup Node Layout" feature to automatically align** your graph, though less precisely than doing it yourself
 
-![](<images/graphstrategy5 (1).png>)
+![](<images/graphstrategy5.png>)
 
 > 1. Unorganized graph
 > 2. Aligned graph

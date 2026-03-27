@@ -85,7 +85,7 @@ Wires connect the output Port from one Node to the input Port of another Node. T
 
 Input Ports are on the left side and the Output Ports are located on the right side of Nodes, hence, we can generally say that the Program Flow moves from left to right.
 
-![](<images/nodes and wires - flow of data (1).jpg>)
+![](<images/nodes and wires - flow of data.jpg>)
 
 ### Creating Wires <a href="#creating-wires" id="creating-wires"></a>
 
@@ -101,7 +101,7 @@ Frequently we will want to adjust the Program Flow in our Visual Program by edit
 
 * Change connection to an input Port, left-click on another input Port
 
-![](images/nodesandwires-editwirechangeport(2).gif)
+![](images/nodesandwires-editwirechangeport.gif)
 
 * To remove the Wire, pull the Wire away and left-click on Workspace
 
@@ -130,7 +130,7 @@ In case you prefer to hide the Wires in your graph, you can find this option fro
 
 With this setting, only the selected Nodes and its joining Wires will be shown in faint aqua highlight.
 
-![](<images/nodes and wires - hide wires setting (1).gif>)
+![](<images/nodes and wires - hide wires setting.gif>)
 
 #### Hide Individual Wire Only
 

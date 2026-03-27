@@ -341,7 +341,7 @@ Before we build the project, the final step is to add a `pkg.json` file so that 
 
 The common root cause is because the node was created using a constructor that recreated the ports. Instead a constructor which loaded the ports should have been used. These constructors are usually marked `[JsonConstructor]` _see below for examples_
 
-![Broken JSON](<../images/broken-json (1).jpg>)
+![Broken JSON](<../images/broken-json.jpg>)
 
 This can occur because:
 

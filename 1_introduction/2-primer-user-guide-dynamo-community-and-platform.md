@@ -19,11 +19,11 @@ If you would like to see the demonstration of Dynamo workflows, we have included
 
 * [Parametric Vase](../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.md)
 
-![](../.gitbook/assets/vase1.gif)
+![](images/vase1.gif)
 
 * [Attractor points](../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.md)
 
-![](<images/attractor1 (1).gif>)
+![](<images/attractor1.gif>)
 
 {% hint style="info" %}
 There are more topic specific exercises can be found in later chapters as we cover different topics about Dynamo. **Exercises** can usually be found in the last section of each page.

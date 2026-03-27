@@ -2,7 +2,7 @@
 
 In the previous sections, we dove into the details of how our _MapToSurface_ package is set up with custom nodes and example files. But how do we publish a package that has been developed locally? This case study demonstrates how to publish a package from a set of files in a local folder.
 
-![](<../images/develop package - custom nodes 01 (1) (6).jpg>)
+![](<../images/develop package - custom nodes 01.jpg>)
 
 There are many ways to publish a package. Below is the process that we advise: **publish locally, develop locally, and then publish online**. We'll start with a folder containing all of the files in the package.
 
@@ -57,7 +57,7 @@ Publish by clicking "Publish Locally" (1). If you're following along, be certain
 
 After publishing, the custom nodes should be available under the "DynamoPrimer" group or your Dynamo Library.
 
-![](<../images/develop package - install package 02 (1) (4).jpg>)
+![](<../images/develop package - install package 02.jpg>)
 
 Now let's look at the root directory to see how Dynamo has formatted the package we just created. Do this by going to the Installed Packages tab > next to MapToSurface, click on the vertical dots menu > select Show Root Directory.
 

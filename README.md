@@ -39,31 +39,31 @@ The Dynamo Primer is an open-source project, initiated by Matt Jezyk and the Dyn
 
 **Mode Lab** was commissioned to write the First Edition of the Primer. We thank them for all of their efforts in establishing this valuable resource.
 
-![](images/MODELAB_Logo.png)
+![](images/modelab-logo.png)
 
 ***
 
 **John Pierson of Parallax Team** was commissioned to update the Primer to reflect the Dynamo 2.0. revisions.
 
-![](images/PRLX_Logo.jpg)
+![](images/prlx-logo.jpg)
 
 ***
 
 **Matterlab** was commissioned to update the Primer to reflect the Dynamo 2.13. revisions.
 
-![](<.gitbook/assets/matterlab_final-07 (2).jpg>)
+![](images/matterlab-logo.jpg)
 
 ***
 
 **Archilizer** was commissioned to update the primer to reflect the Dynamo 2.17. revisions.
 
-<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 **Wood Rodgers** was commissioned to update the Primer with content for Dynamo for Civil 3D.
 
-<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
 
 ### Acknowledgments
 

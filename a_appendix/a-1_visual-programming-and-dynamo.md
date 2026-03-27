@@ -52,7 +52,7 @@ If your answer contained graphics, then **Visual Programming** is definitely for
 
 **Visual Program:**
 
-![](<images/visualProgramming (2).png>)
+![](<images/visualProgramming.png>)
 
 **Textual Program:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 The results of our algorithm:
 
-![](<images/visualProgramming (1).png>)
+![](<images/visualProgramming.png>)
 
 The visual characteristic to programming in such a way lowers the barrier to entry and frequently speaks to designers. Dynamo falls in the Visual Programming paradigm, but as we will see later, we can still use textual programming in the application as well.

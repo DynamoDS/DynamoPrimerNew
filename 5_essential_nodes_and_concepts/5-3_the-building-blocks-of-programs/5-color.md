@@ -27,7 +27,7 @@ The colors in the table below correspond to the **HSB color space**. Dividing th
 | Icon                                                  | Name (Syntax)                     | Inputs | Outputs    |
 | ----------------------------------------------------- | --------------------------------- | ------ | ---------- |
 | ![](<../images/Color Hue.jpg>)            | Hue (**Color.Hue**)               | color  | Hue        |
-| ![](<../images/Color Saturation (1).jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
+| ![](<../images/Color Saturation.jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
 | ![](<../images/Color Brightness.jpg>)     | Brightness (**Color.Brightness**) | color  | Brightness |
 
 ### Color Range
@@ -53,7 +53,7 @@ The **Display.ByGeometry** Node gives us the ability to color geometry in the Dy
 
 The **Display.BySurfaceColors** node gives us the ability to map data across a surface using color! This functionality introduces some exciting possibilities for visualizing data obtained through discrete analysis like solar, energy, and proximity. Applying color to a surface in Dynamo is similar to applying a texture to a material in other CAD environments. Let's demonstrate how to use this tool in the brief exercise below.
 
-![](<../images/12 (1).jpg>)
+![](<../images/12.jpg>)
 
 ## Exercise
 

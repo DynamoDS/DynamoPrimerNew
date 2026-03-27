@@ -45,7 +45,7 @@ Let's go!
 
 The first thing we need to do is select all of the Structures that we plan to work with. We'll do this by simply selecting all of the objects on a certain layer, which means that we can select Structures from different Pipe Networks (assuming they share the same layer).
 
-<figure><img src="../../images/Utilities_RenameStructures_SelectStructures (1).png" alt=""><figcaption><p>Selecting the Structures on a given layer</p></figcaption></figure>
+<figure><img src="../../images/Utilities_RenameStructures_SelectStructures.png" alt=""><figcaption><p>Selecting the Structures on a given layer</p></figcaption></figure>
 
 > 1. This node ensures that we don't accidentally retrieve any undesirable object types that might share the same layer as the Structures.
 
@@ -118,11 +118,11 @@ If Dynamo Player is new to you, take a look at the [dynamo-player.md](../../dyna
 
 It can be helpful to take advantage of Dynamo's 3D background preview to visualize the graph's intermediate outputs instead of just the final result. One easy thing we can do is show the Bounding Boxes for the Structures. In addition, this particular dataset has a Corridor in the document, so we can bring the Corridor Feature Line geometry into Dynamo to provide some context for where the Structures are located in space. If the graph is used on a dataset that doesn't have any Corridors, then these nodes will simply do nothing.
 
-<figure><img src="../../images/Utilities_RenameStructures_Visualize (2).png" alt=""><figcaption><p>Visualizing the geometry for Structures and Corridor Feature Lines</p></figcaption></figure>
+<figure><img src="../../images/Utilities_RenameStructures_Visualize.png" alt=""><figcaption><p>Visualizing the geometry for Structures and Corridor Feature Lines</p></figcaption></figure>
 
 Now we can better understand how the process of filtering the Structures by offset works.
 
-<figure><img src="../../images/Utilities_RenameStructures_Dynamo (1).gif" alt=""><figcaption><p>Adjusting the Alignment offset threshold value and visualizing the affected Structures in Dynamo</p></figcaption></figure>
+<figure><img src="../../images/Utilities_RenameStructures_Dynamo.gif" alt=""><figcaption><p>Adjusting the Alignment offset threshold value and visualizing the affected Structures in Dynamo</p></figcaption></figure>
 
 ## Ideas
 

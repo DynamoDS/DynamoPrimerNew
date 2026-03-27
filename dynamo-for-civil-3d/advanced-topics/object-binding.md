@@ -40,7 +40,7 @@ Dynamo for Civil 3D allows for modifying the default object binding behavior thr
 Note that the Binding Data Storage options are available in **Civil 3D 2022.1** and above.
 {% endhint %}
 
-<figure><img src="../images/c3d-binding-settings (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/c3d-binding-settings.png" alt=""><figcaption></figcaption></figure>
 
 All of the options are enabled by default. Here's a summary of what each option does.
 

@@ -8,10 +8,10 @@ Operators are a set of components that use algebraic functions with two numeric 
 
 | Icon                                                | Name (Syntax)     | Inputs                     | Outputs      |
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/addition (1).jpg>)       | Add (**+**)       | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/Subtraction (1).jpg>)    | Subtract (**-**)  | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/Multiplication (2).jpg>) | Multiply (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/Division (2).jpg>)       | Divide (**/**)    | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/addition.jpg>)       | Add (**+**)       | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/Subtraction.jpg>)    | Subtract (**-**)  | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/Multiplication.jpg>) | Multiply (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/Division.jpg>)       | Divide (**/**)    | var\[]...\[], var\[]...\[] | var\[]...\[] |
 
 ## Exercise: The Golden Spiral Formula
 

@@ -11,7 +11,7 @@ There are a few basic shorthand methods in the code block which, simply put, mak
 | Sequences              | ![](<../images/03 node- sequence.jpg>)       | ![](<../images/03 codeblock- sequence.jpg>)       |
 | Ranges                 | ![](<../images/04 node- range.jpg>)          | ![](<../images/04 codeblock - range.jpg>)         |
 | Get Item at Index      | ![](<../images/05 node - list get item.jpg>) | ![](<../images/05 codeblock - list get item.jpg>) |
-| Create List            | ![](<../images/06 node - list create.jpg>)   | ![](<../images/image (17).png>)                   |
+| Create List            | ![](<../images/06 node - list create.jpg>)   | ![](<../images/image.png>)                   |
 | Concatenate Strings    | ![](<../images/07 node - string concat.jpg>) | ![](<../images/07 codeblock - string concat.jpg>) |
 | Conditional Statements | ![](<../images/08 node - conditional.jpg>)   | ![](<../images/08 codeblock - conditional.jpg>)   |
 

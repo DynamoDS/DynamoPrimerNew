@@ -1,6 +1,6 @@
 # Light Pole Placement
 
-<figure><img src="../../images/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../images/Roads_CorridorBlockRefs_Player.gif" alt=""><figcaption></figcaption></figure>
 
 One of Dynamo's many great use cases is dynamically placing discrete objects along a Corridor model. It is often the case that objects need to be placed at locations that are independent of the inserted Assemblies along the Corridor, which is a very tedious task to accomplish manually. And when the horizontal or vertical geometry of the Corridor changes, then a significant amount of re-work is introduced.
 
@@ -59,7 +59,7 @@ Using Dynamo to read data from an external file (such as an Excel file) is a gre
 
 The Excel data is imported into Dynamo like this.&#x20;
 
-<figure><img src="../../images/Roads_CorridorBlockRefs_GetExcelData (1).png" alt="" width="548"><figcaption><p>Importing the Excel data into Dynamo</p></figcaption></figure>
+<figure><img src="../../images/Roads_CorridorBlockRefs_GetExcelData.png" alt="" width="548"><figcaption><p>Importing the Excel data into Dynamo</p></figcaption></figure>
 
 Now that we have the data, we need to split it up by column (_Corridor_, _Baseline_, _PointCode_, etc.) so that it can be used in the rest of the graph. A common way to do this is to use the **List.GetItemAtIndex** node and specify the index number of each column that we want. For example, the _Corridor_ column is at index 0, the _Baseline_ column is at index 1, etc.
 
@@ -93,7 +93,7 @@ What we're going to do now is generate **Coordinate Systems** along the Corridor
 If Coordinate Systems are new to you, take a look at the [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") section.
 {% endhint %}
 
-<figure><img src="../../images/Roads_CorridorBlockRefs_GetCoordinateSystems (1).png" alt=""><figcaption><p>Getting Coordinate Systems along the Corridor Feature Lines</p></figcaption></figure>
+<figure><img src="../../images/Roads_CorridorBlockRefs_GetCoordinateSystems.png" alt=""><figcaption><p>Getting Coordinate Systems along the Corridor Feature Lines</p></figcaption></figure>
 
 Note the use of a Code Block here to rotate the Coordinate Systems depending on which side of the baseline they are on. This could be achieved using a sequence of several nodes, but this is a good example of a situation where it's easier to just write it out.
 
@@ -123,7 +123,7 @@ You can read more about graph execution modes in the [3\_user\_interface](../../
 
 Here's an example of running the graph using **Dynamo Player**.
 
-<figure><img src="../../images/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption><p>Running the graph using Dynamo Player and seeing the results in Civil 3D</p></figcaption></figure>
+<figure><img src="../../images/Roads_CorridorBlockRefs_Player.gif" alt=""><figcaption><p>Running the graph using Dynamo Player and seeing the results in Civil 3D</p></figcaption></figure>
 
 {% hint style="info" %}
 If Dynamo Player is new to you, take a look at the [dynamo-player.md](../../dynamo-player.md "mention") section.
@@ -137,7 +137,7 @@ It can be helpful to visualize the Corridor geometry in Dynamo to provide contex
 
 But there's something else we need to consider. Solids are a relatively "heavy" geometry type, which means that this operation will slow down the graph. It would be nice if there was a simple way to _choose_ if we wanted to view the solids or not. The obvious answer is to just unplug the **Corridor.GetSolids** node, but that will produce warnings for all of the downstream nodes, which is a little messy. This is a situation where the **ScopeIf** node really shines.
 
-<figure><img src="../../images/Roads_CorridorBlockRefs_VisualizeCorridor (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../images/Roads_CorridorBlockRefs_VisualizeCorridor.png" alt=""><figcaption></figcaption></figure>
 
 > 1. Notice that the **Object.Geometry** node has a gray bar at the bottom. This means that the node preview is turned off (accessible by right-clicking on the node), which allows the **GeometryColor.ByGeometryColor** to avoid "fighting" with other geometry for display priority in the background preview.
 > 2. The **ScopeIf** node basically allows you to selectively run an entire branch of nodes. If the _test_ input in false, then every node connected to the **ScopeIf** node will not run.

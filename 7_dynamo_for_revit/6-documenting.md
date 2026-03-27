@@ -83,7 +83,7 @@ Back in Revit, we see a much more legible gradient which is representative of pl
 
 Back in Revit, we can now make better sense of areas of maximum deviation in the corners. Remember, this node is for overriding a color in a view, so it can be really helpful if we had a particular sheet in the set of drawings which focuses on a particular type of analysis.
 
-![Exercise](<images/07 (4).jpg>)
+![Exercise](<images/07.jpg>)
 
 ### Part III: Scheduling
 
@@ -93,11 +93,11 @@ Selecting one ETFE panel in Revit, we see that there are four instance parameter
 
 In a sample sheet, we have a large, empty schedule. The XYZ parameters are shared parameters in the Revit file, which allows us to add them to the schedule.
 
-![Exercise](<images/03 (8).jpg>)
+![Exercise](<images/03.jpg>)
 
 Zooming in, the XYZ parameters are yet to be filled in. The first two parameters are taken care of by Revit.
 
-![Exercise](<images/02 (5).jpg>)
+![Exercise](<images/02.jpg>)
 
 To write in these values, we'll do a complex list operation. The graph itself is simple, but the concepts build heavily from the list mapping as discussed in the list chapter.
 
@@ -114,11 +114,11 @@ We are list mapping here, because we are writing four values for each element, w
 
 Selecting a panel in Revit, we see now that we have string values for each parameter. Realistically, we would create a simpler format to write a point (X,Y,Z). This can be done with string operations in Dynamo, but we're bypassing that here to stay within the scope of this chapter.
 
-![](<images/6/04 (5).jpg>)
+![](<images/6/04.jpg>)
 
 A view of the sample schedule with parameters filled in.
 
-![](<images/6/01 (9).jpg>)
+![](<images/6/01.jpg>)
 
 Each ETFE panel now has the XYZ coordinates written for each adaptive point, representing the corners of each panel for fabrication.
 

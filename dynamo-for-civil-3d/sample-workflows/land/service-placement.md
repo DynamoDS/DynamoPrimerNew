@@ -1,6 +1,6 @@
 # Service Placement
 
-<figure><img src="../../images/Land_ServicePlacement_Dynamo (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Dynamo.gif" alt=""><figcaption></figcaption></figure>
 
 The engineering design of a typical housing development involves working with several underground utilities, such as sanitary sewer, storm drainage, potable water, or others. This example will demonstrate how Dynamo can be used to draw the service connections from a distribution main to a given lot (i.e., parcel). It is common for every lot to require a service connection, which introduces significant tedious work to place all of the services. Dynamo can speed up the process by automatically drawing the necessary geometry with precision, as well as providing flexible inputs that can be adjusted to suit local agency standards.
 
@@ -50,7 +50,7 @@ Our first step is to get the geometry for the distribution main into Dynamo. Ins
 If Dynamo curve geometry is new to you, take a look at the [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention") section.
 {% endhint %}
 
-<figure><img src="../../images/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Getting the objects from Civil 3D and joining everything together into a single PolyCurve</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_DistributionMain.png" alt=""><figcaption><p>Getting the objects from Civil 3D and joining everything together into a single PolyCurve</p></figcaption></figure>
 
 ### Get Lot Line Geometry
 
@@ -58,7 +58,7 @@ Next, we need to get the geometry for a selected lot line into Dynamo so we can 
 
 We also need to handle a potential issue that may arise. The lot line has a start point and an end point, which means that it has a direction. In order for the graph to produce consistent results, we need all of the lot lines to have a consistent direction. We can account for this condition directly in the graph logic, which makes the graph more resilient.&#x20;
 
-<figure><img src="../../images/Land_ServicePlacement_Selection (2).png" alt=""><figcaption><p>Selecting a lot line and ensuring that it is the right direction</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Selection.png" alt=""><figcaption><p>Selecting a lot line and ensuring that it is the right direction</p></figcaption></figure>
 
 > 1. Get the start and end points of the lot line.
 > 2. Measure the distance from each point to the distribution main, then figure out which distance is greater.
@@ -78,7 +78,7 @@ If Coordinate Systems are new to you, take a look at the [2-vectors.md](../../..
 
 Now we need to get points on the distribution main that are closest to the service meter locations. This will allow us to draw the service connections in Model Space so that they are always perpendicular to the distribution main. The **Geometry.ClosestPointTo** node is the perfect solution.
 
-<figure><img src="../../images/Land_ServicePlacement_GetPerpendicularPoints (1).png" alt="" width="339"><figcaption><p>Getting perpendicular points on the distribution main</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_GetPerpendicularPoints.png" alt="" width="339"><figcaption><p>Getting perpendicular points on the distribution main</p></figcaption></figure>
 
 > 1. This is the distribution main PolyCurve
 > 2. These are the service meter insertion points
@@ -93,7 +93,7 @@ The last step is to actually create objects in Model Space. We'll use the insert
 
 When you run the graph you should see new Block References and service connection lines in Model Space. Try changing some of the inputs and watching everything update automatically!
 
-<figure><img src="../../images/Land_ServicePlacement_Dynamo (1).gif" alt=""><figcaption><p>Adjusting the input parameters in Dynamo and immediately seeing the results in Civil 3D</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Dynamo.gif" alt=""><figcaption><p>Adjusting the input parameters in Dynamo and immediately seeing the results in Civil 3D</p></figcaption></figure>
 
 ### Bonus: Enable Sequential Placement
 
@@ -111,7 +111,7 @@ Take a look at the [object-binding.md](../../advanced-topics/object-binding.md "
 
 Changing this setting will force Dynamo to "forget" the objects that it creates with each run. Here's an example of running the graph with object binding turned off using **Dynamo Player**.
 
-<figure><img src="../../images/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Running the graph using Dynamo Player and seeing the results in Civil 3D</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Player.gif" alt=""><figcaption><p>Running the graph using Dynamo Player and seeing the results in Civil 3D</p></figcaption></figure>
 
 {% hint style="info" %}
 If Dynamo Player is new to you, take a look at the [dynamo-player.md](../../dynamo-player.md "mention") section.

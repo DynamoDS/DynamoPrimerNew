@@ -12,7 +12,7 @@ This workflow will teach you how to:
 * Create and modify geometric elements using nodes.
 * Visualize design results in real-time.
 
-![](../../.gitbook/assets/vase1.gif)
+![](../images/vase1.gif)
 
 ## Defining Our Objectives
 
@@ -48,7 +48,7 @@ We will leave the default value of _centerPoint_ but add a **Number Slider** to 
 
 This node is a bit different than our previous node as it contains a slider. You can use the interface to change the output value of the slider.
 
-![](<../images/vase13 (1).gif>)
+![](<../images/vase13.gif>)
 
 The slider can be configured using the dropdown button at the left of the node. Let's limit the slider to a maximum value of 15.
 
@@ -70,7 +70,7 @@ Let's continue adding some nodes and connections to our logic to define our vase
 
 Let's copy these nodes 4 times so that these circles define our surface, change the Number Slider's names as shown below.
 
-![](<../images/vase4 (1).png>)
+![](<../images/vase4.png>)
 
 > 1. Circles are created by a center point and a radius
 
@@ -78,7 +78,7 @@ Let's copy these nodes 4 times so that these circles define our surface, change 
 
 We are missing a key parameter to our vase, its height. In order to control the vase's height, we create another number slider. We also add a **Code Block** node. Code blocks can help as add personalized code snippets to our workflow. We will use the code block to multiply the height slider by different factors so that we can position our circles along the vase's height.
 
-![](<../images/vase15 (1).png>)
+![](<../images/vase15.png>)
 
 We then use a **Geometry.Translate** node to place circles at the desired height. Since we want to distribute our circles through the vase we use code blocks to multiply the height parameter by a factor.
 
@@ -100,6 +100,6 @@ Let's also turn off the preview in other nodes to only display the Surface.ByLof
 
 Our workflow is ready! We can now use the **Number Sliders** we defined in our script to create different vase designs.
 
-![](../../.gitbook/assets/vase1.gif)
+![](../images/vase1.gif)
 
 ![](../images/vase7.png)

@@ -18,7 +18,7 @@ Dynamo comes pre-installed with software such as **Revit3D**, **FormIt**, **Civi
 
 To start using, launch it from your toolbar panel. Depends on which software you are using, the launch icon can usually be found from the Menu > **Manage** Tab. Click on Dynamo icon ![](images/dynamoCore-halfSize.png) to launch it.
 
-![](<../.gitbook/assets/launch dynamo from revit (1).jpg>)
+![](images/launchdynamofromrevit.jpg)
 
 For more guidance on using Dynamo with a specific software, we recommend referring to the following sections:
 
@@ -33,7 +33,7 @@ If you would like to use Dynamo as a standalone application. Continue reading fo
 
 The Dynamo application is available from the [Dynamo website](http://dynamobim.com). Both official, past or pre-released versions are available from the download page. Visit [Get Dynamo](http://dynamobim.org/download/) page and Click **Download** for the official released version.
 
-![](<images/image (4).png>)
+![](<images/image.png>)
 
 If you are looking for previous or 'bleeding edge' development releases, all versions can be found in the lower section from the same page.
 
@@ -57,7 +57,7 @@ Right-click on the zip file and select **Extract All**...
 
 Choose a destination to unzip all the files.
 
-![](<images/03-04 Extract destination folder (1).png>)
+![](<images/03-04 Extract destination folder.png>)
 
 #### Launching
 

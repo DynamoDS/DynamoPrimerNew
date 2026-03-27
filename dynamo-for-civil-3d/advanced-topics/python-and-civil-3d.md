@@ -31,7 +31,7 @@ As you move through this section, there may be some concepts that you are unfami
 
 When you first edit a new Python node, it will be pre-populated with template code to get you started. Here's a breakdown of the template with explanations about each block.
 
-<figure><img src="../images/Python_Template (1).png" alt=""><figcaption><p>The default Python template in Civil 3D</p></figcaption></figure>
+<figure><img src="../images/Python_Template.png" alt=""><figcaption><p>The default Python template in Civil 3D</p></figcaption></figure>
 
 > 1. Imports the `sys` and `clr` modules, both of which are necessary for the Python interpreter to function properly. In particular, the `clr` module enables .NET namespaces to be treated essentially as Python packages.
 > 2. Loads the standard assemblies (i.e., DLLs) for working with the managed .NET APIs for AutoCAD and Civil 3D.
@@ -179,7 +179,7 @@ As a rule of thumb, it is a best practice to include the bulk of your script log
 
 At this stage, the Python script should output a list of Dynamo points that you can see in the background preview. The last step is to simply create PolyCurves from the points. Note that this could also be accomplished directly in the Python script, but we've intentionally put it outside the script in a node so that it is more visible. Here's what the final graph looks like.
 
-<figure><img src="../images/Python_Final_Script (1).png" alt=""><figcaption><p>The final graph</p></figcaption></figure>
+<figure><img src="../images/Python_Final_Script.png" alt=""><figcaption><p>The final graph</p></figcaption></figure>
 
 ### Result
 

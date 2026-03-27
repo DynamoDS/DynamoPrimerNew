@@ -18,7 +18,7 @@
 
 ### Line
 
-[Line ](4-curves.md#lines)is made of a set of points, each line has at least 2 points. One of the most common way to create line in Dynamo is using `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) to create a Line in Dynamo.
+[Line ](4-curves.md#lines)is made of a set of points, each line has at least 2 points. One of the most common way to create line in Dynamo is using `Line.ByStartPointEndPoint` ![](../images/5-2/4/Linebystartpointendpoint.jpg) to create a Line in Dynamo.
 
 ![](<../images/curves - line by start point end point.jpg>)
 

@@ -34,7 +34,7 @@ Let's use an Alignment as an example.
 
 Say your goal is to change the name of the Alignment. From here, the next node you would add is a **CivilObject.SetName** node.
 
-<figure><img src="images/c3d-node-library-alignment-set-name (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/c3d-node-library-alignment-set-name.png" alt=""><figcaption></figcaption></figure>
 
 At first, this may not seem very intuitive. What is a **CivilObject**, and why does the library not have an **Alignment.SetName** node? The answer is related to _reusability_ and _simplicity._ If you think about it, the process of changing the name of a Civil 3D object is the same whether the object is an Alignment, Corridor, Profile, or something else. So instead of having repetitive nodes that essentially all do the same thing (e.g., **Alignment.SetName, Corridor.SetName, Profile.SetName**, etc.), it would make sense to wrap up that functionality into a single node. That's exactly what **CivilObject.SetName** does!
 

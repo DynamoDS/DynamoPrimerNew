@@ -4,12 +4,12 @@ A powerful feature of Dynamo is that you can edit parameters on a parametric lev
 
 ### Type and Instance Parameters
 
-![Exercise](<images/32 (2).jpg>)
+![Exercise](<images/32.jpg>)
 
 > 1. Instance parameters define the aperture of the panels on the roof surface, ranging from an Aperture Ratio of 0.1 to 0.4.
 > 2. Type-based parameters are applied to every element on the surface because they are the same family type. The material of each panel, for example, can be driven by a type-based parameter.
 
-![Exercise](<images/params (1).jpg>)
+![Exercise](<images/params.jpg>)
 
 > 1. If you've set up a Revit family before, remember that you have to assign a parameter type (string, number, dimension, etc.) Be sure to use the correct data type when assigning parameters from Dynamo.
 > 2. You can also use Dynamo in combination with parametric constraints defined in a Revit family's properties.

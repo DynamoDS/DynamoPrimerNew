@@ -30,7 +30,7 @@ Fill out the relevant information similar to the image above and select _"Publis
 
 Choose a folder to house all of the custom nodes that you plan on publishing locally. Dynamo will check this folder each time it loads, so make sure the folder is in a permanent place. Navigate to this folder and choose _"Select Folder"._ Your Dynamo node is now published locally, and will remain in your Dynamo library each time you load the program!
 
-![](<../images/publish custom node exercise - 04 (1).jpg>)
+![](<../images/publish custom node exercise - 04.jpg>)
 
 To check on the custom node folder location, go to _Dynamo > Preferences > Package Settings > Node and Package Paths._
 

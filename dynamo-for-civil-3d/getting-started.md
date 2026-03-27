@@ -10,7 +10,7 @@ This is a simple example that is meant to demonstrate basic Dynamo functionality
 
 The first thing to do is open up an empty document in Civil 3D. Once you're there, navigate to the **Manage** tab in the Civil 3D ribbon and look for the **Visual Programming** panel.
 
-![](<images/image (7).png>)
+![](<images/image.png>)
 
 Click on the **Dynamo** button, which will launch Dynamo in a separate window.
 
@@ -70,7 +70,7 @@ Nodes in the library are grouped into logical categories based on what they do. 
 
 Here's what your final graph should look like.
 
-<figure><img src="images/c3d-text-create-final (2).png" alt=""><figcaption><p>The finished graph</p></figcaption></figure>
+<figure><img src="images/c3d-text-create-final.png" alt=""><figcaption><p>The finished graph</p></figcaption></figure>
 
 Let's summarize what we've done here:
 

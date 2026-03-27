@@ -1,6 +1,6 @@
 # The Civil 3D Connection
 
-<figure><img src="images/DynamoSwissKnife-WhiteBackground_edit (2).jpg" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="images/DynamoSwissKnife-WhiteBackground_edit.jpg" alt="" width="563"><figcaption></figcaption></figure>
 
 Dynamo for Civil 3D brings the _visual programming_ paradigm to engineers and designers working on civil infrastructure projects. You can think of Dynamo as a sort of digital multi-tool for Civil 3D users - whatever the task, it has just the right tool for the job. Its intuitive interface enables you to create powerful and customizable routines without writing a single line of code. You don't need to _be_ a programmer to use Dynamo, but you do need to be able to _think_ with the logic of a programmer. Coupled with the other chapters in the Primer, this chapter will help you build your logic skills so that you can tackle any task with a computational design mindset.
 
