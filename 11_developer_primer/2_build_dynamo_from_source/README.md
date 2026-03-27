@@ -28,7 +28,7 @@ Prima di poter clonare il repository, è necessario installare git. Seguire ques
 > 1. Selezionare Clone o Download.
 > 2. Copiare l'URL.
 
-Con git installato, è possibile clonare il repository di Dynamo. Iniziare aprendo la riga di comando. Quindi, utilizzare il comando di cambio della directory `cd` per individuare la cartella in cui si desidera clonare i file di origine. In questo caso, è stata creata una cartella denominata `Github` in `Documents`.
+Con git installato, è possibile clonare il repository di Dynamo. Iniziare aprendo la riga di comando. Quindi, utilizzare il comando di cambio della directory `cd` per individuare la cartella in cui si desidera clonare i file di origine. In questo caso, è stata creata una cartella denominata `GitHub` in `Documents`.
 
 `cd C:\Users\username\Documents\GitHub`
 

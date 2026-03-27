@@ -79,7 +79,7 @@ Ora possiamo aprire Dynamo e importare il file `.dll`. Con la funzione Add-ons, 
 
 Se nella libreria viene creata una categoria denominata `MyCustomNode`, il file .dll è stato importato correttamente. Tuttavia, Dynamo ha creato due nodi da quello che voleva essere un singolo nodo. Nella sezione successiva spiegheremo perché ciò accade e come Dynamo legge un file .dll.
 
-![Nodi personalizzati](../../.gitbook/assets/dyn-customnode.jpg)
+![Nodi personalizzati](../../.gitbook/assets/dyn-customnode.png)
 
 > 1. MyCustomNode nella libreria di Dynamo. La categoria Libreria è determinata dal nome `.dll`.
 > 2. SampleFunctions.MultiplyByTwo nell'area di disegno.

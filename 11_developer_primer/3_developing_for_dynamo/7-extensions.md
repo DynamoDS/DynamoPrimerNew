@@ -6,7 +6,7 @@ Le estensioni sono un potente strumento di sviluppo nell'ecosistema di Dynamo. C
 
 Seguendo l'esempio SampleViewExtension dal repository DynamoSamples su GitHub, illustreremo la procedura necessaria per creare una finestra non modale semplice che visualizzi i nodi attivi nel grafico in tempo reale. Per un'estensione della vista è necessario creare un'interfaccia utente per la finestra ed eseguire il binding dei valori ad un modello di vista.
 
-![Finestra dell'estensione della vista](../../.gitbook/assets/dyn-viewextension.jpg)
+![Finestra dell'estensione della vista](../../.gitbook/assets/dyn-viewextension.png)
 
 > 1. La finestra dell'estensione della vista è stata sviluppata seguendo l'esempio SampleViewExtension nel repository su GitHub.
 
@@ -28,7 +28,7 @@ Un'estensione della vista è costituita da tre parti essenziali:
 
 Iniziare creando un nuovo progetto `Class Library` denominato `SampleViewExtension`.
 
-![![Creare una nuova libreria di classi](../../.gitbook/assets/vs-new-project-viewextension-1.jpg).](../../.gitbook/assets/vs-new-project-viewextension-1.jpg)
+![Creazione di una nuova libreria](../../.gitbook/assets/vs-new-project-viewextension-1.jpg)
 
 ![Configurazione di un nuovo progetto](../../.gitbook/assets/vs-new-project-viewextension-2.jpg)
 

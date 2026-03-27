@@ -4,7 +4,7 @@
 
 L'interfaccia utente per Dynamo è organizzata in cinque aree principali. Verrà illustrata brevemente la panoramica qui e verranno descritte ulteriormente l'area di lavoro e la Libreria nelle sezioni seguenti.
 
-\![](<../.gitbook/assets/user interface - ui.jpg>)
+\![](<../.gitbook/assets/user interface - ui.png>)
 
 > 1. Menu
 > 2. Barra degli strumenti
@@ -49,11 +49,11 @@ Se si è bloccati, consultare il menu **?**. È possibile accedere ad uno dei si
 La barra degli strumenti di Dynamo contiene una serie di pulsanti per l'accesso rapido ai file, nonché i comandi Annulla [CTRL+Z] e Ripeti [CTRL+Y]. All'estrema destra è presente un altro pulsante che consente di esportare un'istantanea dell'area di lavoro, che è estremamente utile per la documentazione e la condivisione.
 
 * \![](<../.gitbook/assets/user interface - new file.jpg>) Nuovo: consente di creare un nuovo file .dyn.
-* \![](<../.gitbook/assets/user interface - open (1).jpg>) Apri: consente di aprire un file .dyn (area di lavoro) o .dyf (nodo personalizzato) esistente.
-* \![](<../.gitbook/assets/user interface - save.jpg>) Salva/Salva con nome: consente di salvare il file .dyn o .dyf attivo.
+* \![](<../.gitbook/assets/user interface - open (1).png>) Apri: consente di aprire un file .dyn (area di lavoro) o .dyf (nodo personalizzato) esistente.
+* \![](<../.gitbook/assets/user interface - save.png>) Salva/Salva con nome: consente di salvare il file .dyn o .dyf attivo.
 * \![](<../.gitbook/assets/user interface - undo.jpg>) Annulla: consente di annullare l'ultima azione.
 * \![](<../.gitbook/assets/user interface - redo.jpg>) Ripeti: consente di ripetere l'azione successiva.
-* \![](<../.gitbook/assets/user interface - screenshot.jpg>) Esporta area di lavoro come immagine: consente di esportare l'area di lavoro visibile come file PNG.
+* \![](<../.gitbook/assets/user interface - screenshot.png>) Esporta area di lavoro come immagine: consente di esportare l'area di lavoro visibile come file PNG.
 
 ### Libreria
 

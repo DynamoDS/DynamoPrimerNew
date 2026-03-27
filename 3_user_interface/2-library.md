@@ -2,7 +2,7 @@
 
 La Libreria contiene tutti i nodi caricati, compresi i dieci nodi delle categorie di default forniti con l'installazione, nonché eventuali pacchetti o nodi personalizzati caricati aggiuntivi. I nodi della Libreria sono organizzati in modo gerarchico all'interno di librerie, categorie e, se necessario, sottocategorie.
 
-\![](<../.gitbook/assets/library - library UI.jpg>)
+\![](<../.gitbook/assets/library - library UI.png>)
 
 * Nodi di base: vengono forniti con l'installazione di default.
 * Nodi personalizzati: consentono di memorizzare le routine o il grafico speciale utilizzati più di frequente come nodi personalizzati. È inoltre possibile condividere i nodi personalizzati con la community.
