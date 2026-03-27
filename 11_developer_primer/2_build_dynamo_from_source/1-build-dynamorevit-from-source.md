@@ -199,7 +199,7 @@ Revit 需要一个附加模块文件来识别 DynamoRevit，[安装程序](http:
 
 如果我们继续单步调试该功能，我们将遇到在 DynamoRevit 窗口中显示的异常。在“调用堆栈”窗口中，我们可以看到异常最初抛出自名为 `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve` 的方法。值得庆幸的是，异常在此处得到处理，因此 Dynamo 未崩溃。调试过程通过将我们引入到源代码中的其他方法，来为问题提供上下文。
 
-由于这不是一个开源库，因此我们无法在此处进行更改 - 由于我们有详细信息，因此我们可以通过填写 GitHub [问题](https://docs.github.com/zh/issues/tracking-your-work-with-issues/about-issues)来报告问题以及更多上下文，也可以针对此问题提出解决方案，以进行拉取请求。
+由于这不是一个开源库，因此我们无法在此处进行更改 - 由于我们有详细信息，因此我们可以通过填写 GitHub [问题](https://guides.github.com/features/issues/)来报告问题以及更多上下文，也可以针对此问题提出解决方案，以进行拉取请求。
 
 ![Visual Studio 中的异常](../../.gitbook/assets/vs-exception.jpg)
 

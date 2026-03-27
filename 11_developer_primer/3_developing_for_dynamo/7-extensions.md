@@ -6,7 +6,7 @@
 
 按照 DynamoSamples Github 存储库中的 SampleViewExtension 示例，我们将逐步介绍创建一个实时显示图形中活动节点的简单无模式窗口所需的步骤。视图扩展要求我们为窗口创建 UI，并将值绑定到视图模型。
 
-![视图扩展窗口](../../.gitbook/assets/dyn-viewextension.jpg)
+![视图扩展窗口](../../.gitbook/assets/dyn-viewextension.png)
 
 > 1. 视图扩展窗口是按照 Github 存储库中的 SampleViewExtension 示例开发的。
 
@@ -285,8 +285,8 @@ namespace SampleViewExtension
 
 > 1. 我们已复制到 Dynamo 的视图扩展文件夹中的 `.xml` 文件
 
-这是对视图扩展的基本介绍。有关更复杂的案例研究，请参见 DynaShape 软件包，它是 Github 上的开源项目。该软件包使用支持在 Dynamo 模型视图中实时编辑的视图扩展。
+这是对视图扩展的基本介绍。有关更复杂的案例研究，请参见 DynaShape 软件包，它是 GitHub 上的开源项目。该软件包使用支持在 Dynamo 模型视图中实时编辑的视图扩展。
 
 DynaShape 的软件包安装程序可以从 Dynamo 论坛下载：[https://forum.dynamobim.com/t/dynashape-published/11666](https://forum.dynamobim.com/t/dynashape-published/11666)
 
-源代码可以从 Github 克隆：[https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape)
+源代码可以从 GitHub 克隆：[https://github.com/LongNguyenP/DynaShape](https://github.com/LongNguyenP/DynaShape)

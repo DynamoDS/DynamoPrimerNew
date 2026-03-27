@@ -4,7 +4,7 @@
 
 Dynamo 工作空间由四个主要元素组成。
 
-\![](<../.gitbook/assets/workspace - ui.jpg>)
+\![](<../.gitbook/assets/workspace - ui.png>)
 
 > 1. 所有活动选项卡。
 > 2. 预览模式
@@ -15,11 +15,11 @@ Dynamo 工作空间由四个主要元素组成。
 
 打开新文件时，将默认打开新的主工作空间。
 
-\![](<../.gitbook/assets/workspace - home tab.jpg>)
+\![](<../.gitbook/assets/workspace - home tab.png>)
 
 可以创建一个自定义节点，然后在自定义节点工作空间中将其打开。
 
-\![](<../.gitbook/assets/workspace - custom node tab.jpg>)
+\![](<../.gitbook/assets/workspace - custom node tab.png>)
 
 {% hint style="info" %}每个 Dynamo 窗口中仅允许有一个主工作空间，但可能在选项卡中打开多个自定义节点工作空间。{% endhint %}
 

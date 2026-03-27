@@ -36,7 +36,7 @@
 
 已知问题：
 
-* 命令式块中的命名空间冲突会导致出现意外的输入端口。有关详细信息，请参见 [Github 问题](https://github.com/DynamoDS/Dynamo/issues/8796)。要解决此问题，请在命令式块外部定义函数，如下所示：
+* 命令式块中的命名空间冲突会导致出现意外的输入端口。有关详细信息，请参见 [GitHub 问题](https://github.com/DynamoDS/Dynamo/issues/8796)。要解决此问题，请在命令式块外部定义函数，如下所示：
 
 ```
 pnt = Autodesk.Point.ByCoordinates;

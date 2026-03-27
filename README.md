@@ -1,6 +1,6 @@
 # 关于
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %}Dynamo Hype 视频{% endembed %}
+{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
 
 ## 适用于 Dynamo v2.13 及更高版本
 

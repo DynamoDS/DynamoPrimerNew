@@ -12,7 +12,7 @@ Dynamo Package Manager 是一个软件注册表（类似于 npm），可以从 D
 
 * 在 Dynamo 中，软件包管理器包括安装、发布和更新软件包。
 
-![搜索软件包](../../.gitbook/assets/dynamopackagemanager.jpg)
+![搜索软件包](../../.gitbook/assets/dynamopackagemanager.png)
 
 > 1. 联机搜索软件包：`Packages > Search for a Package...`
 > 2. 查看/编辑已安装的软件包：`Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Dynamo Package Manager 是一个软件注册表（类似于 npm），可以从 D
 
 启动 Dynamo，然后选择 `Packages > Publish New Package...` 以打开 `Publish a Package` 窗口。
 
-![发布软件包](../../.gitbook/assets/dyn-publish-package-add-files.jpg)
+![发布软件包](../../.gitbook/assets/dyn-publish-package-add-files.png)
 
 > 1. 选择 `Add file...` 以浏览要添加到软件包的文件
 > 2. 从 NodeModel 案例研究中选择两个 `.dll` 文件
@@ -32,7 +32,7 @@ Dynamo Package Manager 是一个软件注册表（类似于 npm），可以从 D
 
 在将文件添加到软件包内容中后，为软件包指定名称、描述和版本。使用 Dynamo 发布软件包会自动创建 `pkg.json` 文件。
 
-![软件包设置](../../.gitbook/assets/dyn-publish-package.jpg)
+![软件包设置](../../.gitbook/assets/dyn-publish-package.png)
 
 > 准备好发布的软件包。
 >
