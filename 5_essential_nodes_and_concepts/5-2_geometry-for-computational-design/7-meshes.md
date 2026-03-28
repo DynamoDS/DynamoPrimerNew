@@ -12,7 +12,7 @@ Dynamo define mallas mediante una estructura de datos de cara-vértice. En su ni
 
 Para crear una malla, se necesita una lista de vértices y un sistema de agrupación de esos vértices en caras denominado grupo de índice.
 
-\![](<../../.gitbook/assets/meshes - mesh elements.jpg>)
+\![](<../images/meshes - mesh elements.jpg>)
 
 > 1. Lista de vértices
 > 2. Lista de grupos de índice para definir caras
@@ -25,7 +25,7 @@ La biblioteca también proporciona herramientas para modificar y reparar mallas,
 
 Consulte los [casos reales del Kit de herramientas de malla](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes) para obtener un ejemplo de cómo utilizar este paquete.
 
-\![Kit de herramientas de malla](<../../.gitbook/assets/meshes - mesh toolkit standford bunny.jpg>)
+! [Kit de herramientas de malla](<../images/meshes - mesh toolkit standford bunny.jpg>)
 
 ## Información más detallada sobre...
 
@@ -33,7 +33,7 @@ Consulte los [casos reales del Kit de herramientas de malla](https://github.com/
 
 Una malla es un conjunto de cuadriláteros y triángulos que representa una superficie o una geometría sólida. Al igual que los sólidos, la estructura de un objeto de malla incluye vértices, aristas y caras. Existen propiedades adicionales que hacen que las mallas sean únicas como, por ejemplo, las normales.
 
-![Elementos de malla](../../.gitbook/assets/MeshElements2.jpg)
+![Elementos de malla](../images/MeshElements2.jpg)
 
 > 1. Vértices de malla.
 > 2. Aristas de malla 
@@ -44,7 +44,7 @@ Una malla es un conjunto de cuadriláteros y triángulos que representa una supe
 
 Los vértices de una malla son simplemente una lista de puntos. El índice de los vértices es muy importante al crear una malla u obtener información sobre la estructura de una malla. Para cada vértice, también existe una normal de vértice (vector) correspondiente que describe la dirección media de las caras enlazadas y ayuda a comprender la orientación de "entrada" y "salida" de la malla.
 
-![Vértices + normales](../../.gitbook/assets/vertexNormals.jpg)
+![Vértices + normales](../images/vertexNormals.jpg)
 
 > 1. Vértices
 > 2. Normales de vértice
@@ -53,7 +53,7 @@ Los vértices de una malla son simplemente una lista de puntos. El índice de lo
 
 Una cara es una lista ordenada de tres o cuatro vértices. Por lo tanto, la representación de la "superficie" de una cara de malla se deduce en función de la posición de los vértices que se están indexando. Ya tenemos la lista de vértices que componen la malla, por lo que, en lugar de proporcionar puntos individuales para definir la malla, solo tenemos que usar el índice de los vértices. Esto también nos permite utilizar el mismo vértice en más de una cara.
 
-![](../../.gitbook/assets/meshFaces.jpg)
+![](../images/meshFaces.jpg)
 
 > 1. Una cara cuadrática compuesta por los índices 0, 1, 2 y 3.
 > 2. Una cara triangular creada con los índices 1, 4 y 2\. Tenga en cuenta que se puede cambiar el orden de los grupos de índice; siempre que la secuencia se ordene en el sentido contrario a las agujas del reloj, la cara se definirá correctamente.
@@ -66,7 +66,7 @@ Una cara es una lista ordenada de tres o cuatro vértices. Por lo tanto, la repr
 
 En un capítulo anterior, vimos que las superficies NURBS se definen mediante una serie de curvas NURBS que se dirigen en dos direcciones. Estas direcciones se etiquetan como `U` y `V`, y permiten que una superficie NURB se parametrice de acuerdo con un dominio de superficie bidimensional. Las curvas propiamente dichas se almacenan como ecuaciones en el ordenador, lo que permite calcular las superficies resultantes con un grado de precisión arbitrariamente pequeño. Sin embargo, puede ser difícil combinar varias superficies NURBS. La unión de dos superficies NURBS genera una PolySurface, donde las distintas secciones de la geometría tendrán diferentes parámetros UV y definiciones de curva.
 
-![Puntos de control](../../.gitbook/assets/NURBSvsMESH-01.jpg)
+![Puntos de control](../images/NURBSvsMESH-01.jpg)
 
 > 1. Superficie
 > 2. Curva isoparamétrica (línea isoparamétrica)
@@ -87,7 +87,7 @@ Por otra parte, las mallas están formadas por un número específico de caras y
 
 Otra diferencia importante es la extensión en la que un cambio local en la geometría de malla o NURBS afecta a toda la forma. El desplazamiento de un vértice de una malla solo afecta a las caras adyacentes a ese vértice. En las superficies NURBS, la extensión de la influencia es más complicada y depende del grado de la superficie, así como de los grosores y los nudos de los puntos de control. Sin embargo, por lo general, al desplazar un único punto de control en una superficie NURBS, se produce un cambio más suave y extensivo en la geometría.
 
-![Edición](../../.gitbook/assets/NURBSvsMESH-02.jpg)
+![Edición](../images/NURBSvsMESH-02.jpg)
 
 > 1. Superficie NURBS: el desplazamiento de un punto de control tiene una influencia que se extiende a lo largo de la forma.
 > 2. Geometría de malla: el desplazamiento de un vértice solo influye en los elementos adyacentes.

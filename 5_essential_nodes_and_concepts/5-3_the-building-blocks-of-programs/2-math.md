@@ -8,10 +8,10 @@ Los operadores son un conjunto de componentes que utilizan funciones algebraicas
 
 | Icono                                                | Nombre (sintaxis)     | Entradas                     | Salidas      |
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../../.gitbook/assets/addition (1).jpg>)       | Sumar (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| \![](<../../.gitbook/assets/Subtraction (1).jpg>)    | Restar (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| \![](<../../.gitbook/assets/Multiplication (2).jpg>) | Multiplicar (*****) | var[]...[], var[]...[] | var[]...[] |
-| \![](<../../.gitbook/assets/Division (2).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/addition.jpg>)       | Sumar (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/Subtraction.jpg>)    | Restar (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/Multiplication.jpg>) | Multiplicar ( ***** ) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/Division.jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Ejercicio: la fórmula de la espiral dorada
 
@@ -29,7 +29,7 @@ Combine operadores y variables para formar una relación más compleja mediante 
 
 **Number Sequence**: defina una secuencia de números basada en tres entradas: _start, amount_ y _step_.
 
-\![](<../../.gitbook/assets/math - part I-01.jpg>)
+\![](<../images/math - part I-01.jpg>)
 
 2\. En el paso anterior, hemos creado una lista de números para definir el dominio paramétrico. A continuación, cree un grupo de nodos que representen la ecuación de la espiral dorada.
 
@@ -45,7 +45,7 @@ $$
 
 La imagen siguiente representa la espiral dorada en forma de programación visual. Al desplazarse por el grupo de nodos, intente prestar atención al paralelismo entre el programa visual y la ecuación por escrito.
 
-\![](<../../.gitbook/assets/math - part I-02.jpg>)
+\![](<../images/math - part I-02.jpg>)
 
 > a. **Number Slider**: añada dos controles deslizantes de número al lienzo. Estos controles deslizantes representarán las variables _a_ y _b_ de la ecuación paramétrica. Estas representan una constante que es flexible o parámetros que podemos ajustar hacia el resultado deseado.
 >
@@ -65,11 +65,11 @@ El cúmulo de nodos del paso anterior funcionará correctamente, pero conlleva m
 
 **Point.ByCoordinates**: conecte el nodo de multiplicación superior a la entrada "_x_" y el inferior a la entrada "_y_". Ahora se muestra una espiral paramétrica de puntos en la pantalla.
 
-\![](<../../.gitbook/assets/math - part II-01.gif>)
+\![](<../images/math - part II-01.gif>)
 
 **Polycurve.ByPoints**: conecte **Point.ByCoordinates** del paso anterior a _points_. Podemos dejar _connectLastToFirst_ sin entrada porque no estamos creando una curva cerrada. Se crea una espiral que pasa a través de cada punto definido en el paso anterior.
 
-\![](<../../.gitbook/assets/math - part II-02.jpg>)
+\![](<../images/math - part II-02.jpg>)
 
 Ya hemos completado la espiral Fibonacci. Vamos a profundizar en estos conceptos con dos ejercicios separados a partir de aquí; a uno lo llamaremos caracol y al otro girasol. Se trata de abstracciones de sistemas naturales, pero las dos aplicaciones diferentes de la espiral Fibonacci estarán bien representadas.
 
@@ -77,13 +77,13 @@ Ya hemos completado la espiral Fibonacci. Vamos a profundizar en estos conceptos
 
 **Circle.ByCenterPointRadius**: utilizaremos aquí un nodo de círculo con las mismas entradas que en el paso anterior. El valor por defecto del radio es _1,0_, por lo que vemos una salida de círculos inmediata. Se hace inmediatamente evidente cómo los puntos divergen más respecto al origen.
 
-\![](<../../.gitbook/assets/math - part III-01.jpg>)
+\![](<../images/math - part III-01.jpg>)
 
 **Number Sequence**: es la matriz original de "_t_". Al conectarlo con el valor del radio de **Circle.ByCenterPointRadius**, los centros de círculo siguen divergiendo más respecto del origen, pero el radio de los círculos aumenta, lo que crea un gráfico de círculos Fibonacci con mucho estilo.
 
 Un premio para quién consiga convertirlo a 3D.
 
-\![](<../../.gitbook/assets/math - part III-02.gif>)
+\![](<../images/math - part III-02.gif>)
 
 ### Parte IV: del caracol al filotaxis
 
@@ -91,15 +91,15 @@ Ahora que hemos hecho una concha de caracol circular, vamos a pasar a las rejill
 
 Como punto de partida, vamos a realizar el mismo paso del ejercicio anterior: crear una matriz de puntos de espiral con el nodo **Point.ByCoordinates**.
 
-<figure><img src="../../.gitbook/assets/math - part IV-01.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/math - part IV-01.jpg" alt=""><figcaption></figcaption></figure>
 
 A continuación, siga estos pequeños pasos para generar una serie de espirales en varias rotaciones.
 
-\![](<../../.gitbook/assets/math - part IV-02.jpg>)
+\![](<../images/math - part IV-02.jpg>)
 
 > a. **Geometry.Rotate**: existen varias opciones de **Geometry.Rotate**; asegúrese de que ha elegido el nodo que contiene las entradas _geometry_, _basePlane_ y _degrees_. Conecte **Point.ByCoordinates** en la entrada geometry. Haga clic con el botón derecho en este nodo y asegúrese de que el encaje se haya establecido en "Producto vectorial".
 >
-> <img src="../../.gitbook/assets/math - part IV-03 cross product.jpg" alt="" data-size="original">
+> <img src="../images/math - part IV-03 cross product.jpg" alt="" data-size="original">
 >
 > b. **Plano.XY**: conéctelo a la entrada _basePlane_. Rotaremos alrededor del origen, que es la misma ubicación que la base de la espiral.
 >
@@ -111,8 +111,8 @@ Nuestro resultado empieza a parecerse a un remolino. Ajustemos algunos de los pa
 
 Cambie el tamaño de paso del nodo **Number Range** de _120,0_ a _36,0_. Observe que esto crea más rotaciones y que, por tanto, nos proporciona una rejilla más densa.
 
-\![](<../../.gitbook/assets/math - part IV-04.jpg>)
+\![](<../images/math - part IV-04.jpg>)
 
 Cambie el tamaño de paso del nodo **Number Range** de _36,0_ a _3,6_. Esto nos da una rejilla mucho más densa y la dirección de la espiral no está clara. Damas y caballeros, hemos creado un girasol.
 
-\![](<../../.gitbook/assets/math - part IV-05.jpg>)
+\![](<../images/math - part IV-05.jpg>)

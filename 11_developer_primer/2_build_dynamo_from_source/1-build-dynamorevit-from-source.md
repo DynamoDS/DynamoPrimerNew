@@ -21,7 +21,7 @@ El código del proyecto DynamoRevit se encuentra en un repositorio de GitHub dis
 
 El código fuente de DynamoRevit se encuentra aquí: [https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit).
 
-![DynamoRevit en GitHub](../../.gitbook/assets/github-dynamorevit.jpg)
+![DynamoRevit en GitHub](../images/github-dynamorevit.jpg)
 
 > 1. Clone o descargue el repositorio.
 > 2. Las ramificaciones de DynamoRevit hacen referencia a las versiones de Revit.
@@ -34,13 +34,13 @@ En un proceso similar al de extracción del repositorio de Dynamo, utilizaremos 
 
 > Sustituya `username` por su nombre de usuario.
 
-![Interfaz de línea de comando](../../.gitbook/assets/cli-cd-revit.jpg)
+![Interfaz de línea de comando](../images/cli-cd-revit.jpg)
 
 Ahora podemos clonar el repositorio en este directorio. Aunque necesitaremos especificar una ramificación del repositorio, podemos cambiar a ella después de la clonación.
 
 `git clone https://github.com/DynamoDS/DynamoRevit.git` clona el repositorio desde una dirección URL remota y cambia por defecto a la ramificación principal.
 
-![Interfaz de línea de comando después de clonar el repositorio](../../.gitbook/assets/cli-clone-revit.jpg)
+![Interfaz de línea de comando después de clonar el repositorio](../images/cli-clone-revit.jpg)
 
 Una vez que el repositorio haya terminado de clonarse, cambie el directorio actual a la carpeta del repositorio y pase a la ramificación que coincida con la versión instalada de Revit. En este ejemplo, se utiliza Revit RC2.13.1_Revit2023. Todas las ramificaciones remotas se pueden ver en el menú desplegable de ramificaciones de la página de GitHub.
 
@@ -48,7 +48,7 @@ Una vez que el repositorio haya terminado de clonarse, cambie el directorio actu
  `git checkout RC2.13.1_Revit2023` establece la ramificación actual en `RC2.13.1_Revit2023`.\
  `git branch` comprueba en que ramificación se encuentra y muestra las demás que existen localmente.
 
-![Directorio cambiado a una ramificación](../../.gitbook/assets/cli-branch-revit.jpg)
+![Directorio cambiado a una ramificación](../images/cli-branch-revit.jpg)
 
 > La ramificación marcada con un asterisco es la que se ha restaurado en ese momento. Se muestra la ramificación `Revit2018` porque se ha restaurado anteriormente, por lo que existe localmente.
 
@@ -58,19 +58,19 @@ Es importante elegir la ramificación correcta del repositorio para asegurarse d
 
 Antes de crear el repositorio, necesitaremos restablecer los paquetes NuGet con el archivo `restorepackages.bat` ubicado en la carpeta `src`. Este archivo bat utiliza el administrador de paquetes [NuGet](https://www.nuget.org) para extraer los archivos binarios de Dynamo Core compilados necesarios para DynamoRevit. También puede optar por compilarlos manualmente, pero solo si realiza cambios en DynamoRevit y no en Dynamo Core. Esto agiliza el proceso de inicio. Asegúrese de ejecutar este archivo como administrador.
 
-![Ejecutar como administrador](../../.gitbook/assets/fe-restorepackages.jpg)
+![Ejecutar como administrador](../images/fe-restorepackages.jpg)
 
 > 1. Haga clic con el botón derecho en `restorepackages.bat` y seleccione `Run as administrator`.
 
 Si los paquetes se restablecen correctamente, se añadirá una carpeta `packages` a la carpeta `src`con los últimos paquetes NuGet beta.
 
-![Los paquetes NuGet beta más recientes de Dynamo](../../.gitbook/assets/fe-packages.jpg)
+![Los paquetes NuGet beta más recientes de Dynamo](../images/fe-packages.jpg)
 
 > 1. Los paquetes NuGet beta más recientes de Dynamo
 
 Con los paquetes restablecidos, abra el archivo de la solución de Visual Studio `DynamoRevit.All.sln` en `src` y compile la solución. Es posible que la compilación no pueda encontrar inicialmente el archivo `AssemblySharedInfo.cs`. Si es así, al volver a ejecutar la compilación, se resuelve este problema.
 
-![Compilación de una solución](../../.gitbook/assets/vs-build-dynamorevit.jpg)
+![Compilación de una solución](../images/vs-build-dynamorevit.jpg)
 
 > 1. Seleccione `Build > Build Solution`.
 > 2. Compruebe que la compilación se haya realizado correctamente en la ventana de salida. Debería aparecer el siguiente mensaje. `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`.
@@ -118,7 +118,7 @@ También podemos conseguir que el complemento cargue el selector de versión en 
 
 Además, es necesario eliminar la instancia de Dynamo existente que se suministra con Revit. Para ello, vaya a `C:\\Program Files\Autodesk\Revit 2023\AddIns` y elimine las dos carpetas que contienen **Dynamo**, `DynamoForRevit` y `DynamoPlayerForRevit`. Puede suprimirlas o realizar una copia de seguridad de ellas en una carpeta independiente si necesita recuperar el archivo original de Dynamo para Revit.
 
-![Carpetas DynamoForRevit y DynamoPlayerforRevit](../../.gitbook/assets/fe-dynamo-folders-remove.jpg)
+![Carpetas DynamoForRevit y DynamoPlayerforRevit](../images/fe-dynamo-folders-remove.jpg)
 
 El segundo paso consiste en añadir una ruta de archivo para los montajes de Dynamo Core al archivo `Dynamo.config` de la carpeta `bin` de DynamoRevit. DynamoRevit los cargará cuando se abra el complemento en Revit. Este archivo de configuración permite señalar el complemento DynamoRevit a diferentes versiones de Dynamo Core para desarrollar y probar cambios tanto en Core como en DynamoRevit.
 
@@ -139,7 +139,7 @@ El código debe presentar un aspecto similar al siguiente.
 
 Ahora, al abrir Revit, debería haber un complemento de Dynamo ubicado en la ficha Gestionar.
 
-![El complemento de Dynamo se encuentra en la ficha Gestionar.](../../.gitbook/assets/revit-dynamo.jpg)
+![![El complemento de Dynamo se encuentra en la ficha Gestionar](../images/revit-dynamo.jpg).](../images/revit-dynamo.jpg)
 
 > 1. Seleccione `Manage`.
 > 2. Haga clic en el icono del complemento de Dynamo.
@@ -160,13 +160,13 @@ En la sección anterior, **Compilar Dynamo a partir del código fuente**, se pre
 
 El nodo **Wall.ByCurveAndHeight** genera una excepción cuando se le asigna un valor de PolyCurve como su entrada de curva con el mensaje: _"A BSPlineCurve no implementado"_. Con la depuración, podemos averiguar por qué el nodo no acepta este tipo de geometría como entrada para el parámetro de curva. En este ejemplo, se supone que DynamoRevit se ha generado correctamente y se puede ejecutar como complemento de Revit.
 
-![Excepción generada en el nodo Wall.ByCurveAndHeight](../../.gitbook/assets/dyn-wallbycurveandheight.jpg)
+![Excepción generada en el nodo Wall.ByCurveAndHeight](../images/dyn-wallbycurveandheight.jpg)
 
 > 1. Excepción generada en el nodo Wall.ByCurveAndHeight
 
 Abra primero el archivo de la solución `DynamoRevit.All.sln`, inicie Revit e inicie el complemento DynamoRevit. A continuación, enlace Visual Studio al proceso de Revit con la ventana `Attach to Process`.
 
-![Ventana Asociar al proceso](../../.gitbook/assets/vs-debug-attachprocess.jpg)
+![Ventana Asociar al proceso](../images/vs-debug-attachprocess.jpg)
 
 > Revit y DynamoRevit deben estar en ejecución para mostrarse como un proceso disponible.
 >
@@ -177,21 +177,21 @@ Abra primero el archivo de la solución `DynamoRevit.All.sln`, inicie Revit e in
 
 Con Visual Studio enlazado a Revit, abra el código fuente de Wall.ByCurveAndHeight en `Wall.cs`. Podemos encontrarlo en el Explorador de soluciones, en `Libraries > RevitNodes > Elements`, en la región `Public static constructors` del archivo. Establezca un punto de interrupción en el constructor del tipo de muro para que, cuando se ejecute el nodo en Dynamo, el proceso se interrumpa y se pueda recorrer cada línea de código de forma individual. Por lo general, los constructores de tipo Zero-Touch de Dynamo comienzan por `By<parameters>`.
 
-![Establecimiento de un punto de interrupción](../../.gitbook/assets/vs-debugging-breakpoint.jpg)
+![Establecimiento de un punto de interrupción](../images/vs-debugging-breakpoint.jpg)
 
 > 1. El archivo de clase con el constructor de Wall.ByCurveAndHeight.
 > 2. Establezca un punto de interrupción. Para ello, haga clic a la izquierda del número de línea o haga clic con el botón derecho en la línea de código y seleccione `Breakpoint > Insert Breakpoint`.
 
 Con el punto de interrupción establecido, es necesario que el proceso se ejecute a través de la función Wall.ByCurveAndHeight. La función se puede volver a ejecutar en Dynamo. Para ello, es necesario volver a conectar un cable a uno de sus puertos, lo que obligará al nodo a ejecutarse de nuevo. El punto de interrupción se activará en Visual Studio.
 
-![Activación de puntos de interrupción en Visual Studio](../../.gitbook/assets/vs-breakpoint.jpg)
+![Activación de puntos de interrupción en Visual Studio](../images/vs-breakpoint.jpg)
 
 > 1. El icono de punto de interrupción cambia cuando se activa
 > 2. La ventana de pila de llamadas que muestra el método que se activará a continuación
 
 Ahora recorra cada línea del constructor hasta que se alcance la excepción. El código resaltado en amarillo es la siguiente instrucción que se ejecutará.
 
-![Recorrido en Visual Studio](../../.gitbook/assets/vs-stepover.jpg)
+![Recorrido en Visual Studio](../images/vs-stepover.jpg)
 
 > 1. Las herramientas de depuración para desplazarse por el código.
 > 2. Pulse `Step Over` para ejecutar el código resaltado y, a continuación, suspender la ejecución tras la devolución de la función.
@@ -201,7 +201,7 @@ Si seguimos avanzando por la función, se producirá la excepción que se muestr
 
 Dado que no se trata de una biblioteca de código abierto, no podemos realizar cambios en ella; ahora que hay más información, se puede notificar el problema con más contexto mediante la presentación de una [incidencia](https://guides.github.com/features/issues/) en GitHub o se puede proponer una solución para este problema mediante una solicitud de incorporación de cambios.
 
-![Excepción en Visual Studio](../../.gitbook/assets/vs-exception.jpg)
+![Excepción en Visual Studio](../images/vs-exception.jpg)
 
 > 1. Cuando se llega a la instrucción que provoca la excepción en `Walls.cs`, el proceso de depuración nos acerca lo máximo posible a la raíz del problema en el código de usuario dentro de `ProtoToRevitCurve.cs`.
 > 2. La instrucción que provoca la excepción en `ProtoToRevitCurve.cs`.
@@ -220,7 +220,7 @@ Este proceso es casi idéntico al de extracción de cambios para Dynamo, excepto
 
 El origen simplemente señala a la dirección URL original que hemos clonado.
 
-![Configuración de un directorio en la interfaz de línea de comando](../../.gitbook/assets/cli-pull-revit.jpg)
+![Configuración de un directorio en la interfaz de línea de comando](../images/cli-pull-revit.jpg)
 
 > Deseamos ser conscientes aquí de en qué ramificación nos encontramos y de cuál vamos a obtener datos, por ejemplo, para evitar extraer cambios de `RC2.13.1_Revit2023` e incorporarlos en `Revit2018`.
 

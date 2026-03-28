@@ -16,7 +16,7 @@ La parametrización no resulta especialmente útil a la hora de determinar los p
 
 Las curvas presentan el método _PointAtParameter_, que utiliza un único argumento doble entre 0 y 1, y devuelve el objeto de punto en ese parámetro. Por ejemplo, esta secuencia de comandos busca los puntos en los parámetros 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 y 1:
 
-![](../../.gitbook/assets/GeometricParameterization_01.png)
+![](../images/GeometricParameterization_01.png)
 
 ```js
 pts = {};
@@ -41,7 +41,7 @@ De forma similar, las superficies presentan el método _PointAtParameter_, que u
 
 Aunque la extracción de puntos individuales en una curva y una superficie puede ser útil, a menudo, es necesario que las secuencias de comandos conozcan las características geométricas específicas de un parámetro, como la dirección hacia la que está orientada la curva o la superficie. El método _CoordinateSystemAtParameter_ no solo busca la posición, sino un CoordinateSystem orientado en el parámetro de una curva o una superficie. Por ejemplo, el siguiente archivo de comandos extrae objetos CoordinateSystem orientados a lo largo de una superficie de revolución y utiliza la orientación de los objetos CoordinateSystem para generar líneas que permanecen en la dirección normal a la superficie:
 
-![](../../.gitbook/assets/GeometricParameterization_02.png)
+![](../images/GeometricParameterization_02.png)
 
 ```js
 pts = {};

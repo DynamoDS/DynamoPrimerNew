@@ -12,18 +12,18 @@ La instrucción "If" ("si") es un concepto clave en la programación: "Si _esto_
 
 | Icono                                     | Nombre (sintaxis)             | Entradas            | Salidas |
 | ---------------------------------------- | ------------------------- | ----------------- | ------- |
-| ![](../../.gitbook/assets/If.jpg)        | If (**If**)               | test, true, false | resultado  |
-| ![](../../.gitbook/assets/CodeBlock.jpg) | Code Block (**(x?y:z);**) | x? y, z           | resultado  |
+| ![](../images/If.jpg)        | If (**If**)               | test, true, false | resultado  |
+| ![](../images/CodeBlock.jpg) | Code Block (**(x?y:z);**) | x? y, z           | resultado  |
 
 Veamos un breve ejemplo de cada uno de estos tres nodos en acción mediante la instrucción condicional "If".
 
 En esta imagen, el nodo _Boolean_ se ha establecido en _Verdadero (True)_, lo que significa que el resultado es una cadena que dice: "_este es el resultado si es verdadero"._ Los tres nodos que crean la instrucción _If_ funcionan de la misma forma aquí.
 
-\![](<../../.gitbook/assets/logic - conditional statements 01 false.jpg>)
+\![](<../images/logic - conditional statements 01 false.jpg>)
 
 De nuevo, los nodos funcionan de la misma forma. Si el nodo _Boolean_ se cambia a _Falso (False)_, el resultado es el número _Pi_, tal y como se define en la instrucción _If_ original.
 
-\![](<../../.gitbook/assets/logic - conditional statements 02 true.jpg>)
+[](<../images/logic - conditional statements 02 true.jpg>)
 
 ## Ejercicio: lógica y geometría
 
@@ -37,7 +37,7 @@ De nuevo, los nodos funcionan de la misma forma. Si el nodo _Boolean_ se cambia 
 
 1. Usemos la lógica para separar una lista de números en una lista de números pares y una lista de números impares.
 
-\![](<../../.gitbook/assets/logic - exercise part I-01.jpg>)
+\![](<../images/logic - exercise part I-01.jpg>)
 
 > a. **Number Range**: añada un rango de números al lienzo.
 >
@@ -61,7 +61,7 @@ Basándonos en la lógica establecida en el primer ejercicio, vamos a aplicar es
 
 2\. Comenzaremos por donde dejamos el ejercicio anterior, con los mismos nodos. Las únicas excepciones (además de cambiar el formato) son las siguientes:
 
-\![](<../../.gitbook/assets/logic - exercise part II-01.jpg>)
+\![](<../images/logic - exercise part II-01.jpg>)
 
 > a. Utilice un nodo **Sequence** con estos valores de entrada.
 >
@@ -69,7 +69,7 @@ Basándonos en la lógica establecida en el primer ejercicio, vamos a aplicar es
 
 3\. Creemos primero un grupo independiente de gráficos, como se muestra en la imagen anterior. Este grupo de nodos representa una ecuación paramétrica para definir una curva de línea. Información que debemos tener en cuenta:
 
-\![](<../../.gitbook/assets/logic - exercise part II-02.jpg>)
+\![](<../images/logic - exercise part II-02.jpg>)
 
 > a. El primer **control deslizante de número** representa la frecuencia de la onda; debe tener un mínimo de 1, un máximo de 4 y un paso de 0,01.
 >
@@ -79,23 +79,23 @@ Basándonos en la lógica establecida en el primer ejercicio, vamos a aplicar es
 
 El método que se sigue para las entradas es utilizar nodos numéricos para las propiedades más estáticas y controles deslizantes de número para las más flexibles. Vamos a mantener el rango de números original que definimos al principio de este paso. Sin embargo, la curva de seno que se crea aquí debe tener cierta flexibilidad. Se pueden mover estos controles deslizantes para ver cómo se actualiza la frecuencia y la amplitud de la curva.
 
-\![](<../../.gitbook/assets/logic - exercise part II-03.gif>)
+\![](<../images/logic - exercise part II-03.gif>)
 
 4\. Vamos a saltar un poco en la definición, así que veamos el resultado final para que podamos tener como referencia lo que vamos a conseguir. Los dos primeros pasos se realizan por separado; ahora queremos conectar los dos. Utilizaremos la curva de seno base para controlar la ubicación de los componentes de cremallera y utilizaremos la lógica de verdadero/falso para alternar entre cuadros pequeños y cuadros más grandes.
 
-\![](<../../.gitbook/assets/logic - exercise part II-04.jpg>)
+\![](<../images/logic - exercise part II-04.jpg>)
 
 > a. **Math.RemapRange**: con la secuencia de números creada en el paso 02, vamos a crear una nueva serie de números reasignando el rango. Los números originales del paso 01 van del 0 al 100. Estos números oscilan entre 0 y 1 en las entradas _newMin_ y _newMax_ respectivamente.
 
 5\. Cree un nodo **Curve.PointAtParameter** y, a continuación, conecte la salida **Math.RemapRange** del paso 04 como su entrada _param_.
 
-\![](<../../.gitbook/assets/logic - exercise part II-05.jpg>)
+\![](<../images/logic - exercise part II-05.jpg>)
 
 Este paso crea puntos a lo largo de la curva. Hemos reasignado los números a entre 0 y 1 porque la entrada _param_ busca valores en este rango. El valor _0_ representa el punto inicial; el valor _1_ representa los puntos finales. Todos los números que se encuentran en medio se evalúan dentro del rango de _[0,1]_.
 
 6\. Conecte la salida de **Curve.PointAtParameter** a **List.FilterByBoolMask** para separar la lista de índices pares e impares.
 
-\![](<../../.gitbook/assets/logic - exercise part II-06.jpg>)
+\![](<../images/logic - exercise part II-06.jpg>)
 
 > a. **List.FilterByBoolMask**: conecte el nodo **Curve.PointAtParameter** del paso anterior a la entrada _list_.
 >
@@ -105,7 +105,7 @@ Este paso crea puntos a lo largo de la curva. Hemos reasignado los números a en
 
 **Cuboid.ByLengths**: reproduzca las conexiones representadas en la imagen anterior para obtener una cremallera a lo largo de la curva de seno. Un cubo es solo un cuadro, y estamos definiendo su tamaño basándonos en el punto de curva del centro del cuadro. La lógica de la división par/impar debería ser clara ahora en el modelo.
 
-\![](<../../.gitbook/assets/logic - exercise part II-07.jpg>)
+\![](<../images/logic - exercise part II-07.jpg>)
 
 > a. Lista de ortoedros en índices uniformes.
 >

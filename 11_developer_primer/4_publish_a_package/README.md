@@ -12,7 +12,7 @@ En el navegador, busque paquetes y vea estadísticas. Para ello, visite [https:/
 
 * En Dynamo, Package Manager permite la instalación, la publicación y la actualización de paquetes.
 
-![Búsqueda de paquetes](../../.gitbook/assets/dynamopackagemanager.png)
+![Búsqueda de paquetes](../images/dynamopackagemanager.png)
 
 > 1. Busque paquetes en línea mediante `Packages > Search for a Package...`
 > 2. Vea o edite los paquetes instalados mediante `Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Los paquetes se publican desde Package Manager en Dynamo. El proceso recomendado
 
 Inicie Dynamo y seleccione `Packages > Publish New Package...` para abrir la ventana `Publish a Package`.
 
-![Publicación de un paquete](../../.gitbook/assets/dyn-publish-package-add-files.png)
+![Publicación de un paquete](../images/dyn-publish-package-add-files.png)
 
 > 1. Seleccione `Add file...` para buscar archivos que añadir al paquete.
 > 2. Seleccione los dos archivos `.dll` del caso real de NodeModel.
@@ -32,7 +32,7 @@ Inicie Dynamo y seleccione `Packages > Publish New Package...` para abrir la ven
 
 Una vez que se hayan añadido los archivos al contenido del paquete, asigne al paquete un nombre, una descripción y una versión. Al publicar un paquete mediante Dynamo, se crea automáticamente un archivo `pkg.json`.
 
-![Configuración del paquete](../../.gitbook/assets/dyn-publish-package.png)
+![Configuración del paquete](../images/dyn-publish-package.png)
 
 > Un paquete listo para su publicación.
 >
@@ -41,13 +41,13 @@ Una vez que se hayan añadido los archivos al contenido del paquete, asigne al p
 
 Después de publicar un paquete, los nodos estarán disponibles en la biblioteca de Dynamo, en la categoría `CustomNodeModel`.
 
-![Paquete en la biblioteca de Dynamo](../../.gitbook/assets/dyn-publish-package-library.jpg)
+![Paquete en la biblioteca de Dynamo](../images/dyn-publish-package-library.jpg)
 
 > 1. El paquete que acabamos de crear en la biblioteca de Dynamo
 
 Una vez que el paquete esté listo para publicarse en línea, abra Package Manager, y seleccione `Publish` y, a continuación, `Publish Online`.
 
-![Publicar un paquete en Package Manager](../../.gitbook/assets/dyn-publish-package-directory.jpg)
+![Publicar un paquete en Package Manager](../images/dyn-publish-package-directory.jpg)
 
 > 1. Para ver cómo Dynamo ha aplicado formato al paquete, haga clic en los tres puntos verticales que aparecen a la derecha de "CustomNodeModel" y elija "Mostrar directorio raíz".
 > 2. Seleccione `Publish` y, a continuación, `Publish Online` en la ventana "Publicar un paquete de Dynamo".
@@ -57,7 +57,7 @@ Una vez que el paquete esté listo para publicarse en línea, abra Package Manag
 
 La actualización de un paquete es un proceso similar al de su publicación. Abra Package Manager, seleccione `Publish Version...` en el paquete que debe actualizarse y especifique una versión posterior.
 
-![Publicar una versión del paquete](../../.gitbook/assets/dyn-publish-package-version.jpg)
+![Publicar una versión del paquete](../images/dyn-publish-package-version.jpg)
 
 > 1. Seleccione `Publish Version` para actualizar un paquete existente con nuevos archivos en el directorio raíz y, a continuación, elija si debe publicarse localmente o en línea.
 
@@ -69,7 +69,7 @@ Para obtener más información sobre estas funciones, consulte esta publicación
 
 Se puede acceder al cliente web de Package Manager en el siguiente vínculo: [https://dynamopackages.com/](https://dynamopackages.com).
 
-![Cliente web de Package Manager](../../.gitbook/assets/packagemanager-browser.jpg)
+![Cliente web de Package Manager](../images/packagemanager-browser.jpg)
 
 **Actualización de detalles del paquete**
 
@@ -82,13 +82,13 @@ Los autores pueden editar la descripción del paquete, el enlace al sitio web y 
 
 **Nota**: Las actualizaciones pueden tardar hasta 15 minutos en actualizarse en Package Manager dentro de Dynamo, ya que las actualizaciones del servidor llevan cierto tiempo. Se están tomando medidas para reducir este retardo.
 
-![Nueva interfaz de usuario para actualizar los detalles de paquetes publicados](../../.gitbook/assets/Package-Manager_Image_5.png)
+![Nueva interfaz de usuario para actualizar los detalles de paquetes publicados](../images/Package-Manager_Image_5.png)
 
 **Editar la información sobre compatibilidad de las versiones de paquete publicadas**
 
 La información sobre compatibilidad se puede actualizar de forma retroactiva para las versiones del paquete publicadas anteriormente. Siga estos pasos:
 
-![Editar la información sobre compatibilidad de los paquetes publicados: paso 1](../../.gitbook/assets/Package-Manager_Image_6.png)
+![Editar la información sobre compatibilidad de los paquetes publicados: paso 1](../images/Package-Manager_Image_6.png)
 
 **Paso 1:**
 
@@ -100,7 +100,7 @@ La información sobre compatibilidad se puede actualizar de forma retroactiva pa
 
 Siga el diagrama de flujo siguiente y consulte la tabla de abajo para determinar la opción que mejor se adapta a su paquete.
 
-![Qué opción elegir para el flujo de trabajo "Editar información de compatibilidad"](../../.gitbook/assets/Package-Manager_Image_7.png)
+![Qué opción elegir para el flujo de trabajo "Editar información de compatibilidad"](../images/Package-Manager_Image_7.png)
 
 Usaremos varios ejemplos para analizar diferentes escenarios:
 
@@ -110,8 +110,8 @@ Usaremos varios ejemplos para analizar diferentes escenarios:
 
 **Paquete de ejemplo n.º 3** \- Kit de herramientas de malla: este es un paquete de Dynamo Core que consiste en una colección de nodos de geometría que no tiene dependencias de anfitrión. Por lo tanto, en este caso, la opción ideal sería la opción 3. El paquete se mostrará como "Compatible" en Dynamo y en todos los entornos anfitriones que coincidan con el rango de versiones o la lista de versiones individuales especificados.
 
-![Opciones en la edición de información de compatibilidad](../../.gitbook/assets/Package-Manager_Image_8.png)
+![Opciones en la edición de información de compatibilidad](../images/Package-Manager_Image_8.png)
 
 En función de la opción seleccionada, aparecerán campos específicos de Dynamo o del anfitrión, tal como se muestra en la imagen siguiente.
 
-![Editar información de compatibilidad: paso 2](../../.gitbook/assets/Package-Manager_Image_9.png)
+![Editar información de compatibilidad: paso 2](../images/Package-Manager_Image_9.png)

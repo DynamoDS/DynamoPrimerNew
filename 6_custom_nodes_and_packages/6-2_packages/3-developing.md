@@ -8,7 +8,7 @@ Vamos a trabajar con un paquete de ejemplo que demuestra la asignación de UV de
 
 En esta imagen, se asigna un punto de una superficie a otra mediante coordenadas UV. El paquete se basa en este concepto, pero con una geometría más compleja.
 
-![](../../.gitbook/assets/uvMap.jpg)
+![](../images/uvMap.jpg)
 
 ### Instalación del paquete
 
@@ -16,11 +16,11 @@ En el capítulo anterior, exploramos métodos para panelizar una superficie en D
 
 En Dynamo, haga clic en Paquetes > Package Manager y busque el paquete "MapToSurface" (todo en una sola palabra). Haga clic en Instalar para iniciar la descarga y añada el paquete a la biblioteca.
 
-<figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
 Después de la instalación, los nodos personalizados deben estar disponibles en la sección Complementos > DynamoPrimer.
 
-\![](<../../.gitbook/assets/publish a package - publish locally 04.jpg>)
+\![](<../images/publish a package - publish locally 04.jpg>)
 
 Con el paquete instalado, veamos cómo se configura.
 
@@ -30,37 +30,37 @@ El paquete que estamos creando utiliza cinco nodos personalizados que hemos crea
 
 Este es un paquete sencillo con cinco nodos personalizados. En los pasos siguientes, hablaremos brevemente de la configuración de cada nodo personalizado.
 
-\![](<../../.gitbook/assets/develop package - custom nodes 01 (1) (3).jpg>)
+\![](<../images/develop package - custom nodes 01.jpg>)
 
 #### **PointsToSurface**
 
 Se trata de un nodo personalizado básico en el que se basan los demás nodos de asignación. En pocas palabras, el nodo asigna un punto desde una coordenada UV de la superficie de origen a la ubicación de la coordenada UV de la superficie de destino. Como los puntos son la geometría más primitiva, a partir de la cual se genera geometría más compleja, podemos utilizar esta lógica para asignar geometría 2D e incluso geometría 3D de una superficie a otra.
 
-\![](<../../.gitbook/assets/develop package -pointToSurface.jpg>)
+\![](<../images/develop package -pointToSurface.jpg>)
 
 #### **PolygonsToSurface**
 
 La lógica de ampliar puntos asignados de geometría 1D a geometría 2D se muestra aquí de forma sencilla con polígonos. Observe que se ha anidado el nodo _"PointsToSurface"_ en este nodo personalizado. De esta forma, podemos asignar los puntos de cada polígono a la superficie y, a continuación, volver a generar el polígono a partir de los puntos asignados. Si se mantiene la estructura de datos correcta (una lista de listas de puntos), se pueden mantener los polígonos separados después de reducirlos a un conjunto de puntos.
 
-\![](<../../.gitbook/assets/develop package -polygonsToSurface.jpg>)
+\![](<../images/develop package -polygonsToSurface.jpg>)
 
 #### **NurbsCrvtoSurface**
 
 Aquí se aplica la misma lógica que en el nodo _"PolygonsToSurface"_. En lugar de asignar puntos poligonales, asignamos puntos de control de una curva NURBS.
 
-\![](<../../.gitbook/assets/develop package -nurbsCrvtoSurface.jpg>)
+\![](<../images/develop package -nurbsCrvtoSurface.jpg>)
 
 **OffsetPointsToSurface**
 
 Este nodo es un poco más complejo, pero el concepto es simple. Como el nodo _"PointsToSurface"_, este nodo asigna puntos de una superficie a otra. Sin embargo, también considera los puntos que no se encuentran en la superficie de origen inicial, obtiene su distancia al parámetro UV más cercano y asigna esta distancia a la normal de la superficie de destino en la coordenada UV correspondiente. Esto se ve con mayor claridad al examinar los archivos de ejemplo.
 
-\![](<../../.gitbook/assets/develop package -OffsetPointsToSurface.jpg>)
+\![](<../images/develop package -OffsetPointsToSurface.jpg>)
 
 #### **SampleSrf**
 
 Se trata de un nodo simple que crea una superficie paramétrica para asignar de la rejilla de origen a una superficie ondulada en los archivos de ejemplo.
 
-\![](<../../.gitbook/assets/develop package -sampleSrf.jpg>)
+\![](<../images/develop package -sampleSrf.jpg>)
 
 ### Archivos de ejemplo
 
@@ -68,7 +68,7 @@ Los archivos de ejemplo se pueden encontrar en la carpeta raíz del paquete. Hag
 
 Junto a MapToSurface, haga clic en el menú de puntos verticales > Mostrar directorio raíz.
 
-<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 A continuación, abra la carpeta _"extra"_, que aloja todos los archivos del paquete que no son nodos personalizados. Aquí es donde se almacenan los archivos de ejemplo (si existen) de los paquetes de Dynamo. Las capturas de pantalla que se muestran a continuación explican los conceptos demostrados en cada archivo de ejemplo.
 
@@ -76,40 +76,40 @@ A continuación, abra la carpeta _"extra"_, que aloja todos los archivos del paq
 
 Este archivo de ejemplo muestra cómo se puede utilizar _"PointsToSurface"_ para panelizar una superficie en función de una rejilla de rectángulos. Esto debería resultarle familiar, ya que hicimos una demostración de un flujo de trabajo similar en el [capítulo anterior](../6-1_custom-nodes/2-creating.md).
 
-\![](<../../.gitbook/assets/develop package -sample file 01.jpg>)
+\![](<../images/develop package -sample file 01.jpg>)
 
 #### **02-PanelingWithPolygons-II**
 
 Mediante un flujo de trabajo similar, este archivo de ejercicio muestra una configuración para la asignación de círculos (o polígonos que representan círculos) de una superficie a otra. Utiliza el nodo _"PolygonsToSurface"_.
 
-\![](<../../.gitbook/assets/develop package -sample file 02.jpg>)
+\![](<../images/develop package -sample file 02.jpg>)
 
 #### **03-NurbsCrvsAndSurface**
 
 Este archivo de ejemplo añade cierta complejidad al trabajar con el nodo "NurbsCrvToSurface". La superficie de destino se desfasa una distancia dada y la curva NURBS se asigna a la superficie de destino original y a la superficie de desfase. A partir de ahí, las dos curvas asignadas se solevan para crear una superficie que, a continuación, se engrosa. Este sólido resultante tiene una ondulación que es representativa de las normales de la superficie de destino.
 
-\![](<../../.gitbook/assets/develop package -sample file 03.jpg>)
+\![](<../images/develop package -sample file 03.jpg>)
 
 #### **04-PleatedPolysurface-OffsetPoints**
 
 Este archivo de ejemplo muestra cómo asignar una PolySurface plegada de una superficie de origen a una superficie de destino. Las superficies de origen y de destino son superficies rectangulares que abarcan la rejilla y una superficie de revolución, respectivamente.
 
-\![](<../../.gitbook/assets/develop package -sample file 04a.jpg>)
+\![](<../images/develop package -sample file 04a.jpg>)
 
 La PolySurface de origen asignada desde la superficie de origen a la superficie de destino.
 
-\![](<../../.gitbook/assets/develop package -sample file 04b.jpg>)
+\![](<../images/develop package -sample file 04b.jpg>)
 
 #### **05-SVG-Import**
 
 Dado que los nodos personalizados pueden asignar diferentes tipos de curvas, este último archivo hace referencia a un archivo SVG exportado de Illustrator y asigna las curvas importadas a una superficie de destino.
 
-\![](<../../.gitbook/assets/develop package -sample file 05a.jpg>)
+\![](<../images/develop package -sample file 05a.jpg>)
 
 Mediante el análisis de la sintaxis de un archivo .svg, las curvas se trasladan del formato .xml a PolyCurves de Dynamo.
 
-\![](<../../.gitbook/assets/develop package -sample file 05b.jpg>)
+\![](<../images/develop package -sample file 05b.jpg>)
 
 Las curvas importadas se asignan a una superficie de destino. Esto nos permite diseñar de forma explícita (señalar y hacer clic) una panelización en Illustrator, importarla en Dynamo y aplicarla a una superficie de destino.
 
-\![](<../../.gitbook/assets/develop package -sample file 05c.jpg>)
+\![](<../images/develop package -sample file 05c.jpg>)

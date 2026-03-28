@@ -112,7 +112,7 @@ Los nodos personalizados se organizan en función del `Category Name` especifica
 **ADVERTENCIA**\
  El uso de la notación de puntos en los nombres o categorías de nodos genera subcategorías anidadas adicionales. El `.` funciona como un delimitador para determinar la jerarquía adicional. Este comportamiento es nuevo en la biblioteca de Dynamo 2.0.
 
-![Propiedades de nodo personalizado](../../.gitbook/assets/custom-node-properties.jpg)
+![Propiedades de nodo personalizado](../images/custom-node-properties.jpg)
 
 El nombre de categoría se puede actualizar posteriormente en el archivo .dyf (XML o JSON).
 

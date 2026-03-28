@@ -2,7 +2,7 @@
 
 El Kit de herramientas de malla de Dynamo proporciona herramientas para importar mallas desde formatos de archivo externos, crear una malla a partir de objetos de geometría de Dynamo y generar manualmente mallas mediante sus vértices e índices. La biblioteca también proporciona herramientas para modificar y reparar mallas, o extraer cortes horizontales para su uso en la fabricación.
 
-\![](<../../.gitbook/assets/meshToolkit case study 01.jpg>)
+\![](<../images/meshToolkit case study 01.jpg>)
 
 El Kit de herramientas de malla de Dynamo forma parte de la investigación de mallas en curso de Autodesk y, como tal, seguirá creciendo a lo largo de los próximos años. Esperamos que aparezcan con frecuencia nuevos métodos en este kit y no dude en ponerse en contacto con el equipo de Dynamo para ofrecer comentarios, indicar errores y enviar sugerencias sobre las nuevas funciones.
 
@@ -14,7 +14,7 @@ En el siguiente ejercicio, se muestran algunas operaciones básicas de malla que
 
 En Dynamo, vaya a Paquetes > Package Manager en la barra de menús superior. En el campo de búsqueda, escriba "MeshToolkit", todo en una sola palabra. Haga clic en Instalar y acepte las confirmaciones para iniciar la descarga. Así de fácil.
 
-<figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
 ## Ejercicio: intersección de malla
 
@@ -28,19 +28,19 @@ En este ejemplo, examinaremos el nodo Intersect del Kit de herramientas de malla
 
 Abra primero _Mesh-Toolkit_Intersect-Mesh.dyn in Dynamo._
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 01.jpg>)
+\![](<../images/meshToolkit case study - exercise 01.jpg>)
 
 > 1. **File Path**: busque el archivo de malla que desea importar (_stanford_bunny_tri.obj_). Los tipos de archivo admitidos son .mix y .obj.
 > 2. **Mesh.ImportFile**: conecte la ruta de archivo para importar la malla.
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 02.jpg>)
+\![](<../images/meshToolkit case study - exercise 02.jpg>)
 
 > 1. **Point.ByCoordinates**: cree un punto; este será el centro de un arco.
 > 2. **Arc.ByCenterPointRadiusAngle**: cree un arco alrededor del punto. Esta curva se utilizará para colocar una serie de planos. __ La configuración es la siguiente: __ `radius: 40, startAngle: -90, endAngle:0`.
 
 Cree una serie de planos orientados a lo largo del arco.
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 03.jpg>)
+\![](<../images/meshToolkit case study - exercise 03.jpg>)
 
 > 1. **Code Block**: cree 25 números entre 0 y 1.
 > 2. **Curve.PointAtParameter**: conecte el arco a la entrada _"curve"_ y la salida de bloque de código a la entrada _"param"_ para extraer una serie de puntos a lo largo de la curva.
@@ -49,7 +49,7 @@ Cree una serie de planos orientados a lo largo del arco.
 
 A continuación, utilizaremos estos planos para intersecar la malla.
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 04.jpg>)
+\![](<../images/meshToolkit case study - exercise 04.jpg>)
 
 > 1. **Mesh.Intersect**: interseque los planos con la malla importada, creando una serie de contornos de PolyCurve. Haga clic con el botón derecho en el nodo y defina el encaje como el más largo.
 > 2. **PolyCurve.Curves**: divida las PolyCurves en fragmentos de curva.
@@ -58,12 +58,12 @@ A continuación, utilizaremos estos planos para intersecar la malla.
 
 Antes de continuar, desactive la vista preliminar de algunos de los nodos, como Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal y Arc.ByCenterPointRadiusAngle para ver mejor el resultado.
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 05.jpg>)
+\![](<../images/meshToolkit case study - exercise 05.jpg>)
 
 > 1. **Surface.ByPatch**: cree parches de superficie para cada contorno con el fin de crear "cortes" de la malla.
 
 Añada un segundo conjunto de cortes para obtener un efecto de gofre/cartón de huevos.
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 06.jpg>)
+\![](<../images/meshToolkit case study - exercise 06.jpg>)
 
 Es posible que se haya dado cuenta de que las operaciones de intersección se calculan de forma más rápida con una malla que con un sólido comparable. Los flujos de trabajo como el que se muestra en este ejercicio son excelentes para trabajar con mallas.

@@ -6,13 +6,13 @@ Esta plantilla se encuentra en la ubicación `APPDATA` de la instalación de Dyn
 
 Por lo general, suele ser `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-\![](<../../.gitbook/assets/python templates - appdata folder location.jpg>)
+\![](<../images/python templates - appdata folder location.jpg>)
 
 ### Configuración de la plantilla
 
 Para utilizar esta función, debemos añadir la siguiente línea en el archivo `DynamoSettings.xml`. _(Edítelo en el Bloc de notas)_.
 
-\![](<../../.gitbook/assets/python templates -dynamo settings xml file.png>)
+\![](<../images/python templates -dynamo settings xml file.png>)
 
 Cuando aparece `<PythonTemplateFilePath />`, solo tenemos que sustituir esto por lo siguiente:
 
@@ -71,10 +71,10 @@ Una vez hecho esto, guarde este archivo como `PythonTemplate.py` en la ubicació
 
 Una vez que se haya definido la plantilla de Python, Dynamo la buscará cada vez que se coloque un nodo de Python. Si no se encuentra, se mostrará la ventana de Python por defecto.
 
-\![](<../../.gitbook/assets/python templates - before setup template.jpg>)
+\![](<../images/python templates - before setup template.jpg>)
 
 Si se encuentra la plantilla de Python (como, por ejemplo, nuestra plantilla de Revit), aparecerán todos los elementos por defecto integrados.
 
-\![](<../../.gitbook/assets/python templates - after setup template.jpg>)
+\![](<../images/python templates - after setup template.jpg>)
 
 Aquí encontrará información adicional (de Radu Gidei) sobre esta excelente incorporación. https://github.com/DynamoDS/Dynamo/pull/8122

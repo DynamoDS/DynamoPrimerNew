@@ -8,13 +8,13 @@ En este flujo de trabajo, aprenderá los siguientes procedimientos:
 * Desplace puntos en la vista preliminar 3D mediante manipulación directa.
 * Cambie el modo de ejecución.
 
-![](../../.gitbook/assets/attractor1.gif)
+![](../images/attractor1.gif)
 
 ## Definición de objetivos
 
 En este ejercicio, vamos a crear un círculo (_objetivo_) donde la entrada de radio se define mediante una distancia hasta un punto cercano (_relación_).
 
-![Boceto a mano de un círculo](../../.gitbook/assets/00-Hand-Sketch-of-Circle.png)
+![Boceto a mano de un círculo](../images/00-Hand-Sketch-of-Circle.png)
 
 > Un punto que define una relación basada en la distancia se suele denominar "atractor". Aquí, la distancia a nuestro punto atractor se utilizará para especificar el tamaño del círculo.
 
@@ -28,7 +28,7 @@ En este ejercicio, vamos a crear un círculo (_objetivo_) donde la entrada de ra
 
 Ahora que hemos dibujado un boceto de nuestros objetivos y relaciones, podemos empezar a crear el gráfico. Necesitamos los nodos que representarán la secuencia de acciones que ejecutará Dynamo. Añadamos primero los siguientes nodos: **Number**, **Number Slider**, **Point.ByCoordinates** y **Geometry.DistanceTo y Circle.ByCenterPointRadius.**
 
-\![](<../../.gitbook/assets/attractor (2).png>)
+\![](<../images/attractor (2).png>)
 
 > 1. Entrada > Básico > **Number**
 > 2. Entrada > Básico > **Number Slider**
@@ -40,7 +40,7 @@ Ahora que hemos dibujado un boceto de nuestros objetivos y relaciones, podemos e
 
 Ahora que tenemos algunos nodos, debemos conectar los puertos de los nodos con cables. Estas conexiones definirán el flujo de datos.
 
-\![](<../../.gitbook/assets/attractor (3).png>)
+\![](<../images/attractor (3).png>)
 
 > 1. De **Number** a **Point.ByCoordinates**
 > 2. De **Number Sliders** a **Point.ByCoordinates**
@@ -51,7 +51,7 @@ Ahora que tenemos algunos nodos, debemos conectar los puertos de los nodos con c
 
 Con el flujo de programa definido, solo tenemos que indicarle a Dynamo que lo ejecute. Una vez ejecutado el programa (automáticamente o al hacer clic en Ejecutar en modo manual), los datos pasarán por los cables y se mostrará la vista preliminar 3D.
 
-\![](<../../.gitbook/assets/attractor (4).png>)
+\![](<../images/attractor (4).png>)
 
 > 1. (Haga clic en Ejecutar): si la barra de ejecución está en modo manual, debemos hacer clic en Ejecutar para ejecutar el gráfico.
 > 2. Vista preliminar de nodos: al colocar el puntero sobre el cuadro situado en la esquina inferior derecha de un nodo, se mostrará un elemento emergente con los resultados.
@@ -62,7 +62,7 @@ Con el flujo de programa definido, solo tenemos que indicarle a Dynamo que lo ej
 
 Si el programa está en funcionamiento, debería aparecer un círculo en la vista preliminar 3D que atraviesa el punto atractor. Esto es genial, pero es posible que desee añadir más detalles o controles. Ajustemos la entrada al nodo del círculo para que podamos calibrar la influencia en el radio. Añada otro nodo **Number Slider** al espacio de trabajo y haga doble clic en un área en blanco del espacio de trabajo para añadir un nodo de **bloque de código**. Edite el campo en el bloque de código. Para ello, especifique `X/Y`.
 
-\![](<../../.gitbook/assets/attractor (5).png>)
+\![](<../images/attractor (5).png>)
 
 > 1. **Code Block**
 > 2. De **DistanceTo** y **Number Slider** al **bloque de código**
@@ -72,7 +72,7 @@ Si el programa está en funcionamiento, debería aparecer un círculo en la vist
 
 Un comienzo sencillo al que se le añada complejidad es una manera eficaz de desarrollar el programa de manera incremental. Una vez que esto funcione para un círculo, apliquemos la potencia del programa a varios círculos. En lugar de un punto central, si utilizamos una rejilla de puntos y acomodamos el cambio en la estructura de datos resultante, el programa creará muchos círculos, cada uno con un valor de radio exclusivo definido por la distancia calibrada al punto atractor.
 
-\![](<../../.gitbook/assets/attractor (6).png>)
+\![](<../images/attractor (6).png>)
 
 > 1. Añada un nodo **Number Sequence** y sustituya las entradas de **Point.ByCoordinates**: haga clic con el botón derecho en Point.ByCoordinates y seleccione Encaje > Referencia cruzada.
 > 2. Añada un nodo **Flatten** después de Point.ByCoordinates. Para aplanar una lista por completo, mantenga la entrada `amt` en el valor por defecto `-1`.
@@ -82,7 +82,7 @@ Un comienzo sencillo al que se le añada complejidad es una manera eficaz de des
 
 En ocasiones, la manipulación numérica no es el enfoque adecuado. Ahora puede empujar y estirar manualmente la geometría de punto al desplazarse por la vista preliminar 3D en segundo plano. También podemos controlar otra geometría construida por un punto. Por ejemplo, **Sphere.ByCenterPointRadius** también es capaz de realizar la manipulación directa. Podemos controlar la ubicación de un punto a partir de una serie de valores X, Y y Z con **Point.ByCoordinates**. Sin embargo, con el enfoque de manipulación directa, puede actualizar los valores de los controles deslizantes moviendo manualmente el punto en el modo de **navegación de vista preliminar 3D**. Esto ofrece un enfoque más intuitivo para controlar un conjunto de valores específicos que identifican la ubicación de un punto.
 
-\![](<../../.gitbook/assets/attractor (7).png>)
+\![](<../images/attractor (7).png>)
 
 > 1. Para utilizar la **manipulación directa**, seleccione el panel del punto que se va a mover; aparecerán flechas sobre el punto seleccionado.
 > 2. Cambie al modo de **navegación de vista preliminar 3D**.
@@ -92,6 +92,6 @@ En ocasiones, la manipulación numérica no es el enfoque adecuado. Ahora puede 
 > 1. Coloque el cursor sobre el punto; aparecerán los ejes X, Y y Z.
 > 2. Haga clic y arrastre la flecha coloreada para mover el eje correspondiente; los valores de **Number Slider** se actualizarán al instante con el punto desplazado manualmente.
 
-\![](<../../.gitbook/assets/attractor (1).png>)
+\![](<../images/attractor (1).png>)
 
 > 1. Tenga en cuenta que, antes de la **manipulación directa**, solo se conectó un control deslizante al componente **Point.ByCoordinates**. Al desplazar manualmente el punto en la dirección X, Dynamo generará automáticamente un nuevo componente **Number Slider** para la entrada X.

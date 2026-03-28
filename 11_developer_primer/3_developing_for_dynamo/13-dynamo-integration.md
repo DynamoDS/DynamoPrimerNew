@@ -377,7 +377,7 @@ Si se ha activado el enlace de elementos, podemos conservar el trabajo existente
 
 ***
 
-![Crear muros](../../.gitbook/assets/creates_walls.png)
+![Crear muros](../images/creates_walls.png)
 
 #### Enlace de elementos en comparación con el seguimiento
 
@@ -466,15 +466,15 @@ En la siguiente ejecución del gráfico, buscamos en el seguimiento y encontramo
 
 El flujo de dos ejecuciones consecutivas del gráfico que crea un único `TraceExampleItem` presenta el siguiente aspecto:
 
-![Primera llamada](../../.gitbook/assets/Trace-first-call.png)
+![Primera llamada](../images/Trace-first-call.png)
 
-![Segunda llamada](../../.gitbook/assets/Trace-second-call.png)
+![Segunda llamada](../images/Trace-second-call.png)
 
 La misma idea se muestra en el siguiente ejemplo con un caso de uso más realista de un nodo de DynamoRevit.
 
 #### Diagrama de seguimiento
 
-![Pasos de seguimiento](../../.gitbook/assets/trace_diagram.png) ![Flujo de seguimiento](../../.gitbook/assets/trace_alt_diagram.png)
+![Pasos de seguimiento](../images/trace_diagram.png) ![Flujo de seguimiento](../images/trace_alt_diagram.png)
 
 #### NOTA
 
@@ -560,7 +560,7 @@ Las fases importantes de la ejecución del constructor en relación con el enlac
 
 * Los objetos de seguimiento guardados en versiones anteriores a Dynamo 3.0 se almacenan mediante SOAP, por lo que no son compatibles con las versiones más recientes. Los datos de enlace de elementos guardados anteriormente se omitirán y se mostrará el siguiente mensaje en Dynamo 3.0 y versiones posteriores. Los datos de enlace de elementos se guardarán la próxima vez que ejecute y guarde el espacio de trabajo.
 
-![Compatibilidad de enlaces de elementos](../../.gitbook/assets/element_binding_compatibility_message.jpg)
+![Compatibilidad de enlaces de elementos](../images/element_binding_compatibility_message.jpg)
 
 #### ¿ElementBinding debería estar activado por defecto?
 
@@ -574,7 +574,7 @@ De forma general, **una buena forma de conceptualizar estos nodos es como una fu
 
 Hay varios nodos `Selection` en DynamoRevit. Podemos dividirlos en al menos los siguientes dos grupos:
 
-![Nodos de selección de Revit](../../.gitbook/assets/revitSelectionNodes.png)
+![Nodos de selección de Revit](../images/revitSelectionNodes.png)
 
 1.  Selección de interfaz de usuario:
 
@@ -602,7 +602,7 @@ Hay varios nodos `Selection` en DynamoRevit. Podemos dividirlos en al menos los 
 
 Los flujos de trabajo de D4C son muy similares a la descripción anterior para Revit; aquí hay dos conjuntos típicos de nodos de selección en D4C:
 
-![Nodos de selección de Civil 3D](../../.gitbook/assets/civilSelectionNodes.png)
+![Nodos de selección de Civil 3D](../images/civilSelectionNodes.png)
 
 ### Incidencias:
 
@@ -613,9 +613,9 @@ Los flujos de trabajo de D4C son muy similares a la descripción anterior para R
 
 ### Diagramas de flujo de datos
 
-![Flujo de selección](../../.gitbook/assets/selectModelElement.png)
+![Flujo de selección](../images/selectModelElement.png)
 
-![Flujo de selección 2](../../.gitbook/assets/selectElementFace.png)
+![Flujo de selección 2](../images/selectElementFace.png)
 
 ### Implementación técnica: (consulte los diagramas anteriores):
 
@@ -624,7 +624,7 @@ Los nodos de selección se implementan al heredar de los tipos de `SelectionBase
 * Implementación de un método `BuildOutputAST`: este método debe devolver un AST, que se ejecutará en algún momento en el futuro, cuando se vaya a ejecutar el nodo. En el caso de los nodos de selección, debe devolver elementos o geometría a partir de los ID de elemento. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * La implementación de `BuildOutputAST` es una de las partes más difíciles de la implementación de nodos de `NodeModel`/interfaz de usuario. Es mejor poner toda la lógica posible en una función de C# y simplemente incrustar un nodo de llamada de función AST en AST. Tenga en cuenta que aquí `node` hace referencia a un nodo AST en el árbol de sintaxis abstracta, no a un nodo en el gráfico de Dynamo.
 
-![Flujo de selección 2](../../.gitbook/assets/selectionAST.png)
+![Flujo de selección 2](../images/selectionAST.png)
 
 * Serialización:
   *   Dado que se trata de tipos derivados de `NodeModel` explícitos (no ZeroTouch), también requieren la implementación de un [JsonConstructor] que se utilizará durante la deserialización del nodo a partir de un archivo .dyn.

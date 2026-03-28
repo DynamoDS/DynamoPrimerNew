@@ -4,7 +4,7 @@
 
 Si sabe cómo escribir secuencias de comandos en Python y desea obtener más funcionalidad de los nodos estándar de Python de Dynamo, podemos utilizar Zero-Touch para crear nuestros propios nodos. Comencemos con un ejemplo sencillo que nos permite pasar una secuencia de comandos de Python como una cadena a un nodo Zero-Touch donde se ejecuta la secuencia de comandos y se devuelve un resultado. Este caso real se basará en los recorridos y los ejemplos de la sección Introducción. Consulte estos ejemplos si es la primera vez que crea nodos Zero-Touch.
 
-![Un nodo Zero-Touch que ejecutará una cadena de secuencia de comandos de Python.](../../.gitbook/assets/python-case-study.png)
+![Un nodo Zero-Touch que ejecutará una cadena de secuencia de comandos de Python.](../images/python-case-study.png)
 
 > Un nodo Zero-Touch que ejecutará una cadena de secuencia de comandos de Python.
 
@@ -68,7 +68,7 @@ output = str(volume)
 
 Una limitación de los nodos estándar de Python es que solo tienen un único puerto de salida, por lo que si deseamos devolver varios objetos, debemos crear una lista y recuperar cada objeto. Si modificamos el ejemplo anterior para devolver un diccionario, podemos añadir tantos puertos de salida como deseemos. Consulte la sección Devolución de varios valores de Conceptos avanzados de Zero-Touch para obtener información detallada sobre los diccionarios.
 
-![Este nodo nos permite devolver tanto el volumen del ortoedro como su centroide.](../../.gitbook/assets/python-multi-case-study.png)
+![Este nodo nos permite devolver tanto el volumen del ortoedro como su centroide.](../images/python-multi-case-study.png)
 
 > Este nodo nos permite devolver tanto el volumen del ortoedro como su centroide.
 

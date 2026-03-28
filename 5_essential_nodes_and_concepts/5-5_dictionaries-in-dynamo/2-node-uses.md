@@ -2,7 +2,7 @@
 
 Dynamo 2.0 presenta una gran variedad de nodos de diccionario para nuestro uso. Esto incluye los nodos de _creación, acción y consulta_.
 
-\![](<../../.gitbook/assets/dictionary nodes - nodes.jpg>)
+\![](<../images/dictionary nodes - nodes.jpg>)
 
 #### Crear
 

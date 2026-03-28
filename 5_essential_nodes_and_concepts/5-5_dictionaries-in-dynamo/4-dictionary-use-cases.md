@@ -6,7 +6,7 @@ Si la respuesta es afirmativa, es probable que haya hecho algo similar a lo que 
 
 En la imagen mostrada a continuación, recopilamos todas las habitaciones del modelo de Revit, obtenemos el índice de la habitación que deseamos (por número de habitación) y, por último, obtenemos la habitación en el índice.
 
-\![](<../../.gitbook/assets/dictionary - collect room in revit model.jpg>)
+\![](<../images/dictionary - collect room in revit model.jpg>)
 
 > 1. Recopile todas las habitaciones del modelo.
 > 2. Especifique el número de habitación que se va a buscar.
@@ -25,27 +25,27 @@ En la imagen mostrada a continuación, recopilamos todas las habitaciones del mo
 
 Ahora vamos a recrear esta idea mediante diccionarios. Debemos recopilar primero todas las habitaciones de nuestro modelo de Revit.
 
-\![](<../../.gitbook/assets/dictionary - exercise I - 01.jpg>)
+\![](<../images/dictionary - exercise I - 01.jpg>)
 
 > 1. Seleccionamos la categoría de Revit con la que deseamos trabajar (en este caso, trabajaremos con habitaciones).
 > 2. Le indicamos a Dynamo que recopile todos esos elementos.
 
 A continuación, debemos decidir las claves que vamos a utilizar para buscar estos datos. (La información sobre las claves se encuentra en la sección [¿Qué es un diccionario?](1-what-is-a-dictionary.md)).
 
-\![](<../../.gitbook/assets/dictionary - exercise I - 02.jpg>)
+\![](<../images/dictionary - exercise I - 02.jpg>)
 
 > 1. Los datos que usaremos son el número de habitación.
 
 Ahora crearemos el diccionario con las claves y los elementos especificados.
 
-\![](<../../.gitbook/assets/dictionary - exercise I - 03.jpg>)
+\![](<../images/dictionary - exercise I - 03.jpg>)
 
 > 1. El nodo **Dictionary.ByKeysValues** creará un diccionario con las entradas correspondientes especificadas.
 > 2. `Keys` debe ser una cadena, mientras que `values` puede ser diversos tipos de objeto.
 
 Por último, ahora podemos recuperar una habitación del diccionario con su número de habitación.
 
-\![](<../../.gitbook/assets/dictionary - exercise I - 04.jpg>)
+\![](<../images/dictionary - exercise I - 04.jpg>)
 
 > 1. `String` será la clave que utilizaremos para buscar un objeto en el diccionario.
 > 2. **Dictionary.ValueAtKey** obtendrá ahora el objeto del diccionario.
@@ -54,19 +54,19 @@ Por último, ahora podemos recuperar una habitación del diccionario con su núm
 
 Con esta misma lógica de diccionario, también podemos crear diccionarios con objetos agrupados. Si deseamos buscar todas las habitaciones en un nivel determinado, podemos modificar el gráfico anterior de la siguiente manera.
 
-\![](<../../.gitbook/assets/dictionary - exercise II - 01.jpg>)
+\![](<../images/dictionary - exercise II - 01.jpg>)
 
 > 1. En lugar de utilizar el número de habitación como clave, ahora podemos utilizar un valor de parámetro (en este caso, utilizaremos nivel).
 
-\![](<../../.gitbook/assets/dictionary - exercise II - 02.jpg>)
+\![](<../images/dictionary - exercise II - 02.jpg>)
 
 > 2. Ahora podemos agrupar las habitaciones por el nivel en el que residen.
 
-\![](<../../.gitbook/assets/dictionary - exercise II - 03.jpg>)
+\![](<../images/dictionary - exercise II - 03.jpg>)
 
 > 3. Con los elementos agrupados por el nivel, ahora podemos utilizar las claves compartidas (claves exclusivas) como nuestra clave para el diccionario y las listas de habitaciones como elementos.
 
-\![](<../../.gitbook/assets/dictionary - exercise II - 04.jpg>)
+\![](<../images/dictionary - exercise II - 04.jpg>)
 
 > 4. Por último, mediante los niveles del modelo de Revit, podemos buscar en el diccionario las habitaciones que se encuentran en ese nivel. `Dictionary.ValueAtKey` utilizará el nombre de nivel y devolverá los objetos de habitación presentes en ese nivel.
 

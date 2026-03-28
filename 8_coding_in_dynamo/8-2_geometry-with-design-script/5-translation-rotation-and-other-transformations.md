@@ -6,7 +6,7 @@ Algunos objetos de geometría se pueden crear indicando de forma explícita las 
 
 La transformación geométrica más sencilla es una traslación, que desplaza un objeto un número determinado de unidades en las direcciones X, Y y Z.
 
-![](../../.gitbook/assets/Transformations_01.png)
+![](../images/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -22,7 +22,7 @@ p2 = p.Translate(10, -20, 50);
 
 Aunque todos los objetos de Dynamo se pueden trasladar mediante la adición del método _.Translate_ al final del nombre del objeto, las transformaciones más complejas requieren transformar el objeto de un CoordinateSystem subyacente a un nuevo CoordinateSystem. Por ejemplo, para girar un objeto 45 grados alrededor del eje X, debemos transformar el objeto de su CoordinateSystem existente sin rotación a un CoordinateSystem que se había girado 45 grados alrededor del eje X con el método _.Transform_:
 
-![](../../.gitbook/assets/Transformations_02.png)
+![](../images/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -42,7 +42,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Además de trasladarse y rotarse, los objetos CoordinateSystem también se pueden crear cortados o con su escala ajustada. Se puede ajustar la escala de un CoordinateSystem con el método _.Scale_:
 
-![](../../.gitbook/assets/Transformations_03.png)
+![](../images/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -58,7 +58,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Los objetos CoordinateSystem cortados se crean mediante la introducción de vectores no ortogonales en el constructor CoordinateSystem.
 
-![](../../.gitbook/assets/Transformations_04.png)
+![](../images/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(

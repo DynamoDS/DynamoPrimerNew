@@ -4,7 +4,7 @@
 
 El objeto geométrico más sencillo de la biblioteca de geometría estándar de Dynamo es un punto. Toda la geometría se crea mediante funciones especiales denominadas constructores, que devuelven un nuevo ejemplar de ese tipo de geometría específico. En Dynamo, los constructores empiezan por el nombre del tipo de objeto, en este caso, "Point", seguido del método de construcción. Para crear un punto tridimensional especificado con las coordenadas cartesianas X, Y y Z, utilice el constructor _ByCoordinates_:
 
-![](../../.gitbook/assets/GeometryBasics_01.png)
+![](../images/GeometryBasics_01.png)
 
 ```js
 // create a point with the following x, y, and z
@@ -20,7 +20,7 @@ Los constructores de Dynamo se designan normalmente con el prefijo _By_ y, al in
 
 La mayoría de los objetos tienen muchos constructores distintos y se puede utilizar el constructor _BySphericalCoordinates_ para crear un punto que resida en una esfera, especificado por el radio de la esfera, y un primer y un segundo ángulo de rotación (especificados en grados):
 
-![](../../.gitbook/assets/GeometryBasics_02.png)
+![](../images/GeometryBasics_02.png)
 
 ```js
 // create a point on a sphere with the following radius,
@@ -38,7 +38,7 @@ p = Point.BySphericalCoordinates(cs, radius, theta,
 
 Los puntos se pueden utilizar para crear geometría dimensional superior como, por ejemplo, líneas. Se puede utilizar el constructor _ByStartPointEndPoint_ para crear un objeto de línea entre dos puntos:
 
-![](../../.gitbook/assets/GeometryBasics_03.png)
+![](../images/GeometryBasics_03.png)
 
 ```js
 // create two points:
@@ -53,7 +53,7 @@ l = Line.ByStartPointEndPoint(p1, p2);
 
 De forma similar, las líneas se pueden utilizar para crear geometría de superficie dimensional superior, por ejemplo, mediante el constructor _Loft_, que utiliza una serie de líneas o curvas e interpola una superficie entre ellas.
 
-![](../../.gitbook/assets/GeometryBasics_04.png)
+![](../images/GeometryBasics_04.png)
 
 ```js
 // create points:
@@ -79,7 +79,7 @@ surf = Surface.ByLoft([l1, l2, l3]);
 
 Las superficies también se pueden utilizar para crear geometría sólida dimensional superior, por ejemplo, mediante el engrosado de la superficie a una distancia especificada. Muchos objetos tienen funciones enlazadas a ellos denominadas métodos, que permiten al programador ejecutar comandos en ese objeto específico. Entre los métodos comunes a todas las partes de geometría, se incluyen _Translate_ y _Rotate_, que trasladan (desplazan) y rotan la geometría una cantidad especificada. Las superficies presentan el método _Thicken_, que utiliza una única entrada, un número que especifica el nuevo grosor de la superficie.
 
-![](../../.gitbook/assets/GeometryBasics_05.png)
+![](../images/GeometryBasics_05.png)
 
 ```js
 p1 = Point.ByCoordinates(3, 10, 2);
@@ -101,7 +101,7 @@ solid = surf.Thicken(4.75, true);
 
 Los comandos de _intersección_ pueden extraer geometría dimensional inferior de objetos dimensionales superiores. Esta geometría dimensional inferior extraída puede formar la base para una geometría dimensional superior en un proceso cíclico de creación, extracción y recreación. En este ejemplo, se utiliza el sólido generado para crear una superficie y se utiliza la superficie para crear una curva.
 
-![](../../.gitbook/assets/GeometryBasics_06.png)
+![](../images/GeometryBasics_06.png)
 
 ```js
 p1 = Point.ByCoordinates(3, 10, 2);

@@ -2,7 +2,7 @@
 
 Antes de este capítulo, en el manual de introducción, se describe cómo implementar las eficaces funciones de creación de secuencias de comandos visuales de Dynamo. Un conocimiento exhaustivo de estas funciones constituye una base sólida y el primer paso para la creación de programas visuales potentes. Cuando utilizamos los programas visuales sobre el terreno, los compartimos con compañeros, solucionamos errores o probamos los límites, nos encontraremos con problemas adicionales que deberemos afrontar. Si otra persona va a utilizar el programa o espera abrirlo dentro de seis meses, este debe tener una claridad gráfica y lógica inmediata. Dynamo dispone de numerosas herramientas para gestionar la complejidad del programa y, en este capítulo, se proporcionan las directrices para utilizarlas.
 
-![grupos](../.gitbook/assets/cad-chart-visual.jpg)
+![grupos](images/cad-chart-visual.jpg)
 
 ## Reducción de la complejidad
 
@@ -15,7 +15,7 @@ A medida que desarrolla el gráfico de Dynamo y prueba sus ideas, su tamaño y s
 * Puede cambiar el **color del grupo para diferenciar** su finalidad (entradas y funciones).
 * Puede utilizar grupos para empezar a **organizar el gráfico a fin de simplificar la creación de nodos personalizados**.
 
-![](../.gitbook/assets/graphstrategy2.png)
+![](images/graphstrategy2.png)
 
 > Los colores de este programa identifican la finalidad de cada grupo. Esta estrategia se puede utilizar para crear una jerarquía en cualquier norma o plantilla gráficas que desarrolle.
 >
@@ -30,7 +30,7 @@ A medida que desarrolla el gráfico de Dynamo y prueba sus ideas, su tamaño y s
 * En ocasiones, se puede utilizar un bloque de código para **escribir un método de nodo o número de forma más rápida que con la búsqueda** (Point.ByCoordinates, Number, String y Formula).
 * Los bloques de código son útiles **cuando se desean definir funciones personalizadas en DesignScript para reducir el número de nodos de un gráfico**.
 
-![](../.gitbook/assets/graphstrategy3.png)
+![](images/graphstrategy3.png)
 
 > Los ejemplos 1 y 2 realizan la misma función. Se tardó mucho menos en escribir unas pocas líneas de código que en buscar y añadir cada nodo individualmente. El bloque de código también es mucho más conciso.
 >
@@ -53,7 +53,7 @@ A medida que desarrolla el gráfico de Dynamo y prueba sus ideas, su tamaño y s
   * Es más difícil de comprender para otros usuarios.
   * No hay una forma sencilla de volver a la versión de programación visual.
 
-![](../.gitbook/assets/graphstrategy3_1.png)
+![](images/graphstrategy3_1.png)
 
 > 1. Programa existente
 > 2. Bloque de código creado con el método de nodo a código
@@ -65,7 +65,7 @@ A medida que desarrolla el gráfico de Dynamo y prueba sus ideas, su tamaño y s
 * El uso de List@Level puede ayudarle a **reducir la complejidad del gráfico mediante la sustitución de los nodos List.Map y List.Combine**, que pueden ocupar una cantidad considerable de espacio en el lienzo.
 * List@Level proporciona un** método más rápido que List.Map/List.Combine para crear una lógica de nodo**, lo que permite acceder a los datos de cualquier nivel de una lista directamente desde el puerto de entrada de un nodo
 
-![](../.gitbook/assets/graphstrategy4.png)
+![](images/graphstrategy4.png)
 
 > Podemos comprobar cuántos valores devuelve True BoundingBox.Contains y en qué listas mediante la activación de List@Level para la entrada "list" de CountTrue. List@Level permite al usuario determinar de qué nivel se obtendrán los datos. El uso de List@Level es flexible, eficaz y muy recomendado frente a otros métodos en los que se utilizan List.Map y List.Combine.
 >
@@ -84,7 +84,7 @@ Además de conseguir que el gráfico sea lo más sencillo y eficaz posible, inte
 * Si otros van a trabajar con el gráfico, **asegúrese de que el diseño de cables y nodos fluya con facilidad antes de enviarlo**.
 * Para facilitar la alineación, **utilice la función "Presentación de nodo de limpieza" para alinear automáticamente** el gráfico, aunque de forma menos precisa que manualmente.
 
-\![](<../.gitbook/assets/graphstrategy5 (1).png>)
+![](<images/graphstrategy5.png>)
 
 > 1. Gráfico desorganizado
 > 2. Gráfico alineado
@@ -96,7 +96,7 @@ Además de conseguir que el gráfico sea lo más sencillo y eficaz posible, inte
 * El cambio de nombre de las entradas puede ayudar a otros a comprender más fácilmente el gráfico, **sobre todo, si los elementos a los que se van a conectar no aparecen en la pantalla**.
 * **Tenga cuidado de no cambiar el nombre de los nodos que no sean entradas**. Una alternativa a esto es crear un nodo personalizado a partir de un clúster de nodos y cambiarle el nombre; se comprenderá que contiene otro elemento.
 
-![](../.gitbook/assets/graphstrategy6.png)
+![](images/graphstrategy6.png)
 
 > 1. Entradas para la manipulación de superficies
 > 2. Entradas para los parámetros arquitectónicos
@@ -109,7 +109,7 @@ Además de conseguir que el gráfico sea lo más sencillo y eficaz posible, inte
 * Debe añadir una nota si alguna parte del **gráfico requiere una explicación en lenguaje sencillo** que los nodos no pueden expresar.
 * Debe añadir una nota si un conjunto de **nodos o un grupo son demasiado grandes o complejos y no se pueden entender al instante**.
 
-![](../.gitbook/assets/graphstrategy7.png)
+![](images/graphstrategy7.png)
 
 > 1. Una nota que describe la parte del programa que devuelve distancias de traslado sin procesar.
 > 2. Una nota que describe el código que asigna esos valores a una onda sinusoidal.
@@ -124,7 +124,7 @@ Al crear la secuencia de comandos visual, es importante comprobar que se devuelv
 
 * Utilice las burbujas de visualización y vista preliminar al crear el programa para **comprobar que las salidas clave devuelvan lo que esperaba**.
 
-![](../.gitbook/assets/graphstrategy8.png)
+![](images/graphstrategy8.png)
 
 > Los nodos de visualización se utilizan para comparar:
 >
@@ -155,7 +155,7 @@ Es muy probable que otro usuario abra el programa en algún momento, incluso aun
 * Debe utilizar un nodo personalizado **si una parte del gráfico se reutilizará a menudo** en otros programas.
 * Debe utilizar un nodo personalizado si desea **compartir una función con la comunidad de Dynamo**.
 
-![](../.gitbook/assets/graphstrategy9.png)
+![](images/graphstrategy9.png)
 
 > La recopilación del programa de traslado de puntos en un nodo personalizado consigue que un programa potente y exclusivo sea más fácil de comprender. Los puertos de entrada con nombres adecuados ayudarán a otros usuarios a comprender cómo utilizar el nodo. No olvide añadir descripciones y los tipos de datos necesarios para cada entrada.
 >
@@ -170,7 +170,7 @@ Es muy probable que otro usuario abra el programa en algún momento, incluso aun
 * Al crear una plantilla, puede normalizar los **colores de grupo y los tamaños de tipo de letra** para organizar en categorías los flujos de trabajo o las acciones de datos.
 * Al crear una plantilla, puede incluso normalizar el modo en que desea utilizar una **etiqueta, un color o un estilo para indicar la diferencia entre los flujos de trabajo front-end y back-end** del gráfico.
 
-![](../.gitbook/assets/graphstrategy10.png)
+![](images/graphstrategy10.png)
 
 > 1. La interfaz de usuario, o front-end, del programa incluye un nombre de proyecto, controles deslizantes de entrada y geometría de importación.
 > 2. El back-end del programa.
@@ -184,13 +184,13 @@ Es muy probable que otro usuario abra el programa en algún momento, incluso aun
 
 Ahora que hemos establecido algunos procedimientos recomendados, vamos a aplicarlos a un programa que hemos creado rápidamente. Aunque el programa genera correctamente la cubierta, el estado del gráfico es un "mapa mental" del autor. Carece de organización o una descripción de su uso. Recorreremos los procedimientos recomendados para organizar, describir y analizar el programa a fin de que otros usuarios puedan comprender cómo utilizarlo.
 
-![](../.gitbook/assets/graphstrategy11.png)
+![](images/graphstrategy11.png)
 
 > El programa funciona, pero el gráfico está desorganizado.
 
 Comencemos por determinar los datos y la geometría devueltos por el programa.
 
-![](../.gitbook/assets/graphstrategy12.png)
+![](images/graphstrategy12.png)
 
 > Es crucial comprender cuándo se producen cambios importantes en los datos para establecer divisiones lógicas o modularidad. Pruebe a inspeccionar el resto del programa con nodos de visualización para ver si se pueden determinar los grupos antes de pasar al siguiente paso.
 >
@@ -199,7 +199,7 @@ Comencemos por determinar los datos y la geometría devueltos por el programa.
 
 Una vez que entendemos las partes elementales del programa, organicémoslas en grupos.
 
-![](../.gitbook/assets/graphstrategy13.png)
+![](images/graphstrategy13.png)
 
 > Los grupos permiten al usuario diferenciar visualmente las partes del programa.
 >
@@ -211,13 +211,13 @@ Una vez que entendemos las partes elementales del programa, organicémoslas en g
 
 Con los grupos establecidos, alinee los nodos para crear continuidad visual en el gráfico.
 
-![](../.gitbook/assets/graphstrategy14.png)
+![](images/graphstrategy14.png)
 
 > La continuidad visual ayuda al usuario a ver el flujo del programa y las relaciones implícitas entre nodos.
 
 Consiga que el programa sea más accesible mediante la adición de otra capa de mejoras gráficas. Añada notas para describir cómo funciona un área específica del programa, proporcione nombres personalizados a las entradas y asigne colores a los distintos tipos de grupos.
 
-![](../.gitbook/assets/graphstrategy15.png)
+![](images/graphstrategy15.png)
 
 > Estas mejoras gráficas permiten al usuario obtener más información sobre lo que realiza el programa. Los diferentes colores de grupo ayudan a distinguir las entradas de las funciones.
 >
@@ -226,7 +226,7 @@ Consiga que el programa sea más accesible mediante la adición de otra capa de 
 
 Antes de empezar a condensar el programa, busquemos una ubicación estratégica para introducir el simulador de drenaje de la secuencia de comandos de Python. Conecte la salida de la primera superficie de cubierta a escala con la entrada de secuencias de comandos respectiva.
 
-![](../.gitbook/assets/graphstrategy16.png)
+![](images/graphstrategy16.png)
 
 > Hemos optado por integrar secuencias de comandos en este punto del programa para que la simulación de drenaje pueda ejecutarse en la superficie de cubierta original. No se está previsualizando esa superficie específica, pero esto nos evita tener que elegir la superficie superior de la PolySurface achaflanada.
 >
@@ -237,7 +237,7 @@ Antes de empezar a condensar el programa, busquemos una ubicación estratégica 
 
 Ahora que todo está en su lugar, vamos a simplificar el gráfico.
 
-![](../.gitbook/assets/graphstrategy17.png)
+![](images/graphstrategy17.png)
 
 > La condensación del programa con el método de nodo a código y el nodo personalizado ha reducido considerablemente el tamaño del gráfico. Los grupos que crean la superficie de cubierta y los muros se han convertido en código, ya que son muy específicos de este programa. El grupo de traslado de puntos se encuentra en un nodo personalizado, ya que podría utilizarse en otro programa. En el archivo de ejemplo, cree su propio nodo personalizado a partir del grupo de puntos de traslado.
 >
@@ -246,14 +246,14 @@ Ahora que todo está en su lugar, vamos a simplificar el gráfico.
 
 Como paso final, cree valores predefinidos para formas de cubierta de ejemplo.
 
-![](../.gitbook/assets/graphstrategy18.png)
+![](images/graphstrategy18.png)
 
 > Estas entradas son los controladores principales de la forma de cubierta y ayudarán a los usuarios a ver el potencial del programa.
 
 Nuestro programa con vistas de dos valores predefinidos.
 
-![](../.gitbook/assets/graphstrategy19.png)
+![](images/graphstrategy19.png)
 
-![](../.gitbook/assets/graphstrategy20.png)
+![](images/graphstrategy20.png)
 
 > Los patrones de drenaje de la cubierta proporcionan al usuario una vista analítica de los valores predefinidos respectivos.

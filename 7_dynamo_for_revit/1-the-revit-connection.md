@@ -1,6 +1,6 @@
 # La conexión de Revit
 
-\![](<../.gitbook/assets/revit connection link.jpg>)
+\![](<images/revit connection link.jpg>)
 
 Dynamo para Revit amplía el modelado de información de construcción mediante el entorno de datos y lógica de un editor gráfico de algoritmos. Su flexibilidad, junto con una base de datos de Revit robusta, ofrece una nueva perspectiva para BIM.
 
@@ -23,7 +23,7 @@ A medida que Revit y Dynamo continúan evolucionando, es posible que observe que
 
 ### Historia de Dynamo
 
-![Historia](../.gitbook/assets/earlyScreenshot.jpg)
+![Historia](images/earlyScreenshot.jpg)
 
 Con un equipo dedicado de desarrolladores y una ferviente comunidad, el proyecto ha avanzado mucho desde sus humildes inicios.
 
@@ -37,13 +37,13 @@ En un editor de proyectos o familias de Revit, vaya a Complementos y haga clic e
 
 {% hint style="warning" %}* Tenga en cuenta que Dynamo solo se ejecutará en el archivo en el que se abrió. {% endhint %}
 
-\![](<../.gitbook/assets/launch dynamo from revit (1).jpg>)
+![](images/1/launchdynamofromrevit.jpg)
 
 Al abrir Dynamo en Revit, hay una nueva categoría denominada "Revit". Se trata de una adición completa a la interfaz de usuario que ofrece nodos que se adaptan específicamente a los flujos de trabajo de Revit.*
 
 {% hint style="warning" %}* El gráfico de Dynamo solo funcionará al abrirse en Dynamo para Revit mediante la familia de nodos específica de Revit. Si se abre un gráfico de Dynamo para Revit en Dynamo Sandbox, por ejemplo, no aparecerán los nodos de Revit. {% endhint %}
 
-\![](<../.gitbook/assets/revit connection - running dynamo in revit 02.jpg>)
+\![](<images/revit connection - running dynamo in revit 02.jpg>)
 
 ### Bloqueo de nodos
 
@@ -59,4 +59,4 @@ Dynamo es un proyecto de código abierto que evoluciona constantemente y gran pa
 
 Dynamo también mantiene un blog activo. Lea las últimas publicaciones para obtener información sobre los avances más recientes.
 
-![Blog](../.gitbook/assets/blog.png)
+![Blog](images/blog.png)

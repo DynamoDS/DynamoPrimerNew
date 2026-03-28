@@ -2,7 +2,7 @@
 
 Los nodos basados en NodeModel proporcionan una flexibilidad y una eficacia mucho mayores que los nodos Zero-Touch. En este ejemplo, vamos a llevar el nodo de rejilla Zero-Touch al siguiente nivel mediante la adición de un control deslizante integrado que determina aleatoriamente el tamaño del rectángulo.
 
-![Gráfico de rejilla rectangular](../../.gitbook/assets/cover-image-2.jpg)
+![Gráfico de rejilla rectangular](../images/cover-image-2.jpg)
 
 > El control deslizante ajusta la escala de las celdas en relación con su tamaño para que el usuario no tenga que proporcionar un control deslizante con el rango correcto.
 
@@ -33,7 +33,7 @@ Un nodo NodeModel solo puede llamar a funciones, por lo que es necesario separar
 
 Cree dos proyectos de biblioteca de clases de C# en la solución: uno para las funciones y otro para implementar la interfaz de NodeModel.
 
-![Adición de una nueva biblioteca de clases](../../.gitbook/assets/vs-new-class-projects.jpg)
+![Adición de una nueva biblioteca de clases](../images/vs-new-class-projects.jpg)
 
 > 1. Haga clic con el botón derecho en la solución y seleccione `Add > New Project`.
 > 2. Seleccione Biblioteca de clases.
@@ -43,7 +43,7 @@ Cree dos proyectos de biblioteca de clases de C# en la solución: uno para las f
 
 A continuación, debemos cambiar el nombre de las bibliotecas de clases que se han creado automáticamente y añadir una al proyecto `CustomNodeModel`. La clase `GridNodeModel` implementa la clase abstracta NodeModel; `GridNodeView` se utiliza para personalizar la vista, y `GridFunction` contiene las funciones a las que se debe llamar.
 
-![Explorador de soluciones](../../.gitbook/assets/vs-new-class.jpg)
+![Explorador de soluciones](../images/vs-new-class.jpg)
 
 > 1. Añada otra clase. Para ello, haga clic con el botón derecho en el proyecto `CustomNodeModel`, seleccione `Add > New Item...` y, a continuación, elija `Class`.
 > 2. En el proyecto `CustomNodeModel`, necesitamos las clases `GridNodeModel.cs` y `GridNodeView.cs`.
@@ -51,14 +51,14 @@ A continuación, debemos cambiar el nombre de las bibliotecas de clases que se h
 
 Antes de agregar código a las clases, añada los paquetes necesarios para este proyecto. `CustomNodeModel` necesitará ZeroTouchLibrary y WpfUILibrary, y `CustomNodeModelFunction` solo necesitará ZeroTouchLibrary. WpfUILibrary se utilizará en la personalización de la interfaz de usuario que realizaremos más adelante y ZeroTouchLibrary se empleará para crear geometría. Los paquetes se pueden añadir individualmente para los proyectos. Como estos paquetes presentan dependencias, Core y DynamoServices se instalarán automáticamente.
 
-![Instalación de paquetes](../../.gitbook/assets/vs-add-packages.jpg)
+![Instalación de paquetes](../images/vs-add-packages.jpg)
 
 > 1. Haga clic con el botón derecho en un proyecto y seleccione `Manage NuGet Packages`.
 > 2. Instale solo los paquetes necesarios para ese proyecto.
 
 Visual Studio copiará los paquetes NuGet a los que hemos hecho referencia en el directorio de compilación. Esto se puede establecer en "false" (falso) para que no tengamos ningún archivo innecesario en el paquete.
 
-![Desactivación de la copia de paquete local](../../.gitbook/assets/vs-disable-package-copying.jpg)
+![Desactivación de la copia de paquete local](../images/vs-disable-package-copying.jpg)
 
 > 1. Seleccione paquetes NuGet de Dynamo.
 > 2. Establezca `Copy Local` en "false" (falso).
@@ -199,7 +199,7 @@ Esta clase de función es muy similar al caso real de rejilla de Zero-Touch con 
 
 Al igual que hemos añadido referencias para los paquetes NuGet, `CustomNodeModel` deberá hacer referencia a `CustomNodeModelFunction` para llamar a la función.
 
-![Adición de una referencia](../../.gitbook/assets/vs-add-project-reference.jpg)
+![Adición de una referencia](../images/vs-add-project-reference.jpg)
 
 > La instrucción "using" de CustomNodeModel estará inactiva hasta que hagamos referencia a la función
 >
@@ -240,7 +240,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 Una vez configurada la estructura del proyecto, utilice el entorno de diseño de Visual Studio para generar un control de usuario y definir sus parámetros en un archivo `.xaml`. En el cuadro de herramientas, añada un control deslizante a `<Grid>...</Grid>`.
 
-![Adición de un nuevo control deslizante](../../.gitbook/assets/vs-usercontrol.jpg)
+![Adición de un nuevo control deslizante](../images/vs-usercontrol.jpg)
 
 > 1. Haga clic con el botón derecho en `CustomNodeModel` y seleccione `Add > New Item`.
 > 2. Seleccione `WPF`.
@@ -295,7 +295,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 Antes de generar el proyecto, el último paso es añadir un archivo `pkg.json` para que Dynamo pueda leer el paquete.
 
-![Adición de un archivo JSON](../../.gitbook/assets/vs-pkg-json.jpg)
+![Adición de un archivo JSON](../images/vs-pkg-json.jpg)
 
 > 1. Haga clic con el botón derecho en `CustomNodeModel` y seleccione `Add > New Item`.
 > 2. Seleccione `Web`.
@@ -341,7 +341,7 @@ Antes de generar el proyecto, el último paso es añadir un archivo `pkg.json` p
 
 La principal causa habitual es que el nodo se ha creado con un constructor que ha vuelto a crear los puertos. En su lugar, debería haberse utilizado un constructor que cargara los puertos. Estos constructores suelen estar marcados con `[JsonConstructor]`. _Consulte los ejemplos siguientes:_
 
-\![JSON interrumpido](<../../.gitbook/assets/broken-json (1).jpg>)
+![JSON interrumpido](<../images/broken-json.jpg>)
 
 Esto puede deberse a lo siguiente:
 

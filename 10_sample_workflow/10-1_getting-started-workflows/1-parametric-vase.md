@@ -12,7 +12,7 @@ En este flujo de trabajo, aprenderá los siguientes procedimientos:
 * Cree y modifique elementos geométricos mediante nodos.
 * Visualice los resultados de diseño en tiempo real.
 
-![](../../.gitbook/assets/vase1.gif)
+![](../images/vase1.gif)
 
 ## Definición de objetivos
 
@@ -22,7 +22,7 @@ Imaginemos que vamos a diseñar un jarrón de arcilla que tenga en cuenta las pr
 
 Vamos a utilizar una metodología similar para definir nuestro jarrón. Crearemos cuatro círculos a diferentes alturas y con diferentes radios y, a continuación, crearemos una superficie solevando esos círculos.
 
-![](../../.gitbook/assets/vase2.png)
+![](../images/vase2.png)
 
 ## Para empezar
 
@@ -34,7 +34,7 @@ Vamos a utilizar una metodología similar para definir nuestro jarrón. Crearemo
 
 Necesitamos los nodos que representarán la secuencia de acciones que ejecutará Dynamo. Como sabemos que estamos intentando crear un círculo, busquemos primero un nodo que realice esta acción. Utilice el **campo de búsqueda** o examine la **biblioteca** para buscar el nodo **Circle.ByCenterPointRadius**, y añada este al espacio de trabajo.
 
-![](../../.gitbook/assets/vase8.png)
+![](../images/vase8.png)
 
 > 1. Busque > "Circle...".
 > 2. Seleccione > "ByCenterPointRadius".
@@ -42,25 +42,25 @@ Necesitamos los nodos que representarán la secuencia de acciones que ejecutará
 
 Examinemos más detalladamente este nodo. A la izquierda, se muestran las entradas del nodo (_centerPoint_ y _radius_) y, a la derecha, la salida del nodo (Circle). Observe que las salidas presentan una línea azul claro. Esto significa que la entrada tiene un valor por defecto. Para obtener más información sobre la entrada, coloque el cursor sobre su nombre. La entrada _radius_ requiere una entrada doble y tiene el valor por defecto 1.
 
-![](../../.gitbook/assets/vase10.png)
+![](../images/vase10.png)
 
 Dejaremos el valor por defecto de _centerPoint_, pero añadiremos un **control deslizante de número** para manejar el radio. Al igual que con el nodo **Circle.ByCenterPointRadius**, utilizaremos la biblioteca para buscar el **control deslizante de número** y lo añadiremos al gráfico.
 
 Este nodo es algo diferente al anterior, ya que contiene un control deslizante. Puede utilizar la interfaz para cambiar el valor de salida del control deslizante.
 
-\![](<../../.gitbook/assets/vase13 (1).gif>)
+![](<../images/vase13.gif>)
 
 El control deslizante se puede configurar mediante el botón desplegable situado a la izquierda del nodo. Vamos a limitar el control deslizante a un valor máximo de 15.
 
-![](../../.gitbook/assets/vase11.png)
+![](../images/vase11.png)
 
 Lo colocaremos a la izquierda del nodo **Circle.ByCenterPointRadius** y conectaremos los dos nodos. Para ello, seleccionaremos la salida del **control deslizante de número** y lo conectaremos a la entrada del radio.
 
-![](../../.gitbook/assets/vase12.png)
+![](../images/vase12.png)
 
 Cambiemos también el nombre del control deslizante de número a "Radio superior". Para ello, haga doble clic en el nombre del nodo.
 
-![](../../.gitbook/assets/vase14.png)
+![](../images/vase14.png)
 
 ## Pasos siguientes
 
@@ -70,7 +70,7 @@ Vamos a seguir añadiendo algunos nodos y conexiones a nuestra lógica para defi
 
 Vamos a copiar estos nodos cuatro veces para que estos círculos definan nuestra superficie; cambie los nombres de los controles deslizantes de número, como se muestra a continuación.
 
-\![](<../../.gitbook/assets/vase4 (1).png>)
+![](<../images/vase4.png>)
 
 > 1. Los círculos se crean mediante un centro y un radio.
 
@@ -78,11 +78,11 @@ Vamos a copiar estos nodos cuatro veces para que estos círculos definan nuestra
 
 Nos falta un parámetro clave para nuestro jarrón, su altura. Para controlar la altura del jarrón, crearemos otro control deslizante de número. También añadiremos el nodo **Code Block**. Los bloques de código permiten añadir fragmentos de código personalizados al flujo de trabajo. Utilizaremos el bloque de código para multiplicar el control deslizante de altura por diferentes factores para que podamos colocar los círculos a lo largo de la altura del jarrón.
 
-\![](<../../.gitbook/assets/vase15 (1).png>)
+![](<../images/vase15.png>)
 
 A continuación, utilizaremos un nodo **Geometry.Translate** para colocar círculos a la altura deseada. Como deseamos distribuir los círculos a través del jarrón, usaremos bloques de código para multiplicar el parámetro de altura por un factor.
 
-![](../../.gitbook/assets/vase5.png)
+![](../images/vase5.png)
 
 > 2\. Los círculos se trasladan (desplazan) mediante una variable en el eje Z.
 
@@ -92,7 +92,7 @@ Para crear una superficie mediante el nodo **Surface.ByLoft**, debemos combinar 
 
 Desactivaremos también la vista preliminar en otros nodos para visualizar únicamente Surface.ByLoft.
 
-![](../../.gitbook/assets/vase6.png)
+![](../images/vase6.png)
 
 > 3\. Una superficie se crea solevando los círculos trasladados.
 
@@ -100,6 +100,6 @@ Desactivaremos también la vista preliminar en otros nodos para visualizar únic
 
 Ya está listo nuestro flujo de trabajo. Ahora podemos utilizar los **controles deslizantes de número** que hemos definido en la secuencia de comandos para crear diferentes diseños de jarrones.
 
-![](../../.gitbook/assets/vase1.gif)
+![](../images/vase1.gif)
 
-![](../../.gitbook/assets/vase7.png)
+![](../images/vase7.png)

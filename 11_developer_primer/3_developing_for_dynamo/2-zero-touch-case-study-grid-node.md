@@ -4,22 +4,22 @@ Con un proyecto de Visual Studio en ejecución, veremos cómo generar un nodo pe
 
 En este ejemplo, se abordarán algunas de las funciones y los conceptos que deben tenerse en cuenta al crear un nodo Zero-Touch. Después de generar el nodo personalizado y añadirlo a Dynamo, asegúrese de consultar la página Conceptos avanzados de Zero-Touch para obtener una visión más detallada de los valores de entrada por defecto, la devolución de varios valores, la documentación, los objetos, el uso de tipos de geometría de Dynamo y las migraciones.
 
-![Gráfico de rejilla rectangular](../../.gitbook/assets/cover-image.jpg)
+![Gráfico de rejilla rectangular](../images/cover-image.jpg)
 
 ### Nodo de rejilla rectangular personalizado <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 Para comenzar a generar el nodo de rejilla, cree un nuevo proyecto de biblioteca de clases de Visual Studio. Consulte la página Introducción para obtener un recorrido detallado sobre cómo configurar un proyecto.
 
-![Creación de un nuevo proyecto en Visual Studio](../../.gitbook/assets/vs-new-project-1.jpg)
+![Creación de un nuevo proyecto en Visual Studio](../images/vs-new-project-1.jpg)
 
-![Configuración de un nuevo proyecto en Visual Studio](../../.gitbook/assets/vs-new-project-2.jpg)
+![Configuración de un nuevo proyecto en Visual Studio](../images/vs-new-project-2.jpg)
 
 > 1. Seleccione `Class Library` como tipo de proyecto.
 > 2. Asigne el nombre `CustomNodes` al proyecto.
 
 Dado que vamos a crear geometría, debemos hacer referencia al paquete NuGet adecuado. Instale el paquete ZeroTouchLibrary desde el administrador de paquetes NuGet. Este paquete es necesario para la instrucción `using Autodesk.DesignScript.Geometry;`.
 
-![Paquete ZeroTouchLibrary](../../.gitbook/assets/vs-nugetpackage.jpg)
+![Paquete ZeroTouchLibrary](../images/vs-nugetpackage.jpg)
 
 > 1. Busque el paquete ZeroTouchLibrary.
 > 2. Utilizaremos este nodo en la compilación actual de Dynamo. Seleccione la versión del paquete que coincida con la versión de Dynamo.
@@ -84,13 +84,13 @@ namespace CustomNodes
 
 Si el proyecto presenta un aspecto similar al siguiente, continúe e intente compilar el archivo `.dll`.
 
-![Compilación de un archivo DLL](../../.gitbook/assets/vs-grids.jpg)
+![Compilación de un archivo DLL](../images/vs-grids.jpg)
 
 > 1. Seleccione Compilar > Compilar solución.
 
 En la carpeta `bin` del proyecto, busque un archivo `.dll`. Si la compilación se ha realizado correctamente, podemos añadir el archivo `.dll` a Dynamo.
 
-![Nodos personalizados de Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.png)
+![Nodos personalizados de Dynamo](../images/RectangularGrid-Dynamo.png)
 
 > 1. El nodo personalizado RectangularGrids de la biblioteca de Dynamo
 > 2. El nodo personalizado en el lienzo
@@ -100,7 +100,7 @@ En la carpeta `bin` del proyecto, busque un archivo `.dll`. Si la compilación s
 
 En el ejemplo anterior, hemos creado un nodo bastante sencillo que solo define el método `RectangularGrids`. Sin embargo, es posible que deseemos crear información de herramientas para los puertos de entrada o proporcionar al nodo un resumen como los nodos estándar de Dynamo. La adición de estas funciones a nodos personalizados facilita su uso, sobre todo, si un usuario desea buscarlas en la biblioteca.
 
-![Información de herramientas de entrada](../../.gitbook/assets/nodemodification.png)
+![Información de herramientas de entrada](../images/nodemodification.png)
 
 > 1. Un valor de entrada por defecto
 > 2. Información de herramientas para la entrada de xCount
@@ -155,7 +155,7 @@ namespace CustomNodes
 
 Para añadir información de herramientas, se necesita un archivo xml en el directorio del proyecto. Visual Studio puede generar automáticamente un archivo `.xml` se activa la opción.
 
-![Activación de la documentación XML](../../.gitbook/assets/vs-xml.jpg)
+![Activación de la documentación XML](../images/vs-xml.jpg)
 
 > 1. Active aquí el archivo de documentación XML y especifique una ruta de archivo. Esta acción generará un archivo XML.
 

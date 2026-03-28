@@ -4,7 +4,7 @@
 
 Una lista es un conjunto de elementos o ítems. Pensemos en un racimo de plátanos, por ejemplo. Cada plátano es un elemento de la lista (o racimo). Es más fácil coger un racimo de plátanos que cada plátano individualmente y lo mismo se aplica a la agrupación de elementos por relaciones paramétricas en una estructura de datos.
 
-![Plátanos](../../.gitbook/assets/Bananas_white_background_DS.jpg)
+![Plátanos](../images/Bananas_white_background_DS.jpg)
 
 > Fotografía de [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
@@ -20,7 +20,7 @@ Por ejemplo, si tuviéramos que contar el número de dedos que tenemos en la man
 
 Tenga en cuenta que sigue habiendo cinco elementos en la lista; solo que la lista utiliza un sistema de recuento basado en cero. Y los elementos que se almacenan en la lista no solo pueden ser números. Pueden ser cualquier tipo de datos compatible con Dynamo, como puntos, curvas, superficies, familias, etc.
 
-\![](<../../.gitbook/assets/what's a list - zero based indices.jpg>)
+![](<../images/whats-a-list-zero-based-indices.jpg>)
 
 > a. Índice
 >
@@ -36,7 +36,7 @@ Estos índices son elementos decisivos cuando se trabaja con listas.
 
 Las entradas y las salidas, que pertenecen a las listas, varían en función del nodo de Dynamo que se utilice. Como ejemplo, vamos a utilizar una lista de cinco puntos y a conectar esta salida a dos nodos de Dynamo diferentes: **PolyCurve.ByPoints** y **Circle.ByCenterPointRadius**:
 
-\![Ejemplos de entrada](<../../.gitbook/assets/what's a list - inputs and outputs.jpg>)
+![Ejemplos de entrada](<../images/whats-a-list-inputs-and-outputs.jpg>)
 
 > 1. La entrada _points_ de **PolyCurve.ByPoints** busca _"Point[]"_. Esto representa una lista de puntos.
 > 2. La salida de **PolyCurve.ByPoints** es una PolyCurve única creada a partir de una lista de cinco puntos.
@@ -59,23 +59,23 @@ Imagine un nodo que crea segmentos de línea entre puntos (**Line.ByStartPointEn
 
 La forma más sencilla es conectar las entradas una a una hasta que uno de los flujos se acabe. Esto se denomina algoritmo "Lista más corta". Este es el comportamiento por defecto de los nodos de Dynamo:
 
-\![](<../../.gitbook/assets/what's a list - lacing - shortest.jpg>)
+![](<../images/whats-a-list-lacing-shortest.jpg>)
 
 #### Lista más larga
 
 El algoritmo "Lista más larga" sigue conectando entradas, reutilizando elementos, hasta que todos los flujos se acaben:
 
-\![](<../../.gitbook/assets/what's a list - lacing - longest.jpg>)
+![](<../images/whats-a-list-lacing-longest.jpg>)
 
 #### Producto vectorial
 
 Por último, el método "Producto vectorial" hace todas las conexiones posibles:
 
-\![](<../../.gitbook/assets/what's a list - lacing - cross.jpg>)
+![](<../images/whats-a-list-lacing-cross.jpg>)
 
 Como puede ver, existen diferentes métodos para dibujar líneas entre estos conjuntos de puntos. Las opciones de encaje se encuentran haciendo clic con el botón derecho en el centro de un nodo y eligiendo el menú "Encaje".
 
-\![](<../../.gitbook/assets/what's a list - right click lacing opt.jpg>)
+![](<../images/whats-a-list-right-click-lacing-opt.jpg>)
 
 ### ¿Qué es la replicación?
 
@@ -121,16 +121,16 @@ Cambiaremos el encaje en **Point.ByCoordinates**, pero no cambiaremos nada más 
 
 Si se selecciona _Lista más corta_ como opción de encaje (también la opción por defecto), se obtiene una línea diagonal básica compuesta por cinco puntos. Cinco puntos es la longitud de la lista menor, de modo que el encaje de la lista más corta se detiene cuando alcanza el final de una lista.
 
-\![Ejemplos de entrada](<../../.gitbook/assets/what's a list - lacing exercise 01.jpg>)
+![Ejemplos de entrada](<../images/whats-a-list-lacing-exercise-01.jpg>)
 
 ### **Lista más larga**
 
 Al cambiar el encaje a la _lista más larga_, obtenemos una línea diagonal que se extiende verticalmente. Con el mismo método que el diagrama conceptual, el último elemento de la lista de cinco elementos se repetirá para alcanzar la longitud de la lista más larga.
 
-\![Ejemplos de entrada](<../../.gitbook/assets/what's a list - lacing exercise 02.jpg>)
+![Ejemplos de entrada](<../images/whats-a-list-lacing-exercise-02.jpg>)
 
 ### **Producto vectorial**
 
 Al cambiar el encaje a _Producto vectorial_, obtenemos todas las combinaciones entre cada lista, lo que nos proporciona una rejilla de puntos de 5 x 10. Esta es una estructura de datos equivalente al producto vectorial que se muestra en el diagrama de conceptos anterior, excepto que nuestros datos son ahora una lista de listas. Al conectar una PolyCurve, podemos ver que cada lista se ha definido por su valor X, lo que nos da una fila de líneas verticales.
 
-\![Ejemplos de entrada](<../../.gitbook/assets/what's a list - lacing exercise 03.jpg>)
+![Ejemplos de entrada](<../images/whats-a-list-lacing-exercise-03.jpg>)

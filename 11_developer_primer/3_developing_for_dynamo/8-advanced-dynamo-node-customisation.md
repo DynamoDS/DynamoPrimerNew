@@ -49,7 +49,7 @@ Para demostrar `OnLogWarningMessage` en acción, aquí presentamos diferentes es
 
 En este ejemplo, nos basaremos en el nodo personalizado creado en el anterior **"Caso real de Zero-Touch (nodo de rejilla)";** un método denominado `RectangularGrid` que genera una rejilla de rectángulos basada en entradas de `xCount` y `yCount`. Veremos paso a paso cómo hacer las pruebas si una entrada no es válida y, a continuación, cómo utilizar `OnLogWarningMessage` para registrar una advertencia y detener el procesamiento.
 
-![Ejemplo 1 de OnLogWarningMessage](../../.gitbook/assets/onlogwarningmessage-example-1.png)
+![Ejemplo 1 de OnLogWarningMessage](../images/onlogwarningmessage-example-1.png)
 
 **Uso de `OnLogWarningMessage` para la validación de entradas**
 
@@ -137,7 +137,7 @@ namespace CustomNodes
 
 Si su método requiere una lista de puntos, pero un usuario envía una lista vacía o nula, puede usar `OnLogWarningMessage` para informarle sobre el problema.
 
-![Ejemplo 2 de OnLogWarningMessage](../../.gitbook/assets/onlogwarningmessage-example-2.png)
+![Ejemplo 2 de OnLogWarningMessage](../images/onlogwarningmessage-example-2.png)
 
 ```
 public static Polygon CreatePolygonFromPoints(List<Point> points)
@@ -164,7 +164,7 @@ Esto advierte a los usuarios de que deben enviar una lista válida con al menos 
 
 En el caso de un nodo que procesa rutas de archivo, quizá quiera asegurarse de que solo se permiten determinados tipos de archivo. Si se detecta un tipo de archivo no admitido, registre una advertencia.
 
-![Ejemplo 3 de OnLogWarningMessage](../../.gitbook/assets/onlogwarningmessage-example-3.png)
+![Ejemplo 3 de OnLogWarningMessage](../images/onlogwarningmessage-example-3.png)
 
 ```
 public static void ProcessFile(string filePath)
@@ -226,7 +226,7 @@ A continuación se presentan diferentes escenarios para demostrar el uso de `OnL
 
 En este ejemplo, nos basaremos en el nodo personalizado creado en el anterior **"Caso real de Zero-Touch (nodo de rejilla)";** un método denominado `RectangularGrid` que genera una rejilla de rectángulos basada en entradas de `xCount` y `yCount`. Veremos paso a paso cómo hacer las pruebas si una entrada no es válida y, a continuación, cómo utilizar `OnLogInfoMessage` para proporcionar información después de que el nodo haya completado su ejecución.
 
-![Ejemplo 1 de OnLogInfoMessage](../../.gitbook/assets/onloginfomessage-example-1.png)
+![Ejemplo 1 de OnLogInfoMessage](../images/onloginfomessage-example-1.png)
 
 **Uso de `OnLogInfoMessage` para la validación de entradas**
 
@@ -309,7 +309,7 @@ namespace CustomNodes
 
 Si está creando un nodo que procesa una lista de puntos, es posible que desee registrar cuántos puntos se procesan correctamente. Esto puede ser útil para grandes conjuntos de datos.
 
-![Ejemplo 2 de OnLogInfoMessage](../../.gitbook/assets/onloginfomessage-example-2.png)
+![Ejemplo 2 de OnLogInfoMessage](../images/onloginfomessage-example-2.png)
 
 ```
 public static List<Point> ProcessPoints(List<Point> points)
@@ -339,7 +339,7 @@ Este mensaje permite a los usuarios conocer el resultado del procesamiento y con
 
 En algunos casos, es útil confirmar los parámetros de entrada que ha utilizado un nodo para completar una acción. Por ejemplo, si el nodo exporta datos a un archivo, el registro del nombre y la ruta del archivo puede servir a los usuarios como garantía de que se ha utilizado el archivo correcto.
 
-![Ejemplo 3 de OnLogInfoMessage](../../.gitbook/assets/onloginfomessage-example-3.png)
+![Ejemplo 3 de OnLogInfoMessage](../images/onloginfomessage-example-3.png)
 
 ```
 public static void ExportData(string filePath, List<string> data)
@@ -365,7 +365,7 @@ Este mensaje confirma a los usuarios que la exportación se ha realizado correct
 
 Tradicionalmente, ha habido limitaciones en Dynamo en cuanto a la forma en que los autores de paquetes podían proporcionar documentación para sus nodos. Los autores de nodos personalizados se han visto limitados a permitir solo una descripción breve que se muestre en la información de herramientas del nodo o a enviar el paquete con gráficos de muestra cargados de anotaciones.
 
-![Descripción de la información de herramientas de los nodos](../../.gitbook/assets/customnodedocumentation-overloads.png)
+![Descripción de la información de herramientas de los nodos](../images/customnodedocumentation-overloads.png)
 
 ### Una nueva vía
 
@@ -399,11 +399,11 @@ Siga estos pasos para que los archivos de Markdown se muestren en Dynamo.
 
 Dynamo utiliza la extensión de vista del Navegador de documentación para mostrar la documentación de los nodos. Para abrir la documentación de un nodo, haga clic con el botón derecho en el nodo y seleccione Ayuda. De esta forma, se abrirá el Navegador de documentación y se mostrará el archivo de Markdown asociado con ese nodo, si lo hay.
 
-![Navegador de documentación](../../.gitbook/assets/customnodedocumentation-no-documentation-provided.png)
+![Navegador de documentación](../images/customnodedocumentation-no-documentation-provided.png)
 
 La documentación que se muestra en el Navegador de documentación consta de dos partes. La primera es la sección `Node Info`, que se genera automáticamente a partir de la información extraída del nodo, como las entradas/salidas, la categoría, el nombre/espacio de nombres y la descripción breve del nodo. La segunda parte muestra la documentación del nodo personalizado, que es el archivo de Markdown que se proporciona para generar dicha documentación.
 
-![Documentación de nodos personalizados](../../.gitbook/assets/customnodedocumentation-custom-node-documentation.png)
+![Documentación de nodos personalizados](../images/customnodedocumentation-custom-node-documentation.png)
 
 #### Carpeta de documentos del paquete
 
@@ -417,13 +417,13 @@ Este espacio de nombres debe ser el nombre del archivo de Markdown para ese nodo
 
 En los casos especiales en los que haya sobrecargas en los nodos (nodos con el mismo nombre, pero entradas diferentes), tendrá que añadir los nombres de entrada entre `()` después del espacio de nombres del nodo. Por ejemplo, el nodo integrado `Geometry.Translate` tiene varias sobrecargas. En este caso, denominaríamos a los archivos de Markdown de los siguientes nodos de la siguiente forma: `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction).md` `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction,distance).md`
 
-![Nodos con sobrecarga](../../.gitbook/assets/customnodedocumentation-overloads.png)
+![Nodos con sobrecarga](../images/customnodedocumentation-overloads.png)
 
 #### Modificación de archivos de Markdown mientras están abiertos en Dynamo
 
 Para facilitar la modificación de los archivos de documentación, el Navegador de documentación incluye un visor de archivos en el archivo de documentación abierto. Esto permite realizar cambios en el archivo de Markdown y ver los cambios en Dynamo al instante.
 
-![Recarga en caliente](../../.gitbook/assets/customnodedocumentation-hot-reload.gif)
+![Recarga en caliente](../images/customnodedocumentation-hot-reload.gif)
 
 También se pueden añadir nuevos archivos de documentación mientras Dynamo está abierto. Basta con añadir un nuevo archivo de Markdown a la carpeta `/doc` con un nombre que se corresponda con el nodo para el que genera documentación.
 
@@ -441,9 +441,9 @@ Esta guía le mostrará cómo añadir iconos a los nodos Zero Touch.
 
 Para empezar, cree un proyecto de biblioteca de clases de Visual Studio (.NET Framework) para los nodos Zero Touch. Si aún no tiene un proyecto, consulte la sección **Introducción** para obtener instrucciones paso a paso sobre cómo crear uno.
 
-![Creación de un proyecto de Visual Studio](../../.gitbook/assets/vs-new-project-1.jpg)
+![Creación de un proyecto de Visual Studio](../images/vs-new-project-1.jpg)
 
-![Configuración de un nuevo proyecto en Visual Studio](../../.gitbook/assets/zerotouchicons-configure-new-project.jpg)
+![Configuración de un nuevo proyecto en Visual Studio](../images/zerotouchicons-configure-new-project.jpg)
 
 Asegúrese de tener al menos un nodo Zero Touch operativo, ya que los iconos solo se pueden agregar a nodos existentes. Para obtener instrucciones, consulte el **Caso real de Zero Touch (nodo de rejilla)**.
 
@@ -475,11 +475,11 @@ Para incrustar los iconos en el archivo `.dll`, cree un archivo de recursos:
 
 * Haga clic con el botón derecho en el proyecto desde el **Explorador de soluciones**.
 
-![Adición de un nuevo elemento](../../.gitbook/assets/zerotouchicons-add-resources-file-1.jpg)
+![Adición de un nuevo elemento](../images/zerotouchicons-add-resources-file-1.jpg)
 
 * Vaya a **Añadir > Nuevo elemento** y seleccione **Archivo de recursos**.
 
-![Adición de un archivo de recursos](../../.gitbook/assets/zerotouchicons-add-resources-file-2.jpg)
+![Adición de un archivo de recursos](../images/zerotouchicons-add-resources-file-2.jpg)
 
 * Nombre el archivo `<ProjectName>Images.resx`. Por ejemplo, `ZeroTouchNodeIconsImages.resx`.
 
@@ -489,7 +489,7 @@ Para incrustar los iconos en el archivo `.dll`, cree un archivo de recursos:
 3. **Establezca "Acción de compilación" en "Ninguna".**
    * Dado que nosotros mismos crearemos este recurso más adelante, no es necesario que lo creemos automáticamente.
 
-![Limpieza de la propiedad de herramienta personalizada](../../.gitbook/assets/zerotouchicons-custom-tool-property-update.png)
+![Limpieza de la propiedad de herramienta personalizada](../images/zerotouchicons-custom-tool-property-update.png)
 
 > _NOTA: Si no se desactiva el campo "Herramienta personalizada", Visual Studio convertirá los puntos en guiones bajos en los nombres de los recursos. Antes de generar el archivo, compruebe que los nombres de los recursos cuentan con puntos para separar los nombres de clase y no guiones bajos._
 
@@ -500,7 +500,7 @@ Para incrustar los iconos en el archivo `.dll`, cree un archivo de recursos:
    * Establezca el tipo de recurso en **Archivo**.
    * Vaya a la ubicación del archivo de imagen e incluya los iconos de nodo **grandes** y **pequeños**.
 
-![Añadir recursos...](../../.gitbook/assets/zerotouchicons-open-resource-editor-update.png)
+![Añadir recursos...](../images/zerotouchicons-open-resource-editor-update.png)
 
 > _NOTA: No es necesario organizar las imágenes en una carpeta de **recursos** ni en subcarpetas de iconos **grandes** y **pequeños**, pero se considera una práctica recomendada para organizar de forma eficaz los recursos._
 
@@ -510,26 +510,26 @@ Si el proyecto aún no es de estilo SDK (necesario para incrustar recursos), con
 
 1. Instale la extensión de `.NET Upgrade Assistant` desde el menú **Extensiones > Administrar extensiones** de Visual Studio.
 
-![Administrar extensiones](../../.gitbook/assets/zerotouchicons-manage-extensions-update.png)
+![Administrar extensiones](../images/zerotouchicons-manage-extensions-update.png)
 
-![Instalación del Asistente para actualización de .NET](../../.gitbook/assets/zerotouchicons-net-upgrade-assistant.jpg)
+![Instalación del Asistente para actualización de .NET](../images/zerotouchicons-net-upgrade-assistant.jpg)
 
 2. Haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione **Actualizar > Convertir proyecto a estilo SDK**.
 
-![Actualizar el proyecto](../../.gitbook/assets/zerotouchicons-upgrade-project.jpg)
+![Actualizar el proyecto](../images/zerotouchicons-upgrade-project.jpg)
 
-![Convertir a estilo SDK](../../.gitbook/assets/zerotouchicons-convert-to-sdk-style.jpg)
+![Convertir a estilo SDK](../images/zerotouchicons-convert-to-sdk-style.jpg)
 
 3. Espere a que se complete la conversión.
 
-![Actualización finalizada](../../.gitbook/assets/zerotouchicons-upgrade-complete.jpg)
+![Actualización finalizada](../images/zerotouchicons-upgrade-complete.jpg)
 
 #### Paso 6: Añadir una secuencia de comandos posterior a la compilación para incrustar recursos
 
 1. Descargue el proyecto:
    * Haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione **Descargar proyecto**.
 
-![Descargar el proyecto](../../.gitbook/assets/zerotouchicons-unload-project.jpg)
+![Descargar el proyecto](../images/zerotouchicons-unload-project.jpg)
 
 2. Edite el archivo `.csproj`:
    * Añada el siguiente elemento `<Target>` entre `</ItemGroup>` y `</Project>`:
@@ -550,26 +550,26 @@ Si el proyecto aún no es de estilo SDK (necesario para incrustar recursos), con
 	</Target>
 ```
 
-![Adición del código posterior a la compilación](../../.gitbook/assets/zerotouchicons-after-build.jpg)
+![Adición del código posterior a la compilación](../images/zerotouchicons-after-build.jpg)
 
 1. Reemplace todos los ejemplares de `ZeroTouchNodeIcons` por el nombre del proyecto.
 2. Vuelva a cargar el proyecto:
    * Haga clic con el botón derecho en el proyecto descargado y seleccione **Volver a cargar proyecto**.
 
-![Volver a cargar proyecto](../../.gitbook/assets/zerotouchicons-reload-project.jpg)
+![Volver a cargar proyecto](../images/zerotouchicons-reload-project.jpg)
 
 #### Paso 7: Compilar y cargar el archivo .dll en Dynamo
 
 1. Compile el proyecto:
    * Después de añadir la secuencia de comandos posterior a la compilación, compile el proyecto en Visual Studio.
 
-![Compilar la solución](../../.gitbook/assets/zerotouchicons-build-solution.jpg)
+![Compilar la solución](../images/zerotouchicons-build-solution.jpg)
 
 2. Compruebe los archivos de salida:
    * Asegúrese de que los archivos `.dll` y `.customization.dll` se encuentran en la carpeta `bin`.
 3. Añada el archivo `.dll` a Dynamo:
    * En Dynamo, utilice el botón Importar biblioteca para importar el archivo .dll.
 
-![Botón Importar biblioteca](../../.gitbook/assets/zerotouchicons-icon-in-dynamo.jpg)
+![Botón Importar biblioteca](../images/zerotouchicons-icon-in-dynamo.jpg)
 
 4. Los nodos personalizados deberían aparecer ahora con sus respectivos iconos.
