@@ -8,7 +8,7 @@ En Dynamo, los **nodos** son los objetos que se conectan para formar un programa
 
 La mayoría de los nodos de Dynamo están compuestos por cinco partes. Aunque existen excepciones, como los nodos de entrada, la anatomía de cada nodo se puede describir como se indica a continuación:
 
-\![](<images/nodes and wires - nodes anatomy.jpg>)
+![](<images/nodes and wires - nodes anatomy.jpg>)
 
 > 1. Nombre: nombre del nodo con la convención de nomenclatura `Category.Name`.
 > 2. Cuerpo principal: el cuerpo principal del nodo. Al hacer clic con el botón derecho, se presentan opciones en el nivel de todo el nodo.
@@ -24,7 +24,7 @@ Los puertos esperan recibir datos de un tipo determinado. Por ejemplo, al conect
 
 {% hint style="info" %}Consejo: Coloque el cursor sobre un puerto para ver la información de herramientas que contiene el tipo de datos esperado. {% endhint %}
 
-\![](<images/nodes and wires - nodes input and tooltip.jpg>)
+![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
 > 1. Etiqueta de puerto
 > 2. Información de herramientas
@@ -55,7 +55,7 @@ Si el programa visual contiene advertencias o errores, Dynamo proporcionará inf
 
 {% hint style="info" %} Consejo: Con esta información de herramientas a mano, examine los nodos ascendentes para ver si el tipo de datos o la estructura de datos necesarios presentan errores. {% endhint %}
 
-\![](<images/nodes and wires - nodes with warning tooltip.jpg>)
+![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
 > 1. Información de herramientas de advertencia: el valor "null" (nulo) o la falta de datos no se pueden considerar como doble, por ejemplo, un número.
 > 2. Utilice el nodo Watch para examinar los datos de entrada.
@@ -81,7 +81,7 @@ Los cables conectan el puerto de salida de un nodo al puerto de entrada de otro 
 
 Los puertos de entrada se encuentran en el lado izquierdo de los nodos y los de salida se encuentran en el lado derecho, por lo que podemos afirmar que el flujo del programa se suele desplazar de izquierda a derecha.
 
-\![](<images/nodes and wires - flow of data.jpg>)
+![](<images/nodes and wires - flow of data.jpg>)
 
 ### Creación de cables <a href="#creating-wires" id="creating-wires"></a>
 
@@ -89,7 +89,7 @@ Cree un cable. Para ello, haga clic con el botón izquierdo en un puerto y, a co
 
 Los datos siempre fluirán a través de este cable desde la salida hasta la entrada. No obstante, podemos crear el cable en cualquier dirección en cuanto a la secuencia en la que se hace clic en los puertos conectados.
 
-\![](<images/nodes and wires - creating a wire.gif>)
+![](<images/nodes and wires - creating a wire.gif>)
 
 ### Edición de cables <a href="#editing-wires" id="editing-wires"></a>
 
@@ -101,21 +101,21 @@ Con frecuencia, desearemos ajustar el flujo de programa de nuestro programa visu
 
 * Para eliminar el cable, retire el cable y haga clic con el botón izquierdo en el espacio de trabajo.
 
-\![](<images/nodes and wires - edit wires remove.gif>)
+![](<images/nodes and wires - edit wires remove.gif>)
 
 * Vuelva a conectar varios cables. Para ello, mantenga pulsada la tecla Mayús mientras hace clic con el botón izquierdo.
 
-\![](<images/nodes and wires - edit multi ports.gif>)
+![](<images/nodes and wires - edit multi ports.gif>)
 
 * Duplique un cable. Para ello, mantenga pulsada la tecla Ctrl mientras hace clic con el botón izquierdo.
 
-\![](<images/nodes and wires - duplicate wire.gif>)
+![](<images/nodes and wires - duplicate wire.gif>)
 
 #### Cables por defecto frente a resaltados <a href="#wire-previews" id="wire-previews"></a>
 
 Por defecto, nuestros cables se previsualizarán con un trazo gris. Cuando se selecciona un nodo, se renderizará cualquier cable de conexión con el mismo resaltado de color turquesa que el nodo.
 
-\![](<images/nodes and wires - default vs highlighted wires.jpg>)
+![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
 > 1. Cable resaltado
 > 2. Cable por defecto
@@ -126,10 +126,10 @@ Si prefiere ocultar los cables en el gráfico, vaya a Vista > Conectores > desma
 
 Con este parámetro, solo los nodos seleccionados y sus cables de unión se mostrarán resaltados en turquesa claro.
 
-\![](<images/nodes and wires - hide wires setting.gif>)
+![](<images/nodes and wires - hide wires setting.gif>)
 
 #### Ocultar solo un cable individual
 
 También puede ocultar el conductor seleccionado. Para ello, haga clic con el botón derecho en la salida Nodos > seleccione Ocultar cables.
 
-\![](<images/nodes and wires - hide selected wire.gif>)
+![](<images/nodes and wires - hide selected wire.gif>)
