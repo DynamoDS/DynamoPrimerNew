@@ -16,7 +16,7 @@ Dynamo nos permite trabajar en un proceso de programación visual en el que cone
 
 Los nodos y los cables son los componentes clave de Dynamo que impulsan el proceso de [programación visual](../a_appendix/a-1_visual-programming-and-dynamo.md). Este ayuda a establecer relaciones visuales y sistémicas sólidas entre las piezas de un diseño. Con un simple clic del ratón, conecte fácilmente los nodos mientras desarrolla y optimiza el flujo de trabajo de diseño.
 
-![](/images/1-1/what is dynamo - connecting nodes with wires.gif>)
+![](<images/what is dynamo - connecting nodes with wires.gif>)
 
 ## ¿Qué puede lograr Dynamo?
 
