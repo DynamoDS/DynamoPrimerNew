@@ -10,17 +10,17 @@ Un [punto](3-points.md#deep-dive-into...) se define por uno o más valores denom
 
 El tipo de punto más común en Dynamo se encuentra en el sistema de coordenadas universales tridimensional y tiene tres coordenadas [X,Y,Z] (punto 3D en Dynamo).
 
-\![](<../images/points - 3d point in dynamo.jpg>)
+![](<../images/points - 3d point in dynamo.jpg>)
 
 Un punto 2D de Dynamo tiene dos coordenadas [X,Y].
 
-\![](<../images/points - 2d point in dynamo.jpg>)
+![](<../images/points - 2d point in dynamo.jpg>)
 
 ### Punto en curvas y superficies
 
 Los parámetros de las curvas y las superficies son continuos y se extienden más allá del borde de la geometría especificada. Como las formas que definen el espacio paramétrico se encuentran en un sistema de coordenadas universales tridimensional, siempre se puede convertir una coordenada paramétrica en una coordenada "universal". Por ejemplo, el punto [0,2, 0,5] de la superficie es el mismo que el punto [1,8, 2,0, 4,1] de las coordenadas universales.
 
-\![](<../images/points - xyz vs coord sys vs uv.jpg>)
+![](<../images/points - xyz vs coord sys vs uv.jpg>)
 
 > 1. Punto en presuntas coordenadas XYZ globales
 > 2. Punto relativo a un sistema de coordenadas especificado (cilíndrico)
