@@ -2,7 +2,7 @@
 
 Las siguientes secuencias de comandos de Python generan matrices de puntos para varios ejemplos. Se deben pegar en un nodo Python Script, como se indica a continuación:
 
-\![](<../images/python points 01.jpg>)
+![](<../images/python points 01.jpg>)
 
 **python_points_1**
 
