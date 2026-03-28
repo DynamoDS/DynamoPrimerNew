@@ -32,7 +32,7 @@ Este índice proporciona información adicional sobre todos los nodos utilizados
 |                                             |                                                                               |                                                                 |
 | ------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------- |
 |                                             | ACCIONES                                                                       |                                                                 |
-| ![](<imágenes/Ver watch.jpg>)    | <p><strong>View.Watch</strong><br>Permite visualizar la salida del nodo.</p>           | ![](<images/index of nodes - view watch.jpg>)       |
+| ![](<images/View watch.jpg>)    | <p><strong>View.Watch</strong><br>Permite visualizar la salida del nodo.</p>           | ![](<images/index of nodes - view watch.jpg>)       |
 | ![](<images/View watch 3d.jpg>) | <p><strong>View.Watch 3D</strong><br>Muestra una vista preliminar dinámica de la geometría.</p> | ![](<images/index of nodes - view watch.3Djpg.jpg>) |
 
 ## Entrada
@@ -134,7 +134,7 @@ Este índice proporciona información adicional sobre todos los nodos utilizados
 | ![](<images/Bounding box to cuboid.jpg>)             | <p><strong>BoundingBox.ToCuboid</strong></p><p>Obtiene el cuadro delimitador como un ortoedro sólido.</p>                                                  | ![](<images/index of nodes - bounding box to cuboid.jpg>)              |
 
 {% hint style="warning" %}
-**En otras palabras, si crea una longitud de anchura de ortoedro (eje X) de 10 y la transforma en un CoordinateSystem con dos veces la escala en X, la anchura seguirá siendo 10. ASM no permite extraer los vértices de un cuerpo en ningún orden predecible, por lo que es imposible determinar las cotas después de una transformación.
+\*\*En otras palabras, si crea una longitud de anchura de ortoedro (eje X) de 10 y la transforma en un CoordinateSystem con dos veces la escala en X, la anchura seguirá siendo 10. ASM no permite extraer los vértices de un cuerpo en ningún orden predecible, por lo que es imposible determinar las cotas después de una transformación.
 {% endhint %}
 
 ### Curva
