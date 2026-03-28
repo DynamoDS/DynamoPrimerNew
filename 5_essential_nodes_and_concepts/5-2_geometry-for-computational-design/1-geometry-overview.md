@@ -6,11 +6,11 @@ La **geometría** es el idioma del diseño. Cuando un lenguaje o un entorno de p
 
 Conocer los tipos de geometría y [cómo se relacionan](1-geometry-overview.md#stepping-through-the-hierarchy) nos permitirá desplazarnos por la colección de **nodos de geometría** disponibles en la biblioteca. Los nodos de geometría se organizan alfabéticamente en lugar de jerárquicamente; aquí se muestran de forma similar a su presentación en la interfaz de Dynamo.
 
-\![](<../images/geometry overview - geometry in dynamo.jpg>)
+![](<../images/geometry overview - geometry in dynamo.jpg>)
 
 Además, la creación de modelos en Dynamo y la conexión de la vista preliminar de lo que aparece en la vista preliminar en segundo plano al flujo de datos del gráfico deberían ser procesos más intuitivos con el tiempo.
 
-\![](<../images/Geometry for Computational Design - Overview.jpg>)
+![](<../images/Geometry for Computational Design - Overview.jpg>)
 
 > 1. Observe el supuesto sistema de coordenadas renderizado por la rejilla y los ejes coloreados.
 > 2. Los nodos seleccionados renderizarán la geometría correspondiente (si el nodo crea la geometría) en segundo plano con el color resaltado.
@@ -42,7 +42,7 @@ En la práctica, estos principios nos indican que debemos tener en cuenta con qu
 
 Dediquemos un momento a observar la relación entre las descripciones abstractas y jerárquicas de la geometría. Como estos dos conceptos están relacionados, pero esto no es siempre evidente al principio, podemos encontrarnos rápidamente con un bloqueo conceptual una vez que empezamos a desarrollar flujos de trabajo o modelos más profundos. Para empezar, vamos a usar la dimensionalidad como un sencillo descriptor del "material" que modelamos. El número de dimensiones necesarias para describir una forma nos muestra cómo organizar la forma en que la geometría se organiza jerárquicamente.
 
-\![Geometría computacional](<../images/Geometry for - GeometryDimensionality.jpg>)
+![Geometría computacional](<../images/Geometry for - GeometryDimensionality.jpg>)
 
 > 1. Un **punto** (definido por coordenadas) no tiene ninguna dimensión asociada; son solo números que describen cada coordenada.
 > 2. Una **línea** (definida por dos puntos) tiene ahora _una_ dimensión; podemos "recorrer" la línea hacia delante (dirección positiva) o hacia atrás (dirección negativa).
