@@ -8,7 +8,7 @@ GitHub es un servicio de alojamiento basado en [git](https://help.github.com/art
 
 El código fuente de Dynamo está alojado en el GitHub de DynamoDS, en este repositorio: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo).
 
-![Los archivos de código fuente de Dynamo](../../.gitbook/assets/github.jpg)
+![Los archivos de código fuente de Dynamo](../images/github.jpg)
 
 > Los archivos de código fuente de Dynamo
 >
@@ -23,7 +23,7 @@ Antes de poder clonar el repositorio, debemos instalar git. Siga esta [breve gu�
 
 Necesitamos una dirección URL desde la que clonar el repositorio de Dynamo. Para obtenerla, se puede utilizar el botón para clonar o descargar de la página del repositorio. Copie la dirección URL para pegarla en la solicitud de comando.
 
-![Clonación de un repositorio](../../.gitbook/assets/github-clone.png)
+![Clonación de un repositorio](../images/github-clone.png)
 
 > 1. Seleccione la opción para clonar o descargar.
 > 2. Copie la dirección URL.
@@ -34,7 +34,7 @@ Con git instalado, podemos clonar el repositorio de Dynamo. Abra primero la soli
 
 > Sustituya "username" por su nombre de usuario.
 
-![Solicitud de comando](../../.gitbook/assets/cli-1.jpg)
+![Solicitud de comando](../images/cli-1.jpg)
 
 En el paso siguiente, ejecutaremos un comando de git para clonar el repositorio de Dynamo en la ubicación especificada. Para obtener la dirección URL del comando, haga clic en el botón para clonar o descargar en GitHub. Ejecute este comando en el terminal de comando. Tenga en cuenta que esto clonará la ramificación principal del repositorio de Dynamo, que es el código más actualizado para Dynamo, y contendrá la última versión del código de Dynamo. Esta ramificación cambia diariamente.
 
