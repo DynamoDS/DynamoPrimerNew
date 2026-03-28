@@ -1,5 +1,5 @@
 ---
-cover: ../.gitbook/assets/Infrastructure-cityscape-01.jpg
+cover: images/Infrastructure-cityscape-01.jpg
 coverY: -62
 ---
 

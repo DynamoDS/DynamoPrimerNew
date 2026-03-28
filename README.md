@@ -4,7 +4,7 @@
 
 ## Para Dynamo v2.13 y versiones posteriores
 
-![Logotipo de Dynamo](.gitbook/assets/dynamo_logo_dark-trim.jpg)
+![Logotipo de Dynamo](images/dynamo_logo_dark-trim.jpg)
 
 > Dynamo es una plataforma de programación visual de código abierto para diseñadores.
 
@@ -37,31 +37,31 @@ Dynamo Primer es un proyecto de código abierto iniciado por Matt Jezyk y el equ
 
 **Mode Lab** recibió el encargo de escribir la primera edición del manual de introducción. Les agradecemos todos sus esfuerzos para establecer este valioso recurso.
 
-![](.gitbook/assets/MODELAB_Logo.png)
+![](images/modelab-logo.png)
 
 ***
 
 A **John Pierson de Parallax Team** se le encargó actualizar el manual de introducción para incluir las revisiones de Dynamo 2.0.
 
-![](.gitbook/assets/PRLX_Logo.jpg)
+![](images/prlx-logo.jpg)
 
 ***
 
 A **Matterlab** se le encargó actualizar el manual de introducción para incluir las revisiones de Dynamo 2.13.
 
-\![](<.gitbook/assets/matterlab_final-07 (2).jpg>)
+![](images/matterlab-logo.jpg)
 
 ***
 
 A **Archilizer** se le encargó actualizar el manual de introducción para incluir las revisiones de Dynamo 2.17.
 
-<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 A **Wood Rodgers** se le encargó actualizar el manual de introducción con contenido sobre Dynamo for Civil 3D.
 
-<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
 
 ### Agradecimientos
 

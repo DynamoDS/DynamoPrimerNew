@@ -1,6 +1,6 @@
 # La conexión con Civil 3D
 
-<figure><img src="../.gitbook/assets/DynamoSwissKnife-WhiteBackground_edit (2).jpg" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="images/DynamoSwissKnife-WhiteBackground_edit.jpg" alt="" width="563"><figcaption></figcaption></figure>
 
 Dynamo for Civil 3D lleva el paradigma de la _programación visual_ a los ingenieros y los diseñadores que trabajan en proyectos de infraestructuras civiles. Puede pensar en Dynamo como una especie de "navaja suiza" digital para los usuarios de Civil 3D; sea cual sea la tarea, dispone de la herramienta adecuada para el trabajo. Su intuitiva interfaz le permite crear rutinas eficaces y personalizables sin necesidad de escribir una sola línea de código. No necesita _ser_ programador para utilizar Dynamo, pero sí debe ser capaz de _pensar_ con la lógica de un programador. Junto con los demás capítulos del manual de introducción, este le ayudará a desarrollar sus habilidades lógicas para que pueda abordar cualquier tarea con una mentalidad de diseño computacional.
 
@@ -8,9 +8,9 @@ Dynamo for Civil 3D lleva el paradigma de la _programación visual_ a los ingeni
 
 Dynamo se introdujo por primera vez en Civil 3D 2020 y ha seguido evolucionando desde entonces. En un principio, se instalaba por separado mediante una actualización de software, pero ahora viene incluido con todas las versiones de Civil 3D. En función de la versión de Civil 3D que esté utilizando, es posible que observe que la interfaz de Dynamo presenta un aspecto ligeramente distinto al de los ejemplos que aparecen en este capítulo. Esto se debe a que se ha realizado una revisión significativa de la interfaz en Civil 3D 2023.
 
-<figure><img src="../.gitbook/assets/c3d-ui-old.png" alt=""><figcaption><p>Interfaz de Dynamo, Civil 3D 2020 - 2022</p></figcaption></figure>
+<figure><img src="images/c3d-ui-old.png" alt=""><figcaption><p>Interfaz de Dynamo, Civil 3D 2020 - 2022</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/c3d-ui-new.png" alt=""><figcaption><p>Interfaz de Dynamo, Civil 3D 2023 - presente</p></figcaption></figure>
+<figure><img src="images/c3d-ui-new.png" alt=""><figcaption><p>Interfaz de Dynamo, Civil 3D 2023 - presente</p></figcaption></figure>
 
 Es recomendable que consulte el [blog de Dynamo](https://dynamobim.org/blog/) para obtener la información más actualizada sobre el desarrollo de esta herramienta. En la tabla siguiente, se resumen los principales hitos en la trayectoria de Dynamo for Civil 3D. 
 
