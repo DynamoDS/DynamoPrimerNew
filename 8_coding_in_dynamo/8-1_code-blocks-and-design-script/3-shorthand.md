@@ -6,14 +6,14 @@ Existen varios métodos básicos de abreviatura en el bloque de código que, sen
 
 | **Tipo de datos**          | **Dynamo estándar**                                      | **Bloque de código equivalente**                                     |
 | ---------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
-| Números                | \![](<../images/01 node - numbers.jpg>)       | \![](<../images/01 codeblock - numbers.jpg>)       |
-| Cadenas                | \![](<../images/02 node - string.jpg>)        | \![](<../images/02 codeblock- string.jpg>)         |
-| Secuencias              | \![](<../images/03 node- sequence.jpg>)       | \![](<../images/03 codeblock- sequence.jpg>)       |
-| Rangos                 | \![](<../images/04 node- range.jpg>)          | \![](<../images/04 codeblock - range.jpg>)         |
-| Obtener elemento en índice      | \![](<../images/05 node - list get item.jpg>) | \![](<../images/05 codeblock - list get item.jpg>) |
-| Crear lista            | \![](<../images/06 node - list create.jpg>)   | ![](<../images/image.png>)                   |
-| Concatenar cadenas    | \![](<../images/07 node - string concat.jpg>) | \![](<../images/07 codeblock - string concat.jpg>) |
-| Instrucciones condicionales | \![](<../images/08 node - conditional.jpg>)   | \![](<../images/08 codeblock - conditional.jpg>)   |
+| Números                | ![](<../images/01 node - numbers.jpg>)       | ![](<../images/01 codeblock - numbers.jpg>)       |
+| Cadenas                | ![](<../images/02 node - string.jpg>)        | ![](<../images/02 codeblock- string.jpg>)         |
+| Secuencias              | ![](<../images/03 node- sequence.jpg>)       | ![](<../images/03 codeblock- sequence.jpg>)       |
+| Rangos                 | ![](<../images/04 node- range.jpg>)          | ![](<../images/04 codeblock - range.jpg>)         |
+| Obtener elemento en índice      | ![](<../images/05 node - list get item.jpg>) | ![](<../images/05 codeblock - list get item.jpg>) |
+| Crear lista            | ![](<../images/06 node - list create.jpg>)   | ![](<../images/image.png>)                   |
+| Concatenar cadenas    | ![](<../images/07 node - string concat.jpg>) | ![](<../images/07 codeblock - string concat.jpg>) |
+| Instrucciones condicionales | ![](<../images/08 node - conditional.jpg>)   | ![](<../images/08 codeblock - conditional.jpg>)   |
 
 ### Sintaxis adicional
 
@@ -28,7 +28,7 @@ Existen varios métodos básicos de abreviatura en el bloque de código que, sen
 
 El método para definir rangos y secuencias se puede reducir a un método básico de abreviatura. Utilice la imagen siguiente como guía de la sintaxis "..." para definir una lista de datos numéricos con un bloque de código. Una vez que aprendemos a utilizar esta notación, crear datos numéricos es un proceso realmente eficaz:
 
-\![](<../images/shorthand - ranges and sequences.jpg>)
+![](<../images/shorthand - ranges and sequences.jpg>)
 
 > 1. En este ejemplo, un rango de números se sustituye por una sintaxis de **bloque de código** que define `beginning..end..step-size;`. Representados numéricamente, obtenemos lo siguiente: `0..10..1;`.
 > 2. Observe que la sintaxis `0..10..1;` es equivalente a `0..10;`. Un tamaño de paso de 1 es el valor por defecto de la notación de abreviatura. Por lo tanto, `0..10;` proporciona una secuencia de 0 a 10 con un tamaño de paso de 1.
@@ -39,7 +39,7 @@ El método para definir rangos y secuencias se puede reducir a un método básic
 
 La creación de rangos avanzados nos permite trabajar con listas de listas de una forma sencilla. En los ejemplos siguientes, se aísla una variable de la notación de rango principal y se crea otro rango de dicha lista.
 
-\![](<../images/shorthand - advance range 01.jpg>)
+![](<../images/shorthand - advance range 01.jpg>)
 
 > 1\. Mediante la creación de rangos anidados, compare la notación con el símbolo "#" frente a la notación sin este símbolo. Se aplica la misma lógica que en los rangos básicos, pero se vuelve un poco más compleja.
 >
@@ -49,13 +49,13 @@ La creación de rangos avanzados nos permite trabajar con listas de listas de un
 
 Como ejercicio lógico, compare las dos abreviaturas anteriores e intente analizar el modo en que los _subrangos_ y la notación _#_ controlan la salida.
 
-\![](<../images/shorthand - advance range 02.jpg>)
+![](<../images/shorthand - advance range 02.jpg>)
 
 ### Crear listas y obtener elementos de una lista
 
 Además de crear listas con la función de abreviatura, también podemos crear listas sobre la marcha. Estas listas pueden contener una amplia gama de tipos de elementos y también se pueden consultar (recuerde que las listas son objetos en sí mismas). En resumen, con el bloque de código se crean listas y se consultan los elementos de una lista con corchetes.
 
-\![](<../images/shorthand - list & get from list 01.jpg>)
+![](<../images/shorthand - list & get from list 01.jpg>)
 
 > 1\. Cree listas rápidamente con cadenas y consulte las listas mediante el índice de elementos.
 >
@@ -63,7 +63,7 @@ Además de crear listas con la función de abreviatura, también podemos crear l
 
 Además, el proceso de gestión con listas anidadas es similar. Tenga en cuenta el orden de la lista y recuerde utilizar varios conjuntos de corchetes:
 
-\![](<../images/shorthand - list & get from list 02.jpg>)
+![](<../images/shorthand - list & get from list 02.jpg>)
 
 > 1\. Defina una lista de listas.
 >
@@ -83,58 +83,58 @@ En este ejercicio, vamos a poner en práctica nuestras nuevas habilidades de abr
 
 Comience por crear una superficie conectando los nodos anteriores. En lugar de utilizar un nodo numérico para definir la anchura y la longitud, haga doble clic en el lienzo y escriba `100;` en un bloque de código.
 
-\![](<../images/shorthand - exercise 01.jpg>)
+![](<../images/shorthand - exercise 01.jpg>)
 
-\![](<../images/shorthand - exercise 02.jpg>)
+![](<../images/shorthand - exercise 02.jpg>)
 
 > 1. Defina un rango entre 0 y 1 con 50 divisiones. Para ello, escriba `0..1..#50` en un **bloque de código**.
 > 2. Conecte el rango en **Surface.PointAtParameter**, que toma los valores u y v entre 0 y 1 a lo largo de la superficie. No olvide cambiar el encaje a Producto vectorial. Para ello, haga clic con el botón derecho en el nodo **Surface.PointAtParameter**.
 
 En este paso, utilizamos nuestra primera función para mover la rejilla de puntos hacia arriba en el eje Z. Esta rejilla controlará una superficie generada a partir de la función subyacente. Añada nuevos nodos, como se muestra en la imagen siguiente.
 
-\![](<../images/shorthand - exercise 03.jpg>)
+![](<../images/shorthand - exercise 03.jpg>)
 
 > 1. Utilizamos un **bloque de código** con la línea: `(0..Math.Sin(x*360)..#50)*5;`. Para descomponerlo rápidamente, vamos a definir un rango con una fórmula dentro de él. Esta fórmula es la función de seno. La función de seno recibe entradas de grado en Dynamo, por lo que, para obtener una onda sinusoidal completa, multiplicamos los valores x (es decir, la entrada de rango de 0 a 1) por 360. A continuación, queremos que haya el mismo número de divisiones que de puntos de rejilla de control para cada fila, por lo que definimos cincuenta subdivisiones con #50. Por último, el multiplicador de 5 simplemente aumenta la amplitud de la traslación para que podamos ver el efecto en la vista preliminar de Dynamo.
 
-\![](<../images/shorthand - exercise 04.jpg>)
+![](<../images/shorthand - exercise 04.jpg>)
 
 > 1. Aunque el **bloque de código** anterior, no era totalmente paramétrico. Deseamos controlar sus parámetros de forma dinámica, por lo que reemplazaremos la línea del paso anterior por `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`. Esto nos permite definir estos valores en función de las entradas.
 
 Al cambiar los controles deslizantes (de 0 a 10), obtenemos resultados interesantes.
 
-\![](<../images/shorthand - exercise 05.gif>)
+![](<../images/shorthand - exercise 05.gif>)
 
-\![](<../images/shorthand - exercise 06.jpg>)
+![](<../images/shorthand - exercise 06.jpg>)
 
 > 1. Al realizar una transposición en el rango de números, se invierte la dirección de la onda cortina: `transposeList = List.Transpose(sineList);`.
 
-\![](<../images/shorthand - exercise 07.jpg>)
+![](<../images/shorthand - exercise 07.jpg>)
 
 > 1. Se obtiene una superficie de cáscara de huevo distorsionada al añadir los elementos sineList y transposeList: `eggShellList = sineList+transposeList;`.
 
 Cambiemos los valores de los controles deslizantes especificados a continuación para "calmar las aguas" de este algoritmo.
 
-\![](<../images/shorthand - exercise 08.jpg>)
+![](<../images/shorthand - exercise 08.jpg>)
 
 Por último, vamos a consultar las partes aisladas de los datos con el bloque de código. Para regenerar la superficie con un rango específico de puntos, añada el bloque de código anterior entre los nodos **Geometry.Translate** y **NurbsSurface.ByPoints**. Tiene la siguiente línea de texto: `sineStrips[0..15..1];`. De este modo, se seleccionarán las primeras 16 filas de puntos (de 50). Al volver a crear la superficie, podemos ver que hemos generado una parte aislada de la rejilla de puntos.
 
-\![](<../images/shorthand - exercise 09.jpg>)
+![](<../images/shorthand - exercise 09.jpg>)
 
-\![](<../images/shorthand - exercise 10.jpg>)
+![](<../images/shorthand - exercise 10.jpg>)
 
 > 1. En el paso final, para que este **bloque de código** sea más paramétrico, la consulta se controla mediante un control deslizante que va de 0 a 1. Para ello, utilizaremos esta línea de código: `sineStrips[0..((List.Count(sineStrips)-1)*u)];`. Esto puede resultar confuso, pero la línea de código nos proporciona una forma rápida de modificar la longitud de la lista con un multiplicador entre 0 y 1.
 
 Un valor de `0.53` en el control deslizante crea una superficie justo después del punto medio de la rejilla.
 
-\![](<../images/shorthand - exercise 11.jpg>)
+![](<../images/shorthand - exercise 11.jpg>)
 
 Como se puede esperar, un control deslizante de `1` crea una superficie a partir de la rejilla completa de puntos.
 
-\![](<../images/shorthand - exercise 12.jpg>)
+![](<../images/shorthand - exercise 12.jpg>)
 
 En el gráfico visual, podemos resaltar los bloques de código y ver cada una de sus funciones.
 
-\![](<../images/shorthand - exercise 13.jpg>)
+![](<../images/shorthand - exercise 13.jpg>)
 
 > 1\. El primer **bloque de código** sustituye al nodo **Number**.
 >
