@@ -16,11 +16,11 @@ Al publicar un nodo localmente, se podrá acceder a este en la biblioteca de Dyn
 
 Avancemos con el nodo personalizado que hemos creado en la sección anterior. Una vez abierto el nodo personalizado PointsToSurface, se muestra el gráfico en el editor de nodos personalizados de Dynamo. También puede abrir un nodo personalizado haciendo doble clic en él en el editor de gráficos de Dynamo.
 
-\![](<../images/publish custom node exercise - 01.jpg>)
+![](<../images/publish custom node exercise - 01.jpg>)
 
 Para publicar localmente un nodo personalizado, haga clic con el botón derecho en el lienzo y seleccione _"Publicar este nodo personalizado"_.
 
-\![](<../images/publish custom node exercise - 02.jpg>)
+![](<../images/publish custom node exercise - 02.jpg>)
 
 Rellene la información pertinente similar a la imagen anterior y seleccione _"Publicar localmente"_. Observe que el campo Grupo define el elemento principal al que se puede acceder desde el menú de Dynamo.
 
@@ -28,7 +28,7 @@ Rellene la información pertinente similar a la imagen anterior y seleccione _"P
 
 Seleccione una carpeta para alojar todos los nodos personalizados que tiene previsto publicar localmente. Dynamo comprobará esta carpeta cada vez que se cargue, por lo que debe asegurarse de que esta se encuentre en una ubicación permanente. Vaya a esta carpeta y elija _"Seleccionar carpeta"_. El nodo de Dynamo se publica ahora localmente y permanecerá en la biblioteca de Dynamo cada vez que cargue el programa.
 
-\![](<../images/publish custom node exercise - 04.jpg>)
+![](<../images/publish custom node exercise - 04.jpg>)
 
 Para comprobar la ubicación de la carpeta de nodos personalizados, vaya a _Dynamo > Preferencias > Configuración de paquetes > Rutas de nodos y paquetes_.
 
@@ -48,8 +48,8 @@ Cambiamos el orden de los nombres de ruta para que la ruta por defecto de Dynamo
 
 Al acceder a esta carpeta local, podemos encontrar el nodo personalizado original en la carpeta _".dyf"_, que es la extensión de un archivo de nodo personalizado de Dynamo. Podemos editar el archivo en esta carpeta; el nodo se actualizará en la interfaz de usuario. También podemos añadir más nodos a la carpeta principal de _DynamoCustomNode_; Dynamo los añadirá a la biblioteca al reiniciar.
 
-\![](<../images/publish custom node exercise - 08.jpg>)
+![](<../images/publish custom node exercise - 08.jpg>)
 
 Dynamo ahora se cargará cada vez con PointsToSurface en el grupo DynamoPrimer de la biblioteca de Dynamo.
 
-\![](<../images/publish custom node exercise - 09.jpg>)
+![](<../images/publish custom node exercise - 09.jpg>)
