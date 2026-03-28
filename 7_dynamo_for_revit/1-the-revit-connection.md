@@ -1,6 +1,6 @@
 # La conexión de Revit
 
-\![](<images/revit connection link.jpg>)
+![](<images/revit connection link.jpg>)
 
 Dynamo para Revit amplía el modelado de información de construcción mediante el entorno de datos y lógica de un editor gráfico de algoritmos. Su flexibilidad, junto con una base de datos de Revit robusta, ofrece una nueva perspectiva para BIM.
 
@@ -35,21 +35,27 @@ Mediante el uso de los nodos principales de Dynamo, junto con los nodos personal
 
 En un editor de proyectos o familias de Revit, vaya a Complementos y haga clic en Dynamo.*
 
-{% hint style="warning" %}* Tenga en cuenta que Dynamo solo se ejecutará en el archivo en el que se abrió. {% endhint %}
+{% hint style="warning" %}*
+Tenga en cuenta que Dynamo solo se ejecutará en el archivo en el que se abrió.
+{% endhint %}
 
 ![](images/1/launchdynamofromrevit.jpg)
 
 Al abrir Dynamo en Revit, hay una nueva categoría denominada "Revit". Se trata de una adición completa a la interfaz de usuario que ofrece nodos que se adaptan específicamente a los flujos de trabajo de Revit.*
 
-{% hint style="warning" %}* El gráfico de Dynamo solo funcionará al abrirse en Dynamo para Revit mediante la familia de nodos específica de Revit. Si se abre un gráfico de Dynamo para Revit en Dynamo Sandbox, por ejemplo, no aparecerán los nodos de Revit. {% endhint %}
+{% hint style="warning" %}*
+El gráfico de Dynamo solo funcionará al abrirse en Dynamo para Revit mediante la familia de nodos específica de Revit. Si se abre un gráfico de Dynamo para Revit en Dynamo Sandbox, por ejemplo, no aparecerán los nodos de Revit.
+{% endhint %}
 
-\![](<images/revit connection - running dynamo in revit 02.jpg>)
+![](<images/revit connection - running dynamo in revit 02.jpg>)
 
 ### Bloqueo de nodos
 
 Como Revit es una plataforma que proporciona una sólida gestión de proyectos, las operaciones paramétricas de Dynamo pueden ser complejas y lentas de calcular. Si Dynamo tarda mucho tiempo en calcular los nodos, puede usar la función "Bloquear" para poner en pausa la ejecución de operaciones de Revit mientras desarrolla el gráfico.
 
-{% hint style="info" %} Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../4_nodes_and_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../4_nodes_and_wires/ "mention").
+{% endhint %}
 
 ### Comunidad y blog de Dynamo
 
