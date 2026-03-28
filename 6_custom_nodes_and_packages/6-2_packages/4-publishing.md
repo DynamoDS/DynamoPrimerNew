@@ -18,7 +18,9 @@ A continuación, reinicie Dynamo. Al volver a abrirlo, cuando active la ventana 
 
 ### Publicación local de un paquete
 
-{% hint style="warning" %} Puede publicar nodos y paquetes personalizados desde Dynamo Sandbox en la versión 2.17 y posteriores, siempre que no presenten dependencias de la API del anfitrión. En versiones anteriores, la publicación de nodos y paquetes personalizados solo estaba activada en Dynamo for Revit y Dynamo para Civil 3D. {% endhint %}
+{% hint style="warning" %}
+Puede publicar nodos y paquetes personalizados desde Dynamo Sandbox en la versión 2.17 y posteriores, siempre que no presenten dependencias de la API del anfitrión. En versiones anteriores, la publicación de nodos y paquetes personalizados solo estaba activada en Dynamo for Revit y Dynamo para Civil 3D.
+{% endhint %}
 
 > Descargue el archivo de ejemplo. Para ello, haga clic en el vínculo siguiente.
 >
@@ -72,7 +74,9 @@ Observe que el directorio raíz se encuentra en la ubicación local del paquete 
 
 ### Publicación de un paquete en línea
 
-{% hint style="warning" %} Nota: No siga este paso a menos que publique realmente un paquete suyo. {% endhint %}
+{% hint style="warning" %}
+Nota: No siga este paso a menos que publique realmente un paquete suyo.
+{% endhint %}
 
 <figure><img src="../images/publish-version.png" alt=""><figcaption></figcaption></figure>
 
