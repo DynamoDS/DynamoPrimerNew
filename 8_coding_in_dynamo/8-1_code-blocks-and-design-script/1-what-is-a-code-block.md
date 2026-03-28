@@ -12,7 +12,7 @@ En resumen, los bloques de código son una interfaz de creación de secuencias d
 
 Con los bloques de código, un usuario dispone de flexibilidad para decidir cómo especificar entradas. A continuación, se indican varias formas de crear un punto básico con coordenadas _(10, 5, 0)_:
 
-\![](<../images/codeblock brief overview.jpg>)
+![](<../images/codeblock brief overview.jpg>)
 
 A medida que aprende más sobre las funciones disponibles en la biblioteca, es posible que le sea más rápido escribir "Point.ByCoordinates" que buscar en la biblioteca y encontrar el nodo adecuado. Por ejemplo, al escribir _"Point."_, Dynamo mostrará una lista de posibles funciones que aplicar a un punto. Esto hace que la creación de secuencias de comandos sea más intuitiva y le ayudará a aprender a aplicar funciones en Dynamo.
 
@@ -20,7 +20,7 @@ A medida que aprende más sobre las funciones disponibles en la biblioteca, es p
 
 El bloque de código se encuentra en _Core > Entrada > Acciones > Bloque de código_. O, simplemente, de forma más rápida, haga doble clic en el lienzo para que aparezca el bloque de código. Este nodo se utiliza con tanta frecuencia que se le han proporcionado privilegios completos de doble clic.
 
-\![](<../images/creating codeblock nodes.jpg>)
+![](<../images/creating codeblock nodes.jpg>)
 
 ### Números, cadenas y fórmulas
 
@@ -30,7 +30,7 @@ En la imagen siguiente, puede comprobar que la forma tradicional de trabajo es a
 
 Los nodos "number" y "string" son dos ejemplos de nodos de Dynamo que posiblemente estén obsoletos en comparación con el bloque de código.
 
-\![](<../images/old school vs code blocks nodes.jpg>)
+![](<../images/old school vs code blocks nodes.jpg>)
 
 > 1. "Forma tradicional"
 > 2. Bloques de código
