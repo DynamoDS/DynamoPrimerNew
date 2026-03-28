@@ -22,12 +22,12 @@ En el siguiente ejercicio, utilizaremos una desviación básica del nodo del pla
 
 Empiece con el archivo de Revit para esta sección (o continúe desde la sección anterior). Este archivo tiene una matriz de paneles ETFE en la cubierta. Haremos referencia a estos paneles en este ejercicio.
 
-\![](<images/documenting - exercise I - 01.jpg>)
+![](<images/documenting - exercise I - 01.jpg>)
 
 > 1. Añada un nodo _Family Types_ al lienzo y seleccione _"ROOF-PANEL-4PT"_.
 > 2. Conecte este nodo a un nodo _Select All Elements of Family Type_ para obtener todos los elementos de Revit en Dynamo.
 
-\![](<images/documenting - exercise I - 02.jpg>)
+![](<images/documenting - exercise I - 02.jpg>)
 
 > 1. Consulte la ubicación de los puntos adaptativos de cada elemento con el nodo _AdaptiveComponent.Locations_.
 > 2. Cree un polígono a partir de estos cuatro puntos con el nodo _Polygon.ByPoints_. Observe que ahora tenemos una versión abstracta del sistema de paneles en Dynamo sin tener que importar la geometría completa del elemento de Revit.
@@ -35,12 +35,12 @@ Empiece con el archivo de Revit para esta sección (o continúe desde la secció
 
 Solo por probar, como en el ejercicio anterior, vamos a configurar el coeficiente de apertura de cada panel en función de su desviación plana.
 
-\![](<images/documenting - exercise I - 03.jpg>)
+![](<images/documenting - exercise I - 03.jpg>)
 
 > 1. Añada un nodo _Element.SetParameterByName_ al lienzo y conecte los componentes adaptativos a la entrada _element_. Conecte un _bloque de código_ con el texto _"Aperture Ratio"_ a la entrada _parameterName_.
 > 2. No se pueden conectar directamente los resultados de la desviación a la entrada "value" porque es necesario volver a asignar los valores al rango de parámetros.
 
-\![](<images/documenting - exercise I - 04.jpg>)
+![](<images/documenting - exercise I - 04.jpg>)
 
 > 1. Con _Math.RemapRange_, vuelva a asignar los valores de desviación a un dominio entre 0,15 y 0,45\. Para ello, introduzca `0.15; 0.45;` en el _bloque de código_.
 > 2. Conecte estos resultados a la entrada "value" de _Element.SetParameterByName_.
@@ -57,13 +57,13 @@ Al ampliar, resulta más evidente que los paneles cerrados están ponderados hac
 
 La configuración de la relación de apertura no demuestra claramente la desviación de los paneles de la cubierta; además, se cambia la geometría del elemento real. Supongamos que solo queremos estudiar la desviación desde el punto de vista de la viabilidad de fabricación. Sería útil colorear los paneles según el rango de desviación para la documentación. Esto se puede realizar con la serie de pasos que se indican a continuación y en un proceso muy similar a los pasos anteriores.
 
-\![](<images/documenting - exercise II - 01.jpg>)
+![](<images/documenting - exercise II - 01.jpg>)
 
 > 1. Elimine _Element.SetParameterByName_ y sus nodos de entrada, y añada _Element.OverrideColorInView_.
 > 2. Añada un nodo _Color Range_ al lienzo y conéctelo a la entrada color de _Element.OverrideColorInView_. Aún tenemos que conectar los valores de desviación con el rango de color para crear el degradado.
 > 3. Al pasar el ratón sobre la entrada _value_, podemos ver que los valores de la entrada deben estar entre _0_ y _1_ para asignar un color a cada valor. Es necesario reasignar los valores de desviación a este rango.
 
-\![](<images/documenting - exercise II - 02.jpg>)
+![](<images/documenting - exercise II - 02.jpg>)
 
 > 1. Mediante _Math.RemapRange_, vuelva a asignar los valores de desviación plana a un rango entre *0* y _1_ (también puede utilizar el nodo _"MapTo"_ para definir un dominio de origen).
 > 2. Conecte los resultados en un nodo _Color Range_.
@@ -74,7 +74,7 @@ Al regresar a Revit, vemos un degradado mucho más legible que es representativo
 
 ![](images/09.jpg)
 
-\![](<images/documenting - exercise II - 04.jpg>)
+![](<images/documenting - exercise II - 04.jpg>)
 
 > 1. Mediante un _bloque de código_, añada dos números en dos líneas diferentes: `0;` y `255;`.
 > 2. Cree los colores rojo y azul mediante la conexión de los valores adecuados a dos nodos _Color.ByARGB_.
@@ -89,7 +89,7 @@ De vuelta en Revit, ahora podemos entender mejor las áreas de máxima desviaci�
 
 Al seleccionar un panel ETFE en Revit, vemos que hay cuatro parámetros de ejemplar: XYZ1, XYZ2, XYZ3 y XYZ4. Todos están en blanco después de crearlos. Se trata de parámetros basados en texto y necesitan valores. Utilizaremos Dynamo para escribir las ubicaciones de puntos adaptativos en cada parámetro. Esto aumenta la interoperabilidad si es necesario enviar la geometría a un ingeniero o consultor de fachadas.
 
-\![](<images/documenting - exercise III - 01.jpg>)
+![](<images/documenting - exercise III - 01.jpg>)
 
 En un plano de ejemplo, tenemos una tabla de planificación grande y vacía. Los parámetros XYZ son parámetros compartidos en el archivo de Revit, lo que nos permite añadirlos a la tabla de planificación.
 
@@ -101,7 +101,7 @@ Al ampliar, vemos que los parámetros XYZ aún no se han rellenado. Revit se ocu
 
 Para escribir estos valores, realizaremos una operación de lista compleja. El gráfico en sí es sencillo, pero los conceptos se hacen más complejos a partir de la asignación de lista, como se explica en el capítulo sobre las listas.
 
-\![](<images/documenting - exercise III - 04.jpg>)
+![](<images/documenting - exercise III - 04.jpg>)
 
 > 1. Seleccione todos los componentes adaptativos con dos nodos.
 > 2. Extraiga la ubicación de cada punto con _AdaptiveComponent.Locations_.
