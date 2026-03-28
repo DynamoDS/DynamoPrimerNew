@@ -32,7 +32,7 @@ Este índice proporciona información adicional sobre todos los nodos utilizados
 |                                             |                                                                               |                                                                 |
 | ------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------- |
 |                                             | ACCIONES                                                                       |                                                                 |
-| ! [](<imágenes/Ver watch.jpg>)    | <p><strong>View.Watch</strong><br>Permite visualizar la salida del nodo.</p>           | ![](<images/index of nodes - view watch.jpg>)       |
+| ![](<imágenes/Ver watch.jpg>)    | <p><strong>View.Watch</strong><br>Permite visualizar la salida del nodo.</p>           | ![](<images/index of nodes - view watch.jpg>)       |
 | ![](<images/View watch 3d.jpg>) | <p><strong>View.Watch 3D</strong><br>Muestra una vista preliminar dinámica de la geometría.</p> | ![](<images/index of nodes - view watch.3Djpg.jpg>) |
 
 ## Entrada
