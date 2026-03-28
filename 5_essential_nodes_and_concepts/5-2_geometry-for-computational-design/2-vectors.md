@@ -6,7 +6,7 @@
 
 El [vector](2-vectors.md#vector-1) es una representación de magnitud y dirección, que se puede mostrar como una flecha que se acelera hacia una dirección concreta a una velocidad determinada. Este es un componente clave de los modelos de Dynamo. Tenga en cuenta que, como se encuentran en la categoría abstracta de "ayudas", cuando creamos un vector, no aparecerá nada en la vista preliminar en segundo plano.
 
-\![Vectores en Dynamo](<../images/Geometry for Computational Design - vectors.jpg>)
+![Vectores en Dynamo](<../images/Geometry for Computational Design - vectors.jpg>)
 
 > 1. Podemos utilizar una línea como sustituto de una vista preliminar del vector.
 
@@ -20,7 +20,7 @@ El [vector](2-vectors.md#vector-1) es una representación de magnitud y direcci�
 
 Un [plano](2-vectors.md#plane-1) es una superficie bidimensional que puede tener el aspecto de una superficie plana que se extiende de forma indefinida. Cada plano tiene un origen y una dirección X, Y y Z (arriba).
 
-\![Planos en Dynamo](<../images/Geometry for Computational Design - plane.jpg>)
+![Planos en Dynamo](<../images/Geometry for Computational Design - plane.jpg>)
 
 > 1. Aunque son abstractos, los planos tienen una posición de origen, por lo que podemos localizarlos en el espacio.
 > 2. En Dynamo, los planos se renderizan en la vista preliminar en segundo plano.
@@ -35,7 +35,7 @@ Un [plano](2-vectors.md#plane-1) es una superficie bidimensional que puede tener
 
 Un [sistema de coordenadas](2-vectors.md#coordinate-system-1) permite determinar la ubicación de puntos u otros elementos geométricos. En la imagen siguiente, se explica el aspecto que tiene en Dynamo y lo que representa cada color.
 
-\![Sistema de coordenadas en Dynamo](<../images/Geometry for Computational Design - Coordinate.jpg>)
+![Sistema de coordenadas en Dynamo](<../images/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. Aunque son abstractos, los sistemas de coordenadas también tienen una posición de origen para poder localizarlos en el espacio.
 > 2. En Dynamo, los sistemas de coordenadas se renderizan en la vista preliminar en segundo plano como un punto (origen) y líneas que definen los ejes (X es rojo, Y es verde y Z es azul según la convención).
