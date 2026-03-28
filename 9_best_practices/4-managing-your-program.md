@@ -6,7 +6,7 @@ Trabajar en un proceso de programación visual puede ser una potente actividad c
 
 Una vez que hemos añadido varios nodos al espacio de trabajo, es posible que deseemos reorganizar el diseño de los nodos para obtener mayor claridad. Al seleccionar más de un nodo y hacer clic con el botón derecho en el espacio de trabajo, la ventana emergente incluye un menú **Alinear selección** con opciones de justificación y distribución en X e Y.
 
-\![](<images/managing your program - alignment.jpg>)
+![](<images/managing your program - alignment.jpg>)
 
 > 1. Seleccione varios nodos.
 > 2. Haga clic con el botón derecho en el espacio de trabajo.
@@ -16,20 +16,20 @@ Una vez que hemos añadido varios nodos al espacio de trabajo, es posible que de
 
 Con cierta experiencia, es posible que podamos "leer" el programa visual revisando los nombres de nodo y siguiendo el flujo de programa. Para los usuarios de todos los niveles de experiencia, es recomendable también incluir etiquetas y descripciones en lenguaje sencillo. Para ello, Dynamo presenta un nodo **Notes** con un campo de texto editable. Podemos añadir notas al espacio de trabajo de dos formas:
 
-\![](<images/managing your program - notes.jpg>)
+![](<images/managing your program - notes.jpg>)
 
 > 1. Vaya al menú Editar > Crear nota.
 > 2. Utilice el método abreviado de teclado Ctrl + W.
 
 Una vez que se ha añadido la nota al espacio de trabajo, aparece un campo de texto que nos permite editar el texto de la nota. Una vez creada, se puede editar la nota. Para ello, haga doble clic o haga clic con el botón derecho en el nodo Note.
 
-\![](<images/managing your program - notes 02.jpg>)
+![](<images/managing your program - notes 02.jpg>)
 
 ### Agrupación
 
 Cuando aumente el tamaño del programa visual, resultará útil identificar los pasos más grandes que se ejecutarán. Podemos resaltar conjuntos más grandes de nodos con un **grupo** para etiquetarlos con un rectángulo de color en el fondo y un título. Hay tres formas de crear un grupo con más de un nodo seleccionado, como se indica a continuación:
 
-\![](<images/managing your program - grouping 01.jpg>)
+![](<images/managing your program - grouping 01.jpg>)
 
 > 1. Vaya al menú Editar > Crear grupo.
 > 2. Utilice el acceso directo de teclado Ctrl + G.
@@ -37,13 +37,15 @@ Cuando aumente el tamaño del programa visual, resultará útil identificar los 
 
 Una vez creado un grupo, se pueden editar sus parámetros, como el título y el color.
 
-\![](<images/managing your program - grouping 02.jpg>)
+![](<images/managing your program - grouping 02.jpg>)
 
-{% hint style="info" %} Consejo: El uso de notas y grupos es una forma eficaz de anotar el archivo y aumentar la legibilidad. {% endhint %}
+{% hint style="info" %}
+Consejo: El uso de notas y grupos es una forma eficaz de anotar el archivo y aumentar la legibilidad.
+{% endhint %}
 
 A continuación, se muestra un ejemplo de programa con notas y grupos añadidos:
 
-\![](<images/managing your program - grouping 03.jpg>)
+![](<images/managing your program - grouping 03.jpg>)
 
 > 1. Nota: "Grid Parameters" (Parámetros de rejilla)
 > 2. Nota: "Grid Points" (Puntos de rejilla)
