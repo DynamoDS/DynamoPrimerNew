@@ -12,7 +12,7 @@ Dynamo define mallas mediante una estructura de datos de cara-vértice. En su ni
 
 Para crear una malla, se necesita una lista de vértices y un sistema de agrupación de esos vértices en caras denominado grupo de índice.
 
-\![](<../images/meshes - mesh elements.jpg>)
+![](<../images/meshes - mesh elements.jpg>)
 
 > 1. Lista de vértices
 > 2. Lista de grupos de índice para definir caras
@@ -25,7 +25,7 @@ La biblioteca también proporciona herramientas para modificar y reparar mallas,
 
 Consulte los [casos reales del Kit de herramientas de malla](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes) para obtener un ejemplo de cómo utilizar este paquete.
 
-! [Kit de herramientas de malla](<../images/meshes - mesh toolkit standford bunny.jpg>)
+![Kit de herramientas de malla](<../images/meshes - mesh toolkit standford bunny.jpg>)
 
 ## Información más detallada sobre...
 
