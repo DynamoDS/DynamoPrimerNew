@@ -24,7 +24,7 @@ When handling an issue:
 
 3. Follow these rules strictly:
    - Preserve the existing markdown table style.
-   - Insert the new row in descending version order within the correct product section.
+   - Insert the new row in descending version order within the correct product section, comparing versions by splitting on `.` and comparing each segment as an integer; if one version has fewer segments, treat missing segments as `0` for comparison only (for example, `2026.10` > `2026.2` and `2026.0` == `2026`).
    - Do not duplicate an existing row.
    - Do not modify unrelated sections.
    - If the product is "Other" and no section exists, stop and explain that a maintainer must define the section first.
