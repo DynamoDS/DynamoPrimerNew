@@ -4,7 +4,6 @@ title: "[Host Integration]: <Product> <Host Version> -> Dynamo <Version>"
 labels:
   - host-integration
   - documentation
-type: feature
 body:
   - type: markdown
     attributes:
