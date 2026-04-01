@@ -1,6 +1,6 @@
 name: Host integration update
 description: Report a new host product version and the Dynamo build it shipped with
-title: "Update Host Map"
+title: "[Host Integration]: <Product> <Host Version> -> Dynamo <Version>"
 labels:
   - host-integration
   - documentation
@@ -24,6 +24,13 @@ body:
         - Other
     validations:
       required: true
+
+  - type: input
+    id: other_product
+    attributes:
+      label: Other product name
+      description: If you selected "Other" above, specify the host product name here.
+      placeholder: ex. FormIt
 
   - type: input
     id: host_version
