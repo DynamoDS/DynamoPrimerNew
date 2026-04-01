@@ -5,6 +5,20 @@ on:
     types: [opened, edited, labeled]
 
 jobs:
+  assign-copilot:
+    if: github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'host-integration')
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Assign Copilot to issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue edit ${{ github.event.issue.number }} \
+            --repo ${{ github.repository }} \
+            --add-assignee "Copilot"
+
   validate:
     if: contains(github.event.issue.labels.*.name, 'host-integration')
     runs-on: ubuntu-latest
@@ -48,8 +62,6 @@ jobs:
             const missingHeadings = [];
             const emptySections = [];
 
-            let hostProductValue = null;
-
             for (const title of requiredTitles) {
               const value = getSectionValue(body, title);
               if (value === null) {
@@ -62,23 +74,6 @@ jobs:
 
               if (!normalized || isNoResponse) {
                 emptySections.push(title);
-              }
-
-              if (title === "Host product") {
-                hostProductValue = normalized;
-              }
-            }
-
-            // If Host product is "Other", require a non-empty "Other product name" section.
-            if (hostProductValue) {
-              const firstLine = hostProductValue.split(/\r?\n/, 1)[0].trim();
-              if (/^other\b/i.test(firstLine)) {
-                const otherNameValue = getSectionValue(body, "Other product name");
-                const normalizedOther = (otherNameValue || "").trim();
-                const isNoResponseOther = /^_No response_$/i.test(normalizedOther);
-                if (!normalizedOther || isNoResponseOther) {
-                  emptySections.push("Other product name");
-                }
               }
             }
 
