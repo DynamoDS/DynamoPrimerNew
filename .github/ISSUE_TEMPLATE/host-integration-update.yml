@@ -30,10 +30,10 @@ body:
     id: other_product
     attributes:
       label: Other product name
-      description: Fill this in only if you selected "Other"
+      description: If you selected "Other" above, specify the host product name here.
       placeholder: ex. FormIt
     validations:
-      required: false
+      required: true
 
   - type: input
     id: host_version
