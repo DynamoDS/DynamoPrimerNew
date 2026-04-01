@@ -15,14 +15,83 @@ jobs:
           script: |
             const body = context.payload.issue.body || "";
 
-            const requiredMarkers = [
-              "### Host product",
-              "### Host product version",
-              "### Dynamo version"
+            function escapeRegExp(str) {
+              return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+            }
+
+            function getSectionValue(markdown, title) {
+              const headingRegex = new RegExp("^###\\s+" + escapeRegExp(title) + "\\s*$", "mi");
+              const headingMatch = markdown.match(headingRegex);
+              if (!headingMatch) {
+                return null;
+              }
+
+              const headingStart = markdown.indexOf(headingMatch[0]);
+              if (headingStart === -1) {
+                return null;
+              }
+
+              const contentStart = headingStart + headingMatch[0].length;
+              const rest = markdown.slice(contentStart);
+              const nextHeadingMatch = rest.match(/^###\s+/m);
+              const sectionText = nextHeadingMatch ? rest.slice(0, nextHeadingMatch.index) : rest;
+
+              return sectionText.trim();
+            }
+
+            const requiredTitles = [
+              "Host product",
+              "Host product version",
+              "Dynamo version"
             ];
 
-            const missing = requiredMarkers.filter(marker => !body.includes(marker));
+            const missingHeadings = [];
+            const emptySections = [];
 
-            if (missing.length) {
-              core.setFailed(`Missing required issue form sections: ${missing.join(", ")}`);
+            let hostProductValue = null;
+
+            for (const title of requiredTitles) {
+              const value = getSectionValue(body, title);
+              if (value === null) {
+                missingHeadings.push(title);
+                continue;
+              }
+
+              const normalized = value.trim();
+              const isNoResponse = /^_No response_$/i.test(normalized);
+
+              if (!normalized || isNoResponse) {
+                emptySections.push(title);
+              }
+
+              if (title === "Host product") {
+                hostProductValue = normalized;
+              }
+            }
+
+            // If Host product is "Other", require a non-empty "Other product name" section.
+            if (hostProductValue) {
+              const firstLine = hostProductValue.split(/\r?\n/, 1)[0].trim();
+              if (/^other\b/i.test(firstLine)) {
+                const otherNameValue = getSectionValue(body, "Other product name");
+                const normalizedOther = (otherNameValue || "").trim();
+                const isNoResponseOther = /^_No response_$/i.test(normalizedOther);
+                if (!normalizedOther || isNoResponseOther) {
+                  emptySections.push("Other product name");
+                }
+              }
+            }
+
+            const problems = [];
+
+            if (missingHeadings.length) {
+              problems.push(`Missing required issue form sections: ${missingHeadings.join(", ")}`);
+            }
+
+            if (emptySections.length) {
+              problems.push(`The following sections must not be empty or "_No response_": ${emptySections.join(", ")}`);
+            }
+
+            if (problems.length) {
+              core.setFailed(problems.join(" | "));
             }
