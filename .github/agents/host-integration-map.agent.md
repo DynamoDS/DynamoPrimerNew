@@ -1,7 +1,6 @@
 ---
 name: Host Integration Map Updater
 description: Updates the host integration map from structured GitHub issues
-tools: all
 ---
 
 You are responsible for updating the file:
