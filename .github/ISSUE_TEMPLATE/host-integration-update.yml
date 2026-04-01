@@ -1,0 +1,84 @@
+name: Host integration update
+description: Report a new host product version and the Dynamo build it shipped with
+title: "[Host Integration]: <Product> <Host Version> -> Dynamo <Version>"
+labels:
+  - host-integration
+  - documentation
+type: feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to report a host product release and the Dynamo version integrated with it.
+        Please include the exact host product version and exact Dynamo version.
+
+  - type: dropdown
+    id: product
+    attributes:
+      label: Host product
+      description: Which Autodesk host product shipped this Dynamo version?
+      options:
+        - Revit
+        - Civil 3D
+        - Alias
+        - Advance Steel
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: other_product
+    attributes:
+      label: Other product name
+      description: Fill this in only if you selected "Other"
+      placeholder: ex. FormIt
+    validations:
+      required: false
+
+  - type: input
+    id: host_version
+    attributes:
+      label: Host product version
+      description: Exact host version as it should appear in the table
+      placeholder: ex. 2026.3
+    validations:
+      required: true
+
+  - type: input
+    id: dynamo_version
+    attributes:
+      label: Dynamo version
+      description: Exact Dynamo version/build shipped with the host
+      placeholder: ex. 3.6.0.9395
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Source or evidence
+      description: Release notes, internal source, or PR reference
+      placeholder: ex. https://...
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Any nuance the agent should know before updating the table
+      placeholder: ex. This should be inserted above 2026.2 in the Revit section
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I verified the host product version is correct
+          required: true
+        - label: I verified the Dynamo version is correct
+          required: true
+        - label: This integration is not already listed in the map
+          required: true
