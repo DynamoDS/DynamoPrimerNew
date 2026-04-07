@@ -147,6 +147,7 @@
   * [Release Notes](a_appendix/a-8_release-notes.md)
   * [Useful Packages](a_appendix/a-3_packages.md)
   * [Example Files](a_appendix/a-4_example-files.md)
+  * [.NET Compatibility](a_appendix/dotnet-compatibility.md)
   * [Host Integration Map](a_appendix/host-integration-map.md)
   * [Download PDF](a_appendix/a-5_download-pdf.md)
   * [Dynamo Keyboard Shortcuts](a_appendix/a-6_dynamo-keyboard-shortcuts.md)
