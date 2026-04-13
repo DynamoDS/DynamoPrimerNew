@@ -2,7 +2,7 @@
 
 La bibliothèque contient tous les nœuds chargés, y compris les nœuds de catégorie par défaut fournis avec l’installation, ainsi que tous les autres nœuds ou packages personnalisés chargés. Les nœuds de la bibliothèque sont organisés de manière hiérarchique dans les bibliothèques, les catégories et, le cas échéant, les sous-catégories.
 
-\![](<../.gitbook/assets/library - library UI.png>)
+![](<images/library-library-ui.png>)
 
 * Nœuds de base : fournis avec l’installation par défaut.
 * Nœuds personnalisés : stockez vos routines fréquemment utilisées ou votre graphique spécial en tant que nœuds personnalisés. Vous pouvez également partager vos nœuds personnalisés avec la communauté.
@@ -18,7 +18,7 @@ Parcourez la bibliothèque en cliquant sur les menus pour développer chaque cat
 
 {% hint style="info" %} Géométrie est un excellent menu à explorer en premier, car il contient la plus grande quantité de nœuds. {% endhint %}
 
-\![](<../.gitbook/assets/library - modified and resize library categories.jpg>)
+![](<images/library-modified-and-resize-library-categories.jpg>)
 
 > 1. Bibliothèque
 > 2. Catégorie
@@ -27,13 +27,13 @@ Parcourez la bibliothèque en cliquant sur les menus pour développer chaque cat
 
 Ces menus permettent de classer les nœuds dans la même sous-catégorie selon que les nœuds **créent** des données, exécutent une **action** ou **interrogent** des données.
 
-* \![](<../.gitbook/assets/user interface - create.jpg>) **Créer** : créez ou construisez une géométrie à partir de zéro, par exemple, un cercle.
-* \![](<../.gitbook/assets/user interface - action.jpg>) **Action** : effectuez une action sur un objet, par exemple, mettre un cercle à l’échelle.
-* \![](<../.gitbook/assets/user interface - query.jpg>) **Requête** : permet d’obtenir une propriété d’un objet qui existe déjà, par exemple, obtenir le rayon d’un cercle.
+* ![](<images/user-interface-create.jpg>) **Créer** : permet de créer ou de construire une géométrie de toutes pièces. par exemple, un cercle.
+* ![](<images/user-interface-action.jpg>) **Action** : permet d’effectuer une action sur un objet. par exemple, mettre un cercle à l’échelle.
+* ![](<images/user-interface-query.jpg>) **Requête** : permet d’obtenir la propriété d’un objet qui existe déjà. par exemple, obtenir le rayon d’un cercle.
 
 Placez le curseur de la souris sur un nœud pour afficher des informations plus détaillées que son nom et son icône. Ces informations permettent de comprendre ce que fait le nœud, ce qu’il requiert pour les entrées et ce qu’il va donner en sortie.
 
-\![](<../.gitbook/assets/user interface - node description.jpg>)
+![](<images/user-interface-node-description.jpg>)
 
 > 1. Description : description du nœud en langage simple
 > 2. Icône : version plus grande de l'icône dans le menu de la bibliothèque
@@ -46,7 +46,7 @@ Si vous avez une idée du nœud que vous souhaitez ajouter à votre espace de tr
 
 Cliquez sur le nœud que vous souhaitez ajouter ou appuyez sur la touche Entrée pour ajouter les nœuds mis en surbrillance au centre de l’espace de travail.
 
-\![](<../.gitbook/assets/user interface - search.jpg>)
+![](<images/user-interface-search.jpg>)
 
 #### Recherche par hiérarchie
 
@@ -58,15 +58,15 @@ La saisie de différentes parties de la position du nœud dans la hiérarchie de
 
 * `library.category.nodeName`
 
-\![](<../.gitbook/assets/library - search by hierarchy 1 geometry point by coordinates.jpg>)
+![](<images/library-search-by-hierarchy-1-geometry-point-by-coordinates.jpg>)
 
 * `category.nodeName`
 
-\![](<../.gitbook/assets/library - search by hierarchy 2 point by coordinates.jpg>)
+![](<images/library-search-by-hierarchy-2-point-by-coordinates.jpg>)
 
 * `nodeName` ou `keyword`
 
-\![](<../.gitbook/assets/library - search by hierarchy 3 by coordinates.jpg>)
+![](<images/library-search-by-hierarchy-3-by-coordinates.jpg>)
 
 En règle générale, le nom du nœud dans l’espace de travail est rendu au format `category.nodeName`, à quelques exceptions près, notamment dans les catégories Input et View.
 
@@ -74,15 +74,15 @@ Attention aux nœuds ayant un nom similaire et notez la différence de catégori
 
 * Les nœuds de la plupart des bibliothèques incluent le format de catégorie.
 
-\![](<../.gitbook/assets/library - node category differences 1.jpg>)
+![](<images/library-node-category-differences-1.jpg>)
 
 * Les nœuds `Point.ByCoordinates` et `UV.ByCoordinates` portent le même nom, mais proviennent de différentes catégories.
 
-\![](<../.gitbook/assets/library - node category differences 2.jpg>)
+![](<images/library-node-category-differences-2.jpg>)
 
 * Les exceptions notables incluent les fonctions intégrées : Core.Input, Core.View et Operators.
 
-\![](<../.gitbook/assets/library - node category differences 3.jpg>)
+![](<images/library-node-category-differences-3.jpg>)
 
 ### Nœuds fréquemment utilisés
 
@@ -94,24 +94,24 @@ Les nœuds Input sont les principaux moyens pour que l'utilisateur de votre prog
 
 | Noeud           |                                                        | Nœud           |                                                        |
 | -------------- | ------------------------------------------------------ | -------------- | ------------------------------------------------------ |
-| Booléen        | \![](<../.gitbook/assets/library - boolean.jpg>)        | Numéro         | \![](<../.gitbook/assets/library - number.jpg>)         |
-| String         | \![](<../.gitbook/assets/library - string.jpg>)         | Curseur de nombre  | \![](<../.gitbook/assets/library - number slider.jpg>)  |
-| Chemin de répertoire | \![](<../.gitbook/assets/library - directory path.jpg>) | Integer Slider | \![](<../.gitbook/assets/library - integer slider.jpg>) |
-| Chemin du fichier      | \![](<../.gitbook/assets/library - file path.jpg>)      |                |                                                        |
+| Boolean        | ![](<images/library-boolean.jpg>)        | Number         | ![](<images/library-number.jpg>)         |
+| String         | ![](<images/library-string.jpg>)         | Number Slider  | ![](<images/library-number-slider.jpg>)  |
+| Directory Path | ![](<images/library-directory-path.jpg>) | Integer Slider | ![](<images/library-integer-slider.jpg>) |
+| File Path      | ![](<images/library-file-path.jpg>)      |                |                                                        |
 
 #### Watch et Watch3D
 
 Les nœuds Watch sont essentiels pour la gestion des données qui circulent dans votre programme visuel. Vous pouvez afficher le résultat d’un nœud dans l’**aperçu des données de nœud** en plaçant le curseur de la souris sur le nœud.
 
-\![](<../.gitbook/assets/library - node preview.jpg>)
+![](<images/library-node-preview.jpg>)
 
 Il sera utile de l’afficher dans un nœud **Watch**
 
-\![](<../.gitbook/assets/library - watch node.jpg>)
+![](<images/library-watch-node.jpg>)
 
 Vous pouvez également afficher les résultats de la géométrie à l’aide d’un nœud **Watch3D**.
 
-\![](<../.gitbook/assets/library - watch3d node.gif>)
+![](<images/library-watch3d-node.gif>)
 
 Ces deux nœuds sont disponibles dans la catégorie View de la bibliothèque Core.
 
@@ -125,7 +125,7 @@ Vous pouvez également utiliser les nœuds Code Block comme raccourci pour défi
 
 Voici une démonstration simple (avec des instructions) de l’utilisation du nœud Code Block dans votre script.
 
-![](../.gitbook/assets/library-codeblockdemo.gif)
+![](images/library-codeblockdemo.gif)
 
 1. Double-cliquez pour créer un nœud Code Block.
 2. Saisissez `Circle.ByCenterPointRadius(x,y);`

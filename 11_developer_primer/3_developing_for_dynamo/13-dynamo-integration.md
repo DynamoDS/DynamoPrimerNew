@@ -377,7 +377,7 @@ Avec la liaison d’éléments activée, nous aurions pu conserver le travail ex
 
 ***
 
-![Création de murs](../../.gitbook/assets/creates_walls.png)
+![Création de murs](../images/creates_walls.png)
 
 #### Liaison d’éléments par rapport au traçage
 
@@ -466,15 +466,15 @@ Lorsqu’un utilisateur exécute pour la première fois un graphe contenant le n
 
 Le flux de deux exécutions consécutives de graphe qui crée un seul `TraceExampleItem` ressemble au suivant :
 
-![Premier appel](../../.gitbook/assets/Trace-first-call.png)
+![Premier appel](../images/Trace-first-call.png)
 
-![Deuxième appel](../../.gitbook/assets/Trace-second-call.png)
+![Deuxième appel](../images/Trace-second-call.png)
 
 La même idée est illustrée dans l’exemple suivant avec un cas d’utilisation plus réaliste d’un nœud DynamoRevit.
 
 #### Diagramme de Trace
 
-![Étapes de Trace](../../.gitbook/assets/trace_diagram.png) ![Flux de Trace](../../.gitbook/assets/trace_alt_diagram.png)
+![Étapes de Trace](../images/trace_diagram.png) ![Flux de Trace](../images/trace_alt_diagram.png)
 
 #### REMARQUE :
 
@@ -560,7 +560,7 @@ Les phases importantes de l’exécution du constructeur en ce qui concerne la l
 
 * Les objets de Trace enregistrés dans des versions antérieures à Dynamo 3.0 sont stockés avec SOAP, de sorte qu’ils ne sont pas pris en charge dans les versions plus récentes. Les données de liaison d’éléments précédemment enregistrées seront ignorées et le message ci-dessous s’affichera dans Dynamo 3.0 et les versions ultérieures. Les données de liaison d’éléments seront enregistrées la prochaine fois que vous exécuterez et enregistrerez l’espace de travail.
 
-![Compatibilité de liaison d’éléments](../../.gitbook/assets/element_binding_compatibility_message.jpg)
+![Compatibilité de liaison d’éléments](../images/element_binding_compatibility_message.jpg)
 
 #### ElementBinding doit-il être activé par défaut ?
 
@@ -574,7 +574,7 @@ En général, ces nœuds permettent à l’utilisateur de décrire d’une mani�
 
 Il existe plusieurs nœuds de `Selection` dans DynamoRevit. Nous pouvons les diviser en au moins deux groupes :
 
-![Nœuds de sélection Revit](../../.gitbook/assets/revitSelectionNodes.png)
+![Nœuds de sélection Revit](../images/revitSelectionNodes.png)
 
 1.  Choix de l’interface utilisateur :
 
@@ -602,7 +602,7 @@ Il existe plusieurs nœuds de `Selection` dans DynamoRevit. Nous pouvons les div
 
 Les workflows D4C sont très similaires à la description ci-dessus pour Revit. Voici deux ensembles typiques de nœuds de sélection dans D4C :
 
-![Nœuds de sélection Civil 3D](../../.gitbook/assets/civilSelectionNodes.png)
+![Nœuds de sélection Civil 3D](../images/civilSelectionNodes.png)
 
 ### Problèmes :
 
@@ -613,9 +613,9 @@ Les workflows D4C sont très similaires à la description ci-dessus pour Revit. 
 
 ### Diagrammes de flux de données
 
-![Flux de sélection](../../.gitbook/assets/selectModelElement.png)
+![Flux de sélection](../images/selectModelElement.png)
 
-![Flux de sélection 2](../../.gitbook/assets/selectElementFace.png)
+![Flux de sélection 2](../images/selectElementFace.png)
 
 ### Implémentation technique (voir les diagrammes ci-dessus) :
 
@@ -624,7 +624,7 @@ Les nœuds de sélection sont implémentés en héritant des types `SelectionBas
 * Implémentation d’une méthode `BuildOutputAST` : cette méthode doit renvoyer un AST, qui sera exécuté à un moment donné dans le futur, lorsque le nœud devra être exécuté. Dans le cas des noeuds Sélection, il doit renvoyer des éléments ou une géométrie à partir des ID d’éléments. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * L’implémentation de `BuildOutputAST` est l’une des parties les plus difficiles de l’implémentation des nœuds `NodeModel` / UI. Il est préférable de mettre autant de logique que possible dans une fonction c# et d’incorporer simplement un nœud d’appel de fonction AST dans l’AST. Notez qu’ici, `node` est un nœud AST dans l’arborescence syntaxique abstraite et non un nœud du graphe Dynamo.
 
-![Flux de sélection 2](../../.gitbook/assets/selectionAST.png)
+![Flux de sélection 2](../images/selectionAST.png)
 
 * Sérialisation -
   *   Étant donné qu’il s’agit de types dérivés `NodeModel` explicites (et non ZeroTouch), ils nécessitent également l’implémentation d’un [JsonConstructor] qui sera utilisé lors de la désérialisation du nœud à partir d’un fichier .dyn.

@@ -10,7 +10,7 @@ Si vous voulez construire des modèles plus complexes qui ne peuvent pas être c
 
 Vous pouvez utiliser des [opérations booléennes](6-solids.md#boolean-operations) pour modifier des solides. Utilisez quelques opérations booléennes pour créer une balle hérisson.
 
-\![](<../../.gitbook/assets/solids - spiky ball.jpg>)
+\![](<../images/solids - spiky ball.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius** : permet de créer le solide de base.
 > 2. **Topology.Faces**, **Face.SurfaceGeometry** : permet d’envoyer des requêtes aux faces du solide et de les convertir en géométrie de surface. Dans ce cas, la sphère ne possède qu’une seule face.
@@ -29,7 +29,7 @@ Vous pouvez utiliser des [opérations booléennes](6-solids.md#boolean-operation
 
 Les opérations booléennes sont complexes et peuvent être lentes à calculer. Vous pouvez utiliser la fonctionnalité Geler pour suspendre l’exécution des nœuds sélectionnés et affectés aux nœuds en aval.
 
-\![](<../../.gitbook/assets/solids - freeze node.jpg>)
+\![](<../images/solids - freeze node.jpg>)
 
 > 1. Utilisez le menu contextuel du bouton droit de la souris pour geler l'opération d'union de solide.
 > 2. Le nœud sélectionné et tous les nœuds en aval s’affichent en mode fantôme gris clair et les fils affectés en tant que lignes en pointillés. Le mode fantôme sera également appliqué à l'aperçu de la géométrie concernée. Vous pouvez maintenant modifier les valeurs en amont sans calculer l’union booléenne.
@@ -44,7 +44,7 @@ Les opérations booléennes sont complexes et peuvent être lentes à calculer. 
 
 Les solides sont constitués d'une ou de plusieurs surfaces contenant un volume au moyen d'une limite fermée qui définit l'"intérieur" ou l'"extérieur". Quel que soit le nombre de surfaces, elles doivent former un volume "étanche" pour être considérées comme un solide. Vous pouvez créer des solides en joignant des surfaces ou des polysurfaces ou en utilisant des opérations telles que le lissage, le balayage et la révolution. Les primitives sphère, cube, cône et cylindre sont également des solides. Un cube dont au moins une face a été supprimée est considéré comme une polysurface qui possède des propriétés similaires, mais ce n’est pas un solide.
 
-![Solides](../../.gitbook/assets/Primitives.jpg)
+![Solides](../images/Primitives.jpg)
 
 > 1. Un plan est constitué d’une surface unique et n’est pas un solide.
 > 2. Une sphère est constituée d’une surface, mais _est_ un solide.
@@ -56,7 +56,7 @@ Les solides sont constitués d'une ou de plusieurs surfaces contenant un volume 
 
 Les solides sont constitués de trois types d'éléments : sommets, arêtes et faces. Les faces sont les surfaces qui constituent le solide. Les arêtes sont des courbes qui définissent la connexion entre des faces adjacentes et les sommets sont les points de départ et d'arrivée de ces courbes. Les nœuds Topology peuvent être utilisés pour envoyer des requêtes à ces éléments.
 
-![Topologie](../../.gitbook/assets/Solid-topology.jpg)
+![Topologie](../images/Solid-topology.jpg)
 
 > 1. Faces
 > 2. Arêtes
@@ -66,7 +66,7 @@ Les solides sont constitués de trois types d'éléments : sommets, arêtes et 
 
 Les solides peuvent être modifiés en raccordant ou en chanfreinant leurs arêtes pour éliminer les angles et les angles aigus. L’opération de chanfrein crée une surface réglée entre deux faces, tandis qu’un congé se mélange entre les faces pour maintenir la tangence.
 
-![](../../.gitbook/assets/SolidOperations.jpg)
+![](../images/SolidOperations.jpg)
 
 > 1. Cube solide
 > 2. Cube chanfreiné
@@ -81,13 +81,13 @@ Les opérations booléennes de solide sont des méthodes pour combiner deux soli
 3. **Supprimer** les portions indésirables de la géométrie.
 4. **Rassembler** le tout.
 
-Cela rend les objets booléens solides extrêmement efficaces. Il existe trois opérations booléennes de solide qui permettent de distinguer les parties de la géométrie qui sont conservées. ![Opération booléenne de solide](../../.gitbook/assets/SolidBooleans.jpg)
+Cela rend les objets booléens solides extrêmement efficaces. Il existe trois opérations booléennes de solide qui permettent de distinguer les parties de la géométrie qui sont conservées. ![Opération booléenne de solide](../images/SolidBooleans.jpg)
 
 > 1. **Union** : supprimez les parties des solides qui se chevauchent et joignez-les en un seul solide.
 > 2. **Différence** : soustrayez un solide à un autre. Le solide à soustraire est appelé outil. Notez que vous pouvez redéfinir quel solide est l’outil pour conserver le volume inverse.
 > 3. **Intersection** : conservez uniquement le volume d’intersection des deux solides.
 
-Outre ces trois opérations, Dynamo dispose des nœuds **Solid.DifferenceAll** et **Solid.UnionAll** pour effectuer des opérations de différence et d’union avec plusieurs solides. ![](../../.gitbook/assets/BooleanAll.jpg)
+Outre ces trois opérations, Dynamo dispose des nœuds **Solid.DifferenceAll** et **Solid.UnionAll** pour effectuer des opérations de différence et d’union avec plusieurs solides. ![](../images/BooleanAll.jpg)
 
 > 1. **UnionAll** : opération d’union avec une sphère et des cônes orientés vers l’extérieur
 > 2. **DifferenceAll** : opération de différence avec une sphère et des cônes orientés vers l’intérieur

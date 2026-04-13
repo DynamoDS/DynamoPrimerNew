@@ -4,7 +4,7 @@
 
 Ajoutons un autre niveau à la hiérarchie. Si vous prenez le paquet de cartes de l'exemple d'origine et si vous créez une boîte contenant plusieurs paquets, la case représente désormais une liste de paquets et chaque paquet représente une liste de cartes. Voici une liste de listes. Pour l’analogie de cette section, l’image ci-dessous contient une liste de rouleaux de pièces de monnaie, et chaque rouleau contient une liste de centimes.
 
-![Pièces de monnaie](../../.gitbook/assets/coins-521245_640.jpg)
+![Pièces de monnaie](../images/coins-521245_640.jpg)
 
 > Photo de [Dori](https://commons.wikimedia.org/wiki/File:Stack_of_coins_0214.jpg).
 
@@ -42,7 +42,7 @@ Lorsque vous travaillez sur des listes de listes, les données sont superposées
 
 Voici le concept fondamental à retenir de cette section : **Dynamo traite les listes comme des objets**. Cette hiérarchie verticale est développée en tenant compte de la programmation orientée objet. Au lieu de sélectionner des sous-éléments à l’aide d’une commande telle que **List.GetItemAtIndex**, Dynamo sélectionne cet index de la liste principale dans la structure de données. Cet élément peut être une autre liste. Nous allons le décomposer avec une image d’exemple :
 
-\![de haut en bas](<../../.gitbook/assets/lists of lists - top down hierachy.jpg>)
+\![de haut en bas](<../images/lists of lists - top down hierachy.jpg>)
 
 > 1. Grâce au nœud **Code Block**, vous avez défini deux intervalles : `0..2; 0..3;`
 > 2. Ces intervalles sont connectés à un nœud **Point.ByCoordinates** avec la combinaison définie sur _« Produit vectoriel »_. Cela crée une grille de points et renvoie également une liste de listes sous forme de sortie.
@@ -59,14 +59,14 @@ Voici le concept fondamental à retenir de cette section : **Dynamo traite les 
 
 Le noeud Flatten permet de supprimer tous les niveaux de données d'une structure de données. Il est utile lorsque les hiérarchies de données ne sont pas nécessaires à votre opération, mais il comporte un risque car il supprime des informations. L’exemple ci-dessous montre le résultat de l’aplanissement d’une liste de données.
 
-\![Exercice](<../../.gitbook/assets/lists of lists - flatten 01.jpg>)
+\![Exercice](<../images/lists of lists - flatten 01.jpg>)
 
 > 1. Insérez une ligne de code pour définir un intervalle dans le nœud **Code Block** : `-250..-150..#4;`
 > 2. En connectant le _bloc de code_ aux entrées _x_ et _y_ d’un nœud **Point.ByCoordinates**, vous définissez la combinaison sur _« Produit vectoriel »_ pour obtenir une grille de points.
 > 3. Le nœud **Watch** indique que vous avez une liste de listes.
 > 4. Un nœud **PolyCurve.ByPoints** référence chaque liste et crée une polycourbe respective. Dans l’aperçu Dynamo, notez que quatre polycourbes représentent chaque ligne de la grille.
 
-\![Exercice](<../../.gitbook/assets/lists of lists - flatten 02.jpg>)
+\![Exercice](<../images/lists of lists - flatten 02.jpg>)
 
 > 1. En insérant un nœud _Flatten_ avant le nœud de la polycourbe, vous créez une liste unique pour tous les points. Le nœud **PolyCurve.ByPoints** fait référence à une liste permettant de créer une courbe. Comme tous les points figurent sur une liste, une polycourbe en zigzag est générée pour l’ensemble de la liste de points.
 
@@ -84,7 +84,7 @@ Lors de la modélisation paramétrique, vous pouvez ajouter la structure de donn
 
 La commande Chop divise les listes en fonction d'une longueur de liste donnée. D'une certaine manière, la commande de découpage est l'opposé de l'aplanissement : au lieu de supprimer la structure de données, elle y ajoute de nouveaux niveaux. Cet outil est utile pour les opérations géométriques comme dans l’exemple ci-dessous.
 
-\![Exercice](<../../.gitbook/assets/lists of lists - chop.jpg>)
+\![Exercice](<../images/lists of lists - chop.jpg>)
 
 ### List.Map
 
@@ -102,7 +102,7 @@ En guise d’introduction, examinons le nœud **List.Count** d’une section pr�
 
 Le nœud **List.Count** compte tous les éléments d’une liste. Vous allez l’utiliser pour montrer comment fonctionne **List.Map**.
 
-\![](<../../.gitbook/assets/lists of lists - map 01.jpg>)
+\![](<../images/lists of lists - map 01.jpg>)
 
 > 1.  Insérez deux lignes de code dans le nœud **Code Block** : `-50..50..#Nx; -50..50..#Ny;`
 >
@@ -111,7 +111,7 @@ Le nœud **List.Count** compte tous les éléments d’une liste. Vous allez l�
 > 3. Connectez chaque ligne du bloc de code aux entrées _X_ et _Y_ respectives d’un nœud **Point.ByCoordinates**. Cliquez avec le bouton droit de la souris sur le nœud, sélectionnez « Combinaison », puis _« Produit vectoriel »_. Cela crée une grille de points. Étant donné que vous avez défini l’intervalle de -50 à 50, élargissez la grille Dynamo par défaut.
 > 4. Un nœud _**Watch**_ révèle les points créés. Observez la structure des données. Vous avez créé une liste de listes. Chaque liste représente une ligne de points de la grille.
 
-\![Exercice](<../../.gitbook/assets/lists of lists - map 02.jpg>)
+\![Exercice](<../images/lists of lists - map 02.jpg>)
 
 > 1. Attachez un nœud **List.Count** à la sortie du nœud Watch de l’étape précédente.
 > 2. Connectez un nœud **Watch** à la sortie **List.Count**.
@@ -121,7 +121,7 @@ Le nœud List.Count donne une valeur de 5. Il s'agit de la variable "Nx" telle q
 * Tout d’abord, le nœud **Point.ByCoordinates** utilise l’entrée « x » comme entrée principale pour la création de listes. Lorsque Nx est égale à 5 et Ny à 3, vous obtenez une liste de 5 listes, chacune comportant 3 éléments.
 * Étant donné que Dynamo traite les listes comme des objets, un nœud **List.Count** est appliqué à la liste principale de la hiérarchie. Le résultat est une valeur de 5 ou le nombre de listes dans la liste principale.
 
-\![Exercice](<../../.gitbook/assets/lists of lists - map 03.jpg>)
+\![Exercice](<../images/lists of lists - map 03.jpg>)
 
 > 1. En utilisant un nœud **List.Map**, vous descendez d’un niveau dans la hiérarchie et effectuez une _« fonction »_ à ce niveau.
 > 2. Le nœud **List.Count** n’a pas d’entrée. Il est utilisé en tant que fonction, de sorte que le nœud **List.Count** sera appliqué à chaque liste individuelle d’un niveau vers le bas dans la hiérarchie. L’entrée vide de **List.Count** correspond à l’entrée de liste de **List.Map**.
@@ -135,7 +135,7 @@ Dans cet exercice, vous allez utiliser le nœud **List.Combine** pour montrer co
 
 Commencez par configurer deux listes de points.
 
-\![Exercice](<../../.gitbook/assets/lists of lists - combined 01.jpg>)
+\![Exercice](<../images/lists of lists - combined 01.jpg>)
 
 > 1. Utilisez le nœud **Sequence** pour générer 10 valeurs, chacune avec un incrément de 10 pas.
 > 2. Connectez le résultat à l’entrée x d’un nœud **Point.ByCoordinates**. Cela permet de créer une liste de points dans Dynamo.
@@ -143,7 +143,7 @@ Commencez par configurer deux listes de points.
 
 Ensuite, utilisez le nœud **List.Combine** pour appliquer une fonction aux objets dans deux listes distinctes. Dans ce cas, il s’agit d’une fonction de dessin de ligne simple.
 
-\![Exercice](<../../.gitbook/assets/lists of lists - combined 02.jpg>)
+\![Exercice](<../images/lists of lists - combined 02.jpg>)
 
 > 1. Ajoutez un nœud **List.Combine** à l’espace de travail et connectez les deux jeux de points comme entrées list0 et list1.
 > 2. Utilisez **Line.ByStartPointEndPoint** comme fonction d’entrée pour le nœud **List.Combine**.
@@ -164,7 +164,7 @@ Une fois l’opération terminée, les deux jeux de points sont compressés/asso
 
 Dans cet exercice, vous allez utiliser la fonction **List@Level** pour isoler un niveau de données spécifique.
 
-\![List@Level](<../../.gitbook/assets/lists of lists - list at level 01.jpg>)
+\![List@Level](<../images/lists of lists - list at level 01.jpg>)
 
 Nous allons commencer par une grille de points 3D simple.
 
@@ -172,7 +172,7 @@ Nous allons commencer par une grille de points 3D simple.
 > 2. Ces niveaux existent à différents **niveaux**. Les niveaux sont indiqués en bas de la bulle d’aperçu. Les colonnes de niveaux de la liste correspondent aux données de liste ci-dessus pour vous aider à identifier le niveau à utiliser.
 > 3. Les niveaux de liste sont organisés dans l’ordre inverse de sorte que les données de niveau le plus bas soient toujours dans « L1 ». Cela permet de garantir le fonctionnement de vos graphiques tels qu’ils seront planifiés, même si tout est modifié en amont.
 
-\![List@Level](<../../.gitbook/assets/lists of lists - list at level 02.jpg>)
+\![List@Level](<../images/lists of lists - list at level 02.jpg>)
 
 > 1. Pour utiliser la fonction **List@Level** , cliquez sur « > ». Dans ce menu, vous verrez deux cases à cocher.
 > 2. **Utiliser les niveaux** : permet d’activer la fonctionnalité **List@Level**. Après avoir cliqué sur cette option, vous pourrez sélectionner les niveaux de liste d’entrée que le nœud doit utiliser. Ce menu vous permet de tester rapidement différentes options de niveau en cliquant sur les boutons haut ou bas.
@@ -180,7 +180,7 @@ Nous allons commencer par une grille de points 3D simple.
 
 La grille 3D simple vous permet d'accéder à la structure de la liste et de la visualiser en passant par les niveaux de liste. Chaque combinaison de niveau de liste et d’index renvoie un jeu de points différent de votre jeu 3D d’origine.
 
-\![](<../../.gitbook/assets/lists of lists - list at level 03.jpg>)
+\![](<../images/lists of lists - list at level 03.jpg>)
 
 > 1. Dans DesignScript, "@L2" permet de sélectionner uniquement la liste au niveau 2. La liste au niveau 2 avec l'index 0 inclut uniquement le premier jeu de points Y, renvoyant uniquement la grille XZ.
 > 2. Si vous définissez le filtre de niveaux sur "L1", vous pourrez voir l'intégralité du contenu du premier niveau de la liste. La liste au niveau 1 avec l'index 0 inclut tous vos points 3D dans une liste simple.
@@ -189,7 +189,7 @@ La grille 3D simple vous permet d'accéder à la structure de la liste et de la 
 
 Bien que cet exemple particulier puisse également être créé avec **List.Map**, **List@Level** simplifie grandement l’interaction, ce qui facilite l’accès aux données de nœud. Comparez les méthodes **List.Map** et **List@Level** ci-dessous :
 
-\![](<../../.gitbook/assets/lists of lists - list at level 04.jpg>)
+\![](<../images/lists of lists - list at level 04.jpg>)
 
 > 1. Bien que les deux méthodes vous donnent accès aux mêmes points, la méthode **List@Level** vous permet de basculer facilement entre les couches de données au sein d’un nœud unique.
 > 2. Pour accéder à une grille de points avec **List.Map**, vous avez besoin d’un nœud **List.GetItemAtIndex** avec **List.Map**. Pour chaque niveau de liste que vous allez décaler vers le bas, utilisez un nœud **List.Map** supplémentaire. Selon la complexité de vos listes, vous devrez peut-être ajouter une quantité importante de nœuds **List.Map** à votre graphique pour accéder au niveau d’informations approprié.
@@ -205,16 +205,16 @@ Bien que cet exemple particulier puisse également être créé avec **List.Map*
 
 La fonction Transposer est une fonction fondamentale lorsque vous travaillez avec des listes de listes. Tout comme dans les programmes de feuille de calcul, une transposition inverse les colonnes et les lignes d'une structure de données. Nous allons le démontrer avec une matrice de base ci-dessous. Dans la section suivante, nous allons montrer comment une transposition peut être utilisée pour créer des relations géométriques.
 
-![Transposer](../../.gitbook/assets/transpose1.jpg)
+![Transposer](../images/transpose1.jpg)
 
 Supprimez les nœuds **List.Count** de l’exercice précédent et passez à une géométrie pour voir comment les données sont structurées.
 
-\![](<../../.gitbook/assets/lists of lists - transpose 01.jpg>)
+\![](<../images/lists of lists - transpose 01.jpg>)
 
 > 1. Connectez un nœud **PolyCurve.ByPoints** à la sortie du nœud Watch à partir de **Point.ByCoordinates**.
 > 2. Le résultat affiche 5 polycourbes et les courbes sont visibles dans l’aperçu Dynamo. Le nœud Dynamo recherche une liste de points (ou une liste de listes de points dans ce cas) et crée une polycourbe à partir de ces points. Chaque liste a en fait été convertie en une courbe dans la structure de données.
 
-\![](<../../.gitbook/assets/lists of lists - transpose 02.jpg>)
+\![](<../images/lists of lists - transpose 02.jpg>)
 
 > 1. Un nœud **List.Transpose** permet de remplacer l’ensemble des éléments par toutes les listes dans une liste de listes. Cette opération semble compliquée, mais la logique est la même que pour la fonction Transposer dans Microsoft Excel : remplacer des colonnes par des lignes dans une structure de données.
 > 2. Observez le résultat abstrait : la transposition a modifié la structure de la liste d’une liste de 5 listes comportant chacune 3 éléments en 3 listes contenant 5 éléments.
@@ -224,13 +224,13 @@ Supprimez les nœuds **List.Count** de l’exercice précédent et passez à une
 
 Le raccourci de bloc de code utilise « [] » pour définir une liste. Cette méthode est beaucoup plus rapide et fluide pour créer une liste que le nœud **List.Create**. Le nœud **Code Block** est abordé plus en détail dans la rubrique [Nœuds Code Block et DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/). Consultez l’image ci-dessous pour découvrir comment définir une liste contenant plusieurs expressions à l’aide d’un bloc de code.
 
-\![](<../../.gitbook/assets/lists of lists - codeblock for list creation 01.jpg>)
+\![](<../images/lists of lists - codeblock for list creation 01.jpg>)
 
 #### Requête de bloc de code
 
 Le raccourci de **Code Block** utilise « [] » pour sélectionner facilement et rapidement des éléments spécifiques à partir d’une structure de données complexe. Les nœuds **Code Block** sont abordés plus en détail dans le chapitre [Nœuds Code Block et DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/). Consultez l’image ci-dessous pour découvrir comment interroger une liste contenant plusieurs types de données à l’aide d’un bloc de code.
 
-\![](<../../.gitbook/assets/lists of lists - codeblock for list creation 02.jpg>)
+\![](<../images/lists of lists - codeblock for list creation 02.jpg>)
 
 ## Exercice - Interrogation et insertion de données
 
@@ -244,7 +244,7 @@ Cet exercice utilise une partie de la logique établie dans l'exercice précéde
 
 Commencez par la chaîne de nœuds ci-dessus. Vous allez créer une surface de base qui s’étend sur la grille Dynamo par défaut.
 
-\![](<../../.gitbook/assets/list of lists - exercise cb insert & query 01.jpg>)
+\![](<../images/list of lists - exercise cb insert & query 01.jpg>)
 
 > 1. À l’aide du nœud **Code Block**, insérez ces deux lignes de code et connectez-les aux entrées _u_ et _v_ de **Surface.PointAtParameter**, respectivement : `-50..50..#3;` `-50..50..#5;`
 > 2. Veillez à définir la combinaison de **Surface.PointAtParameter** sur _« Produit vectoriel »_.
@@ -252,20 +252,20 @@ Commencez par la chaîne de nœuds ci-dessus. Vous allez créer une surface de b
 
 Dans cette étape, vous allez interroger le point central de la grille créée. Pour ce faire, sélectionnez le point central dans la liste centrale. Logique, non ?
 
-\![](<../../.gitbook/assets/list of lists - exercise cb insert & query 02.jpg>)
+\![](<../images/list of lists - exercise cb insert & query 02.jpg>)
 
 > 1. Pour confirmer qu’il s’agit du bon point, vous pouvez également cliquer sur les éléments du nœud Watch pour confirmer que vous ciblez le bon point.
 > 2. À l’aide du nœud **Code Block**, écrivez une ligne de code de base afin d’interroger une liste de listes :\
  `points[1][2];`
 > 3. À l’aide de **Geometry.Translate**, vous allez déplacer le point sélectionné vers le haut dans la direction _Z_ de _20_ unités.
 
-\![](<../../.gitbook/assets/list of lists - exercise cb insert & query 03.jpg>)
+\![](<../images/list of lists - exercise cb insert & query 03.jpg>)
 
 > 1. Sélectionnez également la ligne centrale des points avec un nœud **List.GetItemAtIndex**. Remarque : comme lors de l’étape précédente, vous pouvez également interroger la liste avec le nœud **Code Block**, à l’aide d’une ligne de `points[1];`.
 
 Jusqu’à présent, vous avez interrogé le point central et l’avez déplacé vers le haut. Vous devez à présent insérer ce point déplacé dans la structure de données d’origine.
 
-\![](<../../.gitbook/assets/list of lists - exercise cb insert & query 04.jpg>)
+\![](<../images/list of lists - exercise cb insert & query 04.jpg>)
 
 > 1. Vous devez d’abord remplacer l’élément de la liste isolé à l’étape précédente.
 > 2. À l’aide de **List.ReplaceItemAtIndex**, remplacez l’élément central à l’aide d’un index de _« 2 »_ par l’élément de remplacement connecté au point déplacé (**Geometry.Translate**).
@@ -273,7 +273,7 @@ Jusqu’à présent, vous avez interrogé le point central et l’avez déplacé
 
 Maintenant que vous avez modifié la liste, vous devez la réinsérer dans la structure de données d’origine : la liste de listes.
 
-\![](<../../.gitbook/assets/list of lists - exercise cb insert & query 05.jpg>)
+\![](<../images/list of lists - exercise cb insert & query 05.jpg>)
 
 > 1. En suivant la même logique, utilisez **List.ReplaceItemAtIndex** pour remplacer la liste centrale par la liste modifiée.
 > 2. Les nœuds **Code Block**_s_ définissant l’index de ces deux nœuds sont 1 et 2, ce qui correspond à la requête d’origine du nœud **Code Block** (_points[1][2]_).
@@ -281,10 +281,10 @@ Maintenant que vous avez modifié la liste, vous devez la réinsérer dans la st
 
 Il existe plusieurs façons de créer une surface à partir de cet ensemble de points. Dans ce cas, vous allez créer une surface en lissant des courbes.
 
-\![](<../../.gitbook/assets/list of lists - exercise cb insert & query 06.jpg>)
+\![](<../images/list of lists - exercise cb insert & query 06.jpg>)
 
 > 1. Créez un nœud **NurbsCurve.ByPoints** et connectez la nouvelle structure de données pour créer trois courbes NURBS.
 
-\![](<../../.gitbook/assets/list of lists - exercise cb insert & query 07.jpg>)
+\![](<../images/list of lists - exercise cb insert & query 07.jpg>)
 
 > 1. Connectez une surface **Surface.ByLoft** à la sortie de **NurbsCurve.ByPoints**. Vous avez maintenant une surface modifiée. Vous pouvez modifier la valeur _Z_ d’origine de la géométrie. Effectuez la conversion et observez la mise à jour de la géométrie.

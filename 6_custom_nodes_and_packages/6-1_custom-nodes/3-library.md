@@ -16,27 +16,27 @@ Avec la publication locale, le nœud sera accessible dans votre bibliothèque Dy
 
 Nous allons avancer à l'aide du nœud personnalisé que vous avez créé dans la section précédente. Une fois le nœud PointsToSurface personnalisé ouvert, le graphique s’affiche dans l’éditeur de nœuds personnalisés Dynamo. Vous pouvez également ouvrir un nœud personnalisé en double-cliquant dessus dans l’éditeur graphique Dynamo.
 
-\![](<../../.gitbook/assets/publish custom node exercise - 01.jpg>)
+\![](<../images/publish custom node exercise - 01.jpg>)
 
 Pour publier un nœud personnalisé localement, cliquez simplement avec le bouton droit de la souris sur la zone de dessin et choisissez _« Publier ce nœud personnalisé… »_.
 
-\![](<../../.gitbook/assets/publish custom node exercise - 02.jpg>)
+\![](<../images/publish custom node exercise - 02.jpg>)
 
 Remplissez les informations pertinentes comme dans l’image ci-dessus et choisissez _« Publier localement »_ Notez que le champ Groupe définit l’élément principal accessible à partir du menu Dynamo.
 
-<figure><img src="../../.gitbook/assets/publish_a_package.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/publish_a_package.png" alt=""><figcaption></figcaption></figure>
 
 Choisissez un dossier pour héberger tous les nœuds personnalisés que vous envisagez de publier localement. Dynamo consultera ce dossier à chaque chargement. Par conséquent, assurez-vous que le dossier réside dans un emplacement permanent. Accédez à ce dossier et choisissez _« Sélectionner un dossier »._ Votre nœud Dynamo est désormais publié localement et restera dans votre bibliothèque Dynamo chaque fois que vous chargez le programme.
 
-\![](<../../.gitbook/assets/publish custom node exercise - 04 (1).jpg>)
+\![](<../images/publish custom node exercise - 04.jpg>)
 
 Pour vérifier l’emplacement du dossier de nœud personnalisé, accédez à _Dynamo > Préférences > Paramètres de package > Chemins d’accès de nœud et de package_
 
-<figure><img src="../../.gitbook/assets/settings.png" alt="" width="520"><figcaption></figcaption></figure>
+<figure><img src="../images/settings.png" alt="" width="520"><figcaption></figcaption></figure>
 
 Cette fenêtre contient une liste de chemins.
 
-<figure><img src="../../.gitbook/assets/package-locations.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/package-locations.png" alt=""><figcaption></figcaption></figure>
 
 > 1. _Documents\\DynamoCustomNodes…_ fait référence à l’emplacement des nœuds personnalisés publiés localement.
 > 2. _AppData\\Roaming\\Dynamo…_ fait référence à l’emplacement par défaut des packages Dynamo installés en ligne.
@@ -44,12 +44,12 @@ Cette fenêtre contient une liste de chemins.
 
 Nous avons changé l’ordre des noms de chemin pour que le chemin par défaut de Dynamo devienne l’emplacement d’installation du package.
 
-<figure><img src="../../.gitbook/assets/updated-package-locations.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/updated-package-locations.png" alt=""><figcaption></figcaption></figure>
 
 En accédant à ce dossier local, vous trouvez le nœud personnalisé d’origine dans le dossier _« .dyf »_, qui est l’extension d’un fichier de nœud personnalisé Dynamo. Vous pouvez modifier le fichier dans ce dossier et le nœud sera mis à jour dans l’interface utilisateur. Vous pouvez également ajouter des nœuds au dossier _DynamoCustomNode_ principal et Dynamo les ajoutera à votre bibliothèque au redémarrage.
 
-\![](<../../.gitbook/assets/publish custom node exercise - 08.jpg>)
+\![](<../images/publish custom node exercise - 08.jpg>)
 
 Dynamo se charge désormais à chaque fois avec « PointsToSurface » dans le groupe « DynamoPrimer » de votre bibliothèque Dynamo.
 
-\![](<../../.gitbook/assets/publish custom node exercise - 09.jpg>)
+\![](<../images/publish custom node exercise - 09.jpg>)

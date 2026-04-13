@@ -19,11 +19,11 @@ Pour découvrir la démonstration des workflows Dynamo, consultez les graphiques
 
 * [Vase paramétrique](../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.md)
 
-![](../.gitbook/assets/vase1.gif)
+![](images/vase1.gif)
 
 * [Points d’attraction](../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.md)
 
-\![](<../.gitbook/assets/attractor1 (1).gif>)
+![](<images/attractor1.gif>)
 
 {% hint style="info" %} À mesure que nous abordons les différentes rubriques de Dynamo, vous pourrez retrouver des exercices plus spécifiques dans les prochains chapitres. Les **exercices** se trouvent généralement dans la dernière section de chaque page. {% endhint %}
 
@@ -31,7 +31,7 @@ Pour découvrir la démonstration des workflows Dynamo, consultez les graphiques
 
 Dynamo ne serait pas ce qu’il est sans un groupe d’utilisateurs passionnés et de contributeurs actifs. Interagissez avec la communauté en suivant le [blog](http://dynamobim.org/blog/), en ajoutant votre travail à la galerie ou en discutant de Dynamo sur le [forum](https://forum.dynamobim.com).
 
-![Forum](../.gitbook/assets/02-Community.png)
+![Forum](images/02-Community.png)
 
 ### Plate-forme
 
@@ -39,6 +39,6 @@ Dynamo est conçu comme un outil de programmation visuelle pour les concepteurs,
 
 Le code source du projet est ouvert, ce qui vous permet d'étendre ses fonctionnalités comme bon vous semble. Consultez le projet sur GitHub et parcourez les travaux en cours des utilisateurs qui personnalisent Dynamo.
 
-![Référentiel](../.gitbook/assets/03-TheRepo.png)
+![Référentiel](images/03-TheRepo.png)
 
 > Naviguez dans Dynamo, créez un fork et étendez ses fonctionnalités selon vos besoins.

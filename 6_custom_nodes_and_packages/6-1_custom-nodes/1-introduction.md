@@ -10,7 +10,7 @@ Lorsque votre graphique contient plusieurs copies d'un nœud personnalisé, vous
 
 La meilleure fonctionnalité des nœuds personnalisés est sans doute leur capacité de partage de travail. Si un "utilisateur avancé" crée un graphique Dynamo complexe et le transmet à un concepteur qui débute avec Dynamo, il peut condenser le graphique en ne gardant que l'essentiel pour l'interaction. Le nœud personnalisé peut être ouvert pour modifier le graphique interne, mais le "conteneur" peut rester simple. Avec ce processus, les nœuds personnalisés permettent aux utilisateurs de Dynamo de concevoir un graphique propre et intuitif.
 
-\![](<../../.gitbook/assets/custom node intro - work sharing 01.jpg>)
+\![](<../images/custom node intro - work sharing 01.jpg>)
 
 ### Les différentes méthodes de création d’un nœud
 
@@ -22,11 +22,11 @@ Passez maintenant à l'environnement de nœud personnalisé et créez un nœud s
 
 Pour créer un nœud personnalisé à partir de zéro, lancez Dynamo et choisissez Nœud personnalisé, ou tapez Ctrl + Maj + N dans la zone de dessin.
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 01.png>)
+\![](<../images/custom node intro - custom node environment 01.png>)
 
 Ajoutez un nom, une description et une catégorie dans la boîte de dialogue Propriétés du nœud personnalisé.
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 02.jpg>)
+\![](<../images/custom node intro - custom node environment 02.jpg>)
 
 > 1. **Nom :** Pourcentage
 > 2. **Description** : Calcule le pourcentage d’une valeur par rapport à une autre.
@@ -34,16 +34,16 @@ Ajoutez un nom, une description et une catégorie dans la boîte de dialogue Pro
 
 Une zone de dessin s’ouvre avec un arrière-plan jaune, indiquant que vous travaillez dans un nœud personnalisé. Dans cette zone de dessin, vous avez accès à tous les nœuds Dynamo de base, ainsi qu'aux nœuds Input et Output, qui définissent le flux de données entrant et sortant du nœud personnalisé. Ils se trouvent sous Input > Basic.
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 03.jpg>)
+\![](<../images/custom node intro - custom node environment 03.jpg>)
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 04.jpg>)
+\![](<../images/custom node intro - custom node environment 04.jpg>)
 
 > 1. **Input :** les nœuds Input créent des ports d’entrée sur le nœud personnalisé. La syntaxe d’un nœud d’entrée est _nom_entrée : typededonnées = valeur_défaut (facultatif)._
 > 2. **Outputs:** semblables aux entrées, elles créent et nomment des ports de sortie sur le nœud personnalisé. Ajoutez un **commentaire personnalisé** aux ports d’entrée et de sortie pour indiquer les types d’entrée et de sortie. Cette opération est décrite plus en détail dans la section [Création de nœuds personnalisés](2-creating.md).
 
 Vous pouvez enregistrer ce nœud personnalisé en tant que fichier .dyf (par opposition au fichier .dyn standard) et il sera automatiquement ajouté à votre session et aux sessions ultérieures. Le nœud personnalisé se trouve dans votre bibliothèque, dans la section Compléments.
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 05.jpg>)
+\![](<../images/custom node intro - custom node environment 05.jpg>)
 
 ### Pour continuer
 

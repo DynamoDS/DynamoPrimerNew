@@ -2,7 +2,7 @@
 
 Quel que soit le niveau d’expérience, la plateforme Dynamo est conçue pour que tous les utilisateurs soient des contributeurs. Il existe plusieurs options de développement qui ciblent des capacités et des niveaux de compétence différents, chacune avec ses forces et ses faiblesses selon l’objectif. Nous présentons ci-dessous les différentes options et comment les choisir.
 
-![Trois environnements de développement](../../.gitbook/assets/developing-for-dynamo.png)
+![Trois environnements de développement](../images/developing-for-dynamo.png)
 
 > Trois environnements de développement : Visual Studio, Python Editor et Code Block DesignScript
 
@@ -22,7 +22,7 @@ Ces nœuds permettent le plus haut degré de personnalisation. De nombreux packa
 
 Visual Studio est utilisé comme environnement de développement pour les nœuds Zero Touch et NodeModel dans les explications ci-dessous.
 
-![Interface Visual Studio](../../.gitbook/assets/vs-devenv.jpg)
+![Interface Visual Studio](../images/vs-devenv.jpg)
 
 > L’interface Visual Studio avec un projet que nous allons développer
 
@@ -42,7 +42,7 @@ Bien que ces processus existent dans l’espace de travail de programmation visu
 
 Le développement dans l’espace de travail de Dynamo est un outil puissant qui permet d’obtenir un retour immédiat.
 
-![Développement dans l’espace de travail Dynamo avec le nœud Python](../../.gitbook/assets/python-example.jpg)
+![Développement dans l’espace de travail Dynamo avec le nœud Python](../images/python-example.jpg)
 
 > Développement dans l’espace de travail Dynamo avec le nœud Python
 
@@ -54,7 +54,7 @@ Les options de développement de Dynamo ont été conçues pour répondre à la 
 
 Ces options sont simples pour écrire du code dans l’environnement de programmation visuelle Dynamo. L’espace de programmation visuelle Dynamo permet d’accéder à Python, DesignScript et de contenir plusieurs nœuds dans un nœud personnalisé.
 
-![Bloc de code, script Python et nœud personnalisé](../../.gitbook/assets/Development-Icons.png)
+![Bloc de code, script Python et nœud personnalisé](../images/Development-Icons.png)
 
 Avec ces méthodes, vous pouvez :
 
@@ -66,7 +66,7 @@ Avec ces méthodes, vous pouvez :
 
 Zero Touch fait référence à une méthode pointer-cliquer simple permettant d’importer des bibliothèques C#. Dynamo lit les méthodes publiques d’un fichier `.dll` et les convertit en nœuds Dynamo. Vous pouvez utiliser le Zero-Touch pour développer vos propres nœuds et packages personnalisés.
 
-![Nœuds Zero-Touch](../../.gitbook/assets/ZTImport.png)
+![Nœuds Zero-Touch](../images/ZTImport.png)
 
 Avec cette méthode, vous pouvez :
 
@@ -78,7 +78,7 @@ Avec cette méthode, vous pouvez :
 
 Ces nœuds permettent d’approfondir la structure de Dynamo. Ils sont basés sur la classe `NodeModel` et écrits en C#. Bien que cette méthode soit la plus souple et la plus puissante, la plupart des aspects du nœud doivent être définis de manière explicite et les fonctions doivent se trouver dans un ensemble séparé.
 
-![Nœuds dérivés de NodeModel](../../.gitbook/assets/Development-Icons-NodeModel.png)
+![Nœuds dérivés de NodeModel](../images/Development-Icons-NodeModel.png)
 
 Avec cette méthode, vous pouvez :
 
@@ -93,13 +93,13 @@ Comme Dynamo est régulièrement mis à jour, des modifications peuvent être ap
 
 Les modifications de l’API sont répertoriées sur le [Wiki de GitHub sur Dynamo](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). Cela couvre les modifications apportées à DynamoCore, aux bibliothèques et aux espaces de travail.
 
-![Document des modifications de l’API Dynamo](../../.gitbook/assets/api-changes.png)
+![Document des modifications de l’API Dynamo](../images/api-changes.png)
 
 Le passage du format de fichier XML au format JSON dans la version 2.0 est un exemple de changement important à venir. Les nœuds dérivés de NodeModel auront désormais besoin d’un [constructeur JSON](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node), sinon ils ne s’ouvriront pas dans Dynamo 2.0.
 
 La documentation de l’API Dynamo couvre actuellement les fonctionnalités de base : [http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI)
 
-![Documentation de l’API](../../.gitbook/assets/api-docs.jpg)
+![Documentation de l’API](../images/api-docs.jpg)
 
 ### Autorisation de distribuer des binaires dans un package <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 

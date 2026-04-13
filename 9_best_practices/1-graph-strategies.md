@@ -2,7 +2,7 @@
 
 Avant ce chapitre, le guide a présenté les étapes à suivre pour mettre en œuvre les puissantes fonctionnalités de script visuel de Dynamo. Une bonne compréhension de ces fonctionnalités est une base solide et la première étape dans la construction de programmes visuels fiables. Lorsque vous utilisez vos programmes visuels sur le terrain, partagez-les avec vos collègues, corrigez les erreurs ou testez les limites avec lesquelles vous rencontrez d'autres problèmes. Si une autre personne va utiliser votre programme ou si vous souhaitez l'ouvrir dans six mois, il doit être clair d'un point de vue graphique et logique dès l'ouverture. Dynamo dispose de nombreux outils pour gérer la complexité de votre programme. Ce chapitre vous expliquera les conditions d’utilisation de ces derniers.
 
-![groupe](../.gitbook/assets/cad-chart-visual.jpg)
+![groupe](images/cad-chart-visual.jpg)
 
 ## Simplification des processus
 
@@ -15,7 +15,7 @@ Lorsque vous développez votre graphique Dynamo et testez vos idées, la taille 
 * Vous pouvez modifier la **couleur du groupe pour différencier** ce que font les groupes (entrées et fonctions)
 * Vous pouvez utiliser des groupes pour commencer à **organiser votre graphique afin de simplifier la création de nœuds personnalisés**
 
-![](../.gitbook/assets/graphstrategy2.png)
+![](images/graphstrategy2.png)
 
 > Les couleurs de ce programme identifient l’objectif de chaque groupe. Cette stratégie sert à créer une hiérarchie dans les normes graphiques ou les gabarits que vous développez.
 >
@@ -30,7 +30,7 @@ Lorsque vous développez votre graphique Dynamo et testez vos idées, la taille 
 * Vous pouvez parfois utiliser un bloc de code pour **saisir un nombre ou une méthode de nœud plus rapidement qu’en effectuant une recherche** (Point.ByCoordinates, Number, String, Formula)
 * Les blocs de code sont utiles **lorsque vous souhaitez définir des fonctions personnalisées dans DesignScript afin de réduire le nombre de nœuds dans un graphique**
 
-![](../.gitbook/assets/graphstrategy3.png)
+![](images/graphstrategy3.png)
 
 > Les deux encadrés exécutent la même fonction. Il était beaucoup plus rapide d'écrire quelques lignes de code que de rechercher et d'ajouter chaque nœud individuellement. Le bloc de code est également beaucoup plus concis.
 >
@@ -53,7 +53,7 @@ Lorsque vous développez votre graphique Dynamo et testez vos idées, la taille 
   * Plus difficile à comprendre pour les autres utilisateurs
   * Aucun moyen simple de revenir à la version de programmation visuelle
 
-![](../.gitbook/assets/graphstrategy3_1.png)
+![](images/graphstrategy3_1.png)
 
 > 1. Programme existant
 > 2. Bloc de code créé à partir de Nœud vers code
@@ -65,7 +65,7 @@ Lorsque vous développez votre graphique Dynamo et testez vos idées, la taille 
 * L’utilisation de List@Level vous permet de **réduire la complexité de votre graphique en remplaçant les nœuds List.Map et List.Combine** qui peuvent occuper une grande partie de la zone de dessin
 * List@Level fournit une méthode plus** rapide que List.Map/List.Combine pour établir la logique de nœud** en vous permettant d’accéder aux données à n’importe quel niveau d’une liste, directement à partir du port d’entrée d’un nœud
 
-![](../.gitbook/assets/graphstrategy4.png)
+![](images/graphstrategy4.png)
 
 > Vous pouvez vérifier le nombre de valeurs True renvoyées par BoundingBox.Contains et dans quelles listes ces valeurs sont renvoyées en activant List@Level pour l’entrée « list » de CountTrue. La fonction List@Level permet à l'utilisateur de déterminer à quel niveau l'entrée va extraire des données. La fonction List@Level est flexible, efficace et vivement recommandée par rapport à d'autres méthodes impliquant List.Map et List.Combine.
 >
@@ -84,7 +84,7 @@ En plus de rendre le graphique aussi simple et efficace que possible, essayez d'
 * Si d’autres utilisateurs vont travailler avec votre graphique, **assurez-vous que la disposition des liaisons de nœud s’enchaîne facilement avant la livraison**
 * Pour vous aider avec la tâche d’alignement, **utilisez la fonction « Arranger l’affichage des nœuds » pour aligner automatiquement** votre graphique, même si elle est moins précise que vous-même
 
-\![](<../.gitbook/assets/graphstrategy5 (1).png>)
+![](<images/graphstrategy5.png>)
 
 > 1. Graphique non organisé
 > 2. Graphique aligné
@@ -96,7 +96,7 @@ En plus de rendre le graphique aussi simple et efficace que possible, essayez d'
 * L’attribution de nouveaux noms aux entrées permet aux autres utilisateurs de comprendre facilement votre graphique, **notamment si ce qu’ils connectent n’est pas affiché à l’écran**
 * **Veillez à renommer les nœuds en plus des entrées.** Une autre solution consiste à créer un nœud personnalisé à partir d’un cluster de nœuds et à le renommer. Il sera alors évident qu’il contient autre chose
 
-![](../.gitbook/assets/graphstrategy6.png)
+![](images/graphstrategy6.png)
 
 > 1. Entrées pour la manipulation de surfaces
 > 2. Entrées pour les paramètres architecturaux
@@ -109,7 +109,7 @@ En plus de rendre le graphique aussi simple et efficace que possible, essayez d'
 * Vous devez ajouter une note si quelque chose dans le **graphique requiert une explication en langage simple** que les nœuds ne peuvent pas exprimer
 * Vous devez ajouter une note si un ensemble de **nœuds ou de groupes est trop volumineux ou trop complexe et ne peut pas être facilement compris immédiatement**
 
-![](../.gitbook/assets/graphstrategy7.png)
+![](images/graphstrategy7.png)
 
 > 1. Note décrivant la partie du programme qui renvoie les distances de conversion brutes
 > 2. Note décrivant le code qui mappe ces valeurs avec une onde sinusoïdale
@@ -124,7 +124,7 @@ Lors de la création de votre script visuel, il est important de vérifier que l
 
 * Utilisez les bulles Watch et d’aperçu lorsque vous créez le programme pour** vérifier que les sorties clés renvoient le résultat attendu**
 
-![](../.gitbook/assets/graphstrategy8.png)
+![](images/graphstrategy8.png)
 
 > Les nœuds Watch sont utilisés pour comparer :
 >
@@ -155,7 +155,7 @@ Il est fort probable qu'une autre personne ouvre votre programme à un moment do
 * Vous devez utiliser un nœud personnalisé **lorsqu’une partie du graphique sera réutilisée souvent** dans d’autres programmes
 * Vous devez utiliser un nœud personnalisé pour **partager une fonctionnalité avec la communauté Dynamo**
 
-![](../.gitbook/assets/graphstrategy9.png)
+![](images/graphstrategy9.png)
 
 > La collecte du programme de conversion de points dans un nœud personnalisé permet de simplifier et de rendre transférable un programme robuste et unique. Les ports d'entrée bien nommés aideront d'autres utilisateurs à comprendre comment utiliser le nœud. N'oubliez pas d'ajouter des descriptions et des types de données requis pour chaque entrée.
 >
@@ -170,7 +170,7 @@ Il est fort probable qu'une autre personne ouvre votre programme à un moment do
 * Lors de la création d’un gabarit, vous pouvez normaliser **les tailles de police et les couleurs de groupe** afin de classer les types de workflow ou d’actions de données.
 * Lors de la création d’un gabarit, vous pouvez même normaliser la façon dont vous souhaitez **étiqueter, colorer ou styliser la différence entre les workflows front-end et back-end** dans votre graphique.
 
-![](../.gitbook/assets/graphstrategy10.png)
+![](images/graphstrategy10.png)
 
 > 1. L’interface utilisateur, ou la partie frontale, du programme inclut un nom de projet, des curseurs d’entrée et une géométrie d’importation.
 > 2. La partie back-end du programme.
@@ -184,13 +184,13 @@ Il est fort probable qu'une autre personne ouvre votre programme à un moment do
 
 Maintenant que vous avez établi plusieurs meilleures pratiques, appliquez-les à un programme qui a été mis en place rapidement. Bien que le programme réussisse à générer le toit, l'état du graphique reflète le cheminement de pensée de l'auteur, à la manière d'une carte mentale. Il n'y a aucune organisation ou description de son utilisation. Vous allez parcourir les meilleures pratiques pour organiser, décrire et analyser le programme afin que d’autres utilisateurs puissent comprendre comment l’utiliser.
 
-![](../.gitbook/assets/graphstrategy11.png)
+![](images/graphstrategy11.png)
 
 > Le programme fonctionne, mais le graphique est désorganisé.
 
 Commençons par déterminer les données et la géométrie renvoyées par le programme.
 
-![](../.gitbook/assets/graphstrategy12.png)
+![](images/graphstrategy12.png)
 
 > Comprendre quand des modifications importantes des données se produisent est crucial pour établir des divisions logiques, ou des modularités. Inspectez le reste du programme avec les nœuds Watch pour voir si vous pouvez déterminer les groupes avant de passer à l’étape suivante.
 >
@@ -199,7 +199,7 @@ Commençons par déterminer les données et la géométrie renvoyées par le pro
 
 Une fois que vous avez identifié les composantes essentielles du programme, placez-les dans des groupes.
 
-![](../.gitbook/assets/graphstrategy13.png)
+![](images/graphstrategy13.png)
 
 > Les groupes permettent à l’utilisateur de différencier visuellement les parties du programme.
 >
@@ -211,13 +211,13 @@ Une fois que vous avez identifié les composantes essentielles du programme, pla
 
 Lorsque les groupes sont établis, alignez les nœuds pour créer une continuité visuelle sur le graphique.
 
-![](../.gitbook/assets/graphstrategy14.png)
+![](images/graphstrategy14.png)
 
 > La continuité visuelle aide l’utilisateur à voir le flux du programme et les relations implicites entre les nœuds.
 
 Rendez le programme plus accessible en ajoutant un autre calque d'améliorations graphiques. Ajoutez des notes pour décrire le fonctionnement d’une zone spécifique du programme, donnez des noms personnalisés aux entrées et affectez des couleurs à différents types de groupes.
 
-![](../.gitbook/assets/graphstrategy15.png)
+![](images/graphstrategy15.png)
 
 > Ces améliorations graphiques permettent à l’utilisateur de mieux connaître les activités du programme. Les différentes couleurs de groupe permettent de distinguer les entrées des fonctions.
 >
@@ -226,7 +226,7 @@ Rendez le programme plus accessible en ajoutant un autre calque d'améliorations
 
 Avant de commencer à condenser le programme, identifions un emplacement stratégique pour présenter le simulateur de drainage du script Python. Branchez la sortie de la première surface de toit mise à l’échelle dans l’entrée de script correspondante.
 
-![](../.gitbook/assets/graphstrategy16.png)
+![](images/graphstrategy16.png)
 
 > Vous avez choisi d’intégrer les scripts à ce stade du programme afin que la simulation de drainage puisse être exécutée sur la surface de toit unique d’origine. Cette surface spécifique n'est pas affichée en aperçu, mais elle vous évite d'avoir à choisir la surface supérieure de la polysurface chanfreinée.
 >
@@ -237,7 +237,7 @@ Avant de commencer à condenser le programme, identifions un emplacement straté
 
 Maintenant que tout est en place, simplifions le graphique.
 
-![](../.gitbook/assets/graphstrategy17.png)
+![](images/graphstrategy17.png)
 
 > La condensation du programme grâce à Nœud vers code et à Nœud personnalisé a permis de réduire considérablement la taille du graphique. Les groupes qui créent la surface du toit et les murs ont été convertis en code, car ils sont très spécifiques de ce programme. Le groupe de conversion de points est contenu dans un nœud personnalisé, car il peut être utilisé dans un autre programme. Dans le fichier d'exemple, créez votre propre nœud personnalisé à partir du groupe Convertir les points.
 >
@@ -246,14 +246,14 @@ Maintenant que tout est en place, simplifions le graphique.
 
 Pour finir, créez des valeurs prédéfinies pour des formes de toit représentatives.
 
-![](../.gitbook/assets/graphstrategy18.png)
+![](images/graphstrategy18.png)
 
 > Ces entrées sont les principaux pilotes de la forme du toit et permettent aux utilisateurs de découvrir le potentiel du programme.
 
 Votre programme avec des vues de deux valeurs prédéfinies.
 
-![](../.gitbook/assets/graphstrategy19.png)
+![](images/graphstrategy19.png)
 
-![](../.gitbook/assets/graphstrategy20.png)
+![](images/graphstrategy20.png)
 
 > Les motifs de drainage du toit permettent à l’utilisateur d’obtenir une vue analytique des valeurs prédéfinies respectives.

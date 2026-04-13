@@ -24,7 +24,7 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![Déplacer des fichiers de projet](../../.gitbook/assets/fe-proj-directory.jpg)
+![Déplacer des fichiers de projet](../images/fe-proj-directory.jpg)
 
 > 1. Déplacez les fichiers de projet vers le nouveau dossier `src`.
 
@@ -47,7 +47,7 @@ Maintenant que les fichiers source se trouvent dans un dossier distinct, ajoutez
   </Target>
 ```
 
-![Placer la cible AfterBuild](../../.gitbook/assets/atom-afterbuild.jpg)
+![Placer la cible AfterBuild](../images/atom-afterbuild.jpg)
 
 > Nous devons nous assurer que la cible a été ajoutée au fichier `CustomNodeModel.csproj` (et non à un autre fichier de projet) et que le projet ne possède aucun paramètre postérieur à la génération.
 >
@@ -75,7 +75,7 @@ Les packages Dynamo possèdent généralement un dossier `dyf` et `extra` pour l
 
 Si vous générez le projet, le dossier de projet doit désormais comporter un dossier `packages` en plus du dossier `src` créé précédemment. Le répertoire `packages` contient un dossier contenant tous les éléments nécessaires au package. Vous devez également copier le fichier `pkg.json` dans le dossier du package afin que Dynamo sache comment charger le package.
 
-![Copier des fichiers](../../.gitbook/assets/fe-proj-directory-package.jpg)
+![Copier des fichiers](../images/fe-proj-directory-package.jpg)
 
 > 1. Le nouveau dossier de packages créé par la cible AfterBuild
 > 2. Le dossier src existant avec le projet

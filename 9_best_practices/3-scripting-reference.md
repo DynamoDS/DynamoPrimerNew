@@ -6,7 +6,7 @@ Cette page de référence présente les meilleures pratiques décrites dans la s
 
 Les bibliothèques standard sont externes à Dynamo et sont présentes dans les langages de programmation Python et C# (Zerotouch). Dynamo possède également son propre ensemble de bibliothèques qui correspondent directement à sa hiérarchie de nœuds, permettant à l'utilisateur de coder tout ce qui peut être fait avec des nœuds et des fils. Voici un guide qui présente le contenu auquel chaque bibliothèque Dynamo permet d’accéder et qui explique quand utiliser une bibliothèque standard.
 
-![](../.gitbook/assets/textual-programming.jpg)
+![](images/textual-programming.jpg)
 
 **Bibliothèques standard et bibliothèques Dynamo**
 

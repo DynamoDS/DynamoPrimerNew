@@ -4,7 +4,7 @@
 
 L’objectif de ce guide est de vous aider à parcourir les différentes possibilités de développement en C# pour Dynamo, de la création de nœuds Zero-Touch à la génération d’extensions.
 
-![La source Dynamo sur GitHub](../../.gitbook/assets/dynamogithub.png)
+![La source Dynamo sur GitHub](../images/dynamogithub.png)
 
 > La source Dynamo sur GitHub
 

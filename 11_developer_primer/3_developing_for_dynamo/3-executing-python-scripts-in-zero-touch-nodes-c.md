@@ -4,7 +4,7 @@
 
 Si vous êtes à l’aise avec l’écriture de scripts en Python et que vous voulez plus de fonctionnalités à partir des nœuds Python standard de Dynamo, nous pouvons utiliser Zero-Touch pour créer les nôtres. Commençons par un exemple simple qui nous permet de faire passer un script python sous la forme d’une chaîne à un nœud Zero-Touch où le script est exécuté et un résultat est renvoyé. Cette étude de cas s’appuie sur les guides et les exemples de la section Mise en route. Reportez-vous à ces derniers si vous êtes novice en matière de création de nœuds Zero-Touch.
 
-![Un nœud Zero-Touch qui exécute une chaîne de script Python](../../.gitbook/assets/python-case-study.png)
+![Un nœud Zero-Touch qui exécute une chaîne de script Python](../images/python-case-study.png)
 
 > Un nœud Zero-Touch qui exécute une chaîne de script Python
 
@@ -68,7 +68,7 @@ output = str(volume)
 
 L’une des limites des nœuds Python standard est qu’ils n’ont qu’un seul port de sortie. Si nous souhaitons renvoyer plusieurs objets, nous devons construire une liste et récupérer chaque objet à l’intérieur. Si nous modifions l’exemple ci-dessus pour qu’il renvoie un dictionnaire, nous pouvons ajouter autant de ports de sortie que nous le souhaitons. Reportez-vous à la section Renvoyer plusieurs valeurs dans Aller plus loin avec Zero-Touch pour plus de détails sur les dictionnaires.
 
-![Ce nœud permet de renvoyer le volume du cuboïde et son centre de gravité.](../../.gitbook/assets/python-multi-case-study.png)
+![Ce nœud permet de renvoyer le volume du cuboïde et son centre de gravité.](../images/python-multi-case-study.png)
 
 > Ce nœud permet de renvoyer le volume du cuboïde et son centre de gravité.
 

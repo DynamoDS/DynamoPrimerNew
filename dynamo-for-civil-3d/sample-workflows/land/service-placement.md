@@ -1,6 +1,6 @@
 # Positionnement des services
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Dynamo (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Dynamo.gif" alt=""><figcaption></figcaption></figure>
 
 La conception technique d’un projet de construction de logements typique implique de travailler avec plusieurs équipements souterrains, tels que des égouts sanitaires, des équipements d’évacuation des eaux pluviales, l’eau potable, etc. Cet exemple montre comment Dynamo peut être utilisé pour dessiner les raccordements d’une conduite principale à un terrain donné (c’est-à-dire une parcelle). Il est courant que chaque parcelle doive être raccordée à un service, ce qui représente une tâche fastidieuse pour placer tous les services. Dynamo peut accélérer le processus en dessinant automatiquement la géométrie nécessaire avec précision, et en fournissant des données d’entrée flexibles qui peuvent être adaptées aux normes locales.
 
@@ -46,7 +46,7 @@ La première étape consiste à intégrer la géométrie de la conduite principa
 
 {% hint style="info" %} Si vous ne connaissez pas la géométrie des courbes Dynamo, consultez la section [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Récupération des objets de Civil 3D et regroupement de l’ensemble en une seule polycourbe</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_DistributionMain.png" alt=""><figcaption><p>Récupération des objets de Civil 3D et regroupement de l’ensemble en une seule polycourbe</p></figcaption></figure>
 
 ### Obtenir la géométrie de la ligne de parcelle
 
@@ -54,7 +54,7 @@ Ensuite, vous devez obtenir la géométrie d’une ligne de parcelle sélectionn
 
 Vous devez également gérer un problème potentiel qui pourrait survenir. La ligne de parcelle a un point de départ et un point d’arrivée, ce qui signifie qu’elle a une direction. Pour que le graphique produise des résultats cohérents, il faut que toutes les lignes de parcelle aient une direction cohérente. Vous pouvez tenir compte de cette condition directement dans la logique du graphique, ce qui rend ce dernier plus résilient. 
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Selection (2).png" alt=""><figcaption><p>Sélection d’une ligne de parcelle et vérification de la bonne direction</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Selection.png" alt=""><figcaption><p>Sélection d’une ligne de parcelle et vérification de la bonne direction</p></figcaption></figure>
 
 > 1. Obtenez les points de départ et d’arrivée de la ligne de parcelle.
 > 2. Mesurez la distance entre chaque point et la conduite principale, puis déterminez quelle est la plus grande distance.
@@ -66,13 +66,13 @@ Il est temps de déterminer l’emplacement des compteurs. Généralement, l’e
 
 {% hint style="info" %} Si vous ne connaissez pas les systèmes de coordonnées, consultez la section [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Création des points d’insertion des compteurs</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Création des points d’insertion des compteurs</p></figcaption></figure>
 
 ### Obtenir des points de raccordement
 
 Vous devez maintenant déterminer les points de la conduite principale les plus proches de l’emplacement des compteurs. Cela vous permettra de dessiner les raccordements aux services dans l’espace objet de manière à ce qu’ils soient toujours perpendiculaires à la conduite principale. Le nœud **Geometry.ClosestPointTo** est la solution idéale.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_GetPerpendicularPoints (1).png" alt="" width="339"><figcaption><p>Obtention de points perpendiculaires sur la conduite principale</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_GetPerpendicularPoints.png" alt="" width="339"><figcaption><p>Obtention de points perpendiculaires sur la conduite principale</p></figcaption></figure>
 
 > 1. Polycourbe de la conduite principale
 > 2. Points d’insertion des compteurs
@@ -81,29 +81,29 @@ Vous devez maintenant déterminer les points de la conduite principale les plus 
 
 La dernière étape consiste à créer des objets dans l’espace objet. Vous utiliserez les points d’insertion que vous avez générés précédemment pour créer des références de bloc, puis vous utiliserez les points sur la conduite principale pour tracer des lignes vers les raccordements aux services.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_CreateObjects.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_CreateObjects.png" alt=""><figcaption></figcaption></figure>
 
 ### Résultat
 
 Lorsque vous exécutez le graphique, vous devriez voir apparaître de nouvelles références de bloc et des lignes de raccordement aux services dans l’espace objet. Essayez de modifier certaines entrées et observez l’actualisation automatique de l’ensemble !
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Dynamo (1).gif" alt=""><figcaption><p>Ajustement des paramètres d’entrée dans Dynamo et visualisation immédiate des résultats dans Civil 3D</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Dynamo.gif" alt=""><figcaption><p>Ajustement des paramètres d’entrée dans Dynamo et visualisation immédiate des résultats dans Civil 3D</p></figcaption></figure>
 
 ### Bonus : activer le placement séquentiel
 
 Vous avez peut-être remarqué qu’après avoir placé les objets pour une ligne de parcelle, la sélection d’une autre ligne de parcelle entraîne le « déplacement » des objets.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Binding.gif" alt=""><figcaption><p>Comportement lorsque la liaison d’objet est activée</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Binding.gif" alt=""><figcaption><p>Comportement lorsque la liaison d’objet est activée</p></figcaption></figure>
 
 C’est le comportement par défaut de Dynamo, et il est très utile dans de nombreux cas. Cependant, il se peut que vous souhaitiez placer plusieurs raccordements aux services de manière séquentielle et que Dynamo crée de nouveaux objets à chaque exécution au lieu de modifier les objets d’origine. Vous pouvez contrôler ce comportement en modifiant les paramètres de liaison d’objet.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Paramètres de liaison d’objet de Dynamo</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Paramètres de liaison d’objet de Dynamo</p></figcaption></figure>
 
 {% hint style="info" %} Pour plus d’informations, consultez la section [object-binding.md](../../advanced-topics/object-binding.md "mention"). {% endhint %}
 
 La modification de ce paramètre forcera Dynamo à « oublier » les objets qu’il crée à chaque exécution. Voici un exemple d’exécution du graphique avec la liaison d’objet désactivée en utilisant le **Lecteur Dynamo**.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Exécution du graphique à l’aide du Lecteur Dynamo et visualisation des résultats dans Civil 3D</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Player.gif" alt=""><figcaption><p>Exécution du graphique à l’aide du Lecteur Dynamo et visualisation des résultats dans Civil 3D</p></figcaption></figure>
 
 {% hint style="info" %} Si vous ne connaissez pas le Lecteur Dynamo, consultez la section [lecteur-dynamo.md](../../dynamo-player.md "mention"). {% endhint %}
 

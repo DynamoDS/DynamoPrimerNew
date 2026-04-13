@@ -12,7 +12,7 @@ Dans le navigateur, recherchez des packages et consultez les statistiques : [ht
 
 * Dans Dynamo, le gestionnaire de package inclut les packages d’installation, de publication et de mise à jour.
 
-![Recherche de packages](../../.gitbook/assets/dynamopackagemanager.png)
+![Recherche de packages](../images/dynamopackagemanager.png)
 
 > 1. Rechercher des packages en ligne : `Packages > Search for a Package...`
 > 2. Afficher/modifier les packages installés : `Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Les packages sont publiés à partir du gestionnaire de package dans Dynamo. Le 
 
 Lancez Dynamo et sélectionnez `Packages > Publish New Package...` pour ouvrir la fenêtre `Publish a Package`.
 
-![Publier un package](../../.gitbook/assets/dyn-publish-package-add-files.png)
+![Publier un package](../images/dyn-publish-package-add-files.png)
 
 > 1. Sélectionnez `Add file...` pour rechercher les fichiers à ajouter au package
 > 2. Sélectionnez les deux fichiers `.dll` dans l’étude de cas NodeModel
@@ -32,7 +32,7 @@ Lancez Dynamo et sélectionnez `Packages > Publish New Package...` pour ouvrir l
 
 Une fois les fichiers ajoutés au contenu du package, donnez-lui un nom, une description et une version. Publier un package avec Dynamo crée automatiquement un fichier `pkg.json`.
 
-![Paramètres du package](../../.gitbook/assets/dyn-publish-package.png)
+![Paramètres du package](../images/dyn-publish-package.png)
 
 > Un package prêt à être publié.
 >
@@ -41,13 +41,13 @@ Une fois les fichiers ajoutés au contenu du package, donnez-lui un nom, une des
 
 Après avoir publié un package, les nœuds seront disponibles dans la bibliothèque Dynamo sous la catégorie `CustomNodeModel`.
 
-![Package dans la bibliothèque Dynamo](../../.gitbook/assets/dyn-publish-package-library.jpg)
+![Package dans la bibliothèque Dynamo](../images/dyn-publish-package-library.jpg)
 
 > 1. Le package que nous venons de créer dans la bibliothèque Dynamo
 
 Une fois que le package est prêt à être publié en ligne, ouvrez le gestionnaire de package et choisissez `Publish` puis `Publish Online`.
 
-![Publier un package dans le gestionnaire de package](../../.gitbook/assets/dyn-publish-package-directory.jpg)
+![Publier un package dans le gestionnaire de package](../images/dyn-publish-package-directory.jpg)
 
 > 1. Pour voir comment Dynamo a formaté le package, cliquez sur les trois points verticaux à droite de « CustomNodeModel » et choisissez « Afficher le répertoire racine ».
 > 2. Sélectionnez `Publish`, puis `Publish Online` dans la fenêtre « Publier un package Dynamo ».
@@ -57,7 +57,7 @@ Une fois que le package est prêt à être publié en ligne, ouvrez le gestionna
 
 La mise à jour d’un package est un processus similaire à la publication. Ouvrez le gestionnaire de package et sélectionnez `Publish Version...` sur le package à mettre à jour, puis entrez une version supérieure.
 
-![Publier une version de package](../../.gitbook/assets/dyn-publish-package-version.jpg)
+![Publier une version de package](../images/dyn-publish-package-version.jpg)
 
 > 1. Sélectionnez `Publish Version` pour mettre à jour un package existant avec de nouveaux fichiers dans le répertoire racine, puis choisissez s’il doit être publié localement ou en ligne.
 
@@ -69,7 +69,7 @@ Pour plus d’informations sur ces fonctionnalités, consultez l’article de bl
 
 Le client Web du gestionnaire de package est accessible à l’adresse suivante : [https://dynamopackages.com/](https://dynamopackages.com)
 
-![Client Web du gestionnaire de package](../../.gitbook/assets/packagemanager-browser.jpg)
+![Client Web du gestionnaire de package](../images/packagemanager-browser.jpg)
 
 **Mise à jour des détails du package**
 
@@ -82,13 +82,13 @@ Les créateurs peuvent modifier la description du package, le lien vers le site 
 
 **Remarque** : l’application des mises à jour dans le gestionnaire de packages peut prendre jusqu’à 15 minutes dans Dynamo, car les mises à jour du serveur prennent un certain temps. Nous nous efforçons de réduire ce retard.
 
-![Nouvelle interface utilisateur pour mettre à jour les détails des packages publiés](../../.gitbook/assets/Package-Manager_Image_5.png)
+![Nouvelle interface utilisateur pour mettre à jour les détails des packages publiés](../images/Package-Manager_Image_5.png)
 
 **Modifier les informations de compatibilité pour les versions de packages publiées**
 
 Les informations de compatibilité peuvent être mises à jour de manière rétroactive pour les versions de package précédemment publiés. Procédez comme suit :
 
-![Modifier les informations de compatibilité des packages publiés - Étape 1](../../.gitbook/assets/Package-Manager_Image_6.png)
+![Modifier les informations de compatibilité des packages publiés - Étape 1](../images/Package-Manager_Image_6.png)
 
 **Étape 1 :**
 
@@ -100,7 +100,7 @@ Les informations de compatibilité peuvent être mises à jour de manière rétr
 
 Suivez le schéma opérationnel ci-dessous et reportez-vous au tableau pour choisir l’option qui convient le mieux à votre package.
 
-![Quelle option choisir pour le workflow « Modifier les informations de compatibilité »](../../.gitbook/assets/Package-Manager_Image_7.png)
+![Quelle option choisir pour le workflow « Modifier les informations de compatibilité »](../images/Package-Manager_Image_7.png)
 
 Voici quelques exemples pour explorer différents scénarios :
 
@@ -110,8 +110,8 @@ Voici quelques exemples pour explorer différents scénarios :
 
 **Exemple de package # 3** \- Mesh Toolkit : il s’agit d’un package Dynamo Core qui contient une collection de nœuds de géométrie et n’a pas de dépendances d’hôte. Donc, dans ce cas, la solution idéale serait l’option 3. Le package s’affiche comme compatible dans Dynamo et dans tous les environnements hôtes qui correspondent à la gamme de versions et/ou à la liste de versions individuelle.
 
-![Modifier les options d’informations de compatibilité](../../.gitbook/assets/Package-Manager_Image_8.png)
+![Modifier les options d’informations de compatibilité](../images/Package-Manager_Image_8.png)
 
 Selon l’option sélectionnée, les champs propres à Dynamo et/ou à l’hôte s’affichent, comme illustré sur l’image ci-dessous.
 
-![Modifier les informations de compatibilité - Étape 2](../../.gitbook/assets/Package-Manager_Image_9.png)
+![Modifier les informations de compatibilité - Étape 2](../images/Package-Manager_Image_9.png)

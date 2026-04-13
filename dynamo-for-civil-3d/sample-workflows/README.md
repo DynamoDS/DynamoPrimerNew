@@ -6,4 +6,4 @@ Voilà ce qui compose l’infrastructure civile, entre autres. Cette section con
 
 En outre, ces exemples illustrent les meilleures pratiques déjà éprouvées en matière de construction de graphiques de qualité. Au fil des exemples, nous vous encourageons à vous familiariser avec la section [9_best_practices](../../9\_best\_practices/ "mention") pour obtenir davantage d’idées sur la façon de construire des graphiques performants, flexibles et faciles à gérer.
 
-<figure><img src="../../.gitbook/assets/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>

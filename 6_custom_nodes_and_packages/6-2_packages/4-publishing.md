@@ -2,7 +2,7 @@
 
 Dans les sections précédentes, vous avez découvert en détail comment configurer le package _MapToSurface_ avec des nœuds personnalisés et des fichiers d’exemple. Mais comment publier un package développé localement ? Cette étude de cas montre comment publier un package à partir d’un ensemble de fichiers dans un dossier local.
 
-\![](<../../.gitbook/assets/develop package - custom nodes 01 (1) (6).jpg>)
+\![](<../images/develop package - custom nodes 01.jpg>)
 
 Il existe plusieurs façons de publier un package. Voici le processus recommandé :**publier localement, développer localement, puis publier en ligne**. Vous allez commencer par un dossier contenant tous les fichiers du package.
 
@@ -12,7 +12,7 @@ Avant de commencer la publication du package MapToSurface, si vous avez install�
 
 Commencez par aller dans Packages > Gestionnaire de package > onglet Packages installés > à côté de MapToSurface, cliquez sur le menu des points verticaux > Supprimer.
 
-<figure><img src="../../.gitbook/assets/delete-map-to-surface.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/delete-map-to-surface.png" alt=""><figcaption></figcaption></figure>
 
 Ensuite, redémarrez Dynamo. Lors de la réouverture, vérifiez la fenêtre _« Gérer les packages »_ : le package _MapToSurface_ ne doit plus être présent. Vous pouvez désormais commencer !
 
@@ -28,7 +28,7 @@ Ensuite, redémarrez Dynamo. Lors de la réouverture, vérifiez la fenêtre _«�
 
 Il s'agit de la première soumission du package, et tous les fichiers d'exemple et les nœuds personnalisés sont placés dans un dossier unique. Maintenant que ce dossier est prêt, vous pouvez effectuer le chargement dans le gestionnaire de package Dynamo.
 
-\![](<../../.gitbook/assets/publish a package - publish locally 01.jpg>)
+\![](<../images/publish a package - publish locally 01.jpg>)
 
 > 1. Ce dossier contient cinq nœuds personnalisés (.dyf).
 > 2. Ce dossier contient également cinq fichiers d'exemple (.dyn) et un fichier vectoriel importé (.svg). Ces fichiers serviront d’exercices préliminaires pour montrer à l’utilisateur comment utiliser les nœuds personnalisés.
@@ -37,33 +37,33 @@ Dans Dynamo, commencez par cliquer sur l’onglet _Packages > Gestionnaire de pa
 
 Dans l’onglet _Publier un package_, remplissez les champs pertinents dans la partie gauche de la fenêtre.
 
-<figure><img src="../../.gitbook/assets/package-details.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/package-details.png" alt=""><figcaption></figcaption></figure>
 
 Ensuite, nous allons ajouter des fichiers de package. Vous pouvez ajouter des fichiers un par un ou des dossiers entiers en sélectionnant Ajouter un répertoire (1). Pour ajouter des fichiers qui ne sont pas des fichiers .dyf, veillez à modifier le type de fichier dans la fenêtre du navigateur en **« Tous les fichiers(**_._**) »**. Notez que nous ajouterons chaque fichier, nœud personnalisé (.dyf) ou fichier d’exemple (.dyn), sans distinction. Dynamo classe ces éléments lors de la publication du package.
 
-<figure><img src="../../.gitbook/assets/map-to-surface-contents.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/map-to-surface-contents.png" alt=""><figcaption></figcaption></figure>
 
 Une fois que vous avez sélectionné le dossier MapToSurface, le gestionnaire de package vous montre le contenu du dossier. Si vous chargez votre propre package avec une structure de dossiers complexe, et que vous ne voulez pas que Dynamo apporte des changements à votre structure de dossiers, vous pouvez cocher la case « Conserver la structure des dossiers ». Cette option est destinée aux utilisateurs avancés, et si votre package n’est pas délibérément configuré d’une manière spécifique, il est préférable de laisser cette option désactivée et de permettre à Dynamo d’organiser les fichiers selon les besoins. Cliquez sur Suivant pour continuer.
 
-<figure><img src="../../.gitbook/assets/map-to-surface-contents-preview.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/map-to-surface-contents-preview.png" alt=""><figcaption></figcaption></figure>
 
 Ici, vous avez la possibilité de voir comment Dynamo organisera vos fichiers de package avant de les publier. Cliquez sur Terminer pour continuer.
 
-<figure><img src="../../.gitbook/assets/publish-locally.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/publish-locally.png" alt=""><figcaption></figcaption></figure>
 
 Publiez en cliquant sur « Publier localement » (1). Si vous suivez, veillez à cliquer sur _« Publier localement »_ et **non** _« Publier en ligne » pour éviter_ d’avoir un groupe de packages en double dans le gestionnaire de package.
 
 Une fois la publication terminée, les nœuds personnalisés doivent être disponibles sous le groupe « DynamoPrimer » ou votre bibliothèque Dynamo.
 
-\![](<../../.gitbook/assets/develop package - install package 02 (1) (4).jpg>)
+\![](<../images/develop package - install package 02.jpg>)
 
 Examinez maintenant le répertoire racine pour découvrir comment Dynamo a mis en forme le package créé. Pour ce faire, allez dans l’onglet Packages installés > à côté de MapToSurface, cliquez sur le menu des points verticaux > sélectionnez Afficher le répertoire racine.
 
-<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Le répertoire racine se trouve à l’emplacement local de votre package (n’oubliez pas que vous avez publié le package « localement »). Dynamo utilise actuellement ce dossier pour lire les nœuds personnalisés. Il est donc important de publier localement le répertoire dans un emplacement permanent (par exemple, pas sur votre bureau). Voici la répartition du dossier du package Dynamo :
 
-\![](<../../.gitbook/assets/publish a package - publish locally 06.jpg>)
+\![](<../images/publish a package - publish locally 06.jpg>)
 
 > 1. Le dossier _bin_ contient les fichiers .dll créés avec des bibliothèques C# ou Zero Touch. Étant donné qu’il n’en existe pas pour ce package, ce dossier est vide pour cet exemple.
 > 2. Le dossier _dyf_ contient les nœuds personnalisés. L’ouverture de ce dossier permet d’afficher tous les nœuds personnalisés (fichiers .dyf) de ce package.
@@ -74,7 +74,7 @@ Le répertoire racine se trouve à l’emplacement local de votre package (n’o
 
 {% hint style="warning" %}Remarque : ne suivez pas cette étape, sauf si vous publiez réellement un package de votre choix. {% endhint %}
 
-<figure><img src="../../.gitbook/assets/publish-version.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/publish-version.png" alt=""><figcaption></figcaption></figure>
 
 1. Lorsque vous êtes prêt à publier, dans la fenêtre Packages > Gestionnaire de package > Packages installés, sélectionnez le bouton situé à droite du package que vous souhaitez publier et choisissez Publier.
 2. Si vous mettez à jour un package qui a déjà été publié, choisissez « Publier la version » et Dynamo mettra à jour votre package en ligne en fonction des nouveaux fichiers contenus dans le répertoire racine de ce package. C'est aussi simple que ça !

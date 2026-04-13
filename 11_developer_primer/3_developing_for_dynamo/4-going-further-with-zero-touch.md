@@ -2,7 +2,7 @@
 
 Après avoir appris à créer un projet Zero-Touch, nous pouvons approfondir les spécificités de la création d’un nœud en parcourant l’exemple ZeroTouchEssentials sur Dynamo GitHub.
 
-![Nœuds Zero-Touch](../../.gitbook/assets/ootbzerotouch.png)
+![Nœuds Zero-Touch](../images/ootbzerotouch.png)
 
 > De nombreux nœuds standard de Dynamo sont essentiellement des nœuds Zero-Touch, comme la plupart des nœuds Math, Color et DateTime ci-dessus.
 
@@ -10,7 +10,7 @@ Pour commencer, téléchargez le projet ZeroTouchEssentials à partir de l’emp
 
 Dans Visual Studio, ouvrez le fichier solution `ZeroTouchEssentials.sln` et générez la solution.
 
-![ZeroTouchEssentials dans Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
+![ZeroTouchEssentials dans Visual Studio](../images/vs-build-zte.jpg)
 
 > Le fichier `ZeroTouchEssentials.cs` contient toutes les méthodes que vous allez importer dans Dynamo.
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Valeur par défaut](../../.gitbook/assets/defaultval.jpg)
+![Valeur par défaut](../images/defaultval.jpg)
 
 > 1. La valeur par défaut s’affiche lorsque vous passez le curseur sur le port d’entrée du nœud.
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Un nœud qui renvoie plusieurs sorties.
 
-![Sorties multiples](../../.gitbook/assets/multipleoutputs.png)
+![Sorties multiples](../images/multipleoutputs.png)
 
 > 1. Notez que deux ports de sortie sont désormais nommés en fonction des chaînes que nous avons saisies pour les clés du dictionnaire.
 
@@ -90,7 +90,7 @@ Il est recommandé d’ajouter de la documentation aux nœuds Dynamo pour décri
   * par exemple : `/// <summary>...</summary>`
 * Activez la documentation XML dans Visual Studio en sélectionnant `Project > [Project] Properties > Build > Output` et en cochant la case `Documentation file`.
 
-![Générer un fichier XML](../../.gitbook/assets/vs-xml.jpg)
+![Générer un fichier XML](../images/vs-xml.jpg)
 
 > 1. Visual Studio générera un fichier XML à l’emplacement spécifié.
 
@@ -141,7 +141,7 @@ Les descriptions de nœud décrivent brièvement la fonction et la sortie d’un
 * Dans l’info-bulle du nœud
 * Dans le navigateur de documentation
 
-![Description du nœud](../../.gitbook/assets/node-description.png)
+![Description du nœud](../images/node-description.png)
 
 Suivez ces instructions pour harmoniser les descriptions de nœud et gagner du temps lors de leur rédaction ou de leur mise à jour.
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 Une fois que le .dll ZeroTouchEssentials a été importé, un nœud ZeroTouchEssentials sera présent dans la bibliothèque. Cet objet peut être créé en utilisant le nœud `ByTwoDoubles`.
 
-![Nœud ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
+![Nœud ByTwoDoubles](../images/dyn-constructor.jpg)
 
 ### Utiliser des types de géométrie Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Un nœud qui obtient la longueur d’une courbe et la double.
 
-![Entrée de la courbe](../../.gitbook/assets/doublelength.png)
+![Entrée de la courbe](../images/doublelength.png)
 
 > 1. Ce nœud accepte un type de géométrie Courbe comme entrée.
 
@@ -285,7 +285,7 @@ Lors de la publication d’une nouvelle version d’une bibliothèque, les noms 
 * dans l’élément migrations, créez `<priorNameHint>...</priorNameHint>` éléments pour chaque changement de nom ;
 * pour chaque changement de nom, fournissez un élément `<oldName>...</oldName>` et `<newName>...</newName>`.
 
-![Fichier migrations](../../.gitbook/assets/vs-migrations-file.jpg)
+![Fichier migrations](../images/vs-migrations-file.jpg)
 
 > 1. Cliquez avec le bouton droit de la souris et sélectionnez `Add > New Item`
 > 2. Choisissez `XML File`

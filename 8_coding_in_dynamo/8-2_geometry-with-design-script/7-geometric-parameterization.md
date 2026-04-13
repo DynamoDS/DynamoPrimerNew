@@ -16,7 +16,7 @@ La définition des paramètres n’est pas particulièrement utile lors de la d�
 
 Les courbes ont une méthode _PointAtParameter_, qui prend un double argument entre 0 et 1, et renvoie l’objet Point à ce paramètre. Par exemple, ce script recherche les points aux paramètres 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 et 1 :
 
-![](../../.gitbook/assets/GeometricParameterization_01.png)
+![](../images/GeometricParameterization_01.png)
 
 ```js
 pts = {};
@@ -41,7 +41,7 @@ De même, les surfaces ont une méthode _PointAtParameter_ qui prend deux argume
 
 Alors que l’extraction de points individuels sur une courbe et une surface peut être utile, les scripts requièrent souvent la connaissance des caractéristiques géométriques spécifiques d’un paramètre, telles que la direction dans laquelle la courbe ou la surface est orientée. La méthode _CoordinateSystemAtParameter_ trouve non seulement la position, mais également un CoordinateSystem orienté au niveau du paramètre d’une courbe ou d’une surface. Par exemple, le script suivant extrait des CoordinateSystems orientés le long d’une surface de révolution et utilise leur orientation pour générer des lignes qui dépassent normalement par rapport à la surface :
 
-![](../../.gitbook/assets/GeometricParameterization_02.png)
+![](../images/GeometricParameterization_02.png)
 
 ```js
 pts = {};

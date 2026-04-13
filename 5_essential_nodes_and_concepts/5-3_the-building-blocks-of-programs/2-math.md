@@ -8,10 +8,10 @@ Les opérateurs sont un ensemble de composants qui utilisent des fonctions algé
 
 | Icône                                                | Nom (Syntaxe)     | Entrées                     | Sorties      |
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../../.gitbook/assets/addition (1).jpg>)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
-| \![](<../../.gitbook/assets/Subtraction (1).jpg>)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
-| \![](<../../.gitbook/assets/Multiplication (2).jpg>) | Multiplier ( ***** ) | var[]…[], var[]…[] | var[]…[] |
-| \![](<../../.gitbook/assets/Division (2).jpg>)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/addition.jpg>)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/Subtraction.jpg>)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/Multiplication.jpg>) | Multiplier ( ***** ) | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/Division.jpg>)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
 
 ## Exercice : Formule de la clothoïde dorée
 
@@ -29,7 +29,7 @@ Combinez les opérateurs et les variables pour créer une relation plus complexe
 
 **Number Sequence :** définissez une séquence de nombres reposant sur les trois entrées _start, amount_ et _step_.
 
-\![](<../../.gitbook/assets/math - part I-01.jpg>)
+\![](<../images/math - part I-01.jpg>)
 
 2\. L’étape ci-dessus a permis de créer une liste de nombres pour définir le domaine paramétrique. Ensuite, créez un groupe de nœuds représentant l’équation de la clothoïde dorée.
 
@@ -45,7 +45,7 @@ $$
 
 L’image ci-dessous représente la spirale dorée sous forme de programmation visuelle. Lorsque vous parcourez le groupe de nœuds, essayez de faire le parallèle entre le programme visuel et l’équation écrite.
 
-\![](<../../.gitbook/assets/math - part I-02.jpg>)
+\![](<../images/math - part I-02.jpg>)
 
 > a. **Number Slider :** ajoutez deux curseurs de numérotation dans la zone de dessin. Ces curseurs représentent les variables _a_ et _b_ de l’équation paramétrique. Elles représentent une constante flexible, ou des paramètres que vous pouvez ajuster afin d’obtenir le résultat souhaité.
 >
@@ -65,11 +65,11 @@ Le bloc de nœuds de l’étape précédente fonctionne correctement, mais cela 
 
 **Point.ByCoordinates :** connectez le nœud de multiplication supérieur à l’entrée « _x_ » et le nœud inférieur à l’entrée « _y_ ». Une clothoïde paramétrique de points apparaît à l’écran.
 
-\![](<../../.gitbook/assets/math - part II-01.gif>)
+\![](<../images/math - part II-01.gif>)
 
 **Polycurve.ByPoints :** connectez **Point.ByCoordinates** de l’étape précédente à _points_. Vous pouvez laisser _connectLastToFirst_ sans entrée, car vous ne créez pas de courbe fermée. Cela permet de créer une spirale qui passe par chaque point défini à l’étape précédente.
 
-\![](<../../.gitbook/assets/math - part II-02.jpg>)
+\![](<../images/math - part II-02.jpg>)
 
 La clothoïde de Fibonacci est désormais terminée. Vous allez désormais effectuer deux exercices distincts, appelés Nautilus et Tournesol. Ce sont des abstractions de systèmes naturels, mais qui représentent bien les deux applications différentes de la clothoïde de Fibonacci.
 
@@ -77,13 +77,13 @@ La clothoïde de Fibonacci est désormais terminée. Vous allez désormais effec
 
 **Circle.ByCenterPointRadius :** utilisez un nœud circulaire avec les mêmes entrées que celles de l’étape précédente. Étant donné que la valeur du rayon par défaut est de _1,0_, un réseau de cercles apparaît immédiatement. La façon dont les points divergent à partir du point d’origine est immédiatement lisible.
 
-\![](<../../.gitbook/assets/math - part III-01.jpg>)
+\![](<../images/math - part III-01.jpg>)
 
 **Number Sequence :** réseau d’origine de « _t_ ». Si vous connectez ceci à la valeur du rayon de **Circle.ByCenterPointRadius**, les centres des cercles divergent davantage à partir de l’origine, mais le rayon des cercles augmente, créant ainsi un super graphique circulaire de Fibonacci.
 
 Et c’est encore mieux en 3D !
 
-\![](<../../.gitbook/assets/math - part III-02.gif>)
+\![](<../images/math - part III-02.gif>)
 
 ### Partie IV : Du Nautilus à la phyllotaxie
 
@@ -91,15 +91,15 @@ Maintenant que vous avez créé une coque Nautilus circulaire, passez aux grille
 
 Comme point de départ, commencez par la même étape qu’à l’exercice précédent : la création d’un réseau de points en forme de spirale avec le nœud **Point.ByCoordinates**.
 
-<figure><img src="../../.gitbook/assets/math - part IV-01.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/math - part IV-01.jpg" alt=""><figcaption></figcaption></figure>
 
 Ensuite, suivez ces courtes étapes pour générer une série de clothoïdes à différentes rotations.
 
-\![](<../../.gitbook/assets/math - part IV-02.jpg>)
+\![](<../images/math - part IV-02.jpg>)
 
 > a. **Geometry.Rotate :** il existe plusieurs options **Geometry.Rotate**. Assurez-vous d’avoir choisi le nœud avec les entrées _geometry_, _basePlane_ et _degrees_. Connectez **Point.ByCoordinates** à l’entrée geometry. Cliquez avec le bouton droit de la souris sur ce nœud et assurez-vous que la combinaison est définie sur « Produit vectoriel ».
 >
-> <img src="../../.gitbook/assets/math - part IV-03 cross product.jpg" alt="" data-size="original">
+> <img src="../images/math - part IV-03 cross product.jpg" alt="" data-size="original">
 >
 > b. **Plane.XY :** connexion à l’entrée _basePlane_. Vous allez effectuer une rotation autour de l’origine, servant également de base pour la clothoïde.
 >
@@ -111,8 +111,8 @@ Le résultat obtenu commence à ressembler à un tourbillon. Ajustez certains pa
 
 Modifiez la taille du pas du nœud **Number Range** de _120.0_ à _36.0_. Cette action crée davantage de rotations et permet donc d’obtenir une grille plus dense.
 
-\![](<../../.gitbook/assets/math - part IV-04.jpg>)
+\![](<../images/math - part IV-04.jpg>)
 
 Modifiez la taille du pas du nœud **Number Range** de _36.0_ à _3.6_. Vous obtenez une grille beaucoup plus dense, et la direction de la clothoïde n’est pas claire. Bravo, vous avez créé un tournesol.
 
-\![](<../../.gitbook/assets/math - part IV-05.jpg>)
+\![](<../images/math - part IV-05.jpg>)

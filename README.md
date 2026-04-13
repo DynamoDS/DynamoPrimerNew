@@ -4,7 +4,7 @@
 
 ## Pour Dynamo v2.13 et plus récent
 
-![Dynamo Logo](.gitbook/assets/dynamo_logo_dark-trim.jpg)
+![Dynamo Logo](images/dynamo_logo_dark-trim.jpg)
 
 > Dynamo est une plate-forme de programmation visuelle open source pour les concepteurs.
 
@@ -37,31 +37,31 @@ Le guide Dynamo est un projet open source, initié par Matt Jezyk et l’équip
 
 **Mode Lab** a été chargé d’écrire la première édition du guide. Nous remercions l’équipe pour tous ses efforts afin d’établir cette précieuse ressource.
 
-![](.gitbook/assets/MODELAB_Logo.png)
+![](images/modelab-logo.png)
 
 ***
 
 **John Pierson de Parallax Team** a été chargé de mettre à jour le guide pour qu’il contienne les révisions de Dynamo 2.0.
 
-![](.gitbook/assets/PRLX_Logo.jpg)
+![](images/prlx-logo.jpg)
 
 ***
 
 **Matterlab** a été chargé de mettre à jour le guide pour refléter les révisions de Dynamo 2.13.
 
-\![](<.gitbook/assets/matterlab_final-07 (2).jpg>)
+![](images/matterlab-logo.jpg)
 
 ***
 
 **Archilizer** a été chargé de mettre à jour le guide pour refléter les révisions de Dynamo 2.17.
 
-<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 **Wood Rodgers** a été chargé de mettre à jour le guide avec le contenu de Dynamo for Civil 3D.
 
-<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
 
 ### Remerciements
 

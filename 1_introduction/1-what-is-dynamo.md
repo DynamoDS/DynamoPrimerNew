@@ -8,13 +8,13 @@ Dynamo est une application de [programmation visuelle](https://primer2.dynamobim
 
 Dynamo vous permet de travailler au sein d’un processus de programmation visuelle dans lequel vous connectez des éléments pour définir les relations et les séquences d’actions qui composent les algorithmes personnalisés. Vous pouvez utiliser vos algorithmes pour un large éventail d’applications, du traitement de données à la génération de géométries, le tout en temps réel et sans avoir à écrire une ligne de `code`.
 
-\![](<../.gitbook/assets/nodes and wires - flow of data.jpg>)
+\![](<images/nodes and wires - flow of data.jpg>)
 
 ### Connexion de nœuds et des fils
 
 Les nœuds et les fils sont les composants clés de Dynamo qui prennent en charge un processus de [programmation visuelle](../a_appendix/a-1_visual-programming-and-dynamo.md). Ils permettent d’établir des relations visuelles et systémiques solides entre les parties d’une conception. Utilisez la souris pour connecter les nœuds en toute simplicité lorsque vous développez et optimisez votre workflow de conception.
 
-\![](<../.gitbook/assets/what is dynamo - connecting nodes with wires.gif>)
+\![](<images/what is dynamo - connecting nodes with wires.gif>)
 
 ## Quels sont les avantages de Dynamo ?
 

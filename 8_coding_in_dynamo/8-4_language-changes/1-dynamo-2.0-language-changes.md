@@ -68,7 +68,7 @@ Explication des changements effectués dans la version 2.0 :
 
 ## 1\. Simplification de la syntaxe list@level
 
-Nouvelle syntaxe pour list@level, afin d’utiliser `list@L1` au lieu de `list@-1` ![](../../.gitbook/assets/lang2_1.png)
+Nouvelle syntaxe pour list@level, afin d’utiliser `list@L1` au lieu de `list@-1` ![](../images/lang2_1.png)
 
 ## 2\. Les fonctions surchargées avec des paramètres qui ne diffèrent que par le rang sont interdites
 
@@ -85,7 +85,7 @@ BoundingBox BoundingBox.ByGeometry(geometry: Geometry) {...}
 BoundingBox BoundingBox.ByGeometry(geometry: Geometry[]) {...}
 ```
 
-Si l’utilisateur a déposé le premier nœud sur la zone de dessin et a connecté une liste de géométries, il s’attend à ce que la réplication se déclenche. Toutefois, cela ne se produira jamais, car au moment de l’exécution, la deuxième surcharge sera appelée à la place, comme indiqué ici : ![](../../.gitbook/assets/lang2_2.png)
+Si l’utilisateur a déposé le premier nœud sur la zone de dessin et a connecté une liste de géométries, il s’attend à ce que la réplication se déclenche. Toutefois, cela ne se produira jamais, car au moment de l’exécution, la deuxième surcharge sera appelée à la place, comme indiqué ici : ![](../images/lang2_2.png)
 
 C’est pour cette raison que dans la version 2.0, nous avons interdit les fonctions surchargées dont les paramètres ne diffèrent que par la cardinalité. Cela signifie que pour les fonctions surchargées qui ont le même nombre et le même type de paramètres, mais qui ont un ou plusieurs paramètres qui ne diffèrent que par le rang, la surcharge définie en premier l’emporte toujours, tandis que les autres sont rejetées par le compilateur. Le principal avantage est que cela simplifie la logique de résolution de la méthode en disposant d’un chemin rapide pour sélectionner les fonctions candidates.
 
@@ -105,7 +105,7 @@ Dans l’exemple suivant, deux surcharges de fonction `foo` ont été définies.
 
 Dans la version 2.0, c’est toujours la première méthode définie qui est choisie par rapport au reste. « Premier arrivé, premier servi ».
 
-![](../../.gitbook/assets/lang2_3.png)
+![](../images/lang2_3.png)
 
 Dans tous les cas suivants, la première surcharge définie sera choisie. Notez que cela se base exclusivement sur l’ordre de définition des fonctions et non sur les rangs de paramètres, bien qu’il soit recommandé de donner la préférence aux méthodes avec des paramètres de rang plus élevé pour les nœuds définis par l’utilisateur et Zero Touch.
 
@@ -137,7 +137,7 @@ Par exemple, si une entrée de liste avec les types de `[Arc, Line]` suivants es
 
 ### Dynamo 1.x teste uniquement le premier élément de la liste d’entrée pour la vérification de la résolution de la méthode
 
-![](../../.gitbook/assets/lang2_4.png)
+![](../images/lang2_4.png)
 
 ```
 x = [arc, line];
@@ -164,7 +164,7 @@ Voici ce qui se passe dans la version 2.0 :
 
 Cet exemple fonctionnait dans la version 1.x, car le graphe se compilait en `point.X;` et il trouvait la propriété `X` sur l’objet point. Il échoue désormais dans la version 2.0 car le code compilé `Vector.X(point)` n’accepte qu’un type `Vector` :
 
-![](../../.gitbook/assets/lang2_5.png)
+![](../images/lang2_5.png)
 
 ### Avantages :
 
@@ -176,7 +176,7 @@ Cet exemple fonctionnait dans la version 1.x, car le graphe se compilait en `po
 
 ### Mise en garde : ambiguïtés non résolues avec des méthodes surchargées
 
-Étant donné que Dynamo prend en charge les surcharges de fonctions en général, il peut se tromper s’il existe une autre fonction surchargée avec le même nombre de paramètres. Par exemple, dans le graphe suivant, si nous connectons une valeur numérique à l’entrée `direction` de `Curve.Extrude` et un vecteur à l’entrée `distance` de `Curve.Extrude`. Les deux nœuds continuent de fonctionner, comme prévu. Dans ce cas, même si les nœuds sont compilés en méthodes statiques, le moteur ne peut toujours pas faire la différence au moment de l’exécution et choisit l’une ou l’autre en fonction du type d’entrée. ![](../../.gitbook/assets/lang2_6.png)
+Étant donné que Dynamo prend en charge les surcharges de fonctions en général, il peut se tromper s’il existe une autre fonction surchargée avec le même nombre de paramètres. Par exemple, dans le graphe suivant, si nous connectons une valeur numérique à l’entrée `direction` de `Curve.Extrude` et un vecteur à l’entrée `distance` de `Curve.Extrude`. Les deux nœuds continuent de fonctionner, comme prévu. Dans ce cas, même si les nœuds sont compilés en méthodes statiques, le moteur ne peut toujours pas faire la différence au moment de l’exécution et choisit l’une ou l’autre en fonction du type d’entrée. ![](../images/lang2_6.png)
 
 ### Problèmes résolus :
 
@@ -186,11 +186,11 @@ Le passage à la sémantique des méthodes statiques a entraîné les effets col
 
 Prenons un exemple de nœuds `TSpline` dans `ProtoGeometry` (notez que `TSplineTopology` hérite du type de base `Topology`) : le nœud `Topology.Edges` qui était auparavant compilé en méthode d’instance, `object.Edges`, est maintenant compilé en méthode statique, `Topology.Edges(object)`. L’appel précédent serait résolu de manière polymorphe à la méthode de classe dérivée `TsplineTopology.Edges` après l’appel d’une méthode sur le type d’objet à l’exécution.
 
-![](../../.gitbook/assets/lang2_7.png)
+![](../images/lang2_7.png)
 
 Alors que le nouveau comportement statique est forcé d’appeler la méthode de classe de base `Topology.Edges`. En conséquence, ce nœud a renvoyé la classe de base, des objets `Edge` au lieu des objets de classe dérivés de type `TSplineEdge`.
 
-![](../../.gitbook/assets/lang2_8.png)
+![](../images/lang2_8.png)
 
 Il s’agissait d’une régression, car les nœuds `TSpline` en aval qui s’attendaient à `TSplineEdges` ont commencé à échouer.
 
@@ -198,13 +198,13 @@ Le problème a été résolu par l’ajout d’une vérification d’exécution 
 
 **Nouveau comportement polymorphe en 2.0 :**
 
-![](../../.gitbook/assets/lang2_9.png)
+![](../images/lang2_9.png)
 
 Dans ce cas, étant donné que le premier élément `a` est un `TSpline`, c’est la méthode dérivée `TSplineTopology.Edges` qui est invoquée au moment de l’exécution. Par conséquent, elle renvoie `null` pour `b` de type `Topology` de base.
 
 Dans le second cas, puisque `b` de type `Topology` général est le premier élément, la méthode `Topology.Edges` de base est appelée. Étant donné que `Topology.Edges` accepte également le type `TSplineTopology` dérivé, `a` en tant qu’entrée, elle renvoie `Edges` pour les deux entrées, `a` et `b`.
 
-![](../../.gitbook/assets/lang2_10.png)
+![](../images/lang2_10.png)
 
 **2\. Régressions dues la production de listes externes redondantes**
 
@@ -248,13 +248,13 @@ p = Point.ByCoordinates(x<1>, y<2>, z<3>); // cross-lacing
 
 ### Dynamo 1.x : liste 3D de points
 
-![](../../.gitbook/assets/lang2_11.png)
+![](../images/lang2_11.png)
 
 Dans la version 2.0, la présence de guides de réplication pour chaque argument à valeur unique `y` et `z` ne provoque pas de conversion, ce qui crée une liste ayant la même dimension que la liste 1D d’entrée pour `x`.
 
 ### Dynamo 2.0 : liste 1D de points
 
-![](../../.gitbook/assets/lang2_12.png)
+![](../images/lang2_12.png)
 
 La régression mentionnée ci-dessus causée par la compilation de méthodes statiques avec la génération de listes externes redondantes a également été corrigée avec cette modification du langage.
 
@@ -268,7 +268,7 @@ a produit une liste 3D de points dans Dynamo 1.x. Cela s’est produit en raiso
 
 ### Dynamo 1.x : conversion en liste des arguments avec guide de réplication
 
-![](../../.gitbook/assets/lang2_13.png)
+![](../images/lang2_13.png)
 
 Dans la version 2.0, nous avons désactivé la conversion d’arguments à valeur unique en listes lorsqu’ils sont utilisés avec des guides de réplication ou des liaisons. Donc désormais, l’appel à :
 
@@ -280,7 +280,7 @@ renvoie simplement une liste 2D, car la surface n’est pas convertie.
 
 ### Dynamo 2.0 : désactivation de la conversion en liste des arguments à valeur unique avec guide de réplication
 
-![](../../.gitbook/assets/lang2_14.png)
+![](../images/lang2_14.png)
 
 Cette modification supprime l’ajout d’un niveau de liste redondant et résout également la régression causée par le passage à la compilation de méthodes statiques.
 
@@ -295,7 +295,7 @@ Cette modification supprime l’ajout d’un niveau de liste redondant et résou
 * Les méthodes d’instance et les méthodes statiques sont cohérentes (cela résout les problèmes liés à la sémantique des méthodes statiques)
 * Les nœuds avec des entrées et des arguments par défaut se comportent de manière cohérente (voir ci-dessous)
 
-![](../../.gitbook/assets/lang2_15.png)
+![](../images/lang2_15.png)
 
 ## 5\. Les variables sont immuables dans les nœuds de bloc de code afin d’empêcher la mise à jour associative
 
@@ -336,7 +336,7 @@ a = 4;         // b = 10 or b = 7?
 
 Dans cet exemple de géométrie, étant donné que le cube `b` dépend de lui-même ainsi que du cylindre `a`, le déplacement du curseur doit-il déplacer le trou le long du bloc ou doit-il créer un effet cumulatif de perforation de plusieurs trous le long de sa trajectoire à chaque mise à jour de la position du curseur ?
 
-![](../../.gitbook/assets/lang2_16.gif)
+![](../images/lang2_16.gif)
 
 **3\. Mise à jour des propriétés des variables :**
 
@@ -359,7 +359,7 @@ Par expérience, nous avons constaté que la mise à jour associative ne s’av�
 
 si cette fonction a été utilisée par des utilisateurs, c’est probablement sans le savoir, causant plus de tort que de bien. Nous avons donc décidé, dans la version 2.0, de masquer l’associativité dans l’utilisation des nœuds de blocs de code en rendant les variables immuables, tout en conservant la mise à jour associative en tant que fonctionnalité native du moteur DS uniquement. Ce changement s’inscrit également dans l’objectif de simplifier l’expérience de script pour les utilisateurs.
 
-**La mise à jour associative est désactivée dans les CBN en empêchant la redéfinition des variables :** ![](../../.gitbook/assets/lang2_17.png)
+**La mise à jour associative est désactivée dans les CBN en empêchant la redéfinition des variables :** ![](../images/lang2_17.png)
 
 **L’indexation de listes est toujours autorisée dans les blocs de code**
 
@@ -367,7 +367,7 @@ Une exception a été faite pour l’indexation de listes qui est toujours autor
 
 Dans l’exemple suivant, nous voyons que la liste `a` est initialisée, mais elle peut être remplacée ultérieurement par une affectation via l’opérateur d’index, et que toutes les variables dépendantes de `a` sont mises à jour de manière associative, comme le montre la valeur de `c`. De plus, l’aperçu du nœud affiche les valeurs mises à jour de `a` après la redéfinition d’un ou plusieurs de ses éléments.
 
-![](../../.gitbook/assets/lang2_18.png)
+![](../images/lang2_18.png)
 
 ## 6\. Les variables des blocs impératifs sont locales à la portée des blocs impératifs
 
@@ -483,11 +483,11 @@ dict = {<key> : <value>, …};
 
 format de paire clé-valeur où seule une chaîne est autorisée pour `<key>` et où plusieurs paires clé-valeur sont séparées par des virgules.
 
-![](../../.gitbook/assets/lang2_19.png)
+![](../images/lang2_19.png)
 
 La méthode Zero Touch `Dictionary.ByKeysValues` constitue un moyen plus polyvalent d’initialiser un dictionnaire en transmettant une liste de clés et de valeurs et en bénéficiant de tous les avantages de l’utilisation de méthodes Zero Touch comme les guides de réplication, etc.
 
-![](../../.gitbook/assets/lang2_20.png)
+![](../images/lang2_20.png)
 
 ### Pourquoi n’avons-nous pas utilisé d’expressions arbitraires pour la syntaxe d’initialisation du dictionnaire ?
 
@@ -507,21 +507,21 @@ Nous _pourrions_ étendre les clés de dictionnaire pour prendre en charge des e
 
 **1\. Le nœud Zero Touch renvoyant un dictionnaire .NET est renvoyé en tant que dictionnaire Dynamo.**
 
-**Examinez la méthode C# Zero-Touch suivante qui renvoie un IDictionary :** ![](../../.gitbook/assets/lang2_21.png)
+**Consider the following zero-touch C# method returning an IDictionary:** ![](../images/lang2_21.png)
 
-**La valeur de retour correspondante du nœud ZT est convertie en dictionnaire Dynamo :** ![](../../.gitbook/assets/lang2_22.png)
+**La valeur de retour correspondante du nœud ZT est convertie en dictionnaire Dynamo :** ![](../images/lang2_22.png)
 
 **2\. Les nœuds à retours multiples sont prévisualisés en tant que dictionnaires**
 
-**Le nœud Zero-Touch renvoyant IDictionary avec l’attribut Multi-Return renvoie un dictionnaire Dynamo :** ![](../../.gitbook/assets/lang2_23.png)
+**Le nœud Zero-Touch renvoyant IDictionary avec l’attribut Multi-Return renvoie un dictionnaire Dynamo :** ![](../images/lang2_23.png)
 
-![](../../.gitbook/assets/lang2_24.png)
+![](../images/lang2_24.png)
 
 **3\. Le dictionnaire Dynamo peut être transmis en tant qu’entrée dans un nœud Zero Touch compatible avec le dictionnaire .NET**
 
-**Méthode ZT avec un paramètre IDictionary :** ![](../../.gitbook/assets/lang2_25.png)
+**ZT method with an IDictionary parameter:** ![](../images/lang2_25.png)
 
-**Le nœud ZT accepte le dictionnaire Dynamo en tant qu’entrée :** ![](../../.gitbook/assets/lang2_26.png)
+**ZT node accepts Dynamo Dictionary as input:** ![](../images/lang2_26.png)
 
 ### Aperçu du dictionnaire dans les nœuds à retours multiples
 
@@ -529,4 +529,4 @@ Les dictionnaires sont des paires clé-valeur non ordonnées. Il n’est donc pa
 
 Nous avons cependant fait une exception pour les nœuds à retours multiples dont le `MultiReturnAttribute` est défini. Dans l’exemple suivant, `DateTime.Components` est un nœud « à retours multiples » et l’aperçu du nœud montre que ses paires clé-valeur sont dans le même ordre que celui des ports de sortie sur le nœud, qui correspond à l’ordre dans lequel les sorties sont spécifiées en fonction du`MultiReturnAttribute` de la définition du nœud.
 
-Notez également que les aperçus des blocs de code ne sont pas ordonnés, contrairement au nœud d’interface utilisateur, car les informations du port de sortie (sous la forme d’un attribut MultiReturn) n’existent pas pour le nœud Code Block : ![](../../.gitbook/assets/lang2_27.png)
+Notez également que les aperçus des blocs de code ne sont pas ordonnés, contrairement au nœud d’interface utilisateur, car les informations du port de sortie (sous la forme d’un attribut MultiReturn) n’existent pas pour le nœud Code Block : ![](../images/lang2_27.png)

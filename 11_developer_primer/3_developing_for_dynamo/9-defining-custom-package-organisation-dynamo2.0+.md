@@ -112,7 +112,7 @@ Les nœuds personnalisés sont organisés en fonction du `Category Name` spécif
 **AVERTISSEMENT**\
  L’utilisation de la notation par points dans les noms ou catégories de nœuds entraîne la création de sous-catégories imbriquées supplémentaires. Le `.` agit comme un délimiteur pour déterminer la hiérarchie supplémentaire. Il s’agit d’un nouveau comportement dans la bibliothèque de Dynamo 2.0.
 
-![Propriétés de nœuds personnalisés](../../.gitbook/assets/custom-node-properties.jpg)
+![Propriétés de nœuds personnalisés](../images/custom-node-properties.jpg)
 
 Vous pouvez mettre à jour le nom de la catégorie ultérieurement dans le fichier .dyf (XML ou JSON)
 

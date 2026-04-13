@@ -6,7 +6,7 @@ L'analogie bidimensionnelle d'une NurbsCurve est la NurbsSurface. Comme pour la 
 
 Pour créer une surface interpolée, il suffit de générer un ensemble de points à deux dimensions qui se rapproche de la forme d'une surface. L’ensemble doit être rectangulaire, c’est-à-dire non irrégulier. La méthode _NurbsSurface.ByPoints_ permet de construire une surface à partir de ces points.
 
-![](../../.gitbook/assets/Surfaces_01.png)
+![](../images/Surfaces_01.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -19,7 +19,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 
 Vous pouvez également créer des NurbsSurfaces de forme libre en spécifiant les points de contrôle sous-jacents d'une surface. Comme les NurbsCurves, les points de contrôle peuvent être considérés comme représentant un maillage quadrilatéral avec des segments droits, qui, en fonction du degré de la surface, est lissé pour obtenir la forme de surface finale. Pour créer une NurbsSurface via des points de contrôle, incluez deux paramètres supplémentaires à _NurbsSurface.ByPoints_, indiquant les degrés des courbes sous-jacentes dans les deux directions de la surface.
 
-![](../../.gitbook/assets/Surfaces_02.png)
+![](../images/Surfaces_02.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -31,7 +31,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 
 Vous pouvez augmenter le degré de la NurbsSurface pour modifier la géométrie de la surface obtenue :
 
-![](../../.gitbook/assets/Surfaces_03.png)
+![](../images/Surfaces_03.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -45,7 +45,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 
 Tout comme les surfaces peuvent être créées en effectuant une interpolation entre un ensemble de points d'entrée, elles peuvent être créées en effectuant une interpolation entre un ensemble de courbes de base. On parle alors de lissage. Une courbe lissée est créée à l’aide du constructeur _Surface.ByLoft_, avec un ensemble de courbes d’entrée comme seul paramètre.
 
-![](../../.gitbook/assets/Surfaces_04.png)
+![](../images/Surfaces_04.png)
 
 ```js
 // python_points_2, 3, and 4 are generated with
@@ -64,7 +64,7 @@ Les surfaces de révolution sont un type de surface supplémentaire créé en ba
 
 Les surfaces de révolution sont spécifiées par une courbe de base, représentant l’« arête » de la surface, par une origine d’axe, représentant le point de base de la surface, par une direction d’axe, représentant la direction du « noyau » central, par un angle de départ de balayage et par un angle de fin de balayage. Elles sont utilisées comme entrées du constructeur _Surface.Revolve_.
 
-![](../../.gitbook/assets/Surfaces_05.png)
+![](../images/Surfaces_05.png)
 
 ```js
 pts = {};

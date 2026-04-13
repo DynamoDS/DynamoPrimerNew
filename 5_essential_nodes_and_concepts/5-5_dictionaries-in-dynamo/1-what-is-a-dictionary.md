@@ -22,7 +22,7 @@ La séparation des dictionnaires et des listes place les dictionnaires comme cit
 * De _nouveaux nœuds_ ont été introduits dans la bibliothèque pour vous aider à créer et à modifier les dictionnaires, ainsi qu’à leur envoyer des requêtes.
 * Les listes créées dans les nœuds Code Block v1.x seront automatiquement migrées au chargement du script vers la nouvelle syntaxe de liste qui utilise des crochets `[ ]` au lieu des accolades `{ }` \\
 
-\![](<../../.gitbook/assets/what is a dictionary - what are the changes (1) (4).jpg>)
+\![](<../images/what is a dictionary - what are the changes.jpg>)
 
 ***
 
@@ -32,7 +32,7 @@ En informatique, les dictionnaires, comme les listes, sont des collections d’o
 
 Dans l’image ci-dessous, nous présentons un cas d’utilisation potentiel d’un dictionnaire. Souvent, les dictionnaires servent à relier deux types de données qui ne possèdent pas de corrélation directe. Dans notre cas, nous connectons la version espagnole d’un mot à la version anglaise pour une recherche ultérieure.
 
-\![](<../../.gitbook/assets/what is a dictionary - what would you use these for.jpg>)
+\![](<../images/what is a dictionary - what would you use these for.jpg>)
 
 > 1. Créez un dictionnaire pour relier les deux types de données.
 > 2. Obtenez la valeur avec la clé donnée.

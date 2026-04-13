@@ -6,13 +6,13 @@ Ce gabarit se trouve à l’emplacement `APPDATA` de votre installation de Dynam
 
 L’emplacement habituel est le suivant : `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-\![](<../../.gitbook/assets/python templates - appdata folder location.jpg>)
+\![](<../images/python templates - appdata folder location.jpg>)
 
 ### Configuration du gabarit
 
 Pour utiliser cette fonctionnalité, vous devez ajouter la ligne suivante dans le fichier `DynamoSettings.xml`. _(Modifier dans le bloc-notes)_
 
-\![](<../../.gitbook/assets/python templates -dynamo settings xml file.png>)
+\![](<../images/python templates -dynamo settings xml file.png>)
 
 Vous pouvez simplement remplacer `<PythonTemplateFilePath />` par ce qui suit :
 
@@ -71,10 +71,10 @@ Une fois cela fait, enregistrez ce fichier sous le nom `PythonTemplate.py` à l�
 
 Une fois le gabarit Python défini, Dynamo le recherche à chaque fois qu'un nœud Python est positionné. Si le gabarit est introuvable, l’affichage sera comparable à la fenêtre Python par défaut.
 
-\![](<../../.gitbook/assets/python templates - before setup template.jpg>)
+\![](<../images/python templates - before setup template.jpg>)
 
 Si Dynamo trouve le gabarit Python (par exemple, notre gabarit Revit), il affiche tous les éléments par défaut que vous avez intégrés.
 
-\![](<../../.gitbook/assets/python templates - after setup template.jpg>)
+\![](<../images/python templates - after setup template.jpg>)
 
 Vous trouverez ici des informations supplémentaires sur cet ajout important (par Radu Gidei). https://github.com/DynamoDS/Dynamo/pull/8122
