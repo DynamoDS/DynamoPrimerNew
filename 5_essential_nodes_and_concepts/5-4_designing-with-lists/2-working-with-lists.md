@@ -43,7 +43,7 @@ Toutes les opérations répertoriées ci-dessus possèdent des nœuds Dynamo sim
 
 L’image ci-dessous est le graphique de base sur lequel vous dessinez des lignes entre deux cercles pour représenter les opérations de liste de base. Vous allez découvrir comment gérer les données dans une liste et afficher les résultats visuels à travers les actions de liste ci-dessous.
 
-\![](<../images/working with list - list operation.jpg>)
+![](<../images/working with list - list operation.jpg>)
 
 > 1. Commencez par un nœud **Code Block** avec une valeur de `500;`.
 > 2. Connectez-le à l’entrée x d’un nœud **Point.ByCoordinates**.
@@ -65,7 +65,7 @@ L’image ci-dessous est le graphique de base sur lequel vous dessinez des ligne
 
 Le nœud _List.Count_ est simple : il compte le nombre de valeurs dans une liste et renvoie ce nombre. Ce nœud devient plus subtil lorsque vous travaillez avec des listes de listes, mais vous le découvrirez dans les sections suivantes.
 
-\![Nombre](<../images/working with list - list operation - list count.jpg>)
+![Nombre](<../images/working with list - list operation - list count.jpg>)
 
 > 1. Le nœud **List.Count** renvoie le nombre de lignes dans le nœud **Line.ByStartPointEndPoint**. Dans ce cas, la valeur est de 10, ce qui correspond au nombre de points créés à partir du nœud **Code Block** d’origine.
 
@@ -79,14 +79,14 @@ Le nœud _List.Count_ est simple : il compte le nombre de valeurs dans une list
 
 **List.GetItemAtIndex** est une méthode fondamentale pour interroger un élément de la liste.
 
-\![Exercice](<../images/working with list - get item index 01.jpg>)
+![Exercice](<../images/working with list - get item index 01.jpg>)
 
 > 1. Tout d’abord, cliquez avec le bouton droit sur le nœud **Line.ByStartPointEndPoint** pour désactiver son aperçu.
 > 2. À l’aide du nœud **List.GetItemAtIndex**, sélectionnez l’index _« 0 »_ ou le premier élément de la liste de lignes.
 
 Modifiez la valeur du curseur entre 0 et 9 pour sélectionner un autre élément à l’aide de **List.GetItemAtIndex**.
 
-\![](<../images/working with list - get item index 02.gif>)
+![](<../images/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
@@ -98,7 +98,7 @@ Modifiez la valeur du curseur entre 0 et 9 pour sélectionner un autre éléme
 
 _List.Reverse_ inverse l’ordre de tous les éléments d’une liste.
 
-\![Exercice](<../images/working with list - list reverse.jpg>)
+![Exercice](<../images/working with list - list reverse.jpg>)
 
 > 1. Pour visualiser correctement la liste inversée des lignes, créez plus de lignes en remplaçant le nœud **Code Block** par `0..1..#50;`.
 > 2. Dupliquez le nœud **Line.ByStartPointEndPoint**, insérez un nœud List.Reverse entre **Curve.PointAtParameter** et le deuxième nœud **Line.ByStartPointEndPoint**.
@@ -114,7 +114,7 @@ _List.Reverse_ inverse l’ordre de tous les éléments d’une liste.
 
 **List.ShiftIndices** est un bon outil pour créer des torsions ou des motifs hélicoïdaux, ou toute autre manipulation de données similaire. Ce nœud déplace les éléments d’une liste d’un certain nombre d’index.
 
-\![Exercice](<../images/working with list - shiftIndices 01.jpg>)
+![Exercice](<../images/working with list - shiftIndices 01.jpg>)
 
 > 1. Dans le même processus que la liste inversée, insérez un nœud **List.ShiftIndices** dans les nœuds **Curve.PointAtParameter** et **Line.ByStartPointEndPoint**.
 > 2. À l’aide d’un nœud **Code Block**, définissez une valeur de « 1 » pour déplacer la liste d’un index.
@@ -122,7 +122,7 @@ _List.Reverse_ inverse l’ordre de tous les éléments d’une liste.
 
 En remplaçant la valeur du nœud **Code Block** par une valeur plus élevée, _« 30 »_ par exemple, vous pouvez observer une différence significative dans les lignes diagonales. Le décalage fonctionne comme l’objectif d’une caméra dans ce cas, créant une torsion dans la forme cylindrique d’origine.
 
-\![](<../images/working with list - shiftIndices 02.jpg>)
+![](<../images/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -136,7 +136,7 @@ En remplaçant la valeur du nœud **Code Block** par une valeur plus élevée, _
 
 **List.FilterByBooleanMask** supprime certains éléments en fonction d’une liste de valeurs booléennes ou les valeurs « true » ou « false ».
 
-\![Exercice](<../images/working with list - filter by bool mask.jpg>)
+![Exercice](<../images/working with list - filter by bool mask.jpg>)
 
 Pour créer une liste de valeurs « true » ou « false », vous devez travailler un peu plus…
 
