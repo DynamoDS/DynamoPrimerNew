@@ -2,7 +2,7 @@
 
 Le package Dynamo Mesh Toolkit fournit des outils permettant d'importer des maillages à partir de formats de fichiers externes, de créer un maillage à partir d'objets de géométrie Dynamo et de créer manuellement des maillages à partir de leurs sommets et index. La bibliothèque fournit également des outils permettant de modifier et de réparer les maillages, ainsi que d’extraire des sections horizontales à utiliser lors de la fabrication.
 
-\![](<../images/meshToolkit case study 01.jpg>)
+![](<../images/meshToolkit case study 01.jpg>)
 
 Le package Dynamo Mesh Toolkit s’inscrit dans le cadre des recherches en cours d’Autodesk sur les maillages, et il continuera à évoluer au cours des prochaines années. Attendez-vous à voir apparaître fréquemment de nouvelles méthodes applicables à ce package, et n'hésitez pas à faire parvenir à l'équipe de Dynamo vos commentaires, bogues et suggestions en vue d'intégrer de nouvelles fonctionnalités.
 
@@ -28,19 +28,19 @@ Dans cet exemple, nous allons examiner le nœud Intersect dans Mesh Toolkit. No
 
 Commencez par ouvrir _Mesh-Toolkit_Intersect-Mesh.dyn dans Dynamo._
 
-\![](<../images/meshToolkit case study - exercise 01.jpg>)
+![](<../images/meshToolkit case study - exercise 01.jpg>)
 
 > 1. **Chemin d’accès au fichier :** recherchez le fichier de maillage à importer (_stanford_bunny_tri.obj_). Les types de fichiers pris en charge sont .mix et .obj.
 > 2. **Mesh.ImportFile :** associez le chemin d’accès au fichier pour importer le maillage.
 
-\![](<../images/meshToolkit case study - exercise 02.jpg>)
+![](<../images/meshToolkit case study - exercise 02.jpg>)
 
 > 1. **Point.ByCoordinates :** crée un point. Il s’agit du centre d’un arc.
 > 2. **Arc.ByCenterPointRadiusAngle :** crée un arc autour du point. Cette courbe sera utilisée pour positionner une série de plans. __ Les paramètres sont les suivants : __ `radius: 40, startAngle: -90, endAngle:0`
 
 Créez une série de plans orientés le long de l’arc.
 
-\![](<../images/meshToolkit case study - exercise 03.jpg>)
+![](<../images/meshToolkit case study - exercise 03.jpg>)
 
 > 1. **Code Block** : créez 25 nombres compris entre 0 et 1.
 > 2. **Curve.PointAtParameter :** connectez l’arc à l’entrée _« curve »_ et le bloc de code de sortie à l’entrée _« param »_ pour extraire une série de points le long de la courbe.
@@ -49,7 +49,7 @@ Créez une série de plans orientés le long de l’arc.
 
 Vous allez ensuite utiliser ces plans pour entrecouper le maillage.
 
-\![](<../images/meshToolkit case study - exercise 04.jpg>)
+![](<../images/meshToolkit case study - exercise 04.jpg>)
 
 > 1. **Mesh.Intersect :** entrecoupez les plans avec le maillage importé, ce qui crée une série de contours de polycourbe. Cliquez avec le bouton droit de la souris sur Nœud et définissez la liaison sur la plus longue.
 > 2. **PolyCurve.Curves :** divisez les polycourbes en fragments de courbe.
@@ -58,12 +58,12 @@ Vous allez ensuite utiliser ces plans pour entrecouper le maillage.
 
 Avant de continuer, désactivez l’aperçu de certains nœuds, tels que Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal et Arc.ByCenterPointRadiusAngle, pour mieux voir le résultat.
 
-\![](<../images/meshToolkit case study - exercise 05.jpg>)
+![](<../images/meshToolkit case study - exercise 05.jpg>)
 
 > 1. **Surface.ByPatch :** créez des corrections de surface pour chaque contour afin de créer des « sections » du maillage.
 
 Ajoutez un deuxième jeu de sections pour un effet gaufré/alvéolé.
 
-\![](<../images/meshToolkit case study - exercise 06.jpg>)
+![](<../images/meshToolkit case study - exercise 06.jpg>)
 
 Vous avez peut-être remarqué que les opérations d’intersection sont calculées plus rapidement avec un maillage plutôt qu’avec un solide comparable. Les workflows tels que ceux présentés dans cet exercice se prêtent bien à l'utilisation de maillages.
