@@ -20,13 +20,13 @@ Les [courbes ](4-curves.md#deep-dive-into...)sont le premier type de données g�
 
 La [ligne](4-curves.md#lines) est un ensemble de points. Chaque ligne contient au moins 2 points. L’une des méthodes les plus courantes pour créer une ligne dans Dynamo consiste à utiliser [](4-curves.md#lines) ``Line.ByStartPointEndPoint`.
 
-\![](<../images/curves - line by start point end point.jpg>)
+![](<../images/curves - line by start point end point.jpg>)
 
 ### Courbe NURBS
 
 [NURBS](4-curves.md#nurbs-+-polycurves) est un modèle utilisé pour représenter les courbes et les surfaces avec précision. Une courbe sinusoïdale dans Dynamo à l’aide de deux méthodes différentes afin de créer des courbes NURBS et de comparer les résultats.
 
-\![](<../images/curves - Nurbs Curves.jpg>)
+![](<../images/curves - Nurbs Curves.jpg>)
 
 > 1. _NurbsCurve.ByControlPoints_ utilise la liste de points comme points de contrôle.
 > 2. _NurbsCurve.ByPoints_ trace une courbe passant par la liste de points.
