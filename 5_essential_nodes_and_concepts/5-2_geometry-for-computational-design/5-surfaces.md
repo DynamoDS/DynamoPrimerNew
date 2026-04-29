@@ -10,7 +10,7 @@ Grâce à l’utilisation de la [surface](5-surfaces.md#surface) dans le modèle
 
 Importez et évaluez une surface au niveau d’un paramètre dans Dynamo pour voir quel type d’informations vous pouvez extraire.
 
-\![](<../images/surfaces - surface in dynamo.jpg>)
+![](<../images/surfaces - surface in dynamo.jpg>)
 
 > 1. _Surface.PointAtParameter_ renvoie le point à une coordonnée UV donnée.
 > 2. _Surface.NormalAtParameter_ renvoie le vecteur normal à une coordonnée UV donnée.
