@@ -10,17 +10,17 @@ Un [point](3-points.md#deep-dive-into...) est défini uniquement par une ou plus
 
 Le type de point le plus courant dans Dynamo existe dans notre système de coordonnées général en trois dimensions et possède trois coordonnées [X,Y,Z] (Points 3D dans Dynamo).
 
-\![](<../images/points - 3d point in dynamo.jpg>)
+![](<../images/points - 3d point in dynamo.jpg>)
 
 Un point 2D dans Dynamo possède deux coordonnées [X, Y].
 
-\![](<../images/points - 2d point in dynamo.jpg>)
+![](<../images/points - 2d point in dynamo.jpg>)
 
 ### Point sur des courbes et des surfaces
 
 Les paramètres des courbes et des surfaces sont continus et s’étendent au-delà de l’arête de la géométrie donnée. Étant donné que les formes qui définissent l’espace des paramètres résident dans un système de coordonnées général en trois dimensions, vous pouvez toujours convertir une coordonnée paramétrique en coordonnée « universelle ». Le point [0.2, 0.5] sur la surface, par exemple, est le même que le point [1.8, 2.0, 4.1] en coordonnées universelles.
 
-\![](<../images/points - xyz vs coord sys vs uv.jpg>)
+![](<../images/points - xyz vs coord sys vs uv.jpg>)
 
 > 1. Point dans les coordonnées XYZ universelles supposées
 > 2. Point relatif à un système de coordonnées donné (cylindrique)
