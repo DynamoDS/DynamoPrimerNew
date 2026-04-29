@@ -1,6 +1,6 @@
 # La connexion Revit
 
-\![](<images/revit connection link.jpg>)
+![](<images/revit connection link.jpg>)
 
 Dynamo pour Revit étend la modélisation des données du bâtiment à l’environnement de données et de logique d’un éditeur d’algorithmes graphiques. Sa flexibilité, associée à une base de données Revit robuste, offre une nouvelle perspective pour le BIM.
 
@@ -43,7 +43,7 @@ Lors de l’ouverture de Dynamo dans Revit, une nouvelle catégorie appelée Rev
 
 {% hint style="warning" %} *En utilisant la famille de nœuds propre à Revit, le graphique Dynamo fonctionne uniquement lorsqu’il est ouvert dans Dynamo pour Revit. Si un graphique Dynamo pour Revit est ouvert dans Dynamo Sandbox par exemple, les nœuds Revit sont manquants. {% endhint %}
 
-\![](<images/revit connection - running dynamo in revit 02.jpg>)
+![](<images/revit connection - running dynamo in revit 02.jpg>)
 
 ### Gel des nœuds
 
