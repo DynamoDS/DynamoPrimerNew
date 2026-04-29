@@ -16,11 +16,11 @@ Avec la publication locale, le nœud sera accessible dans votre bibliothèque Dy
 
 Nous allons avancer à l'aide du nœud personnalisé que vous avez créé dans la section précédente. Une fois le nœud PointsToSurface personnalisé ouvert, le graphique s’affiche dans l’éditeur de nœuds personnalisés Dynamo. Vous pouvez également ouvrir un nœud personnalisé en double-cliquant dessus dans l’éditeur graphique Dynamo.
 
-\![](<../images/publish custom node exercise - 01.jpg>)
+![](<../images/publish custom node exercise - 01.jpg>)
 
 Pour publier un nœud personnalisé localement, cliquez simplement avec le bouton droit de la souris sur la zone de dessin et choisissez _« Publier ce nœud personnalisé… »_.
 
-\![](<../images/publish custom node exercise - 02.jpg>)
+![](<../images/publish custom node exercise - 02.jpg>)
 
 Remplissez les informations pertinentes comme dans l’image ci-dessus et choisissez _« Publier localement »_ Notez que le champ Groupe définit l’élément principal accessible à partir du menu Dynamo.
 
@@ -48,8 +48,8 @@ Nous avons changé l’ordre des noms de chemin pour que le chemin par défaut d
 
 En accédant à ce dossier local, vous trouvez le nœud personnalisé d’origine dans le dossier _« .dyf »_, qui est l’extension d’un fichier de nœud personnalisé Dynamo. Vous pouvez modifier le fichier dans ce dossier et le nœud sera mis à jour dans l’interface utilisateur. Vous pouvez également ajouter des nœuds au dossier _DynamoCustomNode_ principal et Dynamo les ajoutera à votre bibliothèque au redémarrage.
 
-\![](<../images/publish custom node exercise - 08.jpg>)
+![](<../images/publish custom node exercise - 08.jpg>)
 
 Dynamo se charge désormais à chaque fois avec « PointsToSurface » dans le groupe « DynamoPrimer » de votre bibliothèque Dynamo.
 
-\![](<../images/publish custom node exercise - 09.jpg>)
+![](<../images/publish custom node exercise - 09.jpg>)
