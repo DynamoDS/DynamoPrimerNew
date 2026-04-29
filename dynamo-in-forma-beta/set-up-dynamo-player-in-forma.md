@@ -17,7 +17,7 @@ Nejprve nainstalujeme rozšíření Dynamo Player v aplikaci Forma.
 1. Na webu Forma přejděte v levém bočním panelu do části **Extensions** a klikněte na tlačítko **Add extension**. Otevřou se webové stránky služby Autodesk App Store.
 2. Vyhledejte Dynamo a přidejte položku Dynamo Player Beta. Přečtěte si prohlášení o zřeknutí se odpovědnosti a klikněte na tlačítko **Agree**.
 
-<figure><img src="../.gitbook/assets/install-player.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/install-player.png" alt=""><figcaption></figcaption></figure>
 
 3. Nyní je ve vašich rozšířeních k dispozici Dynamo Player. Kliknutím jej otevřete.
 4. Nyní by rozšíření Dynamo Player mělo být připraveno k použití.
@@ -67,11 +67,11 @@ Nejprve nainstalujeme rozšíření Dynamo Player v aplikaci Forma.
 1. Na webu Forma přejděte v levém bočním panelu do části **Extensions** a klikněte na tlačítko **Add extension**. Otevřou se webové stránky služby Autodesk App Store.
 2. Vyhledejte Dynamo a přidejte položku Dynamo Player Beta. Přečtěte si prohlášení o zřeknutí se odpovědnosti a klikněte na tlačítko **Agree**.
 
-<figure><img src="../.gitbook/assets/install-player.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/install-player.png" alt=""><figcaption></figcaption></figure>
 
 3. Nyní je ve vašich rozšířeních k dispozici Dynamo Player. Kliknutím jej otevřete.
 4. Kliknutím na možnost Desktop v horní části přejděte do počítačové verze aplikace Dynamo.
 
-<figure><img src="../.gitbook/assets/dynamo-desktop.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/dynamo-desktop.png" alt=""><figcaption></figcaption></figure>
 
 5. Nyní by rozšíření Dynamo Player mělo být připraveno k použití. Pokud již máte graf otevřený v aplikaci Dynamo, stačí kliknout na tlačítko Open v části **Connected graph** a zobrazit jej v rozšíření Player.

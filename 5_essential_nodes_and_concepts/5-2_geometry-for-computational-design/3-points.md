@@ -10,17 +10,17 @@
 
 Nejběžnější typ bodu v aplikaci Dynamo existuje v našem trojrozměrném globálním souřadnicovém systému a má tři souřadnice [X,Y,Z] (3D bod v aplikaci Dynamo).
 
-\![](<../../.gitbook/assets/points - 3d point in dynamo.jpg>)
+\![](<../images/points - 3d point in dynamo.jpg>)
 
 2D bod v aplikaci Dynamo má dvě souřadnice [X,Y].
 
-\![](<../../.gitbook/assets/points - 2d point in dynamo.jpg>)
+\![](<../images/points - 2d point in dynamo.jpg>)
 
 ### Bod na křivkách a površích
 
 Parametry křivek i povrchů jsou spojité a přesahují hranu dané geometrie. Protože tvary, které definují parametrický prostor, se nacházejí v trojrozměrném globálním souřadnicovém systému, můžeme vždy převést parametrickou souřadnici do „Globální“ souřadnice. Například bod [0.2, 0.5] na povrchu je stejný jako bod [1.8, 2.0, 4.1] v globálních souřadnicích.
 
-\![](<../../.gitbook/assets/points - xyz vs coord sys vs uv.jpg>)
+\![](<../images/points - xyz vs coord sys vs uv.jpg>)
 
 > 1. Bod v předpokládaných globálních souřadnicích XYZ
 > 2. Bod relativní k danému souřadnicovému systému (válcový)
@@ -36,7 +36,7 @@ Parametry křivek i povrchů jsou spojité a přesahují hranu dané geometrie.
 
 Pokud je geometrie jazykem modelu, pak body jsou abecedou. Body jsou základem, na kterém je vytvořena veškerá další geometrie – k vytvoření křivky potřebujeme alespoň dva body, k vytvoření polygonu nebo plochy sítě potřebujeme alespoň tři body, a tak dále. Definování polohy, pořadí a vztahu mezi body (zkuste funkci sinus) umožňuje definovat geometrii vyššího řádu, například věci, které známe jako kružnice nebo křivky.
 
-![Od bodu ke křivce](../../.gitbook/assets/PointsAsBuildingBlocks-1.jpg)
+![Od bodu ke křivce](../images/PointsAsBuildingBlocks-1.jpg)
 
 > 1. Kružnice vytvořená pomocí funkcí `x=r*cos(t)` a `y=r*sin(t)`.
 > 2. Sinusoida vytvořená pomocí funkcí `x=(t)` a `y=r*sin(t)`.
@@ -45,7 +45,7 @@ Pokud je geometrie jazykem modelu, pak body jsou abecedou. Body jsou základem, 
 
 Body mohou existovat také v dvojrozměrném souřadnicovém systému. Konvence má různé písmeno označující prostor, se kterým pracujete – můžeme použít [X,Y] na rovině nebo [U,V], na ploše.
 
-![Bod jako souřadnice](../../.gitbook/assets/Coordinates.jpg)
+![Bod jako souřadnice](../images/Coordinates.jpg)
 
 > 1. Bod v euklidovském souřadnicovém systému: [X,Y,Z]
 > 2. Bod v souřadnicovém systému parametru křivky: [t]

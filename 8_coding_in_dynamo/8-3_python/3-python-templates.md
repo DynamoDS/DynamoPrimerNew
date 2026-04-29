@@ -6,13 +6,13 @@ V aplikaci Dynamo 2.0 je možné určit výchozí šablonu `(.py extension)`, k
 
 Obvykle je to následující umístění: `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-\![](<../../.gitbook/assets/python templates - appdata folder location.jpg>)
+\![](<../images/python templates - appdata folder location.jpg>)
 
 ### Nastavení šablony
 
 Aby bylo možné tuto funkci používat, je nutné přidat do souboru `DynamoSettings.xml` následující řádek. _(Upravte v poznámkovém bloku)_
 
-\![](<../../.gitbook/assets/python templates -dynamo settings xml file.png>)
+\![](<../images/python templates -dynamo settings xml file.png>)
 
 Řetězec `<PythonTemplateFilePath />` je možné jednoduše nahradit následujícím řetězcem:
 
@@ -71,10 +71,10 @@ Poté tento soubor uložte pod názvem `PythonTemplate.py` do umístění `APPDA
 
 Po definování šablony jazyka Python aplikace Dynamo tuto šablonu vyhledá při každém vložení uzlu jazyka Python. Pokud ji nenajde, okno jazyka Python bude vypadat jako ve výchozím nastavení.
 
-\![](<../../.gitbook/assets/python templates - before setup template.jpg>)
+\![](<../images/python templates - before setup template.jpg>)
 
 Pokud se podaří šablonu jazyka Python nalézt (například náš skript pro aplikaci Revit), zobrazí se všechny položky, které obsahuje.
 
-\![](<../../.gitbook/assets/python templates - after setup template.jpg>)
+\![](<../images/python templates - after setup template.jpg>)
 
 Další informace o této skvělé nové funkci (autor: Radu Gidei) naleznete zde: https://github.com/DynamoDS/Dynamo/pull/8122

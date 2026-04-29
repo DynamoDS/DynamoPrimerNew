@@ -2,7 +2,7 @@
 
 Aplikace Dynamo 2.0 nabízí několik uzlů pro slovníky. Mezi ně patří uzly pro _tvorbu, akci a dotazování_.
 
-\![](<../../.gitbook/assets/dictionary nodes - nodes.jpg>)
+\![](<../images/dictionary nodes - nodes.jpg>)
 
 #### Tvorba
 

@@ -8,7 +8,7 @@ GitHub je hostovací služba založená na [gitu](https://help.github.com/articl
 
 Zdroj aplikace Dynamo je hostován na GitHubu DynamoDS v tomto úložišti: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo).
 
-![Zdrojové soubory aplikace Dynamo](../../.gitbook/assets/github.jpg)
+![Zdrojové soubory aplikace Dynamo](../images/github.jpg)
 
 > Zdrojové soubory aplikace Dynamo.
 >
@@ -23,7 +23,7 @@ Než bude možné úložiště klonovat, je třeba nainstalovat git. V této [k
 
 Potřebujeme adresu URL úložiště aplikace Dynamo, ze kterého se bude klonovat. Tu najdeme v tlačítku Clone or download (Klonovat nebo stáhnout) na stránce úložiště. Zkopírujte adresu URL, kterou chcete vložit do příkazového řádku.
 
-![Klonování úložiště](../../.gitbook/assets/github-clone.png)
+![Klonování úložiště](../images/github-clone.png)
 
 > 1. Vyberte možnost Clone or download (Klonovat nebo stáhnout).
 > 2. Zkopírujte adresu URL.
@@ -34,17 +34,17 @@ S nainstalovaným gitem můžeme klonovat úložiště aplikace Dynamo. Začně
 
 > Parametr „username“ nahraďte svým uživatelským jménem.
 
-![Příkazový řádek](../../.gitbook/assets/cli-1.jpg)
+![Příkazový řádek](../images/cli-1.jpg)
 
 V dalším kroku spustíme příkaz gitu, který naklonuje úložiště aplikace Dynamo do zadaného umístění. Adresu URL v příkazu získáte kliknutím na tlačítko Clone or download (Klonovat nebo stáhnout) na GitHubu. Tento příkaz spusťte v příkazovém řádku. Tímto příkazem se naklonuje hlavní větev úložiště aplikace Dynamo, která obsahuje nejaktuálnější verzi kódu aplikace Dynamo. Tato větev se denně mění.
 
 `git clone https://github.com/DynamoDS/Dynamo.git`
 
-![Výsledky operace klonování příkazem git clone](../../.gitbook/assets/cli-2.jpg)
+![Výsledky operace klonování příkazem git clone](../images/cli-2.jpg)
 
 Pokud byla operace klonování úspěšně dokončena, víme, že git funguje. V Průzkumníku souborů přejděte do adresáře, do kterého jste klonovali, a zobrazte zdrojové soubory. Struktura adresáře by měla vypadat stejně jako hlavní větev úložiště aplikace Dynamo na GitHubu.
 
-![Zdrojové soubory aplikace Dynamo](../../.gitbook/assets/source-files.jpg)
+![Zdrojové soubory aplikace Dynamo](../images/source-files.jpg)
 
 > 1. Zdrojové soubory aplikace Dynamo
 > 2. Soubory Git
@@ -71,11 +71,11 @@ Pomocí zdrojových souborů, které jsou nyní klonovány do místního počít
 > 4. Najděte **Visual Studio 2022 Preview/2026 Insider** (Community, Professional nebo Enterprise).
 > 5. Kliknutím na tlačítko **Instalovat** ji přidáte k vaší stávající instalace sady Visual Studio.
 
-\![Visual Studio preview](<../../.gitbook/assets/vs-preview (1).png>) \![Visual Studio 2026 insider](<../../.gitbook/assets/vs-2026-insiders (1).png>)
+![Visual Studio Preview](<../images/vs-preview.png>) ![Visual Studio 2026 Insider](<../images/vs-2026-insiders.png>)
 
 Po dokončení instalace můžete spustit aplikaci Visual Studio a otevřít řešení `Dynamo.All.sln`, které se nachází v umístění `Dynamo\src`.
 
-![Otevírání souboru řešení](../../.gitbook/assets/vs-open-dynamo.jpg)
+![Otevírání souboru řešení](../images/vs-open-dynamo.jpg)
 
 > 1. Vyberte `File > Open > Project/Solution`.
 > 2. Přejděte do úložiště aplikace Dynamo a otevřete složku `src`.
@@ -84,7 +84,7 @@ Po dokončení instalace můžete spustit aplikaci Visual Studio a otevřít ře
 
 Než budeme moct vytvořit řešení, je třeba zadat několik nastavení. Nejprve bychom měli vytvořit ladicí verzi aplikace Dynamo, aby aplikace Visual Studio mohla získat další informace při ladění, které nám pomůžou s vývojem, přičemž jako platformu vybereme možnost „AnyCPU“.
 
-![Nastavení řešení](../../.gitbook/assets/vs-dynamo-build-settings.jpg)
+![Nastavení řešení](../images/vs-dynamo-build-settings.jpg)
 
 > Tyto složky se stanou složkami ve složce `bin`.
 >
@@ -93,7 +93,7 @@ Než budeme moct vytvořit řešení, je třeba zadat několik nastavení. Nejpr
 
 S otevřeným projektem můžeme vytvořit řešení. Tento proces vytvoří soubor DynamoSandbox.exe, který můžeme spustit.
 
-![Vytváření řešení](../../.gitbook/assets/vs-build-dynamo.jpg)
+![Vytváření řešení](../images/vs-build-dynamo.jpg)
 
 > Vytvořením projektu se obnoví závislosti NuGet.
 >
@@ -104,7 +104,7 @@ S otevřeným projektem můžeme vytvořit řešení. Tento proces vytvoří so
 
 Pokud sestavení aplikace Dynamo proběhlo úspěšně, vytvoří se v úložišti aplikace Dynamo složka `bin` se souborem DynamoSandbox.exe. V našem případě vytváříme sestavení s možností Debug, takže spustitelný soubor se nachází v umístění `bin\AnyCPU\Debug`. Spuštěním tohoto souboru otevřete místní sestavení aplikace Dynamo.
 
-![Spustitelný soubor DynamoSandbox](../../.gitbook/assets/ex-dynamosandbox.jpg)
+![Spustitelný soubor DynamoSandbox](../images/ex-dynamosandbox.jpg)
 
 > 1. Spustitelný soubor DynamoSandbox, který jsme právě vytvořili. Jeho spuštěním spustíte aplikaci Dynamo.
 
@@ -114,7 +114,7 @@ Pokyny k vytváření aplikace Dynamo pro další platformy (například Linux 
 
 ### Ladění místního sestavení pomocí aplikace Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
-Ladění je proces identifikace, izolování a opravy chyby nebo problému. Po úspěšném sestavení aplikace Dynamo ze zdroje můžeme pomocí několika nástrojů v aplikaci Visual Studio ladit spuštěnou aplikaci, například doplněk DynamoRevit. Můžeme analyzovat jeho zdrojový kód a najít příčinu problému nebo sledovat aktuálně prováděný kód. Podrobnější informace o tom, jak ladit a procházet kód v aplikaci Visual Studio, naleznete v [dokumentaci k aplikaci Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
+Ladění je proces identifikace, izolování a opravy chyby nebo problému. Po úspěšném sestavení aplikace Dynamo ze zdroje můžeme pomocí několika nástrojů v aplikaci Visual Studio ladit spuštěnou aplikaci, například doplněk DynamoRevit. Můžeme analyzovat jeho zdrojový kód a najít příčinu problému nebo sledovat aktuálně prováděný kód. Podrobnější informace o tom, jak ladit a procházet kód v aplikaci Visual Studio, naleznete v [dokumentaci k aplikaci Visual Studio](https://docs.microsoft.com/cs-cz/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
 V případě samostatné aplikace Dynamo, DynamoSandbox, se budeme zabývat dvěma možnostmi ladění:
 
@@ -123,7 +123,7 @@ V případě samostatné aplikace Dynamo, DynamoSandbox, se budeme zabývat dv�
 
 Spuštění aplikace Dynamo z aplikace Visual Studio v případě potřeby znovu sestaví řešení pro každou relaci ladění, takže pokud jsme provedli změny zdroje, budou při ladění začleněny. Se stále otevřeným řešením `Dynamo.All.sln` vyberte v rozevíracích nabídkách možnosti `Debug`, `AnyCPU` a `DynamoSandbox` a klikněte na tlačítko `Start`. Tím se vytvoří aplikace Dynamo, spustí se nový proces (DynamoSandbox.exe) a připojí se k němu ladicí program aplikace Visual Studio.
 
-![Vytváření a spouštění aplikací z aplikace Visual Studio](../../.gitbook/assets/vs-debug-options.jpg)
+![Vytváření a spouštění aplikací z aplikace Visual Studio](../images/vs-debug-options.jpg)
 
 > Vytvořte a spusťte aplikaci přímo z aplikace Visual Studio.
 >
@@ -134,7 +134,7 @@ Spuštění aplikace Dynamo z aplikace Visual Studio v případě potřeby zno
 
 Případně můžete chtít ladit proces aplikace Dynamo, který je již spuštěný, abyste vyřešili problém s konkrétním otevřeným grafem nebo balíčkem. Za tímto účelem otevřete zdrojové soubory projektu v aplikaci Visual Studio a připojte je ke spuštěnému procesu aplikace Dynamo pomocí položky nabídky ladění `Attach to Process`.
 
-![Dialog Attach to process (Připojit k procesu)](../../.gitbook/assets/vs-attach-dynamosandbox.jpg)
+![Dialog Attach to process (Připojit k procesu)](../images/vs-attach-dynamosandbox.jpg)
 
 > Připojení spuštěného procesu k aplikaci Visual Studio
 >
@@ -144,7 +144,7 @@ Případně můžete chtít ladit proces aplikace Dynamo, který je již spušt�
 
 V obou případech připojujeme ladicí program k procesu, který chceme ladit. V kódu můžeme před nebo po spuštění ladicího programu nastavit body přerušení, které způsobí, že se proces zastaví bezprostředně před provedením tohoto řádku kódu. Pokud je během ladění vyvolána nezachycená výjimka, aplikace Visual Studio přejde na místo jejího výskytu ve zdrojovém kódu. Jedná se o efektivní metodu hledání jednoduchých selhání, neošetřených výjimek a pochopení toku spuštění aplikace.
 
-![Nastavení bodu přerušení](../../.gitbook/assets/vs-debug-dynamocore.jpg)
+![Nastavení bodu přerušení](../images/vs-debug-dynamocore.jpg)
 
 > Při ladění aplikace DynamoSandbox jsme nastavili bod přerušení v konstruktoru uzlu Colour.ByARGB, který způsobí pozastavení procesu aplikace Dynamo při vytvoření instance uzlu. Pokud tento uzel způsobí výjimku nebo selhání aplikace Dynamo, můžeme postupně projít jednotlivé řádky konstruktoru a zjistit, kde k problému došlo.
 >
@@ -167,7 +167,7 @@ K získání nejnovějších změn použijte následující příkaz:
 
 `git pull origin master`
 
-![Aktualizované místní úložiště](../../.gitbook/assets/cli-pull-changes.jpg)
+![Aktualizované místní úložiště](../images/cli-pull-changes.jpg)
 
 > 1. Zde je vidět, že místní úložiště bylo aktualizováno změnami ze vzdáleného úložiště.
 

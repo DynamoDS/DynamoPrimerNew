@@ -52,7 +52,7 @@ Pokud je vaše odpověď grafika, pak byste rozhodně měli zvolit **vizuální 
 
 **Vizuální program:**
 
-\![](<../.gitbook/assets/visualProgramming (2).png>)
+![](<images/visualProgramming.png>)
 
 **Textový program:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 Výsledky našeho algoritmu:
 
-\![](<../.gitbook/assets/visualProgramming (1).png>)
+![](<images/visualProgramming.png>)
 
 Vizuální charakteristika programování tímto způsobem snižuje obtížnost pro začátečníky a lépe oslovuje návrháře. Aplikace Dynamo spadá do paradigmatu vizuálního programování, ale jak uvidíme později, stále můžeme používat také textové programování v aplikaci.

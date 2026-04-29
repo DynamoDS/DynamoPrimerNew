@@ -6,7 +6,7 @@ V aplikaci Dynamo existují dva základní způsoby, jak vytvořit křivky voln�
 
 Chcete-li vytvořit interpolovanou křivku, jednoduše zadejte kolekci bodů do metody _NurbsCurve.ByPoints_.
 
-![](../../.gitbook/assets/Curves_01.png)
+![](../images/Curves_01.png)
 
 ```js
 num_pts = 6;
@@ -20,7 +20,7 @@ int_curve = NurbsCurve.ByPoints(pts);
 
 Vygenerovaná křivka protne všechny vstupní body, počínaje prvním bodem a konče posledním bodem v kolekci. Pomocí volitelného parametru lze vytvořit periodickou uzavřenou křivku. Aplikace Dynamo chybějící segment automaticky vytvoří, proto není potřeba zadávat koncový bod stejný jako počáteční bod.
 
-![](../../.gitbook/assets/Curves_02.png)
+![](../images/Curves_02.png)
 
 ```js
 pts = Point.ByCoordinates(Math.Cos(0..350..#10),
@@ -38,7 +38,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 Křivky Nurbs lze vygenerovat stejným způsobem, vstupní body reprezentují koncové body úsečky a druhý parametr určuje sílu a typ vyhlazení, kterému se říká stupeň.* Křivka se stupněm 1 nemá žádné vyhlazení, jedná se o křivku polyline.
 
-![](../../.gitbook/assets/Curves_03.png)
+![](../images/Curves_03.png)
 
 ```js
 num_pts = 6;
@@ -52,7 +52,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 
 Křivka se stupněm 2 je vyhlazená, takže prochází středy lomených čar a v průsečíku je k nim tečná:
 
-![](../../.gitbook/assets/Curves_04.png)
+![](../images/Curves_04.png)
 
 ```js
 num_pts = 6;
@@ -66,7 +66,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 
 Aplikace Dynamo podporuje křivky NURBS (Non-Uniform Rational B-Spline) až do stupně 20 a následující skript demonstruje účinek vyšších stupňů vyhlazení na tvar křivky:
 
-![](../../.gitbook/assets/Curves_05.png)
+![](../images/Curves_05.png)
 
 ```js
 num_pts = 6;
@@ -87,7 +87,7 @@ Poznámka: křivka musí mít alespoň o jeden řídicí bod více, než je jej
 
 Další výhodou tvorby křivek pomocí řídicích bodů je možnost zachování tečnosti mezi jednotlivými segmenty. To lze provést tak, že se získá směr mezi posledními dvěma řídicími body a v tomto směru se bude pokračovat u prvních dvou řídicích bodů následující křivky. V následujícím příkladu jsou vytvořeny dvě samostatné křivky NURBS, které jsou vyhlazené jako jedna křivka:
 
-![](../../.gitbook/assets/Curves_06.png)
+![](../images/Curves_06.png)
 
 ```js
 pts_1 = {};

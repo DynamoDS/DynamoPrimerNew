@@ -10,7 +10,7 @@ Formálně je **řetězec** posloupnost znaků představujících písmennou kon
 
 Výše uvedené vzorové uzly jsou řetězce. Číslo může být reprezentováno jako řetězec, jako písmeno nebo celé pole textu.
 
-\![](<../../.gitbook/assets/strings - creating strings.jpg>)
+\![](<../images/strings - creating strings.jpg>)
 
 ## Cvičení
 
@@ -26,11 +26,11 @@ Pomocí dotazů na řetězce můžete rychle analyzovat velké množství dat. O
 
 Následující obrázek vychází z řetězce dat pocházejících z externí tabulky. Řetězec představuje vrcholy obdélníku v rovině XY. V miniaturním cvičení projdeme některé operace rozdělení řetězce:
 
-\![](<../../.gitbook/assets/strings - querying strings 01.jpg>)
+\![](<../images/strings - querying strings 01.jpg>)
 
 > 1. Oddělovač „;“ rozdělí každý vrchol obdélníku. Tím se vytvoří seznam se třemi položkami pro každý vrchol.
 
-\![](<../../.gitbook/assets/strings - querying strings 02.jpg>)
+\![](<../images/strings - querying strings 02.jpg>)
 
 > 1. Kliknutím na tlačítko _+_ uprostřed uzlu vytvoříte nový oddělovač.
 > 2. Na kreslicí plochu přidejte řetězec „_,_“ a zadejte jej do nového vstupu oddělovače.
@@ -38,13 +38,13 @@ Následující obrázek vychází z řetězce dat pocházejících z externí 
 
 Zatímco výše uvedený seznam položek může vypadat jako čísla, jsou stále považovány za samostatné řetězce v aplikaci Dynamo. Aby bylo možné vytvořit body, je nutné jejich datový typ převést z řetězce na číslo. To se provádí pomocí uzlu **String.ToNumber**.
 
-\![](<../../.gitbook/assets/strings - querying strings 03.jpg>)
+\![](<../images/strings - querying strings 03.jpg>)
 
 > 1. Tento uzel je přímočarý. Připojte výsledky uzlu **String.Split** ke vstupu. Výstup nevypadá jinak, ale datový typ je nyní _number_ místo _string_.
 
 Po několika základních doplňkových operacích je nyní v počátku nakreslen trojúhelník na základě původního vstupu řetězce.
 
-\![](<../../.gitbook/assets/strings - querying strings 04.jpg>)
+\![](<../images/strings - querying strings 04.jpg>)
 
 ### Manipulace s řetězci
 
@@ -54,7 +54,7 @@ Tato metoda spojí dva řetězce v zadaném pořadí. Vezme všechny řetězcov
 
 Následující obrázek představuje zřetězení tří řetězců:
 
-\![Zřetězení](<../../.gitbook/assets/strings - manipulating strings 01.jpg>)
+\![Sloučit](<../images/strings - manipulating strings 01.jpg>)
 
 > 1. Řetězce přidejte nebo odeberte ze zřetězení kliknutím na tlačítka +/- uprostřed uzlu.
 > 2. Výstup obsahuje jeden zřetězený řetězec, včetně mezer a interpunkcí.
@@ -65,7 +65,7 @@ Pokud jste pracovali v aplikaci Excel, mohli jste potkat soubor CSV. To znamen�
 
 Následující obrázek představuje spojení dvou řetězců:
 
-\![](<../../.gitbook/assets/strings - manipulating strings 02.jpg>)
+\![](<../images/strings - manipulating strings 02.jpg>)
 
 > 1. Vstup oddělovače umožňuje vytvořit řetězec, který rozdělí spojené řetězce.
 
@@ -75,7 +75,7 @@ V tomto cvičení použijeme metody dotazování a manipulace s řetězci, aby
 
 Začneme základním rozdělením řetězce sloky. Nejprve si všimneme, že zápis je formátován na základě čárek. Tento formát použijeme k rozdělení každého řádku do jednotlivých položek.
 
-\![](<../../.gitbook/assets/strings - working with strings 01.jpg>)
+\![](<../images/strings - working with strings 01.jpg>)
 
 > 1. Základní řetězec je vložen do uzlu **String**.
 > 2. K označení oddělovače se používá další uzel **String**. V tomto případě používáme čárku.
@@ -84,27 +84,27 @@ Začneme základním rozdělením řetězce sloky. Nejprve si všimneme, že zá
 
 Teď se pojďme dostat k dobré části básně: poslední dva řádky. Původní sloka byla jedna datová položka. Tato data jsme rozdělili na jednotlivé položky v prvním kroku. Teď musíme najít text, který hledáme. I když to _můžeme_ provést výběrem posledních dvou položek seznamu, pokud by se jednalo o celou knihu, nechtěli bychom si vše pročítat a ručně izolovat jednotlivé prvky.
 
-\![](<../../.gitbook/assets/strings - working with strings 02.jpg>)
+\![](<../images/strings - working with strings 02.jpg>)
 
 > 1. Místo ručního vyhledávání použijeme uzel **String.Contains** k vyhledání sady znaků. To je podobné jako příkaz Najít v textovém procesoru. V tomto případě získáme výsledek true nebo false, pokud je tento podřetězec nalezen v položce.
 > 2. Ve vstupu _searchFor_ definujeme podřetězec, který hledáme v rámci sloky. Použijeme uzel **String** s textem „And miles“.
 > 3. Výstup nám dává seznam hodnot false a true. Pomocí této booleovské logiky filtrujeme prvky v dalším kroku.
 
-\![Rozdělení](<../../.gitbook/assets/strings - working with strings 03.jpg>)
+\![Rozdělit](<../images/strings - working with strings 03.jpg>)
 
 > 1. **List.FilterByBoolMask** je uzel, který chceme použít k procházení hodnot false a true. Výstup „in“ vrátí výrazy s hodnotou „mask“ vstupu true, zatímco výstup „out“ vrací příkazy, které jsou false.
 > 2. Náš výstup z „in“ je podle očekávání a dává nám poslední dva řádky sloky.
 
 Teď chceme tyto dva řádky sloučit dohromady. Při zobrazení výstupu předchozího kroku si všimneme, že jsou v seznamu dvě položky:
 
-\![](<../../.gitbook/assets/strings - working with strings 04.jpg>)
+\![](<../images/strings - working with strings 04.jpg>)
 
 > 1. Pomocí dvou uzlů **List.GetItemAtIndex** lze izolovat položky pomocí hodnot 0 a 1 jako vstupu index.
 > 2. Výstup každého uzlu nám poskytne v pořadí poslední dva řádky.
 
 Ke sloučení těchto dvou položek do jedné použijte uzel **String.Join**:
 
-\![Rozdělení řetězce](<../../.gitbook/assets/strings - working with strings 05.jpg>)
+\![Rozdělit řetězec](<../images/strings - working with strings 05.jpg>)
 
 > 1. Po přidání uzlu **String.Join** si všimneme, že potřebujeme oddělovač.
 > 2. K vytvoření oddělovače přidáme na kreslicí plochu uzel **String** a zadáme do něj čárku.

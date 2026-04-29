@@ -2,15 +2,15 @@
 
 Než se pustíte do vývoje, je důležité vybudovat pevné základy nového projektu. V komunitě vývojářů aplikace Dynamo existuje několik šablon projektů, které jsou vynikajícím východiskem pro zahájení práce, ale ještě cennější je porozumět tomu, jak začít projekt od začátku. Vytvoření projektu od základů umožní hlubší pochopení procesu vývoje.
 
-![Visual Studio](../../.gitbook/assets/visual-studio.jpg)
+![Visual Studio](../images/visual-studio.jpg)
 
 ### Vytvoření projektu aplikace Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 Visual Studio je výkonné integrované vývojové prostředí, ve kterém můžeme vytvořit projekt, přidat odkazy, vytvořit knihovny `.dlls` a provádět ladění. Při tvorbě nového projektu vytvoří aplikace Visual Studio také tzv. řešení, což je struktura pro uspořádání projektů. V rámci jednoho řešení může existovat více projektů, které lze vytvářet společně. Chcete-li vytvořit uzel ZeroTouch, bude nutné vytvořit nový projekt aplikace Visual Studio, do kterého zapíšeme knihovnu tříd C# a vytvoříme knihovnu `.dll`.
 
-![Vytvoření nového projektu v aplikaci Visual Studio](../../.gitbook/assets/vs-new-project-1.jpg)
+![Vytvoření nového projektu v aplikaci Visual Studio](../images/vs-new-project-1.jpg)
 
-![Konfigurace nového projektu v aplikaci Visual Studio](../../.gitbook/assets/vs-new-project-2.jpg)
+![Konfigurace nového projektu v aplikaci Visual Studio](../images/vs-new-project-2.jpg)
 
 > Okno Nový projekt v aplikaci Visual Studio
 >
@@ -35,7 +35,7 @@ Aplikace Visual Studio automaticky vytvoří a otevře soubor v jazyce C#. Měl
  }
 ```
 
-![Použití Průzkumníka řešení](../../.gitbook/assets/vs-edit-class.jpg)
+![Použití Průzkumníka řešení](../images/vs-edit-class.jpg)
 
 > 1. Z nabídky `View` otevřete okna Průzkumník řešení a Výstup.
 > 2. V Průzkumníku řešení na pravé straně přejmenujte soubor `Class1.cs` na `SampleFunctions.cs`.
@@ -45,7 +45,7 @@ Aplikace Visual Studio automaticky vytvoří a otevře soubor v jazyce C#. Měl
 
 Dalším krokem je sestavení projektu, ale před provedením tohoto kroku je třeba zkontrolovat několik nastavení. Nejprve se ujistěte, že jako cílová platforma je vybrána možnost `Any CPU` nebo `x64` a že ve vlastnostech projektu není zaškrtnuto políčko `Prefer 32-bit`.
 
-![Nastavení sestavení aplikace Visual Studio](../../.gitbook/assets/vs-build-settings.jpg)
+![Nastavení sestavení aplikace Visual Studio](../images/vs-build-settings.jpg)
 
 > 1. Otevřete vlastnosti projektu výběrem `Project > "ProjectName" Properties`.
 > 2. Vyberte stránku `Build`.
@@ -54,14 +54,14 @@ Dalším krokem je sestavení projektu, ale před provedením tohoto kroku je t�
 
 Nyní můžeme sestavit projekt, který vytvoří knihovnu `.dll`. To provedete buď výběrem položky `Build Solution` v nabídce `Build` nebo pomocí klávesové zkratky `CTRL+SHIFT+B`.
 
-![Sestavení řešení](../../.gitbook/assets/vs-build.jpg)
+![Sestavení řešení](../images/vs-build.jpg)
 
 > 1. Vyberte `Build > Build Solution`.
 > 2. Úspěšné sestavení projektu můžete ověřit v okně Výstup.
 
 Pokud byl projekt úspěšně vytvořen, bude ve složce projektu `bin` uvedena knihovna `.dll` s názvem `MyCustomNode`. V tomto příkladu jsme pro cestu k souborům projektu ponechali výchozí nastavení aplikace Visual Studio, tj. `c:\users\username\documents\visual studio 2015\Projects`. Podívejme se na strukturu souborů projektu.
 
-![Struktura souborů projektu](../../.gitbook/assets/folder-structure.jpg)
+![Struktura souborů projektu](../images/folder-structure.jpg)
 
 > 1. Složka `bin` obsahuje knihovnu `.dll` vytvořenou z aplikace Visual Studio.
 > 2. Soubor projektu aplikace Visual Studio.
@@ -70,7 +70,7 @@ Pokud byl projekt úspěšně vytvořen, bude ve složce projektu `bin` uvedena 
 
 Nyní můžeme otevřít aplikaci Dynamo a importovat knihovnu `.dll`. Pomocí funkce Přidat přejděte do umístění projektu `bin` a vyberte knihovnu `.dll`, kterou chcete otevřít.
 
-![Otevření souboru DLL projektu](../../.gitbook/assets/dyn-import-dll.jpg)
+![Otevření souboru DLL projektu](../images/dyn-import-dll.jpg)
 
 > 1. Klikněte na tlačítko Přidat, abyste mohli importovat knihovnu `.dll`.
 > 2. Přejděte do umístění projektu. Projekt se nachází ve výchozí cestě k souborům aplikace Visual Studio: `C:\Users\username\Documents\Visual Studio 2015\Projects\MyCustomNode`
@@ -79,7 +79,7 @@ Nyní můžeme otevřít aplikaci Dynamo a importovat knihovnu `.dll`. Pomocí f
 
 Pokud je v knihovně vytvořena kategorie s názvem `MyCustomNode`, byla knihovna .dll úspěšně importována! Aplikace Dynamo však vytvořila dva uzly, přičemž my jsme chtěli mít pouze jeden uzel. V další části vysvětlíme, proč k tomu dochází a jak aplikace Dynamo načítá knihovnu .dll.
 
-![Vlastní uzly](../../.gitbook/assets/dyn-customnode.png)
+![Vlastní uzly](../images/dyn-customnode.png)
 
 > 1. Kategorie MyCustomNode v knihovně aplikace Dynamo. Kategorie knihovny je určena názvem knihovny `.dll`.
 > 2. Uzel SampleFunctions.MultiplyByTwo na kreslicí ploše.
@@ -88,7 +88,7 @@ Pokud je v knihovně vytvořena kategorie s názvem `MyCustomNode`, byla kniho
 
 Když aplikace Dynamo načte knihovnu .dll, zobrazí všechny veřejné statické metody jako uzly. Konstruktory, metody a vlastnosti budou převedeny na uzly pro tvorbu, akci a dotazování. V našem příkladu násobení se metoda `MultiplyByTwo()` v aplikaci Dynamo stane uzlem akce. Je tomu tak proto, že uzel byl pojmenován na základě své metody a třídy.
 
-![Uzel SampleFunction.MultiplyByTwo v grafu](../../.gitbook/assets/multiplybytwo.png)
+![Uzel SampleFunction.MultiplyByTwo v grafu](../images/multiplybytwo.png)
 
 > 1. Vstup je pojmenován `inputNumber` na základě názvu parametru metody.
 > 2. Ve výchozím nastavení je výstup pojmenován `double`, protože se jedná o tento vrácený typ dat.
@@ -115,7 +115,7 @@ namespace MyCustomNode
 }
 ```
 
-![Metoda importovaná jako uzel tvorby](../../.gitbook/assets/private-constructor.jpg)
+![Metoda importovaná jako uzel tvorby](../images/private-constructor.jpg)
 
 > 1. Aplikace Dynamo naimportovala naši metodu jako uzel tvorby.
 
@@ -132,13 +132,13 @@ Uzel násobení je velmi jednoduchý a nejsou nutné žádné odkazy na aplikaci
 
 Chcete-li v projektu aplikace Visual Studio odkazovat na tyto balíčky, stáhněte si požadovaný balíček z webu NuGet pomocí výše uvedených odkazů a ručně odkazujte na knihovny .dll, nebo použijte Správce balíčků NuGet v aplikaci Visual Studio. Nejprve si ukážeme, jak je nainstalovat pomocí Správce balíčků NuGet v aplikaci Visual Studio.
 
-![Otevírání Správce balíčků NuGet](../../.gitbook/assets/vs-nuget-package-manager2.jpg)
+![Otevírání Správce balíčků NuGet](../images/vs-nuget-package-manager2.jpg)
 
 > 1. Otevřete Správce balíčků NuGet výběrem možnosti `Tools > NuGet Package Manager > Manage NuGet Packages for Solution...`.
 
 Toto je Správce balíčků NuGet. Toto okno ukazuje, jaké balíčky byly pro projekt nainstalovány, a umožňuje uživateli vyhledat další. Pokud je vydána nová verze balíčku DynamoServices, lze odtud balíčky aktualizovat nebo vrátit ke starší verzi.
 
-![Správce balíčků NuGet](../../.gitbook/assets/vs-nuget-package-manager.jpg)
+![Správce balíčků NuGet](../images/vs-nuget-package-manager.jpg)
 
 > 1. Klikněte na tlačítko Procházet a vyhledáním položky DynamoVisualProgramming zobrazte balíčky aplikace Dynamo.
 > 2. Balíčky aplikace Dynamo Výběrem některého z nich zobrazíte jeho aktuální verzi a popis toho, co je uvnitř.
@@ -146,7 +146,7 @@ Toto je Správce balíčků NuGet. Toto okno ukazuje, jaké balíčky byly pro p
 
 Chcete-li ručně přidat balíček stažený z prohlížeče, otevřete Správce odkazů z Průzkumníku řešení a vyhledejte požadovaný balíček.
 
-![Správce odkazů](../../.gitbook/assets/vs-manual-dynamo-package.jpg)
+![Správce odkazů](../images/vs-manual-dynamo-package.jpg)
 
 > 1. Klikněte pravým tlačítkem myši na položku `References` a vyberte příkaz `Add Reference`.
 > 2. Klikněte na tlačítko `Browse` a přejděte do umístění balíčku.

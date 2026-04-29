@@ -6,4 +6,4 @@ Aplikace Dynamo představuje skvělou příležitostí, jak začít kódovat pro
 * [Geometrie pomocí jazyka DesignScript](8-2_geometry-with-design-script/)
 * [Python](8-3_python/)
 
-![](../.gitbook/assets/image.png)
+![](images/image.png)

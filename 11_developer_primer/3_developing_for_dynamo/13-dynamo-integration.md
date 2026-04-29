@@ -377,7 +377,7 @@ Pokud by byla povolena vazba prvků, můžeme zachovat stávající práci, kter
 
 ***
 
-![Vytvoření stěn](../../.gitbook/assets/creates_walls.png)
+![Vytvoření stěn](../images/creates_walls.png)
 
 #### Vazba prvků vs. trasování
 
@@ -466,15 +466,15 @@ Při dalším spuštění grafu prohledáme trasování, vyhledáme uložené ID
 
 Průběh dvou po sobě jdoucích spuštění grafu, který vytvoří jeden objekt `TraceExampleItem`, vypadá takto:
 
-![První volání](../../.gitbook/assets/Trace-first-call.png)
+![První volání](../images/Trace-first-call.png)
 
-![Druhé volání](../../.gitbook/assets/Trace-second-call.png)
+![Druhé volání](../images/Trace-second-call.png)
 
 Stejná myšlenka je znázorněna v dalším příkladu s realističtějším případem použití uzlu doplňku DynamoRevit.
 
 #### Schéma trasování
 
-![Kroky trasování](../../.gitbook/assets/trace_diagram.png) ![Tok trasování](../../.gitbook/assets/trace_alt_diagram.png)
+![Kroky trasování](../images/trace_diagram.png) ![Tok trasování](../images/trace_alt_diagram.png)
 
 #### POZNÁMKA:
 
@@ -560,7 +560,7 @@ Důležité fáze provádění konstruktoru, které se vztahují k vazbě prvků
 
 * Objekty trasování uložené ve verzích starších než je Dynamo 3.0 jsou uloženy pomocí protokolu SOAP, takže nejsou v novějších verzích podporovány. Dříve uložená data vazeb prvků budou ignorována a v aplikaci Dynamo 3.0 a vyšších verzích se zobrazí následující zpráva. Data vazeb prvků budou uložena při příštím spuštění a uložení pracovního prostoru.
 
-![Kompatibilita vazeb prvků](../../.gitbook/assets/element_binding_compatibility_message.jpg)
+![Kompatibilita vazeb prvků](../images/element_binding_compatibility_message.jpg)
 
 #### Měla by být vazba prvků ve výchozím nastavení zapnutá?
 
@@ -574,7 +574,7 @@ Na vysoké úrovni je **dobré si tyto uzly představit jako funkci, která při
 
 V doplňku DynamoRevit je více uzlů `Selection`. Můžeme je rozdělit alespoň do dvou skupin:
 
-![Uzly výběru aplikace Revit](../../.gitbook/assets/revitSelectionNodes.png)
+![Uzly výběru aplikace Revit](../images/revitSelectionNodes.png)
 
 1.  Uživatelský výběr pomocí UI:
 
@@ -602,7 +602,7 @@ V doplňku DynamoRevit je více uzlů `Selection`. Můžeme je rozdělit alespo�
 
 Pracovní postupy v D4C jsou velmi podobné výše uvedenému popisu pro aplikaci Revit, zde jsou dvě typické sady uzlů výběru v D4C:
 
-![Uzly výběru aplikace Civil 3D](../../.gitbook/assets/civilSelectionNodes.png)
+![Uzly výběru aplikace Civil 3D](../images/civilSelectionNodes.png)
 
 ### Problémy:
 
@@ -613,9 +613,9 @@ Pracovní postupy v D4C jsou velmi podobné výše uvedenému popisu pro aplikac
 
 ### Diagramy datových toků
 
-![Tok výběru](../../.gitbook/assets/selectModelElement.png)
+![Tok výběru](../images/selectModelElement.png)
 
-![Tok výběru 2](../../.gitbook/assets/selectElementFace.png)
+![Tok výběru 2](../images/selectElementFace.png)
 
 ### Technická implementace (viz výše uvedená schémata):
 
@@ -624,7 +624,7 @@ Uzly výběru jsou implementovány děděním z obecných typů `SelectionBase`
 * Implementace metody `BuildOutputAST` – Tato metoda musí vracet AST, který bude proveden v určitém okamžiku v budoucnosti, kdy bude uzel spuštěn. V případě uzlů Selection by měla vracet prvky nebo geometrii z ID prvků. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * Implementace metody `BuildOutputAST` je jednou z nejobtížnějších částí implementace uzlů `NodeModel` / uzlů uživatelského rozhraní. Nejlepší je vložit do funkce jazyka C# co nejvíce logiky a jednoduše vložit uzel volání funkce AST do AST. Všimněte si, že `node` zde je uzel AST v abstraktním stromu syntaxe, nikoli uzel v grafu Dynamo.
 
-![Tok výběru 2](../../.gitbook/assets/selectionAST.png)
+![Tok výběru 2](../images/selectionAST.png)
 
 * Serializace
   *   Vzhledem k tomu, že se jedná o explicitní odvozené typy uzlu `NodeModel` (nikoli ZeroTouch), vyžadují také implementaci konstruktoru [JsonConstructor], který bude použit při deserializaci uzlu ze souboru .dyn.

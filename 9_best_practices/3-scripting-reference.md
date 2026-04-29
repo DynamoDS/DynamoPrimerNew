@@ -6,7 +6,7 @@ Tato referenční stránka rozšiřuje doporučené postupy popsané ve skriptov
 
 Standardní knihovny jsou externí pro aplikaci Dynamo a jsou k dispozici v programovacích jazycích Python a C# (Zerotouch). Aplikace Dynamo má také vlastní sadu knihoven, které přímo odpovídají hierarchii uzlu aplikace Dynamo, což uživateli umožňuje vytvořit v kódu cokoliv, co by mohlo být vytvořeno pomocí uzlů a drátů. V následující části je uveden postup, jak jednotlivé knihovny aplikace Dynamo poskytují přístup a kdy mají používat standardní knihovnu.
 
-![](../.gitbook/assets/textual-programming.jpg)
+![](images/textual-programming.jpg)
 
 **Standardní knihovny a knihovny aplikace Dynamo**
 

@@ -2,7 +2,7 @@
 
 Když nyní víme, jak vytvořit projekt Zero-Touch, můžeme se podrobněji seznámit se specifiky vytváření uzlu a projít si příklad ZeroTouchEssentials na GitHubu aplikace Dynamo.
 
-![Uzly Zero-Touch](../../.gitbook/assets/ootbzerotouch.png)
+![Uzly Zero-Touch](../images/ootbzerotouch.png)
 
 > Mnoho standardních uzlů aplikace Dynamo jsou v podstatě uzly Zero-Touch, například většina výše uvedených uzlů Math, Color a DateTime.
 
@@ -10,7 +10,7 @@ Nejprve si stáhněte projekt ZeroTouchEssentials z tohoto umístění: [https:
 
 V aplikaci Visual Studio otevřete soubor řešení `ZeroTouchEssentials.sln` a sestavte řešení.
 
-![ZeroTouchEssentials v aplikaci Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
+![ZeroTouchEssentials v aplikaci Visual Studio](../images/vs-build-zte.jpg)
 
 > Soubor `ZeroTouchEssentials.cs` obsahuje všechny metody, které budeme importovat do aplikace Dynamo.
 
@@ -20,7 +20,7 @@ Příklady kódu jsou získány ze souboru [ZeroTouchEssentials.cs](https://gith
 
 ### Výchozí vstupní hodnota <a href="#default-input-values" id="default-input-values"></a>
 
-Aplikace Dynamo podporuje definici výchozích hodnot vstupních portů v uzlu. Tyto výchozí hodnoty budou do uzlu zadány, pokud porty nemají žádná připojení. Výchozí hodnoty jsou vyjádřeny pomocí mechanismu jazyka C# pro zadávání volitelných argumentů popsaném v [Příručce programování v jazyce C#](https://msdn.microsoft.com/en-us/library/dd264739.aspx). Výchozí hodnoty jsou určeny následujícím způsobem:
+Aplikace Dynamo podporuje definici výchozích hodnot vstupních portů v uzlu. Tyto výchozí hodnoty budou do uzlu zadány, pokud porty nemají žádná připojení. Výchozí hodnoty jsou vyjádřeny pomocí mechanismu jazyka C# pro zadávání volitelných argumentů popsaném v [Příručce programování v jazyce C#](https://msdn.microsoft.com/cs-cz/library/dd264739.aspx). Výchozí hodnoty jsou určeny následujícím způsobem:
 
 * Nastavte parametry metody na výchozí hodnotu: `inputNumber = 2.0`
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Výchozí hodnota](../../.gitbook/assets/defaultval.jpg)
+![Výchozí hodnota](../images/defaultval.jpg)
 
 > 1. Výchozí hodnota se zobrazí, když umístíte kurzor nad vstupní port uzlu.
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Uzel, který vrací více výstupů.
 
-![Více výstupů](../../.gitbook/assets/multipleoutputs.png)
+![Více výstupů](../images/multipleoutputs.png)
 
 > 1. Všimněte si, že nyní existují dva výstupní porty pojmenované podle řetězců, které jsme zadali pro klíče slovníku.
 
@@ -90,7 +90,7 @@ Osvědčeným postupem je přidat k uzlům aplikace Dynamo dokumentaci, která 
   * Například: `/// <summary>...</summary>`
 * Povolte dokumentaci XML v aplikaci Visual Studio výběrem možnosti `Project > [Project] Properties > Build > Output` a zaškrtnutím políčka `Documentation file`.
 
-![Generování souboru XML](../../.gitbook/assets/vs-xml.jpg)
+![Generování souboru XML](../images/vs-xml.jpg)
 
 > 1. Aplikace Visual Studio vygeneruje soubor XML v zadaném umístění.
 
@@ -141,7 +141,7 @@ Popisy uzlů stručně popisují funkci a výstup uzlu. V aplikaci Dynamo se ob
 * V popisku nástroje uzlu.
 * V Prohlížeči dokumentace.
 
-![Popis uzlu](../../.gitbook/assets/node-description.png)
+![Popis uzlu](../images/node-description.png)
 
 Dodržováním těchto pokynů zajistíte konzistenci a ušetříte čas při psaní nebo aktualizaci popisů uzlů.
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 Po importu knihovny dll ZeroTouchEssentials bude v knihovně uzel ZeroTouchEssentials. Tento objekt lze vytvořit pomocí uzlu `ByTwoDoubles`.
 
-![Uzel ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
+![Uzel ByTwoDoubles](../images/dyn-constructor.jpg)
 
 ### Použití typů geometrie aplikace Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Uzel, který získá délku křivky a zdvojnásobí ji.
 
-![Vstup Křivka](../../.gitbook/assets/doublelength.png)
+![Vstup Křivka](../images/doublelength.png)
 
 > 1. Tento uzel přijímá jako vstup typ geometrie Křivka.
 
@@ -262,7 +262,7 @@ Zdroje geometrie, které nejsou vráceny z funkcí, bude nutné spravovat ručn
     }
     ```
 
-    > Příkaz using je zdokumentován [zde](https://msdn.microsoft.com/en-us/library/yh598w02.aspx).
+    > Příkaz using je zdokumentován [zde](https://msdn.microsoft.com/cs-cz/library/yh598w02.aspx).
     >
     > Další informace o nových funkcích stability v aplikaci Dynamo 2.5 naleznete v části [Vylepšení stability geometrie aplikace Dynamo](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297).
 *   Pomocí ručního volání příkazu Dispose:
@@ -285,7 +285,7 @@ Při publikování novější verze knihovny se mohou změnit názvy uzlů. Změ
 * V prvku migrace vytvořte prvky `<priorNameHint>...</priorNameHint>` pro každou změnu názvu.
 * Pro každou změnu názvu zadejte prvek `<oldName>...</oldName>` a `<newName>...</newName>`.
 
-![Soubor migrace](../../.gitbook/assets/vs-migrations-file.jpg)
+![Soubor migrace](../images/vs-migrations-file.jpg)
 
 > 1. Klikněte pravým tlačítkem myši a vyberte příkaz `Add > New Item`.
 > 2. Zvolte `XML File`.

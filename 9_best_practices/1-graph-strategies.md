@@ -2,7 +2,7 @@
 
 Před touto kapitolou se příručka Primer zabývala implementací výkonných funkcí vizuálního skriptování v aplikaci Dynamo. Správné pochopení těchto možností je pevným základem a prvním krokem ve vytváření robustních vizuálních programů. Když vizuální programy používáme v ostrém provozu, sdílíme je s kolegy, řešíme chyby nebo zkoušíme meze, vyvstávají další problémy, které je třeba řešit. Pokud váš program bude používat někdo jiný nebo očekáváte, že jej otevřete až za šest měsíců, je v obou případech nutné, aby vše bylo ihned graficky a logicky přehledné. Aplikace Dynamo nabízí mnoho nástrojů ke správě složitosti programu a tato kapitola se zabývá pokyny k tomu, jak tyto nástroje použít.
 
-![skupiny](../.gitbook/assets/cad-chart-visual.jpg)
+![skupiny](images/cad-chart-visual.jpg)
 
 ## Snížení složitosti
 
@@ -15,7 +15,7 @@ Při vývoji grafu aplikace Dynamo a zkušebních nápadů může rychle dojít 
 * Můžete změnit **barvu skupiny k rozlišení** toho, co je účelem skupiny (vstupy vs. funkce).
 * Pomocí skupin můžete vytvořit **organizaci grafu ke zjednodušení tvorby uživatelských uzlů**.
 
-![](../.gitbook/assets/graphstrategy2.png)
+![](images/graphstrategy2.png)
 
 > Barvy v tomto programu určují účel každé skupiny. Pomocí této strategie je možné vytvořit hierarchii v libovolných grafických normách nebo šablonách, které vyvíjíte.
 >
@@ -30,7 +30,7 @@ Při vývoji grafu aplikace Dynamo a zkušebních nápadů může rychle dojít 
 * Někdy můžete použít blok kódu k **rychlejšímu zadání čísla nebo metody uzlu než při vyhledávání** (Point.ByCoordinates, Number, String, Formula).
 * Bloky kódu jsou užitečné, **pokud chcete definovat vlastní funkce v jazyce DesignScript, aby se snížil počet uzlů v grafu**.
 
-![](../.gitbook/assets/graphstrategy3.png)
+![](images/graphstrategy3.png)
 
 > Vzor 1 i 2 provádí stejnou funkci. Bylo však mnohem rychlejší napsat několik řádků kódu, než vyhledávat a přidávat jednotlivé uzly. Blok kódu je také mnohem výstižnější.
 >
@@ -53,7 +53,7 @@ Při vývoji grafu aplikace Dynamo a zkušebních nápadů může rychle dojít 
   * Pro některé uživatele je obtížnější na porozumění
   * Neexistuje snadný způsob, jak se vrátit k verzi vizuálního programování
 
-![](../.gitbook/assets/graphstrategy3_1.png)
+![](images/graphstrategy3_1.png)
 
 > 1. Existující program
 > 2. Blok kódu vytvořený pomocí možnosti Uzel na kód
@@ -65,7 +65,7 @@ Při vývoji grafu aplikace Dynamo a zkušebních nápadů může rychle dojít 
 * Funkce List@Level pomáhá **snížit složitost grafu nahrazením uzlů List.Map a List.Combine**, které mohou zabírat značné množství místa na pracovní ploše.
 * Funkce List@Level nabízí** rychlejší způsob, jak vytvořit logiku uzlu konstrukce, než u uzlů List.Map a List.Combine**, umožněním přístupu k datům na libovolné úrovni v seznamu přímo ze vstupního portu uzlu.
 
-![](../.gitbook/assets/graphstrategy4.png)
+![](images/graphstrategy4.png)
 
 > Můžeme ověřit, kolik hodnot True vrátí metoda BoundingBox.Contains a ve kterých seznamech, a to aktivováním funkce List@Level u vstupu seznamu funkce CountTrue. List@Level umožňuje uživateli určit, ze které úrovně se bude přebírat vstup. Použití funkce List@Level je flexibilní, efektivní a vysoce podporované u jiných metod zahrnujících metody List.Map a List.Combine.
 >
@@ -84,7 +84,7 @@ Kromě zjednodušení a zefektivnění grafu nejvíce, jak je to možné, snažt
 * Pokud s grafem budou pracovat i ostatní, měli byste se **před jeho odesláním ujistit, že rozvržení drátů a uzlů je přehledné**.
 * Chcete-li si usnadnit zarovnání, **použijte funkci Rozvržení uzlů vyčištění k automatickému zarovnání** grafu, zarovnání však bude méně přesné, než když je uděláte sami.
 
-\![](<../.gitbook/assets/graphstrategy5 (1).png>)
+![](<images/graphstrategy5.png>)
 
 > 1. Neuspořádaný graf
 > 2. Zarovnaný graf
@@ -96,7 +96,7 @@ Kromě zjednodušení a zefektivnění grafu nejvíce, jak je to možné, snažt
 * Přejmenování vstupů může ostatním usnadnit porozumění vašemu grafu, **zejména pokud jejich vstup nebude vidět na obrazovce**.
 * **Buďte opatrní při přejmenovávání jiných uzlů než vstupů.** Alternativou je vytvoření vlastního uzlu ze shluku uzlů a jeho přejmenování; bude zřejmé, že obsahuje něco jiného.
 
-![](../.gitbook/assets/graphstrategy6.png)
+![](images/graphstrategy6.png)
 
 > 1. Vstupy pro manipulaci s povrchem
 > 2. Vstupy architektonických parametrů
@@ -109,7 +109,7 @@ Kromě zjednodušení a zefektivnění grafu nejvíce, jak je to možné, snažt
 * Pokud něco v **grafu vyžaduje vysvětlení v jednoduchém jazyce**, které není možné vyjádřit uzly, měli byste přidat poznámku.
 * Poznámka by měla být přidána, pokud je kolekce **uzlů nebo skupina příliš velká nebo složitá a není možné jí ihned porozumět**.
 
-![](../.gitbook/assets/graphstrategy7.png)
+![](images/graphstrategy7.png)
 
 > 1. Poznámka popisující část programu, která vrací nezpracované vzdálenosti posunu
 > 2. Poznámka popisující kód, který mapuje tyto hodnoty na sinusovou vlnu
@@ -124,7 +124,7 @@ Při tvorbě vizuálního skriptu je důležité ověřit, zda skript vrací oč
 
 * Pomocí uzlů Watch a bublin náhledů můžete při sestavování programu** ověřit, zda se na klíčových výstupech vrací očekávané hodnoty**.
 
-![](../.gitbook/assets/graphstrategy8.png)
+![](images/graphstrategy8.png)
 
 > K porovnání se použijí uzly Watch:
 >
@@ -155,7 +155,7 @@ Je vysoce pravděpodobné, váš program otevře i někdo jiný, a to i v př
 * Vlastní uzel byste měli použít i v případě, **že se část grafu často znovu používá** v jiných aplikacích.
 * Pokud chcete **sdílet funkce s komunitou aplikace Dynamo**, měli byste použít vlastní uzel.
 
-![](../.gitbook/assets/graphstrategy9.png)
+![](images/graphstrategy9.png)
 
 > Shromáždění programu sloužícího k převodu bodů do vlastního uzlu učiní robustní, jedinečný program přenositelným a mnohem snadnějším na pochopení. Dobře pojmenované vstupní porty pomohou ostatním uživatelům porozumět tomu, jak tento uzel používat. Nezapomeňte přidávat popisy a požadované typy dat pro každý vstup.
 >
@@ -170,7 +170,7 @@ Je vysoce pravděpodobné, váš program otevře i někdo jiný, a to i v př
 * Při tvorbě šablony můžete standardizovat **barvy skupin a velikosti písem** a kategorizovat tak typy pracovních postupů nebo akcí s daty.
 * Při tvorbě šablony můžete dokonce standardizovat, jakým způsobem chcete v grafu **označovat, barvit nebo stylizovat rozdíly mezi front-end a back-end pracovními postupy**.
 
-![](../.gitbook/assets/graphstrategy10.png)
+![](images/graphstrategy10.png)
 
 > 1. Uživatelské rozhraní nebo front-end programu obsahuje název projektu, posuvníky vstupu a importovanou geometrii.
 > 2. Back-end programu.
@@ -184,13 +184,13 @@ Je vysoce pravděpodobné, váš program otevře i někdo jiný, a to i v př
 
 Nyní, když bylo stanoveno několik osvědčených postupů, použijeme tyto postupy na rychle sestavený program. I když program při generování střechy uspěje, stav grafu je „mapou mysli“ autora. Chybí jakákoli organizace a popis použití. Projdeme si nejlepší postupy organizace, popisu a analýzy programu, aby ostatní uživatelé mohli porozumět tomu, jak se tento program používá.
 
-![](../.gitbook/assets/graphstrategy11.png)
+![](images/graphstrategy11.png)
 
 > Program funguje, ale graf není uspořádán.
 
 Začneme určením dat a geometrie vrácené programem.
 
-![](../.gitbook/assets/graphstrategy12.png)
+![](images/graphstrategy12.png)
 
 > Porozumění tomu, kdy dochází k velkým změnám dat, je velmi důležité ke stanovení logického dělení nebo modularity. Zkuste zkontrolovat zbytek programu pomocí uzlů Watch, čímž zjistíte, zda můžete před přechodem na další krok určit skupiny.
 >
@@ -199,7 +199,7 @@ Začneme určením dat a geometrie vrácené programem.
 
 Když teď rozumíte základním prvkům programu, můžeme je umístit do skupin.
 
-![](../.gitbook/assets/graphstrategy13.png)
+![](images/graphstrategy13.png)
 
 > Skupiny umožňují uživateli vizuální rozlišení částí programu.
 >
@@ -211,13 +211,13 @@ Když teď rozumíte základním prvkům programu, můžeme je umístit do skupi
 
 Jakmile budou skupiny stanoveny, zarovnejte uzly, tak aby vznikla vizuální spojitost přes celý graf.
 
-![](../.gitbook/assets/graphstrategy14.png)
+![](images/graphstrategy14.png)
 
 > Vizuální spojitost zlepšuje pro uživatele viditelnost toku programu a implicitních vztahů mezi uzly.
 
 Zlepšete přístup k programu přidáním další hladiny grafických vylepšení. Přidáním poznámek popisujete, jak určitá oblast programu funguje, zadejte u vstupů vlastní názvy a přiřaďte k různým typům skupin barvy.
 
-![](../.gitbook/assets/graphstrategy15.png)
+![](images/graphstrategy15.png)
 
 > Tato grafická vylepšení sdělují uživateli více o tom, co program dělá. Různé barvy skupin pomáhají rozlišit vstupy od funkcí.
 >
@@ -226,7 +226,7 @@ Zlepšete přístup k programu přidáním další hladiny grafických vylepše
 
 Před zhuštěním programu, je třeba najít strategické umístění, kde představíme simulátor odvodnění ve skriptu jazyka Python. Výstup prvního povrchu střechy s měřítkem připojte k odpovídajícímu vstupu skriptování.
 
-![](../.gitbook/assets/graphstrategy16.png)
+![](images/graphstrategy16.png)
 
 > V této části programu jsme se rozhodli integrovat skriptování, aby simulace odvodnění mohla být spuštěna na původním, jediném povrchu střechy. Tento konkrétní povrch není zobrazen v náhledu, ale ušetří krok výběru horního povrchu u zkoseného objektu Polysurface.
 >
@@ -237,7 +237,7 @@ Před zhuštěním programu, je třeba najít strategické umístění, kde pře
 
 Nyní, když je vše připraveno, zjednodušíme graf.
 
-![](../.gitbook/assets/graphstrategy17.png)
+![](images/graphstrategy17.png)
 
 > Berte v potaz, že program s využitím možnosti Uzel na kód a vlastního uzlu značně zmenšil velikost grafu. Skupiny, které tvoří povrch střechy a stěny, byly převedeny na kód, protože jsou pro tento program velmi specifické. Skupina převodu bodů je obsažena ve vlastním uzlu, protože by mohla být využita i v jiném programu. Ve vzorovém souboru vytvořte vlastní uzel ze skupiny převodu bodů.
 >
@@ -246,14 +246,14 @@ Nyní, když je vše připraveno, zjednodušíme graf.
 
 Jako poslední krok vytvořte předvolby pro ukázkové tvary střechy.
 
-![](../.gitbook/assets/graphstrategy18.png)
+![](images/graphstrategy18.png)
 
 > Tyto vstupy jsou primárními ovladači tvaru střechy a díky nim uživatel snadněji pochopí potenciál programu.
 
 Program s pohledy dvou předvoleb.
 
-![](../.gitbook/assets/graphstrategy19.png)
+![](images/graphstrategy19.png)
 
-![](../.gitbook/assets/graphstrategy20.png)
+![](images/graphstrategy20.png)
 
 > Vzory odvodnění střechy nabízí uživateli analytický pohled příslušných předvoleb.

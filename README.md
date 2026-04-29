@@ -4,7 +4,7 @@
 
 ## Pro aplikaci Dynamo verze 2.13 a novější
 
-![Logo aplikace Dynamo](.gitbook/assets/dynamo_logo_dark-trim.jpg)
+![Logo aplikace Dynamo](images/dynamo_logo_dark-trim.jpg)
 
 > Aplikace Dynamo je platforma vizuálního programování s otevřeným kódem určená pro konstruktéry.
 
@@ -37,31 +37,31 @@ Dynamo Primer je projekt s otevřeným zdrojovým kódem, který vytvořil Matt
 
 Společnost **Mode Lab** sepsala první edici příručky Primer. Děkujeme jim za jejich úsilí při vytváření tohoto hodnotného zdroje.
 
-![](.gitbook/assets/MODELAB_Logo.png)
+![](images/modelab-logo.png)
 
 ***
 
 **John Pierson ze společnosti Parallax Team** aktualizoval příručku Primer podle verze aplikace Dynamo 2.0.
 
-![](.gitbook/assets/PRLX_Logo.jpg)
+![](images/prlx-logo.jpg)
 
 ***
 
 Společnost **Matterlab** byla pověřena aktualizací příručky Primer tak, aby odrážela revize aplikace Dynamo 2.13.
 
-\![](<.gitbook/assets/matterlab_final-07 (2).jpg>)
+![](images/matterlab-logo.jpg)
 
 ***
 
 Společnost **Archilizer** byla pověřena aktualizací příručky Primer tak, aby odrážela revize aplikace Dynamo 2.17.
 
-<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 Společnost **Wood Rodgers** byla pověřena aktualizací příručky Primer obsahem týkajícím se aplikace Dynamo for Civil 3D.
 
-<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
 
 ### Poděkování
 

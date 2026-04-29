@@ -8,7 +8,7 @@ Barvy v aplikaci Dynamo jsou tvořeny pomocí vstupů ARGB. To odpovídá kaná
 
 | Ikona                                          | Název (Syntaxe)                 | Vstupy  | Výstupy |
 | --------------------------------------------- | ----------------------------- | ------- | ------- |
-| \![](<../../.gitbook/assets/Color byARGB.jpg>) | Barva ARGB (**Color.ByARGB**) | A,R,G,B | barva   |
+| \![](<../images/Color byARGB.jpg>) | Barva ARGB (**Color.ByARGB**) | A,R,G,B | barva   |
 
 ### Dotazování se na hodnoty barev
 
@@ -16,19 +16,19 @@ Barvy v níže uvedené tabulce se dotazují na vlastnosti, které se používa
 
 | Ikona                                             | Název (Syntaxe)                     | Vstupy | Výstupy    |
 | ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| \![](<../../.gitbook/assets/Color Alpha.jpg>)     | Alfa (**Colour.Alpha**)           | barva  | A          |
-| \![](<../../.gitbook/assets/Color Red.jpg>)       | Červená (**Colour.Red**)               | barva  | R          |
-| \![](<../../.gitbook/assets/Color Green.jpg>)     | Zelená (**Color.Green**)           | barva  | G          |
-| \![](<../../.gitbook/assets/Color Blue.jpg>)      | Modrá (**Color.Blue**)             | barva  | B          |
-| \![](<../../.gitbook/assets/Color Component.jpg>) | Komponenty (**Colour.Components**) | barva  | A,R,G,B |
+| \![](<../images/Color Alpha.jpg>)     | Alfa (**Colour.Alpha**)           | barva  | A          |
+| \![](<../images/Color Red.jpg>)       | Červená (**Colour.Red**)               | barva  | R          |
+| \![](<../images/Color Green.jpg>)     | Zelená (**Color.Green**)           | barva  | G          |
+| \![](<../images/Color Blue.jpg>)      | Modrá (**Color.Blue**)             | barva  | B          |
+| \![](<../images/Color Component.jpg>) | Komponenty (**Colour.Components**) | barva  | A,R,G,B |
 
 Barvy v tabulce níže odpovídají **barevnému prostoru HSB**. Rozdělení barvy na odstín, sytost a jas je pravděpodobně intuitivnější pro interpretaci barvy: Jaká barva by to měla být? Jak moc sytá má být? A jak moc světlá, či tmavá má být? Toto je rozbor odstínu, respektive sytosti, respektive jasu.
 
 | Ikona                                                  | Název (Syntaxe)                     | Vstupy | Výstupy    |
 | ----------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| \![](<../../.gitbook/assets/Color Hue.jpg>)            | Odstín (**Colour.Hue**)               | barva  | Odstín        |
-| \![](<../../.gitbook/assets/Color Saturation (1).jpg>) | Sytost (**Colour.Saturation**) | barva  | Sytost |
-| \![](<../../.gitbook/assets/Color Brightness.jpg>)     | Jas (**Colour.Brightness**) | barva  | Jas |
+| \![](<../images/Color Hue.jpg>)            | Odstín (**Colour.Hue**)               | barva  | Odstín        |
+| \![](<../images/Color Saturation.jpg>) | Sytost (**Colour.Saturation**) | barva  | Sytost |
+| \![](<../images/Color Brightness.jpg>)     | Jas (**Colour.Brightness**) | barva  | Jas |
 
 ### Color Range
 
@@ -36,7 +36,7 @@ Rozsah barev je podobný uzlu **Remap Range** ve cvičení [\#part-ii-from-logic
 
 Aktuální uzel funguje dobře, pokud však všechno začne fungovat napoprvé, něco je zřejmě špatně. Nejlepší způsob, jak se s barevným gradientem seznámit, je provést interaktivní test. Nyní provedeme rychlé cvičení a probereme, jak nastavit gradient s výstupními barvami odpovídajícími číslům.
 
-\![](<../../.gitbook/assets/color - color range.jpg>)
+\![](<../images/color - color range.jpg>)
 
 > 1. Definujte tři barvy: Pomocí **bloku kódu** definujte _červenou, zelenou_ a _modrou_ zadáním příslušných kombinací hodnot _0_ a _255_.
 > 2. **Vytvořte seznam:** Slučte tři barvy do jednoho seznamu.
@@ -47,13 +47,13 @@ Aktuální uzel funguje dobře, pokud však všechno začne fungovat napoprvé, 
 
 Uzel **Display.ByGeometry** umožňuje vybarvit geometrii ve výřezu aplikace Dynamo. Toto je užitečné při oddělení různých typů geometrie, předvedení parametrické koncepce nebo definování legendy analýzy pro simulaci. Vstupy jsou jednoduché: geometrie a barva. Vstup color je za účelem vytvoření gradientu jako na obrázku výše připojen k uzlu **Color** **Range**.
 
-\![](<../../.gitbook/assets/color - color preview.jpg>)
+\![](<../images/color - color preview.jpg>)
 
 ### Barva na površích
 
 Uzel **Display.BySurfaceColor** umožňuje mapovat data po celém povrchu pomocí barvy. Tato funkce nabízí určité zajímavé možnosti vizualizace dat obdržených přes diskrétní analýzu, jako je analýza slunečného světla, energetická analýza a analýza blízkosti. Použití barvy na povrch v aplikaci Dynamo je podobné jako použití textury na materiál v jiných prostředích CAD. Krátké cvičení níže znázorňuje použití tohoto nástroje.
 
-\![](<../../.gitbook/assets/12 (1).jpg>)
+![](<../images/12.jpg>)
 
 ## Cvičení
 
@@ -67,14 +67,14 @@ Uzel **Display.BySurfaceColor** umožňuje mapovat data po celém povrchu pomoc�
 
 Toto cvičení je zaměřeno na parametrické řízení barvy rovnoběžně s geometrií. Geometrie je základní šroubovice, kterou níže definujeme pomocí **bloku kódu**. Jedná se o rychlý a snadný způsob tvorby parametrické funkce; vzhledem k tomu, že se soustředíme na barvu (místo geometrie), můžeme efektivně vytvořit šroubovici pomocí bloku kódu, aniž by došlo k zaplnění kreslicí plochy. K čím složitějším materiálům se příručka Primer dostane, tím častěji se bude používat blok kódu.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 01.jpg>)
+\![](<../images/color - basic helix with colors 01.jpg>)
 
 > 1. **Blok kódu:** Definujte dva bloky kódu s výše uvedenými vzorci. Toto je rychlá parametrická metoda tvorby spirály.
 > 2. **Point.ByCoordinates:** Připojte tři výstupy z bloku kódu k souřadnicím uzlu.
 
 Nyní je vidět pole bodů tvořících šroubovici. Dalším krokem je tvorba křivky procházející body, aby bylo možné vizualizovat šroubovici.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 02.jpg>)
+\![](<../images/color - basic helix with colors 02.jpg>)
 
 > 1. **PolyCurve.ByPoints:** Připojte výstup **Point.ByCoordinates** ke vstupu _points_ u uzlu. Vznikne šroubovitá křivka.
 > 2. **Curve.PointAtParameter:** Připojte výstup **PolyCurve.ByPoints** ke vstupu _curve_. Účelem tohoto kroku je vytvořit parametrický bod atraktoru, který se posouvá podél křivky. Vzhledem k tomu, že křivka vyhodnocuje bod v parametru, bude nutné zadat hodnotu _param_ v rozmezí od 0 do 1.
@@ -82,14 +82,14 @@ Nyní je vidět pole bodů tvořících šroubovici. Dalším krokem je tvorba k
 
 Po vytvoření referenčního bodu nyní porovnáme vzdálenost od referenčního bodu k původním bodům, čímž se definuje šroubovice. Tato hodnota vzdálenosti bude řídit geometrii i barvu.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 03.jpg>)
+\![](<../images/color - basic helix with colors 03.jpg>)
 
 > 1. **Geometry.DistanceTo:** Připojte výstup **Curve.PointAtParameter** ke _vstupu_. Připojte uzel **Point.ByCoordinates** ke vstupu geometrie.
 > 2. **Watch:** Výsledný výstup zobrazuje seznam vzdáleností od každého bodu šroubovice k referenčnímu bodu podél křivky.
 
 Dalším krokem je řízení parametrů pomocí seznamu vzdáleností od bodů šroubovice k referenčnímu bodu. Pomocí těchto hodnot vzdáleností se definují poloměry řady koulí podél křivky. Aby se koule udržely ve vhodné velikosti, je nutné _přemapovat_ hodnoty vzdálenosti.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 04.jpg>)
+\![](<../images/color - basic helix with colors 04.jpg>)
 
 > 1. **Math.RemapRange:** Připojte výstup **Geometry.DistanceTo** ke vstupu čísel.
 > 2. **Blok kódu:** připojte blok kódu s hodnotou _0.01_ ke vstupu _newMin_ a blok kódu s hodnotou _1_ ke vstupu _newMax_.
@@ -97,41 +97,41 @@ Dalším krokem je řízení parametrů pomocí seznamu vzdáleností od bodů �
 
 V tomto kroku došlo k přemapování seznamu vzdáleností do menšího rozsahu. Hodnoty _newMin_ a _newMax_ je možné upravit podle libosti. Hodnoty se přemapují a budou mít stejný _poměr rozložení_ v rámci celé domény.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 05.jpg>)
+\![](<../images/color - basic helix with colors 05.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius:** Připojte výstup **Math.RemapRange** ke vstupu _radius_ a původní výstup **Point.ByCoordinates** připojte ke vstupu _centerPoint_.
 
 Změňte hodnotu posuvníku čísel a sledujte, jak se aktualizuje velikost koulí. Vytvořili jsme parametrický objekt.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 06.gif>)
+\![](<../images/color - basic helix with colors 06.gif>)
 
 Velikost koulí ukazuje parametrické pole definované referenčním bodem podél křivky. Použijeme stejnou koncepci u poloměru koule, abychom mohli řídit jejich barvu.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 07.jpg>)
+\![](<../images/color - basic helix with colors 07.jpg>)
 
 > 1. **Color Range:** Přidejte horní část kreslicí plochy. Při přejetí kurzoru nad vstupem _value_ si všimněte, že požadovaná čísla jsou v rozsahu 0 až 1. Čísla z výstupu **Geometry.DistanceTo** je nutné přemapovat, aby byla kompatibilní s touto doménou.
 > 2. **Sphere.ByCenterPointRadius:** V tuto chvíli vypněte náhled u tohoto uzlu. (_Klikněte pravým tlačítkem myši > Náhled_.)
 
-\![](<../../.gitbook/assets/color - basic helix with colors 08.jpg>)
+\![](<../images/color - basic helix with colors 08.jpg>)
 
 > 1. **Math.RemapRange:** Tento proces by vám měl být známý. Připojte výstup **Geometry.DistanceTo** ke vstupu čísel.
 > 2. **Blok kódu:** Podobně jako v předchozím kroku vytvořte hodnotu _0_ pro vstup _newMin_ a hodnotu _1_ pro zadání _newMax_. Všimněte si, že v tomto případě je možné definovat dva výstupy z jednoho bloku kódu.
 > 3. **Color Range:** Připojte výstup **Math.RemapRange** ke vstupu _value_.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 09.jpg>)
+\![](<../images/color - basic helix with colors 09.jpg>)
 
 > 1. **Color.ByARGB:** Toto je akce, pomocí které se vytvoří dvě barvy. I přesto, že tento proces může vypadat neobvykle, je stejný jako u barev RGB v jiném softwaru, jen se přitom využije vizuální programování.
 > 2. **Blok kódu:** Vytvořte dvě hodnoty _0_ a _255_. Připojte dva výstupy ke dvěma vstupům **Color.ByARGB** podle výše uvedeného obrázku (případně vytvořte jakékoli dvě požadované barvy).
 > 3. **Color Range:** Vstup _colors_ vyžaduje seznam barev. Tento seznam je potřeba vytvořit ze dvou barev vytvořených v předchozím kroku.
 > 4. **List.Create:** Slučte dvě barvy do jednoho seznamu. Připojte výstup ke vstupu _colors_ u uzlu **Color Range**.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 10.jpg>)
+\![](<../images/color - basic helix with colors 10.jpg>)
 
 > 1. **Display.ByGeometryColor:** Připojte položku **Sphere.ByCenterPointRadius** ke vstupu _geometry_ a uzel _Color Range_ připojte ke vstupu _color_. Nyní máme hladký gradient v celé doméně křivky.
 
 Pokud změníme hodnotu **posuvníku čísel** z dřívější definice, barvy a velikosti se aktualizují. V tomto případě spolu barvy a velikost poloměru přímo souvisí: nyní existuje vizuální propojení mezi dvěma parametry.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 11.gif>)
+\![](<../images/color - basic helix with colors 11.gif>)
 
 ### Cvičení barev na površích
 
@@ -143,12 +143,12 @@ Pokud změníme hodnotu **posuvníku čísel** z dřívější definice, barvy 
 
 Nejprve je třeba vytvořit (nebo odkázat) povrch, který se použije jako vstup pro uzel **Display.BySurfaceColor**. V tomto příkladu šablonujeme mezi sinusovou a kosinusovou křivkou.
 
-\![](<../../.gitbook/assets/color - color on surface 01.jpg>)
+\![](<../images/color - color on surface 01.jpg>)
 
 > 1. Tato skupina uzlů vytváří body podél osy Z a poté je posunuje podle sinových a kosinových funkcí. Pomocí dvou seznamů bodů se poté vygenerují křivky NURBS.
 > 2. **Surface.ByLoft**: Vygenerujte interpolovaný povrch mezi křivkami NURBS v seznamu.
 
-\![](<../../.gitbook/assets/color - color on surface 02.jpg>)
+\![](<../images/color - color on surface 02.jpg>)
 
 > 1. **File Path**: Vyberte soubor obrázku, který se bude vzorkovat pro následná data pixelů.
 > 2. Pomocí uzlu **File.FromPath** převeďte cestu k souboru na soubor a poté jej předejte do uzlu **Image.ReadFromFile**. Tím vytvoříte obrázek pro vzorkování.
@@ -158,4 +158,4 @@ Nejprve je třeba vytvořit (nebo odkázat) povrch, který se použije jako vstu
 
 Podrobný náhled výstupního povrchu s rozlišením 400x300 vzorků.
 
-\![](<../../.gitbook/assets/color - color on surface 03.jpg>)
+\![](<../images/color - color on surface 03.jpg>)

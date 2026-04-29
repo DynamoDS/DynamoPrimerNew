@@ -2,7 +2,7 @@
 
 Knihovna obsahuje všechny načtené uzly, včetně výchozích kategorií uzlů, které jsou dodávány s instalací, a všech dalších načtených vlastních uzlů nebo balíčků. Uzly v knihovně jsou hierarchicky uspořádány v rámci knihoven, kategorií a případně podkategorií.
 
-\![](<../.gitbook/assets/library - library UI.png>)
+![](<images/library-library-ui.png>)
 
 * Základní uzly: Dodávány s výchozí instalací.
 * Vlastní uzly: Často používané postupy nebo speciální graf si můžete uložit jako vlastní uzly. Vlastní uzly můžete také sdílet s komunitou.
@@ -18,7 +18,7 @@ Procházejte knihovnu kliknutím na nabídky a rozbalte jednotlivé kategorie a 
 
 {% hint style="info" %} K počátečnímu zkoumání je vhodná nabídka Geometry, protože obsahuje největší množství uzlů. {% endhint %}
 
-\![](<../.gitbook/assets/library - modified and resize library categories.jpg>)
+![](<images/library-modified-and-resize-library-categories.jpg>)
 
 > 1. Knihovna
 > 2. Kategorie
@@ -27,13 +27,13 @@ Procházejte knihovnu kliknutím na nabídky a rozbalte jednotlivé kategorie a 
 
 Uzly jsou dále kategorizovány do stejné podkategorie na základě toho, zda uzly **vytvářejí** data, provádějí **akce** nebo **dotazují** data.
 
-* \![](<../.gitbook/assets/user interface - create.jpg>) **Tvorba**: Vytvořte nebo sestavte geometrii od začátku. Vytvořte například kružnici.
-* \![](<../.gitbook/assets/user interface - action.jpg>) **Akce**: Proveďte akci s objektem. Změňte například velikost kružnice.
-* \![](<../.gitbook/assets/user interface - query.jpg>) **Dotaz**: Získejte vlastnost objektu, který již existuje. Zjistěte například poloměr kružnice.
+* ![](<images/user-interface-create.jpg>) **Tvorba**: Vytvořte nebo sestavte zcela novou geometrii. Vytvořte například kružnici.
+* ![](<images/user-interface-action.jpg>) **Akce**: Proveďte s  objektem nějakou akci. Změňte například velikost kružnice.
+* ![](<images/user-interface-query.jpg>) **Dotaz**: Získejte vlastnost objektu, který již existuje. Zjistěte například poloměr kružnice.
 
 Přesunutím ukazatele myši nad uzel zobrazíte podrobnější informace kromě jeho názvu a ikony. To nám umožňuje rychle pochopit, co uzel dělá, jaké bude vyžadovat vstupy a jaký bude poskytovat výstup.
 
-\![](<../.gitbook/assets/user interface - node description.jpg>)
+![](<images/user-interface-node-description.jpg>)
 
 > 1. Popis – prostý jazyk popisující uzel
 > 2. Ikona – větší verze ikony v nabídce knihovny
@@ -46,7 +46,7 @@ Pokud přibližně víte, který uzel chcete přidat do pracovního prostoru, za
 
 Kliknutím na uzel, který chcete přidat, nebo stisknutím klávesy Enter přidáte zvýrazněné uzly do středu pracovního prostoru.
 
-\![](<../.gitbook/assets/user interface - search.jpg>)
+![](<images/user-interface-search.jpg>)
 
 #### Hledání podle hierarchie
 
@@ -58,15 +58,15 @@ Zadáním různých částí místa uzlu v hierarchii knihovny ve formátu `lib
 
 * `library.category.nodeName`
 
-\![](<../.gitbook/assets/library - search by hierarchy 1 geometry point by coordinates.jpg>)
+![](<images/library-search-by-hierarchy-1-geometry-point-by-coordinates.jpg>)
 
 * `category.nodeName`
 
-\![](<../.gitbook/assets/library - search by hierarchy 2 point by coordinates.jpg>)
+![](<images/library-search-by-hierarchy-2-point-by-coordinates.jpg>)
 
 * `nodeName` nebo `keyword`
 
-\![](<../.gitbook/assets/library - search by hierarchy 3 by coordinates.jpg>)
+![](<images/library-search-by-hierarchy-3-by-coordinates.jpg>)
 
 Název uzlu v pracovním prostoru se obvykle vykresluje ve formátu `category.nodeName`, s důležitými výjimkami zejména v kategoriích Input a View.
 
@@ -74,15 +74,15 @@ Dávejte pozor na podobně pojmenované uzly a všimněte si rozdílu kategorií
 
 * Uzly z většiny knihoven budou obsahovat formát kategorie
 
-\![](<../.gitbook/assets/library - node category differences 1.jpg>)
+![](<images/library-node-category-differences-1.jpg>)
 
 * Uzly `Point.ByCoordinates` a `UV.ByCoordinates` mají stejný název, ale pocházejí z různých kategorií
 
-\![](<../.gitbook/assets/library - node category differences 2.jpg>)
+![](<images/library-node-category-differences-2.jpg>)
 
 * Mezi povinné výjimky patří funkce Built-in, Core.Input, Core.View a Operators
 
-\![](<../.gitbook/assets/library - node category differences 3.jpg>)
+![](<images/library-node-category-differences-3.jpg>)
 
 ### Často používané uzly
 
@@ -94,24 +94,24 @@ Vstupní uzly jsou primárním prostředkem pro uživatele našeho vizuálního 
 
 | Uzel           |                                                        | Uzel           |                                                        |
 | -------------- | ------------------------------------------------------ | -------------- | ------------------------------------------------------ |
-| Boolean        | \![](<../.gitbook/assets/library - boolean.jpg>)        | Number         | \![](<../.gitbook/assets/library - number.jpg>)         |
-| Řetězec         | \![](<../.gitbook/assets/library - string.jpg>)         | Number Slider  | \![](<../.gitbook/assets/library - number slider.jpg>)  |
-| Directory Path | \![](<../.gitbook/assets/library - directory path.jpg>) | Integer Slider | \![](<../.gitbook/assets/library - integer slider.jpg>) |
-| Cesta k souboru      | \![](<../.gitbook/assets/library - file path.jpg>)      |                |                                                        |
+| Logická hodnota        | ![](<images/library-boolean.jpg>)        | Number         | ![](<images/library-number.jpg>)         |
+| String         | ![](<images/library-string.jpg>)         | Number Slider  | ![](<images/library-number-slider.jpg>)  |
+| Directory Path | ![](<images/library-directory-path.jpg>) | Integer Slider | ![](<images/library-integer-slider.jpg>) |
+| File Path      | ![](<images/library-file-path.jpg>)      |                |                                                        |
 
 #### Uzly Watch a Watch3D
 
 Uzly Watch jsou nezbytné ke správě dat, která prochází vaším vizuálním programem. Výsledek uzlu si můžete zobrazit prostřednictvím **náhledu dat uzlu**, když nad uzel umístíte ukazatel myši.
 
-\![](<../.gitbook/assets/library - node preview.jpg>)
+![](<images/library-node-preview.jpg>)
 
 V uzlu **Watch** je vhodné zachovat náhled zobrazený.
 
-\![](<../.gitbook/assets/library - watch node.jpg>)
+![](<images/library-watch-node.jpg>)
 
 Pomocí uzlu **Watch3D** si můžete zobrazit výsledky geometrie.
 
-\![](<../.gitbook/assets/library - watch3d node.gif>)
+![](<images/library-watch3d-node.gif>)
 
 Oba tyto uzly jsou dostupné v základní knihovně v kategorii View.
 
@@ -125,7 +125,7 @@ Bloky kódu také můžete použít jako zkratku k definování položky Number
 
 Níže je uvedena jednoduchá ukázka (s pokyny) použití bloku kódu ve skriptu.
 
-![](../.gitbook/assets/library-codeblockdemo.gif)
+![](images/library-codeblockdemo.gif)
 
 1. Dvojitým kliknutím vytvořte uzel Code Block.
 2. Zadejte `Circle.ByCenterPointRadius(x,y);`.

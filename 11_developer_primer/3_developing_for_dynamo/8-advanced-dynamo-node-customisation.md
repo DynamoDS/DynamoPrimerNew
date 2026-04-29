@@ -49,7 +49,7 @@ Pro demonstraci možností použití metody `OnLogWarningMessage` naleznete ní�
 
 V tomto příkladu budeme vycházet z vlastního uzlu vytvořeném v předchozí části **Případová studie funkce Zero-Touch – uzel osnovy**; metody pojmenované `RectangularGrid`, která generuje osnovu obdélníků na základě vstupů `xCount` a `yCount`. Otestujeme, zda je vstup neplatný a pak pomocí metody `OnLogWarningMessage` zaprotokolujeme upozornění a zastavíme zpracování.
 
-![OnLogWarningMessage – příklad 1](../../.gitbook/assets/onlogwarningmessage-example-1.png)
+![OnLogWarningMessage – příklad 1](../images/onlogwarningmessage-example-1.png)
 
 **Použití metody `OnLogWarningMessage` k ověření vstupu**
 
@@ -137,7 +137,7 @@ namespace CustomNodes
 
 Pokud vaše metoda vyžaduje seznam bodů, ale uživatel předá prázdný nebo nulový seznam, můžete ho o problému informovat pomocí metody `OnLogWarningMessage`.
 
-![OnLogWarningMessage – příklad 2](../../.gitbook/assets/onlogwarningmessage-example-2.png)
+![OnLogWarningMessage – příklad 2](../images/onlogwarningmessage-example-2.png)
 
 ```
 public static Polygon CreatePolygonFromPoints(List<Point> points)
@@ -164,7 +164,7 @@ Tato zpráva uživatele upozorní, že k vytvoření mnohoúhelníku je třeba 
 
 U uzlu, který zpracovává cesty k souborům, můžete chtít zajistit, že budou povoleny pouze určité typy souborů. Pokud bude zjištěn nepodporovaný typ souboru, bude zaprotokolováno upozornění.
 
-![OnLogWarningMessage – příklad 3](../../.gitbook/assets/onlogwarningmessage-example-3.png)
+![OnLogWarningMessage – příklad 3](../images/onlogwarningmessage-example-3.png)
 
 ```
 public static void ProcessFile(string filePath)
@@ -226,7 +226,7 @@ Níže jsou uvedeny různé scénáře demonstrující použití metody `OnLogIn
 
 V tomto příkladu budeme vycházet z vlastního uzlu vytvořeném v předchozí části **Případová studie funkce Zero-Touch – uzel osnovy**; metody pojmenované `RectangularGrid`, která generuje osnovu obdélníků na základě vstupů `xCount` a `yCount`. Otestujeme, zda je vstup neplatný a pak pomocí metody `OnLogInfoMessage` poskytneme informace po dokončení spuštění uzlu.
 
-![OnLogInfoMessage – příklad 1](../../.gitbook/assets/onloginfomessage-example-1.png)
+![OnLogInfoMessage – příklad 1](../images/onloginfomessage-example-1.png)
 
 **Použití metody `OnLogInfoMessage` k ověření vstupu**
 
@@ -309,7 +309,7 @@ namespace CustomNodes
 
 Pokud vytváříte uzel, který zpracovává seznam bodů, můžete chtít zaznamenat, kolik bodů bylo úspěšně zpracováno. To může být užitečné u velkých datových sad.
 
-![OnLogInfoMessage – příklad 2](../../.gitbook/assets/onloginfomessage-example-2.png)
+![OnLogInfoMessage – příklad 2](../images/onloginfomessage-example-2.png)
 
 ```
 public static List<Point> ProcessPoints(List<Point> points)
@@ -339,7 +339,7 @@ Tato zpráva pomůže uživatelům pochopit výsledek zpracování a potvrdí, �
 
 V některých případech je užitečné potvrdit vstupní parametry, které uzel použil k dokončení akce. Pokud například uzel exportuje data do souboru, můžete zaprotokolováním názvu souboru a cesty uživatele ujistit, že byl použit správný soubor.
 
-![OnLogInfoMessage – příklad 3](../../.gitbook/assets/onloginfomessage-example-3.png)
+![OnLogInfoMessage – příklad 3](../images/onloginfomessage-example-3.png)
 
 ```
 public static void ExportData(string filePath, List<string> data)
@@ -365,7 +365,7 @@ Tato zpráva uživatelům potvrdí, že export proběhl, a zobrazí přesnou ces
 
 V minulosti existovala v aplikaci Dynamo omezení, pokud jde o způsob, jakým mohli autoři balíčků poskytovat dokumentaci ke svým uzlům. Autoři vlastních uzlů mohli pouze zadat krátký popis, který se zobrazí v popisku uzlu, nebo dodat balíček s ukázkovými grafy s velkým množstvím poznámek.
 
-![Popisek uzlu](../../.gitbook/assets/customnodedocumentation-overloads.png)
+![Popisek uzlu](../images/customnodedocumentation-overloads.png)
 
 ### Nový způsob
 
@@ -399,11 +399,11 @@ Postupujte podle následujících několika kroků, aby se soubory Markdown zobr
 
 Dynamo používá k zobrazení dokumentace uzlů rozšíření pohledu Prohlížeče dokumentace. Chcete-li otevřít dokumentaci uzlů, klikněte pravým tlačítkem na uzel a vyberte nápovědu. Tím se otevře Prohlížeč dokumentace a zobrazí se soubor Markdown přiřazený k danému uzlu, pokud je k dispozici.
 
-![Prohlížeč dokumentace](../../.gitbook/assets/customnodedocumentation-no-documentation-provided.png)
+![Prohlížeč dokumentace](../images/customnodedocumentation-no-documentation-provided.png)
 
 Dokumentace zobrazená v Prohlížeči dokumentace se skládá ze dvou částí. První je část `Node Info`, která je automaticky generována z informací extrahovaných z uzlu, jako jsou vstupy/výstupy, kategorie uzlu, název/jmenný prostor uzlu a krátký popis uzlů. Druhá část zobrazuje dokumentaci vlastních uzlů, což je soubor Markdown, který je poskytován k dokumentaci uzlu.
 
-![Dokumentace vlastních uzlů](../../.gitbook/assets/customnodedocumentation-custom-node-documentation.png)
+![Dokumentace vlastních uzlů](../images/customnodedocumentation-custom-node-documentation.png)
 
 #### Složka doc balíčku
 
@@ -417,13 +417,13 @@ Tento jmenný prostor by měl být název souboru Markdown pro daný uzel. Např
 
 Ve speciálních případech s přetížením uzlů (uzly se stejným názvem, ale různými vstupy), budete nutné přidat názvy vstupů do `()` za jmenný prostor uzlu. Například vestavěný uzel `Geometry.Translate` má několik přetížení. V tomto případě bychom soubory Markdown pro níže uvedené uzly pojmenovali následujícím způsobem: `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction).md` `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction,distance).md`
 
-![Přetížené uzly](../../.gitbook/assets/customnodedocumentation-overloads.png)
+![Přetížené uzly](../images/customnodedocumentation-overloads.png)
 
 #### Úpravy souborů Markdown při otevření v aplikaci Dynamo
 
 Aby bylo možné soubory dokumentace snadno upravovat, implementuje Prohlížeč dokumentace do otevřeného souboru dokumentace nástroj pro sledování souboru. Díky tomu můžete provádět změny v souboru Markdown, přičemž tyto změny okamžitě uvidíte v aplikaci Dynamo.
 
-![Opakované načítání za provozu](../../.gitbook/assets/customnodedocumentation-hot-reload.gif)
+![Opakované načítání za provozu](../images/customnodedocumentation-hot-reload.gif)
 
 Přidání nových souborů dokumentace lze provést i v případě, kdy je aplikace Dynamo otevřená. Jednoduše přidejte do složky `/doc` nový soubor Markdown s názvem odpovídajícím uzlu, který dokumentuje.
 
@@ -441,9 +441,9 @@ V této příručce se dozvíte, jak přidat ikony do uzlů Zero Touch.
 
 Začněte tím, že vytvoříte projekt knihovny tříd aplikace Visual Studio (.NET Framework) pro své uzly Zero Touch. Pokud projekt ještě nemáte, přečtěte si část **Začínáme**, ve které najdete podrobné pokyny k jeho vytvoření.
 
-![Vytvoření nového projektu aplikace Visual Studio](../../.gitbook/assets/vs-new-project-1.jpg)
+![Vytvoření nového projektu aplikace Visual Studio](../images/vs-new-project-1.jpg)
 
-![Konfigurace nového projektu v aplikaci Visual Studio](../../.gitbook/assets/zerotouchicons-configure-new-project.jpg)
+![Konfigurace nového projektu v aplikaci Visual Studio](../images/zerotouchicons-configure-new-project.jpg)
 
 Ujistěte se, že máte alespoň jeden funkční uzel Zero Touch, protože ikony lze přidávat pouze do existujících uzlů. Pokyny najdete v části **Případová studie funkce Zero-Touch – uzel osnovy**.
 
@@ -475,11 +475,11 @@ Pokud chcete vložit ikony do `.dll`, vytvořte soubor zdrojů:
 
 * Klikněte pravým tlačítkem myši na projekt v nástroji **Solution Explorer**.
 
-![Přidání nové položky](../../.gitbook/assets/zerotouchicons-add-resources-file-1.jpg)
+![Přidání nové položky](../images/zerotouchicons-add-resources-file-1.jpg)
 
 * Přejděte do nabídky **Add > New Item** a vyberte možnost **Resources File**.
 
-![Přidání souboru zdrojů](../../.gitbook/assets/zerotouchicons-add-resources-file-2.jpg)
+![Přidání souboru zdrojů](../images/zerotouchicons-add-resources-file-2.jpg)
 
 * Pojmenujte soubor jako `<ProjectName>Images.resx`. Příklad: `ZeroTouchNodeIconsImages.resx`.
 
@@ -489,7 +489,7 @@ Pokud chcete vložit ikony do `.dll`, vytvořte soubor zdrojů:
 3. **Nastavte možnost Build Action na hodnotu None**
    * Vzhledem k tomu, že tento zdroj budeme vytvářet sami o něco níže, nemusíme ho také vytvářet automaticky.
 
-![Čištění vlastnosti Custom Tool](../../.gitbook/assets/zerotouchicons-custom-tool-property-update.png)
+![Čištění vlastnosti Custom Tool](../images/zerotouchicons-custom-tool-property-update.png)
 
 > _POZNÁMKA: Pokud se nepodaří vymazat pole Custom Tool, Visual Studio převede v názvech zdrojů tečky na podtržítka. Před sestavením ověřte, že názvy zdrojů mají tečky oddělující názvy tříd, nikoli podtržítka._
 
@@ -500,7 +500,7 @@ Pokud chcete vložit ikony do `.dll`, vytvořte soubor zdrojů:
    * Nastavte typ zdroje na **File**
    * Přejděte do umístění souboru obrázku a přidejte ikony uzlu **Large** a **Small**.
 
-![Přidání zdrojů...](../../.gitbook/assets/zerotouchicons-open-resource-editor-update.png)
+![Přidání zdrojů...](../images/zerotouchicons-open-resource-editor-update.png)
 
 > _POZNÁMKA: Uspořádání obrázků do složky **Resource** a dokonce i do podsložek **Large** a **Small** není povinné, ale je to dobrý postup, jak udržovat zdroje dobře uspořádané._
 
@@ -510,26 +510,26 @@ Pokud váš projekt ještě není ve stylu SDK (nutné pro vkládání prostřed
 
 1. V aplikaci Visual Studio nainstalujte rozšíření `.NET Upgrade Assistant` z nabídky **Extensions > Manage Extensions**.
 
-![Nabídka Manage Extensions](../../.gitbook/assets/zerotouchicons-manage-extensions-update.png)
+![Nabídka Manage Extensions](../images/zerotouchicons-manage-extensions-update.png)
 
-![Instalace nástroje .NET Upgrade Assistant](../../.gitbook/assets/zerotouchicons-net-upgrade-assistant.jpg)
+![Instalace nástroje .NET Upgrade Assistant](../images/zerotouchicons-net-upgrade-assistant.jpg)
 
 2. Klikněte pravým tlačítkem myši na projekt v nástroji **Solution Explorer** a vyberte možnost **Upgrade > Convert project to SDK-style**.
 
-![Upgrade projektu](../../.gitbook/assets/zerotouchicons-upgrade-project.jpg)
+![Upgrade projektu](../images/zerotouchicons-upgrade-project.jpg)
 
-![Převod do stylu SDK](../../.gitbook/assets/zerotouchicons-convert-to-sdk-style.jpg)
+![Převod do stylu SDK](../images/zerotouchicons-convert-to-sdk-style.jpg)
 
 3. Počkejte na dokončení převodu.
 
-![Upgrade dokončen](../../.gitbook/assets/zerotouchicons-upgrade-complete.jpg)
+![Upgrade dokončen](../images/zerotouchicons-upgrade-complete.jpg)
 
 #### Krok 6: Přidejte skript po sestavení pro vložení zdrojů
 
 1. Uvolněte projekt:
    * Klikněte pravým tlačítkem myši na projekt v nástroji **Solution Explorer** a vyberte možnost **Unload Project**.
 
-![Uvolnění projektu](../../.gitbook/assets/zerotouchicons-unload-project.jpg)
+![Uvolnění projektu](../images/zerotouchicons-unload-project.jpg)
 
 2. Upravte soubor `.csproj`:
    * Mezi `</ItemGroup>` a `</Project>` přidejte následující prvek `<Target>`:
@@ -550,26 +550,26 @@ Pokud váš projekt ještě není ve stylu SDK (nutné pro vkládání prostřed
 	</Target>
 ```
 
-![Přidání kódu po sestavení](../../.gitbook/assets/zerotouchicons-after-build.jpg)
+![Přidání kódu po sestavení](../images/zerotouchicons-after-build.jpg)
 
 1. Nahraďte všechny instance `ZeroTouchNodeIcons` názvem projektu.
 2. Znovu načtěte projekt:
    * Klikněte pravým tlačítkem myši na uvolněný projekt a vyberte možnost **Reload Project**.
 
-![Opakované načtení projektu](../../.gitbook/assets/zerotouchicons-reload-project.jpg)
+![Opakované načtení projektu](../images/zerotouchicons-reload-project.jpg)
 
 #### Krok 7: Sestavte svou knihovnu .dll a načtěte ji do aplikace Dynamo
 
 1. Sestavení projektu:
    * Po přidání skriptu po sestavení sestavte projekt v aplikaci Visual Studio.
 
-![Sestavení řešení](../../.gitbook/assets/zerotouchicons-build-solution.jpg)
+![Sestavení řešení](../images/zerotouchicons-build-solution.jpg)
 
 2. Kontrola výstupních souborů:
    * Ujistěte se, že vaše knihovny `.dll` a `.customization.dll` jsou ve složce `bin`.
 3. Přidejte knihovnu `.dll` do aplikace Dynamo:
    * V aplikaci Dynamo importujte svou knihovnu .dll pomocí tlačítka Importovat knihovnu.
 
-![Tlačítko Importovat knihovnu](../../.gitbook/assets/zerotouchicons-icon-in-dynamo.jpg)
+![Tlačítko Importovat knihovnu](../images/zerotouchicons-icon-in-dynamo.jpg)
 
 4. Vaše vlastní uzly by se nyní měly zobrazit s příslušnými ikonami.

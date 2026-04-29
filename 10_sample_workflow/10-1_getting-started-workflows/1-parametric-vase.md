@@ -12,7 +12,7 @@ Tento pracovní postup vás naučí, jak:
 * Vytvářet a upravovat geometrické prvky pomocí uzlů.
 * Vizualizovat výsledky návrhu v reálném čase.
 
-![](../../.gitbook/assets/vase1.gif)
+![](../images/vase1.gif)
 
 ## Definování cílů
 
@@ -22,7 +22,7 @@ Než začneme pracovat v aplikaci Dynamo, navrhněme koncepčně naši vázu.
 
 Podobnou metodiku použijeme k definování naší vázy. Vytvoříme 4 kružnice o různých poloměrech v různých výškách a poté vytvoříme povrch šablonováním těchto kružnic.
 
-![](../../.gitbook/assets/vase2.png)
+![](../images/vase2.png)
 
 ## Začínáme
 
@@ -34,7 +34,7 @@ Podobnou metodiku použijeme k definování naší vázy. Vytvoříme 4 kružn
 
 Potřebujeme uzly, které představují posloupnost akcí, které budou aplikací Dynamo provedeny. Protože víme, že se pokoušíme vytvořit kružnici, začneme vyhledáním uzlu, který to dělá. Pomocí **vyhledávacího pole** nebo procházením **knihovny** vyhledejte uzel **Circle.ByCenterPointRadius** a přidejte jej do pracovního prostoru.
 
-![](../../.gitbook/assets/vase8.png)
+![](../images/vase8.png)
 
 > 1. Vyhledejte > Circle.
 > 2. Vyberte > ByCenterPointRadius.
@@ -42,25 +42,25 @@ Potřebujeme uzly, které představují posloupnost akcí, které budou aplikac�
 
 Podívejme se na tento uzel blíže. Na levé straně jsou vstupy uzlu (_centerPoint_ a _radius_) a na pravé straně je výstup uzlu (circle). Všimněte si, že vstupy jsou označeny světle modrou čárou. To znamená, že vstup má výchozí hodnotu. Chcete-li získat další informace o vstupu, přesuňte ukazatel myši nad jeho název. Vstup _radius_ vyžaduje dvojitý vstup a jeho výchozí hodnota je 1.
 
-![](../../.gitbook/assets/vase10.png)
+![](../images/vase10.png)
 
 Ponecháme výchozí hodnotu _centerPoint_, ale přidáme uzel **Number Slider**, který nám umožní nastavit poloměr. Stejně jako u uzlu **Circle.ByCenterPointRadius** použijte knihovnu k vyhledání uzlu **Number Slider** a přidejte jej do grafu.
 
 Tento uzel se trochu liší od předchozího uzlu, protože obsahuje posuvník. Pomocí rozhraní můžete změnit výstupní hodnotu posuvníku.
 
-\![](<../../.gitbook/assets/vase13 (1).gif>)
+![](<../images/vase13.gif>)
 
 Posuvník lze konfigurovat pomocí rozevíracího tlačítka v levé části uzlu. Omezme posuvník na maximální hodnotu 15.
 
-![](../../.gitbook/assets/vase11.png)
+![](../images/vase11.png)
 
 Nyní posuvník umístíme nalevo od uzlu **Circle.ByCenterPointRadius** a propojíme oba uzly výběrem výstupu **Number Slider** a jeho připojením ke vstupu Radius.
 
-![](../../.gitbook/assets/vase12.png)
+![](../images/vase12.png)
 
 Dále změňte název posuvníku čísla: dvakrát klikněte na název uzlu a zadejte Top Radius (Horní poloměr).
 
-![](../../.gitbook/assets/vase14.png)
+![](../images/vase14.png)
 
 ## Další postup
 
@@ -70,7 +70,7 @@ Pokračujte v přidávání uzlů a jejich připojením k naší logice, abych
 
 Zkopírujte tyto uzly čtyřikrát, aby kružnice definovaly povrch, a změňte názvy posuvníku čísel, jak je znázorněno níže.
 
-\![](<../../.gitbook/assets/vase4 (1).png>)
+![](<../images/vase4.png>)
 
 > 1. Kružnice jsou vytvořeny pomocí středu a poloměru.
 
@@ -78,11 +78,11 @@ Zkopírujte tyto uzly čtyřikrát, aby kružnice definovaly povrch, a změňte 
 
 Chybí nám klíčový parametr naší vázy: její výška. Abychom mohli ovládat výšku vázy, vytvoříme další posuvník čísel. Přidáme také uzel **Code Block**. Bloky kódu umožňují do pracovního postupu přidat vlastní fragmenty kódu. Pomocí bloku kódu vynásobíme posuvník výšky různými koeficienty, abychom mohli umístit kružnice podél výšky vázy.
 
-\![](<../../.gitbook/assets/vase15 (1).png>)
+![](<../images/vase15.png>)
 
 Poté pomocí uzlu **Geometry.Translate** umístíme kružnice do požadované výšky. Protože chceme kružnice distribuovat podél výšky vázy, použijeme bloky kódu k vynásobení parametru výšky koeficientem.
 
-![](../../.gitbook/assets/vase5.png)
+![](../images/vase5.png)
 
 > 2\. Kružnice jsou převedeny (posunuty) pomocí proměnné v ose Z.
 
@@ -92,7 +92,7 @@ Abychom vytvořili povrch pomocí uzlu **Surface.ByLoft**, je nutné spojit vše
 
 Vypněte také náhled v ostatních uzlech, aby se zobrazilo pouze zobrazení uzlu Surface.ByLoft.
 
-![](../../.gitbook/assets/vase6.png)
+![](../images/vase6.png)
 
 > 3\. Povrch je vytvořen šablonováním převedených kružnic.
 
@@ -100,6 +100,6 @@ Vypněte také náhled v ostatních uzlech, aby se zobrazilo pouze zobrazení u
 
 Náš pracovní postup je připraven! Nyní můžete pomocí **posuvníků čísel** definovaných ve skriptu vytvářet různé návrhy váz.
 
-![](../../.gitbook/assets/vase1.gif)
+![](../images/vase1.gif)
 
-![](../../.gitbook/assets/vase7.png)
+![](../images/vase7.png)

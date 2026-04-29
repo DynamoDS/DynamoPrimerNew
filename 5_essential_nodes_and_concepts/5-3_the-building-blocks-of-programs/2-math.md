@@ -8,10 +8,10 @@ Operátory jsou sada komponent, které používají algebraické funkce se dvěm
 
 | Ikona                                                | Název (Syntaxe)     | Vstupy                     | Výstupy      |
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../../.gitbook/assets/addition (1).jpg>)       | Součet (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| \![](<../../.gitbook/assets/Subtraction (1).jpg>)    | Rozdíl (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| \![](<../../.gitbook/assets/Multiplication (2).jpg>) | Násobení ( ***** ) | var[]...[], var[]...[] | var[]...[] |
-| \![](<../../.gitbook/assets/Division (2).jpg>)       | Dělení (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/addition.jpg>)       | Součet (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/Subtraction.jpg>)    | Rozdíl (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/Multiplication.jpg>) | Násobení ( ***** ) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/Division.jpg>)       | Dělení (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Cvičení: Vzorec zlaté spirály
 
@@ -29,7 +29,7 @@ Kombinací operátorů a proměnných vytvořte složitější vztah prostředni
 
 **Number Sequence:** Definuje posloupnost čísel na základě tří vstupů: _start, amount_ a _step_.
 
-\![](<../../.gitbook/assets/math - part I-01.jpg>)
+\![](<../images/math - part I-01.jpg>)
 
 2\. Výše uvedený krok vytvořil seznam čísel definujících parametrickou doménu. Dále vytvořte skupinu uzlů představující rovnici zlaté spirály.
 
@@ -45,7 +45,7 @@ $$
 
 Obrázek níže znázorňuje zlatou spirálu ve vizuální programové podobě. Při procházení skupiny uzlů se snažte věnovat pozornost souvislosti mezi vizuálním programem a psanou rovnicí.
 
-\![](<../../.gitbook/assets/math - part I-02.jpg>)
+\![](<../images/math - part I-02.jpg>)
 
 > a. **Number Slider:** Přidejte na kreslicí plochu dva posuvníky. Tyto posuvníky budou představovat proměnné _a_ a _b_ parametrické rovnice. Představují konstantu, která je flexibilní, nebo parametry, které lze upravit podle požadovaného výsledku.
 >
@@ -65,11 +65,11 @@ Většina uzlů z předchozího kroku bude fungovat dobře, ale jedná se o pr
 
 **Point.ByCoordinates:** Spojte horní uzel násobení se vstupem _x_ a dolní část se vstupem _y_. Nyní vidíte parametrickou spirálu bodů na obrazovce.
 
-\![](<../../.gitbook/assets/math - part II-01.gif>)
+\![](<../images/math - part II-01.gif>)
 
 **Polycurve.ByPoints**: Spojte uzel **Point.ByCoordinates** z předchozího kroku se vstupem _points_. Možnost _connectLastToFirst_ můžeme nechat bez vstupu, protože neděláme uzavřený oblouk. Tím se vytvoří spirála, která prochází každým bodem definovaným v předchozím kroku.
 
-\![](<../../.gitbook/assets/math - part II-02.jpg>)
+\![](<../images/math - part II-02.jpg>)
 
 Nyní jsme dokončili Fibonacciho spirálu. Pokračujme dvěma různými cvičeními, které pojmenujeme Loděnka a Slunečnice. Jedná se o abstrakce přírodních systémů, ale dvě různá použití Fibonacciho spirály budou dobře zastoupena.
 
@@ -77,13 +77,13 @@ Nyní jsme dokončili Fibonacciho spirálu. Pokračujme dvěma různými cvičen
 
 **Circle.ByCenterPointRadius:** Zde použijeme kruhový uzel se stejnými vstupy jako v předchozím kroku. Výchozí hodnota poloměru je _1.0_, takže je vidět okamžitý výstup kružnic. Je okamžitě vidět, jak se body dále vzdalují od počátku.
 
-\![](<../../.gitbook/assets/math - part III-01.jpg>)
+\![](<../images/math - part III-01.jpg>)
 
 **Number Sequence:** Toto je původní pole '_t_'. Jeho připojením k hodnotě poloměru v uzlu **Circle.ByCenterPointRadius** se středy kružnic stále vzdalují od počátku, ale poloměry kružnic se zvětšují, což vytváří zábavný Fibonacciho kruhový graf.
 
 Bonusové body, pokud to vytvoříte ve 3D.
 
-\![](<../../.gitbook/assets/math - part III-02.gif>)
+\![](<../images/math - part III-02.gif>)
 
 ### Část IV: Od loděnky k fylotaxii
 
@@ -91,15 +91,15 @@ Nyní, když jsme vytvořili kruhovou ulitu loděnky, přejděme k parametrick�
 
 Jako výchozí bod použijeme stejný krok z předchozího cvičení: Vytvoření spirálového pole bodů pomocí uzlu **Point.ByCoordinates**.
 
-<figure><img src="../../.gitbook/assets/math - part IV-01.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/math - part IV-01.jpg" alt=""><figcaption></figcaption></figure>
 
 Dále postupujte podle těchto krátkých kroků a vygenerujte řadu spirál s různým natočením.
 
-\![](<../../.gitbook/assets/math - part IV-02.jpg>)
+\![](<../images/math - part IV-02.jpg>)
 
 > a. **Geometry.Rotate:** Existuje několik možností **Geometry.Rotate**. Ujistěte se, že jste vybrali uzel se vstupy _geometry_, _basePlane_ a _degrees_. Připojte položku **Point.ByCoordinates** ke vstupu geometrie. Klikněte pravým tlačítkem na tento uzel a ujistěte se, že je vázání nastaveno na možnost Kartézský součin.
 >
-> <img src="../../.gitbook/assets/math - part IV-03 cross product.jpg" alt="" data-size="original">
+> <img src="../images/math - part IV-03 cross product.jpg" alt="" data-size="original">
 >
 > b. **Plane.XY:** Připojte se ke vstupu _basePlane_. Budeme se otáčet kolem počátku, což je stejné umístění jako základna spirály.
 >
@@ -111,8 +111,8 @@ Náš výstup se začíná podobat víru. Upravíme některé parametry položky
 
 Změňte velikost kroku uzlu **Number Range** z _120.0_ na _36.0_. Všimněte si, že tím vznikají další otáčení, a proto získáváme hustší osnovu.
 
-\![](<../../.gitbook/assets/math - part IV-04.jpg>)
+\![](<../images/math - part IV-04.jpg>)
 
 Změňte velikost kroku uzlu **Number Range** z _36.0_ na _3.6_. Tím získáme mnohem hustší osnovu a směr spirály je nejasný. Dámy a pánové, vytvořili jsme slunečnici.
 
-\![](<../../.gitbook/assets/math - part IV-05.jpg>)
+\![](<../images/math - part IV-05.jpg>)

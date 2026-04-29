@@ -68,7 +68,7 @@ Následuje seznam změn ve verzi 2.0 spolu s vysvětlením:
 
 ## 1\. Zjednodušená syntaxe list@level syntax.
 
-Nová syntaxe pro list@level používá `list@L1` místo `list@-1` ![](../../.gitbook/assets/lang2_1.png)
+Nová syntaxe pro list@level používá `list@L1` místo `list@-1` ![](../images/lang2_1.png)
 
 ## 2\. Přetížené funkce s parametry, které se liší pouze úrovní, jsou neplatné.
 
@@ -85,7 +85,7 @@ BoundingBox BoundingBox.ByGeometry(geometry: Geometry) {...}
 BoundingBox BoundingBox.ByGeometry(geometry: Geometry[]) {...}
 ```
 
-Pokud uživatel přetáhl první uzel na kreslicí plochu a připojil seznam geometrií, očekávat by, že se spustí replikace, ale k tomu nikdy nedošlo, protože za běhu by místo toho bylo voláno druhé přetížení, jak je znázorněno na obrázku: ![](../../.gitbook/assets/lang2_2.png)
+Pokud uživatel přetáhl první uzel na kreslicí plochu a připojil seznam geometrií, očekávat by, že se spustí replikace, ale k tomu nikdy nedošlo, protože za běhu by místo toho bylo voláno druhé přetížení, jak je znázorněno na obrázku: ![](../images/lang2_2.png)
 
 Ve verzi 2.0 jsme z tohoto důvodu zakázali přetížené funkce, které se liší pouze kardinalitou parametrů. To znamená, že u přetížených funkcí, které mají stejný počet a typy parametrů, ale mají jeden nebo více parametrů, které se liší pouze úrovní, vítězí vždy přetížení, které je definováno jako první, zatímco ostatní jsou překladačem vyřazena. Hlavní výhodou tohoto zjednodušení je zjednodušení logiky rozlišení metody díky rychlé cestě k výběru kandidátů na funkce.
 
@@ -105,7 +105,7 @@ V následujícím příkladu jsou definována dvě přetížení funkce `foo`. 
 
 Ve verzi 2.0 je to vždy první definovaná metoda, která je vybrána před ostatními. Kdo dřív přijde, ten dřív mele.
 
-![](../../.gitbook/assets/lang2_3.png)
+![](../images/lang2_3.png)
 
 Pro každý z následujících případů bude použito první definované přetížení. Všimněte si, že toto chování je založeno čistě na pořadí definování funkcí, nikoli na úrovni parametrů, i když se u uživatelem definovaných uzlů a uzlů Zero Touch doporučuje upřednostňovat metody s parametry s vyšší úrovní.
 
@@ -137,7 +137,7 @@ Pokud by byl například do uzlu `Arc.CenterPoint` předán vstup seznamu s ná
 
 ### Dynamo 1.x: V rámci kontroly rozlišení metody je testován pouze první prvek seznamu vstupů
 
-![](../../.gitbook/assets/lang2_4.png)
+![](../images/lang2_4.png)
 
 ```
 x = [arc, line];
@@ -164,7 +164,7 @@ Ve verzi 2.0 se stane toto:
 
 Tento příklad by dříve fungoval ve verzi 1.x, protože graf by se zkompiloval do `point.X;` a našel by vlastnost `X` u objektu point. Nyní ve verzi 2.0 selhává, protože zkompilovaný kód `Vector.X(point)` očekává pouze typ `Vector`:
 
-![](../../.gitbook/assets/lang2_5.png)
+![](../images/lang2_5.png)
 
 ### Výhody:
 
@@ -176,7 +176,7 @@ Tento příklad by dříve fungoval ve verzi 1.x, protože graf by se zkompilova
 
 ### Upozornění: Nevyřešené nejasnosti s přetíženými metodami
 
-Vzhledem k tomu, že Dynamo obecně podporuje přetížení funkcí, může stále docházet k nejasnostem, pokud existuje jiná přetížená funkce se stejným počtem parametrů. Pokud například v následujícím grafu připojíme číselnou hodnotu ke vstupu `direction` uzlu `Curve.Extrude` a vektor ke vstupu `distance` uzlu `Curve.Extrude`, budou oba uzly nadále fungovat, což je neočekávané. V tomto případě, i když se uzly zkompilují do statických metod, modul stále nedokáže zjistit rozdíl za běhu a vybere jednu z nich v závislosti na typu vstupu. ![](../../.gitbook/assets/lang2_6.png)
+Vzhledem k tomu, že Dynamo obecně podporuje přetížení funkcí, může stále docházet k nejasnostem, pokud existuje jiná přetížená funkce se stejným počtem parametrů. Pokud například v následujícím grafu připojíme číselnou hodnotu ke vstupu `direction` uzlu `Curve.Extrude` a vektor ke vstupu `distance` uzlu `Curve.Extrude`, budou oba uzly nadále fungovat, což je neočekávané. V tomto případě, i když se uzly zkompilují do statických metod, modul stále nedokáže zjistit rozdíl za běhu a vybere jednu z nich v závislosti na typu vstupu. ![](../images/lang2_6.png)
 
 ### Vyřešené problémy:
 
@@ -186,11 +186,11 @@ Přechod na sémantiku statických metod přinesl následující vedlejší efek
 
 Podívejme se na příklad z uzlů `TSpline` v `ProtoGeometry` (všimněte si, že `TSplineTopology` dědí ze základního typu `Topology`): Uzel `Topology.Edges`, který byl dříve zkompilován do metody instance `object.Edges`, je nyní zkompilován do statické metody `Topology.Edges(object)`. Předchozí volání by se polymorfně přeložilo na odvozenou metodu třídy `TsplineTopology.Edges` po odeslání metody přes typ objektu za běhu.
 
-![](../../.gitbook/assets/lang2_7.png)
+![](../images/lang2_7.png)
 
 Kdežto nové statické chování bylo nuceno volat metodu základní třídy `Topology.Edges`, V důsledku toho tento uzel vrátil základní třídu, objekty `Edge` místo odvozených objektů třídy typu `TSplineEdge`.
 
-![](../../.gitbook/assets/lang2_8.png)
+![](../images/lang2_8.png)
 
 V důsledku toho došlo k regresi, protože navazující uzly `TSpline`, které očekávaly `TSplineEdges`, začaly selhávat.
 
@@ -198,13 +198,13 @@ Problém byl vyřešen přidáním kontroly za běhu do logiky odesílání meto
 
 **Nové polymorfní chování ve verzi 2.0:**
 
-![](../../.gitbook/assets/lang2_9.png)
+![](../images/lang2_9.png)
 
 V tomto případě, protože první prvek `a` je `TSpline`, je za běhu vyvolána odvozená metoda `TSplineTopology.Edges`. V důsledku toho vrátí `null` pro základní typ `Topology` pro vstup `b`.
 
 Ve druhém případě, protože prvním prvkem je obecný typ `Topology` na vstupu `b`, je volána základní metoda `Topology.Edges`. Protože metoda `Topology.Edges` přijímá jako vstup také odvozený typ `TSplineTopology`, `a` jako vstup vrátí `Edges`pro oba vstupy, `a` i `b`.
 
-![](../../.gitbook/assets/lang2_10.png)
+![](../images/lang2_10.png)
 
 **2\. Regrese z vytváření nadbytečných vnějších seznamů**
 
@@ -248,13 +248,13 @@ p = Point.ByCoordinates(x<1>, y<2>, z<3>); // cross-lacing
 
 ### Dynamo 1.x: 3D seznam bodů
 
-![](../../.gitbook/assets/lang2_11.png)
+![](../images/lang2_11.png)
 
 Ve verzi 2.0 přítomnost vodítek replikace pro každý z argumentů s jednou hodnotou `y` a `z` nezpůsobí povýšení, jehož výsledkem je seznam, který má stejnou dimenzi jako vstupní 1D seznam pro `x`.
 
 ### Dynamo 2.0: 1D seznam bodů
 
-![](../../.gitbook/assets/lang2_12.png)
+![](../images/lang2_12.png)
 
 Touto změnou jazyka byla také vyřešena výše zmíněná regrese způsobená kompilací statické metody s generováním nadbytečných vnějších seznamů.
 
@@ -268,7 +268,7 @@ vytvořilo v aplikaci Dynamo verze 1.x 3D seznam bodů. K tomu došlo kvůli p
 
 ### Dynamo 1.x: Povýšení argumentu na seznam při použití vodítek replikace
 
-![](../../.gitbook/assets/lang2_13.png)
+![](../images/lang2_13.png)
 
 Ve verzi 2.0 jsme zakázali povýšení argumentů s jednou hodnotou na seznamy při použití s vodítky replikace nebo vázáním. Nyní tedy volání:
 
@@ -280,7 +280,7 @@ jednoduše vrátí 2D seznam, protože povrch není povýšen.
 
 ### Dynamo 2.0.x: Zakázání povýšení argumentu s jednou hodnotou na seznam při použití vodítek replikace
 
-![](../../.gitbook/assets/lang2_14.png)
+![](../images/lang2_14.png)
 
 Tato změna nyní odstraňuje přidání nadbytečné úrovně seznamu a také řeší regresi způsobenou přechodem na kompilaci statické metody.
 
@@ -295,7 +295,7 @@ Tato změna nyní odstraňuje přidání nadbytečné úrovně seznamu a také �
 * Metody instance a statické metody jsou konzistentní (což opravuje problémy se sémantikou statické metody).
 * Uzly se vstupy a výchozími argumenty se chovají konzistentně (viz níže).
 
-![](../../.gitbook/assets/lang2_15.png)
+![](../images/lang2_15.png)
 
 ## 5\. Proměnné jsou v uzlech bloku kódu neměnné, aby se zabránilo asociativní aktualizaci.
 
@@ -336,7 +336,7 @@ a = 4;         // b = 10 or b = 7?
 
 Protože v tomto příkladu geometrie závisí krychle `b` sama na sobě i na válci `a`, měl by pohyb posuvníku způsobit, že se otvor posune podél kvádru, nebo by se měl při každé aktualizaci polohy posuvníku vytvořit kumulativní efekt vyhloubení několika otvorů podél jeho dráhy?
 
-![](../../.gitbook/assets/lang2_16.gif)
+![](../images/lang2_16.gif)
 
 **3\. Aktualizace vlastností proměnných:**
 
@@ -359,7 +359,7 @@ Na základě zkušeností jsme zjistili, že asociativní aktualizace se v uzle
 
 Pokud ji vůbec někteří uživatelé použili, s největší pravděpodobností ji použili nevědomky a způsobili tím více škody než užitku. Proto jsme se rozhodli ve verzi 2.0 skrýt asociativitu při použití uzlů bloků kódu tím, že jsme proměnné učinili neměnnými, zatímco asociativní aktualizaci jsme nadále zachovali pouze jako nativní funkci modulu DS. Jedná se o další změnu provedenou s myšlenkou zjednodušit uživatelům skriptování.
 
-**Asociativní aktualizace je v uzlu bloku kódu zakázána, aby se zabránilo redefinici proměnné:** ![](../../.gitbook/assets/lang2_17.png)
+**Asociativní aktualizace je v uzlu bloku kódu zakázána, aby se zabránilo redefinici proměnné:** ![](../images/lang2_17.png)
 
 **Indexování seznamu je v blocích kódu nadále povoleno.**
 
@@ -367,7 +367,7 @@ Byla vytvořena výjimka pro indexování seznamu, které je ve verzi 2.0 stále
 
 V následujícím příkladu vidíme, že seznam `a` je inicializován, ale později může být přepsán přiřazením operátoru indexu, a že všechny proměnné závislé na `a` by se aktualizovaly asociativně, jak je vidět na hodnotě `c`. Také náhled uzlu zobrazuje aktualizované hodnoty `a` po předefinování jednoho nebo více prvků.
 
-![](../../.gitbook/assets/lang2_18.png)
+![](../images/lang2_18.png)
 
 ## 6\. Proměnné v imperativních blocích jsou místní pro obor imperativního bloku.
 
@@ -483,11 +483,11 @@ dict = {<key> : <value>, …};
 
 formátu dvojice klíč-hodnota, kde je pro `<key>` povolen pouze řetězec a více dvojic klíč-hodnota je odděleno čárkami.
 
-![](../../.gitbook/assets/lang2_19.png)
+![](../images/lang2_19.png)
 
 Metodu `Dictionary.ByKeysValues` Zero Touch lze použít jako univerzálnější způsob inicializace slovníku předáním seznamu klíčů a hodnot, který má k dispozici všechny funkce a možnosti metod Zero Touch, jako jsou vodítka replikace atd.
 
-![](../../.gitbook/assets/lang2_20.png)
+![](../images/lang2_20.png)
 
 ### Proč jsme pro syntaxi inicializace slovníku nepoužili libovolné výrazy?
 
@@ -507,21 +507,21 @@ V budoucnu bychom _mohli_ rozšířit klíče slovníku tak, aby podporovaly li
 
 **1\. Uzel Zero Touch vracející slovník .NET je vrácen jako slovník Dynamo.**
 
-**Uvažujme následující metodu Zero Touch jazyka C#, která vrací IDictionary:** ![](../../.gitbook/assets/lang2_21.png)
+**Uvažujme následující metodu Zero Touch jazyka C#, která vrací IDictionary:** ![](../images/lang2_21.png)
 
-**Odpovídající návratová hodnota uzlu Zero Touch je převedena na slovník Dynamo:** ![](../../.gitbook/assets/lang2_22.png)
+**Odpovídající návratová hodnota uzlu Zero Touch je převedena na slovník Dynamo:** ![](../images/lang2_22.png)
 
 **2\. Uzly vracející více hodnot jsou zobrazeny jako slovníky.**
 
-**Uzel Zero Touch vracející IDictionary s atributem MultiReturn vrací slovník Dynamo:** ![](../../.gitbook/assets/lang2_23.png)
+**Uzel Zero Touch vracející IDictionary s atributem MultiReturn vrací slovník Dynamo:** ![](../images/lang2_23.png)
 
-![](../../.gitbook/assets/lang2_24.png)
+![](../images/lang2_24.png)
 
 **3\. Slovník Dynamo je možné předat jako vstup do uzlu Zero Touch, který přijímá slovník .NET.**
 
-**Metoda Zero Touch s parametrem IDictionary:** ![](../../.gitbook/assets/lang2_25.png)
+**Metoda Zero Touch s parametrem IDictionary:** ![](../images/lang2_25.png)
 
-**Uzel Zero Touch přijímá jako vstup slovník Dynamo:** ![](../../.gitbook/assets/lang2_26.png)
+**Uzel Zero Touch přijímá jako vstup slovník Dynamo:** ![](../images/lang2_26.png)
 
 ### Náhled slovníku v uzlech vracejících více hodnot
 
@@ -529,4 +529,4 @@ Slovníky jsou neuspořádané dvojice klíč-hodnota. V souladu s touto myšlen
 
 Udělali jsme však výjimku pro uzly vracející více hodnot, které mají definován atribut `MultiReturnAttribute`. V následujícím příkladu je uzel `DateTime.Components` uzel vracející více hodnot a náhled uzlu odráží jeho dvojice klíč-hodnota tak, aby byly ve stejném pořadí jako výstupní porty uzlu, což je také pořadí, ve kterém jsou výstupy zadány na základě atributu `MultiReturnAttribute` v definici uzlu.
 
-Všimněte si také, že náhledy bloků kódu nejsou na rozdíl od uzlu uživatelského rozhraní seřazeny, protože informace o výstupním portu (ve formě atributu multireturn) pro uzel bloku kódu neexistují: ![](../../.gitbook/assets/lang2_27.png)
+Všimněte si také, že náhledy bloků kódu nejsou na rozdíl od uzlu uživatelského rozhraní seřazeny, protože informace o výstupním portu (ve formě atributu multireturn) pro uzel bloku kódu neexistují: ![](../images/lang2_27.png)

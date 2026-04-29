@@ -2,7 +2,7 @@
 
 Platforma Dynamo je navržena tak, aby se přispěvateli mohli stát všichni uživatelé, bez ohledu na úroveň jejich zkušeností. Existuje několik možností vývoje, které se zaměřují na různé schopnosti a úrovně dovedností, přičemž každá má své silné a slabé stránky v závislosti na cíli. Níže uvádíme různé možnosti a způsob, jak si vybrat jednu z nich.
 
-![Tři vývojová prostředí](../../.gitbook/assets/developing-for-dynamo.png)
+![Tři vývojová prostředí](../images/developing-for-dynamo.png)
 
 > Tři vývojová prostředí: Visual Studio, Editor jazyka Python a Blok kódů s jazykem DesignScript
 
@@ -22,7 +22,7 @@ Tyto uzly umožňují nejvyšší stupeň přizpůsobení. Touto metodou je sest
 
 V následujícím pojednání je jako vývojové prostředí pro uzly Zero-Touch a NodeModel použita aplikace Visual Studio.
 
-![Rozhraní aplikace Visual Studio](../../.gitbook/assets/vs-devenv.jpg)
+![Rozhraní aplikace Visual Studio](../images/vs-devenv.jpg)
 
 > Rozhraní aplikace Visual Studio s projektem, který budeme vyvíjet.
 
@@ -42,7 +42,7 @@ Ačkoli tyto procesy existují v pracovním prostoru vizuálního programován�
 
 Vývoj v pracovním prostoru Dynamo představuje výkonný nástroj pro získání okamžité zpětné vazby.
 
-![Vývoj v pracovním prostoru aplikace Dynamo pomocí uzlu jazyka Python](../../.gitbook/assets/python-example.jpg)
+![Vývoj v pracovním prostoru aplikace Dynamo pomocí uzlu jazyka Python](../images/python-example.jpg)
 
 > Vývoj v pracovním prostoru aplikace Dynamo pomocí uzlu jazyka Python
 
@@ -54,7 +54,7 @@ Možnosti vývoje aplikace Dynamo byly navrženy tak, aby řešily složitost po
 
 Toto jsou přímé možnosti pro psaní kódu ve vizuálním programovacím prostředí aplikace Dynamo. Pracovní prostor vizuálního programování aplikace Dynamo poskytuje přístup k jazyku Python a jazyku DesignScript a umožňuje zahrnout více uzlů do vlastního uzlu.
 
-![Blok kódu, skript jazyka Python a vlastní uzel](../../.gitbook/assets/Development-Icons.png)
+![Blok kódu, skript jazyka Python a vlastní uzel](../images/Development-Icons.png)
 
 Pomocí těchto metod můžeme:
 
@@ -66,7 +66,7 @@ Pomocí těchto metod můžeme:
 
 Zero-Touch označuje jednoduchou metodu importu knihoven C# pomocí najetí kurzoru a kliknutí. Aplikace Dynamo přečte veřejné metody knihovny `.dll` a převede je na uzly aplikace Dynamo. Pomocí funkce Zero-Touch můžete vyvíjet své vlastní uzly a balíčky.
 
-![Uzly Zero-Touch](../../.gitbook/assets/ZTImport.png)
+![Uzly Zero-Touch](../images/ZTImport.png)
 
 Pomocí této metody můžeme:
 
@@ -78,7 +78,7 @@ Pomocí této metody můžeme:
 
 Tyto uzly jsou krokem hlouběji do struktury aplikace Dynamo. Jsou založeny na třídě `NodeModel` a napsány v jazyce C#. Tato metoda sice poskytuje největší flexibilitu a výkon, ale většina aspektů uzlu musí být explicitně definována a funkce musí být umístěny v samostatné sestavě.
 
-![Uzly odvozené z uzlů NodeModel](../../.gitbook/assets/Development-Icons-NodeModel.png)
+![Uzly odvozené z uzlů NodeModel](../images/Development-Icons-NodeModel.png)
 
 Pomocí této metody můžeme:
 
@@ -93,13 +93,13 @@ Protože je aplikace Dynamo pravidelně aktualizována, mohou být provedeny zm�
 
 Změny rozhraní API jsou sledovány na [stránce Wiki aplikace Dynamo na GitHubu](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). Sledovány jsou změny v jádru aplikace Dynamo, knihovnách a pracovních prostorech.
 
-![Dokument změn rozhraní API aplikace Dynamo](../../.gitbook/assets/api-changes.png)
+![Dokument změn rozhraní API aplikace Dynamo](../images/api-changes.png)
 
 Příkladem nadcházející významné změny je přechod z formátu XML na formátu souboru JSON ve verzi 2.0. Uzly odvozené z uzlu NodeModel nyní potřebují [konstruktor JSON](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node), jinak se neotevřou v aplikaci Dynamo 2.0.
 
 Dokumentace rozhraní API aplikace Dynamo aktuálně pokrývá hlavní funkce: [http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI)
 
-![Dokumentace k rozhraní API](../../.gitbook/assets/api-docs.jpg)
+![Dokumentace k rozhraní API](../images/api-docs.jpg)
 
 ### Oprávnění k distribuci binárních souborů v balíčku <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 

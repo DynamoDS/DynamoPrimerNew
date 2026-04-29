@@ -1,6 +1,6 @@
 # Propojení s aplikací Revit
 
-\![](<../.gitbook/assets/revit connection link.jpg>)
+\![](<images/revit connection link.jpg>)
 
 Modul Dynamo pro aplikaci Revit rozšiřuje informační model budovy o data a logiku grafického editoru algoritmů. Jeho flexibilita spolu s robustní databázi aplikace Revit umožňují pracovat na BIM inovativním způsobem.
 
@@ -23,7 +23,7 @@ Protože se aplikace Revit i aplikace Dynamo neustále vyvíjejí, může dojí
 
 ### Historie aplikace Dynamo
 
-![Historie](../.gitbook/assets/earlyScreenshot.jpg)
+![Historie](images/earlyScreenshot.jpg)
 
 Díky specializovanému týmu vývojářů a aktivní komunitě ušel projekt od svým počátku dlouhou cestu.
 
@@ -37,13 +37,13 @@ V projektu aplikace Revit nebo Editoru rodiny přejděte na doplňky a kliknět
 
 {% hint style="warning" %} *Aplikace Dynamo se spustí pouze v souboru, ve kterém byla otevřena. {% endhint %}
 
-\![](<../.gitbook/assets/launch dynamo from revit (1).jpg>)
+![](images/1/launchdynamofromrevit.jpg)
 
 Po otevření aplikace Dynamo v aplikaci Revit je k dispozici nová kategorie s názvem „Revit“. Jedná se o rozšíření uživatelského rozhraní, které nabízí uzly pro práci s aplikací Revit.*
 
 {% hint style="warning" %} *Pokud použijete uzly určené pro práci v aplikaci Revit, graf aplikace Dynamo bude fungovat pouze při otevření v modulu Dynamo pro aplikaci Revit. Pokud graf modulu Dynamo pro aplikaci Revit otevřete například v aplikaci Dynamo Sandbox, uzly aplikace Revit budou chybět. {% endhint %}
 
-\![](<../.gitbook/assets/revit connection - running dynamo in revit 02.jpg>)
+\![](<images/revit connection - running dynamo in revit 02.jpg>)
 
 ### Zmrazení uzlů
 
@@ -59,4 +59,4 @@ Aplikace Dynamo je projekt s otevřeným zdrojovým kódem, která se neustále
 
 Aplikace Dynamo také provozuje aktivní blog. Přečtěte si nejnovější příspěvky z vývoje.
 
-![Blog](../.gitbook/assets/blog.png)
+![Blog](images/blog.png)

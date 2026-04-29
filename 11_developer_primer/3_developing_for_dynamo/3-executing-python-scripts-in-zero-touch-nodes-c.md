@@ -4,7 +4,7 @@
 
 Pokud umíte psát skripty v jazyce Python a chcete více funkcí, než vám mohou nabídnout standardní uzly jazyka Python aplikace Dynamo, můžete si pomocí funkce Zero-Touch vytvořit vlastní uzel. Začneme jednoduchým příkladem, který nám umožní předat skript jazyka Python jako řetězec uzlu Zero-Touch, kde se skript provede a vrátí se výsledek. Tato případová studie bude vycházet z ukázek a příkladů v části Začínáme. Pokud s tvorbou uzlů Zero-Touch úplně začínáte, podívejte se na ně.
 
-![Uzel Zero-Touch, který provede řetězec skriptu jazyka Python](../../.gitbook/assets/python-case-study.png)
+![Uzel Zero-Touch, který provede řetězec skriptu jazyka Python](../images/python-case-study.png)
 
 > Uzel Zero-Touch, který provede řetězec skriptu jazyka Python
 
@@ -68,7 +68,7 @@ output = str(volume)
 
 Jedním z omezení standardních uzlů jazyka Python je, že mají pouze jeden výstupní port, takže pokud chceme vrátit více objektů, musíme sestavit seznam a načíst každý objekt v něm. Pokud upravíme výše uvedený příklad tak, aby vracel slovník, můžeme přidat libovolný počet výstupních portů. Další informace o slovnících naleznete v části Vrácení více hodnot v tématu Další práce s funkcí Zero-Touch.
 
-![Tento uzel umožňuje vrátit objem kvádru i jeho těžiště.](../../.gitbook/assets/python-multi-case-study.png)
+![Tento uzel umožňuje vrátit objem kvádru i jeho těžiště.](../images/python-multi-case-study.png)
 
 > Tento uzel umožňuje vrátit objem kvádru i jeho těžiště.
 

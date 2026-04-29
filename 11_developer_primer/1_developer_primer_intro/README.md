@@ -4,7 +4,7 @@
 
 Účelem této příručky je pomoci vám zorientovat se v možnostech vývoje aplikace Dynamo v jazyce C#, od vytváření uzlů Zero-Touch až po tvorbu rozšíření.
 
-![Zdroj pro aplikaci Dynamo na GitHubu](../../.gitbook/assets/dynamogithub.png)
+![Zdroj pro aplikaci Dynamo na GitHubu](../images/dynamogithub.png)
 
 > Zdroj pro aplikaci Dynamo na GitHubu
 

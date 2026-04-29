@@ -112,7 +112,7 @@ Vlastní uzly jsou uspořádány na základě parametru `Category Name` zadanéh
 **UPOZORNĚNÍ**\
  Použití tečkové notace v názvech nebo kategoriích uzlů bude mít za následek vytvoření dalších vnořených podkategorií. Tečka `.` bude fungovat jako oddělovač určující další hierarchii. Jedná se o nové chování v knihovně v aplikaci Dynamo 2.0.
 
-![Vlastnosti vlastního uzlu](../../.gitbook/assets/custom-node-properties.jpg)
+![Vlastnosti vlastního uzlu](../images/custom-node-properties.jpg)
 
 Název kategorie lze později aktualizovat v souboru .dyf (XML nebo JSON),
 

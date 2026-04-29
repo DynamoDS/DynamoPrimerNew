@@ -19,19 +19,19 @@ Pro uživatele, kteří si chtějí prohlédnout ukázku pracovních postupů ap
 
 * [Parametrická váza](../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.md)
 
-![](../.gitbook/assets/vase1.gif)
+![](images/vase1.gif)
 
 * [Body atraktoru](../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.md)
 
-\![](<../.gitbook/assets/attractor1 (1).gif>)
+![](<images/attractor1.gif>)
 
-{% hint style="info" %} Další tematická cvičení najdete v dalších kapitolách týkajících se různých aspektů aplikace Dynamo. **Cvičení** se obvykle nacházejí v poslední části každé stránky. {% endhint %}
+{% hint style="info" %} Další tematická cvičení najdete v dalších kapitolách týkajících se různých aspektů aplikace Dynamo.  **Cvičení** se obvykle nacházejí v poslední části každé stránky. {% endhint %}
 
 ### Komunita
 
 Aplikace Dynamo by nemohla být taková, jaká je bez široké komunity uživatelů a přispěvatelů. Zapojte se do komunity tím, že budete sledovat [blog](http://dynamobim.org/blog/), přidáte svou práci do galerie nebo budete diskutovat na [fóru](https://forum.dynamobim.com).
 
-![Fórum](../.gitbook/assets/02-Community.png)
+![Fórum](images/02-Community.png)
 
 ### Platforma
 
@@ -39,6 +39,6 @@ Aplikace Dynamo je navržena jako nástroj vizuálního programování pro konst
 
 Projekt má otevřený zdrojový kód, takže jej lze rozšiřovat o požadované funkce. Navštivte projekt na GitHubu a podívejte se na probíhající práce na aplikaci Dynamo.
 
-![Repozitář](../.gitbook/assets/03-TheRepo.png)
+![Repozitář](images/03-TheRepo.png)
 
 > Prohlédněte si a forkněte repozitář a začněte jej rozšiřovat o nové funkce

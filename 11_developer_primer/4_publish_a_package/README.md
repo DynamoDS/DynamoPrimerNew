@@ -12,7 +12,7 @@ V prohlížeči si můžete vyhledat balíčky a zobrazit statistiku: [https://
 
 * Nástroj Package Manager v aplikaci Dynamo umožňuje instalaci, publikování a aktualizaci balíčků.
 
-![Vyhledání balíčků](../../.gitbook/assets/dynamopackagemanager.png)
+![Vyhledání balíčků](../images/dynamopackagemanager.png)
 
 > 1. Vyhledejte balíčky online: `Packages > Search for a Package...`
 > 2. Zobrazte nebo upravte nainstalované balíčky: `Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Balíčky jsou publikovány pomocí nástroje Package Manager v aplikaci Dynamo
 
 Spusťte aplikaci Dynamo a výběrem možnosti `Packages > Publish New Package...` otevřete okno `Publish a Package`.
 
-![Publikování balíčku](../../.gitbook/assets/dyn-publish-package-add-files.png)
+![Publikování balíčku](../images/dyn-publish-package-add-files.png)
 
 > 1. Vyberte `Add file...` a vyhledejte soubory, které chcete přidat do balíčku.
 > 2. Vyberte dva soubory `.dll` z případové studie uzlu NodeModel.
@@ -32,7 +32,7 @@ Spusťte aplikaci Dynamo a výběrem možnosti `Packages > Publish New Package..
 
 Po přidání souborů do obsahu balíčku zadejte název, popis a verzi balíčku. Publikováním balíčku pomocí aplikace Dynamo se automaticky vytvoří soubor `pkg.json`.
 
-![Nastavení balíčku](../../.gitbook/assets/dyn-publish-package.png)
+![Nastavení balíčku](../images/dyn-publish-package.png)
 
 > Balíček připravený k publikování.
 >
@@ -41,13 +41,13 @@ Po přidání souborů do obsahu balíčku zadejte název, popis a verzi balíč
 
 Po publikování balíčku budou uzly dostupné v knihovně aplikace Dynamo v kategorii `CustomNodeModel`.
 
-![Balíček v knihovně aplikace Dynamo](../../.gitbook/assets/dyn-publish-package-library.jpg)
+![Balíček v knihovně aplikace Dynamo](../images/dyn-publish-package-library.jpg)
 
 > 1. Právě vytvořený balíček v knihovně aplikace Dynamo
 
 Když je balíček připraven k publikování online, otevřete nástroj Package Manager a vyberte možnost `Publish` a poté `Publish Online`.
 
-![Publikování balíčku v nástroji Package Manager](../../.gitbook/assets/dyn-publish-package-directory.jpg)
+![Publikování balíčku v nástroji Package Manager](../images/dyn-publish-package-directory.jpg)
 
 > 1. Chcete-li se podívat, jak aplikace Dynamo naformátovala balíček, klikněte na tři svislé tečky vpravo od položky CustomNodeModel a vyberte možnost Zobrazit kořenový adresář.
 > 2. V okně Publikovat balíček aplikace Dynamo vyberte možnost `Publish` a poté `Publish Online`.
@@ -57,7 +57,7 @@ Když je balíček připraven k publikování online, otevřete nástroj Packag
 
 Aktualizace balíčku probíhá podobně jako publikování. Otevřete nástroj Package Manager, vyberte položku `Publish Version...` u balíčku, který je třeba aktualizovat, a zadejte vyšší verzi.
 
-![Publikování verze balíčku](../../.gitbook/assets/dyn-publish-package-version.jpg)
+![Publikování verze balíčku](../images/dyn-publish-package-version.jpg)
 
 > 1. Výběrem možnosti `Publish Version` aktualizujte existující balíček novými soubory v kořenovém adresáři a poté vyberte, zda má být balíček publikován místně nebo online.
 
@@ -69,7 +69,7 @@ Další informace o těchto funkcích najdete v blogovém příspěvku na nás
 
 K webovému klientu Package Manager lze získat přístup pomocí tohoto odkazu: [https://dynamopackages.com/](https://dynamopackages.com)
 
-![Webový klient Package Manager](../../.gitbook/assets/packagemanager-browser.jpg)
+![Webový klient Package Manager](../images/packagemanager-browser.jpg)
 
 **Aktualizace podrobností balíčku**
 
@@ -82,13 +82,13 @@ Autoři mohou upravit popis balíčku, odkaz na web a odkaz na úložiště pomo
 
 **Poznámka**: Aktualizace v nástroji Package Manager v aplikaci Dynamo mohou trvat až 15 minut, protože aktualizace serveru nějakou dobu trvají. Snažíme se toto zpoždění zkrátit.
 
-![Nové uživatelské rozhraní pro aktualizaci podrobností o publikovaných balíčcích](../../.gitbook/assets/Package-Manager_Image_5.png)
+![Nové uživatelské rozhraní pro aktualizaci podrobností o publikovaných balíčcích](../images/Package-Manager_Image_5.png)
 
 **Úprava informací o kompatibilitě publikovaných verzí balíčků**
 
 Informace o kompatibilitě lze zpětně aktualizovat pro dříve publikované verze balíčků. Postupujte podle následujících kroků:
 
-![Úprava informací o kompatibilitě publikovaných balíčků – krok 1](../../.gitbook/assets/Package-Manager_Image_6.png)
+![Úprava informací o kompatibilitě publikovaných balíčků – krok 1](../images/Package-Manager_Image_6.png)
 
 **Krok 1:**
 
@@ -100,7 +100,7 @@ Informace o kompatibilitě lze zpětně aktualizovat pro dříve publikované v
 
 Postupujte podle níže uvedeného vývojového diagramu a podívejte se na tabulku níže, jež vám pomůže pochopit, která možnost je pro váš balíček nejvhodnější.
 
-![Kterou možnost zvolit pro pracovní postup Upravit informace o kompatibilitě](../../.gitbook/assets/Package-Manager_Image_7.png)
+![Kterou možnost zvolit pro pracovní postup Upravit informace o kompatibilitě](../images/Package-Manager_Image_7.png)
 
 Projděme si na příkladech několik scénářů:
 
@@ -110,8 +110,8 @@ Projděme si na příkladech několik scénářů:
 
 **Příklad balíčku č. 3** – Mesh Toolkit: Tento balíček je balíček Dynamo Core, což je kolekce uzlů geometrie, která nemá žádné závislosti na hostiteli. V tomto případě by tedy bylo ideální zvolit možnost 3. Balíček se zobrazí jako kompatibilní v aplikaci Dynamo a ve všech hostitelských prostředích, které odpovídají rozsahu verzí nebo seznamu jednotlivých verzí.
 
-![Možnosti úprav informací o kompatibilitě](../../.gitbook/assets/Package-Manager_Image_8.png)
+![Možnosti úprav informací o kompatibilitě](../images/Package-Manager_Image_8.png)
 
 V závislosti na vybrané možnosti se zobrazí pole specifická pro aplikaci Dynamo a/nebo hostitele, jak je znázorněno na obrázku níže.
 
-![Úprava informací o kompatibilitě – krok 2](../../.gitbook/assets/Package-Manager_Image_9.png)
+![Úprava informací o kompatibilitě – krok 2](../images/Package-Manager_Image_9.png)

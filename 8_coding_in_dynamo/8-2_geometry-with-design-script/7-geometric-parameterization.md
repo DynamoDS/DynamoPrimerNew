@@ -16,7 +16,7 @@ Parametrizace primárně neslouží k určování bodů použitých ke generov�
 
 Křivky mají metodu _PointAtParameter_, která přijímá jeden parametr typu double v rozsahu od 0 do 1 a vrací objekt Point v tomto parametru. Například tento skript vyhledá body v parametrech 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 a 1.0:
 
-![](../../.gitbook/assets/GeometricParameterization_01.png)
+![](../images/GeometricParameterization_01.png)
 
 ```js
 pts = {};
@@ -41,7 +41,7 @@ Podobně plochy mají metodu _PointAtParameter_, která přijímá dva parametry
 
 Ačkoliv získávání bodů na křivce nebo ploše může být užitečné, skripty často vyžadují určité geometrické vlastnosti v daném parametru, například směr křivky nebo plochy. Pomocí metody _CoordinateSystemAtParameter_ lze získat nejen pozici, ale rovnou úplný orientovaný objekt CoordinateSystem v daném parametru křivky nebo plochy. Například následující skript získá orientované objekty CoordinateSystem podél rotované plochy a použije jejich orientaci k vygenerování čar, které budou vycházet z plochy kolmo:
 
-![](../../.gitbook/assets/GeometricParameterization_02.png)
+![](../images/GeometricParameterization_02.png)
 
 ```js
 pts = {};

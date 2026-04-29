@@ -4,7 +4,7 @@ Proč byste měli používat textové programování ve vizuálním programovac�
 
 **Vizuální program:**
 
-\![](<../../.gitbook/assets/python node - visual vs textual programming.jpg>)
+\![](<../images/python node - visual vs textual programming.jpg>)
 
 **Textový program:**
 
@@ -38,15 +38,15 @@ OUT = solids
 
 Stejně jako bloky kódu jsou uzly Python skriptovacím rozhraním v prostředí vizuálního programování. Uzel jazyka Python naleznete v knihovně v části Script > Editor > Python Script.
 
-\![](<../../.gitbook/assets/python node - the python node 01.jpg>)
+\![](<../images/python node - the python node 01.jpg>)
 
 Dvojitým kliknutím na uzel otevřete editor skriptů jazyka Python (můžete také kliknout pravým tlačítkem na uzel a vybrat možnost _Upravit_). Všimněte si, že se v horní části nachází výchozí text, který vám má pomoci odkazovat na knihovny, které budete potřebovat. Vstupy jsou uloženy v poli IN. Hodnoty se vrátí do aplikace Dynamo jejich přiřazením k proměnné OUT.
 
-\![](<../../.gitbook/assets/python node - the python node 02.jpg>)
+\![](<../images/python node - the python node 02.jpg>)
 
 Knihovna Autodesk.DesignScript.Geometry umožňuje použití tečkové notace podobné blokům kódů. Další informace o syntaxi aplikace Dynamo naleznete v části [7-2\\_design-script-syntaxe.md](../../coding-in-dynamo/7_code-blocks-and-design-script/7-2_design-script-syntax.md "mention") a také v příručce [DesignScript Guide](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf). (Chcete-li stáhnout tento dokument PDF, klikněte pravým tlačítkem na odkaz a vyberte možnost Uložit odkaz jako.) Zadáním typu geometrie, například „Point.“, zobrazíte seznam metod vytváření a dotazování bodů.
 
-\![](<../../.gitbook/assets/python node - the python node 03.jpg>)
+\![](<../images/python node - the python node 03.jpg>)
 
 > Metody zahrnují konstruktory, například _ByCoordinates_, akce, například _Add_, a dotazy, například souřadnice _X_, _Y_ a _Z_.
 
@@ -62,12 +62,12 @@ Knihovna Autodesk.DesignScript.Geometry umožňuje použití tečkové notace po
 
 V tomto příkladu napíšeme skript jazyka Python, který vytvoří vzory z modulu tělesa a převede je na vlastní uzel. Nejprve vytvoříme náš modul tělesa pomocí uzlů aplikace Dynamo.
 
-\![](<../../.gitbook/assets/python node - exercise pt I-01.jpg>)
+\![](<../images/python node - exercise pt I-01.jpg>)
 
 > 1. **Rectangle.ByWidthLength:** Vytvořte obdélník, který bude základem našeho tělesa.
 > 2. **Surface.ByPatch:** Spojte obdélník se vstupem _closedCurve_ a vytvořte tak dolní povrch.
 
-\![](<../../.gitbook/assets/python node - exercise pt I-02.jpg>)
+\![](<../images/python node - exercise pt I-02.jpg>)
 
 > 1. **Geometry.Translate:** Připojte obdélník ke vstupu _geometrie_, aby se posunul nahoru pomocí bloku kódu, který určuje základní tloušťku našeho tělesa.
 > 2. **Polygon.Points:** Pomocí dotazu na převedený obdélník extrahujte rohové body.
@@ -77,7 +77,7 @@ V tomto příkladu napíšeme skript jazyka Python, který vytvoří vzory z m
 
 Nyní, když máme horní a dolní povrch, vytvoříme boky tělesa šablonováním mezi dvěma profily.
 
-\![](<../../.gitbook/assets/python node - exercise pt I-03.jpg>)
+\![](<../images/python node - exercise pt I-03.jpg>)
 
 > 1. **List.Create:** Spojte dolní obdélník a horní polygon se vstupy indexu.
 > 2. **Surface.ByLoft:** Šablonováním dvou profilů vytvořte strany tělesa.
@@ -86,13 +86,13 @@ Nyní, když máme horní a dolní povrch, vytvoříme boky tělesa šablonován
 
 Nyní, když máme naše těleso, přetáhneme do pracovního prostoru uzel skriptu jazyka Python.
 
-\![](<../../.gitbook/assets/python node - exercise pt I-04.jpg>)
+\![](<../images/python node - exercise pt I-04.jpg>)
 
 > 1. Chcete-li do uzlu přidat další vstupy, klikněte na ikonu + v uzlu. Vstupy jsou pojmenovány IN[0], IN[1] atd., což označuje, že představují položky v seznamu.
 
 Začneme definováním našich vstupů a výstupu. Dvojitým kliknutím na uzel otevřete editor jazyka Python. Při úpravách kódu v editoru postupujte podle kódu uvedeného níže.
 
-\![](<../../.gitbook/assets/python node - exercise pt I-05.jpg>)
+\![](<../images/python node - exercise pt I-05.jpg>)
 
 ```py
 # Load the Python Standard and DesignScript Libraries
@@ -124,7 +124,7 @@ OUT = solids
 
 Tento kód začne dávat větší smysl, jak budeme cvičením procházet. Dále musíme přemýšlet o tom, jaké informace jsou potřeba k vytvoření pole našeho modulu tělesa. Nejprve je nutné znát rozměry tělesa, abychom mohli určit vzdálenost posunutí. Kvůli chybě ohraničujícího kvádru bude nutné k jeho vytvoření použít geometrii křivky hrany.
 
-![](../../.gitbook/assets/python07.png)
+![](../images/python07.png)
 
 > Podívejte se na uzel Python v aplikaci Dynamo. Všimněte si, že používáme stejnou syntaxi, jakou vidíme v názvech uzlů v aplikaci Dynamo. Prohlédněte si níže uvedený kód s komentáři.
 
@@ -169,7 +169,7 @@ OUT = solids
 
 Protože budeme převádět i otáčet moduly těles, použijeme operaci Geometry.Transform. Při pohledu na uzel Geometry.Transform zjistíme, že k transformaci tělesa budeme potřebovat zdrojový souřadnicový systém a cílový souřadnicový systém. Zdroj je kontextový souřadnicový systém našeho tělesa, zatímco cíl bude odlišný souřadnicový systém pro každý modul v poli. To znamená, že bude nutné projít hodnoty X a Y a transformovat souřadnicový systém pokaždé jinak.
 
-\![](<../../.gitbook/assets/python node - exercise pt I-06.jpg>)
+\![](<../images/python node - exercise pt I-06.jpg>)
 
 ```py
 # Load the Python Standard and DesignScript Libraries
@@ -225,7 +225,7 @@ OUT = solids
 
 Klikněte na tlačítko Spustit a poté uložte kód. Připojte uzel jazyka Python k existujícímu skriptu níže uvedeným způsobem.
 
-\![](<../../.gitbook/assets/python node - exercise pt I-07.jpg>)
+\![](<../images/python node - exercise pt I-07.jpg>)
 
 > 1. Připojte výstup z uzlu **Solid.ByConnectedSurfaces** jako první vstup uzlu jazyka Python a pomocí uzlu CodeBlock definujte ostatní vstupy.
 > 2. Vytvořte uzel **Topology.Edge** a jako vstup použijte výstup z uzlu jazyka Python.
@@ -233,25 +233,25 @@ Klikněte na tlačítko Spustit a poté uložte kód. Připojte uzel jazyka Pyth
 
 Zkuste změnit výchozí hodnotu a vytvořte jiné vzory. Můžete také změnit parametry samotného modulu tělesa a dosáhnout tak různých efektů.
 
-![](../../.gitbook/assets/python10.png)
+![](../images/python10.png)
 
 ### Část II: Převod uzlu Python Script na vlastní uzel
 
 Nyní, když jsme vytvořili užitečný skript jazyka Python, uložte jej jako uživatelský uzel. Vyberte uzel Python Script, klikněte pravým tlačítkem na pracovní prostor a vyberte možnost Vytvořit vlastní uzel.
 
-\![](<../../.gitbook/assets/python node - exercise pt II-01.jpg>)
+\![](<../images/python node - exercise pt II-01.jpg>)
 
 Přiřaďte název, popis a kategorii.
 
-\![](<../../.gitbook/assets/python node - exercise pt II-02.jpg>)
+\![](<../images/python node - exercise pt II-02.jpg>)
 
 Tím se otevře nový pracovní prostor, ve kterém se má upravit uživatelský uzel.
 
-\![](<../../.gitbook/assets/python node - exercise pt II-03.jpg>)
+\![](<../images/python node - exercise pt II-03.jpg>)
 
 > 1. **Vstupy:** Změňte vstupní názvy tak, aby byly popisnější, a přidejte typy dat a výchozí hodnoty.
 > 2. **Výstup:** Změňte název výstupu.
 
 Uzel uložte jako soubor .dyf a měli byste vidět, že vlastní uzel odráží změny, které jsme právě provedli.
 
-\![](<../../.gitbook/assets/python node - exercise pt II-04.jpg>)
+\![](<../images/python node - exercise pt II-04.jpg>)

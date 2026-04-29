@@ -4,22 +4,22 @@ Po spuštění projektu v aplikaci Visual Studio si ukážeme, jak vytvořit vl
 
 V tomto příkladu si představíme několik funkcí a konceptů, které je třeba znát při vytváření uzlu Zero-Touch. Po vytvoření vlastního uzlu a jeho přidání do aplikace Dynamo si projděte stránku Další práce s funkcí Zero-Touch, kde naleznete podrobnější informace o výchozích vstupních hodnotách, vrácení více hodnot, dokumentaci, objektech, použití typů geometrií aplikace Dynamo a migraci.
 
-![Graf obdélníkové osnovy](../../.gitbook/assets/cover-image.jpg)
+![Graf obdélníkové osnovy](../images/cover-image.jpg)
 
 ### Vlastní uzel obdélníkové osnovy <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 Chcete-li začít vytvářet uzel osnovy, vytvořte nový projekt knihovny tříd aplikace Visual Studio. Podrobné informace o nastavení projektu naleznete na stránce Začínáme.
 
-![Vytvoření nového projektu v aplikaci Visual Studio](../../.gitbook/assets/vs-new-project-1.jpg)
+![Vytvoření nového projektu v aplikaci Visual Studio](../images/vs-new-project-1.jpg)
 
-![Konfigurace nového projektu v aplikaci Visual Studio](../../.gitbook/assets/vs-new-project-2.jpg)
+![Konfigurace nového projektu v aplikaci Visual Studio](../images/vs-new-project-2.jpg)
 
 > 1. Vyberte `Class Library` pro typ projektu.
 > 2. Pojmenujte projekt jako `CustomNodes`.
 
 Protože budeme vytvářet geometrii, je nutné odkazovat na příslušný balíček NuGet. Ze správce balíčků NuGet nainstalujte balíček ZeroTouchLibrary. Tento balíček je nezbytný pro příkaz `using Autodesk.DesignScript.Geometry;`.
 
-![Balíček ZeroTouchLibrary](../../.gitbook/assets/vs-nugetpackage.jpg)
+![Balíček ZeroTouchLibrary](../images/vs-nugetpackage.jpg)
 
 > 1. Procházením vyhledejte balíček ZeroTouchLibrary.
 > 2. Tento uzel použijeme v aktuálním sestavení aplikace Dynamo. Vyberte verzi balíčku, která odpovídá vaší verzi aplikace Dynamo.
@@ -84,13 +84,13 @@ namespace CustomNodes
 
 Pokud projekt vypadá podobně jako tento, pokračujte a zkuste sestavit knihovnu `.dll`.
 
-![Sestavení knihovny DLL](../../.gitbook/assets/vs-grids.jpg)
+![Sestavení knihovny DLL](../images/vs-grids.jpg)
 
 > 1. Zvolte Sestavit > Sestavit řešení.
 
 Zkontrolujte složku projektu `bin` pro knihovnu `.dll`. Pokud bylo sestavení úspěšné, můžeme přidat knihovnu `.dll` do aplikace Dynamo.
 
-![Vlastní uzly v aplikaci Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.png)
+![Vlastní uzly v aplikaci Dynamo](../images/RectangularGrid-Dynamo.png)
 
 > 1. Vlastní uzel RectangularGrids v knihovně aplikace Dynamo
 > 2. Vlastní uzel na kreslicí ploše
@@ -100,7 +100,7 @@ Zkontrolujte složku projektu `bin` pro knihovnu `.dll`. Pokud bylo sestavení �
 
 Ve výše uvedeném příkladu jsme vytvořili poměrně jednoduchý uzel, který kromě metody `RectangularGrids` nedefinoval nic dalšího. Můžeme však chtít vytvořit popisky pro vstupní porty nebo poskytnout uzlu souhrn jako u standardních uzlů aplikace Dynamo. Přidání těchto funkcí do vlastních uzlů usnadní jejich používání, zejména pokud je uživatel chce vyhledávat v knihovně.
 
-![Popisek vstupu](../../.gitbook/assets/nodemodification.png)
+![Popisek vstupu](../images/nodemodification.png)
 
 > 1. Výchozí vstupní hodnota
 > 2. Popisek pro vstup xCount
@@ -155,7 +155,7 @@ namespace CustomNodes
 
 K přidání popisků je potřeba soubor XML v adresáři projektu. V aplikaci Visual Studio je možné automaticky vytvořit soubor `.xml`, pokud tuto možnost povolíte.
 
-![Povolení dokumentace XML](../../.gitbook/assets/vs-xml.jpg)
+![Povolení dokumentace XML](../images/vs-xml.jpg)
 
 > 1. Zde povolte soubor dokumentace XML a zadejte cestu k souboru. Tím se vytvoří soubor XML.
 

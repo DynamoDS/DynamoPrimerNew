@@ -6,7 +6,7 @@ Metody _Průnik_, _Oříznutí_ a _SelectTrim_ se používají zejména u mén�
 
 Metoda _Sjednocení_ přijímá dvě tělesa a z prostoru, který tyto objekty zaujímají, vytváří jedno těleso. Překrývající se prostor mezi objekty se zkombinuje do konečného tvaru. Tento příklad kombinuje kouli a kvádr do jednoho tvaru:
 
-![](../../.gitbook/assets/GeometricBooleans_01.png)
+![](../images/GeometricBooleans_01.png)
 
 ```js
 s1 = Sphere.ByCenterPointRadius(
@@ -23,7 +23,7 @@ combined = s1.Union(s2);
 
 Metoda _Rozdíl_ funguje podobně jako metoda _Oříznutí_ odečítá obsah vstupního tělesa od základního tělesa. V tomto příkladu odřízneme od koule malý kus:
 
-![](../../.gitbook/assets/GeometricBooleans_02.png)
+![](../images/GeometricBooleans_02.png)
 
 ```js
 s = Sphere.ByCenterPointRadius(
@@ -40,7 +40,7 @@ result = s.Difference(tool);
 
 Metoda _Průnik_ vrací těleso tvořené překrývajícím se prostorem dvou vstupních těles. V následujícím příkladu je metoda _Rozdíl_ změněna na _Průnik_, výsledným tělesem je kus, který byl v předchozím příkladu odříznut:
 
-![](../../.gitbook/assets/GeometricBooleans_03.png)
+![](../images/GeometricBooleans_03.png)
 
 ```js
 s = Sphere.ByCenterPointRadius(

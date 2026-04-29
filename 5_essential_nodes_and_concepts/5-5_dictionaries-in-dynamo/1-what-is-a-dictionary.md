@@ -22,7 +22,7 @@ Díky oddělení slovníků od seznamů můžete slovníky používat k rychlé
 * Do knihovny byly přidány _nové uzly_, které vám pomohou vytvářet, upravovat a dotazovat slovníky.
 * Seznamy vytvořené v blocích kódu verze 1.x budou po načtení skriptu automaticky převedeny do nové syntaxe seznamu, která používá hranaté závorky `[ ]` místo složených závorek `{ }` \\.
 
-\![](<../../.gitbook/assets/what is a dictionary - what are the changes (1) (4).jpg>)
+\![](<../images/what is a dictionary - what are the changes.jpg>)
 
 ***
 
@@ -32,7 +32,7 @@ V počítačových vědách jsou slovníky, podobně jako seznamy, kolekcemi ob
 
 Na obrázku níže je znázorněno potenciální využití slovníků. Slovníky se často používají ke spojení dvou různých položek, které spolu nemusí souviset. V našem případě propojujeme španělské slovo s anglickým pro později vyhledání.
 
-\![](<../../.gitbook/assets/what is a dictionary - what would you use these for.jpg>)
+\![](<../images/what is a dictionary - what would you use these for.jpg>)
 
 > 1. Vytvoří slovník, který propojí obě části dat.
 > 2. Získá hodnotu s daným klíčem.

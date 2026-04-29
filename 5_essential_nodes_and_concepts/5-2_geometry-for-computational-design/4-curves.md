@@ -6,7 +6,7 @@
 
 [Křivky](4-curves.md#deep-dive-into...) jsou první geometrický datový typ, kterému jsme se věnovali a který má známé sady vlastností popisujících tvar: Jak křivé nebo rovné? Jak dlouhé nebo krátké? Nezapomeňte, že body jsou stále stavební bloky pro definování všeho od úsečky k spline a všechny typy křivek mezi nimi.
 
-![Typy oblouků](../../.gitbook/assets/CurveTypes.jpg)
+![Typy oblouků](../images/CurveTypes.jpg)
 
 > 1. Čára
 > 2. Křivka
@@ -18,15 +18,15 @@
 
 ### Čára
 
-[Čára](4-curves.md#lines) je tvořena sadou bodů, každá čára má alespoň 2 body. Jedním z nejběžnějších způsobů, jak vytvořit čáru v aplikaci Dynamo, je použití `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg).
+[Čára](4-curves.md#lines) je tvořena sadou bodů, každá čára má alespoň 2 body. Jedním z nejběžnějších způsobů, jak vytvořit čáru v aplikaci Dynamo, je použití  ``Line.ByStartPointEndPoint`.
 
-\![](<../../.gitbook/assets/curves - line by start point end point.jpg>)
+\![](<../images/curves - line by start point end point.jpg>)
 
 ### Křivka NURBS
 
 [NURBS](4-curves.md#nurbs-+-polycurves) je model používaný k přesnému znázornění křivek a povrchů. Pojďme v aplikaci Dynamo pomocí dvou různých metod vytvořit křivku NURBS ve tvaru sinusoidy a porovnat výsledky.
 
-\![](<../../.gitbook/assets/curves - Nurbs Curves.jpg>)
+\![](<../images/curves - Nurbs Curves.jpg>)
 
 > 1. _NurbsCurve.ByControlPoints_ používá seznam bodů jako řídicí body
 > 2. _NurbsCurve.ByPoints_ nakreslí křivku procházející seznamem bodů
@@ -43,7 +43,7 @@
 
 Termín **křivka** obvykle označuje všechny různé křivé (i rovné) tvary. Křivka s velkým K je nadřazená kategorizace všech těchto typů tvarů – úseček, kružnic, spline atd. Přesněji řečeno, Křivka popisuje každý možný Bod, který lze najít vložením „t“ do kolekce funkcí, která může být v rozsahu od jednoduchých (`x = -1.26*t, y = t`) až po funkce zahrnující infinitezimální počet. Bez ohledu na to, s jakým typem Křivky pracujeme, je tento **parametr** s názvem „t“ vlastnost, kterou můžeme vyhodnotit. Kromě toho, bez ohledu na vzhled tvaru, mají všechny Křivky také počáteční a koncový bod, který je shodný s minimálními a maximálními hodnotami t použitými k vytvoření Křivky. To nám také pomůže pochopit její směr.
 
-![Parametr křivky](../../.gitbook/assets/CurveParameter.jpg)
+![Parametr křivky](../images/CurveParameter.jpg)
 
 > Je důležité poznamenat, že aplikace Dynamo předpokládá, že doména hodnot „t“ pro křivku je chápána jako 0.0 až 1.0.
 
@@ -53,23 +53,23 @@ Všechny křivky také mají řadu vlastností, které lze použít k jejich po
 
 **Úsečky** jsou nejjednodušší formou křivek. Nemusí vypadat zaobleně, ale ve skutečnosti jsou Křivky – jen bez zakřivení. Existuje několik různých způsobů vytvoření čar, nejintuitivnější je od bodu A do bodu B. Tvar čáry AB bude nakreslen mezi body, ale matematicky se prodlouží do nekonečna oběma směry.
 
-![Čára](../../.gitbook/assets/Line.jpg)
+![Čára](../images/Line.jpg)
 
 Když propojíme obě úsečky dohromady, máme **křivku**. Zde máme přímočaré znázornění toho, co je řídicí bod. Úprava umístění těchto bodů změní tvar křivky. Pokud je křivka uzavřená, máme polygon. Pokud jsou všechny délky hran polygonu shodné, je popisován jako normální.
 
-![Křivka + polygon](../../.gitbook/assets/Polyline.jpg)
+![Křivka + polygon](../images/Polyline.jpg)
 
 ### Oblouky, kružnice, oblouky elips a elipsy
 
 Když přidáváme více složitosti k parametrickým funkcím, které definují tvar, můžeme o jeden krok dále od čáry vytvořit **oblouk**, **kružnici**, **oblouk elipsy** nebo **elipsu** popisem jednoho nebo dvou poloměrů. Rozdíly mezi verzí oblouku a kružnice nebo elipsy spočívají pouze v tom, zda je tvar uzavřený, nebo ne.
 
-![Oblouky + kružnice](../../.gitbook/assets/Arcs+Circles.jpg)
+![Oblouky + kružnice](../images/Arcs+Circles.jpg)
 
 ### NURBS + PolyCurve
 
 **NURBS** (Nerovnoměrné racionální křivky spline) jsou matematická znázornění, která mohou přesně modelovat libovolný tvar z jednoduché dvojrozměrné úsečky, kružnice, oblouku nebo obdélníku na nejsložitější trojrozměrnou volnou organickou křivku. Díky své pružnosti (relativně málo řídicích bodů, přesto hladká interpolace podle nastavení stupňů) a přesnosti (vázané robustní matematikou) lze modely NURBS použít v jakémkoli procesu od ilustrace a animace až po výrobu.
 
-![Křivka NURBS](../../.gitbook/assets/NURBScurve.jpg)
+![Křivka NURBS](../images/NURBScurve.jpg)
 
 **Stupeň**: Způsob definice křivky určuje rozsah vlivu řídicích bodů na křivku, kde čím vyšší je stupeň, tím větší je rozsah. Stupeň je kladné celé číslo. Toto číslo je obvykle 1, 2, 3 nebo 5, ale může to být libovolné kladné celé číslo. Úsečky a křivky NURBS jsou obvykle stupně 1 a většina křivek volného tvaru je stupeň 3 nebo 5.
 
@@ -79,7 +79,7 @@ Když přidáváme více složitosti k parametrickým funkcím, které definuj�
 
 **Uzly**: Uzly jsou seznamy čísel (Stupeň+N-1), kde N je počet řídicích bodů. Uzly se používají spolu s váhami k ovládání vlivu řídicích bodů na výslednou křivku. Jedno použití pro uzly je vytvoření zalomení v určitých bodech křivky.
 
-![Stupeň křivky NURBS](../../.gitbook/assets/NURBScurve_Degree.jpg)
+![Stupeň křivky NURBS](../images/NURBScurve_Degree.jpg)
 
 > 1. Stupeň = 1
 > 2. Stupeň = 2

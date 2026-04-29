@@ -4,7 +4,7 @@ Objekty ve výpočetních návrzích se výjimečně vytvářejí přímo v jej
 
 Na nejzákladnější úrovni představuje vektor pozici ve 3D prostoru a často je reprezentován jako bod s šipkou od pozice (0, 0, 0) do jiné pozice. Vektory je možné vytvořit pomocí konstruktoru _ByCoordinates_, který jako vstup přijímá souřadnice X, Y a Z nově vytvořeného vektoru. Vektory nejsou geometrickými objekty a nezobrazují se v okně aplikace Dynamo. Informace o nově vytvořeném nebo upraveném vektoru je možné vypsat do konzolového okna:
 
-\![](<../../.gitbook/assets/vector math 01.jpg>)
+\![](<../images/vector math 01.jpg>)
 
 ```js
 // construct a Vector object
@@ -19,7 +19,7 @@ U vektorových objektů je definována sada matematických operací, které umo
 
 Součet vektorů je definován jako součet komponent dvou vektorů a lze si jej představit tak, že na špičku jednoho vektoru umístíme druhý vektor. Součet vektorů lze provést metodou _Add_ a je znázorněn na diagramu vlevo.
 
-![](../../.gitbook/assets/VectorMath_02.png)
+![](../images/VectorMath_02.png)
 
 ```js
 a = Vector.ByCoordinates(5, 5, 0);
@@ -33,7 +33,7 @@ c = a.Add(b);
 
 Podobně lze metodou _Subtract_ od sebe dva vektorové objekty odečíst. Odečtení vektoru si lze představit tak, že se jedná o vektor směřující od prvního vektoru k druhému vektoru.
 
-![](../../.gitbook/assets/VectorMath_03.png)
+![](../images/VectorMath_03.png)
 
 ```js
 a = Vector.ByCoordinates(5, 5, 0);
@@ -47,7 +47,7 @@ c = a.Subtract(b);
 
 Násobení vektorů si lze představit jako přesun koncového bodu vektoru v jeho směru o určený faktor měřítka.
 
-![](../../.gitbook/assets/VectorMath_04.png)
+![](../images/VectorMath_04.png)
 
 ```js
 a = Vector.ByCoordinates(4, 4, 0);
@@ -60,7 +60,7 @@ c = a.Scale(5);
 
 Při změně měřítka vektoru je často potřeba, aby výsledná délka odpovídala hodnotě měřítka. Toho lze snadno dosáhnout normalizací vektoru, jinými slovy nastavením jeho délky na 1.
 
-\![](<../../.gitbook/assets/vector math 05.jpg>)
+\![](<../images/vector math 05.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 3);
@@ -80,7 +80,7 @@ Vektor c má stejný směr jako vektor a (1, 2, 3), ale jeho délka je nyní př
 
 Ve vektorové matematice existují dvě další metody, pro které v 1D matematice neexistují podobné operace, jedná se o vektorový a skalární součin. Vektorový součin vytváří vektor, který je kolmý (90 stupňů) ke dvěma existujícím vektorům. Například vektorový součin os X a Y je osa Z, ale vstupní vektory na sebe nemusí být nutně kolmé. Vektorový součin lze vypočítat metodou _Cross_.
 
-![](../../.gitbook/assets/VectorMath_06.png)
+![](../images/VectorMath_06.png)
 
 ```js
 a = Vector.ByCoordinates(1, 0, 1);
@@ -94,7 +94,7 @@ c = a.Cross(b);
 
 Další pokročilejší funkcí vektorové matematiky je skalární součin. Skalární součin mezi dvěma vektory je reálné číslo (a nikoliv vektor), které souvisí s úhlem mezi dvěma vektory (ale nejedná se přímo o úhel). Jednou z užitečných vlastností skalárního součinu je, že skalární součin je nulový pouze v případě, kdy jsou na sebe vektory kolmé. Skalární součin lze vypočítat metodou _Dot_.
 
-\![](<../../.gitbook/assets/vector math 07.jpg>)
+\![](<../images/vector math 07.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 1);
