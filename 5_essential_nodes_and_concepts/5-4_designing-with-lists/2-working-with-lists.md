@@ -141,8 +141,8 @@ En remplaçant la valeur du nœud **Code Block** par une valeur plus élevée, _
 Pour créer une liste de valeurs « true » ou « false », vous devez travailler un peu plus…
 
 > 1. À l’aide d’un nœud **Code Block**, définissez une expression avec la syntaxe : `0..List.Count(list);`. Connectez le nœud **Curve.PointAtParameter** à l’entrée _list_. Vous allez découvrir davantage cette configuration dans le chapitre relatif aux blocs de code, mais la ligne de code dans ce cas présente une liste représentant chaque index du nœud **Curve.PointAtParameter**.
-> 2. À l’aide d’un nœud _**%**_** (module)**, connectez la sortie du nœud _Code Block_ à l’entrée _x_, et une valeur de _4_ à l’entrée _y_. Vous obtiendrez ainsi le reste lors de la division de la liste d’index par 4. Le module est un nœud très utile pour la création de réseaux. Toutes les valeurs sont lues comme étant les restes possibles de 4 : 0, 1, 2, 3.
-> 3. Grâce au nœud _**%**_** (module)**, vous savez qu’une valeur de 0 signifie que l’index est divisible par 4 (0, 4, 8, etc.). À l’aide d’un nœud **==**, vous pouvez tester la visibilité en effectuant un test sur une valeur de _« 0 »_.
+> 2. À l’aide d’un nœud _**%**_\*\* (module)\*\*, connectez la sortie du nœud _Code Block_ à l’entrée _x_, et une valeur de _4_ à l’entrée _y_. Vous obtiendrez ainsi le reste lors de la division de la liste d’index par 4. Le module est un nœud très utile pour la création de réseaux. Toutes les valeurs sont lues comme étant les restes possibles de 4 : 0, 1, 2, 3.
+> 3. Grâce au nœud _**%**_\*\* (module)\*\*, vous savez qu’une valeur de 0 signifie que l’index est divisible par 4 (0, 4, 8, etc.). À l’aide d’un nœud **==**, vous pouvez tester la visibilité en effectuant un test sur une valeur de _« 0 »_.
 > 4. Le nœud **Watch** montre que vous avez un motif true/false qui indique : _true,false,false,false…_.
 > 5. À l’aide de ce motif true/false, connectez-vous à l’entrée mask de deux nœuds **List.FilterByBooleanMask**.
 > 6. Connectez le nœud **Curve.PointAtParameter** à chaque entrée list de **List.FilterByBooleanMask**.
