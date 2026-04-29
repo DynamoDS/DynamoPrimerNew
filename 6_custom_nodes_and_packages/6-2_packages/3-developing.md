@@ -20,7 +20,7 @@ Dans Dynamo, cliquez sur Packages > Gestionnaire de package et recherchez le pac
 
 Une fois l’installation terminée, les nœuds personnalisés sont disponibles sous la section Compléments > DynamoPrimer.
 
-\![](<../images/publish a package - publish locally 04.jpg>)
+![](<../images/publish a package - publish locally 04.jpg>)
 
 Une fois le package installé, voyons comment il est configuré.
 
@@ -30,37 +30,37 @@ Le package créé utilise cinq nœuds personnalisés créés pour référence. V
 
 Il s'agit d'un package simple de cinq nœuds personnalisés. Les étapes ci-dessous présentent brièvement la configuration de chaque nœud personnalisé.
 
-\![](<../images/develop package - custom nodes 01.jpg>)
+![](<../images/develop package - custom nodes 01.jpg>)
 
 #### **PointsToSurface**
 
 Il s’agit d’un nœud personnalisé de base, sur lequel tous les autres nœuds de mappage reposent. Autrement dit, le nœud mappe un point à partir d'une coordonnée UV de la surface source vers l'emplacement de la coordonnée UV de la surface cible. Étant donné que les points constituent la géométrie la plus basique à partir de laquelle une géométrie plus complexe est créée, vous pouvez utiliser cette logique pour mapper une géométrie 2D, voire 3D, d’une surface à une autre.
 
-\![](<../images/develop package -pointToSurface.jpg>)
+![](<../images/develop package -pointToSurface.jpg>)
 
 #### **PolygonsToSurface**
 
 La logique d’extension des points mappés de la géométrie 1D à la géométrie 2D est simplement présentée ici avec des polygones. Le nœud _« PointsToSurface »_ est imbriqué dans ce nœud personnalisé. De cette manière, vous pouvez mapper les points de chaque polygone sur la surface, puis régénérer le polygone à partir de ces points mappés. En conservant la structure de données appropriée (une liste de listes de points), vous pouvez conserver les polygones séparés une fois réduits à un ensemble de points.
 
-\![](<../images/develop package -polygonsToSurface.jpg>)
+![](<../images/develop package -polygonsToSurface.jpg>)
 
 #### **NurbsCrvtoSurface**
 
 La même logique s’applique ici, ainsi que dans le nœud _« PolygonsToSurface »_. Au lieu de mapper des points polygonaux, vous allez mapper les points de contrôle d’une courbe NURBS.
 
-\![](<../images/develop package -nurbsCrvtoSurface.jpg>)
+![](<../images/develop package -nurbsCrvtoSurface.jpg>)
 
 **OffsetPointsToSurface**
 
 Ce nœud devient un peu plus complexe, mais le concept est simple. Comme le nœud _« PointsToSurface »_, ce nœud mappe des points d’une surface à une autre. Toutefois, il prend également en compte les points qui ne sont pas sur la surface source d’origine, extrait leur distance par rapport au paramètre UV le plus proche et mappe cette distance par rapport à la normale de surface cible au niveau des coordonnées UV correspondantes. Regardez les fichiers d’exemple pour comprendre.
 
-\![](<../images/develop package -OffsetPointsToSurface.jpg>)
+![](<../images/develop package -OffsetPointsToSurface.jpg>)
 
 #### **SampleSrf**
 
 Il s’agit d’un nœud simple qui crée une surface paramétrique à mapper de la grille source à une surface ondulée dans les fichiers d’exemple.
 
-\![](<../images/develop package -sampleSrf.jpg>)
+![](<../images/develop package -sampleSrf.jpg>)
 
 ### Fichiers d’exemple
 
@@ -76,40 +76,40 @@ Ensuite, ouvrez le dossier _« extra »_, qui contient tous les fichiers du pa
 
 Ce fichier d’exemple montre comment vous pouvez utiliser _« PointsToSurface »_ pour créer des panneaux sur une surface en fonction d’une grille de rectangles. Ce processus vous paraît sûrement familier, car un workflow similaire est présenté dans le [chapitre précédent](../6-1_custom-nodes/2-creating.md).
 
-\![](<../images/develop package -sample file 01.jpg>)
+![](<../images/develop package -sample file 01.jpg>)
 
 #### **02-PanelingWithPolygons-II**
 
 À l’aide d’un workflow similaire, ce fichier d’exercice présente une configuration permettant de mapper des cercles (ou des polygones représentant des cercles) d’une surface à une autre. Cette option utilise le nœud _PolygonsToSurface_.
 
-\![](<../images/develop package -sample file 02.jpg>)
+![](<../images/develop package -sample file 02.jpg>)
 
 #### **03-NurbsCrvsAndSurface**
 
 Ce fichier d’exemple ajoute de la complexité en exploitant le nœud « NurbsCrvToSurface ». La surface cible est décalée d'une distance donnée, et la courbe NURBS est mappée sur la surface cible d'origine et la surface décalée. À partir de là, les deux courbes mappées sont lissées pour créer une surface, qui est ensuite épaissie. Le solide qui en résulte comporte une ondulation représentative des normales de la surface cible.
 
-\![](<../images/develop package -sample file 03.jpg>)
+![](<../images/develop package -sample file 03.jpg>)
 
 #### **04-PleatedPolysurface-OffsetPoints**
 
 Ce fichier d’exemple montre comment mapper une polysurface plissée entre une surface source et une surface cible. Les surfaces source et cible sont une surface rectangulaire qui s’étend sur la grille et une surface de révolution, respectivement.
 
-\![](<../images/develop package -sample file 04a.jpg>)
+![](<../images/develop package -sample file 04a.jpg>)
 
 Polysurface source mappée entre la surface source et la surface cible.
 
-\![](<../images/develop package -sample file 04b.jpg>)
+![](<../images/develop package -sample file 04b.jpg>)
 
 #### **05-SVG-Import**
 
 Puisque les nœuds personnalisés sont en mesure de mapper différents types de courbes, ce dernier fichier fait référence à un fichier SVG exporté à partir d’Illustrator et mappe les courbes importées avec une surface cible.
 
-\![](<../images/develop package -sample file 05a.jpg>)
+![](<../images/develop package -sample file 05a.jpg>)
 
 L’analyse de la syntaxe d’un fichier .svg permet de convertir les courbes au format .xml en polycourbes Dynamo.
 
-\![](<../images/develop package -sample file 05b.jpg>)
+![](<../images/develop package -sample file 05b.jpg>)
 
 Les courbes importées sont mappées avec une surface cible. Cela vous permet de concevoir de manière explicite (pointer-cliquer) une contruction de panneaux dans Illustrator, de l’importer dans Dynamo et de l’appliquer à une surface cible.
 
-\![](<../images/develop package -sample file 05c.jpg>)
+![](<../images/develop package -sample file 05c.jpg>)
