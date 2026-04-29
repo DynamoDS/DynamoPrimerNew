@@ -10,7 +10,7 @@ Si vous voulez construire des modèles plus complexes qui ne peuvent pas être c
 
 Vous pouvez utiliser des [opérations booléennes](6-solids.md#boolean-operations) pour modifier des solides. Utilisez quelques opérations booléennes pour créer une balle hérisson.
 
-\![](<../images/solids - spiky ball.jpg>)
+![](<../images/solids - spiky ball.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius** : permet de créer le solide de base.
 > 2. **Topology.Faces**, **Face.SurfaceGeometry** : permet d’envoyer des requêtes aux faces du solide et de les convertir en géométrie de surface. Dans ce cas, la sphère ne possède qu’une seule face.
@@ -29,7 +29,7 @@ Vous pouvez utiliser des [opérations booléennes](6-solids.md#boolean-operation
 
 Les opérations booléennes sont complexes et peuvent être lentes à calculer. Vous pouvez utiliser la fonctionnalité Geler pour suspendre l’exécution des nœuds sélectionnés et affectés aux nœuds en aval.
 
-\![](<../images/solids - freeze node.jpg>)
+![](<../images/solids - freeze node.jpg>)
 
 > 1. Utilisez le menu contextuel du bouton droit de la souris pour geler l'opération d'union de solide.
 > 2. Le nœud sélectionné et tous les nœuds en aval s’affichent en mode fantôme gris clair et les fils affectés en tant que lignes en pointillés. Le mode fantôme sera également appliqué à l'aperçu de la géométrie concernée. Vous pouvez maintenant modifier les valeurs en amont sans calculer l’union booléenne.
