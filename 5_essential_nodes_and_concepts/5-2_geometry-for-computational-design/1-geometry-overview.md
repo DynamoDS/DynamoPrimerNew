@@ -6,11 +6,12 @@ La **géométrie** est le langage de conception. Lorsqu’un environnement ou un
 
 La compréhension des types de géométrie et de [leur relation](1-geometry-overview.md#stepping-through-the-hierarchy) vous permettra de naviguer dans l’ensemble des **nœuds de géométrie** disponibles dans la bibliothèque. Les nœuds de géométrie sont organisés par ordre alphabétique et non hiérarchisé. Ici, l’affichage des nœuds est similaire à leur présentation dans l’interface Dynamo.
 
-\![](<../images/geometry overview - geometry in dynamo.jpg>)
+![](<../images/geometry overview - geometry in dynamo.jpg>)
 
 De plus, la création de modèles dans Dynamo et la connexion de l’aperçu de ce qui est visible dans l’aperçu en arrière-plan avec le flux de données dans le graphique devraient devenir plus intuitives au fil du temps.
 
-\![](<../images/Geometry for Computational Design - Overview.jpg>)
+
+![](<../images/Geometry for Computational Design - Overview.jpg>)
 
 > 1. Observez le système de coordonnées spécifique rendu par la grille et les axes de couleur.
 > 2. Les nœuds sélectionnés génèrent le rendu de la géométrie correspondante (si le nœud crée une géométrie) à l'arrière-plan (couleur de surbrillance).
@@ -42,7 +43,7 @@ En pratique, ces principes impliquent que nous devons être conscients de ce ave
 
 Prenez le temps d'observer la relation entre les descriptions abstraite et hiérarchique de la géométrie. Ces deux concepts étant liés, mais pas toujours évidents au début, vous pouvez vous heurter rapidement à un blocage conceptuel une fois que vous avez commencé à développer des workflows ou des modèles plus approfondis. Pour commencer, utilisez la cotation comme descripteur simple des "éléments" modélisés. Le nombre de cotes requises pour décrire une forme vous donne un aperçu de la façon dont la géométrie est organisée de façon hiérarchique.
 
-\![Géometrie de calcul](<../images/Geometry for - GeometryDimensionality.jpg>)
+![Géometrie de calcul](<../images/Geometry for - GeometryDimensionality.jpg>)
 
 > 1. Un **point** (défini par des coordonnées) ne possède pas de cotes ; il s’agit juste de nombres décrivant chaque coordonnée.
 > 2. Une **ligne** (définie par deux points) possède désormais _une_ cote : vous pouvez « déplacer » la ligne vers l’avant (direction positive) ou vers l’arrière (direction négative).
