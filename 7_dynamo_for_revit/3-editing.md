@@ -24,7 +24,7 @@ Pour rappel, Revit comprend des paramètres de type et des paramètres d'occurre
 
 Pour une conversion rapide des unités, utilisez le nœud _"Convert Between Units"_. Cet outil est pratique pour convertir des unités de longueur, de surface et de volume à la volée.
 
-\![](<images/editing - units.jpg>)
+![](<images/editing - units.jpg>)
 
 ## Exercice
 
@@ -44,22 +44,22 @@ Commencez par utiliser l'exemple de fichier Revit pour cette section. Les élém
 
 Lorsque vous sélectionnez le bâtiment dans Volume dans Revit, un réseau de paramètres d’occurrence s’affiche dans le groupe de fonctions Propriétés.
 
-\![](<images/editing - exercise 01.jpg>)
+![](<images/editing - exercise 01.jpg>)
 
 Dans Dynamo, vous pouvez récupérer les paramètres en sélectionnant l’élément de ciblage.
 
-\![](<images/editing - exercise 02.jpg>)
+![](<images/editing - exercise 02.jpg>)
 
 > 1. Sélectionnez le volume du bâtiment à l’aide du nœud _« Select Model Element »_.
 > 2. Vous pouvez rechercher tous les paramètres de ce volume à l'aide du nœud _"Element.Parameters"_. Cela inclut les paramètres de type et d’occurrence.
 
-\![](<images/editing - exercise 03.jpg>)
+![](<images/editing - exercise 03.jpg>)
 
 > 1. Faites référence au nœud _Element. Parameters_ pour trouver les paramètres cibles. Vous pouvez également afficher le groupe de fonctions Propriétés de l'étape précédente pour choisir les noms de paramètres à modifier. Dans ce cas, vous recherchez les paramètres qui ont une incidence sur les grands déplacements géométriques sur le volume du bâtiment.
 > 2. Modifiez l'élément Revit à l'aide du nœud _Element.SetParameterByName_.
 > 3. Utilisez le nœud Code Block pour définir une liste de paramètres, avec des guillemets autour de chaque élément pour indiquer une chaîne. Vous pouvez aussi utiliser le nœud List.Create avec une série de nœuds _"String"_ connectés à plusieurs entrées, mais le nœud Code Block est plus rapide et plus simple. Assurez-vous que la chaîne correspond au nom exact dans Revit, en respectant la casse : `{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
 
-\![](<images/editing - exercise 04.jpg>)
+![](<images/editing - exercise 04.jpg>)
 
 > 1. Vous devez également désigner des valeurs pour chaque paramètre. Ajoutez six _"curseurs d'entier"_ à la zone de dessin et renommez-les en fonction du paramètre correspondant dans la liste. Définissez également les valeurs de chaque curseur tel qu'illustré ci-dessus. Dans l'ordre de haut en bas : 62,92,25,22,8,12
 > 2. Définissez un autre _bloc de code_ avec une liste de la même longueur que les noms des paramètres. Dans ce cas, nommez les variables (sans guillemets) qui créent des entrées pour le _bloc de code_. Connectez les _curseurs_ à chaque entrée respective : `{bw,bl,bh,ao,io,lu};`
@@ -69,7 +69,7 @@ Dans Dynamo, vous pouvez récupérer les paramètres en sélectionnant l’élé
 
 Tout comme dans Revit, la plupart de ces paramètres sont dépendants les uns des autres. Il existe bien entendu des combinaisons dans lesquelles la géométrie peut être rompue. Vous pouvez résoudre ce problème avec des formules définies dans les propriétés des paramètres, ou bien configurer une logique similaire avec des opérations mathématiques dans Dynamo (ce défi supplémentaire est nécessaire si vous souhaitez développer l’exercice).
 
-\![](<images/editing - exercise 05.jpg>)
+![](<images/editing - exercise 05.jpg>)
 
 > 1. Cette combinaison donne une superbe nouvelle conception au volume du bâtiment : 100, 92, 100, 25, 13, 51
 
@@ -77,12 +77,12 @@ Tout comme dans Revit, la plupart de ces paramètres sont dépendants les uns de
 
 Découvrez maintenant comment modifier la façade à l’aide d’un processus similaire.
 
-\![](<images/editing - exercise 06.jpg>)
+![](<images/editing - exercise 06.jpg>)
 
 > 1. Copiez le graphique et concentrez-vous sur le vitrage de la façade qui va abriter le système de ferme. Dans ce cas, isolez quatre paramètres : `{"DblSkin_SouthOffset","DblSkin_MidOffset","DblSkin_NorthOffset","Facade Bend Location"};`
 > 2. De plus, créez des _curseurs de numérotation_ et renommez-les en fonction des paramètres appropriés. Les trois premiers curseurs, de haut en bas, doivent être remappés avec un domaine de [0,10], tandis que le curseur final, _"Facade Bend Location"_, doit être remappé avec un domaine de [0,1]. Ces valeurs, de haut en bas, doivent commencer par les valeurs suivantes (bien qu'elles soient arbitraires) : 2.68, 2.64, 2.29, 0.5
 > 3. Définissez un nouveau nœud Code Block et connectez les curseurs : `{so,mo,no,fbl};`
 
-\![](<images/editing - exercise 07.jpg>)
+![](<images/editing - exercise 07.jpg>)
 
 > 1. En modifiant les _curseurs_ dans cette partie du graphique, vous pouvez rendre le vitrage de la façade beaucoup plus important : 9.98, 10.0, 9.71, 0.31
