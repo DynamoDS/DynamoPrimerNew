@@ -12,7 +12,7 @@ Dynamo définit les maillages à l'aide d'une structure de données Face-Sommet.
 
 Pour créer un maillage, vous avez besoin d’une liste de sommets et d’un système de regroupement de ces sommets en faces appelé groupe d’index.
 
-\![](<../images/meshes - mesh elements.jpg>)
+![](<../images/meshes - mesh elements.jpg>)
 
 > 1. Liste de sommets
 > 2. Liste des groupes d'index permettant de définir les faces.
@@ -25,7 +25,7 @@ La bibliothèque fournit également des outils permettant de modifier les mailla
 
 Consultez les [études de cas Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes) pour découvrir des exemples d’utilisation de ce package.
 
-\![Boîte à outils de maillage](<../images/meshes - mesh toolkit standford bunny.jpg>)
+![Boîte à outils de maillage](<../images/meshes - mesh toolkit standford bunny.jpg>)
 
 ## Approfondir…
 
