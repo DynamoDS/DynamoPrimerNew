@@ -71,7 +71,7 @@ b. En mode **Aperçu 3D**
   * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)Effectuer un zoom avant.
   * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)Effectuer un zoom arrière.
   * ![](<images/2.3-11-graph-preview-pan.jpg>)Panoramique.
-  * \![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Orbit
+  * ![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Orbit
 * À l’aide de la souris :
   * Défilement vers le haut/bas au milieu – Zoom avant/arrière
   * Clic avec le bouton du milieu de la souris et glissement – Panoramique
