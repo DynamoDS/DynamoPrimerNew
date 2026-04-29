@@ -4,7 +4,7 @@
 
 Maintenant que vous avez établi une liste, il est temps de découvrir les opérations que vous pouvez effectuer sur celle-ci. Imaginez que la liste est un paquet de cartes de jeu. Un paquet est la liste et chaque carte de jeu représente un élément.
 
-![cartes](../images/Playing_cards_modified.jpg)
+![cartes](../images/Playing_cards_modified.jpg) 
 
 > Photo de [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
