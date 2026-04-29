@@ -6,7 +6,7 @@
 
 Un [vecteur](2-vectors.md#vector-1) est une représentation de magnitude et de direction. Imaginez-vous une flèche accélérant vers une direction spécifique à une vitesse donnée. C’est un composant clé des modèles dans Dynamo. Dans la mesure où ils se trouvent dans la catégorie Abstract des « assistants », lorsque vous créez un vecteur, vous ne verrez rien dans l’aperçu en arrière-plan.
 
-\![Vecteurs dans Dynamo](<../images/Geometry for Computational Design - vectors.jpg>)
+![Vecteurs dans Dynamo](<../images/Geometry for Computational Design - vectors.jpg>)
 
 > 1. Vous pouvez utiliser une ligne comme support pour un aperçu vectoriel.
 
@@ -20,7 +20,7 @@ Un [vecteur](2-vectors.md#vector-1) est une représentation de magnitude et de d
 
 Un [plan](2-vectors.md#plane-1) est une surface bidimensionnelle. Imaginez-vous une surface plane qui s’étend indéfiniment. Chaque plan possède une origine, une direction X, une direction Y et une direction Z (vers le haut).
 
-\![Plans dans Dynamo](<../images/Geometry for Computational Design - plane.jpg>)
+![Plans dans Dynamo](<../images/Geometry for Computational Design - plane.jpg>)
 
 > 1. Bien qu’ils soient abstraits, les plans possèdent une position d’origine qui permet de les placer dans l’espace.
 > 2. Dans Dynamo, les plans sont rendus dans l'aperçu en arrière-plan.
@@ -35,7 +35,7 @@ Un [plan](2-vectors.md#plane-1) est une surface bidimensionnelle. Imaginez-vous 
 
 Le [système de coordonnées](2-vectors.md#coordinate-system-1) est un système permettant de déterminer l’emplacement des points ou d’autres éléments géométriques. L’image ci-dessous explique à quoi il ressemble dans Dynamo et à quoi correspond chaque couleur.
 
-\![Système de coordonnées dans Dynamo](<../images/Geometry for Computational Design - Coordinate.jpg>)
+![Système de coordonnées dans Dynamo](<../images/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. Bien qu’ils soient abstraits, les systèmes de coordonnées possèdent également une position d’origine qui permet de les placer dans l’espace.
 > 2. Dans Dynamo, les systèmes de coordonnées sont rendus dans l'aperçu en arrière-plan en tant que point (origine) et lignes définissant les axes (X est rouge, Y est vert et Z est bleu suivant la convention).
