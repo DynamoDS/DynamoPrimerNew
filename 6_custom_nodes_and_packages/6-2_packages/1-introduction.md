@@ -22,11 +22,11 @@ Cliquez sur Installer pour ajouter ce package à votre bibliothèque, puis accep
 
 Vous avez maintenant un autre groupe appelé « buildz » dans la bibliothèque Dynamo. Son nom fait référence au développeur du package. Le nœud personnalisé est placé dans ce groupe. Vous pouvez commencer à l’utiliser immédiatement.
 
-\![](<../images/package introduction - installing a package 03.jpg>)
+![](<../images/package introduction - installing a package 03.jpg>)
 
 Utilisez un nœud **Code Block**pour définir rapidement une grille rectangulaire, générer le résultat sur un nœud **Polygon.ByPoints**, puis sur un nœud **Surface.ByPatch** pour afficher la liste des panneaux rectangulaires que vous venez de créer.
 
-\![](<../images/package introduction - installing a package 04.jpg>)
+![](<../images/package introduction - installing a package 04.jpg>)
 
 ### Installation du dossier de package – DynamoUnfold
 
@@ -40,7 +40,7 @@ Cette fois, recherchez _« DynamoUnfold »_, en un mot. Lorsque les packages s
 
 La bibliothèque Dynamo contient un groupe _DynamoUnfold_ avec plusieurs catégories et nœuds personnalisés.
 
-\![](<../images/package introduction - installing package folder 02.jpg>)
+![](<../images/package introduction - installing package folder 02.jpg>)
 
 Examinez maintenant la structure de fichiers du package.
 
@@ -52,7 +52,7 @@ Examinez maintenant la structure de fichiers du package.
 
 Cette action permet d’accéder au répertoire racine du package. Il contient trois dossiers et un fichier.
 
-\![](<../images/package introduction - installing package folder 05.jpg>)
+![](<../images/package introduction - installing package folder 05.jpg>)
 
 > 1. Le dossier _bin_ contient les fichiers .dll. Ce package Dynamo a été développé à l’aide de la commande Zero Touch, de sorte que les nœuds personnalisés sont conservés dans ce dossier.
 > 2. Le dossier _dyf_ contient les nœuds personnalisés. Ce package n’a pas été développé à l’aide de nœuds personnalisés Dynamo. Ce dossier est donc vide pour ce package.
@@ -87,7 +87,7 @@ Une autre façon de découvrir les packages Dynamo est d’explorer le site Web 
 
 Si vous souhaitez voir où vos fichiers de package sont conservés, dans la barre de navigation supérieure, cliquez sur Dynamo > Préférences > Paramètres de package > Emplacement des fichiers de nœuds et de packages. Vous pouvez trouver le répertoire de votre dossier racine actuel à partir d’ici.
 
-\![](<../images/package introduction - installing package folder 08.png>)
+![](<../images/package introduction - installing package folder 08.png>)
 
 Par défaut, les packages sont installés dans un emplacement semblable à celui du dossier suivant : _C:/Utilisateurs/[nom d’utilisateur]/AppData/Itinérance/Dynamo/[Version Dynamo]_.
 
