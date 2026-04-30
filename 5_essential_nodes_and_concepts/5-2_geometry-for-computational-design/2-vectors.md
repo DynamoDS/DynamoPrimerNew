@@ -6,7 +6,7 @@
 
 [Vektor](2-vectors.md#vector-1) je vyjádřením velikosti a směru. Můžete si jej představit jako šipku zrychlující danou rychlostí do určitého směru. Jedná se o klíčovou komponentou pro naše modely v aplikaci Dynamo. Všimněte si, že protože jsou v abstraktní kategorii „Pomocníci“, když vytvoříme vektor, v náhledu pozadí nic neuvidíme.
 
-\![Vektory v aplikaci Dynamo](<../images/Geometry for Computational Design - vectors.jpg>)
+![Vektory v aplikaci Dynamo](<../images/Geometry for Computational Design - vectors.jpg>)
 
 > 1. Úsečku můžeme použít jako náhradu pro náhled vektoru.
 
@@ -20,7 +20,7 @@
 
 [Rovina](2-vectors.md#plane-1) je dvourozměrný povrch. Můžete si jej představit jako plochý povrch, která se neomezeně rozprostírá. Každá rovina má počátek, směr X, směr Y a směr Z (nahoru).
 
-\![Roviny v aplikaci Dynamo](<../images/Geometry for Computational Design - plane.jpg>)
+![Roviny v aplikaci Dynamo](<../images/Geometry for Computational Design - plane.jpg>)
 
 > 1. I když jsou abstraktní, roviny mají polohu počátku, aby je bylo možné umístit do prostoru.
 > 2. V aplikaci Dynamo se roviny rendrují v náhledu pozadí.
@@ -35,7 +35,7 @@
 
 [Souřadnicový systém](2-vectors.md#coordinate-system-1) je systém, který slouží k určení umístění bodů nebo jiných geometrických prvků. Obrázek níže vysvětluje, jak vypadá v aplikaci Dynamo a co představují jednotlivé barvy.
 
-\![Souřadnicový systém v aplikaci Dynamo](<../images/Geometry for Computational Design - Coordinate.jpg>)
+![Souřadnicový systém v aplikaci Dynamo](<../images/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. I když jsou abstraktní, souřadnicové systémy mají také počáteční polohu, takže je můžeme umístit do prostoru.
 > 2. V aplikaci Dynamo jsou souřadnicové systémy vykreslovány v náhledu na pozadí jako bod (počátek) a úsečky definující osy (podle konvence je osa X červená, osa Y zelená a osa Z modrá).
