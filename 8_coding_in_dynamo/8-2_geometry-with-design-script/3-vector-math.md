@@ -4,7 +4,7 @@ Les objets dans les conceptions de calcul sont rarement créés explicitement da
 
 Sous sa forme de base, un vecteur représente une position dans un espace 3D et est souvent considéré comme l’extrémité d’une flèche partant de la position (0, 0, 0) et allant jusqu’à cette position. Les vecteurs peuvent être créés avec le constructeur _ByCoordinates_, qui prend la position x, y et z de l’objet Vector venant d’être créé. Notez que les objets Vector ne sont pas des objets géométriques et n’apparaissent pas dans la fenêtre Dynamo. Toutefois, les informations sur un vecteur nouvellement créé ou modifié peuvent être imprimées dans la fenêtre de la console :
 
-\![](<../images/vector math 01.jpg>)
+![](<../images/vector math 01.jpg>)
 
 ```js
 // construct a Vector object
@@ -60,7 +60,7 @@ c = a.Scale(5);
 
 Souvent, lors de la mise à l'échelle d'un vecteur, on souhaite que la longueur du vecteur résultant soit exactement la même que la valeur mise à l'échelle. Pour ce faire, il faut d’abord normaliser un vecteur, c’est-à-dire définir la longueur du vecteur comme exactement égale à un.
 
-\![](<../images/vector math 05.jpg>)
+![](<../images/vector math 05.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 3);
@@ -94,7 +94,7 @@ c = a.Cross(b);
 
 Le produit scalaire est une autre fonction plus avancée de calcul vectoriel. Le produit scalaire entre deux vecteurs est un nombre réel (et non un objet Vector) qui fait référence, mais ne correspond pas exactement, à l'angle entre deux vecteurs. L’une des propriétés utiles de cette fonction est que le produit scalaire entre deux vecteurs sera égal à 0 si ces derniers sont perpendiculaires (et uniquement à cette condition). Le produit scalaire est calculé à l’aide de la méthode _Dot_.
 
-\![](<../images/vector math 07.jpg>)
+![](<../images/vector math 07.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 1);
