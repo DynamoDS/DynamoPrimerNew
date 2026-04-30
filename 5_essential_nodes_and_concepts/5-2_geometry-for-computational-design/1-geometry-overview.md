@@ -6,11 +6,11 @@
 
 Porozumění typům geometrie a [jejich vzájemným vztahům](1-geometry-overview.md#stepping-through-the-hierarchy) nám umožní orientovat se v kolekci **uzlů geometrie**, která je pro nás k dispozici v knihovně. Uzly geometrie jsou uspořádány abecedně a ne hierarchicky – zde jsou zobrazeny podobně jako jejich rozvržení v rozhraní aplikace Dynamo.
 
-\![](<../images/geometry overview - geometry in dynamo.jpg>)
+![](<../images/geometry overview - geometry in dynamo.jpg>)
 
 Navíc by se vytváření modelů v aplikaci Dynamo a připojení náhledu toho, co vidíme v náhledu pozadí, k toku dat v grafu mělo časem stát více intuitivní.
 
-\![](<../images/Geometry for Computational Design - Overview.jpg>)
+![](<../images/Geometry for Computational Design - Overview.jpg>)
 
 > 1. Všimněte si předpokládaného souřadnicového systému vykresleného pomocí rastru a barevných os
 > 2. Vybrané uzly rendrují odpovídající geometrii (pokud uzel vytvoří geometrii) na pozadí, přičemž barva zvýraznění je stejná
@@ -42,7 +42,7 @@ V praxi tyto zásady znamenají, že je nutné vědět, s čím pracujeme (jak
 
 Věnujme chvíli času sledování vztahu mezi abstraktním a hierarchickým popisem geometrie. Protože tyto dva koncepty spolu souvisí, ale ne vždy zjevně, můžeme se rychle dostat do koncepčních problémů, jakmile začneme vyvíjet hlubší pracovní postupy nebo modely. Pro začátek používáme dimenzionalitu jako jednoduchý popis toho, co vytváříme. Počet kót potřebných k popisu tvaru nám dává vědět, jak je geometrie uspořádána hierarchicky.
 
-\![Výpočetní geometrie](<../images/Geometry for - GeometryDimensionality.jpg>)
+![Výpočetní geometrie](<../images/Geometry for - GeometryDimensionality.jpg>)
 
 > 1. **Bod** (definovaný souřadnicemi) nemá žádné kóty – jsou to jen čísla popisující jednotlivé souřadnice
 > 2. **Úsečka** (definovaná dvěma body) má nyní _jednu_ kótu – úsečku lze „procházet“ dopředu (kladný směr), nebo dozadu (záporný směr)
