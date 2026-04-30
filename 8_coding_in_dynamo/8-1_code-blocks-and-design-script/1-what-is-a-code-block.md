@@ -12,7 +12,7 @@ Pour faire court, les blocs de code sont une interface de génération de script
 
 Avec les blocs de code, l’utilisateur peut décider de la méthode de spécification des entrées de manière flexible. Voici plusieurs méthodes pour créer un point de base avec les coordonnées _(10, 5, 0)_ :
 
-\![](<../images/codeblock brief overview.jpg>)
+![](<../images/codeblock brief overview.jpg>)
 
 Au fur et à mesure que vous découvrez les fonctions disponibles dans la bibliothèque, vous pouvez même constater que saisir « Point.ByCoordinates » est plus rapide que d’effectuer une recherche dans la bibliothèque et trouver le nœud approprié. Lorsque vous tapez _« Point »_ par exemple, Dynamo affiche une liste des fonctions possibles à appliquer à un point. Cela rend le script plus intuitif et aide à apprendre comment appliquer les fonctions dans Dynamo.
 
@@ -20,7 +20,7 @@ Au fur et à mesure que vous découvrez les fonctions disponibles dans la biblio
 
 Le bloc de code se trouve dans _Core > Entrée > Actions > Bloc de code_. Pour aller plus vite, il suffit de cliquer deux fois sur la zone de dessin pour afficher le bloc de code. Ce nœud est si souvent utilisé qu’il dispose de privilèges de double-clic.
 
-\![](<../images/creating codeblock nodes.jpg>)
+![](<../images/creating codeblock nodes.jpg>)
 
 ### Numéros, chaînes et formules
 
@@ -30,7 +30,7 @@ Dans l'image ci-dessous, vous pouvez voir que la manière "classique" de faire l
 
 Les nœuds number et string sont deux exemples de nœuds Dynamo qui sont probablement obsolètes par rapport au bloc de code.
 
-\![](<../images/old school vs code blocks nodes.jpg>)
+![](<../images/old school vs code blocks nodes.jpg>)
 
 > 1. « La vieille école »
 > 2. Nœuds Code Block
