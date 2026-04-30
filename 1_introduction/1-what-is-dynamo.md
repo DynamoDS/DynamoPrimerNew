@@ -8,13 +8,13 @@ Dynamo je aplikace pro [vizuální programování](https://primer2.dynamobim.org
 
 Aplikace Dynamo umožňuje vizuální programování, tedy propojovat prvky, určovat mezi nimi vazby a vytvářet tak algoritmy složené z posloupnosti akcí. Tyto algoritmy lze použít pro širokou škálu aplikací, od zpracování dat po generování geometrií, to vše v reálném čase a bez jediného řádku kódu (`code`).
 
-\![](<images/nodes and wires - flow of data.jpg>)
+![](<images/nodes and wires - flow of data.jpg>)
 
 ### Propojení uzlů pomocí drátů
 
 Uzly a dráty jsou v aplikaci Dynamo klíčovými komponentami, které podporují proces [vizuálního programování](../a_appendix/a-1_visual-programming-and-dynamo.md). Pomáhají vytvořit silné vizuální a systémové vztahy mezi součástmi návrhu. Jednoduchým kliknutím myši snadno propojíte uzly při vývoji a optimalizaci pracovního postupu návrhu.
 
-\![](<images/what is dynamo - connecting nodes with wires.gif>)
+![](<images/what is dynamo - connecting nodes with wires.gif>)
 
 ## K čemu lze aplikaci Dynamo používat?
 
