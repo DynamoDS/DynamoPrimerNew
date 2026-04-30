@@ -4,7 +4,7 @@
 
 Aplikace Dynamo je aktivní vývojový projekt s otevřeným zdrojovým kódem. Prohlédněte si [seznam softwaru, který podporuje aplikaci Dynamo](http://dynamobim.org/download/).
 
-\![](<images/setup for dynamo - dynamo revit.png>) \![](<images/setup for dynamo - dynamo civil 3D.png>) \![](<images/setup for dynamo - dynamo alias design.png>) \![](<images/setup for dynamo - dynamo formit.png>) \![](<images/setup for dynamo - dynamo advance steel.png>) \![](<images/setup for dynamo - dynamo robot structural analysis.png>) \![](<images/setup for dynamo - dynamo forma.png>)
+![](<images/setup for dynamo - dynamo revit.png>) \![](<images/setup for dynamo - dynamo civil 3D.png>) ![](<images/setup for dynamo - dynamo alias design.png>) ![](<images/setup for dynamo - dynamo formit.png>) ![](<images/setup for dynamo - dynamo advance steel.png>) ![](<images/setup for dynamo - dynamo robot structural analysis.png>) ![](<images/setup for dynamo - dynamo forma.png>)
 
 ### Spuštění aplikace Dynamo jako rozšíření
 
@@ -31,7 +31,7 @@ Aplikace Dynamo je k dispozici na [webových stránkách aplikace Dynamo](http:
 
 Pokud hledáte předchozí nebo testovací vývojové verze, přejděte do dolní části této stránky, kde najdete všechny verze.
 
-\![](<images/03-02 Dynamo Sandbox All builds.png>)
+![](<images/03-02 Dynamo Sandbox All builds.png>)
 
 {% hint style="info" %} Testovací vývojové verze mohou obsahovat některé nové a experimentální funkce, které ještě nejsou plně testovány, a proto mohu být nestabilní. Jejich používáním můžete odhalit chyby nebo problémy a pomoci nám vylepšit aplikaci tím, že nahlásíte problémy našemu týmu.
 
@@ -45,21 +45,21 @@ V tomto kroku stáhněte a nainstalujte do počítače soubor [7zip](https://ww
 
 Klikněte pravým tlačítkem myši na soubor ZIP a vyberte příkaz **Extrahovat vše**.
 
-\![](<images/03-03 Extract zip file.png>)
+![](<images/03-03 Extract zip file.png>)
 
 Vyberte cíl, do kterého chcete rozbalit všechny soubory.
 
-\![](<images/03-04 Extract destination folder.png>)
+![](<images/03-04 Extract destination folder.png>)
 
 #### Spouštění
 
 V cílové složce dvakrát klikněte na soubor **DynamoSandbox.exe**, abyste jej spustili.
 
-\![](<images/03-05 Dynamo exe.jpg>)
+![](<images/03-05 Dynamo exe.jpg>)
 
 Zobrazí se následující úvodní obrazovka aplikace Dynamo Sandbox.
 
-\![](<images/03-06 Dynamo startup screen.png>)
+![](<images/03-06 Dynamo startup screen.png>)
 
 Blahopřejeme! Dokončili jste instalaci aplikace Dynamo Sandbox a můžete ji začít používat.
 
