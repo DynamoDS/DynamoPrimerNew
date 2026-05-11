@@ -160,7 +160,7 @@ Dadurch werden Benutzer gewarnt, dass sie eine gültige Liste mit mindestens dre
 
 ***
 
-**Beispiel 3: Überprüfen der Dateitypkompatibilität **
+**Beispiel 3: Überprüfen der Dateitypkompatibilität**
 
 Bei einem Block, der Dateipfade verarbeitet, sollten Sie sicherstellen, dass nur bestimmte Dateitypen zulässig sind. Wenn ein nicht unterstützter Dateityp erkannt wird, protokollieren Sie eine Warnung.
 
