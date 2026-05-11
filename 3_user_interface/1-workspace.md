@@ -71,7 +71,7 @@ b. Im **3D-Vorschaumodus**
   * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)Vergrößern
   * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)Verkleinern
   * ![](<images/2.3-11-graph-preview-pan.jpg>)Schwenken
-  * \![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Orbit
+  * ![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Orbit
 * Mit der Maus:
   * Mausrad nach oben/unten drehen – Vergrößern/Verkleinern
   * Klicken und ziehen mit der mittleren Maustaste – Schwenken
