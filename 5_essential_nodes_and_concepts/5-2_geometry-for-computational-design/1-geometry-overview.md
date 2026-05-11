@@ -6,11 +6,11 @@
 
 Durch das Verstehen der Geometrietypen und der [Beziehungen, die sie zueinander aufweisen](1-geometry-overview.md#stepping-through-the-hierarchy), können Sie leichter durch die Sammlung der **Geometry-Blöcke** navigieren, die in der Bibliothek für Sie verfügbar sind. Die Geometrieblöcke sind in alphabetischer Reihenfolge im Gegensatz zu hierarchischen angeordnet. Sie werden hier also ähnlich wie in ihrem Layout in der Dynamo Benutzeroberfläche angezeigt.
 
-\![](<../images/geometry overview - geometry in dynamo.jpg>)
+![](<../images/geometry overview - geometry in dynamo.jpg>)
 
 Darüber hinaus sollte das Erstellen von Modellen in Dynamo und das Verbindung der Vorschau in der Hintergrundvorschau mit dem Datenstrom in unserem Diagramm im Laufe der Zeit intuitiver werden.
 
-\![](<../images/Geometry for Computational Design - Overview.jpg>)
+![](<../images/Geometry for Computational Design - Overview.jpg>)
 
 > 1. Beachten Sie das angenommene Koordinatensystem, das durch das Raster und die farbigen Achsen dargestellt wird.
 > 2. Die ausgewählten Knoten rendern die entsprechende Geometrie (wenn der Knoten Geometrie erstellt) im Hintergrund in der Hervorhebungsfarbe.
@@ -42,7 +42,7 @@ In der Praxis bedeutet dies, dass uns bewusst sein muss, womit wir arbeiten (wel
 
 Nehmen Sie sich etwas Zeit, um die Beziehung zwischen der abstrakten und hierarchischen Beschreibung von Geometrie näher zu betrachten. Da diese beiden Konzepte miteinander verbunden, aber nicht immer auf den ersten Blick ersichtlich sind, können Sie schnell in eine konzeptuelle Sackgasse gelangen, sobald Sie damit beginnen, tiefergehende Arbeitsabläufe oder Modelle zu entwickeln. Verwenden Sie zunächst Dimensionalität als eine einfache Beschreibung des "Zeugs", das Sie modellieren. Die Anzahl der Bemaßungen, die erforderlich sind, um eine Form zu beschreiben, verdeutlicht, wie Geometrie hierarchisch aufgebaut ist.
 
-\![Computational Geometry](<../images/Geometry for - GeometryDimensionality.jpg>)
+![Computational Geometry](<../images/Geometry for - GeometryDimensionality.jpg>)
 
 > 1. Ein **Punkt** (definiert durch Koordinaten) verfügt über keine Bemaßungen, sondern weist nur Zahlen auf, die die einzelnen Koordinaten beschreiben.
 > 2. Eine **Linie** (definiert durch zwei Punkte) verfügt jetzt über _eine_ Bemaßung – Sie können sich vorwärts (in positiver Richtung) oder rückwärts (in negativer Richtung) entlang der Linie bewegen.
