@@ -2,7 +2,7 @@
 
 Wenn wir wissen, wie wir ein Zero-Touch-Projekt erstellen, können wir uns die Details zum Erstellen eines Blocks anhand des Beispiels ZeroTouchEssentials im Dynamo-GitHub genauer ansehen.
 
-![Zero-Touch-Blöcke](../../.gitbook/assets/ootbzerotouch.png)
+![Zero-Touch-Blöcke](../images/ootbzerotouch.png)
 
 > Viele der Standardblöcke von Dynamo sind im Wesentlichen Zero-Touch-Blöcke, wie die meisten der oben genannten Mathematik-, Farb- und DateTime-Blöcke.
 
@@ -10,7 +10,7 @@ Laden Sie zunächst hier das Projekt ZeroTouchEssentials herunter: [https://gith
 
 Öffnen Sie in Visual Studio die Projektmappendatei `ZeroTouchEssentials.sln`, und erstellen Sie die Projektmappe.
 
-![ZeroTouchEssentials in Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
+![ZeroTouchEssentials in Visual Studio](../images/vs-build-zte.jpg)
 
 > Die Datei `ZeroTouchEssentials.cs` enthält alle Methoden, die wir in Dynamo importieren.
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Vorgabewert](../../.gitbook/assets/defaultval.jpg)
+![Vorgabewert](../images/defaultval.jpg)
 
 > 1. Der Vorgabewert wird angezeigt, wenn Sie den Mauszeiger über den Eingabeanschluss des Blocks bewegen.
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Ein Block, der mehrere Ausgaben zurückgibt.
 
-![Mehrere Ausgaben](../../.gitbook/assets/multipleoutputs.png)
+![Mehrere Ausgaben](../images/multipleoutputs.png)
 
 > 1. Beachten Sie, dass nun zwei Ausgabeanschlüsse vorhanden sind, die entsprechend den Zeichenfolgen benannt sind, die wir für die Wörterbuchschlüssel eingegeben haben.
 
@@ -90,7 +90,7 @@ Es wird empfohlen, Dynamo-Blöcken Dokumentation hinzuzufügen, die die Funktion
   * Beispiel: `/// <summary>...</summary>`
 * Aktivieren Sie die XML-Dokumentation in Visual Studio, indem Sie `Project > [Project] Properties > Build > Output` auswählen und `Documentation file` aktivieren.
 
-![Erstellen einer XML-Datei](../../.gitbook/assets/vs-xml.jpg)
+![Erstellen einer XML-Datei](../images/vs-xml.jpg)
 
 > 1. Visual Studio generiert eine XML-Datei am angegebenen Speicherort.
 
@@ -141,7 +141,7 @@ Blockbeschreibungen erläutern kurz die Funktion und die Ausgabe eines Blocks. I
 * In der QuickInfo des Blocks
 * Im Dokumentationsbrowser
 
-![Blockbeschreibung](../../.gitbook/assets/node-description.png)
+![Blockbeschreibung](../images/node-description.png)
 
 Befolgen Sie diese Richtlinien, um beim Schreiben oder Aktualisieren von Blockbeschreibungen Konsistenz zu gewährleisten und Zeit zu sparen.
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 Nachdem die DLL-Datei ZeroTouchEssentials importiert wurde, befindet sich ein ZeroTouchEssentials-Block in der Bibliothek. Dieses Objekt kann mithilfe des Blocks `ByTwoDoubles` erstellt werden.
 
-![Block ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
+![Block ByTwoDoubles](../images/dyn-constructor.jpg)
 
 ### Verwenden von Dynamo-Geometrietypen <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Ein Block, der die Länge einer Kurve abruft und diese verdoppelt.
 
-![Kurveneingabe](../../.gitbook/assets/doublelength.png)
+![Kurveneingabe](../images/doublelength.png)
 
 > 1. Dieser Block akzeptiert einen Kurvengeometrietyp als Eingabe.
 
@@ -285,7 +285,7 @@ Beim Publizieren einer neueren Version einer Bibliothek können sich Blocknamen 
 * Erstellen Sie im migrations-Element für jede Namensänderung `<priorNameHint>...</priorNameHint>`-Elemente.
 * Geben Sie für jede Namensänderung ein `<oldName>...</oldName>`- und ein `<newName>...</newName>`-Element an.
 
-![Migrationsdatei](../../.gitbook/assets/vs-migrations-file.jpg)
+![Migrationsdatei](../images/vs-migrations-file.jpg)
 
 > 1. Klicken Sie mit der rechten Maustaste, und wählen Sie `Add > New Item` aus.
 > 2. Wählen Sie `XML File`.

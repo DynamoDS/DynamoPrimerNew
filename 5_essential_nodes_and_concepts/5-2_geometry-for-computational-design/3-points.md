@@ -10,17 +10,17 @@ Ein [Punkt](3-points.md#deep-dive-into...) wird lediglich durch einen oder mehre
 
 In Dynamo werden größtenteils Punkte verwendet, die sich im dreidimensionalen Weltkoordinatensystem befinden und drei Koordinaten [x,y,z] aufweisen (3D-Punkt in Dynamo).
 
-\![](<../../.gitbook/assets/points - 3d point in dynamo.jpg>)
+\![](<../images/points - 3d point in dynamo.jpg>)
 
 Ein 2D-Punkt in Dynamo hat zwei Koordinaten: [x,y].
 
-\![](<../../.gitbook/assets/points - 2d point in dynamo.jpg>)
+\![](<../images/points - 2d point in dynamo.jpg>)
 
 ### Punkt auf Kurven und Flächen
 
 Die Parameter für Kurven und Flächen sind kontinuierlich und erstrecken sich über die Kante der angegebenen Geometrie hinaus. Da die Formen, die den Parameterraum definieren, sich im dreidimensionalen Weltkoordinatensystem befinden, können parametrische Koordinaten jederzeit in Weltkoordinaten konvertiert werden. Der Punkt [0.2, 0.5] auf der Oberfläche entspricht beispielsweise dem Punkt [1.8, 2.0, 4.1] in Weltkoordinaten.
 
-\![](<../../.gitbook/assets/points - xyz vs coord sys vs uv.jpg>)
+\![](<../images/points - xyz vs coord sys vs uv.jpg>)
 
 > 1. Punkt in angenommenen Weltkoordinaten (xyz)
 > 2. Punkt relativ zu einem angegebenen Koordinatensystem (zylindrisch)
@@ -36,7 +36,7 @@ Die Parameter für Kurven und Flächen sind kontinuierlich und erstrecken sich �
 
 Wenn Geometrie gewissermaßen die Sprache für ein Modell ist, sind Punkte das Alphabet. Punkte sind die Grundlage für die Erstellung aller anderen Geometrie: Sie benötigen mindestens zwei Punkte, um eine Kurve zu erstellen, mindestens drei Punkte für ein Polygon oder eine Netzfläche usw. Indem Sie die Position, Anordnung und Beziehung zwischen Punkten angeben (z. B. mithilfe einer Sinusfunktion), können Sie Geometrie höherer Ordnung definieren, die etwa als Kreise oder Kurven zu erkennen ist.
 
-![Punkt zu Kurve](../../.gitbook/assets/PointsAsBuildingBlocks-1.jpg)
+![Punkt zu Kurve](../images/PointsAsBuildingBlocks-1.jpg)
 
 > 1. Ein Kreis, der die Funktionen `x=r*cos(t)` und `y=r*sin(t)` verwendet
 > 2. Eine Sinuskurve, die die Funktionen `x=(t)` und `y=r*sin(t)` verwendet
@@ -45,7 +45,7 @@ Wenn Geometrie gewissermaßen die Sprache für ein Modell ist, sind Punkte das A
 
 Punkte können auch in zweidimensionalen Koordinatensystemen vorhanden sein. Für unterschiedliche Räume bestehen unterschiedliche Notationskonventionen: So wird etwa bei einer Ebene [X,Y], bei einer Oberfläche jedoch [U,V] verwendet.
 
-![Punkt als Koordinaten](../../.gitbook/assets/Coordinates.jpg)
+![Punkt als Koordinaten](../images/Coordinates.jpg)
 
 > 1. Punkt in euklidischen Koordinatensystem: [x,y,z]
 > 2. Punkt in einem Koordinatensystem mit Kurvenparameter: [t]

@@ -377,7 +377,7 @@ Wenn die Elementbindung aktiviert gewesen wäre, könnten wir die bereits geleis
 
 ***
 
-![Wände erstellen](../../.gitbook/assets/creates_walls.png)
+![Wände erstellen](../images/creates_walls.png)
 
 #### Elementbindung und Trace im Vergleich
 
@@ -466,15 +466,15 @@ Bei der nächsten Ausführung des Diagramms suchen wir in Trace die dort gespeic
 
 Der Ablauf von zwei aufeinander folgenden Ausführungen des Diagramms, mit denen ein einzelnes `TraceExampleItem`-Objekt erstellt wird, sieht wie folgt aus:
 
-![Erster Anruf](../../.gitbook/assets/Trace-first-call.png)
+![Erster Anruf](../images/Trace-first-call.png)
 
-![Zweiter Aufruf](../../.gitbook/assets/Trace-second-call.png)
+![Zweiter Aufruf](../images/Trace-second-call.png)
 
 Die gleiche Idee wird im nächsten Beispiel anhand eines realistischeren Anwendungsfalls mit einem DynamoRevit-Block veranschaulicht.
 
 #### Trace-Diagramm
 
-![Trace-Schritte](../../.gitbook/assets/trace_diagram.png) ![Trace-Ablauf](../../.gitbook/assets/trace_alt_diagram.png)
+![Trace-Schritte](../images/trace_diagram.png) ![Trace-Ablauf](../images/trace_alt_diagram.png)
 
 #### ANMERKUNG:
 
@@ -560,7 +560,7 @@ Die wichtigsten Phasen der Ausführung des Konstruktors im Zusammenhang mit der 
 
 * Die in Versionen vor Dynamo 3.0 gespeicherten Trace-Objekte werden mit SOAP gespeichert und deshalb nicht in neueren Versionen unterstützt. Die zuvor gespeicherten Elementbindungsdaten werden ignoriert, und die folgende Meldung wird in Dynamo 3.0 und höheren Versionen angezeigt. Die Elementbindungsdaten werden beim nächsten Ausführen und Speichern des Arbeitsbereichs gespeichert.
 
-![Kompatibilität der Elementbindung](../../.gitbook/assets/element_binding_compatibility_message.jpg)
+![Kompatibilität der Elementbindung](../images/element_binding_compatibility_message.jpg)
 
 #### Sollte ElementBinding vorgabemäßig aktiviert sein?
 
@@ -574,7 +574,7 @@ Im Allgemeinen **können Sie diese Blöcke gut als Funktion konzeptualisieren, d
 
 Es sind mehrere `Selection`-Blöcke in DynamoRevit vorhanden. Sie lassen sich in mindestens zwei Gruppen unterteilen:
 
-![Revit-Auswahlblöcke](../../.gitbook/assets/revitSelectionNodes.png)
+![Revit-Auswahlblöcke](../images/revitSelectionNodes.png)
 
 1.  Benutzeroberflächen-Auswahl durch Benutzer:
 
@@ -602,7 +602,7 @@ Es sind mehrere `Selection`-Blöcke in DynamoRevit vorhanden. Sie lassen sich in
 
 Die Arbeitsabläufe in D4C ähneln der obigen Beschreibung für Revit. Hier sehen Sie zwei typische Sätze von Auswahlblöcken in D4C:
 
-![Civil 3D-Auswahlblöcke](../../.gitbook/assets/civilSelectionNodes.png)
+![Civil 3D-Auswahlblöcke](../images/civilSelectionNodes.png)
 
 ### Mängel:
 
@@ -613,9 +613,9 @@ Die Arbeitsabläufe in D4C ähneln der obigen Beschreibung für Revit. Hier sehe
 
 ### Datenablaufdiagramme
 
-![Auswahlablauf](../../.gitbook/assets/selectModelElement.png)
+![Auswahlablauf](../images/selectModelElement.png)
 
-![Auswahlfluss2](../../.gitbook/assets/selectElementFace.png)
+![Auswahlfluss2](../images/selectElementFace.png)
 
 ### Technische Implementierung: (siehe Diagramme oben):
 
@@ -624,7 +624,7 @@ Auswahlblöcke werden implementiert, indem sie Daten von den generischen `Select
 * Implementierung einer `BuildOutputAST`-Methode. Diese Methode muss einen AST zurückgeben, der irgendwann in der Zukunft ausgeführt wird, wenn der Block ausgeführt werden soll. Im Fall von Auswahlblöcken sollten Elemente oder Geometrie aus den Element-IDs zurückgegeben werden. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * Die Implementierung von `BuildOutputAST` ist einer der schwierigsten Aspekte bei der Implementierung von `NodeModel`-/Benutzeroberflächen-Blöcken. Es empfiehlt sich, einer C#-Funktion so viel Logik wie möglich hinzuzufügen und einfach einen AST-Funktionsaufruf-Block in den AST einzubetten. Beachten Sie, dass `node` hier ein AST-Block in der abstrakten Syntaxstruktur und kein Block im Dynamo-Diagramm ist.
 
-![Auswahlfluss2](../../.gitbook/assets/selectionAST.png)
+![Auswahlfluss2](../images/selectionAST.png)
 
 * Serialisierung -
   *   Da es sich hierbei um explizite abgeleitete `NodeModel`-Typen (nicht um ZeroTouch) handelt, muss auch ein [JsonConstructor] implementiert werden, der während der Deserialisierung des Blocks aus einer DYN-Datei verwendet wird.

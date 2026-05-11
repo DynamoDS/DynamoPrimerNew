@@ -4,7 +4,7 @@
 
 Der Dynamo-Arbeitsbereich besteht aus vier Hauptelementen.
 
-\![](<../.gitbook/assets/workspace - ui.png>)
+![](<images/workspace-ui.png>)
 
 > 1. Alle aktiven Registerkarten.
 > 2. Vorschaumodus
@@ -15,11 +15,11 @@ Der Dynamo-Arbeitsbereich besteht aus vier Hauptelementen.
 
 Wenn Sie eine neue Datei öffnen, wird vorgabemäßig ein neuer Start-Arbeitsbereich geöffnet.
 
-\![](<../.gitbook/assets/workspace - home tab.png>)
+![](<images/workspace-home-tab.png>)
 
 Sie können einen benutzerdefinierten Block erstellen und ihn in einem Arbeitsbereich für benutzerdefinierte Blöcke öffnen.
 
-\![](<../.gitbook/assets/workspace - custom node tab.png>)
+![](<images/workspace-custom-node-tab.png>)
 
 {% hint style="info" %} In jedem Dynamo-Fenster ist nur ein Start-Arbeitsbereich zulässig, auf den Registerkarten können jedoch mehrere Arbeitsbereiche für benutzerdefinierte Blöcke geöffnet sein. {% endhint %}
 
@@ -29,18 +29,18 @@ Es gibt 3 Methoden zum Wechseln zwischen verschiedenen Vorschauen:
 
 a. Verwenden Sie die Symbole oben rechts.
 
-* \![](<../.gitbook/assets/2.3-04 Graph preview icon.jpg>)Diagrammvorschau
-* \![](<../.gitbook/assets/2.3-05 3D preview icon.jpg>)3D-Vorschau
+* ![](<images/2.3-04-graph-preview-icon.jpg>)Diagrammvorschau
+* ![](<images/2.3-05-3d-preview-icon.jpg>)3D-Vorschau
 
 b. Klicken Sie mit der rechten Maustaste in den Arbeitsbereich.
 
 * Wechseln von der 3D-Vorschau zur Diagrammvorschau
 
-\![](<../.gitbook/assets/workspace - right click switch to graph view.jpg>)
+![](<images/workspace-right-click-switch-to-graph-view.jpg>)
 
 * Wechseln von der Diagrammvorschau zur 3D-Vorschau
 
-\![](<../.gitbook/assets/workspace - right click switch to geometry.jpg>)
+![](<images/workspace-right-click-switch-to-geometry.jpg>)
 
 c. Verwenden Sie den Tastaturbefehl (Strg+B).
 
@@ -51,10 +51,10 @@ Sie können in beiden Arbeitsbereichen Symbole oder eine Maus zum Navigieren ver
 a. Im Modus **Diagrammvorschau**
 
 * Mit Symbolen:
-  * \![](<../.gitbook/assets/2.3-08 graph preview zoom to fitpsd.jpg>)Zoom Grenzen
-  * \![](<../.gitbook/assets/2.3-09 graph preview zoom in.jpg>)Vergrößern
-  * \![](<../.gitbook/assets/2.3-10 graph preview zoom out.jpg>)Verkleinern
-  * \![](<../.gitbook/assets/2.3-11 graph preview pan.jpg>)Schwenken
+  * ![](<images/2.3-08-graph-preview-zoom-to-fitpsd.jpg>)Zoom Grenzen
+  * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)Vergrößern
+  * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)Verkleinern
+  * ![](<images/2.3-11-graph-preview-pan.jpg>)Schwenken
 * Mit der Maus:
   * Linksklick – Auswählen
   * Linksklicken und ziehen – Auswahlfeld zur Auswahl mehrerer Blöcke
@@ -62,16 +62,16 @@ a. Im Modus **Diagrammvorschau**
   * Klicken und ziehen mit der mittleren Maustaste – Schwenken
   * Klicken mit der rechten Maustaste auf eine beliebige Stelle im Ansichtsbereich – Suche im Ansichtsbereich öffnen
 
-\![](<../.gitbook/assets/workspace - in canvas search.gif>)
+![](<images/workspace-in-canvas-search.gif>)
 
 b. Im **3D-Vorschaumodus**
 
 * Mit Symbolen:
-  * \![](<../.gitbook/assets/2.3-08 graph preview zoom to fitpsd.jpg>)Zoom Grenzen
-  * \![](<../.gitbook/assets/2.3-09 graph preview zoom in.jpg>)Vergrößern
-  * \![](<../.gitbook/assets/2.3-10 graph preview zoom out.jpg>)Verkleinern
-  * \![](<../.gitbook/assets/2.3-11 graph preview pan.jpg>)Schwenken
-  * ![](images/3-1/3-1-133Dprevieworbit.jpg)Orbit
+  * ![](<images/2.3-08-graph-preview-zoom-to-fitpsd.jpg>)Zoom Grenzen
+  * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)Vergrößern
+  * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)Verkleinern
+  * ![](<images/2.3-11-graph-preview-pan.jpg>)Schwenken
+  * \![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Orbit
 * Mit der Maus:
   * Mausrad nach oben/unten drehen – Vergrößern/Verkleinern
   * Klicken und ziehen mit der mittleren Maustaste – Schwenken
@@ -83,4 +83,4 @@ Klicken Sie mit der linken Maustaste, um einen beliebigen Block auszuwählen.
 
 Um mehrere Blöcke auszuwählen, klicken Sie und ziehen Sie, um einen Auswahlrahmen zu erstellen.
 
-\![](<../.gitbook/assets/workspace - selection box.gif>)
+![](<images/workspace-selection-box.gif>)

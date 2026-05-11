@@ -6,4 +6,4 @@ All das und noch viel mehr umfasst der Tief- und Infrastrukturbau! Dieser Abschn
 
 Darüber hinaus sind in diesen Beispielen bewährte Best Practices für die Erstellung aussagekräftiger Diagramme enthalten. Während Sie die Beispiele durcharbeiten, sollten Sie sich auch mit dem Abschnitt [9_best_practices](../../9\_best\_practices/ "mention") vertraut machen, der weitere Ideen zum Erstellen leistungsstarker, flexibler und langlebiger Diagramme enthält.
 
-<figure><img src="../../.gitbook/assets/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>

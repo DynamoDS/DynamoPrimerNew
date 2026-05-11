@@ -8,7 +8,7 @@ Sie arbeiten mit einem Beispielpaket, das die UV-Zuordnung von Punkten aus einer
 
 In der unten gezeigten Abbildung wird ein Punkt aus einer Oberfläche mithilfe von UV-Koordinaten einer anderen zugeordnet. Dem Paket liegt dasselbe Prinzip zugrunde, es wird jedoch komplexere Geometrie verwendet.
 
-![](../../.gitbook/assets/uvMap.jpg)
+![](../images/uvMap.jpg)
 
 ### Installieren des Pakets
 
@@ -16,11 +16,11 @@ Im vorigen Kapitel wurden in Dynamo verfügbare Methoden vorgestellt, mit denen 
 
 Klicken Sie in Dynamo auf Pakete > Package Manager, und suchen Sie nach dem Paket MapToSurface (in einem Wort geschrieben). Klicken Sie auf Installieren, um den Download zu starten und das Paket zu Ihrer Bibliothek hinzuzufügen.
 
-<figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
 Nach der Installation sollten die benutzerdefinierten Blöcke im Abschnitt Add-Ons > Dynamo Primer verfügbar sein.
 
-\![](<../../.gitbook/assets/publish a package - publish locally 04.jpg>)
+\![](<../images/publish a package - publish locally 04.jpg>)
 
 Nachdem Sie das Paket installiert haben, sehen Sie sich dessen Konfiguration an.
 
@@ -30,37 +30,37 @@ Für das Paket, das Sie hier erstellen, werden fünf benutzerdefinierte Blöcke 
 
 Dieses Paket ist mit fünf benutzerdefinierten Blöcken recht einfach konstruiert. In den nachfolgenden Schritten wird der Aufbau der einzelnen Blöcke kurz erläutert.
 
-\![](<../../.gitbook/assets/develop package - custom nodes 01 (1) (3).jpg>)
+\![](<../images/develop package - custom nodes 01.jpg>)
 
 #### **PointsToSurface**
 
 Dieser recht einfache benutzerdefinierte Block bildet die Grundlage für alle anderen Zuordnungsblöcke. Dieser Block ordnet, einfach ausgedrückt, einen Punkt mit UV-Koordinaten auf einer Quelloberfläche der Position mit den entsprechenden UV-Koordinaten auf der Zieloberfläche zu. Punkte sind das einfachste Geometrieelement, aus dem komplexere Geometrie erstellt wird. Aus diesem Grund können Sie mithilfe dieser Logik 2D- und sogar 3D-Geometrie von einer Oberfläche einer anderen zuweisen.
 
-\![](<../../.gitbook/assets/develop package -pointToSurface.jpg>)
+\![](<../images/develop package -pointToSurface.jpg>)
 
 #### **PolygonsToSurface**
 
 Die Logik zum Erweitern der Punktzuordnung von 1D- auf 2D-Geometrie wird hier auf einfache Weise anhand von Polygonen gezeigt. Beachten Sie, dass der _PointsToSurface_-Block in diesem Block verschachtelt ist. Dadurch können Sie Punkte jedes Polygons der Oberfläche zuordnen und dann das Polygon aus den zugeordneten Punkten rekonstruieren. Durch Verwendung der geeigneten Datenstruktur (eine Liste aus Listen von Punkten) bleiben die Polygone nach ihrer Umwandlung in eine Punktsammlung als separate Polygone erhalten.
 
-\![](<../../.gitbook/assets/develop package -polygonsToSurface.jpg>)
+\![](<../images/develop package -polygonsToSurface.jpg>)
 
 #### **NurbsCrvtoSurface**
 
 Hier kommt dieselbe Logik zum Einsatz wie beim _PolygonsToSurface_-Block. Dabei werden allerdings keine Punkte für Polygone, sondern Steuerpunkte für Nurbs-Kurven zugeordnet.
 
-\![](<../../.gitbook/assets/develop package -nurbsCrvtoSurface.jpg>)
+\![](<../images/develop package -nurbsCrvtoSurface.jpg>)
 
 **OffsetPointsToSurface**
 
 Dieser Block ist etwas komplexer, wobei jedoch ein einfaches Prinzip zugrunde liegt: Mit diesem Block werden genau wie beim _PointsToSurface_-Block Punkte aus einer Oberfläche einer anderen zugeordnet. Dabei werden jedoch auch Punkte berücksichtigt, die nicht auf der ursprünglichen Quelloberfläche liegen. Für diese Punkte wird ihr Abstand zum nächstgelegenen UV-Parameter abgerufen und dieser Abstand wird der Normalen an der entsprechenden UV-Koordinatenposition der Zieloberfläche zugeordnet. Bei der Bearbeitung der Beispieldateien wird dies leichter verständlich.
 
-\![](<../../.gitbook/assets/develop package -OffsetPointsToSurface.jpg>)
+\![](<../images/develop package -OffsetPointsToSurface.jpg>)
 
 #### **SampleSrf**
 
 Mit diesem einfachen Block wird eine parametrische Oberfläche erstellt, die aus dem Quellraster einer gewellten Oberfläche in den Beispieldateien zugeordnet werden kann.
 
-\![](<../../.gitbook/assets/develop package -sampleSrf.jpg>)
+\![](<../images/develop package -sampleSrf.jpg>)
 
 ### Beispieldateien
 
@@ -68,7 +68,7 @@ Die Beispieldateien befinden sich im Stammordner des Pakets. Klicken Sie auf Pac
 
 Klicken Sie neben MapToSurface auf das Menü mit den drei Punkten > Stammverzeichnis anzeigen.
 
-<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Navigieren Sie zum Ordner _extra_, in dem sich alle Dateien des Pakets befinden, die keine benutzerdefinierten Blöcke sind. Hier werden Beispieldateien (sofern vorhanden) für Dynamo-Pakete abgelegt. Mit den im Folgenden gezeigten Abbildungen werden die in den einzelnen Beispieldateien gezeigten Konzepte erläutert.
 
@@ -76,40 +76,40 @@ Navigieren Sie zum Ordner _extra_, in dem sich alle Dateien des Pakets befinden,
 
 Dieses Beispiel zeigt die Unterteilung einer Oberfläche anhand eines Rasters aus Rechtecken mithilfe von _PointsToSurface_. Dieser Vorgang ist Ihnen wahrscheinlich vertraut, da ein ähnlicher Arbeitsablauf im [vorherigen Kapitel](../6-1_custom-nodes/2-creating.md) gezeigt wurde.
 
-\![](<../../.gitbook/assets/develop package -sample file 01.jpg>)
+\![](<../images/develop package -sample file 01.jpg>)
 
 #### **02-PanelingWithPolygons-II**
 
 In dieser Übungsdatei wird eine Einrichtung zum Zuordnen von Kreisen (bzw. Polygonen, die Kreise repräsentieren) von einer Oberfläche zu einer anderen gezeigt. Hierfür wird der _PolygonsToSurface_-Block verwendet.
 
-\![](<../../.gitbook/assets/develop package -sample file 02.jpg>)
+\![](<../images/develop package -sample file 02.jpg>)
 
 #### **03-NurbsCrvsAndSurface**
 
 Diese Beispieldatei zeigt einen komplexeren Vorgang unter Verwendung des NurbsCrvToSurface-Blocks. Die Zieloberfläche wird um eine angegebene Strecke versetzt und die Nurbs-Kurve wird sowohl der ursprünglichen Zieloberfläche als auch der versetzten Oberfläche zugeordnet. Die beiden zugeordneten Kurven werden anschließend durch eine Erhebung verbunden, sodass eine Oberfläche entsteht, die anschließend verdickt wird. Der resultierende Körper weist eine gewellte Form auf, die den Normalen der Zieloberfläche folgt.
 
-\![](<../../.gitbook/assets/develop package -sample file 03.jpg>)
+\![](<../images/develop package -sample file 03.jpg>)
 
 #### **04-PleatedPolysurface-OffsetPoints**
 
 In dieser Beispieldatei wird die Zuordnung einer gefalteten PolySurface von einer Quell- zu einer Zieloberfläche gezeigt. Die Quell- und Zieloberfläche sind eine rechteckige, das ganze Raster umfassende Oberfläche und ein Rotationskörper.
 
-\![](<../../.gitbook/assets/develop package -sample file 04a.jpg>)
+\![](<../images/develop package -sample file 04a.jpg>)
 
 Zuordnung des Quell-PolySurface von der Quell- zur Zieloberfläche.
 
-\![](<../../.gitbook/assets/develop package -sample file 04b.jpg>)
+\![](<../images/develop package -sample file 04b.jpg>)
 
 #### **05-SVG-Import**
 
 Mithilfe der benutzerdefinierten Blöcke können Kurven unterschiedlicher Typen zugeordnet werden. In dieser letzten Datei wird daher eine aus Illustrator exportierte SVG-Datei referenziert und die importierten Kurven werden einer Zieloberfläche zugeordnet.
 
-\![](<../../.gitbook/assets/develop package -sample file 05a.jpg>)
+\![](<../images/develop package -sample file 05a.jpg>)
 
 Durch Analyse der Syntax einer SVG-Datei werden die Kurven aus dem XML-Format in Dynamo-Polykurven konvertiert.
 
-\![](<../../.gitbook/assets/develop package -sample file 05b.jpg>)
+\![](<../images/develop package -sample file 05b.jpg>)
 
 Die importierten Kurven werden einer Zieloberfläche zugeordnet. Dieser Vorgang ermöglicht es, eine Unterteilung explizit (durch Zeigen und Klicken) in Illustrator zu entwerfen, und sie anschließend in Dynamo zu importieren und auf eine Zieloberfläche anzuwenden.
 
-\![](<../../.gitbook/assets/develop package -sample file 05c.jpg>)
+\![](<../images/develop package -sample file 05c.jpg>)

@@ -1,6 +1,6 @@
 # Verbindung zu Revit
 
-\![](<../.gitbook/assets/revit connection link.jpg>)
+\![](<images/revit connection link.jpg>)
 
 Dynamo für Revit ergänzt die Gebäudemodellierung (Building Information Modelling) um die Daten- und Logikumgebung eines grafischen Algorithmeneditors. Die Flexibilität dieser Umgebung eröffnet zusammen mit einer robusten Revit-Datenbank neue Perspektiven für BIM.
 
@@ -23,7 +23,7 @@ Da sich sowohl Revit als auch Dynamo laufend weiterentwickeln, bemerken Sie mög
 
 ### Entwicklung von Dynamo
 
-![Verlauf](../.gitbook/assets/earlyScreenshot.jpg)
+![Verlauf](images/earlyScreenshot.jpg)
 
 Ein spezialisiertes Entwicklerteam und eine engagierte Community haben dafür gesorgt, dass das Projekt seit seinen Anfängen kaum wiederzuerkennen ist.
 
@@ -37,13 +37,13 @@ Navigieren Sie in einem Revit-Projekt oder im Familieneditor zu Zusatzmodule und
 
 {% hint style="warning" %} *Dynamo wird nur in der Datei ausgeführt, in der die Anwendung geöffnet wurde. {% endhint %}
 
-\![](<../.gitbook/assets/launch dynamo from revit (1).jpg>)
+![](images/1/launchdynamofromrevit.jpg)
 
-Wenn Sie Dynamo in Revit öffnen, wird eine neue Kategorie namens Revit angezeigt. In dieser umfassenden Erweiterung der Benutzeroberfläche stehen spezielle Blöcke für Revit-Arbeitsabläufe zur Verfügung.*
+Wenn Sie Dynamo in Revit öffnen, wird eine neue Kategorie namens "Revit" angezeigt. In dieser umfassenden Erweiterung der Benutzeroberfläche stehen spezielle Blöcke für Revit-Arbeitsabläufe zur Verfügung.*
 
 {% hint style="warning" %} *Da die für Revit spezifische Familie von Blöcken verwendet wird, funktioniert das Dynamo-Diagramm nur, wenn Sie es in Dynamo für Revit öffnen. Wenn Sie ein Diagramm aus Dynamo für Revit beispielsweise in Dynamo Sandbox öffnen, fehlen die Revit-Blöcke. {% endhint %}
 
-\![](<../.gitbook/assets/revit connection - running dynamo in revit 02.jpg>)
+\![](<images/revit connection - running dynamo in revit 02.jpg>)
 
 ### Anhalten von Blöcken
 
@@ -59,4 +59,4 @@ Dynamo ist ein Open Source-Projekt und entwickelt sich daher ständig weiter. Ei
 
 Für Dynamo steht auch ein aktives Blog zur Verfügung. Lesen Sie die neuesten Posts, um sich über neue Entwicklungen auf dem Laufenden zu halten.
 
-![Blog](../.gitbook/assets/blog.png)
+![Blog](images/blog.png)

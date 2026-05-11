@@ -1,6 +1,6 @@
 # Platzieren von Hausanschlüssen
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Dynamo (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Dynamo.gif" alt=""><figcaption></figcaption></figure>
 
 Beim technischen Entwurf eines typischen Wohngebäudes werden verschiedene unterirdische Versorgungssysteme wie Abwasserkanäle, Regenwasserabläufe, Trinkwasser usw. geplant. In diesem Beispiel wird gezeigt, wie Sie mit Dynamo die Hausanschlüsse von einer Hauptverteilung zu einem bestimmten Grundstück (d. h. einer Parzelle) zeichnen können. Für jedes Grundstück ist ein Hausanschluss erforderlich, was die Positionierung der gesamten Anschlüsse sehr mühsam macht. Dynamo kann den Prozess beschleunigen, indem die erforderliche Geometrie automatisch präzise gezeichnet wird und flexible Eingaben bereitgestellt werden, die an lokale behördliche Standards angepasst werden können.
 
@@ -46,7 +46,7 @@ Der erste Schritt besteht darin, die Geometrie für die Hauptverteilung in Dynam
 
 {% hint style="info" %} Wenn die Kurvengeometrie in Dynamo neu für Sie ist, finden Sie im Abschnitt [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention") weitere Informationen. {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Abrufen der Objekte aus Civil 3D und Zusammenführen aller Objekte zu einer einzelnen PolyCurve</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_DistributionMain.png" alt=""><figcaption><p>Abrufen der Objekte aus Civil 3D und Zusammenführen aller Objekte zu einer einzelnen PolyCurve</p></figcaption></figure>
 
 ### Abrufen der Parzellenliniengeometrie
 
@@ -54,7 +54,7 @@ Als Nächstes müssen wir die Geometrie für eine ausgewählte Parzellenlinie in
 
 An dieser Stelle tritt möglicherweise ein Problem auf, um das wir uns kümmern müssen. Die Parzellenlinie hat einen Start- und einen Endpunkt, d. h., sie hat eine Richtung. Damit das Diagramm konsistente Ergebnisse erzeugt, müssen alle Parzellenlinien eine konsistente Richtung aufweisen. Wir können diese Bedingung direkt in der Diagrammlogik berücksichtigen, wodurch das Diagramm zuverlässiger wird. 
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Selection (2).png" alt=""><figcaption><p>Auswählen einer Parzellenlinie und Sicherstellen der korrekten Richtung</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Selection.png" alt=""><figcaption><p>Auswählen einer Parzellenlinie und Sicherstellen der korrekten Richtung</p></figcaption></figure>
 
 > 1. Rufen Sie die Start- und Endpunkte der Parzellenlinie ab.
 > 2. Messen Sie den Abstand von jedem Punkt zur Hauptverteilung, und ermitteln Sie dann, welcher Abstand größer ist.
@@ -66,13 +66,13 @@ Jetzt überlegen wir, wo die Zähler platziert werden sollen. In der Regel wird 
 
 {% hint style="info" %} Wenn Koordinatensysteme neu für Sie sind, finden Sie im Abschnitt [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") weitere Informationen. {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Erstellen der Einfügepunkte für die Zähler</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Erstellen der Einfügepunkte für die Zähler</p></figcaption></figure>
 
 ### Abrufen von Verbindungspunkten
 
 Jetzt müssen wir Punkte auf der Hauptverteilung abrufen, die den Zählerpositionen am nächsten sind. Dadurch können wir die Hausanschlüsse im Modellbereich so zeichnen, dass sie immer lotrecht zur Hauptverteilung sind. Dafür eignet sich der Block **Geometry.ClosestPointTo**.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_GetPerpendicularPoints (1).png" alt="" width="339"><figcaption><p>Abrufen von lotrechten Punkten auf der Hauptverteilung</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_GetPerpendicularPoints.png" alt="" width="339"><figcaption><p>Abrufen von lotrechten Punkten auf der Hauptverteilung</p></figcaption></figure>
 
 > 1. Dies ist die Hauptverteilungs-PolyCurve.
 > 2. Dies sind die Zählereinfügepunkte.
@@ -81,29 +81,29 @@ Jetzt müssen wir Punkte auf der Hauptverteilung abrufen, die den Zählerpositio
 
 Der letzte Schritt besteht darin, Objekte im Modellbereich zu erstellen. Wir verwenden die zuvor generierten Einfügepunkte, um Blockreferenzen zu erstellen, und dann die Punkte auf der Hauptverteilung, um Linien zu den Hausanschlüssen zu zeichnen.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_CreateObjects.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_CreateObjects.png" alt=""><figcaption></figcaption></figure>
 
 ### Ergebnis
 
 Wenn Sie das Diagramm ausführen, sollten neue Blockreferenzen und Hausanschlusslinien im Modellbereich angezeigt werden. Ändern Sie einige der Eingaben, und beobachten Sie, wie alles automatisch aktualisiert wird.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Dynamo (1).gif" alt=""><figcaption><p>Anpassen der Eingabeparameter in Dynamo und sofortiges Anzeigen der Ergebnisse in Civil 3D</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Dynamo.gif" alt=""><figcaption><p>Anpassen der Eingabeparameter in Dynamo und sofortiges Anzeigen der Ergebnisse in Civil 3D</p></figcaption></figure>
 
 ### Bonus: Aktivieren der sequenziellen Platzierung
 
 Sie werden feststellen, dass nach dem Platzieren der Objekte für eine Parzellenlinie die Objekte bei Auswahl einer anderen Parzellenlinie "verschoben" werden.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Binding.gif" alt=""><figcaption><p>Verhalten bei aktivierter Objektbindung</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Binding.gif" alt=""><figcaption><p>Verhalten bei aktivierter Objektbindung</p></figcaption></figure>
 
 Dies ist das Vorgabeverhalten von Dynamo und in vielen Fällen sehr nützlich. Möglicherweise möchten Sie jedoch mehrere Hausanschlüsse nacheinander platzieren und Dynamo neue Objekte mit jeder Ausführung erstellen lassen, anstatt die ursprünglichen zu ändern. Sie können dieses Verhalten steuern, indem Sie die Einstellungen für die Objektbindung ändern.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Einstellungen für Objektbindung in Dynamo</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Einstellungen für Objektbindung in Dynamo</p></figcaption></figure>
 
 {% hint style="info" %} Weitere Informationen finden Sie im Abschnitt [object-bound.md](../../advanced-topics/object-binding.md "mention") {% endhint %}
 
 Durch Ändern dieser Einstellung wird Dynamo gezwungen, die Objekte, die mit jedem Durchlauf erstellt werden, zu "vergessen". Hier sehen Sie ein Beispiel für die Ausführung des Diagramms mit deaktivierter Objektbindung in **Dynamo Player**.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Ausführen des Diagramms mit Dynamo Player und Anzeigen der Ergebnisse in Civil 3D</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Player.gif" alt=""><figcaption><p>Ausführen des Diagramms mit Dynamo Player und Anzeigen der Ergebnisse in Civil 3D</p></figcaption></figure>
 
 {% hint style="info" %} Wenn Dynamo Player neu für Sie ist, finden Sie im Abschnitt [dynamo-player.md](../../dynamo-player.md "mention") weitere Informationen. {% endhint %}
 

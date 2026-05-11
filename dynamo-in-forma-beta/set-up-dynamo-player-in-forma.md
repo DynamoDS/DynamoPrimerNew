@@ -17,7 +17,7 @@ Installieren Sie zunächst Dynamo Player in Forma.
 1. Wechseln Sie in Ihrer Forma-Site in der linken Seitenleiste zu **Extensions**, und klicken Sie auf **Add extension**. Der Autodesk App Store wird geöffnet.
 2. Suchen Sie nach Dynamo, und fügen Sie Dynamo Player Beta hinzu. Lesen Sie den Haftungsausschluss und klicken Sie auf **Agree**.
 
-<figure><img src="../.gitbook/assets/install-player.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/install-player.png" alt=""><figcaption></figcaption></figure>
 
 3. Jetzt steht Dynamo Player in Ihren Erweiterungen zur Verfügung. Klicken Sie darauf, um diesen zu öffnen.
 4. Sie können Dynamo Player nun verwenden.
@@ -67,11 +67,11 @@ Installieren Sie zunächst Dynamo Player in Forma.
 1. Wechseln Sie in Ihrer Forma-Site in der linken Seitenleiste zu **Extensions**, und klicken Sie auf **Add extension**. Der Autodesk App Store wird geöffnet.
 2. Suchen Sie nach Dynamo, und fügen Sie Dynamo Player Beta hinzu. Lesen Sie den Haftungsausschluss und klicken Sie auf **Agree**.
 
-<figure><img src="../.gitbook/assets/install-player.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/install-player.png" alt=""><figcaption></figcaption></figure>
 
 3. Jetzt steht Dynamo Player in Ihren Erweiterungen zur Verfügung. Klicken Sie darauf, um diesen zu öffnen.
 4. Klicken Sie oben auf Desktop, um auf Dynamo Desktop zuzugreifen.
 
-<figure><img src="../.gitbook/assets/dynamo-desktop.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/dynamo-desktop.png" alt=""><figcaption></figcaption></figure>
 
 5. Sie können Dynamo Player nun verwenden. Wenn Sie bereits ein Diagramm in Dynamo geöffnet haben, klicken Sie einfach unter **Connected graph** auf Open, um es im Player anzuzeigen.

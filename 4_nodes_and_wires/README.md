@@ -8,7 +8,7 @@ In Dynamo stellen **Blöcke** die Objekte dar, die zum Bilden eines visuellen Pr
 
 In Dynamo setzen sich die meisten Blöcke aus fünf Teilen zusammen. Abgesehen von einigen Ausnahmen (z. B. Eingabeblöcke) kann die Anatomie eines jeden Blocks wie folgt beschrieben werden:
 
-\![](<../.gitbook/assets/nodes and wires - nodes anatomy.jpg>)
+\![](<images/nodes and wires - nodes anatomy.jpg>)
 
 > 1. Name: Der Name des Blocks gemäß `Category.Name`-Benennungskonvention
 > 2. Hauptkörper: Der Hauptkörper des Blocks. Durch Klicken mit der rechten Maustaste auf diesen Bereich werden Optionen für den gesamten Block angezeigt.
@@ -24,7 +24,7 @@ Anschlüsse erwarten Daten eines bestimmten Typs. Das Verbinden einer Zahl wie _
 
 {% hint style="info" %} Tipp: Bewegen Sie den Cursor auf einen Anschluss, um eine QuickInfo mit dem erwarteten Datentyp aufzurufen. {% endhint %}
 
-\![](<../.gitbook/assets/nodes and wires - nodes input and tooltip.jpg>)
+\![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
 > 1. Anschlussbezeichnung
 > 2. QuickInfo
@@ -37,25 +37,25 @@ Dynamo gibt einen Hinweis auf den Status der Ausführung eines visuellen Program
 
 Durch Bewegen des Cursors auf den Namen bzw. die Anschlüsse oder durch Klicken mit der rechten Maustaste darauf werden zusätzliche Informationen und Optionen angezeigt.
 
-![](../.gitbook/assets/nodesandwires-nodestates.png)
+![](images/nodesandwires-nodestates.png)
 
 > 1. Erfüllte Eingaben: Ein Block mit blauen vertikalen Leisten über den Eingabeanschlüssen ist ordnungsgemäß verbunden, und alle Eingaben wurden erfolgreich verbunden.
 > 2. Nicht erfüllte Eingaben: Bei einem Block mit einer roten vertikalen Leiste über einem oder mehreren Eingabeanschlüssen müssen diese Eingaben verbunden werden.
 > 3. Funktion: Ein Block, der eine Funktion ausgibt und über einem Ausgabeanschluss eine graue vertikale Leiste hat, ist ein Funktionsblock.
 > 4. Ausgewählt: Aktuell ausgewählte Blöcke weisen einen aquamarinblau hervorgehobenen Rand auf.
 > 5. Eingefroren: Ein durchscheinender blauer Block wird eingefroren, wodurch die Ausführung des Blocks unterbrochen wird.
-> 6. Vorschau aus: Eine graue Statusleiste unter dem Block und ein Augensymbol <img src="../.gitbook/assets/nodes and wires - preview off.jpg" alt="" data-size="line"> zeigen an, dass die Geometrievorschau für den Block deaktiviert ist.
+> 6. Vorschau aus: Eine graue Statusleiste unter dem Block und ein Augensymbol <img src="images/nodes and wires - preview off.jpg" alt="" data-size="line"> zeigen an, dass die Geometrievorschau für den Block deaktiviert ist.
 > 7. Warnung: Eine gelbe Statusleiste unter dem Block zeigt einen Warnstatus an, d. h., es fehlen Eingabedaten für den Block oder es sind möglicherweise falsche Datentypen vorhanden.
 > 8. Fehlerstatus: Eine rote Statusleiste unter dem Block gibt an, dass der Block einen Fehlerstatus aufweist.
 > 9. Info: Die blaue Statusleiste unter dem Block zeigt den Status Info an, in dem nützliche Informationen zu Blöcken markiert sind. Dieser Status kann ausgelöst werden, wenn ein vom Block unterstützter Maximalwert erreicht wird, indem ein Block in einer Weise verwendet wird, die sich auf die Leistung auswirken kann, usw.
 
 #### Umgang mit Fehler- oder Warnungsblöcken
 
-Wenn Ihr visuelles Programm Warnungen oder Fehler aufweist, gibt Dynamo zusätzliche Informationen zu dem Problem an. Alle Blöcke, die in gelb angezeigt werden, verfügen auch über eine QuickInfo über dem Namen. Bewegen Sie den Mauszeiger über das Symbol der QuickInfo für die Warnung \![](<../.gitbook/assets/nodes and wires - node warning icon.png>) oder den Fehler \![](<../.gitbook/assets/nodes and wires - node error icon.png>), um sie zu erweitern.
+Wenn Ihr visuelles Programm Warnungen oder Fehler aufweist, gibt Dynamo zusätzliche Informationen zu dem Problem an. Alle Blöcke, die in gelb angezeigt werden, verfügen auch über eine QuickInfo über dem Namen. Bewegen Sie den Mauszeiger über das Symbol der QuickInfo für die Warnung \![](<images/nodes and wires - node warning icon.png>) oder den Fehler \![](<images/nodes and wires - node error icon.png>), um sie zu erweitern.
 
 {% hint style="info" %}Tipp: Untersuchen Sie vor dem Hintergrund dieser QuickInfo die vorgelagerten Blöcke, um zu sehen, ob der erforderliche Datentyp oder die erforderliche Datenstruktur fehlerhaft ist. {% endhint %}
 
-\![](<../.gitbook/assets/nodes and wires - nodes with warning tooltip.jpg>)
+\![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
 > 1. QuickInfo zu Warnung: "Null" oder keine Daten können nicht als Double verstanden werden, d. h. als Zahl.
 > 2. Verwenden Sie den Watch-Block, um die Eingabedaten zu untersuchen.
@@ -65,11 +65,11 @@ Wenn Ihr visuelles Programm Warnungen oder Fehler aufweist, gibt Dynamo zusätzl
 
 In einigen Situationen ist es möglicherweise empfehlenswert, die Ausführung bestimmter Blöcke in Ihrem visuellen Programm zu verhindern. Sie können dies tun, indem Sie den Block "anhalten". Dies ist eine Option im Kontextmenü des Blocks.
 
-<figure><img src="../.gitbook/assets/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
+<figure><img src="images/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
 
 Durch das Anhalten eines Blocks werden auch die untergeordneten Blöcke angehalten. Mit anderen Worten werden alle Blöcke, die von der Ausgabe eines angehaltenen Blocks abhängen, ebenfalls angehalten.
 
-<figure><img src="../.gitbook/assets/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
 
 ## Drähte
 
@@ -81,41 +81,41 @@ Drähte verbinden den Ausgabeanschluss eines Blocks mit dem Eingabeanschluss ein
 
 Die Eingabeanschlüsse befinden sich auf der linken Seite, die Ausgabeanschlüsse auf der rechten Seite der Blöcke. Daher kann man allgemein sagen, dass der Programmablauf von links nach rechts verläuft.
 
-\![](<../.gitbook/assets/nodes and wires - flow of data (1).jpg>)
+\![](<images/nodes and wires - flow of data.jpg>)
 
-### Erstellen von Drähten <a href="#creating-wires" id="creating-wires"></a>
+### Drähte erstellen <a href="#creating-wires" id="creating-wires"></a>
 
 Erstellen Sie einen Draht, indem Sie mit der linken Maustaste auf einen Anschluss und anschließend mit der linken Maustaste auf den Anschluss eines anderen Blocks klicken, um eine Verbindung zu erstellen. Während der Herstellung der Verbindung wird der Draht gestrichelt angezeigt. Nachdem die Verbindung erfolgreich hergestellt wurde, erscheint er als durchgezogene Linie.
 
 Die Daten fließen immer von Ausgabe zu Eingabe durch diesen Draht. Sie können den Draht jedoch in beliebiger Richtung erstellen, die dadurch definiert wird, in welcher Reihenfolge Sie auf die Anschlüsse klicken.
 
-\![](<../.gitbook/assets/nodes and wires - creating a wire.gif>)
+\![](<images/nodes and wires - creating a wire.gif>)
 
-### Bearbeiten von Drähten <a href="#editing-wires" id="editing-wires"></a>
+### Drähte bearbeiten <a href="#editing-wires" id="editing-wires"></a>
 
 Es kommt häufig vor, dass Sie den Programmablauf in Ihrem visuellen Programm anpassen müssen, indem Sie die durch Drähte dargestellten Verbindungen bearbeiten. Um einen Draht zu bearbeiten, klicken Sie mit der linken Maustaste auf den Eingabeanschluss eines Blocks, der bereits verbunden ist. Sie haben jetzt zwei Möglichkeiten:
 
 * Um die Verbindung zu einem Eingabeanschluss zu ändern, klicken Sie mit der linken Maustaste auf einen anderen Eingabeanschluss.
 
-![](../.gitbook/assets/nodesandwires-editwirechangeport\(2\).gif)
+![](images/nodesandwires-editwirechangeport.gif)
 
 * Um den Draht zu entfernen, ziehen Sie ihn weg und klicken mit der linken Maustaste in den Arbeitsbereich.
 
-\![](<../.gitbook/assets/nodes and wires - edit wires remove.gif>)
+\![](<images/nodes and wires - edit wires remove.gif>)
 
-* Um mehrere Drähte erneut zu verbinden, nutzen Sie Umschalt+Linksklick.
+* Erneutes Verbinden mehrerer Drähte mit UMSCHALT+Linksklick
 
-\![](<../.gitbook/assets/nodes and wires - edit multi ports.gif>)
+\![](<images/nodes and wires - edit multi ports.gif>)
 
-* Um einen Draht zu duplizieren, nutzen Sie STRG+Linksklick.
+* Duplizieren eines Drahts mit STRG+Linksklick
 
-\![](<../.gitbook/assets/nodes and wires - duplicate wire.gif>)
+\![](<images/nodes and wires - duplicate wire.gif>)
 
 #### Vorgabemäßige und markierte Drähte im Vergleich <a href="#wire-previews" id="wire-previews"></a>
 
 Standardmäßig werden Drähte in der Vorschau mit einem grauen Strich angezeigt. Wenn ein Block ausgewählt wird, werden alle Verbindungsdrähte wie der Block in aquamarinblau hervorgehoben.
 
-\![](<../.gitbook/assets/nodes and wires - default vs highlighted wires.jpg>)
+\![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
 > 1. Hervorgehobener Draht
 > 2. Standarddraht
@@ -126,10 +126,10 @@ Falls Sie es vorziehen, die Drähte im Diagramm auszublenden, können Sie diese 
 
 Mit dieser Einstellung werden nur die ausgewählten Blöcke und die verbindenden Drähte in hellem Aquamarin hervorgehoben.
 
-\![](<../.gitbook/assets/nodes and wires - hide wires setting (1).gif>)
+\![](<images/nodes and wires - hide wires setting.gif>)
 
 #### Ausblenden von einzelnen Drähte
 
 Sie können auch nur ausgewählte Drähte ausblenden, indem Sie mit der rechten Maustaste auf die Blockausgabe klicken und Drähte ausblenden auswählen.
 
-\![](<../.gitbook/assets/nodes and wires - hide selected wire.gif>)
+\![](<images/nodes and wires - hide selected wire.gif>)

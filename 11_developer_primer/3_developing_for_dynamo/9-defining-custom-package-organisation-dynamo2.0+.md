@@ -112,7 +112,7 @@ Benutzerdefinierte Blöcke werden während der Blockerstellung auf Grundlage des
 **WARNUNG!**\
  Die Verwendung der Punktnotation in Blocknamen oder -kategorien führt zu zusätzlichen verschachtelten Unterkategorien. `.` dient als Trennzeichen, um die zusätzliche Hierarchie festzulegen. Dies ist ein neues Verhalten in der Bibliothek für Dynamo 2.0.
 
-![Eigenschaften von benutzerdefinierten Blöcken](../../.gitbook/assets/custom-node-properties.jpg)
+![Eigenschaften von benutzerdefinierten Blöcken](../images/custom-node-properties.jpg)
 
 Der Kategoriename kann später in der DYF-Datei (XML oder JSON) aktualisiert werden
 

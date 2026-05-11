@@ -8,7 +8,7 @@ Ein Koordinatensystem ist streng genommen kein Geometrieobjekt, dient jedoch als
 
 Zum Erstellen eines an einem Punkt mit x = 0, y = 0, z = 0 zentrierten Koordinatensystems ohne Rotations-, Skalierungs- oder Schertransformationen kann einfach der Konstruktor Identity aufgerufen werden:
 
-![](../../.gitbook/assets/GeometricPrimitives_01.png)
+![](../images/GeometricPrimitives_01.png)
 
 ```js
 // create a CoordinateSystem at x = 0, y = 0, z = 0,
@@ -19,7 +19,7 @@ cs = CoordinateSystem.Identity();
 
 Koordinatensysteme mit geometrischen Transformationen gehen über den Umfang dieses Kapitels hinaus, auch wenn Sie mit einem anderen Konstruktor, namentlich _CoordinateSystem.ByOriginVectors_, ein Koordinatensystem an einem bestimmten Punkt erstellen können:
 
-![](../../.gitbook/assets/GeometricPrimitives_02.png)
+![](../images/GeometricPrimitives_02.png)
 
 ```js
 // create a CoordinateSystem at a specific location,
@@ -41,7 +41,7 @@ Der einfachste geometrische Grundkörper ist ein Punkt, der eine nulldimensional
 
 Dieses Beispiel zeigt Punkte, die in unterschiedlichen Koordinatensystemen erstellt wurden:
 
-![](../../.gitbook/assets/GeometricPrimitives_03.png)
+![](../images/GeometricPrimitives_03.png)
 
 ```js
 // create a point with x, y, and z coordinates
@@ -77,7 +77,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
 
 Der nächsthöherdimensionale Dynamo-Grundkörper ist ein Liniensegment, das eine unendliche Anzahl von Punkten zwischen zwei Endpunkten darstellt. Linien können erstellt werden, indem Sie die beiden Grenzpunkte mit dem Konstruktor _Line.ByStartPointEndPoint_ explizit angeben, oder durch Angabe eines Startpunkts, einer Richtung und Länge in dieser Richtung mittels _Line.ByStartPointDirectionLength_.
 
-![](../../.gitbook/assets/GeometricPrimitives_04.png)
+![](../images/GeometricPrimitives_04.png)
 
 ```js
 p1 = Point.ByCoordinates(-2, -5, -10);
@@ -96,7 +96,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
 
 Dynamo verfügt über Objekte, die grundlegende Typen geometrischer Grundkörper in drei Dimensionen darstellen: Quader, erstellt mit _Cuboid.ByLengths_; Kegel, erstellt mit _Cone.ByPointsRadius_ und _Cone.ByPointsRadii_; Zylinder, erstellt mit _Cylinder.ByRadiusHeight_ sowie Kugeln, erstellt mit _Sphere.ByCenterPointRadius_.
 
-![](../../.gitbook/assets/GeometricPrimitives_05.png)
+![](../images/GeometricPrimitives_05.png)
 
 ```js
 // create a cuboid with specified lengths

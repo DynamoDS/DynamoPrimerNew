@@ -4,7 +4,7 @@ Wozu dient die Textprogrammierung in der visuellen Programmierumgebung von Dynam
 
 **Visuelles Programm:**
 
-\![](<../../.gitbook/assets/python node - visual vs textual programming.jpg>)
+\![](<../images/python node - visual vs textual programming.jpg>)
 
 **Textprogramm:**
 
@@ -38,15 +38,15 @@ OUT = solids
 
 Python-Blöcke sind genau wie Codeblöcke eine Scripting-Oberfläche innerhalb einer Umgebung für die visuelle Programmierung. Der Python-Block befindet sich in der Bibliothek unter Skript > Editor > Python Script.
 
-\![](<../../.gitbook/assets/python node - the python node 01.jpg>)
+\![](<../images/python node - the python node 01.jpg>)
 
 Durch Doppelklicken auf den Block wird der Python-Skript-Editor geöffnet. (Sie können auch mit der rechten Maustaste auf den Block klicken und _Bearbeiten …_ auswählen.) Oben auf dem Bildschirm befindet sich vorgegebener Text, der es Ihnen erleichtern soll, die benötigten Bibliotheken zu referenzieren. Eingaben werden in der IN-Reihe gespeichert. Werte werden durch Zuweisung zur OUT-Variablen an Dynamo zurückgegeben.
 
-\![](<../../.gitbook/assets/python node - the python node 02.jpg>)
+\![](<../images/python node - the python node 02.jpg>)
 
 In der Autodesk.DesignScript.Geometry-Bibliothek können Sie Punktnotation ähnlich wie in Codeblöcken verwenden. Weitere Informationen zur Dynamo-Syntax finden Sie unter [7-2_design-script-syntax.md](../../coding-in-dynamo/7_code-blocks-and-design-script/7-2_design-script-syntax.md "mention") sowie im [DesignScript-Handbuch](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf). (Um dieses PDF-Dokument herunterzuladen, klicken Sie mit der rechten Maustaste auf den Link und wählen Link speichern unter... aus). Wenn Sie einen Geometrietyp, z. B. 'Point.' eingeben, wird eine Liste mit den Methoden zum Erstellen und Abfragen von Punkten angezeigt.
 
-\![](<../../.gitbook/assets/python node - the python node 03.jpg>)
+\![](<../images/python node - the python node 03.jpg>)
 
 > Zu den Methoden gehören Konstruktoren, wie _ByCoordinates_, Aktionen wie _Add_ und Abfragen wie _X_-, _Y_\- und _Z_-Koordinaten.
 
@@ -62,12 +62,12 @@ In der Autodesk.DesignScript.Geometry-Bibliothek können Sie Punktnotation ähnl
 
 In diesem Beispiel schreiben Sie ein Python-Skript zum Erstellen von Mustern aus einem Körpermodul und wandeln das Skript in einen benutzerdefinierten Block um. Zuerst erstellen Sie das Körpermodul mithilfe von Dynamo-Blöcken.
 
-\![](<../../.gitbook/assets/python node - exercise pt I-01.jpg>)
+\![](<../images/python node - exercise pt I-01.jpg>)
 
 > 1. **Rectangle.ByWidthLength**: Erstellen Sie ein Rechteck, das als Basis für den Körper verwendet wird.
 > 2. **Surface.ByPatch**: Verbinden Sie das Rechteck mit der _closedCurve_-Eingabe, um die untere Oberfläche zu erstellen.
 
-\![](<../../.gitbook/assets/python node - exercise pt I-02.jpg>)
+\![](<../images/python node - exercise pt I-02.jpg>)
 
 > 1. **Geometry.Translate**: Verbinden Sie das Rechteck mit der _geometry_-Eingabe, um es nach oben zu verschieben, wobei Sie mithilfe eines Codeblocks die allgemeine Dicke des Körpers festlegen.
 > 2. **Polygon.Points**: Fragen Sie die Eckpunkte des verschobenen Rechtecks ab.
@@ -77,7 +77,7 @@ In diesem Beispiel schreiben Sie ein Python-Skript zum Erstellen von Mustern aus
 
 Damit haben Sie die obere und untere Oberfläche erstellt. Erstellen Sie jetzt durch eine Erhebung zwischen den beiden Profilen die Seiten des Körpers.
 
-\![](<../../.gitbook/assets/python node - exercise pt I-03.jpg>)
+\![](<../images/python node - exercise pt I-03.jpg>)
 
 > 1. **List.Create**: Verbinden Sie das Rechteck unten und das Polygon oben mit den index-Eingaben.
 > 2. **Surface.ByLoft**: Erstellen Sie über eine Erhebung die Seiten des Körpers.
@@ -86,13 +86,13 @@ Damit haben Sie die obere und untere Oberfläche erstellt. Erstellen Sie jetzt d
 
 Damit haben Sie den Körper erstellt. Fügen Sie jetzt einen Block für das Python-Skript in den Arbeitsbereich ein.
 
-\![](<../../.gitbook/assets/python node - exercise pt I-04.jpg>)
+\![](<../images/python node - exercise pt I-04.jpg>)
 
 > 1. Um dem Block weitere Eingaben hinzuzufügen, klicken Sie auf das +-Symbol im Block. Die Eingaben erhalten die Namen IN[0], IN[1] usw., um anzuzeigen, dass sie für die Einträge einer Liste stehen.
 
 Sie beginnen, indem Sie die Ein- und Ausgaben definieren. Doppelklicken Sie auf den Block, um den Python-Editor zu öffnen. Halten Sie sich an den unten stehenden Code, um den Code im Editor zu ändern.
 
-\![](<../../.gitbook/assets/python node - exercise pt I-05.jpg>)
+\![](<../images/python node - exercise pt I-05.jpg>)
 
 ```py
 # Load the Python Standard and DesignScript Libraries
@@ -124,7 +124,7 @@ OUT = solids
 
 Dieser Code wird im weiteren Verlauf der Übung leichter verständlich. Als Nächstes müssen Sie überlegen, welche Informationen Sie zum Erstellen einer Reihe aus dem Körpermodul benötigen. Als Erstes müssen Sie die Maße des Körpers kennen, um die Entfernung für die Verschiebung zu ermitteln. Wegen eines Fehlers bei Begrenzungsrahmen müssen Sie diesen anhand der Kurvengeometrie der Kanten erstellen.
 
-![](../../.gitbook/assets/python07.png)
+![](../images/python07.png)
 
 > Werfen Sie einen Blick auf den Python-Block in Dynamo. Dieselbe Syntax wie in den Titeln der Blöcke in Dynamo wird auch hier verwendet. Sehen Sie sich den kommentierten Code unten an.
 
@@ -169,7 +169,7 @@ OUT = solids
 
 Da die Körpermodule sowohl verschoben als auch gedreht werden sollen, verwenden Sie hier die Geometry.Transform-Operation. Wenn Sie den Geometry.Transform-Block genauer betrachten, sehen Sie, dass für die Transformation des Körpers ein Quell- und ein Zielkoordinatensystem benötigt werden. Die Quelle ist das Koordinatensystem, das den Kontext für den Ausgangskörper bildet, während als Ziel ein eigenes Koordinatensystem für jedes Modul in der Reihe verwendet wird. Das bedeutet, dass Sie die x- und y-Werte in einer Schleife verarbeiten müssen, um das Koordinatensystem jedes Mal auf andere Weise zu transformieren.
 
-\![](<../../.gitbook/assets/python node - exercise pt I-06.jpg>)
+\![](<../images/python node - exercise pt I-06.jpg>)
 
 ```py
 # Load the Python Standard and DesignScript Libraries
@@ -225,7 +225,7 @@ OUT = solids
 
 Klicken Sie auf Ausführen, und speichern Sie dann den Code. Verbinden Sie den Python-Block wie folgt mit dem vorhandenen Skript.
 
-\![](<../../.gitbook/assets/python node - exercise pt I-07.jpg>)
+\![](<../images/python node - exercise pt I-07.jpg>)
 
 > 1. Verbinden Sie die Ausgabe aus **Solid.ByJoinedSurfaces** als erste Eingabe für den Python-Block, und definieren Sie die anderen Eingaben mithilfe eines Codeblocks.
 > 2. Erstellen Sie einen **Topology.Edges**-Block, und verwenden Sie die Ausgabe aus dem Python-Block als Eingabe.
@@ -233,25 +233,25 @@ Klicken Sie auf Ausführen, und speichern Sie dann den Code. Verbinden Sie den P
 
 Ändern Sie den Wert für die Ausgangszahl, um verschiedene Muster zu erstellen. Indem Sie die Parameter des Körpermoduls selbst ändern, erzielen Sie ebenfalls unterschiedliche Wirkungen.
 
-![](../../.gitbook/assets/python10.png)
+![](../images/python10.png)
 
 ### Teil II: Umwandeln des Python Script-Blocks in einen benutzerdefinierten Block
 
 Damit haben Sie ein nützliches Python-Skript erstellt. Speichern Sie dieses jetzt als benutzerdefinierten Block. Wählen Sie den Python Script-Block aus, klicken Sie mit der rechten Maustaste auf den Arbeitsbereich, und wählen Sie Benutzerdefinierten Block erstellen aus.
 
-\![](<../../.gitbook/assets/python node - exercise pt II-01.jpg>)
+\![](<../images/python node - exercise pt II-01.jpg>)
 
 Weisen Sie einen Namen, eine Beschreibung und eine Kategorie zu.
 
-\![](<../../.gitbook/assets/python node - exercise pt II-02.jpg>)
+\![](<../images/python node - exercise pt II-02.jpg>)
 
 Dadurch wird ein neuer Arbeitsbereich geöffnet, in dem Sie den benutzerdefinierten Block bearbeiten können.
 
-\![](<../../.gitbook/assets/python node - exercise pt II-03.jpg>)
+\![](<../images/python node - exercise pt II-03.jpg>)
 
 > 1. **Eingabe-Blöcke**: Geben Sie den Eingaben aussagekräftigere Namen und fügen Sie Datentypen und Vorgabewerte hinzu.
 > 2. **Ausgabe-Blöcke:** Ändert den Namen der Ausgabe.
 
 Speichern Sie den Block als DYF-Datei. Nun sollten Sie sehen, dass der benutzerdefinierte Block die gerade vorgenommenen Änderungen widerspiegelt.
 
-\![](<../../.gitbook/assets/python node - exercise pt II-04.jpg>)
+\![](<../images/python node - exercise pt II-04.jpg>)

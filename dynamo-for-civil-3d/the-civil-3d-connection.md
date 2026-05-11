@@ -1,6 +1,6 @@
 # Die Civil 3D-Verbindung
 
-<figure><img src="../.gitbook/assets/DynamoSwissKnife-WhiteBackground_edit (2).jpg" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="images/DynamoSwissKnife-WhiteBackground_edit.jpg" alt="" width="563"><figcaption></figcaption></figure>
 
 Dynamo for Civil 3D stellt Ingenieuren und Konstrukteuren, die an Tiefbau- und Infrastrukturprojekten arbeiten, ein _visuelles Programmierkonzept_ zur Verfügung. Sie können sich Dynamo als eine Art digitales Multitool für Civil 3D-Benutzer vorstellen – was auch immer die Aufgabe sein mag, es bietet genau das richtige Werkzeug für die jeweilige Aufgabe. Die intuitive Benutzeroberfläche ermöglicht Ihnen die Erstellung leistungsstarker und anpassbarer Routinen, ohne dass Sie eine einzige Codezeile schreiben müssen. Sie müssen kein _Programmierer_ sein, um Dynamo verwenden zu können, aber Sie müssen in der Lage sein, mit der Logik eines Programmierers zu _denken_. In Verbindung mit den anderen Kapiteln in dieser Einführung hilft Ihnen dieses Kapitel beim Vertiefen von Logikfähigkeiten. So können Sie ein Verständnis dafür entwickeln, wie Computer Fragestellungen lösen und Ihre Aufgaben (mit mehr oder weniger) Programmieraufwand entsprechend angehen.
 
@@ -8,9 +8,9 @@ Dynamo for Civil 3D stellt Ingenieuren und Konstrukteuren, die an Tiefbau- und 
 
 Dynamo wurde erstmals in Civil 3D 2020 eingeführt und hat sich seitdem kontinuierlich weiterentwickelt. Die ursprünglich separat über ein Software-Update installierte Anwendung ist jetzt in allen Versionen von Civil 3D enthalten. Je nachdem, welche Version von Civil 3D Sie verwenden, werden Sie feststellen, dass die Benutzeroberfläche von Dynamo etwas anders aussieht als die in diesem Kapitel gezeigten Beispiele. Dies liegt daran, dass die Benutzeroberfläche in Civil 3D 2023 erheblich überarbeitet wurde.
 
-<figure><img src="../.gitbook/assets/c3d-ui-old.png" alt=""><figcaption><p>Dynamo-Benutzeroberfläche, Civil 3D 2020–2022</p></figcaption></figure>
+<figure><img src="images/c3d-ui-old.png" alt=""><figcaption><p>Dynamo-Benutzeroberfläche, Civil 3D 2020–2022</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/c3d-ui-new.png" alt=""><figcaption><p>Dynamo-Benutzeroberfläche, Civil 3D 2023–heute</p></figcaption></figure>
+<figure><img src="images/c3d-ui-new.png" alt=""><figcaption><p>Dynamo-Benutzeroberfläche, Civil 3D 2023–heute</p></figcaption></figure>
 
 Wir empfehlen Ihnen, den [Dynamo-Blog](https://dynamobim.org/blog/) zu lesen, um aktuelle Informationen zur Entwicklung von Dynamo zu erhalten. Die folgende Tabelle fasst die wichtigsten Meilensteine von Dynamo for Civil 3D zusammen. 
 

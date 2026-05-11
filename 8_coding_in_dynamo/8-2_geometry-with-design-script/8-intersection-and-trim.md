@@ -15,7 +15,7 @@ Die Methode _Intersect_ ist für alle Geometrieobjekte in Dynamo definiert. Das 
 
 Das folgende sehr einfache Beispiel zeigt die Überschneidung einer Ebene mit einer NurbsSurface. Die Überschneidung erzeugt ein NurbsCurve-Array, das wie jede andere NurbsCurve verwendet werden kann.
 
-![](../../.gitbook/assets/IntersectionAndTrim_01.png)
+![](../images/IntersectionAndTrim_01.png)
 
 ```js
 // python_points_5 is a set of Points generated with
@@ -47,7 +47,7 @@ Die Methode _Trim_ ähnelt der Methode Intersect insofern, dass sie ebenfalls f�
 
 Erwähnenswert bei den _Trim_-Methoden ist die Anforderung eines Select-Punkts, der bestimmt, welche Geometrie verworfen und welche Teile beibehalten werden sollen. Dynamo sucht und verwirft die gestutzte Geometrie, die dem ausgewählten Punkt am nächsten liegt.
 
-![](../../.gitbook/assets/IntersectionAndTrim_02.png)
+![](../images/IntersectionAndTrim_02.png)
 
 ```js
 // python_points_5 is a set of Points generated with

@@ -8,13 +8,13 @@ Dynamo ist eine [visuelle Programmieranwendung](https://primer2.dynamobim.org/v/
 
 In Dynamo haben Sie die Möglichkeit, in einem visuellen Programmierprozess zu arbeiten, wobei Sie Elemente miteinander verbinden und dadurch die Beziehungen und Abfolgen von Aktionen definieren, aus denen sich benutzerdefinierte Algorithmen zusammensetzen. Ihre Algorithmen können Sie für ein breites Spektrum an Verwendungszwecken von der Verarbeitung von Daten bis zum Generieren von Geometrie einsetzen – in Echtzeit und ohne eine einzige Zeile `code` zu schreiben.
 
-\![](<../.gitbook/assets/nodes and wires - flow of data.jpg>)
+\![](<images/nodes and wires - flow of data.jpg>)
 
 ### Verbinden von Blöcken und Drähten
 
 Blöcke und Drähte sind die wichtigsten Komponenten in Dynamo zur Unterstützung eines [visuellen Programmierungsprozesses](../a_appendix/a-1_visual-programming-and-dynamo.md). Sie helfen beim Aufbau starker visueller und systemischer Beziehungen zwischen den Teilen eines Entwurfs. Verwenden Sie einen einfachen Mausklick, um die Blöcke während der Entwicklung und Optimierung Ihres Entwurfsarbeitsablaufs einfach zu verbinden.
 
-\![](<../.gitbook/assets/what is dynamo - connecting nodes with wires.gif>)
+\![](<images/what is dynamo - connecting nodes with wires.gif>)
 
 ## Was kann Dynamo leisten?
 

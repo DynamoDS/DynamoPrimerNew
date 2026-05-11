@@ -7,9 +7,7 @@ Dynamo ist als [visuelles Programmierwerkzeug](../../a\_appendix/a-1\_visual-pro
 
 In diesem Abschnitt wird beschrieben, wie Sie Python in der Civil 3D-Umgebung einsetzen können, um die Vorteile der .NET-APIs von AutoCAD und Civil 3D zu nutzen.
 
-{% hint style="info" %}
- Weitere allgemeine Informationen zur Verwendung von Python in Dynamo finden Sie im Abschnitt [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") . 
-{% endhint %} 
+{% hint style="info" %} Weitere allgemeine Informationen zur Verwendung von Python in Dynamo finden Sie im Abschnitt [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") . {% endhint %}
 
 ## API-Dokumentation
 
@@ -23,15 +21,13 @@ AutoCAD und Civil 3D verfügen über mehrere APIs, mit denen Entwickler wie Sie
 
 [Civil 3D-.NET-API - Referenzhandbuch](https://help.autodesk.com/view/CIV3D/2024/DEU/?guid=73fd1950-ee31-00b8-4872-c3f328ea1331)
 
-{% hint style="info" %}
- Wenn Sie diesen Abschnitt durcharbeiten, werden Ihnen möglicherweise einige Konzepte begegnen, mit denen Sie nicht vertraut sind, z. B. Datenbanken, Transaktionen, Methoden, Eigenschaften usw. Viele dieser Konzepte sind für die Arbeit mit .NET-APIs wichtig und nicht spezifisch für Dynamo oder Python. Da diese Konzepte in diesem Abschnitt der Einführung nicht behandelt werden, empfehlen wir für weitere Informationen die oben genannten Links. 
-{% endhint %} 
+{% hint style="info" %} Wenn Sie diesen Abschnitt durcharbeiten, werden Ihnen möglicherweise einige Konzepte begegnen, mit denen Sie nicht vertraut sind, z. B. Datenbanken, Transaktionen, Methoden, Eigenschaften usw. Viele dieser Konzepte sind für die Arbeit mit .NET-APIs wichtig und nicht spezifisch für Dynamo oder Python. Da diese Konzepte in diesem Abschnitt der Einführung nicht behandelt werden, empfehlen wir für weitere Informationen die oben genannten Links. {% endhint %}
 
 ## Code-Vorlage
 
 Wenn Sie einen neuen Python-Block zum ersten Mal bearbeiten, wird er automatisch mit Vorlagencode gefüllt, um Ihnen den Einstieg zu erleichtern. Hier sehen Sie eine Aufschlüsselung der Vorlage mit Erläuterungen zu den einzelnen Blöcken.
 
-<figure><img src="../../.gitbook/assets/Python_Template (1).png" alt=""><figcaption><p>Die vorgabemäßige Python-Vorlage in Civil 3D</p></figcaption></figure>
+<figure><img src="../images/Python_Template.png" alt=""><figcaption><p>Die vorgabemäßige Python-Vorlage in Civil 3D</p></figcaption></figure>
 
 > 1. Importiert die Module `sys` und `clr`, die beide für die korrekte Funktionsweise des Python-Interpreters erforderlich sind. Insbesondere ermöglicht das `clr`-Modul, dass .NET-Namensbereiche im Wesentlichen wie Python-Pakete behandelt werden.
 > 2. Lädt die Standardbaugruppen (d. h. DLLs) für die Arbeit mit den verwalteten .NET-APIs für AutoCAD und Civil 3D.
@@ -43,10 +39,8 @@ Wenn Sie einen neuen Python-Block zum ersten Mal bearbeiten, wird er automatisch
 > 8. Heben Sie die Auskommentierung dieser Zeile auf, um die Transaktion nach der Hauptarbeit zu bestätigen.
 > 9. Wenn Sie Daten aus dem Block ausgeben möchten, weisen Sie diese der Variablen `OUT` am Ende des Skripts zu.
 
-{% hint style="info" %}
- **Sie möchten die Software anpassen?**\
- Sie können die vorgabemäßige Python-Vorlage ändern, indem Sie die Datei `PythonTemplate.py` in `C:\ProgramData\Autodesk\C3D <Version>\Dynamo` bearbeiten. 
-{% endhint %} 
+{% hint style="info" %} **Sie möchten die Software anpassen?**\
+ Sie können die vorgabemäßige Python-Vorlage ändern, indem Sie die Datei `PythonTemplate.py` in `C:\ProgramData\Autodesk\C3D <Version>\Dynamo` bearbeiten. {% endhint %}
 
 ## Beispiel
 
@@ -84,7 +78,7 @@ Bevor wir beginnen, unser Diagramm zu erstellen und Code zu schreiben, sollten w
 
 Jetzt können wir mit der Erstellung der Diagrammlogik beginnen. Als Erstes müssen Sie eine Liste aller Einzugsgebiete im Dokument abrufen. Hierfür sind Blöcke verfügbar, sodass Sie dies nicht in das Python-Skript aufnehmen müssen. Die Verwendung von Blöcken bietet eine bessere Sichtbarkeit für andere Benutzer, die das Diagramm möglicherweise lesen (im Gegensatz zu in einem Python-Skript "verstecktem" Code). Außerdem konzentriert sich das Python-Skript auf eine Sache: die Rückgabe der Umgrenzungspunkte der Einzugsgebiete.
 
-<figure><img src="../../.gitbook/assets/Python_Get_Catchments.png" alt=""><figcaption><p>Abrufen aller Einzugsgebiete im Dokument nach Layer</p></figcaption></figure>
+<figure><img src="../images/Python_Get_Catchments.png" alt=""><figcaption><p>Abrufen aller Einzugsgebiete im Dokument nach Layer</p></figcaption></figure>
 
 Beachten Sie, dass die Ausgabe des Blocks **All Objects on Layer** eine Liste von CivilObjects ist. Dies liegt daran, dass Dynamo for Civil 3D derzeit keine Blöcke für die Arbeit mit Einzugsgebieten hat. Aus diesem Grund müssen wir über Python auf die API zugreifen.
 
@@ -94,16 +88,13 @@ Bevor wir fortfahren, müssen wir noch kurz auf ein wichtiges Konzept eingehen. 
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Dynamo-Typ</th><th width="373">Enthält im Wrapper</th></tr></thead><tbody><tr><td><strong>Objekt</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>Objekt</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>Objekt</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
-{% hint style="warning" %} Als Faustregel gilt: Es ist in der Regel sicherer, die Objekt-ID über die Eigenschaft `InternalObjectId` abzurufen und dann in einer Transaktion auf das im Wrapper enthaltene Objekt zuzugreifen. Dies liegt daran, dass die Eigenschaft `InternalDBObject` ein AutoCAD-DBObject zurückgibt, das sich nicht in einem schreibbaren Status befindet. 
-{% endhint %} 
+{% hint style="warning" %} Als Faustregel gilt: Es ist in der Regel sicherer, die Objekt-ID über die Eigenschaft `InternalObjectId` abzurufen und dann in einer Transaktion auf das im Wrapper enthaltene Objekt zuzugreifen. Dies liegt daran, dass die Eigenschaft `InternalDBObject` ein AutoCAD-DBObject zurückgibt, das sich nicht in einem schreibbaren Status befindet. {% endhint %}
 
 ### Python-Skript
 
 Hier sehen Sie das vollständige Python-Skript, das für den Zugriff auf die internen Einzugsgebietobjekte deren Umgrenzungspunkte abruft. Die hervorgehobenen Zeilen stehen für die Zeilen, die vom Vorgabevorlagencode geändert/hinzugefügt wurden.
 
-{% hint style="info" %}
- Klicken Sie auf den unterstrichenen Text im Skript, um eine Erläuterung für jede Zeile anzuzeigen. 
-{% endhint %} 
+{% hint style="info" %} Klicken Sie auf den unterstrichenen Text im Skript, um eine Erläuterung für jede Zeile anzuzeigen. {% endhint %}
 
 <pre class="language-python" data-line-numbers><code class="lang-python"># Python-Standard- und DesignScript-Bibliotheken laden
 import sys
@@ -170,20 +161,19 @@ with adoc.LockDocument():
 <strong><a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
 </strong></code></pre>
 
-{% hint style="warning" %} Als Faustregel sollten Sie den Großteil Ihrer Skriptlogik in eine Transaktion einschließen. Dadurch wird der sichere Zugriff auf die Objekte sichergestellt, die das Skript lesen und schreiben kann. In vielen Fällen kann das Auslassen einer Transaktion einen schwerwiegenden Fehler verursachen. 
-{% endhint %} 
+{% hint style="warning" %} Als Faustregel sollten Sie den Großteil Ihrer Skriptlogik in eine Transaktion einschließen. Dadurch wird der sichere Zugriff auf die Objekte sichergestellt, die das Skript lesen und schreiben kann. In vielen Fällen kann das Auslassen einer Transaktion einen schwerwiegenden Fehler verursachen. {% endhint %}
 
 ### Erstellen von PolyCurves
 
 An dieser Stelle sollte das Python-Skript eine Liste von Dynamo-Punkten ausgeben, die Sie in der Hintergrundvorschau sehen können. Der letzte Schritt besteht darin, einfach PolyCurves aus den Punkten zu erstellen. Beachten Sie, dass dies auch direkt im Python-Skript erfolgen kann. Wir haben dies jedoch absichtlich außerhalb des Skripts in einem Block platziert, damit es besser sichtbar ist. Hier sehen Sie, wie das fertige Diagramm aussieht.
 
-<figure><img src="../../.gitbook/assets/Python_Final_Script (1).png" alt=""><figcaption><p>Das endgültige Diagramm</p></figcaption></figure>
+<figure><img src="../images/Python_Final_Script.png" alt=""><figcaption><p>Das endgültige Diagramm</p></figcaption></figure>
 
 ### Ergebnis
 
 Hier sehen Sie die endgültige Dynamo-Geometrie.
 
-<figure><img src="../../.gitbook/assets/Python_Dynamo_Curves.png" alt=""><figcaption><p>Die resultierenden Dynamo-PolyCurves für die Einzugsgebietsgrenzen</p></figcaption></figure>
+<figure><img src="../images/Python_Dynamo_Curves.png" alt=""><figcaption><p>Die resultierenden Dynamo-PolyCurves für die Einzugsgebietsgrenzen</p></figcaption></figure>
 
 > :tada: Mission erfüllt!
 
@@ -191,9 +181,7 @@ Hier sehen Sie die endgültige Dynamo-Geometrie.
 
 Hier noch eine kurze Anmerkung. Je nachdem, welche Version von Civil 3D Sie verwenden, ist der Python-Block möglicherweise anders konfiguriert. In **Civil 3D 2020 und 2021** hat Dynamo das Werkzeug **IronPython** verwendet, um Daten zwischen .NET-Objekten und Python-Skripten zu verschieben. In **Civil 3D 2022** wurde in Dynamo jedoch der standardmäßige native Python-Interpreter (auch **CPython** genannt) anstelle von Python 3 verwendet. Zu den Vorteilen dieser Umstellung zählen der Zugriff auf beliebte moderne Bibliotheken und neue Plattformfunktionen, grundlegende Wartung und Sicherheits-Patches.
 
-{% hint style="info" %}
- Weitere Informationen zu dieser Umstellung und zum Aktualisieren älterer Skripte finden Sie im [Dynamo-Blog](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Wenn Sie IronPython weiterhin verwenden möchten, müssen Sie lediglich das **DynamoIronPython2.7** \- Paket mithilfe des Dynamo Package Manager installieren. 
-{% endhint %} 
+{% hint style="info" %} Weitere Informationen zu dieser Umstellung und zum Aktualisieren älterer Skripte finden Sie im [Dynamo-Blog](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Wenn Sie IronPython weiterhin verwenden möchten, müssen Sie lediglich das **DynamoIronPython2.7** \- Paket mithilfe des Dynamo Package Manager installieren. {% endhint %}
 
 [^1]: Vorgabemäßig wird die Dynamo-Geometriebibliothek nicht zur Python-Umgebung hinzugefügt. Unser Ziel mit diesem Skript ist die Ausgabe einer Liste von Dynamo-Punkten für die Einzugsgebietsgrenzen. Daher müssen wir diese Zeile hinzufügen, um die Punkte später erstellen zu können.
 

@@ -4,7 +4,7 @@
 
 Wenn wir mit dem Schreiben von Skripts in Python vertraut sind und mehr Funktionen aus den Dynamo-Python-Standardblöcken herausholen möchten, können wir mit Zero-Touch eigene Blöcke erstellen. Beginnen wir mit einem einfachen Beispiel, in dem ein Python-Skript als Zeichenfolge an einen Zero-Touch-Block übergeben werden kann, in dem das Skript ausgeführt und ein Ergebnis zurückgegeben wird. Diese Fallstudie baut auf den exemplarischen Vorgehensweisen und Beispielen im Abschnitt Erste Schritte auf. Wenn Sie mit der Erstellung von Zero-Touch-Blöcken noch nicht vertraut sind, finden Sie dort weitere Informationen.
 
-![Ein Zero-Touch-Block, der eine Python-Skriptzeichenfolge ausführt](../../.gitbook/assets/python-case-study.png)
+![Ein Zero-Touch-Block, der eine Python-Skriptzeichenfolge ausführt](../images/python-case-study.png)
 
 > Ein Zero-Touch-Block, der eine Python-Skriptzeichenfolge ausführt
 
@@ -68,7 +68,7 @@ output = str(volume)
 
 Eine Einschränkung der Python-Standardblöcke besteht darin, dass sie nur einen einzigen Ausgabeanschluss haben. Wenn wir also mehrere Objekte zurückgeben möchten, müssen wir eine Liste erstellen und jedes Objekt abrufen. Wenn wir das obige Beispiel ändern, um ein Wörterbuch zurückzugeben, können wir beliebig viele Ausgabeanschlüsse hinzufügen. Weitere Informationen zu Wörterbüchern finden Sie im Abschnitt Zurückgeben mehrerer Werte unter Weitere Schritte mit Zero-Touch.
 
-![Mit diesem Block können wir sowohl das Volumen des Quaders als auch seinen Schwerpunkt zurückgeben.](../../.gitbook/assets/python-multi-case-study.png)
+![Mit diesem Block können wir sowohl das Volumen des Quaders als auch seinen Schwerpunkt zurückgeben.](../images/python-multi-case-study.png)
 
 > Mit diesem Block können wir sowohl das Volumen des Quaders als auch seinen Schwerpunkt zurückgeben.
 

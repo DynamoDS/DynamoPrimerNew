@@ -2,7 +2,7 @@
 
 Unabhängig vom Kenntnisstand ist die Dynamo-Plattform dafür konzipiert, dass alle Benutzer ihre Beiträge leisten können. Es gibt mehrere Entwicklungsoptionen, die auf unterschiedliche Fähigkeiten und Qualifikationen ausgerichtet sind und je nach Ziel alle ihre Stärken und Schwächen haben. Nachfolgend werden die verschiedenen Optionen und die Möglichkeiten zur Auswahl einer Option erläutert.
 
-![Drei Entwicklungsumgebungen](../../.gitbook/assets/developing-for-dynamo.png)
+![Drei Entwicklungsumgebungen](../images/developing-for-dynamo.png)
 
 > Drei Entwicklungsumgebungen: Visual Studio, Python Editor und Code Block DesignScript
 
@@ -22,7 +22,7 @@ Diese Blöcke gestatten die größtmögliche Anpassung. Viele Pakete werden mit 
 
 Für die folgende Beschreibung wird Visual Studio als Entwicklungsumgebung für Zero-Touch- und NodeModel-Blöcke verwendet.
 
-![Visual Studio-Benutzeroberfläche](../../.gitbook/assets/vs-devenv.jpg)
+![Visual Studio-Benutzeroberfläche](../images/vs-devenv.jpg)
 
 > Visual Studio-Benutzeroberfläche mit einem Projekt, das wir entwickeln werden
 
@@ -42,7 +42,7 @@ Diese Prozesse befinden sich zwar im Arbeitsbereich für visuelle Programmierung
 
 Die Entwicklung im Dynamo-Arbeitsbereich ist ein leistungsstarkes Werkzeug, um unmittelbar Feedback zu erhalten.
 
-![Entwickeln im Dynamo-Arbeitsbereich mit dem Python-Block](../../.gitbook/assets/python-example.jpg)
+![Entwickeln im Dynamo-Arbeitsbereich mit dem Python-Block](../images/python-example.jpg)
 
 > Entwickeln im Dynamo-Arbeitsbereich mit dem Python-Block
 
@@ -54,7 +54,7 @@ Die Entwicklungsoptionen für Dynamo wurden speziell auf die Komplexität bei de
 
 Mit diesen Optionen können Sie sehr einfach Code in der visuellen Programmierumgebung von Dynamo schreiben. Der Arbeitsbereich für visuelle Programmierung in Dynamo bietet Zugriff auf Python und DesignScript und umfasst die Möglichkeit, mehrere Blöcke in einem benutzerdefinierten Block zu enthalten.
 
-![Codeblock, Python-Skript und benutzerdefinierter Block](../../.gitbook/assets/Development-Icons.png)
+![Codeblock, Python-Skript und benutzerdefinierter Block](../images/Development-Icons.png)
 
 Mit diesen Methoden haben wir folgende Möglichkeiten:
 
@@ -66,7 +66,7 @@ Mit diesen Methoden haben wir folgende Möglichkeiten:
 
 Unter Zero-Touch versteht man ein einfaches Verfahren zum Importieren von C#-Bibliotheken durch Zeigen und Klicken. Dynamo liest die öffentlichen Methoden einer `.dll`-Datei und konvertiert sie in Dynamo-Blöcke. Sie können Zero-Touch verwenden, um Ihre eigenen benutzerdefinierten Blöcke und Pakete zu entwickeln.
 
-![Zero-Touch-Blöcke](../../.gitbook/assets/ZTImport.png)
+![Zero-Touch-Blöcke](../images/ZTImport.png)
 
 Mit dieser Methode haben wir folgende Möglichkeiten:
 
@@ -78,7 +78,7 @@ Mit dieser Methode haben wir folgende Möglichkeiten:
 
 Diese Blöcke gehen ein Schritt tiefer in die Struktur von Dynamo. Sie basieren auf der `NodeModel`-Klasse und sind in C# geschrieben. Diese Methode bietet die größte Flexibilität und Leistung. Die meisten Aspekte des Blocks müssen jedoch explizit definiert werden, und Funktionen müssen in einer separaten Assembly ausgeführt werden.
 
-![Von NodeModel abgeleitete Blöcke](../../.gitbook/assets/Development-Icons-NodeModel.png)
+![Von NodeModel abgeleitete Blöcke](../images/Development-Icons-NodeModel.png)
 
 Mit dieser Methode haben wir folgende Möglichkeiten:
 
@@ -93,13 +93,13 @@ Da Dynamo regelmäßig aktualisiert wird, können Änderungen an Teilen der API 
 
 Änderungen an der API werden im [Dynamo-GitHub-Wiki](https://github.com/DynamoDS/Dynamo/wiki/API-Changes) nachverfolgt. Hier werden Änderungen an DynamoCore, Bibliotheken und Arbeitsbereichen behandelt.
 
-![Dokument mit Dynamo-API-Änderungen](../../.gitbook/assets/api-changes.png)
+![Dokument mit Dynamo-API-Änderungen](../images/api-changes.png)
 
 Ein Beispiel für eine bevorstehende, signifikante Änderung ist der Wechsel von XML zum JSON-Dateiformat in Version 2.0. Von NodeModel abgeleitete Blöcke benötigen jetzt einen [JSON-Konstruktor](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node), da sie sonst nicht in Dynamo 2.0 geöffnet werden können.
 
 Die API-Dokumentation von Dynamo deckt derzeit die Kernfunktionen ab: [http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI).
 
-![API-Dokumentation](../../.gitbook/assets/api-docs.jpg)
+![API-Dokumentation](../images/api-docs.jpg)
 
 ### Berechtigung zum Verteilen von Binärdateien in einem Paket <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 

@@ -4,15 +4,15 @@
 
 Dynamo ist ein aktives Open Source-Entwicklungsprojekt. Hier finden Sie eine [Liste der Software, die Dynamo unterstützt](http://dynamobim.org/download/).
 
-\![](<../.gitbook/assets/setup for dynamo - dynamo revit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo forma.png>)
+\![](<images/setup for dynamo - dynamo revit.png>) \![](<images/setup for dynamo - dynamo civil 3D.png>) \![](<images/setup for dynamo - dynamo alias design.png>) \![](<images/setup for dynamo - dynamo formit.png>) \![](<images/setup for dynamo - dynamo advance steel.png>) \![](<images/setup for dynamo - dynamo robot structural analysis.png>) \![](<images/setup for dynamo - dynamo forma.png>)
 
 ### Starten von Dynamo als Erweiterung
 
 Dynamo ist im Lieferumfang von Software wie **Revit3D**, **FormIt**, **Civil3D** usw. enthalten.
 
-Um Dynamo zu verwenden, starten Sie es über die Gruppe Werkzeugkasten. Je nachdem, welche Software Sie verwenden, befindet sich das Startsymbol in der Regel unter Menü > Registerkarte **Verwalten**. Klicken Sie auf das Dynamo-Symbol ![](../.gitbook/assets/dynamoCore-halfSize.png), um die Anwendung zu starten.
+Um Dynamo zu verwenden, starten Sie es über die Gruppe Werkzeugkasten. Je nachdem, welche Software Sie verwenden, befindet sich das Startsymbol in der Regel unter Menü > Registerkarte **Verwalten**. Klicken Sie auf das Dynamo-Symbol ![](images/dynamoCore-halfSize.png), um die Anwendung zu starten.
 
-\![](<../.gitbook/assets/launch dynamo from revit (1).jpg>)
+![](images/launchdynamofromrevit.jpg)
 
 Weitere Informationen zur Verwendung von Dynamo mit einer bestimmten Software finden Sie in den folgenden Abschnitten:
 
@@ -27,11 +27,11 @@ Wenn Sie Dynamo als eigenständige Anwendung verwenden möchten. Lesen Sie weite
 
 Die Dynamo-Anwendung ist auf der [Dynamo-Website](http://dynamobim.com) verfügbar. Sowohl offizielle als auch frühere oder vorab veröffentlichte Versionen sind auf der Download-Seite verfügbar. Besuchen Sie die Seite [Get Dynamo](http://dynamobim.org/download/), und klicken Sie auf **Download**, um die offizielle veröffentlichte Version herunterzuladen.
 
-\![](<../.gitbook/assets/image (4).png>)
+![](<images/image.png>)
 
 Wenn Sie nach früheren oder aktuellen Entwicklungsversionen suchen, finden Sie alle Versionen im unteren Bereich derselben Seite.
 
-\![](<../.gitbook/assets/03-02 Dynamo Sandbox All builds.png>)
+\![](<images/03-02 Dynamo Sandbox All builds.png>)
 
 {% hint style="info" %} Aktuelle Entwicklungsversionen können einige neue und experimentelle Funktionen enthalten, die noch nicht vollständig getestet wurden und daher instabil sein können. Durch die Verwendung dieser Versionen können Sie Fehler oder Probleme entdecken und uns helfen, die Anwendung zu verbessern, indem Sie Probleme an unser Team melden.
 
@@ -45,21 +45,21 @@ Laden Sie für diesen Schritt [7-Zip](https://www.7-zip.org/download.html) auf I
 
 Klicken Sie mit der rechten Maustaste auf die ZIP-Datei, und wählen Sie **Alle extrahieren** …
 
-\![](<../.gitbook/assets/03-03 Extract zip file.png>)
+\![](<images/03-03 Extract zip file.png>)
 
 Wählen Sie ein Ziel zum Entpacken aller Dateien.
 
-\![](<../.gitbook/assets/03-04 Extract destination folder (1).png>)
+\![](<images/03-04 Extract destination folder.png>)
 
 #### Starten
 
 Doppelklicken Sie im Zielordner auf **DynamoSandbox.exe**, um die Anwendung zu starten.
 
-\![](<../.gitbook/assets/03-05 Dynamo exe.jpg>)
+\![](<images/03-05 Dynamo exe.jpg>)
 
 Der Startbildschirm von Dynamo Sandbox wird wie folgt angezeigt.
 
-\![](<../.gitbook/assets/03-06 Dynamo startup screen.png>)
+\![](<images/03-06 Dynamo startup screen.png>)
 
 Sie haben die Einrichtung für die Verwendung von Dynamo Sandbox abgeschlossen!
 
