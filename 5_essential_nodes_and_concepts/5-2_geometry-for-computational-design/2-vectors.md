@@ -6,7 +6,7 @@
 
 Ein [Vektor](2-vectors.md#vector-1) ist eine Darstellung der Größe und Richtung. Sie können sich diesen als einen Pfeil vorstellen, der mit einer bestimmten Geschwindigkeit in eine bestimmte Richtung beschleunigt. Vektoren stellen eine wichtige Komponente für Modelle in Dynamo dar. Beachten Sie, dass Sie zur abstrakten Kategorie der "Helfer" gehören. Wenn Sie also einen Vektor erstellen, wird nichts in der Hintergrundvorschau angezeigt.
 
-\![Vectors in Dynamo](<../images/Geometry for Computational Design - vectors.jpg>)
+![Vectors in Dynamo](<../images/Geometry for Computational Design - vectors.jpg>)
 
 > 1. Sie können eine Linie zur Darstellung einer Vektorvorschau verwenden.
 
@@ -20,7 +20,7 @@ Ein [Vektor](2-vectors.md#vector-1) ist eine Darstellung der Größe und Richtun
 
 Eine [Ebene](2-vectors.md#plane-1) ist eine zweidimensionale Fläche. Sie können sich diese als eine flache Oberfläche vorstellen, die sich unendlich ausdehnt. Jede Ebene verfügt über einen Ursprung, eine X-Richtung, eine Y-Richtung und eine Z-Richtung (nach oben).
 
-\![Ebenen in Dynamo](<../images/Geometry for Computational Design - plane.jpg>)
+![Ebenen in Dynamo](<../images/Geometry for Computational Design - plane.jpg>)
 
 > 1. Ebenen sind zwar abstrakt, verfügen aber über eine Ursprungsposition, damit sie im Raum lokalisiert werden können.
 > 2. In Dynamo werden Ebenen in der Hintergrundvorschau gerendert.
@@ -35,7 +35,7 @@ Eine [Ebene](2-vectors.md#plane-1) ist eine zweidimensionale Fläche. Sie könne
 
 Ein [Koordinatensystem](2-vectors.md#coordinate-system-1) ist ein System zur Bestimmung der Position von Punkten oder anderen geometrischen Elementen. In der folgenden Abbildung wird erläutert, wie die Darstellung in Dynamo aussieht und welche Bedeutung die einzelnen Farben haben.
 
-\![Coordinate System in Dynamo](<../images/Geometry for Computational Design - Coordinate.jpg>)
+![Coordinate System in Dynamo](<../images/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. Koordinatensysteme sind zwar abstrakt, verfügen aber über eine Ursprungsposition, damit sie im Raum lokalisiert werden können.
 > 2. In Dynamo werden Koordinatensysteme in der Hintergrundvorschau als Punkt (Ursprung) und Linien gerendert, die die Achsen definieren (gemäß folgender Konvention: X ist rot, Y ist grün und Z ist blau).
