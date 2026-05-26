@@ -18,7 +18,7 @@ One thing that might seem odd at first is that the first index of a list is alwa
 
 For example, if you were to count the number of fingers we have on our right hand, chances are that you would have counted from 1 to 5. However, if you were to put your fingers in a list, Dynamo would have given them indices from 0 to 4. While this may seem a little strange to programming beginners, the zero-based index is standard practice in most computation systems.
 
-Note that we still have 5 items in the list; it's just that the list is using a zero-based counting system. And the items being stored in the list don't just have to be numbers. They can be any data type that Dynamo supports, such as points, curves, surfaces, families, etc.
+Note that we still have 5 items in the list; it's just that the list is using a zero-based counting system. The items being stored in the list don't just have to be numbers. They can be any data type that Dynamo supports, such as points, curves, surfaces, families, etc.
 
 ![](<../images/whats-a-list-zero-based-indices.jpg>)
 

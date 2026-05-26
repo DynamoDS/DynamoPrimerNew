@@ -11,7 +11,7 @@ This guide is designed to cater to readers from different backgrounds and skill 
 * [User Interface](../3_user_interface/)
 * [Nodes and Wires](../4_nodes_and_wires/)
 
-For users who would like to develop a more in-depth understanding of each element such as a specific Nodes and the concept behind it, we cover the fundamentals in its own chapter.
+For users who would like to develop a more in-depth understanding of each element such as a specific node and the concept behind it, we cover the fundamentals in its own chapter.
 
 * [Essential Nodes & Concepts](../5_essential_nodes_and_concepts/)
 

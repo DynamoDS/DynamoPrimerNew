@@ -1,6 +1,6 @@
 # What is Dynamo & How Does It Work?
 
-Dynamo is a [visual programming](https://primer2.dynamobim.org/a_appendix/a-1_visual-programming-and-dynamo) application that can be downloaded and run in either stand-alone "Sandbox" mode or as a plug-in for other software like Revit, FormIt or Civil 3D.
+Dynamo is a [Visual Programming](https://primer2.dynamobim.org/a_appendix/a-1_visual-programming-and-dynamo) application that can be downloaded and run in either stand-alone "Sandbox" mode or as a plug-in for other software like Revit, FormIt or Civil 3D.
 
 {% hint style="info" %}
 Learn more about the [difference between **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/)

@@ -27,11 +27,11 @@ Geometry are great menus to begin exploring as they contain the largest quantity
 > 3. Subcategory
 > 4. Node
 
-These further categorize the Nodes among same subcategory based on whether the Nodes **Create** data, execute an **Action**, or **Query** data.
+These further categorize the Nodes among the same subcategory based on whether the Nodes **Create** data, execute an **Action**, or **Query** data.
 
-* ![](<images/user-interface-create.jpg>) **Create**: Create or construct a geometry from scratch. E.g a circle.
-* ![](<images/user-interface-action.jpg>) **Action**: Perform an action on an object. E.g scaling a circle.
-* ![](<images/user-interface-query.jpg>) **Query**: Get a property of an object that already exists. E.g get the radius of a circle.
+* ![](<images/user-interface-create.jpg>) **Create**: Create or construct a geometry from scratch, e.g a circle.
+* ![](<images/user-interface-action.jpg>) **Action**: Perform an action on an object, e.g scaling a circle.
+* ![](<images/user-interface-query.jpg>) **Query**: Get a property of an object that already exists, e.g get the radius of a circle.
 
 Hover your mouse over a Node to reveal more detailed information beyond its name and icon. This offers us a quick way to understand what the Node does, what it will require for inputs, and what it will give as an output.
 
@@ -92,7 +92,7 @@ With hundreds of Nodes included in the basic installation of Dynamo, which ones 
 
 #### Input Nodes
 
-Input Nodes are the primary means for the User of our Visual Program - be that yourself or someone else - to interface with the key parameters. Here are some available from the Core Library:
+Input Nodes are the primary means for the User of our Visual Program, be that yourself or someone else, to interface with the key parameters. Here are some available from the Core Library:
 
 | Node           |                                                        | Node           |                                                        |
 | -------------- | ------------------------------------------------------ | -------------- | ------------------------------------------------------ |
@@ -127,7 +127,7 @@ Code Block Nodes can be used to define a block of code with lines separated by s
 
 We can also use Code Blocks as a shortcut to defining a Number Input or call to another Node's functionality. The syntax to do so follows the Naming Convention of the Dynamo textual language, [DesignScript](../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md).
 
-Here is a simple demonstration (with instructions) for using Code Block in your script.
+Here is a simple demonstration (with instructions) for using Code Blocks in your script.
 
 ![](images/library-codeblockdemo.gif)
 

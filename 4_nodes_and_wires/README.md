@@ -53,7 +53,7 @@ Hovering or right-clicking over the Name or Ports presents additional informatio
 
 #### Handling Error or Warning Nodes
 
-If your Visual Program contains warning or errors, Dynamo will provide additional information about the problem. Any Node that is Yellow will also have a tooltip above the Name. Hover your mouse over the warning ![](<images/nodes and wires - node warning icon.png>) or error ![](<images/nodes and wires - node error icon.png>) tooltip icon to expand it.
+If your Visual Program contains warnings or errors, Dynamo will provide additional information about the problem. Any Node that is Yellow will also have a tooltip above the Name. Hover your mouse over the warning ![](<images/nodes and wires - node warning icon.png>) or error ![](<images/nodes and wires - node error icon.png>) tooltip icon to expand it.
 
 {% hint style="info" %}
 Tip: With this tooltip information in hand, examine the upstream Nodes to see if the data type or data structure required is in error.
@@ -63,7 +63,7 @@ Tip: With this tooltip information in hand, examine the upstream Nodes to see if
 
 > 1. Warning Tooltip - "Null" or no data cannot be understood as a Double, i.e., a number
 > 2. Use the Watch Node to examine the input data
-> 3. Upstream the Number Node is storing "Red," not a number
+> 3. Upstream the Number Node is storing "Red", not a number
 
 ### Freezing Nodes
 
@@ -89,7 +89,7 @@ Input Ports are on the left side and the Output Ports are located on the right s
 
 ### Creating Wires <a href="#creating-wires" id="creating-wires"></a>
 
-Create a Wire by left-click on a Port subsequently left-click on the port of another Node to create a connection. While we are in the process of making a connection, the Wire will appear dashed and will snap to become solid lines when successfully connected.
+Create a Wire by left-clicking on a Port, then subsequently left-clicking on the port of another Node to create a connection. While we are in the process of making a connection, the Wire will appear dashed and will snap to become solid lines when successfully connected.
 
 The data will always flow through this Wire from output to input; however, we may create the wire in either direction in terms of the sequence of clicking on the connected Ports.
 
@@ -134,6 +134,6 @@ With this setting, only the selected Nodes and its joining Wires will be shown i
 
 #### Hide Individual Wire Only
 
-You can also hide selected wire only by Right-clicking on the Nodes output > select Hide Wires
+You can also hide the selected wire only by Right-clicking on the Nodes output > select Hide Wires
 
 ![](<images/nodes and wires - hide selected wire.gif>)

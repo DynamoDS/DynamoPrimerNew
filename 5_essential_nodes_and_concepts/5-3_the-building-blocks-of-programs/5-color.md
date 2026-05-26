@@ -38,10 +38,10 @@ The current Node works well, but it can be a little awkward to get everything wo
 
 ![](<../images/color - color range.jpg>)
 
-> 1. Define three colors: Using a **Code Block** node, define _red, green_, and _blue_ by plugging in the appropriate combinations of _0_ and _255_.
+> 1. **Define three colors:** Using a **Code Block** node, define _red, green_, and _blue_ by plugging in the appropriate combinations of _0_ and _255_.
 > 2. **Create list:** Merge the three colors into one list.
-> 3. Define Indices: Create a list to define the grip positions of each color (ranging from 0 to 1). Notice the value of 0.75 for green. This places the green color 3/4 of the way across the horizontal gradient in the color range slider.
-> 4. **Code Block**: Input values (between 0 and 1) to translate to colors.
+> 3. **Define Indices:** Create a list to define the grip positions of each color (ranging from 0 to 1). Notice the value of 0.75 for green. This places the green color 3/4 of the way across the horizontal gradient in the color range slider.
+> 4. **Code Block:** Input values (between 0 and 1) to translate to colors.
 
 ### Color Preview
 
@@ -92,14 +92,14 @@ Our next step is to drive parameters with the list of distances from the helical
 ![](<../images/color - basic helix with colors 04.jpg>)
 
 > 1. **Math.RemapRange:** Connect **Geometry.DistanceTo** output into the numbers input.
-> 2. **Code Block:** connect a code block with a value of _0.01_ into the _newMin_ input and a code block with a value of _1_ into the _newMax_ input.
+> 2. **Code Block:** Connect a code block with a value of _0.01_ into the _newMin_ input and a code block with a value of _1_ into the _newMax_ input.
 > 3. **Watch:** connect the **Math.RemapRange** output into one node and the **Geometry.DistanceTo** output into another. Compare the results.
 
 This step has remapped the list of distance to be a smaller range. We can edit the _newMin_ and _newMax_ values however we see fit. The values will remap and will have the same _distribution ratio_ across the domain.
 
 ![](<../images/color - basic helix with colors 05.jpg>)
 
-> 1. **Sphere.ByCenterPointRadius:** connect the **Math.RemapRange** output into the _radius_ input and the original **Point.ByCoordinates** output into the _centerPoint_ input.
+> 1. **Sphere.ByCenterPointRadius:** Connect the **Math.RemapRange** output into the _radius_ input and the original **Point.ByCoordinates** output into the _centerPoint_ input.
 
 Change the value of the number slider and watch the size of the spheres update. We now have a parametric jig
 
@@ -121,9 +121,9 @@ The size of the spheres demonstrates the parametric array defined by a reference
 ![](<../images/color - basic helix with colors 09.jpg>)
 
 > 1. **Color.ByARGB:** This is what we'll do to create two colors. While this process may look awkward, it's the same as RGB colors in another software, we're just using visual programming to do it.
-> 2. **Code Block:** create two values of _0_ and _255_. Plug the two outputs into the two **Color.ByARGB** inputs in agreement with the image above (or create your favorite two colors).
+> 2. **Code Block:** Create two values of _0_ and _255_. Plug the two outputs into the two **Color.ByARGB** inputs in agreement with the image above (or create your favorite two colors).
 > 3. **Color Range:** The _colors_ input requests a list of colors. We need to create this list from the two colors created in the previous step.
-> 4. **List.Create:** merge the two colors into one list. Plug the output into the _colors_ input for **Color Range**.
+> 4. **List.Create:** Merge the two colors into one list. Plug the output into the _colors_ input for **Color Range**.
 
 ![](<../images/color - basic helix with colors 10.jpg>)
 
@@ -150,11 +150,11 @@ First, we need to create (or reference) a surface to use as an input for the **D
 
 ![](<../images/color - color on surface 02.jpg>)
 
-> 1. **File Path**: select an image file to sample for pixel data downstream
+> 1. **File Path:** Select an image file to sample for pixel data downstream
 > 2. use **File.FromPath** to convert the file path to a file then pass into **Image.ReadFromFile** to output an image for sampling
-> 3. **Image.Pixels**: input an image and provide a sample value to use along the x and y dimensions of the image.
-> 4. **Slider**: provide sample values for **Image.Pixels**
-> 5. **Display.BySurfaceColors**: map array of color values across surface along X and Y respectively
+> 3. **Image.Pixels:** Input an image and provide a sample value to use along the x and y dimensions of the image.
+> 4. **Slider:** Provide sample values for **Image.Pixels**
+> 5. **Display.BySurfaceColors:** Map array of color values across surface along X and Y respectively
 
 Close-up preview of the output surface with resolution of 400x300 samples
 

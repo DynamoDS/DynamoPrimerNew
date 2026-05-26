@@ -32,7 +32,7 @@ The image below considers a string of data coming from an external spreadsheet. 
 
 ![](<../images/strings - querying strings 02.jpg>)
 
-> 1. By hitting the "_+_" in the middle of the Node, we create new separator.
+> 1. By hitting the "_+_" in the middle of the Node, we create a new separator.
 > 2. Add a "_,_" string to the canvas and plug in to the new separator input.
 > 3. Our result is now a list of ten items. The Node first splits based on _separator0_, then based on _separator1_.
 
