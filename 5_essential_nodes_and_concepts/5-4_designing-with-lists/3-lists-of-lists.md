@@ -104,8 +104,7 @@ The **List.Count** node counts all of the items in a list. We'll use this to dem
 
 ![](<../images/lists of lists - map 01.jpg>)
 
-> 1.  Insert two lines of code into the **Code Block**: `-50..50..#Nx; -50..50..#Ny;`
->     After typing in this code, the code block will create two inputs for Nx and Ny.
+> 1.  Insert two lines of code into the **Code Block**: `-50..50..#Nx; -50..50..#Ny;`. After typing in this code, the code block will create two inputs for Nx and Ny.
 > 2. With two _integer sliders_, define the _Nx_ and _Ny_ values by connecting them to the **Code Block**.
 > 3. Connect each line of the code block into the respective _X_ and _Y_ inputs of a **Point.ByCoordinates** node. Right click the node, select "Lacing", and choose _"Cross Product"_. This creates a grid of points. Because we defined the range from -50 to 50, we are spanning the default Dynamo grid.
 > 4. A _**Watch**_ node reveals the points created. Notice the data structure. We've created a list of lists. Each list represents a row of points of the grid.
@@ -208,7 +207,7 @@ Transpose is a fundamental function when dealing with lists of lists. Just as in
 
 ![Transpose](../images/transpose1.jpg)
 
-Let's delete the **List.Count** nodes from the previous exercise and move on to some geometry to see how the data structured.
+Let's delete the **List.Count** nodes from the previous exercise and move on to some geometry to see how the data is structured.
 
 ![](<../images/lists of lists - transpose 01.jpg>)
 
@@ -223,13 +222,13 @@ Let's delete the **List.Count** nodes from the previous exercise and move on to 
 
 ## Code Block for List Creation
 
-Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create list than the **List.Create** node. **Code block** is discussed in more detail in [Code Blocks and DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/). Reference the image below to note how a list with multiple expressions can be defined with code block.
+Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create a list than the **List.Create** node. **Code block** is discussed in more detail in [Code Blocks and DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/). Reference the image below to note how a list with multiple expressions can be defined with code block.
 
 ![](<../images/lists of lists - codeblock for list creation 01.jpg>)
 
 #### Code Block Query
 
-**Code block** shorthand uses "\[]" as a quick and easy way to select specific items that you want from a complex data structure. **Code blocks** are discussed in more detail in [Code Block and DesignScript chapter](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/). Reference the image below to note how a list with multiple data types can be queried with code block.
+**Code block** shorthand uses "\[]" as a quick and easy way to select specific items that you want from a complex data structure. **Code blocks** are discussed in more detail in [Code Block and DesignScript chapter](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/). Reference the image below to note how a list with multiple data types can be queried with **Code blocks**.
 
 ![](<../images/lists of lists - codeblock for list creation 02.jpg>)
 
@@ -276,9 +275,9 @@ Now that we've modified the list, we need to insert this list back into the orig
 
 ![](<../images/list of lists - exercise cb insert & query 05.jpg>)
 
-> 1. Following the same logic, use **List.ReplaceItemAtIndex** to replace the middle list with the our modified list.
+> 1. Following the same logic, use **List.ReplaceItemAtIndex** to replace the middle list with our modified list.
 > 2. Notice that the **Code Block**_s_ defining the index for these two nodes are 1 and 2, which matches the original query from the **Code Block** (_points\[1]\[2]_).
-> 3. By selecting the list at _index 1_, we see the data structure highlighted in the Dynamo preview. We successfully merged the moved point into the original data structure.
+> 3. By selecting the list at _index 1_, we see the data structure highlighted in the Dynamo preview. We have successfully merged the moved point into the original data structure.
 
 There are many ways to make a surface from this set of points. In this case, we're going to create a surface by lofting curves together.
 

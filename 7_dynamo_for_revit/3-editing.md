@@ -59,7 +59,7 @@ In Dynamo, we can retrieve the parameters by selecting the targeting element.
 
 ![](<images/editing - exercise 03.jpg>)
 
-> 1. Reference the _Element. Parameters_ node to find target parameters. Or, we can view the properties panel from the previous step to choose which parameter names we want to edit. In this case, we are looking for the parameters which affect the large geometric moves on the building mass.
+> 1. Reference the _Element. Parameters_ node to find target parameters. We can also view the properties panel from the previous step to choose which parameter names we want to edit. In this case, we are looking for the parameters which affect the large geometric moves on the building mass.
 > 2. We will make changes to the Revit element using the _Element.SetParameterByName_ node
 > 3. Use C\_ode Block to\_ define a list of parameters, with quotes around each item to denote a string. We can also use the List.Create node with a series of _"string"_ nodes connected to multiple inputs but Code block is faster and easier. Make sure that the string matches the exact name in Revit, case-specific: `{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
 
@@ -77,7 +77,7 @@ Just as in Revit, many of these parameters are dependent on each other. There ar
 
 ![](<images/editing - exercise 05.jpg>)
 
-> 1. This combination gives a funky new design to the building mass: 100, 92, 100, 25, 13, 51
+> 1. This combination gives a funky new design to the building mass: 100, 92, 100, 25, 13, 51.
 
 ### Editing Facade Parameters
 

@@ -88,7 +88,7 @@ Using some basic list operations, we can query a face of interest.
 > 1. First, output the selected elements from earlier to Element.Faces node.
 > 2. Next, use the _List.Count_ node reveals that we're working with 23 surfaces in the mass.
 > 3. Referencing this number, we change the Maximum value of an \*integer slider \*to _"22"_.
-> 4. Using _List.GetItemAtIndex_, we input the lists and the \*integer slider \*for the _index_. Sliding through with the selected, we stop when we get to _index 9_ and have isolated the main facade hosts the trusses.
+> 4. Using _List.GetItemAtIndex_, we input the lists and the \*integer slider \*for the _index_. Sliding through with the selected, we stop when we get to _index 9_ and have isolated the main facade that hosts the trusses.
 
 The previous step was a little cumbersome. We can do this much faster with the _"Select Face"_ node. This allows us to isolate a face that is not an element itself in the Revit project. The same interaction applies as _"Select Model Element"_, except we select the surface rather than the full element.
 
@@ -139,7 +139,7 @@ In any case, if we were to import 500 beams, do we need all of the surfaces to p
 
 ### Selecting Trusses
 
-Using the same graph of nodes, select the truss element rather than the beam element. Before doing this, delete the Element.Geometry from the previous step.
+Using the same graph of nodes, select the truss element rather than the beam element. Before doing this, delete the **Element.Geometry** from the previous step.
 
 ![](images/selecting_exercise_14.jpg)
 

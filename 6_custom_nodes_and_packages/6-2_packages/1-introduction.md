@@ -24,7 +24,7 @@ Notice that we now have another group in our Dynamo library called "buildz". Thi
 
 ![](<../images/package introduction - installing a package 03.jpg>)
 
-Use **Code Block** to quickly define a rectangular grid, output the result to a **Polygon.ByPoints** Node, subsequently a **Surface.ByPatch** Node to view the list of rectangular panels you have just created.
+Use **Code Block** to quickly define a rectangular grid, output the result to a **Polygon.ByPoints** Node, then subsequently a **Surface.ByPatch** Node to view the list of rectangular panels you have just created.
 
 ![](<../images/package introduction - installing a package 04.jpg>)
 

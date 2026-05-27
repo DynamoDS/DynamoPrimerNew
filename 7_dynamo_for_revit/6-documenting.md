@@ -42,7 +42,7 @@ Just for kicks, like the previous exercise, let's set the aperture ratio of each
 
 ![](<images/documenting - exercise I - 04.jpg>)
 
-> 1. Using _Math.RemapRange_, remap the deviation values to a domain between 0.15 and 0\_.\_45 by entering `0.15; 0.45;` into the _Code Block_.
+> 1. Using _Math.RemapRange_, remap the deviation values to a domain between 0.15 and 0.45 by entering `0.15; 0.45;` into the _Code Block_.
 > 2. Plug these results into the value input for _Element.SetParameterByName_.
 
 Back in Revit we can _kind of_ make sense of the change in aperture across the surface.
@@ -65,7 +65,7 @@ Setting the Aperture Ratio doesn't clearly demonstrate the deviation of panels o
 
 ![](<images/documenting - exercise II - 02.jpg>)
 
-> 1. Using _Math.RemapRange_, remap the planar deviation values to a range between\* 0\* and _1_ (note: you can use the _"MapTo"_ node to define a source domain as well).
+> 1. Using _Math.RemapRange_, remap the planar deviation values to a range between _0_ and _1_ (note: you can use the _"MapTo"_ node to define a source domain as well).
 > 2. Plug the results into a _Color Range_ node.
 > 3. Notice our output is a range of colors instead of a range of numbers.
 > 4. If you're set to Manual, hit _Run_. You should be able to get away with being set to Automatic from this point forward.
@@ -87,7 +87,7 @@ Back in Revit, we can now make better sense of areas of maximum deviation in the
 
 ### Part III: Scheduling
 
-Selecting one ETFE panel in Revit, we see that there are four instance parameters, XYZ1, XYZ2, XYZ3, and XYZ4. These are all blank after they're created. These are text-based parameters and need values. We'll use Dynamo to write the adaptive point locations to each parameter. This helps interoperability if the geometry needs to be sent to an engineer of facade consultant.
+Selecting one ETFE panel in Revit, we see that there are four instance parameters, XYZ1, XYZ2, XYZ3, and XYZ4. These are all blank after they're created. These are text-based parameters and need values. We'll use Dynamo to write the adaptive point locations to each parameter. This helps interoperability if the geometry needs to be sent to an engineer or facade consultant.
 
 ![](<images/documenting - exercise III - 01.jpg>)
 
@@ -108,7 +108,7 @@ To write in these values, we'll do a complex list operation. The graph itself is
 > 3. Convert these points to strings. Remember, the parameter is text-based so we need to input the correct data type.
 > 4. Create a list of the four strings which define the parameters to change: _XYZ1, XYZ2, XYZ3,_ and _XYZ4_.
 > 5. Plug this list into the _parameterName_ input of _Element.SetParameterByName_.
-> 6. Connect _Element.SetParameterByName_ into the the _combinator_ input of _List.Combine._ Connect the _adaptive components_ into _list1_. Connect _String_ from Object into _list2_.
+> 6. Connect _Element.SetParameterByName_ into the the _combinator_ input of _List.Combine._ Connect the _adaptive components_ into _list1_. Connect _String from Object_ into _list2_.
 
 We are list mapping here, because we are writing four values for each element, which creates a complex data structure. The _List.Combine_ node defines an operation one step down in the data hierarchy. This is why element and value inputs of _Element.SetParameterByName_ are left blank. _List.Combine_ is connecting the sublists of its inputs into the empty inputs of _Element.SetParameterByName_, based on the order in which they are connected.
 

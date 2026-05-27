@@ -1,6 +1,6 @@
 # n-Dimensional Lists
 
-Further down the rabbit-hole, let's add even more tiers to hierarchy. Data structure can expand far beyond a two-dimensional list of lists. Since lists are items in and of themselves in Dynamo, we can create data with as many dimensions as possible.
+Further down the rabbit-hole, let's add even more tiers to the hierarchy. Data structure can expand far beyond a two-dimensional list of lists. Since lists are items in and of themselves in Dynamo, we can create data with as many dimensions as possible.
 
 The analogy we'll work with here are Russian Nesting Dolls. Each list can be regarded as one container holding multiple items. Each list has its own properties and is also regarded as its own object.
 
@@ -48,7 +48,7 @@ The next step is to divide the surface into a grid of points.
 >
 > 3\. The output reveals the data structure, which is also visible in the Dynamo preview.
 
-Next, used the Points from last step to generate ten curves along the surface.
+Next, use the Points from last step to generate ten curves along the surface.
 
 ![](<../images/n-dimensional lists - 2d lists basic 04.jpg>)
 

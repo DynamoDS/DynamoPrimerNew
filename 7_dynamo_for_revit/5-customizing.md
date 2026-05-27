@@ -67,8 +67,7 @@ With the parametric surface, we want to define a way to panelize it in order to 
 
 > 1. Go to _Packages>Search for a Package..._
 > 2. Search for _"LunchBox"_ and install _"LunchBox for Dynamo"_. This is a really helpful set of tools for geometry operations such as this.
-
-> 1. After downloading, you now have full access to the LunchBox suite. Search for _"Quad Grid"_ and select _"LunchBox Quad Grid By Face"_. Plug the parametric surface into the _surface_ input and set the _U_ and _V_ divisions to _15_. You should see a quad-paneled surface in your Dynamo preview.
+> 3. After downloading, you now have full access to the LunchBox suite. Search for _"Quad Grid"_ and select _"LunchBox Quad Grid By Face"_. Plug the parametric surface into the _surface_ input and set the _U_ and _V_ divisions to _15_. You should see a quad-paneled surface in your Dynamo preview.
 
 > If you're curious about its setup, you can double click on the _Lunch Box_ node and see how it's made.
 
@@ -87,10 +86,8 @@ _Note: If Dynamo is taking a long time to calculate nodes, you may want to use t
 
 ### Analysis
 
-> 1. Continuing from the previous step, let's go further and drive the aperture of each panel based on its exposure to the sun. Zooming into Revit and select one panel, we see in the properties bar that there is a parameter called _"Aperture Ratio"_. The family is setup so that the aperture ranges, roughly, from _0.05_ to _0.45_.
-
+> 1. Continuing from the previous step, let's go further and drive the aperture of each panel based on its exposure to the sun. Zoom into Revit and select one panel, we see in the properties bar that there is a parameter called _"Aperture Ratio"_. The family is setup so that the aperture ranges roughly from _0.05_ to _0.45_.
 > 2. If we turn on the solar path, we can see the current sun location in Revit.
-
 > 3. We can reference this sun location using the _SunSettings.Current_ node.
 
 1. Plug the Sun settings into _Sunsetting.SunDirection_ to get the solar vector.

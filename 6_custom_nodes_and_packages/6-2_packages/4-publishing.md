@@ -41,7 +41,7 @@ In the _Publish a Package_ tab, fill out the relevant fields on the left side of
 
 <figure><img src="../images/package-details.png" alt=""><figcaption></figcaption></figure>
 
-Next, we’ll add package files. You can add files one by one or entire folders by selecting Add Directory (1). To add files that are not .dyf files, be sure to change your file type in the browser window to **"All Files(**_._**)"**. Notice that we’ll be adding every file, custom node (.dyf) or example file (.dyn), indiscriminately. Dynamo will categorize these items when we publish the package.
+Next, we’ll add package files. You can add files one by one or entire folders by selecting Add Folder (1). To add files that are not .dyf files, be sure to change your file type in the browser window to **"All Files(**_._**)"**. Notice that we’ll be adding every file, custom node (.dyf) or example file (.dyn), indiscriminately. Dynamo will categorize these items when we publish the package.
 
 <figure><img src="../images/map-to-surface-contents.png" alt=""><figcaption></figcaption></figure>
 
@@ -53,7 +53,7 @@ Here, you have a chance to preview how Dynamo will organize your package files p
 
 <figure><img src="../images/publish-locally.png" alt=""><figcaption></figcaption></figure>
 
-Publish by clicking "Publish Locally" (1). If you're following along, be certain to click _"Publish Locally"_ and **not** _"Publish Online” to avoid having_ a bunch of duplicate packages in the Package Manager.
+Publish by clicking "Publish Locally" (1). If you're following along, be certain to click _"Publish Locally"_ and **not** _"Publish Online”_ to avoid having a bunch of duplicate packages in the Package Manager.
 
 After publishing, the custom nodes should be available under the "DynamoPrimer" group or your Dynamo Library.
 
@@ -80,7 +80,7 @@ Note: please do not follow along with this step unless you are actually publishi
 
 <figure><img src="../images/publish-version.png" alt=""><figcaption></figcaption></figure>
 
-1. When you're ready to publish, in the Packages > Package Manager > Installed Packages window, select the button the right of the package you want to publish and choose Publish.
+1. When you're ready to publish, in the Packages > Package Manager > Installed Packages window, select the button to the right of the package you want to publish and choose Publish.
 2. If you're updating a package that has already been published, choose "Publish Version" and Dynamo will update your package online based on the new files in that package's root directory. Simple as that!
 
 ### Publish Version...
