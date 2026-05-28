@@ -2,7 +2,7 @@
 
 Dynamo 2.0 stellt eine Reihe von Wörterbuch-Blöcken für die Verwendung bereit. Dies umfasst die Blöcke für _Erstellen, Aktion und Abfragen_.
 
-\![](<../images/dictionary nodes - nodes.jpg>)
+![](<../images/dictionary nodes - nodes.jpg>)
 
 #### Erstellen
 
