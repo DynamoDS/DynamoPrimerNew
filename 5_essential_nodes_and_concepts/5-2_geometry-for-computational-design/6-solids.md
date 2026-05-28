@@ -10,7 +10,7 @@ Wenn wir komplexere Modelle entwickeln möchten, die nicht aus einer einzelnen F
 
 Sie können [Boolesche Operationen](6-solids.md#boolean-operations) verwenden, um Volumenmodelle zu ändern. Führen Sie mehrere boolesche Operationen aus, um einen Noppenball zu erstellen.
 
-\![](<../images/solids - spiky ball.jpg>)
+![](<../images/solids - spiky ball.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius**: Der Basisvolumenkörper wird erstellt.
 > 2. **Topology.Faces**, **Face.SurfaceGeometry**: Die Flächen des Volumenkörpers werden abgefragt und die Oberflächengeometrie wird konvertiert – in diesem Fall weist die Kugel nur eine Fläche auf.
@@ -29,7 +29,7 @@ Sie können [Boolesche Operationen](6-solids.md#boolean-operations) verwenden, u
 
 Boolesche Operationen sind sehr komplex und ihre Berechnung kann möglicherweise viel Zeit in Anspruch nehmen. Sie können die Anhaltfunktion verwenden, um die Ausführung der ausgewählten Blöcke und der betroffenen untergeordneten Blöcke zu unterbrechen.
 
-\![](<../images/solids - freeze node.jpg>)
+![](<../images/solids - freeze node.jpg>)
 
 > 1. Verwenden Sie das Kontextmenü, um den Vorgang Vereinigung für einen Volumenkörper anzuhalten.
 > 2. Der ausgewählte Block und alle untergeordneten Blöcke werden in einem hellgrauen halbtransparenten Modus in einer Vorschau angezeigt und die betroffenen Drähte werden als gestrichelte Linien angezeigt. Die betroffene Geometrievorschau wird ebenfalls halbtransparent angezeigt. Sie können jetzt vorgelagerte Werte ändern, ohne die boolesche Vereinigung zu berechnen.
