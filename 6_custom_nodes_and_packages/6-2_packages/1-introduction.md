@@ -22,11 +22,11 @@ Klicken Sie auf Installieren, um dieses Paket zu Ihrer Bibliothek hinzuzufügen,
 
 In der Dynamo-Bibliothek wird jetzt eine weitere Gruppe namens buildz angezeigt. Dieser Name bezieht sich auf den Entwickler des Pakets und der benutzerdefinierte Block wird in dieser Gruppe abgelegt. Sie können ihn sofort verwenden.
 
-\![](<../images/package introduction - installing a package 03.jpg>)
+![](<../images/package introduction - installing a package 03.jpg>)
 
 Verwenden Sie den **Codeblock**, um schnell ein rechteckiges Raster zu definieren, und geben Sie das Ergebnis als **Polygon.ByPoints**-Block und anschließend als **Surface.ByPatch**-Block aus, um die Liste der rechteckigen Elemente anzuzeigen, die Sie gerade erstellt haben.
 
-\![](<../images/package introduction - installing a package 04.jpg>)
+![](<../images/package introduction - installing a package 04.jpg>)
 
 ### Paketordner wird installiert - DynamoUnfold
 
@@ -40,7 +40,7 @@ Dieses Mal suchen wir nach _DynamoUnfold_ (in einem Wort geschrieben). Wenn die 
 
 Die Dynamo-Bibliothek enthält jetzt die Gruppe _DynamoUnfold_ mit mehreren Kategorien und benutzerdefinierten Blöcken.
 
-\![](<../images/package introduction - installing package folder 02.jpg>)
+![](<../images/package introduction - installing package folder 02.jpg>)
 
 Als Nächstes betrachten Sie die Dateistruktur des Pakets genauer.
 
@@ -52,7 +52,7 @@ Als Nächstes betrachten Sie die Dateistruktur des Pakets genauer.
 
 Dadurch gelangen Sie zum Stammverzeichnis des Pakets. Hier sind drei Ordner und eine Datei vorhanden.
 
-\![](<../images/package introduction - installing package folder 05.jpg>)
+![](<../images/package introduction - installing package folder 05.jpg>)
 
 > 1. Im Ordner _bin_ werden DLL-Dateien gespeichert. Dieses Dynamo-Paket wurde mit Zero-Touch entwickelt, d. h., die benutzerdefinierten Blöcke wurden in diesem Ordner abgelegt.
 > 2. Im Ordner _dyf_ befinden sich die benutzerdefinierten Blöcke. Da dieses Paket nicht mithilfe benutzerdefinierter Dynamo-Blöcke entwickelt wurde, ist dieser Ordner in diesem Paket leer.
@@ -87,7 +87,7 @@ Sie können auch auf der [Dynamo Package Manager-Website](http://dynamopackages.
 
 Wenn Sie wissen möchten, wo Ihre Paketdateien gespeichert sind, klicken Sie in der oberen Navigationsleiste auf Dynamo > Voreinstellungen > Paketeinstellungen > Dateispeicherorte für Blöcke und Pakete. Hier finden Sie das aktuelle Stammordnerverzeichnis.
 
-\![](<../images/package introduction - installing package folder 08.png>)
+![](<../images/package introduction - installing package folder 08.png>)
 
 Pakete werden vorgabemäßig unter einem Speicherort ähnlich dem folgenden installiert: _C:/Benutzer/[Benutzername]/AppData/Roaming/Dynamo/[Dynamo-Version]_.
 
