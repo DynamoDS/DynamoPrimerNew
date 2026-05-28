@@ -11,7 +11,7 @@ There are a few basic shorthand methods in the code block which, simply put, mak
 | Sequences              | ![](<../images/03 node- sequence.jpg>)       | ![](<../images/03 codeblock- sequence.jpg>)       |
 | Ranges                 | ![](<../images/04 node- range.jpg>)          | ![](<../images/04 codeblock - range.jpg>)         |
 | Get Item at Index      | ![](<../images/05 node - list get item.jpg>) | ![](<../images/05 codeblock - list get item.jpg>) |
-| Create List            | ![](<../images/06 node - list create.jpg>)   | ![](<../images/image.png>)                   |
+| Create List            | ![](<../images/06 node - list create.jpg>)   | ![](<../images/06 node - list create.jpg>)                   |
 | Concatenate Strings    | ![](<../images/07 node - string concat.jpg>) | ![](<../images/07 codeblock - string concat.jpg>) |
 | Conditional Statements | ![](<../images/08 node - conditional.jpg>)   | ![](<../images/08 codeblock - conditional.jpg>)   |
 
@@ -61,7 +61,7 @@ In addition to making lists with shorthand, we can also create lists on the fly.
 >
 > 2\. Create lists with variables and query using the range shorthand notation.
 
-And managing with nested lists is a similar process. Be aware of the list order and recall using multiple sets of square brackets:
+Managing with nested lists is a similar process. Be aware of the list order and recall using multiple sets of square brackets:
 
 ![](<../images/shorthand - list & get from list 02.jpg>)
 
@@ -79,7 +79,7 @@ And managing with nested lists is a similar process. Be aware of the list order 
 
 {% file src="../../.gitbook/assets/Obsolete-Nodes_Sine-Surface.dyn" %}
 
-In this exercise, we will flex our new shorthand skills to create a funky-cool eggshell surface defined by ranges and formulas. During this exercise, notice how we use code block and existing Dynamo nodes in tandem: we use the code block for the heavy data lifting while the Dynamo nodes are visually laid out for legibility of the definition.
+In this exercise, we will flex our new shorthand skills to create a funky-cool eggshell surface defined by ranges and formulas. During this exercise, notice how we use code blocks and existing Dynamo nodes in tandem: we use the code blocks for the heavy data lifting while the Dynamo nodes are visually laid out for legibility of the definition.
 
 Start by creating a surface by connecting the nodes above. Instead of using a number node to define width and length, double click on the canvas and type `100;` into a code block
 
@@ -94,11 +94,11 @@ In this step, we employ our first function to move the grid of points up in the 
 
 ![](<../images/shorthand - exercise 03.jpg>)
 
-> 1. We use a **Code Block** with the line: `(0..Math.Sin(x*360)..#50)*5;`. To quickly break this down, we're defining a range with a formula inside of it. This formula is the Sine function. The sine function receives degree inputs in Dynamo, so in order to get a full sine wave, we multiple our x values (this is the range input from 0 to 1) by 360. Next we want the same number of divisions as control grid points for each row, so we define fifty subdivisions with #50. Finally, the multiplier of 5 simply increases the amplitude of translation so that we can see the effect in the Dynamo Preview.
+> We use a **Code Block** with the line: `(0..Math.Sin(x*360)..#50)*5;`. To quickly break this down, we're defining a range with a formula inside of it. This formula is the Sine function. The sine function receives degree inputs in Dynamo, so in order to get a full sine wave, we multiple our x values (this is the range input from 0 to 1) by 360. Next we want the same number of divisions as control grid points for each row, so we define fifty subdivisions with #50. Finally, the multiplier of 5 simply increases the amplitude of translation so that we can see the effect in the Dynamo Preview.
 
 ![](<../images/shorthand - exercise 04.jpg>)
 
-> 1. While the previous **Code Block** worked fine, it wasn't completely parametric. We want to dynamically drive its parameters, so we'll replace the line from the previous step with `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`. This gives us the ability to define these values based on inputs.
+> While the previous **Code Block** worked fine, it wasn't completely parametric. We want to dynamically drive its parameters, so we'll replace the line from the previous step with `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`. This gives us the ability to define these values based on inputs.
 
 By changing the sliders (ranging from 0 to 10), we get some interesting results.
 
@@ -106,11 +106,11 @@ By changing the sliders (ranging from 0 to 10), we get some interesting results.
 
 ![](<../images/shorthand - exercise 06.jpg>)
 
-> 1. By doing a transpose on the number range, we reverse the direction of the curtain wave: `transposeList = List.Transpose(sineList);`
+> By doing a transpose on the number range, we reverse the direction of the curtain wave: `transposeList = List.Transpose(sineList);`
 
 ![](<../images/shorthand - exercise 07.jpg>)
 
-> 1. We get a distorted eggshell surface when we add the sineList and the transposeList: `eggShellList = sineList+transposeList;`
+> We get a distorted eggshell surface when we add the sineList and the transposeList: `eggShellList = sineList+transposeList;`
 
 Let's change the sliders values specified below to 'calm the waters' of this algorithm.
 
@@ -122,7 +122,7 @@ Last, let's query isolated parts of the data with the Code Block. To regenerate 
 
 ![](<../images/shorthand - exercise 10.jpg>)
 
-> 1. In the final step, to make this **Code Block** more parametric, we drive the query by using a slider ranging from 0 to 1. We do this with this line of code: `sineStrips[0..((List.Count(sineStrips)-1)*u)];`. This may seem confusing, but the line of code gives us a quick way to scale the length of the list into a multiplier between 0 and 1.
+> In the final step, to make this **Code Block** more parametric, we drive the query by using a slider ranging from 0 to 1. We do this with this line of code: `sineStrips[0..((List.Count(sineStrips)-1)*u)];`. This may seem confusing, but the line of code gives us a quick way to scale the length of the list into a multiplier between 0 and 1.
 
 A value of `0.53` on the slider creates a surface just past the midpoint of the grid.
 

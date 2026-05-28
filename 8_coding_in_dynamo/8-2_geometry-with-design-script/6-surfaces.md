@@ -82,6 +82,5 @@ crv = NurbsCurve.ByPoints(pts);
 axis_origin = Point.ByCoordinates(0, 0, 0);
 axis = Vector.ByCoordinates(0, 0, 1);
 
-surf = Surface.ByRevolve(crv, axis_origin, axis, 0,
-    360);
+surf = Surface.ByRevolve(crv, axis_origin, axis, 0, 360);
 ```

@@ -48,7 +48,7 @@ Create a **Code Block** and introduce our definition.
 
 ![](<../images/functions - exercise - 02.jpg>)
 
-> 1.  Use these lines of code:
+> Use these lines of code:
 >
 >     ```
 >     def sphereByZ(inputPt)
@@ -61,7 +61,7 @@ Create a **Code Block** and introduce our definition.
 
 ![](<../images/functions - exercise - 03.jpg>)
 
-> 1. Adding to the **Code Block** function, we place a comment and a _sphereRadius_ variable which queries the _Z_ position of each point. Remember, _inputPt.Z_ does not need parentheses as a method. This is a _query_ of an existing element's properties, so no inputs are necessary:
+> Adding to the **Code Block** function, we place a comment and a _sphereRadius_ variable which queries the _Z_ position of each point. Remember, _inputPt.Z_ does not need parentheses as a method. This is a _query_ of an existing element's properties, so no inputs are necessary:
 >
 > ```
 > def sphereByZ(inputPt,radiusRatio)
@@ -73,7 +73,7 @@ Create a **Code Block** and introduce our definition.
 
 ![](<../images/functions - exercise - 04.jpg>)
 
-> 1. Now, let's recall the function we've created in another **Code Block**. If we double-click on the canvas to create a new _code block_, and type in _sphereB_, we notice that Dynamo suggest the _sphereByZ_ function that we've defined. Your function has been added to the intellisense library! Pretty cool.
+> Now, let's recall the function we've created in another **Code Block**. If we double-click on the canvas to create a new _code block_, and type in _sphereB_, we notice that Dynamo suggest the _sphereByZ_ function that we've defined. Your function has been added to the intellisense library! Pretty cool.
 
 ![](<../images/functions - exercise - 05.jpg>)
 
@@ -98,11 +98,11 @@ Let's create actual spheres now by editing the _Parent_ function.
 
 ![](<../images/functions - exercise - 08.jpg>)
 
-> 1\. To temper the size of these spheres, let's update the sphereRadius value by adding a divider: `sphereRadius = inputPt.Z/20;` Now we can see the separate spheres and start to make sense of the relationship between radius and Z value.
+> To temper the size of these spheres, let's update the sphereRadius value by adding a divider: `sphereRadius = inputPt.Z/20;` Now we can see the separate spheres and start to make sense of the relationship between radius and Z value.
 
 ![](<../images/functions - exercise - 09.jpg>)
 
-> 1. On the **Point.ByCoordinates** node, by changing the lacing from Shortest List to Cross Product, we create a grid of points. The _sphereByZ_ function is still in full effect, so the points all create spheres with radii based on Z values.
+> On the **Point.ByCoordinates** node, by changing the lacing from Shortest List to Cross Product, we create a grid of points. The _sphereByZ_ function is still in full effect, so the points all create spheres with radii based on Z values.
 
 ![](<../images/functions - exercise - 10.jpg>)
 

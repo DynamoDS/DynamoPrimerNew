@@ -56,10 +56,10 @@ from RevitServices.Transactions import TransactionManager
 doc = DocumentManager.Instance.CurrentDBDocument
 uidoc=DocumentManager.Instance.CurrentUIApplication.ActiveUIDocument
 
-#Preparing input from dynamo to revit
+# Preparing input from dynamo to revit
 element = UnwrapElement(IN[0])
 
-#Do some action in a Transaction
+# Do some action in a Transaction
 TransactionManager.Instance.EnsureInTransaction(doc)
 
 TransactionManager.Instance.TransactionTaskDone()
