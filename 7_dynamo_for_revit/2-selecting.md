@@ -30,7 +30,7 @@ _Zeigen und Klicken:_ Dies ist das einfachste Verfahren zur direkten Auswahl von
 
 _Dropdown-Menüs:_ In diesen Menüs wird eine Liste aller Elemente im Revit-Projekt erstellt, auf die Sie zugreifen können. Über diese können Sie Revit-Elemente referenzieren, die eventuell in der jeweiligen Ansicht nicht sichtbar sind. Dieses Werkzeug eignet sich hervorragend zum Abfragen bestehender und zum Erstellen neuer Elemente in einem Revit-Projekt oder im Familieneditor.
 
-\![](<images/2/selecting - database navigation with dynamo nodes 02.jpg>)
+![](<images/2/selecting - database navigation with dynamo nodes 02.jpg>)
 
 Sie können darüber hinaus Revit-Elemente anhand ihrer Ebene in der _Revit-Hierarchie_ auswählen. Diese Option erweist sich als hocheffizient, wenn große Datenmengen zur Vorbereitung der Dokumentation oder für die generative Instanziierung und Anpassung verarbeitet werden müssen.
 
@@ -81,7 +81,7 @@ Eine Alternative dazu wird im Folgenden beschrieben. In diesem Fall nehmen Sie d
 
 Mithilfe einiger einfacher Listenoperationen können Sie eine bestimmte Fläche abrufen, die für Ihre Zwecke von Interesse ist.
 
-\![](images/2/selecting - exercise 05.jpg)
+![](images/2/selecting - exercise 05.jpg)
 
 > 1. Geben Sie zunächst die ausgewählten Elemente von zuvor an den Element.Faces-Block aus.
 > 2. Der _List.Count_-Block zeigt dann, dass 23 Oberflächen im Körper enthalten sind.
