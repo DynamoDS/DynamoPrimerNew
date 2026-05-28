@@ -6,7 +6,7 @@
 
 Ein [Vektor](2-vectors.md#vector-1) ist eine Darstellung der Größe und Richtung. Sie können sich diesen als einen Pfeil vorstellen, der mit einer bestimmten Geschwindigkeit in eine bestimmte Richtung beschleunigt. Vektoren stellen eine wichtige Komponente für Modelle in Dynamo dar. Beachten Sie, dass Sie zur abstrakten Kategorie der "Helfer" gehören. Wenn Sie also einen Vektor erstellen, wird nichts in der Hintergrundvorschau angezeigt.
 
-![Vectors in Dynamo](<../images/Geometry for Computational Design - vectors.jpg>)
+![Vectors in Dynamo](<../images/Geometry for Computational Design  - vectors.jpg>)
 
 > 1. Sie können eine Linie zur Darstellung einer Vektorvorschau verwenden.
 
