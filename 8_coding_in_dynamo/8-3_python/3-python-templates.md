@@ -75,6 +75,6 @@ Nach dem Definieren der Python-Vorlage sucht Dynamo jedes Mal danach, wenn Sie e
 
 Wenn die Python-Vorlage gefunden wird (beispielsweise für Revit), werden alle vorgegebenen Elemente angezeigt, die Sie integriert haben.
 
-\![](<../images/python templates - after setup template.jpg>)
+![](<../images/python templates - after setup template.jpg>)
 
 Weitere Informationen zu dieser großartigen Ergänzung (von Radu Gidei) finden Sie hier. https://github.com/DynamoDS/Dynamo/pull/8122
