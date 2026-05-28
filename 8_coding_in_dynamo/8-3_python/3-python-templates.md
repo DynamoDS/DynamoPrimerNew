@@ -6,13 +6,13 @@ Die Vorlage befindet sich im Ordner `APPDATA` Ihrer Dynamo-Installation.
 
 Dies ist in der Regel wie folgt `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-\![](<../images/python templates - appdata folder location.jpg>)
+![](<../images/python templates - appdata folder location.jpg>)
 
 ### Einrichten der Vorlage
 
 Um diese Funktion nutzen zu können, müssen wir unserer Datei `DynamoSettings.xml` die folgende Zeile hinzufügen. _(in Editor bearbeiten)_
 
-\![](<../images/python templates -dynamo settings xml file.png>)
+![](<../images/python templates -dynamo settings xml file.png>)
 
 Ersetzen Sie alle Vorkommen von `<PythonTemplateFilePath />` durch das Folgende:
 
@@ -71,7 +71,7 @@ Anschließend speichern Sie diese Datei als `PythonTemplate.py` am Speicherort `
 
 Nach dem Definieren der Python-Vorlage sucht Dynamo jedes Mal danach, wenn Sie einen Python-Block einfügen. Wenn sie nicht gefunden wird, wird das vorgabemäßige Python-Fenster angezeigt.
 
-\![](<../images/python templates - before setup template.jpg>)
+![](<../images/python templates - before setup template.jpg>)
 
 Wenn die Python-Vorlage gefunden wird (beispielsweise für Revit), werden alle vorgegebenen Elemente angezeigt, die Sie integriert haben.
 
