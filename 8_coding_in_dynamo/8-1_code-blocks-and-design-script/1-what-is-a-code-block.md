@@ -12,7 +12,7 @@ Codeblöcke sind, kurz zusammengefasst, eine Oberfläche für Textskripts innerh
 
 Bei Codeblöcken kann der Benutzer flexibel entscheiden, wie die Eingaben festgelegt werden sollen. Die folgenden Abbildungen zeigen verschiedene Möglichkeiten zum Erstellen eines einfachen Punkts mit den Koordinaten _(10, 5, 0)_:
 
-\![](<../images/codeblock brief overview.jpg>)
+![](<../images/codeblock brief overview.jpg>)
 
 Während Sie weitere Funktionen aus der Bibliothek kennenlernen, erweist sich eventuell die Eingabe von "Point.ByCoordinates" als leichter und schneller als die Suche nach dem passenden Block in der Bibliothek. Wenn Sie beispielsweise _Point._ eingeben, zeigt Dynamo eine Liste möglicher Funktionen an, die für Punkte angewendet werden können. Dadurch gestaltet sich die Skripterstellung intuitiver und die Anwendung von Funktionen in Dynamo ist leichter zu erlernen.
 
@@ -20,7 +20,7 @@ Während Sie weitere Funktionen aus der Bibliothek kennenlernen, erweist sich ev
 
 Der Codeblock befindet sich unter _Core > Input > Actions > Code Block_. Sie können den Codeblock jedoch auch wesentlich schneller durch einfaches Doppelklicken im Ansichtsbereich aufrufen. Dieser Block wird so häufig verwendet, dass ihm uneingeschränkte Doppelklickfunktionen zugewiesen wurden.
 
-\![](<../images/creating codeblock nodes.jpg>)
+![](<../images/creating codeblock nodes.jpg>)
 
 ### Zahlen, Zeichenfolgen und Formeln
 
@@ -30,7 +30,7 @@ Die folgende Abbildung zeigt, dass der "herkömmliche" Ablauf für diese Angaben
 
 Die Nummern- und Zeichenfolgenblöcke sind zwei Beispiele für Dynamo-Blöcke, die im Vergleich zum Codeblock als veraltet betrachtet werden könnten.
 
-\![](<../images/old school vs code blocks nodes.jpg>)
+![](<../images/old school vs code blocks nodes.jpg>)
 
 > 1. Traditionell
 > 2. Codeblöcke
