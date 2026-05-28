@@ -19,11 +19,11 @@ Die folgenden kurzen Beispiele zeigen die Funktionsweise dieser drei Blöcke in 
 
 In dieser Abbildung wurde für _Boolean_ die Option _true_ eingestellt, d. h., das Ergebnis ist die Zeichenfolge: _"this is the result if true"._ Die drei möglichen Blöcke, mit deren Hilfe die _If_-Anweisung erstellt werden kann, funktionieren hier auf dieselbe Weise.
 
-\![](<../images/logic - conditional statements 01 false.jpg>)
+![](<../images/logic - conditional statements 01 false.jpg>)
 
 Auch in diesem Fall funktionieren die Blöcke auf dieselbe Weise. Wenn Sie den _Boolean_-Wert in _False_ ändern, wird als Ergebnis die Zahl _Pi_ ausgegeben, wie in der ursprünglichen _If_-Anweisung festgelegt.
 
-\![](<../images/logic - conditional statements 02 true.jpg>)
+![](<../images/logic - conditional statements 02 true.jpg>)
 
 ## Übung: Logik und Geometrie
 
@@ -37,7 +37,7 @@ Auch in diesem Fall funktionieren die Blöcke auf dieselbe Weise. Wenn Sie den _
 
 1. In diesem Beispiel teilen Sie eine Liste von Zahlen in eine Liste mit geraden und eine Liste ungeraden Zahlen auf.
 
-\![](<../images/logic - exercise part I-01.jpg>)
+![](<../images/logic - exercise part I-01.jpg>)
 
 > a. **Range**: Definieren Sie im Ansichtsbereich einen Zahlenbereich.
 >
@@ -61,7 +61,7 @@ In diesem Schritt wenden Sie die in der ersten Übung erstellte Logik auf einen 
 
 2\. Beginnen Sie mit den Blöcken aus der letzten Übung. Die einzigen Ausnahmen (zusätzlich zum Ändern des Formats) sind:
 
-\![](<../images/logic - exercise part II-01.jpg>)
+![](<../images/logic - exercise part II-01.jpg>)
 
 > a. Verwenden Sie einen **Sequence**-Block mit diesen Eingabewerten.
 >
@@ -69,7 +69,7 @@ In diesem Schritt wenden Sie die in der ersten Übung erstellte Logik auf einen 
 
 3\. Erstellen Sie zunächst eine separate Gruppe von Diagrammen, wie in der Abbildung oben gezeigt. Diese Gruppe von Blöcken stellt eine parametrische Gleichung zum Definieren einer Sinuskurve dar. Einige Hinweise:
 
-\![](<../images/logic - exercise part II-02.jpg>)
+![](<../images/logic - exercise part II-02.jpg>)
 
 > a. Der erste **Number Slider**-Block repräsentiert die Frequenz der Welle. Er sollte einen Mindestwert von 1, einen Höchstwert von 4 und eine Schrittweite von 0.01 haben.
 >
@@ -79,23 +79,23 @@ In diesem Schritt wenden Sie die in der ersten Übung erstellte Logik auf einen 
 
 Für die Eingaben gilt hier folgende Regel: Verwenden Sie Zahlenblöcke für statische und Schieberegler für veränderliche Eigenschaften. Der anfangs definierte ursprüngliche Zahlenbereich soll erhalten bleiben. Für die Sinuskurve, die hier erstellt werden soll, wird jedoch mehr Flexibilität benötigt. Mithilfe dieser Schieberegler können Sie die Frequenz und Amplitude der Kurve ändern.
 
-\![](<../images/logic - exercise part II-03.gif>)
+![](<../images/logic - exercise part II-03.gif>)
 
 4\. Die Schritte dieser Definition werden hier nicht nacheinander beschrieben. Hier wird zunächst das Endergebnis gezeigt, um eine Vorstellung der fertigen Geometrie zu vermitteln. Die ersten beiden Schritte wurden separat durchgeführt und müssen jetzt zusammengeführt werden. Die Position der reißverschlussähnlichen Bauteile soll durch die zugrunde liegende Sinuskurve gesteuert werden, wobei mithilfe der True/False-Logik abwechselnd große und kleine Quader eingefügt werden.
 
-\![](<../images/logic - exercise part II-04.jpg>)
+![](<../images/logic - exercise part II-04.jpg>)
 
 > a. **Math.RemapRange**: Erstellen Sie aus der in Schritt 02 erstellten Zahlenfolge eine neue Zahlenfolge, indem Sie den Bereich neu zuordnen. In Schritt 01 wurden Zahlen von 0 – 100 festgelegt. Diese Zahlen liegen zwischen 0 und 1, wie mithilfe der Eingaben _newMin_ und _newMax_ festgelegt.
 
 5\. Erstellen Sie einen **Curve.PointAtParameter**-Block, und verbinden Sie dann die **Math.RemapRange**-Ausgabe aus Schritt 04 als _param_-Eingabe.
 
-\![](<../images/logic - exercise part II-05.jpg>)
+![](<../images/logic - exercise part II-05.jpg>)
 
 Mithilfe dieses Schritts erstellen Sie Punkte entlang der Kurve. Die Zahlen mussten dem Bereich 0 bis 1 neu zugeordnet werden, da als Eingabe für _param_ Werte in diesem Bereich verlangt werden. Der Wert _0_ steht für den Startpunkt, der Wert _1_ für die Endpunkte. Die Auswertung aller dazwischen liegenden Zahlen ergibt Werte im Bereich _[0,1]_.
 
 6\. Verbinden Sie die Ausgabe von **Curve.PointAtParameter** mit **List.FilterByBoolMask**, um die Liste der ungeraden und geraden Indizes zu trennen.
 
-\![](<../images/logic - exercise part II-06.jpg>)
+![](<../images/logic - exercise part II-06.jpg>)
 
 > a. **List.FilterByBoolMask**: Verbinden Sie **Curve.PointAtParameter** aus dem vorigen Schritt mit der _list_-Eingabe.
 >
@@ -105,7 +105,7 @@ Mithilfe dieses Schritts erstellen Sie Punkte entlang der Kurve. Die Zahlen muss
 
 **Cuboid.ByLengths**: Stellen Sie die in der Abbildung oben gezeigten Verbindungen wieder her, um eine reißverschlussähnliche Struktur entlang der Kurve zu erhalten. Sie erstellen hier einfache Quader, deren Größe jeweils durch ihren auf der Kurve liegenden Mittelpunkt definiert wird. Die Logik der Aufteilung in gerade und ungerade Werte wird damit im Modell deutlich.
 
-\![](<../images/logic - exercise part II-07.jpg>)
+![](<../images/logic - exercise part II-07.jpg>)
 
 > a. Liste der Quader mit geraden Indizes.
 >
