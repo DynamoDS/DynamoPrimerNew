@@ -16,11 +16,11 @@ Indem Sie den Block lokal veröffentlichen, stellen Sie ihn in Ihrer Dynamo-Bibl
 
 Verwenden Sie weiterhin den benutzerdefinierten Block, den Sie im vorigen Abschnitt erstellt haben. Nachdem Sie den benutzerdefinierten PointsToSurface-Block geöffnet haben, wird das Diagramm im Editor für benutzerdefinierte Blöcke von Dynamo angezeigt. Sie können einen benutzerdefinierten Block auch durch Doppelklicken im Diagrammeditor von Dynamo öffnen.
 
-\![](<../images/publish custom node exercise - 01.jpg>)
+![](<../images/publish custom node exercise - 01.jpg>)
 
 Um einen benutzerdefinierten Block lokal zu veröffentlichen, klicken Sie mit der rechten Maustaste in den Ansichtsbereich und wählen Sie _Diesen benutzerdefinierten Block veröffentlichen_.
 
-\![](<../images/publish custom node exercise - 02.jpg>)
+![](<../images/publish custom node exercise - 02.jpg>)
 
 Geben Sie wie in der Abbildung oben gezeigt die nötigen Informationen ein und wählen Sie _Lokal publizieren_. Beachten Sie, dass das Feld Gruppe den Haupteintrag angibt, der über das Dynamo-Menü aufgerufen wird.
 
@@ -28,7 +28,7 @@ Geben Sie wie in der Abbildung oben gezeigt die nötigen Informationen ein und w
 
 Wählen Sie einen Ordner, in dem alle benutzerdefinierten Blöcke gespeichert werden sollen, die Sie lokal veröffentlichen werden. Dynamo prüft diesen Ordner jedes Mal beim Laden der Anwendung. Achten Sie daher darauf, dass der Ordner sich an einem dauerhaften Speicherort befindet. Navigieren Sie zu diesem Ordner und wählen Sie _Ordner auswählen_. Damit haben Sie den Dynamo-Block lokal publiziert. Er steht jetzt jedes Mal, wenn Sie das Programm laden, in der Dynamo-Bibliothek zur Verfügung.
 
-\![](<../images/publish custom node exercise - 04.jpg>)
+![](<../images/publish custom node exercise - 04.jpg>)
 
 Um den Speicherort des benutzerdefinierten Blocks zu überprüfen, wechseln Sie zu _Dynamo > Voreinstellungen > Paketeinstellungen > Pfade für Blöcke und Pakete_.
 
@@ -48,8 +48,8 @@ Hier wurde die Reihenfolge der Pfadnamen vertauscht, damit Pakete unter dem Vorg
 
 Wenn Sie zu diesem lokalen Ordner navigieren, finden Sie den ursprünglichen benutzerdefinierten Block im Ordner _dyf_. Dies ist die Erweiterung von Dateien für benutzerdefinierte Dynamo-Blöcke. Sie können die Datei in diesem Ordner bearbeiten. Der Block wird dann in der Benutzeroberfläche aktualisiert. Sie können auch weitere Blöcke im Ordner _DynamoCustomNode_ hinzufügen. Diese werden beim Neustart von Dynamo Ihrer Bibliothek hinzugefügt.
 
-\![](<../images/publish custom node exercise - 08.jpg>)
+![](<../images/publish custom node exercise - 08.jpg>)
 
 Wenn Sie Dynamo jetzt laden, wird der Block PointsToSurface jedes Mal in der Gruppe DynamoPrimer Ihrer Dynamo-Bibliothek angezeigt.
 
-\![](<../images/publish custom node exercise - 09.jpg>)
+![](<../images/publish custom node exercise - 09.jpg>)
