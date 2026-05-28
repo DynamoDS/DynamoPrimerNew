@@ -1,6 +1,6 @@
 # Verbindung zu Revit
 
-\![](<images/revit connection link.jpg>)
+![](<images/revit connection link.jpg>)
 
 Dynamo für Revit ergänzt die Gebäudemodellierung (Building Information Modelling) um die Daten- und Logikumgebung eines grafischen Algorithmeneditors. Die Flexibilität dieser Umgebung eröffnet zusammen mit einer robusten Revit-Datenbank neue Perspektiven für BIM.
 
@@ -43,7 +43,7 @@ Wenn Sie Dynamo in Revit öffnen, wird eine neue Kategorie namens "Revit" angeze
 
 {% hint style="warning" %} *Da die für Revit spezifische Familie von Blöcken verwendet wird, funktioniert das Dynamo-Diagramm nur, wenn Sie es in Dynamo für Revit öffnen. Wenn Sie ein Diagramm aus Dynamo für Revit beispielsweise in Dynamo Sandbox öffnen, fehlen die Revit-Blöcke. {% endhint %}
 
-\![](<images/revit connection - running dynamo in revit 02.jpg>)
+![](<images/revit connection - running dynamo in revit 02.jpg>)
 
 ### Anhalten von Blöcken
 
