@@ -285,6 +285,6 @@ Es gibt viele Möglichkeiten zum Erstellen einer Oberfläche aus dieser Punktgru
 
 > 1. Erstellen Sie einen **NurbsCurve.ByPoints**-Block und verbinden Sie ihn mit der neuen Datenstruktur, um drei Nurbs-Kurven zu erstellen.
 
-\![](<../images/list of lists - exercise cb insert & query 07.jpg>)
+![](<../images/list of lists - exercise cb insert & query 07.jpg>)
 
 > 1. Verbinden Sie einen **Surface.ByLoft**-Block mit der Ausgabe von **NurbsCurve.ByPoints**. Damit haben Sie eine geänderte Oberfläche erstellt. Sie können den ursprünglichen _Z_-Wert der Geometrie ändern. Beobachten Sie, wie die Geometrie durch diese Verschiebung aktualisiert wird.
