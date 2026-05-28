@@ -22,7 +22,7 @@ Durch die Trennung von Wörterbüchern und Listen werden Wörterbücher zu wicht
 * Es wurden _neue Blöcke_ in der Bibliothek eingeführt, mit denen Sie einfacher Wörterbücher erstellen, ändern und abfragen können.
 * Listen, die in v1.x-Codeblöcken erstellt wurden, werden automatisch beim Laden des Skripts zur neuen Listensyntax migriert, die eckige `[ ]` anstelle von geschweiften Klammern `{ }` verwendet. \\
 
-\![](<../images/what is a dictionary - what are the changes.jpg>)
+![](<../images/what is a dictionary - what are the changes.jpg>)
 
 ***
 
@@ -32,7 +32,7 @@ In der Computerwissenschaft handelt es sich bei Wörterbüchern – wie bei Lis
 
 In der folgenden Abbildung sehen Sie eine mögliche Verwendung eines Wörterbuchs. Wörterbücher werden häufig genutzt, um zwei Teile von Daten zu verbinden, die vielleicht keine direkte Beziehung zueinander aufweisen. In unserem Fall verbinden wir die spanische Version eines Worts mit der englischen Version, so dass wir das Wort später nachschlagen können.
 
-\![](<../images/what is a dictionary - what would you use these for.jpg>)
+![](<../images/what is a dictionary - what would you use these for.jpg>)
 
 > 1. Erstellt ein Wörterbuch, um die beiden Daten miteinander zu verknüpfen.
 > 2. Ruft den Wert mit dem angegebenen Schlüssel ab.
