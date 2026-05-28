@@ -37,7 +37,7 @@ Bei der Skripterstellung in Dynamo, einer zwangsläufig parametrischen Umgebung,
   * Die beabsichtigte Ausgabe
   * Konstanten
 
-\![](<images/think parametrically 01.jpg>)
+![](<images/think parametrically 01.jpg>)
 
 > Vor dem Schreiben des Codes wurden mehrere Variablen festgelegt.
 >
@@ -55,7 +55,7 @@ Bei der Skripterstellung in Dynamo, einer zwangsläufig parametrischen Umgebung,
 * Beschränken Sie die Anzahl der Eingaben, indem Sie nur die wichtigsten Parameter bereitstellen:
   * Wenn eine Gruppe von Parametern aus Parametern auf einer höheren Hierarchieebene abgeleitet werden kann, stellen Sie nur die übergeordneten Parameter als Skripteingaben bereit. Auf diese Weise vereinfachen Sie die Benutzeroberfläche des Skripts und machen dieses dadurch benutzerfreundlicher.
 
-\![](<images/think parametrically 02.jpg>)
+![](<images/think parametrically 02.jpg>)
 
 > Die Codemodule aus dem Beispiel unter [Python-Block](../8_coding_in_dynamo/8-3_python/1-python.md).
 >
@@ -102,7 +102,7 @@ Mit zunehmender Länge und Komplexität des Codes ist das Grundkonzept bzw. der 
 * Dabei kann es sich um beliebigen Code handeln, der visuell von angrenzendem Code abgetrennt sollte (eine Funktion, eine Klasse, eine Gruppe von Eingaben oder die von Ihnen importierten Bibliotheken).
 * Durch die Entwicklung von Code in Form von Modulen können Sie sowohl die visuellen, intuitiven Eigenschaften von Blöcken als auch die komplexen Beziehungen nutzen, die nur mit Textskripts zu erreichen sind.
 
-\![](<images/think parametrically 02.jpg>)
+![](<images/think parametrically 02.jpg>)
 
 > Diese Schleifen rufen eine Klasse namens „agent“ auf, die in dieser Übung entwickelt wird.
 >
@@ -117,7 +117,7 @@ Mit zunehmender Länge und Komplexität des Codes ist das Grundkonzept bzw. der 
 
 In diesem Beispiel werden Kugeln erstellt, deren Radien und Farben vom Z-Wert ihrer Mittelpunkte abhängig sind.
 
-\![](<images/spot code resuse.jpg>)
+![](<images/spot code resuse.jpg>)
 
 > 1. Zwei übergeordnete „Worker“-Funktionen zum Erstellen von Kugeln mit Radien und mit Anzeigefarben anhand des Z-Werts des Mittelpunkts.
 > 2. Eine übergeordnete „Manager“-Funktion, die die beiden „Worker“-Funktionen kombiniert. Durch Aufrufen dieser Funktion werden beide darin enthaltenen Funktionen aufgerufen.
@@ -182,7 +182,7 @@ Es ist sinnvoll, während der Entwicklung von Textskripts in Dynamo laufend zu �
   * Führen Sie rasch Tests durch, um sich zu überzeugen, dass plausible Daten zurückgegebenen werden.
 * Weisen Sie die aktuellsten Daten, mit denen Sie arbeiten, in Ihrem Skript als Ausgabedaten zu, damit der Block bei einer Aktualisierung des Skripts immer relevante Daten ausgibt:
 
-\![](<images/flex continuously.jpg>)
+![](<images/flex continuously.jpg>)
 
 > 1. Überprüfen Sie, ob alle Kanten des Volumenkörpers als Kurven zurückgegeben werden, damit ein Begrenzungsrahmen darum erstellt wird.
 > 2. Überprüfen Sie, ob die Count-Eingaben in Ranges konvertiert werden.
@@ -232,7 +232,7 @@ for i in range(xCount):
 * Wenn ein Programm geändert werden muss, ist Code, der in Form von Modulen entwickelt wurde, erheblich leichter zu ändern.
   * Sie können neue oder korrigierte Module in ein bestehendes Programm einfügen und sich dabei darauf verlassen, dass der Rest des Programms unverändert bleibt.
 
-\![](<images/leverage code's modularity.jpg>)
+![](<images/leverage code's modularity.jpg>)
 
 > Debuggen der Beispieldatei aus dem [Python-Block](../8_coding_in_dynamo/8-3_python/1-python.md).
 >
@@ -250,19 +250,19 @@ In dieser Übung schreiben Sie unter Beachtung der optimalen Verfahren für Text
 
 Das auf eine durch einen Attraktor verformte Oberfläche angewendete Skript.
 
-\![](<images/scripting strategies - exercise - 01.jpg>)
+![](<images/scripting strategies - exercise - 01.jpg>)
 
 Als Erstes müssen Sie die benötigten Dynamo-Bibliotheken importieren. Indem Sie dies zu Anfang durchführen, erhalten Sie globalen Zugriff auf Dynamo-Funktionen in Python.
 
 Sie müssen hier sämtliche Bibliotheken importieren, die Sie verwenden möchten.
 
-\![](<images/scripting strategies - exercise - 02.jpg>)
+![](<images/scripting strategies - exercise - 02.jpg>)
 
 Anschließend müssen Sie die Eingaben und die Ausgabe definieren, die als Eingabeanschlüsse am Block angezeigt werden. Diese externen Eingaben sind die Grundlage für das Skript und der Schlüssel zum Erstellen einer parametrischen Umgebung.
 
 Sie müssen Eingaben definieren, die Variablen im Python-Skript entsprechen, und die gewünschte Ausgabe bestimmen:
 
-\![](<images/scripting strategies - exercise - 03.jpg>)
+![](<images/scripting strategies - exercise - 03.jpg>)
 
 > 1. Die Oberfläche, über die die Bewegung nach unten erfolgen soll.
 > 2. Die Anzahl der Agents, die sich bewegen sollen.
@@ -275,7 +275,7 @@ Erstellen Sie jetzt unter Beachtung des Modularitätsprinzips den Hauptteil des 
 
 Sie müssen eine Klasse bzw. eine Vorlage für einen Agent definieren, der eine Abwärtsbewegung über eine Oberfläche darstellt, wobei bei jedem Schritt der Bewegung jeweils die Richtung mit der maximalen Neigung gewählt wird:
 
-\![](<images/scripting strategies - exercise - 04.jpg>)
+![](<images/scripting strategies - exercise - 04.jpg>)
 
 > 1. Name.
 > 2. Globale, allen Agents gemeinsame Attribute.
@@ -287,7 +287,7 @@ Initialisieren Sie die Agents, indem Sie ihre Startpositionen definieren. Dies i
 
 Sie müssen alle Agents, deren Abwärtsbewegung über die Oberfläche Sie beobachten möchten, instanziieren und ihre Anfangsattribute definieren.
 
-\![](<images/scripting strategies - exercise - 05.jpg>)
+![](<images/scripting strategies - exercise - 05.jpg>)
 
 > 1. Eine neue, leere Pfadliste.
 > 2. Ausgangspunkt der Bewegung über die Oberfläche.
@@ -295,15 +295,15 @@ Sie müssen alle Agents, deren Abwärtsbewegung über die Oberfläche Sie beobac
 
 Aktualisieren Sie die einzelnen Agents bei jedem Schritt. Anschließend müssen Sie eine verschachtelte Schleife starten, wobei die Position für jeden Agent und jeden Schritt aktualisiert und in der jeweiligen Pfadliste aufgezeichnet wird. Bei jedem Schritt wird außerdem geprüft, ob der Agent einen Punkt auf der Oberfläche erreicht hat, von dem aus keine weiteren Abwärtsschritte mehr möglich sind. Ist diese Bedingung erfüllt, wird die Bewegung des Agent beendet.
 
-\![](<images/scripting strategies - exercise - 06.jpg>)
+![](<images/scripting strategies - exercise - 06.jpg>)
 
 Nachdem die Agents vollständig aktualisiert sind, können Sie Geometrie ausgeben, durch die sie dargestellt werden. Nachdem alle Agents entweder den Endpunkt ihrer Abwärtsbewegung erreicht oder die maximale Anzahl Schritte ausgeführt haben, erstellen Sie eine Polykurve durch die Punkte in ihrem Pfad und geben die Polykurvenpfade aus.
 
-\![](<images/scripting strategies - exercise - 07.jpg>)
+![](<images/scripting strategies - exercise - 07.jpg>)
 
 Das Skript zur Ermittlung der steilstmöglichen Pfade.
 
-\![](<images/scripting strategies - exercise - 08.jpg>)
+![](<images/scripting strategies - exercise - 08.jpg>)
 
 > 1. Voreinstellung zur Simulation von Regen auf der zugrunde liegenden Oberfläche.
 > 2. Die Agents können umgeschaltet werden, sodass sie nicht die steilstmöglichen Pfade suchen, sondern die Oberfläche überqueren.
