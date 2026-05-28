@@ -12,7 +12,7 @@ Dynamo definiert Netze mit einer Flächen-Scheitelpunkt-Datenstruktur. Auf eleme
 
 Um ein Netz zu erstellen, benötigen Sie eine Liste von Scheitelpunkten und ein System für die Gruppierung dieser Scheitelpunkte in Flächen. Dies wird auch als Indexgruppe bezeichnet.
 
-\![](<../images/meshes - mesh elements.jpg>)
+![](<../images/meshes - mesh elements.jpg>)
 
 > 1. Liste von Scheitelpunkten
 > 2. Liste von Indexgruppen zum Definieren von Flächen
@@ -25,7 +25,7 @@ Die Bibliothek enthält auch Werkzeuge zum Ändern und Reparieren von Netzen sow
 
 Ein Beispiel zur Verwendung dieses Pakets finden Sie in den [Fallstudien zu Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes).
 
-\![Mesh Toolkit](<../images/meshes - mesh toolkit standford bunny.jpg>)
+![Mesh Toolkit](<../images/meshes - mesh toolkit standford bunny.jpg>)
 
 ## Vertiefung...
 
