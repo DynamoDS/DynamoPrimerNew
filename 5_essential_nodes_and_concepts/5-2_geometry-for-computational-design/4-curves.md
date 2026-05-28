@@ -20,13 +20,13 @@
 
 Eine [Linie](4-curves.md#lines) besteht aus einer Reihe von Punkten, jede Linie verfügt über mindestens zwei Punkte. Eine der häufigsten Methoden zum Erstellen von Linien in Dynamo ist die Verwendung von  ``Line.ByStartPointEndPoint`, um eine Linie in Dynamo zu erstellen.
 
-\![](<../images/curves - line by start point end point.jpg>)
+![](<../images/curves - line by start point end point.jpg>)
 
 ### NURBS-Kurve
 
 [NURBS](4-curves.md#nurbs-+-polycurves) ist ein Modell, das zur exakten Darstellung von Kurven und Oberflächen verwendet wird. Eine Sinuskurve in Dynamo mit zwei unterschiedlichen Methoden, um NURBS-Kurven zu erstellen und die Ergebnisse zu vergleichen.
 
-\![](<../images/curves - Nurbs Curves.jpg>)
+![](<../images/curves - Nurbs Curves.jpg>)
 
 > 1. _NurbsCurve.ByControlPoints_ verwendet die Liste der Punkte als Steuerpunkte.
 > 2. _NurbsCurve.ByPoints_ zeichnet eine Kurve durch die Liste der Punkte.
