@@ -10,7 +10,7 @@ Wir verwenden [Oberfläche](5-surfaces.md#surface) im Modell, um Objekte darzust
 
 Importieren Sie eine Oberfläche in Dynamo und werten Sie sie an einer Parameterposition aus, um zu sehen, welche Informationen Sie extrahieren können.
 
-\![](<../images/surfaces - surface in dynamo.jpg>)
+![](<../images/surfaces - surface in dynamo.jpg>)
 
 > 1. _Surface.PointAtParameter_ gibt den Punkt an der angegebenen UV-Koordinatenposition zurück.
 > 2. _Surface.NormalAtParameter_ gibt den Normalenvektor an der angegebenen UV-Koordinatenposition zurück.
