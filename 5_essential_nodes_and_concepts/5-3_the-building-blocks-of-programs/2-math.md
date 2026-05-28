@@ -10,7 +10,7 @@ Operatoren sind Komponenten für algebraische Funktionen, die zwei Eingabewerte 
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
 | ![](<../images/addition.jpg>)       | Addieren (**+**)       | var[]...[], var[]...[] | var[]...[] |
 | ![](<../images/Subtraction.jpg>)    | Subtrahieren (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/Multiplication.jpg>) | Multiplizieren (*****) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/Multiplication.jpg>) | Multiplizieren (*) | var[]...[], var[]...[] | var[]...[] |
 | ![](<../images/Division.jpg>)       | Dividieren (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Übung: Die Goldene Spirale-Formel
@@ -29,7 +29,7 @@ Kombinieren Sie Operatoren und Variablen, um mithilfe von **Formeln** eine kompl
 
 **Number Sequence**: Definieren Sie eine Zahlenfolge mithilfe von drei Eingaben: _start, amount_ und _step_.
 
-\![](<../images/math - part I-01.jpg>)
+![](<../images/math - part I-01.jpg>)
 
 2\. Mit dem oben beschriebenen Schritt haben Sie eine Liste von Zahlen erstellt, die die parametrische Domäne definieren. Als Nächstes erstellen Sie eine Gruppe von Blöcken, die die Goldene Spirale-Gleichung darstellen.
 
@@ -45,7 +45,7 @@ $$
 
 Die folgende Abbildung zeigt die goldene Spirale in visueller Programmierung. Beachten Sie bei der Betrachtung dieser Blockgruppe die Entsprechungen zwischen dem visuellen Programm und der schriftlichen Gleichung.
 
-\![](<../images/math - part I-02.jpg>)
+![](<../images/math - part I-02.jpg>)
 
 > a. **Number Slider**: Fügen Sie im Ansichtsbereich zwei Number Sliders ein. Diese Schieberegler steuern die Variablen _a_ und _b_ in der parametrischen Gleichung. Sie stehen für einstellbare Konstanten bzw. Parameter, die Sie anpassen können, um das gewünschte Ergebnis zu erhalten.
 >
@@ -65,11 +65,11 @@ Die Gruppe von Blöcken aus dem letzten Schritt funktioniert einwandfrei, erford
 
 **Point.ByCoordinates**: Verbinden Sie den oberen Multiplikationsblock mit der _x_-Eingabe und den unteren mit der _y_-Eingabe. Dadurch wird auf dem Bildschirm eine parametrische Spirale aus Punkten angezeigt.
 
-\![](<../images/math - part II-01.gif>)
+![](<../images/math - part II-01.gif>)
 
 **Polycurve.ByPoints**: Verbinden Sie **Point.ByCoordinates** aus dem vorigen Schritt mit _points_. Für _connectLastToFirst_ wird keine Eingabe benötigt, da Sie keine geschlossene Kurve erstellen. Dadurch wird eine durch die im vorigen Schritt erstellten Punkte verlaufende Spirale erstellt.
 
-\![](<../images/math - part II-02.jpg>)
+![](<../images/math - part II-02.jpg>)
 
 Damit haben Sie die Fibonacci-Spirale erstellt. Dies entwickeln Sie in zwei weiteren Übungen weiter, die hier als "Nautilus" und "Sonnenblume" bezeichnet werden. Dabei handelt es sich um Abstraktionen aus Systemen, die in der Natur vorkommen und gute Beispiele für zwei verschiedene Verwendungsweisen der Fibonacci-Spirale darstellen.
 
@@ -77,13 +77,13 @@ Damit haben Sie die Fibonacci-Spirale erstellt. Dies entwickeln Sie in zwei weit
 
 **Circle.ByCenterPointRadius**: Verwenden Sie hier einen Circle-Block mit denselben Eingaben wie im vorigen Schritt. Als Radius ist der Wert _1.0_ vorgegeben, d. h., Sie sehen sofort die ausgegebenen Kreise. Die zunehmende Entfernung der Punkte vom Ursprung ist sofort ersichtlich.
 
-\![](<../images/math - part III-01.jpg>)
+![](<../images/math - part III-01.jpg>)
 
 **Number Sequence**: Dies ist das Original-Array für "_t_". Die Verbindung mit dem Radiuswert **Circle.ByCenterPointRadius** bewirkt, dass die Mittelpunkte der Kreise sich nach wie vor vom Ursprung entfernen, wobei jedoch auch ihr Radius zunimmt. Sie erhalten eine recht originelle Fibonacci-Grafik.
 
 Versuchen Sie, dies in 3D darzustellen!
 
-\![](<../images/math - part III-02.gif>)
+![](<../images/math - part III-02.gif>)
 
 ### Teil IV: Von der Nautilusmuschel zur Phyllotaxis
 
@@ -95,7 +95,7 @@ Beginnen Sie mit demselben Schritt wie in der vorigen Übung, d. h., indem Sie m
 
 Als Nächstes führen Sie diese kleinen Schritte aus, um eine Reihe von Spiralen mit verschiedenen Drehungen zu erstellen.
 
-\![](<../images/math - part IV-02.jpg>)
+![](<../images/math - part IV-02.jpg>)
 
 > a. **Geometry.Rotate**: Es stehen mehrere Optionen für **Geometry.Rotate** zur Verfügung. Achten Sie darauf, den Block mit den Eingaben _geometry_,_basePlane_ und _degrees_ zu wählen. Verbinden Sie **Point.ByCoordinates** mit der geometry-Eingabe. Klicken Sie mit der rechten Maustaste auf diesen Block, und vergewissern Sie sich, dass die Vergitterung auf Kartesisches Produkt festgelegt ist.
 >
@@ -111,8 +111,8 @@ Die Ausgabe nimmt eine gewisse Ähnlichkeit mit einem Wirbel an. Passen Sie jetz
 
 Ändern Sie die Schrittgröße für den **Number Range**-Block von _120.0_ in _36.0_. Damit erhalten Sie mehr Drehungen und daher ein dichteres Raster.
 
-\![](<../images/math - part IV-04.jpg>)
+![](<../images/math - part IV-04.jpg>)
 
 Ändern Sie die Schrittgröße für den **Number Range**-Block von _36.0_ in _3.6_. Dadurch erhalten Sie ein wesentlich dichteres Raster und die Richtung der Spiralen ist nicht mehr erkennbar. Damit haben Sie ein Sonnenblumenmuster erstellt.
 
-\![](<../images/math - part IV-05.jpg>)
+![](<../images/math - part IV-05.jpg>)
