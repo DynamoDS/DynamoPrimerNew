@@ -8,7 +8,7 @@ Unter Daten versteht man eine Gruppe von Werten für qualitative oder quantitati
 
 In Dynamo geben wir Daten in die Eingabeanschlüsse von Blöcken ein: Daten können ohne Aktionen existieren, aber die Aktionen, die durch die Blöcke dargestellt werden, können nur durchgeführt werden, wenn Daten vorhanden sind. Wenn Sie im Arbeitsbereich einen Block hinzufügen, ohne Eingaben bereitzustellen, ist das Ergebnis eine Funktion, nicht das Ergebnis der eigentlichen Aktion.
 
-\![Daten und Aktionen](<../images/data - what is data.jpg>)
+![Daten und Aktionen](<../images/data - what is data.jpg>)
 
 > 1. Einfache Daten
 > 2. Daten und Aktion (Block): erfolgreiche Ausführung
@@ -22,7 +22,7 @@ Das Ermitteln und Entfernen von Nullwerten aus Datenstrukturen ist ein entscheid
 
 | Symbol                                                  | Name/Syntax   | Eingaben | Ausgaben |
 | ----------------------------------------------------- | ------------- | ------ | ------- |
-| \![](<../images/data - object IsNull.jpg>) | Object.IsNull | obj    | bool    |
+| ![](<../images/data - object IsNull.jpg>) | Object.IsNull | obj    | bool    |
 
 ### Datenstrukturen
 
@@ -35,7 +35,7 @@ Eine Liste für eine Sammlung von Elementen, die in einer Struktur von Daten abg
 * Sie haben fünf Finger (_Elemente_) an einer Hand (_Liste_).
 * Zehn Häuser (_Elemente_) stehen entlang einer Straße (_Liste_).
 
-\![List Breakdown](<../images/data - data structures.jpg>)
+![List Breakdown](<../images/data - data structures.jpg>)
 
 > 1. Ein **Number Sequence**-Block definiert eine Liste von Zahlen mithilfe der Eingaben _start_, _amount_ und _step_. Mithilfe dieser Blöcke wurden zwei separate Listen mit je zehn Zahlen – _100–109_ und _0–9_ erstellt.
 > 2. Mithilfe des Blocks **List.GetItemAtIndex** wird das Element an einer bestimmten Indexposition ausgewählt. Wenn Sie _0_ wählen, wird das erste Element in der Liste (in diesem Fall _100_) abgerufen.
@@ -59,25 +59,25 @@ In diesem ersten Beispiel erstellen Sie zur Demonstration der in diesem Abschnit
 
 1\. Fügen Sie **Point.ByCoordinates** hinzu: Nachdem Sie diesen Block im Ansichtsbereich hinzugefügt haben, wird ein Punkt am Ursprung des Rasters in der Dynamo-Vorschau angezeigt. Die Vorgabewerte der Eingaben für _x, y_ und _z_ sind _0.0_, wodurch ein Punkt an dieser Position definiert wird.
 
-\![](<../images/data - exercise step 1.jpg>)
+![](<../images/data - exercise step 1.jpg>)
 
 2\. **Plane.ByOriginNormal**: Die nächste Stufe in der Geometriehierarchie ist eine Ebene. Es gibt mehrere Möglichkeiten für die Konstruktion einer Ebene: Hier werden ein Ursprung und eine Normale als Eingaben verwendet. Der Ursprung ist der Punkt, den Sie mithilfe des Blocks im vorigen Schritt erstellt haben.
 
 **Vector.ZAxis**: Dies ist ein Vektor mit Einheiten in z-Richtung. Hier sind keine Eingaben, sondern nur ein Vektor mit dem Wert [0,0,1] vorhanden. Dieser wird für die _normal_-Eingabe des **Plane.ByOriginNormal**-Blocks verwendet. In der Dynamo-Vorschau wird daraufhin eine rechteckige Ebene angezeigt.
 
-\![](<../images/data - exercise step 2.jpg>)
+![](<../images/data - exercise step 2.jpg>)
 
 3\. **Circle.ByPlaneRadius**: Eine Stufe höher in der Hierarchie erstellen Sie aus der Ebene, die Sie im letzten Schritt erstellt haben, eine Kurve. Nachdem Sie den Block verbunden haben, erhalten Sie einen Kreis um den Ursprungspunkt. Als Radius ist in diesem Block der Wert _1_ vorgegeben.
 
-\![](<../images/data - exercise step 3.jpg>)
+![](<../images/data - exercise step 3.jpg>)
 
 4\. **Curve.Extrude**: In diesem Schritt wandeln Sie dieses Objekt in einen 3D-Körper um. Dieser Block erstellt durch Extrusion eine Oberfläche aus einer Kurve. Der vorgegebene Abstand im Block beträgt _1_ und im Ansichtsfenster ist jetzt ein Zylinder zu sehen.
 
-\![](<../images/data - exercise step 4.jpg>)
+![](<../images/data - exercise step 4.jpg>)
 
 5\. **Surface.Thicken**: Mit diesem Block erhalten Sie einen geschlossenen Körper, indem die Oberfläche um den angegebenen Wert versetzt und die entstehende Form geschlossen wird. Der Vorgabewert für die Verdickung ist _1_. Im Ansichtsfenster wird ein Zylinder mit der entsprechenden Wandstärke angezeigt.
 
-\![](<../images/data - exercise step 5.jpg>)
+![](<../images/data - exercise step 5.jpg>)
 
 6\. **Number Slider**: Anstatt die Vorgabewerte für alle diese Eingaben zu verwenden, können Sie dem Modell auch Funktionen zur parametrischen Steuerung hinzufügen.
 
@@ -85,21 +85,21 @@ In diesem ersten Beispiel erstellen Sie zur Demonstration der in diesem Abschnit
 
 **Min/Max/Step**: Ändern Sie die Werte für _min_, _max_ und _step_ in _0_,_2_ und _0.01_. Mit diesen Angaben steuern Sie die Gesamtgröße der Geometrie.
 
-\![](<../images/data - exercise step 6.gif>)
+![](<../images/data - exercise step 6.gif>)
 
 7\. **Number Slider**-Blöcke: Erstellen Sie mehrere Kopien dieses Number Slider-Blocks (indem Sie ihn auswählen und anschließend zuerst Strg+C und dann Strg+V drücken), bis für alle Eingaben anstelle der bisherigen Vorgaben nun Verbindungen zu den Number Sliders verwendet werden. Manche Werte für diese Schieberegler müssen größer als Null sein, damit die Definition verwendbar ist. So wird beispielsweise eine Tiefe für die Extrusion benötigt, damit eine Oberfläche entsteht, die verdickt werden kann.
 
-\![](<../images/data - exercise step 7a.gif>)
+![](<../images/data - exercise step 7a.gif>)
 
-\![](<../images/data - exercise step 7b.gif>)
+![](<../images/data - exercise step 7b.gif>)
 
 8\. Sie haben jetzt mithilfe dieser Regler einen parametrischen Zylinder mit Angabe einer Wandstärke erstellt. Experimentieren Sie mit einigen dieser Parameter und beobachten Sie die dynamische Veränderung der Geometrie im Dynamo-Ansichtsfenster.
 
-\![](<../images/data - exercise step 8a.gif>)
+![](<../images/data - exercise step 8a.gif>)
 
 **Number Sliders**-Blöcke: In einem weiteren Schritt wurden etliche weitere Number Sliders im Ansichtsbereich hinzugefügt und die Benutzeroberfläche des neu erstellten Werkzeugs muss übersichtlicher gestaltet werden. Klicken Sie mit der rechten Maustaste nacheinander auf die einzelnen Schieberegler, wählen Sie Umbenennen und ändern Sie den Namen jedes Schiebereglers in den Namen des dazugehörigen Parameters (Dicke, Radius, Höhe usw.).
 
-\![](<../images/data - exercise step 8b step.jpg>)
+![](<../images/data - exercise step 8b step.jpg>)
 
 ### Teil II: Füllen eines Arrays von Zylindern aus Teil I
 
@@ -107,11 +107,11 @@ In diesem ersten Beispiel erstellen Sie zur Demonstration der in diesem Abschnit
 
 **Addition (+)**: Neben dem eben erstellten Zylinder soll eine Reihe weiterer Zylinder hinzugefügt werden. Um einen Zylinder direkt neben dem vorhandenen hinzuzufügen, müssen Sie sowohl dessen Radius als auch die Stärke seiner Wand berücksichtigen. Diesen Wert erhalten Sie durch Addition der Werte aus den beiden Schiebereglern.
 
-\![](<../images/data - exercise step 9.jpg>)
+![](<../images/data - exercise step 9.jpg>)
 
 10\. Dieser Schritt ist etwas komplexer und wird daher im Einzelnen erläutert: Erstellt werden soll eine Liste mit Zahlen, die die Positionen der einzelnen Zylinder in einer Reihe definieren.
 
-\![](<../images/data - exercise step 10.jpg>)
+![](<../images/data - exercise step 10.jpg>)
 
 > a. **Multiplikation**: Als Erstes müssen Sie den Wert aus dem vorigen Schritt mit 2 multiplizieren. Der Wert aus dem vorherigen Schritt gibt den Radius an, der Zylinder muss jedoch um den vollständigen Durchmesser verschoben werden.
 >
@@ -123,8 +123,8 @@ In diesem ersten Beispiel erstellen Sie zur Demonstration der in diesem Abschnit
 
 11\. Dieser Schritt ist einfach: Verbinden Sie die im letzten Schritt erstellte Sequenz mit der _x_-Eingabe des ursprünglichen **Point.ByCoordinates**. Dies ersetzt den Schieberegler _pointX_, den Sie löschen können. Im Ansichtsfenster wird jetzt ein Array von Zylindern angezeigt (achten Sie darauf, dass im Integer Slider ein Wert größer als Null angegeben ist).
 
-\![](<../images/data - exercise step 11.gif>)
+![](<../images/data - exercise step 11.gif>)
 
 12\. Die Kette der Zylinder ist weiterhin dynamisch mit allen Schiebereglern verknüpft. Experimentieren Sie mit den Schiebereglern, und beobachten Sie, wie die Definition aktualisiert wird.
 
-\![](<../images/data - exercise step 12.gif>)
+![](<../images/data - exercise step 12.gif>)
