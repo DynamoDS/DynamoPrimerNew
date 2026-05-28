@@ -2,7 +2,7 @@
 
 Das Dynamo Mesh Toolkit enthält Werkzeuge zum Importieren von Netzen aus externen Dateiformaten, zum Erstellen von Netzen aus Dynamo-Geometrieobjekten und zum manuellen Erstellen von Netzen aus ihren Scheitelpunkten und Indizes. In der Bibliothek stehen außerdem Werkzeuge zum Ändern oder Reparieren von Netzen sowie zum Extrahieren horizontaler Segmente zur Verwendung in der Fertigung zur Verfügung.
 
-\![](<../images/meshToolkit case study 01.jpg>)
+![](<../images/meshToolkit case study 01.jpg>)
 
 Das Dynamo Mesh Toolkit ist Bestandteil der von Autodesk durchgeführten laufenden Forschungsarbeiten zu Netzen und wird daher in den kommenden Jahren weiter ausgebaut. Sie können damit rechnen, dass häufig neue Methoden zu diesem Toolkit hinzukommen. Falls Sie Kommentare oder Vorschläge haben oder Fehler melden möchten, ist das Dynamo-Team jederzeit für Sie da.
 
@@ -28,19 +28,19 @@ In diesem Beispiel verwenden Sie den Intersect-Block innerhalb von Mesh Toolkit.
 
 Öffnen Sie zunächst _Mesh-Toolkit_Intersect-Mesh.dyn in Dynamo._
 
-\![](<../images/meshToolkit case study - exercise 01.jpg>)
+![](<../images/meshToolkit case study - exercise 01.jpg>)
 
 > 1. **Dateipfad**: Suchen Sie die zu importierende Netzdatei (_stanford_bunny_tri.obj_). Unterstützte Dateitypen sind .mix und .obj.
 > 2. **Mesh.ImportFile**: Verbinden Sie den Dateipfad, um das Netz zu importieren.
 
-\![](<../images/meshToolkit case study - exercise 02.jpg>)
+![](<../images/meshToolkit case study - exercise 02.jpg>)
 
 > 1. **Point.ByCoordinates**: Legen Sie einen Punkt fest. Dieser wird als Mittelpunkt eines Bogens verwendet.
 > 2. **Arc.ByCenterPointRadiusAngle**: Konstruieren Sie einen Bogen um den Punkt. Mithilfe dieser Kurve wird eine Reihe von Ebenen platziert. __ Die Einstellungen sind wie folgt: __ `radius: 40, startAngle: -90, endAngle:0`
 
 Erstellen Sie eine Reihe von Ebenen, die entlang des Bogens ausgerichtet sind.
 
-\![](<../images/meshToolkit case study - exercise 03.jpg>)
+![](<../images/meshToolkit case study - exercise 03.jpg>)
 
 > 1. **Code Block**: Erstellen Sie 25 Zahlen zwischen 0 und 1.
 > 2. **Curve.PointAtParameter**: Verbinden Sie den Bogen mit der _curve_-Eingabe und die Ausgabe des Codeblocks mit der _param_-Eingabe, um eine Reihe von Punkten entlang der Kurve abzurufen.
@@ -49,7 +49,7 @@ Erstellen Sie eine Reihe von Ebenen, die entlang des Bogens ausgerichtet sind.
 
 Diese Ebenen verwenden Sie als Nächstes zum Schneiden des Netzes.
 
-\![](<../images/meshToolkit case study - exercise 04.jpg>)
+![](<../images/meshToolkit case study - exercise 04.jpg>)
 
 > 1. **Mesh.Intersect**: Schneiden Sie die Ebenen mit dem importierten Netz, sodass eine Reihe von Polykurvenkonturen entsteht. Klicken Sie mit der rechten Maustaste auf den Block, und legen Sie die Vergitterung auf longest fest.
 > 2. **PolyCurve.Curves**: Teilen Sie die Polykurven in ihre Kurvenfragmente auf.
@@ -58,12 +58,12 @@ Diese Ebenen verwenden Sie als Nächstes zum Schneiden des Netzes.
 
 Bevor wir fortfahren, deaktivieren Sie die Vorschau für einige der Blöcke, z. B. Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal und Arc.ByCenterPointRadiusAngle, um das Ergebnis besser sehen zu können.
 
-\![](<../images/meshToolkit case study - exercise 05.jpg>)
+![](<../images/meshToolkit case study - exercise 05.jpg>)
 
 > 1. **Surface.ByPatch**: Konstruieren Sie Oberflächenfelder für die einzelnen Konturen, um das Netz in Segmente aufzuteilen.
 
 Fügen Sie eine zweite Segmentierung hinzu, um einen gitter- oder eierkartonähnlichen Effekt zu erzielen.
 
-\![](<../images/meshToolkit case study - exercise 06.jpg>)
+![](<../images/meshToolkit case study - exercise 06.jpg>)
 
 Ihnen ist vielleicht aufgefallen, dass die Schnittvorgänge für Netze schneller berechnet werden als für vergleichbare Volumenkörper. Arbeitsabläufe wie der in dieser Übung beschriebene eignen sich gut für die Arbeit mit Netzen.
