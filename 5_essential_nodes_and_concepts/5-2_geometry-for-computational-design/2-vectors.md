@@ -20,7 +20,7 @@ Ein [Vektor](2-vectors.md#vector-1) ist eine Darstellung der Größe und Richtun
 
 Eine [Ebene](2-vectors.md#plane-1) ist eine zweidimensionale Fläche. Sie können sich diese als eine flache Oberfläche vorstellen, die sich unendlich ausdehnt. Jede Ebene verfügt über einen Ursprung, eine X-Richtung, eine Y-Richtung und eine Z-Richtung (nach oben).
 
-![Ebenen in Dynamo](<../images/Geometry for Computational Design - plane.jpg>)
+![Ebenen in Dynamo](<../images/Geometry for Computational Design  - plane.jpg>)
 
 > 1. Ebenen sind zwar abstrakt, verfügen aber über eine Ursprungsposition, damit sie im Raum lokalisiert werden können.
 > 2. In Dynamo werden Ebenen in der Hintergrundvorschau gerendert.
