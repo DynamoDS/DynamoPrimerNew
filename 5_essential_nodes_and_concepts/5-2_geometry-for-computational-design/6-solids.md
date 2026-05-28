@@ -10,7 +10,7 @@ Wenn wir komplexere Modelle entwickeln möchten, die nicht aus einer einzelnen F
 
 Sie können [Boolesche Operationen](6-solids.md#boolean-operations) verwenden, um Volumenmodelle zu ändern. Führen Sie mehrere boolesche Operationen aus, um einen Noppenball zu erstellen.
 
-![](<../images/solids - spiky ball.jpg>)
+![](<../images/solids  - spiky ball.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius**: Der Basisvolumenkörper wird erstellt.
 > 2. **Topology.Faces**, **Face.SurfaceGeometry**: Die Flächen des Volumenkörpers werden abgefragt und die Oberflächengeometrie wird konvertiert – in diesem Fall weist die Kugel nur eine Fläche auf.
