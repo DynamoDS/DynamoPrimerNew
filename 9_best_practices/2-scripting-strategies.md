@@ -178,7 +178,7 @@ This example creates spheres with radii and color based on the Z value of the ce
 
 ### Flex Continuously
 
-While developing text-scripts in Dynamo, it is wise to constantly make sure that what is actually being created is in line with what you are expecting. This will ensure that unforeseen events-- syntax errors, logical discrepancies, value inaccuracies, anomalous outputs etc.-- are quickly discovered and dealt with as they surface rather than all at once at the end. Because text-scripts live inside nodes on the canvas, they are already integrated into the data flow of your visual program. This makes the successive monitoring of your script as simple as assigning data to be outputted, running the program, and evaluating what flows out of the script using a Watch Node. Here are some tips for continuously inspecting your scripts as you construct them.
+While developing text-scripts in Dynamo, it is wise to constantly make sure that what is actually being created is in line with what you are expecting. This will ensure that unforeseen events, syntax errors, logical discrepancies, value inaccuracies, anomalous outputs etc., are quickly discovered and dealt with as they surface, rather than all at once at the end. Because text-scripts live inside nodes on the canvas, they are already integrated into the data flow of your visual program. This makes the successive monitoring of your script as simple as assigning data to be outputted, running the program, and evaluating what flows out of the script using a Watch Node. Here are some tips for continuously inspecting your scripts as you construct them.
 
 **Test as you go:**
 
@@ -202,7 +202,7 @@ While developing text-scripts in Dynamo, it is wise to constantly make sure that
   * Understand what is causing the error and then decide if it needs to be fixed internally or if a parameter domain needs to be redefined to avoid the problem.
 
 {% hint style="info" %}
-Tip: Always assume the that the user will use every combination of every input value that has been exposed to him/her. This will help eliminate unwanted surprises.
+Tip: Always assume the that the user will use every combination of every input value that has been exposed to them. This will help eliminate unwanted surprises.
 {% endhint %}
 
 ### Debug Efficiently
@@ -223,8 +223,8 @@ for i in range(xCount):
   for j in range(yCount):
 
     # Rotate and translate the coordinate system
-    toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordinates(0,0,1),(90*(i+j%seed)))
-    vec = Vector.ByCoordinates((xDist*i),(yDist*j),0)
+    toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin, Vector.ByCoordinates(0,0,1), (90*(i+j%seed)))
+    vec = Vector.ByCoordinates((xDist*i), (yDist*j), 0)
     toCoord = toCoord.Translate(vec)
 
     # Transform the solid from the source coord system to the target coord system and append to the list
@@ -316,7 +316,7 @@ Our script for finding the steepest paths.
 > 1. A preset that simulates rainfall on the underlying surface.
 > 2. Rather than finding the steepest path, the agents can be toggled to traverse the underlying surface.
 
-The full Python text-script.
+The full Python script.
 
 ```
 ### STEEPEST PATH ALGORITHM

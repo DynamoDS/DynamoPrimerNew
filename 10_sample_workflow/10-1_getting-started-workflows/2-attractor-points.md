@@ -74,8 +74,8 @@ Starting simple and building complexity is an effective way to incrementally dev
 
 ![](<../images/attractor (6).png>)
 
-> 1. Add a **Number Sequence** Node and replace the inputs of **Point.ByCoordinates** - Right Click Point.ByCoordinates and select Lacing > Cross Reference
-> 2. Add a **Flatten** Node after Point.ByCoordinates. To flatten a list completely, leave the `amt` input at the default of `-1`
+> 1. Add a **Number Sequence** Node and replace the inputs of **Point.ByCoordinates** - Right Click **Point.ByCoordinates** and select Lacing > Cross Reference
+> 2. Add a **Flatten** Node after **Point.ByCoordinates**. To flatten a list completely, leave the `amt` input at the default of `-1`
 > 3. The 3D Preview will update with a grid of circles
 
 ### Adjusting with Direct Manipulation

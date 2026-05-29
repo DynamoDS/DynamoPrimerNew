@@ -42,7 +42,7 @@ In the next step we will run a git command to clone the Dynamo repository to the
 
 ![Results of Git clone operation](../images/cli-2.jpg)
 
-We know git is working if the cloning operation completed successfully. In the file explorer, navigate to the directory where you cloned to see the source files. the directory structure should look identical to the Dynamo repository's master branch on GitHub.
+We know git is working if the cloning operation completed successfully. In the file explorer, navigate to the directory where you cloned to see the source files. The directory structure should look identical to the Dynamo repository's master branch on GitHub.
 
 ![Dynamo's source files](../images/source-files.jpg)
 
@@ -59,11 +59,11 @@ With the source files now cloned to our local machine, we can build an executabl
 
 > .NET and DirectX may already be installed.
 
-> **Note:** Breaking change - [**Visual Studio 2022**](https://visualstudio.microsoft.com/vs/community/) **/** [**Visual Studio 2026 Insider**](https://visualstudio.microsoft.com/insiders/) Required
+> **Note:** Breaking change - [**Visual Studio 2022 Preview**](https://visualstudio.microsoft.com/vs/community/) **/** [**Visual Studio 2026 Insider**](https://visualstudio.microsoft.com/insiders/) Required
 >
-> Starting in late 2025, Dynamo will implement the `dotnet10.0` framework. To develop against this framework, you'll need Visual Studio 2022 Preview or Visual Studio 2026 Insider (or later) as the stable versions don't yet support .NET 10.0.
+> Current stable versions of Dynamo implement the `dotnet10.0` framework. To develop against this framework, you'll need Visual Studio 2022 Preview or Visual Studio 2026 Insider (or later).
 >
-> **Installing Visual Studio 2022 Preview / 2026 insider alongside your existing installation:**
+> **Installing Visual Studio 2022 Preview / 2026 Insider alongside your existing installation:**
 >
 > 1. Open the **Visual Studio Installer** (search for it in your Start menu)
 > 2. Click **Update** to ensure you have the latest installer version
@@ -106,7 +106,7 @@ If Dynamo builds successfully, a `bin` folder will be created in the Dynamo repo
 
 ![DynamoSandbox executable](../images/ex-dynamosandbox.jpg)
 
-> 1. The DynamoSandbox executable we just built. Run this to start Dynamo.
+> The DynamoSandbox executable we just built. Run this to start Dynamo.
 
 Now we are almost fully set up to start developing for Dynamo.
 
@@ -146,7 +146,7 @@ In both situations we are attaching the debugger to a process we wish to debug. 
 
 ![Setting a breakpoint](../images/vs-debug-dynamocore.jpg)
 
-> While debugging DynamoSandbox, we set a breakpoint in the Color.ByARGB node's constructor that causes the Dynamo process to pause when the node is instantiated. If this node was throwing an exception or causing Dynamo to crash, we could step through each line in the constructor to find where the issue was occurring.
+> While debugging DynamoSandbox, we set a breakpoint in the **Color.ByARGB** node's constructor that causes the Dynamo process to pause when the node is instantiated. If this node was throwing an exception or causing Dynamo to crash, we could step through each line in the constructor to find where the issue was occurring.
 >
 > 1. The breakpoint
 > 2. The call stack showing the function which is currently being executed and previous function calls.
@@ -169,14 +169,14 @@ Use the following command to pull the latest changes:
 
 ![Updated local repository](../images/cli-pull-changes.jpg)
 
-> 1. Here we can see that the local repository has been updated with changes from the remote.
+> Here we can see that the local repository has been updated with changes from the remote.
 
 In addition to pulling updates, there are four more git workflows to be familiar with.
 
 * **Fork** the Dynamo repository to create a copy separate from the original. Any changes made here will not affect the original repository and updates can be fetched from or submitted with pull requests. Fork is not a git command, but is a workflow that GitHub adds - the fork, pull request model is one of the most common workflows for contributing to open source projects online. It is worth learning if you want to contribute to Dynamo.
 * **Branch** - work on experiments or new features isolated from other work in branches. This makes sending pull requests easier.
-* Make **commits** often, after completing a unit of work, and after a change that may want to be undone. A commit records changes to the repository and will be visible when making a pull request to the main Dynamo repository.
-* Create **pull requests** when changes are ready to be officially proposed to the main Dynamo repository.
+* Make **Commits** often, after completing a unit of work, and after a change that may want to be undone. A commit records changes to the repository and will be visible when making a pull request to the main Dynamo repository.
+* Create **Pull Requests** when changes are ready to be officially proposed to the main Dynamo repository.
 
 The Dynamo team has specific instructions on creating pull requests. Refer to the Pull Requests section in this documentation for more detailed items to address.
 

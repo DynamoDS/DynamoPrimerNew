@@ -34,7 +34,6 @@ It's very unlikely that a package built for Dynamo 4.x (*using .Net 10*) is goin
 
 ![Package Compatibility Warning](images/6-2-packages-new-version-compatibility-warning.png)
 
-
 #### Using Dynamo 4.x Packages in Dynamo 3.x 
 
 The package built for Dynamo 4.x (*using .Net 10*) might work on Dynamo 3.x as long as if all the APIs used in the package exist in .NET 8. But there is no guarantee that it will work. You will also see the below warning when you try to install packages built for Dynamo 4.x in Dynamo 3.x.

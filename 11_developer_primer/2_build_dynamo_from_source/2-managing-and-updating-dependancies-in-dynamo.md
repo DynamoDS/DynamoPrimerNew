@@ -7,7 +7,7 @@ While working on a new feature, or simply updating an existing dependency you sh
 ### Considerations
 
 1. What is the license of the new or updated dependency - only some open source licenses are approved without speaking with ADSK legal.
-   * After resolving license, make sure the dep and version are recorded in the internal wiki.
+   * After resolving license, make sure the dependency and version are recorded in the internal wiki.
    * If license is `LGPL`, `GPL` or `Apache`, the license file must be copied into the _"Open Source Licenses"_ sub-folder of the Dynamo build.
    * If license is `LGPL`, the full source code for all third-party components, along with text copies of their appropriate open source licenses, must be uploaded to [www.autodesk.com/lgplsource](https://www.autodesk.com/company/legal-notices-trademarks/open-source-distribution)
 2. If updating, has the license type changed from the previous version?

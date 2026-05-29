@@ -8,7 +8,7 @@ NodeModel based nodes provides significantly more flexibility and power than the
 
 #### The Model-View-Viewmodel Pattern <a href="#the-model-view-viewmodel-pattern" id="the-model-view-viewmodel-pattern"></a>
 
-Dynamo is based on the [model-view-viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) (MVVM) software architecture pattern to keep the UI separate from the back-end. When creating ZeroTouch nodes, Dynamo does the data bind between a node's data and its UI . To create a custom UI, we have to add the data-binding logic.
+Dynamo is based on the [model-view-viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) (MVVM) software architecture pattern to keep the UI separate from the back-end. When creating ZeroTouch nodes, Dynamo does the data bind between a node's data and its UI. To create a custom UI, we have to add the data-binding logic.
 
 At a high-level there are two parts to establishing a model-view relationship in Dynamo:
 
@@ -124,7 +124,7 @@ namespace CustomNodeModel.CustomNodeModel
 }
 ```
 
-This different from Zero-Touch nodes. Let's understand what each part is doing.
+This is different from Zero-Touch nodes. Let's understand what each part is doing.
 
 * Specify the Node attributes like Name, Category, InPort/OutPort names, InPort/OutPort types, descriptions.
 * `public class GridNodeModel : NodeModel` is a class that inherits the `NodeModel` class from `Dynamo.Graph.Nodes`.
@@ -238,7 +238,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 * `public class CustomNodeModelView : INodeViewCustomization<GridNodeModel>` defines the necessary functions to customize the UI.
 
-After the structure of the project is set up, use Visual Studio's design environment to build a user control and define its parameters in an `.xaml` file. From the tool box, add a slider to `<Grid>...</Grid>`.
+After the structure of the project is set up, use Visual Studio's design environment to build a user control and define its parameters in a `.xaml` file. From the tool box, add a slider to `<Grid>...</Grid>`.
 
 ![Adding a new slider](../images/vs-usercontrol.jpg)
 
@@ -337,7 +337,7 @@ Before we build the project, the final step is to add a `pkg.json` file so that 
 
 #### Common Issues: <a href="#common-issues" id="common-issues"></a>
 
-1\) Upon opening a graph some nodes have multiple ports with the same name, but the graph looked fine when saving. This issue can have a few causes.
+1\) Upon opening a graph some nodes have multiple ports with the same name, but the graph looks fine when saving. This issue can have a few causes.
 
 The common root cause is because the node was created using a constructor that recreated the ports. Instead a constructor which loaded the ports should have been used. These constructors are usually marked `[JsonConstructor]` _see below for examples_
 
