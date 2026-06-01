@@ -133,7 +133,7 @@ from Autodesk.Civil.DatabaseServices import *
 
 <strong><a data-footnote-ref href="#user-content-fn-2">from Autodesk.DesignScript.Geometry import Point as DynPoint</a>
 </strong>
-# The inputs to this node will be stored as a list in the IN variables.
+# The inputs to this node will be stored as a list in the IN variable.
 <strong><a data-footnote-ref href="#user-content-fn-3">objs</a> = <a data-footnote-ref href="#user-content-fn-4">IN[0]</a>
 </strong>
 <strong><a data-footnote-ref href="#user-content-fn-5">output = []</a> 
@@ -219,7 +219,7 @@ You can read more about this transition and how to upgrade legacy scripts on the
 
 [^11]: "Unwrap" the Dynamo object by getting its Object ID.
 
-[^12]: Retrieve the "wrapped" object from the AutoCAD database. Notice that the OpenMode is set to `ForRead` here because we're not planning on making any edits to the objects. We're simplying "querying" data.
+[^12]: Retrieve the "wrapped" object from the AutoCAD database. Notice that the OpenMode is set to `ForRead` here because we're not planning on making any edits to the objects. We're simply "querying" data.
 
 [^13]: It's possible that the input list of objects contains a mix of Catchments and other non-Catchment item. We need to check for this situation and handle it appropriately (i.e., only continue this iteration of the loop if the item is indeed a Catchment).
 

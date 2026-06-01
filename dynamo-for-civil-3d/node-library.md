@@ -24,7 +24,7 @@ This organization distinguishes the nodes for native AutoCAD objects (Lines, Pol
 
 ## Node Hierarchy
 
-In order to work with the AutoCAD and Civil 3D nodes, it's important to have a solid understanding of the object hierarchy within each shelf. Remember the taxonomy from Biology? Kingdom, Phylum, Class, Order, Family, Genus, Species? AutoCAD and Civil 3D objects are categorized in a similar manner. Let's work through some examples to explain.
+In order to work with the AutoCAD and Civil 3D nodes, it's important to have a solid understanding of the object hierarchy within each shelf. Remember the taxonomy from Biology? Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species? AutoCAD and Civil 3D objects are categorized in a similar manner. Let's work through some examples to explain.
 
 ### Civil Objects
 
