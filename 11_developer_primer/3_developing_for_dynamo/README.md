@@ -111,4 +111,4 @@ If a package includes binaries, users must be prompted upon downloading that the
 
 At the time of writing, Dynamo primarily uses WPF (windows presentation foundation) to render its UI. WPF is a complex and powerful xaml/binding based system. Because Dynamo has a complex UI, it's easy to create UI hangs, memory leaks, or wrap the graph execution and UI updates together in ways that degrade performance.
 
-Please refer to the [Dynamo Performance Considerations Wiki Page](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance) which will help you avoid a few common pitfalls making changes to Dynamo's code.
+Please refer to the [Dynamo Performance Considerations Wiki Page](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance) which will help you avoid a few common pitfalls when making changes to Dynamo's code.

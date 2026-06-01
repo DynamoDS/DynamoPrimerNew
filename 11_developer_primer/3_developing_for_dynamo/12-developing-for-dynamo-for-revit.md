@@ -19,7 +19,7 @@ The methods in `GeometryPrimitiveConverter.cs` can be grouped into four main cat
 
 Creates a Revit BoundingBoxXYZ from a Dynamo coordinate system and two defining points (minimum and maximum).
 
-`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox( Autodesk.DesignScript.Geometry.CoordinateSystem cs, Autodesk.DesignScript.Geometry.Point minPoint, Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
+`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox(Autodesk.DesignScript.Geometry.CoordinateSystem cs, Autodesk.DesignScript.Geometry.Point minPoint, Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
 
 #### ToRevitType (BoundingBox)
 
@@ -272,7 +272,7 @@ This method returns a perpendicular Dynamo `Vector` to the given Dynamo `Vector`
 
 #### Example Usage of X & UZ
 
-This example shows a quick and easy method to use the .GetPerpendicular method to get the perpendicular vector to an input vector.
+This example shows a quick and easy method to use the .GetPerpendicular() method to get the perpendicular vector to an input vector.
 
 ![Get Perpendicular Vector](Images/get-perpendicular-vector.png)
 

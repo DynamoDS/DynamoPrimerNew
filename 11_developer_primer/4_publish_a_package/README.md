@@ -10,7 +10,7 @@ The Dynamo Package Manager is a Software Registry (similar to npm) that can be a
 
 In the browser, search for packages and view statistics: [https://dynamopackages.com/](https://dynamopackages.com)
 
-* In Dynamo, the Package Manager includes install, publish, and update packages.
+* In Dynamo, the Package Manager installs, publishes, and updates packages.
 
 ![Searching for packages](../images/dynamopackagemanager.png)
 

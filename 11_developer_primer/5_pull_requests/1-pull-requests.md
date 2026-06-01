@@ -6,9 +6,9 @@ Dynamo depends on the creativity and commitment of its community, and the Dynamo
 
 The Dynamo team expects pull requests to follow a few guidelines:
 
-* Adhere to our [coding standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards) and [node naming standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
-* Include unit tests when adding new features
-* When fixing a bug, add a unit test that highlights how the current behavior is broken
+* Adhere to our [coding standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards) and [node naming standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards).
+* Include unit tests when adding new features.
+* When fixing a bug, add a unit test that highlights how the current behavior is broken.
 * Keep the discussion focused on one issue. Create a new issue if a new or related topic comes up.
 
 And a few guidelines on what not to do:
@@ -22,12 +22,12 @@ And a few guidelines on what not to do:
 
 When submitting a pull request, please use the [default PR template](https://github.com/DynamoDS/Dynamo/blob/master/.github/PULL\_REQUEST\_TEMPLATE.md). Before submitting your PR, ensure that the purpose is clearly described and all of the declarations can be claimed as true:
 
-* The codebase is in a better state after this PR
-* Is documented according to the [standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
-* The level of testing this PR includes is appropriate
-* User facing strings, if any, are extracted into `*.resx`files
-* All tests pass using the self-service CI
-* Snapshot of UI changes, if any
+* The codebase is in a better state after this PR.
+* Is documented according to the [standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards).
+* The level of testing this PR includes is appropriate.
+* User facing strings, if any, are extracted into `*.resx`files.
+* All tests pass using the self-service CI.
+* Snapshot of UI changes, if any.
 * Changes to the API follow [Semantic Versioning](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Versions), and are documented in the [API Changes](https://github.com/DynamoDS/Dynamo/wiki/API-Changes) document.
 
 An appropriate reviewer will be assigned to your pull request by the Dynamo Team.
@@ -38,7 +38,7 @@ Once a pull request is submitted, you may need to stay involved during the revie
 
 * The Dynamo team meets once per month to review pull requests from oldest to newest.
 * If a reviewed pull request requires changes by the owner, the owner of the PR has 30 days to respond. If the PR has seen no activity by the next session, it will be either closed by the team or depending on its utility will be taken over by someone on the team.
-* Pull requests should use Dynamo's default PR template
+* Pull requests should use Dynamo's default PR template.
 * Pull requests that do not have the Dynamo PR templates completely filled out with all declarations satisfied will not be reviewed.
 
 #### Cherry-picking Dynamo Revit commits <a href="#cherry-picking-dynamo-revit-commits" id="cherry-picking-dynamo-revit-commits"></a>

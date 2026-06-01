@@ -123,15 +123,15 @@ The JSON geometry file would have the form:
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -h`
 
-the -i flag can be used multiple times to import multiple assemblies which the graph you are trying to open requires to run.
+The -i flag can be used multiple times to import multiple assemblies which the graph you are trying to open requires to run.
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -i"a.dll" -i"aSecond.dll"`
 
-the -l flag can be used to run Dynamo under a different locale setting. But usually, locale setting does not affect graph results
+The -l flag can be used to run Dynamo under a different locale setting. But usually, locale setting does not affect graph results
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -l "de-DE"`
 
-the --GeometryPath flag can be used to point DynamoSandbox or CLI to a specific set of ASM binaries - use it like
+The --GeometryPath flag can be used to point DynamoSandbox or CLI to a specific set of ASM binaries - use it like
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"`
 
@@ -139,11 +139,11 @@ or
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"`
 
-the -k flag can be used to leave the Dynamo process running until a loaded extension shuts it down.
+The -k flag can be used to leave the Dynamo process running until a loaded extension shuts it down.
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -k`
 
-the --HostName flag can be used to identify Dynamo variation associated with the host.
+The --HostName flag can be used to identify Dynamo variation associated with the host.
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe --HostName "DynamoFormIt"`
 
@@ -151,10 +151,10 @@ or
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --HostName "DynamoFormIt"`
 
-the -s flag can be used to identify Dynamo host analytics session id
+The -s flag can be used to identify Dynamo host analytics session id
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -s [HostSessionId]`
 
-the -p flag can be used to identify Dynamo host analytics parent id
+The -p flag can be used to identify Dynamo host analytics parent id
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -p "RVT&2022&MUI64&22.0.2.392"`

@@ -28,7 +28,7 @@ CustomNodeModel
 
 > 1. Move the project files into the new `src` folder
 
-Now that the source files are in a separate folder, add a `AfterBuild` target to the `CustomNodeModel.csproj` file in Visual Studio. This should copy the necessary files into a new package folder. Open the `CustomNodeModel.csproj` file in a text editor (we used [Atom](https://atom.io)) and place the build target before the closing `</Project>` tag. This AfterBuild target will copy all .dll, .pbd, .xml, and .config files into a new bin folder and creates a dyf and extra folders.
+Now that the source files are in a separate folder, add a `AfterBuild` target to the `CustomNodeModel.csproj` file in Visual Studio. This should copy the necessary files into a new package folder. Open the `CustomNodeModel.csproj` file in a text editor (we used [Atom](https://atom.io)) and place the build target before the closing `</Project>` tag. This AfterBuild target will copy all .dll, .pbd, .xml, and .config files into a new /bin folder and creates a dyf and extra folders.
 
 ```
   <Target Name="AfterBuild">

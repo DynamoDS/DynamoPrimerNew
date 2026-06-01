@@ -26,9 +26,9 @@ The `DynamoModel` is the entry point for an application hosting Dynamo. It repre
 
 A configuration object is used to set common parameters on the `DynamoModel` when it is constructed.
 
-The examples in this document are taken from the DynamoRevit implementation, which is an integration where Revit hosts a `DynamoModel` as an Add-in. (Plugin architecture for Revit). When this Add-in loads, it starts a `DynamoModel` and then displays it to the user with a `DynamoView` and `DynamoViewModel`.
+The examples in this document are taken from the DynamoRevit implementation, which is an integration where Revit hosts a `DynamoModel` as an Add-in. When this Add-in loads, it starts a `DynamoModel` and then displays it to the user with a `DynamoView` and `DynamoViewModel`.
 
-Dynamo is a c# .net project and to use it in process in your application you need to be able to host and execute .net code.
+Dynamo is a C# .net project and to use it in process in your application you need to be able to host and execute .net code.
 
 DynamoCore is a cross platform compute engine and collection of core models, which can be built with .net or mono (in the future .net core). But DynamoCoreWPF contains the windows only UI components of Dynamo and will not compile on other platforms.
 
@@ -38,15 +38,15 @@ To Initialize the `DynamoModel`, integrators will need to do these steps from so
 
 ### Preload shared Dynamo Dlls from host.
 
-Currently the list in D4R only includes `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` This is done to avoid library version conflicts between Dynamo and Revit. E.g. When conflicts on `AvalonEdit` happen, the function of code block can be totally broken. The issue is reported in Dynamo 1.1.x at [https://github.com/DynamoDS/Dynamo/issues/7130](https://github.com/DynamoDS/Dynamo/issues/7130) and, also manually reproducible. If integrators found library conflicts between host function and Dynamo, it is suggested to do this as a first step. This is sometimes required to stop other plugin or the host application itself from loading an incompatible version of as shared dependency. A better solution is to resolve the version conflict by aligning the version - or to use a .net binding redirect in the host's app.config if possible.
+Currently the list in D4R only includes `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` This is done to avoid library version conflicts between Dynamo and Revit. E.g. When conflicts on `AvalonEdit` happen, the function of code blocks can be totally broken. The issue is reported in Dynamo 1.1.x at [https://github.com/DynamoDS/Dynamo/issues/7130](https://github.com/DynamoDS/Dynamo/issues/7130) and, also manually reproducible. If integrators found library conflicts between host function and Dynamo, it is suggested to do this as a first step. This is sometimes required to stop other plugin or the host application itself from loading an incompatible version of a shared dependency. A better solution is to resolve the version conflict by aligning the version, or to use a .net binding redirect in the host's app.config if possible.
 
 ### Loading ASM
 
 #### What are ASM and LibG
 
-ASM is the ADSK geometry library that Dynamo's is built on top of.
+ASM is the ADSK geometry library that Dynamo's geometry library is built on top of.
 
-LibG is .Net user-friendly wrapper around ASM geometry kernel. libG shares its versioning scheme with ASM - it is using the same major and minor version number of ASM to indicate it is the corresponding wrapper of particular ASM version. When given an ASM version, the corresponding libG version should be the same. LibG in most cases should work with all versions of ASM of a particular major version. For example - LibG 223 - should be able to load any ASM 223 version.
+LibG is .Net user-friendly wrapper around ASM geometry kernel. LibG shares its versioning scheme with ASM - it is using the same major and minor version number of ASM to indicate it is the corresponding wrapper of a particular ASM version. When given an ASM version, the corresponding libG version should be the same. LibG in most cases should work with all versions of ASM of a particular major version. For example, LibG 223 should be able to load any ASM 223 version.
 
 #### Dynamo Sandbox loading ASM
 
@@ -58,11 +58,9 @@ private static readonly List<string> ProductsWithASM = new List<string>()
  { "Revit", "Civil", "Robot Structural Analysis", "FormIt" }; 
 ```
 
-Dynamo will search the windows registry and find if the Autodesk products in this list are installed on the user's machine, if any of these are installed, then it will search for ASM binaries, and will get the version and look for a corresponding libG version in Dynamo.
+Dynamo will search the windows registry and find if the Autodesk products in this list are installed on the user's machine. If any of these are installed, then it will search for ASM binaries and will get the version and look for a corresponding libG version in Dynamo.
 
-Given the ASM version, the following ShapeManager API will pick the corresponding libG preloader location to load. If there is an exact version match it will be used, otherwise the closest versioned libG below, but with the same major version will be loaded.
-
-E.g. If Dynamo is integrated with a Revit dev build where there is a newer ASM build 225.3.0, Dynamo will try to use libG 225.3.0 if it exists, otherwise it will try to use the closest major version less than its first choice, ie 225.0.0.
+Given the ASM version, the following ShapeManager API will pick the corresponding libG preloader location to load. If there is an exact version match it will be used, otherwise the closest versioned libG below, but with the same major version, will be loaded. E.g. If Dynamo is integrated with a Revit dev build where there is a newer ASM build 225.3.0, Dynamo will try to use libG 225.3.0 if it exists, otherwise it will try to use the closest major version less than its first choice, ie 225.0.0.
 
 `public static string GetLibGPreloaderLocation(Version asmVersion, string dynRootFolder)`
 
@@ -116,33 +114,33 @@ It consists of the following:
 
 Default preference setting path is managed by `PathManager.PreferenceFilePath`, e.g. `"AppData\\Roaming\\Dynamo\\Dynamo Revit\\2.5\\DynamoSettings.xml"`. Integrators can decide if they would like to also ship a customized preference setting file to a location which needs to be aligned with path manager. The following are preference setting properties which are serialized:
 
-* IsFirstRun // Indicates if it is the first time running this version of dynamo, e.g. used to determine if need to display GA opt-in/out message. Also used to determine if it's needed to migrate the legacy Dynamo preference setting when launching a new Dynamo version, so users have consistent experience
-* IsUsageReportingApproved // Indicates whether usage reporting is approved or not
-* IsAnalyticsReportingApproved // Indicates whether analytics reporting is approved or not
+* IsFirstRun // Indicates if it is the first time running this version of dynamo, e.g. used to determine if need to display GA opt-in/out message. Also used to determine if it's needed to migrate the legacy Dynamo preference setting when launching a new Dynamo version, so users have consistent experience.
+* IsUsageReportingApproved // Indicates whether usage reporting is approved or not.
+* IsAnalyticsReportingApproved // Indicates whether analytics reporting is approved or not.
 * LibraryWidth // The width of the Dynamo left library panel.
-* ConsoleHeight // The height of the console display
-* ShowPreviewBubbles // Indicates if preview bubbles should be displayed
-* ShowConnector // Indicates if connectors are displayed
-* ConnectorType //Indicates the type of connector: Bezier or Polyline
-* BackgroundPreviews // Indicates active state of the specified background preview
+* ConsoleHeight // The height of the console display.
+* ShowPreviewBubbles // Indicates if preview bubbles should be displayed.
+* ShowConnector // Indicates if connectors are displayed.
+* ConnectorType //Indicates the type of connector: Bezier or Polyline.
+* BackgroundPreviews // Indicates active state of the specified background preview.
 * RenderPrecision // The level of render precision - lower generates meshes with less triangles. Higher will generate smoother geometry in the background preview. 128 is a good fast number for preview geometry.
-* ShowEdges // Indicates whether surface and solid edges will be rendered
-* ShowDetailedLayout // UNUSED
-* WindowX, WindowY // Last X, Y coordinate of the Dynamo window
-* WindowW, WindowH // Last width, height of the Dynamo window
-* UseHardwareAcceleration // Should Dynamo use hardware acceleration if it is supported
+* ShowEdges // Indicates whether surface and solid edges will be rendered.
+* ShowDetailedLayout // UNUSED.
+* WindowX, WindowY // Last X, Y coordinate of the Dynamo window.
+* WindowW, WindowH // Last width, height of the Dynamo window.
+* UseHardwareAcceleration // Should Dynamo use hardware acceleration if it is supported.
 * NumberFormat // The decimal precision used to display numbers in preview bubble toString().
-* MaxNumRecentFiles // The maximum number of recent file paths to be saved
-* RecentFiles // A list of recently opened file paths, touching this will directly affect the recent files list in Dynamo start up page
-* BackupFiles // A list of backup file paths
+* MaxNumRecentFiles // The maximum number of recent file paths to be saved.
+* RecentFiles // A list of recently opened file paths, touching this will directly affect the recent files list in Dynamo start up page.
+* BackupFiles // A list of backup file paths.
 * CustomPackageFolders // A list of folders containing zero-touch binaries and directory paths that will be scanned for packages and custom nodes.
 * PackageDirectoriesToUninstall // A list of packages used by the Package Manager to determine which packages are marked for deletion. These paths will be deleted if possible during Dynamo startup.
 * PythonTemplateFilePath // Path to the Python (.py) file to use as a starting template when creating a new PythonScript Node - this can be used to setup a custom python template for your integration.
-* BackupInterval // Indicates how long (in milliseconds) will the graph be automatically saved
-* BackupFilesCount // Indicates how many backups will be made
-* PackageDownloadTouAccepted // Indicates if the user has accepted the terms of use for downloading packages from package manager
-* OpenFileInManualExecutionMode // Indicates the default state of the "Open in Manual Mode" checkbox in OpenFileDialog
-* NamespacesToExcludeFromLibrary // Indicates which (if any) namespaces should not be displayed in the Dynamo node library. String format: "\[library name]:\[fully qualified namespace]"
+* BackupInterval // Indicates how long (in milliseconds) will the graph be automatically saved.
+* BackupFilesCount // Indicates how many backups will be made.
+* PackageDownloadTouAccepted // Indicates if the user has accepted the terms of use for downloading packages from package manager.
+* OpenFileInManualExecutionMode // Indicates the default state of the "Open in Manual Mode" checkbox in OpenFileDialog.
+* NamespacesToExcludeFromLibrary // Indicates which (if any) namespaces should not be displayed in the Dynamo node library. String format: "\[library name]:\[fully qualified namespace]".
 
 An example of serialized preference settings:
 
@@ -246,9 +244,9 @@ An example of serialized preference settings:
 </PreferenceSettings> 
 ```
 
-* Extensions // A list of extensions implementing IExtension, if it's null, Dynamo will load extensions from the default path (`extensions` folder under Dynamo folder)
+* Extensions // A list of extensions implementing IExtension, if it's null, Dynamo will load extensions from the default path (`extensions` folder under Dynamo folder).
 * IsHeadless // Indicates if Dynamo is launched without UI, effects Analytics.
-* UpdateManager // Integrator's implementation of UpdateManager, see description above
+* UpdateManager // Integrator's implementation of UpdateManager, see description above.
 * ProcessMode // Equivalent to TaskProcessMode, Synchronous if in test mode, otherwise Asynchronous - This controls the behavior of the scheduler. Single threaded environments may also set this to synchronous.
 
 Use the target StartConfiguration to launch `DynamoModel`
@@ -299,15 +297,15 @@ When a Dynamo graph is opened from disk, the trace data saved therein is re-asso
 #### glossary:
 
 * Trace mechanism:
-  * Implements Element Binding in Dynamo
-  * The trace mechanism can be used to ensure that objects are rebound to geometry that they created
-  * The Callsite and trace mechanism handle providing a persistent GUID that the node implementor can use for relinking
+  * Implements Element Binding in Dynamo.
+  * The trace mechanism can be used to ensure that objects are rebound to geometry that they created.
+  * The Callsite and trace mechanism handle providing a persistent GUID that the node implementor can use for relinking.
 * Callsite
   * The executable contains multiple callsites. These callsites are used to dispatch execution to the various places where they need to be dispatched from:
-    * C# library
-    * Built-in method
-    * DesignScript function
-    * Custom node (DS function)
+    * C# library.
+    * Built-in method.
+    * DesignScript function.
+    * Custom node (DS function).
 * TraceSerializer
   * Handles serialization and deserialization of data into trace. This mechanism follows a multi-step process to handle trace data:
     * When Saving the Graph (Serialization), data generated by specific nodes is converted into a structured JSON string.This serialized data is compressed using gzip to reduce file size, then Base64 encoded to ensure safe storage. The resulting safe string is embedded into the bindings section of the .dyn file.
@@ -369,11 +367,11 @@ Let's return to our architectural model example.
 
 Let's run through an example first with element binding disabled - This time the user has a program that generates some architectural walls.
 
-They run their program, and it generates some walls in the host application. They then leave the dynamo graph, and use normal Revit tools to place some windows into those walls. The windows are bound to these specific walls as part of the Revit model.
+They run their program, and it generates some walls in the host application. They then leave the dynamo graph and use normal Revit tools to place some windows into those walls. The windows are bound to these specific walls as part of the Revit model.
 
 The user starts Dynamo back up and runs the graph again - now, like in our last example, they have two sets of walls. The first set has the windows added to it, but the new walls do not.
 
-If element binding had been enabled we can retain the existing work that was done manually in the host application without Dynamo. For example, if binding was enabled when the user ran their program the second time, the walls would be modified, not deleted, and the downstream changes made in the host application would persist. The model would contain walls with windows - instead of two sets of walls in various states.
+If element binding had been enabled we can retain the existing work that was done manually in the host application without Dynamo. For example, if binding was enabled when the user ran their program the second time, the walls would be modified, not deleted, and the downstream changes made in the host application would persist. The model would contain walls with windows, instead of two sets of walls in various states.
 
 ***
 
@@ -393,7 +391,7 @@ ElementBinding on the other hand is a built on top of the trace apis and is impl
 
 #### Trace APIs
 
-some of the low level Trace APIs worth knowing about are:
+Some of the low level Trace APIs worth knowing about are:
 
 ```c#
 public static string GetTraceData(string key)
@@ -403,9 +401,9 @@ public static void SetTraceData(string key, string value)
 ///Set the data bound to a particular key
 ```
 
-you can see these used in the example below
+You can see these used in the example below.
 
-to interact with the trace data that Dynamo has loaded from an existing file or is generating you can look at:
+To interact with the trace data that Dynamo has loaded from an existing file or is generating you can look at:
 
 ```c#
  public IDictionary<Guid, List<CallSite.RawTraceData>> 
@@ -420,7 +418,7 @@ to interact with the trace data that Dynamo has loaded from an existing file or 
 
 ***
 
-An example of a Dynamo node which uses trace directly is provided here in the [DynamoSamples repo](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryZeroTouch/Examples/TraceExample.cs)
+An example of a Dynamo node which uses trace directly is provided here in the [DynamoSamples repo](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryZeroTouch/Examples/TraceExample.cs).
 
 The summary of the class there explains the gist of what trace is all about:
 
@@ -529,7 +527,7 @@ The above code illustrates a sample constructor for a wall element - this constr
 The important phases of the constructor's execution as they relate to element binding are:
 
 1. Use the `elementBinder` to check if there are any previously created objects which were bound to this callsite in a past run. `ElementBinder.GetElementFromTrace<Autodesk.Revit.DB.Wall>`
-2. If so ,then try to modify that wall instead of creating a new one.
+2. If so, then try to modify that wall instead of creating a new one.
 
 ```c#
  if(!CurveUtils.CurvesAreSimilar(wallLocation.Curve, curve))
@@ -581,6 +579,7 @@ There are multiple `Selection` Nodes in DynamoRevit. We can break them into at l
     Example `DynamoRevit` nodes in this category are `SelectModelElement`, `SelectElementFace`
 
     These nodes allow the user to switch into the Revit UI context and select an element or set of elements, the ids of these elements are captured, and some conversion function is run, either a wrapper is created or geometry is extracted and converted from the element. The conversion which runs depends on the type of node the user chooses.
+
 2.  Document Query:
 
     Example nodes in this category are `AllElementsOfClass`, `AllElementsOfCategory`
@@ -651,7 +650,7 @@ Selection nodes are implemented by inheriting from the generic `SelectionBase` t
 
 The Built-In Packages mechanism is an effort to bundle more node content with Dynamo Core without expanding the core itself by leveraging the dynamo package loading functionality implemented by the `PackageLoader` and `PackageManager` extension.
 
-In this doc we'll interchangeably use the terms Built-In Packages, Dynamo Built-In Packages, builtin packages to mean the same thing.
+In this doc we'll interchangeably use the terms Built-In Packages, Dynamo Built-In Packages and, builtin packages to mean the same thing.
 
 ### Should I ship a package as a Built-In Package?
 
@@ -671,11 +670,11 @@ We are intending the `Built-In Packages` to be a core feature, a set of packages
 
 With some constraints this location will be useable for ADSK Dynamo clients and integrators to distribute their integration specific packages. _(for example, the Dynamo Formit integration requires a custom Dynamo Formit package)._
 
-Because the underlying loading mechanism is the same for both core and host specific packages - it will be necessary to make sure that packages distributed this way do not lead to user confusion about core `Built-In Packages` packages vs. integration specific packages that are only available in a single host product. We advise that that to avoid user confusion host-specific packages should be introduced in discussion with the Dynamo teams.
+Because the underlying loading mechanism is the same for both core and host specific packages - it will be necessary to make sure that packages distributed this way do not lead to user confusion about core `Built-In Packages` packages vs. integration specific packages that are only available in a single host product. We advise that to avoid user confusion host-specific packages should be introduced in discussion with the Dynamo teams.
 
 ### Package Localization
 
-Because packages included in the `Built-In Packages` will be available to more customers and the guarantees we make about them will be stricter (see above) they should be localized.
+Because packages included in the `Built-In Packages` will be available to more customers and the guarantees we make about them will be stricter (see above), they should be localized.
 
 For internal ADSK packages intended for `Built-In Packages` inclusion - the current limitations of not being able to publish localized content to the package manager are not blockers as the packages don't necessarily need to be published to the package manager.
 
