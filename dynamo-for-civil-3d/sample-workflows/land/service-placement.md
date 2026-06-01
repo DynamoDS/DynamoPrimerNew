@@ -1,6 +1,6 @@
 # 服务设施放置
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Dynamo (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Dynamo.gif" alt=""><figcaption></figcaption></figure>
 
 典型住宅开发的工程设计涉及使用多个地下公共设施（如生活污水管、雨水排水、饮用水等）。本例将演示如何使用 Dynamo 来绘制从配水总管到给定小块土地（即地块）的服务设施连接。每个地块都需要连接服务设施，这会导致放置所有服务设施的工作非常繁琐。Dynamo 可以通过自动精确绘制必要的几何图形，并提供可调整以符合当地机构标准的灵活输入，从而加快该过程。
 
@@ -46,7 +46,7 @@
 
 {% hint style="info" %} 如果您对使用 Dynamo 曲线几何图形不熟悉，请参见 [4-曲线.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention") 部分。 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>从 Civil 3D 获取对象并将所有对象一起连接为单个 PolyCurve</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_DistributionMain.png" alt=""><figcaption><p>从 Civil 3D 获取对象并将所有对象一起连接为单个 PolyCurve</p></figcaption></figure>
 
 ### 获取地块线几何图形
 
@@ -54,7 +54,7 @@
 
 我们还需要处理可能会出现的潜在问题。地块线有起点和终点，这意味着它有方向。为了使图形能够生成一致的结果，我们需要所有地块线都有一致的方向。我们可以直接在图形逻辑中考虑此情况，这会使图形更具弹性。
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Selection (2).png" alt=""><figcaption><p>选择地块线并确保其方向正确</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Selection.png" alt=""><figcaption><p>选择地块线并确保其方向正确</p></figcaption></figure>
 
 > 1. 获取地块线的起点和终点。
 > 2. 测量每个点到配水总管的距离，然后确定哪个距离更大。
@@ -66,13 +66,13 @@
 
 {% hint style="info" %} 如果您对使用坐标系不熟悉，请参见 [2-向量.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") 部分。 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>创建服务设施计量表的插入点</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>创建服务设施计量表的插入点</p></figcaption></figure>
 
 ### 获取连接点
 
 现在，我们需要获取配水总管上距服务设施计量表位置最近的点。这将使我们能够在模型空间中绘制服务设施连接，以便它们始终垂直于配水总管。**Geometry.ClosestPointTo** 节点是完美解决方案。
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_GetPerpendicularPoints (1).png" alt="" width="339"><figcaption><p>获取配水总管上的垂直点</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_GetPerpendicularPoints.png" alt="" width="339"><figcaption><p>获取配水总管上的垂直点</p></figcaption></figure>
 
 > 1. 这是配水总管 PolyCurve
 > 2. 这些是服务设施计量表插入点
@@ -81,29 +81,29 @@
 
 最后一步是在模型空间中实际创建对象。我们将使用之前生成的插入点来创建块参照，然后使用配水总管上的点来绘制到服务设施连接的线。
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_CreateObjects.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_CreateObjects.png" alt=""><figcaption></figcaption></figure>
 
 ### 结果
 
 当运行图形时，您应该会在模型空间中看到新的块参照和服务设施连接线。尝试更改某些输入，并观察所有内容自动更新！
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Dynamo (1).gif" alt=""><figcaption><p>在 Dynamo 中调整输入参数，并立即查看在 Civil 3D 中的结果</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Dynamo.gif" alt=""><figcaption><p>在 Dynamo 中调整输入参数，并立即查看在 Civil 3D 中的结果</p></figcaption></figure>
 
 ### 小贴士：启用连续放置
 
 您可能会注意到，在为一条地块线放置对象后，选择其他地块线会导致对象被“移动”。
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Binding.gif" alt=""><figcaption><p>对象绑定时的行为处于启用状态</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Binding.gif" alt=""><figcaption><p>对象绑定时的行为处于启用状态</p></figcaption></figure>
 
 这是 Dynamo 的默认行为，在许多情况下非常有用。但是，您可能会发现需要按顺序放置多个服务设施连接，并让 Dynamo 使用每个管路创建新对象，而不是修改原始对象。可以通过更改对象绑定设置来控制此行为。
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Dynamo 的对象绑定设置</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Dynamo 的对象绑定设置</p></figcaption></figure>
 
 {% hint style="info" %} 有关详细信息，请参见[对象绑定.md](../../advanced-topics/object-binding.md "mention") 部分。 {% endhint %}
 
 更改此设置会强制 Dynamo“忘记”它使用每个管路创建的对象。以下是一个使用 **Dynamo 播放器**运行图形（其对象绑定已关闭）的示例。
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>使用 Dynamo 播放器运行图形并在 Civil 3D 中查看结果</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Player.gif" alt=""><figcaption><p>使用 Dynamo 播放器运行图形并在 Civil 3D 中查看结果</p></figcaption></figure>
 
 {% hint style="info" %} 如果您对使用 Dynamo 播放器不熟悉，请参见 [Dynamo 播放器.md](../../dynamo-player.md "mention") 部分。 {% endhint %}
 

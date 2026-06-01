@@ -4,7 +4,7 @@
 
 让我们再为层次结构添加一个层级。如果我们从原始示例中获取数据卡组并创建包含多个数据卡组的框，则该框现在表示一列数据卡组，每个数据卡组表示一列数据卡。这是一列列表。在本节的类比中，下图包含一列硬币卷，每个卷包含一列便士。
 
-![硬币](../../.gitbook/assets/coins-521245_640.jpg)
+![硬币](../images/coins-521245_640.jpg)
 
 > 照片由 [Dori](https://commons.wikimedia.org/wiki/File:Stack_of_coins_0214.jpg) 拍摄。
 
@@ -42,7 +42,7 @@
 
 要从本部分中了解的基本概念：**Dynamo 将列表视为自身内部和自身的对象**。这种自上而下层次结构是在考虑面向对象编程的情况下开发的。Dynamo 会选择数据结构中主列表的索引，而不是使用诸如 **“List.GetItemAtIndex”** 之类的命令选择子元素。该项可以是另一个列表。让我们用示例图像进行分解：
 
-\![top-down](<../../.gitbook/assets/lists of lists - top down hierachy.jpg>)
+\![自上而下](<../images/lists of lists - top down hierachy.jpg>)
 
 > 1. 使用 **“代码块”**，我们已定义两个范围：`0..2; 0..3;`
 > 2. 这些范围连接到 **“Point.ByCoordinates”** 节点，其中连缀设置为 _“叉积”_。这将创建点栅格，并且还会返回一列列表作为输出。
@@ -59,14 +59,14 @@
 
 “展平”会从数据结构中删除所有层级的数据。这在操作不需要数据层次结构时非常有用，但由于它会删除信息，因此可能存在风险。下面的示例显示了展平一列数据的结果。
 
-\![Exercise](<../../.gitbook/assets/lists of lists - flatten 01.jpg>)
+\![练习](<../images/lists of lists - flatten 01.jpg>)
 
 > 1. 在 **“代码块”** 中插入一行代码以定义一个范围：`-250..-150..#4;`
 > 2. 通过将 _“代码块”_ 插入到 **“Point.ByCoordinates”** 节点的 _“x”_ 和 _“y”_ 输入，我们会将连缀设置为 _“叉积”_ 以获取点栅格。
 > 3. **“Watch”** 节点显示我们有一列列表。
 > 4. **“PolyCurve.ByPoints”** 节点将引用每个列表并创建相应的复合线。请注意，在 Dynamo 预览中，我们有四条复合线分别表示栅格中的每一行。
 
-\![Exercise](<../../.gitbook/assets/lists of lists - flatten 02.jpg>)
+\![练习](<../images/lists of lists - flatten 02.jpg>)
 
 > 1. 通过在复合线节点之前插入 _“展平”_，我们为所有点创建了一个列表。**“PolyCurve.ByPoints”** 节点引用列表来创建一条曲线，并且由于所有点都在一个列表中，因此我们得到了一条锯齿形复合线，该复合线贯穿整个点列表。
 
@@ -84,7 +84,7 @@
 
 “切除”命令会根据给定的列表长度来分割列表。在某些方面，切除与展平相反：它不是删除数据结构，而是向其中添加新的层级。这是一个有助于执行几何操作（如以下示例）的工具。
 
-\![Exercise](<../../.gitbook/assets/lists of lists - chop.jpg>)
+\![练习](<../images/lists of lists - chop.jpg>)
 
 ### List.Map
 
@@ -102,7 +102,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 **“List.Count”** 节点对列表中的所有项目进行计数。我们将使用此节点来演示 **“List.Map”** 如何工作。
 
-\![](<../../.gitbook/assets/lists of lists - map 01.jpg>)
+\![](<../images/lists of lists - map 01.jpg>)
 
 > 1.  将两行代码插入到 **“代码块”**：`-50..50..#Nx; -50..50..#Ny;`
 >
@@ -111,7 +111,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 > 3. 将代码块的每行连接到 **“Point.ByCoordinates”** 节点的相应 _“X”_ 和 _“Y”_ 输入。在节点上单击鼠标右键，选择“连缀”，然后选择 _“叉积”_。这将创建点栅格。因为我们定义的范围是 -50 到 50，所以我们跨越了默认的 Dynamo 栅格。
 > 4. _**“Watch”**_ 节点显示所创建的点。请注意数据结构。我们已创建一列列表。每个列表都表示栅格的一行点。
 
-\![Exercise](<../../.gitbook/assets/lists of lists - map 02.jpg>)
+\![练习](<../images/lists of lists - map 02.jpg>)
 
 > 1. 将上一步中的 **“List.Count”** 节点附加到“Watch”节点的输出。
 > 2. 将 **“Watch”** 节点连接到 **“List.Count”** 输出。
@@ -121,7 +121,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 * 首先，**“Point.ByCoordinates”** 节点使用“x”输入作为用于创建列表的主输入。当 Nx 为 5 且 Ny 为 3 时，我们得到一列 5 个列表，每个列表都包含 3 个项目。
 * 由于 Dynamo 将列表视为自身内部和自身的对象，因此 **“List.Count”** 节点会应用于层次结构中的主列表。结果为值 5 或主列表中列表的数量。
 
-\![Exercise](<../../.gitbook/assets/lists of lists - map 03.jpg>)
+\![练习](<../images/lists of lists - map 03.jpg>)
 
 > 1. 通过使用 **“List.Map”** 节点，我们在层次结构中向下一步，然后在此级别上执行 _“函数”_。
 > 2. 请注意，**“List.Count”** 节点没有输入。它将用作一个函数，因此 **“List.Count”** 节点将应用于层次结构中向下一步的每个单独列表。**“List.Count”** 的空白输入对应于 **“List.Map”** 的列表输入。
@@ -135,7 +135,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 首先，设置两个点列表。
 
-\![Exercise](<../../.gitbook/assets/lists of lists - combined 01.jpg>)
+\![练习](<../images/lists of lists - combined 01.jpg>)
 
 > 1. 使用 **“Sequence”** 节点生成 10 个值，每个值都有 10 步增量。
 > 2. 将结果连接到 **“Point.ByCoordinates”** 节点的 x 输入。这将在 Dynamo 中创建点列表。
@@ -143,7 +143,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 接下来，我们将使用 **“List.Combine”** 对 2 个单独列表中的对象应用函数。在本例中，它将是一个简单的绘制线函数。
 
-\![Exercise](<../../.gitbook/assets/lists of lists - combined 02.jpg>)
+\![练习](<../images/lists of lists - combined 02.jpg>)
 
 > 1. 将 **“List.Combine”** 添加到工作空间，并连接 2 组点作为其 list0 和 list1 输入。
 > 2. 使用 **“Line.ByStartPointEndPoint”** 作为 **“List.Combine”** 的输入函数。
@@ -164,7 +164,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 在本练习中，我们将使用 **“List@Level”** 功能隔离特定级别的数据。
 
-\![List@Level](<../../.gitbook/assets/lists of lists - list at level 01.jpg>)
+\![List@Level](<../images/lists of lists - list at level 01.jpg>)
 
 我们将从一个简单的三维点栅格开始。
 
@@ -172,7 +172,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 > 2. 这些层级存在于不同的**级别**上。级别显示在预览气泡的底部。“列表级别”列与上述列表数据相对应，以帮助确定要在哪个级别工作。
 > 3. “列表级别”按相反顺序进行组织，以便最低级别数据始终位于“L1”。这将有助于确保图形按计划工作，即使上游发生任何更改也是如此。
 
-\![List@Level](<../../.gitbook/assets/lists of lists - list at level 02.jpg>)
+\![List@Level](<../images/lists of lists - list at level 02.jpg>)
 
 > 1. 要使用 **“List@Level”** 函数，请单击“>”。在此菜单中，您会看到两个复选框。
 > 2. **使用级别** \- 这会启用 **“List@Level”** 功能。单击此选项后，将能够点进，然后选择希望节点使用的输入列表级别。使用此菜单，可以通过单击上下箭头来快速试用不同的级别选项。
@@ -180,7 +180,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 使用简单的三维栅格，我们可以通过切换“列表级别”来访问和可视化列表结构。每个列表级别和索引组合将从原始三维集中返回一组不同的点。
 
-\![](<../../.gitbook/assets/lists of lists - list at level 03.jpg>)
+\![](<../images/lists of lists - list at level 03.jpg>)
 
 > 1. DesignScript 中的“@L2”允许我们仅选择级别 2 的列表。级别 2 列表（索引为 0）仅包含第一组 Y 点，从而仅返回 XZ 栅格。
 > 2. 如果将级别过滤器更改为“L1”，则我们将能够看到第一列表级别中的所有内容。级别 1 列表（索引 0）将所有三维点都包括在一个展平列表中。
@@ -189,7 +189,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 尽管也可以使用 **“List.Map”** 创建此特定示例，但 **“List@Level”** 会极大地简化交互，从而可以轻松访问节点数据。请在下面查看 **“List.Map”** 和 **“List@Level”** 方法的比较：
 
-\![](<../../.gitbook/assets/lists of lists - list at level 04.jpg>)
+\![](<../images/lists of lists - list at level 04.jpg>)
 
 > 1. 尽管这两种方法都将允许我们访问相同的点，但 **“List@Level”** 方法允许我们轻松地在一个节点内的数据层之间切换。
 > 2. 要使用 **“List.Map”** 访问点栅格，我们需要使用 **“List.GetItemAtIndex”** 节点以及 **“List.Map”**。对于我们要向下步进的每个列表级别，我们需要使用额外的 **“List.Map”** 节点。根据列表的复杂程度，这可能需要将大量 **“List.Map”** 节点添加到图形中，才能访问正确级别的信息。
@@ -205,16 +205,16 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 “Transpose”是一个处理列表的列表时的基本函数。与在电子表格程序中一样，转置会翻转数据结构的列和行。我们将在下面的基本矩阵中对此进行演示，并且在以下部分中我们将演示如何使用转置来创建几何关系。
 
-![Transpose](../../.gitbook/assets/transpose1.jpg)
+![Transpose](../images/transpose1.jpg)
 
 让我们从上一个练习中删除 **“List.Count”** 节点，然后转到一些几何图形以查看数据的结构。
 
-\![](<../../.gitbook/assets/lists of lists - transpose 01.jpg>)
+\![](<../images/lists of lists - transpose 01.jpg>)
 
 > 1. 从 **“Point.ByCoordinates”** 将 **“PolyCurve.ByPoints”** 连接到“Watch”节点的输出。
 > 2. 输出会显示 5 条复合线，我们可以在 Dynamo 预览中看到这些曲线。Dynamo 节点将查找一列点（或在本例中为一列点列表）并基于它们创建一条复合线。实际上，每个列表已转换为数据结构中的曲线。
 
-\![](<../../.gitbook/assets/lists of lists - transpose 02.jpg>)
+\![](<../images/lists of lists - transpose 02.jpg>)
 
 > 1. **“List.Transpose”** 节点将切换一列列表中所有列表的所有项目。这听起来很复杂，但其逻辑与 Microsoft Excel 中的“转置”相同：在数据结构中切换列和行。
 > 2. 请注意抽象结果：“转置”将列表结构从 5 列（每列 3 个项目）更改为 3 列（每列 5 个项目）。
@@ -224,13 +224,13 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 代码块简写使用“[]”来定义列表。与 **“List.Create”** 节点相比，这种方法可更快、更流畅地创建列表。**代码块**会在[“代码块和 DesignScript”](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/)中进行更详细的介绍。请参照下图，以注意如何使用代码块定义具有多个表达式的列表。
 
-\![](<../../.gitbook/assets/lists of lists - codeblock for list creation 01.jpg>)
+\![](<../images/lists of lists - codeblock for list creation 01.jpg>)
 
 #### 代码块查询
 
 **代码块**简写使用“[]”作为要从复杂数据结构中选择所需特定项目的快速简便方法。**代码块**会在[“代码块和 DesignScript”](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/)一章中进行更详细的介绍。请参照下图，以注意如何使用代码块查询具有多个数据类型的列表。
 
-\![](<../../.gitbook/assets/lists of lists - codeblock for list creation 02.jpg>)
+\![](<../images/lists of lists - codeblock for list creation 02.jpg>)
 
 ## 练习 - 查询和插入数据
 
@@ -244,7 +244,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 从上述节点字符串开始。我们将创建一个跨越默认 Dynamo 栅格的基本曲面。
 
-\![](<../../.gitbook/assets/list of lists - exercise cb insert & query 01.jpg>)
+\![](<../images/list of lists - exercise cb insert & query 01.jpg>)
 
 > 1. 使用 **“代码块”**，插入以下两行代码并分别连接到 **“Surface.PointAtParameter”** 的 _“u”_ 和 _“v”_ 输入：`-50..50..#3;` `-50..50..#5;`
 > 2. 确保将 **“Surface.PointAtParameter”** 的“连缀”设置为 _“叉积”_。
@@ -252,20 +252,20 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 在此步骤中，我们要在已创建的栅格中查询中心点。为此，我们将选择中间列表中的中间点。有道理，对吧？
 
-\![](<../../.gitbook/assets/list of lists - exercise cb insert & query 02.jpg>)
+\![](<../images/list of lists - exercise cb insert & query 02.jpg>)
 
 > 1. 要确认这一点是正确的，我们还可以单击“Watch”节点项目来确认我们面向的目标是正确的。
 > 2. 使用 **“代码块”**，我们将编写一行基本代码，用于查询一列列表：\
  `points[1][2];`
 > 3. 使用 **“Geometry.Translate”**，我们会将选定点在 _Z_ 方向上上移 _20_ 个单位。
 
-\![](<../../.gitbook/assets/list of lists - exercise cb insert & query 03.jpg>)
+\![](<../images/list of lists - exercise cb insert & query 03.jpg>)
 
 > 1. 我们还要使用 **“List.GetItemAtIndex”** 节点选择中间行的点。注意：与上一步类似，我们还可以使用 **“代码块”**，通过一行代码 `points[1];` 查询列表
 
 到目前为止，我们已成功查询中心点并将其向上移动。现在，我们需要将此移动的点插回原始数据结构。
 
-\![](<../../.gitbook/assets/list of lists - exercise cb insert & query 04.jpg>)
+\![](<../images/list of lists - exercise cb insert & query 04.jpg>)
 
 > 1. 首先，我们要替换在上一步中隔离的列表项。
 > 2. 使用 **“List.ReplaceItemAtIndex”**，我们会将使用且索引为 _“2”_ 的中间项替换为与移动的点（ **“Geometry.Translate”** ）相连的替换项。
@@ -273,7 +273,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 现在，我们已经修改了列表，我们需要将此列表插回原始数据结构：列表的列表。
 
-\![](<../../.gitbook/assets/list of lists - exercise cb insert & query 05.jpg>)
+\![](<../images/list of lists - exercise cb insert & query 05.jpg>)
 
 > 1. 遵循相同的逻辑，使用 **“List.ReplaceItemAtIndex”** 将中间列表替换为我们修改的列表。
 > 2. 请注意，为这两个节点定义索引的 “**代码块**_”_ 为 1 和 2，这与 **“代码块”** (_points[1][2]_) 中的原始查询匹配。
@@ -281,10 +281,10 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 基于这组点生成曲面的方法有多种。在本例中，我们将通过一起放样曲线来创建曲面。
 
-\![](<../../.gitbook/assets/list of lists - exercise cb insert & query 06.jpg>)
+\![](<../images/list of lists - exercise cb insert & query 06.jpg>)
 
 > 1. 创建 **“NurbsCurve.ByPoints”** 节点并连接新的数据结构，来创建三条 NURBS 曲线。
 
-\![](<../../.gitbook/assets/list of lists - exercise cb insert & query 07.jpg>)
+\![](<../images/list of lists - exercise cb insert & query 07.jpg>)
 
 > 1. 将 **“Surface.ByLoft”** 连接到 **“NurbsCurve.ByPoints”** 的输出。现在，我们得到了一个修改的曲面。我们可以更改几何图形的原始 _Z_ 值。平移并观察几何图形更新！

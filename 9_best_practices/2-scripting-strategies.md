@@ -2,7 +2,7 @@
 
 可视化脚本编写环境中基于文本的脚本编写支持使用 DesignScript、Python 和 ZeroTouch (C#) 实现功能强大的可视化关系。用户可以显示输入滑块等图元，将大型操作压缩为 DesignScript，以及通过 Python 或 C＃ 访问功能强大的工具和库，所有这些操作都可在同一工作空间内进行。在有效管理的情况下，结合使用这些策略可以将大量自定义、清晰和高效提供给整个程序。以下是一组准则，可帮助您使用文本脚本来增强可视化脚本。
 
-![](../.gitbook/assets/cad-chart-textual.jpg)
+![](images/cad-chart-textual.jpg)
 
 ### 了解何时编写脚本
 
@@ -37,7 +37,7 @@
   * 预期输出
   * 常数
 
-\![](<../.gitbook/assets/think parametrically 01.jpg>)
+\![](<images/think parametrically 01.jpg>)
 
 > 编写代码之前已建立多个变量。
 >
@@ -55,7 +55,7 @@
 * 通过仅显示关键参数来最大程度减少输入数量：
   * 如果可以从更多父参数派生一组参数，则仅将父参数公开为脚本输入。通过降低脚本接口的复杂性，从而提高脚本的可用性。
 
-\![](<../.gitbook/assets/think parametrically 02.jpg>)
+\![](<images/think parametrically 02.jpg>)
 
 > [Python 节点](../8_coding_in_dynamo/8-3_python/1-python.md)中的示例代码“模块”。
 >
@@ -102,7 +102,7 @@ for i in range(count):
 * 这可以是应与相邻代码（函数、类、一组输入或要输入的库）在视觉上分开的任何内容。
 * 以模块形式开发代码可利用节点的可视化直观质量以及只有文本脚本编写才能实现的复杂关系。
 
-\![](<../.gitbook/assets/think parametrically 02.jpg>)
+\![](<images/think parametrically 02.jpg>)
 
 > 这些循环调用我们将在练习中开发的名为“agent”的类。
 >
@@ -117,7 +117,7 @@ for i in range(count):
 
 本例将根据中心点的 Z 值创建具有半径和颜色的球体。
 
-\![](<../.gitbook/assets/spot code resuse.jpg>)
+\![](<images/spot code resuse.jpg>)
 
 > 1. 两个“worker”父函数：根据中心点的 Z 值创建具有半径和颜色颜色的球体。
 > 2. 合并两个“worker”函数的“manager”父函数。调用此函数会调用其中的两个函数。
@@ -182,7 +182,7 @@ for i in range(count):
   * 快速测试以确保返回的数据“有意义”。
 * 将正在脚本中使用的最新数据指定为输出，以便在脚本更新时节点始终输出相关数据：
 
-\![](<../.gitbook/assets/flex continuously.jpg>)
+\![](<images/flex continuously.jpg>)
 
 > 1. 检查实体的所有边是否都将作为曲线返回，以围绕其创建边界框。
 > 2. 检查“Count”输入是否成功转换为“Ranges”。
@@ -232,7 +232,7 @@ for i in range(xCount):
 * 当必须修改程序时，则以模块形式开发的代码将更容易更改：
   * 可以将新模块或已调试模块插入到现有程序中，同时确保程序的其余部分不会更改。
 
-\![](<../.gitbook/assets/leverage code's modularity.jpg>)
+\![](<images/leverage code's modularity.jpg>)
 
 > 调试 [Python 节点](../8_coding_in_dynamo/8-3_python/1-python.md)中的示例文件。
 >
@@ -250,19 +250,19 @@ for i in range(xCount):
 
 我们的脚本已应用于吸引器变形的曲面。
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 01.jpg>)
+\![](<images/scripting strategies - exercise - 01.jpg>)
 
 首先，我们需要输入必要的 Dynamo 库。首先执行此操作将在 Python 中提供对 Dynamo 功能的全局访问。
 
 我们打算使用的所有库都需要在此处输入。
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 02.jpg>)
+\![](<images/scripting strategies - exercise - 02.jpg>)
 
 接下来，我们需要定义脚本的输入和输出，这些将在节点上显示为输入端口。这些外部输入是脚本的基础，也是建立参数化环境的关键。
 
 我们需要定义与 Python 脚本中的变量对应的输入，并确定所需的输出：
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 03.jpg>)
+\![](<images/scripting strategies - exercise - 03.jpg>)
 
 > 1. 我们要漫游的曲面。
 > 2. 我们要走的代理数。
@@ -275,7 +275,7 @@ for i in range(xCount):
 
 我们需要为代理定义一个类或蓝图，以便代理每走一步时都选择沿尽可能陡峭的方向行进，从而漫游曲面：
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 04.jpg>)
+\![](<images/scripting strategies - exercise - 04.jpg>)
 
 > 1. 名称。
 > 2. 所有代理共享的全局属性。
@@ -287,7 +287,7 @@ for i in range(xCount):
 
 我们需要实例化要观察漫游曲面的所有代理，并定义其初始属性：
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 05.jpg>)
+\![](<images/scripting strategies - exercise - 05.jpg>)
 
 > 1. 一个新的空轨迹列表。
 > 2. 它们将在曲面上开始其旅程的位置。
@@ -295,15 +295,15 @@ for i in range(xCount):
 
 每一步都更新每个代理。然后，我们需要进入一个嵌套循环，在该循环中，针对每个代理和每一步，我们更新其位置并记录到其轨迹列表中。在每一步，我们还将确保代理尚未到达曲面上无法采取其他步骤（即允许代理下降）的点。如果满足该条件，我们将结束该代理的行程。
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 06.jpg>)
+\![](<images/scripting strategies - exercise - 06.jpg>)
 
 现在，我们的代理已完全更新，让我们返回代表它们的几何图元。在所有代理达到其下降限制或最大步数后，我们将创建一条贯穿其轨迹列表中点的复合线并输出复合线轨迹。
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 07.jpg>)
+\![](<images/scripting strategies - exercise - 07.jpg>)
 
 我们的脚本用于查找最陡路径。
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 08.jpg>)
+\![](<images/scripting strategies - exercise - 08.jpg>)
 
 > 1. 预设在基础曲面上模拟降雨。
 > 2. 可以切换代理以遍历基础曲面，而不是查找最陡路径。

@@ -4,22 +4,22 @@
 
 本例将介绍创建 Zero-Touch 节点时需要注意的一些功能和概念。在我们构建自定义节点并将其添加到 Dynamo 中后，请确保查看“进一步了解 Zero-Touch”页面，以更深入地了解默认输入值、返回多个值、文档、对象、使用 Dynamo 几何类型和移植。
 
-![矩形网格图形](../../.gitbook/assets/cover-image.jpg)
+![矩形网格图形](../images/cover-image.jpg)
 
 ### 自定义矩形网格节点 <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 要开始构建网格节点，请创建一个新的 Visual Studio 类库项目。有关如何设置项目的深入介绍，请参见“快速入门”页面。
 
-![在 Visual Studio 中创建新项目](../../.gitbook/assets/vs-new-project-1.jpg)
+![在 Visual Studio 中创建新项目](../images/vs-new-project-1.jpg)
 
-![在 Visual Studio 中配置新项目](../../.gitbook/assets/vs-new-project-2.jpg)
+![在 Visual Studio 中配置新项目](../images/vs-new-project-2.jpg)
 
 > 1. 选择 `Class Library` 作为项目类型
 > 2. 将项目命名为 `CustomNodes`
 
 由于我们将要创建几何图形，因此我们需要参照相应的 NuGet 软件包。通过 Nuget 软件包管理器安装 ZeroTouchLibrary 软件包。对于 `using Autodesk.DesignScript.Geometry;` 语句而言，此软件包是必需的。
 
-![ZeroTouchLibrary 软件包](../../.gitbook/assets/vs-nugetpackage.jpg)
+![ZeroTouchLibrary 软件包](../images/vs-nugetpackage.jpg)
 
 > 1. 浏览 ZeroTouchLibrary 软件包
 > 2. 我们将要在 Dynamo 的当前版本中使用此节点。选择与 Dynamo 版本匹配的软件包版本。
@@ -84,13 +84,13 @@ namespace CustomNodes
 
 如果项目看起来与此类似，请继续并尝试构建 `.dll`。
 
-![构建 DLL](../../.gitbook/assets/vs-grids.jpg)
+![构建 DLL](../images/vs-grids.jpg)
 
 > 1. 选择“构建”>“构建解决方案”
 
 检查项目的 `bin` 文件夹以查找 `.dll`。在构建成功后，我们可以将 `.dll` 添加到 Dynamo 中。
 
-![Dynamo 中的自定义节点](../../.gitbook/assets/RectangularGrid-Dynamo.png)
+![Dynamo 中的自定义节点](../images/RectangularGrid-Dynamo.png)
 
 > 1. Dynamo 库中的自定义 RectangularGrids 节点
 > 2. 画布上的自定义节点
@@ -100,7 +100,7 @@ namespace CustomNodes
 
 在上例中，我们创建了一个非常简单的节点，该节点未定义 `RectangularGrids` 方法之外的太多其他内容。但是，我们可能要为输入端口创建工具提示，或者像标准 Dynamo 节点一样为该节点提供摘要。将这些功能添加到自定义节点会使其更易于使用，尤其是当用户要在库中搜索这些节点时。
 
-![输入工具提示](../../.gitbook/assets/nodemodification.png)
+![输入工具提示](../images/nodemodification.png)
 
 > 1. 默认输入值
 > 2. xCount 输入的工具提示
@@ -155,7 +155,7 @@ namespace CustomNodes
 
 要添加工具提示，我们需要在项目目录中有一个 xml 文件。通过启用该选项，`.xml` 可以由 Visual Studio 自动生成。
 
-![启用 XML 文档](../../.gitbook/assets/vs-xml.jpg)
+![启用 XML 文档](../images/vs-xml.jpg)
 
 > 1. 在此处启用 XML 文档文件，然后指定文件路径。这将生成一个 XML 文件。
 

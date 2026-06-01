@@ -2,7 +2,7 @@
 
 在本章之前，入门手册介绍了如何实现 Dynamo 的强大可视化脚本编写功能。充分了解这些功能是构建健壮可视化程序的坚实基础和第一步。我们在现场使用可视化程序、与同事共享这些程序、排除错误或测试限制时，我们还要处理其他问题。如果其他人将使用您的程序，或者您希望从现在开始六个月内打开它，则它需要具有直观的图形和清晰的逻辑。Dynamo 有许多工具可用于管理程序的复杂性，本章会提供有关何时使用它们的指南。
 
-![组](../.gitbook/assets/cad-chart-visual.jpg)
+![组](images/cad-chart-visual.jpg)
 
 ## 降低复杂性
 
@@ -15,7 +15,7 @@
 * 可以更改**组的颜色以区分**各组的功能（输入与函数）
 * 可以使用组来开始**组织图形以简化“自定义节点”创建**
 
-![](../.gitbook/assets/graphstrategy2.png)
+![](images/graphstrategy2.png)
 
 > 本程序中的颜色标识了每个组的用途。此策略可用于在您开发的任何图形标准或模板中创建层次结构。
 >
@@ -30,7 +30,7 @@
 * 有时，可以使用代码块**键入数字或节点方法，速度比搜索快**（Point.ByCoordinates、Number、String、Formula）
 * 代码块在**您要在 DesignScript 中定义自定义函数以减少图形中的节点数量**时非常有用
 
-![](../.gitbook/assets/graphstrategy3.png)
+![](images/graphstrategy3.png)
 
 > 1 和 2 执行相同的函数。与分别搜索并添加每个节点相比，编写几行代码要快得多。代码块也更加简洁。
 >
@@ -53,7 +53,7 @@
   * 其他用户难以理解
   * 无法轻松返回到可视化编程版本
 
-![](../.gitbook/assets/graphstrategy3_1.png)
+![](images/graphstrategy3_1.png)
 
 > 1. 现有程序
 > 2. 基于“节点到代码”创建的代码块
@@ -65,7 +65,7 @@
 * 使用 List@Level，可以**通过替换 List.Map 和 List.Combine 节点降低图形的复杂性**，这可能会占用大量画布空间
 * List@Level 通过允许您从节点的输入端口访问列表中任何级别的数据，从而为您提供了一种**快于 List.Map/List.Combine 的方法来构建节点逻辑**
 
-![](../.gitbook/assets/graphstrategy4.png)
+![](images/graphstrategy4.png)
 
 > 我们可以通过为 CountTrue 的“列表”输入激活 List@Level，来验证 BoundingBox.Contains 返回的 True 值数以及具体列表。List@Level 允许用户确定输入从哪个级别获取数据。与其他涉及 List.Map 和 List.Combine 的方法相比，使用 List@Level 灵活、高效并且强烈建议采用。
 >
@@ -84,7 +84,7 @@
 * 如果其他人将要使用您的图形，则应**确保“节点-线”布局在发布之前轻松流动**
 * 为了帮助您进行对齐，请**使用“清理节点布局”功能自动对齐**您的图形，尽管不如您自己做的精确
 
-\![](<../.gitbook/assets/graphstrategy5 (1).png>)
+![](<images/graphstrategy5.png>)
 
 > 1. 未组织的图形
 > 2. 对齐的图形
@@ -96,7 +96,7 @@
 * 重命名输入有助于其他人轻松了解您的图形，**尤其是当他们插入的内容将离屏时**
 * **请谨慎重命名输入以外的节点。** 除此之外，还可以基于节点群集创建自定义节点并重命名该节点；显而易见，它包含其他内容
 
-![](../.gitbook/assets/graphstrategy6.png)
+![](images/graphstrategy6.png)
 
 > 1. 曲面操纵的输入
 > 2. 建筑参数的输入
@@ -109,7 +109,7 @@
 * 如果**图形中的某些内容需要节点无法表达的简单语言说明**，则应添加注释
 * 如果**一个节点集或一个组太大或太复杂且无法轻松理解**，则应添加注释
 
-![](../.gitbook/assets/graphstrategy7.png)
+![](images/graphstrategy7.png)
 
 > 1. 描述程序中返回原始平移距离的部分的注释
 > 2. 描述将这些值映射到正弦波的代码的注释
@@ -124,7 +124,7 @@
 
 * 构建程序时使用“观察”或“预览”气泡，**来验证关键输出是否返回预期内容**
 
-![](../.gitbook/assets/graphstrategy8.png)
+![](images/graphstrategy8.png)
 
 > “Watch”节点用于比较：
 >
@@ -155,7 +155,7 @@
 * **当图形的某一部分将经常在其他程序中重复使用时**，应使用自定义节点
 * 如果要**与 Dynamo 社区共享功能**，则应使用自定义节点
 
-![](../.gitbook/assets/graphstrategy9.png)
+![](images/graphstrategy9.png)
 
 > 将点平移程序收集到自定义节点，会使健壮的独特程序可移植且更易于理解。命名良好的输入端口将有助于其他用户了解如何使用该节点。请记住为每个输入添加描述和所需的数据类型。
 >
@@ -170,7 +170,7 @@
 * 构建模板时，可以标准化**组颜色和字体大小**，以对工作流或数据操作的类型进行分类。
 * 构建模板时，甚至可以标准化您希望如何对图形中**前端和后端工作流之间的差异进行标注、上色或设计样式**。
 
-![](../.gitbook/assets/graphstrategy10.png)
+![](images/graphstrategy10.png)
 
 > 1. 程序的 UI 或前端包括项目名称、输入滑块和输入几何图形。
 > 2. 程序的后端。
@@ -184,13 +184,13 @@
 
 现在，我们已经建立了几种最佳实践，让我们将它们应用于快速组合在一起的程序中。尽管该程序成功生成了屋顶，但图形的状态是作者的“思维导图”。它缺少任何组织或使用说明。我们将通过最佳实践来组织、描述和分析该程序，以便其他用户可以了解如何使用它。
 
-![](../.gitbook/assets/graphstrategy11.png)
+![](images/graphstrategy11.png)
 
 > 程序运行正常，但图形混乱。
 
 让我们先确定程序返回的数据和几何图形。
 
-![](../.gitbook/assets/graphstrategy12.png)
+![](images/graphstrategy12.png)
 
 > 了解何时对数据进行重大更改对于建立逻辑划分或模块化至关重要。尝试使用“Watch”节点检查程序的其余部分，以查看在继续进行下一步之前是否可以确定组。
 >
@@ -199,7 +199,7 @@
 
 在了解程序的基本部分后，让我们将它们放入组中。
 
-![](../.gitbook/assets/graphstrategy13.png)
+![](images/graphstrategy13.png)
 
 > 组允许用户直观地区分程序的各个部分。
 >
@@ -211,13 +211,13 @@
 
 建立组后，对齐节点以在整个图上创建视觉连续性。
 
-![](../.gitbook/assets/graphstrategy14.png)
+![](images/graphstrategy14.png)
 
 > 视觉连续性有助于用户查看程序流和节点之间的隐式关系。
 
 通过添加另一图形改进层，使程序更易于访问。添加注释以描述程序的特定区域如何工作、为输入提供自定义名称以及为不同类型的组指定颜色。
 
-![](../.gitbook/assets/graphstrategy15.png)
+![](images/graphstrategy15.png)
 
 > 这些图形改进会告诉用户有关程序正在执行的操作的更多信息。不同的组颜色有助于区分输入和函数。
 >
@@ -226,7 +226,7 @@
 
 在开始压缩程序之前，让我们找到一个战略位置来介绍 Python 脚本排水模拟器。将第一个缩放屋顶曲面的输出插入相应的脚本输入。
 
-![](../.gitbook/assets/graphstrategy16.png)
+![](images/graphstrategy16.png)
 
 > 我们选择此时将脚本集成到程序中，以便可以在原始的单屋顶曲面上运行排水模拟。该特定曲面不会被预览，但它让我们无需选择倒角的 Polysurface 的顶面。
 >
@@ -237,7 +237,7 @@
 
 现在一切就绪，让我们简化图形。
 
-![](../.gitbook/assets/graphstrategy17.png)
+![](images/graphstrategy17.png)
 
 > 使用“节点到代码”和“自定义节点”压缩我们的程序，大大减小了图形的大小。创建屋顶曲面和墙的组已转换为代码，因为它们非常特定于此程序。点平移组包含在自定义节点中，因为它用于其他程序。在示例文件中，基于平移点组创建您自己的自定义节点。
 >
@@ -246,14 +246,14 @@
 
 最后一步，为示例性屋顶成型创建预设。
 
-![](../.gitbook/assets/graphstrategy18.png)
+![](images/graphstrategy18.png)
 
 > 这些输入是屋顶成型的主要驱动力，将帮助用户发现程序的潜力。
 
 我们的程序具有两个预设的视图。
 
-![](../.gitbook/assets/graphstrategy19.png)
+![](images/graphstrategy19.png)
 
-![](../.gitbook/assets/graphstrategy20.png)
+![](images/graphstrategy20.png)
 
 > 屋顶排水模式为用户提供了各个预设的分析视图。

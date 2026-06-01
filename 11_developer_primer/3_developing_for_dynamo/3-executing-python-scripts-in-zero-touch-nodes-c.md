@@ -4,7 +4,7 @@
 
 如果您愿意使用 Python 编写脚本，并希望从标准 Dynamo Python 节点中获取更多功能，我们可以使用 Zero-Touch 创建自己的节点。让我们从一个简单示例开始，它允许我们将 Python 脚本作为字符串传递给 Zero-Touch 节点，在该节点中执行脚本并返回结果。本案例研究将建立在“快速入门”部分中的漫游和示例的基础上；如果您对创建 Zero-Touch 节点完全不熟悉，请参见这些漫游和示例。
 
-![将执行 Python 脚本字符串的 Zero-Touch 节点](../../.gitbook/assets/python-case-study.png)
+![将执行 Python 脚本字符串的 Zero-Touch 节点](../images/python-case-study.png)
 
 > 将执行 Python 脚本字符串的 Zero-Touch 节点
 
@@ -68,7 +68,7 @@ output = str(volume)
 
 标准 Python 节点的一个限制是它们只有一个输出端口；因此，如果我们要返回多个对象，我们必须构造一个列表并检索其中的每个对象。如果我们修改上面的示例以返回字典，则我们可以根据需要添加许多输出端口。有关字典的更多详细信息，请参见“进一步了解 Zero-Touch”中的“返回多个值”部分。
 
-![此节点允许我们返回立方体的体积及其质心。](../../.gitbook/assets/python-multi-case-study.png)
+![此节点允许我们返回立方体的体积及其质心。](../images/python-multi-case-study.png)
 
 > 此节点允许我们返回立方体的体积及其质心。
 

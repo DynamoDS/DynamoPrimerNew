@@ -52,7 +52,7 @@
 
 **可视化程序：**
 
-\![](<../.gitbook/assets/visualProgramming (2).png>)
+![](<images/visualProgramming.png>)
 
 **文本程序：**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 我们的算法结果：
 
-\![](<../.gitbook/assets/visualProgramming (1).png>)
+![](<images/visualProgramming.png>)
 
 以此类方式进行编程的可视化特性降低了入门门槛，无需与设计师经常沟通。Dynamo 属于可视化编程范例，但正如我们稍后所见到的，我们仍可以在应用程序中使用文本编程。

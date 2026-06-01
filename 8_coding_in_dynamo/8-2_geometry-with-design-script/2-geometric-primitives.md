@@ -8,7 +8,7 @@
 
 以 x = 0、y = 0、z = 0 的点为中心创建 CoordinateSystem，不进行旋转、缩放或调节变换，只需调用 Identity 构造函数：
 
-![](../../.gitbook/assets/GeometricPrimitives_01.png)
+![](../images/GeometricPrimitives_01.png)
 
 ```js
 // create a CoordinateSystem at x = 0, y = 0, z = 0,
@@ -19,7 +19,7 @@ cs = CoordinateSystem.Identity();
 
 具有几何变换的 CoordinateSystems 超出本章的范围，但另一个构造函数允许您在特定点 _CoordinateSystem.ByOriginVectors_ 创建坐标系：
 
-![](../../.gitbook/assets/GeometricPrimitives_02.png)
+![](../images/GeometricPrimitives_02.png)
 
 ```js
 // create a CoordinateSystem at a specific location,
@@ -41,7 +41,7 @@ cs = CoordinateSystem.ByOriginVectors(origin,
 
 本例说明在各种坐标系中创建的点：
 
-![](../../.gitbook/assets/GeometricPrimitives_03.png)
+![](../images/GeometricPrimitives_03.png)
 
 ```js
 // create a point with x, y, and z coordinates
@@ -77,7 +77,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
 
 下一个较高维度的 Dynamo 基本体是一条线段，表示两个端点之间的无限多个点。可以通过构造函数 _Line.ByStartPointEndPoint_ 明确指定两个边界点，或者通过 _Line.ByStartPointDirectionLength_ 在该方向指定起点、方向和长度来创建直线。
 
-![](../../.gitbook/assets/GeometricPrimitives_04.png)
+![](../images/GeometricPrimitives_04.png)
 
 ```js
 p1 = Point.ByCoordinates(-2, -5, -10);
@@ -96,7 +96,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
 
 Dynamo 有表示三维中大多数基本类型的几何基本体的对象：立方体，使用 _Cuboid.ByLengths_ 创建；圆锥体，使用 _Cone.ByPointsRadius_ 和 _Cone.ByPointsRadii_ 创建；圆柱体，使用 _Cylinder.ByRadiusHeight_ 创建；球体，使用 _Sphere.ByCenterPointRadius_ 创建。
 
-![](../../.gitbook/assets/GeometricPrimitives_05.png)
+![](../images/GeometricPrimitives_05.png)
 
 ```js
 // create a cuboid with specified lengths

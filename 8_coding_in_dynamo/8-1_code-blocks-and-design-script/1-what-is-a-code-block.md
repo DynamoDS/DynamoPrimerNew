@@ -2,7 +2,7 @@
 
 代码块是深入 Dynamo 的核心编程语言 DesignScript 的窗口。从头进行构建的 DesignScript 可支持探索式设计工作流，它是一种可读且简明的语言，既可提供对少量代码的即时反馈，也可扩展到大型和复杂交互。DesignScript 还构成引擎的支柱，该引擎推动 Dynamo 的大部分方面“处于底层”。由于在 Dynamo 节点和交互中找到的几乎所有功能都与脚本语言有一对一关系，因此有独特的机会在基于节点的交互和脚本之间以流畅的方式进行移动。
 
-![](../../.gitbook/assets/codeblock.jpg)
+![](../images/8-1/1/codeblock.jpg)
 
 对于初学者，节点可以自动转换为文本语法以帮助学习 DesignScript，或者只是缩小图形较大部分的大小。这是使用名为“节点到代码”过程完成的，将在[“DesignScript 语法”部分](2-design-script-syntax.md)中详细介绍该过程。有经验的用户可以使用“代码块”创建现有功能的自定义映射，并使用许多标准编码范例来创建用户编写的关系。在初学者和高级用户之间，有大量可加快设计速度的快捷方式和代码段。虽然对于非程序员来说，术语“代码块”可能有点令人畏惧，但它既易于使用又功能强大。初学者可以高效地使用代码块（最少编码），高级用户可以定义脚本化定义以在 Dynamo 定义中的其他位置重新调用。
 
@@ -12,7 +12,7 @@
 
 使用代码块，用户可以灵活地确定如何指定输入。以下是通过坐标 _“(10, 5, 0)”_ 创建基点的几种不同方法：
 
-\![](<../../.gitbook/assets/codeblock brief overview.jpg>)
+\![](<../images/codeblock brief overview.jpg>)
 
 当您了解库中更多的可用函数时，您甚至会发现键入“Point.ByCoordinates”比在库中搜索和查找正确的节点更快。例如，当键入 _“Point.”_ 时，Dynamo 会显示可能应用于点的函数列表。这使脚本更加直观，有助于了解如何在 Dynamo 中应用函数。
 
@@ -20,7 +20,7 @@
 
 代码块位于 _“核心”>“输入”>“操作”>“代码块”_ 中。但更快的是，只需双击画布，代码块即会显示。此节点经常被使用，因此赋予其完全双击权限。
 
-\![](<../../.gitbook/assets/creating codeblock nodes.jpg>)
+\![](<../images/creating codeblock nodes.jpg>)
 
 ### 数字、字符串和公式
 
@@ -30,7 +30,7 @@
 
 数字和字符串节点是两个 Dynamo 节点示例，这些节点相较于代码块无疑是过时的。
 
-\![](<../../.gitbook/assets/old school vs code blocks nodes.jpg>)
+\![](<../images/old school vs code blocks nodes.jpg>)
 
 > 1. “过去”
 > 2. 代码块

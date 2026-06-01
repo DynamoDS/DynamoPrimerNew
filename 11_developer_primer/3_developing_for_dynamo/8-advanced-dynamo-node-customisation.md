@@ -49,7 +49,7 @@ LogWarningMessageEvents.OnLogWarningMessage("Your warning message here.");
 
 在此示例中，我们将基于之前的 **“Zero-Touch 案例研究 - 网格节点”** 中创建的自定义节点；一种名为 `RectangularGrid` 的方法，用于根据 `xCount` 和 `yCount` 输入生成矩形网格。如果输入无效，我们将演练测试，然后使用 `OnLogWarningMessage` 记录警告并停止处理。
 
-![OnLogWarningMessage 示例 1](../../.gitbook/assets/onlogwarningmessage-example-1.png)
+![OnLogWarningMessage 示例 1](../images/onlogwarningmessage-example-1.png)
 
 **使用 `OnLogWarningMessage` 进行输入验证**
 
@@ -137,7 +137,7 @@ namespace CustomNodes
 
 如果您的方法需要点列表，但用户传递空列表或 Null 列表，则可以使用 `OnLogWarningMessage` 向他们通知相关问题。
 
-![OnLogWarningMessage 示例 2](../../.gitbook/assets/onlogwarningmessage-example-2.png)
+![OnLogWarningMessage 示例 2](../images/onlogwarningmessage-example-2.png)
 
 ```
 public static Polygon CreatePolygonFromPoints(List<Point> points)
@@ -164,7 +164,7 @@ public static Polygon CreatePolygonFromPoints(List<Point> points)
 
 对于处理文件路径的节点，可能需要确保仅允许某些文件类型。如果检测到不受支持的文件类型，请记录警告。
 
-![OnLogWarningMessage 示例 3](../../.gitbook/assets/onlogwarningmessage-example-3.png)
+![OnLogWarningMessage 示例 3](../images/onlogwarningmessage-example-3.png)
 
 ```
 public static void ProcessFile(string filePath)
@@ -226,7 +226,7 @@ LogWarningMessageEvents.OnLogInfoMessage("Your info message here.");
 
 在此示例中，我们将基于之前的 **“Zero-Touch 案例研究 - 网格节点”** 中创建的自定义节点；一种名为 `RectangularGrid` 的方法，用于根据 `xCount` 和 `yCount` 输入生成矩形网格。如果输入无效，我们将演练测试，然后在节点完成运行后使用 `OnLogInfoMessage` 提供信息。
 
-![OnLogInfoMessage 示例 1](../../.gitbook/assets/onloginfomessage-example-1.png)
+![OnLogInfoMessage 示例 1](../images/onloginfomessage-example-1.png)
 
 **使用 `OnLogInfoMessage` 进行输入验证**
 
@@ -309,7 +309,7 @@ namespace CustomNodes
 
 如果要创建处理点列表的节点，则可能需要记录已成功处理的点数。这对于大型数据集非常有用。
 
-![OnLogInfoMessage 示例 2](../../.gitbook/assets/onloginfomessage-example-2.png)
+![OnLogInfoMessage 示例 2](../images/onloginfomessage-example-2.png)
 
 ```
 public static List<Point> ProcessPoints(List<Point> points)
@@ -339,7 +339,7 @@ public static List<Point> ProcessPoints(List<Point> points)
 
 在某些情况下，确认节点用于完成操作的输入参数非常有用。例如，如果节点将数据导出到某个文件，则记录文件名和路径可以让用户确信使用了正确的文件。
 
-![OnLogInfoMessage 示例 3](../../.gitbook/assets/onloginfomessage-example-3.png)
+![OnLogInfoMessage 示例 3](../images/onloginfomessage-example-3.png)
 
 ```
 public static void ExportData(string filePath, List<string> data)
@@ -365,7 +365,7 @@ public static void ExportData(string filePath, List<string> data)
 
 一直以来，Dynamo 中对于软件包作者为其节点提供文档的方式存在限制。自定义节点作者已被限制为仅允许在节点的工具提示中显示简短描述，或在交付包含大量注释的示例图形的软件包时。
 
-![节点工具提示说明](../../.gitbook/assets/customnodedocumentation-overloads.png)
+![节点工具提示说明](../images/customnodedocumentation-overloads.png)
 
 ### 新方式
 
@@ -399,11 +399,11 @@ Markdown 非常灵活，应该提供足够的功能来轻松创建良好的文�
 
 Dynamo 使用“文档浏览器”视图扩展来显示节点文档。要打开节点文档，请在节点上单击鼠标右键，然后选择“帮助”。这将打开文档浏览器并显示与该节点关联的 Markdown（如果已提供）。
 
-![文档浏览器](../../.gitbook/assets/customnodedocumentation-no-documentation-provided.png)
+![文档浏览器](../images/customnodedocumentation-no-documentation-provided.png)
 
 显示在“文档浏览器”中的文档由两部分组成。第一个是 `Node Info` 部分，这是根据从节点提取的信息自动生成的，例如输入/输出、节点类别、节点名称/名称空间和节点简短描述。第二部分显示自定义节点文档，这是用于记录节点的 Markdown 文件。
 
-![自定义节点文档](../../.gitbook/assets/customnodedocumentation-custom-node-documentation.png)
+![自定义节点文档](../images/customnodedocumentation-custom-node-documentation.png)
 
 #### 软件包文档文件夹
 
@@ -417,13 +417,13 @@ Dynamo 使用“文档浏览器”视图扩展来显示节点文档。要打开�
 
 在有节点过载（节点名称相同但输入不同）的特殊情况下，需要在 `()` 中的节点命名空间之后添加输入名称。例如，内置节点 `Geometry.Translate` 具有多个过载。在本例中，我们会按如下方式为以下节点命名 Markdown 文件：`Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction).md` `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction,distance).md`
 
-![过载节点](../../.gitbook/assets/customnodedocumentation-overloads.png)
+![过载节点](../images/customnodedocumentation-overloads.png)
 
 #### 在 Dynamo 中打开时修改 Markdown 文件
 
 为了便于修改文档文件，“文档浏览器”在打开的文档文件上实现了文件观察程序。这使您可以对 Markdown 文件进行更改，并将立即在 Dynamo 中看到更改。
 
-![热重载](../../.gitbook/assets/customnodedocumentation-hot-reload.gif)
+![热重载](../images/customnodedocumentation-hot-reload.gif)
 
 也可以在 Dynamo 处于打开状态时添加新文档文件。只需将新的 Markdown 文件添加到 `/doc` 文件夹，并使用与其所记录的节点对应的名称。
 
@@ -441,9 +441,9 @@ Dynamo 中 Zero Touch 节点的自定义图标使节点在视觉上与众不同�
 
 首先，为 Zero Touch 节点创建 Visual Studio 类库 (.NET Framework) 项目。如果您还没有项目，请参见**入门**部分，了解有关创建项目的分步说明。
 
-![创建新的 Visual Studio 项目](../../.gitbook/assets/vs-new-project-1.jpg)
+![创建新的 Visual Studio 项目](../images/vs-new-project-1.jpg)
 
-![在 Visual Studio 中配置新项目](../../.gitbook/assets/zerotouchicons-configure-new-project.jpg)
+![在 Visual Studio 中配置新项目](../images/zerotouchicons-configure-new-project.jpg)
 
 确保至少有一个正常运行的 Zero Touch 节点，因为图标只能添加到现有节点。有关有关指导，请参见 **Zero Touch 案例研究 - 网格节点**。
 
@@ -475,11 +475,11 @@ Dynamo 中 Zero Touch 节点的自定义图标使节点在视觉上与众不同�
 
 * 在**解决方案资源管理器**中右键单击您的项目。
 
-![添加新项目](../../.gitbook/assets/zerotouchicons-add-resources-file-1.jpg)
+![添加新项目](../images/zerotouchicons-add-resources-file-1.jpg)
 
 * 转到 **“添加”>“新建项目”**，然后选择 **“资源文件”**。
 
-![添加资源文件](../../.gitbook/assets/zerotouchicons-add-resources-file-2.jpg)
+![添加资源文件](../images/zerotouchicons-add-resources-file-2.jpg)
 
 * 将该文件命名为 `<ProjectName>Images.resx`。例如：`ZeroTouchNodeIconsImages.resx`。
 
@@ -489,7 +489,7 @@ Dynamo 中 Zero Touch 节点的自定义图标使节点在视觉上与众不同�
 3. **将“Build Action”设置为“None”**
    * 由于我们将自己构建此资源，因此我们不需要自动构建它。
 
-![清理自定义工具特性](../../.gitbook/assets/zerotouchicons-custom-tool-property-update.png)
+![清理自定义工具特性](../images/zerotouchicons-custom-tool-property-update.png)
 
 > _注意：未能清除“自定义工具”字段会导致 Visual Studio 将资源名称中的句点转换为下划线。请在构建之前验证您的资源名称是否使用句点分隔类名，而不是下划线。_
 
@@ -500,7 +500,7 @@ Dynamo 中 Zero Touch 节点的自定义图标使节点在视觉上与众不同�
    * 将资源类型设置为 **File**
    * 浏览到图像文件位置并包含 **Large** 和 **Small** 节点图标。
 
-![添加资源...](../../.gitbook/assets/zerotouchicons-open-resource-editor-update.png)
+![添加资源...](../images/zerotouchicons-open-resource-editor-update.png)
 
 > _注意：虽然不要求将图像组织到 **Resource** 文件夹，甚至 **Large** 和 **Small** 子文件夹中，但这是保持资源井井有条的好做法！_
 
@@ -510,26 +510,26 @@ Dynamo 中 Zero Touch 节点的自定义图标使节点在视觉上与众不同�
 
 1. 从 Visual Studio 的 **Extensions > Manage Extensions** 菜单安装 `.NET Upgrade Assistant` 扩展。
 
-![Manage Extensions](../../.gitbook/assets/zerotouchicons-manage-extensions-update.png)
+![Manage Extensions](../images/zerotouchicons-manage-extensions-update.png)
 
-![安装 .NET 升级助手](../../.gitbook/assets/zerotouchicons-net-upgrade-assistant.jpg)
+![安装 .NET 升级助手](../images/zerotouchicons-net-upgrade-assistant.jpg)
 
 2. 在**解决方案资源管理器**中的项目上单击鼠标右键，然后选择 **“升级”>“将项目转换为 SDK 样式”**。
 
-![升级项目](../../.gitbook/assets/zerotouchicons-upgrade-project.jpg)
+![升级项目](../images/zerotouchicons-upgrade-project.jpg)
 
-![转换为 SDK 样式](../../.gitbook/assets/zerotouchicons-convert-to-sdk-style.jpg)
+![转换为 SDK 样式](../images/zerotouchicons-convert-to-sdk-style.jpg)
 
 3. 等待转换完成。
 
-![升级完成](../../.gitbook/assets/zerotouchicons-upgrade-complete.jpg)
+![升级完成](../images/zerotouchicons-upgrade-complete.jpg)
 
 #### 步骤 6：添加构建后脚本以嵌入资源
 
 1. 卸载项目：
    * 在**解决方案资源管理器**中的项目上单击鼠标右键，然后选择**卸载项目**。
 
-![卸载项目](../../.gitbook/assets/zerotouchicons-unload-project.jpg)
+![卸载项目](../images/zerotouchicons-unload-project.jpg)
 
 2. 编辑 `.csproj` 文件：
    * 在 `</ItemGroup>` 和 `</Project>` 之间添加以下 `<Target>` 元素：
@@ -550,26 +550,26 @@ Dynamo 中 Zero Touch 节点的自定义图标使节点在视觉上与众不同�
 	</Target>
 ```
 
-![添加构建后代码](../../.gitbook/assets/zerotouchicons-after-build.jpg)
+![添加构建后代码](../images/zerotouchicons-after-build.jpg)
 
 1. 将所有 `ZeroTouchNodeIcons` 实例替换为您的项目名称。
 2. 重新加载项目：
    * 在已卸载的项目上单击鼠标右键，然后选择 **“重新加载项目”**。
 
-![重新加载项目](../../.gitbook/assets/zerotouchicons-reload-project.jpg)
+![重新加载项目](../images/zerotouchicons-reload-project.jpg)
 
 #### 步骤 7：构建 .dll 并将其加载到 Dynamo 中
 
 1. 构建项目：
    * 添加构建后脚本后，在 Visual Studio 中构建项目。
 
-![构建解决方案](../../.gitbook/assets/zerotouchicons-build-solution.jpg)
+![构建解决方案](../images/zerotouchicons-build-solution.jpg)
 
 2. 检查输出文件：
    * 确保 `.dll` 和 `.customization.dll` 位于 `bin` 文件夹中。
 3. 将 `.dll` 添加到 Dynamo：
    * 在 Dynamo 中，使用“导入库”按钮将 .dll 导入到 Dynamo。
 
-![“导入库”按钮](../../.gitbook/assets/zerotouchicons-icon-in-dynamo.jpg)
+![“导入库”按钮](../images/zerotouchicons-icon-in-dynamo.jpg)
 
 4. 现在，您的自定义节点应显示各自的图标。

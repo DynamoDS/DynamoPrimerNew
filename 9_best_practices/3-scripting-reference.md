@@ -6,7 +6,7 @@
 
 标准库位于 Dynamo 外部，并以编程语言 Python 和 C# (Zerotouch) 呈现。Dynamo 还有自己的库集，这些库直接对应于其节点层次结构，使用户能够使用代码构建可以由节点和线生成的任何内容。下面介绍了每个 Dynamo 库对哪些内容提供访问以及何时使用标准库。
 
-![](../.gitbook/assets/textual-programming.jpg)
+![](images/textual-programming.jpg)
 
 **标准库和 Dynamo 库**
 

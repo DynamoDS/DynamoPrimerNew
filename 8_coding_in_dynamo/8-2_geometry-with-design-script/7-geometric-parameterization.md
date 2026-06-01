@@ -16,7 +16,7 @@ p1 将具有参数 u = 0 v = 0，而 p9 将具有参数 u = 1 v = 1。
 
 曲线具有 _PointAtParameter_ 方法，该方法采用 0 到 1 之间的单个双精度参数，并返回该参数处的“点”对象。例如，此脚本会在参数 0、.1、.2、.3、.4、.5、.6、.7、.8、.9 和 1 处查找点：
 
-![](../../.gitbook/assets/GeometricParameterization_01.png)
+![](../images/GeometricParameterization_01.png)
 
 ```js
 pts = {};
@@ -41,7 +41,7 @@ lines = Line.ByStartPointEndPoint(pts_at_param,
 
 尽管提取曲线和曲面上的各个点非常有用，但脚本通常需要了解参数处的特定几何特征，例如曲线或曲面面对的方向。_CoordinateSystemAtParameter_ 方法不仅可以查找位置，还能查找位于曲线或曲面参数处的定向 CoordinateSystem。例如，以下脚本沿旋转曲面提取定向 CoordinateSystems，并使用 CoordinateSystems 的方向生成将法线粘滞到曲面的线：
 
-![](../../.gitbook/assets/GeometricParameterization_02.png)
+![](../images/GeometricParameterization_02.png)
 
 ```js
 pts = {};

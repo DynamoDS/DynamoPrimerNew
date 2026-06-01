@@ -4,7 +4,7 @@
 
 Dynamo 标准几何体库中最简单的几何对象是一个点。所有几何体均使用称为构造函数的特殊函数创建，每个函数都返回该特定几何体类型的新实例。在 Dynamo 中，构造函数以对象类型的名称（在本例中为“Point”）开始，然后是构造方法。要创建由 x、y 和 z 笛卡尔坐标指定的三维点，请使用 _ByCoordinates_ 构造函数：
 
-![](../../.gitbook/assets/GeometryBasics_01.png)
+![](../images/GeometryBasics_01.png)
 
 ```js
 // create a point with the following x, y, and z
@@ -20,7 +20,7 @@ Dynamo 中的构造函数通常使用前缀为“_By_”指定，调用这些函
 
 大多数对象都有许多不同的构造函数，我们可以使用 _BySphericalCoordinates_ 构造函数创建位于球体上的点，由球体的半径、第一个旋转角度和第二个旋转角度（以度为单位指定）指定：
 
-![](../../.gitbook/assets/GeometryBasics_02.png)
+![](../images/GeometryBasics_02.png)
 
 ```js
 // create a point on a sphere with the following radius,
@@ -38,7 +38,7 @@ p = Point.BySphericalCoordinates(cs, radius, theta,
 
 点可用于构造更大尺寸的几何图形（例如直线）。我们可以使用 _ByStartPointEndPoint_ 构造函数在两点之间创建“直线”对象：
 
-![](../../.gitbook/assets/GeometryBasics_03.png)
+![](../images/GeometryBasics_03.png)
 
 ```js
 // create two points:
@@ -53,7 +53,7 @@ l = Line.ByStartPointEndPoint(p1, p2);
 
 同样，直线可用于创建更多维的曲面几何体，例如使用 _Loft_ 构造函数，该构造函数可获取一系列直线或曲线，并在它们之间内插曲面。
 
-![](../../.gitbook/assets/GeometryBasics_04.png)
+![](../images/GeometryBasics_04.png)
 
 ```js
 // create points:
@@ -79,7 +79,7 @@ surf = Surface.ByLoft([l1, l2, l3]);
 
 曲面也可用于创建更多维的实体几何体，例如通过按指定距离加厚曲面。许多对象都附加了函数（称为方法），程序员可以对该特定对象执行命令。所有几何图形通用的方法包括 _Translate_ 和 _Rotate_，分别按指定的量平移（移动）和旋转几何图形。曲面具有 _Thicken_ 方法，该方法采用单个输入，即指定曲面的新厚度的数字。
 
-![](../../.gitbook/assets/GeometryBasics_05.png)
+![](../images/GeometryBasics_05.png)
 
 ```js
 p1 = Point.ByCoordinates(3, 10, 2);
@@ -101,7 +101,7 @@ solid = surf.Thicken(4.75, true);
 
 _交点_ 命令可以从较高维度的对象提取较低维度的几何图形。提取的较低纬度几何图形可以在几何图形创建、提取和重建的循环过程中形成较高维度几何图形的基础。在本示例中，我们使用生成的实体来创建曲面，并使用曲面来创建曲线。
 
-![](../../.gitbook/assets/GeometryBasics_06.png)
+![](../images/GeometryBasics_06.png)
 
 ```js
 p1 = Point.ByCoordinates(3, 10, 2);

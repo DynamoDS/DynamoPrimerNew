@@ -39,7 +39,7 @@ C:\Users\User\AppData\Roaming\Dynamo\Dynamo Core\2.1\packages\Sample View Extens
 
 此时，您应该位于常规发布软件包窗口，在该窗口中将输入有关软件包/扩展的所有必填字段。还有一个**非常重要**的附加步骤，要求您确保没有任何程序集文件标记为节点库。为此，请在已输入的文件（在上面创建的软件包文件夹）上单击鼠标右键。一个上下文菜单即会显示，让您可以选中（或取消选中）此选项。应取消选中所有扩展程序集。
 
-![发布软件包](../../.gitbook/assets/ViewExtension_Search.png)
+![发布软件包](../images/ViewExtension_Search.png)
 
 在公开发布之前，应始终在本地发布，以确保一切正常。在确认一切正常后，即可通过选择“发布”来联机发布。
 
@@ -47,4 +47,4 @@ C:\Users\User\AppData\Roaming\Dynamo\Dynamo Core\2.1\packages\Sample View Extens
 
 要确认软件包是否已成功上传，您应该能够根据在发布步骤中指定的命名和关键字搜索到相应软件包。最后，请务必注意，相同的扩展需要重新启动 Dynamo，然后才能正常运行。通常，这些扩展需要在 Dynamo 启动时指定的参数。
 
-![搜索软件包](../../.gitbook/assets/ViewExtension_Search.jpg)
+![搜索软件包](../images/ViewExtension_Search.jpg)

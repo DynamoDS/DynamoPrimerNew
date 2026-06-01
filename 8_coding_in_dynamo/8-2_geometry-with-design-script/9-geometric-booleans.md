@@ -6,7 +6,7 @@ _Intersect_、_Trim_ 和 _SelectTrim_ 主要用于较低维度的几何图形，
 
 _Union_ 方法可获取两个实体对象，并在两个对象覆盖的空间之外创建单个实体对象。对象之间的重叠空间会合并为最终形式。本例将球体和立方体合并为单个实体球体-立方体形状：
 
-![](../../.gitbook/assets/GeometricBooleans_01.png)
+![](../images/GeometricBooleans_01.png)
 
 ```js
 s1 = Sphere.ByCenterPointRadius(
@@ -23,7 +23,7 @@ combined = s1.Union(s2);
 
 _Difference_ 方法类似 _Trim_，从基础实体中减去输入工具实体的内容。在本例中，我们从球体中穿凿出一个小凹穴：
 
-![](../../.gitbook/assets/GeometricBooleans_02.png)
+![](../images/GeometricBooleans_02.png)
 
 ```js
 s = Sphere.ByCenterPointRadius(
@@ -40,7 +40,7 @@ result = s.Difference(tool);
 
 _Intersect_ 方法会返回两个实体输入之间的重叠实体。在以下示例中，_Difference_ 已更改为 _Intersect_，并且生成的实体是最初穿凿的缺失空心：
 
-![](../../.gitbook/assets/GeometricBooleans_03.png)
+![](../images/GeometricBooleans_03.png)
 
 ```js
 s = Sphere.ByCenterPointRadius(

@@ -2,7 +2,7 @@
 
 在了解如何创建 Zero-Touch 项目后，我们可以通过浏览 Dynamo GitHub 中的 ZeroTouchEssentials 示例，来更深入地了解创建节点的具体细节。
 
-![Zero-Touch 节点](../../.gitbook/assets/ootbzerotouch.png)
+![Zero-Touch 节点](../images/ootbzerotouch.png)
 
 > Dynamo 的许多标准节点本质上都是 Zero-Touch 节点，就像上面的大多数 Math、Color 和 DateTime 节点一样。
 
@@ -10,7 +10,7 @@
 
 在 Visual Studio 中，打开 `ZeroTouchEssentials.sln` 解决方案文件并构建解决方案。
 
-![Visual Studio 中的 ZeroTouchEssentials](../../.gitbook/assets/vs-build-zte.jpg)
+![Visual Studio 中的 ZeroTouchEssentials](../images/vs-build-zte.jpg)
 
 > `ZeroTouchEssentials.cs` 文件包含我们将要输入到 Dynamo 中的所有方法。
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![默认值](../../.gitbook/assets/defaultval.jpg)
+![默认值](../images/defaultval.jpg)
 
 > 1. 将光标悬停在节点输入端口上方时，即会显示默认值
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 返回多个输出的节点。
 
-![多个输出](../../.gitbook/assets/multipleoutputs.png)
+![多个输出](../images/multipleoutputs.png)
 
 > 1. 请注意，现在有两个输出端口，它们是根据我们为字典的键输入的字符串命名的。
 
@@ -90,7 +90,7 @@ namespace ZeroTouchEssentials
   * 例如：`/// <summary>...</summary>`
 * 在 Visual Studio 中，通过选择 `Project > [Project] Properties > Build > Output` 并选中 `Documentation file` 来启用 XML 文档
 
-![生成 XML 文件](../../.gitbook/assets/vs-xml.jpg)
+![生成 XML 文件](../images/vs-xml.jpg)
 
 > 1. Visual Studio 将在指定位置处生成 XML 文件
 
@@ -141,7 +141,7 @@ namespace ZeroTouchEssentials
 * 在节点工具提示中
 * 在文档浏览器中
 
-![节点描述](../../.gitbook/assets/node-description.png)
+![节点描述](../images/node-description.png)
 
 请遵循以下准则以确保一致性，并帮助在编写或更新节点描述时节省时间。
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 在已输入 ZeroTouchEssentials dll 后，库中会有一个 ZeroTouchEssentials 节点。可以使用 `ByTwoDoubles` 节点创建此对象。
 
-![ByTwoDoubles 节点](../../.gitbook/assets/dyn-constructor.jpg)
+![ByTwoDoubles 节点](../images/dyn-constructor.jpg)
 
 ### 使用 Dynamo 几何图形类型 <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 获取曲线长度并使其加倍的节点。
 
-![曲线输入](../../.gitbook/assets/doublelength.png)
+![曲线输入](../images/doublelength.png)
 
 > 1. 此节点接受曲线几何图形类型作为输入。
 
@@ -285,7 +285,7 @@ namespace ZeroTouchEssentials
 * 在移植元素内，为每个名称更改创建 `<priorNameHint>...</priorNameHint>` 元素
 * 对于每个名称更改，请提供 `<oldName>...</oldName>` 和 `<newName>...</newName>` 元素
 
-![移植文件](../../.gitbook/assets/vs-migrations-file.jpg)
+![移植文件](../images/vs-migrations-file.jpg)
 
 > 1. 单击鼠标右键，然后选择 `Add > New Item`
 > 2. 选择 `XML File`

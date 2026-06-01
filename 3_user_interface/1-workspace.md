@@ -4,7 +4,7 @@
 
 Dynamo 工作空间由四个主要元素组成。
 
-\![](<../.gitbook/assets/workspace - ui.png>)
+![](<images/workspace-ui.png>)
 
 > 1. 所有活动选项卡。
 > 2. 预览模式
@@ -15,11 +15,11 @@ Dynamo 工作空间由四个主要元素组成。
 
 打开新文件时，将默认打开新的主工作空间。
 
-\![](<../.gitbook/assets/workspace - home tab.png>)
+![](<images/workspace-home-tab.png>)
 
 可以创建一个自定义节点，然后在自定义节点工作空间中将其打开。
 
-\![](<../.gitbook/assets/workspace - custom node tab.png>)
+![](<images/workspace-custom-node-tab.png>)
 
 {% hint style="info" %}每个 Dynamo 窗口中仅允许有一个主工作空间，但可能在选项卡中打开多个自定义节点工作空间。{% endhint %}
 
@@ -29,18 +29,18 @@ Dynamo 工作空间由四个主要元素组成。
 
 a.使用右上角图标
 
-* \![](<../.gitbook/assets/2.3-04 Graph preview icon.jpg>)图形预览
-* \![](<../.gitbook/assets/2.3-05 3D preview icon.jpg>)三维预览
+* ![](<images/2.3-04-graph-preview-icon.jpg>)图形预览
+* ![](<images/2.3-05-3d-preview-icon.jpg>)三维预览
 
 b.在工作空间中单击鼠标右键
 
 * 从三维预览切换到图形预览
 
-\![](<../.gitbook/assets/workspace - right click switch to graph view.jpg>)
+![](<images/workspace-right-click-switch-to-graph-view.jpg>)
 
 * 从图形预览切换到三维预览
 
-\![](<../.gitbook/assets/workspace - right click switch to geometry.jpg>)
+![](<images/workspace-right-click-switch-to-geometry.jpg>)
 
 c.使用键盘快捷键 (Ctrl+B)
 
@@ -51,10 +51,10 @@ c.使用键盘快捷键 (Ctrl+B)
 a.在 **“图形预览”** 模式下
 
 * 使用图标：
-  * \![](<../.gitbook/assets/2.3-08 graph preview zoom to fitpsd.jpg>)缩放以适配
-  * \![](<../.gitbook/assets/2.3-09 graph preview zoom in.jpg>)放大
-  * \![](<../.gitbook/assets/2.3-10 graph preview zoom out.jpg>)缩小
-  * \![](<../.gitbook/assets/2.3-11 graph preview pan.jpg>)Pan
+  * ![](<images/2.3-08-graph-preview-zoom-to-fitpsd.jpg>)缩放匹配
+  * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)放大
+  * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)缩小
+  * ![](<images/2.3-11-graph-preview-pan.jpg>)平移
 * 使用鼠标：
   * 单击鼠标左键 - 选择
   * 单击鼠标左键并拖动 - 选择框用于选择多个节点
@@ -62,16 +62,16 @@ a.在 **“图形预览”** 模式下
   * 单击鼠标中键并拖动 - 平移
   * 在画布上的任意位置单击鼠标右键 - 打开画布内搜索
 
-\![](<../.gitbook/assets/workspace - in canvas search.gif>)
+![](<images/workspace-in-canvas-search.gif>)
 
 b.在 **“三维预览”** 模式下
 
 * 使用图标：
-  * \![](<../.gitbook/assets/2.3-08 graph preview zoom to fitpsd.jpg>)缩放以适配
-  * \![](<../.gitbook/assets/2.3-09 graph preview zoom in.jpg>)放大
-  * \![](<../.gitbook/assets/2.3-10 graph preview zoom out.jpg>)缩小
-  * \![](<../.gitbook/assets/2.3-11 graph preview pan.jpg>)Pan
-  * ![](images/3-1/3-1-133Dprevieworbit.jpg)动态观察
+  * ![](<images/2.3-08-graph-preview-zoom-to-fitpsd.jpg>)缩放匹配
+  * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)放大
+  * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)缩小
+  * ![](<images/2.3-11-graph-preview-pan.jpg>)平移
+  * \![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)动态观察
 * 使用鼠标：
   * 鼠标中键向上/向下滚动 - 放大/缩小
   * 单击鼠标中键并拖动 - 平移
@@ -83,4 +83,4 @@ b.在 **“三维预览”** 模式下
 
 要选择多个节点，请单击并拖动以创建选择框。
 
-\![](<../.gitbook/assets/workspace - selection box.gif>)
+![](<images/workspace-selection-box.gif>)

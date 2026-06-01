@@ -16,27 +16,27 @@
 
 让我们继续处理上一节中创建的自定义节点。打开“PointsToSurface”自定义节点后，我们会在 Dynamo 自定义节点编辑器中看到该图形。还可以在 Dynamo 图形编辑器中双击自定义节点来打开它。
 
-\![](<../../.gitbook/assets/publish custom node exercise - 01.jpg>)
+\![](<../images/publish custom node exercise - 01.jpg>)
 
 要在本地发布自定义节点，只需在画布上单击鼠标右键，然后选择 _“发布此自定义节点...”_ 。
 
-\![](<../../.gitbook/assets/publish custom node exercise - 02.jpg>)
+\![](<../images/publish custom node exercise - 02.jpg>)
 
 填写与上图类似的相关信息，然后选择 _“本地发布”_ 。请注意，“组”字段定义可从 Dynamo 菜单访问的主图元。
 
-<figure><img src="../../.gitbook/assets/publish_a_package.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/publish_a_package.png" alt=""><figcaption></figcaption></figure>
 
 选择一个文件夹以容纳计划在本地发布的所有自定义节点。Dynamo 每次加载时都会检查该文件夹，因此请确保该文件夹处于永久位置。导航到此文件夹，然后选择 _“选择文件夹”_ 。现在，Dynamo 节点在本地发布，每次加载程序时都会保留在 Dynamo 库中！
 
-\![](<../../.gitbook/assets/publish custom node exercise - 04 (1).jpg>)
+\![](<../images/publish custom node exercise - 04.jpg>)
 
 要检查自定义节点文件夹位置，请转到 _“Dynamo”>“首选项”>“软件包设置”>“节点和软件包路径”_ 。
 
-<figure><img src="../../.gitbook/assets/settings.png" alt="" width="520"><figcaption></figcaption></figure>
+<figure><img src="../images/settings.png" alt="" width="520"><figcaption></figcaption></figure>
 
 在此窗口中，我们会看到路径列表。
 
-<figure><img src="../../.gitbook/assets/package-locations.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/package-locations.png" alt=""><figcaption></figcaption></figure>
 
 > 1. _“Documents\\DynamoCustomNodes...”_ 是指我们已本地发布的自定义节点的位置。
 > 2. _“AppData\\Roaming\\Dynamo...”_ 是指联机安装的 Dynamo 软件包的默认位置。
@@ -44,12 +44,12 @@
 
 我们切换了路径名称的顺序，以便让 Dynamo 的默认路径作为软件包安装位置。
 
-<figure><img src="../../.gitbook/assets/updated-package-locations.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/updated-package-locations.png" alt=""><figcaption></figcaption></figure>
 
 导航到此本地文件夹，我们可以在 _“.dyf”_ 文件夹中找到原始自定义节点，该文件夹是 Dynamo 自定义节点文件的扩展名。我们可以编辑此文件夹中的文件，并且节点将在 UI 中更新。我们还可以向 _“DynamoCustomNode”_ 主文件夹添加更多节点，Dynamo 会在重新启动时将它们添加到您的库中！
 
-\![](<../../.gitbook/assets/publish custom node exercise - 08.jpg>)
+\![](<../images/publish custom node exercise - 08.jpg>)
 
 现在，每次使用 Dynamo 库的“DynamoPrimer”组中的“PointsToSurface”时，Dynamo 都会载入。
 
-\![](<../../.gitbook/assets/publish custom node exercise - 09.jpg>)
+\![](<../images/publish custom node exercise - 09.jpg>)

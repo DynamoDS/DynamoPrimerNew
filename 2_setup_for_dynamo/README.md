@@ -4,13 +4,7 @@
 
 Dynamo 是一个活动的开源开发项目。查看[支持 Dynamo 的软件列表](http://dynamobim.org/download/)。
 
-![](<images/setup for dynamo - dynamo revit.png>) 
-![](<images/setup for dynamo - dynamo civil 3D.png>) 
-![](<images/setup for dynamo - dynamo alias design.png>) 
-![](<images/setup for dynamo - dynamo formit.png>) 
-![](<images/setup for dynamo - dynamo advance steel.png>) 
-![](<images/setup for dynamo - dynamo robot structural analysis.png>) 
-![](<images/setup for dynamo - dynamo forma.png>)
+\![](<images/setup for dynamo - dynamo revit.png>) \![](<images/setup for dynamo - dynamo civil 3D.png>) \![](<images/setup for dynamo - dynamo alias design.png>) \![](<images/setup for dynamo - dynamo formit.png>) \![](<images/setup for dynamo - dynamo advance steel.png>) \![](<images/setup for dynamo - dynamo robot structural analysis.png>) \![](<images/setup for dynamo - dynamo forma.png>)
 
 ### 启动 Dynamo 作为扩展
 
@@ -37,13 +31,11 @@ Dynamo 应用程序可从 [Dynamo 网站](http://dynamobim.com)获得。正式�
 
 如果要查找以前或“前沿”开发版本，则可以在同一页面的下半部分找到所有版本。
 
-![](<images/03-02 Dynamo Sandbox All builds.png>)
+\![](<images/03-02 Dynamo Sandbox All builds.png>)
 
-{% hint style="info" %}
-“前沿”开发可能包括一些尚未经过完全测试的新功能和实验性功能，因此可能不稳定。使用这一版本时，您可能会遇到错误或问题，请通过向我们的团队报告问题来帮助我们改进应用程序。
+{% hint style="info" %}“前沿”开发可能包括一些尚未经过完全测试的新功能和实验性功能，因此可能不稳定。使用这一版本时，您可能会遇到错误或问题，请通过向我们的团队报告问题来帮助我们改进应用程序。
 
-建议初学者下载稳定的正式版。
-{% endhint %}
+建议初学者下载稳定的正式版。{% endhint %}
 
 #### 解压缩
 
@@ -53,24 +45,22 @@ Dynamo 应用程序可从 [Dynamo 网站](http://dynamobim.com)获得。正式�
 
 在压缩文件上单击鼠标右键，然后选择 **“全部解压缩”**...
 
-![](<images/03-03 Extract zip file.png>)
+\![](<images/03-03 Extract zip file.png>)
 
 选择一个目标位置来解压缩所有文件。
 
-![](<images/03-04 Extract destination folder.png>)
+\![](<images/03-04 Extract destination folder.png>)
 
 #### 启动
 
 在目标文件夹中，双击 **“DynamoSandbox.exe”** 可启动它
 
-![](<images/03-05 Dynamo exe.jpg>)
+\![](<images/03-05 Dynamo exe.jpg>)
 
 您将看到 DynamoSandbox 启动屏幕，如下所示。
 
-![](<images/03-06 Dynamo startup screen.png>)
+\![](<images/03-06 Dynamo startup screen.png>)
 
 恭喜您，现在已完成设置 DynamoSandbox，可立即使用！
 
-{% hint style="info" %}
-**“几何图形”** 是 Dynamo Sandbox 中的一项附加功能，仅适用于拥有以下 Autodesk 软件的当前固定期限的许可或许可的用户：Revit、Robot Structural Analysis、FormIt 和 Civil 3D。**“几何图形”** 允许用户从 Dynamo Sandbox 输入、创建、编辑和输出几何图形。 
-{% endhint %}
+{% hint style="info" %} **“几何图形”** 是 Dynamo Sandbox 中的一项附加功能，仅适用于拥有以下 Autodesk 软件的当前固定期限的许可或许可的用户：Revit、Robot Structural Analysis、FormIt 和 Civil 3D。**“几何图形”** 允许用户从 Dynamo Sandbox 输入、创建、编辑和输出几何图形。 {% endhint %}

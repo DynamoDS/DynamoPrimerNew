@@ -12,18 +12,18 @@
 
 | 图标                                     | 名称（语法）             | 输入            | 输出 |
 | ---------------------------------------- | ------------------------- | ----------------- | ------- |
-| ![](../../.gitbook/assets/If.jpg)        | 如果 (**If**)               | test, true, false | 结果  |
-| ![](../../.gitbook/assets/CodeBlock.jpg) | 代码块 (**(x?y:z);**) | x? y, z           | 结果  |
+| ![](../images/If.jpg)        | 如果 (**If**)               | test, true, false | 结果  |
+| ![](../images/CodeBlock.jpg) | 代码块 (**(x?y:z);**) | x? y, z           | 结果  |
 
 接下来，我们来看一个简短示例，分别介绍这三个节点在使用“If”条件语句时的行为。
 
 在本图中，_“boolean”_设置为_“true”_，这意味着结果是字符串读取：_“this is the result if true”_。在此处，创建 _“If”_ 语句的三个节点的工作方式相同。
 
-\![](<../../.gitbook/assets/logic - conditional statements 01 false.jpg>)
+\![](<../images/logic - conditional statements 01 false.jpg>)
 
 同样，该节点的工作方式也相同。如果 _“boolean”_ 更改为 _“false”_，则结果是 _“Pi”_ 数字，如原始 _“If”_ 语句中所定义。
 
-\![](<../../.gitbook/assets/logic - conditional statements 02 true.jpg>)
+\![](<../images/logic - conditional statements 02 true.jpg>)
 
 ## 练习：逻辑和几何图形
 
@@ -37,7 +37,7 @@
 
 1. 我们使用逻辑将一列数字分隔为一列偶数和一列奇数。
 
-\![](<../../.gitbook/assets/logic - exercise part I-01.jpg>)
+\![](<../images/logic - exercise part I-01.jpg>)
 
 > a.**Number Range** \- 向画布添加一个数字范围。
 >
@@ -61,7 +61,7 @@
 
 2\.我们将从上一个具有相同节点的练习跳转。唯一的例外（除了更改格式外）:
 
-\![](<../../.gitbook/assets/logic - exercise part II-01.jpg>)
+\![](<../images/logic - exercise part II-01.jpg>)
 
 > a.使用具有这些输入值的 **“Sequence”** 节点。
 >
@@ -69,7 +69,7 @@
 
 3\.首先，我们创建一组单独的图形，如上图所示。该组节点表示参数方程，用于定义曲线。几点注意事项：
 
-\![](<../../.gitbook/assets/logic - exercise part II-02.jpg>)
+\![](<../images/logic - exercise part II-02.jpg>)
 
 > a.第一个 **“数字滑块”** 表示波浪的频率，其最小值应为 1，最大值应为 4，步长应为 0.01。
 >
@@ -79,23 +79,23 @@
 
 此处的输入方法：使用数字节点可获得更多静态特性，使用数字滑块可获得更多灵活特性。我们希望保留在此步骤开头定义的原始数字范围。但是，我们在此处创建的正弦曲线应该具有一定的灵活性。我们可以移动这些滑块，来观察曲线更新的频率和振幅。
 
-\![](<../../.gitbook/assets/logic - exercise part II-03.gif>)
+\![](<../images/logic - exercise part II-03.gif>)
 
 4\.我们在定义中跳过一点，从而看一下最终结果，以便我们可以参照所得到的内容。前两个步骤是分别进行的，我们现在要将这两个步骤连接起来。我们将使用基础正弦曲线来驱动拉链组件的位置，我们将使用 true/false 逻辑以在小框和大框之间交替。
 
-\![](<../../.gitbook/assets/logic - exercise part II-04.jpg>)
+\![](<../images/logic - exercise part II-04.jpg>)
 
 > a.**Math.RemapRange** \- 使用在步骤 02 中创建的数字序列，我们通过重新映射范围来创建一系列新数字。原始数字来自步骤 01，范围为 0-100。这些数字介于 0 到 1，分别通过 _“newMin”_ 和 _“newMax”_ 输入。
 
 5\.创建 **“Curve.PointAtParameter”** 节点，然后将步骤 04 中的 **“Math.RemapRange”** 输出连接为其 _“param”_ 输入。
 
-\![](<../../.gitbook/assets/logic - exercise part II-05.jpg>)
+\![](<../images/logic - exercise part II-05.jpg>)
 
 此步骤将沿曲线创建点。我们将数字重新映射为 0 到 1，因为 _“param”_ 的输入将查找此范围中的值。值为 _“0”_ 表示开始点，值为 _“1”_ 表示结束点。介于两者之间的所有数字均在 _“[0,1]”_ 范围内求值。
 
 6\.将 **“Curve.PointAtParameter”** 的输出连接到 **“List.FilterByBoolMask”**，以分隔奇数和偶数索引列表。
 
-\![](<../../.gitbook/assets/logic - exercise part II-06.jpg>)
+\![](<../images/logic - exercise part II-06.jpg>)
 
 > a.**List.FilterByBoolMask** \- 将上一步的 **“Curve.PointAtParameter”** 连接到 _“list”_ 输入。
 >
@@ -105,7 +105,7 @@
 
 **Cuboid.ByLengths** \- 重新创建在上图中所见到的连接，以沿正弦曲线获得拉链。立方体在此处就是一个框，我们将基于框中心的曲线点定义其大小。现在，偶数/奇数分割的逻辑在模型中应该一清二楚。
 
-\![](<../../.gitbook/assets/logic - exercise part II-07.jpg>)
+\![](<../images/logic - exercise part II-07.jpg>)
 
 > a.偶数索引处的立方体列表。
 >

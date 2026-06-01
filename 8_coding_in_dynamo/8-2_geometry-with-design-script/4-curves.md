@@ -6,7 +6,7 @@
 
 要创建插值曲线，只需将点集合传递到 _NurbsCurve.ByPoints_ 方法。
 
-![](../../.gitbook/assets/Curves_01.png)
+![](../images/Curves_01.png)
 
 ```js
 num_pts = 6;
@@ -20,7 +20,7 @@ int_curve = NurbsCurve.ByPoints(pts);
 
 生成的曲线与每个输入点相交，分别在集合中的第一个点和最后一个点开始和结束。可以使用可选的周期性参数创建闭合的周期性曲线。Dynamo 将自动填充缺失的段，因此不需要重复的端点（与起点相同）。
 
-![](../../.gitbook/assets/Curves_02.png)
+![](../images/Curves_02.png)
 
 ```js
 pts = Point.ByCoordinates(Math.Cos(0..350..#10),
@@ -38,7 +38,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 NurbsCurves 的生成方式几乎相同，输入点表示直线段的端点，第二个参数用于指定曲线经历的平滑量和类型（称为阶数）。* 阶数为 1 的曲线没有平滑；它是多段线。
 
-![](../../.gitbook/assets/Curves_03.png)
+![](../images/Curves_03.png)
 
 ```js
 num_pts = 6;
@@ -52,7 +52,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 
 对阶数为 2 的曲线进行平滑处理，使曲线相交并与多段线线段的中点相切：
 
-![](../../.gitbook/assets/Curves_04.png)
+![](../images/Curves_04.png)
 
 ```js
 num_pts = 6;
@@ -66,7 +66,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 
 Dynamo 支持最多 20 阶的 NURBS（非均匀有理 B 样条曲线）曲线，以下脚本说明了增加平滑级别对曲线形状的影响：
 
-![](../../.gitbook/assets/Curves_05.png)
+![](../images/Curves_05.png)
 
 ```js
 num_pts = 6;
@@ -87,7 +87,7 @@ ctrl_crvs = create_curve(pts, 1..11);
 
 通过控制点构建曲线的另一个好处是能够保持各个曲线段之间的相切。通过提取最后两个控制点之间的方向，并继续使用以下曲线的前两个控制点来完成此操作。下例创建两条单独的 NURBS 曲线，它们仍然像一条曲线一样平滑：
 
-![](../../.gitbook/assets/Curves_06.png)
+![](../images/Curves_06.png)
 
 ```js
 pts_1 = {};

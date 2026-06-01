@@ -377,7 +377,7 @@ _跟踪_是 DynamoCore 中的一种机制，支持将数据序列化到 .dyn（D
 
 ***
 
-![创建墙](../../.gitbook/assets/creates_walls.png)
+![创建墙](../images/creates_walls.png)
 
 #### 图元绑定与跟踪的比较
 
@@ -466,15 +466,15 @@ TraceableId 类是为我们希望保存到跟踪中的每个 `TraceExampleItem` 
 
 创建单个 `TraceExampleItem` 的两次连续图形执行的流程如下所示：
 
-![首次调用](../../.gitbook/assets/Trace-first-call.png)
+![首次调用](../images/Trace-first-call.png)
 
-![第二次调用](../../.gitbook/assets/Trace-second-call.png)
+![第二次调用](../images/Trace-second-call.png)
 
 下一个示例使用一个更真实的 DynamoRevit 节点用例演示了相同的概念。
 
 #### 跟踪示意图
 
-![追踪步长](../../.gitbook/assets/trace_diagram.png) ![追踪流程](../../.gitbook/assets/trace_alt_diagram.png)
+![追踪步长](../images/trace_diagram.png) ![追踪流程](../images/trace_alt_diagram.png)
 
 #### 注意：
 
@@ -560,7 +560,7 @@ TraceableId 类是为我们希望保存到跟踪中的每个 `TraceExampleItem` 
 
 * 保存在 Dynamo 3.0 之前版本中的跟踪对象是使用 SOAP 存储的，因此它们在较新版本上不受支持。以前保存的图元绑定数据将被忽略，并且以下消息将显示在 Dynamo 3.0 及更高版本中。下次运行并保存工作空间时，将保存图元绑定数据。
 
-![图元绑定兼容性](../../.gitbook/assets/element_binding_compatibility_message.jpg)
+![图元绑定兼容性](../images/element_binding_compatibility_message.jpg)
 
 #### ElementBinding 是否应该默认处于启用状态？
 
@@ -574,7 +574,7 @@ TraceableId 类是为我们希望保存到跟踪中的每个 `TraceExampleItem` 
 
 DynamoRevit 中有多个 `Selection` 节点。我们可以将它们分为至少两组：
 
-![Revit 选择节点](../../.gitbook/assets/revitSelectionNodes.png)
+![Revit 选择节点](../images/revitSelectionNodes.png)
 
 1.  用户 UI 拾取：
 
@@ -602,7 +602,7 @@ DynamoRevit 中有多个 `Selection` 节点。我们可以将它们分为至少�
 
 D4C 中的工作流与上述针对 Revit 的描述非常相似，以下是 D4C 中两组典型的选择节点：
 
-![Civil 3D 选择节点](../../.gitbook/assets/civilSelectionNodes.png)
+![Civil 3D 选择节点](../images/civilSelectionNodes.png)
 
 ### 问题：
 
@@ -613,9 +613,9 @@ D4C 中的工作流与上述针对 Revit 的描述非常相似，以下是 D4C �
 
 ### 数据流程图
 
-![选择流程](../../.gitbook/assets/selectModelElement.png)
+![选择流程](../images/selectModelElement.png)
 
-![选择流程 2](../../.gitbook/assets/selectElementFace.png)
+![选择流程 2](../images/selectElementFace.png)
 
 ### 技术实现（参考上图）：
 
@@ -624,7 +624,7 @@ D4C 中的工作流与上述针对 Revit 的描述非常相似，以下是 D4C �
 * `BuildOutputAST` 方法的实现 - 此方法需要返回一个 AST，该 AST 将在未来的某个时间点执行该节点。对于 Selection 节点，它应从图元 ID 返回图元或几何图形。[https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * 实现 `BuildOutputAST` 是实现 `NodeModel`/UI 节点时最困难的部分之一。最好将尽可能多的逻辑放入 C# 函数，并且直接将 AST 函数调用节点嵌入到 AST 中。请注意，这里 `node` 是抽象语法树中的 AST 节点，而不是 Dynamo 图中的节点。
 
-![选择流程 2](../../.gitbook/assets/selectionAST.png)
+![选择流程 2](../images/selectionAST.png)
 
 * 序列化 -
   *   由于这些是显式 `NodeModel` 派生类型（而不是 ZeroTouch），因此它们还需要实现将在从 .dyn 文件反序列化节点期间使用的 [JsonConstructor]。

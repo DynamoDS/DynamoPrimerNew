@@ -22,7 +22,7 @@ Dynamo 2.0 引入了将词典数据类型与列表数据类型进行分隔的概
 * 库中引入了 _新节点_，以帮助您创建、修改和查询词典。
 * 加载脚本时，v1.x 代码块中创建的列表会自动迁移为使用方括号 `[ ]`（而不是大括号 `{ }`）的新列表语法 \\
 
-\![](<../../.gitbook/assets/what is a dictionary - what are the changes (1) (4).jpg>)
+\![](<../images/what is a dictionary - what are the changes.jpg>)
 
 ***
 
@@ -32,7 +32,7 @@ Dynamo 2.0 引入了将词典数据类型与列表数据类型进行分隔的概
 
 在下图中，我们演示了词典的潜在使用案例。通常，词典用于关联两个可能没有直接相关性的数据。在本例中，我们将单词的西班牙语版本连接到英文版本，供以后查找。
 
-\![](<../../.gitbook/assets/what is a dictionary - what would you use these for.jpg>)
+\![](<../images/what is a dictionary - what would you use these for.jpg>)
 
 > 1. 构建词典来关联两条数据。
 > 2. 获取给定键的值。

@@ -24,7 +24,7 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![移动项目文件](../../.gitbook/assets/fe-proj-directory.jpg)
+![移动项目文件](../images/fe-proj-directory.jpg)
 
 > 1. 将项目文件移动到新的 `src` 文件夹
 
@@ -47,7 +47,7 @@ CustomNodeModel
   </Target>
 ```
 
-![放置 AfterBuild 目标](../../.gitbook/assets/atom-afterbuild.jpg)
+![放置 AfterBuild 目标](../images/atom-afterbuild.jpg)
 
 > 我们需要确保目标已添加到 `CustomNodeModel.csproj` 文件（而非其他项目文件）中，并确保项目没有任何现有的“构建后”设置。
 >
@@ -75,7 +75,7 @@ Dynamo 软件包通常有 `dyf` 和 `extra` 文件夹，用于 Dynamo 自定义�
 
 如果您构建项目，则项目文件夹现在应该有 `packages` 文件夹以及之前创建的 `src` 文件夹。`packages` 目录内是一个文件夹，其中包含软件包所需的所有内容。我们还需要将 `pkg.json` 文件复制到软件包文件夹中，以使 Dynamo 知道要载入软件包。
 
-![复制文件](../../.gitbook/assets/fe-proj-directory-package.jpg)
+![复制文件](../images/fe-proj-directory-package.jpg)
 
 > 1. AfterBuild 目标创建的新软件包文件夹
 > 2. 项目的现有 src 文件夹

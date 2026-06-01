@@ -6,7 +6,7 @@
 
 按照 DynamoSamples Github 存储库中的 SampleViewExtension 示例，我们将逐步介绍创建一个实时显示图形中活动节点的简单无模式窗口所需的步骤。视图扩展要求我们为窗口创建 UI，并将值绑定到视图模型。
 
-![视图扩展窗口](../../.gitbook/assets/dyn-viewextension.png)
+![视图扩展窗口](../images/dyn-viewextension.png)
 
 > 1. 视图扩展窗口是按照 Github 存储库中的 SampleViewExtension 示例开发的。
 
@@ -28,9 +28,9 @@ DynamoSamples 存储库：[https://github.com/DynamoDS/DynamoSamples](https://gi
 
 首先，创建一个名为 `SampleViewExtension` 的 `Class Library` 新项目。
 
-![创建新类库](../../.gitbook/assets/vs-new-project-viewextension-1.jpg)
+![创建新类库](../images/vs-new-project-viewextension-1.jpg)
 
-![配置新项目](../../.gitbook/assets/vs-new-project-viewextension-2.jpg)
+![配置新项目](../images/vs-new-project-viewextension-2.jpg)
 
 > 1. 通过选择 `File > New > Project` 来创建新项目
 > 2. 选择 `Class Library`
@@ -39,14 +39,14 @@ DynamoSamples 存储库：[https://github.com/DynamoDS/DynamoSamples](https://gi
 
 在此项目中，我们需要两个类。一个类将实现 `IViewExtension`，另一个类将实现 `NotificationObject.`。`IViewExtension` 将包含有关如何展开、载入、参照和处理我们扩展的所有信息。`NotificationObject` 将为 Dynamo 和 `IDisposable` 中的更改提供通知；当发生更改时，计数将随之更新。
 
-![视图扩展类文件](../../.gitbook/assets/vs-viewextension-classes.jpg)
+![视图扩展类文件](../images/vs-viewextension-classes.jpg)
 
 > 1. 一个名为 `SampleViewExtension.cs` 的类文件，将实现 `IViewExtension`
 > 2. 一个名为 `SampleWindowViewMode.cs` 的类文件，将实现 `NotificationObject`
 
 要使用 `IViewExtension`，我们需要 WpfUILibrary NuGet 软件包。安装此软件包将自动安装 Core、Services 和 ZeroTouchLibrary 软件包。
 
-![视图扩展包](../../.gitbook/assets/vs-viewextension-packages.jpg)
+![视图扩展包](../images/vs-viewextension-packages.jpg)
 
 > 1. 选择 WpfUILibrary
 > 2. 选择 `Install` 以安装所有相关软件包
@@ -133,7 +133,7 @@ namespace SampleViewExtension
 * `public class SampleViewExtension : IViewExtension` `SampleViewExtension` 继承自 `IViewExtension` 接口，提供我们创建菜单项所需的一切。
 * `sampleMenuItem = new MenuItem { Header = "Show View Extension Sample Window" };` 创建 MenuItem 并将其添加到 `View` 菜单。
 
-![菜单项](../../.gitbook/assets/dyn-menuitem.jpg)
+![菜单项](../images/dyn-menuitem.jpg)
 
 > 1. 菜单项
 
@@ -208,7 +208,7 @@ namespace SampleViewExtension
 
 在定义扩展的核心逻辑后，我们现在将使用 `.xaml` 文件指定窗口的外观详细信息。我们所需要的只是一个简单的窗口，它将通过 `TextBlock` `Text` 中的 `ActiveNodeTypes` 特性绑定来显示字符串。
 
-![添加窗口](../../.gitbook/assets/vs-window.jpg)
+![添加窗口](../images/vs-window.jpg)
 
 > 1. 在项目上单击鼠标右键，然后选择 `Add > New Item...`
 > 2. 选择我们将对其进行更改以创建窗口的“用户控制”模板
@@ -259,7 +259,7 @@ namespace SampleViewExtension
 
 视图扩展现在已准备好构建并添加到 Dynamo 中。Dynamo 需要一个 `xml` 文件，才能将我们的输出 `.dll` 注册为扩展。
 
-![添加新 XML](../../.gitbook/assets/vs-viewextension-xml.jpg)
+![添加新 XML](../images/vs-viewextension-xml.jpg)
 
 > 1. 在项目上单击鼠标右键，然后选择 `Add > New Item...`
 > 2. 选择 XML 文件
@@ -281,7 +281,7 @@ namespace SampleViewExtension
 
 最后一步是将 `SampleViewExtension_ViewExtensionDefinition.xml` 文件复制到 Dynamo 的视图扩展文件夹，该文件夹位于 Dynamo Core 安装目录 `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions` 中。请务必注意，`extensions` 和 `viewExtensions` 有单独的文件夹。将 `xml` 文件放置在不正确的文件夹中可能会导致在运行时无法正确载入。
 
-![XML 文件已复制到 Extensions 文件夹](../../.gitbook/assets/fe-viewextension-xml.jpg)
+![XML 文件已复制到 Extensions 文件夹](../images/fe-viewextension-xml.jpg)
 
 > 1. 我们已复制到 Dynamo 的视图扩展文件夹中的 `.xml` 文件
 

@@ -10,17 +10,17 @@
 
 Dynamo 中最常用的点类型存在于三维世界坐标系中，具有三个坐标 [X,Y,Z]（Dynamo 中的三维点）。
 
-\![](<../../.gitbook/assets/points - 3d point in dynamo.jpg>)
+\![](<../images/points - 3d point in dynamo.jpg>)
 
 Dynamo 中的二维点有两个坐标 [X,Y]。
 
-\![](<../../.gitbook/assets/points - 2d point in dynamo.jpg>)
+\![](<../images/points - 2d point in dynamo.jpg>)
 
 ### 曲线和曲面上的点
 
 曲线和曲面的参数是连续的，并且延伸到给定几何图元的边缘之外。由于定义“参数空间”的形状存在于三维世界坐标系中，因此我们始终可以将“参数化坐标”转换为“世界”坐标。例如，曲面上的点 [0.2, 0.5] 与世界坐标中的点 [1.8, 2.0, 4.1] 相同。
 
-\![](<../../.gitbook/assets/points - xyz vs coord sys vs uv.jpg>)
+\![](<../images/points - xyz vs coord sys vs uv.jpg>)
 
 > 1. 假定的世界 XYZ 坐标中的点
 > 2. 相对于给定坐标系（圆柱）的点
@@ -36,7 +36,7 @@ Dynamo 中的二维点有两个坐标 [X,Y]。
 
 如果“几何图形”是模型的语言，则“点”是字母。点是创建所有其他几何图形的基础 - 我们需要至少两个点来创建曲线、我们需要至少三个点来生成一个多边形或网格面，依此类推。通过定义点之间的位置、顺序和关系（尝试使用正弦函数），我们可以定义更高阶的几何图形，例如我们识别为“圆”或“曲线”的图形。
 
-![点到曲线](../../.gitbook/assets/PointsAsBuildingBlocks-1.jpg)
+![点到曲线](../images/PointsAsBuildingBlocks-1.jpg)
 
 > 1. 使用函数 `x=r*cos(t)` 和 `y=r*sin(t)` 的圆
 > 2. 使用函数 `x=(t)` 和 `y=r*sin(t)` 的正弦曲线
@@ -45,7 +45,7 @@ Dynamo 中的二维点有两个坐标 [X,Y]。
 
 点也可以存在于二维坐标系中。根据我们所使用的空间类型，约定的字母表示法有所不同 - 我们可能在平面上使用 [X,Y] 或在曲面上使用 [U,V]。
 
-![点作为坐标](../../.gitbook/assets/Coordinates.jpg)
+![点作为坐标](../images/Coordinates.jpg)
 
 > 1. 欧几里得坐标系中的点：[X,Y,Z]
 > 2. 曲线参数坐标系中的点：[t]

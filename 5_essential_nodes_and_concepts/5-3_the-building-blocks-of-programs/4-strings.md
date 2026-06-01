@@ -10,7 +10,7 @@
 
 上面的示例节点都是字符串。数字可以表示为字符串、字母或整个文本数组。
 
-\![](<../../.gitbook/assets/strings - creating strings.jpg>)
+\![](<../images/strings - creating strings.jpg>)
 
 ## 练习
 
@@ -26,11 +26,11 @@
 
 下图考虑了来自外部电子表格的数据字符串。该字符串表示矩形在 XY 平面中的顶点。让我们在微型练习中分解一些字符串拆分操作：
 
-\![](<../../.gitbook/assets/strings - querying strings 01.jpg>)
+\![](<../images/strings - querying strings 01.jpg>)
 
 > 1. “;”分隔符分割矩形的每个顶点。这将为每个顶点创建一个包含 3 个项目的列表。
 
-\![](<../../.gitbook/assets/strings - querying strings 02.jpg>)
+\![](<../images/strings - querying strings 02.jpg>)
 
 > 1. 点击节点中间的“_+_”，可创建新的分隔符。
 > 2. 向画布添加“_,_”字符串，然后连接到新的分隔符输入。
@@ -38,13 +38,13 @@
 
 虽然上述项目列表看起来像数字，但在 Dynamo 中仍将它们视为单独的字符串。要创建点，需要将点的数据类型从“字符串”转换为“数字”。使用 **“String.ToNumber”** 节点可执行此操作
 
-\![](<../../.gitbook/assets/strings - querying strings 03.jpg>)
+\![](<../images/strings - querying strings 03.jpg>)
 
 > 1. 此节点简单明了。将 **“String.Split”** 结果连接到输入。输出看起来没有什么不同，但数据类型现在是 _“number”_ ，而不是 _“string”_。
 
 使用其他一些基本操作，我们现在在原点处基于原始字符串输入绘制了一个三角形。
 
-\![](<../../.gitbook/assets/strings - querying strings 04.jpg>)
+\![](<../images/strings - querying strings 04.jpg>)
 
 ### 处理字符串
 
@@ -54,7 +54,7 @@
 
 以下内容表示三个字符串的串联：
 
-\![Concatenate](<../../.gitbook/assets/strings - manipulating strings 01.jpg>)
+\![连接](<../images/strings - manipulating strings 01.jpg>)
 
 > 1. 通过单击节点中心的“+/-”按钮，可在串联中添加或减少字符串。
 > 2. 输出会提供一个串联的字符串，其中包含空格和标点符号。
@@ -65,7 +65,7 @@
 
 下图表示两个字符串的合并：
 
-\![](<../../.gitbook/assets/strings - manipulating strings 02.jpg>)
+\![](<../images/strings - manipulating strings 02.jpg>)
 
 > 1. 分隔符输入允许一个分隔符创建一个字符串，该字符串会分割已合并的字符串。
 
@@ -75,7 +75,7 @@
 
 我们先从该诗小节的基本字符串拆分开始。首先，我们注意到书写格式基于逗号设置。我们将使用此格式来将每行分隔为单独的项目。
 
-\![](<../../.gitbook/assets/strings - working with strings 01.jpg>)
+\![](<../images/strings - working with strings 01.jpg>)
 
 > 1. 基础字符串将粘贴到 **“String”** 节点中。
 > 2. 另一个 **“String”** 节点用于表示分隔符。在本例中，我们使用的是逗号。
@@ -84,27 +84,27 @@
 
 现在，让我们了解这首诗的优美部分：最后两行。原始诗小节是一项数据。在第一步中，我们已将该数据分为各个项目。现在，我们需要搜索所需的文字。尽管我们 _可以_ 通过选择列表的最后两项来完成此操作，但如果这是一本书，我们不希望通读所有内容并手动隔离各元素。
 
-\![](<../../.gitbook/assets/strings - working with strings 02.jpg>)
+\![](<../images/strings - working with strings 02.jpg>)
 
 > 1. 我们使用 **“String.Contains”** 节点来搜索一组字符，而不是手动搜索。这类似于在文字处理器中执行“查找”命令。在本例中，如果在项目中找到相应子字符串，则返回“true”或“false”。
 > 2. 在 _“searchFor”_ 输入中，我们定义了要在诗小节中查找的子字符串。我们使用一个带有文字“And miles”的 **“String”** 节点。
 > 3. 输出结果为一列 false 或 true。我们将在下一步中使用此布尔逻辑过滤各元素。
 
-\![Split](<../../.gitbook/assets/strings - working with strings 03.jpg>)
+\![分裂](<../images/strings - working with strings 03.jpg>)
 
 > 1. **“List.FilterByBoolMask”** 是我们要用来剔除 false 和 true 的节点。“in”输出返回“mask”输入为“true”的语句，而“out”输出返回“mask”输入为“false”的语句。
 > 2. “in”的输出与预期一样，为我们提供了诗小节的最后两行。
 
 现在，我们要通过合并这两行，来再现该诗小节。查看上一步的输出时，我们注意到列表中有两个项目：
 
-\![](<../../.gitbook/assets/strings - working with strings 04.jpg>)
+\![](<../images/strings - working with strings 04.jpg>)
 
 > 1. 使用两个 **“List.GetItemAtIndex”** 节点，我们可以使用值 0 和 1 作为索引输入来隔离项目。
 > 2. 每个节点的输出按顺序为我们提供最后两行。
 
 要将这两个项目合并为一个项目，我们将使用 **“String.Join”** 节点：
 
-\![Split String](<../../.gitbook/assets/strings - working with strings 05.jpg>)
+\![拆分字符串](<../images/strings - working with strings 05.jpg>)
 
 > 1. 在添加 **“String.Join”** 节点后，我们注意到需要分隔符。
 > 2. 要创建分隔符，我们向画布中添加一个 **“String”** 节点，然后键入逗号。

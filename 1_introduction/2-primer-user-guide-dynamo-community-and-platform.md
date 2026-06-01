@@ -19,11 +19,11 @@
 
 * [参数化花瓶](../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.md)
 
-![](../.gitbook/assets/vase1.gif)
+![](images/vase1.gif)
 
 * [吸引器点](../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.md)
 
-\![](<../.gitbook/assets/attractor1 (1).gif>)
+![](<images/attractor1.gif>)
 
 {% hint style="info" %} 我们会介绍有关 Dynamo 的不同主题，因此可以在后面的章节中找到更多特定于主题的练习。**“练习”** 通常位于每个页面的最后一部分。 {% endhint %}
 
@@ -31,7 +31,7 @@
 
 如果没有众多热衷的用户和积极贡献者，Dynamo 就不能成为现在的样子。通过关注[博客](http://dynamobim.org/blog/)、将作品添加到库或在[论坛](https://forum.dynamobim.com)中讨论 Dynamo，来与社区进行交流。
 
-![论坛](../.gitbook/assets/02-Community.png)
+![论坛](images/02-Community.png)
 
 ### 平台
 
@@ -39,6 +39,6 @@ Dynamo 被设计为一款面向设计师的可视化编程工具，可帮助我�
 
 项目的源代码是开源的，使我们能够尽情地扩展其功能。在 GitHub 上检出项目，并浏览用户自定义 Dynamo 的工作进度。
 
-![库](../.gitbook/assets/03-TheRepo.png)
+![库](images/03-TheRepo.png)
 
 > 浏览、分叉并开始扩展 Dynamo 以满足您的需求

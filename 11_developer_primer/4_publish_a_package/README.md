@@ -12,7 +12,7 @@ Dynamo Package Manager 是一个软件注册表（类似于 npm），可以从 D
 
 * 在 Dynamo 中，软件包管理器包括安装、发布和更新软件包。
 
-![搜索软件包](../../.gitbook/assets/dynamopackagemanager.png)
+![搜索软件包](../images/dynamopackagemanager.png)
 
 > 1. 联机搜索软件包：`Packages > Search for a Package...`
 > 2. 查看/编辑已安装的软件包：`Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Dynamo Package Manager 是一个软件注册表（类似于 npm），可以从 D
 
 启动 Dynamo，然后选择 `Packages > Publish New Package...` 以打开 `Publish a Package` 窗口。
 
-![发布软件包](../../.gitbook/assets/dyn-publish-package-add-files.png)
+![发布软件包](../images/dyn-publish-package-add-files.png)
 
 > 1. 选择 `Add file...` 以浏览要添加到软件包的文件
 > 2. 从 NodeModel 案例研究中选择两个 `.dll` 文件
@@ -32,7 +32,7 @@ Dynamo Package Manager 是一个软件注册表（类似于 npm），可以从 D
 
 在将文件添加到软件包内容中后，为软件包指定名称、描述和版本。使用 Dynamo 发布软件包会自动创建 `pkg.json` 文件。
 
-![软件包设置](../../.gitbook/assets/dyn-publish-package.png)
+![软件包设置](../images/dyn-publish-package.png)
 
 > 准备好发布的软件包。
 >
@@ -41,13 +41,13 @@ Dynamo Package Manager 是一个软件注册表（类似于 npm），可以从 D
 
 发布软件包后，节点将在 Dynamo 库中的 `CustomNodeModel` 类别下可用。
 
-![Dynamo 库中的软件包](../../.gitbook/assets/dyn-publish-package-library.jpg)
+![Dynamo 库中的软件包](../images/dyn-publish-package-library.jpg)
 
 > 1. 我们刚刚在 Dynamo 库中创建的软件包
 
 在软件包准备好联机发布后，打开软件包管理器、选择 `Publish`，然后选择 `Publish Online`。
 
-![在软件包管理器中发布软件包](../../.gitbook/assets/dyn-publish-package-directory.jpg)
+![在软件包管理器中发布软件包](../images/dyn-publish-package-directory.jpg)
 
 > 1. 要查看 Dynamo 如何设置软件包的格式，请单击“CustomNodeModel”右侧的三个垂直点，然后选择“显示根目录”
 > 2. 在“发布 Dynamo 软件包”窗口中，选择 `Publish`，然后选择 `Publish Online`。
@@ -57,7 +57,7 @@ Dynamo Package Manager 是一个软件注册表（类似于 npm），可以从 D
 
 更新软件包的过程与发布过程类似。打开软件包管理器、在需要更新的软件包上选择 `Publish Version...`，然后输入更高版本。
 
-![发布软件包版本](../../.gitbook/assets/dyn-publish-package-version.jpg)
+![发布软件包版本](../images/dyn-publish-package-version.jpg)
 
 > 1. 选择 `Publish Version` 以使用根目录中的新文件更新现有软件包，然后选择它应本地发布还是联机发布。
 
@@ -69,7 +69,7 @@ Dynamo Package Manager 是一个软件注册表（类似于 npm），可以从 D
 
 可以通过以下链接访问软件包管理器 Web 客户端：[https://dynamopackages.com/](https://dynamopackages.com)
 
-![软件包管理器 Web 客户端](../../.gitbook/assets/packagemanager-browser.jpg)
+![软件包管理器 Web 客户端](../images/packagemanager-browser.jpg)
 
 **更新软件包详细信息**
 
@@ -82,13 +82,13 @@ Dynamo Package Manager 是一个软件注册表（类似于 npm），可以从 D
 
 **注意**：由于服务器更新需要一些时间，因此更新可能需要长达 15 分钟才能在 Dynamo 内的软件包管理器中刷新。正在努力减少这种延误。
 
-![用于更新已发布软件包的软件包详细信息的新 UI](../../.gitbook/assets/Package-Manager_Image_5.png)
+![用于更新已发布软件包的软件包详细信息的新 UI](../images/Package-Manager_Image_5.png)
 
 **编辑已发布软件包版本的兼容性信息**
 
 兼容性信息可以针对以前发布的软件包版本进行追溯更新。请遵循下列步骤：
 
-![编辑已发布软件包的兼容性信息 - 第 1 步](../../.gitbook/assets/Package-Manager_Image_6.png)
+![编辑已发布软件包的兼容性信息 - 第 1 步](../images/Package-Manager_Image_6.png)
 
 **第 1 步：**
 
@@ -100,7 +100,7 @@ Dynamo Package Manager 是一个软件注册表（类似于 npm），可以从 D
 
 请按照流程图并参考下表，帮助您了解哪个选项最适合您的软件包。
 
-![为“编辑兼容性信息”工作流选择哪个选项](../../.gitbook/assets/Package-Manager_Image_7.png)
+![为“编辑兼容性信息”工作流选择哪个选项](../images/Package-Manager_Image_7.png)
 
 让我们使用一些示例来演练一些方案：
 
@@ -110,8 +110,8 @@ Dynamo Package Manager 是一个软件注册表（类似于 npm），可以从 D
 
 **示例软件包 # 3** \- Mesh Toolkit：此软件包是 Dynamo Core 软件包，它是不依赖于主机的几何图形节点的集合。因此，在这种情况下，理想的选择是选项 3。该软件包在 Dynamo 和所有与版本范围和/或单个版本列表匹配的主机环境中将显示为“兼容”。
 
-![编辑兼容性信息选项](../../.gitbook/assets/Package-Manager_Image_8.png)
+![编辑兼容性信息选项](../images/Package-Manager_Image_8.png)
 
 根据选定的选项，将弹出 Dynamo 和/或主机特定字段，如下图所示。
 
-![编辑兼容性信息 - 第 2 步](../../.gitbook/assets/Package-Manager_Image_9.png)
+![编辑兼容性信息 - 第 2 步](../images/Package-Manager_Image_9.png)

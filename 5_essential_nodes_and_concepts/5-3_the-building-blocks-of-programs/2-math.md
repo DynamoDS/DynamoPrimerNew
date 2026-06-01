@@ -8,10 +8,10 @@
 
 | 图标                                                | 名称（语法）     | 输入                     | 输出      |
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../../.gitbook/assets/addition (1).jpg>)       | 相加 (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| \![](<../../.gitbook/assets/Subtraction (1).jpg>)    | 相减 (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| \![](<../../.gitbook/assets/Multiplication (2).jpg>) | 相乘 (*****) | var[]...[], var[]...[] | var[]...[] |
-| \![](<../../.gitbook/assets/Division (2).jpg>)       | 相除 (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/addition.jpg>)       | 添加 (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/Subtraction.jpg>)    | 相减 (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/Multiplication.jpg>) | 相乘 ( ***** ) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/Division.jpg>)       | 相除 (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## 练习：黄金螺旋公式
 
@@ -29,7 +29,7 @@
 
 **Number Sequence**：基于以下三个输入定义数字序列：_start、amount_ 和 _step_。
 
-\![](<../../.gitbook/assets/math - part I-01.jpg>)
+\![](<../images/math - part I-01.jpg>)
 
 2\.上述步骤已创建一列数字，来定义参数化域。接下来，创建表示黄金螺旋方程的节点组。
 
@@ -45,7 +45,7 @@ $$
 
 下图以可视化编程形式呈现了黄金螺旋。在逐步查看节点组时，请尝试注意可视化程序和编写方程之间的平行性。
 
-\![](<../../.gitbook/assets/math - part I-02.jpg>)
+\![](<../images/math - part I-02.jpg>)
 
 > a.**Number Slider**：向画布添加两个数字滑块。这些滑块将表示参数方程的 _“a”_ 和 _“b”_ 变量。这些表示灵活的常量，或我们可以根据所需结果调整的参数。
 >
@@ -65,11 +65,11 @@ $$
 
 **Point.ByCoordinates**：将上乘法节点连接到 _“x”_ 输入，将下乘法节点连接到 _“y”_ 输入。现在，我们在屏幕上会看到点的参数化螺旋。
 
-\![](<../../.gitbook/assets/math - part II-01.gif>)
+\![](<../images/math - part II-01.gif>)
 
 **Polycurve.ByPoints**：将上一步的 **“Point.ByCoordinates”** 连接到 _“points”_。我们可以不输入而保留 _“connectLastToFirst”_，因为我们不会绘制闭合曲线。这将创建穿过上一步中定义的每个点的螺旋。
 
-\![](<../../.gitbook/assets/math - part II-02.jpg>)
+\![](<../images/math - part II-02.jpg>)
 
 我们现在已完成 Fibonacci 螺旋！让我们从此处开始进一步研究两个独立的练习，我们称之为 Nautilus 和 Sunflower。这些是自然系统的抽象表示，但 Fibonacci 螺旋的两种不同应用将得到充分体现。
 
@@ -77,13 +77,13 @@ $$
 
 **Circle.ByCenterPointRadius**：我们将在此处使用“Circle”节点，其输入与上一步相同。半径值默认为 _“1.0”_，因此可以看到圆即时输出。这些点与原点之间的分离程度立即清晰可辩。
 
-\![](<../../.gitbook/assets/math - part III-01.jpg>)
+\![](<../images/math - part III-01.jpg>)
 
 **Number Sequence**：这是 _“t”_ 的原始数组。通过将其连接到 **“Circle.ByCenterPointRadius”** 的半径值，圆心仍会与原点进一步偏离，但圆的半径不断增大，从而创建一个时髦的 Fibonacci 圆图形。
 
 如果使其成为三维形式，可获得奖励积分！
 
-\![](<../../.gitbook/assets/math - part III-02.gif>)
+\![](<../images/math - part III-02.gif>)
 
 ### 第 IV 部分：从 Nautilus 到 Phyllotaxis
 
@@ -91,15 +91,15 @@ $$
 
 作为一个跳跃点，我们从上一练习的相同步骤开始：使用 **“Point.ByCoordinates”** 节点创建点的螺旋阵列。
 
-<figure><img src="../../.gitbook/assets/math - part IV-01.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/math - part IV-01.jpg" alt=""><figcaption></figcaption></figure>
 
 接下来，按照这些小步骤操作以生成一系列不同旋转的螺旋。
 
-\![](<../../.gitbook/assets/math - part IV-02.jpg>)
+\![](<../images/math - part IV-02.jpg>)
 
 > a.**Geometry.Rotate**：有多个 **“Geometry.Rotate”** 选项；请务必选择将 _“geometry”_ 、 _“basePlane”_ 和 _“degrees”_ 作为其输入的节点。将 **“Point.ByCoordinates”** 连接到几何图形输入。在该节点上单击鼠标右键，并确保将连缀设置为“叉积”
 >
-> <img src="../../.gitbook/assets/math - part IV-03 cross product.jpg" alt="" data-size="original">
+> <img src="../images/math - part IV-03 cross product.jpg" alt="" data-size="original">
 >
 > b.**Plane.XY**：连接到 _“basePlane”_ 输入。我们将绕原点旋转，该原点与螺旋的底部位置相同。
 >
@@ -111,8 +111,8 @@ $$
 
 将 **“Number Range”** 节点的步长从 _“120.0”_ 更改为 _“36.0”_。请注意，这将创建更多旋转，因此会为我们提供更密集的栅格。
 
-\![](<../../.gitbook/assets/math - part IV-04.jpg>)
+\![](<../images/math - part IV-04.jpg>)
 
 将 **“Number Range”** 节点的步长从 _“36.0”_ 更改为 _“3.6”_。现在，我们得到更密集的栅格，但螺旋的方向性尚不清楚。女士们，先生们：我们创建了一颗向日葵。
 
-\![](<../../.gitbook/assets/math - part IV-05.jpg>)
+\![](<../images/math - part IV-05.jpg>)

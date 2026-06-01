@@ -4,7 +4,7 @@
 
 列表是元素或项目的集合。以一串香蕉为例。每个香蕉都是列表（或串）中的一个项目。拾取一串香蕉比单独拾取每个香蕉要容易得多，同样适用于通过数据结构中的参数化关系对元素进行分组。
 
-![香蕉](../../.gitbook/assets/Bananas_white_background_DS.jpg)
+![香蕉](../images/Bananas_white_background_DS.jpg)
 
 > 照片由 [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list) 提供。
 
@@ -20,7 +20,7 @@
 
 请注意，列表中仍有 5 个项目；只是列表使用的是基于零的计数系统。而且，列表中存储的项目并不仅限于数字。它们可以是 Dynamo 支持的任何数据类型，例如点、曲线、曲面、族等。
 
-\![](<../../.gitbook/assets/what's a list - zero based indices.jpg>)
+![](<../images/whats-a-list-zero-based-indices.jpg>)
 
 > a.索引
 >
@@ -36,7 +36,7 @@
 
 与列表相关，输入和输出因使用的 Dynamo 节点而异。例如，我们使用一列 5 个点，并将该输出连接到两个不同的 Dynamo 节点：**”PolyCurve.ByPoints”**和**“Circle.ByCenterPointRadius”**：
 
-\![Input Examples](<../../.gitbook/assets/what's a list - inputs and outputs.jpg>)
+![输入示例](<../images/whats-a-list-inputs-and-outputs.jpg>)
 
 > 1. **“PolyCurve.ByPoints”** 的 _“points”_ 输入正在查找 _“Point[]”_。这表示一列点
 > 2. **“PolyCurve.ByPoints”** 的输出是基于一列五个点所创建的一条复合线。
@@ -59,23 +59,23 @@
 
 最简单的方法是逐一连接输入，直到其中一个流运行干。这称为“最短列表”算法。这是 Dynamo 节点的默认行为：
 
-\![](<../../.gitbook/assets/what's a list - lacing - shortest.jpg>)
+![](<../images/whats-a-list-lacing-shortest.jpg>)
 
 #### 最长列表
 
 “最长列表”算法会一直连接输入、重用元素，直到所有流都流干为止：
 
-\![](<../../.gitbook/assets/what's a list - lacing - longest.jpg>)
+![](<../images/whats-a-list-lacing-longest.jpg>)
 
 #### 笛卡尔积
 
 最后，“笛卡尔积”方法可以建立所有可能的连接：
 
-\![](<../../.gitbook/assets/what's a list - lacing - cross.jpg>)
+![](<../images/whats-a-list-lacing-cross.jpg>)
 
 如您所见，我们可以通过不同的方式在这些点集之间绘制直线。通过在某个节点的中心上单击鼠标右键并选择“连缀”菜单，即可找到连缀选项。
 
-\![](<../../.gitbook/assets/what's a list - right click lacing opt.jpg>)
+![](<../images/whats-a-list-right-click-lacing-opt.jpg>)
 
 ### 什么是复制？
 
@@ -121,16 +121,16 @@ Zip 复制的工作方式略有不同。如果您有两个列表，一个用于�
 
 通过选择 _“最短列表”_ 作为连缀选项（也是默认选项），我们会得到一条由五个点组成的基本对角线。五个点是较小列表的长度，因此最短列表连缀在到达一个列表的末尾后即停止。
 
-\![Input Examples](<../../.gitbook/assets/what's a list - lacing exercise 01.jpg>)
+![输入示例](<../images/whats-a-list-lacing-exercise-01.jpg>)
 
 ### **最长列表**
 
 通过将连缀更改为 _“最长列表”_，我们得到一条垂直延伸的对角线。采用与概念图相同的方法，将重复该列表的 5 个项目中的最后一项，以达到较长列表的长度。
 
-\![Input Examples](<../../.gitbook/assets/what's a list - lacing exercise 02.jpg>)
+![输入示例](<../images/whats-a-list-lacing-exercise-02.jpg>)
 
 ### **笛卡尔积**
 
 通过将连缀更改为 _“笛卡尔积”_，我们得到每个列表之间的每个组合，从而获得 5x10 点栅格。这是与上述概念图中所示的笛卡尔积等效的数据结构，但数据现在是一列列表。通过连接复合线，我们可以看到每个列表均由其 X 值定义，从而得到一行垂直线。
 
-\![Input Examples](<../../.gitbook/assets/what's a list - lacing exercise 03.jpg>)
+![输入示例](<../images/whats-a-list-lacing-exercise-03.jpg>)

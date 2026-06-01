@@ -6,4 +6,4 @@ Dynamo 是开始为 AEC 世界编码的绝佳起点。您可能对其中一些�
 * [使用 DesignScript 的几何图形](8-2_geometry-with-design-script/)
 * [Python](8-3_python/)
 
-![](../.gitbook/assets/image.png)
+![](images/image.png)

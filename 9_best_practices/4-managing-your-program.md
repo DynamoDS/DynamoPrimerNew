@@ -6,7 +6,7 @@
 
 在向工作空间添加了多个节点后，我们可能需要为了清晰显示而重新组织节点的布局。通过选择多个节点并在工作空间上单击鼠标右键，弹出窗口会包括 **“对齐当前选择”** 菜单，其中包含 X 和 Y 方向的对正和分布选项。
 
-\![](<../.gitbook/assets/managing your program - alignment.jpg>)
+\![](<images/managing your program - alignment.jpg>)
 
 > 1. 选择多个节点
 > 2. 在工作空间中单击鼠标右键
@@ -16,20 +16,20 @@
 
 有了一些经验后，我们可以通过查看节点名称并遵循程序流来“读取”可视化程序。对于所有经验级别的用户来说，最好还要包括纯语言标签和描述。Dynamo 有一个 **“Notes”** 节点，该节点有可编辑的文本字段来执行此操作。我们可以通过两种方式向工作空间添加注释：
 
-\![](<../.gitbook/assets/managing your program - notes.jpg>)
+\![](<images/managing your program - notes.jpg>)
 
 > 1. 浏览到菜单“编辑”>“创建注释”
 > 2. 使用键盘快捷键 Ctrl+W
 
 将注释添加到工作空间后，将弹出一个文本字段，允许我们编辑注释中的文本。创建注释后，我们可以通过双击或在注释节点上单击鼠标右键来编辑注释。
 
-\![](<../.gitbook/assets/managing your program - notes 02.jpg>)
+\![](<images/managing your program - notes 02.jpg>)
 
 ### 分组
 
 当可视化程序变得非常大时，确定要执行的较大步骤会很有帮助。我们可以使用 **“组”** 亮显较大的节点集合，以在背景中使用彩色矩形和标题标记它们。有三种方法可以使包含多个节点的组处于选中状态：
 
-\![](<../.gitbook/assets/managing your program - grouping 01.jpg>)
+\![](<images/managing your program - grouping 01.jpg>)
 
 > 1. 浏览到菜单“编辑”>“创建组”
 > 2. 使用键盘快捷键 Ctrl+G
@@ -37,13 +37,13 @@
 
 在创建组后，我们可以编辑其设置，例如标题和颜色。
 
-\![](<../.gitbook/assets/managing your program - grouping 02.jpg>)
+\![](<images/managing your program - grouping 02.jpg>)
 
 {% hint style="info" %}提示：使用“注释”和“组”是注释文件并提高可读性的有效方法。{% endhint %}
 
 以下是添加了“注释”和“组”的程序示例：
 
-\![](<../.gitbook/assets/managing your program - grouping 03.jpg>)
+\![](<images/managing your program - grouping 03.jpg>)
 
 > 1. 注释：“栅格参数”
 > 2. 注释：“栅格点”

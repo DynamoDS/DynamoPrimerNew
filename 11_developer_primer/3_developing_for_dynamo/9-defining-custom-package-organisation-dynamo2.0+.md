@@ -112,7 +112,7 @@ MyZTLibrary/Utilities/doubleValue
 **警告！**\
 在节点名称或类别中使用点表示法将产生其他嵌套的子类别。`.` 将用作分隔符来确定其他层次结构。这是 Dynamo 2.0 库中的新行为。
 
-![自定义节点属性](../../.gitbook/assets/custom-node-properties.jpg)
+![自定义节点属性](../images/custom-node-properties.jpg)
 
 类别名称可以稍后在 .dyf 文件（XML 或 JSON）中更新
 

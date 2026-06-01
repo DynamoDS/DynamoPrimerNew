@@ -8,7 +8,7 @@ GitHub 是一种基于 [Git](https://help.github.com/articles/git-and-github-lea
 
 Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
-![Dynamo 源文件](../../.gitbook/assets/github.jpg)
+![Dynamo 源文件](../images/github.jpg)
 
 > Dynamo 源文件。
 >
@@ -23,7 +23,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 
 我们需要一个 Dynamo 存储库的 URL，以通过其进行克隆。这可以在存储库页面上的“克隆或下载”按钮中找到。复制要粘贴到命令提示中的 URL。
 
-![克隆存储库](../../.gitbook/assets/github-clone.png)
+![克隆存储库](../images/github-clone.png)
 
 > 1. 选择“Clone or download”
 > 2. 复制 URL
@@ -34,17 +34,17 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 
 > 将“username”替换为您的用户名
 
-![命令提示](../../.gitbook/assets/cli-1.jpg)
+![命令提示](../images/cli-1.jpg)
 
 在下一步中，我们将运行一个 git 命令，以将 Dynamo 存储库克隆到我们指定的位置。通过单击 GitHub 上的“克隆或下载”按钮，可获取命令中的 URL。在命令终端中运行此命令。请注意，这将克隆 Dynamo 存储库主分支（它是 Dynamo 的最新代码），并将包含到最新版本的 Dynamo 代码。此分支每天都会发生变化。
 
 `git clone https://github.com/DynamoDS/Dynamo.git`
 
-![Git 克隆操作的结果](../../.gitbook/assets/cli-2.jpg)
+![Git 克隆操作的结果](../images/cli-2.jpg)
 
 如果克隆操作成功完成，则我们知道 Git 工作正常。在文件资源管理器中，导航到克隆的目录以查看源文件。目录结构看起来应与 GitHub 上 Dynamo 存储库的主分支相同。
 
-![Dynamo 的源文件](../../.gitbook/assets/source-files.jpg)
+![Dynamo 的源文件](../images/source-files.jpg)
 
 > 1. Dynamo 的源文件
 > 2. Git 文件
@@ -71,11 +71,11 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 > 4. 查找 **Visual Studio 2022 预览版/2026 Insider**（社区版、专业版或企业版）
 > 5. 单击**“安装”**，将其与现有 Visual Studio 安装一起添加
 
-\![Visual Studio preview](<../../.gitbook/assets/vs-preview (1).png>) \![Visual Studio 2026 insider](<../../.gitbook/assets/vs-2026-insiders (1).png>)
+![Visual Studio 预览版](<../images/vs-preview.png>) ![Visual Studio 2026 Insider](<../images/vs-2026-insiders.png>)
 
 在完成所有安装后，我们就可以启动 Visual Studio，然后打开位于 `Dynamo\src` 中的 `Dynamo.All.sln` 解决方案。
 
-![打开解决方案文件](../../.gitbook/assets/vs-open-dynamo.jpg)
+![打开解决方案文件](../images/vs-open-dynamo.jpg)
 
 > 1. 选择 `File > Open > Project/Solution`
 > 2. 浏览到 Dynamo 库并打开 `src` 文件夹
@@ -84,7 +84,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 
 在可以构建解决方案之前，应先指定一些设置。我们应该先构建调试版本的 Dynamo，以便 Visual Studio 可以在调试期间收集更多信息来帮助我们开发，并且我们希望以 AnyCPU 为目标。
 
-![解决方案设置](../../.gitbook/assets/vs-dynamo-build-settings.jpg)
+![解决方案设置](../images/vs-dynamo-build-settings.jpg)
 
 > 这些将成为 `bin` 文件夹内的文件夹
 >
@@ -93,7 +93,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 
 在项目打开后，我们可以构建解决方案。此过程将创建一个我们可以运行的 DynamoSandbox.exe 文件。
 
-![构建解决方案](../../.gitbook/assets/vs-build-dynamo.jpg)
+![构建解决方案](../images/vs-build-dynamo.jpg)
 
 > 通过构建项目，将恢复 NuGet 依存关系。
 >
@@ -104,7 +104,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 
 如果 Dynamo 构建成功，则会在 Dynamo 存储库中创建一个 `bin` 文件夹，其中包含 DynamoSandbox.exe 文件。在我们的案例中，我们使用“调试”选项进行构建，因此可执行文件位于 `bin\AnyCPU\Debug` 中。运行此文件会打开 Dynamo 的本地构建。
 
-![DynamoSandbox 可执行文件](../../.gitbook/assets/ex-dynamosandbox.jpg)
+![DynamoSandbox 可执行文件](../images/ex-dynamosandbox.jpg)
 
 > 1. 我们刚刚构建的 DynamoSandbox 可执行文件。运行此文件以启动 Dynamo。
 
@@ -123,7 +123,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 
 如果需要，从 Visual Studio 启动 Dynamo 会为每个调试会话重新构建解决方案；因此，如果我们对源代码进行更改，则在调试时将合并这些更改。在 `Dynamo.All.sln` 解决方案仍打开的情况下，从下拉菜单中选择 `Debug`、`AnyCPU` 和 `DynamoSandbox`，然后单击 `Start`。这将构建 Dynamo 并启动一个新进程 (DynamoSandbox.exe)，然后将 Visual Studio 的调试器附加到该进程。
 
-![从 Visual Studio 构建和启动应用程序](../../.gitbook/assets/vs-debug-options.jpg)
+![从 Visual Studio 构建和启动应用程序](../images/vs-debug-options.jpg)
 
 > 直接从 Visual Studio 构建和启动应用程序
 >
@@ -134,7 +134,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 
 或者，我们可能希望调试已在运行的 Dynamo 进程，以解决特定图形打开或打包的问题。为此，我们将在 Visual Studio 中打开项目的源文件，然后使用 `Attach to Process` 调试菜单项附加到正在运行的 Dynamo 进程。
 
-![“附加到进程”对话框](../../.gitbook/assets/vs-attach-dynamosandbox.jpg)
+![“附加到进程”对话框](../images/vs-attach-dynamosandbox.jpg)
 
 > 将正在运行的进程附加到 Visual Studio
 >
@@ -144,7 +144,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 
 在这两种情况下，我们都会将调试器附加到要调试的进程。我们可以在启动调试器之前或之后在代码中设置断点，这将导致进程在执行该行代码之前立即暂停。如果在调试期间引发未捕获的异常，则 Visual Studio 会跳转到源代码中发生异常的位置。这是一种用于查找简单崩溃、未处理的异常以及了解应用程序执行流的有效方法。
 
-![设置断点](../../.gitbook/assets/vs-debug-dynamocore.jpg)
+![设置断点](../images/vs-debug-dynamocore.jpg)
 
 > 在调试 DynamoSandbox 期间，我们在 Color.ByARGB 节点的构造函数中设置一个断点，这会导致 Dynamo 进程在节点实例化时暂停。如果此节点抛出异常或导致 Dynamo 崩溃，则我们可以单步调试构造函数中的每一行，以查找出现问题的位置。
 >
@@ -167,7 +167,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 
 `git pull origin master`
 
-![更新的本地存储库](../../.gitbook/assets/cli-pull-changes.jpg)
+![更新的本地存储库](../images/cli-pull-changes.jpg)
 
 > 1. 在此处，我们可以看到本地存储库已使用远程存储库中的更改进行了更新。
 

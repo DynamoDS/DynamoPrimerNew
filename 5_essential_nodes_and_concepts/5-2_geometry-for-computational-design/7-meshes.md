@@ -12,7 +12,7 @@ Dynamo 使用“面-顶点”数据结构定义网格。在最基本的层次上
 
 要创建网格，我们需要一列顶点和将这些顶点分组为面的系统（称为“索引组”）。
 
-\![](<../../.gitbook/assets/meshes - mesh elements.jpg>)
+\![](<../images/meshes - mesh elements.jpg>)
 
 > 1. 顶点列表
 > 2. 用于定义面的索引组列表
@@ -25,7 +25,7 @@ Dynamo 的网格功能可通过安装[“Mesh Toolkit”](https://github.com/Dyn
 
 例如，有关使用此软件包的信息，请访问 [Mesh Toolkit 案例研究](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes)。
 
-\![Mesh Toolkit](<../../.gitbook/assets/meshes - mesh toolkit standford bunny.jpg>)
+\![网格工具包](<../images/meshes - mesh toolkit standford bunny.jpg>)
 
 ## 深入探讨...
 
@@ -33,7 +33,7 @@ Dynamo 的网格功能可通过安装[“Mesh Toolkit”](https://github.com/Dyn
 
 网格是表示曲面或实体几何图形的四边形和三角形的集合。像实体一样，网格对象的结构包括顶点、边和面。还有一些使网络独一无二的特性，例如法线。
 
-![网格图元](../../.gitbook/assets/MeshElements2.jpg)
+![网格图元](../images/MeshElements2.jpg)
 
 > 1. 网格顶点
 > 2. 网格边 
@@ -44,7 +44,7 @@ Dynamo 的网格功能可通过安装[“Mesh Toolkit”](https://github.com/Dyn
 
 网格的顶点只是一列点。在构建网格或获取网格结构的相关信息时，顶点的索引非常重要。对于每个顶点，还有一个相应的顶点法线（向量），它描述了附加面的平均方向，并帮助我们了解网格的“入”和“出”方向。
 
-![顶点 + 法线](../../.gitbook/assets/vertexNormals.jpg)
+![顶点 + 法线](../images/vertexNormals.jpg)
 
 > 1. 顶点
 > 2. 顶点法线
@@ -53,7 +53,7 @@ Dynamo 的网格功能可通过安装[“Mesh Toolkit”](https://github.com/Dyn
 
 面是由三个或四个顶点组成的有序列表。因此，根据要建立索引的顶点位置，网格面的“曲面”表示处于隐含状态。我们已经拥有构成网格的顶点列表，因此无需提供单独的点来定义面，只需使用顶点的索引即可。这样，我们还可以在多个面中使用同一顶点。
 
-![](../../.gitbook/assets/meshFaces.jpg)
+![](../images/meshFaces.jpg)
 
 > 1. 使用索引 0、1、2 和 3 创建的四边形面
 > 2. 使用索引 1、4 和 2 创建的三角形面 请注意，索引组可以按其顺序移动 - 只要该顺序按逆时针顺序排序，相应面将正确定义
@@ -66,7 +66,7 @@ Dynamo 的网格功能可通过安装[“Mesh Toolkit”](https://github.com/Dyn
 
 在前一章中，我们看到 NURBS 曲面由一系列沿两个方向的 NURBS 曲线进行定义。这些方向标有 `U` 和 `V`，并允许根据二维曲面域对 NURBS 曲面进行参数化。曲线本身作为方程存储在计算机中，从而允许将生成的曲面计算为任意小的精度。但是，将多个 NURBS 曲面组合在一起可能会非常困难。连接两个 NURBS 曲面将生成多重曲面，其中几何图形的不同部分将具有不同的 UV 参数和曲线定义。
 
-![控制点](../../.gitbook/assets/NURBSvsMESH-01.jpg)
+![控制点](../images/NURBSvsMESH-01.jpg)
 
 > 1. 曲面
 > 2. 等参（等参线）曲线
@@ -87,7 +87,7 @@ Dynamo 的网格功能可通过安装[“Mesh Toolkit”](https://github.com/Dyn
 
 另一个重要区别是网格或 NURBS 几何图形中的局部更改影响整个形状的程度。移动网格的一个顶点只会影响与该顶点相邻的面。在 NURBS 曲面中，影响范围更加复杂，具体取决于曲面的阶数以及控制点的权重和结。但通常，在 NURBS 曲面中移动单个控制点会在几何图形中产生更平滑、更广泛的更改。
 
-![编辑](../../.gitbook/assets/NURBSvsMESH-02.jpg)
+![编辑](../images/NURBSvsMESH-02.jpg)
 
 > 1. NURBS 曲面 - 移动控制点具有延伸到形状上的影响
 > 2. 网格几何图形 - 移动顶点仅对相邻图元有影响

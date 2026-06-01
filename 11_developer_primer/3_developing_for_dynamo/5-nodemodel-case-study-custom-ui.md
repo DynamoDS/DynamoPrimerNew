@@ -2,7 +2,7 @@
 
 相较于 Zero-Touch 节点，基于 NodeModel 的节点提供了更大的灵活性和更强大的功能。在本例中，我们将通过添加一个随机化矩形大小的集成滑块，来将 Zero-Touch 网格节点提升到下一个级别。
 
-![矩形网格图形](../../.gitbook/assets/cover-image-2.jpg)
+![矩形网格图形](../images/cover-image-2.jpg)
 
 > 滑块会相对于单元大小缩放单元，因此用户不必为滑块提供正确的范围。
 
@@ -33,7 +33,7 @@ NodeModel 节点只能调用函数，因此我们需要将 NodeModel 和函数�
 
 在解决方案中创建两个 C# 类库项目：一个用于函数，一个用于实现 NodeModel 接口。
 
-![添加新类库](../../.gitbook/assets/vs-new-class-projects.jpg)
+![添加新类库](../images/vs-new-class-projects.jpg)
 
 > 1. 在解决方案上单击鼠标右键，然后选择 `Add > New Project`
 > 2. 选择类库
@@ -43,7 +43,7 @@ NodeModel 节点只能调用函数，因此我们需要将 NodeModel 和函数�
 
 接下来，我们需要重命名自动创建的类库，然后将其添加到 `CustomNodeModel` 项目中。类 `GridNodeModel` 实现抽象的 NodeModel 类、`GridNodeView` 用于自定义视图，`GridFunction` 包含我们需要调用的任何函数。
 
-![解决方案资源管理器](../../.gitbook/assets/vs-new-class.jpg)
+![解决方案资源管理器](../images/vs-new-class.jpg)
 
 > 1. 添加另一个类，方法是在 `CustomNodeModel` 项目上单击鼠标右键、选择 `Add > New Item...`，然后选择 `Class`。
 > 2. 在 `CustomNodeModel` 项目中，我们需要 `GridNodeModel.cs` 和 `GridNodeView.cs` 类
@@ -51,14 +51,14 @@ NodeModel 节点只能调用函数，因此我们需要将 NodeModel 和函数�
 
 在我们将任何代码添加到类之前，请为此项目添加必需的软件包。`CustomNodeModel` 将需要 ZeroTouchLibrary 和 WpfUILibrary，`CustomNodeModelFunction` 将仅需要 ZeroTouchLibrary。WpfUILibrary 将用于我们稍后进行操作的 UI 自定义，ZeroTouchLibrary 将用于创建几何图形。可以为项目单独添加软件包。由于这些软件包具有依存关系，因此将自动安装 Core 和 DynamoServices。
 
-![安装软件包](../../.gitbook/assets/vs-add-packages.jpg)
+![安装软件包](../images/vs-add-packages.jpg)
 
 > 1. 在项目上单击鼠标右键，然后选择 `Manage NuGet Packages`
 > 2. 仅安装该项目所需的软件包
 
 Visual Studio 会将我们参照的 NuGet 软件包复制到构建目录中。这可以设置为 false，这样一来软件包中就不会存在任何不必要的文件。
 
-![禁用本地软件包复制](../../.gitbook/assets/vs-disable-package-copying.jpg)
+![禁用本地软件包复制](../images/vs-disable-package-copying.jpg)
 
 > 1. 选择 Dynamo NuGet 软件包
 > 2. 将 `Copy Local` 设置为 false
@@ -199,7 +199,7 @@ namespace CustomNodeModel.CustomNodeModelFunction
 
 正如我们为 NuGet 软件包添加参照一样，`CustomNodeModel` 需要参照 `CustomNodeModelFunction` 才能调用函数。
 
-![添加参照](../../.gitbook/assets/vs-add-project-reference.jpg)
+![添加参照](../images/vs-add-project-reference.jpg)
 
 > 在我们参照函数之前，CustomNodeModel 的 using 语句将处于不活动状态
 >
@@ -240,7 +240,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 在完成设置项目结构后，使用 Visual Studio 的设计环境构建用户控件并在 `.xaml` 文件中定义其参数。通过工具箱，将滑块添加到 `<Grid>...</Grid>`。
 
-![添加新滑块](../../.gitbook/assets/vs-usercontrol.jpg)
+![添加新滑块](../images/vs-usercontrol.jpg)
 
 > 1. 在 `CustomNodeModel` 上单击鼠标右键，然后选择 `Add > New Item`
 > 2. 选择 `WPF`
@@ -295,7 +295,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 在我们构建项目之前，最后一步是添加一个 `pkg.json` 文件，以便 Dynamo 可以读取软件包。
 
-![添加 JSON 文件](../../.gitbook/assets/vs-pkg-json.jpg)
+![添加 JSON 文件](../images/vs-pkg-json.jpg)
 
 > 1. 在 `CustomNodeModel` 上单击鼠标右键，然后选择 `Add > New Item`
 > 2. 选择 `Web`
@@ -341,7 +341,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 常见的根本原因是，节点是使用重新创建端口的构造函数创建的。反之，应使用已载入端口的构造函数。这些构造函数通常标记为 `[JsonConstructor]` _参见下文以了解示例_
 
-\![Broken JSON](<../../.gitbook/assets/broken-json (1).jpg>)
+![损坏的 JSON](<../images/broken-json.jpg>)
 
 这可能是因为：
 

@@ -21,7 +21,7 @@ DynamoRevit 项目的代码位于 GitHub 上独立于核心 Dynamo 源代码的�
 
 DynamoRevit 的源代码托管在此处：[https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit)
 
-![GitHub 上的 DynamoRevit](../../.gitbook/assets/github-dynamorevit.jpg)
+![GitHub 上的 DynamoRevit](../images/github-dynamorevit.jpg)
 
 > 1. 克隆或下载存储库
 > 2. DynamoRevit 的分支参照 Revit 版本
@@ -34,13 +34,13 @@ DynamoRevit 的源代码托管在此处：[https://github.com/DynamoDS/DynamoRev
 
 > 将 `username` 替换为您的用户名
 
-![命令行界面](../../.gitbook/assets/cli-cd-revit.jpg)
+![命令行界面](../images/cli-cd-revit.jpg)
 
 现在，我们可以将存储库克隆到此目录中。尽管我们需要指定存储库的分支，但可以在克隆后切换到该分支。
 
 `git clone https://github.com/DynamoDS/DynamoRevit.git` 从远程 URL 克隆存储库，然后默认切换到主分支。
 
-![克隆存储库后的命令行界面](../../.gitbook/assets/cli-clone-revit.jpg)
+![克隆存储库后的命令行界面](../images/cli-clone-revit.jpg)
 
 在存储库克隆完成后，将当前目录更改为存储库文件夹，然后切换到与已安装版本的 Revit 匹配的分支。在本例中，我们使用的是 Revit RC2.13.1_Revit2023。可以在 GitHub 页面上的“分支”下拉菜单中查看所有远程分支。
 
@@ -48,7 +48,7 @@ DynamoRevit 的源代码托管在此处：[https://github.com/DynamoDS/DynamoRev
  `git checkout RC2.13.1_Revit2023` 将当前分支设置为 `RC2.13.1_Revit2023`。\
  `git branch` 确认我们所在的分支，并显示本地存在的其他分支。
 
-![目录已切换到分支](../../.gitbook/assets/cli-branch-revit.jpg)
+![目录已切换到分支](../images/cli-branch-revit.jpg)
 
 > 带星号的分支是当前已检出的分支。`Revit2018` 分支之所以显示，是因为我们之前已将其检出，所以它存在于本地。
 
@@ -58,19 +58,19 @@ DynamoRevit 的源代码托管在此处：[https://github.com/DynamoDS/DynamoRev
 
 在构建存储库之前，我们需要使用 `src` 文件夹中的 `restorepackages.bat` 文件恢复 NuGet 软件包。该 bat 文件会使用 [NuGet](https://www.nuget.org) 软件包管理器来拉取 DynamoRevit 所需的 Dynamo 核心的已构建二进制文件。但如果您仅对 DynamoRevit 进行更改，而不是对 Dynamo 核心进行更改，也可以选择手动构建这些文件。这样可以更快地开始运行。确保以管理员身份运行此文件。
 
-![以管理员身份运行](../../.gitbook/assets/fe-restorepackages.jpg)
+![以管理员身份运行](../images/fe-restorepackages.jpg)
 
 > 1. 在 `restorepackages.bat` 上单击鼠标右键，然后选择 `Run as administrator`
 
 如果软件包已成功恢复，则 `packages` 文件夹将添加到 `src` 文件夹（包含最新 Beta 版 NuGet 软件包）中。
 
-![最新 Beta 版 Dynamo NuGet 软件包](../../.gitbook/assets/fe-packages.jpg)
+![最新 Beta 版 Dynamo NuGet 软件包](../images/fe-packages.jpg)
 
 > 1. 最新 Beta 版 Dynamo NuGet 软件包
 
 在软件包恢复后，打开 `src` 中的 `DynamoRevit.All.sln` Visual Studio 解决方案文件，然后构建解决方案。该构建最初可能难以找到 `AssemblySharedInfo.cs`。如果是这样，则重新运行构建即会解决该问题。
 
-![构建解决方案](../../.gitbook/assets/vs-build-dynamorevit.jpg)
+![构建解决方案](../images/vs-build-dynamorevit.jpg)
 
 > 1. 选择 `Build > Build Solution`
 > 2. 在“输出”窗口中确认构建是否已成功。消息应为 `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`。
@@ -118,7 +118,7 @@ Revit 需要一个附加模块文件来识别 DynamoRevit，[安装程序](http:
 
 此外，我们还需要删除 Revit 附带的现有 Dynamo。要执行此操作，请转到 `C:\\Program Files\Autodesk\Revit 2023\AddIns` 并删除包含 **“Dynamo”** 的两个文件夹：`DynamoForRevit` 和 `DynamoPlayerForRevit`。如果需要恢复原始 Dynamo for Revit，可以删除它们，也可以将它们备份在单独的文件夹中。
 
-![DynamoForRevit 和 DynamoPlayerforRevit 文件夹](../../.gitbook/assets/fe-dynamo-folders-remove.jpg)
+![DynamoForRevit 和 DynamoPlayerforRevit 文件夹](../images/fe-dynamo-folders-remove.jpg)
 
 第二步是将 Dynamo 核心程序集的文件路径添加到 DynamoRevit 的 `bin` 文件夹中的 `Dynamo.config` 文件。当附加模块在 Revit 中打开时，DynamoRevit 将载入这些文件。通过此配置文件，可以将 DynamoRevit 附加模块指向不同版本的 Dynamo 核心，以在核心和 DynamoRevit 中开发和测试更改。
 
@@ -139,7 +139,7 @@ Revit 需要一个附加模块文件来识别 DynamoRevit，[安装程序](http:
 
 现在，当我们打开 Revit 时，“管理”选项卡中应该有一个 Dynamo 附加模块。
 
-![位于“管理”选项卡中的 Dynamo 附加模块](../../.gitbook/assets/revit-dynamo.jpg)
+![位于“管理”选项卡中的 Dynamo 附加模块](../images/revit-dynamo.jpg)
 
 > 1. 选择 `Manage`
 > 2. 单击 Dynamo 附加模块图标
@@ -160,13 +160,13 @@ Revit 需要一个附加模块文件来识别 DynamoRevit，[安装程序](http:
 
 当给定 PolyCurve 作为 **“Wall.ByCurveAndHeight”** 节点的曲线输入时，该节点会抛出异常，并显示消息：_“未实现 BSPlineCurve”_。通过调试，我们可以弄清楚节点不会接受此几何图形类型作为曲线参数的输入的确切原因。在本例中，我们假定 DynamoRevit 已成功构建，并可以作为 Revit 的附加模块运行。
 
-![Wall.ByCurbeAndHeight 节点抛出异常](../../.gitbook/assets/dyn-wallbycurveandheight.jpg)
+![Wall.ByCurbeAndHeight 节点抛出异常](../images/dyn-wallbycurveandheight.jpg)
 
 > 1. Wall.ByCurveAndHeight 节点抛出异常
 
 首先打开 `DynamoRevit.All.sln` 解决方案文件、启动 Revit，然后启动 DynamoRevit 附加模块。然后，使用 `Attach to Process` 窗口将 Visual Studio 附着到 Revit 进程。
 
-![“附着到进程”窗口](../../.gitbook/assets/vs-debug-attachprocess.jpg)
+![“附着到进程”窗口](../images/vs-debug-attachprocess.jpg)
 
 > Revit 和 DynamoRevit 需要运行才能显示为可用进程
 >
@@ -177,21 +177,21 @@ Revit 需要一个附加模块文件来识别 DynamoRevit，[安装程序](http:
 
 在将 Visual Studio 附着到 Revit 后，打开 `Wall.cs` 中的 Wall.ByCurveAndHeight 源代码。我们可以在“解决方案资源管理器”的 `Libraries > RevitNodes > Elements` 下的文件的 `Public static constructors` 区域中找到此内容。在墙类型的构造函数中设置断点，以便在 Dynamo 中执行节点时，该进程会中断，然后我们可以分别单步调试每行代码。通常，Dynamo Zero Touch 类型构造函数以 `By<parameters>` 开头。
 
-![设置断点](../../.gitbook/assets/vs-debugging-breakpoint.jpg)
+![设置断点](../images/vs-debugging-breakpoint.jpg)
 
 > 1. 具有 Wall.ByCurveAndHeight 构造函数的类文件
 > 2. 设置断点，方法是单击行号的左侧，或者在代码行上单击鼠标右键并选择 `Breakpoint > Insert Breakpoint`。
 
 在设置断点后，我们需要该进程运行穿过 Wall.ByCurveAndHeight 函数。通过将导线重新连接到 Dynamo 的一个端口（这将强制节点重新执行），可以在 Dynamo 中再次执行该函数。断点将在 Visual Studio 中命中。
 
-![Visual Studio 中的断点命中](../../.gitbook/assets/vs-breakpoint.jpg)
+![Visual Studio 中的断点命中](../images/vs-breakpoint.jpg)
 
 > 1. 断点图标会在断点命中后发生变化
 > 2. 显示下一个方法的“调用堆栈”窗口
 
 现在，单步执行构造函数中的每一行，直到我们遇到异常。以黄色亮显的代码是要运行的下一条语句。
 
-![Visual Studio 中的单步执行](../../.gitbook/assets/vs-stepover.jpg)
+![Visual Studio 中的单步执行](../images/vs-stepover.jpg)
 
 > 1. 用于导航代码的调试工具
 > 2. 按 `Step Over` 以运行亮显的代码，然后在函数返回后暂停执行
@@ -201,7 +201,7 @@ Revit 需要一个附加模块文件来识别 DynamoRevit，[安装程序](http:
 
 由于这不是一个开源库，因此我们无法在此处进行更改 - 由于我们有详细信息，因此我们可以通过填写 GitHub [问题](https://guides.github.com/features/issues/)来报告问题以及更多上下文，也可以针对此问题提出解决方案，以进行拉取请求。
 
-![Visual Studio 中的异常](../../.gitbook/assets/vs-exception.jpg)
+![Visual Studio 中的异常](../images/vs-exception.jpg)
 
 > 1. 当我们在 `Walls.cs` 中遇到导致异常的语句时，调试过程使我们尽可能接近 `ProtoToRevitCurve.cs` 中用户代码中问题的根源
 > 2. 在 `ProtoToRevitCurve.cs` 中导致异常的语句
@@ -220,7 +220,7 @@ Revit 需要一个附加模块文件来识别 DynamoRevit，[安装程序](http:
 
 来源仅指向我们克隆的原始 URL。
 
-![在命令行界面中设置目录](../../.gitbook/assets/cli-pull-revit.jpg)
+![在命令行界面中设置目录](../images/cli-pull-revit.jpg)
 
 > 例如，我们需要注意当前位于哪个分支上，以及要从哪个分支拉取，从而避免将更改从 `RC2.13.1_Revit2023` 拉取到 `Revit2018` 中。
 

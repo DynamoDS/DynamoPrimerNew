@@ -17,7 +17,7 @@ Forma 中的 Dynamo 当前作为早期访问开放 Beta 版提供，这意味着
 1. 在 Forma 站点中，转到左侧侧栏中的**“Extensions”**然后单击**“Add extension”**。这将打开 Autodesk App Store。
 2. 搜索 Dynamo，然后添加 Dynamo Player Beta 版。阅读免责声明，然后单击**“Agree”**。
 
-<figure><img src="../.gitbook/assets/install-player.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/install-player.png" alt=""><figcaption></figcaption></figure>
 
 3. 现在，Dynamo Player 在扩展中可用。单击它以将其打开。
 4. 现在，可以使用 Dynamo Player了！
@@ -67,11 +67,11 @@ Forma 中的 Dynamo 当前作为早期访问开放 Beta 版提供，这意味着
 1. 在 Forma 站点中，转到左侧侧栏中的**“Extensions”**然后单击**“Add extension”**。这将打开 Autodesk App Store。
 2. 搜索 Dynamo，然后添加 Dynamo Player Beta 版。阅读免责声明，然后单击**“Agree”**。
 
-<figure><img src="../.gitbook/assets/install-player.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/install-player.png" alt=""><figcaption></figcaption></figure>
 
 3. 现在，Dynamo Player 在扩展中可用。单击它以将其打开。
 4. 在顶部附近，单击“Desktop”以访问 Dynamo Desktop。
 
-<figure><img src="../.gitbook/assets/dynamo-desktop.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/dynamo-desktop.png" alt=""><figcaption></figcaption></figure>
 
 5. 现在，可以使用 Dynamo Player了！如果已在 Dynamo 中打开一个图形，只需单击**“Connected graph”**下的“Open”，即可在 Player 中查看该图形。

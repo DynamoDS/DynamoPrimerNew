@@ -1,6 +1,6 @@
 # Civil 3D 连接
 
-<figure><img src="../.gitbook/assets/DynamoSwissKnife-WhiteBackground_edit (2).jpg" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="images/DynamoSwissKnife-WhiteBackground_edit.jpg" alt="" width="563"><figcaption></figcaption></figure>
 
 Dynamo for Civil 3D 为从事土木基础设施项目的工程师和设计师提供了 _可视化编程_ 范例。可以将 Dynamo 视为一种面向 Civil 3D 用户的数字多功能工具 - 无论任务如何，它都有适合该工作的合适工具。Dynamo 的直观界面使您无需编写一行代码即可创建强大且可自定义的例程。您不需要 _成为_ 一名程序员就可以使用 Dynamo，但您确实需要能够以程序员的逻辑 _思考_。结合该 Primer 中的其他章，本章将帮助您培养逻辑技能，以便您能够以计算设计思维模式来处理任何任务。
 
@@ -8,9 +8,9 @@ Dynamo for Civil 3D 为从事土木基础设施项目的工程师和设计师提
 
 Dynamo 是在 Civil 3D 2020 中首次引入的，自此以后不断发展。它最初是通过软件更新单独安装的，现在随所有版本的 Civil 3D 一起提供。根据您正在使用的 Civil 3D 的版本，您可能会注意到 Dynamo 界面看起来与您在本章中所见的示例略有不同。这是因为在 Civil 3D 2023 中对界面进行了重大改进。
 
-<figure><img src="../.gitbook/assets/c3d-ui-old.png" alt=""><figcaption><p>Dynamo 界面，Civil 3D 2020 - 2022</p></figcaption></figure>
+<figure><img src="images/c3d-ui-old.png" alt=""><figcaption><p>Dynamo 界面，Civil 3D 2020 - 2022</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/c3d-ui-new.png" alt=""><figcaption><p>Dynamo 界面，Civil 3D 2023 - 至今</p></figcaption></figure>
+<figure><img src="images/c3d-ui-new.png" alt=""><figcaption><p>Dynamo 界面，Civil 3D 2023 - 至今</p></figcaption></figure>
 
 建议您查看 [Dynamo 博客](https://dynamobim.org/blog/)，以了解有关 Dynamo 开发的最新信息。下表汇总了 Dynamo for Civil 3D 生命期中的关键里程碑。
 

@@ -68,7 +68,7 @@ lne = Autodesk.Line.ByStartPointEndPoint;
 
 ## 1\.简化的 list@level 语法
 
-list@level的新语法，使用 `list@L1` 而不是 `list@-1` ![](../../.gitbook/assets/lang2_1.png)
+list@level的新语法，使用 `list@L1` 而不是 `list@-1` ![](../images/lang2_1.png)
 
 ## 2\.使用仅按等级不同的参数的重载函数是非法的
 
@@ -85,7 +85,7 @@ BoundingBox BoundingBox.ByGeometry(geometry: Geometry) {...}
 BoundingBox BoundingBox.ByGeometry(geometry: Geometry[]) {...}
 ```
 
-如果用户将第一个节点放在画布上并连接了一组几何图形，则他将期望执行复制，但这永远不会发生，因为在运行时，将改为调用第二个重载，如下所示：![](../../.gitbook/assets/lang2_2.png)
+如果用户将第一个节点放在画布上并连接了一组几何图形，则他将期望执行复制，但这永远不会发生，因为在运行时，将改为调用第二个重载，如下所示：![](../images/lang2_2.png)
 
 因此，在 2.0 中，我们不允许重载函数，这些函数仅在参数基数上有所不同。这意味着，对于具有相同数量和类型参数但具有一个或多个参数仅等级不同的重载函数，首先定义的重载始终优先，而其余重载则被编译器丢弃。进行这种简化的主要优点是通过选择候选函数的快速路径来简化方法解决逻辑。
 
@@ -105,7 +105,7 @@ BoundingBox.ByGeometry(geometry<1>);
 
 在 2.0 中，始终是定义的第一个方法优先于其余方法被拾取。遵循先到先得原则。
 
-![](../../.gitbook/assets/lang2_3.png)
+![](../images/lang2_3.png)
 
 对于以下每种情况，将采用定义的第一个重载。请注意，这纯粹基于函数的定义顺序，而不是参数等级，尽管建议优先使用用户定义节点和 Zero Touch 节点的等级参数较高的方法。
 
@@ -137,7 +137,7 @@ foo(x: int[], y: int[]); ✕
 
 ### Dynamo 1.x：仅测试输入列表中的第一个元素以进行方法解决检查
 
-![](../../.gitbook/assets/lang2_4.png)
+![](../images/lang2_4.png)
 
 ```
 x = [arc, line];
@@ -164,7 +164,7 @@ y = x.CenterPoint; // y = null ✕
 
 此示例以前在 1.x 版本中有效，因为图表编译为 `point.X;`，并且它将在点对象上找到 `X` 属性。它现在在 2.0 中失败，因为编译的代码 - `Vector.X(point)` 只需要一个 `Vector` 类型：
 
-![](../../.gitbook/assets/lang2_5.png)
+![](../images/lang2_5.png)
 
 ### 优点：
 
@@ -176,7 +176,7 @@ y = x.CenterPoint; // y = null ✕
 
 ### 警告：重载方法的未解决歧义
 
-由于 Dynamo 通常支持函数重载，因此如果存在具有相同数量参数的另一个重载函数，它可能仍会感到困惑。例如，在下图中，如果我们将数值连接到 `Curve.Extrude` 的 `direction` 输入，将向量连接到 `Curve.Extrude` 的 `distance` 输入，则两个节点都会继续工作（这是意外情况）。在这种情况下，即使节点编译为静态方法，引擎仍然无法在运行时分辨出差异，而是根据输入类型选择任一方法。![](../../.gitbook/assets/lang2_6.png)
+由于 Dynamo 通常支持函数重载，因此如果存在具有相同数量参数的另一个重载函数，它可能仍会感到困惑。例如，在下图中，如果我们将数值连接到 `Curve.Extrude` 的 `direction` 输入，将向量连接到 `Curve.Extrude` 的 `distance` 输入，则两个节点都会继续工作（这是意外情况）。在这种情况下，即使节点编译为静态方法，引擎仍然无法在运行时分辨出差异，而是根据输入类型选择任一方法。![](../images/lang2_6.png)
 
 ### 已解决的问题：
 
@@ -186,11 +186,11 @@ y = x.CenterPoint; // y = null ✕
 
 我们来看一个来自 `ProtoGeometry` 中 `TSpline` 节点的示例（请注意，`TSplineTopology` 继承自基础 `Topology` 类型）：以前编译为实例方法 `object.Edges` 的 `Topology.Edges` 节点现在编译为静态方法 `Topology.Edges(object)`。在运行时类型的对象进行方法调度之后，上一个调用将多态解析为派生类方法 `TsplineTopology.Edges`。
 
-![](../../.gitbook/assets/lang2_7.png)
+![](../images/lang2_7.png)
 
 新的静态行为被强制调用基类方法 `Topology.Edges`。因此，此节点返回基类 `Edge` 对象，而不是 `TSplineEdge` 类型的派生类对象。
 
-![](../../.gitbook/assets/lang2_8.png)
+![](../images/lang2_8.png)
 
 这是一种回归，因为下游 `TSpline` 节点期待 `TSplineEdges` 开始失败。
 
@@ -198,13 +198,13 @@ y = x.CenterPoint; // y = null ✕
 
 **2.0 中的新多态行为：**
 
-![](../../.gitbook/assets/lang2_9.png)
+![](../images/lang2_9.png)
 
 在这种情况下，由于 `a` 的第一个元素是 `TSpline`，因此它是在运行时调用的 `TSplineTopology.Edges` 派生方法。因此，它为基础 `Topology` 类型 `b` 返回 `null`。
 
 在第二种情况下，由于常规 `Topology` 类型 `b` 是第一个元素，因此调用了基础 `Topology.Edges` 方法。由于 `Topology.Edges` 也恰好接受派生的 `TSplineTopology` 类型，因此 `a` 作为输入，它将为输入 `a` 和 `b` 返回 `Edges`。
 
-![](../../.gitbook/assets/lang2_10.png)
+![](../images/lang2_10.png)
 
 **2\.从生成冗余外部列表的回归**
 
@@ -248,13 +248,13 @@ p = Point.ByCoordinates(x<1>, y<2>, z<3>); // cross-lacing
 
 ### Dynamo 1.x：三维点列表
 
-![](../../.gitbook/assets/lang2_11.png)
+![](../images/lang2_11.png)
 
 在 2.0 中，每个单值参数 `y` 和 `z` 的复制导向的存在不会导致升级，从而导致列表与 `x` 的输入一维列表具有相同的尺寸。
 
 ### Dynamo 2.0：一维点列表
 
-![](../../.gitbook/assets/lang2_12.png)
+![](../images/lang2_12.png)
 
 上述由静态方法编译引起的回归问题，并生成冗余的外部列表，也通过此语言更改得到了解决。
 
@@ -268,7 +268,7 @@ Surface.PointAtParameter(surface<1>, u<2>, v<3>);
 
 ### Dynamo 1.x：使用复制导向的参数列表升级
 
-![](../../.gitbook/assets/lang2_13.png)
+![](../images/lang2_13.png)
 
 在 2.0 中，我们已禁用在与复制导向或连缀一起使用时将单值参数提升为列表的功能。所以现在调用：
 
@@ -280,7 +280,7 @@ Surface.PointAtParameter(surface<1>, u<2>, v<3>);
 
 ### Dynamo 2.0：已禁用使用复制导向进行单值参数的列表提升
 
-![](../../.gitbook/assets/lang2_14.png)
+![](../images/lang2_14.png)
 
 此更改现在删除了冗余列表级别的添加，还解决了过渡到静态方法编译引起的回归。
 
@@ -295,7 +295,7 @@ Surface.PointAtParameter(surface<1>, u<2>, v<3>);
 * 实例方法和静态方法一致（修复了静态方法语义的问题）
 * 具有输入和默认参数的节点行为一致（请参见下文）
 
-![](../../.gitbook/assets/lang2_15.png)
+![](../images/lang2_15.png)
 
 ## 5\.变量在代码块节点中不可变以防止关联更新
 
@@ -336,7 +336,7 @@ a = 4;         // b = 10 or b = 7?
 
 在此几何图形示例中，由于立方体 `b` 取决于自身以及圆柱体 `a`，移动滑块是否应该使孔沿块移动，还是应该在每次滑块位置更新时创建沿其路径布满多个孔的累积效果？
 
-![](../../.gitbook/assets/lang2_16.gif)
+![](../images/lang2_16.gif)
 
 **3\.更新变量的属性：**
 
@@ -359,7 +359,7 @@ a = 4;         // b = 10 or b = 7?
 
 如果它被一些用户使用过，那么它很可能在不知不觉中被他们使用，弊大于利。因此，我们决定在 2.0 版中通过使变量不可变来隐藏代码块节点使用中的关联性，同时我们继续仅将关联更新保留为 DS 引擎的原生功能。这是为了简化用户的脚本体验而做出的另一项更改。
 
-**通过防止变量重定义，在 CBN 中禁用了关联更新：** ![](../../.gitbook/assets/lang2_17.png)
+**通过防止变量重定义，在 CBN 中禁用了关联更新：** ![](../images/lang2_17.png)
 
 **代码块中仍允许列表索引**
 
@@ -367,7 +367,7 @@ a = 4;         // b = 10 or b = 7?
 
 在下一个示例中，我们看到列表 `a` 已初始化，但稍后可以使用索引运算符赋值覆盖，并且依赖于 `a` 的任何变量都将关联更新，如 `c` 的值所示。此外，节点预览还将显示在重新定义其一个或多个单元后更新的 `a` 值。
 
-![](../../.gitbook/assets/lang2_18.png)
+![](../images/lang2_18.png)
 
 ## 6\.命令式块中的变量是命令式块范围的局部变量
 
@@ -483,11 +483,11 @@ dict = {<key> : <value>, …};
 
 键值对格式，其中 `<key>` 只允许一个字符串，多个键值对之间用逗号分隔。
 
-![](../../.gitbook/assets/lang2_19.png)
+![](../images/lang2_19.png)
 
 `Dictionary.ByKeysValues` zero-touch 方法可以用作初始化词典的更通用方法，通过分别传入键和值列表并具有使用 zero-touch 方法的所有花里胡哨的功能，如复制导向等。
 
-![](../../.gitbook/assets/lang2_20.png)
+![](../images/lang2_20.png)
 
 ### 为什么我们不使用任意表达式作为词典初始化语法？
 
@@ -507,21 +507,21 @@ dict = {["foo", "bar"] : "baz" };
 
 **1\.返回 .NET 词典的 Zero Touch 节点会以 Dynamo 词典形式返回**
 
-**请考虑以下返回 IDictionary 的 zero-touch C# 方法：** ![](../../.gitbook/assets/lang2_21.png)
+**请考虑以下返回 IDictionary 的 zero-touch C# 方法：** ![](../images/lang2_21.png)
 
-**相应的 ZT 节点返回值以 Dynamo 词典形式封送处理：** ![](../../.gitbook/assets/lang2_22.png)
+**相应的 ZT 节点返回值以 Dynamo 词典形式封送处理：** ![](../images/lang2_22.png)
 
 **2\.多回波节点预览为词典**
 
-**返回具有多重返回属性的 IDictionary 的 Zero Touch 节点会返回 Dynamo 词典：** ![](../../.gitbook/assets/lang2_23.png)
+**返回具有多重返回属性的 IDictionary 的 Zero Touch 节点会返回 Dynamo 词典：** ![](../images/lang2_23.png)
 
-![](../../.gitbook/assets/lang2_24.png)
+![](../images/lang2_24.png)
 
 **3\.Dynamo 词典可以作为输入传递到接受 .NET 词典的 Zero-Touch 节点**
 
-**带有 IDictionary 参数的 ZT 方法：** ![](../../.gitbook/assets/lang2_25.png)
+**带有 IDictionary 参数的 ZT 方法：** ![](../images/lang2_25.png)
 
-**ZT 节点接受 Dynamo 词典作为输入：** ![](../../.gitbook/assets/lang2_26.png)
+**ZT 节点接受 Dynamo 词典作为输入：** ![](../images/lang2_26.png)
 
 ### 多返回节点中的词典预览
 
@@ -529,4 +529,4 @@ dict = {["foo", "bar"] : "baz" };
 
 但是，我们对已定义 `MultiReturnAttribute` 的多返回节点进行了例外处理。在以下示例中，`DateTime.Components` 节点是“多返回”节点，节点预览反映其键值对的顺序与节点上的输出端口的顺序相同，这也是根据节点定义上的 `MultiReturnAttribute` 指定输出的顺序。
 
-另请注意，与 UI 节点不同，代码块的预览不按顺序排列，因为代码块节点的输出端口信息（以多返回属性的形式）不存在：![](../../.gitbook/assets/lang2_27.png)
+另请注意，与 UI 节点不同，代码块的预览不按顺序排列，因为代码块节点的输出端口信息（以多返回属性的形式）不存在：![](../images/lang2_27.png)
