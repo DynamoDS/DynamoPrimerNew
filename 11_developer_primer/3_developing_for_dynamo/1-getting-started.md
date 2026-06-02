@@ -117,7 +117,7 @@ namespace MyCustomNode
 
 ![Method imported as a create node](../images/private-constructor.jpg)
 
-> Dynamo has imported our method as a Create node
+> 1. Dynamo has imported our method as a Create node
 
 ### Adding Dynamo NuGet Package References <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
 
@@ -134,7 +134,7 @@ To reference these packages in a Visual Studio project, either download the pack
 
 ![Opening NuGet package manager](../images/vs-nuget-package-manager2.jpg)
 
-> Open the NuGet package manager by selecting `Tools > NuGet Package Manager > Manage NuGet Packages for Solution...`
+> 1. Open the NuGet package manager by selecting `Tools > NuGet Package Manager > Manage NuGet Packages for Solution...`
 
 This is the NuGet Package Manager. This window shows what packages have been installed for the project and lets the user browse for others. If a new version of the DynamoServices package is released, packages can be updated from here or reverted to an earlier version.
 

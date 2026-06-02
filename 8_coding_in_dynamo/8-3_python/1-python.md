@@ -88,7 +88,7 @@ Now that we have our solid, let’s drop a Python Script node onto the workspace
 
 ![](<../images/python node - exercise pt I-04.jpg>)
 
-> To add additional inputs to the node, click the + icon on the node. The inputs are named IN\[0], IN\[1], etc. to indicate that they represent items in a list.
+> 1. To add additional inputs to the node, click the + icon on the node. The inputs are named IN\[0], IN\[1], etc. to indicate that they represent items in a list.
 
 Let’s start by defining our inputs and output. Double click the node to open the python editor. Follow the code below to modify the code in the editor.
 

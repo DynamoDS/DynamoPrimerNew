@@ -40,7 +40,7 @@ namespace ZeroTouchEssentials
 
 ![Default value](../images/defaultval.jpg)
 
-> The default value will show up when hovering over the node input port
+> 1. The default value will show up when hovering over the node input port
 
 ### Returning Multiple Values <a href="#returning-multiple-values" id="returning-multiple-values"></a>
 
@@ -78,7 +78,7 @@ A node that returns multiple outputs.
 
 ![Multiple outputs](../images/multipleoutputs.png)
 
-> Notice that there are now two output ports named according to the strings we entered for the dictionary's keys.
+> 1. Notice that there are now two output ports named according to the strings we entered for the dictionary's keys.
 
 ### Documentation, Tooltips, and Search <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
 
@@ -92,7 +92,7 @@ It is best practice to add documentation to Dynamo nodes that describe the node'
 
 ![Generating an XML file](../images/vs-xml.jpg)
 
-> Visual Studio will generate an XML file at the specified location
+> 1. Visual Studio will generate an XML file at the specified location
 
 The types of tags are as follows:
 

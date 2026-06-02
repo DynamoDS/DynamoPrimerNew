@@ -162,7 +162,7 @@ The **Wall.ByCurveAndHeight** node throws an exception when given a PolyCurve as
 
 ![The Wall.ByCurbeAndHeight node throwing an exception](../images/dyn-wallbycurveandheight.jpg)
 
-> The **Wall.ByCurveAndHeight** node throwing an exception
+> 1. The **Wall.ByCurveAndHeight** node throwing an exception
 
 Start by opening the `DynamoRevit.All.sln` solution file, start Revit, and start the DynamoRevit add-in. Then attach Visual Studio to the Revit process with the `Attach to Process` window.
 

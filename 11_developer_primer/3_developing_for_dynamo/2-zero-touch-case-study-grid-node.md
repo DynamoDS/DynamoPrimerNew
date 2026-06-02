@@ -86,7 +86,7 @@ If the project looks similar to this, go ahead and try to build the `.dll`.
 
 ![Building a DLL](../images/vs-grids.jpg)
 
-> Choose Build > Build Solution
+> 1. Choose Build > Build Solution
 
 Check the project's `bin` folder for a `.dll`. If the build was successful, we can add the `.dll` to Dynamo.
 
@@ -157,6 +157,6 @@ To add tooltips, we need an xml file in the project directory. A `.xml` can be a
 
 ![Enabling XML documentation](../images/vs-xml.jpg)
 
-> Enable XML documentation file here and specify a file path. This generates an XML file.
+> 1. Enable XML documentation file here and specify a file path. This generates an XML file.
 
 That's it! We have created a new node with several standard features. The following chapter Zero-Touch Basics goes into greater detail about Zero-Touch node development and the issues to be aware of.

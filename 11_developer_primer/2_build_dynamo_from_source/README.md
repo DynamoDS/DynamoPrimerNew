@@ -106,7 +106,7 @@ If Dynamo builds successfully, a `bin` folder will be created in the Dynamo repo
 
 ![DynamoSandbox executable](../images/ex-dynamosandbox.jpg)
 
-> The DynamoSandbox executable we just built. Run this to start Dynamo.
+> 1. The DynamoSandbox executable we just built. Run this to start Dynamo.
 
 Now we are almost fully set up to start developing for Dynamo.
 
@@ -169,7 +169,7 @@ Use the following command to pull the latest changes:
 
 ![Updated local repository](../images/cli-pull-changes.jpg)
 
-> Here we can see that the local repository has been updated with changes from the remote.
+> 1. Here we can see that the local repository has been updated with changes from the remote.
 
 In addition to pulling updates, there are four more git workflows to be familiar with.
 
