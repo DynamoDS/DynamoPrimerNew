@@ -60,13 +60,13 @@ Before building the repository, we will need to restore the NuGet packages with 
 
 ![Run as administrator](../images/fe-restorepackages.jpg)
 
-> Right-click `restorepackages.bat` and select `Run as administrator`
+> 1. Right-click `restorepackages.bat` and select `Run as administrator`
 
 If the packages are successfully restored, a `packages` folder will be added to the `src` folder with the latest beta NuGet packages.
 
 ![The latest beta Dynamo NuGet packages](../images/fe-packages.jpg)
 
-> The latest beta Dynamo NuGet packages
+> 1. The latest beta Dynamo NuGet packages
 
 With the packages restored, open the `DynamoRevit.All.sln` Visual Studio solution file in `src` and build the solution. The build may initially have trouble finding `AssemblySharedInfo.cs`. If so, rerunning the build will resolve this issue.
 

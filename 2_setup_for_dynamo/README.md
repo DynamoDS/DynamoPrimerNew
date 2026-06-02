@@ -31,7 +31,7 @@ If you would like to use Dynamo as a standalone application. Continue reading fo
 
 #### Download
 
-The Dynamo application is available from the [Dynamo website](http://dynamobim.com). Both official, past or pre-released versions are available from the download page. Visit [Get Dynamo](http://dynamobim.org/download/) page and Click **Download** for the official released version.
+ Both official, past or pre-released versions are available from the download page. Visit [Get Dynamo](http://dynamobim.org/download/) page and Click **Download** for the official released version.
 
 ![](<images/image.png>)
 

@@ -73,9 +73,9 @@ Thank you to Matt Jezyk, Ian Keough, Zach Kron, Racel Amour and Colin McCrone fo
 
 ### Software and Resources
 
-**Dynamo** Please refer to the following sites for the most current **stable** release of Dynamo.
+**Dynamo** Please refer to the following site for the most current **stable** release of Dynamo.
 
-[https://dynamobim.com/download/](https://dynamobim.com/download/) or [https://dynamobuilds.com](https://dynamobuilds.com/)
+[https://dynamobuilds.com](https://dynamobuilds.com/)
 
 \*Note: Starting with Revit 2020, Dynamo is bundled with Revit releases, resulting in manual installation not being required. More information is available at this [blog post](https://dynamobim.org/dynamo-core-2-1-release/).
 
