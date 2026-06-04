@@ -23,7 +23,7 @@ Extension authors may also have some potential changes to make - depending on ho
 
 ### Custom Nodes 1.3 - > 2.0 <a href="#custom-nodes-13----20" id="custom-nodes-13----20"></a>
 
-[Organizing Custom Nodes in librarie.js](https://github.com/DynamoDS/Dynamo/wiki/Library-2.0-Add-Ons-Organization#customnodes)
+[Organizing Custom Nodes in librarie.js](..\3_developing_for_dynamo\9-defining-custom-package-organisation-dynamo2.0+.md)
 
 Known Issues:
 

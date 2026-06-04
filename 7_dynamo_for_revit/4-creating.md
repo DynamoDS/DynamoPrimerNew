@@ -135,7 +135,7 @@ Begin by opening the sample file for this lesson - ARCH-DirectShape-BaseFile.rvt
 
 ![](<images/creating - exercise II - 03.jpg>)
 
-> 1. Zooming out and panning to the right in the sample graph, we see a large group of nodes - these are geometric operations which generate the trellis roof structure visible in the Dynamo preview. These nodes are generating using the _Node to Code_ functionality as discussed in the [code block section](../coding-in-dynamo/7_code-blocks-and-design-script/7-2_design-script-syntax.md#Node) of the primer.
+> 1. Zooming out and panning to the right in the sample graph, we see a large group of nodes - these are geometric operations which generate the trellis roof structure visible in the Dynamo preview. These nodes are generating using the _Node to Code_ functionality as discussed in the [code block section](..\8_coding_in_dynamo\8-1_code-blocks-and-design-script\2-design-script-syntax.md) of the primer.
 > 2. The structure is driven by three major parameters - Diagonal Shift, Camber, and Radius.
 
 Zooming a close-up look of the parameters for this graph. We can flex these to get different geometry outputs.

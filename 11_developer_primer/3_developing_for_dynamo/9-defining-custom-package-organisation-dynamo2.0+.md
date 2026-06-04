@@ -126,6 +126,7 @@ The Category Name can later be updated in the .dyf file (XML or JSON)
   "ElementResolver": {
     "ResolutionMap": {}
   },...
+}
 ```
 
 ```xml

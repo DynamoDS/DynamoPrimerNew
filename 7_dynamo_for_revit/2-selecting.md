@@ -133,7 +133,7 @@ A question that may come up often in Revit/Dynamo workflows: how do I select one
 
 > 1. We can convert all of these five elements to Dynamo geometry too.
 
-What if we had 500 beams? Converting all of these elements into Dynamo geometry would be really slow. If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../essential-nodes-and-concepts/5_geometry-for-computational-design/5-6_solids.md#freezing)" section in the solids chapter.
+What if we had 500 beams? Converting all of these elements into Dynamo geometry would be really slow. If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](..\5_essential_nodes_and_concepts\5-2_geometry-for-computational-design\6-solids.md#freezing)" section in the solids chapter.
 
 In any case, if we were to import 500 beams, do we need all of the surfaces to perform the intended parametric operation? Or can we extract basic information from the beams and perform generative tasks with fundamental geometry? This is a question that we'll keep in mind as we walk through this chapter. For example, let's take a look at the truss system next.
 
@@ -149,7 +149,7 @@ Next we are ready to extract some basic information from trusses family type.
 
 > 1. In the _Watch_ node, we can see that we have a list of adaptive components selected from Revit. We want to extract the basic information, so we're start with the adaptive points.
 > 2. Plug the _"All Elements of Family Type"_ node into the _"AdaptiveComponent.Location"_ node. This gives us a list of lists, each with three points which represent the adaptive point locations.
-> 3. Connecting a _"Polygon.ByPoints"_ node returns a polycurve. We can see this in the Dynamo viewport. By this method, we've visualized the geometry of one element and abstracted the geometry of the remaining array of elements (which could be larger in number than this example).
+> 3. Connecting a **Polygon.ByPoints** node returns a polycurve. We can see this in the Dynamo viewport. By this method, we've visualized the geometry of one element and abstracted the geometry of the remaining array of elements (which could be larger in number than this example).
 
 {% hint style="info" %}
 Tip: if you click on the green number of a Revit element in Dynamo, the Revit viewport will zoom to that element.

@@ -17,7 +17,7 @@ A powerful feature of Dynamo is that you can edit parameters on a parametric lev
 As a quick review of parameters in Revit, we recall that there are type parameters and instance parameters. Both can be edited from Dynamo, but we'll work with instance parameters in the exercise below.
 
 {% hint style="info" %}
-As you discover the wide-reaching application of editing parameters, you may want to edit a large quantity of elements in Revit with Dynamo. This can be a _computationally expensive_ operation, meaning that it can be slow. If you're editing a large number of elements, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/6-solids.md)" section in the solids chapter.
+As you discover the wide-reaching application of editing parameters, you may want to edit a large quantity of elements in Revit with Dynamo. This can be a _computationally expensive_ operation, meaning that it can be slow. If you're editing a large number of elements, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/6-solids.md#freezing)" section in the solids chapter.
 {% endhint %}
 
 ### Units

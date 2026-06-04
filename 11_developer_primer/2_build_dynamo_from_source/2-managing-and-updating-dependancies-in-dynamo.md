@@ -15,6 +15,6 @@ While working on a new feature, or simply updating an existing dependency you sh
    * Does it have native components (like `CEFSharp` or `ImageMagick`)? This will make it harder to deploy cross platform
    * Does it have windows only references? If so it should not be as dependency of DynamoCore or other cross platform parts of Dynamo (The model layer).
 4. Is the dependency correctly bundled into the bin folder on build with all of its required dependencies?
-   * If updating, are some files removed as a consequence of updating? Is this version of Dynamo intended for a point release of host products? If so you'll need to keep the old binaries around until a global launch year to support patch installers. See [here](https://github.com/DynamoDS/Dynamo/tree/master/extern/legacy_remove_me).
+   * If updating, are some files removed as a consequence of updating? Is this version of Dynamo intended for a point release of host products? If so you'll need to keep the old binaries around until a global launch year to support patch installers.
 5. Does the dependency or its dependency tree conflict with other existing dependencies in Dynamo?
 6. Does the dependency or its dependency tree conflict with existing dependencies in products that integrate Dynamo in process (Revit, Civil etc) - **This is important, as these issues can only be discovered at integration time unless work is done upfront.**
