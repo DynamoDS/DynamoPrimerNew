@@ -26,7 +26,7 @@ Place any assembly files in the `bin` folder and the manifest file in the `extra
 
 Example manifest .XML file:
 
-```
+```xml
 <ViewExtensionDefinition>
   <AssemblyPath>..\bin\MyViewExtension.dll</AssemblyPath>
   <TypeName>MyViewExtension.MyViewExtension</TypeName>

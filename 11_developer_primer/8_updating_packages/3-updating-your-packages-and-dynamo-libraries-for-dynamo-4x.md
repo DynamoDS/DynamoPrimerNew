@@ -43,7 +43,7 @@ The package built for Dynamo 4.x (*using .Net 10*) might work on Dynamo 3.x as l
 #### Best Practice for Package Authors 
 Best practice is to multi-target your project to both .NET 8 and .NET 10 by modifying your .csproj.
 
-```
+```xml
 <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
 ```
 This ensures:

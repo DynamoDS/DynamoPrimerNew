@@ -6,11 +6,11 @@ This guide will discuss various aspects of how to host Dynamo in your applicatio
 
 Contents:
 
-* [This Intro](13-dynamo-integration.md#dynamo-integration) High level overview of what this guide includes, and what Dynamo is all about.
-* [Dynamo Custom Entry Point](13-dynamo-integration.md#dynamo-custom-entry-point) How to create a DynamoModel and where to start.
-* [Element Binding and Trace](13-dynamo-integration.md#element-binding-and-trace) Using Dynamo's trace mechanism to bind nodes in the graph to their results in your host.
-* [Dynamo Revit Selection Nodes](13-dynamo-integration.md#dynamo-revit-selection-nodes-what-are-they) How to implement nodes that allow users to select objects or data from your host and pass them as inputs to the Dynamo graph.
-* [Dynamo Built-In Packages Overview](13-dynamo-integration.md#dynamo-built-in-packages-overview) What is the Dynamo Standard Library, and how to use the underlying mechanism to ship packages with your integration.
+* [This Intro](12-dynamo-integration.md#dynamo-integration) High level overview of what this guide includes, and what Dynamo is all about.
+* [Dynamo Custom Entry Point](12-dynamo-integration.md#dynamo-custom-entry-point) How to create a DynamoModel and where to start.
+* [Element Binding and Trace](12-dynamo-integration.md#element-binding-and-trace) Using Dynamo's trace mechanism to bind nodes in the graph to their results in your host.
+* [Dynamo Revit Selection Nodes](12-dynamo-integration.md#dynamo-revit-selection-nodes-what-are-they) How to implement nodes that allow users to select objects or data from your host and pass them as inputs to the Dynamo graph.
+* [Dynamo Built-In Packages Overview](12-dynamo-integration.md#dynamo-built-in-packages-overview) What is the Dynamo Standard Library, and how to use the underlying mechanism to ship packages with your integration.
 
 **Some diction:**
 
@@ -68,7 +68,7 @@ Given the ASM version, the following ShapeManager API will pick the correspondin
 
 Revit is the first entry in the ASM product search list, which means by default `DynamoSandbox.exe` will try to load ASM from Revit first, we still want to make sure the integrated D4R working session loads ASM from the current Revit host: e.g. if user has both R2018 and R2020 on computer, when launching D4R from R2020, D4R should be using ASM 225 from R2020 instead of ASM 223 from R2018. Integrators will need to implement similar calls to the following to force their specified version to load.
 
-```
+```c#
 internal static Version PreloadAsmFromRevit() 
 
 { 
@@ -637,9 +637,9 @@ Selection nodes are implemented by inheriting from the generic `SelectionBase` t
 
 * [https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs](https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs)
 * [NodeModel Case Study - Custom UI](5-nodemodel-case-study-custom-ui.md)
-* [Updating your Packages and Dynamo Libraries for Dynamo 2.x](6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
-* [Updating your Packages and Dynamo Libraries for Dynamo 3.x](6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
-* [Updating your Packages and Dynamo Libraries for Dynamo 4.x](6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
+* [Updating your Packages and Dynamo Libraries for Dynamo 2.x](1-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+* [Updating your Packages and Dynamo Libraries for Dynamo 3.x](2-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+* [Updating your Packages and Dynamo Libraries for Dynamo 4.x](3-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
 
 #### DynamoRevit:
 

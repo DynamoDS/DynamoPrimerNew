@@ -14,7 +14,7 @@ In Dynamo, the `OnLogWarningMessage` method provides a way to log warning messag
 
 `OnLogWarningMessage` is part of the `DynamoServices` namespace, so begin by adding this to your project file.
 
-```
+```c#
 using DynamoServices;
 ```
 
@@ -37,7 +37,7 @@ Place `OnLogWarningMessage` calls where you detect conditions that could cause i
 
 ### Syntax for `OnLogWarningMessage` <a href="#syntax-for-onlogwarningmessage" id="syntax-for-onlogwarningmessage"></a>
 
-```
+```c#
 LogWarningMessageEvents.OnLogWarningMessage("Your warning message here.");
 ```
 
@@ -55,7 +55,7 @@ In this example, we'll build upon the custom node created in the previous "**Zer
 
 When generating a grid based on `xCount` and `yCount`. You want to ensure both values are positive integers before proceeding.
 
-```
+```c#
 public static List<Rectangle> CreateGrid(int xCount, int yCount)
 {
     // Check if xCount and yCount are positive
@@ -77,7 +77,7 @@ This will show the warning in Dynamo if a user enters zero or negative values, h
 
 Now we know what this looks like, we can implement it into the Grids example node:
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 using DynamoServices;
 
@@ -141,7 +141,7 @@ If your method requires a list of points but a user passes an empty or null list
 
 ![OnLogWarningMessage Example 2](../images/onlogwarningmessage-example-2.png)
 
-```
+```c#
 public static Polygon CreatePolygonFromPoints(List<Point> points)
 {
     if (points == null || points.Count < 3)
@@ -170,7 +170,7 @@ For a node that processes file paths, you may want to ensure that only certain f
 
 ![OnLogWarningMessage Example 3](../images/onlogwarningmessage-example-3.png)
 
-```
+```c#
 public static void ProcessFile(string filePath)
 {
     if (!filePath.EndsWith(".csv"))
@@ -218,7 +218,7 @@ Place `OnLogInfoMessage` calls at meaningful points in your method. When a key s
 
 ### Syntax for `OnLogInfoMessage` <a href="#syntax-for-onloginfomessage" id="syntax-for-onloginfomessage"></a>
 
-```
+```c#
 LogWarningMessageEvents.OnLogInfoMessage("Your info message here.");
 ```
 
@@ -236,7 +236,7 @@ In this example, we'll build upon the custom node created in the previous "**Zer
 
 When generating a grid based on `xCount` and `yCount`. After generating the grid, you want to confirm its creation by logging an informational message with the grid's dimensions.
 
-```
+```c#
 public static List<Rectangle> CreateGrid(int xCount, int yCount)
 {
     var pList = new List<Rectangle>();
@@ -258,7 +258,7 @@ This message will inform users that the grid was created as specified, helping t
 
 Now we know what this looks like, we can implement it into the Grids example node:
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 using DynamoServices;
 
@@ -315,7 +315,7 @@ If you're creating a node that processes a list of points, you might want to log
 
 ![OnLogInfoMessage Example 2](../images/onloginfomessage-example-2.png)
 
-```
+```c#
 public static List<Point> ProcessPoints(List<Point> points)
 {
     var processedPoints = new List<Point>();
@@ -345,7 +345,7 @@ In some cases, it's useful to confirm the input parameters a node used to comple
 
 ![OnLogInfoMessage Example 3](../images/onloginfomessage-example-3.png)
 
-```
+```c#
 public static void ExportData(string filePath, List<string> data)
 {
     // Code to write data to the specified file path...
@@ -538,7 +538,7 @@ If your project is not already SDK-style (required for embedding resources), con
 2. Edit the `.csproj` file:
    * Add the following `<Target>` element between `</ItemGroup>` and `</Project>`:
 
-```
+```xml
 <Target Name="CreateNodeIcons" AfterTargets="PostBuildEvent">
 		<!-- Get System.Drawing.dll     -->
 		<GetReferenceAssemblyPaths TargetFrameworkMoniker=".NETFramework, Version=v4.8">

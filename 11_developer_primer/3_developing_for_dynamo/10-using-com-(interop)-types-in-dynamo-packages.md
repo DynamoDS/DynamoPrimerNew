@@ -22,7 +22,7 @@ Some packages have already been created with embedded interop types (ex CivilCon
 
 You can follow this example:
 
-```
+```c#
 public class Application
     {
         string m_sProdID = "SomeNamespace.Application";

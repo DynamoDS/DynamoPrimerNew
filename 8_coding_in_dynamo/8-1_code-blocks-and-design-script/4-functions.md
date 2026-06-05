@@ -8,7 +8,7 @@ The first line has the key word “def”, then the function name, then the name
 
 ![](<../images/functions parent def.jpg>)
 
-```
+```js
 /*This is a multi-line comment,
 which continues for
 multiple lines*/
@@ -26,7 +26,7 @@ Call the function with another Code Block in the same file by giving the name an
 
 ![](<../images/functions children call def.jpg>)
 
-```
+```c#
 FunctionName(in1,in2);
 ```
 
@@ -50,7 +50,7 @@ Create a **Code Block** and introduce our definition.
 
 > 1. Use these lines of code:
 >
->     ```
+>     ```py
 >     def sphereByZ(inputPt)
 >     {
 >
@@ -63,7 +63,7 @@ Create a **Code Block** and introduce our definition.
 
 > 1. Adding to the **Code Block** function, we place a comment and a _sphereRadius_ variable which queries the _Z_ position of each point. Remember, _inputPt.Z_ does not need parentheses as a method. This is a _query_ of an existing element's properties, so no inputs are necessary:
 >
-> ```
+> ```py
 > def sphereByZ(inputPt,radiusRatio)
 > {
 > //get Z Value, ise ot to drive radius of sphere
@@ -79,7 +79,7 @@ Create a **Code Block** and introduce our definition.
 
 > 1.  Now we call the function and create a variable called _Pt_ to plug in the points created in the earlier steps:
 >
->     ```
+>     ```py
 >     sphereByZ(Pt)
 >     ```
 > 2. We notice from the output that we have all null values. Why is this? When we defined the function, we are calculating the _sphereRadius_ variable, but we did not define what the function should _return_ as an _output_. We can fix this in the next step.
@@ -119,14 +119,14 @@ One final step: let's drive the radius ratio with a user defined parameter. To d
 
 > 1.  Update the _sphereByZ_ definition to:
 >
->     ```
+>     ```py
 >     def sphereByZ(inputPt,radiusRatio)
 >     {
->     //get Z Value, use it to drive radius of sphere
+>     # Get Z Value, use it to drive radius of sphere
 >     sphereRadius=inputPt.Z/radiusRatio;
->     //Define Sphere Geometry
+>     # Define Sphere Geometry
 >     sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);
->     //Define output for function
+>     # Define output for function
 >     return sphere;
 >     };
 >     ```

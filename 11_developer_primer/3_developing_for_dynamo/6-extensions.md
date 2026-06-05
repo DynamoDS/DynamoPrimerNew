@@ -55,7 +55,7 @@ To use `IViewExtension`, we will need the WpfUILibrary NuGet package. Installing
 
 From the `IViewExtension` class we will determine what happens when Dynamo starts up, when the extension is loaded, and when Dynamo shuts down. In the `SampleViewExtension.cs` class file, add the following code:
 
-```
+```c#
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -145,7 +145,7 @@ The `SampleViewExtension` class creates a clickable menu item to open the window
 
 Now that we have established some of the window's basic parameters, we will add the logic for responding to various Dynamo related events and instruct the UI to update based on these events. Copy the following code into the `SampleWindowViewModel.cs` class file:
 
-```
+```c#
 using System;
 using Dynamo.Core;
 using Dynamo.Extensions;
@@ -216,7 +216,7 @@ With the core logic of the extension defined, we will now specify the appearance
 
 In the window `.xaml` code, we will need to bind `SelectedNodesText` to a text block. Add the following code to `SampleWindow.xaml`:
 
-```
+```xml
 <Window x:Class="SampleViewExtension.SampleWindow"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -238,7 +238,7 @@ In the window `.xaml` code, we will need to bind `SelectedNodesText` to a text b
 
 We will now initialize the sample window in the `.xaml` C# backing file `SampleWindow.xaml.cs`. Add the following code to `SampleWindow.xaml`:
 
-```
+```c#
 using System.Windows;
 
 namespace SampleViewExtension
@@ -269,7 +269,7 @@ The view extension is now ready to be built and added to Dynamo. Dynamo requires
 
 In the `.xml` file, add the following code to tell Dynamo where to look for the extension assembly:
 
-```
+```xml
 <ViewExtensionDefinition>
   <AssemblyPath>C:\Users\username\Documents\Visual Studio 2015\Projects\SampleViewExtension\SampleViewExtension\bin\Debug\SampleViewExtension.dll</AssemblyPath>
   <TypeName>SampleViewExtension.SampleViewExtension</TypeName>

@@ -56,7 +56,7 @@ If your answer contained graphics, then **Visual Programming** is definitely for
 
 **Textual Program:**
 
-```
+```py
 myPoint = Point.ByCoordinates(0.0,0.0,0.0);
 x = 5.6;
 y = 11.5;

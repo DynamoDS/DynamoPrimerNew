@@ -24,7 +24,7 @@ Dynamo supports the definition of default values for input ports on a node. Thes
 
 * Set method parameters to a default value: `inputNumber = 2.0`
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -51,7 +51,7 @@ Returning multiple values is a bit more complex than creating multiple inputs an
 * Add the `[MultiReturn(new[] { "string1", "string2", ... more strings here })]` attribute to the method. The strings refer to keys in the dictionary and will become the output port names.
 * Return a `Dictionary<>` from the function with keys that match the parameter names in the attribute: `return new Dictionary<string, object>`
 
-```
+```c#
 using System.Collections.Generic;
 using Autodesk.DesignScript.Runtime;
 
@@ -104,7 +104,7 @@ The types of tags are as follows:
 
 The following is an example node with input and output descriptions, as well as a summary that will display in the Library.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -182,7 +182,7 @@ Dynamo doesn't have a `new` keyword, so objects will need to be constructed usin
 
 > Note: Dynamo uses the "By" prefix to indicate a static method is a constructor, and while this is optional, using "By" will help your library better fit into the existing Dynamo style.
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -221,7 +221,7 @@ Dynamo libraries can use native Dynamo geometry types as inputs and create new g
 
 > Note: Dynamo geometry objects are used like any other passed object to functions.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -252,7 +252,7 @@ Geometry resources that are not returned out of functions will need to be manual
 
 *   With a using statement:
 
-    ```
+    ```c#
     using (Point p1 = Point.ByCoordinates(0, 0, 0))
     {
       using (Point p2 = Point.ByCoordinates(10, 10, 0))
@@ -267,7 +267,7 @@ Geometry resources that are not returned out of functions will need to be manual
     > See [Dynamo Geometry Stability Improvements](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297) to read more about the new stability features introduced in Dynamo 2.5
 *   With manual Dispose calls:
 
-    ```
+    ```c#
     Point p1 = Point.ByCoordinates(0, 0, 0);
     Point p2 = Point.ByCoordinates(10, 10, 0);
     Line l = Line.ByStartPointEndPoint(p1, p2);
@@ -293,7 +293,7 @@ When publishing a newer version of a library, node names may change. Name change
 
 This example code is telling Dynamo that any node named `GetClosestPoint` is now named `ClosestPointTo`.
 
-```
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -311,7 +311,7 @@ Zero-Touch currently does not support the use of generics. They can be used, but
 
 In the example below, a Zero-Touch node of type `T` will not be imported. If the rest of the library imports into Dynamo there will be missing type exceptions.
 
-```
+```c#
 public class SomeGenericClass<T>
 {
     public SomeGenericClass()
@@ -323,7 +323,7 @@ public class SomeGenericClass<T>
 
 Using a generic type with the type set in this example will import into Dynamo.
 
-```
+```c#
 public class SomeWrapper
 {
     public object wrapped;

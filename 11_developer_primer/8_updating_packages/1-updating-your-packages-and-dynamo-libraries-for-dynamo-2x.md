@@ -23,7 +23,7 @@ Extension authors may also have some potential changes to make - depending on ho
 
 ### Custom Nodes 1.3 - > 2.0 <a href="#custom-nodes-13----20" id="custom-nodes-13----20"></a>
 
-[Organizing Custom Nodes in librarie.js](..\3_developing_for_dynamo\9-defining-custom-package-organisation-dynamo2.0+.md)
+[Organizing Custom Nodes in librarie.js](..\3_developing_for_dynamo\8-defining-custom-package-organisation-dynamo2.0+.md)
 
 Known Issues:
 
@@ -119,7 +119,7 @@ The other common use case that is affected by the 2.0 API changes relates to the
 
 Let's walk through upgrading a 1.3 UI node to Dynamo 2.x.
 
-```
+```c#
 using System;
 using System.Collections.Generic;
 using Dynamo.Graph.Nodes;
@@ -176,7 +176,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 All we need to do to this `nodeModel` class to get it loading and saving correctly in 2.0 is add a JSON Constructor to handle loading of the ports. We simply pass the ports on the base constructor and this implementation is empty.
 
-```
+```c#
 [JsonConstructor]
 protected GridNodeModel(IEnumerable<PortModel> Inports, IEnumerable<PortModel> Outports ) :
 base(Inports,Outports)
@@ -187,7 +187,7 @@ base(Inports,Outports)
 
 Note: Do not call `RegisterPorts()` or some variation of that in your JSON Constructor - this will use the input and output parameter attributes on your node class to construct new ports! **We don't want this**, since we want to use the loaded ports which are passed to your constructor.
 
-```
+```c#
 [InPortNames("xCount", "yCount")]
 [InPortTypes("double", "double")]
 ```
@@ -197,7 +197,7 @@ This example adds the minimal loading JSON constructor possible. But what if we 
 
 Here is a more complex constructor for a UI node:
 
-```
+```c#
  public ButtonCustomNodeModel()
         {
             // When you create a UI node, you need to do the
@@ -238,7 +238,7 @@ Here is a more complex constructor for a UI node:
 
 When we add a JSON constructor for loading this node from a file we have to recreate some of this logic, but note that we do not include the code that creates ports, sets lacing, or sets the default values for properties which we can load from the file.
 
-```
+```c#
         // This constructor is called when opening a JSON graph.
 
         [JsonConstructor]

@@ -18,6 +18,6 @@ The table below shows which .NET version each major Dynamo release series target
 
 For guidance on updating your packages to a new .NET version, see the migration guides in the Developer Primer:
 
-* [Updating Packages for Dynamo 2.x](../11\_developer\_primer/3\_developing\_for\_dynamo/6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
-* [Updating Packages for Dynamo 3.x / .NET 8](../11\_developer\_primer/3\_developing\_for\_dynamo/6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
-* [Updating Packages for Dynamo 4.x / .NET 10](../11\_developer\_primer/3\_developing\_for\_dynamo/6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
+* [Updating Packages for Dynamo 2.x](../11\_developer\_primer/3\_developing\_for\_dynamo/1-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+* [Updating Packages for Dynamo 3.x / .NET 8](../11\_developer\_primer/3\_developing\_for\_dynamo/2-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+* [Updating Packages for Dynamo 4.x / .NET 10](../11\_developer\_primer/3\_developing\_for\_dynamo/3-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)

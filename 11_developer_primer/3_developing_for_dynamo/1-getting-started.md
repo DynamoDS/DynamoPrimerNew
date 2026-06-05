@@ -96,7 +96,7 @@ When Dynamo loads a .dll, it will expose all public static methods as nodes. Con
 
 In the example above, the extra `SampleFunctions` Create node was created because we did not explicitly provide a constructor and therefore one was automatically created. We can avoid this by creating an empty private constructor in our `SampleFunctions` class.
 
-```
+```c#
 namespace MyCustomNode
 {
     public class SampleFunctions
