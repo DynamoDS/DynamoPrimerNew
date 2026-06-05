@@ -4,7 +4,7 @@
 
 If you are comfortable writing scripts in Python and want more functionality out of the standard Dynamo Python nodes, we can use Zero-Touch to create our own. Let's start with a simple example that allows us to pass a python script as a string to a Zero-Touch node where the script is executed and a result is returned. This case study will build on the walk-throughs and examples in the Getting Started section, please refer to those if you are completely new to creating Zero-Touch nodes.
 
-![A Zero-Touch node that will execute a Python script string](../images/python-case-study.png)
+![A Zero-Touch node that will execute a Python script string](../../.gitbook/assets/python-case-study.png)
 
 > A Zero-Touch node that will execute a Python script string
 
@@ -68,7 +68,7 @@ output = str(volume)
 
 One limitation of the standard Python nodes is that they only have a single output port so if we wish to return multiple object we must construct a list and retrieve each object in. If we modify the example above to return a dictionary, we can add as many output ports as we want. Refer to the Returning Multiple Values section in Going Further With Zero-Touch for more specifics on dictionaries.
 
-![This node is allowing us to return both the cuboid's volume and its centroid.](../images/python-multi-case-study.png)
+![This node is allowing us to return both the cuboid's volume and its centroid.](../../.gitbook/assets/python-multi-case-study.png)
 
 > This node is allowing us to return both the cuboid's volume and its centroid.
 
@@ -125,51 +125,47 @@ output1 = str(volume)
 output2 = str(centroid)
 ```
 
-#### PythonNet3 Known Limitaions and Workarounds<a href="#pythonnet3-known-Issues-Workarounds" id="pythonnet3-known-Issues-Workarounds"></a>
+#### PythonNet3 Known Limitaions and Workarounds <a href="#pythonnet3-known-issues-workarounds" id="pythonnet3-known-issues-workarounds"></a>
 
 The following are few known limitations and workarounds while using PythonNet3
 
 * .NET collections are not automatically converted to Python lists
-    * You must explicitly convert ```.NET``` arrays or collections using ```list(...)``` before using ```len()```, indexing or iteration.
+  * You must explicitly convert `.NET` arrays or collections using `list(...)` before using `len()`, indexing or iteration.
 * Generic .NET methods may require explicit type parameters
-    * Some methods (e.g. ```GroupBy```) will fail unless you manually specify the generic types instead of relying on automatic inference.
-* Extension methods are not discoverable via ```dir()``` or auto complete
-    * Extension methods may still work when called explicitly, but they do not appear in introspection or code completion.
+  * Some methods (e.g. `GroupBy`) will fail unless you manually specify the generic types instead of relying on automatic inference.
+* Extension methods are not discoverable via `dir()` or auto complete
+  * Extension methods may still work when called explicitly, but they do not appear in introspection or code completion.
 * DataTable extension methods are not supported
-    * Importing ```System.Data.DataTableExtensions``` fails; these helper methods cannot be used directly.
+  * Importing `System.Data.DataTableExtensions` fails; these helper methods cannot be used directly.
 * Some Dynamo core methods behave differently in PythonNet3
-    * Certain functions (e.g. list flattening) may not work as expected due to stricter collection handling.
+  * Certain functions (e.g. list flattening) may not work as expected due to stricter collection handling.
 * Python classes cannot be passed between nodes if they inherit from .NET types
-    * Classes derived from .NET types or interfaces cannot be safely transferred between Python nodes.
-* Python ```set()``` does not accept some .NET objects
-    * Objects like ```InvalidElementId``` must be filtered out or handled using .NET collections instead.
-* Frequent ```print()``` calls can cause memory growth
-    * Avoid heavy use of ```print()``` in loops or long-running scripts.
+  * Classes derived from .NET types or interfaces cannot be safely transferred between Python nodes.
+* Python `set()` does not accept some .NET objects
+  * Objects like `InvalidElementId` must be filtered out or handled using .NET collections instead.
+* Frequent `print()` calls can cause memory growth
+  * Avoid heavy use of `print()` in loops or long-running scripts.
 * Dictionary interoperability between Dynamo and Python is limited
-    * Dynamo dictionaries and Python dictionaries are not fully interchangeable and may require manual conversion.
-* The method ```Marshal.GetActiveObject()``` to get the running COM instance of a specified object is no longer available
-    * Use ```BindToMoniker``` if you know the path of the file in use.
-    * Code a library in C# using the class structure ```Marshal.GetActiveObject()```
+  * Dynamo dictionaries and Python dictionaries are not fully interchangeable and may require manual conversion.
+* The method `Marshal.GetActiveObject()` to get the running COM instance of a specified object is no longer available
+  * Use `BindToMoniker` if you know the path of the file in use.
+  * Code a library in C# using the class structure `Marshal.GetActiveObject()`
 
-#### Migrating from CPython3 to PythonNet3<a href="#migrating-from-cpython-pythonnet3" id="migrating-from-cpython-pythonnet3"></a>
+#### Migrating from CPython3 to PythonNet3 <a href="#migrating-from-cpython-pythonnet3" id="migrating-from-cpython-pythonnet3"></a>
 
-Dynamo will automatically migrate CPython nodes to PythonNet 3. 
-Here’s what happens:
+Dynamo will automatically migrate CPython nodes to PythonNet 3. Here’s what happens:
 
 > 1. A backup copy of your original file is created automatically.
-> 2. All CPython nodes (including custom nodes that use CPython) are converted to PythonNet3. 
+> 2. All CPython nodes (including custom nodes that use CPython) are converted to PythonNet3.
 > 3. A toast notification lets you know how many nodes were migrated.
-> 4. When saving, you’ll see a reminder that your Python nodes will now use PythonNet3. 
-Again, don’t worry about backward computability: For those who work in multi-version shops (e.g., Revit or Civil 3D 2025/2026), install the PythonNet3 Engine package in Dynamo 3.3–3.6 to maintain compatibility. 
+> 4. When saving, you’ll see a reminder that your Python nodes will now use PythonNet3. Again, don’t worry about backward computability: For those who work in multi-version shops (e.g., Revit or Civil 3D 2025/2026), install the PythonNet3 Engine package in Dynamo 3.3–3.6 to maintain compatibility.
 
-#### Migrating from IronPython2 to PythonNet3<a href="#migrating-from-cpython-pythonnet3" id="migrating-from-cpython-pythonnet3"></a>
+#### Migrating from IronPython2 to PythonNet3 <a href="#migrating-from-cpython-pythonnet3" id="migrating-from-cpython-pythonnet3"></a>
 
-If your graph uses an IronPython engine, there’s no auto-migration. 
+If your graph uses an IronPython engine, there’s no auto-migration.
 
-If the matching IronPython package is installed, your graph runs normally. 
-If it’s missing, you’ll see a dependency warning in the Workspace References extension asking you to download the package. 
-You can continue using IronPython by reinstalling the package. But because IronPython hasn’t been updated in years and Dynamo hasn’t been actively supporting these engines in Dynamo for quite some time, we strongly recommend migrating to PythonNet3 to ensure your graphs keep working reliably going forward. While DynamoIronPython2.7 and DynamoIronPython3 will continue to remain available as packages on the Dynamo Package Manager they will no longer be maintained by the Dynamo team. 
+If the matching IronPython package is installed, your graph runs normally. If it’s missing, you’ll see a dependency warning in the Workspace References extension asking you to download the package. You can continue using IronPython by reinstalling the package. But because IronPython hasn’t been updated in years and Dynamo hasn’t been actively supporting these engines in Dynamo for quite some time, we strongly recommend migrating to PythonNet3 to ensure your graphs keep working reliably going forward. While DynamoIronPython2.7 and DynamoIronPython3 will continue to remain available as packages on the Dynamo Package Manager they will no longer be maintained by the Dynamo team.
 
-In this case, the migration option available to you is node-by-node migration utilizing the Migration Assistant available within the Python Editor.  
+In this case, the migration option available to you is node-by-node migration utilizing the Migration Assistant available within the Python Editor.
 
 More information on migration can be found in this [blog](https://dynamobim.org/dynamo-pythonnet3-upgrade-a-practical-guide-to-migrating-your-dynamo-graphs/)

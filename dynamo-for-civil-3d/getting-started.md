@@ -10,7 +10,7 @@ This is a simple example that is meant to demonstrate basic Dynamo functionality
 
 The first thing to do is open up an empty document in Civil 3D. Once you're there, navigate to the **Manage** tab in the Civil 3D ribbon and look for the **Visual Programming** panel.
 
-![](<images/image.png>)
+![](<../.gitbook/assets/image (2).png>)
 
 Click on the **Dynamo** button, which will launch Dynamo in a separate window.
 
@@ -26,7 +26,7 @@ Head to the [dynamo-player.md](dynamo-player.md "mention") section when you're r
 
 Once Dynamo is open, you'll see the start screen. Click on **New** to open up a blank workspace.
 
-<figure><img src="images/c3d-start.png" alt=""><figcaption><p>Dynamo start screen</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/c3d-start.png" alt=""><figcaption><p>Dynamo start screen</p></figcaption></figure>
 
 {% hint style="info" %}
 **What about the samples?**
@@ -38,7 +38,7 @@ Dynamo for Civil 3D comes with a few pre-built graphs that can help spark some m
 
 You should now be looking at an empty workspace. Let's see Dynamo in action! Here's our goal:
 
-> &#x20;:dart: **Build a Dynamo graph that will insert Text into Model Space.**
+> :dart: **Build a Dynamo graph that will insert Text into Model Space.**
 
 Pretty simple, right? But before we start, we need to cover a few fundamentals.
 
@@ -49,18 +49,18 @@ The core building blocks of a Dynamo graph are called **nodes**. A node is like 
 
 Some of this might be pretty new for you, and that's OK! These sections will help.
 
-[3\_user\_interface](../3\_user\_interface/ "mention")\
-[4\_nodes\_and\_wires](../4\_nodes\_and\_wires/ "mention")\
-[5\_essential\_nodes\_and\_concepts](../5\_essential\_nodes\_and\_concepts/ "mention")
+[3\_user\_interface](../3_user_interface/ "mention")\
+[4\_nodes\_and\_wires](../4_nodes_and_wires/ "mention")\
+[5\_essential\_nodes\_and\_concepts](../5_essential_nodes_and_concepts/ "mention")
 {% endhint %}
 
 OK, let's build our graph. Here's a list of all the nodes that we'll need.
 
-<figure><img src="images/c3d-create-text-node-list.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/c3d-create-text-node-list.png" alt=""><figcaption></figcaption></figure>
 
 You can find these nodes by typing their names into the search bar in the library, or by right-clicking anywhere in the canvas and searching there.
 
-<figure><img src="images/c3d-create-text-node-placement.gif" alt=""><figcaption><p>Nodes can be placed from the library, or by right-clicking in the canvas</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/c3d-create-text-node-placement.gif" alt=""><figcaption><p>Nodes can be placed from the library, or by right-clicking in the canvas</p></figcaption></figure>
 
 {% hint style="info" %}
 **How do I know which nodes to use and where to find them?**
@@ -70,7 +70,7 @@ Nodes in the library are grouped into logical categories based on what they do. 
 
 Here's what your final graph should look like.
 
-<figure><img src="images/c3d-text-create-final.png" alt=""><figcaption><p>The finished graph</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/c3d-text-create-final.png" alt=""><figcaption><p>The finished graph</p></figcaption></figure>
 
 Let's summarize what we've done here:
 
@@ -92,17 +92,13 @@ Back in Civil 3D, make sure that the **Model** tab is selected. You should see t
 If you can't see the Text, you may need to run the ZOOM -> EXTENTS command to zoom to the right spot.
 {% endhint %}
 
-<figure><img src="images/c3d-create-text-result.png" alt="" width="413"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/c3d-create-text-result.png" alt="" width="413"><figcaption></figcaption></figure>
 
 Cool! Now let's make some updates to the Text.
 
-Back in your Dynamo graph, go ahead and change a few of the input values, such as the text string, insertion point coordinates, etc. You should see the Text automatically update in Civil 3D. Also notice that if you unplug one of the input ports, the Text is removed. If you plug everything back in, the Text is created again.&#x20;
+Back in your Dynamo graph, go ahead and change a few of the input values, such as the text string, insertion point coordinates, etc. You should see the Text automatically update in Civil 3D. Also notice that if you unplug one of the input ports, the Text is removed. If you plug everything back in, the Text is created again.
 
-<div data-full-width="false">
-
-<figure><img src="images/c3d-create-text.gif" alt=""><figcaption><p>The finished graph in action</p></figcaption></figure>
-
-</div>
+<div data-full-width="false"><figure><img src="../.gitbook/assets/c3d-create-text.gif" alt=""><figcaption><p>The finished graph in action</p></figcaption></figure></div>
 
 {% hint style="info" %}
 **Why doesn't Dynamo insert a new Text object every time the graph is run?**
