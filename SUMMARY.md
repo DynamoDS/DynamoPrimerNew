@@ -141,6 +141,7 @@
     * [Updating your Packages and Dynamo Libraries for Dynamo 2.x](11_developer_primer/8_updating_packages/1-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
     * [Updating your Packages and Dynamo Libraries for Dynamo 3.x](11_developer_primer/8_updating_packages/2-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
     * [Updating your Packages and Dynamo Libraries for Dynamo 4.x](11_developer_primer/8_updating_packages/3-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
+    * [Migrating node icons to .NET 10](11_developer_primer/8_updating_packages/4-migrating-node-icons.md)
   * [Migrating to python3](11_developer_primer/9_migrating_versions/0-introduction.md)
     * [Migrating from Net Framework 4.x to Net Core](11_developer_primer/9_migrating_versions/1-migrating-to-net-core.md)
     * [Migrating from IronPython2 to PythonNet3](11_developer_primer/9_migrating_versions/2-migrating-to-pythonnet3.md)
