@@ -38,6 +38,7 @@ The use of the keyword _with_ on .NET objects (which implement the interface _ID
 import sys
 import clr
 import System
+
 # Add Assemblies for AutoCAD and Civil3D
 clr.AddReference('AcMgd')
 clr.AddReference('AcCoreMgd')
@@ -168,6 +169,7 @@ class Form8(Form):
 win_obj = Form8()
 OUT = WrappNetObj(win_obj)
 ```
+
 ![inner object](../images/inner-object.png)
 
 ![no inner object](../images/no-inner-object.png)

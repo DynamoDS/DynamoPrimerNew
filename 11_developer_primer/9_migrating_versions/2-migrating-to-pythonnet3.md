@@ -69,7 +69,8 @@ import clr
 import sys
 import System
 from System.Collections.ObjectModel import ObservableCollection
-#import Revit API
+
+# Import Revit API
 clr.AddReference('RevitAPI')
 import Autodesk
 from Autodesk.Revit.DB import *
@@ -80,7 +81,7 @@ import RevitServices
 from RevitServices.Persistence import DocumentManager
 from RevitServices.Transactions import TransactionManager
 
-#Get Important vars
+# Get Important vars
 doc = DocumentManager.Instance.CurrentDBDocument
 uidoc = DocumentManager.Instance.CurrentUIApplication.ActiveUIDocument
 uiapp = DocumentManager.Instance.CurrentUIApplication
@@ -138,6 +139,7 @@ class ViewModel(INotifyPropertyChanged): # INotifyPropertyChanged
         if self._SelectValue != value:
             self._SelectValue = value
             self.OnPropertyChanged("SelectValue")
+
     # Add SelectValue as a clr property
     SelectValue = clr.clrproperty(DB.Workset, get_SelectValue, set_SelectValue)
       
@@ -237,17 +239,19 @@ class MainWindow(Window):
         self._lst_elems = lst_elems
         self._set_elemTypeId = set(x.GetTypeId() for x in lst_elems if isinstance(x, FamilyInstance))
         self._lst_elemType = [doc.GetElement(xId) for xId in self._set_elemTypeId if xId != ElementId.InvalidElementId]
-        #
-        #sort _lst_elemType by Name   
+        
+
+        # Sort _lst_elemType by Name   
         self._lst_elemType= sorted(self._lst_elemType, key = lambda x : x.FamilyName)
-        #
-       # Create an ObservableCollection of MyDataViewModel objects
+        
+
+        # Create an ObservableCollection of MyDataViewModel objects
         self.data = ObservableCollection[System.Object]()
         for elem in self._lst_elemType:
             self.data.Add(ViewModel(elem, self._lst_wkset))
-        #
+                
         self.pairLst = []
-        #
+        
         xr = XmlReader.Create(StringReader(MainWindow.string_xaml))
         self.winLoad = XamlReader.Load(xr)
         self.InitializeComponent()
@@ -255,18 +259,19 @@ class MainWindow(Window):
     def InitializeComponent(self):
         try:
             self.Content = self.winLoad.Content
-            #
+            
             self.dataGrid = LogicalTreeHelper.FindLogicalNode(self.winLoad, "dataGrid")
-            #
+            
             self.buttonCancel = LogicalTreeHelper.FindLogicalNode(self.winLoad, "buttonCancel")
             self.buttonCancel.Click += self.ButtonCancelClick
-            #
+            
             self.buttonOK = LogicalTreeHelper.FindLogicalNode(self.winLoad, "buttonOK")
             self.buttonOK.Click += self.ButtonOKClick
-            #
+            
             self.winLoad.Loaded += self.OncLoad
-            #
-            self.dataGrid.DataContext = self.data               # Set DataContext
+            
+            # Set DataContext
+            self.dataGrid.DataContext = self.data               
             self.winLoad.DataContext = self.data
 
         except Exception as ex:
@@ -281,7 +286,7 @@ class MainWindow(Window):
 
     def ButtonOKClick(self, sender, e):
         try:
-            # get result from input Data (Binding)
+            # Get result from input Data (Binding)
             self.pairLst = [[x.ElementType, x.SelectValue] for x  in self.data]
             self.winLoad.Close()
         except Exception as ex:
@@ -308,7 +313,8 @@ If you pass a native Python list to a .NET method that expects a .NET collection
 
 ```py
 from System.Collections.Generic import List
-# some imports
+
+# Some imports
 selelemz=List([ElementId][ElementId(124291), ElementId(124292), ElementId(124293)])
 elements=FilteredElementCollector(doc,selelemz).WhereElementIsNotElementType().ToElements()
 ```
@@ -344,6 +350,7 @@ Two workarounds:
 - Use .NET Reflection
 - Cast objects to the correct interface
 Example of using .NET Reflection:
+
 ```py
 import sys
 import clr
@@ -371,16 +378,16 @@ except:
 ex.Visible = False
 workbooks = ex.GetType()\
             .InvokeMember("Workbooks", BindingFlags.GetProperty ,None, ex, None)
-#
+
 workbook = workbooks.GetType()\
             .InvokeMember("Open", BindingFlags.InvokeMethod , None, workbooks, (xls_filePath, ))
-#
+
 worksheets = workbook.GetType()\
             .InvokeMember("Worksheets", BindingFlags.GetProperty ,None, workbook, None)
-#
+
 enumerator_sheets = worksheets.GetType()\
             .InvokeMember("GetEnumerator", BindingFlags.InvokeMethod , None, worksheets, None)
-#
+
 while enumerator_sheets.MoveNext():
     sheet = enumerator_sheets.Current
     sheet_name = sheet.GetType().InvokeMember("Name", BindingFlags.GetProperty,None, sheet, None)
@@ -393,9 +400,9 @@ if workbooks is not None:
     Marshal.ReleaseComObject(workbooks)
 if ex is not None:
     Marshal.ReleaseComObject(ex)
-#
+
 workbooks = None
 ex = None
-#
+
 OUT = wsNames
 ```

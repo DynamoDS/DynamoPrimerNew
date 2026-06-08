@@ -221,18 +221,18 @@ Here is a more complex constructor for a UI node:
             // The arugment lacing is the way in which Dynamo handles
             // inputs of lists. If you don't want your node to
             // support argument lacing, you can set this to LacingStrategy.Disabled.
-            ArgumentLacing = LacingStrategy.Disabled;
+            this.ArgumentLacing = LacingStrategy.Disabled;
 
             // We create a DelegateCommand object which will be 
             // bound to our button in our custom UI. Clicking the button 
             // will call the ShowMessage method.
-            ButtonCommand = new DelegateCommand(ShowMessage, CanShowMessage);
+            var ButtonCommand = new DelegateCommand(ShowMessage, CanShowMessage);
 
             // Setting our property here will trigger a 
             // property change notification and the UI 
             // will be updated to reflect the new value.
-            ButtonText = defaultButtonText;
-            WindowText = defaultWindowText;
+            this.ButtonText = defaultButtonText;
+            this.WindowText = defaultWindowText;
         }
 ```
 

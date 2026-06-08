@@ -32,10 +32,10 @@ Notes:
 - A Python class that derives from a .NET class must have the attribute __namespace__
 - The class _Custom_FamilyOption_ includes an example with _ref_ and _out_ parameters returning as a tuple
 
-```
+```py
 class Custom_SelectionElem(ISelectionFilter):
     __namespace__ = "SelectionNameSpace_tEfYX0DHE"
-    #
+    
     def __init__(self, bic):
         super().__init__() # necessary  if you override the __init__ method
         self.bic = bic
@@ -48,7 +48,7 @@ class Custom_SelectionElem(ISelectionFilter):
     def AllowReference(self, ref, point):
         return True
 
-#        
+
 
 class Custom_FamilyOption(IFamilyLoadOptions) :
     __namespace__ = "FamilyOptionNameSpace_tEfYX0DHE"
@@ -87,9 +87,13 @@ Here is an example with PythonNet3 where we cannot use indexing because the meth
 ```python
 element = UnwrapElement(IN[0])
 
-ref = HostObjectUtils.GetSideFaces(element, ShellLayerType.Exterior)[0] # GetSideFaces return an Ilist so we can use indexer
+# GetSideFaces return an Ilist so we can use indexer
+ref = HostObjectUtils.GetSideFaces(element, ShellLayerType.Exterior)[0] 
+
 face = element.GetGeometryObjectFromReference(ref)
-ds_surface = face.ToProtoType()[0] # ToProtoType() on Revit face return an IEnumerable so we can't use indexer
+
+# ToProtoType() on Revit face return an IEnumerable so we can't use indexer
+ds_surface = face.ToProtoType()[0] 
 ```
 
 **New code (Using LINQ or converting):**
@@ -99,11 +103,17 @@ clr.ImportExtensions(System.Linq)
 
 element = UnwrapElement(IN[0])
 
-ref = HostObjectUtils.GetSideFaces(element, ShellLayerType.Exterior)[0] # GetSideFaces return an Ilist so we can use indexer
+# GetSideFaces return an Ilist so we can use indexer
+ref = HostObjectUtils.GetSideFaces(element, ShellLayerType.Exterior)[0] 
+
 face = element.GetGeometryObjectFromReference(ref)
-ds_surface = face.ToProtoType().First() # ToProtoType() on Revit face return an IEnumerable so we can use LINQ
+
+# ToProtoType() on Revit face return an IEnumerable so we can use LINQ
+ds_surface = face.ToProtoType().First() 
+
 # OR convert to python list
-ds_surface = list(face.ToProtoType())[0] # ToProtoType() on Revit face return an IEnumerable so we need convert to python list to user indexer
+# ToProtoType() on Revit face return an IEnumerable so we need convert to python list to user indexer
+ds_surface = list(face.ToProtoType())[0] 
 OUT = ds_surface
 ```
 
@@ -112,7 +122,7 @@ OUT = ds_surface
 Advice:
 
 - When passing a lambda function as a function parameter, it must be explicitly converted, for example to _System.Func[\<input_type>, \<output_type>]_.
-- Some extension libraries still don’t work, like _DataTableExtensions_ the .NET.
+- Some extension libraries still don’t work, like _DataTableExtensions_.
 
 **Example of using LINQ extension methods**
 ```python
@@ -137,7 +147,6 @@ doc = DocumentManager.Instance.CurrentDBDocument
 
 clr.AddReference("System.Core")
 clr.ImportExtensions(System.Linq)
-#
 
 resultB = FilteredElementCollector(doc).OfClass(FamilySymbol).WhereElementIsElementType()\
             .Where(System.Func[DB.Element, System.Boolean](lambda e_type : "E1" in e_type.Name))\

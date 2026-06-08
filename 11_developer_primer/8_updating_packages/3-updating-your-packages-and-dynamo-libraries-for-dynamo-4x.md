@@ -32,13 +32,13 @@ You may also notice this type of warning in your Dynamo log files at package loa
 
 It's very unlikely that a package built for Dynamo 4.x (*using .Net 10*) is going to work on Dynamo 2.x. You will also see the below warning when you try to install packages built for Dynamo 4.x in Dynamo 2.x.
 
-![Package Compatibility Warning](images/6-2-packages-new-version-compatibility-warning.png)
+![Package Compatibility Warning](<../images/package-incompatibility-warning.jpg>)
 
 #### Using Dynamo 4.x Packages in Dynamo 3.x 
 
 The package built for Dynamo 4.x (*using .Net 10*) might work on Dynamo 3.x as long as if all the APIs used in the package exist in .NET 8. But there is no guarantee that it will work. You will also see the below warning when you try to install packages built for Dynamo 4.x in Dynamo 3.x.
 
-![Package Compatibility Warning](images/6-2-packages-compatibility-warning.png)
+![Package Compatibility Warning](<../images/package-version-incompatibility-warning.jpg>)
 
 #### Best Practice for Package Authors 
 Best practice is to multi-target your project to both .NET 8 and .NET 10 by modifying your .csproj.

@@ -39,4 +39,4 @@ The previous CPython3 engine was based on PythonNet 2.5 and had several limitati
 2. **Difficulty of implementing .NET Class Interfaces:** In CPython3 (PythonNet 2.5), it was impossible to easily use .NET class interfaces.
 3. **Problems with method overloading**
 4. **Binary and unary arithmetic operators** not taken into account for C# operator methods
-**Iteration bug**: A bug caused all instances of .NET classes to be considered Iterable, resolved in the newer version.
+5. **Iteration bug**: A bug caused all instances of .NET classes to be considered Iterable, resolved in the newer version.
