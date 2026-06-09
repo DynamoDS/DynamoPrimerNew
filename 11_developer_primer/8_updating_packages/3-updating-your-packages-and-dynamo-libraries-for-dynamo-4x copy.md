@@ -65,6 +65,7 @@ As Dynamo is now built with the .NET10.0 Runtime, the Dynamo mechanism for icon 
         OwTxD3r4nexvPxELAAAAAElFTkSuQmCC
 </value>
 ```
+This is described in greater detail in [Migrating Node Icons](<4-migrating-node-icons.md>)
 
 **.NET 10 embedded resource format**
 
