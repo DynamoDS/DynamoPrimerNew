@@ -1,5 +1,5 @@
 ---
-cover: ../../images/Geospatial_05H.jpg
+cover: ../../../.gitbook/assets/Geospatial_05H.jpg
 coverY: 226
 ---
 

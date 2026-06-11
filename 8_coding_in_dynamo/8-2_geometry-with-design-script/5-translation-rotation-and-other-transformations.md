@@ -6,7 +6,7 @@ Certain geometry objects can be created by explicitly stating x, y, and z coordi
 
 The simplest geometric transformation is a translation, which moves an object a specified number of units in the x, y, and z directions.
 
-![](../images/Transformations_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -22,7 +22,7 @@ p2 = p.Translate(10, -20, 50);
 
 While all objects in Dynamo can be translated by appending the _.Translate_ method to the end of the object’s name, more complex transformations require transforming the object from one underlying Coordinate System to a new Coordinate System. For instance, to rotate an object 45 degrees around the x axis, we would transform the object from its existing Coordinate System with no rotation, to a Coordinate System which had been rotated 45 degrees around the x axis with the _.Transform_ method:
 
-![](../images/Transformations_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -42,7 +42,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 In addition to being translated and rotated, Coordinate Systems can also be created scaled or sheared. A Coordinate System can be scaled with the _.Scale_ method:
 
-![](../images/Transformations_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -58,7 +58,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Shared Coordinate Systems are created by inputting non-orthogonal vectors into the Coordinate System constructor.
 
-![](../images/Transformations_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(

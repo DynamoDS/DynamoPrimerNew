@@ -1,5 +1,5 @@
 ---
-cover: ../../images/Construction-CCEED-China-0766.jpg
+cover: ../../../.gitbook/assets/Construction-CCEED-China-0766.jpg
 coverY: -61
 ---
 

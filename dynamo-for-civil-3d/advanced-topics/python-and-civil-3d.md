@@ -1,6 +1,6 @@
 # Python and Civil 3D
 
-While Dynamo is extremely powerful as a [visual programming](../../a\_appendix/a-1\_visual-programming-and-dynamo.md) tool, it is also possible to go beyond nodes and wires and write code in textual form. There are two ways that you can do this:
+While Dynamo is extremely powerful as a [visual programming](../../a_appendix/a-1_visual-programming-and-dynamo.md) tool, it is also possible to go beyond nodes and wires and write code in textual form. There are two ways that you can do this:
 
 1. Write **DesignScript** using a Code Block
 2. Write **Python** using a Python node
@@ -8,7 +8,7 @@ While Dynamo is extremely powerful as a [visual programming](../../a\_appendix/a
 This section will focus on how to leverage Python in the Civil 3D environment to take advantage of the AutoCAD and Civil 3D .NET APIs.
 
 {% hint style="info" %}
-Take a look at the [8-3\_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") section for more general information about using Python in Dynamo.
+Take a look at the [8-3\_python](../../8_coding_in_dynamo/8-3_python/ "mention") section for more general information about using Python in Dynamo.
 {% endhint %}
 
 ## API Documentation
@@ -17,7 +17,7 @@ Both AutoCAD and Civil 3D have several APIs available that enable developers lik
 
 [AutoCAD .NET API Developer's Guide](https://help.autodesk.com/view/OARX/2024/ENU/?guid=GUID-C3F3C736-40CF-44A0-9210-55F6A939B6F2)
 
-[AutoCAD .NET API Reference Guide](https://help.autodesk.com/view/OARX/2024/ENU/?guid=OARX-ManagedRefGuide-What\_s\_New)
+[AutoCAD .NET API Reference Guide](https://help.autodesk.com/view/OARX/2024/ENU/?guid=OARX-ManagedRefGuide-What_s_New)
 
 [Civil 3D .NET API Developer's Guide](https://help.autodesk.com/view/CIV3D/2024/ENU/?guid=GUID-DA303320-B66D-4F4F-A4F4-9FBBEC0754E0)
 
@@ -31,7 +31,7 @@ As you move through this section, there may be some concepts that you are unfami
 
 When you first edit a new Python node, it will be pre-populated with template code to get you started. Here's a breakdown of the template with explanations about each block.
 
-<figure><img src="../images/Python_Template.png" alt=""><figcaption><p>The default Python template in Civil 3D</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Template (1).png" alt=""><figcaption><p>The default Python template in Civil 3D</p></figcaption></figure>
 
 > 1. Imports the `sys` and `clr` modules, both of which are necessary for the Python interpreter to function properly. In particular, the `clr` module enables .NET namespaces to be treated essentially as Python packages.
 > 2. Loads the standard assemblies (i.e., DLLs) for working with the managed .NET APIs for AutoCAD and Civil 3D.
@@ -84,7 +84,7 @@ Before we start building our graph and writing code, it's a good idea to take a 
 
 Now we can start building our graph logic. The first thing to do is get a list of all the Catchments in the Document. There are nodes available for this, so we don't need to include it in the Python script. Using nodes provides better visibility for someone else that might read the graph (versus burying lots of code in a Python script), and it also keeps the Python script focused on one thing: returning the boundary points of the Catchments.
 
-<figure><img src="../images/Python_Get_Catchments.png" alt=""><figcaption><p>Getting all of the Catchments in the Document by layer</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Get_Catchments.png" alt=""><figcaption><p>Getting all of the Catchments in the Document by layer</p></figcaption></figure>
 
 Note here that the output from the **All Objects on Layer** node is a list of CivilObjects. This is because Dynamo for Civil 3D doesn't currently have any nodes for working with Catchments, which is the whole reason why we need to access the API through Python.
 
@@ -118,8 +118,8 @@ clr.AddReference('AecBaseMgd')
 clr.AddReference('AecPropDataMgd')
 clr.AddReference('AeccDbMgd')
 
-<strong><a data-footnote-ref href="#user-content-fn-1">clr.AddReference('ProtoGeometry')</a>
-</strong>
+<a data-footnote-ref href="#user-content-fn-1">clr.AddReference('ProtoGeometry')</a>
+
 # Import references from AutoCAD
 from Autodesk.AutoCAD.Runtime import *
 from Autodesk.AutoCAD.ApplicationServices import *
@@ -131,18 +131,18 @@ from Autodesk.AutoCAD.Geometry import *
 from Autodesk.Civil.ApplicationServices import *
 from Autodesk.Civil.DatabaseServices import *
 
-<strong><a data-footnote-ref href="#user-content-fn-2">from Autodesk.DesignScript.Geometry import Point as DynPoint</a>
-</strong>
-# The inputs to this node will be stored as a list in the IN variable.
+<a data-footnote-ref href="#user-content-fn-2">from Autodesk.DesignScript.Geometry import Point as DynPoint</a>
+
+# The inputs to this node will be stored as a list in the IN variables.
 <strong><a data-footnote-ref href="#user-content-fn-3">objs</a> = <a data-footnote-ref href="#user-content-fn-4">IN[0]</a>
 </strong>
 <strong><a data-footnote-ref href="#user-content-fn-5">output = []</a> 
 </strong>
-<strong><a data-footnote-ref href="#user-content-fn-6">if objs is None:</a>
-</strong><strong>    <a data-footnote-ref href="#user-content-fn-7">sys.exit("The input is null or empty.")</a>
+<a data-footnote-ref href="#user-content-fn-6">if objs is None:</a>
+<strong>    <a data-footnote-ref href="#user-content-fn-7">sys.exit("The input is null or empty.")</a>
 </strong>
-<strong><a data-footnote-ref href="#user-content-fn-8">if not isinstance(objs, list):</a>
-</strong><strong>    <a data-footnote-ref href="#user-content-fn-9">objs = [objs]</a>
+<a data-footnote-ref href="#user-content-fn-8">if not isinstance(objs, list):</a>
+<strong>    <a data-footnote-ref href="#user-content-fn-9">objs = [objs]</a>
 </strong>    
 adoc = Application.DocumentManager.MdiActiveDocument
 editor = adoc.Editor
@@ -168,8 +168,8 @@ with adoc.LockDocument():
 </strong>            pass
             
 # Assign your output to the OUT variable.
-<strong><a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
-</strong></code></pre>
+<a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
+</code></pre>
 
 {% hint style="warning" %}
 As a rule of thumb, it is a best practice to include the bulk of your script logic inside a transaction. This ensures safe access to the objects that your script is reading/writing. In many cases, omitting a transaction can cause a fatal error.
@@ -179,13 +179,13 @@ As a rule of thumb, it is a best practice to include the bulk of your script log
 
 At this stage, the Python script should output a list of Dynamo points that you can see in the background preview. The last step is to simply create PolyCurves from the points. Note that this could also be accomplished directly in the Python script, but we've intentionally put it outside the script in a node so that it is more visible. Here's what the final graph looks like.
 
-<figure><img src="../images/Python_Final_Script.png" alt=""><figcaption><p>The final graph</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Final_Script (1).png" alt=""><figcaption><p>The final graph</p></figcaption></figure>
 
 ### Result
 
 And here's the final Dynamo geometry.
 
-<figure><img src="../images/Python_Dynamo_Curves.png" alt=""><figcaption><p>The resulting Dynamo PolyCurves for the Catchment boundaries</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Dynamo_Curves.png" alt=""><figcaption><p>The resulting Dynamo PolyCurves for the Catchment boundaries</p></figcaption></figure>
 
 > :tada: Mission accomplished!
 
