@@ -65,7 +65,6 @@ As Dynamo is now built with the .NET10.0 Runtime, the Dynamo mechanism for icon 
         OwTxD3r4nexvPxELAAAAAElFTkSuQmCC
 </value>
 ```
-This is described in greater detail in [Migrating Node Icons](<4-migrating-node-icons.md>)
 
 **.NET 10 embedded resource format**
 
@@ -74,6 +73,8 @@ This is described in greater detail in [Migrating Node Icons](<4-migrating-node-
   <data name="DefaultCustomNode.Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\DefaultCustomNode.Large.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 ```
+This is described in greater detail in [Migrating Node Icons](<4-migrating-node-icons.md>)
+
 #### Best Practice for Package Authors 
 Best practice is to multi-target your project to both .NET 8 and .NET 10 by modifying your .csproj.
 

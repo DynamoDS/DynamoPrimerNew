@@ -21,7 +21,7 @@ With some experience, we may be able to "read" the Visual Program by reviewing t
 > 1. Browse to the menu Edit > Create Note
 > 2. Use the keyboard shortcut Ctrl+W
 
-Once the Note is added to the Workspace a text field will pop up allowing us to edit the text in the Note. After they are created, we can edit the Note by double-clicking or right-clicking the Note Node.
+Once the Note is added to the Workspace, a text field will pop up allowing us to edit the text in the Note. After they are created, we can edit the Note by double-clicking or right-clicking the Note Node.
 
 ![](<images/managing your program - notes 02.jpg>)
 

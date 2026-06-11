@@ -92,18 +92,18 @@ When Dynamo loads a .dll, it will expose all public static methods as nodes. Con
 
 > 1. The input is named `inputNumber` based on the method's parameter name.
 > 2. The output is named `double` by default because that is the data type being returned.
-> 3. The node is named `SampleFunctions.MultiplyByTwo` because those are the class and method names.
+> 3. The node is named `SampleFunction.MultiplyByTwo` because those are the class and method names.
 
-In the example above, the extra `SampleFunctions` Create node was created because we did not explicitly provide a constructor and therefore one was automatically created. We can avoid this by creating an empty private constructor in our `SampleFunctions` class.
+In the example above, the extra `SampleFunction` Create node was created because we did not explicitly provide a constructor and therefore one was automatically created. We can avoid this by creating an empty private constructor in our `SampleFunction` class.
 
 ```c#
 namespace MyCustomNode
 {
-    public class SampleFunctions
+    public class SampleFunction
     {
         //The empty private constructor.
         //This will be not imported into Dynamo.
-        private SampleFunctions() { }
+        private SampleFunction() { }
 
         //The public multiplication method. 
         //This will be imported into Dynamo.
