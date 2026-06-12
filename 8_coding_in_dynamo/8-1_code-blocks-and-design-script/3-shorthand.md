@@ -6,14 +6,14 @@ There are a few basic shorthand methods in the code block which, simply put, mak
 
 | **Data Type**          | **Standard Dynamo**                                      | **Code Block Equivalent**                                     |
 | ---------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
-| Numbers                | ![](<../images/01 node - numbers.jpg>)       | ![](<../images/01 codeblock - numbers.jpg>)       |
-| Strings                | ![](<../images/02 node - string.jpg>)        | ![](<../images/02 codeblock- string.jpg>)         |
-| Sequences              | ![](<../images/03 node- sequence.jpg>)       | ![](<../images/03 codeblock- sequence.jpg>)       |
-| Ranges                 | ![](<../images/04 node- range.jpg>)          | ![](<../images/04 codeblock - range.jpg>)         |
-| Get Item at Index      | ![](<../images/05 node - list get item.jpg>) | ![](<../images/05 codeblock - list get item.jpg>) |
-| Create List            | ![](<../images/06 node - list create.jpg>)   | ![](<../images/06 codeblock - list create.jpg>)                   |
-| Concatenate Strings    | ![](<../images/07 node - string concat.jpg>) | ![](<../images/07 codeblock - string concat.jpg>) |
-| Conditional Statements | ![](<../images/08 node - conditional.jpg>)   | ![](<../images/08 codeblock - conditional.jpg>)   |
+| Numbers                | ![](<../../.gitbook/assets/01 node - numbers.jpg>)       | ![](<../../.gitbook/assets/01 codeblock - numbers.jpg>)       |
+| Strings                | ![](<../../.gitbook/assets/02 node - string.jpg>)        | ![](<../../.gitbook/assets/02 codeblock- string.jpg>)         |
+| Sequences              | ![](<../../.gitbook/assets/03 node- sequence.jpg>)       | ![](<../../.gitbook/assets/03 codeblock- sequence.jpg>)       |
+| Ranges                 | ![](<../../.gitbook/assets/04 node- range.jpg>)          | ![](<../../.gitbook/assets/04 codeblock - range.jpg>)         |
+| Get Item at Index      | ![](<../../.gitbook/assets/05 node - list get item.jpg>) | ![](<../../.gitbook/assets/05 codeblock - list get item.jpg>) |
+| Create List            | ![](<../../.gitbook/assets/06 node - list create.jpg>)   | ![](<../../.gitbook/assets/06 codeblock - list create.jpg>)                   |
+| Concatenate Strings    | ![](<../../.gitbook/assets/07 node - string concat.jpg>) | ![](<../../.gitbook/assets/07 codeblock - string concat.jpg>) |
+| Conditional Statements | ![](<../../.gitbook/assets/08 node - conditional.jpg>)   | ![](<../../.gitbook/assets/08 codeblock - conditional.jpg>)   |
 
 ### Additional Syntax
 

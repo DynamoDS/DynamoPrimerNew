@@ -19,10 +19,10 @@ Zero-touch packages are a good complement to user-defined custom nodes. A few pa
 
 | **Logo/Image**                                                               | **Name**                                                                    |
 | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| ![](../images/meshToolkitcasestudy01.jpg)                        | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| ![](../images/packageintroduction-installingpackagefolder07.jpg) | [Dynamo Unfold](https://dynamobim.org/dynamounfold/)                         |
-| ![](../images/rhynamo.jpg)                                       | [Rhynamo](https://provingground.io/tools/rhynamo/)                     |
-| ![](../images/optimo.jpg)                                        | [Optimo](https://github.com/BPOpt/Optimo)                                   |
+| ![](../../.gitbook/assets/meshToolkitcasestudy01.jpg)                         | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| ![](../../.gitbook/assets/packageintroduction-installingpackagefolder07.jpg) | [Dynamo Unfold](https://dynamobim.org/dynamounfold/)                         |
+| ![](../../.gitbook/assets/rhynamo.jpg)                                       | [Rhynamo](https://provingground.io/tools/rhynamo/)                     |
+| ![](../../.gitbook/assets/optimo.jpg)                                        | [Optimo](https://github.com/BPOpt/Optimo)                                   |
 
 ## Case Study - Importing AForge
 
