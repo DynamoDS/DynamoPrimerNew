@@ -40,7 +40,7 @@ The package built for Dynamo 4.x (_using .Net 10_) might work on Dynamo 3.x as l
 
 > Are you sure you want to install \[package name and version]? The compatibility of this version with your setup has not been verified. It may or may not work as expected.
 
-![Package Compatibility Warning](<../images/package-version-incompatibility-warning.jpg>)
+![Package Compatibility Warning](<../../.gitbook/assets/package-version-incompatibility-warning.jpg>)
 
 ### Custom Icons in .NET10
 As Dynamo is now built with the .NET10.0 Runtime, the Dynamo mechanism for icon packages is now updated due to changes in .NET10 Runtime. Embedded Bitmap icons in a .resx file are no longer supported. The prefered option is embedded Byte[]

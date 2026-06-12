@@ -21,7 +21,7 @@ The following migration was therefore carried out as follows:
 
 IronPython2 -> IronPython3 -> PythonNet3
 
-![Distribution](../images/distribution.gif)
+![Distribution](../../.gitbook/assets/distribution.gif)
 
 | **Features**   | **IronPython 2.7**             | **IronPython 3**       |       **Python.NET 2.5.x (alias CPthyon3)**  | **Python.NET 3.x**|
 | -------------- | -------------------------------|----------------------- | --------------                               | ------------------ |

@@ -170,9 +170,9 @@ win_obj = Form8()
 OUT = WrappNetObj(win_obj)
 ```
 
-![inner object](../images/inner-object.png)
+![inner object](../../.gitbook/assets/inner-object.png)
 
-![no inner object](../images/no-inner-object.png)
+![no inner object](../../.gitbook/assets/no-inner-object.png)
 
 ### Missing error line
 
