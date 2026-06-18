@@ -6,6 +6,7 @@ When referencing any of the DynamoVisuaProgramming nuget packages, it is importa
 |Package Version|.Net Version|
 |----------------|-----------|
 |3.0.0.7186 - 3.4.0.6892 | netstandard 2.0|
+|3.3.2 | .Net10.0|
 |3.5.0.9297 - 3.7.0.11777 | .Net8.0|
 |4.0.0.3277+| .Net10.0|
 
@@ -14,6 +15,7 @@ When referencing any of the DynamoVisuaProgramming nuget packages, it is importa
 |Package Version|.Net Version|
 |----------------|-----------|
 |3.0.0.7186 - 3.7.0.11777 | .Net8.0|
+|3.3.2 | .Net10.0|
 |4.0.0.3277+| .Net10.0|
 
 ### Core
@@ -21,6 +23,7 @@ When referencing any of the DynamoVisuaProgramming nuget packages, it is importa
 |Package Version|.Net Version|
 |----------------|-----------|
 |3.0.0.7186 - 3.6.0.9395 | .Net8.0|
+|3.3.2| .Net10.0|
 |3.7.0.11777+| .Net10.0|
 
 ### WPFUILibrary
@@ -28,6 +31,7 @@ When referencing any of the DynamoVisuaProgramming nuget packages, it is importa
 |Package Version|.Net Version|
 |----------------|-----------|
 |3.0.0.7190 - 3.6.0.9395 | .Net8.0|
+|3.3.2| .Net10.0|
 |3.7.0.11437+| .Net10.0|
 
 ### Tests
@@ -35,6 +39,7 @@ When referencing any of the DynamoVisuaProgramming nuget packages, it is importa
 |Package Version|.Net Version|
 |----------------|-----------|
 |3.0.0.7186 - 3.7.0.11777 | .Net8.0|
+|3.3.2| .Net10.0|
 
 ### Greg (Package Manager)
 
@@ -47,4 +52,5 @@ When referencing any of the DynamoVisuaProgramming nuget packages, it is importa
 |Package Version|.Net Version|
 |----------------|-----------|
 |3.0.0.7186 - 3.6.0.9395 | .Net8.0|
+|3.3.2| .Net10.0|
 |3.7.0.11777+| .Net10.0|
