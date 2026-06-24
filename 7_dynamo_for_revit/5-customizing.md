@@ -63,63 +63,26 @@ This grid of points serves as the control points for a parametrically defined su
 
 With the parametric surface, we want to define a way to panelize it in order to array four-point adaptive components. Dynamo now has out-of-the-box functionality for surface panelization.
 
-![](<../.gitbook/assets/index of nodes - divided surface by uv face.jpg>)
+You will need to enable the **PanelSurface** nodes by selecting them in the experimental tab under preferences.
 
-> 1. Search for _"divided surface"_ and select _"by face and uv divisions"_. Plug the parametric surface into the _elementFace_ input and set the _uDivs_ and _vDivs_ divisions to _15_. You should see a quad-paneled surface in your Dynamo preview.
+
+![](<../.gitbook/assets/experimental preferences.jpg>)
+
+> 1. Search for _"PanelSurface"_ and select _"ByQuads"_. Plug the parametric surface into the _surface_ input and set the _numU_ and _numV_ divisions to _15_.
 
 ![](<../.gitbook/assets/surfaces divide by UV.jpg>)
 
-> Back in Revit, let's take a quick look at the adaptive component we're using here. No need to follow along, but this is the roof panel we're going to instantiate. It is a four-point adaptive component which is a crude representation of an ETFE system. The aperture of the center void is on a parameter called _"ApertureRatio"_.
+> Back in Revit, let's take a quick look at the adaptive component we're using here. No need to follow along, but this is the roof panel we're going to instantiate. It is a four-point adaptive component which is a crude representation of an ETFE system. The aperture of the center void is on a parameter called _"ApertureRatio"_. 
 
-
-![](<../.gitbook/assets/make panels from points.jpg>)
-
-> You will need some list management to make this work. The code below should be pasted into a python node and will convert the 15 lists of 15 points into lists of 4 points that are arranged in a square pattern.
-
-```python
-import clr
-clr.AddReference('ProtoGeometry')
-from Autodesk.DesignScript.Geometry import *
-# IN[0] = list of parallel point lines: [[pt, pt, ...], [pt, pt, ...], ...]
-point_lines = IN[0]
-reverse_along_line = IN[1] if len(IN) > 1 and IN[1] is not None else False
-reverse_line_order = IN[2] if len(IN) > 2 and IN[2] is not None else False
-rows = list(point_lines)
-if reverse_line_order:
-    rows = list(reversed(rows))
-num_rows = len(rows)
-if num_rows < 2:
-    OUT = []
-else:
-    num_cols = min(len(row) for row in rows)
-    if num_cols < 2:
-        OUT = []
-    else:
-        squares = []
-        for i in range(num_rows - 1):
-            line_a = rows[i]
-            line_b = rows[i + 1]
-            for j in range(num_cols - 1):
-                if reverse_along_line:
-                    # Walk along the line in reverse
-                    p0 = line_a[num_cols - 1 - j]
-                    p1 = line_a[num_cols - 2 - j]
-                    p2 = line_b[num_cols - 2 - j]
-                    p3 = line_b[num_cols - 1 - j]
-                else:
-                    # Four corners of one square cell (CCW around the cell)
-                    p0 = line_a[j]       # corner on line i
-                    p1 = line_a[j + 1]   # next point on same line
-                    p2 = line_b[j + 1]   # corresponding point on next line
-                    p3 = line_b[j]       # previous point on next line
-                squares.append([p0, p1, p2, p3])
-        OUT = squares
-```
 
 > 1. We're about to instantiate a lot of geometry in Revit, so make sure to turn the Dynamo solver to _"Manual"_.
 > 2. Add a _Family Types_ node to the canvas and select _"ROOF-PANEL-4PT"_.
-> 3. Add an _AdaptiveComponent.ByPoints_ node to the canvas, connect _Panel Pts_ from the _"python node"_ output into the _points_ input. Connect the _Family Types_ node to the _familySymbol_ input.
-> 4. Hit _Run_. Revit will have to _think_ for a bit while the geometry is being created. If it takes too long, reduce the _code block's '15'_ to a lower number. This will reduce the number of panels on the roof.
+> 3. Add a **PanelSurface.GetPoints** to the canvas and connect the _panelSurface_ from **PanelSurface.ByQuads** to the matching input.
+> 4. Add an **AdaptiveComponent.ByPoint** node to the canvas, connect _Panel Pts_ from the **PanelSurface.GetPanelPoints** output into the _points_ input. Connect the _Family Types_ node to the _familyType_ input.
+> 5. Hit _Run_. Revit will have to _think_ for a bit while the geometry is being created. If it takes too long, reduce the _code block's '15'_ to a lower number. This will reduce the number of panels on the roof.
+
+![](<../.gitbook/assets/make panels from points.jpg>)
+
 
 _Note: If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "Freezing" section in the solids chapter._
 
