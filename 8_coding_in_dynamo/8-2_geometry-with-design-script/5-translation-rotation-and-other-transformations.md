@@ -74,9 +74,9 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-Scaling and sharing are comparatively more complex geometric transformations than rotation and translation, so not every Dynamo object can undergo these transformations. The following table outlines which Dynamo objects can have non-uniformly scaled Coordinate Systems, and shared Coordinate Systems.
+Scaling and shearing are comparatively more complex geometric transformations than rotation and translation, so not every Dynamo object can undergo these transformations. The following table outlines which Dynamo objects can have non-uniformly Scaled Coordinate Systems, and Shear-Mapped Coordinate Systems.
 
-| Class        | Non-Uniformly Scaled Coordinate System| Shared Coordinate System |
+| Class        | Non-Uniformly Scaled Coordinate System| Shear-Mapped Coordinate System |
 | ------------ | ------------------------------------- | ------------------------ |
 | Arc          | No                                    | No                       |
 | NurbsCurve   | Yes                                   | Yes                      |

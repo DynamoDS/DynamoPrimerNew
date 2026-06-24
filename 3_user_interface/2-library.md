@@ -88,11 +88,11 @@ Beware of similarly named Nodes and note the category difference:
 
 ### Frequently Used Nodes
 
-With hundreds of Nodes included in the basic installation of Dynamo, which ones are essential for developing our Visual Programs? Let's focus on those that let us define our program's parameters (**Input**), see the results of a Node's action (**Watch**), and define inputs or functionality by way of a shortcut (**Code Block**).
+With hundreds of Nodes included in the basic installation of Dynamo, which ones are essential for developing our visual programs? Let's focus on those that let us define our program's parameters (**Input**), see the results of a Node's action (**Watch**), and define inputs or functionality by way of a shortcut (**Code Block**).
 
 #### Input Nodes
 
-Input Nodes are the primary means for the User of our Visual Program, be that yourself or someone else, to interface with the key parameters. Here are some available from the Core Library:
+Input nodes are the primary means for the user of our visual program, be that yourself or someone else, to interface with the key parameters. Here are some available from the Core Library:
 
 | Node           |                                                    | Node           |                                                    |
 | -------------- | -------------------------------------------------- | -------------- | -------------------------------------------------- |

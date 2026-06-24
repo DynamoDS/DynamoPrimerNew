@@ -22,7 +22,7 @@ API and nodes that were marked as obsolete in 1.x have been removed in Dynamo 4.
 ## Package Compatibility <a href="#package-compatibility" id="package-compatibility"></a>
 
 ### Using Dynamo 2.x and 3.x Packages in Dynamo 4.x 
-Because Dynamo 4.x now runs on the .NET 10 runtime, packages that were built for Dynamo 2.x (*using .NET48*) and Dynamo 3.x(*using .NET 8*) are not guaranteed to work in Dynamo 4.x. When you attempt to download a package in Dynamo 4.x that was published from a Dynamo version less than 4.0, you will get a warning that the package is from an older version of Dynamo.
+Because Dynamo 4.x now runs on the .NET 10 runtime, packages that were built for Dynamo 2.x (*using .NET48*) and Dynamo 3.x (*using .NET 8*) are not guaranteed to work in Dynamo 4.x. When you attempt to download a package in Dynamo 4.x that was published from a Dynamo version less than 4.0, you will get a warning that the package is from an older version of Dynamo.
 
 **This does not mean the package will not work** It's simply a warning that there could be compatibility issues, and in general it's a good idea to check if there's a newer version that has been built specifically for Dynamo 4.x.
 

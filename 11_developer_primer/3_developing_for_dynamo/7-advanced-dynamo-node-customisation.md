@@ -405,7 +405,7 @@ Dynamo uses the Documentation Browser view extension to display nodes documentat
 
 ![Documentation Browser](../../.gitbook/assets/customnodedocumentation-no-documentation-provided.png)
 
-The documentation displayed in the Documentation Browser is made up of two parts. The first is the `Node Info` section, this is auto generated from the information extracted from the node, such as the inputs/outputs, node category, node name/namespace and the nodes short description. The Second part shows the custom nodes documentation, which is the Markdown file that is provided to document the node.
+The documentation displayed in the Documentation Browser is made up of two parts. The first is the `Node Info` section, this is auto generated from the information extracted from the node, such as the inputs/outputs, node category, node name/namespace and the nodes short description. The second part shows the custom node's documentation, which is the Markdown file that is provided to document the node.
 
 ![Custom Node Documentation](../../.gitbook/assets/customnodedocumentation-custom-node-documentation.png)
 
@@ -502,7 +502,7 @@ To embed your icons into the `.dll`, create a resources file:
 1. Double-click on the resouce file you created:
    * Add one image at a time using the '+' button
    * Set resource type to **File**
-   * Browse to your Image file location and include your **Large** and **Small** Node icons
+   * Browse to your image file location and include your **Large** and **Small** node icons
 
 ![Add resources...](../../.gitbook/assets/zerotouchicons-open-resource-editor-update.png)
 

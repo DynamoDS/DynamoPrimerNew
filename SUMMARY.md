@@ -137,7 +137,7 @@
   * [Pull Requests](11_developer_primer/5_pull_requests/1-pull-requests.md)
   * [Testing Expectations](11_developer_primer/6_testing_expectations/1-testing-expectations.md)
   * [Examples](11_developer_primer/7_examples/README.md)
-  * [Updating Packages](11_developer_primer/8_updating_packages/1-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+  * [Updating Packages](11_developer_primer/8_updating_packages/README.md)
     * [Updating your Packages and Dynamo Libraries for Dynamo 2.x](11_developer_primer/8_updating_packages/1-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
     * [Updating your Packages and Dynamo Libraries for Dynamo 3.x](11_developer_primer/8_updating_packages/2-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
     * [Updating your Packages and Dynamo Libraries for Dynamo 4.x](11_developer_primer/8_updating_packages/3-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)

@@ -23,7 +23,7 @@ IronPython2 -> IronPython3 -> PythonNet3
 
 ![Distribution](../../.gitbook/assets/distribution.gif)
 
-| **Features**   | **IronPython 2.7**             | **IronPython 3**       |       **Python.NET 2.5.x (alias CPthyon3)**  | **Python.NET 3.x**|
+| **Features**   | **IronPython 2.7**             | **IronPython 3**       |       **Python.NET 2.5.x (alias CPython3)**  | **Python.NET 3.x**|
 | -------------- | -------------------------------|----------------------- | --------------                               | ------------------ |
 | Principal Concept | Implementing Python on .NET (with DLR)|Implementing Python on .NET (with DLR)| Gateway to CPython | Gateway to CPython  |
 | Python Version| Python 2.7 | Python 3.4 (currently)  | Python 2.7, Python 3.5 - 3.9  | Python 3.7+ (modern) |

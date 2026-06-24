@@ -25,7 +25,7 @@ Visual Studio will automatically create and open a C# file. We should give it an
 ```
  namespace MyCustomNode
  {
-     public class SampleFunctions
+     public class SampleFunction
      {
          public static double MultiplyByTwo(double inputNumber)
          {
@@ -38,7 +38,7 @@ Visual Studio will automatically create and open a C# file. We should give it an
 ![Using the Solution Explorer](../../.gitbook/assets/vs-edit-class.jpg)
 
 > 1. Open the Solution Explorer and Output windows from `View`.
-> 2. Rename the `Class1.cs` file to `SampleFunctions.cs` in the Solution explorer on the right.
+> 2. Rename the `Class1.cs` file to `SampleFunction.cs` in the Solution explorer on the right.
 > 3. Add the code above for the multiplication function. We will cover the specifics of how Dynamo will read your C# classes later on.
 > 4. The Solution Explorer: this gives you access to everything in your project.
 > 5. The Output window: we'll need this later on to see if our build was successful.
@@ -82,7 +82,7 @@ If a category is created in the library called `MyCustomNode`, the .dll was impo
 ![Custom nodes](../../.gitbook/assets/dyn-customnode.png)
 
 > 1. MyCustomNode in the Dynamo Library. The Library category is determined by the `.dll` name.
-> 2. SampleFunctions.MultiplyByTwo on the canvas.
+> 2. SampleFunction.MultiplyByTwo on the canvas.
 
 ### How Dynamo Reads Classes and Methods <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 

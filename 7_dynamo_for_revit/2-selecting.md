@@ -133,7 +133,7 @@ A question that may come up often in Revit/Dynamo workflows: how do I select one
 
 > 1. We can convert all of these five elements to Dynamo geometry too.
 
-What if we had 500 beams? Converting all of these elements into Dynamo geometry would be really slow. If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](..\5_essential_nodes_and_concepts\5-2_geometry-for-computational-design\6-solids.md#freezing)" section in the solids chapter.
+What if we had 500 beams? Converting all of these elements into Dynamo geometry would be really slow. If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/6-solids.md#freezing)" section in the solids chapter.
 
 In any case, if we were to import 500 beams, do we need all of the surfaces to perform the intended parametric operation? Or can we extract basic information from the beams and perform generative tasks with fundamental geometry? This is a question that we'll keep in mind as we walk through this chapter. For example, let's take a look at the truss system next.
 

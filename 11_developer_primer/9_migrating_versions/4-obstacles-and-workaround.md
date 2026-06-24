@@ -2,7 +2,7 @@
 
 ### Properties of type “Indexer”
 
-Properties of type “Indexer” (like access to _Space_ in the Revit API) are no longer handled directly with the bracket syntax. The indexer must be replaced by the corresponding _get__  method.
+Properties of type “Indexer” (like access to _Space_ in the Revit API) are no longer handled directly with the bracket syntax. The indexer must be replaced by the corresponding _get_  method.
 
 **Example:**
 
@@ -16,7 +16,7 @@ space = elem.Space[phase]
 space = elem.get_Space(phase)
 ```
 ### Error in Python set collection
-The Python Collection _ste()_ does not accept objects of type _ElementId.InvalidId_.
+The Python Collection _set()_ does not accept objects of type _ElementId.InvalidId_.
 
 **Workarounds:**
 - Filter invalid IDs when building the _set()_
@@ -24,7 +24,7 @@ The Python Collection _ste()_ does not accept objects of type _ElementId.Invalid
 
 **Example(Filtering):**
 ```py
-setViewsIds = set([w.OwnerViewId for In in allWires if w.OwnerViewId != ElementId.InvalidElementId])
+setViewsIds = set([w.OwnerViewId for w in allWires if w.OwnerViewId != ElementId.InvalidElementId])
 ```
 ### "with" statement on .NET objects
 
