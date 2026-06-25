@@ -81,6 +81,7 @@ Load the relevant reference when working on that content type.
 | **Feature documentation** | In-product help, procedures | [Feature documentation](./assets/feature-documentation.md) |
 | **Blog posts** | Dynamo release and community blog posts | [Blog posts](./assets/blog-posts.md) |
 | **Tutorials and user guides** | Step-by-step tutorials, user guides | [Tutorials and user guides](./assets/tutorials-user-guides.md) |
+| **Primer articles** | Writing or editing Primer chapters, articles, and exercises | [Primer articles](./assets/primer-articles.md) |
 
 ---
 
