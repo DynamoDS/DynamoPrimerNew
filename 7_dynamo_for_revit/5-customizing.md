@@ -81,7 +81,7 @@ You will need to enable the **PanelSurface** nodes by selecting them in the expe
 > 4. Add an **AdaptiveComponent.ByPoint** node to the canvas, connect _Panel Pts_ from the **PanelSurface.GetPanelPoints** output into the _points_ input. Connect the _Family Types_ node to the _familyType_ input.
 > 5. Hit _Run_. Revit will have to _think_ for a bit while the geometry is being created. If it takes too long, reduce the _code block's '15'_ to a lower number. This will reduce the number of panels on the roof.
 
-![](<../.gitbook/assets/make panels from points.jpg>)
+![](<../.gitbook/assets/panelising script.jpg>)
 
 
 _Note: If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "Freezing" section in the solids chapter._
