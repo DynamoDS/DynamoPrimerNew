@@ -89,7 +89,7 @@ Input Ports are on the left side and the Output Ports are located on the right s
 
 ### Creating Wires <a href="#creating-wires" id="creating-wires"></a>
 
-Create a Wire by left-clicking on a Port, then subsequently left-clicking on the port of another Node to create a connection. While we are in the process of making a connection, the Wire will appear dashed and will snap to become solid lines when successfully connected.
+Create a wire by left-clicking on a port, then subsequently left-clicking on the port of another node to create a connection. While we are in the process of making a connection, the wire will appear dashed and will snap to become solid lines when successfully connected.
 
 The data will always flow through this Wire from output to input; however, we may create the wire in either direction in terms of the sequence of clicking on the connected Ports.
 
