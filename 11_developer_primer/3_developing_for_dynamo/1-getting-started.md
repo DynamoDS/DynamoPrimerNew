@@ -142,7 +142,7 @@ This is the NuGet Package Manager. This window shows what packages have been ins
 
 > 1. Select browse and search for DynamoVisualProgramming to bring up the Dynamo Packages.
 > 2. The Dynamo packages. Selecting one will show it's current version and description of what's inside.
-> 3. Select the package version you need and click install. This installs a package for the specific project you are working in. Since we are using the latest stable release of Dynamo, version 4.1, choose the corresponding package version.
+> 3. Select the package version you need and click install. This installs a package for the specific project you are working in. Since we are using the latest stable release of Dynamo, choose the package version which corresponds with the version of Dynamo you are working with.
 
 To manually add a package downloaded from the browser, open the Reference Manager from the Solution Explorer and browse for the package.
 
