@@ -134,6 +134,6 @@ With this setting, only the selected Nodes and its joining Wires will be shown i
 
 #### Hide Individual Wire Only
 
-You can also hide the selected wire only by Right-clicking on the Nodes output > select Hide Wires
+You can also hide the selected wire only by right-clicking on the node's output > select Hide Wires
 
 ![](<../.gitbook/assets/nodes and wires - hide selected wire.gif>)
