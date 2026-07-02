@@ -18,6 +18,7 @@ Autodesk Assistant is a built-in AI tool that will ship standard with Revit 2027
 ### Using the Autodesk Assistant?
 
 > 1. Once installed, an icon should appear above the canvas space towards the right-hand side. Clicking this icon will open the Autodesk Assistant window.
+
 ![](../../.gitbook/assets/AutodeskAssistantInstalled.jpg)
 
 > 2. Once opened, a chatbar will appear on the right-hand side of the window which will allow you to interact and make requests of Autodesk Assistant for Dynamo. 

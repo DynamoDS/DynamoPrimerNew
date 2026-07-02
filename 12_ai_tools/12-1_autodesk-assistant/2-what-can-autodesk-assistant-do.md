@@ -2,6 +2,18 @@
 
 Autodesk Assistant is capable of many operations and will utilise library nodes, code blocks containing designscript and custom python nodes. Autodesk Assistant is also capable of organising and annotating dynamo scripts using coloured regions and text.
 
+### Basic list management
+Autodesk Assistant is perfect for automating small simple tasks that are otherwise repetitive and tedious. In this example, Autodesk Assistant creates two lists of points and then connects them with lines with on offset of two. 
+The exact prompt is: _I would like two sets of points in a line parallel to each other. The sets should each have ten points. Then connect the points with lines and offset the points being connected by two._
+
+![](../../.gitbook/assets/AA_ListManagement.jpg)
+
+### Debugging 
+Autodesk Assistant can debug or resolve any warnings or errors that may be occuring in a dynamo script. In the following script it can be seen that there is a mismatch in the input type expected in a **List.GetItemAtIndex** node. 
+
+![](../../.gitbook/assets/AA_Debug_before.jpg)
+
+
 ### Geometry 
 Autodesk Assistant can create complex geometry and will try as best as possible to match a given query. Concise instructions are key to getting the desired results. In this example, Autodesk Assistant is being asked to create 10 spheres that increase in diameter by 1 unit each time, starting with a diameter of 1. The spheres are to be placed in a spiral that trends upwards. The exact prompt reads: _I would like 10 spheres each with a diameter that is 1 unit larger than the lat, starting at one. Place them in a spiral that rises upwards._
 
@@ -53,9 +65,23 @@ The Autodesk Assistant will again rewrite the script in the requested format, wi
 
 
 ### Real world references
-As Autodesk Assistant has access to the internet it can also search for real world references in order to recreate buildings or forms that already exist. In this example, Autodesk Assistant has been asked to create 
+As Autodesk Assistant has access to the internet it can also search for real world references in order to recreate buildings or forms that already exist. In this example, Autodesk Assistant has been asked to create a geometry form that matches the iconic Gherkin building (also known as 30 St Marys Axe) in London. 
+
+![](../../.gitbook/assets/AA_Search_Gherkin.jpg)
+
+
+For simplicity, the prompt was just to create a geometric form, not full Revit elements. 
+The full prompt was: _I would like a script that recreates the gherkin building, also known as 30 st mary axe, in London. The script can just create geometry for now, I don't need revit elements yet._
 
 ![](../../.gitbook/assets/AA_Search_Script.jpg)
 
 
 ![](../../.gitbook/assets/AA_Search_Geometry.jpg)
+
+As can be seen, the geometry does not quite match the exact form and requires some additional nodes in order to reach the correct orientation. 
+![](../../.gitbook/assets/AA_Search_FlipScript.jpg)
+
+Once the form was flipped though, it somewhat resembles the form of the Gherkin building and particularly given that there are inputs which allow for micro adjustments, it is not hard to arrive at a form which is recognisable as the Gherkin. 
+
+![](../../.gitbook/assets/AA_Search_FlipGeometry.jpg)
+
