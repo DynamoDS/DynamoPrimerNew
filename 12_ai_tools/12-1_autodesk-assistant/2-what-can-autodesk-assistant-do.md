@@ -40,13 +40,22 @@ The Autodesk Assistant will again rewrite the script in the requested format, wi
 ### Data manipulation
 > 1. Autodesk Assistant can use revit nodes to search through the Revit document attached to the dynamo file in order to extract information about the Revit model. In this particular example, a sample revit project has been loaded into the program and Autodesk Assistant will be used to make queries about the model. 
 
+![](../../.gitbook/assets/AA_Data_SampleProject.jpg)
 
 ![](../../.gitbook/assets/AA_Data_Results.jpg)
 
-![](../../.gitbook/assets/AA_Data_SampleProject.jpg)
+
 ![](../../.gitbook/assets/AA_Data_Script.jpg)
 
-AA_Data_Results
 
 ### Search functions 
 > 1. Autodesk Assistant can use the web to search for scripts that may already exist elsewhere and recreate or copy them into the canvas 
+
+
+### Real world references
+As Autodesk Assistant has access to the internet it can also search for real world references in order to recreate buildings or forms that already exist. In this example, Autodesk Assistant has been asked to create 
+
+![](../../.gitbook/assets/AA_Search_Script.jpg)
+
+
+![](../../.gitbook/assets/AA_Search_Geometry.jpg)
