@@ -13,6 +13,14 @@ Autodesk Assistant can debug or resolve any warnings or errors that may be occur
 
 ![](../../.gitbook/assets/AA_Debug_before.jpg)
 
+In this instance Autodesk Assistant has been used to debug the script and fix the input issue. The exact prompt was: _please fix the warning on the canvas_
+
+![](../../.gitbook/assets/AA_Debug_Script.jpg)
+
+Autodesk Assistant identified that a string was being used as input when a number or integer should have been used and rectified the issue.
+
+![](../../.gitbook/assets/AA_Debug_geometry.jpg)
+
 
 ### Geometry 
 Autodesk Assistant can create complex geometry and will try as best as possible to match a given query. Concise instructions are key to getting the desired results. In this example, Autodesk Assistant is being asked to create 10 spheres that increase in diameter by 1 unit each time, starting with a diameter of 1. The spheres are to be placed in a spiral that trends upwards. The exact prompt reads: _I would like 10 spheres each with a diameter that is 1 unit larger than the lat, starting at one. Place them in a spiral that rises upwards._
@@ -48,14 +56,16 @@ The Autodesk Assistant will again rewrite the script in the requested format, wi
 ![](../../.gitbook/assets/AA_Geom_script_CodeResults.jpg)
 
 
-
 ### Data manipulation
-> 1. Autodesk Assistant can use revit nodes to search through the Revit document attached to the dynamo file in order to extract information about the Revit model. In this particular example, a sample revit project has been loaded into the program and Autodesk Assistant will be used to make queries about the model. 
+ Autodesk Assistant can use revit nodes to search through the Revit document attached to the dynamo file in order to extract information about the Revit model. In this particular example, a sample revit project has been loaded into the program and Autodesk Assistant will be used to make queries about the model. 
 
 ![](../../.gitbook/assets/AA_Data_SampleProject.jpg)
 
+The prompt here was: _Please get the combined lengths of all walls in this model that are less than 200mm thick_. As can be seen the Autodesk Assistant utilised a script in order to gather the requested information about the model and then displayed it within the Autodesk Assistant chat window.
+
 ![](../../.gitbook/assets/AA_Data_Results.jpg)
 
+This script could also then be taken and applied to other models if desired.
 
 ![](../../.gitbook/assets/AA_Data_Script.jpg)
 
@@ -65,6 +75,7 @@ The Autodesk Assistant will again rewrite the script in the requested format, wi
 
 
 ### Real world references
+
 As Autodesk Assistant has access to the internet it can also search for real world references in order to recreate buildings or forms that already exist. In this example, Autodesk Assistant has been asked to create a geometry form that matches the iconic Gherkin building (also known as 30 St Marys Axe) in London. 
 
 ![](../../.gitbook/assets/AA_Search_Gherkin.jpg)

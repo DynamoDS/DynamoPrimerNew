@@ -9,7 +9,7 @@ The Dynamo MCP server is currently only available to those who are on the alpha 
 
 https://blog.bimsmith.com/Revit-2027-What-the-Built-In-MCP-Server-Actually-Does-in-Practice
 
-An MCP is the connecting piece that allows an AI model to talk directly to a live Revit model instead of working blind from whatever you happen to paste into a chat window. For Dynamo users specifically, this means letting the AI read the actual model or script, and having it write or fix the graph for you.
+It's the connecting piece that allows an AI model to talk directly to a live Revit model instead of working blind from whatever you happen to paste into a chat window. For Dynamo users specifically, this opens up a genuinely different way of working: instead of hand-building every node graph, you can describe what you want, let the AI read the actual model or script, and have it write or fix the graph for you.
 
 MCP is an open standard that lets an AI model connect to external tools and data sources through a common protocol, rather than needing custom-built integrations for every piece of software. In the Revit/Dynamo world, that means an MCP server acts as a translator sitting between the model and the Revit API (or the Dynamo engine): the model sends a request, the server turns it into an actual API call inside your open Revit session, and the result comes back as structured data the model can reason about.
 
