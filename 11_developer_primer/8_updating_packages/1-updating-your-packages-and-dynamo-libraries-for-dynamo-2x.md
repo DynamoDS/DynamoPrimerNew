@@ -14,7 +14,7 @@ Extension authors may also have some potential changes to make - depending on ho
 
 ### General packaging rules: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
-* Do not bundle Dynamo or Dynamo Revit .dlls with your package. These .dlls will already be loaded by Dynamo. If you bundle a different version than the user has loaded _(e.g., you distribute Dynamo Core 1.3 but the user is running your package on Dynamo 2.0)_ mysterious runtime bugs will occur. This includes .dlls like `DynamoCore.dll`, `DynamoServices.dll`, `DSCodeNodes.dll`, `ProtoGeometry.dll`
+* Do not bundle Dynamo or Dynamo Revit .dlls with your package. These .dlls will already be loaded by Dynamo. If you bundle a different version than the user has loaded _(e.g., you distribute Dynamo Core 1.3 but the user is running your package on Dynamo 2.0)_ mysterious runtime bugs will occur. This includes .dlls like `DynamoCore.dll`, `DynamoServices.dll`, `DSCoreNodes.dll`, `ProtoGeometry.dll`
 * Do not bundle and distribute `newtonsoft.json.net` with your package if you can avoid it. This .dll will also be loaded by dynamo 2.x already. The same issue as above can occur.
 * Do not bundle and distribute `CEFSharp` with your package if you can avoid it. This .dll will also be loaded by Dynamo 2.x already. The same issue as above can occur.
 * In general, avoid sharing dependencies with Dynamo or Revit if you need to control the version of that dependency.
