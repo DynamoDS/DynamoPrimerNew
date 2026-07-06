@@ -4,15 +4,15 @@ Vous venez d’accéder à la documentation d’intégration du langage de progr
 
 Ce guide aborde différents aspects de l’hébergement de Dynamo dans votre application pour permettre à vos utilisateurs d’interagir avec votre application à l’aide de la programmation visuelle.
 
-Sommaire :
+Sommaire :
 
 * [Introduction](13-dynamo-integration.md#dynamo-integration) Présentation détaillée du contenu de ce guide et définition de Dynamo.
 * [Point d’entrée Dynamo personnalisé](13-dynamo-integration.md#dynamo-custom-entry-point) Comment créer un modèle Dynamo et par où commencer.
 * [Liaison et traçage d’éléments](13-dynamo-integration.md#element-binding-and-trace) Utilisation du mécanisme de traçage de Dynamo pour lier les nœuds du graphique à leurs résultats dans votre hôte.
-* [Nœuds de sélection Dynamo Revit](13-dynamo-integration.md#dynamo-revit-selection-nodes-what-are-they) Comment implémenter des nœuds qui permettent aux utilisateurs de sélectionner des objets ou des données de votre hôte et de les transmettre en tant qu’entrées au graphique Dynamo.
+* [Nœuds de sélection Dynamo Revit](13-dynamo-integration.md#dynamo-revit-selection-nodes-what-are-they) Comment implémenter des nœuds qui permettent aux utilisateurs de sélectionner des objets ou des données de votre hôte et de les transmettre en tant qu’entrées au graphique Dynamo.
 * [Présentation des packages intégrés Dynamo](13-dynamo-integration.md#dynamo-built-in-packages-overview) Description de la bibliothèque standard Dynamo et de l’utilisation du mécanisme sous-jacent pour distribuer des packages avec votre intégration.
 
-**Un peu de terminologie :**
+**Un peu de terminologie :**
 
 Dans ces documents, nous utiliserons les termes script, graphe et programme Dynamo indistinctement pour désigner le code créé par les utilisateurs dans Dynamo.
 
@@ -42,15 +42,15 @@ Actuellement, la liste de D4R n’inclut que `Revit\SDA\bin\ICSharpCode.AvalonEd
 
 ### Chargement d’ASM
 
-#### Qu’est-ce qu’ASM et LibG ?
+#### Qu’est-ce qu’ASM et LibG ?
 
 ASM est la bibliothèque de géométrie ADSK sur laquelle Dynamo est construit.
 
-LibG est un wrapper .Net convivial autour du noyau de géométrie ASM. LibG partage son schéma de gestion de versions avec ASM : il utilise le même numéro de version majeure et mineure qu’ASM pour indiquer qu’il s’agit du wrapper correspondant d’une version d’ASM particulière. Lorsqu’une version ASM est donnée, la version correspondante de LibG doit être la même. Dans la plupart des cas, LibG devrait fonctionner avec toutes les versions d’ASM d’une version majeure particulière. Par exemple, LibG 223 devrait pouvoir charger n’importe quelle version d’ASM 223.
+LibG est un wrapper .Net convivial autour du noyau de géométrie ASM. LibG partage son schéma de gestion de versions avec ASM : il utilise le même numéro de version majeure et mineure qu’ASM pour indiquer qu’il s’agit du wrapper correspondant d’une version d’ASM particulière. Lorsqu’une version ASM est donnée, la version correspondante de LibG doit être la même. Dans la plupart des cas, LibG devrait fonctionner avec toutes les versions d’ASM d’une version majeure particulière. Par exemple, LibG 223 devrait pouvoir charger n’importe quelle version d’ASM 223.
 
-#### Chargement d’ASM par Dynamo Sandbox
+#### Chargement d’ASM par Dynamo Sandbox
 
-Dynamo Sandbox est conçu pour pouvoir fonctionner avec plusieurs versions d’ASM. Pour cela, plusieurs versions de LibG sont regroupées et livrées avec Core. Dynamo Shape Manager intègre une fonctionnalité permettant de rechercher les produits Autodesk livrés avec ASM, de sorte que Dynamo peut charger ASM à partir de ces produits et faire en sorte que les nœuds de géométrie fonctionnent sans être explicitement chargés dans une application hôte. À l’heure actuelle, la liste des produits est la suivante :
+Dynamo Sandbox est conçu pour pouvoir fonctionner avec plusieurs versions d’ASM. Pour cela, plusieurs versions de LibG sont regroupées et livrées avec Core. Dynamo Shape Manager intègre une fonctionnalité permettant de rechercher les produits Autodesk livrés avec ASM, de sorte que Dynamo peut charger ASM à partir de ces produits et faire en sorte que les nœuds de géométrie fonctionnent sans être explicitement chargés dans une application hôte. À l’heure actuelle, la liste des produits est la suivante :
 
 ```
 private static readonly List<string> ProductsWithASM = new List<string>() 
@@ -62,13 +62,13 @@ Dynamo effectuera une recherche dans le registre Windows et déterminera si les 
 
 Compte tenu de la version d’ASM, l’API ShapeManager suivante choisira l’emplacement du préchargeur LibG correspondant à charger. Si une version correspond exactement, elle sera utilisée. Autrement, la version de LibG inférieure la plus proche, mais avec la même version majeure, sera chargée.
 
-Exemple Si Dynamo est intégré à une version de développement Revit où il existe une version ASM 225.3.0 plus récente, Dynamo essaiera d’utiliser LibG 225.3.0 si elle existe. Autrement, le programme essaiera d’utiliser la version majeure la plus proche inférieure à son premier choix, c’est-à-dire 225.0.0.
+Exemple Si Dynamo est intégré à une version de développement Revit où il existe une version ASM 225.3.0 plus récente, Dynamo essaiera d’utiliser LibG 225.3.0 si elle existe. Autrement, le programme essaiera d’utiliser la version majeure la plus proche inférieure à son premier choix, c’est-à-dire 225.0.0.
 
 `public static string GetLibGPreloaderLocation(Version asmVersion, string dynRootFolder)`
 
 #### Chargement d’ASM à partir de l’hôte par l’intégration en cours de processus Dynamo
 
-Revit est le premier élément de la liste de recherche de produits ASM, ce qui signifie que, par défaut, `DynamoSandbox.exe` tentera d’abord de charger ASM à partir de Revit. Nous voulons quand même nous assurer que la session de travail D4R intégrée charge ASM à partir de l’hôte Revit actuel : par exemple, si l’utilisateur possède à la fois R2018 et R2020 sur son ordinateur, lors du lancement de D4R à partir de R2020, D4R doit utiliser ASM 225 à partir de R2020 au lieu d’ASM 223 à partir de R2018. Les intégrateurs devront implémenter des appels similaires à ceux indiqués ci-après pour forcer le chargement de leur version spécifiée.
+Revit est le premier élément de la liste de recherche de produits ASM, ce qui signifie que, par défaut, `DynamoSandbox.exe` tentera d’abord de charger ASM à partir de Revit. Nous voulons quand même nous assurer que la session de travail D4R intégrée charge ASM à partir de l’hôte Revit actuel : par exemple, si l’utilisateur possède à la fois R2018 et R2020 sur son ordinateur, lors du lancement de D4R à partir de R2020, D4R doit utiliser ASM 225 à partir de R2020 au lieu d’ASM 223 à partir de R2018. Les intégrateurs devront implémenter des appels similaires à ceux indiqués ci-après pour forcer le chargement de leur version spécifiée.
 
 ```
 internal static Version PreloadAsmFromRevit() 
@@ -96,7 +96,7 @@ Récemment, nous avons ajouté la possibilité pour `DynamoSandbox.exe` et `Dyna
 
 La StartupConfiguration est utilisée pour être transmise en tant que paramètre d’initialisation de DynamoModel, ce qui indique qu’elle contient presque toutes les définitions de la façon dont vous souhaitez personnaliser les paramètres de votre session Dynamo. En fonction de la façon dont les propriétés suivantes sont définies, l’intégration de Dynamo peut varier entre les différents intégrateurs. Par exemple, différents intégrateurs peuvent définir différents chemins de modèle Python ou différents formats de nombres affichés.
 
-Elle se compose des éléments suivants :
+Elle se compose des éléments suivants :
 
 * DynamoCorePath // Où se trouvent les fichiers binaires DynamoCore de chargement
 * DynamoHostPath // Où se trouvent les fichiers binaires d’intégration Dynamo
@@ -105,32 +105,32 @@ Elle se compose des éléments suivants :
 * PreloadLibraryPaths // Où se trouvent les fichiers binaires des nœuds préchargés, par exemple DSOffice.dll
 * AdditionalNodeDirectories // Où se trouvent des fichiers binaires de nœuds supplémentaires
 * AdditionalResolutionPaths // Chemins de résolution d’assemblage supplémentaires pour d’autres dépendances qui peuvent être requises lors du chargement des bibliothèques
-* UserDataRootFolder // Dossier de données utilisateur, p. ex. `"AppData\Roaming\Dynamo\Dynamo Revit"`
+* UserDataRootFolder // Dossier de données utilisateur, p. ex. `"AppData\Roaming\Dynamo\Dynamo Revit"`
 * CommonDataRootFolder // Dossier par défaut pour l’enregistrement de définitions personnalisées, d’échantillons, etc.
-* Context // Nom d’hôte de l’intégrateur + version `(Revit<BuildNum>)`
+* Context // Nom d’hôte de l’intégrateur + version `(Revit<BuildNum>)`
 * SchedulerThread // Thread du planificateur d’intégrateur implémentant `ISchedulerThread`. Pour la plupart des intégrateurs, il s’agit du thread de l’interface utilisateur principale ou de n’importe quel thread à partir duquel ils peuvent accéder à leur API.
 * StartInTestMode // Si la session en cours est une session d’automatisation de test (modifie un ensemble de comportements Dynamo) ne l’utilisez pas, à moins que vous ne soyez en train d’écrire des tests.
-* AuthProvider // L’implémentation de l’intégrateur d’IAuthProvider, p. ex. l’implémentation de RevitOxygenProvider est dans Greg.dll, qui s’utilise pour l’intégration du chargement de packageManager.
+* AuthProvider // L’implémentation de l’intégrateur d’IAuthProvider, p. ex. l’implémentation de RevitOxygenProvider est dans Greg.dll, qui s’utilise pour l’intégration du chargement de packageManager.
 
 ### Préférences
 
-Le chemin des paramètres de préférences par défaut est géré par `PathManager.PreferenceFilePath`, p. ex. `"AppData\\Roaming\\Dynamo\\Dynamo Revit\\2.5\\DynamoSettings.xml"`. Les intégrateurs peuvent décider s’ils souhaitent également envoyer un fichier de paramètres personnalisés de préférences à un emplacement qui doit être en accord avec le gestionnaire de chemins. Les propriétés de paramètres de préférence suivantes sont sérialisées :
+Le chemin des paramètres de préférences par défaut est géré par `PathManager.PreferenceFilePath`, p. ex. `"AppData\\Roaming\\Dynamo\\Dynamo Revit\\2.5\\DynamoSettings.xml"`. Les intégrateurs peuvent décider s’ils souhaitent également envoyer un fichier de paramètres personnalisés de préférences à un emplacement qui doit être en accord avec le gestionnaire de chemins. Les propriétés de paramètres de préférence suivantes sont sérialisées :
 
-* IsFirstRun // Indique si cette version de Dynamo est exécutée pour la première fois, p. ex. utilisée pour déterminer s’il est nécessaire d’afficher le message d’acceptation/refus de GA. S’utilise également pour déterminer s’il est nécessaire de migrer l’ancien paramètre de préférences Dynamo lors du lancement d’une nouvelle version de Dynamo, afin que les utilisateurs bénéficient d’une expérience fluide
+* IsFirstRun // Indique si cette version de Dynamo est exécutée pour la première fois, p. ex. utilisée pour déterminer s’il est nécessaire d’afficher le message d’acceptation/refus de GA. S’utilise également pour déterminer s’il est nécessaire de migrer l’ancien paramètre de préférences Dynamo lors du lancement d’une nouvelle version de Dynamo, afin que les utilisateurs bénéficient d’une expérience fluide
 * IsUsageReportingApproved // Indique si les rapports d’utilisation sont approuvés ou non
 * IsAnalyticsReportingApproved // Indique si les rapports d’analyse sont approuvés ou non
 * LibraryWidth // La largeur du panneau gauche de la bibliothèque Dynamo
 * ConsoleHeight // La hauteur de l’affichage de la console
 * ShowPreviewBubbles // Indique si les bulles d’aperçu doivent être affichées
 * ShowConnector // Indique si les connecteurs sont affichés
-* ConnectorType // Indique le type de connecteur : Bézier ou Polyligne
+* ConnectorType // Indique le type de connecteur : Bézier ou Polyligne
 * BackgroundPreviews // Indique l’état actif de l’aperçu de l’arrière-plan spécifié
 * RenderPrecision // Le niveau de précision du rendu. Une valeur plus faible génère des maillages avec moins de triangles. Plus la valeur est élevée, plus la géométrie sera lisse dans l’aperçu de l’arrière-plan. Le chiffre 128 convient pour générer rapidement la géométrie de l’aperçu.
 * ShowEdges // Indique si les arêtes de surfaces et de solides seront rendues
 * ShowDetailedLayout // NE S’UTILISE PAS
 * WindowX, WindowY // Dernières coordonnées X, Y de la fenêtre Dynamo
 * WindowW, WindowH // Dernière largeur, hauteur de la fenêtre Dynamo
-* UseHardwareAcceleration // Dynamo doit-il utiliser l’accélération matérielle si elle est prise en charge ?
+* UseHardwareAcceleration // Dynamo doit-il utiliser l’accélération matérielle si elle est prise en charge ?
 * NumberFormat // La précision décimale utilisée pour afficher les nombres dans la bulle d’aperçu toString().
 * MaxNumRecentFiles // Le nombre maximal de chemins de fichier récents à enregistrer
 * RecentFiles // Liste des chemins d’accès aux fichiers récemment ouverts. Toute modification aura une incidence directe sur la liste des fichiers récents dans la page de démarrage de Dynamo
@@ -141,10 +141,10 @@ Le chemin des paramètres de préférences par défaut est géré par `PathManag
 * BackupInterval // Indique combien de temps (en millisecondes) le graphe sera automatiquement sauvegardé
 * BackupFilesCount // Indique le nombre de sauvegardes qui seront effectuées
 * PackageDownloadTouAccepted // Indique si l’utilisateur a accepté les conditions générales d’utilisation pour le téléchargement de packages à partir du gestionnaire de packages
-* OpenFileInManualExecutionMode // Indique l’état par défaut de la case à cocher « Ouvrir en mode manuel » dans OpenFileDialog
-* NamespacesToExcludeFromLibrary // Indique les espaces de noms (le cas échéant) qui ne doivent pas être affichés dans la bibliothèque de nœuds Dynamo. Format de chaîne : « [nom de la bibliothèque]:[espace de noms complet] »
+* OpenFileInManualExecutionMode // Indique l’état par défaut de la case à cocher « Ouvrir en mode manuel » dans OpenFileDialog
+* NamespacesToExcludeFromLibrary // Indique les espaces de noms (le cas échéant) qui ne doivent pas être affichés dans la bibliothèque de nœuds Dynamo. Format de chaîne : « \[nom de la bibliothèque]:\[espace de noms complet] »
 
-Exemple de paramètres de préférences sérialisés :
+Exemple de paramètres de préférences sérialisés :
 
 ```xml
 <PreferenceSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
@@ -253,11 +253,11 @@ Exemple de paramètres de préférences sérialisés :
 
 Utiliser la StartConfiguration cible pour lancer `DynamoModel`
 
-Après la transmission de StartConfig pour lancer `DynamoModel`, DynamoCore supervise les spécificités réelles pour s’assurer que la session Dynamo est correctement initialisée avec les détails spécifiés. Chaque intégrateur devra effectuer des étapes de configuration supplémentaires après l’initialisation de `DynamoModel`, p. ex. dans D4R, il faut s’abonner aux événements pour surveiller les transactions de l’hôte Revit ou les mises à jour de documents, la personnalisation des nœuds Python, etc.
+Après la transmission de StartConfig pour lancer `DynamoModel`, DynamoCore supervise les spécificités réelles pour s’assurer que la session Dynamo est correctement initialisée avec les détails spécifiés. Chaque intégrateur devra effectuer des étapes de configuration supplémentaires après l’initialisation de `DynamoModel`, p. ex. dans D4R, il faut s’abonner aux événements pour surveiller les transactions de l’hôte Revit ou les mises à jour de documents, la personnalisation des nœuds Python, etc.
 
-### Passons déjà à la partie de « programmation visuelle »
+### Passons déjà à la partie de « programmation visuelle »
 
-Pour initialiser `DynamoViewModel` et `DynamoView`, vous devez d’abord construire un `DynamoViewModel`. Pour cela, vous pouvez utiliser la méthode statique `DynamoViewModel.Start`. Voir ci-dessous :
+Pour initialiser `DynamoViewModel` et `DynamoView`, vous devez d’abord construire un `DynamoViewModel`. Pour cela, vous pouvez utiliser la méthode statique `DynamoViewModel.Start`. Voir ci-dessous :
 
 ```c#
 
@@ -278,13 +278,13 @@ Pour initialiser `DynamoViewModel` et `DynamoView`, vous devez d’abord constru
 
 ```
 
-`DynamoViewModel.StartConfiguration` propose beaucoup moins d’options que la configuration du modèle. Elles sont pour la plupart explicites : `CommandFilePath` peut être ignoré à moins que vous n’écriviez un cas de test.
+`DynamoViewModel.StartConfiguration` propose beaucoup moins d’options que la configuration du modèle. Elles sont pour la plupart explicites : `CommandFilePath` peut être ignoré à moins que vous n’écriviez un cas de test.
 
-Le paramètre `Watch3DViewModel` contrôle la façon dont l’aperçu d’arrière-plan et les nœuds watch3D affichent la géométrie 3D. Vous pouvez utiliser votre propre implémentation si vous implémentez les interfaces requises.
+Le paramètre `Watch3DViewModel` contrôle la façon dont l’aperçu d’arrière-plan et les nœuds watch3D affichent la géométrie 3D. Vous pouvez utiliser votre propre implémentation si vous implémentez les interfaces requises.
 
 Pour construire la `DynamoView`, seul `DynamoViewModel` est requis. La vue est un contrôle de fenêtre et peut être affichée à l’aide de WPF.
 
-### Exemple DynamoSandbox.exe :
+### Exemple DynamoSandbox.exe :
 
 DynamoSandbox.exe est un environnement de développement permettant de tester, d’utiliser et d’expérimenter avec DynamoCore. Il s’agit d’un excellent exemple à consulter pour voir comment les composants `DynamoCore` et `DynamoCoreWPF` sont chargés et configurés. Vous pouvez trouver certains des points d’entrée [ici](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoSandbox/DynamoCoreSetup.cs#L37).
 
@@ -292,28 +292,28 @@ DynamoSandbox.exe est un environnement de développement permettant de tester, d
 
 #### vue d’ensemble
 
-Le _traçage_ est un mécanisme de Dynamo Core capable de sérialiser des données dans le fichier .dyn (fichier Dynamo). Important : ces données sont liées aux sites d’appel des nœuds dans le graphe Dynamo.
+Le _traçage_ est un mécanisme de Dynamo Core capable de sérialiser des données dans le fichier .dyn (fichier Dynamo). Important : ces données sont liées aux sites d’appel des nœuds dans le graphe Dynamo.
 
 Lorsqu’un graphe Dynamo est ouvert à partir du disque, les données de traçage qui y sont enregistrées sont réassociées aux nœuds du graphe.
 
-#### glossaire :
+#### glossaire :
 
-* Mécanisme de traçage :
+* Mécanisme de traçage :
   * Implémente la liaison d’éléments dans Dynamo
   * Le mécanisme de traçage peut être utilisé pour s’assurer que les objets sont reliés à la géométrie qu’ils ont créée
   * Le site d’appel et le mécanisme de traçage gèrent la fourniture d’un GUID persistant que l’implémenteur de nœud peut utiliser pour relier les liens
 * Site d’appel
-  * L’exécutable contient plusieurs sites d’appels. Ces sites d’appels sont utilisés pour expédier l’exécution vers les différents endroits d’où ils doivent être expédiés :
+  * L’exécutable contient plusieurs sites d’appels. Ces sites d’appels sont utilisés pour expédier l’exécution vers les différents endroits d’où ils doivent être expédiés :
     * Bibliothèque C#
     * Méthode intégrée
     * Fonction DesignScript
     * Nœud personnalisé (fonction DS)
 * TraceSerializer
-  * Gère la sérialisation et la désérialisation des données dans le traçage. Ce mécanisme suit un processus en plusieurs étapes pour gérer les données de Trace :
+  * Gère la sérialisation et la désérialisation des données dans le traçage. Ce mécanisme suit un processus en plusieurs étapes pour gérer les données de Trace :
     * Lors de l’enregistrement du graphique (sérialisation), les données générées par des nœuds spécifiques sont converties en chaîne JSON structurée. Ces données sérialisées sont compressées à l’aide de gzip pour réduire la taille du fichier, puis encodées en Base64 pour assurer un stockage sécurisé. La chaîne sécurisée résultante est incorporée dans la section des liaisons du fichier .dyn.
     * Lors de l’ouverture du graphique (désérialisation), la chaîne codée est lue dans la section des liaisons du fichier .dyn. La chaîne est décodée en Base64 dans sa forme binaire compressée d’origine, puis décompressée à l’aide de gzip. Les données structurées restaurées sont reconverties en objets d’exécution actifs.
 
-#### À quoi cela ressemble-t-il ?
+#### À quoi cela ressemble-t-il ?
 
 ***
 
@@ -339,31 +339,31 @@ Les données de traçage sont sérialisées dans le fichier .dyn à l’intérie
 
 Il est DÉCONSEILLÉ de dépendre du format des données codées en Base64 sérialisées.
 
-#### Quel problème cherchons-nous à résoudre ?
+#### Quel problème cherchons-nous à résoudre ?
 
 ***
 
 Il existe de nombreuses raisons pour lesquelles on voudrait enregistrer des données arbitraires à la suite de l’exécution d’une fonction, mais dans ce cas, Trace a été développé pour résoudre un problème spécifique que les utilisateurs rencontrent fréquemment lorsqu’ils construisent et itèrent sur des programmes logiciels qui créent des éléments dans des applications hôtes.
 
-Le problème est celui que nous avons appelé `Element Binding` et l’idée est la suivante :
+Le problème est celui que nous avons appelé `Element Binding` et l’idée est la suivante :
 
-Lorsqu’un utilisateur développe et exécute un graphe Dynamo, il est probable qu’il génère de nouveaux éléments dans le modèle de l’application hôte. Pour notre exemple, supposons que l’utilisateur dispose d’un petit programme qui génère 100 portes dans un modèle architectural. Le nombre et l’emplacement de ces portes sont contrôlés par leur programme.
+Lorsqu’un utilisateur développe et exécute un graphe Dynamo, il est probable qu’il génère de nouveaux éléments dans le modèle de l’application hôte. Pour notre exemple, supposons que l’utilisateur dispose d’un petit programme qui génère 100 portes dans un modèle architectural. Le nombre et l’emplacement de ces portes sont contrôlés par leur programme.
 
-La première fois que l’utilisateur exécute le programme, il génère ces 100 portes.
+La première fois que l’utilisateur exécute le programme, il génère ces 100 portes.
 
-Lorsqu’il modifiera une entrée de son programme et la réexécutera, son programme _(sans liaison d’éléments)_ créera 100 nouvelles portes. Les anciennes portes se trouveront toujours dans le modèle avec les nouvelles.
+Lorsqu’il modifiera une entrée de son programme et la réexécutera, son programme _(sans liaison d’éléments)_ créera 100 nouvelles portes. Les anciennes portes se trouveront toujours dans le modèle avec les nouvelles.
 
 ***
 
 Étant donné que Dynamo est un environnement de programmation en direct et qu’il dispose d’un mode d’exécution `"Automatic"` selon lequel les modifications apportées au graphe déclenchent une nouvelle exécution, cela peut rapidement encombrer un modèle avec les résultats de nombreuses exécutions du programme.
 
-Nous avons constaté que ce n’est généralement pas ce que les utilisateurs attendent, mais qu’avec la liaison d’éléments activée, les résultats précédents d’une exécution de graphe sont nettoyés et supprimés ou modifiés. L’élément _supprimé ou modifié_ dépend de la flexibilité de l’API de votre hôte. Lorsque la liaison d’éléments est activée, après la deuxième, la troisième ou la 50e exécution du programme Dynamo de l’utilisateur, il ne reste plus que 100 portes dans le modèle.
+Nous avons constaté que ce n’est généralement pas ce que les utilisateurs attendent, mais qu’avec la liaison d’éléments activée, les résultats précédents d’une exécution de graphe sont nettoyés et supprimés ou modifiés. L’élément _supprimé ou modifié_ dépend de la flexibilité de l’API de votre hôte. Lorsque la liaison d’éléments est activée, après la deuxième, la troisième ou la 50e exécution du programme Dynamo de l’utilisateur, il ne reste plus que 100 portes dans le modèle.
 
 Pour ce faire, il ne suffit pas de sérialiser les données dans le fichier .dyn et, comme vous le verrez ci-dessous, il existe dans DynamoRevit des mécanismes basés sur le traçage pour prendre en charge ces processus de reliaison.
 
 ***
 
-Nous en profitons pour mentionner l’autre cas d’utilisation important de la liaison d’éléments pour les hôtes comme Revit. Étant donné que les éléments créés avec la liaison d’éléments activée tentent de conserver les ID d’éléments existants (modifier les éléments existants), la logique qui a été élaborée sur ces éléments dans l’application hôte continue d’exister après l’exécution d’un programme Dynamo. Exemples :
+Nous en profitons pour mentionner l’autre cas d’utilisation important de la liaison d’éléments pour les hôtes comme Revit. Étant donné que les éléments créés avec la liaison d’éléments activée tentent de conserver les ID d’éléments existants (modifier les éléments existants), la logique qui a été élaborée sur ces éléments dans l’application hôte continue d’exister après l’exécution d’un programme Dynamo. Exemples :
 
 Revenons à notre exemple de modèle architectural.
 
@@ -377,7 +377,7 @@ Avec la liaison d’éléments activée, nous aurions pu conserver le travail ex
 
 ***
 
-![Création de murs](../images/creates_walls.png)
+![Création de murs](<../../.gitbook/assets/creates_walls (1).png>)
 
 #### Liaison d’éléments par rapport au traçage
 
@@ -393,7 +393,7 @@ Par ailleurs, ElementBinding est construit sur les API Trace et implémenté dan
 
 #### API Trace
 
-Voici certaines des API Trace de bas niveau à connaître :
+Voici certaines des API Trace de bas niveau à connaître :
 
 ```c#
 public static string GetTraceData(string key)
@@ -405,7 +405,7 @@ public static void SetTraceData(string key, string value)
 
 vous pouvez voir leur utilisation dans l’exemple ci-dessous
 
-pour interagir avec les données de Trace que Dynamo a chargées à partir d’un fichier existant ou qu’il est en train de générer, vous pouvez consulter les éléments suivants :
+pour interagir avec les données de Trace que Dynamo a chargées à partir d’un fichier existant ou qu’il est en train de générer, vous pouvez consulter les éléments suivants :
 
 ```c#
  public IDictionary<Guid, List<CallSite.RawTraceData>> 
@@ -422,7 +422,7 @@ pour interagir avec les données de Trace que Dynamo a chargées à partir d’u
 
 Un exemple de nœud Dynamo qui utilise directement Trace est fourni ici dans le référentiel [DynamoSamples](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryZeroTouch/Examples/TraceExample.cs)
 
-Le résumé de la classe qui s’y trouve explique l’essentiel de Trace :
+Le résumé de la classe qui s’y trouve explique l’essentiel de Trace :
 
 ```
   /*
@@ -443,7 +443,7 @@ Le résumé de la classe qui s’y trouve explique l’essentiel de Trace :
 
 Cet exemple utilise directement les API Trace dans DynamoCore pour stocker des données chaque fois qu’un nœud particulier s’exécute. Dans ce cas, un dictionnaire joue le rôle du modèle de l’application hôte, comme la base de données de modèles de Revit.
 
-La configuration approximative est la suivante :
+La configuration approximative est la suivante :
 
 Une classe util statique `TraceExampleWrapper` est importée en tant que nœud dans Dynamo. Elle contient une méthode unique `ByString` qui crée `TraceExampleItem`. Ce sont des objets .net normaux qui contiennent une propriété `description`.
 
@@ -462,21 +462,21 @@ Enfin, la dernière partie de l’équation est `TraceableObjectManager`, qui es
 
 Lorsqu’un utilisateur exécute pour la première fois un graphe contenant le nœud `TraceExampleWrapper.ByString`, un nouveau `TraceableId` est créé avec un nouvel identifiant, l’élément `TraceExampleItem` est stocké dans le dictionnaire mappé à ce nouvel identifiant et nous stockons `TraceableID` dans Trace.
 
-À l’exécution suivante du graphe, nous recherchons l’ID stocké dans Trace, localisons l’objet mappé à cet ID et renvoyons cet objet ! Au lieu de créer un tout nouvel objet, nous modifions celui qui existe déjà.
+À l’exécution suivante du graphe, nous recherchons l’ID stocké dans Trace, localisons l’objet mappé à cet ID et renvoyons cet objet ! Au lieu de créer un tout nouvel objet, nous modifions celui qui existe déjà.
 
-Le flux de deux exécutions consécutives de graphe qui crée un seul `TraceExampleItem` ressemble au suivant :
+Le flux de deux exécutions consécutives de graphe qui crée un seul `TraceExampleItem` ressemble au suivant :
 
-![Premier appel](../images/Trace-first-call.png)
+![Premier appel](<../../.gitbook/assets/Trace-first-call (1).png>)
 
-![Deuxième appel](../images/Trace-second-call.png)
+![Deuxième appel](<../../.gitbook/assets/Trace-second-call (1).png>)
 
 La même idée est illustrée dans l’exemple suivant avec un cas d’utilisation plus réaliste d’un nœud DynamoRevit.
 
 #### Diagramme de Trace
 
-![Étapes de Trace](../images/trace_diagram.png) ![Flux de Trace](../images/trace_alt_diagram.png)
+![Étapes de Trace](<../../.gitbook/assets/trace_diagram (1).png>) ![Flux de Trace](<../../.gitbook/assets/trace_alt_diagram (1).png>)
 
-#### REMARQUE :
+#### REMARQUE :
 
 Dans les versions récentes de Dynamo, l’utilisation de TLS (stockage local des threads) a été remplacée par l’utilisation statique des membres.
 
@@ -524,9 +524,9 @@ Voyons rapidement à quoi ressemble un nœud qui utilise la liaison d’élémen
         }
 ```
 
-Le code ci-dessus illustre un exemple de constructeur pour un élément de mur. Ce constructeur est appelé à partir d’un nœud dans Dynamo, comme suit : `Wall.byParams`
+Le code ci-dessus illustre un exemple de constructeur pour un élément de mur. Ce constructeur est appelé à partir d’un nœud dans Dynamo, comme suit : `Wall.byParams`
 
-Les phases importantes de l’exécution du constructeur en ce qui concerne la liaison des éléments sont les suivantes :
+Les phases importantes de l’exécution du constructeur en ce qui concerne la liaison des éléments sont les suivantes :
 
 1. Utilisez `elementBinder` pour vérifier s’il existe des objets créés précédemment qui ont été liés à ce site d’appel dans une ancienne exécution. `ElementBinder.GetElementFromTrace<Autodesk.Revit.DB.Wall>`
 2. Si tel est le cas, essayez de modifier ce mur au lieu d’en créer un nouveau.
@@ -544,7 +544,7 @@ Les phases importantes de l’exécution du constructeur en ce qui concerne la l
                      
 ```
 
-4. Supprimez l’ancien élément que nous venons de récupérer de Trace et ajoutez le nouveau afin de pouvoir rechercher cet élément à l’avenir :
+4. Supprimez l’ancien élément que nous venons de récupérer de Trace et ajoutez le nouveau afin de pouvoir rechercher cet élément à l’avenir :
 
 ```c#
  ElementBinder.CleanupAndSetElementForTrace(Document, InternalWall);
@@ -558,36 +558,36 @@ Les phases importantes de l’exécution du constructeur en ce qui concerne la l
 
 #### Compatibilité
 
-* Les objets de Trace enregistrés dans des versions antérieures à Dynamo 3.0 sont stockés avec SOAP, de sorte qu’ils ne sont pas pris en charge dans les versions plus récentes. Les données de liaison d’éléments précédemment enregistrées seront ignorées et le message ci-dessous s’affichera dans Dynamo 3.0 et les versions ultérieures. Les données de liaison d’éléments seront enregistrées la prochaine fois que vous exécuterez et enregistrerez l’espace de travail.
+* Les objets de Trace enregistrés dans des versions antérieures à Dynamo 3.0 sont stockés avec SOAP, de sorte qu’ils ne sont pas pris en charge dans les versions plus récentes. Les données de liaison d’éléments précédemment enregistrées seront ignorées et le message ci-dessous s’affichera dans Dynamo 3.0 et les versions ultérieures. Les données de liaison d’éléments seront enregistrées la prochaine fois que vous exécuterez et enregistrerez l’espace de travail.
 
-![Compatibilité de liaison d’éléments](../images/element_binding_compatibility_message.jpg)
+![Compatibilité de liaison d’éléments](../../.gitbook/assets/element_binding_compatibility_message.jpg)
 
-#### ElementBinding doit-il être activé par défaut ?
+#### ElementBinding doit-il être activé par défaut ?
 
-* Il existe des cas d’utilisation où la liaison d’éléments n’est pas souhaitée. Que se passe-t-il si l’on est un utilisateur avancé de Dynamo développant un programme qui doit être exécuté plusieurs fois pour générer des éléments de regroupement aléatoires. L’intention du programme est de créer des éléments supplémentaires chaque fois que le programme est exécuté. Ce cas d’utilisation n’est pas facilement réalisable sans solutions de contournement pour empêcher la liaison d’éléments de fonctionner. Il est possible de désactiver elementBinding au niveau de l’intégration, mais il s’agit probablement d’une fonctionnalité de base de Dynamo. Le degré de granularité de cette fonctionnalité n’est pas clair : au niveau du nœud ? au niveau du site d’appel ? toute la session Dynamo ? L’espace de travail ? etc.
+* Il existe des cas d’utilisation où la liaison d’éléments n’est pas souhaitée. Que se passe-t-il si l’on est un utilisateur avancé de Dynamo développant un programme qui doit être exécuté plusieurs fois pour générer des éléments de regroupement aléatoires. L’intention du programme est de créer des éléments supplémentaires chaque fois que le programme est exécuté. Ce cas d’utilisation n’est pas facilement réalisable sans solutions de contournement pour empêcher la liaison d’éléments de fonctionner. Il est possible de désactiver elementBinding au niveau de l’intégration, mais il s’agit probablement d’une fonctionnalité de base de Dynamo. Le degré de granularité de cette fonctionnalité n’est pas clair : au niveau du nœud ? au niveau du site d’appel ? toute la session Dynamo ? L’espace de travail ? etc.
 
-## Nœuds de sélection Dynamo Revit (quels sont-ils ?)
+## Nœuds de sélection Dynamo Revit (quels sont-ils ?)
 
 En général, ces nœuds permettent à l’utilisateur de décrire d’une manière ou d’une autre un sous-ensemble du document Revit actif qu’il souhaite référencer. L’utilisateur peut référencer un élément Revit de différentes façons (décrites ci-dessous), et la sortie résultante du nœud peut être un wrapper d’élément Revit (wrapper DynamoRevit) ou une géométrie Dynamo (convertie à partir d’une géométrie Revit). Il sera utile de prendre en compte la différence entre ces types de sortie dans le contexte d’autres intégrations d’hôtes.
 
 À un niveau élevé, **pour conceptualiser ces nœuds, il est judicieux d’utiliser une fonction qui accepte un identifiant d’élément et renvoie un pointeur vers cet élément ou une géométrie qui représente cet élément.**
 
-Il existe plusieurs nœuds de `Selection` dans DynamoRevit. Nous pouvons les diviser en au moins deux groupes :
+Il existe plusieurs nœuds de `Selection` dans DynamoRevit. Nous pouvons les diviser en au moins deux groupes :
 
-![Nœuds de sélection Revit](../images/revitSelectionNodes.png)
+![Nœuds de sélection Revit](<../../.gitbook/assets/revitSelectionNodes (1).png>)
 
-1.  Choix de l’interface utilisateur :
+1.  Choix de l’interface utilisateur :
 
     Des nœuds `DynamoRevit` de cette catégorie sont, par exemple, `SelectModelElement`, `SelectElementFace`
 
     Ces nœuds permettent à l’utilisateur de basculer dans le contexte de l’interface utilisateur Revit et de sélectionner un élément ou un ensemble d’éléments, les ID de ces éléments sont capturés et une fonction de conversion est exécutée, soit un wrapper est créé, soit la géométrie est extraite et convertie à partir de l’élément. La conversion qui s’exécute dépend du type de nœud choisi par l’utilisateur.
-2.  Requête de document :
+2.  Requête de document :
 
     Des nœuds de cette catégorie sont, par exemple, `AllElementsOfClass`, `AllElementsOfCategory`
 
     Ces nœuds permettent à l’utilisateur d’interroger l’ensemble du document à la recherche d’un sous-ensemble d’éléments. Ces nœuds renvoient généralement des wrappers qui pointent vers les éléments Revit sous-jacents. Ces wrappers font partie intégrante de l’expérience DynamoRevit, car ils donnent accès à des fonctionnalités plus avancées, telles que la liaison d’éléments. Ils permettent également aux intégrateurs Dynamo de choisir les API hôtes qui sont exposées en tant que nœuds aux utilisateurs.
 
-### Workflows utilisateur Dynamo Revit :
+### Workflows utilisateur Dynamo Revit :
 
 #### Exemples
 
@@ -598,51 +598,51 @@ Il existe plusieurs nœuds de `Selection` dans DynamoRevit. Nous pouvons les div
    * L’utilisateur modifie le mur d’origine dans Revit.
    * Le graphique est reconduit automatiquement lorsque le Revit document déclenche un événement signalant que certains éléments ont été mis à jour. Le nœud de sélection observe cet événement et constate que l’identifiant de l’élément qu’il a sélectionné a été modifié.
 
-### Workflows utilisateur DynamoCivil :
+### Workflows utilisateur DynamoCivil :
 
-Les workflows D4C sont très similaires à la description ci-dessus pour Revit. Voici deux ensembles typiques de nœuds de sélection dans D4C :
+Les workflows D4C sont très similaires à la description ci-dessus pour Revit. Voici deux ensembles typiques de nœuds de sélection dans D4C :
 
-![Nœuds de sélection Civil 3D](../images/civilSelectionNodes.png)
+![Nœuds de sélection Civil 3D](<../../.gitbook/assets/civilSelectionNodes (1).png>)
 
-### Problèmes :
+### Problèmes :
 
-*   En raison de l’outil de mise à jour des modifications de document, dont les nœuds de sélection dans `DynamoRevit` sont implémentés, des boucles infinies peuvent facilement se créer : imaginez un nœud qui surveille le document au niveau de tous les éléments, puis crée de nouveaux éléments quelque part en aval de ce nœud. Lorsqu’il est exécuté, ce programme déclenche une boucle. `DynamoRevit` essaie d’intercepter ces cas de différentes manières à l’aide des identifiants de transaction et évite de modifier le document lorsque les entrées des constructeurs d’éléments n’ont pas changé.
+*   En raison de l’outil de mise à jour des modifications de document, dont les nœuds de sélection dans `DynamoRevit` sont implémentés, des boucles infinies peuvent facilement se créer : imaginez un nœud qui surveille le document au niveau de tous les éléments, puis crée de nouveaux éléments quelque part en aval de ce nœud. Lorsqu’il est exécuté, ce programme déclenche une boucle. `DynamoRevit` essaie d’intercepter ces cas de différentes manières à l’aide des identifiants de transaction et évite de modifier le document lorsque les entrées des constructeurs d’éléments n’ont pas changé.
 
-    Cela doit être pris en compte si l’exécution automatique du graphe est lancée lorsqu’un élément sélectionné est modifié dans l’application hôte !
+    Cela doit être pris en compte si l’exécution automatique du graphe est lancée lorsqu’un élément sélectionné est modifié dans l’application hôte !
 * Les nœuds de sélection dans `DynamoRevit` sont implémentés dans le projet `RevitUINodes.dll` qui fait référence à WPF. Ce n’est peut-être pas un problème, mais il vaut mieux le prendre en compte en fonction de votre plateforme cible.
 
 ### Diagrammes de flux de données
 
-![Flux de sélection](../images/selectModelElement.png)
+![Flux de sélection](<../../.gitbook/assets/selectModelElement (1).png>)
 
-![Flux de sélection 2](../images/selectElementFace.png)
+![Flux de sélection 2](<../../.gitbook/assets/selectElementFace (1).png>)
 
-### Implémentation technique (voir les diagrammes ci-dessus) :
+### Implémentation technique (voir les diagrammes ci-dessus) :
 
-Les nœuds de sélection sont implémentés en héritant des types `SelectionBase` génériques : `SelectionBase<TSelection, TResult>` et d’un ensemble minimal de membres :
+Les nœuds de sélection sont implémentés en héritant des types `SelectionBase` génériques : `SelectionBase<TSelection, TResult>` et d’un ensemble minimal de membres :
 
-* Implémentation d’une méthode `BuildOutputAST` : cette méthode doit renvoyer un AST, qui sera exécuté à un moment donné dans le futur, lorsque le nœud devra être exécuté. Dans le cas des noeuds Sélection, il doit renvoyer des éléments ou une géométrie à partir des ID d’éléments. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
+* Implémentation d’une méthode `BuildOutputAST` : cette méthode doit renvoyer un AST, qui sera exécuté à un moment donné dans le futur, lorsque le nœud devra être exécuté. Dans le cas des noeuds Sélection, il doit renvoyer des éléments ou une géométrie à partir des ID d’éléments. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * L’implémentation de `BuildOutputAST` est l’une des parties les plus difficiles de l’implémentation des nœuds `NodeModel` / UI. Il est préférable de mettre autant de logique que possible dans une fonction c# et d’incorporer simplement un nœud d’appel de fonction AST dans l’AST. Notez qu’ici, `node` est un nœud AST dans l’arborescence syntaxique abstraite et non un nœud du graphe Dynamo.
 
-![Flux de sélection 2](../images/selectionAST.png)
+![Flux de sélection 2](<../../.gitbook/assets/selectionAST (1).png>)
 
 * Sérialisation -
-  *   Étant donné qu’il s’agit de types dérivés `NodeModel` explicites (et non ZeroTouch), ils nécessitent également l’implémentation d’un [JsonConstructor] qui sera utilisé lors de la désérialisation du nœud à partir d’un fichier .dyn.
+  *   Étant donné qu’il s’agit de types dérivés `NodeModel` explicites (et non ZeroTouch), ils nécessitent également l’implémentation d’un \[JsonConstructor] qui sera utilisé lors de la désérialisation du nœud à partir d’un fichier .dyn.
 
-      Les références d’éléments de l’hôte doivent être enregistrées dans le fichier .dyn de sorte que lorsqu’un utilisateur ouvre un graphe contenant ce nœud, sa sélection soit toujours définie. Dans Dynamo, les nœuds NodeModel utilisent json.net pour la sérialisation, toutes les propriétés publiques seront sérialisées automatiquement à l’aide de Json.net. Utilisez l’attribut [JsonIgnore] pour sérialiser uniquement ce qui est nécessaire.
+      Les références d’éléments de l’hôte doivent être enregistrées dans le fichier .dyn de sorte que lorsqu’un utilisateur ouvre un graphe contenant ce nœud, sa sélection soit toujours définie. Dans Dynamo, les nœuds NodeModel utilisent json.net pour la sérialisation, toutes les propriétés publiques seront sérialisées automatiquement à l’aide de Json.net. Utilisez l’attribut \[JsonIgnore] pour sérialiser uniquement ce qui est nécessaire.
 * Les nœuds Document Query sont un peu plus simples, car ils n’ont pas besoin de stocker une référence à des ID d’élément. Voir ci-dessous pour les implémentations de classe `ElementQueryBase` et dérivées. Lorsqu’ils sont exécutés, ces nœuds appellent l’API Revit et interrogent le document sous-jacent à la recherche d’éléments, puis effectuent la conversion mentionnée précédemment en géométrie ou en wrappers d’éléments Revit.
 
-### Références :
+### Références :
 
-#### Classes de base de DynamoCore :
+#### Classes de base de DynamoCore :
 
 * [https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs](https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs)
-* [Étude de cas de modèle de nœud : interface utilisateur personnalisée](5-nodemodel-case-study-custom-ui.md)
-* [Mise à jour des packages et des bibliothèques Dynamo pour Dynamo 2.x](6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
-* [Mise à jour des packages et des bibliothèques Dynamo pour Dynamo 3.x](6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
-* [Mise à jour des packages et des bibliothèques Dynamo pour Dynamo 4.x](6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
+* [Étude de cas de modèle de nœud : interface utilisateur personnalisée](5-nodemodel-case-study-custom-ui.md)
+* [Mise à jour des packages et des bibliothèques Dynamo pour Dynamo 2.x](6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+* [Mise à jour des packages et des bibliothèques Dynamo pour Dynamo 3.x](6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+* [Mise à jour des packages et des bibliothèques Dynamo pour Dynamo 4.x](6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
 
-#### DynamoRevit :
+#### DynamoRevit :
 
 * [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs)
 * [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Elements.cs](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Elements.cs)
@@ -653,13 +653,13 @@ Le mécanisme des packages intégrés vise à regrouper davantage de contenu de 
 
 Dans ce document, nous utiliserons indistinctement les termes Packages intégrés, Packages intégrés Dynamo, packages intégrés, pour signifier la même chose.
 
-### Dois-je expédier un package en tant que package intégré ?
+### Dois-je expédier un package en tant que package intégré ?
 
 * Le package doit avoir des points d’entrée binaires signés, sinon il ne sera pas chargé.
 * Il faut veiller à éviter d’interrompre les modifications apportées à ces packages. Cela signifie que le contenu du package doit comporter des tests automatisés.
-* Gestion des versions sémantiques : il peut convenir de versionner votre package à l’aide d’un schéma de gestion de versions sémantiques et de le communiquer aux utilisateurs dans la description du package ou d’autres documents.
-* Tests automatisés : veuillez voir ci-dessus, si un package est inclus à l’aide du mécanisme de package intégré, pour un utilisateur, il semble faire partie du produit et doit être testé comme un produit.
-* Haut niveau d’affinage : icônes, documents de nœud, contenu localisé.
+* Gestion des versions sémantiques : il peut convenir de versionner votre package à l’aide d’un schéma de gestion de versions sémantiques et de le communiquer aux utilisateurs dans la description du package ou d’autres documents.
+* Tests automatisés : veuillez voir ci-dessus, si un package est inclus à l’aide du mécanisme de package intégré, pour un utilisateur, il semble faire partie du produit et doit être testé comme un produit.
+* Haut niveau d’affinage : icônes, documents de nœud, contenu localisé.
 * N’expédiez pas de packages que vous ou votre équipe ne pouvez pas gérer.
 * N’expédiez pas de packages tiers de cette façon (voir ci-dessus).
 
@@ -667,9 +667,9 @@ Essentiellement, vous devez avoir un contrôle total sur le package, la possibil
 
 ### Packages intégrés et packages spécifiques à l’intégration de l’hôte
 
-Nous voulons que les `Built-In Packages` soient une fonctionnalité de base, un ensemble de packages auxquels tous les utilisateurs ont accès, même s’ils n’ont pas accès au gestionnaire de packages. À l’heure actuelle, le mécanisme sous-jacent permettant de prendre en charge cette fonctionnalité est un emplacement de chargement par défaut supplémentaire pour les packages directement dans le répertoire de Dynamo Core, par rapport à DynamoCore.dll.
+Nous voulons que les `Built-In Packages` soient une fonctionnalité de base, un ensemble de packages auxquels tous les utilisateurs ont accès, même s’ils n’ont pas accès au gestionnaire de packages. À l’heure actuelle, le mécanisme sous-jacent permettant de prendre en charge cette fonctionnalité est un emplacement de chargement par défaut supplémentaire pour les packages directement dans le répertoire de Dynamo Core, par rapport à DynamoCore.dll.
 
-Avec quelques contraintes, cet emplacement sera utilisable par les clients et intégrateurs ADSK Dynamo pour distribuer leurs packages spécifiques à l’intégration. _(Par exemple, l’intégration de Dynamo Formit nécessite un package Dynamo Formit personnalisé)._
+Avec quelques contraintes, cet emplacement sera utilisable par les clients et intégrateurs ADSK Dynamo pour distribuer leurs packages spécifiques à l’intégration. _(Par exemple, l’intégration de Dynamo Formit nécessite un package Dynamo Formit personnalisé)._
 
 Étant donné que le mécanisme de chargement sous-jacent est le même pour les packages spécifiques au noyau et à l’hôte, il sera nécessaire de s’assurer que les packages distribués de cette manière n’entraînent pas de confusion entre les packages `Built-In Packages` principaux et les packages spécifiques à l’intégration qui ne sont disponibles que dans un seul produit hôte. Afin d’éviter toute confusion chez les utilisateurs, nous recommandons d’introduire des packages spécifiques à l’hôte lors de discussions avec les équipes Dynamo.
 
@@ -687,13 +687,13 @@ Si, pour une raison quelconque, le package doit également être publié dans le
 
 Ces sous-répertoires de culture sont chargés sans problème par l’exécution .net s’ils se trouvent dans le même répertoire que les fichiers binaires nœud/extension.
 
-Pour plus d’informations sur les assemblages de ressources et les fichiers .resx, consultez : [https://docs.microsoft.com/fr-fr/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://learn.microsoft.com/fr-fr/dotnet/core/extensions/create-resource-files).
+Pour plus d’informations sur les assemblages de ressources et les fichiers .resx, consultez : [https://docs.microsoft.com/fr-fr/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://learn.microsoft.com/fr-fr/dotnet/core/extensions/create-resource-files).
 
-Vous allez probablement créer les fichiers `.resx` et les compiler avec Visual Studio. Pour un assemblage `xyz.dll` donné, les ressources résultantes seront compilées dans un nouvel assemblage `xyz.resources.dll`, comme décrit ci-dessus, l’emplacement et le nom de cet assemblage sont importants.
+Vous allez probablement créer les fichiers `.resx` et les compiler avec Visual Studio. Pour un assemblage `xyz.dll` donné, les ressources résultantes seront compilées dans un nouvel assemblage `xyz.resources.dll`, comme décrit ci-dessus, l’emplacement et le nom de cet assemblage sont importants.
 
-Le `xyz.resources.dll` généré doit être disposé comme suit : `package\bin\culture\xyz.resources.dll`.
+Le `xyz.resources.dll` généré doit être disposé comme suit : `package\bin\culture\xyz.resources.dll`.
 
-Pour accéder aux chaînes localisées dans votre package, vous pouvez utiliser ResourceManager, mais encore plus simplement, vous devriez être en mesure de faire référence à `Properties.Resources.YourLocalizedResourceName` à partir de l’assemblage pour lequel vous avez ajouté un fichier `.resx`. Par exemple, reportez-vous à :
+Pour accéder aux chaînes localisées dans votre package, vous pouvez utiliser ResourceManager, mais encore plus simplement, vous devriez être en mesure de faire référence à `Properties.Resources.YourLocalizedResourceName` à partir de l’assemblage pour lequel vous avez ajouté un fichier `.resx`. Par exemple, reportez-vous à :
 
 [https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodes/List.cs#L457](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodes/List.cs#L457) pour obtenir un exemple de message d’erreur localisé
 

@@ -6,12 +6,12 @@ La classe [GeometryPrimitiveConverter](https://github.com/DynamoDS/DynamoRevit/b
 
 ### Catégories de méthodes
 
-Les méthodes de `GeometryPrimitiveConverter.cs` peuvent être regroupées en quatre catégories principales :
+Les méthodes de `GeometryPrimitiveConverter.cs` peuvent être regroupées en quatre catégories principales :
 
-1. **Types Proto à Revit** : méthodes qui convertissent les types Dynamo (Proto) en types Revit.
-2. **Types Revit à Proto**  : méthodes qui convertissent les types Revit en types Dynamo (Proto).
-3. **Degrés et radians** : méthodes qui convertissent entre degrés et radians.
-4. **X et UZ** : méthodes qui traitent de l’obtention de vecteurs perpendiculaires.
+1. **Types Proto à Revit** : méthodes qui convertissent les types Dynamo (Proto) en types Revit.
+2. **Types Revit à Proto**  : méthodes qui convertissent les types Revit en types Dynamo (Proto).
+3. **Degrés et radians** : méthodes qui convertissent entre degrés et radians.
+4. **X et UZ** : méthodes qui traitent de l’obtention de vecteurs perpendiculaires.
 
 ### Types Proto à Revit
 
@@ -93,21 +93,19 @@ Convertit un tableau de valeurs doubles en DoubleArray de Revit.
 
 #### ToUvs
 
-Convertit un tableau à deux dimensions (double[][]), où chaque tableau interne représente une paire de valeurs (U et V) en un tableau d’objets Revit UV.
+Convertit un tableau à deux dimensions (double\[]\[]), où chaque tableau interne représente une paire de valeurs (U et V) en un tableau d’objets Revit UV.
 
 `internal static Autodesk.Revit.DB.UV[] ToUvs(this double[][] uvArr)`
 
 #### ToDSUvs
 
-Convertit un tableau à deux dimensions (double[][]), où chaque tableau interne représente une paire de valeurs (U et V) en un tableau d’objets Dynamo UV.
+Convertit un tableau à deux dimensions (double\[]\[]), où chaque tableau interne représente une paire de valeurs (U et V) en un tableau d’objets Dynamo UV.
 
 `internal static Autodesk.DesignScript.Geometry.UV[] ToDSUvs(this double[][] uvArr)`
 
 #### Exemple d’utilisation de types Proto à Revit
 
 Cet exemple illustre une façon simple et rapide d’utiliser la méthode .ToXyz (Point) pour convertir un système Dynamo Point.ByCoordinates en Revit XYZ.
-
-![Conversion de Dynamo Point.ByCoordinates en Revit XYZ](Images/dynamo-point-to-revit-xyz.png)
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -188,8 +186,6 @@ Convertit une liste de points Revit XYZ en liste de points Dynamo Point.
 
 Cet exemple illustre une façon simple et rapide d’utiliser la méthode .ToPoint (XYZ) pour convertir un Revit XYZ en point Dynamo Point.
 
-![Conversion de Revit XYZ en Dynamo Point.ByCoordinates](Images/revit-xyz-to-dynamo-point.png)
-
 ```
 import sys
 import clr
@@ -231,8 +227,6 @@ Convertit les radians en degrés.
 
 Cet exemple illustre une façon simple et rapide d’utiliser la méthode .ToRadians pour effectuer une conversion de degrés en radians.
 
-![Degrés en radians](Images/degrees-to-radians.png)
-
 ```
 import sys
 import clr
@@ -273,8 +267,6 @@ Cette méthode renvoie un vecteur Dynamo `Vector` perpendiculaire au vecteur Dyn
 #### Exemple d’utilisation de X et UZ
 
 Cet exemple illustre une façon simple et rapide d’utiliser la méthode .GetPerpendicular pour obtenir le vecteur perpendiculaire à un vecteur d’entrée.
-
-![Obtention de vecteur perpendiculaire](Images/get-perpendicular-vector.png)
 
 ```
 import clr

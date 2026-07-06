@@ -1,4 +1,4 @@
-# Définition de l’organisation des packages personnalisés pour Dynamo 2.0+
+# Définition de l’organisation des packages personnalisés pour Dynamo 2.0+
 
 L’organisation de votre package dépend des types de nœuds que vous allez y inclure. Les nœuds dérivés du modèle de nœud, les nœuds Zero Touch et les nœuds personnalisés ont tous un processus de catégorisation légèrement différent. Vous pouvez mélanger et faire correspondre ces types de nœuds dans le même package, mais cela nécessitera une combinaison des stratégies décrites ci-dessous.
 
@@ -25,7 +25,7 @@ public ButtonCustomNodeModel()
 
 ```
 
-Le nœud se trouve dans les modules complémentaires sous :
+Le nœud se trouve dans les modules complémentaires sous :
 
 ```
 SampleLibraryUI/Examples/MyNodeModel
@@ -46,7 +46,7 @@ public ButtonCustomNodeModel()
 }
 ```
 
-Le nœud se trouve désormais dans les modules complémentaires sous :
+Le nœud se trouve désormais dans les modules complémentaires sous :
 
 ```
 NewSampleLibraryUI/Examples/MyNodeModel
@@ -70,7 +70,7 @@ public class Utilities
 }
 ```
 
-Le nœud se trouve dans les modules complémentaires sous :
+Le nœud se trouve dans les modules complémentaires sous :
 
 ```
 MyZTLibrary/Utilities/doubleValue
@@ -110,9 +110,9 @@ Vous pouvez également remplacer l’emplacement de la structure de classe à l�
 Les nœuds personnalisés sont organisés en fonction du `Category Name` spécifié lors de la création des nœuds (à l’aide de la nouvelle boîte de dialogue Nœud personnalisé).
 
 **AVERTISSEMENT**\
- L’utilisation de la notation par points dans les noms ou catégories de nœuds entraîne la création de sous-catégories imbriquées supplémentaires. Le `.` agit comme un délimiteur pour déterminer la hiérarchie supplémentaire. Il s’agit d’un nouveau comportement dans la bibliothèque de Dynamo 2.0.
+L’utilisation de la notation par points dans les noms ou catégories de nœuds entraîne la création de sous-catégories imbriquées supplémentaires. Le `.` agit comme un délimiteur pour déterminer la hiérarchie supplémentaire. Il s’agit d’un nouveau comportement dans la bibliothèque de Dynamo 2.0.
 
-![Propriétés de nœuds personnalisés](../images/custom-node-properties.jpg)
+![Propriétés de nœuds personnalisés](<../../.gitbook/assets/custom-node-properties (1).jpg>)
 
 Vous pouvez mettre à jour le nom de la catégorie ultérieurement dans le fichier .dyf (XML ou JSON)
 
@@ -136,7 +136,7 @@ Vous pouvez mettre à jour le nom de la catégorie ultérieurement dans le fichi
 
 Lorsqu’un créateur de package décide de renommer un nœud existant dans une nouvelle version, il doit migrer les graphes qui contiennent des nœuds avec les anciens noms. La migration peut être réalisée des manières suivantes...
 
-**Les nœuds Zero Touch** utilisent un fichier `Namespace.Migrations.XML` situé dans le dossier `bin` des packages tel que :
+**Les nœuds Zero Touch** utilisent un fichier `Namespace.Migrations.XML` situé dans le dossier `bin` des packages tel que :
 
 `MyZeroTouchLib.MyNodes.SayHello` vers `MyZeroTouchLib.MyNodes.SayHelloRENAMED`
 
@@ -150,7 +150,7 @@ Lorsqu’un créateur de package décide de renommer un nœud existant dans une 
 </migrations>
 ```
 
-**Les nœuds dérivés de NodeModel** utilisent l’attribut `AlsoKnownAs` de la classe, par exemple :
+**Les nœuds dérivés de NodeModel** utilisent l’attribut `AlsoKnownAs` de la classe, par exemple :
 
 `SampleLibraryUI.Examples.DropDownExample` vers `SampleLibraryUI.Examples.DropDownExampleRENAMED`
 

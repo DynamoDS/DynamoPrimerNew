@@ -1,10 +1,10 @@
 # Générateurs de points Python
 
-Les scripts Python suivants génèrent des réseaux de points pour plusieurs exemples. Ils doivent être collés dans un nœud de script Python comme suit :
+Les scripts Python suivants génèrent des réseaux de points pour plusieurs exemples. Ils doivent être collés dans un nœud de script Python comme suit :
 
-![](<../images/python points 01.jpg>)
+![](<../../.gitbook/assets/python points 01 (1).jpg>)
 
-**python_points_1**
+**python\_points\_1**
 
 ```python
 out_points = []
@@ -23,7 +23,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python_points_2**
+**python\_points\_2**
 
 ```python
 out_points = []
@@ -37,7 +37,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python_points_3**
+**python\_points\_3**
 
 ```python
 out_points = []
@@ -51,7 +51,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python_points_4**
+**python\_points\_4**
 
 ```python
 out_points = []
@@ -65,7 +65,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python_points_5**
+**python\_points\_5**
 
 ```python
 out_points = []

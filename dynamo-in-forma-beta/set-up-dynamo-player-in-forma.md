@@ -1,6 +1,6 @@
 # Configurer Dynamo Player dans Forma
 
-Pour utiliser Dynamo avec Forma, vous avez deux options : Dynamo as a Service (DaaS) basé sur le cloud ou la version de bureau Dynamo. Chaque option a ses avantages en fonction de ce que vous voulez faire. Avant de commencer, réfléchissez donc bien à celle qui répond le plus à vos besoins. Cependant, n’oubliez pas que vous pouvez passer d’une option à l’autre à tout moment.
+Pour utiliser Dynamo avec Forma, vous avez deux options : Dynamo as a Service (DaaS) basé sur le cloud ou la version de bureau Dynamo. Chaque option a ses avantages en fonction de ce que vous voulez faire. Avant de commencer, réfléchissez donc bien à celle qui répond le plus à vos besoins. Cependant, n’oubliez pas que vous pouvez passer d’une option à l’autre à tout moment.
 
 **Comparatif entre Dynamo as a Service et Dynamo Desktop**
 
@@ -17,46 +17,46 @@ Commençons par installer Dynamo Player dans Forma.
 1. Sur votre site Forma, accédez à **Extensions** dans la barre latérale gauche et cliquez sur **Add extension**. L’App Store Autodesk s’ouvre.
 2. Recherchez Dynamo et ajoutez la version bêta de Dynamo Player. Lisez la clause de non-responsabilité et cliquez sur **Agree**.
 
-<figure><img src="images/install-player.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/install-player (1).png" alt=""><figcaption></figcaption></figure>
 
 3. Dynamo Player est maintenant disponible dans vos extensions. Cliquez dessus pour l’ouvrir.
-4. Vous pouvez commencer à utiliser Dynamo Player !
+4. Vous pouvez commencer à utiliser Dynamo Player !
 
 ### Configuration de Dynamo Desktop
 
-Pour utiliser Dynamo Desktop, vous aurez besoin de Dynamo, soit en tant que sandbox autonome, soit connecté à Revit ou Civil 3D. Vous aurez également besoin du package DynamoForma.
+Pour utiliser Dynamo Desktop, vous aurez besoin de Dynamo, soit en tant que sandbox autonome, soit connecté à Revit ou Civil 3D. Vous aurez également besoin du package DynamoForma.
 
 #### Revit
 
 Suivez ces instructions pour configurer Dynamo dans Revit et le package DynamoForma.
 
-1. Assurez-vous que Revit 2024.1 ou une version ultérieure est installée.
+1. Assurez-vous que Revit 2024.1 ou une version ultérieure est installée.
 2. Ouvrez Dynamo à partir de Revit en accédant à Gérer > Dynamo.
 3. Dans Dynamo, installez le package DynamoForma. Accédez à Packages > Gestionnaire de packages, puis recherchez DynamoForma.
-   1. Si vous utilisez Revit 2024, installez le package DynamoForma pour la version 2.x.
-   2. Si vous utilisez Revit 2025, installez le package DynamoForma.
+   1. Si vous utilisez Revit 2024, installez le package DynamoForma pour la version 2.x.
+   2. Si vous utilisez Revit 2025, installez le package DynamoForma.
 
-#### Civil 3D
+#### Civil 3D
 
-Suivez ces instructions pour configurer Dynamo dans Civil 3D et le package DynamoForma.
+Suivez ces instructions pour configurer Dynamo dans Civil 3D et le package DynamoForma.
 
-1. Assurez-vous que Civil 3D 2024.1 ou une version ultérieure est installée.
-2. Ouvrez Dynamo à partir de Civil 3D en accédant à Gérer > Dynamo.
+1. Assurez-vous que Civil 3D 2024.1 ou une version ultérieure est installée.
+2. Ouvrez Dynamo à partir de Civil 3D en accédant à Gérer > Dynamo.
 3. Dans Dynamo, installez le package DynamoForma. Accédez à Packages > Gestionnaire de packages, puis recherchez DynamoForma.
-   1. Si vous utilisez Civil 3D 2024, installez le package DynamoForma pour la version 2.x.
-   2. Si vous utilisez Civil 3D 2025, installez le package DynamoForma.
+   1. Si vous utilisez Civil 3D 2024, installez le package DynamoForma pour la version 2.x.
+   2. Si vous utilisez Civil 3D 2025, installez le package DynamoForma.
 
 #### Dynamo Sandbox
 
 Suivez ces instructions pour installer Dynamo Sandbox et le package DynamoForma.
 
-1. Téléchargez Dynamo version 2.18.0 ou ultérieure à partir de [builds Dynamo](https://dynamobuilds.com/). Pour une expérience optimale, choisissez la dernière des versions les plus stables, qui s’affiche en haut de la liste.
+1. Téléchargez Dynamo version 2.18.0 ou ultérieure à partir de [builds Dynamo](https://dynamobuilds.com/). Pour une expérience optimale, choisissez la dernière des versions les plus stables, qui s’affiche en haut de la liste.
    1. Les versions Daily sont des versions de développement et peuvent inclure des fonctionnalités incomplètes ou en cours d’élaboration.
 2. Extrayez Dynamo à l’aide de [7zip](https://www.7-zip.fr/) dans le dossier de votre choix.
 3. Exécutez DynamoSandbox.exe à partir du dossier d’installation de Dynamo.
 4. Dans Dynamo, installez le package DynamoForma. Accédez à Packages > Gestionnaire de packages, puis recherchez DynamoForma.
-   1. Si vous utilisez Dynamo 2.x, installez le package DynamoForma pour la version 2.x.
-   2. Si vous utilisez Dynamo 3.x, installez le package DynamoForma.
+   1. Si vous utilisez Dynamo 2.x, installez le package DynamoForma pour la version 2.x.
+   2. Si vous utilisez Dynamo 3.x, installez le package DynamoForma.
 
 Une fois Dynamo installé, vous pouvez commencer à l’utiliser avec Forma. Lorsque vous exécutez l’option de bureau de Dynamo dans Forma, Dynamo doit être ouvert pour pouvoir utiliser l’extension Dynamo Player.
 
@@ -67,11 +67,11 @@ Commençons par installer Dynamo Player dans Forma.
 1. Sur votre site Forma, accédez à **Extensions** dans la barre latérale gauche et cliquez sur **Add extension**. L’App Store Autodesk s’ouvre.
 2. Recherchez Dynamo et ajoutez la version bêta de Dynamo Player. Lisez la clause de non-responsabilité et cliquez sur **Agree**.
 
-<figure><img src="images/install-player.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/install-player (1).png" alt=""><figcaption></figcaption></figure>
 
 3. Dynamo Player est maintenant disponible dans vos extensions. Cliquez dessus pour l’ouvrir.
 4. Dans la partie supérieure, cliquez sur Desktop pour accéder à Dynamo Desktop.
 
-<figure><img src="images/dynamo-desktop.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/dynamo-desktop (1).png" alt=""><figcaption></figcaption></figure>
 
-5. Vous pouvez commencer à utiliser Dynamo Player ! Si vous avez déjà un graphe ouvert dans Dynamo, cliquez simplement sur Open sous **Connected graph** pour l’afficher dans Player.
+5. Vous pouvez commencer à utiliser Dynamo Player ! Si vous avez déjà un graphe ouvert dans Dynamo, cliquez simplement sur Open sous **Connected graph** pour l’afficher dans Player.

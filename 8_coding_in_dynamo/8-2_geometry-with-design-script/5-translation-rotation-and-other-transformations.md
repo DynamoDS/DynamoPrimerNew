@@ -1,12 +1,12 @@
 # Conversion, rotation et autres transformations
 
-Certains objets de géométrie peuvent être créés en spécifiant explicitement les coordonnées X, Y et Z dans un espace tridimensionnel. Plus souvent, cependant, la géométrie est placée dans sa position finale à l'aide de transformations géométriques sur l'objet lui-même ou sur son CoordinateSystem sous-jacent.
+Certains objets de géométrie peuvent être créés en spécifiant explicitement les coordonnées X, Y et Z dans un espace tridimensionnel. Plus souvent, cependant, la géométrie est placée dans sa position finale à l'aide de transformations géométriques sur l'objet lui-même ou sur son CoordinateSystem sous-jacent.
 
 ### Translation
 
-La transformation géométrique la plus simple est une conversion qui permet de déplacer un objet d’un nombre donné d’unités dans les directions X, Y et Z.
+La transformation géométrique la plus simple est une conversion qui permet de déplacer un objet d’un nombre donné d’unités dans les directions X, Y et Z.
 
-![](../images/Transformations_01.png)
+![](<../../.gitbook/assets/Transformations_01 (1).png>)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -20,9 +20,9 @@ p2 = p.Translate(10, -20, 50);
 
 ### Rotation
 
-Bien que tous les objets dans Dynamo puissent être convertis grâce à l’ajout de la méthode _.Translate_ à la fin du nom de l’objet, des transformations plus complexes requièrent la transformation de l’objet d’un CoordinateSystem sous-jacent en un nouveau CoordinateSystem. Par exemple, pour faire pivoter un objet de 45 degrés autour de l’axe X, transformez l’objet de son CoordinateSystem existant sans rotation en un CoordinateSystem qui a été pivoté de 45 degrés autour de l’axe X à l’aide de la méthode _.Transform_ :
+Bien que tous les objets dans Dynamo puissent être convertis grâce à l’ajout de la méthode _.Translate_ à la fin du nom de l’objet, des transformations plus complexes requièrent la transformation de l’objet d’un CoordinateSystem sous-jacent en un nouveau CoordinateSystem. Par exemple, pour faire pivoter un objet de 45 degrés autour de l’axe X, transformez l’objet de son CoordinateSystem existant sans rotation en un CoordinateSystem qui a été pivoté de 45 degrés autour de l’axe X à l’aide de la méthode _.Transform_ :
 
-![](../images/Transformations_02.png)
+![](<../../.gitbook/assets/Transformations_02 (1).png>)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -40,9 +40,9 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 ### Échelle
 
-Outre la conversion et la rotation, les CoordinateSystems peuvent également être créés à l’échelle ou coupés. Un CoordinateSystem peut être mis à l’échelle à l’aide de la méthode _.Scale_ :
+Outre la conversion et la rotation, les CoordinateSystems peuvent également être créés à l’échelle ou coupés. Un CoordinateSystem peut être mis à l’échelle à l’aide de la méthode _.Scale_ :
 
-![](../images/Transformations_03.png)
+![](<../../.gitbook/assets/Transformations_03 (1).png>)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -58,7 +58,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Les CoordinateSystems coupés sont créés grâce à l’insertion de vecteurs non orthogonaux dans le constructeur CoordinateSystem.
 
-![](../images/Transformations_04.png)
+![](<../../.gitbook/assets/Transformations_04 (1).png>)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(
@@ -77,15 +77,15 @@ new_curves = cube.Transform(old_cs, new_cs);
 Étant donné que la mise à l’échelle et le cisaillement sont des transformations géométriques plus complexes que la rotation et la conversion, les objets Dynamo ne peuvent pas tous faire l’objet de ces transformations. Le tableau suivant répertorie les objets Dynamo qui peuvent avoir un CoordinateSystem mis à l'échelle de façon non uniforme, et ceux qui peuvent avoir un CoordinateSystem coupé.
 
 | Classe        | CoordinateSystem non uniformément mis à l'échelle | CoordinateSystem coupé |
-| ------------ | ------------------------------------- | ------------------------ |
-| Arc          | Non                                    | Non                       |
-| NurbsCurve   | Oui                                   | Oui                      |
-| NurbsSurface | Non                                    | Non                       |
-| Cercle       | Non                                    | Non                       |
-| Ligne         | Oui                                   | Oui                      |
-| Plan        | Non                                    | Non                       |
-| Point        | Oui                                   | Oui                      |
-| Objet Polygon      | Non                                    | Non                       |
-| Solide        | Non                                    | Non                       |
-| Surface      | Non                                    | Non                       |
-| Texte         | Non                                    | Non                       |
+| ------------- | ------------------------------------------------- | ---------------------- |
+| Arc           | Non                                               | Non                    |
+| NurbsCurve    | Oui                                               | Oui                    |
+| NurbsSurface  | Non                                               | Non                    |
+| Cercle        | Non                                               | Non                    |
+| Ligne         | Oui                                               | Oui                    |
+| Plan          | Non                                               | Non                    |
+| Point         | Oui                                               | Oui                    |
+| Objet Polygon | Non                                               | Non                    |
+| Solide        | Non                                               | Non                    |
+| Surface       | Non                                               | Non                    |
+| Texte         | Non                                               | Non                    |

@@ -2,4 +2,4 @@
 
 Cette section propose des workflows simples pour vous aider à commencer à utiliser Dynamo.
 
-![](../images/sampleWorkflows.gif)
+![](<../../.gitbook/assets/sampleWorkflows (1).gif>)

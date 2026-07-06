@@ -10,7 +10,7 @@ Dans Dynamo, la méthode `OnLogWarningMessage` permet de consigner les messages 
 
 ### Étapes de mise en œuvre pour `OnLogWarningMessage` <a href="#implementation-step-for-onlogwarningmessage" id="implementation-step-for-onlogwarningmessage"></a>
 
-#### Étape 1 : importer l’espace de nom requis <a href="#import-the-required-namespace" id="import-the-required-namespace"></a>
+#### Étape 1 : importer l’espace de nom requis <a href="#import-the-required-namespace" id="import-the-required-namespace"></a>
 
 `OnLogWarningMessage` fait partie de l’espace de nom `DynamoServices`. Commencez donc par l’ajouter au fichier de votre projet.
 
@@ -18,20 +18,20 @@ Dans Dynamo, la méthode `OnLogWarningMessage` permet de consigner les messages 
 using DynamoServices;
 ```
 
-#### Étape 2 : déterminer quand consigner les avertissements <a href="#identify-when-to-log-warnings" id="identify-when-to-log-warnings"></a>
+#### Étape 2 : déterminer quand consigner les avertissements <a href="#identify-when-to-log-warnings" id="identify-when-to-log-warnings"></a>
 
-Avant d’ajouter un message d’avertissement, tenez compte de la logique de votre méthode :
+Avant d’ajouter un message d’avertissement, tenez compte de la logique de votre méthode :
 
-* Quelles sont les conditions susceptibles d’entraîner des résultats incorrects ou inattendus ?
-* Existe-t-il des valeurs d’entrée ou des paramètres spécifiques dont la méthode a besoin pour fonctionner correctement ?
+* Quelles sont les conditions susceptibles d’entraîner des résultats incorrects ou inattendus ?
+* Existe-t-il des valeurs d’entrée ou des paramètres spécifiques dont la méthode a besoin pour fonctionner correctement ?
 
-Exemples de conditions à vérifier :
+Exemples de conditions à vérifier :
 
-* **Valeurs hors intervalle** (p. ex., `if (inputValue < 0)`).
-* **Collections nulles ou vides** (p. ex., `if (list == null || list.Count == 0)`).
-* **Non-correspondance des types de données** (p. ex., si un type de fichier n’est pas pris en charge).
+* **Valeurs hors intervalle** (p. ex., `if (inputValue < 0)`).
+* **Collections nulles ou vides** (p. ex., `if (list == null || list.Count == 0)`).
+* **Non-correspondance des types de données** (p. ex., si un type de fichier n’est pas pris en charge).
 
-#### Étape 3 : utiliser `OnLogWarningMessage` pour consigner l’avertissement <a href="#use-onlogwarningmessage-to-log-the-warning" id="use-onlogwarningmessage-to-log-the-warning"></a>
+#### Étape 3 : utiliser `OnLogWarningMessage` pour consigner l’avertissement <a href="#use-onlogwarningmessage-to-log-the-warning" id="use-onlogwarningmessage-to-log-the-warning"></a>
 
 Passez des appels `OnLogWarningMessage` là où vous détectez des conditions pouvant causer des problèmes. Lorsque la condition est remplie, consignez un message d’avertissement qui fournit des indications claires à l’utilisateur.
 
@@ -43,13 +43,13 @@ LogWarningMessageEvents.OnLogWarningMessage("Your warning message here.");
 
 ### Exemples de mise en œuvre de `OnLogWarningMessage` <a href="#example-implementations-of-onlogwarningmessage" id="example-implementations-of-onlogwarningmessage"></a>
 
-Pour démontrer `OnLogWarningMessage` en action, voici différents scénarios que vous pouvez rencontrer lors de la création d’un nœud Zero Touch.
+Pour démontrer `OnLogWarningMessage` en action, voici différents scénarios que vous pouvez rencontrer lors de la création d’un nœud Zero Touch.
 
-#### Exemple 1 : validation des entrées numériques <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
+#### Exemple 1 : validation des entrées numériques <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-Dans cet exemple, nous allons nous appuyer sur le nœud personnalisé créé dans la précédente **« Étude de cas Zero-Touch : nœud grille »,** une méthode appelée `RectangularGrid` qui génère une grille de rectangles en fonction des entrées `xCount` et `yCount`. Nous allons voir comment effectuer un test pour savoir si une entrée est invalide, puis comment utiliser `OnLogWarningMessage` pour enregistrer un avertissement et arrêter le traitement.
+Dans cet exemple, nous allons nous appuyer sur le nœud personnalisé créé dans la précédente **« Étude de cas Zero-Touch : nœud grille »,** une méthode appelée `RectangularGrid` qui génère une grille de rectangles en fonction des entrées `xCount` et `yCount`. Nous allons voir comment effectuer un test pour savoir si une entrée est invalide, puis comment utiliser `OnLogWarningMessage` pour enregistrer un avertissement et arrêter le traitement.
 
-![Exemple 1 de message OnLogWarningMessage](../images/onlogwarningmessage-example-1.png)
+![Exemple 1 de message OnLogWarningMessage](<../../.gitbook/assets/onlogwarningmessage-example-1 (1).png>)
 
 **Utilisation de `OnLogWarningMessage` pour la validation des entrées**
 
@@ -68,14 +68,14 @@ public static List<Rectangle> CreateGrid(int xCount, int yCount)
 }
 ```
 
-Dans cet exemple :
+Dans cet exemple :
 
-* **Condition** : si `xCount` ou `yCount` est inférieur ou égal à zéro.
-* **Message** : `"Grid count values must be positive integers."`
+* **Condition** : si `xCount` ou `yCount` est inférieur ou égal à zéro.
+* **Message** : `"Grid count values must be positive integers."`
 
 Cela affichera l’avertissement dans Dynamo si un utilisateur saisit des valeurs nulles ou négatives, ce qui l’aidera à comprendre l’entrée attendue.
 
-Maintenant que nous savons à quoi cela ressemble, nous pouvons le mettre en œuvre dans l’exemple de nœud Grids :
+Maintenant que nous savons à quoi cela ressemble, nous pouvons le mettre en œuvre dans l’exemple de nœud Grids :
 
 ```
 using Autodesk.DesignScript.Geometry;
@@ -133,11 +133,11 @@ namespace CustomNodes
 }
 ```
 
-**Exemple 2 : recherche de collections nulles ou vides**
+**Exemple 2 : recherche de collections nulles ou vides**
 
 Si une liste de points est nécessaire pour votre méthode, mais qu’un utilisateur transmet une liste vide ou nulle, vous pouvez utiliser `OnLogWarningMessage` pour l’informer du problème.
 
-![Exemple 2 de message OnLogWarningMessage](../images/onlogwarningmessage-example-2.png)
+![Exemple 2 de message OnLogWarningMessage](<../../.gitbook/assets/onlogwarningmessage-example-2 (1).png>)
 
 ```
 public static Polygon CreatePolygonFromPoints(List<Point> points)
@@ -151,20 +151,20 @@ public static Polygon CreatePolygonFromPoints(List<Point> points)
 }
 ```
 
-Dans cet exemple :
+Dans cet exemple :
 
-* **Condition** : si la liste `points` est nulle ou contient moins de trois points.
-* **Message** : `"Point list cannot be null or have fewer than three points."`
+* **Condition** : si la liste `points` est nulle ou contient moins de trois points.
+* **Message** : `"Point list cannot be null or have fewer than three points."`
 
 Cela avertit les utilisateurs qu’ils doivent transmettre une liste valide avec au moins trois points pour former un polygone.
 
 ***
 
-**Exemple 3 : vérification de la compatibilité des types de fichiers**
+**Exemple 3 : vérification de la compatibilité des types de fichiers**
 
 Pour un nœud qui traite les chemins d’accès aux fichiers, il pourrait être judicieux de vous assurer que seuls certains types de fichiers sont autorisés. Si un type de fichier non pris en charge est détecté, consignez un avertissement.
 
-![Exemple 3 de message OnLogWarningMessage](../images/onlogwarningmessage-example-3.png)
+![Exemple 3 de message OnLogWarningMessage](<../../.gitbook/assets/onlogwarningmessage-example-3 (1).png>)
 
 ```
 public static void ProcessFile(string filePath)
@@ -178,10 +178,10 @@ public static void ProcessFile(string filePath)
 }
 ```
 
-Dans cet exemple :
+Dans cet exemple :
 
-* **Condition** : si le chemin d’accès au fichier ne se termine pas par « .csv ».
-* **Message** : `"Only CSV files are supported."`
+* **Condition** : si le chemin d’accès au fichier ne se termine pas par « .csv ».
+* **Message** : `"Only CSV files are supported."`
 
 Cela avertit les utilisateurs qu’ils doivent s’assurer de transmettre un fichier CSV pour éviter les problèmes liés aux formats de fichiers incompatibles.
 
@@ -191,24 +191,24 @@ Dans Dynamo, `OnLogInfoMessage` de l’espace de nom `DynamoServices` permet aux
 
 ### Étapes de mise en œuvre pour `OnLogInfoMessage` <a href="#implementation-steps-for-onloginfomessage" id="implementation-steps-for-onloginfomessage"></a>
 
-#### Étape 1 : importer l’espace de nom requis <a href="#step-1-import-the-required-namespace" id="step-1-import-the-required-namespace"></a>
+#### Étape 1 : importer l’espace de nom requis <a href="#step-1-import-the-required-namespace" id="step-1-import-the-required-namespace"></a>
 
 `OnLogInfoMessage` fait partie de l’espace de nom `DynamoServices`. Commencez donc par l’ajouter au fichier de votre projet.
 
-#### Étape 2 : déterminer quand consigner les informations <a href="#step-2-identify-when-to-log-information" id="step-2-identify-when-to-log-information"></a>
+#### Étape 2 : déterminer quand consigner les informations <a href="#step-2-identify-when-to-log-information" id="step-2-identify-when-to-log-information"></a>
 
-Avant d’ajouter un message d’information, réfléchissez à l’objectif de votre méthode :
+Avant d’ajouter un message d’information, réfléchissez à l’objectif de votre méthode :
 
-* Quelles informations serait-il utile de confirmer une fois une action terminée ?
-* La méthode comprend-elle des étapes clés sur lesquels les utilisateurs pourraient vouloir être informés ?
+* Quelles informations serait-il utile de confirmer une fois une action terminée ?
+* La méthode comprend-elle des étapes clés sur lesquels les utilisateurs pourraient vouloir être informés ?
 
-Exemples de confirmations utiles :
+Exemples de confirmations utiles :
 
-* **Messages de réussite** (p. ex., lorsqu’une grille ou un modèle a été créé).
-* **Détails sur les données traitées** (p. ex., « 10 éléments ont été traités »).
-* **Résumés d’exécution** (p. ex., paramètres utilisés dans le processus).
+* **Messages de réussite** (p. ex., lorsqu’une grille ou un modèle a été créé).
+* **Détails sur les données traitées** (p. ex., « 10 éléments ont été traités »).
+* **Résumés d’exécution** (p. ex., paramètres utilisés dans le processus).
 
-#### Étape 3 : utiliser `OnLogInfoMessage` pour consigner les messages d’information <a href="#step-3-use-onloginfomessage-to-log-informational-message" id="step-3-use-onloginfomessage-to-log-informational-message"></a>
+#### Étape 3 : utiliser `OnLogInfoMessage` pour consigner les messages d’information <a href="#step-3-use-onloginfomessage-to-log-informational-message" id="step-3-use-onloginfomessage-to-log-informational-message"></a>
 
 Passez `OnLogInfoMessage` appels à des points pertinents de votre méthode. Lorsqu’une étape clé commence ou se termine avec succès, consignez un message d’information pour informer l’utilisateur de ce qui s’est passé.
 
@@ -220,13 +220,13 @@ LogWarningMessageEvents.OnLogInfoMessage("Your info message here.");
 
 ### Exemples de mise en œuvre de `OnLogInfoMessage` <a href="#example-implementations-of-onloginfomessage" id="example-implementations-of-onloginfomessage"></a>
 
-Voici différents scénarios illustrant l’utilisation de `OnLogInfoMessage` dans vos nœuds Zero Touch.
+Voici différents scénarios illustrant l’utilisation de `OnLogInfoMessage` dans vos nœuds Zero Touch.
 
-#### Exemple 1 : validation des entrées numériques <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
+#### Exemple 1 : validation des entrées numériques <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-Dans cet exemple, nous allons nous appuyer sur le nœud personnalisé créé dans la précédente **« Étude de cas Zero-Touch : nœud grille »,** une méthode appelée `RectangularGrid` qui génère une grille de rectangles en fonction des entrées `xCount` et `yCount`. Nous allons voir comment effectuer un test pour savoir si une entrée est invalide, puis comment utiliser `OnLogInfoMessage` pour fournir des informations une fois l’exécution du nœud terminée.
+Dans cet exemple, nous allons nous appuyer sur le nœud personnalisé créé dans la précédente **« Étude de cas Zero-Touch : nœud grille »,** une méthode appelée `RectangularGrid` qui génère une grille de rectangles en fonction des entrées `xCount` et `yCount`. Nous allons voir comment effectuer un test pour savoir si une entrée est invalide, puis comment utiliser `OnLogInfoMessage` pour fournir des informations une fois l’exécution du nœud terminée.
 
-![Exemple 1 de message OnLogInfoMessage](../images/onloginfomessage-example-1.png)
+![Exemple 1 de message OnLogInfoMessage](<../../.gitbook/assets/onloginfomessage-example-1 (1).png>)
 
 **Utilisation de `OnLogInfoMessage` pour la validation des entrées**
 
@@ -245,14 +245,14 @@ public static List<Rectangle> CreateGrid(int xCount, int yCount)
 }
 ```
 
-Dans cet exemple :
+Dans cet exemple :
 
-* **Condition** : le processus de création de la grille est terminé.
-* **Message** : `"Successfully created a grid with dimensions {xCount}x{yCount}."`
+* **Condition** : le processus de création de la grille est terminé.
+* **Message** : `"Successfully created a grid with dimensions {xCount}x{yCount}."`
 
 Ce message informera les utilisateurs que la grille a été créée selon les indications fournies, ce qui leur permettra de confirmer que le nœud a fonctionné comme prévu.
 
-Maintenant que nous savons à quoi cela ressemble, nous pouvons le mettre en œuvre dans l’exemple de nœud Grids :
+Maintenant que nous savons à quoi cela ressemble, nous pouvons le mettre en œuvre dans l’exemple de nœud Grids :
 
 ```
 using Autodesk.DesignScript.Geometry;
@@ -305,11 +305,11 @@ namespace CustomNodes
 }
 ```
 
-#### Exemple 2 : fournir des informations sur le nombre de données <a href="#example-2-providing-data-count-information" id="example-2-providing-data-count-information"></a>
+#### Exemple 2 : fournir des informations sur le nombre de données <a href="#example-2-providing-data-count-information" id="example-2-providing-data-count-information"></a>
 
 Si vous créez un nœud qui traite une liste de points, il pourrait être judicieux de consigner le nombre de points ayant été traités. Cela peut s’avérer utile pour les grands jeux de données.
 
-![Exemple 2 de message OnLogInfoMessage](../images/onloginfomessage-example-2.png)
+![Exemple 2 de message OnLogInfoMessage](<../../.gitbook/assets/onloginfomessage-example-2 (1).png>)
 
 ```
 public static List<Point> ProcessPoints(List<Point> points)
@@ -328,18 +328,18 @@ public static List<Point> ProcessPoints(List<Point> points)
 }
 ```
 
-Dans cet exemple :
+Dans cet exemple :
 
-* **Condition** : une fois la boucle terminée, affichage du nombre d’éléments traités.
-* **Message** : `"6 points were processed successfully."`
+* **Condition** : une fois la boucle terminée, affichage du nombre d’éléments traités.
+* **Message** : `"6 points were processed successfully."`
 
 Ce message aidera les utilisateurs à comprendre le résultat du traitement et à confirmer que tous les points ont été traités.
 
-#### Exemple 3 : résumer les paramètres utilisés <a href="#example-3-summarizing-parameters-used" id="example-3-summarizing-parameters-used"></a>
+#### Exemple 3 : résumer les paramètres utilisés <a href="#example-3-summarizing-parameters-used" id="example-3-summarizing-parameters-used"></a>
 
 Dans certains cas, il est utile de confirmer les paramètres d’entrée qu’un nœud a utilisés pour effectuer une action. Par exemple, si votre nœud exporte des données vers un fichier, la consignation du nom et du chemin d’accès du fichier peut indiquer aux utilisateurs que le bon fichier a été utilisé.
 
-![Exemple 3 de message OnLogInfoMessage](../images/onloginfomessage-example-3.png)
+![Exemple 3 de message OnLogInfoMessage](<../../.gitbook/assets/onloginfomessage-example-3 (1).png>)
 
 ```
 public static void ExportData(string filePath, List<string> data)
@@ -352,10 +352,10 @@ public static void ExportData(string filePath, List<string> data)
 }
 ```
 
-Dans cet exemple :
+Dans cet exemple :
 
-* **Condition** : le processus d’exportation s’effectue correctement.
-* **Message** : `"Data exported successfully to {filePath}."`
+* **Condition** : le processus d’exportation s’effectue correctement.
+* **Message** : `"Data exported successfully to {filePath}."`
 
 Ce message confirme aux utilisateurs que l’exportation a fonctionné et affiche le chemin d’accès exact du fichier, ce qui permet d’éviter toute confusion quant à l’emplacement des fichiers.
 
@@ -365,30 +365,30 @@ Ce message confirme aux utilisateurs que l’exportation a fonctionné et affich
 
 La façon dont les créateurs de packages peuvent ajouter de la documentation à leurs nœuds dans Dynamo a longtemps été limitée. Les créateurs de nœuds personnalisés ont longtemps été limités à une brève description qui s’affiche dans l’info-bulle du nœud, ou à expédier votre package avec des exemples de graphes comportant de nombreuses annotations.
 
-![Description de l’info-bulle du nœud](../images/customnodedocumentation-overloads.png)
+![Description de l’info-bulle du nœud](<../../.gitbook/assets/customnodedocumentation-overloads (1).png>)
 
 ### Nouvelle méthode
 
 Dynamo offre désormais un système amélioré permettant aux créateurs de packages de doter les nœuds personnalisés d’une documentation plus détaillée. Cette nouvelle approche utilise le langage convivial Markdown pour la création de texte et l’extension d’affichage Explorateur de documentation pour afficher le Markdown dans Dynamo. L’utilisation de Markdown offre aux créateurs de packages un large éventail de nouvelles possibilités pour documenter les nœuds personnalisés.
 
-#### Qu’est-ce que Markdown ?
+#### Qu’est-ce que Markdown ?
 
 Markdown est un langage de balisage léger que vous pouvez utiliser pour formater des documents en texte brut. Depuis sa création en 2004, sa popularité n’a cessé d’augmenter et il constitue désormais l’un des langages de balisage les plus populaires au monde.
 
 #### Mise en route avec Markdown
 
-Commencer à créer des fichiers Markdown est facile : vous avez uniquement besoin d’un simple éditeur de texte, comme le Bloc-notes, et vous êtes prêt. Toutefois, il existe des manières plus faciles d’écrire des fichiers Markdown que d’utiliser le Bloc-notes. Il existe plusieurs éditeurs en ligne, tels que [Dillinger](https://dillinger.io/), qui vous permettent de voir vos modifications en temps réel. Une autre méthode commune de modification des fichiers Markdown consiste à utiliser un éditeur de code tel que [Visual Studio Code](https://code.visualstudio.com/).
+Commencer à créer des fichiers Markdown est facile : vous avez uniquement besoin d’un simple éditeur de texte, comme le Bloc-notes, et vous êtes prêt. Toutefois, il existe des manières plus faciles d’écrire des fichiers Markdown que d’utiliser le Bloc-notes. Il existe plusieurs éditeurs en ligne, tels que [Dillinger](https://dillinger.io/), qui vous permettent de voir vos modifications en temps réel. Une autre méthode commune de modification des fichiers Markdown consiste à utiliser un éditeur de code tel que [Visual Studio Code](https://code.visualstudio.com/).
 
-#### Que peut faire Markdown ?
+#### Que peut faire Markdown ?
 
-Markdown est très flexible et fournit des fonctionnalités permettant de créer facilement une bonne documentation, notamment : l’ajout de fichiers multimédias tels que des images ou des vidéos, la création de tableaux avec différentes formes de contenu et, bien sûr, des fonctionnalités simples de mise en forme du texte, telles que la mise en **gras** ou _italique_. Vous pouvez faire tout cela et bien plus encore lors de l’écriture de documents Markdown. Pour plus d’informations, consultez ce guide qui explique la [syntaxe Markdown de base](https://www.markdownguide.org/basic-syntax/).
+Markdown est très flexible et fournit des fonctionnalités permettant de créer facilement une bonne documentation, notamment : l’ajout de fichiers multimédias tels que des images ou des vidéos, la création de tableaux avec différentes formes de contenu et, bien sûr, des fonctionnalités simples de mise en forme du texte, telles que la mise en **gras** ou _italique_. Vous pouvez faire tout cela et bien plus encore lors de l’écriture de documents Markdown. Pour plus d’informations, consultez ce guide qui explique la [syntaxe Markdown de base](https://www.markdownguide.org/basic-syntax/).
 
 ### Ajout d’une documentation étendue aux nœuds
 
-Ajouter de la documentation à vos nœuds est une tâche simple. Vous pouvez ajouter la documentation à tous les types de nœuds personnalisés :
+Ajouter de la documentation à vos nœuds est une tâche simple. Vous pouvez ajouter la documentation à tous les types de nœuds personnalisés :
 
 * Nœuds Dynamo prêts à l’emploi
-* Nœuds personnalisés (.dyf) : collections de nœuds prêts à l’emploi et/ou d’autres nœuds de package.
+* Nœuds personnalisés (.dyf) : collections de nœuds prêts à l’emploi et/ou d’autres nœuds de package.
 * Nœuds de package C# personnalisés (également connus sous le nom de Zero Touch. Ces nœuds personnalisés ressemblent aux nœuds prêts à l’emploi)
 * Nœuds NodeModel (nœuds contenant des fonctionnalités spéciales d’interface utilisateur telles que des listes déroulantes ou des boutons de sélection)
 * Nœuds NodeModel avec interface utilisateur personnalisée (nœuds contenant des fonctionnalités uniques d’interface utilisateur, telles que des graphes sur le nœud)
@@ -399,11 +399,11 @@ Suivez ces étapes pour que vos fichiers Markdown s’affichent dans Dynamo.
 
 Dynamo utilise l’extension d’affichage Explorateur de documentation pour afficher la documentation des nœuds. Pour ouvrir la documentation d’un nœud, cliquez avec le bouton droit de la souris sur le nœud et sélectionnez Aide. Cela ouvre l’explorateur de documentation et affiche le fichier Markdown associé à ce nœud, s’il existe.
 
-![Explorateur de documentation](../images/customnodedocumentation-no-documentation-provided.png)
+![Explorateur de documentation](<../../.gitbook/assets/customnodedocumentation-no-documentation-provided (1).png>)
 
 La documentation affichée dans l’explorateur de documentation est composée de deux parties. La première est la section `Node Info`, qui est générée automatiquement à partir des informations extraites du nœud, telles que les entrées/sorties, la catégorie du nœud, le nom/l’espace de noms du nœud et la brève description du nœud. La deuxième partie montre la documentation personnalisée du nœud, c’est-à-dire le fichier Markdown fourni pour documenter le nœud.
 
-![Documentation personnalisée des nœuds](../images/customnodedocumentation-custom-node-documentation.png)
+![Documentation personnalisée des nœuds](<../../.gitbook/assets/customnodedocumentation-custom-node-documentation (1).png>)
 
 #### Dossier de document du package
 
@@ -415,15 +415,15 @@ Pour s’assurer que Dynamo sait quel fichier ouvrir lorsqu’on lui demande pou
 
 Cet espace de noms doit être le nom de votre fichier Markdown pour ce nœud particulier. Par exemple, l’espace de noms de `CustomNodeExample` sur les images ci-dessus est `TestPackage.TestCategory.CustomNodeExample`. Par conséquent, le fichier Markdown de ce nœud doit être nommé `TestPackage.TestCategory.CustomNodeExample.md`
 
-Dans les cas particuliers où vous avez des surcharges de vos nœuds (nœuds avec le même nom, mais des entrées différentes), vous devrez ajouter les noms d’entrée dans `()` après l’espace de noms du nœud. Par exemple, le nœud intégré `Geometry.Translate` présente plusieurs surcharges. Dans ce cas, nous nommerions les fichiers Markdown pour les nœuds ci-dessous comme suit : `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction).md` `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction,distance).md`
+Dans les cas particuliers où vous avez des surcharges de vos nœuds (nœuds avec le même nom, mais des entrées différentes), vous devrez ajouter les noms d’entrée dans `()` après l’espace de noms du nœud. Par exemple, le nœud intégré `Geometry.Translate` présente plusieurs surcharges. Dans ce cas, nous nommerions les fichiers Markdown pour les nœuds ci-dessous comme suit : `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction).md` `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction,distance).md`
 
-![Nœuds avec surcharge](../images/customnodedocumentation-overloads.png)
+![Nœuds avec surcharge](<../../.gitbook/assets/customnodedocumentation-overloads (1).png>)
 
 #### Modification de fichiers Markdown lorsqu’ils sont ouverts dans Dynamo
 
 Pour faciliter la modification des fichiers de documentation, l’explorateur de documentation active un observateur de fichier sur le fichier de documentation ouvert. Cela vous permet de modifier votre fichier Markdown et de voir instantanément les modifications dans Dynamo.
 
-![Rechargement à chaud](../images/customnodedocumentation-hot-reload.gif)
+![Rechargement à chaud](<../../.gitbook/assets/customnodedocumentation-hot-reload (1).gif>)
 
 Vous pouvez également ajouter de nouveaux fichiers de documentation lorsque Dynamo est ouvert. Il vous suffit d’ajouter un nouveau fichier Markdown au dossier `/doc`, avec un nom correspondant au nœud qu’il documente.
 
@@ -433,106 +433,106 @@ Vous pouvez également ajouter de nouveaux fichiers de documentation lorsque Dyn
 
 Les icônes personnalisées pour les nœuds Zero-Touch dans Dynamo distinguent vos nœuds visuellement et les rendent plus faciles à reconnaître dans la bibliothèque. En ajoutant des icônes personnalisées, vous pouvez faire en sorte que vos nœuds se démarquent des autres, permettant ainsi aux utilisateurs de les identifier rapidement dans une liste.
 
-Dans ce guide, vous apprendrez à ajouter des icônes à vos nœuds Zero Touch.
+Dans ce guide, vous apprendrez à ajouter des icônes à vos nœuds Zero Touch.
 
 ### Étapes à suivre pour ajouter des icônes de nœud personnalisées
 
-#### Étape 1 : configurer votre projet
+#### Étape 1 : configurer votre projet
 
-Pour commencer, créez un projet de bibliothèque de classes Visual Studio (.NET Framework) pour vos nœuds Zero-Touch. Si vous n’avez pas encore de projet, reportez-vous à la section **Mise en route** pour obtenir des instructions détaillées sur la création d’un projet.
+Pour commencer, créez un projet de bibliothèque de classes Visual Studio (.NET Framework) pour vos nœuds Zero-Touch. Si vous n’avez pas encore de projet, reportez-vous à la section **Mise en route** pour obtenir des instructions détaillées sur la création d’un projet.
 
-![Créer un nouveau projet Visual Studio](../images/vs-new-project-1.jpg)
+![Créer un nouveau projet Visual Studio](<../../.gitbook/assets/vs-new-project-1 (1).jpg>)
 
-![Configuration d’un nouveau projet dans Visual Studio](../images/zerotouchicons-configure-new-project.jpg)
+![Configuration d’un nouveau projet dans Visual Studio](<../../.gitbook/assets/zerotouchicons-configure-new-project (1).jpg>)
 
-Assurez-vous de disposer d’au moins un nœud Zero-Touch fonctionnel, car les icônes ne peuvent être ajoutées qu’à des nœuds existants. Pour obtenir de l’aide, reportez-vous à **Étude de cas Zero-Touch : nœud grille**.
+Assurez-vous de disposer d’au moins un nœud Zero-Touch fonctionnel, car les icônes ne peuvent être ajoutées qu’à des nœuds existants. Pour obtenir de l’aide, reportez-vous à **Étude de cas Zero-Touch : nœud grille**.
 
-#### Étape 2 : créer vos icônes
+#### Étape 2 : créer vos icônes
 
-Pour créer des icônes personnalisées :
+Pour créer des icônes personnalisées :
 
-1. **Concevez vos icônes** : utilisez un logiciel de traitement d’images pour créer des icônes simples et claires pour vos nœuds.
-2. **Spécifications des images** :
-   * **Petite icône** : 32 x 32 pixels (utilisée dans la barre latérale de la bibliothèque et sur le nœud lui-même).
-   * **Grande icône** : 128 x 128 pixels (utilisée dans les propriétés du nœud, lorsque vous passez le curseur sur le nœud dans la bibliothèque).
-3. **Convention d’appellation des fichiers** :
-   * Les noms de fichiers doivent correspondre au format ci-dessous pour être associés au bon nœud :
+1. **Concevez vos icônes** : utilisez un logiciel de traitement d’images pour créer des icônes simples et claires pour vos nœuds.
+2. **Spécifications des images** :
+   * **Petite icône** : 32 x 32 pixels (utilisée dans la barre latérale de la bibliothèque et sur le nœud lui-même).
+   * **Grande icône** : 128 x 128 pixels (utilisée dans les propriétés du nœud, lorsque vous passez le curseur sur le nœud dans la bibliothèque).
+3. **Convention d’appellation des fichiers** :
+   * Les noms de fichiers doivent correspondre au format ci-dessous pour être associés au bon nœud :
      * **`<ProjectName>.<ClassName>.<MethodName>.Small.png`** (pour la petite icône).
      * **`<ProjectName>.<ClassName>.<MethodName>.Large.png`** (pour la grande icône).
 
-**Exemple** : si votre projet est `ZeroTouchNodeIcons`, votre classe est `Grids` et votre méthode est `RectangularGrid`, les fichiers seront nommés :
+**Exemple** : si votre projet est `ZeroTouchNodeIcons`, votre classe est `Grids` et votre méthode est `RectangularGrid`, les fichiers seront nommés :
 
 * `ZeroTouchNodeIcons.Grids.RectangularGrid.Small.png`
 * `ZeroTouchNodeIcons.Grids.RectangularGrid.Large.png`
 
-> Conseil : maintenez le même thème pour toutes vos icônes pour un aspect plus professionnel.
+> Conseil : maintenez le même thème pour toutes vos icônes pour un aspect plus professionnel.
 
-#### Étape 3 : ajouter un fichier de ressources à votre projet
+#### Étape 3 : ajouter un fichier de ressources à votre projet
 
-Pour intégrer vos icônes au `.dll`, créez un fichier de ressources :
+Pour intégrer vos icônes au `.dll`, créez un fichier de ressources :
 
-1. **Ajouter un nouveau fichier de ressources** :
+1. **Ajouter un nouveau fichier de ressources** :
 
 * Cliquez avec le bouton droit de la souris sur votre projet dans l’**Explorateur de solutions**.
 
-![Ajouter un nouvel élément](../images/zerotouchicons-add-resources-file-1.jpg)
+![Ajouter un nouvel élément](<../../.gitbook/assets/zerotouchicons-add-resources-file-1 (1).jpg>)
 
 * Allez à **Ajouter > Nouvel élément** et sélectionnez **Fichier de ressources**.
 
-![Ajouter un fichier de ressources](../images/zerotouchicons-add-resources-file-2.jpg)
+![Ajouter un fichier de ressources](<../../.gitbook/assets/zerotouchicons-add-resources-file-2 (1).jpg>)
 
 * Nommez le fichier `<ProjectName>Images.resx` Par exemple, `ZeroTouchNodeIconsImages.resx`.
 
-2. **Effacer la propriété Outil personnalisé** :
+2. **Effacer la propriété Outil personnalisé** :
    * Sélectionnez le fichier de ressources dans l’**Explorateur de solutions**.
    * Dans le panneau **Propriétés**, effacez le champ `Custom Tool` en supprimant la valeur `ResXFileCodeGenerator`.
-3. **Définissez « Action de création » sur « Aucune »**.
+3. **Définissez « Action de création » sur « Aucune »**.
    * Étant donné que nous créerons nous-mêmes cette ressource un peu plus tard, nous n’avons pas besoin de la créer automatiquement.
 
-![Effacer la propriété Outil personnalisé](../images/zerotouchicons-custom-tool-property-update.png)
+![Effacer la propriété Outil personnalisé](../../.gitbook/assets/zerotouchicons-custom-tool-property-update.png)
 
-> _REMARQUE : si vous n’effacez pas le champ « Outil personnalisé », Visual Studio convertit les points en tirets bas dans les noms de ressources. Avant de commencer à créer, veuillez vérifier que les noms de ressources utilisent des points pour séparer les noms de classes et non des tirets bas._
+> _REMARQUE : si vous n’effacez pas le champ « Outil personnalisé », Visual Studio convertit les points en tirets bas dans les noms de ressources. Avant de commencer à créer, veuillez vérifier que les noms de ressources utilisent des points pour séparer les noms de classes et non des tirets bas._
 
-#### Étape 4 : ajouter vos images en tant que ressources
+#### Étape 4 : ajouter vos images en tant que ressources
 
-1. Double-cliquez sur le fichier de ressources que vous avez créé :
-   * Ajoutez une image à la fois à l’aide du bouton « + ».
+1. Double-cliquez sur le fichier de ressources que vous avez créé :
+   * Ajoutez une image à la fois à l’aide du bouton « + ».
    * Définissez le type de ressource sur **Fichier**.
    * Accédez à l’emplacement de votre fichier d’images et incluez vos icônes de nœud **grandes** et **petites**.
 
-![Ajouter des ressources...](../images/zerotouchicons-open-resource-editor-update.png)
+![Ajouter des ressources...](../../.gitbook/assets/zerotouchicons-open-resource-editor-update.png)
 
-> _REMARQUE : il n’est pas obligatoire d’organiser vos images dans un dossier **Ressource**, ni même dans des sous-dossiers **Grandes** et **Petites**, mais cette pratique est toutefois recommandée pour organiser vos ressources._
+> _REMARQUE : il n’est pas obligatoire d’organiser vos images dans un dossier **Ressource**, ni même dans des sous-dossiers **Grandes** et **Petites**, mais cette pratique est toutefois recommandée pour organiser vos ressources._
 
-#### Étape 5 : convertir votre projet au style SDK (pour les projets hérités)
+#### Étape 5 : convertir votre projet au style SDK (pour les projets hérités)
 
-Si votre projet n’est pas déjà de style SDK (ce qui nécessaire pour l’intégration des ressources), convertissez-le :
+Si votre projet n’est pas déjà de style SDK (ce qui nécessaire pour l’intégration des ressources), convertissez-le :
 
-1. Installez l’extension `.NET Upgrade Assistant` à partir du menu **Extensions > Gérer les extensions** de Visual Studio.
+1. Installez l’extension `.NET Upgrade Assistant` à partir du menu **Extensions > Gérer les extensions** de Visual Studio.
 
-![Gérer les extensions](../images/zerotouchicons-manage-extensions-update.png)
+![Gérer les extensions](../../.gitbook/assets/zerotouchicons-manage-extensions-update.png)
 
-![Installer l’assistant Mise à niveau .NET](../images/zerotouchicons-net-upgrade-assistant.jpg)
+![Installer l’assistant Mise à niveau .NET](<../../.gitbook/assets/zerotouchicons-net-upgrade-assistant (1).jpg>)
 
 2. Cliquez avec le bouton droit de la souris sur le projet dans l’**Explorateur de solutions**, puis sélectionnez **Mettre à niveau > Convertir le projet au style SDK**.
 
-![Mettre le projet à niveau](../images/zerotouchicons-upgrade-project.jpg)
+![Mettre le projet à niveau](<../../.gitbook/assets/zerotouchicons-upgrade-project (1).jpg>)
 
-![Convertir au style SDK](../images/zerotouchicons-convert-to-sdk-style.jpg)
+![Convertir au style SDK](<../../.gitbook/assets/zerotouchicons-convert-to-sdk-style (1).jpg>)
 
 3. Attendez la fin de la conversion.
 
-![Mise à niveau terminée](../images/zerotouchicons-upgrade-complete.jpg)
+![Mise à niveau terminée](<../../.gitbook/assets/zerotouchicons-upgrade-complete (1).jpg>)
 
-#### Étape 6 : ajouter un script post-build aux ressources intégrées
+#### Étape 6 : ajouter un script post-build aux ressources intégrées
 
-1. Décharger le projet :
+1. Décharger le projet :
    * Cliquez avec le bouton droit de la souris sur le projet dans l’**Explorateur de solutions**, puis sélectionnez **Décharger le projet**.
 
-![Décharger le projet](../images/zerotouchicons-unload-project.jpg)
+![Décharger le projet](<../../.gitbook/assets/zerotouchicons-unload-project (1).jpg>)
 
-2. Modifiez le fichier `.csproj` :
-   * Ajoutez l’élément `<Target>` suivant entre `</ItemGroup>` et `</Project>` :
+2. Modifiez le fichier `.csproj` :
+   * Ajoutez l’élément `<Target>` suivant entre `</ItemGroup>` et `</Project>` :
 
 ```
 <Target Name="CreateNodeIcons" AfterTargets="PostBuildEvent">
@@ -550,26 +550,26 @@ Si votre projet n’est pas déjà de style SDK (ce qui nécessaire pour l’int
 	</Target>
 ```
 
-![Ajouter le code post-build](../images/zerotouchicons-after-build.jpg)
+![Ajouter le code post-build](<../../.gitbook/assets/zerotouchicons-after-build (1).jpg>)
 
 1. Remplacez toutes les instances de `ZeroTouchNodeIcons` par le nom de votre projet.
-2. Rechargez le projet :
+2. Rechargez le projet :
    * Cliquez avec le bouton droit de la souris sur le projet déchargé et sélectionnez **Recharger le projet**.
 
-![Recharger le projet](../images/zerotouchicons-reload-project.jpg)
+![Recharger le projet](<../../.gitbook/assets/zerotouchicons-reload-project (1).jpg>)
 
-#### Étape 7 : créer et charger votre .dll dans Dynamo
+#### Étape 7 : créer et charger votre .dll dans Dynamo
 
-1. Créez le projet :
-   * Après avoir ajouté le script post-build, générez votre projet dans Visual Studio.
+1. Créez le projet :
+   * Après avoir ajouté le script post-build, générez votre projet dans Visual Studio.
 
-![Générer la solution](../images/zerotouchicons-build-solution.jpg)
+![Générer la solution](<../../.gitbook/assets/zerotouchicons-build-solution (1).jpg>)
 
-2. Recherchez les fichiers de sortie :
+2. Recherchez les fichiers de sortie :
    * Vérifiez que votre `.dll` et que le `.customization.dll` se trouvent dans le dossier `bin`.
-3. Ajoutez le `.dll` à Dynamo :
+3. Ajoutez le `.dll` à Dynamo :
    * Dans Dynamo, utilisez le bouton Importer une bibliothèque pour importer vos .dll dans Dynamo.
 
-![Bouton Importer une bibliothèque](../images/zerotouchicons-icon-in-dynamo.jpg)
+![Bouton Importer une bibliothèque](<../../.gitbook/assets/zerotouchicons-icon-in-dynamo (1).jpg>)
 
 4. Vos nœuds personnalisés devraient maintenant s’afficher avec leurs icônes respectives.
