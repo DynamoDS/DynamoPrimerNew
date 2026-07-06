@@ -77,7 +77,7 @@ Cet index fournit des informations supplémentaires sur tous les nœuds utilisé
 |                                |                                                                                                                                                                                                              |                                                   |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------- |
 |                                | ACTIONS                                                                                                                                                                                                      |                                                   |
-| ![](images/If.jpg) | <p><strong>Si</strong><br>Instruction conditionnelle. Vérifie la valeur booléenne de l'entrée de test. Si l’entrée de test est True, le résultat génère la valeur True, sinon le résultat génère la valeur False.</p> | \![](<images/index of nodes - if.jpg>) |
+| ![](images/If.jpg) | <p><strong>Si</strong><br>Instruction conditionnelle. Vérifie la valeur booléenne de l'entrée de test. Si l’entrée de test est True, le résultat génère la valeur True, sinon le résultat génère la valeur False.</p> | ![](<images/index of nodes - if.jpg>) |
 
 ## Math
 
@@ -110,8 +110,8 @@ Cet index fournit des informations supplémentaires sur tous les nœuds utilisé
 |                                                             |                                                                                                                                                          |                                                                                     |
 | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 |                                                             | CREER                                                                                                                                                   |                                                                                     |
-| ![](<images/Circle by center point radius.jpg>) | <p><strong>Circle.ByCenterPointRadius</strong><br>Crée un Circle à l&apos;aide d&apos;un point central d&apos;entrée et un rayon dans le plan XY univers, avec l&apos;univers Z standard.</p> | \![](<images/index of nodes - circle by center point radius normal.jpg>) |
-| ![](<images/Circle by plane radius.jpg>)        | <p><strong>Circle.ByPlaneRadius</strong><br>Créer un Circle centré au niveau de l&apos;origine du plan d&apos;entrée (racine), dans le plan d&apos;entrée, avec un rayon donné.</p>  | \![](<images/index of nodes - circle by plane radius.jpg>)               |
+| ![](<images/Circle by center point radius.jpg>) | <p><strong>Circle.ByCenterPointRadius</strong><br>Crée un Circle à l&apos;aide d&apos;un point central d&apos;entrée et un rayon dans le plan XY univers, avec l&apos;univers Z standard.</p> | ![](<images/index of nodes - circle by center point radius normal.jpg>) |
+| ![](<images/Circle by plane radius.jpg>)        | <p><strong>Circle.ByPlaneRadius</strong><br>Créer un Circle centré au niveau de l&apos;origine du plan d&apos;entrée (racine), dans le plan d&apos;entrée, avec un rayon donné.</p>  | ![](<images/index of nodes - circle by plane radius.jpg>)               |
 
 |                                                                           |                                                                                                                                                                                                    |                                                                                              |
 | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -133,7 +133,9 @@ Cet index fournit des informations supplémentaires sur tous les nœuds utilisé
 | ![](<images/index of nodes - cuboid height.jpg>)                    | <p><strong>Cuboid.Height</strong></p><p>Permet de renvoyer les cotes d’entrée du nœud Cuboid, et NON les cotes réelles de l’espace univers. **</p>           | ![](<images/index of nodes - cuboid height.jpg>)                       |
 | ![](<images/Bounding box to cuboid.jpg>)             | <p><strong>BoundingBox.ToCuboid</strong></p><p>Permet d’obtenir la zone de délimitation en tant que cuboïde solide.</p>                                                  | ![](<images/index of nodes - bounding box to cuboid.jpg>)              |
 
-{% hint style="warning" %} *En d’autres termes, si vous créez un nœud Cuboid avec la largeur de l’axe X et la longueur 10, puis le transformez en CoordinateSystem avec une échelle de 2 dans X, la largeur sera toujours 10. ASM ne vous permet pas d’extraire les sommets d’un corps dans un ordre prévisible. Il est donc impossible de déterminer les cotes après une transformation. {% endhint %}
+{% hint style="warning" %}
+\*\*En d’autres termes, si vous créez un nœud Cuboid avec la largeur de l’axe X et la longueur 10, puis le transformez en CoordinateSystem avec une échelle de 2 dans X, la largeur sera toujours 10. ASM ne vous permet pas d’extraire les sommets d’un corps dans un ordre prévisible. Il est donc impossible de déterminer les cotes après une transformation.
+{% endhint %}
 
 ### Curve
 
@@ -277,4 +279,4 @@ Cet index fournit des informations supplémentaires sur tous les nœuds utilisé
 | ![](images/modular.jpg)         | <p><strong>%</strong><br>La division modulaire recherche le reste de la première entrée après la division par la deuxième entrée</p> | ![](<images/index of nodes - %.jpg>)              |
 | ![](<images/index of nodes - less than.jpg>)        | <p><strong><</strong><br>Inférieur à</p>                                                                             | ![](<images/index of nodes - less than.jpg>)      |
 | ![](<images/greater than.jpg>)   | <p><strong>></strong><br>Supérieur à</p>                                                                               | ![](<images/index of nodes - greater than.jpg>)   |
-| ![](<images/==.jpg>)             | <p><strong>==</strong><br>L’égalité des deux valeurs est un test d’égalité.</p>                                           | ![](<images/index of nodes - ==.jpg>)             |
+| ![](<images/==.jpg>)             | <p><strong>==</strong><br>L’égalité des deux valeurs est un test d’égalité.</p>                                           | ![](<imagesindex of nodes - ==.jpg>)             |
