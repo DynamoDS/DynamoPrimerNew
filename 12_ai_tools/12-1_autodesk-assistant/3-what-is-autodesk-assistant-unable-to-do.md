@@ -20,3 +20,13 @@ In the example below there is some geometry created on the canvas. Autodesk Assi
 
 ### Directly changing the Revit document
 
+![](../../.gitbook/assets/AA_Data_SampleProject.jpg)
+
+Autodesk Assistant for Dynamo is not able to directly alter the revit document or model. Revit has it's own version of Autodesk Assistant that makes changes to the Revit model and document, the Autodesk Assitant for Dynamo will notify the user that it is unable to directly alter the Revit document.
+
+![](../../.gitbook/assets/AA_Revit_Limits.jpg)
+
+Autodesk Assistant in Dynamo can only alter the Revit document and model via scripting.
+
+![](../../.gitbook/assets/AA_ViewScript.jpg)
+
