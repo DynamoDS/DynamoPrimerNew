@@ -2,7 +2,7 @@
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_Player.gif" alt=""><figcaption></figcaption></figure>
 
-When adding Pipes and Structures to a Pipe Network, Civil 3D uses a template to automatically assign names. This is usually sufficient during initial placement, but inevitably the names will have to change in the future as the design evolves. In addition, there are many different naming patterns that might be required, for example naming Structures sequentially within a pipe run starting from the furthest downstream Structure, or following a naming pattern that aligns with a local agency's data schema. This example will demonstrate how Dynamo can be used to define any type of naming strategy apply it consistently.
+When adding Pipes and Structures to a Pipe Network, Civil 3D uses a template to automatically assign names. This is usually sufficient during initial placement, but inevitably the names will have to change in the future as the design evolves. In addition, there are many different naming patterns that might be required, for example naming Structures sequentially within a pipe run starting from the furthest downstream Structure, or following a naming pattern that aligns with a local agency's data schema. This example will demonstrate how Dynamo can be used to define any type of naming strategy and apply it consistently.
 
 ## Goal
 
@@ -51,7 +51,7 @@ The first thing we need to do is select all of the Structures that we plan to wo
 
 ### Get Structure Locations
 
-Now that we have the Structures, we need to figure out their position in space so that we can sort them according to their location. To do this, we'll take advantage of the Bounding Box of each object. The **Bounding Box** of an object is the minimum-sized box that fully contains the geometric extents of the object. By computing the center of the Bounding Box, we get a pretty good approximation of the Structure's insertion point.
+Now that we have the Structures, we need to figure out their position in space so that we can sort them according to their location. To do this, we'll take advantage of the **Bounding Box** of each object. The **Bounding Box** of an object is the minimum-sized box that fully contains the geometric extents of the object. By computing the center of the **Bounding Box**, we get a pretty good approximation of the Structure's insertion point.
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_GetPosition.png" alt=""><figcaption><p>Using Bounding Boxes to get the approximate insertion point of each Structure</p></figcaption></figure>
 

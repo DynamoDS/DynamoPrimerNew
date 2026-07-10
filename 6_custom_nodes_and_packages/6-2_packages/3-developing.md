@@ -44,7 +44,7 @@ The logic of extending mapped points from 1D geometry to 2D geometry is demonstr
 
 ![](<../../.gitbook/assets/develop package -polygonsToSurface.jpg>)
 
-#### **NurbsCrvtoSurface**
+#### **NurbsCrvToSurface**
 
 The same logic applies here as in the _"PolygonsToSurface"_ node. But instead of mapping polygonal points, we're mapping control points of a nurbs curve.
 

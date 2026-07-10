@@ -53,8 +53,7 @@ pCoord = Point.ByCoordinates(x_pos, y_pos, z_pos);
 
 // create a point in a specific coordinate system
 cs = CoordinateSystem.Identity();
-pCoordSystem = Point.ByCartesianCoordinates(cs, x_pos,
-    y_pos, z_pos);
+pCoordSystem = Point.ByCartesianCoordinates(cs, x_pos, y_pos, z_pos);
 
 // create a point on a cylinder with the following
 // radius and height
@@ -62,15 +61,13 @@ radius = 5;
 height = 15;
 theta = 75.5;
 
-pCyl = Point.ByCylindricalCoordinates(cs, radius, theta,
-    height);
+pCyl = Point.ByCylindricalCoordinates(cs, radius, theta, height);
 
 // create a point on a sphere with radius and two angles
 
 phi = 120.3;
 
-pSphere = Point.BySphericalCoordinates(cs, radius,
-    theta, phi);
+pSphere = Point.BySphericalCoordinates(cs, radius, theta, phi);
 ```
 
 ### Line
@@ -88,7 +85,7 @@ l2pts = Line.ByStartPointEndPoint(p1, p2);
 
 // a line segment at p1 in direction 1, 1, 1 with
 // length 10
-lDir = Line.ByStartPointDirectionLength(p1,
+lDir = Line.ByStartPointDirectionLength(p1, 
     Vector.ByCoordinates(1, 1, 1), 10);
 ```
 

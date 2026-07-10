@@ -12,10 +12,10 @@ You can use [Boolean operations](6-solids.md#boolean-operations) to modify solid
 
 ![](<../../.gitbook/assets/solids  - spiky ball.jpg>)
 
-> 1. **Sphere.ByCenterPointRadius**: Create the base Solid.
-> 2. **Topology.Faces**, **Face.SurfaceGeometry**: Query the faces of the Solid and convert to surface geometry—in this case, the Sphere has only one Face.
-> 3. **Cone.ByPointsRadii**: Construct cones using points on the surface.
-> 4. **Solid.UnionAll**: Union the Cones and the Sphere.
+> 1. **Sphere.ByCenterPointRadius**: Create the base Solid
+> 2. **Topology.Faces**, **Face.SurfaceGeometry**: Query the faces of the Solid and convert to surface geometry—in this case, the Sphere has only one Face
+> 3. **Cone.ByPointsRadii**: Construct cones using points on the surface
+> 4. **Solid.UnionAll**: Union the Cones and the Sphere
 > 5. **Topology.Edges**: Query the edges of the new Solid
 > 6. **Solid.Fillet**: Fillet the Edges of the spiky ball
 

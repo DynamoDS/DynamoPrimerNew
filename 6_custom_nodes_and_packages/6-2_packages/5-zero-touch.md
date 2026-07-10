@@ -19,16 +19,16 @@ Zero-touch packages are a good complement to user-defined custom nodes. A few pa
 
 | **Logo/Image**                                                               | **Name**                                                                    |
 | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| ![](../../.gitbook/assets/meshToolkitcasestudy01.jpg)                        | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| ![](../../.gitbook/assets/packageintroduction-installingpackagefolder07.jpg) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
-| ![](../../.gitbook/assets/rhynamo.jpg)                                       | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
+| ![](../../.gitbook/assets/meshToolkitcasestudy01.jpg)                         | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| ![](../../.gitbook/assets/packageintroduction-installingpackagefolder07.jpg) | [Dynamo Unfold](https://dynamobim.org/dynamounfold/)                         |
+| ![](../../.gitbook/assets/rhynamo.jpg)                                       | [Rhynamo](https://provingground.io/tools/rhynamo/)                     |
 | ![](../../.gitbook/assets/optimo.jpg)                                        | [Optimo](https://github.com/BPOpt/Optimo)                                   |
 
 ## Case Study - Importing AForge
 
-In this case study, we'll show how to import the [AForge](http://www.aforgenet.com) external _.dll_ library. AForge is a robust library which offers a range of functionality from image processing to artificial intelligence. We'll reference the imaging class in AForge to do a few image processing exercises below.
+In this case study, we'll show how to import the [AForge](https://code.google.com/archive/p/aforge/) external _.dll_ library. AForge is a robust library which offers a range of functionality from image processing to artificial intelligence. We'll reference the imaging class in AForge to do a few image processing exercises below.
 
-Let's begin by downloading AForge. On the [AForge download page](http://www.aforgenet.com/framework/downloads.html), select _\[Download Installer]_ and install after download has completed.
+Let's begin by downloading AForge. On the [AForge download page](https://code.google.com/archive/p/aforge/downloads), select _\[Download Installer]_ and install after download has completed.
 
 In Dynamo, create a new file and select _File > Import Library..._
 
@@ -104,7 +104,7 @@ Now that we're introduced to some basic image processing, let's use an image to 
 > 1. With the File Path node, navigate to grid.jpg in the exercise folder.
 > 2. Connect the remaining series of nodes above to reveal a course parametric grid.
 
-In this next step, we want to reference the white squares in the image and convert them to actual Dynamo geometry. AForge has a lot of powerful Computer Vision tools, and here we're going to use a particularly important one for the library called [BlobCounter](http://www.aforgenet.com/framework/docs/html/d7d5c028-7a23-e27d-ffd0-5df57cbd31a6.htm).
+In this next step, we want to reference the white squares in the image and convert them to actual Dynamo geometry. AForge has a lot of powerful Computer Vision tools, and here we're going to use a particularly important one for the library called [BlobCounter](https://github.com/cureos/aforge/blob/master/Sources/Imaging/BlobCounter.cs).
 
 ![](<../../.gitbook/assets/case study aforge exercise 2 - 02.jpg>)
 
@@ -131,7 +131,7 @@ Connecting the image output to the Python node input, we get an AForge.Imaging.B
 
 ![](<../../.gitbook/assets/case study aforge exercise 2 - 04.jpg>)
 
-The next steps will do some tricks that demonstrate familiarity with the [AForge Imaging API](http://www.aforgenet.com/framework/docs/html/d087503e-77da-dc47-0e33-788275035a90.htm). It's not necessary to learn all of this for Dynamo work. This is more of a demonstration of working with external libraries within the flexibility of the Dynamo environment.
+The next steps will do some tricks that demonstrate familiarity with the [AForge Imaging API](https://www.aforgenet.com/framework/). It's not necessary to learn all of this for Dynamo work. This is more of a demonstration of working with external libraries within the flexibility of the Dynamo environment.
 
 ![](<../../.gitbook/assets/case study aforge exercise 2 - 05.jpg>)
 
@@ -198,4 +198,4 @@ Last, change the both\_sides input to false and we get an extrusion in one direc
 
 ![](<../../.gitbook/assets/case study aforge exercise 2 - 11.jpg>)
 
-These are basic examples, but the concepts outlined here are transferable to exciting real-world applications. Computer vision can be used for a whole host of processes. To name a few: barcode readers, perspective matching, [projection mapping](https://www.youtube.com/watch?v=XSR0Xady02o), and [augmented reality](http://aforgenet.com/aforge/articles/gratf_ar/). For more advanced topics with AForge related to this exercise, have a read through [this article](http://aforgenet.com/articles/shape_checker/).
+These are basic examples, but the concepts outlined here are transferable to exciting real-world applications. Computer vision can be used for a whole host of processes. To name a few: barcode readers, perspective matching, [projection mapping](https://www.youtube.com/watch?v=XSR0Xady02o), and [augmented reality](https://www.youtube.com/watch?v=Udz95pz0br4). For more advanced topics with AForge related to this exercise, have a read through [this article](http://aforgenet.com/articles/shape_checker/).

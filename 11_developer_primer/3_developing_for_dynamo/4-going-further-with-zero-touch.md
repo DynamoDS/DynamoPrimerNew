@@ -24,7 +24,7 @@ Dynamo supports the definition of default values for input ports on a node. Thes
 
 * Set method parameters to a default value: `inputNumber = 2.0`
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -51,7 +51,7 @@ Returning multiple values is a bit more complex than creating multiple inputs an
 * Add the `[MultiReturn(new[] { "string1", "string2", ... more strings here })]` attribute to the method. The strings refer to keys in the dictionary and will become the output port names.
 * Return a `Dictionary<>` from the function with keys that match the parameter names in the attribute: `return new Dictionary<string, object>`
 
-```
+```c#
 using System.Collections.Generic;
 using Autodesk.DesignScript.Runtime;
 
@@ -66,8 +66,8 @@ namespace ZeroTouchEssentials
 
                 { "add", (a + b) },
                 { "mult", (a * b) }
-            };
-        }
+            
+        };
     }
 }
 ```
@@ -104,7 +104,7 @@ The types of tags are as follows:
 
 The following is an example node with input and output descriptions, as well as a summary that will display in the Library.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -147,7 +147,7 @@ Follow these guidelines to ensure consistency and help save time when writing or
 
 **Overview**
 
-Descriptions should be one to two sentences. If more info is needed, include it under In Depth in the Documentation Browser.
+Descriptions should be one to two sentences. If more info is needed, include it under "In Depth" in the Documentation Browser.
 
 Sentence case (capitalize the first word of a sentence and any proper nouns). No period at the end.
 
@@ -161,9 +161,9 @@ Always prioritize clarity, even if that means deviating from these guidelines.
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <p>Start the description with a third-person verb.</p><ul><li>Example: <em>Determines</em> if one geometry object intersects with another</li></ul>                                                                                                                                                                                                                                                                                                                                                                                         | <p>Don't start with a second-person verb or with any noun.</p><ul><li>Example: <em>Determine</em> if one geometry object intersects with another</li></ul>                                                                                                                                                                                                                                                      |
 | <p>Use "Returns," "Creates," or another descriptive verb instead of "Gets."</p><ul><li>Example: <em>Returns</em> a Nurbs representation of a surface</li></ul>                                                                                                                                                                                                                                                                                                                                                                              | <p>Don't use "Get" or "Gets." It's less specific and has several possible translations.</p><ul><li>Example: <em>Gets</em> a Nurbs representation of the surface</li></ul>                                                                                                                                                                                                                                       |
-| <p>When referring to inputs, use "given" or "input" instead of "specified" or any other terms. Omit "given" or "input" when possible to simplify the description and reduce word count.</p><ul><li>Example: Deletes the <em>given</em> file</li><li>Example: Projects a curve along the <em>given</em> projection direction onto <em>given</em> base geometry</li></ul><p>You may use "specified" when not directly referring to an input.</p><ul><li>Example: Writes text content to a file <em>specified</em> by the given path</li></ul> | <p>When referring to inputs, to ensure consistency, don't use "specified" or any other term except "given" or "input." Don't mix "given" and "input" in the same description unless needed for clarity.</p><ul><li>Example: Deletes the <em>specified</em> file</li><li>Example: Projects an <em>input</em> curve along a <em>given</em> projection direction onto a <em>specified</em> base geometry</li></ul> |
+| <p>When referring to inputs, use "given" or "input" instead of "specified" or any other terms. Omit "given" or "input" when possible to simplify the description and reduce word count.</p><ul><li>Example: Deletes the <em>given</em> file</li><li>Example: Projects a curve along the <em>given</em> projection direction onto <em>given</em> base geometry</li></ul><p>You may use "specified" when not directly referring to an input.</p><ul><li>Example: Writes text content to a file <em>specified</em> by the given path</li></ul> | <p>When referring to inputs, to ensure consistency, don't use "specified" or any other term except "given" or "input". Don't mix "given" and "input" in the same description unless needed for clarity.</p><ul><li>Example: Deletes the <em>specified</em> file</li><li>Example: Projects an <em>input</em> curve along a <em>given</em> projection direction onto a <em>specified</em> base geometry</li></ul> |
 | <p>Use "a" or "an" when first referring to an input. Use "the given" or "the input" instead of "a" or "an" as needed for clarity.</p><ul><li>Example: Sweeps <em>a</em> curve along the path curve</li></ul>                                                                                                                                                                                                                                                                                                                                | <p>Don't use "this" when first referring to an input.</p><ul><li>Example: Sweeps <em>this</em> curve along the path curve</li></ul>                                                                                                                                                                                                                                                                             |
-| <p>When first referring to an output or other noun that's the target of the node operation, use "a" or "an." Only use "the" when pairing it with "input" or "given."</p><ul><li>Example: Copies <em>a</em> file</li><li>Example: Copies <em>the given</em> file</li></ul>                                                                                                                                                                                                                                                                   | <p>When first referring to an output or other noun that's the target of the node operation, don't use "the" on its own.</p><ul><li>Example: Copies <em>the</em> file</li></ul>                                                                                                                                                                                                                                  |
+| <p>When first referring to an output or other noun that's the target of the node operation, use "a" or "an". Only use "the" when pairing it with "input" or "given."</p><ul><li>Example: Copies <em>a</em> file</li><li>Example: Copies <em>the given</em> file</li></ul>                                                                                                                                                                                                                                                                   | <p>When first referring to an output or other noun that's the target of the node operation, don't use "the" on its own.</p><ul><li>Example: Copies <em>the</em> file</li></ul>                                                                                                                                                                                                                                  |
 | <p>Capitalize the first word of a sentence and any proper nouns such as names and traditionally capitalized nouns.</p><ul><li>Example: Returns the intersection of two <em>BoundingBoxes</em></li></ul>                                                                                                                                                                                                                                                                                                                                     | <p>Don't capitalize common geometry objects and concepts unless needed for clarity.</p><ul><li>Example: Scales non-uniformly around the given <em>Plane</em></li></ul>                                                                                                                                                                                                                                          |
 | <p>Capitalize Boolean. Capitalize True and False when referring to the output of Booleans.</p><ul><li>Example: Returns <em>True</em> if the two values are different</li><li>Example: Converts a string to all uppercase or all lowercase characters based on a <em>Boolean</em> parameter</li></ul>                                                                                                                                                                                                                                        | <p>Don't lowercase Boolean. Don't lowercase True and False when referring to the output of Booleans.</p><ul><li>Example: Returns <em>true</em> if the two values are different</li><li>Example: Converts a string to all uppercase characters or all lowercase characters based on a <em>boolean</em> parameter</li></ul>                                                                                       |
 
@@ -182,7 +182,7 @@ Dynamo doesn't have a `new` keyword, so objects will need to be constructed usin
 
 > Note: Dynamo uses the "By" prefix to indicate a static method is a constructor, and while this is optional, using "By" will help your library better fit into the existing Dynamo style.
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -221,7 +221,7 @@ Dynamo libraries can use native Dynamo geometry types as inputs and create new g
 
 > Note: Dynamo geometry objects are used like any other passed object to functions.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -252,7 +252,7 @@ Geometry resources that are not returned out of functions will need to be manual
 
 *   With a using statement:
 
-    ```
+    ```c#
     using (Point p1 = Point.ByCoordinates(0, 0, 0))
     {
       using (Point p2 = Point.ByCoordinates(10, 10, 0))
@@ -267,7 +267,7 @@ Geometry resources that are not returned out of functions will need to be manual
     > See [Dynamo Geometry Stability Improvements](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297) to read more about the new stability features introduced in Dynamo 2.5
 *   With manual Dispose calls:
 
-    ```
+    ```c#
     Point p1 = Point.ByCoordinates(0, 0, 0);
     Point p2 = Point.ByCoordinates(10, 10, 0);
     Line l = Line.ByStartPointEndPoint(p1, p2);
@@ -293,7 +293,7 @@ When publishing a newer version of a library, node names may change. Name change
 
 This example code is telling Dynamo that any node named `GetClosestPoint` is now named `ClosestPointTo`.
 
-```
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -311,7 +311,7 @@ Zero-Touch currently does not support the use of generics. They can be used, but
 
 In the example below, a Zero-Touch node of type `T` will not be imported. If the rest of the library imports into Dynamo there will be missing type exceptions.
 
-```
+```c#
 public class SomeGenericClass<T>
 {
     public SomeGenericClass()
@@ -323,7 +323,7 @@ public class SomeGenericClass<T>
 
 Using a generic type with the type set in this example will import into Dynamo.
 
-```
+```c#
 public class SomeWrapper
 {
     public object wrapped;

@@ -40,11 +40,11 @@ Like code blocks, Python nodes are a scripting interface within a visual program
 
 ![](<../../.gitbook/assets/python node - the python node 01.jpg>)
 
-Double clicking the node opens the python script editor (you can also right click on the node and select _Edit..._). You’ll notice some boilerplate text at the top, which is meant to help you reference the libraries you’ll need. Inputs are stored in the IN array. Values are returned to Dynamo by assigning them to the OUT variable
+Double clicking the node opens the python script editor (you can also right click on the node and select _Edit..._). You’ll notice some boilerplate text at the top, which is meant to help you reference the libraries you’ll need. Inputs are stored in the IN array. Values are returned to Dynamo by assigning them to the OUT variable.
 
 ![](<../../.gitbook/assets/python node - the python node 02.jpg>)
 
-The Autodesk.DesignScript.Geometry library allows you to use dot notation similar to Code Blocks. For more information on Dynamo syntax, refer to [7-2\_design-script-syntax.md](../../coding-in-dynamo/7_code-blocks-and-design-script/7-2_design-script-syntax.md "mention") as well as the [DesignScript Guide](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf) (To download this PDF doc, please right-click on link and choose "Save link as..."). Typing a geometry type such as 'Point.' will bring up a list of methods for creating and querying points.
+The Autodesk.DesignScript.Geometry library allows you to use dot notation similar to Code Blocks. For more information on Dynamo syntax, refer to [DesignScript Syntax](../8-1_code-blocks-and-design-script/2-design-script-syntax.md) as well as the [DesignScript Guide](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf) (To download this PDF doc, please right-click on link and choose "Save link as..."). Typing a geometry type such as 'Point' will bring up a list of methods for creating and querying points.
 
 ![](<../../.gitbook/assets/python node - the python node 03.jpg>)
 
@@ -102,17 +102,17 @@ clr.AddReference('ProtoGeometry')
 from Autodesk.DesignScript.Geometry import *
 
 # The inputs to this node will be stored as a list in the IN variables.
-#The solid module to be arrayed
+# The solid module to be arrayed
 solid = IN[0]
 
-#A Number that determines which rotation pattern to use
+# A Number that determines which rotation pattern to use
 seed = IN[1]
 
-#The number of solids to array in the X and Y axes
+# The number of solids to array in the X and Y axes
 xCount = IN[2]
 yCount = IN[3]
 
-#Create an empty list for the arrayed solids
+# Create an empty list for the arrayed solids
 solids = []
 
 # Place your code below this line
@@ -139,27 +139,27 @@ from Autodesk.DesignScript.Geometry import *
 #The solid module to be arrayed
 solid = IN[0]
 
-#A Number that determines which rotation pattern to use
+# A number that determines which rotation pattern to use
 seed = IN[1]
 
-#The number of solids to array in the X and Y axes
+# The number of solids to array in the X and Y axes
 xCount = IN[2]
 yCount = IN[3]
 
-#Create an empty list for the arrayed solids
+# Create an empty list for the arrayed solids
 solids = []
-#Create an empty list for the edge curves
+# Create an empty list for the edge curves
 crvs = []
 
 # Place your code below this line
-#Loop through edges an append corresponding curve geometry to the list
+# Loop through edges an append corresponding curve geometry to the list
 for edge in solid.Edges:
     crvs.append(edge.CurveGeometry)
 
-#Get the bounding box of the curves
+# Get the bounding box of the curves
 bbox = BoundingBox.ByGeometry(crvs)
 
-#Get the x and y translation distance based on the bounding box
+# Get the x and y translation distance based on the bounding box
 yDist = bbox.MaxPoint.Y-bbox.MinPoint.Y
 xDist = bbox.MaxPoint.X-bbox.MinPoint.X
 
@@ -182,34 +182,34 @@ from Autodesk.DesignScript.Geometry import *
 #The solid module to be arrayed
 solid = IN[0]
 
-#A Number that determines which rotation pattern to use
+# A Number that determines which rotation pattern to use
 seed = IN[1]
 
-#The number of solids to array in the X and Y axes
+# The number of solids to array in the X and Y axes
 xCount = IN[2]
 yCount = IN[3]
 
-#Create an empty list for the arrayed solids
+# Create an empty list for the arrayed solids
 solids = []
-#Create an empty list for the edge curves
+# Create an empty list for the edge curves
 crvs = []
 
 # Place your code below this line
-#Loop through edges an append corresponding curve geometry to the list
+# Loop through edges an append corresponding curve geometry to the list
 for edge in solid.Edges:
     crvs.append(edge.CurveGeometry)
 
-#Get the bounding box of the curves
+# Get the bounding box of the curves
 bbox = BoundingBox.ByGeometry(crvs)
 
-#Get the x and y translation distance based on the bounding box
+# Get the x and y translation distance based on the bounding box
 yDist = bbox.MaxPoint.Y-bbox.MinPoint.Y
 xDist = bbox.MaxPoint.X-bbox.MinPoint.X
 
-#Get the source coordinate system
+# Get the source coordinate system
 fromCoord = solid.ContextCoordinateSystem
 
-#Loop through x and y
+# Loop through x and y
 for i in range(xCount):
     for j in range(yCount):
         #Rotate and translate the coordinate system

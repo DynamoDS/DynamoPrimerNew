@@ -33,11 +33,11 @@ This gives us access to the Revit API and offers custom scripting for any Revit 
 
 The plan behind the Dynamo Project is to widen the scope of platform implementation. As Dynamo adds more programs to the docket, users will gain access to platform-specific APIs from the Python scripting environment. While Revit is the case study for this section, we can anticipate more chapters in the future which offer comprehensive tutorials on scripting in other platforms. Additionally, there are many [IronPython](http://ironpython.net) libraries accessible now which can be imported into Dynamo!
 
-The examples below demonstrate ways to implement Revit-specific operations from Dynamo using Python. For a more detailed review on Python's relationship to Dynamo and Revit, refer to the [Dynamo Wiki page](https://github.com/DynamoDS/Dynamo/wiki/Python-0.6.3-to-0.7.x-Migration). Another useful resource for Python and Revit is the [Revit Python Shell ](https://github.com/architecture-building-systems/revitpythonshell)Project.
+The examples below demonstrate ways to implement Revit-specific operations from Dynamo using Python. For a more detailed review on Python's relationship to Dynamo and Revit, refer to the [Dynamo Wiki page](https://github.com/DynamoDS/Dynamo/wiki/Python-0.6.3-to-0.7.x-Migration). Another useful resource for Python and Revit is the [Revit Python Shell ](https://github.com/architecture-building-systems/revitpythonshell)project.
 
 ## Exercise 1
 
-> Create a new Revit Project.
+> Create a new Revit project.
 >
 > Download the example file by clicking on the link below.
 >
@@ -60,17 +60,17 @@ Take a look at the Python node in Dynamo. You can also find the code from below:
 import sys
 import clr
 
-#Import DocumentManager
+# Import DocumentManager
 clr.AddReference("RevitServices")
 import RevitServices
 from RevitServices.Persistence import DocumentManager
 
-#Place your code below this line
+# Place your code below this line
 doc = DocumentManager.Instance.CurrentDBDocument
 uiapp = DocumentManager.Instance.CurrentUIApplication
 app = uiapp.Application
 
-#Assign your output to the OUT variable
+# Assign your output to the OUT variable
 OUT = [doc,uiapp,app]
 ```
 
@@ -119,18 +119,19 @@ import clr
 # Import RevitNodes
 clr.AddReference("RevitNodes")
 import Revit
+
 #Import Revit elements
 from Revit.Elements import *
 import System
 
-#define inputs
+# Define inputs
 startRefPt = IN[0]
 endRefPt = IN[1]
 
-#define system array to match with required inputs
+# Define system array to match with required inputs
 refPtArray = System.Array[ReferencePoint]([startRefPt, endRefPt])
 
-#create curve by reference points in Revit
+# Create curve by reference points in Revit
 OUT = CurveByPoints.ByReferencePoints(refPtArray)
 ```
 
@@ -157,46 +158,52 @@ In this file we have a set of nodes plugging into five inputs of a Python node.
 ![](<../../.gitbook/assets/python & revit - exercise 03 - 02.jpg>)
 
 > 1. **Select Model Element Nodes:** Hit the select button for each and select a corresponding curve in Revit.
-> 2. **Code Block:** using the syntax `0..1..#x;`_,_ connect an integer slider ranging from 0 to 20 into the _x_ input. This designates the number of beams to draw between the two curves.
+> 2. **Code Block:** Using the syntax `0..1..#x;`_,_ connect an integer slider ranging from 0 to 20 into the _x_ input. This designates the number of beams to draw between the two curves.
 > 3. **Structural Framing Types:** We'll choose the default W12x26 beam here from the dropdown menu.
-> 4. **Levels:** select "Level 1".
+> 4. **Levels:** Select "Level 1".
 
-This code in Python is a little more dense, but the comments within the code describe what's happening in the process
+This code in Python is a little more dense, but the comments within the code describe what's happening in the process.
 
 ![](<../../.gitbook/assets/python & revit - exercise 03 - 03.jpg>)
 
 ```py
 import clr
-#import Dynamo Geometry
+
+# Import Dynamo Geometry
 clr.AddReference('ProtoGeometry')
 from Autodesk.DesignScript.Geometry import *
+
 # Import RevitNodes
 clr.AddReference("RevitNodes")
 import Revit
+
 # Import Revit elements
 from Revit.Elements import *
 import System
 
-#Query Revit elements and convert them to Dynamo Curves
+# Query Revit elements and convert them to Dynamo Curves
 crvA=IN[0].Curves[0]
 crvB=IN[1].Curves[0]
 
-#Define input Parameters
+# Define input Parameters
 framingType=IN[3]
 designLevel=IN[4]
 
-#Define "out" as a list
+# Define "out" as a list
 OUT=[]
 
 for val in IN[2]:
-	#Define Dynamo Points on each curve
+	# Define Dynamo Points on each curve
 	ptA=Curve.PointAtParameter(crvA,val)
 	ptB=Curve.PointAtParameter(crvB,val)
-	#Create Dynamo line
+	
+	# Create Dynamo line
 	beamCrv=Line.ByStartPointEndPoint(ptA,ptB)
-	#create Revit Element from Dynamo Curves
+	
+	# Create Revit Element from Dynamo Curves
 	beam = StructuralFraming.BeamByCurve(beamCrv,designLevel,framingType)
-	#convert Revit Element into list of Dynamo Surfaces
+	
+	# Convert Revit Element into list of Dynamo Surfaces
 	OUT.append(beam.Faces)
 ```
 

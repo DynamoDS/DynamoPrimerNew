@@ -21,8 +21,8 @@ The DynamoSamples repository: [https://github.com/DynamoDS/DynamoSamples](https:
 A view extension has three essential parts:
 
 * An assembly containing a class that implements `IViewExtension` as well as a class that creates a view model
-* An `.xml` file that tells Dynamo where it should look for this assembly at runtime, and the type of extension
-* An `.xaml` file that binds data to the graphic display and determines the window's appearance
+* A `.xml` file that tells Dynamo where it should look for this assembly at runtime, and the type of extension
+* A `.xaml` file that binds data to the graphic display and determines the window's appearance
 
 **1. Create the project structure**
 
@@ -55,7 +55,7 @@ To use `IViewExtension`, we will need the WpfUILibrary NuGet package. Installing
 
 From the `IViewExtension` class we will determine what happens when Dynamo starts up, when the extension is loaded, and when Dynamo shuts down. In the `SampleViewExtension.cs` class file, add the following code:
 
-```
+```c#
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -78,9 +78,8 @@ namespace SampleViewExtension
 
         public void Loaded(ViewLoadedParams p)
         {
-            // Save a reference to your loaded parameters.
-            // You'll need these later when you want to use
-            // the supplied workspaces
+            // Save a reference to your loaded parameters
+            // You'll need these later when you want to use the supplied workspaces
 
             sampleMenuItem = new MenuItem {Header = "Show View Extension Sample Window"};
             sampleMenuItem.Click += (sender, args) =>
@@ -146,7 +145,7 @@ The `SampleViewExtension` class creates a clickable menu item to open the window
 
 Now that we have established some of the window's basic parameters, we will add the logic for responding to various Dynamo related events and instruct the UI to update based on these events. Copy the following code into the `SampleWindowViewModel.cs` class file:
 
-```
+```c#
 using System;
 using Dynamo.Core;
 using Dynamo.Extensions;
@@ -204,9 +203,9 @@ namespace SampleViewExtension
 }
 ```
 
-This implementation of the view model class listens to the `CurrentWorkspaceModel` and triggers an event when a node is added or removed from the workspace. This raises a property change that notifies the UI or bound elements that the data has changed and needs to be updated. The `ActiveNodeTypes` getter is called which internally calls an additional helper function `getNodeTypes()`. This function iterates through all the active nodes on the canvas, populate a string containing the names of these nodes, and returns this string to our binding in the .xaml file to be displayed in our pop-out window.
+This implementation of the view model class listens to the `CurrentWorkspaceModel` and triggers an event when a node is added or removed from the workspace. This raises a property change that notifies the UI or bound elements that the data has changed and needs to be updated. The `ActiveNodeTypes` getter is called which internally calls an additional helper function `getNodeTypes()`. This function iterates through all the active nodes on the canvas, populates a string containing the names of these nodes, and returns this string to our binding in the .xaml file to be displayed in our pop-out window.
 
-With the core logic of the extension defined, we will now specify the appearance details of the window with an `.xaml` file. All we need is a simple window that will display the string via the `ActiveNodeTypes` property binding in the`TextBlock` `Text`.
+With the core logic of the extension defined, we will now specify the appearance details of the window with a `.xaml` file. All we need is a simple window that will display the string via the `ActiveNodeTypes` property binding in the`TextBlock` `Text`.
 
 ![Adding a window](../../.gitbook/assets/vs-window.jpg)
 
@@ -217,7 +216,7 @@ With the core logic of the extension defined, we will now specify the appearance
 
 In the window `.xaml` code, we will need to bind `SelectedNodesText` to a text block. Add the following code to `SampleWindow.xaml`:
 
-```
+```xml
 <Window x:Class="SampleViewExtension.SampleWindow"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -237,9 +236,9 @@ In the window `.xaml` code, we will need to bind `SelectedNodesText` to a text b
 
 * `Text="{Binding ActiveNodeTypes}"` binds to the property value of `ActiveNodeTypes` in `SampleWindowViewModel.cs` to the `TextBlock` `Text` value in the window.
 
-We will now initialize the sample window in the .xaml C# backing file `SampleWindow.xaml.cs`. Add the following code to `SampleWindow.xaml`:
+We will now initialize the sample window in the `.xaml` C# backing file `SampleWindow.xaml.cs`. Add the following code to `SampleWindow.xaml`:
 
-```
+```c#
 using System.Windows;
 
 namespace SampleViewExtension
@@ -268,9 +267,9 @@ The view extension is now ready to be built and added to Dynamo. Dynamo requires
 
 * The file name follows the Dynamo standard for referencing an extension assembly like so: `"extensionName"_ViewExtensionDefinition.xml`
 
-In the `xml` file, add the following code to tell Dynamo where to look for the extension assembly:
+In the `.xml` file, add the following code to tell Dynamo where to look for the extension assembly:
 
-```
+```xml
 <ViewExtensionDefinition>
   <AssemblyPath>C:\Users\username\Documents\Visual Studio 2015\Projects\SampleViewExtension\SampleViewExtension\bin\Debug\SampleViewExtension.dll</AssemblyPath>
   <TypeName>SampleViewExtension.SampleViewExtension</TypeName>
@@ -279,7 +278,7 @@ In the `xml` file, add the following code to tell Dynamo where to look for the e
 
 * In this example, we built the assembly to the default Visual Studio project folder. Replace the `<AssemblyPath>...</AssemblyPath>` target with the location of the assembly.
 
-The last step is to copy the `SampleViewExtension_ViewExtensionDefinition.xml` file into Dynamo's view extensions folder located in the Dynamo Core installation directory `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions`. It is important to note that there are separate folders for `extensions` and `viewExtensions`. Placing the `xml` file in the incorrect folder may cause failure to properly load at runtime.
+The last step is to copy the `SampleViewExtension_ViewExtensionDefinition.xml` file into Dynamo's view extensions folder located in the Dynamo Core installation directory `C:\Program Files\Dynamo\Dynamo Core\1.3\viewExtensions`. It is important to note that there are separate folders for `extensions` and `viewExtensions`. Placing the `.xml` file in the incorrect folder may cause failure to properly load at runtime.
 
 ![XML file copied to Extensions folder](../../.gitbook/assets/fe-viewextension-xml.jpg)
 

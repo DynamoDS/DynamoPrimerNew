@@ -4,33 +4,33 @@ The language changes section provides an overview of the updates and modificatio
 
 ## Dynamo 2.0 Language Changes
 
-1. Change list@level syntax from "@-1" to "@L1"
+1. Change list@level syntax from "@-1" to "@L1".
 
-* New syntax for list@level, to use list@L1 instead of list@-1
-* Motivation: Aligning Code Syntax with preview/UI, user testing shows this new Syntax is more comprehensible
+* New syntax for list@level, to use list@L1 instead of list@-1.
+* Motivation: Aligning Code Syntax with preview/UI, user testing shows this new Syntax is more comprehensible.
 
-2. Implement Int and Double types in TS to align with Dynamo types
-3. Don't allow overloaded functions where arguments only differ by cardinality
+2. Implement Int and Double types in TS to align with Dynamo types.
+3. Don't allow overloaded functions where arguments only differ by cardinality.
 
 * Old graphs that use overloads that have been removed should default to the higher ranked overloads.
-* Motivation: Remove ambiguity about which specific function is being executed
+* Motivation: Remove ambiguity about which specific function is being executed.
 
-4. Disabling array promotion with replication guides
-5. Make variables in imperative blocks local to imperative block scope
+4. Disabling array promotion with replication guides.
+5. Make variables in imperative blocks local to imperative block scope.
 
 * Variable values defined inside of imperative code blocks will not be altered by changes inside of Imperative blocks that reference them.
 
-6. Make variables immutable to disable associative update in code block nodes
-7. Compile all UI nodes to static methods
-8. Support return statements without assignment
+6. Make variables immutable to disable associative update in code block nodes.
+7. Compile all UI nodes to static methods.
+8. Support return statements without assignment.
 
 * “=” not needed in either function definitions or imperative code.
 
-9. Migration of old method names in CBN’s
+9. Migration of old method names in CBN’s.
 
-* Many nodes have been renamed to increase legibility and placement in Library browser User Interface
+* Many nodes have been renamed to increase legibility and placement in Library browser User Interface.
 
-10. List as dictionary cleanup
+10. List as dictionary cleanup.
 
 ***
 
@@ -60,11 +60,11 @@ The following is the list of changes in 2.0 explained:
 
 * Simplified List@Level syntax
 * Overloaded methods with parameters that only differ by rank are illegal
-* Compile all UI nodes as static methods
+* Compiled all UI nodes as static methods
 * Disabled list promotion when used with replication guides/lacing
-* Variables in Associative blocks are immutable to prevent Associative update
-* Variables in Imperative blocks are local to imperative scope
-* Separation of Lists and Dictionaries
+* Variables in Associative blocks made immutable to prevent Associative update
+* Variables in Imperative blocks made local to imperative scope
+* Separated Lists and Dictionaries
 
 ## 1. Simplified list@level syntax
 
@@ -95,7 +95,7 @@ In the geometry library for 2.0, the first overload in the `BoundingBox.ByGeomet
 BoundingBox.ByGeometry(geometry<1>);
 ```
 
-We can see in this example that the higher ranked node can be used in both a replicated as well a non-replicated call and therefore is always preferred to a lower ranked overload. As a rule of thumb therefore, **node authors are always advised to drop lower ranked overloads in favor of higher ranked methods** so that the DesignScript compiler always calls the higher ranked method as the first and only one that it finds.
+We can see in this example that the higher ranked node can be used in both a replicated as well as a  non-replicated call and therefore is always preferred to a lower ranked overload. As a rule of thumb therefore, **node authors are always advised to drop lower ranked overloads in favor of higher ranked methods** so that the DesignScript compiler always calls the higher ranked method as the first and only one that it finds.
 
 ### Examples:
 
@@ -228,7 +228,7 @@ resulting in a 3D list of points with a redundant outermost list.
 
 This side effect of compiling UI nodes to static methods could potentially cause regressions in such existing use cases. This issue has been addressed by disabling the promotion of single value inputs to a list when used with replication guides/lacing (see next item).
 
-**4. Disabled list promotion with replication guides/lacing**
+**3. Disabled list promotion with replication guides/lacing**
 
 In 1.x there were two cases in which single values were promoted to lists:
 

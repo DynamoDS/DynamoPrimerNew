@@ -48,9 +48,9 @@
  * Writing another program to control and automate the running of Dynamo graphs and do cool things with the results of those computations
 
 #### What
-The Command Line Interface (DynamoCLI) is a supplement to DynamoSandbox. it is a dos/terminal command line utility designed to provide the convenience of command line arguments to run Dynamo. In its first implementation, it does not run standalone, it must be run from the folder where the Dynamo binaries reside, as it depends on the same core DLLs as the Sandbox. It can not interoperate with other builds of Dynamo.
+The Command Line Interface (DynamoCLI) is a supplement to DynamoSandbox. It is a DOS/terminal command line utility designed to provide the convenience of command line arguments to run Dynamo. In its first implementation, it does not run standalone; it must be run from the folder where the Dynamo binaries reside, as it depends on the same core DLLs as the Sandbox. It cannot interoperate with other builds of Dynamo.
 
-There are four ways to run CLI: from a Dos prompt, from Dos batch files, and as a Windows desktop shortcut whose path is modified to include the specified command line flags. The Dos file spec can be fully qualified or relative, and mapped drives and URL syntax is supported as well. It can also be built with Mono and run on Linux or Mac from the terminal.
+There are four ways to run CLI: from a DOS prompt, from DOS batch files, and as a Windows desktop shortcut whose path is modified to include the specified command line flags. The DOS file spec can be fully qualified or relative, and mapped drives and URL syntax is supported as well. It can also be built with Mono and run on Linux or Mac from the terminal.
 
 Dynamo packages are supported by the utility, however, you can not load custom nodes (dyf) only standalone graphs (dyn).
 
@@ -69,7 +69,7 @@ This command will tell Dynamo to open the specified file at *"C:\someReallyCoolD
 * The preferred method of interacting with DynamoCLI is through a command prompt interface.
 * At this time you will need to run DynamoCLI from its install location inside the [Dynamo Version] folder. The CLI needs access to the same .dlls as Dynamo so it should not be moved.
 * You should be able to execute graphs that are currently open in Dynamo, but this may cause unintended side effects.
-* All file paths are fully dos compliant so relative and fully qualified paths should work, but be sure to enclose your paths in quotes *"C:path\to\file.dyn"* 
+* All file paths are fully DOS compliant so relative and fully qualified paths should work, but be sure to enclose your paths in quotes *"C:path\to\file.dyn"* 
 * DynamoCLI is new functionality and currently in flux: the **CLI loads only a subset** of standard Dynamo libraries at this time, note this if a graph does not execute correctly. These libraries are specified [here](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoApplications/PathResolvers.cs#L28) 
 * Currently no std output is provided if no errors are encountered, the CLI will simply exit after the run completes.
  
@@ -123,15 +123,15 @@ The JSON geometry file would have the form:
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -h`
 
-the -i flag can be used multiple times to import multiple assemblies which the graph you are trying to open requires to run.
+The -i flag can be used multiple times to import multiple assemblies which the graph you are trying to open requires to run.
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -i"a.dll" -i"aSecond.dll"`
 
-the -l flag can be used to run Dynamo under a different locale setting. But usually, locale setting does not affect graph results
+The -l flag can be used to run Dynamo under a different locale setting. But usually, locale setting does not affect graph results
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -l "de-DE"`
 
-the --GeometryPath flag can be used to point DynamoSandbox or CLI to a specific set of ASM binaries - use it like
+The --GeometryPath flag can be used to point DynamoSandbox or CLI to a specific set of ASM binaries - use it like
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"`
 
@@ -139,11 +139,11 @@ or
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"`
 
-the -k flag can be used to leave the Dynamo process running until a loaded extension shuts it down.
+The -k flag can be used to leave the Dynamo process running until a loaded extension shuts it down.
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -k`
 
-the --HostName flag can be used to identify Dynamo variation associated with the host.
+The --HostName flag can be used to identify Dynamo variation associated with the host.
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe --HostName "DynamoFormIt"`
 
@@ -151,10 +151,10 @@ or
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --HostName "DynamoFormIt"`
 
-the -s flag can be used to identify Dynamo host analytics session id
+The -s flag can be used to identify Dynamo host analytics session id
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -s [HostSessionId]`
 
-the -p flag can be used to identify Dynamo host analytics parent id
+The -p flag can be used to identify Dynamo host analytics parent id
 
 `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -p "RVT&2022&MUI64&22.0.2.392"`

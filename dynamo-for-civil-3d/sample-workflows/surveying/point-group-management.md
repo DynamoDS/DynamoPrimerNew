@@ -88,7 +88,7 @@ Modify the point grouping to be based on **full description** instead of raw des
 {% endhint %}
 
 {% hint style="info" %}
-Group the points by some other **pre-defined categories** that you choose (e.g., "Ground shots," "Monuments," etc.)
+Group the points by some other **pre-defined categories** that you choose (e.g. "Ground shots," "Monuments," etc.)
 {% endhint %}
 
 {% hint style="info" %}

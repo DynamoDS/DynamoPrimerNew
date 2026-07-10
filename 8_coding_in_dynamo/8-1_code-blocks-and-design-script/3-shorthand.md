@@ -11,7 +11,7 @@ There are a few basic shorthand methods in the code block which, simply put, mak
 | Sequences              | ![](<../../.gitbook/assets/03 node- sequence.jpg>)       | ![](<../../.gitbook/assets/03 codeblock- sequence.jpg>)       |
 | Ranges                 | ![](<../../.gitbook/assets/04 node- range.jpg>)          | ![](<../../.gitbook/assets/04 codeblock - range.jpg>)         |
 | Get Item at Index      | ![](<../../.gitbook/assets/05 node - list get item.jpg>) | ![](<../../.gitbook/assets/05 codeblock - list get item.jpg>) |
-| Create List            | ![](<../../.gitbook/assets/06 node - list create.jpg>)   | ![](../../.gitbook/assets/image.png)                          |
+| Create List            | ![](<../../.gitbook/assets/06 node - list create.jpg>)   | ![](<../../.gitbook/assets/06 codeblock - list create.jpg>)                   |
 | Concatenate Strings    | ![](<../../.gitbook/assets/07 node - string concat.jpg>) | ![](<../../.gitbook/assets/07 codeblock - string concat.jpg>) |
 | Conditional Statements | ![](<../../.gitbook/assets/08 node - conditional.jpg>)   | ![](<../../.gitbook/assets/08 codeblock - conditional.jpg>)   |
 
@@ -61,7 +61,7 @@ In addition to making lists with shorthand, we can also create lists on the fly.
 >
 > 2\. Create lists with variables and query using the range shorthand notation.
 
-And managing with nested lists is a similar process. Be aware of the list order and recall using multiple sets of square brackets:
+Managing with nested lists is a similar process. Be aware of the list order and recall using multiple sets of square brackets:
 
 ![](<../../.gitbook/assets/shorthand - list & get from list 02.jpg>)
 
@@ -79,7 +79,7 @@ And managing with nested lists is a similar process. Be aware of the list order 
 
 {% file src="../../.gitbook/assets/Obsolete-Nodes_Sine-Surface.dyn" %}
 
-In this exercise, we will flex our new shorthand skills to create a funky-cool eggshell surface defined by ranges and formulas. During this exercise, notice how we use code block and existing Dynamo nodes in tandem: we use the code block for the heavy data lifting while the Dynamo nodes are visually laid out for legibility of the definition.
+In this exercise, we will flex our new shorthand skills to create a funky-cool eggshell surface defined by ranges and formulas. During this exercise, notice how we use code blocks and existing Dynamo nodes in tandem: we use the code blocks for the heavy data lifting while the Dynamo nodes are visually laid out for legibility of the definition.
 
 Start by creating a surface by connecting the nodes above. Instead of using a number node to define width and length, double click on the canvas and type `100;` into a code block
 

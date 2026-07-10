@@ -1,6 +1,6 @@
 # Math
 
-If the simplest form of data is numbers, the easiest way to relate those numbers is through Mathematics. From simple operators like divide to trigonometric functions, to more complex formulas, Math is a great way to start exploring numeric relationships and patterns.
+If the simplest form of data is numbers, the easiest way to relate those numbers is through Math. From simple operators like divide, to trigonometric functions, to more complex formulas, Math is a great way to start exploring numeric relationships and patterns.
 
 ### Arithmetic Operators
 
@@ -87,7 +87,7 @@ Bonus points if you make it 3D!
 
 ### Part IV: From Nautilus to Phyllotaxis
 
-Pattern Now that we've made a circular Nautilus shell, let's jump into parametric grids. We're going to use a basic rotate on the Fibonacci Spiral to create a Fibonacci grid, and the result is modeled after the [growth of sunflower seeds](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/).
+Now that we've made a circular Nautilus shell, let's jump into parametric grids. We're going to use a basic rotate on the Fibonacci Spiral to create a Fibonacci grid, and the result is modeled after the [growth of sunflower seeds](https://en.wikipedia.org/wiki/Fibonacci_sequence).
 
 As a jumping-off point, let's start with the same step from the previous exercise: creating a spiral array of points with the **Point.ByCoordinates** Node.
 

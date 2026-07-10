@@ -20,7 +20,7 @@ Before jumping into dynamo let's conceptually design our vase.
 
 Let's say we are going to design a clay vase that takes into account manufacturing practices used by ceramists. Ceramists normally use a pottery wheel to fabricate cylindrical vases. Then, by applying pressure on various heights of the vase they can alter the shape of the vase and create varied designs.
 
-We would use a similar methodology to define our vase. We will create 4 circles at different heights and radii and we will then create a surface by lofting those circles.
+We will use a similar methodology to define our vase. We will create 4 circles at different heights and radii and we will then create a surface by lofting those circles.
 
 ![](../../.gitbook/assets/vase2.png)
 
@@ -58,7 +58,7 @@ Let's place it on the left of our **Circle.ByCenterPointRadius** node and connec
 
 ![](../../.gitbook/assets/vase12.png)
 
-Let's also change the Number Slider name to "Top Radius" by double-clicking on the node's name.
+Let's also change the **Number Slider** name to "Top Radius" by double-clicking on the node's name.
 
 ![](../../.gitbook/assets/vase14.png)
 
@@ -68,7 +68,7 @@ Let's continue adding some nodes and connections to our logic to define our vase
 
 ### Creating Circles of Different Radii
 
-Let's copy these nodes 4 times so that these circles define our surface, change the Number Slider's names as shown below.
+Let's copy these nodes 4 times so that these circles define our surface, change the **Number Slider's** names as shown below.
 
 ![](<../../.gitbook/assets/vase4 (1).png>)
 
@@ -90,7 +90,7 @@ We then use a **Geometry.Translate** node to place circles at the desired height
 
 In order to create a surface using the **Surface.ByLoft** node we need to combine all of our translated circles into a list. We use the **List.Create** to combine all of our circles into a single list, and then finally output this list to the **Surface.ByLoft** node to view results.
 
-Let's also turn off the preview in other nodes to only display the Surface.ByLoft display.
+Let's also turn off the preview in other nodes to only display the **Surface.ByLoft** display.
 
 ![](../../.gitbook/assets/vase6.png)
 

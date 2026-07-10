@@ -42,7 +42,7 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
 ### **Condense with Node to Code**
 
 * You can **reduce the complexity of a graph by using Node to Code** which will take a collection of simple nodes and write their corresponding DesignScript in a single Code Block
-* Node to Code can\*\* condense code without eliminating the program’s clarity\*\*
+* Node to Code can **condense code without eliminating the program’s clarity**
 * The following are the **pros** of using Node to Code:
   * Easily condenses code into one component that is still editable
   * Can simplify a significant portion of the graph
@@ -63,11 +63,11 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
 ### **Access data flexibly with List@Level**
 
 * Using List@Level can help you **reduce the complexity of your graph by replacing List.Map and List.Combine nodes** which might occupy a considerable amount of canvas space
-* List@Level provides you with a\*\* quicker way than List.Map/List.Combine to construct node logic\*\* by allowing you to access data at any level in a list right from the input port of a node
+* List@Level provides you with a\*\* quicker way than **List.Map/List.Combine** to construct node logic\*\* by allowing you to access data at any level in a list right from the input port of a node
 
 ![](../.gitbook/assets/graphstrategy4.png)
 
-> We can verify how many True values BoundingBox.Contains is returning and in which lists by activating List@Level for CountTrue's "list" input. List@Level allows the user to determine at which level the input will take data from. Using List@Level is flexible, efficient, and highly encouraged over other methods involving List.Map and List.Combine.
+> We can verify how many True values _BoundingBox.Contains_ is returning and in which lists by activating List@Level for CountTrue's "list" input. List@Level allows the user to determine at which level the input will take data from. Using List@Level is flexible, efficient, and highly encouraged over other methods involving _List.Map_ and _List.Combine_.
 >
 > 1. Counting true values at List Level 2
 > 2. Counting true values at List Level 3
@@ -122,7 +122,7 @@ While building your visual-script, it is important to verify that what is being 
 
 ### **Monitor data with Watch and Preview Bubbles**
 
-* Use Watch or Preview Bubbles as you build the program to\*\* verify that key outputs are returning what you expected\*\*
+* Use Watch or Preview Bubbles as you build the program to **verify that key outputs are returning what you expected**
 
 ![](../.gitbook/assets/graphstrategy8.png)
 

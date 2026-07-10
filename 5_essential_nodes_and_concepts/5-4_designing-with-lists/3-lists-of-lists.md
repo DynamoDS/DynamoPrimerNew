@@ -44,7 +44,7 @@ The fundamental concept to learn from this section: **Dynamo treats lists as obj
 
 ![top-down](<../../.gitbook/assets/lists of lists - top down hierachy.jpg>)
 
-> 1. With **Code Block**, we've defined two ranges: `0..2; 0..3;`
+> 1. With **Code Block**, we've defined two ranges: `0..2; 0..3;`.
 > 2. These ranges are connected to a **Point.ByCoordinates** node with lacing set to _"Cross Product"_. This creates a grid of points, and also returns a list of lists as an output.
 > 3. Notice that the **Watch** node gives 3 lists with 4 items in each list.
 > 4. When using **List.GetItemAtIndex**, with an index of 0, Dynamo selects the first list and all of its contents. Other programs may select the first item of every list in the data structure, but Dynamo employs a top-down hierarchy when dealing with data.
@@ -104,9 +104,7 @@ The **List.Count** node counts all of the items in a list. We'll use this to dem
 
 ![](<../../.gitbook/assets/lists of lists - map 01.jpg>)
 
-> 1.  Insert two lines of code into the **Code Block**: `-50..50..#Nx; -50..50..#Ny;`
->
->     After typing in this code, the code block will create two inputs for Nx and Ny.
+> 1.  Insert two lines of code into the **Code Block**: `-50..50..#Nx; -50..50..#Ny;`. After typing in this code, the code block will create two inputs for Nx and Ny.
 > 2. With two _integer sliders_, define the _Nx_ and _Ny_ values by connecting them to the **Code Block**.
 > 3. Connect each line of the code block into the respective _X_ and _Y_ inputs of a **Point.ByCoordinates** node. Right click the node, select "Lacing", and choose _"Cross Product"_. This creates a grid of points. Because we defined the range from -50 to 50, we are spanning the default Dynamo grid.
 > 4. A _**Watch**_ node reveals the points created. Notice the data structure. We've created a list of lists. Each list represents a row of points of the grid.
@@ -129,7 +127,7 @@ Notice that the List.Count node gives a value of 5. This is equal to the "Nx" va
 
 ### **List.Combine**
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](6-3_lists-of-lists.md#listlevel) _below._
+_Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](#ListLevel) _below._
 
 In this exercise, we will use **List.Combine** to demonstrate how it can be used to apply a function across separate lists of objects.
 
@@ -162,7 +160,7 @@ Refer to exercise in n-Dimensional Lists to see another example of using List.Co
 
 {% file src="../../.gitbook/assets/Listatlevel.dyn" %}
 
-Preferred to **List.Map**, the **List@Level** feature allows you to directly select which level of list you want to work with right at the input port of the node. This feature can be applied to any incoming input of a node and will allow you access the levels of your lists quicker and easier than other methods. Just tell the node what level of the list you want to use as the input and let the node do the rest.
+Preferred to **List.Map**, the **List@Level** feature allows you to directly select which level of list you want to work with right at the input port of the node. This feature can be applied to any incoming input of a node and will allow you access to the levels of your lists quicker and easier than other methods. Just tell the node what level of the list you want to use as the input and let the node do the rest.
 
 In this exercise, we will use the **List@Level** feature to isolate a specific level of data.
 
@@ -209,7 +207,7 @@ Transpose is a fundamental function when dealing with lists of lists. Just as in
 
 ![Transpose](../../.gitbook/assets/transpose1.jpg)
 
-Let's delete the **List.Count** nodes from the previous exercise and move on to some geometry to see how the data structured.
+Let's delete the **List.Count** nodes from the previous exercise and move on to some geometry to see how the data is structured.
 
 ![](<../../.gitbook/assets/lists of lists - transpose 01.jpg>)
 
@@ -224,13 +222,13 @@ Let's delete the **List.Count** nodes from the previous exercise and move on to 
 
 ## Code Block for List Creation
 
-Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create list than the **List.Create** node. **Code block** is discussed in more detail in [Code Blocks and DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/). Reference the image below to note how a list with multiple expressions can be defined with code block.
+Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create a list than the **List.Create** node. **Code block** is discussed in more detail in [Code Blocks and DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/). Reference the image below to note how a list with multiple expressions can be defined with code block.
 
 ![](<../../.gitbook/assets/lists of lists - codeblock for list creation 01.jpg>)
 
 #### Code Block Query
 
-**Code block** shorthand uses "\[]" as a quick and easy way to select specific items that you want from a complex data structure. **Code blocks** are discussed in more detail in [Code Block and DesignScript chapter](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/). Reference the image below to note how a list with multiple data types can be queried with code block.
+**Code block** shorthand uses "\[]" as a quick and easy way to select specific items that you want from a complex data structure. **Code blocks** are discussed in more detail in [Code Block and DesignScript chapter](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/). Reference the image below to note how a list with multiple data types can be queried with **Code blocks**.
 
 ![](<../../.gitbook/assets/lists of lists - codeblock for list creation 02.jpg>)
 
@@ -277,9 +275,9 @@ Now that we've modified the list, we need to insert this list back into the orig
 
 ![](<../../.gitbook/assets/list of lists - exercise cb insert & query 05.jpg>)
 
-> 1. Following the same logic, use **List.ReplaceItemAtIndex** to replace the middle list with the our modified list.
+> 1. Following the same logic, use **List.ReplaceItemAtIndex** to replace the middle list with our modified list.
 > 2. Notice that the **Code Block**_s_ defining the index for these two nodes are 1 and 2, which matches the original query from the **Code Block** (_points\[1]\[2]_).
-> 3. By selecting the list at _index 1_, we see the data structure highlighted in the Dynamo preview. We successfully merged the moved point into the original data structure.
+> 3. By selecting the list at _index 1_, we see the data structure highlighted in the Dynamo preview. We have successfully merged the moved point into the original data structure.
 
 There are many ways to make a surface from this set of points. In this case, we're going to create a surface by lofting curves together.
 

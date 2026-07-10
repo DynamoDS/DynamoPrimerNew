@@ -43,13 +43,13 @@ Again, the Nodes are working identically. If the _boolean_ is changed to _false_
 >
 > b. **Numbers -** add three number nodes to the canvas. The value for each number node should be: _0.0_ for _start_, _10.0_ for _end_, and _1.0_ for _step_.
 >
-> c. **Output** - our output is a list of 11 numbers ranging from 0-10.
+> c. **Output -** our output is a list of 11 numbers ranging from 0-10.
 >
 > d. **Modulo (%)-** **Number Range** into _x_ and _2.0_ into _y_. This calculates the remainder for each number in the list divided by 2. The output from this list gives us a list of values alternating between 0 and 1.
 >
 > e. **Equality Test (==) -** add an equality test to the canvas. Plug _modulo_ output into the _x_ input and _0.0_ into the _y_ input.
 >
-> f. **Watch -** The output of the equality test is a list of values alternating between true and false. These are the values used to separate the items in the list. _0_ (or _true_) represents even numbers and (_1_, or _false_) represents odd numbers.
+> f. **Watch -** the output of the equality test is a list of values alternating between true and false. These are the values used to separate the items in the list. _0_ (or _true_) represents even numbers and (_1_, or _false_) represents odd numbers.
 >
 > g. **List.FilterByBoolMask -** this Node will filter the values into two different lists based on the input boolean. Plug the original _number range_ into the _list_ input and the _equality test_ output into the _mask_ input. The _in_ output represents true values while the _out_ output represents false values.
 >
@@ -97,7 +97,7 @@ This step creates points along the curve. We remapped the numbers to 0 to 1 beca
 
 ![](<../../.gitbook/assets/logic - exercise part II-06.jpg>)
 
-> a. **List.FilterByBoolMask** - Plug **Curve.PointAtParameter** from the previous step into the _list_ input.
+> a. **List.FilterByBoolMask -** plug **Curve.PointAtParameter** from the previous step into the _list_ input.
 >
 > b. **Watch -** a watch node for _in_ and a watch node for _out_ shows that we have two lists representing even indices and odd indices. These points are ordered in the same way on the curve, which we demonstrate in the next step.
 

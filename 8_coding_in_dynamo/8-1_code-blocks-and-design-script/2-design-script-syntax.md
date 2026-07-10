@@ -21,7 +21,7 @@ I don't know about you, but judging by the outputs in the table above, this look
 
 With the apple analogy in mind, let's look at _Point.ByCoordinates_ and show how we can create a point using the code block.
 
-The _code block_ syntax `Point.ByCoordinates(0,10);` gives the same result as a _Point.ByCoordinates_ node in Dynamo, except we're able to create a point using one node. This is more efficient than the connecting a separate node into _"X"_ and _"Y"_.
+The _code block_ syntax `Point.ByCoordinates(0,10);` gives the same result as a _Point.ByCoordinates_ node in Dynamo, except we're able to create a point using one node. This is more efficient than connecting a separate node into _"X"_ and _"Y"_.
 
 ![](<../../.gitbook/assets/codeblock dot notation.jpg>)
 
@@ -54,7 +54,7 @@ An action is something you do to an object of that type. Dynamo uses _dot notati
 ![](<../../.gitbook/assets/DesignScript - action.jpg>)
 
 > 1. The **Point.Add** node is an action-type node, so the syntax works a little differently.
-> 2. The inputs are (1) the _point_, and (2) the _vector_ to add to it. In a **Code Block**, we've named the point (the thing) _“pt”_. To add a vector named \*“vec” \*to _“pt”_, we would write _pt.Add(vec)_, or: thing, dot, action. The Add action only has one input, or all the inputs from the **Point.Add** node minus the first one. The first input for the **Point.Add** node is the point itself.
+> 2. The inputs are (1) the _point_, and (2) the _vector_ to add to it. In a **Code Block**, we've named the point (the thing) _“pt”_. To add a vector named “vec” to _“pt”_, we would write _pt.Add(vec)_, or: thing, dot, action. The Add action only has one input, or all the inputs from the **Point.Add** node minus the first one. The first input for the **Point.Add** node is the point itself.
 
 #### Query
 
@@ -115,7 +115,7 @@ Begin by recreating the definition in the image above (or by opening the sample 
 
 ![](<../../.gitbook/assets/DesignScript - exercise - 05.jpg>)
 
-> 1. Now for the tricky part: We want to move the grid of points up based on their distance to the reference point. First, let's call this new set of points _transPts_. And since a translation is an action on an existing element, rather than using `Geometry.Translate...` , we use `gridPts.Translate`
+> 1. Now for the tricky part: We want to move the grid of points up based on their distance to the reference point. First, let's call this new set of points _transPts_. Since a translation is an action on an existing element, rather than using `Geometry.Translate...` , we use `gridPts.Translate`
 > 2. Reading from the actual node on the canvas, we see that there are three inputs. The geometry to translate is already declared because we are performing the action on that element (with _gridPts.Translate_). The remaining two inputs will be inserted into the parentheses of the function: direction and _distance_.
 > 3. The direction is simple enough, we use a `Vector.ZAxis()` to move vertically.
 > 4. The distance between the reference point and each grid point still needs to be calculated, so we do this as an action to the reference point in the same manner: `refPt.DistanceTo(gridPts)`

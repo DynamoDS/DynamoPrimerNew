@@ -63,7 +63,7 @@ In this first example, we assemble a shelled cylinder which walks through the ge
 
 2\. **Plane.ByOriginNormal -** The next step in the geometry hierarchy is a plane. There are several ways to construct a plane, and we are using an origin and normal for the input. The origin is the point node created in the previous step.
 
-**Vector.ZAxis -** this is a unitized vector in the z direction. Notice there are not inputs, only a vector of \[0,0,1] value. We use this as the _normal_ input for the **Plane.ByOriginNormal** node. This gives us a rectangular plane in the Dynamo preview.
+**Vector.ZAxis -** This is a unitized vector in the z direction. Notice there are not inputs, only a vector of \[0,0,1] value. We use this as the _normal_ input for the **Plane.ByOriginNormal** node. This gives us a rectangular plane in the Dynamo preview.
 
 ![](<../../.gitbook/assets/data - exercise step 2.jpg>)
 
@@ -97,7 +97,7 @@ In this first example, we assemble a shelled cylinder which walks through the ge
 
 ![](<../../.gitbook/assets/data - exercise step 8a.gif>)
 
-**Number Sliders -** taking this a step further, we've added a lot of sliders to the canvas, and need to clean up the interface of the tool we just created. Right click on one slider, select "Rename..." and change each slider to the appropriate name for its parameter (thickness, Radius, Height, etc).
+**Number Sliders -** Taking this a step further, we've added a lot of sliders to the canvas, and need to clean up the interface of the tool we just created. Right click on one slider, select "Rename..." and change each slider to the appropriate name for its parameter (thickness, Radius, Height, etc).
 
 ![](<../../.gitbook/assets/data - exercise step 8b step.jpg>)
 

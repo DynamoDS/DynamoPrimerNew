@@ -12,7 +12,7 @@
 
 This blog is the most up-to-date collection of articles from the Dynamo team, discussing new features, workflows, and all things Dynamo.
 
-[http://dynamobim.com/blog/](http://dynamobim.com/blog/)
+[https://dynamobim.org/blog/](https://dynamobim.org/blog/)
 
 ### **DesignScript Guide**
 
@@ -76,8 +76,3 @@ Developer's Blog:&#x20;
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
-### **The Building Coder**
-
-A robust catalog of Revit API workflows from one of the leading experts in BIM.
-
-[http://thebuildingcoder.typepad.com/](http://thebuildingcoder.typepad.com)

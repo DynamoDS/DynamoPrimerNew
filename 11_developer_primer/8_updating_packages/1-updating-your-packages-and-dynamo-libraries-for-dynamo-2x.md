@@ -4,7 +4,7 @@
 
 Dynamo 2.0 is a major release and some APIs have been changed or removed. One of the largest changes that will effect node and package authors is our move to a JSON file format.
 
-In general Zero Touch node authors will have little to no work to do to get their packages running in 2.0.
+In general Zero Touch node authors will have little to no work to do to get their packages running in 2.x.
 
 UI nodes and nodes that derive directly from NodeModel will take more work to get running in 2.x.
 
@@ -14,16 +14,16 @@ Extension authors may also have some potential changes to make - depending on ho
 
 ### General packaging rules: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
-* Do not bundle Dynamo or Dynamo Revit .dlls with your package. These dlls will already be loaded by dynamo. If you bundle a different version than the user has loaded _(ie you distribute dynamo core 1.3 but the user is running your package on dynamo 2.0)_ mysterious runtime bugs will occur. This includes dlls like `DynamoCore.dll`, `DynamoServices.dll`, `DSCodeNodes.dll`, `ProtoGeometry.dll`
-* Do not bundle and distribute `newtonsoft.json.net` with your package if you can avoid it. This dll will also be loaded by dynamo 2.x already. The same issue as above can occur.
-* Do not bundle and distribute `CEFSharp` with your package if you can avoid it. This dll will also be loaded by Dynamo 2.x already. The same issue as above can occur.
-* In general avoid sharing dependencies with dynamo or revit if you need to control the version of that dependency.
+* Do not bundle Dynamo or Dynamo Revit .dlls with your package. These .dlls will already be loaded by Dynamo. If you bundle a different version than the user has loaded _(e.g., you distribute Dynamo Core 1.3 but the user is running your package on Dynamo 2.0)_ mysterious runtime bugs will occur. This includes .dlls like `DynamoCore.dll`, `DynamoServices.dll`, `DSCoreNodes.dll`, `ProtoGeometry.dll`
+* Do not bundle and distribute `newtonsoft.json.net` with your package if you can avoid it. This .dll will also be loaded by dynamo 2.x already. The same issue as above can occur.
+* Do not bundle and distribute `CEFSharp` with your package if you can avoid it. This .dll will also be loaded by Dynamo 2.x already. The same issue as above can occur.
+* In general, avoid sharing dependencies with Dynamo or Revit if you need to control the version of that dependency.
 
 ### Upgrading In Depth: <a href="#upgrading-in-depth" id="upgrading-in-depth"></a>
 
 ### Custom Nodes 1.3 - > 2.0 <a href="#custom-nodes-13----20" id="custom-nodes-13----20"></a>
 
-[Organizing Custom Nodes in librarie.js](https://github.com/DynamoDS/Dynamo/wiki/Library-2.0-Add-Ons-Organization#customnodes)
+[Organizing Custom Nodes in librarie.js](../3_developing_for_dynamo/8-defining-custom-package-organisation-dynamo2.0+.md)
 
 Known Issues:
 
@@ -119,7 +119,7 @@ The other common use case that is affected by the 2.0 API changes relates to the
 
 Let's walk through upgrading a 1.3 UI node to Dynamo 2.x.
 
-```
+```c#
 using System;
 using System.Collections.Generic;
 using Dynamo.Graph.Nodes;
@@ -174,9 +174,9 @@ namespace CustomNodeModel.CustomNodeModel
 }
 ```
 
-All we need to do to this `nodeModel` class to get it loading and saving correctly in 2.0 is add a jsonConstructor to handle loading of the ports. We simply pass the ports on the base constructor and this implementation is empty.
+All we need to do to this `nodeModel` class to get it loading and saving correctly in 2.0 is add a JSON Constructor to handle loading of the ports. We simply pass the ports on the base constructor and this implementation is empty.
 
-```
+```c#
 [JsonConstructor]
 protected GridNodeModel(IEnumerable<PortModel> Inports, IEnumerable<PortModel> Outports ) :
 base(Inports,Outports)
@@ -185,19 +185,19 @@ base(Inports,Outports)
 }
 ```
 
-Note: Do not call `RegisterPorts()` or some variation of that in your JsonConstructor - this will use the input and output parameter attributes on your node class to construct new ports! **We don't want this**, since we want to use the loaded ports which are passed to your constructor.
+Note: Do not call `RegisterPorts()` or some variation of that in your JSON Constructor - this will use the input and output parameter attributes on your node class to construct new ports! **We don't want this**, since we want to use the loaded ports which are passed to your constructor.
 
-```
+```c#
 [InPortNames("xCount", "yCount")]
 [InPortTypes("double", "double")]
 ```
 
-This example adds the minimal loading JSON constructor possible. But what if we need to do some more complex construction logic, like setup some listeners for event handling inside the constructor. The next sample taken from the\
+This example adds the minimal loading JSON constructor possible. But what if we need to do some more complex construction logic, like setup some listeners for event handling inside the constructor. The next sample taken from the
 [DynamoSamples Repo](https://github.com/DynamoDS/DynamoSamples) is linked above in the `JsonConstructors Section` of this document.
 
 Here is a more complex constructor for a UI node:
 
-```
+```c#
  public ButtonCustomNodeModel()
         {
             // When you create a UI node, you need to do the
@@ -221,25 +221,25 @@ Here is a more complex constructor for a UI node:
             // The arugment lacing is the way in which Dynamo handles
             // inputs of lists. If you don't want your node to
             // support argument lacing, you can set this to LacingStrategy.Disabled.
-            ArgumentLacing = LacingStrategy.Disabled;
+            this.ArgumentLacing = LacingStrategy.Disabled;
 
             // We create a DelegateCommand object which will be 
             // bound to our button in our custom UI. Clicking the button 
             // will call the ShowMessage method.
-            ButtonCommand = new DelegateCommand(ShowMessage, CanShowMessage);
+            var ButtonCommand = new DelegateCommand(ShowMessage, CanShowMessage);
 
             // Setting our property here will trigger a 
             // property change notification and the UI 
             // will be updated to reflect the new value.
-            ButtonText = defaultButtonText;
-            WindowText = defaultWindowText;
+            this.ButtonText = defaultButtonText;
+            this.WindowText = defaultWindowText;
         }
 ```
 
 When we add a JSON constructor for loading this node from a file we have to recreate some of this logic, but note that we do not include the code that creates ports, sets lacing, or sets the default values for properties which we can load from the file.
 
-```
-        // This constructor is called when opening a Json graph.
+```c#
+        // This constructor is called when opening a JSON graph.
 
         [JsonConstructor]
         ButtonCustomNodeModel(IEnumerable<PortModel> inPorts, IEnumerable<PortModel> outPorts) : base(inPorts, outPorts)

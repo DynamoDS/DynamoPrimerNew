@@ -16,6 +16,7 @@ To start building the grid node, create a new Visual Studio class library projec
 
 > 1. Choose `Class Library` for the project type
 > 2. Name the project `CustomNodes`
+> 3. Click to create the project
 
 Since we will be creating geometry, we need to reference the appropriate NuGet package. Install the ZeroTouchLibrary package from the NuGet Package Manager. This package is necessary for the `using Autodesk.DesignScript.Geometry;` statement.
 
@@ -107,7 +108,7 @@ In the example above, we created a fairly simple node that didn't define much el
 
 The RectangularGrid node needs some of these basic features. In the code below, we have added input and output port descriptions, a summary, and default input values.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 using System.Collections.Generic;
 

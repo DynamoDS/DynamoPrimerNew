@@ -21,8 +21,8 @@ You should be able to launch DynamoSandbox.exe in the extracted folder to use Dy
 | Dynamo Version | Microsoft Visual C++ | DirectX                         |   |   |   |   |
 | -------------- | -------------------- | ------------------------------- | - | - | - | - |
 | 2.0 - 2.6      | 2015 Redistributable | 10                              |   |   |   |   |
-| 2.7            | 2019 Redistributable | 11/12 (included with windows 10 |   |   |   |   |
-| >=2.8          | 2019 Redistributable | 11/12 (included with windows 10 |   |   |   |   |
+| 2.7            | 2019 Redistributable | 11/12 (included with windows 10) |   |   |   |   |
+| >=2.8          | 2019 Redistributable | 11/12 (included with windows 10) |   |   |   |   |
 
 **Microsoft DirectX which is also available publicly in our Dynamo GitHub Repo** [**here**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 

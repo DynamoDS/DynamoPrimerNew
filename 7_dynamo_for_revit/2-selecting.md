@@ -88,7 +88,7 @@ Using some basic list operations, we can query a face of interest.
 > 1. First, output the selected elements from earlier to Element.Faces node.
 > 2. Next, use the _List.Count_ node reveals that we're working with 23 surfaces in the mass.
 > 3. Referencing this number, we change the Maximum value of an \*integer slider \*to _"22"_.
-> 4. Using _List.GetItemAtIndex_, we input the lists and the \*integer slider \*for the _index_. Sliding through with the selected, we stop when we get to _index 9_ and have isolated the main facade hosts the trusses.
+> 4. Using _List.GetItemAtIndex_, we input the lists and the \*integer slider \*for the _index_. Sliding through with the selected, we stop when we get to _index 9_ and have isolated the main facade that hosts the trusses.
 
 The previous step was a little cumbersome. We can do this much faster with the _"Select Face"_ node. This allows us to isolate a face that is not an element itself in the Revit project. The same interaction applies as _"Select Model Element"_, except we select the surface rather than the full element.
 
@@ -133,13 +133,13 @@ A question that may come up often in Revit/Dynamo workflows: how do I select one
 
 > 1. We can convert all of these five elements to Dynamo geometry too.
 
-What if we had 500 beams? Converting all of these elements into Dynamo geometry would be really slow. If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../essential-nodes-and-concepts/5_geometry-for-computational-design/5-6_solids.md#freezing)" section in the solids chapter.
+What if we had 500 beams? Converting all of these elements into Dynamo geometry would be really slow. If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/6-solids.md#freezing)" section in the solids chapter.
 
 In any case, if we were to import 500 beams, do we need all of the surfaces to perform the intended parametric operation? Or can we extract basic information from the beams and perform generative tasks with fundamental geometry? This is a question that we'll keep in mind as we walk through this chapter. For example, let's take a look at the truss system next.
 
 ### Selecting Trusses
 
-Using the same graph of nodes, select the truss element rather than the beam element. Before doing this, delete the Element.Geometry from the previous step.
+Using the same graph of nodes, select the truss element rather than the beam element. Before doing this, delete the **Element.Geometry** from the previous step.
 
 ![](../.gitbook/assets/selecting_exercise_14.jpg)
 
@@ -149,7 +149,7 @@ Next we are ready to extract some basic information from trusses family type.
 
 > 1. In the _Watch_ node, we can see that we have a list of adaptive components selected from Revit. We want to extract the basic information, so we're start with the adaptive points.
 > 2. Plug the _"All Elements of Family Type"_ node into the _"AdaptiveComponent.Location"_ node. This gives us a list of lists, each with three points which represent the adaptive point locations.
-> 3. Connecting a _"Polygon.ByPoints"_ node returns a polycurve. We can see this in the Dynamo viewport. By this method, we've visualized the geometry of one element and abstracted the geometry of the remaining array of elements (which could be larger in number than this example).
+> 3. Connecting a **Polygon.ByPoints** node returns a polycurve. We can see this in the Dynamo viewport. By this method, we've visualized the geometry of one element and abstracted the geometry of the remaining array of elements (which could be larger in number than this example).
 
 {% hint style="info" %}
 Tip: if you click on the green number of a Revit element in Dynamo, the Revit viewport will zoom to that element.

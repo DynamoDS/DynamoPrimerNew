@@ -62,11 +62,11 @@ We also need to handle a potential issue that may arise. The lot line has a star
 
 > 1. Get the start and end points of the lot line.
 > 2. Measure the distance from each point to the distribution main, then figure out which distance is greater.
-> 3. The desired result is that the start point of the line is closest to the distribution main. If that isn't then case, then we reverse the direction of the lot line. Otherwise we simply return the original lot line.
+> 3. The desired result is that the start point of the line is closest to the distribution main. If that isn't the case, then we reverse the direction of the lot line. Otherwise we simply return the original lot line.
 
 ### Generate Insertion Points
 
-It's time to figure out where the service meters are going to be placed. Typically the placement is determined by local agency requirements, so we'll just provide input values that can be changed to suit various conditions. We're going to use a **Coordinate System** along the lot line as the reference for creating the points. This makes it really easy to define offsets relative to the lot line, not matter its orientation.
+It's time to figure out where the service meters are going to be placed. Typically the placement is determined by local agency requirements, so we'll just provide input values that can be changed to suit various conditions. We're going to use a **Coordinate System** along the lot line as the reference for creating the points. This makes it really easy to define offsets relative to the lot line, no matter its orientation.
 
 {% hint style="info" %}
 If Coordinate Systems are new to you, take a look at the [2-vectors.md](../../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/2-vectors.md "mention") section.

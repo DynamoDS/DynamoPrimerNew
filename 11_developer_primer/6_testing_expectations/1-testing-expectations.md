@@ -1,13 +1,13 @@
 # Testing expectations
 
-This page describes what we're looking for with testing on new code being added to Dynamo.
+This page describes what we're looking for when testing new code being added to Dynamo.
 
-So. You've got a new node that you want to add. Awesome. It's time to add some tests. There are two reasons to do this.
+So, you've got a new node that you want to add. Awesome. It's time to add some tests. There are two reasons to do this.
 
-1. It helps to find out where it doesn't work
+1. It helps to find out where it doesn't work.
 2. When someone else changes something that breaks your node, it should break the tests. That way that person who broke the tests needs to go and fix it. If it doesn't break the tests, then it's largely your problem to deal with the users' whose models get broken.
 
-Testing in Dynamo comes in two broad types: Unit Tests, System Tests.
+Testing in Dynamo comes in two broad types: Unit Tests and System Tests.
 
 ## Unit Tests
 
@@ -15,9 +15,9 @@ Unit tests should test as little as possible. If you built a node that computes 
 
 It should include:
 
-* Positive tests (it does the right thing)
-* Negative tests (it doesn't barf when given garbage input)
-* Regression tests (when someone finds a bug in your code, write a test to ensure that it doesn't reoccur)
+* Positive tests (it does the right thing).
+* Negative tests (it doesn't break when given garbage input).
+* Regression tests (when someone finds a bug in your code, write a test to ensure that it doesn't reoccur).
 
 They should be small, fast and reliable. The majority of tests should be unit tests.
 
@@ -33,15 +33,15 @@ Ideally, there would be a progressive series of tests covering increasing sets o
 
 Examples of things that need System Tests:
 
-* A new type of Revit node that stores multiple elements in trace rather than a single element
-* A new watch node that displays data differently
+* A new type of Revit node that stores multiple elements in trace rather than a single element.
+* A new watch node that displays data differently.
 
 Example of things that don't need System Tests:
 
-* A new math node
-* A string processing library
+* A new math node.
+* A string processing library.
 
 System tests should:
 
-* Assert the correct behavior
-* Assert an absence of pathological behaviors, e.g. no exceptions
+* Assert the correct behavior.
+* Assert an absence of pathological behaviors, e.g. no exceptions.

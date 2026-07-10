@@ -14,7 +14,7 @@ Below is an example of a three-point adaptive component in the family editor. Th
 
 ### Principles of Interoperability
 
-The adaptive component is a good example for best practices of interoperability. We can create an array of adaptive components by defining the fundamental adaptive points. And, when transferring this data to other programs, we have the ability to reduce the geometry to simple data. Importing and exporting with a program like Excel follows a similar logic.
+The adaptive component is a good example for best practices of interoperability. We can create an array of adaptive components by defining the fundamental adaptive points. When transferring this data to other programs, we have the ability to reduce the geometry to simple data. Importing and exporting with a program like Excel follows a similar logic.
 
 Suppose a facade consultant wants to know the location of the truss elements without needing to parse through fully articulated geometry. In preparation for fabrication, the consultant can reference the location of adaptive points to regenerate geometry in a program like Inventor.
 
@@ -75,7 +75,7 @@ We want to take advantage of the top curve, which is a line, and represents the 
 ![](<../.gitbook/assets/creating - exercise 04.jpg>)
 
 > 1. With a _code block_, define a range using the syntax: `0..1..#numberOfTrusses;`
-> 2. Plug an \*integer slider \*into the input for the code block. As you could have guessed, this will represent the number of trusses. Notice that the slider controls the number of items in the range defined from \*0 \*to _1_.
+> 2. Plug an \*integer slider \*into the input for the code block. As you could have guessed, this will represent the number of trusses. Notice that the slider controls the number of items in the range defined from \*_0_ \*to _1_.
 > 3. Plug the _code block_ into the _param_ input of a _"Curve.PlaneAtParameter"_ node, and plug the top edge into the _curve_ input. This will give us ten planes, evenly distributed across the span of the facade.
 
 A plane is an abstract piece of geometry, representing a two dimensional space which is infinite. Planes are great for contouring and intersecting, as we are setting up in this step.
@@ -135,7 +135,7 @@ Begin by opening the sample file for this lesson - ARCH-DirectShape-BaseFile.rvt
 
 ![](<../.gitbook/assets/creating - exercise II - 03.jpg>)
 
-> 1. Zooming out and panning to the right in the sample graph, we see a large group of nodes - these are geometric operations which generate the trellis roof structure visible in the Dynamo preview. These nodes are generating using the _Node to Code_ functionality as discussed in the [code block section](../coding-in-dynamo/7_code-blocks-and-design-script/7-2_design-script-syntax.md#Node) of the primer.
+> 1. Zooming out and panning to the right in the sample graph, we see a large group of nodes - these are geometric operations which generate the trellis roof structure visible in the Dynamo preview. These nodes are generating using the _Node to Code_ functionality as discussed in the [code block section](../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md) of the primer.
 > 2. The structure is driven by three major parameters - Diagonal Shift, Camber, and Radius.
 
 Zooming a close-up look of the parameters for this graph. We can flex these to get different geometry outputs.

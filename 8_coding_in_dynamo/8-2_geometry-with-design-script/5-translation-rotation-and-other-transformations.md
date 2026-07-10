@@ -1,6 +1,6 @@
 # Translation, Rotation, and Other Transformations
 
-Certain geometry objects can be created by explicitly stating x, y, and z coordinates in three-dimensional space. More often, however, geometry is moved into its final position using geometric transformations on the object itself or on its underlying CoordinateSystem.
+Certain geometry objects can be created by explicitly stating x, y, and z coordinates in three-dimensional space. More often, however, geometry is moved into its final position using geometric transformations on the object itself or on its underlying Coordinate System.
 
 ### Translation
 
@@ -20,7 +20,7 @@ p2 = p.Translate(10, -20, 50);
 
 ### Rotation
 
-While all objects in Dynamo can be translated by appending the _.Translate_ method to the end of the object’s name, more complex transformations require transforming the object from one underlying CoordinateSystem to a new CoordinateSystem. For instance, to rotate an object 45 degrees around the x axis, we would transform the object from its existing CoordinateSystem with no rotation, to a CoordinateSystem which had been rotated 45 degrees around the x axis with the _.Transform_ method:
+While all objects in Dynamo can be translated by appending the _.Translate_ method to the end of the object’s name, more complex transformations require transforming the object from one underlying Coordinate System to a new Coordinate System. For instance, to rotate an object 45 degrees around the x axis, we would transform the object from its existing Coordinate System with no rotation, to a Coordinate System which had been rotated 45 degrees around the x axis with the _.Transform_ method:
 
 ![](../../.gitbook/assets/Transformations_02.png)
 
@@ -40,7 +40,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 ### Scale
 
-In addition to being translated and rotated, CoordinateSystems can also be created scaled or sheared. A CoordinateSystem can be scaled with the _.Scale_ method:
+In addition to being translated and rotated, Coordinate Systems can also be created scaled or sheared. A Coordinate System can be scaled with the _.Scale_ method:
 
 ![](../../.gitbook/assets/Transformations_03.png)
 
@@ -56,7 +56,7 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-Sheared CoordinateSystems are created by inputting non-orthogonal vectors into the CoordinateSystem constructor.
+Sheared Coordinate Systems are created by inputting non-orthogonal vectors into the Coordinate System constructor.
 
 ![](../../.gitbook/assets/Transformations_04.png)
 
@@ -74,9 +74,9 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-Scaling and shearing are comparatively more complex geometric transformations than rotation and translation, so not every Dynamo object can undergo these transformations. The following table outlines which Dynamo objects can have non-uniformly scaled CoordinateSystems, and sheared CoordinateSystems.
+Scaling and shearing are comparatively more complex geometric transformations than rotation and translation, so not every Dynamo object can undergo these transformations. The following table outlines which Dynamo objects can have non-uniformly Scaled Coordinate Systems, and Sheared Coordinate Systems.
 
-| Class        | Non-Uniformly Scaled CoordinateSystem | Sheared CoordinateSystem |
+| Class        | Non-Uniformly Scaled Coordinate System| Sheared Coordinate System |
 | ------------ | ------------------------------------- | ------------------------ |
 | Arc          | No                                    | No                       |
 | NurbsCurve   | Yes                                   | Yes                      |

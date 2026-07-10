@@ -2,7 +2,7 @@
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption></figcaption></figure>
 
-One of Dynamo's many great use cases is dynamically placing discrete objects along a Corridor model. It is often the case that objects need to be placed at locations that are independent of the inserted Assemblies along the Corridor, which is a very tedious task to accomplish manually. And when the horizontal or vertical geometry of the Corridor changes, then a significant amount of re-work is introduced.
+One of Dynamo's many great use cases is dynamically placing discrete objects along a Corridor model. It is often the case that objects need to be placed at locations that are independent of the inserted Assemblies along the Corridor, which is a very tedious task to accomplish manually. When the horizontal or vertical geometry of the Corridor changes, then a significant amount of re-work is introduced.
 
 ## Goal
 

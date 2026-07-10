@@ -45,13 +45,13 @@ The image below is the base graph which we are drawing lines between two circles
 
 ![](<../../.gitbook/assets/working with list - list operation.jpg>)
 
-> 1. Begin with a **Code Block** with a value of `500;`
+> 1. Begin with a **Code Block** with a value of `500;`.
 > 2. Plug into the x input of a **Point.ByCoordinates** node.
 > 3. Plug the node from the previous step into the origin input of a **Plane.ByOriginNormal** node.
 > 4. Using a **Circle.ByPlaneRadius** node, plug the node from the previous step into the plane input.
 > 5. Using **Code Block**, designate a value of `50;` for the radius. This is the first circle we'll create.
 > 6. With a **Geometry.Translate** node, move the circle up 100 units in the Z direction.
-> 7. With a **Code Block** node, define a range of ten numbers between 0 and 1 with this line of code: `0..1..#10;`
+> 7. With a **Code Block** node, define a range of ten numbers between 0 and 1 with this line of code: `0..1..#10;`.
 > 8. Plug the code block from the previous step into the _param_ input of two **Curve.PointAtParameter** nodes. Plug **Circle.ByPlaneRadius** into the curve input of the top node, and **Geometry.Translate** into the curve input of the node beneath it.
 > 9. Using a **Line.ByStartPointEndPoint**, connect the two **Curve.PointAtParameter** nodes.
 
@@ -101,7 +101,7 @@ _List.Reverse_ reverses the order of all of the items in a list.
 ![Exercise](<../../.gitbook/assets/working with list - list reverse.jpg>)
 
 > 1. To properly visualize the reversed list of lines, create more lines by changing the **Code Block** to `0..1..#50;`
-> 2. Duplicate the **Line.ByStartPointEndPoint** node, insert a List.Reverse node in between **Curve.PointAtParameter** and the second **Line.ByStartPointEndPoint**
+> 2. Duplicate the **Line.ByStartPointEndPoint** node, insert a **List.Reverse** node in between **Curve.PointAtParameter** and the second **Line.ByStartPointEndPoint**
 > 3. Use **Watch3D** nodes to preview two different results. The first one shows the result without a reversed list. The lines connect vertically to neighboring points. The reversed list, however, will connect all of the points to the opposing order in the other list.
 
 ### List.ShiftIndices <a href="#listshiftindices" id="listshiftindices"></a>

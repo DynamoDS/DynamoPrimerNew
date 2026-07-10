@@ -25,7 +25,7 @@ Visual Studio will automatically create and open a C# file. We should give it an
 ```
  namespace MyCustomNode
  {
-     public class SampleFunctions
+     public class SampleFunction
      {
          public static double MultiplyByTwo(double inputNumber)
          {
@@ -38,7 +38,7 @@ Visual Studio will automatically create and open a C# file. We should give it an
 ![Using the Solution Explorer](../../.gitbook/assets/vs-edit-class.jpg)
 
 > 1. Open the Solution Explorer and Output windows from `View`.
-> 2. Rename the `Class1.cs` file to `SampleFunctions.cs` in the Solution explorer on the right.
+> 2. Rename the `Class1.cs` file to `SampleFunction.cs` in the Solution explorer on the right.
 > 3. Add the code above for the multiplication function. We will cover the specifics of how Dynamo will read your C# classes later on.
 > 4. The Solution Explorer: this gives you access to everything in your project.
 > 5. The Output window: we'll need this later on to see if our build was successful.
@@ -82,7 +82,7 @@ If a category is created in the library called `MyCustomNode`, the .dll was impo
 ![Custom nodes](../../.gitbook/assets/dyn-customnode.png)
 
 > 1. MyCustomNode in the Dynamo Library. The Library category is determined by the `.dll` name.
-> 2. SampleFunctions.MultiplyByTwo on the canvas.
+> 2. SampleFunction.MultiplyByTwo on the canvas.
 
 ### How Dynamo Reads Classes and Methods <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 
@@ -92,18 +92,18 @@ When Dynamo loads a .dll, it will expose all public static methods as nodes. Con
 
 > 1. The input is named `inputNumber` based on the method's parameter name.
 > 2. The output is named `double` by default because that is the data type being returned.
-> 3. The node is named `SampleFunctions.MultiplyByTwo` because those are the class and method names.
+> 3. The node is named `SampleFunction.MultiplyByTwo` because those are the class and method names.
 
-In the example above, the extra `SampleFunctions` Create node was created because we did not explicitly provide a constructor and therefore one was automatically created. We can avoid this by creating an empty private constructor in our `SampleFunctions` class.
+In the example above, the extra `SampleFunction` Create node was created because we did not explicitly provide a constructor and therefore one was automatically created. We can avoid this by creating an empty private constructor in our `SampleFunction` class.
 
-```
+```c#
 namespace MyCustomNode
 {
-    public class SampleFunctions
+    public class SampleFunction
     {
         //The empty private constructor.
         //This will be not imported into Dynamo.
-        private SampleFunctions() { }
+        private SampleFunction() { }
 
         //The public multiplication method. 
         //This will be imported into Dynamo.
@@ -142,7 +142,7 @@ This is the NuGet Package Manager. This window shows what packages have been ins
 
 > 1. Select browse and search for DynamoVisualProgramming to bring up the Dynamo Packages.
 > 2. The Dynamo packages. Selecting one will show it's current version and description of what's inside.
-> 3. Select the package version you need and click install. This installs a package for the specific project you are working in. Since we are using the latest stable release of Dynamo, version 1.3, choose the corresponding package version.
+> 3. Select the package version you need and click install. This installs a package for the specific project you are working in. Since we are using the latest stable release of Dynamo, choose the package version which corresponds with the version of Dynamo you are working with.
 
 To manually add a package downloaded from the browser, open the Reference Manager from the Solution Explorer and browse for the package.
 

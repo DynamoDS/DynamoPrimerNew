@@ -16,7 +16,7 @@ The User Interface (UI) for Dynamo is organized into five main regions. We will 
 
 ![](../.gitbook/assets/userinterface-menu.jpg)
 
-Here are Menus for basic functionality of the Dynamo application. Like most Windows software, the first two menus related to managing files, operations for selection and content editing. The remaining menus are more specific to Dynamo.
+Here are menus for basic functionality of the Dynamo application. Like most Windows software, the first two menus relate to managing files, operations for selection and content editing. The remaining menus are more specific to Dynamo.
 
 #### Dynamo Menus
 
@@ -26,7 +26,7 @@ General info and settings can be found on the **Dynamo** drop down menu.
 
 > 1. About - Find out the Dynamo version installed on your machine.
 > 2. Agreement to Collect Usability Data - This allows you to opt-in or out for sharing your user data to improve Dynamo.
-> 3. Preferences - Includes settings such as define the application's decimal point precision and geometry render quality.
+> 3. Preferences - Includes settings such as defining the application's decimal point precision and geometry render quality.
 > 4. Exit Dynamo
 
 #### Help

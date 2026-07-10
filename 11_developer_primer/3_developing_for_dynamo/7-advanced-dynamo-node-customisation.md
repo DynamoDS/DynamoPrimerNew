@@ -1,6 +1,6 @@
 # Advanced Dynamo Node Customization
 
-With a foundation knowledge of ZeroTouch already established. this section delves into the advantages of customizing Dynamo nodes to enhance both functionality and user experience. By adding features such as warning messages, informational messages, and custom icons, you can create nodes that are more intuitive, informative, and visually engaging. These customizations not only help users understand potential issues or optimize their workflows but also make your nodes stand out as professional and user-friendly tools.
+With a foundation knowledge of ZeroTouch already established. This section delves into the advantages of customizing Dynamo nodes to enhance both functionality and user experience. By adding features such as warning messages, informational messages, and custom icons, you can create nodes that are more intuitive, informative, and visually engaging. These customizations not only help users understand potential issues or optimize their workflows but also make your nodes stand out as professional and user-friendly tools.
 
 Customizing nodes is an excellent way to ensure your solutions are clear, reliable, and tailored to meet specific project needs.
 
@@ -14,7 +14,7 @@ In Dynamo, the `OnLogWarningMessage` method provides a way to log warning messag
 
 `OnLogWarningMessage` is part of the `DynamoServices` namespace, so begin by adding this to your project file.
 
-```
+```c#
 using DynamoServices;
 ```
 
@@ -37,7 +37,7 @@ Place `OnLogWarningMessage` calls where you detect conditions that could cause i
 
 ### Syntax for `OnLogWarningMessage` <a href="#syntax-for-onlogwarningmessage" id="syntax-for-onlogwarningmessage"></a>
 
-```
+```c#
 LogWarningMessageEvents.OnLogWarningMessage("Your warning message here.");
 ```
 
@@ -55,7 +55,7 @@ In this example, we'll build upon the custom node created in the previous "**Zer
 
 When generating a grid based on `xCount` and `yCount`. You want to ensure both values are positive integers before proceeding.
 
-```
+```c#
 public static List<Rectangle> CreateGrid(int xCount, int yCount)
 {
     // Check if xCount and yCount are positive
@@ -77,7 +77,7 @@ This will show the warning in Dynamo if a user enters zero or negative values, h
 
 Now we know what this looks like, we can implement it into the Grids example node:
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 using DynamoServices;
 
@@ -103,7 +103,9 @@ namespace CustomNodes
             {
                 // Log a warning message if the input values are invalid
                 LogWarningMessageEvents.OnLogWarningMessage("Grid count values must be positive integers.");
-                return new List<Rectangle>(); // Return an empty list if inputs are invalid
+                
+                // Return an empty list if inputs are invalid
+                return new List<Rectangle>(); 
             }
 
             double x = 0;
@@ -139,13 +141,15 @@ If your method requires a list of points but a user passes an empty or null list
 
 ![OnLogWarningMessage Example 2](../../.gitbook/assets/onlogwarningmessage-example-2.png)
 
-```
+```c#
 public static Polygon CreatePolygonFromPoints(List<Point> points)
 {
     if (points == null || points.Count < 3)
     {
         LogWarningMessageEvents.OnLogWarningMessage("Point list cannot be null or have fewer than three points.");
-        return null;  // Return null if the input list is invalid
+        
+        // Return null if the input list is invalid
+        return null;  
     }
     // Proceed with polygon creation...
 }
@@ -166,7 +170,7 @@ For a node that processes file paths, you may want to ensure that only certain f
 
 ![OnLogWarningMessage Example 3](../../.gitbook/assets/onlogwarningmessage-example-3.png)
 
-```
+```c#
 public static void ProcessFile(string filePath)
 {
     if (!filePath.EndsWith(".csv"))
@@ -214,7 +218,7 @@ Place `OnLogInfoMessage` calls at meaningful points in your method. When a key s
 
 ### Syntax for `OnLogInfoMessage` <a href="#syntax-for-onloginfomessage" id="syntax-for-onloginfomessage"></a>
 
-```
+```c#
 LogWarningMessageEvents.OnLogInfoMessage("Your info message here.");
 ```
 
@@ -232,7 +236,7 @@ In this example, we'll build upon the custom node created in the previous "**Zer
 
 When generating a grid based on `xCount` and `yCount`. After generating the grid, you want to confirm its creation by logging an informational message with the grid's dimensions.
 
-```
+```c#
 public static List<Rectangle> CreateGrid(int xCount, int yCount)
 {
     var pList = new List<Rectangle>();
@@ -254,7 +258,7 @@ This message will inform users that the grid was created as specified, helping t
 
 Now we know what this looks like, we can implement it into the Grids example node:
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 using DynamoServices;
 
@@ -311,7 +315,7 @@ If you're creating a node that processes a list of points, you might want to log
 
 ![OnLogInfoMessage Example 2](../../.gitbook/assets/onloginfomessage-example-2.png)
 
-```
+```c#
 public static List<Point> ProcessPoints(List<Point> points)
 {
     var processedPoints = new List<Point>();
@@ -341,7 +345,7 @@ In some cases, it's useful to confirm the input parameters a node used to comple
 
 ![OnLogInfoMessage Example 3](../../.gitbook/assets/onloginfomessage-example-3.png)
 
-```
+```c#
 public static void ExportData(string filePath, List<string> data)
 {
     // Code to write data to the specified file path...
@@ -388,7 +392,7 @@ Markdown is very flexible and should provide enough functionality to easily crea
 Adding documentation to your nodes is easy. Documentation can be added to all flavors of custom nodes, covering:
 
 * Out of the Box Dynamo Nodes
-* Custom Nodes (.dyf) - Collections of out of the box and/or other package nodes.
+* Custom Nodes (.dyf) - Collections of out of the box and/or other package nodes
 * Custom C# Package Nodes (Also known as Zerotouch. These custom nodes look like the out-of-the-box nodes)
 * NodeModel Nodes (Nodes that contain special UI features such as drop downs or selection buttons)
 * NodeModel Nodes with Custom UI (Nodes that contain unique UI features such as graphics on the node)
@@ -401,7 +405,7 @@ Dynamo uses the Documentation Browser view extension to display nodes documentat
 
 ![Documentation Browser](../../.gitbook/assets/customnodedocumentation-no-documentation-provided.png)
 
-The documentation displayed in the Documentation Browser is made up of two parts. The first is the `Node Info` section, this is auto generated from the information extracted from the node, such as the inputs/outputs, node category, node name/namespace and the nodes short description. Second part show the custom nodes documentation, which is the Markdown file that is provided to document the node.
+The documentation displayed in the Documentation Browser is made up of two parts. The first is the `Node Info` section, this is auto generated from the information extracted from the node, such as the inputs/outputs, node category, node name/namespace and the nodes short description. The second part shows the custom node's documentation, which is the Markdown file that is provided to document the node.
 
 ![Custom Node Documentation](../../.gitbook/assets/customnodedocumentation-custom-node-documentation.png)
 
@@ -498,7 +502,7 @@ To embed your icons into the `.dll`, create a resources file:
 1. Double-click on the resouce file you created:
    * Add one image at a time using the '+' button
    * Set resource type to **File**
-   * Browse to your Image file location and include your **Large** and **Small** Node icons.
+   * Browse to your image file location and include your **Large** and **Small** node icons
 
 ![Add resources...](../../.gitbook/assets/zerotouchicons-open-resource-editor-update.png)
 
@@ -534,7 +538,7 @@ If your project is not already SDK-style (required for embedding resources), con
 2. Edit the `.csproj` file:
    * Add the following `<Target>` element between `</ItemGroup>` and `</Project>`:
 
-```
+```xml
 <Target Name="CreateNodeIcons" AfterTargets="PostBuildEvent">
 		<!-- Get System.Drawing.dll     -->
 		<GetReferenceAssemblyPaths TargetFrameworkMoniker=".NETFramework, Version=v4.8">

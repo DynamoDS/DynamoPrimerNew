@@ -19,7 +19,7 @@ The methods in `GeometryPrimitiveConverter.cs` can be grouped into four main cat
 
 Creates a Revit BoundingBoxXYZ from a Dynamo coordinate system and two defining points (minimum and maximum).
 
-`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox( Autodesk.DesignScript.Geometry.CoordinateSystem cs, Autodesk.DesignScript.Geometry.Point minPoint, Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
+`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox(Autodesk.DesignScript.Geometry.CoordinateSystem cs, Autodesk.DesignScript.Geometry.Point minPoint, Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
 
 #### ToRevitType (BoundingBox)
 
@@ -109,7 +109,7 @@ This example shows a quick and easy method to use the .ToXyz (Point) method to c
 
 ![Converting a Dynamo Point.ByCoordinates into a Revit XYZ](Images/dynamo-point-to-revit-xyz.png)
 
-```
+```python
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr
@@ -190,7 +190,7 @@ This example shows a quick and easy method to use the .ToPoint (XYZ) method to c
 
 ![Converting a Revit XYZ into a Dynamo Point.ByCoordinates](Images/revit-xyz-to-dynamo-point.png)
 
-```
+```python
 import sys
 import clr
 clr.AddReference('ProtoGeometry')
@@ -233,7 +233,7 @@ This example shows a quick and easy method to use the .ToRadians method to conve
 
 ![Degrees to Radians](Images/degrees-to-radians.png)
 
-```
+```python
 import sys
 import clr
 clr.AddReference('ProtoGeometry')
@@ -272,11 +272,11 @@ This method returns a perpendicular Dynamo `Vector` to the given Dynamo `Vector`
 
 #### Example Usage of X & UZ
 
-This example shows a quick and easy method to use the .GetPerpendicular method to get the perpendicular vector to an input vector.
+This example shows a quick and easy method to use the .GetPerpendicular() method to get the perpendicular vector to an input vector.
 
 ![Get Perpendicular Vector](Images/get-perpendicular-vector.png)
 
-```
+```python
 import clr
 clr.AddReference('ProtoGeometry')
 from Autodesk.DesignScript.Geometry import *

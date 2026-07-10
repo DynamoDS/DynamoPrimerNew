@@ -26,7 +26,7 @@ This node relies on an instance of the IronPython scripting engine. To do this, 
 
 The following code provides an example for the step mentioned above. Building the solution will create a new `.dll` located in the bin folder of our project. This `.dll` can now be imported into Dynamo as part of a package or by navigating to`File < Import Library...`
 
-```
+```c#
 using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
 

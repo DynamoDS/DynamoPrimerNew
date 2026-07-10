@@ -28,7 +28,7 @@ CustomNodeModel
 
 > 1. Move the project files into the new `src` folder
 
-Now that the source files are in a separate folder, add a `AfterBuild` target to the `CustomNodeModel.csproj` file in Visual Studio. This should copy the necessary files into a new package folder. Open the `CustomNodeModel.csproj` file in a text editor (we used [Atom](https://atom.io)) and place the build target before the closing `</Project>` tag. This AfterBuild target will copy all .dll, .pbd, .xml, and .config files into a new bin folder and creates a dyf and extra folders.
+Now that the source files are in a separate folder, add a `AfterBuild` target to the `CustomNodeModel.csproj` file in Visual Studio. This should copy the necessary files into a new package folder. Open the `CustomNodeModel.csproj` file in a text editor (we used [Atom](https://atom.io)) and place the build target before the closing `</Project>` tag. This AfterBuild target will copy all .dll, .pbd, .xml, and .config files into a new /bin folder and creates a dyf and extra folders.
 
 ```
   <Target Name="AfterBuild">
@@ -55,7 +55,7 @@ Now that the source files are in a separate folder, add a `AfterBuild` target to
 
 In the `<ItemGroup>` section, a number of variables are defined to represent specific file types. For example, the `Dll` variable represents all files in the output directory whose extension is `.dll`.
 
-```
+```xml
 <ItemGroup>
   <Dlls Include="$(OutDir)*.dll" />
 </ItemGroup>
@@ -63,13 +63,13 @@ In the `<ItemGroup>` section, a number of variables are defined to represent spe
 
 `Copy` task is to copy all `.dll` files to a directory, specifically the package folder to which we are building.
 
-```
+```xml
 <Copy SourceFiles="@(Dlls)" DestinationFolder="$(SolutionDir)..\packages\CustomNodeModel\bin\" />
 ```
 
 Dynamo packages typically have a `dyf` and `extra` folder for Dynamo Custom Nodes and other assets such as images. To create these folders, we need to use a `MakeDir` task. This task will create a folder if it does not exist. You can add files manually to this folder.
 
-```
+```xml
 <MakeDir Directories="$(SolutionDir)..\packages\CustomNodeModel\extra" />
 ```
 
