@@ -8,6 +8,9 @@ Below, is a list of what Dynamo version was shipped with some of the key Autodes
 
 | Host Version | Dynamo       |
 | ------------ | ------------ |
+| 2027.3       | 4.2.0.5475   |
+| 2027.2       | 4.1.1.5050   |
+| 2027.1       | 4.0.2.3852   |
 | 2027         | 4.0.2.3852   |
 | 2026.4       | 3.6.1.9895   |
 | 2026.3       | 3.6.0.9395   |
@@ -40,6 +43,8 @@ Below, is a list of what Dynamo version was shipped with some of the key Autodes
 
 | Host Version | Dynamo       |
 | ------------ | ------------ |
+| 2027.1       | 4.2.0.5475   |
+| 2027         | 4.0.2.3852   |
 | 2026.2       | 3.6.1.9956   |
 | 2026.1       | 3.5.2.8914   |
 | 2026         | 3.4.1.7055   |
@@ -62,6 +67,7 @@ Below, is a list of what Dynamo version was shipped with some of the key Autodes
 
 | Host Version | Dynamo      |
 | ------------ | ----------- |
+| 2027         | 4.2.0.5475  |
 | 2026.1       | 3.6.0.9395  |
 | 2026         | 3.4.1.7055  |
 | 2025         | 3.0.4.7905  |
@@ -92,6 +98,7 @@ Below, is a list of what Dynamo version was shipped with some of the key Autodes
 
 | Host Version | Dynamo      |
 | ------------ | ----------- |
+| 2027         | 4.2.0.5475  |
 | 2026         | 3.4.1.7055  |
 | 2025         | 3.0.3.7597  |
 | 2024         | 2.17.0.3472 |
