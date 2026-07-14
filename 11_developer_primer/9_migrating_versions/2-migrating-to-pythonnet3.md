@@ -62,7 +62,7 @@ There is no similar library with PythonNet3. However, with some concessions on B
 
 Here is an example of assigning a sub-project by Element type using the MVVM pattern:
 
-![Distribution](../../.gitbook/assets/mvvm.jpg)
+![MVVM](../../.gitbook/assets/mvvm.jpg)
 
 ```python
 import clr

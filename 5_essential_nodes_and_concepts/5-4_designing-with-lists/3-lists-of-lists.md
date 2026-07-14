@@ -127,7 +127,7 @@ Notice that the List.Count node gives a value of 5. This is equal to the "Nx" va
 
 ### **List.Combine**
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](6-3_lists-of-lists.md#listlevel) _below._
+_Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](#ListLevel) _below._
 
 In this exercise, we will use **List.Combine** to demonstrate how it can be used to apply a function across separate lists of objects.
 

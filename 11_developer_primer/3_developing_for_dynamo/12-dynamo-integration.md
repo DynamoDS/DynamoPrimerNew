@@ -637,9 +637,10 @@ Selection nodes are implemented by inheriting from the generic `SelectionBase` t
 
 * [https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs](https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs)
 * [NodeModel Case Study - Custom UI](5-nodemodel-case-study-custom-ui.md)
-* [Updating your Packages and Dynamo Libraries for Dynamo 2.x](1-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
-* [Updating your Packages and Dynamo Libraries for Dynamo 3.x](2-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
-* [Updating your Packages and Dynamo Libraries for Dynamo 4.x](3-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
+* [Updating your Packages and Dynamo Libraries for Dynamo 2.x](../8_updating_packages\1-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+* [Updating your Packages and Dynamo Libraries for Dynamo 3.x](../8_updating_packages\2-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+* [Updating your Packages and Dynamo Libraries for Dynamo 4.x](../8_updating_packages\3-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
+* [Migrating Node Icons for Dynamo 4.x](../8_updating_packages\4-migrating-node-icons.md)
 
 #### DynamoRevit:
 
@@ -650,7 +651,7 @@ Selection nodes are implemented by inheriting from the generic `SelectionBase` t
 
 The Built-In Packages mechanism is an effort to bundle more node content with Dynamo Core without expanding the core itself by leveraging the dynamo package loading functionality implemented by the `PackageLoader` and `PackageManager` extension.
 
-In this doc we'll interchangeably use the terms Built-In Packages, Dynamo Built-In Packages, and, builtin packages to mean the same thing.
+In this doc we'll interchangeably use the terms Built-In Packages, Dynamo Built-In Packages, and builtin packages to mean the same thing.
 
 ### Should I ship a package as a Built-In Package?
 
@@ -670,7 +671,7 @@ We are intending the `Built-In Packages` to be a core feature, a set of packages
 
 With some constraints this location will be useable for ADSK Dynamo clients and integrators to distribute their integration specific packages. _(for example, the Dynamo Formit integration requires a custom Dynamo Formit package)._
 
-Because the underlying loading mechanism is the same for both core and host specific packages, it will be necessary to make sure that packages distributed this way do not lead to user confusion about core `Built-In Packages` packages vs. integration-specific packages that are only available in a single host product. We advise that to avoid user confusion, host-specific packages should be introduced in discussion with the Dynamo teams.
+Because the underlying loading mechanism is the same for both core and host specific packages, it will be necessary to make sure that packages distributed this way do not lead to user confusion about core `Built-In Packages` vs. integration-specific packages that are only available in a single host product. We advise that to avoid user confusion, host-specific packages should be introduced in discussion with the Dynamo teams.
 
 ### Package Localization
 

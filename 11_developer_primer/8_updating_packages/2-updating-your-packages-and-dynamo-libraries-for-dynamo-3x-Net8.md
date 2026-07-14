@@ -24,4 +24,10 @@ You may also notice this type of warning in your Dynamo log files at package loa
 
 It's very unlikely that a package built for Dynamo 3.x (*using .Net8*) is going to work on Dynamo 2.x. You will also see a warning when downloading packages built for newer versions of Dynamo while using an older version.
 
+#### .NET Compability between minor releases
+
+Compatibility across Dynamo minor versions isn't guaranteed just because the package's API surface hasn't changed. It specifically depends on whether the underlying .NET version is the same:
+
+> 1. Same .NET version across versions: If a package is built for Dynamo 3.(N+1) and that version uses the same .NET runtime as >Dynamo 3.N, the package will likely also work fine in 3.N — as long as the package doesn't use any APIs that changed or were added >between those versions.
+>2. Different .NET version across versions: If Dynamo 3.(N+1) jumped to a new major .NET version (e.g., .NET 8 → .NET 10) while 3.N >is still on the older one, then a package built for 3.(N+1) is not safe to use in 3.N. The runtime mismatch could cause it to fail >or behave unpredictably (missing APIs, binary incompatibility, etc.).
 
