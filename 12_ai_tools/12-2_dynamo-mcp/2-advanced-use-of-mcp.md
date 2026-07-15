@@ -38,12 +38,11 @@ Debug an existing graph by having the model inspect both the script and the mode
 
 ### Practical Limitations
 
-
 Session limits are real. Large models and long multi-query sessions can burn through context quickly. Breaking work into focused sessions — one floor, one discipline, one task — keeps things responsive.
-Direct code execution is powerful but not bulletproof. Servers that let the model generate and run Revit API code on the fly are flexible, but success rates drop on complex, multi-step requests. Simpler, well-scoped asks work best.
+Direct code execution is powerful but not bulletproof. Servers that let the model generate and run Revit API code on the fly are flexible, but success rates drop on complex, multi-step requests. Simpler, well-scoped prompts work best.
 Everything stays local. These connections run over 127.0.0.1 between the model, the MCP server, and Revit — your model data doesn't get uploaded anywhere as part of the connection itself.
 
-The bigger shift
+### The bigger shift
 
 The interesting part isn't that any single task gets faster, though most do. It's that this changes when you can ask certain questions. Code compliance checks, egress analysis, or parametric adjustments that used to wait until a design was nearly finished can now happen at every iteration, because the AI is reading the live model instead of a stale export. For Dynamo users in particular, that means less time spent wiring nodes for one-off adjustments and more time spent on the graphs that are actually worth building as reusable tools.
 
