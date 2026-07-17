@@ -7,7 +7,7 @@ For Revit users, Dynamo connects to Revit’s Autodesk Assistant starting with R
 2. It is available in Dynamo 4.2.0 and later.
 3. It works like other chat-based AI tools and can directly modify nodes on the canvas.
 
-### Using the Autodesk Assistant?
+### Using the Autodesk Assistant
 
 > 1. Once installed, an icon should appear above the canvas space towards the right-hand side. Clicking this icon will open the Autodesk Assistant window.
 

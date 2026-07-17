@@ -8,7 +8,7 @@ For Dynamo users, that means Assistant can do more than answer general questions
 
 DynamoMCP is available in Dynamo 4.2.0 and later.
 
-# How to Use DynamoMCP
+### How to Use DynamoMCP
 
 You use DynamoMCP through Autodesk Assistant — there is no separate setup or standalone interface. Assistant is the entry point for asking questions, getting help with your graph, and letting the AI work with live Dynamo context.
 
