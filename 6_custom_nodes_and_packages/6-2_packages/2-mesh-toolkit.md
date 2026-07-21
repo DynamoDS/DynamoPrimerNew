@@ -30,8 +30,8 @@ Begin by opening _Mesh-Toolkit\_Intersect-Mesh.dyn in Dynamo._
 
 ![](<../../.gitbook/assets/meshToolkit case study - exercise 01.jpg>)
 
-> 1. **File Path:** Locate the mesh file to import (_stanford\_bunny\_tri.obj_). Supported file types are .mix and .obj
-> 2. **Mesh.ImportFile:** Connect the file path to import the mesh
+> 1. **Data.Remember:** These two nodes contain the mesh vertices which are stored as points and the mesh indices which are a series of integers. Together they provide all the necessary information to rebuild the mesh.
+> 2. **Mesh.ByVerticesAndIntegers:** Connect the vertices and indices from the data nodes to build the mesh.
 
 ![](<../../.gitbook/assets/meshToolkit case study - exercise 02.jpg>)
 
