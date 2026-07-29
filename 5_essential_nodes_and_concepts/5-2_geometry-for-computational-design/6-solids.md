@@ -10,7 +10,7 @@
 
 可以使用[布尔运算](6-solids.md#boolean-operations)修改实体。让我们使用几个布尔操作来创建一个尖球。
 
-\![](<../images/solids - spiky ball.jpg>)
+![](<../images/solids - spiky ball.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius**：创建基本体。
 > 2. **Topology.Faces**、**Face.SurfaceGeometry**：查询实体的面并转换为曲面几何图形（在本例中，球体仅有一个面）。
@@ -29,7 +29,7 @@
 
 布尔运算很复杂，计算速度可能很慢。使用“冻结”功能可暂停选定节点和受影响的下游节点的执行。
 
-\![](<../images/solids - freeze node.jpg>)
+![](<../images/solids - freeze node.jpg>)
 
 > 1. 使用快捷上下文菜单可冻结“实体并集”操作。
 > 2. 选定节点和所有下游节点将以浅灰色重影模式预览，并且受影响的线将显示为虚线。受影响的几何体预览也将生成重影。现在，可以在上游修改值，而无需计算布尔并集。
