@@ -2,7 +2,7 @@
 
 Dynamo 2.0 带有各种词典节点供我们使用。这包括 _创建、操作和查询_ 节点。
 
-\![](<../images/dictionary nodes - nodes.jpg>)
+![](<../images/dictionary nodes - nodes.jpg>)
 
 #### 创建
 
