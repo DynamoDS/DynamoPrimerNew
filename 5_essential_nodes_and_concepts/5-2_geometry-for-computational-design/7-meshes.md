@@ -12,7 +12,7 @@ Dynamo 使用“面-顶点”数据结构定义网格。在最基本的层次上
 
 要创建网格，我们需要一列顶点和将这些顶点分组为面的系统（称为“索引组”）。
 
-\![](<../images/meshes - mesh elements.jpg>)
+![](<../images/meshes - mesh elements.jpg>)
 
 > 1. 顶点列表
 > 2. 用于定义面的索引组列表
@@ -25,7 +25,7 @@ Dynamo 的网格功能可通过安装[“Mesh Toolkit”](https://github.com/Dyn
 
 例如，有关使用此软件包的信息，请访问 [Mesh Toolkit 案例研究](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes)。
 
-\![网格工具包](<../images/meshes - mesh toolkit standford bunny.jpg>)
+![网格工具包](<../images/meshes - mesh toolkit standford bunny.jpg>)
 
 ## 深入探讨...
 
