@@ -1,6 +1,6 @@
 # Revit 连接
 
-\![](<images/revit connection link.jpg>)
+![](<images/revit connection link.jpg>)
 
 适用于 Revit 的 Dynamo 使用图形算法编辑器的数据和逻辑环境扩展建筑信息模型。它的灵活性与强大的 Revit 数据库相结合，可以提供全新的 BIM 视角。
 
@@ -43,7 +43,7 @@
 
 {% hint style="warning" %} *通过使用 Revit 特定的节点族，Dynamo 图形将仅在适用于 Revit 的 Dynamo 中打开时可用。例如，如果在 Dynamo 沙盒中打开适用于 Revit 的 Dynamo 图形，Revit 节点将丢失。{% endhint %}
 
-\![](<images/revit connection - running dynamo in revit 02.jpg>)
+![](<images/revit connection - running dynamo in revit 02.jpg>)
 
 ### 冻结节点
 
