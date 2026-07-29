@@ -22,12 +22,12 @@
 
 从本部分的 Revit 文件开始（或从上一部分继续）。此文件中具有屋顶上 ETFE 嵌板的阵列。在本练习中，我们将参照这些嵌板。
 
-\![](<images/documenting - exercise I - 01.jpg>)
+![](<images/documenting - exercise I - 01.jpg>)
 
 > 1. 向画布添加 _“Family Types”_ 节点，然后选择 _“ROOF-PANEL-4PT”_。
 > 2. 将此节点连接到“Select _All Elements of Family Type_”节点，以将所有图元从 Revit 输入到 Dynamo。
 
-\![](<images/documenting - exercise I - 02.jpg>)
+![](<images/documenting - exercise I - 02.jpg>)
 
 > 1. 使用 _“AdaptiveComponent.Locations”_ 节点查询每个图元的自适应点位置。
 > 2. 使用 _“Polygon.ByPoints”_ 节点基于这四个点创建多边形。请注意，我们现在在 Dynamo 中拥有镶板系统的抽象版本，无需输入 Revit 图元的完整几何图形。
@@ -35,12 +35,12 @@
 
 接下来，与上一练习一样，我们会根据每个嵌板的平面偏差设置其孔径比。
 
-\![](<images/documenting - exercise I - 03.jpg>)
+![](<images/documenting - exercise I - 03.jpg>)
 
 > 1. 将 _“Element.SetParameterByName”_ 节点添加到画布，然后将自适应构件连接到 _“element”_ 输入。将读取 _“Aperture Ratio”_ 的 _“代码块”_ 连接到 _“parameterName”_ 输入。
 > 2. 我们无法直接将偏差结果连接到值输入，因为我们需要将这些值重新映射到参数范围。
 
-\![](<images/documenting - exercise I - 04.jpg>)
+![](<images/documenting - exercise I - 04.jpg>)
 
 > 1. 使用 _“Math.RemapRange”_，通过在 _“代码块”_ 中输入 `0.15; 0.45;`，将偏差值重新映射到介于 0.15 和 0.45 之间的域。
 > 2. 将这些结果连接到 _“Element.SetParameterByName”_ 的值输入。
@@ -57,13 +57,13 @@
 
 设置“Aperture Ratio”并不能清楚地显示屋顶上嵌板的偏差，而且我们还要修改实际图元的几何图形。假定我们只想研究制造可行性的偏差。根据我们文档的偏差范围对嵌板进行着色会很有帮助。我们可以通过以下一系列步骤实现，并且过程与上述步骤非常相似。
 
-\![](<images/documenting - exercise II - 01.jpg>)
+![](<images/documenting - exercise II - 01.jpg>)
 
 > 1. 删除 _“Element.SetParameterByName”_ 及其输入节点，然后添加 _“Element.OverrideColorInView”_。
 > 2. 将 _“Color Range”_ 节点添加到画布，然后连接到 _“Element.OverrideColorInView”_ 的颜色输入。为了创建渐变，我们仍需将偏差值连接到颜色范围。
 > 3. 将光标悬停在 _“value”_ 输入上时，我们可以看到输入值必须介于 _0_ 和 _1_ 之间，以便将颜色映射到每个值。我们需要将偏差值重新映射到此范围。
 
-\![](<images/documenting - exercise II - 02.jpg>)
+![](<images/documenting - exercise II - 02.jpg>)
 
 > 1. 使用 _“Math.RemapRange”_，将平面偏差值重新映射到介于 *0* 和 _1_ 之间的范围（注意：也可以使用 _“MapTo”_ 节点定义源域）。
 > 2. 将结果连接到 _“Color Range”_ 节点。
@@ -74,7 +74,7 @@
 
 ![](images/09.jpg)
 
-\![](<images/documenting - exercise II - 04.jpg>)
+![](<images/documenting - exercise II - 04.jpg>)
 
 > 1. 使用 _“代码块”_，在两个不同代码行上添加两个数字：`0;` 和 `255;`。
 > 2. 通过将相应值连接到两个 _“Color.ByARGB”_ 节点，即可创建红色和蓝色。
@@ -89,7 +89,7 @@
 
 在 Revit 中选择一个 ETFE 嵌板，我们会看到有四个实例参数：XYZ1、XYZ2、XYZ3 和 XYZ4。创建这些参数后，它们的内容都为空。这些是基于文字的参数，都需要值。我们会使用 Dynamo 将自适应点位置写入每个参数。如果需要将几何图形发送给外立面顾问工程师，这有助于实现互操作性。
 
-\![](<images/documenting - exercise III - 01.jpg>)
+![](<images/documenting - exercise III - 01.jpg>)
 
 在样例图纸中，我们有一个大的空明细表。XYZ 参数是 Revit 文件中的共享参数，这样我们便可将它们添加到明细表中。
 
@@ -101,7 +101,7 @@
 
 为了写入这些值，我们将执行复杂的列表操作。该图形本身很简单，但这些概念主要基于列表一章中讨论的列表映射进行构建。
 
-\![](<images/documenting - exercise III - 04.jpg>)
+![](<images/documenting - exercise III - 04.jpg>)
 
 > 1. 选择所有具有两个节点的自适应构件。
 > 2. 使用 _“AdaptiveComponent.Locations”_ 提取每个点的位置。
@@ -122,4 +122,4 @@
 
 现在，每个 ETFE 嵌板都为每个自适应点写入了 XYZ 坐标，从而表示要预制的每个嵌板的角点。
 
-![练习](../.gitbook/assets/00\(8\).jpg)
+![练习](../.gitbook/assets/00(8).jpg)
