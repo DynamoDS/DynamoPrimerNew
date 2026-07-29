@@ -4,21 +4,21 @@
 
 此模板的位置位于 Dynamo 安装的 `APPDATA` 位置。
 
-这通常如下所示：`( %appdata%\Dynamo\Dynamo Core\{version}\ )`。
+这通常如下所示：`( %appdata%DynamoDynamo Core{version} )`。
 
-\![](<../images/python templates - appdata folder location.jpg>)
+![](<../images/python templates - appdata folder location.jpg>)
 
 ### 设置模板
 
 为了能够利用此功能，我们需要在 `DynamoSettings.xml` 文件中添加以下行。_（在记事本中编辑）_
 
-\![](<../images/python templates -dynamo settings xml file.png>)
+![](<../images/python templates -dynamo settings xml file.png>)
 
 在我们看到 `<PythonTemplateFilePath />` 的位置，只需将其替换为以下内容：
 
 ```
 <PythonTemplateFilePath>
-<string>C:\Users\CURRENTUSER\AppData\Roaming\Dynamo\Dynamo Core\2.0\PythonTemplate.py</string>
+<string>C:UsersCURRENTUSERAppDataRoamingDynamoDynamo Core2.0PythonTemplate.py</string>
 </PythonTemplateFilePath>
 ```
 
@@ -71,10 +71,10 @@ OUT = element
 
 定义了 Python 模板后，在每次放置 Python 节点时，Dynamo 都会查找该模板。如果找不到，它将看起来像默认的 Python 窗口。
 
-\![](<../images/python templates - before setup template.jpg>)
+![](<../images/python templates - before setup template.jpg>)
 
 如果找到 Python 模板（如我们的 Revit 模板），则您会看到所有内置的默认项目。
 
-\![](<../images/python templates - after setup template.jpg>)
+![](<../images/python templates - after setup template.jpg>)
 
 有关此出色附加功能（由 Radu Gidei 提供）的其他信息可以在此处找到。https://github.com/DynamoDS/Dynamo/pull/8122
