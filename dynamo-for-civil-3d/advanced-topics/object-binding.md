@@ -24,7 +24,7 @@ Dynamo for Civil 3D 包含一个非常强大的机制，用于“记住”每个
 
 <figure><img src="../images/c3d-binding-select-circle.gif" alt=""><figcaption><p>选择一个新圆时 Dynamo 的默认行为</p></figcaption></figure>
 
-似乎每次运行图形时都会删除并重新创建文字。实际上，文字的位置会根据选择的圆进行 _修改_。如此一来，就是文字相同，位置却不同！为了每次都创建新文字，我们需要修改 Dynamo 的对象绑定设置，以便不保留绑定数据（请参见下文的[\#绑定设置](object-binding.md#binding-settings "mention")）。
+似乎每次运行图形时都会删除并重新创建文字。实际上，文字的位置会根据选择的圆进行 _修改_。如此一来，就是文字相同，位置却不同！为了每次都创建新文字，我们需要修改 Dynamo 的对象绑定设置，以便不保留绑定数据（请参见下文的[#绑定设置](object-binding.md#binding-settings "mention")）。
 
 <figure><img src="../images/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>对象绑定设置</p></figcaption></figure>
 
