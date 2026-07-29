@@ -4,7 +4,7 @@
 
 最基本的是，向量表示三维空间中的位置，通常被视为从位置 (0, 0, 0) 到该位置的箭头端点。可以使用 _ByCoordinates_ 构造函数创建向量，以获取新创建的向量对象的 x、y 和 z 位置。请注意，向量对象不是几何对象，不会显示在 Dynamo 窗口中。但是，有关新创建或修改的向量的信息可以在控制台窗口中打印：
 
-\![](<../images/vector math 01.jpg>)
+![](<../images/vector math 01.jpg>)
 
 ```js
 // construct a Vector object
@@ -60,7 +60,7 @@ c = a.Scale(5);
 
 在缩放向量时，通常需要使结果向量的长度与缩放量完全相等。通过首先标准化向量，即将向量的长度精确设置为一，可以轻松实现该目的。
 
-\![](<../images/vector math 05.jpg>)
+![](<../images/vector math 05.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 3);
@@ -94,7 +94,7 @@ c = a.Cross(b);
 
 另外，某些向量数学的更高级函数是点积。两个向量之间的点积是一个实数（不是向量对象），它与两个向量之间的角度相关，但并不完全相关。点积的一个有用属性是：仅当两个向量垂直时，它们之间的点积将为 0。点积使用 _Dot_ 方法计算。
 
-\![](<../images/vector math 07.jpg>)
+![](<../images/vector math 07.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 1);
