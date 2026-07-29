@@ -24,7 +24,7 @@ Dynamo 的一个强大功能是，可以在参数化级别上编辑参数。例�
 
 要快速转换单位，请使用 _“Convert Between Units”_ 节点。这是一个方便工具，可用于即时转换长度、面积和体积单位。
 
-\![](<images/editing - units.jpg>)
+![](<images/editing - units.jpg>)
 
 ## 练习
 
@@ -44,22 +44,22 @@ Dynamo 的一个强大功能是，可以在参数化级别上编辑参数。例�
 
 在 Revit 中，选择体量中的建筑，我们可以在“特性”面板中看到实例参数的阵列。
 
-\![](<images/editing - exercise 01.jpg>)
+![](<images/editing - exercise 01.jpg>)
 
 在 Dynamo 中，我们可以通过选择目标图元来检索参数。
 
-\![](<images/editing - exercise 02.jpg>)
+![](<images/editing - exercise 02.jpg>)
 
 > 1. 使用 _“Select Model Element”_ 节点选择建筑体量。
 > 2. 我们可以使用 _“Element.Parameters”_ 节点查询此体量的所有参数。这包括类型和实例参数。
 
-\![](<images/editing - exercise 03.jpg>)
+![](<images/editing - exercise 03.jpg>)
 
 > 1. 参照 _“Element.Parameters”_ 节点以查找目标参数。或者，我们可以查看上一步中的“特性”面板，以选择要编辑的参数名称。在本例中，我们将查找影响建筑体量上较大几何移动的参数。
 > 2. 我们将使用 _“Element.SetParameterByName”_ 节点对 Revit 图元进行更改
 > 3. 使用“代码块”定义参数列表，其中用引号括起来每个项目以表示字符串。我们还可以将“List.Create”节点与一系列连接到多个输入的 _“string”_ 节点一起使用，但代码块更便捷。在 Revit 中，确保字符串与精确名称匹配，具体情况如下：`{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
 
-\![](<images/editing - exercise 04.jpg>)
+![](<images/editing - exercise 04.jpg>)
 
 > 1. 我们还要为每个参数指定值。向画布添加六个 _“整数滑块”_ ，然后重命名为列表中相应的参数。此外，根据上图设置每个滑块的值。按从上到下的顺序：62、92、25、22、8、12
 > 2. 定义另一个 _“代码块”_ ，其中列表与参数名称的长度相同。在本例中，我们命名变量（不带引号），这将为 _“代码块”_ 创建输入。将 _“滑块”_ 连接到各自的输入：`{bw,bl,bh,ao,io,lu};`
@@ -69,7 +69,7 @@ Dynamo 的一个强大功能是，可以在参数化级别上编辑参数。例�
 
 就像在 Revit 中一样，其中许多参数相互依赖。当然，在这些组合中几何图形可能会中断。我们可以在参数特性中定义公式来解决这个问题，也可以在 Dynamo 中使用数学运算设置类似逻辑（如果您想扩展练习，这也是一项额外的挑战）。
 
-\![](<images/editing - exercise 05.jpg>)
+![](<images/editing - exercise 05.jpg>)
 
 > 1. 此组合为建筑体量提供了功能强大的新设计：100、92、100、25、13、51
 
@@ -77,12 +77,12 @@ Dynamo 的一个强大功能是，可以在参数化级别上编辑参数。例�
 
 接下来，我们来了解一下如何使用类似过程编辑外立面。
 
-\![](<images/editing - exercise 06.jpg>)
+![](<images/editing - exercise 06.jpg>)
 
 > 1. 复制图形，然后专注于将容纳桁架系统的外立面玻璃。在本例中，我们将隔离四个参数：`{"DblSkin_SouthOffset","DblSkin_MidOffset","DblSkin_NorthOffset","Facade Bend Location"};`
 > 2. 此外，我们还会创建 _“数字滑块”_ ，然后重命名为相应的参数。前三个滑块（从上到下）应重新映射到 [0,10] 的域，而最后一个滑块（ _“外立面弯曲位置”_ ）应重新映射到 [0,1] 的域。这些值（从上到下）应从以下这些值开始（尽管它们是任意值）：2.68、2.64、2.29、0.5
 > 3. 定义新的代码块并连接滑块：`{so,mo,no,fbl};`
 
-\![](<images/editing - exercise 07.jpg>)
+![](<images/editing - exercise 07.jpg>)
 
 > 1. 通过更改图形此部分中的 _“滑块”_，我们可以使外立面玻璃更加实质：9.98、10.0、9.71、0.31
