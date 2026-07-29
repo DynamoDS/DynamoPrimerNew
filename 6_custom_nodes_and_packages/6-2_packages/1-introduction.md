@@ -22,11 +22,11 @@ Dynamo 提供了大量现成功能，还维护了一个丰富的软件包库，�
 
 请注意，现在 Dynamo 库中有另一个名为“buildz”的组。该名称指代软件包的开发人员，并且自定义节点将放置在此组中。我们可以立即开始使用此组。
 
-\![](<../images/package introduction - installing a package 03.jpg>)
+![](<../images/package introduction - installing a package 03.jpg>)
 
 使用 **“代码块”** 以快速定义矩形栅格、将结果输出到 **“Polygon.ByPoints”** 节点，然后输出到 **“Surface.ByPatch”** 节点以查看刚创建的矩形嵌板列表。
 
-\![](<../images/package introduction - installing a package 04.jpg>)
+![](<../images/package introduction - installing a package 04.jpg>)
 
 ### 安装软件包文件夹 - DynamoUnfold
 
@@ -40,7 +40,7 @@ Dynamo 提供了大量现成功能，还维护了一个丰富的软件包库，�
 
 在 Dynamo 库中，我们有一个 _“DynamoUnfold”_ 组，其中包含多个类别和自定义节点。
 
-\![](<../images/package introduction - installing package folder 02.jpg>)
+![](<../images/package introduction - installing package folder 02.jpg>)
 
 现在，让我们来看一下软件包的文件结构。
 
@@ -52,7 +52,7 @@ Dynamo 提供了大量现成功能，还维护了一个丰富的软件包库，�
 
 这会转到该软件包的根目录。请注意，我们有 3 个文件夹和一个文件。
 
-\![](<../images/package introduction - installing package folder 05.jpg>)
+![](<../images/package introduction - installing package folder 05.jpg>)
 
 > 1. _“bin”_ 文件夹中存储了 .dll 文件。此 Dynamo 软件包使用 Zero-Touch 开发，因此自定义节点保存在此文件夹中。
 > 2. _“dyf”_ 文件夹中存储了自定义节点。此软件包不是使用 Dynamo 自定义节点开发的，因此此软件包的该文件夹为空。
@@ -87,7 +87,7 @@ Dynamo 提供了大量现成功能，还维护了一个丰富的软件包库，�
 
 如果要查看软件包文件的保存位置，请在顶部导航中，依次单击“Dynamo”>“首选项”>“软件包设置”>“节点和软件包文件位置”，可以在此处查找当前根文件夹目录。
 
-\![](<../images/package introduction - installing package folder 08.png>)
+![](<../images/package introduction - installing package folder 08.png>)
 
 默认情况下，软件包安装在与以下文件夹路径类似的位置：_C:/Users/[用户名]/AppData/Roaming/Dynamo/[Dynamo 版本]_。
 
@@ -99,14 +99,14 @@ Dynamo 提供了大量现成功能，还维护了一个丰富的软件包库，�
 
 在单个应用程序的 UI 中，转到 _Dynamo -> 首选项 -> 软件包设置 -> 节点和软件包文件位置_。在对话框中，按“添加路径”按钮，然后浏览到共享软件包资源的网络位置。
 
-作为一个自动化过程，它将涉及将信息添加到随 Dynamo 一起安装的配置文件：\
- `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
+作为一个自动化过程，它将涉及将信息添加到随 Dynamo 一起安装的配置文件：
+ `C:Users[Username]AppDataRoamingDynamoDynamo Revit[Dynamo Version]DynamoSettings.xml`
 
 默认情况下，适用于 Revit 的 Dynamo 的配置为：
 
 `<CustomPackageFolders>`
 
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
+`<string>C:Users[Username]AppDataRoamingDynamoDynamo Revit[Dynamo Version]</string>`
 
 `</CustomPackageFolders>`
 
@@ -114,9 +114,9 @@ Dynamo 提供了大量现成功能，还维护了一个丰富的软件包库，�
 
 `<CustomPackageFolders>`
 
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
+`<string>C:Users[Username]AppDataRoamingDynamoDynamo Revit[Dynamo Version]</string>`
 
-`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`
+`<string>N:OfficeFilesDynamoPackages_Limited</string>`
 
 `</CustomPackageFolders>`
 
