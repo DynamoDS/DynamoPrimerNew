@@ -50,8 +50,8 @@ Dynamo 云计算目前通过以下方式提供：
 
 ## 了解更多信息
 
-- [Dynamo 云计算与 Dynamo 桌面版的差异](../dynamo-in-forma-beta/dynamo-compute-service-differences-with-desktop-dynamo.md) \- 编写用于云执行的图形时需要注意的重要差异
-- [引擎生命周期](engine-lifecycle.md) \- 有关支持的引擎版本及其生命周期的信息
+- [Dynamo 云计算与 Dynamo 桌面版的差异](../dynamo-in-forma-beta/dynamo-compute-service-differences-with-desktop-dynamo.md) - 编写用于云执行的图形时需要注意的重要差异
+- [引擎生命周期](engine-lifecycle.md) - 有关支持的引擎版本及其生命周期的信息
 
 -----
 
