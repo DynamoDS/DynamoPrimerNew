@@ -15,11 +15,11 @@
 
 Dynamo 中的几何图形节点始终是镶嵌细分的*。这样，您就有两个选项来处理未细分的几何图形：Python 节点和 ZeroTouch 节点。只要您不从 Python 或 ZeroTouch 节点返回几何图形对象，就不会细分该几何图形。对于实例，如果图形具有多个点节点，这些节点连接到多个线节点、连接到多个放样节点、连接到多个加厚节点，则将在每一步中细分几何图形。相反，可以将此逻辑捆绑到 Python 或 ZeroTouch 节点中，并且仅从节点返回最终对象。
 
-有关使用 ZeroTouch 节点的详细信息，请参见本 Primer 的[针对 Dynamo 开发](11\_developer\_primer/3\_developing\_for\_dynamo/README.md)部分。
+有关使用 ZeroTouch 节点的详细信息，请参见本 Primer 的[针对 Dynamo 开发](11_developer_primer/3_developing_for_dynamo/README.md)部分。
 
 ### 内存使用
 
-如果不再细分几何图形，则可能会因过多的几何图形累积而遇到内存瓶颈。Dynamo 中的几何图形对象在创建时消耗的内存量很小，但并非微不足道。如果您正在处理数十万或数百万个对象，这可能会累积起来并导致 Dynamo 或 Revit 崩溃。在 Dynamo 2.5 及更高版本中，通过处理未使用的对象以隐式方式处理该操作，但如果使用的版本早于 2.5，则避免创建大量几何图形的一种方法是，在完成对象处理后处理这些对象。例如，假设您正在创建数十万条 NurbsCurve，每条 NurbsCurve 需要数十个点。创建它们的一种方法是在 Dynamo 中创建二维列表，并将其输入到“NurbsCurve.ByPoints”节点。但是，这需要创建数百万个点。另一种方法是使用 Python 或 ZeroTouch 节点。在此节点中，可以创建十几个点，将其发送到 NurbsCurve.ByPoints 中，然后使用 Dispose() 方法调用处理这十几个点。有关使用 ZeroTouch 节点的详细信息，请参见本 Primer 的[针对 Dynamo 开发](11\_developer\_primer/3\_developing\_for\_dynamo/README.md)部分。在某些情况下，在创建几何图形对象后处理这些几何图形对象会显著减少您使用的内存量；尽管我们会为使用 Dynamo 2.5 及更高版本的用户处理此问题，但如果用例需要在确定性时间减少内存，我们建议用户仍显式处理几何图形。请参见 [Dynamo 几何图形稳定性改进](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297)，以详细了解 Dynamo 2.5 中引入的新稳定性功能。
+如果不再细分几何图形，则可能会因过多的几何图形累积而遇到内存瓶颈。Dynamo 中的几何图形对象在创建时消耗的内存量很小，但并非微不足道。如果您正在处理数十万或数百万个对象，这可能会累积起来并导致 Dynamo 或 Revit 崩溃。在 Dynamo 2.5 及更高版本中，通过处理未使用的对象以隐式方式处理该操作，但如果使用的版本早于 2.5，则避免创建大量几何图形的一种方法是，在完成对象处理后处理这些对象。例如，假设您正在创建数十万条 NurbsCurve，每条 NurbsCurve 需要数十个点。创建它们的一种方法是在 Dynamo 中创建二维列表，并将其输入到“NurbsCurve.ByPoints”节点。但是，这需要创建数百万个点。另一种方法是使用 Python 或 ZeroTouch 节点。在此节点中，可以创建十几个点，将其发送到 NurbsCurve.ByPoints 中，然后使用 Dispose() 方法调用处理这十几个点。有关使用 ZeroTouch 节点的详细信息，请参见本 Primer 的[针对 Dynamo 开发](11_developer_primer/3_developing_for_dynamo/README.md)部分。在某些情况下，在创建几何图形对象后处理这些几何图形对象会显著减少您使用的内存量；尽管我们会为使用 Dynamo 2.5 及更高版本的用户处理此问题，但如果用例需要在确定性时间减少内存，我们建议用户仍显式处理几何图形。请参见 [Dynamo 几何图形稳定性改进](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297)，以详细了解 Dynamo 2.5 中引入的新稳定性功能。
 
 ### Revit API
 
