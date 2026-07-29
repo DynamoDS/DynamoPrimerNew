@@ -12,7 +12,7 @@
 
 使用代码块，用户可以灵活地确定如何指定输入。以下是通过坐标 _“(10, 5, 0)”_ 创建基点的几种不同方法：
 
-\![](<../images/codeblock brief overview.jpg>)
+![](<../images/codeblock brief overview.jpg>)
 
 当您了解库中更多的可用函数时，您甚至会发现键入“Point.ByCoordinates”比在库中搜索和查找正确的节点更快。例如，当键入 _“Point.”_ 时，Dynamo 会显示可能应用于点的函数列表。这使脚本更加直观，有助于了解如何在 Dynamo 中应用函数。
 
@@ -20,7 +20,7 @@
 
 代码块位于 _“核心”>“输入”>“操作”>“代码块”_ 中。但更快的是，只需双击画布，代码块即会显示。此节点经常被使用，因此赋予其完全双击权限。
 
-\![](<../images/creating codeblock nodes.jpg>)
+![](<../images/creating codeblock nodes.jpg>)
 
 ### 数字、字符串和公式
 
@@ -30,7 +30,7 @@
 
 数字和字符串节点是两个 Dynamo 节点示例，这些节点相较于代码块无疑是过时的。
 
-\![](<../images/old school vs code blocks nodes.jpg>)
+![](<../images/old school vs code blocks nodes.jpg>)
 
 > 1. “过去”
 > 2. 代码块
