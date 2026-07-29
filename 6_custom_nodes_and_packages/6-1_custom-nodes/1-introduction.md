@@ -10,7 +10,7 @@
 
 可以说，自定义节点的最佳功能是其工作共享功能。如果“超级用户”创建复杂的 Dynamo 图形，并将其交给 Dynamo 的新手设计师，则他/她可以将图形压缩为用于设计交互的基本要素。可以打开自定义节点来编辑内部图形，但“容器”可以保持简单。借助此过程，自定义节点可让 Dynamo 用户设计清晰且直观的图形。
 
-\![](<../images/custom node intro - work sharing 01.jpg>)
+![](<../images/custom node intro - work sharing 01.jpg>)
 
 ### 构建节点的多种方法
 
@@ -22,11 +22,11 @@
 
 要从头开始创建自定义节点，请启动 Dynamo 并选择“自定义节点”,或者从画布键入 Ctrl + Shift + N。
 
-\![](<../images/custom node intro - custom node environment 01.png>)
+![](<../images/custom node intro - custom node environment 01.png>)
 
 在“自定义节点特性”对话框中指定名称、说明和类别。
 
-\![](<../images/custom node intro - custom node environment 02.jpg>)
+![](<../images/custom node intro - custom node environment 02.jpg>)
 
 > 1. **名称**：百分比
 > 2. **说明**：计算一个值相对于另一个值的百分比。
@@ -34,16 +34,16 @@
 
 这将打开一个带黄色背景的画布，表示您正在自定义节点内部工作。在此画布中，您可以访问所有核心 Dynamo 节点，以及“输入”和“输出”节点，这些节点标记自定义节点的数据流入和流出。它们位于“输入”>“基本”中。
 
-\![](<../images/custom node intro - custom node environment 03.jpg>)
+![](<../images/custom node intro - custom node environment 03.jpg>)
 
-\![](<../images/custom node intro - custom node environment 04.jpg>)
+![](<../images/custom node intro - custom node environment 04.jpg>)
 
 > 1. **输入**：输入节点在自定义节点上创建输入端口。输入节点的语法为 _“input_name : datatype = default_value(optional)”_。
 > 2. **输出**：与输入类似，这些输出将在自定义节点上创建和命名输出端口。考虑将 **“自定义注释”** 添加到输入和输出端口，以提示输入和输出类型。这将在[“创建自定义节点”](2-creating.md)部分中详细介绍。
 
 可以将此自定义节点另存为“.dyf”（与标准“.dyn”相反）文件，并且该文件将自动添加到您的会话和将来的会话中。您会在库的“附加模块”部分中找到自定义节点。
 
-\![](<../images/custom node intro - custom node environment 05.jpg>)
+![](<../images/custom node intro - custom node environment 05.jpg>)
 
 ### 前进
 
