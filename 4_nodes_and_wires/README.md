@@ -8,7 +8,7 @@
 
 Dynamo 中的大多数节点由五个部分组成。虽然存在例外（如输入节点），但每个节点的剖析可描述如下：
 
-\![](<images/nodes and wires - nodes anatomy.jpg>)
+![](<images/nodes and wires - nodes anatomy.jpg>)
 
 > 1. 名称 - 采用 `Category.Name` 命名约定的节点名称
 > 2. 主体 - 节点的主体 - 在此处单击鼠标右键可显示整个节点级别的选项
@@ -24,7 +24,7 @@ Dynamo 中的大多数节点由五个部分组成。虽然存在例外（如输�
 
 {% hint style="info" %}提示：将光标悬停在端口上，可查看包含预期数据类型的工具提示。{% endhint %}
 
-\![](<images/nodes and wires - nodes input and tooltip.jpg>)
+![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
 > 1. 端口标签
 > 2. 工具提示
@@ -51,11 +51,11 @@ Dynamo 通过基于每个节点的状态使用不同颜色方案渲染节点，�
 
 #### 处理错误或警告节点
 
-如果可视化程序包含警告或错误，Dynamo 将提供有关该问题的其他信息。任何黄色节点在名称上方也会有工具提示。将光标悬停在警告 \![](<images/nodes and wires - node warning icon.png>) 或错误 \![](<images/nodes and wires - node error icon.png>) 工具提示图标上以将其展开。
+如果可视化程序包含警告或错误，Dynamo 将提供有关该问题的其他信息。任何黄色节点在名称上方也会有工具提示。将光标悬停在警告 ![](<images/nodes and wires - node warning icon.png>) 或错误 ![](<images/nodes and wires - node error icon.png>) 工具提示图标上以将其展开。
 
 {% hint style="info" %}提示：掌握此工具提示信息后，检查上游节点以查看所需的数据类型或数据结构是否出错。{% endhint %}
 
-\![](<images/nodes and wires - nodes with warning tooltip.jpg>)
+![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
 > 1. 警告工具提示 -“空”或无数据不能理解为双精度，即数字
 > 2. 使用“Watch”节点检查输入数据
@@ -81,7 +81,7 @@ Dynamo 通过基于每个节点的状态使用不同颜色方案渲染节点，�
 
 输入端口位于左侧，输出端口位于节点的右侧；因此，我们通常可以说程序流从左向右移动。
 
-\![](<images/nodes and wires - flow of data.jpg>)
+![](<images/nodes and wires - flow of data.jpg>)
 
 ### 创建导线 <a href="#creating-wires" id="creating-wires"></a>
 
@@ -89,7 +89,7 @@ Dynamo 通过基于每个节点的状态使用不同颜色方案渲染节点，�
 
 数据将始终通过此导线从输出流到输入；但是，我们可以按照单击连接端口的顺序沿任意方向创建导线。
 
-\![](<images/nodes and wires - creating a wire.gif>)
+![](<images/nodes and wires - creating a wire.gif>)
 
 ### 编辑导线 <a href="#editing-wires" id="editing-wires"></a>
 
@@ -101,21 +101,21 @@ Dynamo 通过基于每个节点的状态使用不同颜色方案渲染节点，�
 
 * 要删除导线，请将导线移离，然后在工作空间上单击鼠标左键
 
-\![](<images/nodes and wires - edit wires remove.gif>)
+![](<images/nodes and wires - edit wires remove.gif>)
 
 * 使用 Shift+单击鼠标左键来重新连接多条导线
 
-\![](<images/nodes and wires - edit multi ports.gif>)
+![](<images/nodes and wires - edit multi ports.gif>)
 
 * 使用 Ctrl+单击鼠标左键来复制导线
 
-\![](<images/nodes and wires - duplicate wire.gif>)
+![](<images/nodes and wires - duplicate wire.gif>)
 
 #### 默认导线与亮显的导线 <a href="#wire-previews" id="wire-previews"></a>
 
 默认情况下，导线将通过灰色笔划进行预览。选择某个节点后，将使用与该节点相同的浅绿色亮显来渲染任何连接导线。
 
-\![](<images/nodes and wires - default vs highlighted wires.jpg>)
+![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
 > 1. 亮显的导线
 > 2. 默认导线
@@ -126,10 +126,10 @@ Dynamo 通过基于每个节点的状态使用不同颜色方案渲染节点，�
 
 使用此设置，只有选定的节点及其连接线将以淡绿色亮显。
 
-\![](<images/nodes and wires - hide wires setting.gif>)
+![](<images/nodes and wires - hide wires setting.gif>)
 
 #### 仅隐藏单条导线
 
 还可以仅通过在节点输出上单击鼠标右键 > 选择“隐藏导线”来隐藏选定的导线
 
-\![](<images/nodes and wires - hide selected wire.gif>)
+![](<images/nodes and wires - hide selected wire.gif>)
