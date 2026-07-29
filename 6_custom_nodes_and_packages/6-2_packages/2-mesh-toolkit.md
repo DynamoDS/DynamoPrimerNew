@@ -2,7 +2,7 @@
 
 Dynamo Mesh Toolkit 包提供了多种工具，可从外部文件格式输入网格、从 Dynamo 几何体对象创建网格，以及按顶点和索引手动构建网格。该库还提供了一些工具，可用于修改网格、修复网格或提取水平切片以在制造中使用。
 
-\![](<../images/meshToolkit case study 01.jpg>)
+![](<../images/meshToolkit case study 01.jpg>)
 
 Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未来几年内将继续增长。希望新方法经常出现在工具包中，您可以随时与 Dynamo 团队联系并提供评论、错误和新功能建议。
 
@@ -28,19 +28,19 @@ Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未�
 
 首先，在 Dynamo 中打开 _“Mesh-Toolkit_Intersect-Mesh.dyn”_。
 
-\![](<../images/meshToolkit case study - exercise 01.jpg>)
+![](<../images/meshToolkit case study - exercise 01.jpg>)
 
 > 1. **File Path**：找到要输入的网格文件（_“stanford_bunny_tri.obj”_）。支持的文件类型包括 .mix 和 .obj
 > 2. **Mesh.ImportFile**：连接文件路径以输入网格
 
-\![](<../images/meshToolkit case study - exercise 02.jpg>)
+![](<../images/meshToolkit case study - exercise 02.jpg>)
 
 > 1. **Point.ByCoordinates**：构造点 - 这将是圆弧的中心。
 > 2. **Arc.ByCenterPointRadiusAngle**：围绕点构造圆弧。此曲线将用于定位一系列平面。设置如下所示：`radius: 40, startAngle: -90, endAngle:0`
 
 创建一系列沿圆弧定向的平面。
 
-\![](<../images/meshToolkit case study - exercise 03.jpg>)
+![](<../images/meshToolkit case study - exercise 03.jpg>)
 
 > 1. **代码块**：创建 25 个介于 0 和 1 之间的数字。
 > 2. **Curve.PointAtParameter**：将圆弧连接到 _“curve”_ 输入，将代码块输出连接到 _“param”_ 输入以沿曲线提取一系列点。
@@ -49,7 +49,7 @@ Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未�
 
 接下来，我们将使用这些平面来与网格相交。
 
-\![](<../images/meshToolkit case study - exercise 04.jpg>)
+![](<../images/meshToolkit case study - exercise 04.jpg>)
 
 > 1. **Mesh.Intersect**：使平面与输入的网格相交，从而创建一系列复合线轮廓。在节点上单击鼠标右键并将连缀设置为最长
 > 2. **PolyCurve.Curves**：将复合线断开为其曲线片段。
@@ -58,12 +58,12 @@ Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未�
 
 在继续操作之前，请关闭某些节点（例如：Mesh.ImportFile、Curve.EndPoint、Plane.ByOriginNormal 和 Arc.ByCenterPointRadiusAngle）的预览，以便更好地查看结果。
 
-\![](<../images/meshToolkit case study - exercise 05.jpg>)
+![](<../images/meshToolkit case study - exercise 05.jpg>)
 
 > 1. **Surface.ByPatch**：为每个轮廓构造曲面面片以创建网格的“切片”。
 
 为一个格子/卵形木箱效果添加第二组切片。
 
-\![](<../images/meshToolkit case study - exercise 06.jpg>)
+![](<../images/meshToolkit case study - exercise 06.jpg>)
 
 您可能已注意到，相交操作通过网格与类似实体进行更快的计算。此练习中演示的工作流适合于与网格结合使用。
