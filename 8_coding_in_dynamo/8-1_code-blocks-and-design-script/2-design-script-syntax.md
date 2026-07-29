@@ -23,7 +23,7 @@
 
 _“代码块”_ 语法 `Point.ByCoordinates(0,10);` 会提供与 Dynamo 中的 _“Point.ByCoordinates”_ 节点相同的结果，但我们能够使用一个节点创建点。这相较于将单独的节点连接到 _“X”_ 和 _Y”_ 更加高效。
 
-\![](<../images/codeblock dot notation.jpg>)
+![](<../images/codeblock dot notation.jpg>)
 
 > 1. 通过在代码块中使用 _“Point.ByCoordinates”_，我们指定输入的顺序与现成节点 _“(X,Y)”_ 相同。
 
@@ -33,11 +33,11 @@ _“代码块”_ 语法 `Point.ByCoordinates(0,10);` 会提供与 Dynamo 中的
 
 常规节点（库中的大多数）通常有三种类型。您会发现库是按这些类别来组织的。在代码块内调用这三种类型的方法或节点时，它们的处理方式有所不同。
 
-\![](<../images/action create query category.jpg>)
+![](<../images/action create query category.jpg>)
 
-> 1. **创建** \- 创建（或构造）对象
-> 2. **操作** \- 对某个对象执行操作
-> 3. **查询** \- 获取已存在对象的特性
+> 1. **创建** - 创建（或构造）对象
+> 2. **操作** - 对某个对象执行操作
+> 3. **查询** - 获取已存在对象的特性
 
 #### 创建
 
@@ -51,7 +51,7 @@ _“代码块”_ 语法 `Point.ByCoordinates(0,10);` 会提供与 Dynamo 中的
 
 操作是对该类型的对象所执行的动作。Dynamo 使用许多编码语言通用的 _“点符号”_，来对某个对象应用操作。确定操作对象后，键入一个点，然后键入操作的名称。与创建类方法一样，操作类方法的输入放置在圆括号中，只是您无需在相应节点上指定所见到的第一个输入。反之，我们指定要对其执行操作的元素：
 
-\![](<../images/DesignScript - action.jpg>)
+![](<../images/DesignScript - action.jpg>)
 
 > 1. **“Point.Add”** 节点是操作类节点，因此语法的工作方式略有不同。
 > 2. 要添加给它的输入分别是 (1) _点_ 和 (2) _向量_。在 **“代码块”** 中，我们已将点（对象）命名为 _“pt”_。要将名为*“vec”*的向量添加到 _“pt”_，我们会写入 _“pt.Add(vec)”_ 或写入“: 对象、点、操作”。“添加”操作仅有一个输入，或 **“Point.Add”** 节点的所有输入减去第一个输入。**“Point.Add”** 节点的第一个输入是点本身。
@@ -66,7 +66,7 @@ _“代码块”_ 语法 `Point.ByCoordinates(0,10);` 会提供与 Dynamo 中的
 
 带节点的连缀与带代码块的连缀略有不同。使用节点，用户在相应节点上单击鼠标右键并选择要执行的连缀选项。使用代码块，用户可以更好地控制如何创建数据的结构。代码块简写方法使用 _“复制指南”_，来设置多个一维列表应如何成对。尖括号“<>”中的数字定义所生成嵌套列表的层次结构：<1>、<2>、<3> 等。
 
-\![](<../images/DesignScript - lacing.jpg>)
+![](<../images/DesignScript - lacing.jpg>)
 
 > 1. 在本例中，我们使用简写来定义两个范围（更多简写位于本章的以下部分中）。简而言之，`0..1;` 等效于 `{0,1}`，`-3..-7` 等效于 `{-3,-4,-5,-6,-7}`。结果将生成由 2 个 X 值和 5 个 Y 值组成的列表。如果我们不对这些不匹配的列表使用复制指南，则会得到一列两点，即最短列表的长度。使用“复制指南”，我们可以找出 2 和 5 坐标的所有可能组合（或“笛卡尔积”）。
 > 2. 使用语法 **Point.ByCoordinates**`(x_vals<1>,y_vals<2>);`，可以得到 _两_ 个列表（其中，每个列表中包含 _五_ 个项目）。
@@ -78,7 +78,7 @@ _“代码块”_ 语法 `Point.ByCoordinates(0,10);` 会提供与 Dynamo 中的
 
 尽管上面的代码块方法可能需要一些时间来适应，但 Dynamo 中有一个名为“节点到代码”的功能，该功能可使该过程更加容易。要使用此功能，请在 Dynamo 图形中选择一组节点，在画布上单击鼠标右键并选择“节点到代码”。Dynamo 将这些节点以及所有输入和输出压缩到代码块中！这不仅是学习代码块的优秀工具，还支持您更高效地处理参数化 Dynamo 图形。我们将通过使用“节点到代码”来汇总下面的练习，因此不要错过它。
 
-\![](<../images/DesignScript - node to code.jpg>)
+![](<../images/DesignScript - node to code.jpg>)
 
 ## 练习：曲面吸引器
 
@@ -92,28 +92,28 @@ _“代码块”_ 语法 `Point.ByCoordinates(0,10);` 会提供与 Dynamo 中的
 
 首先，在上图中重新创建定义（或打开样例文件）。
 
-\![](<../images/DesignScript - exercise - 01.jpg>)
+![](<../images/DesignScript - exercise - 01.jpg>)
 
 > 1. 请注意，**“Point.ByCoordinates”** 上的连缀已设置为 _“笛卡尔积”_。
 > 2. 在 Z 方向上，栅格中的每个点均基于其距参照点的距离进行上移。
 > 3. 曲面将重新创建并加厚，从而在几何图形中相对于距参照点的距离创建隆起。
 
-\![](<../images/DesignScript - exercise - 02.jpg>)
+![](<../images/DesignScript - exercise - 02.jpg>)
 
 > 1. 从头开始，我们先定义参照点：**Point.ByCoordinates**`(x,y,0);`，我们使用与参照点节点顶部指定的相同 **“Point.ByCoordinates”** 语法。
 > 2. 变量 _“x”_ 和 _“y”_ 会插入到 **“代码块”** 中，以便我们可以使用滑块动态地更新这些变量。
 > 3. 将一些 _“滑块”_ 添加到 **“代码块”** 输入中（范围介于 -50 到 50 之间）。这样，我们就可以跨越默认的 Dynamo 栅格。
 
-\![](<../images/DesignScript - exercise - 03.jpg>)
+![](<../images/DesignScript - exercise - 03.jpg>)
 
 > 1. 在 **“代码块”** 的第二行中，我们定义简写来替换数字序列节点：`coordsXY = (-50..50..#11);`。我们将在下一节中详细介绍此内容。现在，请注意，此简写与可视化脚本中的 **“数字序列”** 节点等效。
 
-\![](<../images/DesignScript - exercise - 04.jpg>)
+![](<../images/DesignScript - exercise - 04.jpg>)
 
 > 1. 现在，我们要基于 _“coordsXY”_ 序列创建点栅格。为此，我们要使用 **“Point.ByCoordinates”** 语法，但还需要采用与在可视化脚本中相同的方式初始化列表的 _“笛卡尔积”_。为此，我们键入以下代码行：`gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);`。尖括号表示叉积参照。
 > 2. 请注意，在 **“Watch3D”** 节点中，我们有一个点栅格穿过 Dynamo 栅格。
 
-\![](<../images/DesignScript - exercise - 05.jpg>)
+![](<../images/DesignScript - exercise - 05.jpg>)
 
 > 1. 现在，面临的棘手情形是：我们希望根据距参照点的距离向上移动点栅格。首先，我们调用这组新的点 _“transPts”_。由于平移是对现有图元的操作（而不是使用 `Geometry.Translate...`），因此我们使用 `gridPts.Translate`
 > 2. 从画布上的实际节点读取时，我们会看到有三个输入。由于我们要对该图元执行操作（使用 _“gridPts.Translate”_ ），因此已声明要平移的几何图形。其余两个输入将插入到函数的圆括号中：方向和 _距离_。
@@ -121,11 +121,11 @@ _“代码块”_ 语法 `Point.ByCoordinates(0,10);` 会提供与 Dynamo 中的
 > 4. 参照点与每个栅格点之间的距离仍需进行计算，因此我们以相同方式对该参照点执行这一计算操作：`refPt.DistanceTo(gridPts)`
 > 5. 代码的最后一行会给出平移后的点：`transPts=gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));`
 
-\![](<../images/DesignScript - exercise - 06.jpg>)
+![](<../images/DesignScript - exercise - 06.jpg>)
 
 > 1. 现在，我们得到具有相应数据结构的点栅格来创建 Nurbs 曲面。我们使用 `srf = NurbsSurface.ByControlPoints(transPts);` 构建曲面
 
-\![](<../images/DesignScript - exercise - 07.jpg>)
+![](<../images/DesignScript - exercise - 07.jpg>)
 
 > 1. 最后，要为曲面添加一些深度，我们使用 `solid = srf.Thicken(5);` 构建实体；在本例中，我们使用代码将曲面加厚 5 个单位，但我们始终可以将其声明为一个变量（例如，将它命名为“thickness”），然后使用滑块控制该值。
 
@@ -133,10 +133,10 @@ _“代码块”_ 语法 `Point.ByCoordinates(0,10);` 会提供与 Dynamo 中的
 
 “节点到代码”功能可自动执行我们只需单击按钮完成的整个练习。这不仅对于创建自定义定义和可重复使用的代码块来说是一项强大的功能，而且它对了解如何在 Dynamo 中编写脚本也是一个非常有用的工具：
 
-\![](<../images/DesignScript - exercise - 08.jpg>)
+![](<../images/DesignScript - exercise - 08.jpg>)
 
 > 1. 从练习的步骤 1 开始处理现有可视化脚本。选择所有节点，在画布上单击鼠标右键，然后选择 _“节点到代码”_。就这么简单。
 
 Dynamo 具有基于可视化图的版本、连缀和所有功能自动执行的文字。对可视化脚本测试此功能，然后发布该代码块的功能！
 
-\![](<../images/DesignScript - exercise - 09.jpg>)
+![](<../images/DesignScript - exercise - 09.jpg>)
