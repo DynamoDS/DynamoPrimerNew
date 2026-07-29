@@ -10,17 +10,17 @@
 
 Dynamo 中最常用的点类型存在于三维世界坐标系中，具有三个坐标 [X,Y,Z]（Dynamo 中的三维点）。
 
-\![](<../images/points - 3d point in dynamo.jpg>)
+![](<../images/points - 3d point in dynamo.jpg>)
 
 Dynamo 中的二维点有两个坐标 [X,Y]。
 
-\![](<../images/points - 2d point in dynamo.jpg>)
+![](<../images/points - 2d point in dynamo.jpg>)
 
 ### 曲线和曲面上的点
 
 曲线和曲面的参数是连续的，并且延伸到给定几何图元的边缘之外。由于定义“参数空间”的形状存在于三维世界坐标系中，因此我们始终可以将“参数化坐标”转换为“世界”坐标。例如，曲面上的点 [0.2, 0.5] 与世界坐标中的点 [1.8, 2.0, 4.1] 相同。
 
-\![](<../images/points - xyz vs coord sys vs uv.jpg>)
+![](<../images/points - xyz vs coord sys vs uv.jpg>)
 
 > 1. 假定的世界 XYZ 坐标中的点
 > 2. 相对于给定坐标系（圆柱）的点
