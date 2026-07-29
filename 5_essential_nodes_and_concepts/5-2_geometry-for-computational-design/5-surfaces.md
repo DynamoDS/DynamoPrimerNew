@@ -10,7 +10,7 @@
 
 在 Dynamo 中输入和评估“参数处的曲面”，以查看我们可以提取的信息类型。
 
-\![](<../images/surfaces - surface in dynamo.jpg>)
+![](<../images/surfaces - surface in dynamo.jpg>)
 
 > 1. _“Surface.PointAtParameter”_ 返回给定 UV 坐标处的点
 > 2. _“Surface.NormalAtParameter”_ 返回给定 UV 坐标处的法线向量
