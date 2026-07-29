@@ -71,7 +71,7 @@ b.在 **“三维预览”** 模式下
   * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)放大
   * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)缩小
   * ![](<images/2.3-11-graph-preview-pan.jpg>)平移
-  * \![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)动态观察
+  * ![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)动态观察
 * 使用鼠标：
   * 鼠标中键向上/向下滚动 - 放大/缩小
   * 单击鼠标中键并拖动 - 平移
