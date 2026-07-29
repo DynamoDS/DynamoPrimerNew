@@ -6,7 +6,7 @@
 
 [向量](2-vectors.md#vector-1)由大小和方向表示，可以将其视为以给定速度朝特定方向加速的箭头。在 Dynamo 中，它是模型的关键组件。请注意，由于它们属于“辅助对象”的“抽象”类别，因此当我们创建向量时，不希望在背景预览中看到任何内容。
 
-\![Dynamo 中的矢量](<../images/Geometry for Computational Design - vectors.jpg>)
+![Dynamo 中的矢量](<../images/Geometry for Computational Design - vectors.jpg>)
 
 > 1. 我们可以使用一条线作为向量预览的替代对象。
 
@@ -20,7 +20,7 @@
 
 [平面](2-vectors.md#plane-1)是一个二维曲面，可以将其视为无限延伸的平面。每个平面都有一个原点、X 方向、Y 方向和 Z（向上）方向。
 
-\![Dynamo 中的平面](<../images/Geometry for Computational Design - plane.jpg>)
+![Dynamo 中的平面](<../images/Geometry for Computational Design - plane.jpg>)
 
 > 1. 尽管它们是抽象的，但平面确实具有原点位置，以便我们可以在空间中定位它们。
 > 2. 在 Dynamo 中，平面在背景预览中渲染。
@@ -35,7 +35,7 @@
 
 [坐标系](2-vectors.md#coordinate-system-1)是一个用于确定点或其他几何图元位置的系统。下图介绍了它在 Dynamo 中的外观以及每种颜色所表示的含义。
 
-\![坐标系 in Dynamo](<../images/Geometry for Computational Design - Coordinate.jpg>)
+![坐标系 in Dynamo](<../images/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. 尽管它们是抽象的，但坐标系也具有原点位置，以便我们可以在空间中定位它们。
 > 2. 在 Dynamo 中，坐标系在背景预览中渲染为一个点（原点）和定义轴（X 为红色、Y 为绿色以及 Z 为蓝色，遵循约定）的线。
