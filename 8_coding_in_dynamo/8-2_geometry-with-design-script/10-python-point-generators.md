@@ -2,7 +2,7 @@
 
 以下 Python 脚本为几个示例生成点数组。应将它们粘贴到 Python 脚本节点，如下所示：
 
-\![](<../images/python points 01.jpg>)
+![](<../images/python points 01.jpg>)
 
 **python_points_1**
 
