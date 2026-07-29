@@ -6,7 +6,7 @@
 
 假定我们创建了一系列自适应构件，并希望根据其点位置编辑参数。例如，这些点可以驱动与图元面积相关的厚度参数。或者，它们可以驱动一年内与日光曝晒相关的不透明度参数。Dynamo 支持通过几个简单步骤将分析与参数相连接，我们将在下面的练习中探讨基本版本。
 
-\![](<images/customizing - point location.jpg>)
+![](<images/customizing - point location.jpg>)
 
 > 使用 **“AdaptiveComponent.Locations”** 节点查询选定自适应构件的自适应点。这样，我们便可以使用 Revit 图元的抽象版本进行分析。
 
@@ -14,7 +14,7 @@
 
 ### 日光方向分析
 
-\![](<images/customizing - solar orientation analysis.jpg>)
+![](<images/customizing - solar orientation analysis.jpg>)
 
 > 使用“重映射”将一组数据映射到参数范围。这是参数化模型中所使用的基本工具，我们将在下面的练习中进行演示。
 
@@ -30,40 +30,40 @@
 
 本练习将进一步介绍上一节中演示的技术。在本例中，我们将基于 Revit 图元定义参数化曲面、实例化四点自适应构件，然后根据太阳的方向对其进行编辑。
 
-\![](<images/customizing - exercise 01.jpg>)
+![](<images/customizing - exercise 01.jpg>)
 
 > 1. 首先，使用 _“Select Edge”_ 节点选择两条边。这两条边是中庭的长跨度。
 > 2. 使用 _“List.Create”_ 节点将两条边合并为一个列表。
 > 3. 使用 _“Surface.ByLoft”_ 在两条边之间创建曲面。
 
-\![](<images/customizing - exercise 02.jpg>)
+![](<images/customizing - exercise 02.jpg>)
 
 > 1. 使用 _“代码块”_，定义介于 0 到 1 之间的一个范围（包含 10 个等间距值）：`0..1..#10;`
 > 2. 将 _“代码块”_ 连接到 _“Surface.PointAtParameter”_ 节点的*“u”*和 _“v”_ 输入，并将 _“Surface.ByLoft”_ 节点连接到 _“surface”_ 输入。在节点上单击鼠标右键，并将 _“连缀”_ 更改为 _“笛卡尔积”_。这将在曲面上提供点栅格。
 
 该点栅格用作参数化定义的曲面的控制点。我们要提取其中每个点的 u 和 v 位置，以便可以将它们连接到参数化公式并保持相同的数据结构。可以通过查询刚才创建的点的参数位置来执行此操作。
 
-\![](<images/customizing - exercise 03.jpg>)
+![](<images/customizing - exercise 03.jpg>)
 
 > 1. 将 _“Surface.ParameterAtPoint”_ 节点添加到画布，连接输入，如上所示。
 > 2. 使用“UV.U”节点查询这些参数的 _“u”_ 值。
 > 3. 使用“UV.V”节点查询这些参数的 _“v”_ 值。
 > 4. 输出显示曲面每个点对应的 _“u”_ 和 _“v”_ 值。现在，在正确的数据结构中，每个值的范围介于 _0_ 到 _1_ 之间，因此我们准备好应用参数算法。
 
-\![](<images/customizing - exercise 04.jpg>)
+![](<images/customizing - exercise 04.jpg>)
 
 > 1. 将 _“代码块”_ 添加到画布，然后输入代码：`Math.Sin(u*180)*Math.Sin(v*180)*w;`。这是一个参数化函数，可从平面创建正弦平滑。
 > 2. 将 _“UV.U”_ 连接到 _“u”_ 输入，并将“UV.V”连接到 _“v”_ 输入。
 > 3. _“w”_ 输入表示形状的 _“振幅”_，因此我们向其附加 _“数字滑块”_。
 
-\![](<images/customizing - exercise 05.jpg>)
+![](<images/customizing - exercise 05.jpg>)
 
 > 1. 现在，我们得到了由算法定义的一列值。让我们使用该列值在 _“+Z”_ 方向上上移点。使用 _“Geometry.Translate”_，将*“代码块”*连接到 _“zTranslation”_，并将 _“Surface.PointAtParameter”_ 连接到 _“geometry”_ 输入。您应该会看到新点显示在 Dynamo 预览中。
 > 2. 最后，我们使用 _“NurbsSurface.ByPoints”_ 节点创建曲面，从而将上一步中的节点连接到点输入。我们自己有一个参数化曲面。可以随意拖动滑块来观察多边形收缩和扩展。
 
 使用参数化曲面，我们需要定义一种方法来进行镶板，以便布置四点自适应构件。Dynamo 没有现成的功能来进行曲面镶板，因此我们可以向社区寻求有用的 Dynamo 软件包。
 
-\![](<images/customizing - exercise 06.jpg>)
+![](<images/customizing - exercise 06.jpg>)
 
 > 1. 转到 _“软件包”>“搜索软件包...”_
 > 2. 搜索 _“LunchBox”_，然后安装 _“LunchBox for Dynamo”_。对于此种情况，这是一组非常有用的几何图形操作工具。
