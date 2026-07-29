@@ -20,7 +20,7 @@ Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo
 
 完成安装后，自定义节点应位于“附加模块”>“DynamoPrimer”部分下。
 
-\![](<../images/publish a package - publish locally 04.jpg>)
+![](<../images/publish a package - publish locally 04.jpg>)
 
 现在，软件包已完成安装，我们来介绍其设置方式。
 
@@ -30,37 +30,37 @@ Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo
 
 这是一个包含五个自定义节点的简单软件包。在下面的步骤中，我们将简要介绍每个自定义节点的设置。
 
-\![](<../images/develop package - custom nodes 01.jpg>)
+![](<../images/develop package - custom nodes 01.jpg>)
 
 #### **PointsToSurface**
 
 这是一个基本自定义节点，所有其他映射节点均基于该节点。只需放置，该节点会将某个点从源曲面 UV 坐标映射到目标曲面 UV 坐标的位置。由于点是最基本的几何图形，基于它可构建更复杂的几何图形，因此我们可以使用此逻辑将二维几何图形（甚至三维几何图形）从一个曲面映射到另一个曲面。
 
-\![](<../images/develop package -pointToSurface.jpg>)
+![](<../images/develop package -pointToSurface.jpg>)
 
 #### **PolygonsToSurface**
 
 仅使用此处的多边形，可演示将映射点从一维几何图形扩展到二维几何图形的逻辑。请注意，我们已将 _“PointsToSurface”_ 节点嵌套到此自定义节点中。这样，我们就可以将每个多边形的点映射到曲面，然后基于这些映射点重新生成多边形。通过保持正确的数据结构（一列点列表），我们可以在多边形简化为一组点后，使多边形保持分离。
 
-\![](<../images/develop package -polygonsToSurface.jpg>)
+![](<../images/develop package -polygonsToSurface.jpg>)
 
 #### **NurbsCrvtoSurface**
 
 此处应用的逻辑与 _“PolygonsToSurface”_ 节点中的逻辑相同。但是，我们不是映射多边形点，而是映射 NURBS 曲线的控制点。
 
-\![](<../images/develop package -nurbsCrvtoSurface.jpg>)
+![](<../images/develop package -nurbsCrvtoSurface.jpg>)
 
 **OffsetPointsToSurface**
 
 此节点变得更加复杂，但概念非常简单：与 _“PointsToSurface”_ 节点类似，此节点会将点从一个曲面映射到另一个曲面。但是，它还会考虑不在原始源曲面上的点，获取其与最近 UV 参数的距离，并将此距离映射到相应 UV 坐标处的目标曲面法线。在查看示例文件时，这会更有意义。
 
-\![](<../images/develop package -OffsetPointsToSurface.jpg>)
+![](<../images/develop package -OffsetPointsToSurface.jpg>)
 
 #### **SampleSrf**
 
 这是一个简单节点，用于创建参数化曲面以从源栅格映射到示例文件中的波状曲面。
 
-\![](<../images/develop package -sampleSrf.jpg>)
+![](<../images/develop package -sampleSrf.jpg>)
 
 ### 示例文件
 
@@ -76,40 +76,40 @@ Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo
 
 此示例文件演示了如何使用 _“PointsToSurface”_ 来根据矩形栅格为曲面镶板。这应该看起来很熟悉，如我们在[上一章](../6-1_custom-nodes/2-creating.md)中演示的类似工作流。
 
-\![](<../images/develop package -sample file 01.jpg>)
+![](<../images/develop package -sample file 01.jpg>)
 
 #### **02-PanelingWithPolygons-II**
 
 使用类似的工作流，本练习文件显示用于将圆（或表示圆的多边形）从一个曲面映射到另一个曲面的设置。这将使用 _“PolygonsToSurface”_ 节点。
 
-\![](<../images/develop package -sample file 02.jpg>)
+![](<../images/develop package -sample file 02.jpg>)
 
 #### **03-NurbsCrvsAndSurface**
 
 此示例文件通过使用“NurbsCrvToSurface”节点增加了一些复杂性。目标曲面偏移给定距离，且 NURBS 曲线映射到原始目标曲面和偏移曲面。从这里，将放样两条映射曲线以创建曲面，然后加厚该曲面。此结果实体有表示目标曲面法线的波动。
 
-\![](<../images/develop package -sample file 03.jpg>)
+![](<../images/develop package -sample file 03.jpg>)
 
 #### **04-PleatedPolysurface-OffsetPoints**
 
 此示例文件演示如何将褶皱多重曲面从源曲面映射到目标曲面。源曲面和目标曲面是分别跨栅格和旋转曲面的矩形曲面。
 
-\![](<../images/develop package -sample file 04a.jpg>)
+![](<../images/develop package -sample file 04a.jpg>)
 
 源多重曲面从源曲面映射到目标曲面。
 
-\![](<../images/develop package -sample file 04b.jpg>)
+![](<../images/develop package -sample file 04b.jpg>)
 
 #### **05-SVG-Import**
 
 由于自定义节点能够映射不同类型的曲线，因此最后这个文件会引用从 Illustrator 输出的 SVG 文件，并将输入的曲线映射到目标曲面。
 
-\![](<../images/develop package -sample file 05a.jpg>)
+![](<../images/develop package -sample file 05a.jpg>)
 
 通过解析 .svg 文件的语法，曲线将从 .xml 格式转换为 Dynamo 复合线。
 
-\![](<../images/develop package -sample file 05b.jpg>)
+![](<../images/develop package -sample file 05b.jpg>)
 
 输入的曲线将映射到目标曲面。这样，我们可以在 Illustrator 中显式（点击）设计镶板、输入 Dynamo，然后应用于目标曲面。
 
-\![](<../images/develop package -sample file 05c.jpg>)
+![](<../images/develop package -sample file 05c.jpg>)
