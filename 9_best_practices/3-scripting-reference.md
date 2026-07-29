@@ -147,15 +147,15 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
 
 **命名约定：**（为代码中每类实体选择以下约定之一并坚持使用！）
 
-* 变量、函数、方法、软件包、模块：\
+* 变量、函数、方法、软件包、模块：
  `lower_case_with_underscores`
-* 类和例外：\
+* 类和例外：
  `CapWords`
-* 受保护的方法和内部函数：\
+* 受保护的方法和内部函数：
  `_single_leading_underscore(self, ...)`
-* 私有方法：\
+* 私有方法：
  `__double_leading_underscore(self, ...)`
-* 常数：\
+* 常数：
  `ALL_CAPS_WITH_UNDERSCORES`
 
 > 技巧：避免使用单字母变量（尤其是 l、O、I），但在非常短的块中，当其含义从即时上下文中清晰可见时除外。
