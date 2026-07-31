@@ -22,12 +22,12 @@
 
 從本節的 Revit 檔案開始 (或繼續使用上一節課的檔案)。此檔案的屋頂上具有一系列 ETFE 面板。我們在此練習中會參考這些面板。
 
-\![](<images/documenting - exercise I - 01.jpg>)
+[](<images/documenting - exercise I - 01.jpg>)
 
 > 1. 在圖元區加入 _Family Types_ 節點，然後選擇 _「ROOF-PANEL-4PT」_。
 > 2. 將此節點插入 _All Elements of Family Type_ 節點，以便將 Revit 的所有元素匯入 Dynamo。
 
-\![](<images/documenting - exercise I - 02.jpg>)
+[](<images/documenting - exercise I - 02.jpg>)
 
 > 1. 使用 _AdaptiveComponent.Locations_ 節點查詢每個元件的自適應點位置。
 > 2. 使用 _Polygon.ByPoints_ 節點從這四點建立多邊形。請注意，現在我們已在 Dynamo 中建立抽象版本的面板化系統，而無需匯入 Revit 元素的完整幾何圖形。
@@ -35,12 +35,12 @@
 
 就像上一個練習一樣，只是為了好玩，接下來我們根據平面偏差設定每個面板的孔徑比。
 
-\![](<images/documenting - exercise I - 03.jpg>)
+[](<images/documenting - exercise I - 03.jpg>)
 
 > 1. 在圖元區加入 _Element.SetParameterByName_ 節點，並將自適應元件連接至 _element_ 輸入。將名為 _「Aperture Ratio」_ 的 _Code Block_ 連接至 _parameterName_ 輸入。
 > 2. 我們無法將偏差結果直接連接至值輸入，因為需要將值重新對映到參數範圍。
 
-\![](<images/documenting - exercise I - 04.jpg>)
+[](<images/documenting - exercise I - 04.jpg>)
 
 > 1. 使用 _Math.RemapRange_，透過在 _Code Block_ 中輸入 `0.15; 0.45;`，將偏差值重新對映到從 0.15 到 0.45 之間的範圍。
 > 2. 將這些結果重新插入 _Element.SetParameterByName_ 的 value 輸入。
@@ -57,13 +57,13 @@
 
 設定孔徑比不會清楚展示屋頂上面板的偏差，我們還要變更實際元素的幾何圖形。假設我們只希望從製造可行性的觀點研究偏差。根據記錄的偏差範圍對面板上色會很有幫助。我們可以透過以下一系列步驟，採用與上述步驟非常相似的程序來達成。
 
-\![](<images/documenting - exercise II - 01.jpg>)
+[](<images/documenting - exercise II - 01.jpg>)
 
 > 1. 移除 _Element.SetParameterByName_ 及其輸入節點，並加入 _Element.OverrideColorInView_。
 > 2. 在圖元區加入 _Color Range_ 節點，並插入 _Element.OverrideColorInView_ 的 color 輸入。我們仍必須將偏差值連接至顏色範圍，以建立漸層。
 > 3. 將游標懸停在 _value_ 輸入上，我們可以看到輸入的值必須介於 _0_ 與 _1_ 之間，才能將顏色對映至每個值。我們需要將偏差值重新對映到此範圍。
 
-\![](<images/documenting - exercise II - 02.jpg>)
+[](<images/documenting - exercise II - 02.jpg>)
 
 > 1. 使用 _Math.RemapRange_，將平面偏差值重新對映到從 *0* 到 _1_ 之間的範圍 (注意：您也可以使用 _MapTo_ 節點來定義來源範圍)。
 > 2. 將結果插入 _Color Range_ 節點。
@@ -74,7 +74,7 @@
 
 ![](images/09.jpg)
 
-\![](<images/documenting - exercise II - 04.jpg>)
+[](<images/documenting - exercise II - 04.jpg>)
 
 > 1. 使用 _Code Block_，在不同的兩行程式碼中加入兩個數字：`0;` 與 `255;`。
 > 2. 將適合的值插入兩個 _Color.ByARGB_ 節點，以建立紅色與藍色。
@@ -89,7 +89,7 @@
 
 在 Revit 中選取一個 ETFE 面板，我們可以看到有四個實體參數，分別是 XYZ1、XYZ2、XYZ3 與 XYZ4。這些參數在建立之後都是空白的。這些是需要值的文字參數。我們將使用 Dynamo 將自適應點位置寫入每個參數。這有助於在需要將幾何圖形傳送給正面顧問的工程師時實現互通性。
 
-\![](<images/documenting - exercise III - 01.jpg>)
+[](<images/documenting - exercise III - 01.jpg>)
 
 在範例圖紙中，我們建立了一個很大的空白明細表。XYZ 參數是 Revit 檔案中的共用參數，我們可藉此將其加入明細表中。
 
@@ -101,7 +101,7 @@
 
 為了寫入這些值，我們將執行複雜的清單作業。圖表本身很簡單，但概念很大程度上依賴於〈清單〉一章中討論的清單對映。
 
-\![](<images/documenting - exercise III - 04.jpg>)
+[](<images/documenting - exercise III - 04.jpg>)
 
 > 1. 使用兩個節點選取所有自適應元件。
 > 2. 使用 _AdaptiveComponent.Locations_ 擷取每個點的位置。
