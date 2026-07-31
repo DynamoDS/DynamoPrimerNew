@@ -12,7 +12,7 @@ Dynamo 使用面-頂點資料結構定義網格。在最基本的層級，此結
 
 若要建立網格，我們需要頂點清單，以及將這些頂點歸入面的系統 (稱為索引群組)。
 
-\![](<../images/meshes - mesh elements.jpg>)
+[](<../images/meshes - mesh elements.jpg>)
 
 > 1. 頂點清單
 > 2. 將定義面的索引群組清單
@@ -25,7 +25,7 @@ Dynamo 使用面-頂點資料結構定義網格。在最基本的層級，此結
 
 請造訪 [Mesh Toolkit 案例研究](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes)，取得使用此套件的範例。
 
-\![網格工具組](<../images/meshes - mesh toolkit standford bunny.jpg>)
+[網格工具組](<../images/meshes - mesh toolkit standford bunny.jpg>)
 
 ## 深入探索...
 
