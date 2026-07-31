@@ -22,11 +22,11 @@ Dynamo 提供大量即裝即用的功能，並維護了豐富的套件資源庫�
 
 請注意，Dynamo 資源庫中現在有另一個群組稱為「buildz」。此名稱是指套件的開發人員，此群組中已放置自訂節點。我們可以立即開始使用。
 
-\![](<../images/package introduction - installing a package 03.jpg>)
+[](<../images/package introduction - installing a package 03.jpg>)
 
 使用 **Code Block** 可快速定義矩形格線，將結果輸出至 **Polygon.ByPoints** 節點，然後輸出至 **Surface.ByPatch** 節點，以檢視您剛剛建立的矩形板清單。
 
-\![](<../images/package introduction - installing a package 04.jpg>)
+[](<../images/package introduction - installing a package 04.jpg>)
 
 ### 安裝套件資料夾 - DynamoUnfold
 
@@ -40,7 +40,7 @@ Dynamo 提供大量即裝即用的功能，並維護了豐富的套件資源庫�
 
 在 Dynamo 資源庫中，我們有一個 _DynamoUnfold_ 群組，當中有多個品類和自訂節點。
 
-\![](<../images/package introduction - installing package folder 02.jpg>)
+[](<../images/package introduction - installing package folder 02.jpg>)
 
 現在，我們看一下套件的檔案結構。
 
@@ -52,7 +52,7 @@ Dynamo 提供大量即裝即用的功能，並維護了豐富的套件資源庫�
 
 這會將我們帶到套件的根目錄。請注意，我們有 3 個資料夾和 1 個檔案。
 
-\![](<../images/package introduction - installing package folder 05.jpg>)
+[](<../images/package introduction - installing package folder 05.jpg>)
 
 > 1. _bin_ 資料夾包含 .dll 檔案。此 Dynamo 套件使用 Zero-Touch 進行開發，因此自訂節點保留在此資料夾中。
 > 2. _dyf_ 資料夾包含自訂節點。此套件不是使用 Dynamo 自訂節點進行開發，所以此套件的此資料夾是空的。
@@ -87,7 +87,7 @@ Dynamo 提供大量即裝即用的功能，並維護了豐富的套件資源庫�
 
 如果您想要查看套件檔案的儲存位置，請在頂端導覽中按一下「Dynamo」>「偏好」>「套件設定」>「節點和套件檔案位置」。您可以在這裡找到您目前的根資料夾目錄。
 
-\![](<../images/package introduction - installing package folder 08.png>)
+[](<../images/package introduction - installing package folder 08.png>)
 
 套件預設安裝在與以下資料夾路徑類似的位置：_C:/Users/[使用者名稱]/AppData/Roaming/Dynamo/[Dynamo 版本]_。
 
