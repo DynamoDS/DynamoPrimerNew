@@ -23,7 +23,7 @@
 
 在 Dynamo 中，_程式碼區塊_ 語法 `Point.ByCoordinates(0,10);` 產生的結果與 _Point.ByCoordinates_ 節點相同，只是我們可以使用一個節點來建立點。比起將不同節點連接至 _X_ 與 _Y_，此方法更有效率。
 
-\![](<../images/codeblock dot notation.jpg>)
+[](<../images/codeblock dot notation.jpg>)
 
 > 1. 在 Code Block 中使用 _Point.ByCoordinates_，我們就是以內建節點 _(X,Y)_ 的順序指定輸入。
 
@@ -33,7 +33,7 @@
 
 一般節點 (資源庫中的大多數節點) 通常分為三種類型。您會發現資源庫在組織時也考慮到了這些品類。在 Code Block 中呼叫時，對這三種類型方法 (或節點) 的處理方式不同。
 
-\![](<../images/action create query category.jpg>)
+[](<../images/action create query category.jpg>)
 
 > 1. **建立** \- 建立 (或建構) 項目
 > 2. **動作** \- 對某項目執行動作
@@ -51,7 +51,7 @@
 
 動作是您對該類型的物件執行的行為。Dynamo 使用許多程式語言中通用的 _點標記法_ 對物件套用動作。確定物件後，輸入點，後接動作名稱。動作類型方法的輸入將放置在括號中，類似於建立類型的方法，只是您不必指定對應節點上看到的第一個輸入。我們改為指定執行動作時所依據的元素：
 
-\![](<../images/DesignScript - action.jpg>)
+[](<../images/DesignScript - action.jpg>)
 
 > 1. **Point.Add** 節點是動作類型節點，因此語法稍有不同。
 > 2. 輸入是 (1) _point_ 以及要加上去的 (2) _vector_。在 **Code Block** 中，我們已將點 (物件) 命名為 _pt_。為了將命名為 *vec* 的向量加入 _pt_，我們會編寫 _pt.Add(vec)_ 或採用「物件, 點, 動作」的格式。加入動作僅有一個輸入，也就是 **Point.Add** 節點的所有輸入減去第一個輸入。**Point.Add** 節點的第一個輸入是點本身。
@@ -66,7 +66,7 @@
 
 節點的交織與程式碼區塊的交織稍有不同。如果是節點，使用者會在節點上按一下右鍵，然後選取要執行的交織選項。如果是程式碼區塊，使用者對於資料的建構方式會有更多的控制。程式碼區塊速寫方法使用 _複製指南_ 設定幾個一維清單應採用的配對方式。角括號 <> 中的數字定義所產生巢狀清單的階層：<1>、<2>、<3> 等。
 
-\![](<../images/DesignScript - lacing.jpg>)
+[](<../images/DesignScript - lacing.jpg>)
 
 > 1. 在此範例中，我們使用速寫來定義兩個範圍 (本章的下一節將講述速寫的更多內容)。簡單來說，`0..1;` 相當於 `{0,1}`，`-3..-7` 相當於 `{-3,-4,-5,-6,-7}`。結果將產生包含 2 個 x 值與 5 個 y 值的清單。如果我們不對這些不相符的清單使用複製指南，則會得到包含兩個點的清單，這是長度最短的清單。使用複製指南，我們可以找出 2 個座標與 5 個座標所有可能的組合 (即笛卡兒積)。
 > 2. 使用語法 **Point.ByCoordinates**`(x_vals<1>,y_vals<2>);`，可以得到 _兩個_ 清單，每個清單有 _五個_ 項目。
@@ -78,7 +78,7 @@
 
 以上程式碼區塊方法可能花一點時間才能習慣，而 Dynamo 中提供稱為「要編碼的節點」功能，可以讓程序更輕鬆。若要使用此功能，請在 Dynamo 圖表中選取一系列節點，在圖元區上按一下右鍵，然後選取「要編碼的節點」。Dynamo 會將這些節點及所有輸入與輸出濃縮到一個程式碼區塊中！這不僅是一個強大的工具可學習程式碼區塊，也能讓您處理更高效的參數式 Dynamo 圖表。我們將使用「要編碼的節點」結束以下練習，因此請勿錯過。
 
-\![](<../images/DesignScript - node to code.jpg>)
+[](<../images/DesignScript - node to code.jpg>)
 
 ## 練習：曲面牽引
 
@@ -92,28 +92,28 @@
 
 先重新建立以上影像中的定義 (或開啟範例檔案)。
 
-\![](<../images/DesignScript - exercise - 01.jpg>)
+[](<../images/DesignScript - exercise - 01.jpg>)
 
 > 1. 請注意，**Point.ByCoordinates** 的交織已設定為 _「笛卡兒積」_。
 > 2. 格線中的每個點都會根據其與參考點的距離而沿著 Z 方向上移。
 > 3. 重新建立並增厚曲面，同時在幾何圖形上建立相對於距參考點距離的凸度。
 
-\![](<../images/DesignScript - exercise - 02.jpg>)
+[](<../images/DesignScript - exercise - 02.jpg>)
 
 > 1. 從頭開始，我們先定義參考點：**Point.ByCoordinates**`(x,y,0);` 我們使用的 **Point.ByCoordinates** 語法與參考點節點上方指定的語法相同。
 > 2. 將變數 _x_ 與 _y_ 插入 **Code Block**，以便我們可以使用滑棒動態更新這些內容。
 > 3. 在 **Code Block** 的輸入加入一些 _滑棒_，範圍從 -50 到 50。這樣我們可以跨越整個預設 Dynamo 格線。
 
-\![](<../images/DesignScript - exercise - 03.jpg>)
+[](<../images/DesignScript - exercise - 03.jpg>)
 
 > 1. 在 **Code Block** 的第二行，我們定義速寫以取代數字序列節點：`coordsXY = (-50..50..#11);`我們將在下一節詳細討論此內容。現在，請注意此速寫相當於視覺指令碼中的 **Number Sequence** 節點。
 
-\![](<../images/DesignScript - exercise - 04.jpg>)
+[](<../images/DesignScript - exercise - 04.jpg>)
 
 > 1. 現在，我們將從 _coordsXY_ 序列建立點的格線。為了執行此作業，我們要使用 **Point.ByCoordinates** 語法，但還需要使用我們在視覺指令碼中採用的方式，創造一個清單的 _笛卡兒積_。為了執行此作業，我們鍵入行：`gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);` 角括號表示笛卡兒積參考。
 > 2. 請注意，在 **Watch3D** 節點中，我們有一個橫越 Dynamo 格線的點格線。
 
-\![](<../images/DesignScript - exercise - 05.jpg>)
+[](<../images/DesignScript - exercise - 05.jpg>)
 
 > 1. 現在講解困難的部分：我們希望根據點距參考點的距離，將這些點的格線上移。首先，我們呼叫這一組新點 _transPts_。由於平移是針對既有元素的動作，因此我們不用 `Geometry.Translate...`，而是使用 `gridPts.Translate`
 > 2. 從圖元區上的實際節點，我們可以看到有三個輸入。要平移的 geometry 已經宣告，因為我們正對該元素執行動作 (使用 _gridPts.Translate_)。其餘兩個輸入將插入函數 direction 與 _distance_ 的括號內。
@@ -121,11 +121,11 @@
 > 4. 參考點與每個格線點之間的距離仍需要計算，因此我們使用相同方式對參考點執行此動作：`refPt.DistanceTo(gridPts)`
 > 5. 程式碼的最後一行得出平移後的點：`transPts=gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));`
 
-\![](<../images/DesignScript - exercise - 06.jpg>)
+[](<../images/DesignScript - exercise - 06.jpg>)
 
 > 1. 我們現在已經有資料結構適當的點格線，可以建立 Nurbs 曲面。我們使用 `srf = NurbsSurface.ByControlPoints(transPts);` 建構曲面
 
-\![](<../images/DesignScript - exercise - 07.jpg>)
+[](<../images/DesignScript - exercise - 07.jpg>)
 
 > 1. 最後，為了對取面增加一些深度，我們使用 `solid = srf.Thicken(5);` 建構實體。在此案例中，我們在程式碼中將曲面變厚了 5 個單位，不過也可以將其宣告為變數 (例如將其稱為 thickness)，然後使用滑棒控制該值。
 
@@ -133,10 +133,10 @@
 
 只需按一下按鈕，「要編碼的節點」功能即可自動執行我們剛剛完成的整個練習。這不僅在建立自訂定義及可重複使用的 Code Block 時很有威力，也是瞭解如何在 Dynamo 中撰寫指令碼非常有用的工具。
 
-\![](<../images/DesignScript - exercise - 08.jpg>)
+[](<../images/DesignScript - exercise - 08.jpg>)
 
 > 1. 先使用練習的步驟 1 中使用的既有視覺指令碼。選取所有節點，在圖元區上按一下右鍵，然後選取 _「要編碼的節點」_。非常簡單。
 
 Dynamo 已自動建立文字版本的視覺圖表、交織與全部項目。在您的視覺指令碼上試試看，體驗 Code Block 的強大功能！
 
-\![](<../images/DesignScript - exercise - 09.jpg>)
+[](<../images/DesignScript - exercise - 09.jpg>)
