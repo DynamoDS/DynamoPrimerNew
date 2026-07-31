@@ -6,7 +6,7 @@
 
 [向量](2-vectors.md#vector-1)是一種大小和方向的表現法，您可以將其視為以指定速度向特定方向加速的箭頭。在 Dynamo 中，向量是模型的關鍵元件。請注意，由於向量屬於「協助工具」抽象品類，因此我們在建立向量時，不會在背景預覽中看到任何內容。
 
-\![Dynamo 中的向量](<../images/Geometry for Computational Design - vectors.jpg>)
+[Dynamo 中的向量](<../images/Geometry for Computational Design - vectors.jpg>)
 
 > 1. 進行向量預覽時，我們可以使用直線代替向量。
 
@@ -20,7 +20,7 @@
 
 [平面](2-vectors.md#plane-1)是一個二維表面，您可以將其視為無限延伸的平面。每個平面都有原點、X 方向、Y 方向和 Z (向上) 方向。
 
-\![Dynamo 中的平面](<../images/Geometry for Computational Design - plane.jpg>)
+[Dynamo 中的平面](<../images/Geometry for Computational Design - plane.jpg>)
 
 > 1. 雖然平面是抽象的，但是具有原點位置，因此我們可以在空間中對其定位。
 > 2. 在 Dynamo 中，會在背景預覽中彩現平面。
@@ -35,7 +35,7 @@
 
 [座標系統](2-vectors.md#coordinate-system-1)是一個決定點或其他幾何元素位置的系統。下圖說明座標系統在 Dynamo 中的外觀，以及每種顏色代表的意義。
 
-\![Dynamo 中的座標系統](<../images/Geometry for Computational Design - Coordinate.jpg>)
+[Dynamo 中的座標系統](<../images/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. 雖然座標系統是抽象的，但是也具有原點位置，因此我們可以在空間中對其定位。
 > 2. 在 Dynamo 中，會在背景預覽中將座標系統彩現為一點 (原點) 與定義軸的直線 (遵循慣例，X 軸為紅色，Y 軸為綠色，Z 軸為藍色)。
