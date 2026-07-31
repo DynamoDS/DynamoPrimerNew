@@ -29,7 +29,7 @@
 
 **Number Sequence：** 根據以下三項輸入定義數字序列：_start、amount_ 與 _step_。
 
-\![](<../images/math - part I-01.jpg>)
+[](<../images/math - part I-01.jpg>)
 
 2\.上述步驟已建立用於定義參數範圍的數字清單。接下來，建立表示黃金螺旋線方程式的節點群組。
 
@@ -45,7 +45,7 @@ $$
 
 以下影像以視覺程式設計形式表示黃金螺旋線。逐步檢查節點群組時，請盡可能注意視覺程式與書寫方程式之間的對應。
 
-\![](<../images/math - part I-02.jpg>)
+[](<../images/math - part I-02.jpg>)
 
 > a.**Number Slider**：在圖元區加入兩個數字滑棒。這些滑棒代表參數式方程式中的 _a_ 與 _b_ 變數。這些表示彈性的常數，或表示我們可以針對所需結果進行調整的參數。
 >
@@ -65,11 +65,11 @@ $$
 
 **Point.ByCoordinates：** 將上方的相乘節點連接到「_x_」輸入，將下方的節點連接到「_y_」輸入。我們現在可以在螢幕上看到點的參數式螺旋線。
 
-\![](<../images/math - part II-01.gif>)
+[](<../images/math - part II-01.gif>)
 
 **Polycurve.ByPoints：** 將上一步的 **Point.ByCoordinates** 連接到 _points_。我們可以保留 _connectLastToFirst_ 無輸入，因為不打算繪製封閉曲線。這會建立一條穿過上一步定義的每個點的螺旋線。
 
-\![](<../images/math - part II-02.jpg>)
+[](<../images/math - part II-02.jpg>)
 
 我們現在完成了 Fibonacci 螺旋線！接下來進一步將此分為兩個單獨的練習，我們分別稱之為鸚鵡螺與向日葵。這些是自然系統的抽象名稱，但可以充分呈現 Fibonacci 螺旋線的兩種不同應用。
 
@@ -77,13 +77,13 @@ $$
 
 **Circle.ByCenterPointRadius：** 我們在此處將使用圓節點，採用與上一步相同的輸入。半徑的預設值為 _1.0_，所以我們可以立即看到輸出的圓。它會立即清晰展示點如何進一步偏離原點。
 
-\![](<../images/math - part III-01.jpg>)
+[](<../images/math - part III-01.jpg>)
 
 **Number Sequence：** 這是「_t_」的原始陣列。將此序列插入 **Circle.ByCenterPointRadius** 的半徑值後，圓心仍會離原點越來越遠，但半徑會增加，因而產生很酷的 Fibonacci 圓形。
 
 如果您使用 3D 製作會更酷！
 
-\![](<../images/math - part III-02.gif>)
+[](<../images/math - part III-02.gif>)
 
 ### 第 IV 部分：從鸚鵡螺到葉序
 
@@ -95,7 +95,7 @@ $$
 
 接下來，依照這些小步驟，以各種旋轉產生一系列螺旋線。
 
-\![](<../images/math - part IV-02.jpg>)
+[](<../images/math - part IV-02.jpg>)
 
 > a.**Geometry.Rotate：** 有幾個 **Geometry.Rotate** 選項，請確保選擇以 _geometry_、_basePlane_ 和 _degrees_ 為輸入的節點。將 **Point.ByCoordinates** 連接至 geometry 輸入。在此節點上按一下右鍵，並確保將交織設定為「笛卡兒積」
 >
@@ -111,8 +111,8 @@ $$
 
 將 **Number Range** 節點的步長大小從 _120.0_ 變更為 _36.0_。請注意，這會建立更多旋轉，因此會產生更密的格線。
 
-\![](<../images/math - part IV-04.jpg>)
+[](<../images/math - part IV-04.jpg>)
 
 將 **Number Range** 節點的步長大小從 _36.0_ 變更為 _3.6_。現在，這會產生密度大得多的格線，螺旋線的方向性變得不清楚。各位，我們產生了一朵向日葵。
 
-\![](<../images/math - part IV-05.jpg>)
+[](<../images/math - part IV-05.jpg>)
