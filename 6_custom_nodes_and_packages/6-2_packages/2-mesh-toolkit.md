@@ -1,6 +1,6 @@
 # Package Case Study - Mesh Toolkit
 
-The Dynamo Mesh Toolkit provides tools to create meshes from Dynamo geometry objects, and manually build meshes by their vertices and indices. The library also provides tools to modify meshes, repair meshes, or extract horizontal slices for use in fabrication.
+The Dynamo Mesh Toolkit provides tools to create meshes from Dynamo geometry objects, and manually build meshes by their vertices and indices. The library also provides tools to modify meshes, repair meshes, or extract horizontal slices for use in fabrication. Whilst this toolkit can also be used to import and query external mesh files, this example has the mesh included in the script as a set of vertices and indices so that no extra file is necessary. Instead of an external mesh file, the graph provided utilises **Data.Remember** nodes in order to store all the information necessary to rebuild the famous Stanford Bunny mesh.
 
 ![](<../../.gitbook/assets/meshToolkit case study 01.jpg>)
 
