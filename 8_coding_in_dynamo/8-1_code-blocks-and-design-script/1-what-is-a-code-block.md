@@ -12,7 +12,7 @@
 
 程式碼區塊可讓使用者靈活決定如何指定輸入。下面提供了幾種不同方式來使用座標建立基本點 _(10,5,0)_：
 
-\![](<../images/codeblock brief overview.jpg>)
+[](<../images/codeblock brief overview.jpg>)
 
 在您進一步瞭解資源庫中可用的函數後，您可能甚至會發現，鍵入「Point.ByCoordinates」的速度比在資源庫中搜尋和找出正確的節點更快。例如當您鍵入 _Point._ 時，Dynamo 會顯示一個可能函數的清單以套用到點。這可使得指令碼撰寫更直覺，並協助學習如何在 Dynamo 中套用函數。
 
@@ -20,7 +20,7 @@
 
 您可以透過 _Core>Input>Actions>Code Block_ 找到程式碼區塊。但更快的方式是在圖元區按兩下，程式碼區塊就會出現。此節點因為經常使用，所以被賦予完整的按兩下權限。
 
-\![](<../images/creating codeblock nodes.jpg>)
+[](<../images/creating codeblock nodes.jpg>)
 
 ### 數字、字串和公式
 
@@ -30,7 +30,7 @@
 
 number 和 string 節點是 Dynamo 節點的兩個範例，與 Code Block 相比可以說是舊式節點。
 
-\![](<../images/old school vs code blocks nodes.jpg>)
+[](<../images/old school vs code blocks nodes.jpg>)
 
 > 1. 舊式
 > 2. 程式碼區塊
