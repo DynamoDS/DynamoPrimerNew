@@ -1,6 +1,6 @@
 # Package Case Study - Mesh Toolkit
 
-The Dynamo Mesh Toolkit provides tools to import meshes from external file formats, create a mesh from Dynamo geometry objects, and manually build meshes by their vertices and indices. The library also provides tools to modify meshes, repair meshes, or extract horizontal slices for use in fabrication.
+The Dynamo Mesh Toolkit provides tools to create meshes from Dynamo geometry objects, and manually build meshes by their vertices and indices. The library also provides tools to modify meshes, repair meshes, or extract horizontal slices for use in fabrication.
 
 ![](<../../.gitbook/assets/meshToolkit case study 01.jpg>)
 
@@ -24,14 +24,14 @@ In Dynamo, go to Packages > Package Manager... in the top menu bar. In the searc
 
 {% file src="../../.gitbook/assets/MeshToolkit.zip" %}
 
-In this example, we will look at the Intersect node in the mesh toolkit. We will import a mesh and intersect it with a series of input planes to create slices. This is the starting point for preparing the model for fabrication on a laser cutter, waterjet cutter, or CNC mill.
+In this example, we will look at the Intersect node in the mesh toolkit. We will generate a mesh from stored vertices and intersect it with a series of input planes to create slices. This is the starting point for preparing the model for fabrication on a laser cutter, waterjet cutter, or CNC mill.
 
 Begin by opening _Mesh-Toolkit\_Intersect-Mesh.dyn in Dynamo._
 
 ![](<../../.gitbook/assets/meshToolkit case study - exercise 01.jpg>)
 
 > 1. **Data.Remember:** These two nodes contain the mesh vertices which are stored as points and the mesh indices which are a series of integers. Together they provide all the necessary information to rebuild the mesh.
-> 2. **Mesh.ByVerticesAndIntegers:** Connect the vertices and indices from the data nodes to build the mesh.
+> 2. **Mesh.ByVerticesAndIndices:** Connect the vertices and indices from the data nodes to build the mesh.
 
 ![](<../../.gitbook/assets/meshToolkit case study - exercise 02.jpg>)
 
@@ -51,12 +51,12 @@ Next, we will use these planes to intersect the mesh.
 
 ![](<../../.gitbook/assets/meshToolkit case study - exercise 04.jpg>)
 
-> 1. **Mesh.Intersect:** Intersect the planes with the imported mesh, creating a series of polycurve contours. Right click on Node and set the lacing to longest
+> 1. **Mesh.Intersect:** Intersect the planes with the generated mesh, creating a series of polycurve contours. Right click on Node and set the lacing to longest
 > 2. **PolyCurve.Curves:** Break the polycurves into their curve fragments.
 > 3. **Curve.EndPoint:** Extract the end points of each curve.
 > 4. **NurbsCurve.ByPoints:** Use the points to construct a nurbs curve. Use a Boolean node set to _True_ to close the curves.
 
-Before we continue, switch off the preview for some of the Nodes such as: Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal & Arc.ByCenterPointRadiusAngle to see the result better.
+Before we continue, switch off the preview for some of the Nodes such as: Mesh.ByVerticesAndIndices, Curve.EndPoint, Plane.ByOriginNormal & Arc.ByCenterPointRadiusAngle to see the result better.
 
 ![](<../../.gitbook/assets/meshToolkit case study - exercise 05.jpg>)
 
