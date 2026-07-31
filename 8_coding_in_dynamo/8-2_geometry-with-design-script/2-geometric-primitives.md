@@ -8,7 +8,7 @@ Anche se non è strettamente un elemento di geometria, CoordinateSystem è uno s
 
 La creazione di un CoordinateSystem centrato in un punto con x = 0, y = 0, z = 0, senza rotazioni, messa in scala o trasformazioni di taglio, richiede semplicemente di chiamare il costruttore Identity:
 
-![](../../.gitbook/assets/GeometricPrimitives_01.png)
+![](../images/GeometricPrimitives_01.png)
 
 ```js
 // create a CoordinateSystem at x = 0, y = 0, z = 0,
@@ -19,7 +19,7 @@ cs = CoordinateSystem.Identity();
 
 I CoordinateSystem con trasformazioni geometriche non rientrano nell'ambito di questo capitolo, sebbene un altro costruttore consenta di creare un sistema di coordinate in un punto specifico, _CoordinateSystem.ByOriginVectors_:
 
-![](../../.gitbook/assets/GeometricPrimitives_02.png)
+![](../images/GeometricPrimitives_02.png)
 
 ```js
 // create a CoordinateSystem at a specific location,
@@ -41,7 +41,7 @@ La primitiva geometrica più semplice è un punto, che rappresenta una posizione
 
 In questo esempio sono mostrati i punti creati in diversi sistemi di coordinate:
 
-![](../../.gitbook/assets/GeometricPrimitives_03.png)
+![](../images/GeometricPrimitives_03.png)
 
 ```js
 // create a point with x, y, and z coordinates
@@ -77,7 +77,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
 
 La successiva primitiva di Dynamo dimensionale maggiore è un segmento di linea, che rappresenta un numero infinito di punti tra due punti finali. Le linee possono essere create specificando esplicitamente i due punti di contorno con il costruttore _Line.ByStartPointEndPoint_ o specificando un punto iniziale, una direzione e una lunghezza in tale direzione, _Line.ByStartPointDirectionLength_.
 
-![](../../.gitbook/assets/GeometricPrimitives_04.png)
+![](../images/GeometricPrimitives_04.png)
 
 ```js
 p1 = Point.ByCoordinates(-2, -5, -10);
@@ -96,7 +96,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
 
 Dynamo dispone di oggetti che rappresentano i tipi più elementari di primitive geometriche in tre dimensioni: cuboidi, creati con _Cuboid.ByLengths_; coni, creati con _Cone.ByPointsRadius_ e _Cone.ByPointsRadii_; cilindri, creati con _Cylinder.ByRadiusHeight_ e sfere create con _Sphere.ByCenterPointRadius_.
 
-![](../../.gitbook/assets/GeometricPrimitives_05.png)
+![](../images/GeometricPrimitives_05.png)
 
 ```js
 // create a cuboid with specified lengths

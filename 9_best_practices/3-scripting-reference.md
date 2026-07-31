@@ -6,7 +6,7 @@ Questa pagina di riferimento estende le procedure ottimali descritte in Strategi
 
 Le librerie standard sono esterne a Dynamo e sono presenti nei linguaggi di programmazione Python e C# (zero-touch). Dynamo dispone anche di un suo gruppo di librerie che corrispondono direttamente alla gerarchia dei nodi, consentendo all'utente di creare qualsiasi elemento nel codice che potrebbe essere creato con nodi e fili. Di seguito è riportata una guida per gli elementi a cui ciascuna libreria di Dynamo consente di accedere e per quando utilizzarne una standard.
 
-![](../.gitbook/assets/textual-programming.jpg)
+![](images/textual-programming.jpg)
 
 **Librerie standard e librerie di Dynamo**
 

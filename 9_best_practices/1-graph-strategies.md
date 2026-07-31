@@ -2,7 +2,7 @@
 
 Prima di questo capitolo, nella guida introduttiva è stato descritto come implementare le potenti funzionalità di scripting visivo di Dynamo. Una buona comprensione di queste funzionalità è una solida base e il primo passo nella compilazione di efficaci programmi visivi. Quando si utilizzano i programmi visivi sul campo, li si condivide con i colleghi, si correggono gli errori oppure si testano i limiti, ci sono altri problemi da risolvere. Se un altro utente sta utilizzando il programma o ci si aspetta di aprirlo tra sei mesi, deve avere un'immediata chiarezza grafica e logica. Dynamo dispone di molti strumenti per gestire la complessità del programma e in questo capitolo sono fornite linee guida su quando utilizzarli.
 
-![gruppi](../.gitbook/assets/cad-chart-visual.jpg)
+![gruppi](images/cad-chart-visual.jpg)
 
 ## Riduzione della complessità
 
@@ -15,7 +15,7 @@ Man mano che si sviluppa il grafico di Dynamo e si testano le idee, è possibile
 * È possibile modificare il **colore del gruppo per differenziare** l'azione dei gruppi (input e funzioni).
 * È possibile utilizzare i gruppi per iniziare a **organizzare il grafico per semplificare la creazione di nodi personalizzati**.
 
-![](../.gitbook/assets/graphstrategy2.png)
+![](images/graphstrategy2.png)
 
 > I colori in questo programma identificano lo scopo di ciascun gruppo. Questa strategia può essere utilizzata per creare la gerarchia in eventuali modelli o standard grafici sviluppati.
 >
@@ -30,7 +30,7 @@ Man mano che si sviluppa il grafico di Dynamo e si testano le idee, è possibile
 * A volte, è possibile utilizzare un blocco di codice per **digitare un metodo di nodo o numero più rapidamente della ricerca** (Point.ByCoordinates, Number, String, Formula).
 * I blocchi di codice sono utili **quando si desidera definire funzioni personalizzate in DesignScript per ridurre il numero di nodi in un grafico**.
 
-![](../.gitbook/assets/graphstrategy3.png)
+![](images/graphstrategy3.png)
 
 > Entrambi i valori 1 e 2 svolgono la stessa funzione. La scrittura di alcune righe di codice è molto più rapida rispetto alla ricerca e all'aggiunta di ogni nodo singolarmente. Anche il blocco di codice è molto più conciso.
 >
@@ -53,7 +53,7 @@ Man mano che si sviluppa il grafico di Dynamo e si testano le idee, è possibile
   * È più difficile da comprendere per altri utenti.
   * Non è possibile tornare facilmente alla versione di programmazione visiva.
 
-![](../.gitbook/assets/graphstrategy3_1.png)
+![](images/graphstrategy3_1.png)
 
 > 1. Programma esistente
 > 2. Blocco di codice creato da Nodo da aggiungere al codice
@@ -65,7 +65,7 @@ Man mano che si sviluppa il grafico di Dynamo e si testano le idee, è possibile
 * L'utilizzo di List@Level può aiutare a **ridurre la complessità del grafico sostituendo i nodi List.Map e List.Combine** che potrebbero occupare una notevole quantità di spazio nell'area di disegno.
 * List@Level offre un** modo più rapido rispetto a List.Map/List.Combine per costruire la logica dei nodi**, consentendo di accedere ai dati a qualsiasi livello in un elenco direttamente dalla porta di input di un nodo.
 
-![](../.gitbook/assets/graphstrategy4.png)
+![](images/graphstrategy4.png)
 
 > Si può verificare quanti valori True BoundingBox.Contains restituisce e in quali elenchi attivando List@Level per l'input "list" di CountTrue. List@Level consente all'utente di determinare da quale livello l'input acquisirà i dati. L'utilizzo di List@Level è flessibile, efficiente e altamente incoraggiato rispetto ad altri metodi che coinvolgono List.Map e List.Combine.
 >
@@ -82,9 +82,9 @@ Oltre a rendere il grafico il più semplice ed efficiente possibile, è necessar
 
 * Per ridurre il lavoro dopo aver completato la creazione del grafico, è necessario provare ad assicurarsi che il layout del nodo sia leggibile tramite l'**allineamento di nodi spesso e mentre si procede**.
 * Se altri utenti lavoreranno con il grafico, è necessario **verificare che il layout nodo-collegamento fluisca facilmente prima del rilascio**.
-* Per semplificare l'allineamento, **utilizzare la funzionalità Semplifica layout nodi per allineare automaticamente** il grafico, anche se in modo meno preciso rispetto a quello eseguito manualmente.
+* Per semplificare l'allineamento, **utilizzare la funzionalità "Semplifica layout nodi" per allineare automaticamente** il grafico, anche se in modo meno preciso rispetto a quello eseguito manualmente.
 
-\![](<../.gitbook/assets/graphstrategy5 (1).png>)
+![](<images/graphstrategy5.png>)
 
 > 1. Grafico non organizzato
 > 2. Grafico allineato
@@ -96,7 +96,7 @@ Oltre a rendere il grafico il più semplice ed efficiente possibile, è necessar
 * La ridenominazione degli input consente ad altri utenti di comprendere facilmente il grafico, **in particolare se ciò in cui questi si inseriranno sarà fuori dallo schermo**.
 * **È consigliabile rinominare i nodi diversamente dagli input.** In alternativa, è possibile creare un nodo personalizzato da un cluster di nodi e rinominarlo. Si capirà che contiene qualcos'altro.
 
-![](../.gitbook/assets/graphstrategy6.png)
+![](images/graphstrategy6.png)
 
 > 1. Input per la manipolazione della superficie
 > 2. Input per i parametri architettonici
@@ -109,7 +109,7 @@ Oltre a rendere il grafico il più semplice ed efficiente possibile, è necessar
 * Se un elemento del **grafico richiede una spiegazione in un linguaggio semplice** che i nodi non possono esprimere, è necessario aggiungere una nota.
 * Se una raccolta di **nodi o un gruppo è troppo grande o complesso e non può essere facilmente compreso immediatamente**, è necessario aggiungere una nota.
 
-![](../.gitbook/assets/graphstrategy7.png)
+![](images/graphstrategy7.png)
 
 > 1. Una nota che descrive la parte del programma che restituisce le distanze di traslazione non elaborate
 > 2. Una nota che descrive il codice che associa tali valori a un'onda sinusoidale
@@ -124,7 +124,7 @@ Durante la compilazione dello script visivo, è importante verificare che ciò c
 
 * Durante la compilazione del programma, utilizzare i simboli circolari di anteprima o controllo per **verificare che gli output chiave restituiscano ciò che è previsto.**
 
-![](../.gitbook/assets/graphstrategy8.png)
+![](images/graphstrategy8.png)
 
 > I nodi Watch vengono utilizzati per confrontare:
 >
@@ -155,7 +155,7 @@ Durante la compilazione dello script visivo, è importante verificare che ciò c
 * È necessario utilizzare un nodo personalizzato **quando una parte del grafico verrà riutilizzata spesso** in altri programmi.
 * È necessario utilizzare un nodo personalizzato se si desidera **condividere una funzionalità con la community di Dynamo**.
 
-![](../.gitbook/assets/graphstrategy9.png)
+![](images/graphstrategy9.png)
 
 > La raccolta del programma di traslazione dei punti in un nodo personalizzato rende un programma affidabile, unico e molto più facile da comprendere. Le porte di input con nome significativo consentono ad altri utenti di comprendere come utilizzare il nodo. Ricordarsi di aggiungere le descrizioni e i tipi di dati richiesti per ogni input.
 >
@@ -170,7 +170,7 @@ Durante la compilazione dello script visivo, è importante verificare che ciò c
 * Durante la creazione di un modello, è possibile standardizzare **i colori dei gruppi e le dimensioni dei font** per suddividere in categorie i tipi di workflow o le azioni di dati.
 * Durante la creazione di un modello, è anche possibile standardizzare il modo in cui si desidera **etichettare, colorare o applicare stili alla differenza tra i workflow front-end e back-end** nel grafico.
 
-![](../.gitbook/assets/graphstrategy10.png)
+![](images/graphstrategy10.png)
 
 > 1. L'interfaccia utente, o front-end, del programma include un nome di progetto, dispositivi di scorrimento di input e geometria di importazione.
 > 2. Il back-end del programma.
@@ -184,13 +184,13 @@ Durante la compilazione dello script visivo, è importante verificare che ciò c
 
 Ora che sono state definite diverse pratiche ottimali, è possibile applicarle ad un programma che è stato realizzato rapidamente. Sebbene il programma possa generare il tetto, lo stato del grafico è una "mappa mentale" del programmatore. Non è presente alcuna organizzazione o descrizione del suo utilizzo. Si esamineranno le procedure ottimali per organizzare, descrivere e analizzare il programma in modo che altri utenti possano comprendere come utilizzarlo.
 
-![](../.gitbook/assets/graphstrategy11.png)
+![](images/graphstrategy11.png)
 
 > Il programma funziona, ma il grafico è disorganizzato.
 
 Iniziare determinando i dati e la geometria restituiti dal programma.
 
-![](../.gitbook/assets/graphstrategy12.png)
+![](images/graphstrategy12.png)
 
 > Comprendere quando si apportano modifiche importanti ai dati è fondamentale per stabilire le divisioni logiche o la modularità. Provare a controllare il resto del programma con i nodi Watch per verificare se è possibile determinare i gruppi prima di andare al passaggio successivo.
 >
@@ -199,7 +199,7 @@ Iniziare determinando i dati e la geometria restituiti dal programma.
 
 Una volta comprese le parti elementari del programma, si possono inserirle in gruppi.
 
-![](../.gitbook/assets/graphstrategy13.png)
+![](images/graphstrategy13.png)
 
 > I gruppi consentono all'utente di differenziare visivamente le parti del programma.
 >
@@ -211,13 +211,13 @@ Una volta comprese le parti elementari del programma, si possono inserirle in gr
 
 Con i gruppi stabiliti, allineare i nodi per creare una continuità visiva nel grafico.
 
-![](../.gitbook/assets/graphstrategy14.png)
+![](images/graphstrategy14.png)
 
 > La continuità visiva consente all'utente di vedere il flusso del programma e le relazioni implicite tra i nodi.
 
 Rendere il programma più accessibile aggiungendo un altro livello di miglioramenti grafici. Aggiungere note per descrivere il funzionamento di una specifica area del programma, assegnare nomi personalizzati agli input e assegnare colori a diversi tipi di gruppi.
 
-![](../.gitbook/assets/graphstrategy15.png)
+![](images/graphstrategy15.png)
 
 > Questi miglioramenti grafici consentono all'utente di conoscere meglio le attività del programma. I diversi colori dei gruppi consentono di distinguere gli input dalle funzioni.
 >
@@ -226,7 +226,7 @@ Rendere il programma più accessibile aggiungendo un altro livello di migliorame
 
 Prima di iniziare a comprimere il programma, è necessario individuare una posizione strategica per introdurre il simulatore di drenaggio dello script Python. Inserire l'output della prima superficie del tetto in scala nel rispettivo input di scripting.
 
-![](../.gitbook/assets/graphstrategy16.png)
+![](images/graphstrategy16.png)
 
 > Si è scelto di integrare lo scripting in questo punto del programma in modo che la simulazione del drenaggio possa essere eseguita sulla superficie originale del tetto singolo. Questa superficie specifica non viene visualizzata in anteprima, ma consente di evitare di scegliere la superficie superiore della PolySurface smussata.
 >
@@ -237,7 +237,7 @@ Prima di iniziare a comprimere il programma, è necessario individuare una posiz
 
 Si può semplificare il grafico ora che tutto è pronto.
 
-![](../.gitbook/assets/graphstrategy17.png)
+![](images/graphstrategy17.png)
 
 > La compressione del programma con Nodo da aggiungere al codice e Nodo personalizzato ha ridotto notevolmente la dimensione del grafico. I gruppi che creano la superficie del tetto e i muri sono stati convertiti in codice poiché sono molto specifici di questo programma. Il gruppo di traslazione dei punti è contenuto in un nodo personalizzato, in quanto potrebbe essere utilizzato in un altro programma. Nel file di esempio, creare il proprio nodo personalizzato dal gruppo di traslazione dei punti.
 >
@@ -246,14 +246,14 @@ Si può semplificare il grafico ora che tutto è pronto.
 
 Come passaggio finale, creare preimpostazioni per forme di tetto esemplificative.
 
-![](../.gitbook/assets/graphstrategy18.png)
+![](images/graphstrategy18.png)
 
 > Questi input sono i fattori principali della forma del tetto e consentiranno agli utenti di vedere il potenziale del programma.
 
 Il programma con le viste di due preimpostazioni.
 
-![](../.gitbook/assets/graphstrategy19.png)
+![](images/graphstrategy19.png)
 
-![](../.gitbook/assets/graphstrategy20.png)
+![](images/graphstrategy20.png)
 
 > I modelli di drenaggio del tetto offrono all'utente una vista analitica delle rispettive preimpostazioni.

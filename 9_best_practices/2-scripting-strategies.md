@@ -2,7 +2,7 @@
 
 Lo scripting basato su testo all'interno dell'ambiente di creazione di scripting visivo consente relazioni potenti e visive utilizzando DesignScript, Python e ZeroTouch (C#). L'utente può esporre elementi quali dispositivi di scorrimento di input, comprimere operazioni di grandi dimensioni in DesignScript e accedere a potenti strumenti e librerie tramite Python o C#, tutto nella stessa area di lavoro. Se gestita in modo efficace, la combinazione di queste strategie può conferire un elevato livello di personalizzazione, chiarezza ed efficienza al programma generale. Di seguito è riportato un insieme di linee guida per ottimizzare lo script visivo con lo script testuale.
 
-![](../.gitbook/assets/cad-chart-textual.jpg)
+![](images/cad-chart-textual.jpg)
 
 ### Sapere quando eseguire lo script
 
@@ -37,7 +37,7 @@ Quando si esegue lo scripting in Dynamo, un ambiente inevitabilmente parametrico
   * L'output desiderato
   * Costanti
 
-\![](<../.gitbook/assets/think parametrically 01.jpg>)
+\![](<images/think parametrically 01.jpg>)
 
 > Prima di scrivere il codice, sono state definite diverse variabili.
 >
@@ -55,7 +55,7 @@ Quando si esegue lo scripting in Dynamo, un ambiente inevitabilmente parametrico
 * Ridurre al minimo il numero di input esponendo solo i parametri chiave:
   * Se è possibile derivare un gruppo di parametri da più parametri principali, esporre solo i parametri principali come input di script. Ciò consente di migliorare la fruibilità dello script riducendone la complessità dell'interfaccia.
 
-\![](<../.gitbook/assets/think parametrically 02.jpg>)
+\![](<images/think parametrically 02.jpg>)
 
 > I "moduli" del codice dell'esempio nel [nodo Python](../8_coding_in_dynamo/8-3_python/1-python.md).
 >
@@ -102,7 +102,7 @@ Man mano che il codice diventa sempre più lungo e più complesso, la "grande id
 * Può trattarsi di qualsiasi elemento che deve essere separato visivamente dal codice adiacente (una funzione, una classe, un gruppo di input o le librerie che si stanno importando).
 * Lo sviluppo di codice nei moduli consente di sfruttare la qualità visiva e intuitiva dei nodi, nonché le complesse relazioni che possono essere ottenute solo tramite lo scripting di testo.
 
-\![](<../.gitbook/assets/think parametrically 02.jpg>)
+\![](<images/think parametrically 02.jpg>)
 
 > Questi loop chiamano una classe denominata "agente" che verrà sviluppata nell'esercizio.
 >
@@ -117,7 +117,7 @@ Man mano che il codice diventa sempre più lungo e più complesso, la "grande id
 
 In questo esempio vengono create sfere con raggi e colori in base al valore Z dei punti centrali.
 
-\![](<../.gitbook/assets/spot code resuse.jpg>)
+\![](<images/spot code resuse.jpg>)
 
 > 1. Due funzioni principali "worker": una che crea sfere con raggi e visualizza i colori in base al valore Z del punto centrale.
 > 2. Una funzione principale "manager" che combina le due funzioni worker. Chiamando questa funzione si chiameranno entrambe le funzioni al suo interno.
@@ -182,7 +182,7 @@ Durante lo sviluppo di script di testo in Dynamo, è opportuno assicurarsi costa
   * Fare rapidamente delle prove per assicurarsi che restituisca dati "appropriati".
 * Assegnare come output i dati più recenti che si stanno utilizzando nello script, in modo che il nodo generi sempre dati pertinenti quando lo script viene aggiornato:
 
-\![](<../.gitbook/assets/flex continuously.jpg>)
+\![](<images/flex continuously.jpg>)
 
 > 1. Verificare che tutti i bordi del solido vengano restituiti come curve per creare un riquadro di delimitazione attorno.
 > 2. Verificare che gli input del conteggio siano stati convertiti correttamente in intervalli.
@@ -232,7 +232,7 @@ for i in range(xCount):
 * Quando un programma deve essere modificato, il codice sviluppato in moduli sarà molto più facile da modificare:
   * È possibile inserire moduli nuovi o sottoposti al debug in un programma esistente con la certezza che il resto del programma non cambierà.
 
-\![](<../.gitbook/assets/leverage code's modularity.jpg>)
+\![](<images/leverage code's modularity.jpg>)
 
 > Debug del file di esempio del [nodo Python](../8_coding_in_dynamo/8-3_python/1-python.md).
 >
@@ -250,19 +250,19 @@ Tenendo a mente le procedure ottimali per lo scripting di testo, si scrive uno s
 
 Lo script è stato applicato ad una superficie deformata dall'attrattore.
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 01.jpg>)
+\![](<images/scripting strategies - exercise - 01.jpg>)
 
 La prima cosa da fare è importare le librerie di Dynamo necessarie. Questa prima operazione garantirà l'accesso globale alle funzionalità di Dynamo in Python.
 
 Tutte le librerie che si intende utilizzare devono essere importate qui.
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 02.jpg>)
+\![](<images/scripting strategies - exercise - 02.jpg>)
 
 Successivamente dobbiamo definire gli input e l'output dello script, che verranno visualizzati come porte di input sul nodo. Questi input esterni sono la base dello script e la chiave per stabilire un ambiente parametrico.
 
 È necessario definire input corrispondenti alle variabili nello script Python e determinare l'output desiderato:
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 03.jpg>)
+\![](<images/scripting strategies - exercise - 03.jpg>)
 
 > 1. La superficie che si intende percorrere.
 > 2. Il numero di agenti che si desidera far camminare.
@@ -275,7 +275,7 @@ Ora, si applicherà la pratica della modularità e verrà creato il corpo dello 
 
 Occorre definire una classe, o cianografia, per un agente con l'intenzione di percorrere una superficie scegliendo di viaggiare nella direzione più ripida possibile ogni volta che fa un passo:
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 04.jpg>)
+\![](<images/scripting strategies - exercise - 04.jpg>)
 
 > 1. Nome.
 > 2. Attributi globali condivisi da tutti gli agenti.
@@ -287,7 +287,7 @@ Si inizializzano gli agenti definendo la loro posizione iniziale. Questa è un'o
 
 Occorre creare un'istanza di tutti gli agenti che si desidera osservare percorrere la superficie e definire i loro attributi iniziali:
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 05.jpg>)
+\![](<images/scripting strategies - exercise - 05.jpg>)
 
 > 1. Un nuovo elenco di tracce vuoto.
 > 2. Dove inizieranno il loro viaggio sulla superficie.
@@ -295,15 +295,15 @@ Occorre creare un'istanza di tutti gli agenti che si desidera osservare percorre
 
 Aggiornare ogni agente ad ogni passo. Sarà quindi necessario immettere un loop nidificato where per ogni agente e per ogni passo, quindi aggiornare e registrare la loro posizione nell'elenco delle loro tracce. Ad ogni passo, occorre assicurarsi inoltre che l'agente non abbia raggiunto un punto sulla superficie dove non può fare un altro passo che gli consenta la discesa. Se questa condizione è soddisfatta, finirà il viaggio dell'agente.
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 06.jpg>)
+\![](<images/scripting strategies - exercise - 06.jpg>)
 
 Ora che i nostri agenti sono stati completamente aggiornati, si può tornare alla geometria che li rappresenta. Dopo che tutti gli agenti hanno raggiunto il loro limite di discesa o il loro numero massimo di passi, verrà creata una PolyCurve attraverso i punti nell'elenco delle loro tracce e verranno generate le tracce di PolyCurve.
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 07.jpg>)
+\![](<images/scripting strategies - exercise - 07.jpg>)
 
 Lo script per trovare i percorsi più ripidi.
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 08.jpg>)
+\![](<images/scripting strategies - exercise - 08.jpg>)
 
 > 1. Una preimpostazione che simula la pioggia sulla superficie sottostante.
 > 2. Anziché trovare il percorso più ripido, gli agenti possono essere attivati per attraversare la superficie sottostante.

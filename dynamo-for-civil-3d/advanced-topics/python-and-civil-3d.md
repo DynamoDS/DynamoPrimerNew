@@ -7,9 +7,7 @@ Sebbene Dynamo sia estremamente potente come strumento di [programmazione visiva
 
 In questa sezione verrà descritto come utilizzare Python nell'ambiente Civil 3D per sfruttare le API .NET di AutoCAD e Civil 3D.
 
-{% hint style="info" %}
-Per ulteriori informazioni generali sull'utilizzo di Python in Dynamo, consultare la sezione [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention").
-{% endhint %}
+{% hint style="info" %} Per ulteriori informazioni generali sull'utilizzo di Python in Dynamo, consultare la sezione [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention"). {% endhint %}
 
 ## Documentazione sull'API
 
@@ -29,7 +27,7 @@ Sia AutoCAD che Civil 3D dispongono di diverse API che consentono agli sviluppat
 
 Quando si modifica per la prima volta un nuovo nodo Python, questo verrà precompilato con il codice modello per iniziare. Ecco una schematizzazione del modello con spiegazioni su ciascun blocco.
 
-<figure><img src="../../.gitbook/assets/Python_Template (1).png" alt=""><figcaption><p>Modello Python di default in Civil 3D</p></figcaption></figure>
+<figure><img src="../images/Python_Template.png" alt=""><figcaption><p>Modello Python di default in Civil 3D</p></figcaption></figure>
 
 > 1. Importa i moduli `sys` e `clr`, entrambi necessari per il corretto funzionamento dell'interprete Python. In particolare, il modulo `clr` consente di trattare gli spazi dei nomi .NET essenzialmente come pacchetti Python.
 > 2. Carica gli assiemi standard (ad esempio, DLL) per l'utilizzo delle API .NET gestite per AutoCAD e Civil 3D.
@@ -41,10 +39,8 @@ Quando si modifica per la prima volta un nuovo nodo Python, questo verrà precom
 > 8. Annullare i commenti di questa riga per eseguire il commit della transazione dopo il completamento del lavoro principale.
 > 9. Se si desidera eseguire l'output di eventuali dati dal nodo, assegnarli alla variabile `OUT` alla fine dello script.
 
-{% hint style="info" %}
-**Personalizzazione**\
- È possibile modificare il modello Python di default modificando il file `PythonTemplate.py` che si trova in `C:\ProgramData\Autodesk\C3D <versione>\Dynamo`.
- {% endhint %}
+{% hint style="info" %} **Personalizzazione**\
+ È possibile modificare il modello Python di default modificando il file `PythonTemplate.py` che si trova in `C:\ProgramData\Autodesk\C3D <versione>\Dynamo`. {% endhint %}
 
 ## Esempio
 
@@ -82,7 +78,7 @@ Prima di iniziare a costruire il grafico e scrivere il codice, è consigliabile 
 
 Ora è possibile iniziare a costruire la logica del grafico. La prima cosa da fare è ottenere un elenco di tutti i drenaggi nel documento. Sono disponibili nodi per questo, pertanto non è necessario includerli nello script Python. L'utilizzo dei nodi offre una migliore visibilità per un altro utente che potrebbe leggere il grafico (anziché aggiungere codice eccessivo in uno script Python) e mantiene lo script Python concentrato su una cosa: restituire i punti di contorno dei drenaggi.
 
-<figure><img src="../../.gitbook/assets/Python_Get_Catchments.png" alt=""><figcaption><p>Recupero di tutti i drenaggi nel documento in base al layer</p></figcaption></figure>
+<figure><img src="../images/Python_Get_Catchments.png" alt=""><figcaption><p>Recupero di tutti i drenaggi nel documento in base al layer</p></figcaption></figure>
 
 Notare che l'output del nodo **All Objects on Layer** è un elenco di CivilObject. Questo perché Dynamo for Civil 3D non dispone attualmente di nodi per l'utilizzo dei drenaggi, che è il motivo completo per cui è necessario accedere all'API tramite Python.
 
@@ -171,13 +167,13 @@ with adoc.LockDocument():
 
 In questa fase, lo script Python dovrebbe generare un elenco di punti di Dynamo che è possibile vedere nell'anteprima di sfondo. L'ultimo passaggio consiste nel creare semplicemente PolyCurve dai punti. Si noti che questa operazione potrebbe essere effettuata anche direttamente nello script Python, ma noi l'abbiamo volutamente inserita al di fuori dello script in un nodo, in modo che sia più visibile. Ecco come appare il grafico finale.
 
-<figure><img src="../../.gitbook/assets/Python_Final_Script (1).png" alt=""><figcaption><p>Il grafico finale</p></figcaption></figure>
+<figure><img src="../images/Python_Final_Script.png" alt=""><figcaption><p>Il grafico finale</p></figcaption></figure>
 
 ### Risultato
 
 Ed ecco la geometria finale di Dynamo.
 
-<figure><img src="../../.gitbook/assets/Python_Dynamo_Curves.png" alt=""><figcaption><p>Le PolyCurve di Dynamo risultanti per i contorni di drenaggio</p></figcaption></figure>
+<figure><img src="../images/Python_Dynamo_Curves.png" alt=""><figcaption><p>Le PolyCurve di Dynamo risultanti per i contorni di drenaggio</p></figcaption></figure>
 
 > :tada: Missione compiuta!
 
@@ -185,9 +181,7 @@ Ed ecco la geometria finale di Dynamo.
 
 Solo una breve nota prima di concludere. A seconda della versione di Civil 3D in uso, il nodo Python potrebbe essere configurato in modo diverso. In **Civil 3D 2020 e 2021**, Dynamo ha utilizzato uno strumento denominato **IronPython** per spostare i dati tra gli oggetti .NET e gli script Python. In **Civil 3D 2022**, tuttavia, Dynamo è passato a utilizzare l'interprete Python nativo standard (noto anche come **CPython**) anziché Python 3. I vantaggi di questa transizione includono l'accesso alle librerie moderne più diffuse e alle nuove funzionalità della piattaforma, alla manutenzione essenziale e alle patch di sicurezza.
 
-{% hint style="info" %}
-È possibile leggere ulteriori informazioni su questa transizione e su come aggiornare gli script precedenti nel [blog di Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Se si desidera continuare ad utilizzare IronPython, sarà sufficiente installare il pacchetto **DynamoIronPython2.7** utilizzando Dynamo Package Manager.
-{% endhint %}
+{% hint style="info" %} È possibile leggere ulteriori informazioni su questa transizione e su come aggiornare gli script precedenti nel [blog di Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Se si desidera continuare ad utilizzare IronPython, sarà sufficiente installare il pacchetto **DynamoIronPython2.7** utilizzando Dynamo Package Manager. {% endhint %}
 
 [^1]: per default, la libreria della geometria di Dynamo non viene aggiunta all'ambiente Python. L'obiettivo con questo script è di generare un elenco di punti di Dynamo per i contorni di drenaggio, pertanto è necessario aggiungere questa linea per creare i punti in un secondo momento.
 

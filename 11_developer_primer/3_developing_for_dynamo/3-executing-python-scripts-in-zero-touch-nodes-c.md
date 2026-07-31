@@ -4,7 +4,7 @@
 
 Se si ha familiarità con la scrittura di script in Python e si desidera ottenere più funzionalità dai nodi Python di Dynamo standard, è possibile utilizzare nodi zero-touch per creare nodi personalizzati. Iniziamo con un semplice esempio che ci consente di trasferire uno script Python come stringa ad un nodo zero-touch dove viene eseguito lo script e viene restituito un risultato. Questo case study si baserà sulle simulazioni e sugli esempi della sezione Per iniziare, a cui fare riferimento se si è completamente inesperti nella creazione di nodi zero-touch.
 
-![Nodo zero-touch che eseguirà una stringa di script Python](../../.gitbook/assets/python-case-study.png)
+![Nodo zero-touch che eseguirà una stringa di script Python](../images/python-case-study.png)
 
 > Nodo zero-touch che eseguirà una stringa di script Python
 
@@ -68,7 +68,7 @@ output = str(volume)
 
 Una limitazione dei nodi Python standard è che hanno una sola porta di output, pertanto, se si desidera restituire più oggetti, è necessario costruire un elenco e recuperare ogni oggetto incluso. Se si modifica l'esempio precedente per restituire un dizionario, si possono aggiungere tutte le porte di output desiderate. Per ulteriori informazioni sui dizionari, fare riferimento alla sezione Restituzione di più valori in Ulteriori informazioni sul concetto di zero-touch.
 
-![Questo nodo ci consente di restituire sia il volume del cuboide che il relativo baricentro.](../../.gitbook/assets/python-multi-case-study.png)
+![Questo nodo ci consente di restituire sia il volume del cuboide che il relativo baricentro.](../images/python-multi-case-study.png)
 
 > Questo nodo ci consente di restituire sia il volume del cuboide che il relativo baricentro.
 

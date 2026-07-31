@@ -6,13 +6,13 @@ La posizione di questo modello è `APPDATA` per l'installazione di Dynamo.
 
 In genere, è la seguente: `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-\![](<../../.gitbook/assets/python templates - appdata folder location.jpg>)
+\![](<../images/python templates - appdata folder location.jpg>)
 
 ### Configurazione del modello
 
 Per utilizzare questa funzionalità, è necessario aggiungere la seguente riga nel file `DynamoSettings.xml`. _(Modifica nel Blocco note)_
 
-\![](<../../.gitbook/assets/python templates -dynamo settings xml file.png>)
+\![](<../images/python templates -dynamo settings xml file.png>)
 
 Dove è visibile la riga `<PythonTemplateFilePath />`, è sufficiente sostituirla con quanto segue:
 
@@ -71,10 +71,10 @@ Al termine, salvare il file come `PythonTemplate.py` nella posizione `APPDATA`.
 
 Dopo aver definito un modello di Python, verrà cercato in Dynamo ogni volta che viene posizionato un nodo Python. Se non viene trovato, sarà simile alla finestra di Python di default.
 
-\![](<../../.gitbook/assets/python templates - before setup template.jpg>)
+\![](<../images/python templates - before setup template.jpg>)
 
 Se viene trovato il modello di Python (ad esempio, come il modello di Revit), verranno visualizzati tutti gli elementi di default incorporati.
 
-\![](<../../.gitbook/assets/python templates - after setup template.jpg>)
+\![](<../images/python templates - after setup template.jpg>)
 
 Ulteriori informazioni su questa straordinaria aggiunta (di Radu Gidei) sono disponibili qui. https://github.com/DynamoDS/Dynamo/pull/8122

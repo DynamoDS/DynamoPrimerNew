@@ -6,4 +6,4 @@ Le infrastrutture civili sono tutte queste cose e molto altro! Questa sezione co
 
 Inoltre, questi esempi incarnano le pratiche ottimali collaudate nel tempo per la costruzione di grafici efficaci. Mentre si esaminano gli esempi, si consiglia di acquisire familiarità con la sezione [9_best_practice](../../9\_best\_practices/ "mention") per ulteriori idee su come creare grafici potenti, flessibili e gestibili.
 
-<figure><img src="../../.gitbook/assets/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>

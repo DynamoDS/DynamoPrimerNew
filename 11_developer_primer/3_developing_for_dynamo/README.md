@@ -2,7 +2,7 @@
 
 Indipendentemente dal livello di esperienza, la piattaforma Dynamo è progettata per consentire a tutti gli utenti di contribuire. Esistono diverse opzioni di sviluppo che si rivolgono a diversi livelli di abilità e competenze, ciascuno con i suoi punti di forza e di debolezza a seconda dell'obiettivo. Di seguito illustreremo le diverse opzioni e come scegliere una piuttosto che un'altra.
 
-![Tre ambienti di sviluppo](../../.gitbook/assets/developing-for-dynamo.png)
+![Tre ambienti di sviluppo](../images/developing-for-dynamo.png)
 
 > Tre ambienti di sviluppo: Visual Studio, l'editor Python Editor e la sintassi DesignScript di Code Block
 
@@ -22,7 +22,7 @@ Questi nodi consentono il massimo grado di personalizzazione. Molti pacchetti ve
 
 Per la discussione seguente, Visual Studio viene utilizzato come ambiente di sviluppo per i nodi zero-touch e NodeModel.
 
-![Interfaccia di Visual Studio](../../.gitbook/assets/vs-devenv.jpg)
+![Interfaccia di Visual Studio](../images/vs-devenv.jpg)
 
 > L'interfaccia di Visual Studio con un progetto che verrà sviluppato
 
@@ -42,7 +42,7 @@ Sebbene questi processi esistano nell'area di lavoro di programmazione visiva e 
 
 Lo sviluppo nell'area di lavoro di Dynamo è un potente strumento per ottenere un feedback immediato.
 
-![Sviluppo nell'area di lavoro di Dynamo con il nodo Python](../../.gitbook/assets/python-example.jpg)
+![Sviluppo nell'area di lavoro di Dynamo con il nodo Python](../images/python-example.jpg)
 
 > Sviluppo nell'area di lavoro di Dynamo con il nodo Python
 
@@ -54,7 +54,7 @@ Le opzioni di sviluppo per Dynamo sono state progettate per soddisfare la comple
 
 Si tratta di opzioni semplici per la scrittura di codice nell'ambiente di programmazione visiva Dynamo. L'area di lavoro di programmazione visiva di Dynamo consente di accedere a Python, DesignScript e alla possibilità di contenere più nodi all'interno di un nodo personalizzato.
 
-![Code Block, script Python e nodo personalizzato](../../.gitbook/assets/Development-Icons.png)
+![Code Block, script Python e nodo personalizzato](../images/Development-Icons.png)
 
 Con questi metodi è possibile:
 
@@ -66,7 +66,7 @@ Con questi metodi è possibile:
 
 Il termine zero-touch si riferisce ad un semplice metodo di puntamento e clic per l'importazione di librerie C#. Dynamo consentirà di leggere i metodi pubblici di un file `.dll` e di convertirli in nodi di Dynamo. È possibile utilizzare il metodo zero-touch per sviluppare nodi e pacchetti personalizzati.
 
-![Nodi zero-touch](../../.gitbook/assets/ZTImport.png)
+![Nodi zero-touch](../images/ZTImport.png)
 
 Con questo metodo è possibile:
 
@@ -78,7 +78,7 @@ Con questo metodo è possibile:
 
 Questi nodi sono un livello più basso nella struttura di Dynamo. Si basano sulla classe `NodeModel` e sono scritti in C#. Sebbene questo metodo offra la massima flessibilità e potenza, la maggior parte degli aspetti del nodo deve essere definita esplicitamente e le funzioni devono risiedere in un assieme separato.
 
-![Nodi derivati da NodeModel](../../.gitbook/assets/Development-Icons-NodeModel.png)
+![Nodi derivati da NodeModel](../images/Development-Icons-NodeModel.png)
 
 Con questo metodo è possibile:
 
@@ -93,13 +93,13 @@ Poiché Dynamo viene aggiornato regolarmente, potrebbero essere apportate modifi
 
 Le modifiche all'API vengono registrate nella [pagina Wiki di Dynamo su GitHub](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). Vengono descritte le modifiche apportate a DynamoCore, alle librerie e alle aree di lavoro.
 
-![Documento delle modifiche all'API di Dynamo](../../.gitbook/assets/api-changes.png)
+![Documento delle modifiche all'API di Dynamo](../images/api-changes.png)
 
 Un esempio di modifica significativa imminente è la transizione dal formato di file XML a JSON nella versione 2.0. I nodi derivati da NodeModel ora richiedono un [costruttore JSON](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node), altrimenti non si apriranno in Dynamo 2.0.
 
 La documentazione sull'API di Dynamo attualmente copre le funzionalità principali: [http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI).
 
-![Documentazione sull'API](../../.gitbook/assets/api-docs.jpg)
+![Documentazione sull'API](../images/api-docs.jpg)
 
 ### Autorizzazione alla distribuzione di file binari in un pacchetto <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 

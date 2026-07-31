@@ -1,5 +1,5 @@
 ---
-cover: ../../../.gitbook/assets/Site_Development-566364595.jpg
+cover: ../../images/Site_Development-566364595.jpg
 coverY: -39
 --- 
 

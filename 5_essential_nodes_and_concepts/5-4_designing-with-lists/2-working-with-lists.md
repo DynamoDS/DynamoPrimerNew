@@ -4,7 +4,7 @@
 
 Ora che è stato definito un elenco, si può parlare delle operazioni eseguibili su di esso. Si immagini un elenco come un mazzo di carte da gioco. Un mazzo è l'elenco e ogni carta da gioco rappresenta una voce.
 
-![carte](../../.gitbook/assets/Playing_cards_modified.jpg)
+![carte](../images/Playing_cards_modified.jpg)
 
 > Foto di [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
@@ -43,7 +43,7 @@ Tutte le operazioni elencate sopra hanno nodi di Dynamo analoghi per l'utilizzo 
 
 L'immagine seguente è il grafico di base che si sta disegnando tra due cerchi per rappresentare le operazioni di base con gli elenchi. Verrà illustrato come gestire i dati all'interno di un elenco e verranno mostrati i risultati visivi attraverso le azioni con gli elenchi riportate di seguito.
 
-\![](<../../.gitbook/assets/working with list - list operation.jpg>)
+\![](<../images/working with list - list operation.jpg>)
 
 > 1. Iniziare con un **Code Block** con un valore di `500;`.
 > 2. Collegarlo all'input x di un nodo **Point.ByCoordinates**.
@@ -65,7 +65,7 @@ L'immagine seguente è il grafico di base che si sta disegnando tra due cerchi p
 
 Il nodo _List.Count_ è semplice: calcola il numero di valori in un elenco e restituisce tale numero. Questo nodo si diversifica sempre di più quando si utilizzano elenchi di elenchi, come dimostreremo nelle sezioni successive.
 
-\![Count](<../../.gitbook/assets/working with list - list operation - list count.jpg>)
+\![Count](<../images/working with list - list operation - list count.jpg>)
 
 > 1. Il nodo **List.Count** restituisce il numero di linee nel nodo **Line.ByStartPointEndPoint**. In questo caso, il valore è 10, che corrisponde al numero di punti creati dal nodo **Code Block** originale.
 
@@ -79,14 +79,14 @@ Il nodo _List.Count_ è semplice: calcola il numero di valori in un elenco e res
 
 **List.GetItemAtIndex** è un modo fondamentale per eseguire una query su una voce dell'elenco.
 
-\![Exercise](<../../.gitbook/assets/working with list - get item index 01.jpg>)
+\![Esercizio](<../images/working with list - get item index 01.jpg>)
 
 > 1. Innanzitutto, fare clic con il pulsante destro del mouse sul nodo **Line.ByStartPointEndPoint** per disattivare la relativa anteprima.
 > 2. Utilizzando il nodo **List.GetItemAtIndex**, selezionare l'indice _"0"_ o la prima voce dell'elenco di linee.
 
 Modificare il valore del dispositivo di scorrimento compreso tra 0 e 9 per selezionare un elemento diverso utilizzando **List.GetItemAtIndex**.
 
-\![](<../../.gitbook/assets/working with list - get item index 02.gif>)
+\![](<../images/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
@@ -98,7 +98,7 @@ Modificare il valore del dispositivo di scorrimento compreso tra 0 e 9 per selez
 
 _List.Reverse_ inverte l'ordine di tutte le voci di un elenco.
 
-\![Exercise](<../../.gitbook/assets/working with list - list reverse.jpg>)
+\![Esercizio](<../images/working with list - list reverse.jpg>)
 
 > 1. Per visualizzare correttamente l'elenco invertito di linee, creare più linee modificando **Code Block** in `0..1..#50;`.
 > 2. Duplicare il nodo **Line.ByStartPointEndPoint**, inserire un nodo List.Reverse tra **Curve.PointAtParameter** e il secondo **Line.ByStartPointEndPoint**.
@@ -114,7 +114,7 @@ _List.Reverse_ inverte l'ordine di tutte le voci di un elenco.
 
 **List.ShiftIndices** è un buono strumento per creare torsioni o modelli elicoidali o qualsiasi altra manipolazione di dati simile. Questo nodo sposta le voci di un elenco in base ad un determinato numero di indici.
 
-\![Exercise](<../../.gitbook/assets/working with list - shiftIndices 01.jpg>)
+\![Esercizio](<../images/working with list - shiftIndices 01.jpg>)
 
 > 1. Nello stesso processo dell'elenco inverso, inserire **List.ShiftIndices** in **Curve.PointAtParameter** e **Line.ByStartPointEndPoint**.
 > 2. Utilizzando un **Code Block**, è stato designato un valore di "1" per spostare l'elenco in base ad un indice.
@@ -122,7 +122,7 @@ _List.Reverse_ inverte l'ordine di tutte le voci di un elenco.
 
 Modificando **Code Block** in un valore superiore, ad esempio _"30"_, si noterà una differenza significativa nelle linee diagonali. In questo caso, lo spostamento funziona come il diaframma di una fotocamera, creando una torsione nella forma cilindrica originale.
 
-\![](<../../.gitbook/assets/working with list - shiftIndices 02.jpg>)
+\![](<../images/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -132,11 +132,11 @@ Modificando **Code Block** in un valore superiore, ad esempio _"30"_, si noterà
 
 {% file src="../../.gitbook/assets/List-FilterByBooleanMask.dyn" %}
 
-![](../../.gitbook/assets/ListFilterBool.png)
+![](../images/ListFilterBool.png)
 
 **List.FilterByBooleanMask** rimuoverà alcune voci in base ad un elenco di valori booleani o valori che riportano "true" o "false".
 
-\![Exercise](<../../.gitbook/assets/working with list - filter by bool mask.jpg>)
+\![Esercizio](<../images/working with list - filter by bool mask.jpg>)
 
 Per creare un elenco di valori che riportano "true" o "false", è necessario un po' più di lavoro.
 

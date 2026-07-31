@@ -52,7 +52,7 @@ Se la risposta è la grafica, allora la **programmazione visiva** è sicuramente
 
 **Programma visivo:**
 
-\![](<../.gitbook/assets/visualProgramming (2).png>)
+![](<images/visualProgramming.png>)
 
 **Programma testuale:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 I risultati del nostro algoritmo:
 
-\![](<../.gitbook/assets/visualProgramming (1).png>)
+![](<images/visualProgramming.png>)
 
 La caratteristica visiva della programmazione in questo modo abbatte la barriera iniziale e di frequente parla con i progettisti. Dynamo rientra nel paradigma della programmazione visiva, ma, come si vedrà più avanti, è possibile comunque utilizzare anche la programmazione testuale nell'applicazione.

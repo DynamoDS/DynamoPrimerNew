@@ -377,7 +377,7 @@ Se è stato attivato il binding di elementi, è possibile mantenere il lavoro es
 
 ***
 
-![Creazione di muri](../../.gitbook/assets/creates_walls.png)
+![Creazione di muri](../images/creates_walls.png)
 
 #### Confronto di binding di elementi e traccia
 
@@ -466,15 +466,15 @@ Alla successiva esecuzione del grafico, esaminiamo la traccia, troviamo l'ID mem
 
 Il flusso di due esecuzioni consecutive del grafico che crea un singolo `TraceExampleItem` è simile al seguente:
 
-![Prima chiamata](../../.gitbook/assets/Trace-first-call.png)
+![Prima chiamata](../images/Trace-first-call.png)
 
-![Seconda chiamata](../../.gitbook/assets/Trace-second-call.png)
+![Seconda chiamata](../images/Trace-second-call.png)
 
 La stessa idea è illustrata nell'esempio successivo con un caso di utilizzo del nodo DynamoRevit più realistico.
 
 #### Diagramma della traccia
 
-![Passaggi della traccia](../../.gitbook/assets/trace_diagram.png) ![Flusso della traccia](../../.gitbook/assets/trace_alt_diagram.png)
+![Passaggi della traccia](../images/trace_diagram.png) ![Flusso della traccia](../images/trace_alt_diagram.png)
 
 #### NOTA
 
@@ -560,7 +560,7 @@ Le fasi importanti dell'esecuzione del costruttore in relazione al binding di el
 
 * Gli oggetti traccia salvati nelle versioni precedenti a Dynamo 3.0 vengono memorizzati utilizzando SOAP, pertanto non sono supportati nelle versioni più recenti. I dati sul binding degli elementi salvati in precedenza verranno ignorati e il messaggio seguente verrà visualizzato in Dynamo 3.0 e versioni successive. I dati sul binding degli elementi verranno salvati alla successiva esecuzione e al successivo salvataggio dell'area di lavoro.
 
-![Compatibilità del binding di elementi](../../.gitbook/assets/element_binding_compatibility_message.jpg)
+![Compatibilità del binding di elementi](../images/element_binding_compatibility_message.jpg)
 
 #### ElementBinding deve essere attivato per default?
 
@@ -574,7 +574,7 @@ A livello generale, **un buon modo per concettualizzare questi nodi è come una 
 
 In DynamoRevit sono presenti più nodi `Selection`. Possiamo suddividerli in almeno due gruppi:
 
-![Nodi Selection di Revit](../../.gitbook/assets/revitSelectionNodes.png)
+![Nodi Selection di Revit](../images/revitSelectionNodes.png)
 
 1.  Selezione dell'interfaccia utente:
 
@@ -602,7 +602,7 @@ In DynamoRevit sono presenti più nodi `Selection`. Possiamo suddividerli in alm
 
 I workflow in Dynamo for Civil 3D sono molto simili alla descrizione precedente per Revit. Di seguito sono riportati due gruppi tipici di nodi Selection in Dynamo for Civil 3D:
 
-![Nodi Selection di Civil 3D](../../.gitbook/assets/civilSelectionNodes.png)
+![Nodi Selection di Civil 3D](../images/civilSelectionNodes.png)
 
 ### Problemi:
 
@@ -613,9 +613,9 @@ I workflow in Dynamo for Civil 3D sono molto simili alla descrizione precedente 
 
 ### Diagrammi del flusso di dati
 
-![Flusso di selezione](../../.gitbook/assets/selectModelElement.png)
+![Flusso di selezione](../images/selectModelElement.png)
 
-![Flusso di selezione2](../../.gitbook/assets/selectElementFace.png)
+![Flusso di selezione2](../images/selectElementFace.png)
 
 ### Implementazione tecnica: (fare riferimento ai diagrammi precedenti):
 
@@ -624,7 +624,7 @@ I nodi Selection vengono implementati ereditando proprietà dai tipi `SelectionB
 * Implementazione di un metodo `BuildOutputAST`; questo metodo deve restituire un albero sintattico astratto (AST), che verrà eseguito in un certo momento in futuro, quando il nodo deve essere eseguito. Nel caso dei nodi Selection, dovrebbe restituire elementi o geometria dagli ID elemento. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * L'implementazione di `BuildOutputAST` è una delle parti più difficili dell'implementazione dei nodi `NodeModel`/dell'interfaccia utente. È consigliabile inserire quanta più logica possibile in una funzione C# e incorporare semplicemente un nodo di chiamata di funzione AST in AST. Si noti che qui `node` è un nodo AST nell'albero sintattico astratto, non è un nodo nel grafico di Dynamo.
 
-![Flusso di selezione2](../../.gitbook/assets/selectionAST.png)
+![Flusso di selezione2](../images/selectionAST.png)
 
 * Serializzazione
   *   Poiché si tratta di tipi derivati da `NodeModel` espliciti (non ZeroTouch), richiedono anche l'implementazione di un [JsonConstructor] che verrà utilizzato durante la deserializzazione del nodo da un file .dyn.

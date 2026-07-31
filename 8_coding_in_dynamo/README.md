@@ -6,4 +6,4 @@ Dynamo è un ottimo punto da cui iniziare a codificare per il mondo AEC. Si potr
 * [Geometria con DesignScript](8-2_geometry-with-design-script/)
 * [Python](8-3_python/)
 
-![](../.gitbook/assets/image.png)
+![](images/image.png)

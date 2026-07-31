@@ -2,7 +2,7 @@
 
 Dopo aver capito come si crea un progetto zero-touch, possiamo approfondire le specifiche della creazione di un nodo, illustrando l'esempio ZeroTouchEssentials nella pagina di Dynamo su Github.
 
-![Nodi zero-touch](../../.gitbook/assets/ootbzerotouch.png)
+![Nodi zero-touch](../images/ootbzerotouch.png)
 
 > Molti dei nodi standard di Dynamo sono essenzialmente nodi zero-touch, come la maggior parte dei nodi Math, Color e DateTime riportati sopra.
 
@@ -10,7 +10,7 @@ Per iniziare, scaricare il progetto ZeroTouchEssentials da qui: [https://github.
 
 In Visual Studio, aprire il file della soluzione `ZeroTouchEssentials.sln` e creare la soluzione.
 
-![ZeroTouchEssentials in Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
+![ZeroTouchEssentials in Visual Studio](../images/vs-build-zte.jpg)
 
 > Il file `ZeroTouchEssentials.cs` contiene tutti i metodi che importeremo in Dynamo.
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Valore di default](../../.gitbook/assets/defaultval.jpg)
+![Valore di default](../images/defaultval.jpg)
 
 > 1. Il valore di default verrà mostrato quando si posiziona il cursore sulla porta di input del nodo.
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Un nodo che restituisce più output.
 
-![Più output](../../.gitbook/assets/multipleoutputs.png)
+![Più output](../images/multipleoutputs.png)
 
 > 1. Notare che ora sono presenti due porte di output denominate in base alle stringhe immesse per le chiavi del dizionario.
 
@@ -90,7 +90,7 @@ Un nodo che restituisce più output.
   * Ad esempio: `/// <summary>...</summary>`
 * Attivare la documentazione XML in Visual Studio scegliendo `Project > [Project] Properties > Build > Output` e selezionando `Documentation file`.
 
-![Generazione di un file XML](../../.gitbook/assets/vs-xml.jpg)
+![Generazione di un file XML](../images/vs-xml.jpg)
 
 > 1. Visual Studio genererà un file XML nella posizione specificata.
 
@@ -141,7 +141,7 @@ Le descrizioni dei nodi illustrano brevemente la funzione e l'output di un nodo.
 * Nella descrizione comando del nodo
 * Nel Browser della documentazione
 
-![Descrizione del nodo](../../.gitbook/assets/node-description.png)
+![Descrizione del nodo](../images/node-description.png)
 
 Seguire queste linee guida per garantire la coerenza e risparmiare tempo durante la scrittura o l'aggiornamento delle descrizioni dei nodi.
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 Dopo l'importazione del file .dll ZeroTouchEssentials, nella libreria sarà presente un nodo ZeroTouchEssentials. Questo oggetto può essere creato utilizzando il nodo `ByTwoDoubles`
 
-![Nodo ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
+![Nodo ByTwoDoubles](../images/dyn-constructor.jpg)
 
 ### Utilizzo dei tipi di geometria di Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Un nodo che ottiene la lunghezza di una curva e la raddoppia.
 
-![Input curve](../../.gitbook/assets/doublelength.png)
+![Input curve](../images/doublelength.png)
 
 > 1. Questo nodo accetta un tipo di geometria curve come input.
 
@@ -285,7 +285,7 @@ Quando si pubblica una versione più recente di una libreria, i nomi dei nodi po
 * All'interno dell'elemento migrations, creare elementi `<priorNameHint>...</priorNameHint>` per ogni modifica del nome.
 * Per ogni modifica del nome, fornire un elemento `<oldName>...</oldName>` e `<newName>...</newName>`.
 
-![File Migrations](../../.gitbook/assets/vs-migrations-file.jpg)
+![File Migrations](../images/vs-migrations-file.jpg)
 
 > 1. Fare clic con il pulsante destro del mouse e selezionare `Aggiungi > Nuovo elemento`.
 > 2. Scegliere `File XML`.

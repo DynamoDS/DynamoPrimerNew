@@ -112,7 +112,7 @@ I nodi personalizzati vengono organizzati in base al parametro `Category Name` s
 **AVVISO**\
  L'utilizzo della notazione con il punto nei nomi o nelle categorie dei nodi determinerà ulteriori sottocategorie nidificate. Il segno `.` fungerà da delimitatore per determinare la gerarchia aggiuntiva. Questo è un nuovo comportamento nella libreria per Dynamo 2.0.
 
-![Proprietà dei nodi personalizzati](../../.gitbook/assets/custom-node-properties.jpg)
+![Proprietà dei nodi personalizzati](../images/custom-node-properties.jpg)
 
 Il nome della categoria può essere successivamente aggiornato nel file .dyf (XML o JSON)
 

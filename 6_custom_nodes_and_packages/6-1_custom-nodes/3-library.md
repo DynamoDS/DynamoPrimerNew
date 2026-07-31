@@ -16,27 +16,27 @@ Se si pubblica un nodo localmente, questo sarà accessibile nella libreria di Dy
 
 Procedere con il nodo personalizzato creato nella sezione precedente. Una volta aperto il nodo personalizzato PointsToSurface, viene visualizzato il grafico nell'Editor nodi personalizzati di Dynamo. È inoltre possibile aprire un nodo personalizzato facendovi doppio clic nell'editor dei grafici di Dynamo.
 
-\![](<../../.gitbook/assets/publish custom node exercise - 01.jpg>)
+\![](<../images/publish custom node exercise - 01.jpg>)
 
 Per pubblicare un nodo personalizzato localmente, è sufficiente fare clic con il pulsante destro del mouse sull'area di disegno e selezionare _Pubblica questo nodo personalizzato_.
 
-\![](<../../.gitbook/assets/publish custom node exercise - 02.jpg>)
+\![](<../images/publish custom node exercise - 02.jpg>)
 
 Compilare le informazioni pertinenti simili a quelle mostrate nell'immagine riportata sopra e selezionare _Pubblica localmente_. Notare che il campo Gruppo (facoltativo) definisce l'elemento principale accessibile dal menu di Dynamo.
 
-<figure><img src="../../.gitbook/assets/publish_a_package.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/publish_a_package.png" alt=""><figcaption></figcaption></figure>
 
 Scegliere una cartella in cui memorizzare tutti i nodi personalizzati che si prevede di pubblicare localmente. In Dynamo viene controllata questa cartella ad ogni caricamento del programma, quindi verificare che si trovi in una posizione permanente. Individuare la cartella e scegliere _Seleziona cartella_. Il nodo di Dynamo viene ora pubblicato localmente e rimarrà nella libreria di Dynamo ogni volta che si carica il programma.
 
-\![](<../../.gitbook/assets/publish custom node exercise - 04 (1).jpg>)
+\![](<../images/publish custom node exercise - 04.jpg>)
 
 Per verificare il percorso della cartella dei nodi personalizzati, accedere a _Dynamo > Preferenze > Impostazioni pacchetto > Percorsi di nodi e pacchetti_.
 
-<figure><img src="../../.gitbook/assets/settings.png" alt="" width="520"><figcaption></figcaption></figure>
+<figure><img src="../images/settings.png" alt="" width="520"><figcaption></figcaption></figure>
 
 In questa finestra viene visualizzato un elenco di percorsi.
 
-<figure><img src="../../.gitbook/assets/package-locations.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/package-locations.png" alt=""><figcaption></figcaption></figure>
 
 > 1. _Documents\\DynamoCustomNodes..._ si riferisce alla posizione dei nodi personalizzati pubblicati localmente.
 > 2. _AppData\\Roaming\\Dynamo..._ si riferisce alla posizione di default dei pacchetti di Dynamo installati in linea.
@@ -44,12 +44,12 @@ In questa finestra viene visualizzato un elenco di percorsi.
 
 È stato cambiato l'ordine dei nomi dei percorsi in modo da avere il percorso di default di Dynamo come posizione di installazione del pacchetto.
 
-<figure><img src="../../.gitbook/assets/updated-package-locations.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/updated-package-locations.png" alt=""><figcaption></figcaption></figure>
 
 Accedendo a questa cartella locale, è possibile trovare il nodo personalizzato originale nella cartella _dyf_, che è l'estensione del file di un nodo personalizzato di Dynamo. Si può modificare il file in questa cartella e il nodo verrà aggiornato nell'interfaccia utente. È inoltre possibile aggiungere altri nodi alla cartella _DynamoCustomNodes_ principale. In Dynamo verranno aggiunti alla libreria al riavvio.
 
-\![](<../../.gitbook/assets/publish custom node exercise - 08.jpg>)
+\![](<../images/publish custom node exercise - 08.jpg>)
 
 Dynamo ora viene caricato ogni volta con PointsToSurface nel gruppo DynamoPrimer della libreria di Dynamo.
 
-\![](<../../.gitbook/assets/publish custom node exercise - 09.jpg>)
+\![](<../images/publish custom node exercise - 09.jpg>)
