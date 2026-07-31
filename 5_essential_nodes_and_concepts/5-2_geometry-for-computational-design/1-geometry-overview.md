@@ -6,11 +6,11 @@
 
 透過瞭解幾何圖形類型及[其相關方式](1-geometry-overview.md#stepping-through-the-hierarchy)，我們可以導覽資源庫中提供的**幾何圖形節點**集合。幾何圖形節點依字母順序排列，與階層順序 (其顯示類似於在 Dynamo 介面中的配置) 截然不同。
 
-\![](<../images/geometry overview - geometry in dynamo.jpg>)
+[](<../images/geometry overview - geometry in dynamo.jpg>)
 
 此外，在 Dynamo 中製作模型，以及將我們在背景預覽中看到的預覽連接至圖表中的資料流，這兩項功能隨時間演進將變得更直觀。
 
-\![](<../images/Geometry for Computational Design - Overview.jpg>)
+[](<../images/Geometry for Computational Design - Overview.jpg>)
 
 > 1. 請注意由格線與彩色軸呈現的假設座標系統
 > 2. 選取的節點會以亮顯顏色彩現背景中的對應幾何圖形 (若該節點建立幾何圖形)
@@ -42,7 +42,7 @@
 
 接下來花一些時間看一下幾何圖形的抽象描述與階層描述之間的關係。由於這兩個概念彼此相關，但起初並不總是很明顯，因此我們在開始開發更深入的工作流程或模型後，會很快遇到概念障礙。對於初學者，接下來將使用維度來簡單描述模型的「內容」。透過描述一個形狀所需的維數，可以了解幾何圖形所屬的階層。
 
-\![計算幾何圖形](<../images/Geometry for - GeometryDimensionality.jpg>)
+[計算幾何圖形](<../images/Geometry for - GeometryDimensionality.jpg>)
 
 > 1. **點** (由座標定義) 沒有任何維度，它只是描述每個座標的數字
 > 2. **直線** (由兩個點定義) 現在有 _一個_ 維度 - 我們可以沿直線向前 (正方向) 或向後 (負方向)「行走」
