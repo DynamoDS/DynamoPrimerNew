@@ -6,11 +6,11 @@
 
 ### 剖析節點
 
-Dynamo 中的大多數節點由五個部分組成。雖然有一些例外，例如輸入節點，但每個節點的剖析可說明如下：
+Dynamo 中的大多數節點由五個部分組成。雖然有一些例外，例如輸入節點，但每個節點的剖析可說明為如下：
 
-\![](<../.gitbook/assets/nodes and wires - nodes anatomy.jpg>)
+\![](<images/nodes and wires - nodes anatomy.jpg>)
 
-> 1. 名稱：採用 `Category.Name` 命名慣例的節點名稱
+> 1. 名稱 - 採用 `Category.Name` 命名慣例的節點名稱
 > 2. 主體：即節點的主體，在此處按一下右鍵會顯示整個節點在該層級的選項
 > 3. 埠 (輸入和輸出)：線路的接收器，向節點提供輸入資料，以及提供節點動作結果。
 > 4. 預設值：對輸入埠按一下右鍵，某些節點具有可供使用或不可使用的預設值。
@@ -24,7 +24,7 @@ Dynamo 中的大多數節點由五個部分組成。雖然有一些例外，例�
 
 {% hint style="info" %} 秘訣：將游標懸停在埠上可看到一個工具提示，其中包含預期的資料類型。{% endhint %}
 
-\![](<../.gitbook/assets/nodes and wires - nodes input and tooltip.jpg>)
+\![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
 > 1. 埠標示
 > 2. 工具提示
@@ -37,25 +37,25 @@ Dynamo 會根據每個節點的狀態，讓節點呈現不同的顏色外觀，�
 
 懸停在名稱或埠上或對名稱或埠按一下右鍵，可呈現其他資訊和選項。
 
-![](../.gitbook/assets/nodesandwires-nodestates.png)
+![](images/nodesandwires-nodestates.png)
 
 > 1. 滿足條件的輸入：節點的輸入埠標有藍色直線，代表節點連接良好，且所有輸入都成功連接。
 > 2. 未滿足條件的輸入：節點的一個或多個輸入埠標有紅色直線，表示必須讓這些輸入處於連接狀態。
 > 3. 函數：輸出函數且在輸出埠標有灰色直線的節點，即是函數節點。
 > 4. 選取狀態：目前選取的節點邊界會用水藍色醒目顯示。
 > 5. 凍結狀態：半透明藍色節點表示已凍結，暫停執行節點。
-> 6. 關閉預覽：節點下方出現灰色狀態列和眼睛圖示 <img src="../.gitbook/assets/nodes and wires - preview off.jpg" alt="" data-size="line">，即表示已關閉節點的幾何圖形預覽。
+> 6. 關閉預覽 - 節點下方的灰色狀態列和眼睛圖示 <img src="images/nodes and wires - preview off.jpg" alt="" data-size="line"> 表示已關閉節點的幾何圖形預覽。
 > 7. 警告：節點下方的黃色狀態列為「警告」狀態，表示節點可能缺少輸入資料，或者資料類型不正確。
 > 8. 錯誤狀態：節點下方的紅色狀態列表示節點處於「錯誤」狀態。
 > 9. 資訊：節點下方的藍色狀態列表示「資訊」狀態，會標示出節點的相關實用資訊。當節點以可能影響效能等等的方式達到節點支援的最大值時，可觸發此狀態。
 
 #### 處理錯誤或警告節點
 
-如果您的視覺程式包含警告或錯誤，Dynamo 會提供有關問題的其他資訊。任何顯示為黃色的節點會在其名稱上方顯示工具提示。將滑鼠懸停在警告 \![](<../.gitbook/assets/nodes and wires - node warning icon.png>) 或錯誤 \![](<../.gitbook/assets/nodes and wires - node error icon.png>) 工具提示圖示上，可將其展開。
+如果您的視覺程式包含警告或錯誤，Dynamo 會提供有關問題的其他資訊。任何顯示為黃色的節點會在其名稱上方顯示工具提示。將滑鼠懸停在警告 \![](<images/nodes and wires - node warning icon.png>) 或錯誤 \![](<images/nodes and wires - node error icon.png>) 工具提示圖示上，可將其展開。
 
 {% hint style="info" %} 秘訣：隨時使用此工具提示資訊檢查上游節點，可查看所需的資料類型或資料結構是否有錯誤。{% endhint %}
 
-\![](<../.gitbook/assets/nodes and wires - nodes with warning tooltip.jpg>)
+\![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
 > 1. 警告工具提示 -「Null」(亦即沒有資料) 無法識別為 Double (即數字)
 > 2. 使用 Watch 節點檢查輸入資料
@@ -65,11 +65,11 @@ Dynamo 會根據每個節點的狀態，讓節點呈現不同的顏色外觀，�
 
 在某些情況下，您可能想要阻止特定節點在視覺程式中執行。您可以透過「凍結」節點這樣做，在節點右鍵功能表下可以找到這個選項。
 
-<figure><img src="../.gitbook/assets/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
+<figure><img src="images/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
 
 凍結節點也會凍結其下游的節點。換言之，所有依賴凍結節點輸出的節點也會跟著凍結。
 
-<figure><img src="../.gitbook/assets/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
 
 ## 線路
 
@@ -81,7 +81,7 @@ Dynamo 會根據每個節點的狀態，讓節點呈現不同的顏色外觀，�
 
 輸入埠位於節點的左側，輸出埠位於節點的右側，因此我們通常可以說程式從左邊流向右邊。
 
-\![](<../.gitbook/assets/nodes and wires - flow of data (1).jpg>)
+\![](<images/nodes and wires - flow of data.jpg>)
 
 ### 建立線路 <a href="#creating-wires" id="creating-wires"></a>
 
@@ -89,7 +89,7 @@ Dynamo 會根據每個節點的狀態，讓節點呈現不同的顏色外觀，�
 
 資料將一律透過此線路從輸出流向輸入；但是，我們可透過點按連接埠的順序，建立任何方向的線路。
 
-\![](<../.gitbook/assets/nodes and wires - creating a wire.gif>)
+\![](<images/nodes and wires - creating a wire.gif>)
 
 ### 編輯線路 <a href="#editing-wires" id="editing-wires"></a>
 
@@ -97,25 +97,25 @@ Dynamo 會根據每個節點的狀態，讓節點呈現不同的顏色外觀，�
 
 * 變更輸入埠的連接，在另一個輸入埠上按一下左鍵
 
-![](../.gitbook/assets/nodesandwires-editwirechangeport\(2\).gif)
+![](images/nodesandwires-editwirechangeport.gif)
 
 * 若要移除線路，請將線路移開，然後在工作區上按一下左鍵
 
-\![](<../.gitbook/assets/nodes and wires - edit wires remove.gif>)
+\![](<images/nodes and wires - edit wires remove.gif>)
 
-* 按住 Shift 並按一下左鍵重新連接多條線路
+* 按住 Shift 並按一下左鍵，重新連接多條線路
 
-\![](<../.gitbook/assets/nodes and wires - edit multi ports.gif>)
+\![](<images/nodes and wires - edit multi ports.gif>)
 
-* 按住 Ctrl 並按一下左鍵複製線路
+* 按住 Ctrl 並按一下左鍵以複製線路
 
-\![](<../.gitbook/assets/nodes and wires - duplicate wire.gif>)
+\![](<images/nodes and wires - duplicate wire.gif>)
 
 #### 預設與亮顯的線路 <a href="#wire-previews" id="wire-previews"></a>
 
 依預設，線路將以灰色線條呈現預覽。選取節點後，將使用與節點相同的水藍色亮顯方法呈現任何連接的線路。
 
-\![](<../.gitbook/assets/nodes and wires - default vs highlighted wires.jpg>)
+\![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
 > 1. 亮顯的線路
 > 2. 預設線路
@@ -126,10 +126,10 @@ Dynamo 會根據每個節點的狀態，讓節點呈現不同的顏色外觀，�
 
 使用此設定時，只有選取的節點及其接合線路會以水藍色亮顯展示。
 
-\![](<../.gitbook/assets/nodes and wires - hide wires setting (1).gif>)
+\![](<images/nodes and wires - hide wires setting.gif>)
 
 #### 只隱藏個別線路
 
 您也可以在節點輸出上按一下右鍵 > 選取「隱藏線路」，只隱藏選取的線路
 
-\![](<../.gitbook/assets/nodes and wires - hide selected wire.gif>)
+\![](<images/nodes and wires - hide selected wire.gif>)

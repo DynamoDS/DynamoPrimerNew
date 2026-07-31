@@ -38,29 +38,29 @@ DynamoCoreRuntime Zip 建置版本是在自動建置版本期間建立的 Dynamo
 
 如果您解壓縮了建置版本，卻完全無法啟動 DynamoSandbox.exe，請務必使用 [7zip](https://www.developershome.com/7-zip/download.asp) 解壓縮建置版本。如果您有電腦的權限，也可以在解壓縮_之前_ 手動解除封鎖 .zip 歸檔檔案。
 
-![](../.gitbook/assets/dynamo-builds-1.png)
+![](images/dynamo-builds-1.png)
 
 如果您缺少任何必要的元件，使用 Dynamo 時可能會遇到問題，UI 的某些部分可能無法載入。
 
 以下列螢幕擷取畫面為例，在沒有 GPU 的全新安裝 Windows 10 VM 上解壓縮我們的建置版本，電腦缺少兩個必要元件。這在 Dynamo 主控台中有指示。
 
-![](../.gitbook/assets/dynamo-builds-2.png)
+![](images/dynamo-builds-2.png)
 
 **安裝 DirectX**
 
 請按照此處的 Microsoft 指示，檢查是否已安裝 DirectX。如果沒有，您可以在我們[此處](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)的 Dynamo GitHub 儲存庫中開啟 DXSETUP.exe。看到下面的對話方塊後，請按「下一步」，將 DirectX 安裝到預設位置。
 
-![](../.gitbook/assets/dynamo-builds-3.png)
+![](images/dynamo-builds-3.png)
 
 **安裝 Microsoft Visual C++ 2015-2024 可轉散發套件 (x64)**
 
 請在[此處](https://aka.ms/vs/17/release/vc_redist.x64.exe)下載最新版本。然後，您應該可以在瀏覽器下載位置中執行名為 vc_redist.x64.exe 的安裝程式。看到下面的對話方塊後，請按一下「安裝」，將此元件放在預設位置。
 
-![](../.gitbook/assets/dynamo-builds-4.png)
+![](images/dynamo-builds-4.png)
 
 透過上面的連結安裝兩個必要元件後，重新啟動 DynamoSandbox.exe，您應該會看到以下結果：
 
-![](../.gitbook/assets/dynamo-builds-5.png)
+![](images/dynamo-builds-5.png)
 
 **缺少 3D 圖形。**
 
@@ -72,7 +72,7 @@ DynamoCoreRuntime Zip 建置版本是在自動建置版本期間建立的 Dynamo
 
 _NVIDIA 控制台範例：_
 
-![](../.gitbook/assets/dynamo-builds-6.png)
+![](images/dynamo-builds-6.png)
 
 **安裝 WebView2 Runtime**
 
@@ -80,13 +80,13 @@ _NVIDIA 控制台範例：_
 
 這是安裝 WebView2 Runtime 時的連結：[https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/zh-tw/microsoft-edge/webview2/?form=MA13LH#download-section)
 
-![](../.gitbook/assets/dynamo-builds-7.png)
+![](images/dynamo-builds-7.png)
 
 應該安裝的 (只是其中之一) 是 Evergreen Bootstrapper 或 Evergreen Standalone Installer，第一個會下載一個 1.50 MB 安裝程式，第二個會下載一個 130 MB 安裝程式。
 
 安裝 Runtime 後，接下來的 Dynamo 元件應該都可以正常運作：
 
-![](../.gitbook/assets/dynamo-builds-8.png)
+![](images/dynamo-builds-8.png)
 
 **Dynamo Excel 節點問題**
 

@@ -12,7 +12,7 @@ Dynamo Package Manager 是一種可從 Dynamo 或網頁瀏覽器存取的軟體�
 
 * 在 Dynamo 中，Package Manager 包括安裝、發佈和更新套件。
 
-![搜尋套件](../../.gitbook/assets/dynamopackagemanager.png)
+![搜尋套件](../images/dynamopackagemanager.png)
 
 > 1. 線上搜尋套件：`Packages > Search for a Package...`
 > 2. 檢視/編輯安裝的套件：`Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Dynamo Package Manager 是一種可從 Dynamo 或網頁瀏覽器存取的軟體�
 
 啟動 Dynamo，然後選取「`Packages > Publish New Package...`」以開啟「`Publish a Package`」視窗。
 
-![發佈套件](../../.gitbook/assets/dyn-publish-package-add-files.png)
+![發佈套件](../images/dyn-publish-package-add-files.png)
 
 > 1. 選取「`Add file...`」瀏覽要加入套件的檔案
 > 2. 從 NodeModel 案例研究中選取兩個 `.dll` 檔案
@@ -32,7 +32,7 @@ Dynamo Package Manager 是一種可從 Dynamo 或網頁瀏覽器存取的軟體�
 
 將檔案加入套件內容後，為套件指定名稱、描述和版本。使用 Dynamo 發佈套件會自動建立一個 `pkg.json` 檔案。
 
-![套件設定](../../.gitbook/assets/dyn-publish-package.png)
+![套件設定](../images/dyn-publish-package.png)
 
 > 一個準備好要發佈的套件。
 >
@@ -41,13 +41,13 @@ Dynamo Package Manager 是一種可從 Dynamo 或網頁瀏覽器存取的軟體�
 
 發佈套件後，在 Dynamo 資源庫的 `CustomNodeModel` 品類下就能使用節點。
 
-![Dynamo 資源庫中的套件](../../.gitbook/assets/dyn-publish-package-library.jpg)
+![Dynamo 資源庫中的套件](../images/dyn-publish-package-library.jpg)
 
 > 1. 我們剛剛在 Dynamo 資源庫中建立的套件
 
 套件一旦準備好線上發佈，請開啟 Package Manager，選擇「`Publish`」，然後選擇「`Publish Online`」。
 
-![在 Package Manager 中發佈套件](../../.gitbook/assets/dyn-publish-package-directory.jpg)
+![在 Package Manager 中發佈套件](../images/dyn-publish-package-directory.jpg)
 
 > 1. 若要查看 Dynamo 如何格式化套件，請按一下「CustomNodeModel」右側的三個垂直點，然後選擇「展示根目錄」
 > 2. 在「發佈 Dynamo 套件」視窗中，選取「`Publish`」，然後選取「`Publish Online`」。
@@ -57,7 +57,7 @@ Dynamo Package Manager 是一種可從 Dynamo 或網頁瀏覽器存取的軟體�
 
 更新套件的程序與發佈類似。開啟 Package Manager，然後對需要更新的套件選取「`Publish Version...`」，並輸入一個更高的版本。
 
-![發佈套件版本](../../.gitbook/assets/dyn-publish-package-version.jpg)
+![發佈套件版本](../images/dyn-publish-package-version.jpg)
 
 > 1. 選取「`Publish Version`」以使用根目錄中的新檔案更新既有套件，然後選擇在本端還是線上發佈。
 
@@ -69,7 +69,7 @@ Package Manager 網路用戶端可讓使用者搜尋和檢視套件資料，包�
 
 透過此連結 [https://dynamopackages.com/](https://dynamopackages.com) 可以存取 Package Manager 網路用戶端
 
-![Package Manager 網路用戶端](../../.gitbook/assets/packagemanager-browser.jpg)
+![Package Manager 網路用戶端](../images/packagemanager-browser.jpg)
 
 **更新套件詳細資料**
 
@@ -82,13 +82,13 @@ Package Manager 網路用戶端可讓使用者搜尋和檢視套件資料，包�
 
 **注意**: 由於伺服器更新需要一些時間，因此更新內容最多可能需要 15 分鐘，才能在 Dynamo 內的 Package Manager 中重新整理。我們正努力減少這種延誤。
 
-![用來更新已發佈套件之套件詳細資料的新使用者介面](../../.gitbook/assets/Package-Manager_Image_5.png)
+![用來更新已發佈套件之套件詳細資料的新使用者介面](../images/Package-Manager_Image_5.png)
 
 **編輯已發佈套件版本的相容性資訊**
 
 對於先前發佈的套件版本，可以透過回溯方式更新相容性資訊。請依以下步驟執行：
 
-![編輯已發佈套件的相容性資訊 - 步驟 1](../../.gitbook/assets/Package-Manager_Image_6.png)
+![編輯已發佈套件的相容性資訊 - 步驟 1](../images/Package-Manager_Image_6.png)
 
 **步驟 1：**
 
@@ -100,7 +100,7 @@ Package Manager 網路用戶端可讓使用者搜尋和檢視套件資料，包�
 
 請按照以下流程圖並參考下表，協助您瞭解哪種選項最適合您的套件。
 
-![為「編輯相容性資訊」選擇哪個選項的工作流程](../../.gitbook/assets/Package-Manager_Image_7.png)
+![為「編輯相容性資訊」選擇哪個選項的工作流程](../images/Package-Manager_Image_7.png)
 
 我們來使用一些範例來逐步解說一些情境：
 
@@ -110,8 +110,8 @@ Package Manager 網路用戶端可讓使用者搜尋和檢視套件資料，包�
 
 **範例套件 #3** \- Mesh Toolkit：此套件是一個 Dynamo Core 套件，是沒有主體相依性的幾何節點集合。因此，在此案例中，理想的選擇是選項 3。套件在與版本範圍和/或個別版本清單相符的 Dynamo 和所有主體環境中會顯示為「相容」。
 
-![編輯相容性資訊選項](../../.gitbook/assets/Package-Manager_Image_8.png)
+![編輯相容性資訊選項](../images/Package-Manager_Image_8.png)
 
 根據選取的選項，將會彈出 Dynamo 和/或主體特定的欄位，如下圖所示。
 
-![編輯相容性資訊 - 步驟 2](../../.gitbook/assets/Package-Manager_Image_9.png)
+![編輯相容性資訊 - 步驟 2](../images/Package-Manager_Image_9.png)

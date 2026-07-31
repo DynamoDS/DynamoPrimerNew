@@ -2,7 +2,7 @@
 
 Dynamo Mesh Toolkit 可提供工具，以匯入外部檔案格式的網格、根據 Dynamo 幾何圖形物件建立網格，並根據網格的頂點與索引手動建置網格。資源庫還提供工具來修改網格、修復網格，或萃取水平切片，以用於加工。
 
-\![](<../../.gitbook/assets/meshToolkit case study 01.jpg>)
+\![](<../images/meshToolkit case study 01.jpg>)
 
 Dynamo Mesh Toolkit 是 Autodesk 持續進行網格研究的一部分，因此在未來的幾年將繼續成長。該工具箱將頻繁推出新方法，請隨時與 Dynamo 團隊聯繫以提供註解、錯誤以及新功能的建議。
 
@@ -14,7 +14,7 @@ Dynamo Mesh Toolkit 是 Autodesk 持續進行網格研究的一部分，因此�
 
 在 Dynamo 中，前往頂部功能表列中的「套件」>「Package Manager...」。在搜尋欄位中，鍵入 MeshToolkit (全部一個字，無空格)。按一下「安裝」，系統請您確認時，請接受，即可開始下載。非常簡單！
 
-<figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
 ## 練習：網格相交
 
@@ -28,19 +28,19 @@ Dynamo Mesh Toolkit 是 Autodesk 持續進行網格研究的一部分，因此�
 
 首先，_在 Dynamo 中開啟 Mesh-Toolkit_Intersect-Mesh.dyn_。
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 01.jpg>)
+\![](<../images/meshToolkit case study - exercise 01.jpg>)
 
 > 1. **檔案路徑：** 找到要匯入的網格檔案 (_stanford_bunny_tri.obj_)。支援的檔案類型為 .mix 和 .obj
 > 2. **Mesh.ImportFile：** 連接檔案路徑以匯入網格
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 02.jpg>)
+\![](<../images/meshToolkit case study - exercise 02.jpg>)
 
 > 1. **Point.ByCoordinates：** 建構一個點 - 這將是弧的中心。
 > 2. **Arc.ByCenterPointRadiusAngle：** 在該點週圍建構一個弧。這條曲線將用來定位一系列平面。 __設定如下： __ `radius: 40, startAngle: -90, endAngle:0`
 
 建立一系列沿著弧轉向的平面。
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 03.jpg>)
+\![](<../images/meshToolkit case study - exercise 03.jpg>)
 
 > 1. **Code Block**：建立 25 個介於 0 和 1 之間的數字。
 > 2. **Curve.PointAtParameter：** 將弧連接到 _curve_ 輸入並將 Code Block 輸出連接至 _param_ 輸入以擷取出一系列沿著曲線的點。
@@ -49,7 +49,7 @@ Dynamo Mesh Toolkit 是 Autodesk 持續進行網格研究的一部分，因此�
 
 接下來，我們將使用這些平面與網格相交。
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 04.jpg>)
+\![](<../images/meshToolkit case study - exercise 04.jpg>)
 
 > 1. **Mesh.Intersect：** 將這些平面與匯入的網格相交，建立一系列 PolyCurve 輪廓線。在節點上按一下右鍵，並將交織設定為最長
 > 2. **PolyCurve.Curves：** 將 PolyCurve 切斷為曲線段。
@@ -58,12 +58,12 @@ Dynamo Mesh Toolkit 是 Autodesk 持續進行網格研究的一部分，因此�
 
 在繼續之前，請關閉某些節點 (例如：Mesh.ImportFile、Curve.EndPoint、Plane.ByOriginNormal 以及 Arc.ByCenterPointRadiusAngle) 的預覽，以更清楚地查看結果。
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 05.jpg>)
+\![](<../images/meshToolkit case study - exercise 05.jpg>)
 
 > 1. **Surface.ByPatch：** 為每條輪廓線建構曲面修補，以便建立網格的「切片」。
 
 新增第二組切片，產生格子/蛋盒的效果。
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 06.jpg>)
+\![](<../images/meshToolkit case study - exercise 06.jpg>)
 
 您可能會發現與一個差不多的實體相比，網格相交作業的計算速度更快。例如本練習中示範的工作流程非常適合用於網格。

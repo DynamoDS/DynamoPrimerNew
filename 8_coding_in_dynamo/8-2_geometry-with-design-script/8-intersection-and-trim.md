@@ -15,7 +15,7 @@ Dynamo 針對所有幾何圖形都定義了 _Intersect_ 方法，表示理論上
 
 下面這個非常簡單的範例示範一個平面與一個 NurbsSurface 的交集。交集產生一個 NurbsCurve 陣列，可以像任何其他 NurbsCurve 一樣使用這個陣列。
 
-![](../../.gitbook/assets/IntersectionAndTrim_01.png)
+![](../images/IntersectionAndTrim_01.png)
 
 ```js
 // python_points_5 is a set of Points generated with
@@ -47,7 +47,7 @@ _Trim_ 方法與 Intersect 方法非常類似之處在於幾乎是針對每個�
 
 請注意，_Trim_ 方法一定要有「選取」點，這個點決定要捨棄哪個幾何圖形，要保留哪些部份。Dynamo 會找出並捨棄最接近選取點且經過修剪的幾何圖形。
 
-![](../../.gitbook/assets/IntersectionAndTrim_02.png)
+![](../images/IntersectionAndTrim_02.png)
 
 ```js
 // python_points_5 is a set of Points generated with

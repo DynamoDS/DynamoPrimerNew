@@ -24,7 +24,7 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![移動專案檔](../../.gitbook/assets/fe-proj-directory.jpg)
+![移動專案檔](../images/fe-proj-directory.jpg)
 
 > 1. 將專案檔移到新的 `src` 資料夾
 
@@ -47,7 +47,7 @@ CustomNodeModel
   </Target>
 ```
 
-![放置 AfterBuild 目標](../../.gitbook/assets/atom-afterbuild.jpg)
+![放置 AfterBuild 目標](../images/atom-afterbuild.jpg)
 
 > 我們需要確保目標已加到 `CustomNodeModel.csproj` 檔案 (而不是另一個專案檔) 中，而且專案沒有任何既有的「建置後」設定。
 >
@@ -75,7 +75,7 @@ Dynamo 套件通常會有 `dyf` 和 `extra` 資料夾，分別給 Dynamo 自訂�
 
 如果您建置專案，現在專案資料夾在先前建立的 `src` 資料夾旁邊應該會有一個 `packages` 資料夾。`packages` 目錄內有一個資料夾，其中包含套件所需的所有內容。我們也需要將 `pkg.json` 檔案複製到套件資料夾，讓 Dynamo 知道要載入套件。
 
-![複製檔案](../../.gitbook/assets/fe-proj-directory-package.jpg)
+![複製檔案](../images/fe-proj-directory-package.jpg)
 
 > 1. AfterBuild 目標建立的新套件資料夾
 > 2. 專案既有的 src 資料夾

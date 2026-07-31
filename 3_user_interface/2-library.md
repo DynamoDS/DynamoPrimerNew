@@ -2,7 +2,7 @@
 
 資源庫包含所有載入的節點，其中包括 10 個安裝隨附的預設品類節點，以及已載入的其他所有自訂節點或套件。資源庫中的節點在資源庫、品類和子品類 (如果有) 內以階層方式組織。
 
-\![](<../.gitbook/assets/library - library UI.png>)
+![](<images/library-library-ui.png>)
 
 * 基本節點：預設安裝隨附。
 * 自訂節點：將常用常式或特殊圖表儲存為自訂節點。您也可以與社群共用您的自訂節點
@@ -18,7 +18,7 @@
 
 {% hint style="info" %} Geometry 功能表很適合在開始探索時使用，因為它們包含最多數量的節點。{% endhint %}
 
-\![](<../.gitbook/assets/library - modified and resize library categories.jpg>)
+![](<images/library-modified-and-resize-library-categories.jpg>)
 
 > 1. 資源庫
 > 2. 品類
@@ -27,13 +27,13 @@
 
 這些項目會根據節點是**建立**資料、執行**動作**或**查詢**資料，進一步分類成有相同子品類的節點。
 
-* \![](<../.gitbook/assets/user interface - create.jpg>) **建立**：從頭開始建立或建構幾何圖形。例如圓。
-* \![](<../.gitbook/assets/user interface - action.jpg>) **動作**：對物件執行動作。例如，調整圓的比例。
-* \![](<../.gitbook/assets/user interface - query.jpg>) **查詢**：取得已存在物件的性質。例如，取得圓的半徑。
+* ![](<images/user-interface-create.jpg>) **建立**：從頭開始建立或建構幾何圖形。例如圓。
+* ![](<images/user-interface-action.jpg>) **動作**：對物件執行動作。例如，調整圓的比例。
+* ![](<images/user-interface-query.jpg>) **查詢**：取得已存在物件的性質。例如，取得圓的半徑。
 
 將滑鼠懸停在節點上，可顯示名稱和圖示之外更詳細的資訊。我們由此可以快速了解節點的功能、所需的輸入及其提供的輸出。
 
-\![](<../.gitbook/assets/user interface - node description.jpg>)
+![](<images/user-interface-node-description.jpg>)
 
 > 1. 描述 - 節點的普通語言描述
 > 2. 圖示 -「資源庫」功能表中更大版本的圖示
@@ -46,7 +46,7 @@
 
 選擇按一下要加入的節點，或按 Enter 將亮顯的節點加入工作區的中心。
 
-\![](<../.gitbook/assets/user interface - search.jpg>)
+![](<images/user-interface-search.jpg>)
 
 #### 依階層搜尋
 
@@ -58,15 +58,15 @@
 
 * `library.category.nodeName`
 
-\![](<../.gitbook/assets/library - search by hierarchy 1 geometry point by coordinates.jpg>)
+![](<images/library-search-by-hierarchy-1-geometry-point-by-coordinates.jpg>)
 
 * `category.nodeName`
 
-\![](<../.gitbook/assets/library - search by hierarchy 2 point by coordinates.jpg>)
+![](<images/library-search-by-hierarchy-2-point-by-coordinates.jpg>)
 
 * `nodeName` 或 `keyword`
 
-\![](<../.gitbook/assets/library - search by hierarchy 3 by coordinates.jpg>)
+![](<images/library-search-by-hierarchy-3-by-coordinates.jpg>)
 
 通常，工作區中節點的名稱將以 `category.nodeName` 格式呈現，但在「Input」與「View」品類中有一些明顯的例外。
 
@@ -74,15 +74,15 @@
 
 * 大多數資源庫中的節點將包括品類格式
 
-\![](<../.gitbook/assets/library - node category differences 1.jpg>)
+![](<images/library-node-category-differences-1.jpg>)
 
 * `Point.ByCoordinates` 和 `UV.ByCoordinates` 的名稱相同，但來自不同品類
 
-\![](<../.gitbook/assets/library - node category differences 2.jpg>)
+![](<images/library-node-category-differences-2.jpg>)
 
 * 明顯的例外包括內建函數、Core.Input、Core.View 及運算子
 
-\![](<../.gitbook/assets/library - node category differences 3.jpg>)
+![](<images/library-node-category-differences-3.jpg>)
 
 ### 常用的節點
 
@@ -94,24 +94,24 @@ Dynamo 的基本安裝中包括數百個節點，哪些節點對於開發視覺�
 
 | 節點           |                                                        | 節點           |                                                        |
 | -------------- | ------------------------------------------------------ | -------------- | ------------------------------------------------------ |
-| 布林運算        | \![](<../.gitbook/assets/library - boolean.jpg>)        | 編號         | \![](<../.gitbook/assets/library - number.jpg>)         |
-| 字串         | \![](<../.gitbook/assets/library - string.jpg>)         | Number Slider  | \![](<../.gitbook/assets/library - number slider.jpg>)  |
-| Directory Path | \![](<../.gitbook/assets/library - directory path.jpg>) | Integer Slider | \![](<../.gitbook/assets/library - integer slider.jpg>) |
-| File Path      | \![](<../.gitbook/assets/library - file path.jpg>)      |                |                                                        |
+| Boolean        | ![](<images/library-boolean.jpg>)        | Number         | ![](<images/library-number.jpg>)         |
+| String         | ![](<images/library-string.jpg>)         | Number Slider  | ![](<images/library-number-slider.jpg>)  |
+| Directory Path | ![](<images/library-directory-path.jpg>) | Integer Slider | ![](<images/library-integer-slider.jpg>) |
+| File Path      | ![](<images/library-file-path.jpg>)      |                |                                                        |
 
 #### Watch 與 Watch3D
 
 Watch 節點對於管理流經視覺程式的資料非常重要。您可以透過**節點資料預覽**，將滑鼠懸停在節點上，來檢視節點的結果。
 
-\![](<../.gitbook/assets/library - node preview.jpg>)
+![](<images/library-node-preview.jpg>)
 
 在 **Watch** 節點中保持顯示會很有用
 
-\![](<../.gitbook/assets/library - watch node.jpg>)
+![](<images/library-watch-node.jpg>)
 
 或透過 **Watch3D** 節點查看幾何圖形結果。
 
-\![](<../.gitbook/assets/library - watch3d node.gif>)
+![](<images/library-watch3d-node.gif>)
 
 這兩個節點都位於核心資源庫內的 View 品類中。
 
@@ -125,7 +125,7 @@ Code Block 節點可以用於定義一塊程式碼 (以分號分隔各行)。這
 
 以下是在指令碼中使用 Code Block 的簡單示範 (含指示)。
 
-![](../.gitbook/assets/library-codeblockdemo.gif)
+![](images/library-codeblockdemo.gif)
 
 1. 按兩下以建立 Code Block 節點
 2. 鍵入 `Circle.ByCenterPointRadius(x,y);`

@@ -4,7 +4,7 @@
 
 Dynamo 的使用者介面 (UI) 分為五個主要區域。我們在此將簡要概述，並在以下幾節進一步說明工作區和資源庫。
 
-\![](<../.gitbook/assets/user interface - ui.png>)
+![](<images/user-interface-ui.png>)
 
 > 1. 功能表
 > 2. 工具列
@@ -14,7 +14,7 @@ Dynamo 的使用者介面 (UI) 分為五個主要區域。我們在此將簡要�
 
 ### 功能表
 
-![](../.gitbook/assets/userinterface-menu\(1\).jpg)
+![](images/userinterface-menu.jpg)
 
 以下是 Dynamo 應用程式的基本功能功能表。與大多數 Windows 軟體一樣，前兩個功能表與管理檔案、選取作業和編輯內容相關。其餘的功能表包含 Dynamo 更具體的功能。
 
@@ -22,7 +22,7 @@ Dynamo 的使用者介面 (UI) 分為五個主要區域。我們在此將簡要�
 
 在 **Dynamo** 下拉式功能表上可以找到一般資訊和設定。
 
-\![](<../.gitbook/assets/user interface - dynamo menu.jpg>)
+![](<images/user-interface-dynamo-menu.jpg>)
 
 > 1. 關於 - 瞭解您電腦上安裝的 Dynamo 版本。
 > 2. 收集使用狀況資料的合約 - 這可讓您選擇是否分享您的使用者資料來改善 Dynamo。
@@ -33,7 +33,7 @@ Dynamo 的使用者介面 (UI) 分為五個主要區域。我們在此將簡要�
 
 如果您遇到問題，請查閱 **「說明」** 功能表。您可以透過網際網路瀏覽器存取其中一個 Dynamo 參考網站。
 
-![](../.gitbook/assets/help-menu.png)
+![](images/help-menu.png)
 
 > 1. 互動式指南 - 逐步引導您瞭解各種 Dynamo 功能的導覽。
 > 2. 範例 - 參考範例檔案。僅適用於主體程式，包括 Revit 和 Civil 3D。
@@ -42,39 +42,39 @@ Dynamo 的使用者介面 (UI) 分為五個主要區域。我們在此將簡要�
 > 5. Dynamo 儲存庫 - 在 GitHub 上檢視 Dynamo 專案。
 > 6. Dynamo 專案 Wiki - 造訪 Wiki，以學習使用 Dynamo API 進行開發，支援資源庫與工具。
 > 7. 顯示開始頁面 - 返回至文件中的 Dynamo 開始頁面。
-> 8. 報告錯誤 - 在 GitHub 開啟問題。
+> 8. 報告錯誤 - 在 Github 開啟問題。
 
 ### 工具列
 
 Dynamo 的工具列包含一系列按鈕，可快速存取以使用檔案及退回 [Ctrl + Z] 與重做 [Ctrl + Y] 指令。最右側是另一個按鈕，可以匯出工作區的快照，這對於製作文件及分享非常有用。
 
-* \![](<../.gitbook/assets/user interface - new file.jpg>) 新建 - 建立新的 .dyn 檔案
-* \![](<../.gitbook/assets/user interface - open (1).png>) 開啟 - 開啟既有的 .dyn (工作區) 或 .dyf (自訂節點) 檔案
-* \![](<../.gitbook/assets/user interface - save.png>) 儲存/另存新檔 - 儲存使用中的 .dyn 或 .dyf 檔案
-* \![](<../.gitbook/assets/user interface - undo.jpg>) 退回 - 退回上一個動作
-* \![](<../.gitbook/assets/user interface - redo.jpg>) 重做 - 重做下一個動作
-* \![](<../.gitbook/assets/user interface - screenshot.png>) 匯出工作區做為影像 - 將可見工作區匯出為 PNG 檔案
+* ![](<images/user-interface-new-file.jpg>) 新建 - 建立新的 .dyn 檔案
+* ![](<images/user-interface-open.png>) 開啟 - 開啟既有 .dyn (工作區) 或 .dyf (自訂節點) 檔案
+* ![](<images/user-interface-save.png>) 儲存/另存新檔 - 儲存使用中的 .dyn 或 .dyf 檔案
+* ![](<images/user-interface-undo.jpg>) 退回 - 退回上一個動作
+* ![](<images/user-interface-redo.jpg>) 重做 - 重做下一個動作
+* ![](<images/user-interface-screenshot.png>) 匯出工作區做為影像 - 將可見工作區匯出為 PNG 檔案
 
 ### 資源庫
 
 Dynamo 資源庫是一個功能資源庫的集合，每個資源庫都包含依品類分組的節點。它包含在 Dynamo 預設安裝期間加入的基本資源庫，隨著我們繼續介紹用法，我們將示範如何使用自訂節點和其他套件來延伸基本功能。[2-library.md](2-library.md "mention")一節將涵蓋使用資源庫更詳細的指導。
 
-\![](<../.gitbook/assets/user interface - library (1).gif>)
+![](<images/user-interface-library.gif>)
 
 ### 工作區
 
 「工作區」是我們建構視覺程式的位置，您也可以變更其「預覽」設定，以從此處檢視 3D 幾何圖形。請參閱[1-workspace.md](1-workspace.md "mention")，以取得更多詳細資料。
 
-\![](<../.gitbook/assets/user interface - workspace (1).gif>)
+![](<images/user-interface-workspace.gif>)
 
 ### 執行列
 
 從此處執行 Dynamo 腳本。按一下「執行」按鈕上的下拉式圖示，可在不同模式之間進行變更。
 
-\![](<../.gitbook/assets/user interface - execution bar.gif>)
+![](<images/user-interface-execution-bar.gif>)
 
 * 自動：自動執行腳本。變更會即時更新。
 * 手動：只在按一下「執行」按鈕時才執行腳本。在變更複雜繁重的腳本時，此功能非常有用。
 * 周期性：此選項預設會灰顯。只有在使用 _DateTime.Now_ 節點時才能使用。您可以將圖表設定為以指定間隔自動執行。
 
-\![](<../.gitbook/assets/user interface - execution bar DateTime node.jpg>)
+![](<images/user-interface-execution-bar-datetime-node.jpg>)

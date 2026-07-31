@@ -4,7 +4,7 @@
 
 如果您能輕鬆地以 Python 撰寫指令碼，也想要從標準 Dynamo Python 節點獲得更多功能，我們可以使用 Zero-Touch 建立自己的指令碼。我們先從一個簡單的範例開始，我們將一個 Python 指令碼做為字串傳入執行指令碼並傳回結果的 Zero-Touch 節點。此案例研究以「入門」區段中的逐步解說和範例為基礎，如果您是初次建立 Zero-Touch 節點，請參閱這些內容。
 
-![將執行 Python 指令碼字串的 Zero-Touch 節點](../../.gitbook/assets/python-case-study.png)
+![將執行 Python 指令碼字串的 Zero-Touch 節點](../images/python-case-study.png)
 
 > 將執行 Python 指令碼字串的 Zero-Touch 節點
 
@@ -68,7 +68,7 @@ output = str(volume)
 
 標準 Python 節點的一個限制是它們只有單一輸出埠，因此，如果我們希望傳回多個物件，則必須建構清單並擷取其中的每個物件。如果我們修改上述範例以傳回字典，就可以加入任意數目的輸出埠。請參閱〈深入瞭解 Zero-Touch〉中的〈傳回多個值〉一節，以取得有關字典的更多詳細資料。
 
-![此節點可讓我們傳回立方體的體積及其形心。](../../.gitbook/assets/python-multi-case-study.png)
+![此節點可讓我們傳回立方體的體積及其形心。](../images/python-multi-case-study.png)
 
 > 此節點可讓我們傳回立方體的體積及其形心。
 

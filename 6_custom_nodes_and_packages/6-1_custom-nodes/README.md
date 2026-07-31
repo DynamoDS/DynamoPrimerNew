@@ -2,4 +2,4 @@
 
 Dynamo 為廣泛的視覺程式設計任務提供許多核心節點。有時，一個更快、更有序或更輕鬆的共享解決方法是建置您自己的節點。這些節點可以在不同專案中重複使用，讓您的圖表更清楚整潔，這些節點也可以推送至 Package Manager 並與全球的 Dynamo 社群分享。
 
-![](../../.gitbook/assets/customNodes1.png)
+![](../images/customNodes1.png)

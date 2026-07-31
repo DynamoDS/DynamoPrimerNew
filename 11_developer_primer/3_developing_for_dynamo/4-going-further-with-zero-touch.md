@@ -2,7 +2,7 @@
 
 瞭解如何建立 Zero-Touch 專案後，我們可以逐步瀏覽 Dynamo GitHub 上的 ZeroTouchEssentials 範例，更深入地瞭解建立節點的詳細資訊。
 
-![Zero-touch 節點](../../.gitbook/assets/ootbzerotouch.png)
+![Zero-touch 節點](../images/ootbzerotouch.png)
 
 > 許多 Dynamo 的標準節點本質上是 Zero-Touch 節點，如上面大多數的 Math、Color 和 DateTime 節點。
 
@@ -10,7 +10,7 @@
 
 在 Visual Studio 中，開啟 `ZeroTouchEssentials.sln` 方案檔並建置方案。
 
-![Visual Studio 中的 ZeroTouchEssentials](../../.gitbook/assets/vs-build-zte.jpg)
+![Visual Studio 中的 ZeroTouchEssentials](../images/vs-build-zte.jpg)
 
 > `ZeroTouchEssentials.cs` 檔案包含我們要匯入至 Dynamo 的所有方法。
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![預設值](../../.gitbook/assets/defaultval.jpg)
+![預設值](../images/defaultval.jpg)
 
 > 1. 將游標懸停在節點輸入埠上時，會出現預設值
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 傳回多個輸出的節點。
 
-![多個輸出](../../.gitbook/assets/multipleoutputs.png)
+![多個輸出](../images/multipleoutputs.png)
 
 > 1. 請注意，現在有兩個輸出埠，根據我們為字典的鍵輸入的字串進行命名。
 
@@ -90,7 +90,7 @@ namespace ZeroTouchEssentials
   * 例如：`/// <summary>...</summary>`
 * 在 Visual Studio 中選取「`Project > [Project] Properties > Build > Output`」並勾選「`Documentation file`」以啟用 XML 文件
 
-![產生 XML 檔案](../../.gitbook/assets/vs-xml.jpg)
+![產生 XML 檔案](../images/vs-xml.jpg)
 
 > 1. Visual Studio 將在指定位置產生 XML 檔案
 
@@ -141,7 +141,7 @@ namespace ZeroTouchEssentials
 * 在節點工具提示中
 * 在文件瀏覽器中
 
-![節點描述](../../.gitbook/assets/node-description.png)
+![節點描述](../images/node-description.png)
 
 請按照這些準則，在編寫或更新節點描述時，可確保一致性並幫助節省時間。
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 匯入 ZeroTouchEssentials dll 後，資源庫中將會有 ZeroTouchEssentials 節點。使用 `ByTwoDoubles` 節點可以建立此物件。
 
-![ByTwoDoubles 節點](../../.gitbook/assets/dyn-constructor.jpg)
+![ByTwoDoubles 節點](../images/dyn-constructor.jpg)
 
 ### 使用 Dynamo 幾何圖形類型 <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 取得曲線長度後加倍的節點。
 
-![曲線輸入](../../.gitbook/assets/doublelength.png)
+![曲線輸入](../images/doublelength.png)
 
 > 1. 此節點接受曲線幾何圖形類型做為輸入。
 
@@ -285,10 +285,10 @@ namespace ZeroTouchEssentials
 * 在 migrations 元素內，為每個名稱變更建立 `<priorNameHint>...</priorNameHint>` 元素
 * 對每個名稱變更，提供 `<oldName>...</oldName>` 和 `<newName>...</newName>` 元素
 
-![移轉檔案](../../.gitbook/assets/vs-migrations-file.jpg)
+![移轉檔案](../images/vs-migrations-file.jpg)
 
 > 1. 按一下右鍵，然後選取「`Add > New Item`」
-> 2. 選擇「`XML File`」
+> 2. 選擇 `XML File`
 > 3. 對於此專案，我們將移轉檔案命名為 `ZeroTouchEssentials.Migrations.xml`
 
 此範例程式碼告訴 Dynamo，任何名為 `GetClosestPoint` 的節點現在都命名為 `ClosestPointTo`。

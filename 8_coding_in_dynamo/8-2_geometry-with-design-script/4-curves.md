@@ -6,7 +6,7 @@
 
 若要建立內插的曲線，只要將一些點傳入 _NurbsCurve.ByPoints_ 方法即可。
 
-![](../../.gitbook/assets/Curves_01.png)
+![](../images/Curves_01.png)
 
 ```js
 num_pts = 6;
@@ -20,7 +20,7 @@ int_curve = NurbsCurve.ByPoints(pts);
 
 產生的曲線會分別與每個輸入點相交，從第一個點開始，在最後一個點結束。這裡可以使用一個選擇性的週期性參數，用來建立一條週期性的封閉曲線。Dynamo 會自動填入缺少的線段，因此不需要複製終點 (與起點相同)。
 
-![](../../.gitbook/assets/Curves_02.png)
+![](../images/Curves_02.png)
 
 ```js
 pts = Point.ByCoordinates(Math.Cos(0..350..#10),
@@ -38,7 +38,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 NurbsCurve 以幾乎相同的方式產生，輸入點代表直線段的端點，第二個參數稱為次數，指定平滑化曲線的量和類型。* 1 次的曲線沒有平滑化；它是一條聚合線。
 
-![](../../.gitbook/assets/Curves_03.png)
+![](../images/Curves_03.png)
 
 ```js
 num_pts = 6;
@@ -52,7 +52,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 
 2 次的曲線會平滑化讓曲線相交，而且會與聚合線線段的中點相切：
 
-![](../../.gitbook/assets/Curves_04.png)
+![](../images/Curves_04.png)
 
 ```js
 num_pts = 6;
@@ -66,7 +66,7 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 
 Dynamo 支援最高到 20 次的 NURBS (非均勻的有理 B 雲形線) 曲線，以下腳本說明增加平滑程度對曲線造型的影響：
 
-![](../../.gitbook/assets/Curves_05.png)
+![](../images/Curves_05.png)
 
 ```js
 num_pts = 6;
@@ -87,7 +87,7 @@ ctrl_crvs = create_curve(pts, 1..11);
 
 透過控制頂點來建構曲線的另一個好處是，能夠在個別的曲線段之間維持相切。只要萃取出最後兩個控制點之間的方向，然後讓後續曲線的前兩個控制點繼續沿著此方向即可。以下範例會建立兩條獨立的 NURBS 曲線，不過這兩條曲線如一條曲線般平滑：
 
-![](../../.gitbook/assets/Curves_06.png)
+![](../images/Curves_06.png)
 
 ```js
 pts_1 = {};

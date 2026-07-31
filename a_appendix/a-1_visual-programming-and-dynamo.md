@@ -52,7 +52,7 @@
 
 **視覺程式：**
 
-\![](<../.gitbook/assets/visualProgramming (2).png>)
+![](<images/visualProgramming.png>)
 
 **文字程式：**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 我們的演算法結果：
 
-\![](<../.gitbook/assets/visualProgramming (1).png>)
+![](<images/visualProgramming.png>)
 
 採用視覺特性進行程式設計的方式，可減少入門以及與設計人員頻繁溝通的障礙。Dynamo 是視覺程式設計的範例，但我們稍後將看到，在設計應用程式時仍可使用文字程式設計方式。

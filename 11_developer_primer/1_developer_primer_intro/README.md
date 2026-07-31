@@ -4,7 +4,7 @@
 
 本指南的目的是協助您瀏覽使用 C# 開發 Dynamo 的可能範圍，從如何建立 zero-touch 節點到建立延伸。
 
-![GitHub 上的 Dynamo 原始碼](../../.gitbook/assets/dynamogithub.png)
+![GitHub 上的 Dynamo 原始碼](../images/dynamogithub.png)
 
 > GitHub 上的 Dynamo 原始碼
 

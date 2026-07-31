@@ -377,7 +377,7 @@ _追蹤_ 是 Dynamo 核心中的一種機制，能夠將資料序列化至 .dyn 
 
 ***
 
-![建立牆](../../.gitbook/assets/creates_walls.png)
+![建立牆](../images/creates_walls.png)
 
 #### 元素繫結與追蹤的比較
 
@@ -466,17 +466,17 @@ TraceableId 類別是針對我們希望儲存到追蹤中的每個 `TraceExample
 
 連續兩次執行建立單一 `TraceExampleItem` 的圖表，流程會像這樣：
 
-![第一次呼叫](../../.gitbook/assets/Trace-first-call.png)
+![第一次呼叫](../images/Trace-first-call.png)
 
-![第二次呼叫](../../.gitbook/assets/Trace-second-call.png)
+![第二次呼叫](../images/Trace-second-call.png)
 
 下一個範例以更真實的 DynamoRevit 節點使用案例說明相同的想法。
 
 #### 追蹤圖
 
-![追蹤步驟](../../.gitbook/assets/trace_diagram.png) ![追蹤流程](../../.gitbook/assets/trace_alt_diagram.png)
+![追蹤步驟](../images/trace_diagram.png) ![追蹤流程](../images/trace_alt_diagram.png)
 
-#### 注意：
+#### 注意事項：
 
 在 Dynamo 的最新版本中，TLS (執行緒本端儲存) 使用已取代為靜態成員使用。
 
@@ -560,7 +560,7 @@ TraceableId 類別是針對我們希望儲存到追蹤中的每個 `TraceExample
 
 * 在 Dynamo 3.0 之前的版本中儲存的追蹤物件使用 SOAP 儲存，因此在較新版本中不支援。先前儲存的元素繫結資料將會忽略，並在 Dynamo 3.0 及更高版本中顯示以下訊息。下次執行並儲存工作區時，將儲存元素繫結資料。
 
-![元素繫結相容性](../../.gitbook/assets/element_binding_compatibility_message.jpg)
+![元素繫結相容性](../images/element_binding_compatibility_message.jpg)
 
 #### ElementBinding 預設應該開啟嗎？
 
@@ -574,7 +574,7 @@ TraceableId 類別是針對我們希望儲存到追蹤中的每個 `TraceExample
 
 DynamoRevit 中有多個 `Selection` 節點。我們可以將這些節點至少分為兩組：
 
-![Revit Selection 節點](../../.gitbook/assets/revitSelectionNodes.png)
+![Revit Selection 節點](../images/revitSelectionNodes.png)
 
 1.  使用者點選 UI：
 
@@ -602,7 +602,7 @@ DynamoRevit 中有多個 `Selection` 節點。我們可以將這些節點至少�
 
 D4C 中的工作流程與上述針對 Revit 的描述非常類似，以下是 D4C 中兩組典型的 Selection 節點：
 
-![Civil 3D Selection 節點](../../.gitbook/assets/civilSelectionNodes.png)
+![Civil 3D Selection 節點](../images/civilSelectionNodes.png)
 
 ### 問題：
 
@@ -613,9 +613,9 @@ D4C 中的工作流程與上述針對 Revit 的描述非常類似，以下是 D4
 
 ### 資料流程圖
 
-![選取流程](../../.gitbook/assets/selectModelElement.png)
+![選取流程](../images/selectModelElement.png)
 
-![選取流程 2](../../.gitbook/assets/selectElementFace.png)
+![選取流程 2](../images/selectElementFace.png)
 
 ### 技術實作：(參考上圖)：
 
@@ -624,7 +624,7 @@ D4C 中的工作流程與上述針對 Revit 的描述非常類似，以下是 D4
 * 實作 `BuildOutputAST` 方法：此方法在節點要執行時需要傳回一個 AST，這會在將來某個時間點執行。如果是 Selection 節點，它應該會從元素 ID 傳回元素或幾何圖形。[https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * 實作 `BuildOutputAST` 是實作 `NodeModel` / UI 節點最困難的一個部分。最好將盡可能多的邏輯放入 C# 函數中，並簡單地將 AST 函數呼叫節點嵌入到 AST 中。請注意，這裡的 `node` 是抽象語法樹中的 AST 節點，而不是 Dynamo 圖表中的節點。
 
-![選取流程 2](../../.gitbook/assets/selectionAST.png)
+![選取流程 2](../images/selectionAST.png)
 
 * 序列化 -
   *   因為這些是明確的 `NodeModel` 衍生類型 (不是 ZeroTouch)，所以它們還需要實作一個 [JsonConstructor]，在從 .dyn 檔案還原序列化節點期間使用。

@@ -2,4 +2,4 @@
 
 本節提供簡單的工作流程，可協助您開始使用 Dynamo。
 
-![](../../.gitbook/assets/sampleWorkflows.gif)
+![](../images/sampleWorkflows.gif)

@@ -4,7 +4,7 @@
 
 清單是元素 (即項目) 的集合。例如一束香蕉。每個香蕉都是清單 (即香蕉束) 中的項目。揀選一束香蕉比分別揀選每個香蕉更容易，依據資料結構中的參數式關係對元素進行分組也是如此。
 
-![香蕉](../../.gitbook/assets/Bananas_white_background_DS.jpg)
+![香蕉](../images/Bananas_white_background_DS.jpg)
 
 > 相片由 [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list) 拍攝。
 
@@ -20,7 +20,7 @@
 
 請注意，我們的清單中仍有 5 個項目，清單恰好使用從零開始的計數系統。清單中正在儲存的項目不一定是數字。它們可以是 Dynamo 支援的任何資料類型，例如點、曲線、曲面、族群等。
 
-\![](<../../.gitbook/assets/what's a list - zero based indices.jpg>)
+![](<../images/whats-a-list-zero-based-indices.jpg>)
 
 > a.索引
 >
@@ -36,7 +36,7 @@
 
 對清單而言，輸入與輸出視使用的 Dynamo 節點而有所不同。例如，接下來我們使用包含 5 個點的清單，並將此輸出連接至兩個不同的 Dynamo 節點：**PolyCurve.ByPoints** 與 **Circle.ByCenterPointRadius**：
 
-\![輸入範例](<../../.gitbook/assets/what's a list - inputs and outputs.jpg>)
+![輸入範例](<../images/whats-a-list-inputs-and-outputs.jpg>)
 
 > 1. **PolyCurve.ByPoints** 的 _points_ 輸入是尋找 _「Point[]」_。這表示點清單
 > 2. **PolyCurve.ByPoints** 的輸出是從一個包含五個點的清單建立的一條 PolyCurve。
@@ -59,23 +59,23 @@
 
 最簡單的方式是逐一連接輸入，直到其中一個串流結束為止。這稱為「最短清單」演算法。這是 Dynamo 節點的預設行為：
 
-\![](<../../.gitbook/assets/what's a list - lacing - shortest.jpg>)
+![](<../images/whats-a-list-lacing-shortest.jpg>)
 
 #### 最長清單
 
 「最長清單」演算法會保持連接輸入，重複使用元素，直到所有串流結束為止：
 
-\![](<../../.gitbook/assets/what's a list - lacing - longest.jpg>)
+![](<../images/whats-a-list-lacing-longest.jpg>)
 
 #### 笛卡兒積
 
 最後，「笛卡兒積」方法會產生所有可能的連接：
 
-\![](<../../.gitbook/assets/what's a list - lacing - cross.jpg>)
+![](<../images/whats-a-list-lacing-cross.jpg>)
 
 您可以看到，可以採用不同方法在這組點之間繪製直線。在節點的中心按一下右鍵，然後選擇「交織」功能表，可以找到「交織」選項。
 
-\![](<../../.gitbook/assets/what's a list - right click lacing opt.jpg>)
+![](<../images/whats-a-list-right-click-lacing-opt.jpg>)
 
 ### 什麼是複製？
 
@@ -107,7 +107,7 @@ Zip 複製的運作方式稍有不同。如果您有兩個清單，一個是水�
 
 ## 練習
 
-> 按一下下方的連結下載範例檔案。
+> 在下方的連結按一下，下載範例檔案。
 >
 > 附錄中提供完整的範例檔案清單。
 
@@ -121,16 +121,16 @@ Zip 複製的運作方式稍有不同。如果您有兩個清單，一個是水�
 
 選擇 _最短清單_ 做為交織選項 (也是預設選項)，我們會得到一條由五個點組成的基本對角線。五個點是較短清單的長度，因此最短清單交織會在到達一個清單的結尾後停止。
 
-\![輸入範例](<../../.gitbook/assets/what's a list - lacing exercise 01.jpg>)
+![輸入範例](<../images/whats-a-list-lacing-exercise-01.jpg>)
 
 ### **最長清單**
 
 如果將交織變更為 _最長清單_，我們會得到一條垂直延伸的對角線。運用與概念圖相同的方法，含 5 個項目的清單中的最後一個項目將重複，以達到較長清單的長度。
 
-\![輸入範例](<../../.gitbook/assets/what's a list - lacing exercise 02.jpg>)
+![輸入範例](<../images/whats-a-list-lacing-exercise-02.jpg>)
 
 ### **笛卡兒積**
 
 如果將交織變更為 _笛卡兒積_，我們會得到各個清單之間的每種組合，產生一個 5x10 的點格線。這個資料結構等同於上面的概念圖顯示的笛卡兒積，只是現在資料是一個清單的清單。如果連接 polycurve，我們可以看到每個清單都由其 X 值定義，因此產生一列垂直線。
 
-\![輸入範例](<../../.gitbook/assets/what's a list - lacing exercise 03.jpg>)
+![輸入範例](<../images/whats-a-list-lacing-exercise-03.jpg>)

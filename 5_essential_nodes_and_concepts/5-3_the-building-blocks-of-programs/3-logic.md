@@ -12,22 +12,22 @@
 
 | 圖示                                     | 名稱 (語法)             | 輸入            | 輸出 |
 | ---------------------------------------- | ------------------------- | ----------------- | ------- |
-| ![](../../.gitbook/assets/If.jpg)        | If (**If**)               | test、true、false | result  |
-| ![](../../.gitbook/assets/CodeBlock.jpg) | Code Block (**(x?y:z);**) | x? y, z           | result  |
+| ![](../images/If.jpg)        | If (**If**)               | test、true、false | result  |
+| ![](../images/CodeBlock.jpg) | Code Block (**(x?y:z);**) | x? y, z           | result  |
 
 接下來瞭解使用條件「if」陳述式的三種有效節點中每種節點的簡單範例。
 
 在此影像中，_boolean_ 設為 _true_，這意味著結果是字串 _「this is the result if true」_。建立 _If_ 陳述式的三個節點在這裡的工作方式完全相同。
 
-\![](<../../.gitbook/assets/logic - conditional statements 01 false.jpg>)
+\![](<../images/logic - conditional statements 01 false.jpg>)
 
 再說一次，節點的工作方式完全相同。若 _boolean_ 變更為 _false_，則結果是數字 _Pi_，如原始 _If_ 陳述式所定義。
 
-\![](<../../.gitbook/assets/logic - conditional statements 02 true.jpg>)
+\![](<../images/logic - conditional statements 02 true.jpg>)
 
 ## 練習：邏輯和幾何圖形
 
-> 按一下下方的連結下載範例檔案。
+> 在下方的連結按一下，下載範例檔案。
 >
 > 附錄中提供完整的範例檔案清單。
 
@@ -37,7 +37,7 @@
 
 1. 接下來使用邏輯將數字清單分隔為偶數清單與奇數清單。
 
-\![](<../../.gitbook/assets/logic - exercise part I-01.jpg>)
+\![](<../images/logic - exercise part I-01.jpg>)
 
 > a.**Number Range -** 在圖元區加入一個數字範圍。
 >
@@ -61,7 +61,7 @@
 
 2\.我們從上一個練習開始，採用相同的節點。唯一的例外 (除了變更格式) 是：
 
-\![](<../../.gitbook/assets/logic - exercise part II-01.jpg>)
+\![](<../images/logic - exercise part II-01.jpg>)
 
 > a.使用 **Sequence** 節點搭配這些輸入值。
 >
@@ -69,7 +69,7 @@
 
 3\.我們先為圖表建立不同群組，如以上影像所示。此節點群組表示定義曲線所用的參數式方程式。一些註記如下：
 
-\![](<../../.gitbook/assets/logic - exercise part II-02.jpg>)
+\![](<../images/logic - exercise part II-02.jpg>)
 
 > a.第一個 **Number Slider** 表示波浪的頻率，最小值為 1，最大值為 4，步長為 0.01。
 >
@@ -79,23 +79,23 @@
 
 此處採用的輸入方式：對比較靜態的性質使用數字節點，對比較彈性的性質使用數字滑棒。我們希望保留在這一步開始時定義的原始數字範圍。但是，我們在此建立的正弦曲線應具有某些彈性。我們可以移動這些滑棒以觀看曲線對其頻率與振幅的更新。
 
-\![](<../../.gitbook/assets/logic - exercise part II-03.gif>)
+\![](<../images/logic - exercise part II-03.gif>)
 
 4\.我們將對定義進行一些調整，因此接下來看一下最終結果，以便可以參考得到的結果。之前，前兩個步驟是分別執行的，現在我們要連接兩者。我們將使用基準正弦曲線以驅動拉鍊元件的位置，並使用 true/false 邏輯實現大小方塊的交替變化。
 
-\![](<../../.gitbook/assets/logic - exercise part II-04.jpg>)
+\![](<../images/logic - exercise part II-04.jpg>)
 
 > a.**Math.RemapRange** \- 接下來使用步驟 02 中建立的數字序列，透過重新對映範圍建立新的數字系列。步驟 01 的原始數字介於 0-100 之間。這些數字的範圍分別由 _newMin_ 與 _newMax_ 輸入限制為從 0 到 1。
 
 5\.建立 **Curve.PointAtParameter** 節點，然後連接步驟 04 的 **Math.RemapRange** 輸出做為其 _param_ 輸入。
 
-\![](<../../.gitbook/assets/logic - exercise part II-05.jpg>)
+\![](<../images/logic - exercise part II-05.jpg>)
 
 此步驟將沿曲線建立點。我們將數字重新對映到從 0 至 1 的範圍，因為 _param_ 的輸入會尋找此範圍內的值。_0_ 值表示起點，_1_ 值表示終點。這當中的所有數字都會在 _[0,1]_ 範圍內運算。
 
 6\.將 **Curve.PointAtParameter** 的輸出連接至 **List.FilterByBoolMask**，以分隔奇數和偶數索引的清單。
 
-\![](<../../.gitbook/assets/logic - exercise part II-06.jpg>)
+\![](<../images/logic - exercise part II-06.jpg>)
 
 > a.**List.FilterByBoolMask** \- 將上一步的 **Curve.PointAtParameter** 插入 _list_ 輸入。
 >
@@ -105,7 +105,7 @@
 
 **Cuboid.ByLengths -** 重新建立以上影像顯示的連接，以產生一條沿正弦曲線的拉鍊。立方體在這裡只是方塊，我們將根據方塊中心的曲線點定義其大小。現在，模型中應該已清晰呈現偶數/奇數的區分邏輯。
 
-\![](<../../.gitbook/assets/logic - exercise part II-07.jpg>)
+\![](<../images/logic - exercise part II-07.jpg>)
 
 > a.偶數索引處的立方體清單。
 >

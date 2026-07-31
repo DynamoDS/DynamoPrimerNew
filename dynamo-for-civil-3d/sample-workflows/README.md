@@ -1,4 +1,4 @@
-# 範例工作流程 
+# 範例工作流程
 
 道路、鐵路、土地、公共事業、測量、GIS...
 
@@ -6,4 +6,4 @@
 
 此外，這些範例內含經過時間測試、可建置功能強大圖表的最佳實踐。在您進行範例時，我們建議您也要熟悉[9_best_practices](../../9\_best\_practices/ "mention")一節，以獲得更多如何建置功能強大、靈活且可維護的圖表的構想。
 
-<figure><img src="../../.gitbook/assets/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>

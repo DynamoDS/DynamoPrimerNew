@@ -2,15 +2,15 @@
 
 在開始開發之前，為新專案建立堅實的基礎非常重要。Dynamo 開發人員社群中有幾個專案樣板非常適合開始，但瞭解如何從頭開始一個專案更有價值。從頭開始建立一個專案可以更深入地瞭解開發過程。
 
-![Visual Studio](../../.gitbook/assets/visual-studio.jpg)
+![Visual Studio](../images/visual-studio.jpg)
 
 ### 建立 Visual Studio 專案 <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 Visual Studio 是一個功能強大的 IDE，我們可在其中建立專案、新增參考、建置 `.dlls` 和除錯。建立新專案時，Visual Studio 也會建立一個「方案」，這是組織專案的結構。多個專案可以在單一方案中，也可以一起建置。若要建立 ZeroTouch 節點，我們需要啟動新的 Visual Studio 專案，然後在當中撰寫 C# 類別資源庫並建置 `.dll`。
 
-![在 Visual Studio 中建立新專案](../../.gitbook/assets/vs-new-project-1.jpg)
+![在 Visual Studio 中建立新專案](../images/vs-new-project-1.jpg)
 
-![在 Visual Studio 中設定新專案](../../.gitbook/assets/vs-new-project-2.jpg)
+![在 Visual Studio 中設定新專案](../images/vs-new-project-2.jpg)
 
 > Visual Studio 中的「新增專案」視窗
 >
@@ -35,7 +35,7 @@ Visual Studio 會自動建立 C# 檔案並開啟。我們應為其指定適當�
  }
 ```
 
-![使用「方案總管」](../../.gitbook/assets/vs-edit-class.jpg)
+![使用「方案總管」](../images/vs-edit-class.jpg)
 
 > 1. 從「`View`」開啟「方案總管」和「輸出」視窗。
 > 2. 在右側的「方案總管」中，將 `Class1.cs` 檔案更名為 `SampleFunctions.cs`。
@@ -45,7 +45,7 @@ Visual Studio 會自動建立 C# 檔案並開啟。我們應為其指定適當�
 
 下一步是建置專案，但在那之前，需要檢查一些設定。首先，請確定在「平台目標」選取了「`Any CPU`」或「`x64`」，且「專案屬性」中未勾選「`Prefer 32-bit`」。
 
-![Visual Studio 建置設定](../../.gitbook/assets/vs-build-settings.jpg)
+![Visual Studio 建置設定](../images/vs-build-settings.jpg)
 
 > 1. 選取「`Project > "ProjectName" Properties`」開啟專案屬性
 > 2. 選取「`Build`」頁面
@@ -54,14 +54,14 @@ Visual Studio 會自動建立 C# 檔案並開啟。我們應為其指定適當�
 
 現在我們可以建置專案來建立 `.dll`。若要執行，請從「`Build`」功能表中選取「`Build Solution`」，或使用捷徑 `CTRL+SHIFT+B`。
 
-![建置方案](../../.gitbook/assets/vs-build.jpg)
+![建置方案](../images/vs-build.jpg)
 
 > 1. 選取「`Build > Build Solution`」
 > 2. 您可以查看「輸出」視窗，判斷專案是否成功建置
 
 如果專案已成功建置，則專案的 `bin` 資料夾中會有一個名為 `MyCustomNode` 的 `.dll`。在此範例中，我們將專案的檔案路徑保留為 Visual Studio 的預設路徑：`c:\users\username\documents\visual studio 2015\Projects`。我們來看看專案的檔案結構。
 
-![專案的檔案結構](../../.gitbook/assets/folder-structure.jpg)
+![專案的檔案結構](../images/folder-structure.jpg)
 
 > 1. `bin` 資料夾包含從 Visual Studio 建置的 `.dll`。
 > 2. Visual Studio 專案檔。
@@ -70,7 +70,7 @@ Visual Studio 會自動建立 C# 檔案並開啟。我們應為其指定適當�
 
 現在我們可以開啟 Dynamo 並匯入 `.dll`。使用「加入」功能，瀏覽至專案的 `bin` 位置，然後選取要開啟的 `.dll`。
 
-![開啟專案的 dll 檔案](../../.gitbook/assets/dyn-import-dll.jpg)
+![開啟專案的 dll 檔案](../images/dyn-import-dll.jpg)
 
 > 1. 選取「加入」按鈕以匯入 `.dll`
 > 2. 瀏覽至專案位置。我們的專案位於 Visual Studio 的預設檔案路徑：`C:\Users\username\Documents\Visual Studio 2015\Projects\MyCustomNode`
@@ -79,7 +79,7 @@ Visual Studio 會自動建立 C# 檔案並開啟。我們應為其指定適當�
 
 如果在名為 `MyCustomNode` 的資源庫中建立了品類，則表示已成功匯入 .dll！但是，Dynamo 建立了兩個節點，而我們只想要一個節點。在下一節中，我們將說明發生這個狀況的原因，以及 Dynamo 如何讀取 .dll。
 
-![自訂節點](../../.gitbook/assets/dyn-customnode.png)
+![自訂節點](../images/dyn-customnode.png)
 
 > 1. Dynamo 資源庫中的 MyCustomNode。「資源庫」品類由 `.dll` 名稱決定。
 > 2. 圖元區上的 SampleFunctions.MultiplyByTwo。
@@ -88,7 +88,7 @@ Visual Studio 會自動建立 C# 檔案並開啟。我們應為其指定適當�
 
 Dynamo 載入 .dll 時，會將所有公用靜態方法顯示為節點。建構函式、方法和性質將分別轉換為「建立」、「動作」和「查詢」節點。在乘法範例中，`MultiplyByTwo()` 方法會變成 Dynamo 中的「動作」節點。這是因為節點已根據其方法和類別命名。
 
-![圖表中的 SampleFunction.MultiplyByTwo 節點](../../.gitbook/assets/multiplybytwo.png)
+![圖表中的 SampleFunction.MultiplyByTwo 節點](../images/multiplybytwo.png)
 
 > 1. 輸入根據方法的參數名稱命名為 `inputNumber`。
 > 2. 輸出預設命名為 `double`，因為這是要傳回的資料類型。
@@ -115,7 +115,7 @@ namespace MyCustomNode
 }
 ```
 
-![方法已匯入為建立節點](../../.gitbook/assets/private-constructor.jpg)
+![方法已匯入為建立節點](../images/private-constructor.jpg)
 
 > 1. Dynamo 已將我們的方法匯入為「建立」節點
 
@@ -132,13 +132,13 @@ namespace MyCustomNode
 
 若要在 Visual Studio 專案中參考這些套件，請從上面連結的 NuGet 下載套件並手動參考 .dll，或使用 Visual Studio 中的 NuGet 套件管理員。首先，我們可以逐步瞭解如何在 Visual Studio 中使用 NuGet 安裝這些套件。
 
-![開啟 NuGet 套件管理員](../../.gitbook/assets/vs-nuget-package-manager2.jpg)
+![開啟 NuGet 套件管理員](../images/vs-nuget-package-manager2.jpg)
 
 > 1. 選取「`Tools > NuGet Package Manager > Manage NuGet Packages for Solution...`」開啟 NuGet 套件管理員
 
 這是 NuGet 套件管理員。此視窗顯示已為專案安裝的套件，也可讓使用者瀏覽其他套件。如果發行了新版本的 DynamoServices 套件，則可從此處更新套件或回復至舊版。
 
-![NuGet 套件管理員](../../.gitbook/assets/vs-nuget-package-manager.jpg)
+![NuGet 套件管理員](../images/vs-nuget-package-manager.jpg)
 
 > 1. 選取「瀏覽」並搜尋 DynamoVisualProgramming 以顯示 Dynamo 套件。
 > 2. Dynamo 套件。選取一個套件會顯示套件的目前版本和內容描述。
@@ -146,7 +146,7 @@ namespace MyCustomNode
 
 若要手動加入從瀏覽器下載的套件，請從「方案總管」開啟「參考管理員」，然後瀏覽套件。
 
-![參考管理員](../../.gitbook/assets/vs-manual-dynamo-package.jpg)
+![參考管理員](../images/vs-manual-dynamo-package.jpg)
 
 > 1. 以右鍵按一下「`References`」，然後選取「`Add Reference`」。
 > 2. 選取「`Browse`」以瀏覽至套件位置。

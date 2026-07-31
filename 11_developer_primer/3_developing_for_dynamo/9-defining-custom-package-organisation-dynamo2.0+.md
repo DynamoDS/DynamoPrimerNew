@@ -112,7 +112,7 @@ MyZTLibrary/Utilities/doubleValue
 **警告！**\
 在節點名稱或品類中使用點符號，將會產生額外的巢狀子品類。`.` 將用作分隔符號來決定其他階層。這是 Dynamo 2.0 資源庫中的新行為。
 
-![自訂節點性質](../../.gitbook/assets/custom-node-properties.jpg)
+![自訂節點性質](../images/custom-node-properties.jpg)
 
 之後可在 .dyf 檔案 (XML 或 JSON) 中更新品類名稱
 

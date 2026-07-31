@@ -2,4 +2,4 @@
 
 Dynamo 在其節點庫中儲存了許多開箱即用的功能。對於這些經常使用的常式或要與社群共用的特殊圖表，自訂節點和套件是進一步延伸 Dynamo 很好的方式。
 
-![](../.gitbook/assets/customNodes_cover01.jpg)
+![](images/customNodes_cover01.jpg)

@@ -10,7 +10,7 @@
 
 雖然有爭議，但是一般認為自訂節點的最佳功能是其工作共用功能。如果「經驗豐富的使用者」建立了複雜的 Dynamo 圖形，並將其傳遞給不太熟悉 Dynamo 的新使用者，則他/她可壓縮圖形為最基本的內容以進行設計互動。可開啟自訂節點以編輯內部圖形，但「容器」可以保持簡單。使用此程序，自訂節點允許 Dynamo 使用者設計簡潔、直觀的圖表。
 
-\![](<../../.gitbook/assets/custom node intro - work sharing 01.jpg>)
+\![](<../images/custom node intro - work sharing 01.jpg>)
 
 ### 有許多方式可建置節點
 
@@ -22,11 +22,11 @@
 
 若要從頭開始建立自訂節點，請啟動 Dynamo，然後選取「自訂節點」，或在圖元區鍵入 Ctrl + Shift + N。
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 01.png>)
+\![](<../images/custom node intro - custom node environment 01.png>)
 
 在「自訂節點性質」對話方塊中指定名稱、描述和品類。
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 02.jpg>)
+\![](<../images/custom node intro - custom node environment 02.jpg>)
 
 > 1. **名稱：** Percentage
 > 2. **描述**：計算一個值相對於另一個值的百分比。
@@ -34,16 +34,16 @@
 
 這將開啟一個具有黃色背景的圖元區，表示您正在自訂節點內工作。在此畫布上，您可以存取所有核心 Dynamo 節點，以及 Input 和 Output 節點，其標示資料流進和流出自訂節點。您可以在「Input」>「Basic」中找到它們。
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 03.jpg>)
+\![](<../images/custom node intro - custom node environment 03.jpg>)
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 04.jpg>)
+\![](<../images/custom node intro - custom node environment 04.jpg>)
 
 > 1. **Input：** Input 節點在自訂節點上建立輸入埠。Input 節點的語法為 _input_name : datatype = default_value(選擇性)_。
 > 2. **Output：** 類似於 Input，將在自訂節點上建立和命名輸出埠。請考慮對輸入埠和輸出埠新增**自訂註解**，以提示輸入和輸出類型。在[建立自訂節點一節](2-creating.md)將會更詳細討論此問題。
 
 您可以將此自訂節點儲存為 .dyf (而非標準 .dyn) 檔案，它將會自動新增至您的階段作業和將來的階段作業中。您將在資源庫的「Add-ons」區段中找到自訂節點。
 
-\![](<../../.gitbook/assets/custom node intro - custom node environment 05.jpg>)
+\![](<../images/custom node intro - custom node environment 05.jpg>)
 
 ### 繼續向前
 

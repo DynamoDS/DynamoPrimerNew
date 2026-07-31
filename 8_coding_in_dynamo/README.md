@@ -6,4 +6,4 @@ Dynamo 是 AEC 領域開始撰寫程式碼的絕佳之門。您可以從以下�
 * [使用 DesignScript 的幾何圖形](8-2_geometry-with-design-script/)
 * [Python](8-3_python/)
 
-![](../.gitbook/assets/image.png)
+![](images/image.png)

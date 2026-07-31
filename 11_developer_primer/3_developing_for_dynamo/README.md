@@ -2,7 +2,7 @@
 
 無論經驗程度為何，Dynamo 平台專為所有使用者成為貢獻者而設計。針對不同的能力和技能程度有幾種開發選項，每種能力和技能程度的優缺點視目標而定。下面我們將概述不同的選項，以及如何選擇。
 
-![三種開發環境](../../.gitbook/assets/developing-for-dynamo.png)
+![三種開發環境](../images/developing-for-dynamo.png)
 
 > 三種開發環境：Visual Studio、Python 編輯器和 Code Block DesignScript
 
@@ -22,7 +22,7 @@ Dynamo 的開發選項主要分為兩個類別：_為_ Dynamo，以及 _在_ Dyn
 
 下面的討論使用 Visual Studio 當作 Zero-Touch 和 NodeModel 節點的開發環境。
 
-![Visual Studio 介面](../../.gitbook/assets/vs-devenv.jpg)
+![Visual Studio 介面](../images/vs-devenv.jpg)
 
 > Visual Studio 介面，以及我們將開發的專案
 
@@ -42,7 +42,7 @@ Dynamo 的開發選項主要分為兩個類別：_為_ Dynamo，以及 _在_ Dyn
 
 在 Dynamo 工作區中開發是一個能立即得到回饋的強大工具。
 
-![在 Dynamo 工作區中使用 Python 節點開發](../../.gitbook/assets/python-example.jpg)
+![在 Dynamo 工作區中使用 Python 節點開發](../images/python-example.jpg)
 
 > 在 Dynamo 工作區中使用 Python 節點開發
 
@@ -54,7 +54,7 @@ Dynamo 的開發選項已設計為可解決自訂需求的複雜性。無論目�
 
 這些是在 Dynamo 視覺程式設計環境中撰寫程式碼的簡單選項。Dynamo 視覺程式設計工作區可讓您存取 Python、DesignScript，並且能在自訂節點內包含多個節點。
 
-![程式碼區塊、Python 指令碼和自訂節點](../../.gitbook/assets/Development-Icons.png)
+![程式碼區塊、Python 指令碼和自訂節點](../images/Development-Icons.png)
 
 使用這些方法，我們可以：
 
@@ -66,7 +66,7 @@ Dynamo 的開發選項已設計為可解決自訂需求的複雜性。無論目�
 
 「Zero-Touch」是指匯入 C# 資源庫所使用的一個簡易點選方法。Dynamo 將讀取 `.dll` 檔案的公開方法，並將其轉換為 Dynamo 節點。您可以使用 Zero-Touch 開發自己的自訂節點與套件
 
-![Zero-touch 節點](../../.gitbook/assets/ZTImport.png)
+![Zero-touch 節點](../images/ZTImport.png)
 
 使用此方法，我們可以：
 
@@ -78,7 +78,7 @@ Dynamo 的開發選項已設計為可解決自訂需求的複雜性。無論目�
 
 這些節點更深入 Dynamo 結構。它們以 `NodeModel` 類別為基礎，並以 C# 撰寫。雖然此方法提供最大的靈活性和功能，但節點的絕大多數層面必須明確定義，且函數必須位於單獨的組合中。
 
-![NodeModel 衍生的節點](../../.gitbook/assets/Development-Icons-NodeModel.png)
+![NodeModel 衍生的節點](../images/Development-Icons-NodeModel.png)
 
 使用此方法，我們可以：
 
@@ -93,13 +93,13 @@ Dynamo 的開發選項已設計為可解決自訂需求的複雜性。無論目�
 
 [Dynamo GitHub Wiki](https://github.com/DynamoDS/Dynamo/wiki/API-Changes) 會追蹤 API 變更。這包括對 DynamoCore、資源庫和工作區的變更。
 
-![Dynamo API 變更文件](../../.gitbook/assets/api-changes.png)
+![Dynamo API 變更文件](../images/api-changes.png)
 
 一個即將實施的重大變更範例是，在 2.0 版中從 XML 檔案格式轉換為 JSON 檔案格式。NodeModel 衍生的節點現在需要 [JSON 建構函式](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node)，否則無法在 Dynamo 2.0 中開啟。
 
 Dynamo 的 API 文件目前涵蓋核心功能：[http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI)
 
-![API 文件](../../.gitbook/assets/api-docs.jpg)
+![API 文件](../images/api-docs.jpg)
 
 ### 以套件散發二進位檔案的權限 <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 
