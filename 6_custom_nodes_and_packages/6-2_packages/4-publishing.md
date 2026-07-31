@@ -2,7 +2,7 @@
 
 在先前各節中，我們詳細瞭解了如何使用自訂節點與範例檔案設置 _MapToSurface_ 套件。但是，如何發佈已在本端開發的套件呢？此案例研究將示範如何從本端資料夾的一組檔案發佈套件。
 
-\![](<../images/develop package - custom nodes 01.jpg>)
+[](<../images/develop package - custom nodes 01.jpg>)
 
 有許多方式可以發佈套件。以下是建議的程序：**本端發佈、本端開發，然後線上發佈**。我們從包含套件中所有檔案的資料夾開始。
 
@@ -28,7 +28,7 @@
 
 這是為套件首次提交的檔案，我們已將所有範例檔案與自訂節點置於一個資料夾中。準備好此資料夾後，我們就準備好上傳到 Dynamo Package Manager。
 
-\![](<../images/publish a package - publish locally 01.jpg>)
+[](<../images/publish a package - publish locally 01.jpg>)
 
 > 1. 此資料夾包含五個自訂節點 (.dyf)。
 > 2. 此資料夾還包含五個範例檔案 (.dyn) 與一個匯入的向量檔案 (.svg)。這些檔案將作為介紹練習，用以向使用者示範如何使用自訂節點。
@@ -55,7 +55,7 @@
 
 發佈後，在「DynamoPrimer」群組或 Dynamo 資源庫下應該會顯示自訂節點。
 
-\![](<../images/develop package - install package 02.jpg>)
+[](<../images/develop package - install package 02.jpg>)
 
 現在，我們看一下根目錄，以瞭解 Dynamo 如何格式化我們剛剛建立的套件。前往「已安裝的套件」頁籤 > 按一下「MapToSurface」旁的垂直圓點功能表 > 選取「展示根目錄」，即可查看根目錄。
 
@@ -63,7 +63,7 @@
 
 請注意，根目錄位於套件的本端位置 (請記住，我們在「本端」發佈套件)。Dynamo 目前參考此資料夾以讀取自訂節點。因此，請務必使用本端發佈功能，將資料夾發佈到永久的資料夾位置 (即不是您的桌面)。以下將分解講述 Dynamo 套件資料夾。
 
-\![](<../images/publish a package - publish locally 06.jpg>)
+[](<../images/publish a package - publish locally 06.jpg>)
 
 > 1. _bin_ 資料夾包含使用 C# 或 Zero-Touch 資源庫建立的 .dll 檔案。我們沒有為此套件建立任何內容，所以此範例的此資料夾為空白。
 > 2. _dyf_ 資料夾包含自訂節點。開啟此資料夾將顯示此套件的所有自訂節點 (.dyf 檔案)。
