@@ -4,7 +4,7 @@
 
 從最基礎來說，一個向量代表 3D 空間中的一個位置，而且通常視為從位置 (0,0,0) 到該位置的一個箭頭終點。向量可以使用 _ByCoordinates_ 建構函式建立，採用新建立的向量物件的 x、y、z 位置。請注意，向量物件不是幾何物件，不會出現在 Dynamo 視窗中。但是在主控台視窗中可以列印出新建立或修改過的向量的相關資訊：
 
-\![](<../images/vector math 01.jpg>)
+[](<../images/vector math 01.jpg>)
 
 ```js
 // construct a Vector object
@@ -60,7 +60,7 @@ c = a.Scale(5);
 
 如果要調整一個向量的大小，讓產生的向量長度完全等於調整的量，就經常會這樣做。只要先將一個向量正規化，也就是將向量的長度設定為等於 1，就可以輕鬆達成目標。
 
-\![](<../images/vector math 05.jpg>)
+[](<../images/vector math 05.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 3);
@@ -94,7 +94,7 @@ c = a.Cross(b);
 
 向量數學另外一個更進階的函數是內積。二個向量的內積是一個與兩個向量之間的角度有關但不是完全相同的一個實數 (不是 Vector 物件)。內積一個有用的性質是，如果兩個向量互相垂直，則兩個向量之間的內積將為 0。內積使用 _Dot_ 方法計算。
 
-\![](<../images/vector math 07.jpg>)
+[](<../images/vector math 07.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 1);
