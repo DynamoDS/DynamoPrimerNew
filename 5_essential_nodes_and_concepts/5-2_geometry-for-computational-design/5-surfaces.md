@@ -10,7 +10,7 @@
 
 在 Dynamo 中匯入曲面，並演算某個參數處的曲面，以瞭解我們可以擷取哪類資訊。
 
-\![](<../images/surfaces - surface in dynamo.jpg>)
+[](<../images/surfaces - surface in dynamo.jpg>)
 
 > 1. _Surface.PointAtParameter_ 會傳回給定 UV 座標處的點
 > 2. _Surface.NormalAtParameter_ 會傳回給定 UV 座標處的法線向量
