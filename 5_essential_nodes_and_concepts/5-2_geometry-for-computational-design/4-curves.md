@@ -20,13 +20,13 @@
 
 [直線](4-curves.md#lines)由一組點組成，每條直線至少有 2 個點。在 Dynamo 中建立直線最常使用的其中一個方法是使用 `Line.ByStartPointEndPoint` ![](../images/5-2/4/Linebystartpointendpoint.jpg)。
 
-\![](<../images/curves - line by start point end point.jpg>)
+[](<../images/curves - line by start point end point.jpg>)
 
 ### NURBS 曲線
 
 [NURBS](4-curves.md#nurbs-+-polycurves) 是一個用於精確表示曲線和曲面的模型。Dynamo 中的正弦曲線使用兩種不同方法建立 NURBS 曲線以比較結果。
 
-\![](<../images/curves - Nurbs Curves.jpg>)
+[](<../images/curves - Nurbs Curves.jpg>)
 
 > 1. _NurbsCurve.ByControlPoints_ 使用點清單做為控制點
 > 2. _NurbsCurve.ByPoints_ 繪製一條通過點清單的曲線
