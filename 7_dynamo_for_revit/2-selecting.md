@@ -30,7 +30,7 @@ _點選_ 是直接選取 Revit 元素最簡單的方式。您可以選取完整�
 
 _下拉式功能表_ 會建立 Revit 專案中所有可存取元素的清單。您可以使用下拉式功能表參考視圖中不一定可見的 Revit 元素。這是非常強大的工具，可用於在 Revit 專案或族群編輯器中查詢既有元素或建立新元素。
 
-\![](<images/2/selecting - database navigation with dynamo nodes 02.jpg>)
+[](<images/2/selecting - database navigation with dynamo nodes 02.jpg>)
 
 您也可以依 _Revit 階層_中的特定層級選取 Revit 元素。這是一個功能強大的選項，可自訂大型資料陣列，以準備進行記錄或生產實體化及客製化。
 
@@ -81,7 +81,7 @@ _下拉式功能表_ 會建立 Revit 專案中所有可存取元素的清單。�
 
 使用一些基本清單作業，我們可以查詢感興趣的面。
 
-\![](images/2/selecting - exercise 05.jpg)
+[](images/2/selecting - exercise 05.jpg)
 
 > 1. 首先，將前面選取的元素輸出至 Element.Faces 節點。
 > 2. 接著，使用 _List.Count_ 節點顯示出我們正在處理量體中的 23 個曲面。
