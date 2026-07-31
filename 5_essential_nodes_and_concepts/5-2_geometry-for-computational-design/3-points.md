@@ -10,17 +10,17 @@
 
 Dynamo 中最常見的一種點存在於我們的三維世界座標系統中，有三個座標 [X,Y,Z] (Dynamo 中的 3D 點)。
 
-\![](<../images/points - 3d point in dynamo.jpg>)
+[](<../images/points - 3d point in dynamo.jpg>)
 
 Dynamo 中的 2D 點有兩個座標 [X,Y]。
 
-\![](<../images/points - 2d point in dynamo.jpg>)
+[](<../images/points - 2d point in dynamo.jpg>)
 
 ### 曲線和曲面上的點
 
 曲線和曲面的參數是連續的，且會延伸到給定幾何圖形的邊緣之外。由於定義參數空間的形狀位於三維世界座標系統中，我們可以一律將參數式座標轉換為「世界」座標。例如，平面上的點 [0.2,0.5] 等同於世界座標中的點 [1.8,2.0,4.1]。
 
-\![](<../images/points - xyz vs coord sys vs uv.jpg>)
+[](<../images/points - xyz vs coord sys vs uv.jpg>)
 
 > 1. 假定世界 XYZ 座標中的點
 > 2. 相對於給定座標系統 (圓柱) 的點
