@@ -20,7 +20,7 @@ Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群�
 
 安裝後，「Add-ons」>「DynamoPrimer」區段下應該會顯示自訂節點。
 
-\![](<../images/publish a package - publish locally 04.jpg>)
+[](<../images/publish a package - publish locally 04.jpg>)
 
 現在已安裝套件，接下來瞭解其設置方式。
 
@@ -30,37 +30,37 @@ Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群�
 
 這是具有五個自訂節點的簡單套件。在以下步驟中，我們將簡要討論每個自訂節點的設置。
 
-\![](<../images/develop package - custom nodes 01.jpg>)
+[](<../images/develop package - custom nodes 01.jpg>)
 
 #### **PointsToSurface**
 
 這是一個基本自訂節點，是其他所有對映節點的基礎。簡言之，節點會將來源曲面 UV 座標的點對映至目標曲面 UV 座標的位置。由於點是最基本的幾何圖形，以此為基礎會建置更複雜的幾何圖形，因此我們可以使用此邏輯在曲面之間對映 2D 甚至 3D 幾何圖形。
 
-\![](<../images/develop package -pointToSurface.jpg>)
+[](<../images/develop package -pointToSurface.jpg>)
 
 #### **PolygonsToSurface**
 
 只需使用這裡的多邊形，即可示範將對映點從 1D 幾何圖形延伸至 2D 幾何圖形的邏輯。請注意，我們已將 _PointsToSurface_ 節點巢狀插入此自訂節點中。使用此方式，我們可以將每個多邊形的點對映到曲面，然後從這些對映的點重新產生多邊形。透過保持正確的資料結構 (點清單的清單)，我們可以在多邊形精簡為一組點後保持多邊形的獨立性。
 
-\![](<../images/develop package -polygonsToSurface.jpg>)
+[](<../images/develop package -polygonsToSurface.jpg>)
 
 #### **NurbsCrvtoSurface**
 
 這裡套用的邏輯與 _PolygonsToSurface_ 節點中相同。但不是對映多邊形點，而是對映 NURBS 曲線的控制點。
 
-\![](<../images/develop package -nurbsCrvtoSurface.jpg>)
+[](<../images/develop package -nurbsCrvtoSurface.jpg>)
 
 **OffsetPointsToSurface**
 
 此節點稍微複雜一些，但概念很簡單：此節點與 _PointsToSurface_ 節點類似，可在曲面之間對映點。但是，它也會考慮到不在原始來源曲面上的點，會取得這些點距最近 UV 參數的距離，並將此距離對映到對應 UV 座標處的目標曲面法線。如果查看範例檔案，會比較有感覺。
 
-\![](<../images/develop package -OffsetPointsToSurface.jpg>)
+[](<../images/develop package -OffsetPointsToSurface.jpg>)
 
 #### **SampleSrf**
 
 這個簡單節點會建立一個參數式曲面，從來源格線對映到範例檔案中的波浪曲面。
 
-\![](<../images/develop package -sampleSrf.jpg>)
+[](<../images/develop package -sampleSrf.jpg>)
 
 ### 範例檔案
 
@@ -76,40 +76,40 @@ Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群�
 
 此範例檔案示範如何根據矩形的格線使用 _PointsToSurface_ 將曲面平板化。這看起來應該很熟悉，因為我們在[上一章](../6-1_custom-nodes/2-creating.md)示範了類似的工作流程。
 
-\![](<../images/develop package -sample file 01.jpg>)
+[](<../images/develop package -sample file 01.jpg>)
 
 #### **02-PanelingWithPolygons-II**
 
 此練習檔案使用類似的工作流程，展示在從一個曲面將圓 (或表示圓的多邊形) 對映到另一個曲面的設置。此練習檔案使用 _PolygonsToSurface_ 節點。
 
-\![](<../images/develop package -sample file 02.jpg>)
+[](<../images/develop package -sample file 02.jpg>)
 
 #### **03-NurbsCrvsAndSurface**
 
 此範例檔案使用「NurbsCrvToSurface」節點，因此複雜性更高。會將目標曲面偏移指定的距離，並將 NURBS 曲線對映至原始目標曲面與偏移曲面。由此對對映的兩條曲線執行斷面混成以建立曲面，然後增厚該曲面。產生的這個實體具有代表目標曲面法線的波浪線。
 
-\![](<../images/develop package -sample file 03.jpg>)
+[](<../images/develop package -sample file 03.jpg>)
 
 #### **04-PleatedPolysurface-OffsetPoints**
 
 此範例檔案示範如何將褶狀的 PolySurface 從來源曲面對映到目標曲面。來源曲面與目標曲面分別是跨越格線的矩形曲面與旋轉曲面。
 
-\![](<../images/develop package -sample file 04a.jpg>)
+[](<../images/develop package -sample file 04a.jpg>)
 
 來源 PolySurface 從來源曲面對映到目標曲面。
 
-\![](<../images/develop package -sample file 04b.jpg>)
+[](<../images/develop package -sample file 04b.jpg>)
 
 #### **05-SVG-Import**
 
 由於自訂節點可以對映不同類型的曲線，因此這最後一個檔案參考從 Illustrator 匯出的 SVG 檔案，並將匯入的曲線對映到目標曲面。
 
-\![](<../images/develop package -sample file 05a.jpg>)
+[](<../images/develop package -sample file 05a.jpg>)
 
 剖析整個 .svg 檔案的語法，將曲線從 .xml 格式轉換為 Dynamo polycurve。
 
-\![](<../images/develop package -sample file 05b.jpg>)
+[](<../images/develop package -sample file 05b.jpg>)
 
 將匯入的曲線對映到目標曲面。我們可藉此以明確方式 (點選) 在 Illustrator 中設計一個平板化物件，匯入至 Dynamo，然後套用到目標曲面。
 
-\![](<../images/develop package -sample file 05c.jpg>)
+[](<../images/develop package -sample file 05c.jpg>)
