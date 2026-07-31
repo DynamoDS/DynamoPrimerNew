@@ -4,7 +4,7 @@
 
 **視覺程式：**
 
-\![](<../images/python node - visual vs textual programming.jpg>)
+[](<../images/python node - visual vs textual programming.jpg>)
 
 **文字程式：**
 
@@ -38,15 +38,15 @@ OUT = solids
 
 與程式碼區塊類似，Python 節點是視覺程式設計環境中的指令碼撰寫介面。Python 節點位於資源庫中的「Script」>「Editor」>「Python Script」下。
 
-\![](<../images/python node - the python node 01.jpg>)
+[](<../images/python node - the python node 01.jpg>)
 
 按兩下節點會開啟 Python Script 編輯器 (您也可以在節點上按一下右鍵，然後選取 _「編輯...」_ )。您會發現頂部有一些模板文字，目的是協助您參考您會需要的資源庫。輸入儲存於 IN 陣列中。為 OUT 變數指定值，值就會傳回到 Dynamo 中
 
-\![](<../images/python node - the python node 02.jpg>)
+[](<../images/python node - the python node 02.jpg>)
 
 藉由 Autodesk.DesignScript.Geometry 資源庫，您可以使用與 Code Block 類似的點標記法。如需有關 Dynamo 語法的更多資訊，請參閱 [7-2_design-script-syntax.md](../../coding-in-dynamo/7_code-blocks-and-design-script/7-2_design-script-syntax.md "mention") 以及 [DesignScript 指南](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf) (若要下載此 PDF 文件，請在連結上按一下右鍵，然後選擇「另存連結為...」)。鍵入幾何圖形類型 (例如「Point.」) 將顯示建立和查詢點的方法清單。
 
-\![](<../images/python node - the python node 03.jpg>)
+[](<../images/python node - the python node 03.jpg>)
 
 > 這些方法包括建構函式 (例如 _ByCoordinates_)、動作 (例如 _Add_) 以及查詢 (例如 _X_、_Y_、_Z_ 座標)。
 
@@ -62,12 +62,12 @@ OUT = solids
 
 在此範例中，我們將編寫從實體模組建立樣式的 Python 指令碼，然後將其轉換為自訂節點。首先，使用 Dynamo 節點建立實體模組。
 
-\![](<../images/python node - exercise pt I-01.jpg>)
+[](<../images/python node - exercise pt I-01.jpg>)
 
 > 1. **Rectangle.ByWidthLength：** 建立將做為實體基礎的矩形。
 > 2. **Surface.ByPatch：** 將矩形連接至 _closedCurve_ 輸入以建立底部曲面。
 
-\![](<../images/python node - exercise pt I-02.jpg>)
+[](<../images/python node - exercise pt I-02.jpg>)
 
 > 1. **Geometry.Translate：**將矩形連接至 _geometry_ 輸入以將其上移，使用 Code Block 指定實體的基礎厚度。
 > 2. **Polygon.Points：** 查詢平移的矩形以擷取角點。
@@ -77,7 +77,7 @@ OUT = solids
 
 現在我們已建立頂部與底部曲面，接下來在兩個輪廓之間進行斷面混成，以建立實體的側面。
 
-\![](<../images/python node - exercise pt I-03.jpg>)
+[](<../images/python node - exercise pt I-03.jpg>)
 
 > 1. **List.Create：** 將底部矩形與頂部多邊形連接至索引輸入。
 > 2. **Surface.ByLoft：** 對兩個輪廓進行斷面混成，以建立實體的側面。
@@ -86,13 +86,13 @@ OUT = solids
 
 現在我們已建立實體，接下來將 Python Script 節點放入工作區。
 
-\![](<../images/python node - exercise pt I-04.jpg>)
+[](<../images/python node - exercise pt I-04.jpg>)
 
 > 1. 若要在節點中加入其他輸入，請按一下節點上的「+」圖示。輸入命名為 IN[0]、IN[1] 等等，以指出它們代表清單中的項目。
 
 我們先定義輸入與輸出。按兩下節點以開啟 python 編輯器。請依照下面的程式碼，在編輯器中修改程式碼。
 
-\![](<../images/python node - exercise pt I-05.jpg>)
+[](<../images/python node - exercise pt I-05.jpg>)
 
 ```py
 # Load the Python Standard and DesignScript Libraries
@@ -169,7 +169,7 @@ OUT = solids
 
 由於我們將平移並旋轉實體模組，因此接下來使用 Geometry.Transform 作業。看一下 Geometry.Transform 節點，我們知道需要來源座標系統與目標座標系統，以平移實體。來源是實體的關聯座標系統，而目標是所排列每個模組的不同座標系統。這表示我們必須循環使用 x 值與 y 值，以便每次以不同方式平移座標系統。
 
-\![](<../images/python node - exercise pt I-06.jpg>)
+[](<../images/python node - exercise pt I-06.jpg>)
 
 ```py
 # Load the Python Standard and DesignScript Libraries
@@ -225,7 +225,7 @@ OUT = solids
 
 按一下「執行」，然後儲存程式碼。將 Python 節點與既有的指令碼連接，如下所示。
 
-\![](<../images/python node - exercise pt I-07.jpg>)
+[](<../images/python node - exercise pt I-07.jpg>)
 
 > 1. 將 **Solid.ByJoinedSurfaces** 的輸出連接為 Python 節點的第一個輸入，並使用 Code Block 定義其他輸入。
 > 2. 建立 **Topology.Edges** 節點，並使用 Python 節點的輸出做為其輸入。
@@ -239,19 +239,19 @@ OUT = solids
 
 現在我們已建立有用的 Python 指令碼，接下來將其另存成自訂節點。選取 Python Script 節點，在「工作區」上按一下右鍵，然後選取「建立自訂節點」。
 
-\![](<../images/python node - exercise pt II-01.jpg>)
+[](<../images/python node - exercise pt II-01.jpg>)
 
 指定名稱、描述與品類。
 
-\![](<../images/python node - exercise pt II-02.jpg>)
+[](<../images/python node - exercise pt II-02.jpg>)
 
 這會開啟一個新的工作區，可從中編輯自訂節點。
 
-\![](<../images/python node - exercise pt II-03.jpg>)
+[](<../images/python node - exercise pt II-03.jpg>)
 
 > 1. **Input：** 變更輸入名稱以更具描述性，然後加入資料類型及預設值。
 > 2. **Output：** 變更輸出名稱
 
 將節點儲存為 .dyf 檔案，您應該會看到自訂節點反映我們剛才所做的變更。
 
-\![](<../images/python node - exercise pt II-04.jpg>)
+[](<../images/python node - exercise pt II-04.jpg>)
