@@ -43,7 +43,7 @@
 
 以下影像是基礎圖表，我們在兩個圓之間繪製線以表示基本清單作業。我們將探究如何管理清單內的資料，並透過以下清單動作示範視覺結果。
 
-\![](<../images/working with list - list operation.jpg>)
+[](<../images/working with list - list operation.jpg>)
 
 > 1. 首先使用一個 **Code Block**，值為 `500;`
 > 2. 插入 **Point.ByCoordinates** 節點的 x 輸入。
@@ -65,7 +65,7 @@
 
 _List.Count_ 節點很簡單：它會對清單中的值進行計數，並傳回該數量。使用清單的清單時，此節點將更為精細，不過我們將在後續章節示範該內容。
 
-\![計數](<../images/working with list - list operation - list count.jpg>)
+[計數](<../images/working with list - list operation - list count.jpg>)
 
 > 1. **List.Count** 節點會傳回 **Line.ByStartPointEndPoint** 節點中的線數。在此案例中，該值為 10，這與從原始 **Code Block** 節點建立的點數一致。
 
@@ -79,14 +79,14 @@ _List.Count_ 節點很簡單：它會對清單中的值進行計數，並傳回�
 
 **List.GetItemAtIndex** 是對清單中的項目進行查詢的基本方式。
 
-\![練習](<../images/working with list - get item index 01.jpg>)
+[練習](<../images/working with list - get item index 01.jpg>)
 
 > 1. 首先，在 **Line.ByStartPointEndPoint** 節點上按一下右鍵以關閉其預覽。
 > 2. 使用 **List.GetItemAtIndex** 節點，我們將選取索引 _0_ 或線清單中的第一個項目。
 
 變更介於 0 到 9 之間的滑棒值，以使用 **List.GetItemAtIndex** 選取其他項目。
 
-\![](<../images/working with list - get item index 02.gif>)
+[](<../images/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
@@ -98,7 +98,7 @@ _List.Count_ 節點很簡單：它會對清單中的值進行計數，並傳回�
 
 _List.Reverse_ 會反轉清單中所有項目的順序。
 
-\![練習](<../images/working with list - list reverse.jpg>)
+[練習](<../images/working with list - list reverse.jpg>)
 
 > 1. 若要正確顯示反轉的線清單，請將 **Code Block** 變更為 `0..1..#50;` 以建立更多條線
 > 2. 複製 **Line.ByStartPointEndPoint** 節點，在 **Curve.PointAtParameter** 與第二個 **Line.ByStartPointEndPoint** 之間插入 List.Reverse 節點
@@ -114,7 +114,7 @@ _List.Reverse_ 會反轉清單中所有項目的順序。
 
 **List.ShiftIndices** 是建立扭轉或螺旋樣式或任何其他類似資料處理的良好工具。此節點會將清單中的項目移位指定數量的索引。
 
-\![練習](<../images/working with list - shiftIndices 01.jpg>)
+[練習](<../images/working with list - shiftIndices 01.jpg>)
 
 > 1. 採用對反轉清單的相同程序，將 **List.ShiftIndices** 插入 **Curve.PointAtParameter** 與 **Line.ByStartPointEndPoint**。
 > 2. 使用 **Code Block**，指定值「1」將清單移位一個索引。
@@ -122,7 +122,7 @@ _List.Reverse_ 會反轉清單中所有項目的順序。
 
 將 **Code Block** 變更為較大的值 (例如 _30_)，我們發現對角線有顯著不同。在此範例中，此移位的作用類似於相機的光圈，對原始圓柱形產生了扭轉。
 
-\![](<../images/working with list - shiftIndices 02.jpg>)
+[](<../images/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -136,7 +136,7 @@ _List.Reverse_ 會反轉清單中所有項目的順序。
 
 **List.FilterByBooleanMask** 將根據一系列布林值或者「True」或「False」值移除某些項目。
 
-\![練習](<../images/working with list - filter by bool mask.jpg>)
+[練習](<../images/working with list - filter by bool mask.jpg>)
 
 為了建立一系列「True」或「False」值，我們需要多做一些工作...
 
