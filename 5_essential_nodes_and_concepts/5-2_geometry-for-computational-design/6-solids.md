@@ -10,7 +10,7 @@
 
 您可以使用[布林運算](6-solids.md#boolean-operations)來修改實體。讓我們使用幾個布林運算建立一個尖刺球。
 
-\![](<../images/solids - spiky ball.jpg>)
+[](<../images/solids - spiky ball.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius**：建立基礎實體。
 > 2. **Topology.Faces**、**Face.SurfaceGeometry**：查詢實體的面並將其轉換為曲面幾何圖形 - 在此情況下，圓球只有一個面。
@@ -29,7 +29,7 @@
 
 布林運算很複雜，可能會減慢計算速度。您可以使用「凍結」功能暫停執行選取的節點和受影響的下游節點。
 
-\![](<../images/solids - freeze node.jpg>)
+[](<../images/solids - freeze node.jpg>)
 
 > 1. 使用右鍵關聯式功能表來凍結「實體聯集」作業。
 > 2. 選取的節點和所有下游節點將以淺灰色重影模式預覽，受影響的線路將以虛線顯示。受影響的幾何圖像預覽也將被重像。現在，您可以變更上游值，而不計算布林聯集。
