@@ -11,7 +11,7 @@ The exact prompt is: *I would like two sets of points in a line parallel to each
 
 ### Debugging
 
-Autodesk Assistant can debug or resolve any warnings or errors that may be occuring in a dynamo script. In the following script it can be seen that there is a mismatch in the input type expected in a **List.GetItemAtIndex** node. 
+Autodesk Assistant can debug or resolve any warnings or errors that may be occurring in a Dynamo script. In the following script it can be seen that there is a mismatch in the input type expected in a **List.GetItemAtIndex** node. 
 
 
 
@@ -58,7 +58,7 @@ The Autodesk Assistant will again rewrite the script in the requested format, wi
 
 ### Data manipulation
 
- Autodesk Assistant can use revit nodes to search through the Revit document attached to the dynamo file in order to extract information about the Revit model. In this particular example, a sample revit project has been loaded into the program and Autodesk Assistant will be used to make queries about the model. 
+ Autodesk Assistant can use Revit nodes to search through the Revit document attached to the Dynamo file in order to extract information about the Revit model. In this particular example, a sample Revit project has been loaded into the program and Autodesk Assistant will be used to make queries about the model. 
 
 ![](../../.gitbook/assets/Aa_Data_SampleProject.jpg)
 
