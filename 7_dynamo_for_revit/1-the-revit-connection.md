@@ -1,6 +1,6 @@
 # Revit 連接
 
-\![](<images/revit connection link.jpg>)
+[](<images/revit connection link.jpg>)
 
 適用於 Revit 的 Dynamo 使用圖形演算法編輯器的資料和邏輯環境來延伸建築資訊模型。其靈活性以及功能強大的 Revit 資料庫，為 BIM 提供了新視角。
 
@@ -43,7 +43,7 @@ Dynamo 最初建立的目的是為了簡化 Revit 中的 AEC 工作流程。雖�
 
 {% hint style="warning" %} *使用 Revit 特定的節點族群，Dynamo 圖表就只能在於適用於 Revit 的 Dynamo 中開啟時運作。例如，如果在 Dynamo Sandbox 中開啟適用於 Revit 的 Dynamo 圖表，則 Revit 節點將會遺失。{% endhint %}
 
-\![](<images/revit connection - running dynamo in revit 02.jpg>)
+[](<images/revit connection - running dynamo in revit 02.jpg>)
 
 ### 凍結節點
 
