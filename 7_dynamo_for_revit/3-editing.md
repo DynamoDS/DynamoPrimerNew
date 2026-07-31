@@ -24,7 +24,7 @@
 
 為了快速轉換單位，我們使用 _「Convert Between Units」_ 節點。此工具使用方便，可即時轉換長度、面積與體積單位。
 
-\![](<images/editing - units.jpg>)
+[](<images/editing - units.jpg>)
 
 ## 練習
 
@@ -44,22 +44,22 @@
 
 在 Revit 的量體中選取建築，我們將在性質面板中看到實體參數的陣列。
 
-\![](<images/editing - exercise 01.jpg>)
+[](<images/editing - exercise 01.jpg>)
 
 在 Dynamo 中，我們可以選取目標元素來擷取參數。
 
-\![](<images/editing - exercise 02.jpg>)
+[](<images/editing - exercise 02.jpg>)
 
 > 1. 使用 _「Select Model Element」_ 節點選取建築量體。
 > 2. 使用 _「Element.Parameters」_ 節點，我們可以查詢此量體的所有參數。這包括類型參數與實體參數。
 
-\![](<images/editing - exercise 03.jpg>)
+[](<images/editing - exercise 03.jpg>)
 
 > 1. 參考 _Element.Parameters_ 節點，以尋找目標參數。或者，我們可以檢視上一步的性質面板，以選擇希望編輯的的參數名稱。在此案例中，我們將尋找對建築量體上的大型幾何移動有影響的參數。
 > 2. 我們將使用 _Element.SetParameterByName_ 節點變更 Revit 元素
 > 3. 使用 Code Block 定義參數清單，每個項目周圍加上引號以表示是一個字串。我們也可以使用 List.Create 節點，搭配一系列 _「字串」_ 節點連接至多個輸入，但使用 Code Block 更快、更輕鬆。請確保字串與 Revit 中的名稱完全相符 (包含大小寫)：`{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
 
-\![](<images/editing - exercise 04.jpg>)
+[](<images/editing - exercise 04.jpg>)
 
 > 1. 我們還希望指定每個參數的值。在圖元區中加入六個 _「Integer Slider」_ ，並更名為清單中的對應參數。此外，按照以上影像設定每個滑棒的值。從上到下依序為：62、92、25、22、8、12
 > 2. 使用與參數名稱具有相同長度的清單定義另一個 _Code Block_。在此案例中，我們命名的變數 (沒有引號) 會建立 _Code Block_ 的輸入。將 _滑棒_ 插入每個各自的輸入：`{bw,bl,bh,ao,io,lu};`
@@ -69,7 +69,7 @@
 
 正如在 Revit 中一樣，其中許多參數彼此依賴。當然，存在可能導致幾何圖形中斷的組合。我們可以使用參數性質中定義的公式來解決此問題，也可以使用 Dynamo 中的數學運算來設置類似邏輯 (如果您希望在此練習基礎上進行拓展，這是另一項難題)。
 
-\![](<images/editing - exercise 05.jpg>)
+[](<images/editing - exercise 05.jpg>)
 
 > 1. 此組合會為建築量體產生很酷的新設計：100、92、100、25、13、51
 
@@ -77,12 +77,12 @@
 
 接下來，我們來看看如何使用類似流程編輯正面。
 
-\![](<images/editing - exercise 06.jpg>)
+[](<images/editing - exercise 06.jpg>)
 
 > 1. 複製圖表，然後著重瞭解容納桁架系統的正面釉面玻璃。在此範例中，我們隔離四個參數：`{"DblSkin_SouthOffset","DblSkin_MidOffset","DblSkin_NorthOffset","Facade Bend Location"};`
 > 2. 此外，我們將建立 _Number Slider_，並將其更名為適當的參數。前三個滑棒從上到下應重新對映至範圍 [0,10]，而最後一個滑棒 _「Facade Bend Location」_ 應重新對映至範圍 [0,1]。這些值從上到下在開始時應採用以下值 (雖然這些是隨機值)：2.68、2.64、2.29、0.5
 > 3. 定義新的 Code Block 並連接滑棒：`{so,mo,no,fbl};`
 
-\![](<images/editing - exercise 07.jpg>)
+[](<images/editing - exercise 07.jpg>)
 
 > 1. 透過變更此部分圖表中的 _滑棒_，我們可以大幅提升正面釉面玻璃的重要性：9.98、10.0、9.71、0.31
