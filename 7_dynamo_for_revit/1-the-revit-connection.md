@@ -1,6 +1,6 @@
 # Correlazione con Revit
 
-\![](<images/revit connection link.jpg>)
+![](<images/revit connection link.jpg>)
 
 Dynamo per Revit estende il Building Information Modeling (BIM) con l'ambiente di dati e logica di un editor di algoritmi grafici. La sua flessibilità, abbinata ad un solido database di Revit, offre una nuova prospettiva per il BIM.
 
@@ -43,7 +43,7 @@ Quando si apre Dynamo in Revit, è presente una nuova categoria denominata Revit
 
 {% hint style="warning" %} *Utilizzando la famiglia di nodi specifica di Revit, il grafico di Dynamo funzionerà solo durante l'apertura in Dynamo per Revit. Se, ad esempio, viene aperto un grafico di Dynamo per Revit in Dynamo Sandbox, i nodi di Revit risulteranno mancanti. {% endhint %}
 
-\![](<images/revit connection - running dynamo in revit 02.jpg>)
+![](<images/revit connection - running dynamo in revit 02.jpg>)
 
 ### Congelamento di nodi
 
