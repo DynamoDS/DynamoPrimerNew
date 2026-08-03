@@ -10,17 +10,17 @@ Un [punto](3-points.md#deep-dive-into...) è definito da niente di più che uno 
 
 Il tipo di punto più comune in Dynamo è presente nel sistema di coordinate globali tridimensionale e dispone di tre coordinate [X,Y,Z] (punto 3D in Dynamo).
 
-\![](<../images/points - 3d point in dynamo.jpg>)
+![](<../images/points - 3d point in dynamo.jpg>)
 
 Un punto 2D in Dynamo ha due coordinate [X,Y].
 
-\![](<../images/points - 2d point in dynamo.jpg>)
+![](<../images/points - 2d point in dynamo.jpg>)
 
 ### Punto su curve e superfici
 
 I parametri per le curve e le superfici sono continui e si estendono oltre il bordo della geometria specificata. Poiché le forme che definiscono lo spazio del parametro risiedono in un sistema di coordinate globali tridimensionale, è sempre possibile convertire una coordinata parametrica in una coordinata "globale". Il punto [0.2, 0.5] sulla superficie, ad esempio, è uguale al punto [1.8, 2.0, 4.1] nelle coordinate globali.
 
-\![](<../images/points - xyz vs coord sys vs uv.jpg>)
+![](<../images/points - xyz vs coord sys vs uv.jpg>)
 
 > 1. Punto nelle coordinate XYZ globali supposte
 > 2. Punto rispetto ad un determinato sistema di coordinate (cilindrico)
