@@ -73,7 +73,7 @@ b. In modalità di **anteprima 3D**
   * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)Zoom avanti
   * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)Zoom indietro
   * ![](<images/2.3-11-graph-preview-pan.jpg>)Panoramica
-  * [](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Orbit
+  * ![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Orbit
 * Utilizzando il mouse:
   * Scorrere il pulsante centrale del mouse su/giù - Zoom avanti/indietro
   * Fare clic con il pulsante centrale del mouse e trascinare - Panoramica
