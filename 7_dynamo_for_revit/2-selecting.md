@@ -30,7 +30,7 @@ _Puntamento e clic_ è il modo più semplice per selezionare direttamente un ele
 
 I _menu a discesa_ consentono di creare un elenco di tutti gli elementi accessibili in un progetto di Revit. È possibile utilizzare questa opzione per fare riferimento ad elementi di Revit che non sono necessariamente visibili in una vista. Questo è un ottimo strumento per eseguire una query su elementi esistenti o crearne di nuovi in un Editor di famiglie o in un progetto di Revit.
 
-\![](<images/2/selecting - database navigation with dynamo nodes 02.jpg>)
+![](<images/2/selecting - database navigation with dynamo nodes 02.jpg>)
 
 È inoltre possibile selezionare un elemento di Revit in base a livelli specifici nella _gerarchia di Revit_. Si tratta di un'opzione potente per la personalizzazione di grandi serie di dati in preparazione della documentazione o della creazione di istanze generative e della personalizzazione.
 
@@ -81,7 +81,7 @@ Ecco un metodo alternativo. In questo caso, non si esegue la selezione tramite l
 
 Utilizzando alcune operazioni di base con gli elenchi, è possibile eseguire una query su una superficie di interesse.
 
-\![](images/2/selecting - exercise 05.jpg)
+![](images/2/selecting - exercise 05.jpg)
 
 > 1. Innanzitutto, generare gli elementi selezionati da una versione precedente al nodo Element.Faces.
 > 2. Quindi, utilizzare il nodo _List.Count_ per mostrare che si stanno utilizzando 23 superfici nella massa.
