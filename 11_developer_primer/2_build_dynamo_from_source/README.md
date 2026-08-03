@@ -66,10 +66,10 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 > **将 Visual Studio 2022 预览版/2026 Insider 与现有安装一起安装：**
 >
 > 1. 打开 **Visual Studio 安装程序**（在“开始”菜单中搜索它）
-> 2. 单击**“更新”**以确保拥有最新的安装程序版本
-> 3. 转至**“可用”**选项卡
+> 2. 单击 **“更新”** 以确保拥有最新的安装程序版本
+> 3. 转至 **“可用”** 选项卡
 > 4. 查找 **Visual Studio 2022 预览版/2026 Insider**（社区版、专业版或企业版）
-> 5. 单击**“安装”**，将其与现有 Visual Studio 安装一起添加
+> 5. 单击 **“安装”**，将其与现有 Visual Studio 安装一起添加
 
 ![Visual Studio 预览版](<../images/vs-preview.png>) ![Visual Studio 2026 Insider](<../images/vs-2026-insiders.png>)
 
