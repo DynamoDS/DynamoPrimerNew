@@ -21,7 +21,9 @@ Quando si apre un nuovo file, per default, viene aperta una nuova area di lavoro
 
 ![](<images/workspace-custom-node-tab.png>)
 
-{% hint style="info" %} È consentita una sola area di lavoro iniziale in ogni finestra di Dynamo, ma è possibile avere più aree di lavoro del nodo personalizzato aperte nelle schede. {% endhint %}
+{% hint style="info" %}
+È consentita una sola area di lavoro iniziale in ogni finestra di Dynamo, ma è possibile avere più aree di lavoro del nodo personalizzato aperte nelle schede.
+{% endhint %}
 
 ### Modalità anteprima
 
