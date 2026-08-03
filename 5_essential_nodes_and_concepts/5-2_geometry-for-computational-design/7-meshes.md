@@ -12,7 +12,7 @@ Dynamo definisce le mesh utilizzando una struttura di dati di faccia-vertice. Al
 
 Per creare una mesh, è necessario un elenco di vertici e un sistema per raggruppare tali vertici in facce denominate gruppo di indici.
 
-\![](<../images/meshes - mesh elements.jpg>)
+![](<../images/meshes - mesh elements.jpg>)
 
 > 1. Elenco dei vertici
 > 2. Elenco dei gruppi di indici per definire le facce
@@ -25,7 +25,7 @@ La libreria fornisce inoltre strumenti per modificare e correggere la mesh o est
 
 Visitare i [case study di Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes), ad esempio sull'utilizzo di questo pacchetto.
 
-\![Toolkit di mesh](<../images/meshes - mesh toolkit standford bunny.jpg>)
+![Toolkit di mesh](<../images/meshes - mesh toolkit standford bunny.jpg>)
 
 ## Approfondimento su...
 
