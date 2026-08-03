@@ -22,12 +22,12 @@ Nell'esercizio riportato di seguito, verrà utilizzata una deviazione di base da
 
 Iniziare con il file di Revit per questa sezione (o continuare dalla sezione precedente). Questo file presenta una serie di pannelli ETFE sul tetto. Per questo esercizio, si farà riferimento a questi pannelli.
 
-\![](<images/documenting - exercise I - 01.jpg>)
+![](<images/documenting - exercise I - 01.jpg>)
 
 > 1. Aggiungere un nodo _Family Types_ all'area di disegno e scegliere _ROOF-PANEL-4PT_.
 > 2. Collegare il nodo ad un nodo di selezione _All Elements of Family Type_ per caricare tutti gli elementi da Revit in Dynamo.
 
-\![](<images/documenting - exercise I - 02.jpg>)
+![](<images/documenting - exercise I - 02.jpg>)
 
 > 1. Eseguire una query sulla posizione dei punti adattivi per ogni elemento con il nodo _AdaptiveComponent.Locations_.
 > 2. Creare un poligono da questi quattro punti con il nodo _Polygon.ByPoints_. Notare che ora è disponibile una versione astratta del sistema con pannelli in Dynamo senza dover importare la geometria completa dell'elemento di Revit.
@@ -35,12 +35,12 @@ Iniziare con il file di Revit per questa sezione (o continuare dalla sezione pre
 
 Per divertimento, come nell'esercizio precedente, impostare il rapporto di apertura di ogni pannello in base alla sua deviazione planare.
 
-\![](<images/documenting - exercise I - 03.jpg>)
+![](<images/documenting - exercise I - 03.jpg>)
 
 > 1. Aggiungere un nodo _Element.SetParameterByName_ all'area di disegno e collegare i componenti adattivi all'input _element_. Collegare un _Code Block_ che riporta _Aperture Ratio_ all'input _parameterName_.
 > 2. Non è possibile collegare direttamente i risultati della deviazione all'input value perché è necessario riassociare i valori all'intervallo di parametri.
 
-\![](<images/documenting - exercise I - 04.jpg>)
+![](<images/documenting - exercise I - 04.jpg>)
 
 > 1. Utilizzando _Math.RemapRange_, riassociare i valori di deviazione ad un dominio compreso tra 0.15 e 0_._45 immettendo `0.15; 0.45;` nel _Code Block_.
 > 2. Collegare questi risultati all'input value per _Element.SetParameterByName_.
@@ -57,13 +57,13 @@ Eseguendo lo zoom avanti, diventa più chiaro che i pannelli chiusi sono pondera
 
 L'impostazione del rapporto di apertura non mostra chiaramente la deviazione dei pannelli sul tetto; inoltre si sta modificando la geometria dell'elemento effettivo. Si supponga di voler semplicemente studiare la deviazione dal punto di vista della fattibilità della fabbricazione. Sarebbe utile colorare i pannelli in base all'intervallo di deviazione per la documentazione. È possibile farlo con la serie di passaggi riportata di seguito e con un processo molto simile a quello descritto sopra.
 
-\![](<images/documenting - exercise II - 01.jpg>)
+![](<images/documenting - exercise II - 01.jpg>)
 
 > 1. Rimuovere _Element.SetParameterByName_ e i relativi nodi di input e aggiungere _Element.OverrideColorInView_.
 > 2. Aggiungere un nodo _Color Range_ all'area di disegno e collegarlo all'input color di _Element.OverrideColorInView_. Per creare la sfumatura, è ancora necessario collegare i valori della deviazione all'intervallo di colori.
 > 3. Posizionando il cursore del mouse sull'input _value_, è possibile vedere che i valori per l'input devono essere compresi tra _0_ e _1_ per assegnare un colore a ciascun valore. È necessario riassociare i valori della deviazione a questo intervallo.
 
-\![](<images/documenting - exercise II - 02.jpg>)
+![](<images/documenting - exercise II - 02.jpg>)
 
 > 1. Utilizzando _Math.RemapRange_, riassociare i valori della deviazione planare ad un intervallo compreso tra *0* e _1_. Nota È anche possibile utilizzare il nodo _MapTo_ per definire un dominio di origine.
 > 2. Collegare i risultati ad un nodo _Color Range_.
@@ -74,7 +74,7 @@ In Revit, si nota una sfumatura molto più leggibile che è rappresentativa dell
 
 ![](images/09.jpg)
 
-\![](<images/documenting - exercise II - 04.jpg>)
+![](<images/documenting - exercise II - 04.jpg>)
 
 > 1. Utilizzando un _Code Block_, aggiungere due numeri su due righe diverse: `0;` e `255;`.
 > 2. Creare un colore rosso e blu collegando i valori appropriati a due nodi _Color.ByARGB_.
@@ -89,7 +89,7 @@ Tornando in Revit, è ora possibile distinguere meglio le aree di deviazione mas
 
 Selezionando un pannello ETFE in Revit, si noterà che sono presenti quattro parametri di istanza, XYZ1, XYZ2, XYZ3 e XYZ4. Questi sono tutti vuoti dopo la loro creazione. Si tratta di parametri basati sul testo che richiedono valori. Verrà utilizzato Dynamo per scrivere le posizioni dei punti adattivi su ciascun parametro. Ciò consente l'interoperabilità se la geometria deve essere inviata ad un ingegnere o un consulente per le facciate.
 
-\![](<images/documenting - exercise III - 01.jpg>)
+![](<images/documenting - exercise III - 01.jpg>)
 
 In una tavola di esempio, è presente un abaco di grandi dimensioni vuoto. I parametri XYZ sono parametri condivisi nel file di Revit, il che consente di aggiungerli all'abaco.
 
@@ -101,7 +101,7 @@ Se si esegue lo zoom avanti, i parametri XYZ devono ancora essere immessi. I pri
 
 Per scrivere questi valori, verrà eseguita un'operazione sugli elenchi complessa. Il grafico stesso è semplice, ma i concetti si basano in modo significativo sul mappaggio degli elenchi, come discusso nel capitolo sugli elenchi.
 
-\![](<images/documenting - exercise III - 04.jpg>)
+![](<images/documenting - exercise III - 04.jpg>)
 
 > 1. Selezionare tutti i componenti adattivi con due nodi.
 > 2. Estrarre la posizione di ciascun punto con _AdaptiveComponent.Locations_.
