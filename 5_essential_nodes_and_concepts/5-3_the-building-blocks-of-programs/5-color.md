@@ -8,7 +8,7 @@ I colori in Dynamo vengono creati utilizzando gli input ARGB. Corrispondono ai c
 
 | Icona                                          | Nome (Sintassi)                 | Input  | Output |
 | --------------------------------------------- | ----------------------------- | ------- | ------- |
-| \![](<../images/Color byARGB.jpg>) | Colore ARGB (**Color.ByARGB**) | A,R,G,B | colore   |
+| ![](<../images/Color byARGB.jpg>) | Colore ARGB (**Color.ByARGB**) | A,R,G,B | colore   |
 
 ### Esecuzione di una query sui valori dei colori
 
@@ -16,19 +16,19 @@ I colori nella tabella riportata di seguito eseguono una query sulle proprietà 
 
 | Icona                                             | Nome (Sintassi)                     | Input | Output    |
 | ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| \![](<../images/Color Alpha.jpg>)     | Alfa (**Color.Alpha**)           | colore  | A          |
-| \![](<../images/Color Red.jpg>)       | Rosso (**Color.Red**)               | colore  | R          |
-| \![](<../images/Color Green.jpg>)     | Verde (**Color.Green**)           | colore  | G          |
-| \![](<../images/Color Blue.jpg>)      | Blu (**Color.Blue**)             | colore  | B          |
-| \![](<../images/Color Component.jpg>) | Componenti (**Color.Components**) | colore  | A,R,G,B |
+| ![](<../images/Color Alpha.jpg>)     | Alfa (**Color.Alpha**)           | colore  | A          |
+| ![](<../images/Color Red.jpg>)       | Rosso (**Color.Red**)               | colore  | R          |
+| ![](<../images/Color Green.jpg>)     | Verde (**Color.Green**)           | colore  | G          |
+| ![](<../images/Color Blue.jpg>)      | Blu (**Color.Blue**)             | colore  | B          |
+| ![](<../images/Color Component.jpg>) | Componenti (**Color.Components**) | colore  | A,R,G,B |
 
 I colori nella tabella riportata di seguito corrispondono allo **spazio colore HSB**. La divisione del colore in tonalità, saturazione e luminosità è probabilmente più intuitiva per la modalità di interpretazione del colore. Quale colore dovrebbe essere? Quanto dovrebbe essere colorato? E quanto dovrebbe essere chiaro o scuro il colore? Si tratta rispettivamente della suddivisione di tonalità, saturazione e luminosità.
 
 | Icona                                                  | Nome (Sintassi)                     | Input | Output    |
 | ----------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| \![](<../images/Color Hue.jpg>)            | Tonalità (**Color.Hue**)               | colore  | Tonalità        |
-| \![](<../images/Color Saturation.jpg>) | Saturazione (**Color.Saturation**) | colore  | Saturazione |
-| \![](<../images/Color Brightness.jpg>)     | Luminosità (**Color.Brightness**) | colore  | Luminosità |
+| ![](<../images/Color Hue.jpg>)            | Tonalità (**Color.Hue**)               | colore  | Tonalità        |
+| ![](<../images/Color Saturation.jpg>) | Saturazione (**Color.Saturation**) | colore  | Saturazione |
+| ![](<../images/Color Brightness.jpg>)     | Luminosità (**Color.Brightness**) | colore  | Luminosità |
 
 ### Intervallo colori
 
@@ -36,7 +36,7 @@ L'intervallo di colori è simile al nodo **Remap Range** dell'esercizio [\#part-
 
 L'attuale nodo funziona bene, ma può essere un po' complicato fare in modo che tutto funzioni la prima volta. Il modo migliore per acquisire familiarità con la sfumatura di colore consiste nel verificarla in modo interattivo. Ecco un rapido esercizio per esaminare come impostare una sfumatura con colori di output corrispondenti ai numeri.
 
-\![](<../images/color - color range.jpg>)
+![](<../images/color - color range.jpg>)
 
 > 1. Definire tre colori: utilizzando un nodo **Code Block**, definire _rosso, verde_ e _blu_ collegando le combinazioni appropriate di _0_ e _255_.
 > 2. **Creare l'elenco:** unire i tre colori in un elenco.
@@ -47,7 +47,7 @@ L'attuale nodo funziona bene, ma può essere un po' complicato fare in modo che 
 
 Il nodo **Display.ByGeometry** offre la possibilità di colorare la geometria nella finestra di Dynamo. Ciò è utile per separare diversi tipi di geometria, dimostrare un concetto parametrico o definire una legenda di analisi per la simulazione. Gli input sono semplici: geometry e color. Per creare una sfumatura come l'immagine riportata sopra, l'input color è collegato al nodo **Color** **Range**.
 
-\![](<../images/color - color preview.jpg>)
+![](<../images/color - color preview.jpg>)
 
 ### Colore sulle superfici
 
@@ -67,14 +67,14 @@ Il nodo **Display.BySurfaceColors** consente di associare dati su una superficie
 
 Questo esercizio si concentra sul controllo parametrico del colore in parallelo con la geometria. La geometria è un'elica di base, che è possibile definire di seguito utilizzando **Code Block**. Si tratta di un metodo rapido e semplice per creare una funzione parametrica; poiché l'attenzione è rivolta al colore (anziché alla geometria), si utilizza il blocco di codice per creare in modo efficiente l'elica senza sovraccaricare l'area di disegno. Il blocco di codice verrà utilizzato più frequentemente man mano che nella guida introduttiva si passa ad un argomento più avanzato.
 
-\![](<../images/color - basic helix with colors 01.jpg>)
+![](<../images/color - basic helix with colors 01.jpg>)
 
 > 1. **Code Block:** definire i due blocchi di codice con le formule indicate sopra. Si tratta di un metodo parametrico rapido per la creazione di una spirale.
 > 2. **Point.ByCoordinates:** collegare i tre output del blocco di codice alle coordinate per il nodo.
 
 Ora è presente una serie di punti che creano un'elica. Il passaggio successivo consiste nel creare una curva attraverso i punti in modo da poter visualizzare l'elica.
 
-\![](<../images/color - basic helix with colors 02.jpg>)
+![](<../images/color - basic helix with colors 02.jpg>)
 
 > 1. **PolyCurve.ByPoints:** collegare l'output **Point.ByCoordinates** all'input _points_ per il nodo. Si ottiene una curva elicoidale.
 > 2. **Curve.PointAtParameter:** collegare l'output **PolyCurve.ByPoints** all'input _curve_. Lo scopo di questo passaggio è creare un punto attrattore parametrico che scorre lungo la curva. Poiché la curva sta valutando un punto in corrispondenza di un parametro, sarà necessario immettere un valore _param_ compreso tra 0 e 1.
@@ -82,14 +82,14 @@ Ora è presente una serie di punti che creano un'elica. Il passaggio successivo 
 
 Una volta creato il punto di riferimento, verrà confrontata la distanza dal punto di riferimento ai punti originali che definiscono l'elica. Questo valore della distanza controllerà la geometria e il colore.
 
-\![](<../images/color - basic helix with colors 03.jpg>)
+![](<../images/color - basic helix with colors 03.jpg>)
 
 > 1. **Geometry.DistanceTo:** collegare l'output **Curve.PointAtParameter** all'_input_. Collegare **Point.ByCoordinates** all'input geometry.
 > 2. **Watch:** l'output risultante mostra un elenco di distanze da ogni punto elicoidale al punto di riferimento lungo la curva.
 
 Il passaggio successivo consiste nel controllare i parametri con l'elenco di distanze dai punti elicoidali al punto di riferimento. È possibile utilizzare questi valori della distanza per definire i raggi di una serie di sfere lungo la curva. Per mantenere le sfere ad una dimensione adatta, è necessario _riassociare_ i valori per la distanza.
 
-\![](<../images/color - basic helix with colors 04.jpg>)
+![](<../images/color - basic helix with colors 04.jpg>)
 
 > 1. **Math.RemapRange:** collegare l'output **Geometry.DistanceTo** all'input numbers.
 > 2. **Code Block:** collegare un blocco di codice con un valore di _0.01_ all'input _newMin_ e un blocco di codice con un valore di _1_ all'input di _newMax_.
@@ -97,41 +97,41 @@ Il passaggio successivo consiste nel controllare i parametri con l'elenco di dis
 
 In questo passaggio è stato riassociato l'elenco di distanze in modo che siano un intervallo più piccolo. È possibile modificare i valori _newMin_ e _newMax_ in base alle esigenze specifiche. I valori verranno riassociati e avranno lo stesso _rapporto di distribuzione_ nel dominio.
 
-\![](<../images/color - basic helix with colors 05.jpg>)
+![](<../images/color - basic helix with colors 05.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius:** collegare l'output **Math.RemapRange** all'input _radius_ e l'output **Point.ByCoordinates** originale all'input _centerPoint_.
 
 Modificare il valore del dispositivo di scorrimento dei numeri e osservare la dimensione delle sfere aggiornate. Si ottiene una maschera di inserimento parametrica.
 
-\![](<../images/color - basic helix with colors 06.gif>)
+![](<../images/color - basic helix with colors 06.gif>)
 
 La dimensione delle sfere dimostra la serie parametrica definita da un punto di riferimento lungo la curva. Per controllare il colore, utilizzare lo stesso concetto per il raggio della sfera.
 
-\![](<../images/color - basic helix with colors 07.jpg>)
+![](<../images/color - basic helix with colors 07.jpg>)
 
 > 1. **Color Range:** aggiungere all'area di disegno. Quando si posiziona il cursore sull'input _value_, si noterà che i numeri richiesti sono compresi tra 0 e 1. È necessario riassociare i numeri dell'output **Geometry.DistanceTo** in modo che siano compatibili con questo dominio.
 > 2. **Sphere.ByCenterPointRadius:** per il momento, disattivare l'anteprima in questo nodo (_fare clic con il pulsante destro del mouse > Anteprima_).
 
-\![](<../images/color - basic helix with colors 08.jpg>)
+![](<../images/color - basic helix with colors 08.jpg>)
 
 > 1. **Math.RemapRange:** questo processo dovrebbe essere noto. Collegare l'output **Geometry.DistanceTo** all'input numbers.
 > 2. **Code Block:** analogamente ad un passaggio precedente, creare un valore di _0_ per l'input _newMin_ e un valore di _1_ per l'input _newMax_. In questo caso, è possibile definire due output da un blocco di codice.
 > 3. **Color Range:** collegare l'output **Math.RemapRange** all'input _value_.
 
-\![](<../images/color - basic helix with colors 09.jpg>)
+![](<../images/color - basic helix with colors 09.jpg>)
 
 > 1. **Color.ByARGB:** questa è la procedura che consente di creare due colori. Sebbene questo processo possa sembrare complesso, è identico ai colori RGB di un altro software. Per eseguirlo, occorre semplicemente utilizzare la programmazione visiva.
 > 2. **Code Block:** creare due valori di _0_ e _255_. Collegare i due output ai due input **Color.ByARGB** come mostra l'immagine riportata sopra (o creare i due colori preferiti).
 > 3. **Color Range:** l'input _colors_ richiede un elenco di colori. È necessario creare questo elenco dai due colori creati nel passaggio precedente.
 > 4. **List.Create:** unire i due colori in un elenco. Collegare l'output all'input _colors_ per **Color Range**.
 
-\![](<../images/color - basic helix with colors 10.jpg>)
+![](<../images/color - basic helix with colors 10.jpg>)
 
 > 1. **Display.ByGeometryColor:** collegare **Sphere.ByCenterPointRadius** all'input _geometry_ e _Color Range_ all'input _color_. Si ottiene una sfumatura uniforme nel dominio della curva.
 
 Se si modifica il valore di **Number Slider** di prima nella definizione, i colori e le dimensioni vengono aggiornati. In questo caso, i colori e la dimensione del raggio sono direttamente correlati: ora si dispone di un collegamento visivo tra due parametri.
 
-\![](<../images/color - basic helix with colors 11.gif>)
+![](<../images/color - basic helix with colors 11.gif>)
 
 ### Esercizio con il colore sulle superfici
 
@@ -143,12 +143,12 @@ Se si modifica il valore di **Number Slider** di prima nella definizione, i colo
 
 Innanzitutto, è necessario creare (o fare riferimento ad) una superficie da utilizzare come input per il nodo **Display.BySurfaceColors**. In questo esempio si esegue il loft tra una curva seno e una curva coseno.
 
-\![](<../images/color - color on surface 01.jpg>)
+![](<../images/color - color on surface 01.jpg>)
 
 > 1. Questo gruppo di nodi sta creando punti lungo l'asse Z, quindi li disloca in base alle funzioni seno e coseno. Gli elenchi a due punti vengono quindi utilizzati per generare curve NURBS.
 > 2. **Surface.ByLoft**: generare una superficie interpolata tra l'elenco di curve NURBS.
 
-\![](<../images/color - color on surface 02.jpg>)
+![](<../images/color - color on surface 02.jpg>)
 
 > 1. **File Path**: selezionare un file di immagine da campionare per i dati di pixel a valle.
 > 2. Utilizzare **File.FromPath** per convertire il percorso del file in un file, quindi passare a **Image.ReadFromFile** per produrre un'immagine per il campionamento.
@@ -158,4 +158,4 @@ Innanzitutto, è necessario creare (o fare riferimento ad) una superficie da uti
 
 Anteprima ravvicinata della superficie di output con campioni dalla risoluzione di 400 x 300
 
-\![](<../images/color - color on surface 03.jpg>)
+![](<../images/color - color on surface 03.jpg>)
