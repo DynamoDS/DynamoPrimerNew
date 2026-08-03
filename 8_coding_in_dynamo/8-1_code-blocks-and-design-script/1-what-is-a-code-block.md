@@ -12,7 +12,7 @@ In breve, i blocchi di codice sono un'interfaccia dello scripting di testo all'i
 
 Con i blocchi di codice, un utente ha la flessibilità di decidere come specificare gli input. Di seguito sono riportati diversi modi per creare un punto base con le coordinate _(10, 5, 0)_:
 
-\![](<../images/codeblock brief overview.jpg>)
+![](<../images/codeblock brief overview.jpg>)
 
 Man mano che si acquisiscono ulteriori informazioni sulle funzioni disponibili nella libreria, si potrebbe persino scoprire che la digitazione di Point.ByCoordinates è più rapida rispetto alla ricerca nella libreria e all'individuazione del nodo appropriato. Quando si digita _Point_ ad esempio, in Dynamo verrà visualizzato un elenco di possibili funzioni da applicare ad un punto. Ciò rende più intuitivo lo scripting e aiuterà ad imparare come applicare le funzioni in Dynamo.
 
@@ -20,7 +20,7 @@ Man mano che si acquisiscono ulteriori informazioni sulle funzioni disponibili n
 
 Il blocco di codice è disponibile in _Core > Input > Actions > Code Block_. Ma per una procedura ancora più veloce per visualizzare il blocco di codice, è sufficiente fare doppio clic nell'area di disegno. Questo nodo viene utilizzato così spesso che dispone di tutte le funzioni accessibili con il doppio clic del mouse.
 
-\![](<../images/creating codeblock nodes.jpg>)
+![](<../images/creating codeblock nodes.jpg>)
 
 ### Numeri, stringhe e formule
 
@@ -30,7 +30,7 @@ Nella seguente immagine, è possibile vedere che il modo di eseguire le operazio
 
 I nodi Number e String sono due esempi di nodi di Dynamo che risultano probabilmente obsoleti rispetto al blocco di codice.
 
-\![](<../images/old school vs code blocks nodes.jpg>)
+![](<../images/old school vs code blocks nodes.jpg>)
 
 > 1. "Vecchia scuola"
 > 2. Code Block
