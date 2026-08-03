@@ -16,7 +16,9 @@ Sfogliare queste categorie è il modo più rapido per comprendere la gerarchia d
 
 Sfogliare la Libreria facendo clic sui menu per espandere ogni categoria e la relativa sottocategoria.
 
-{% hint style="info" %} Geometry è un menu di grande utilità per iniziare ad esplorare poiché contiene la maggior quantità di nodi. {% endhint %}
+{% hint style="info" %}
+Geometry è un menu di grande utilità per iniziare ad esplorare poiché contiene la maggior quantità di nodi.
+{% endhint %}
 
 ![](<images/library-modified-and-resize-library-categories.jpg>)
 
