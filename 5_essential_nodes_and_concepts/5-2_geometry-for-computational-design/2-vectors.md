@@ -6,7 +6,7 @@
 
 Il [vettore](2-vectors.md#vector-1) è una rappresentazione dell'intensità e della direzione, che è possibile visualizzare come una freccia che accelera verso una specifica direzione ad una determinata velocità. È un componente chiave per i modelli in Dynamo. Notare che, poiché si trovano nella categoria astratta di "helper", quando si crea un vettore, non verrà visualizzato alcun elemento nell'anteprima sfondo.
 
-\![Vectors in Dynamo](<../images/Geometry for Computational Design - vectors.jpg>)
+![Vectors in Dynamo](<../images/Geometry for Computational Design - vectors.jpg>)
 
 > 1. È possibile utilizzare una linea come supporto in un'anteprima vettoriale.
 
@@ -20,7 +20,7 @@ Il [vettore](2-vectors.md#vector-1) è una rappresentazione dell'intensità e de
 
 Il [piano](2-vectors.md#plane-1) è una superficie bidimensionale, che può essere visualizzata come superficie piana che si estende all'infinito. Ciascun piano ha un'origine, una direzione X, una direzione Y e una direzione Z (su).
 
-\![Planes in Dynamo](<../images/Geometry for Computational Design - plane.jpg>)
+![Planes in Dynamo](<../images/Geometry for Computational Design - plane.jpg>)
 
 > 1. Sebbene siano astratti, i piani hanno una posizione di origine in modo da poterli posizionare nello spazio.
 > 2. In Dynamo, il rendering dei piani viene eseguito nell'anteprima sfondo.
@@ -35,7 +35,7 @@ Il [piano](2-vectors.md#plane-1) è una superficie bidimensionale, che può esse
 
 Il [sistema di coordinate](2-vectors.md#coordinate-system-1) è un sistema che consente di determinare la posizione di punti o altri elementi geometrici. Nell'immagine seguente è illustrato l'aspetto che ha in Dynamo e ciò che ogni colore rappresenta.
 
-\![Coordinate System in Dynamo](<../images/Geometry for Computational Design - Coordinate.jpg>)
+![Coordinate System in Dynamo](<../images/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. Sebbene siano astratti, anche i sistemi di coordinate hanno una posizione di origine in modo da poterli individuare nello spazio.
 > 2. In Dynamo, i sistemi di coordinate vengono sottoposti a rendering nell'anteprima sfondo come punto (origine) e linee che definiscono gli assi (X è rosso, Y è verde e Z è blu in base alla seguente convenzione).
