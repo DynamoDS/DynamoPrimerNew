@@ -2,7 +2,7 @@
 
 Dynamo 2.0 consente di visualizzare un'ampia varietà di nodi Dictionary da utilizzare. Ciò include i nodi di _Create, Action e Query_.
 
-\![](<../images/dictionary nodes - nodes.jpg>)
+![](<../images/dictionary nodes - nodes.jpg>)
 
 #### Crea
 
