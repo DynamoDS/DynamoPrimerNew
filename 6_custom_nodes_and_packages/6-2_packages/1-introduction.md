@@ -22,11 +22,11 @@ Fare clic su Installa per aggiungere il pacchetto alla libreria, quindi accettar
 
 Notare che ora è presente un altro gruppo nella libreria di Dynamo denominato "buildz". Questo nome si riferisce allo sviluppatore del pacchetto e il nodo personalizzato viene posizionato in questo gruppo. È possibile iniziare ad utilizzarlo immediatamente.
 
-\![](<../images/package introduction - installing a package 03.jpg>)
+![](<../images/package introduction - installing a package 03.jpg>)
 
 Utilizzare **Code Block** per definire rapidamente una griglia rettangolare, generare il risultato in un nodo **Polygon.ByPoints**, quindi in un nodo **Surface.ByPatch** per visualizzare l'elenco di pannelli rettangolari appena creati.
 
-\![](<../images/package introduction - installing a package 04.jpg>)
+![](<../images/package introduction - installing a package 04.jpg>)
 
 ### Installazione della cartella di pacchetti - DynamoUnfold
 
@@ -40,7 +40,7 @@ Questa volta, si cercherà _"DynamoUnfold"_, una parola. Quando vengono visualiz
 
 Nella libreria di Dynamo, è presente un gruppo _DynamoUnfold_ con più categorie e nodi personalizzati.
 
-\![](<../images/package introduction - installing package folder 02.jpg>)
+![](<../images/package introduction - installing package folder 02.jpg>)
 
 Ora, si può dare un'occhiata alla struttura dei file del pacchetto.
 
@@ -52,7 +52,7 @@ Ora, si può dare un'occhiata alla struttura dei file del pacchetto.
 
 Verrà aperta la directory principale del pacchetto. Notare che sono presenti 3 cartelle e un file.
 
-\![](<../images/package introduction - installing package folder 05.jpg>)
+![](<../images/package introduction - installing package folder 05.jpg>)
 
 > 1. La cartella _bin_ contiene i file .dll. Questo pacchetto di Dynamo è stato sviluppato utilizzando la funzionalità zero-touch, pertanto i nodi personalizzati sono contenuti in questa cartella.
 > 2. La cartella _dyf_ contiene i nodi personalizzati. Questo pacchetto non è stato sviluppato utilizzando nodi personalizzati di Dynamo, pertanto questa cartella è vuota per questo pacchetto.
@@ -87,7 +87,7 @@ Un altro modo per scoprire i pacchetti di Dynamo consiste nell'esplorare il sito
 
 Se si desidera vedere dove vengono mantenuti i file di pacchetto, nella parte superiore del browser fare clic su Dynamo > Preferenze > Impostazioni pacchetto > Posizioni di file di pacchetti e nodi; da qui è possibile trovare la directory della cartella principale corrente.
 
-\![](<../images/package introduction - installing package folder 08.png>)
+![](<../images/package introduction - installing package folder 08.png>)
 
 Per default, i pacchetti vengono installati in una posizione simile a questo percorso delle cartelle: _C:/Utenti/[nome utente]/AppData/Roaming/Dynamo/[versione di Dynamo]_.
 
