@@ -6,14 +6,14 @@ Nel blocco di codice esistono alcuni metodi di sintassi abbreviata di base che, 
 
 | **Tipo dati**          | **Dynamo standard**                                      | **Equivalente a Code Block**                                     |
 | ---------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
-| Numeri                | \![](<../images/01 node - numbers.jpg>)       | \![](<../images/01 codeblock - numbers.jpg>)       |
-| Stringhe                | \![](<../images/02 node - string.jpg>)        | \![](<../images/02 codeblock- string.jpg>)         |
-| Sequenze              | \![](<../images/03 node- sequence.jpg>)       | \![](<../images/03 codeblock- sequence.jpg>)       |
-| Intervalli                 | \![](<../images/04 node- range.jpg>)          | \![](<../images/04 codeblock - range.jpg>)         |
-| Recupero di una voce nell'indice      | \![](<../images/05 node - list get item.jpg>) | \![](<../images/05 codeblock - list get item.jpg>) |
-| Creazione di un elenco            | \![](<../images/06 node - list create.jpg>)   | ![](<../images/image.png>)                   |
-| Concatenazione di stringhe    | \![](<../images/07 node - string concat.jpg>) | \![](<../images/07 codeblock - string concat.jpg>) |
-| Istruzioni condizionali | \![](<../images/08 node - conditional.jpg>)   | \![](<../images/08 codeblock - conditional.jpg>)   |
+| Numeri                | ![](<../images/01 node - numbers.jpg>)       | ![](<../images/01 codeblock - numbers.jpg>)       |
+| Stringhe                | ![](<../images/02 node - string.jpg>)        | ![](<../images/02 codeblock- string.jpg>)         |
+| Sequenze              | ![](<../images/03 node- sequence.jpg>)       | ![](<../images/03 codeblock- sequence.jpg>)       |
+| Intervalli                 | ![](<../images/04 node- range.jpg>)          | ![](<../images/04 codeblock - range.jpg>)         |
+| Recupero di una voce nell'indice      | ![](<../images/05 node - list get item.jpg>) | ![](<../images/05 codeblock - list get item.jpg>) |
+| Creazione di un elenco            | ![](<../images/06 node - list create.jpg>)   | ![](<../images/image.png>)                   |
+| Concatenazione di stringhe    | ![](<../images/07 node - string concat.jpg>) | ![](<../images/07 codeblock - string concat.jpg>) |
+| Istruzioni condizionali | ![](<../images/08 node - conditional.jpg>)   | ![](<../images/08 codeblock - conditional.jpg>)   |
 
 ### Sintassi aggiuntiva
 
@@ -28,7 +28,7 @@ Nel blocco di codice esistono alcuni metodi di sintassi abbreviata di base che, 
 
 Il metodo per la definizione di intervalli e sequenze può essere ridotto ad una sintassi abbreviata di base. Utilizzare l'immagine riportata di seguito come guida per la sintassi "..." per definire un elenco di dati numerici con il blocco di codice. Dopo aver appreso come eseguire questa notazione, la creazione di dati numerici è un processo davvero efficiente:
 
-\![](<../images/shorthand - ranges and sequences.jpg>)
+![](<../images/shorthand - ranges and sequences.jpg>)
 
 > 1. In questo esempio, un intervallo di numeri viene sostituito dalla sintassi di **Code Block** di base che definisce `beginning..end..step-size;`. Rappresentata numericamente, si ottiene: `0..10..1;`.
 > 2. Notare che la sintassi `0..10..1;` è equivalente a `0..10;`. Una dimensione di incremento di 1 è il valore di default per la notazione della sintassi abbreviata. Pertanto, `0..10;` darà una sequenza da 0 a 10 con una dimensione di incremento di 1.
@@ -39,7 +39,7 @@ Il metodo per la definizione di intervalli e sequenze può essere ridotto ad una
 
 La creazione di intervalli avanzati consente di utilizzare l'elenco di elenchi in modo semplice. Negli esempi riportati di seguito, si isola una variabile dalla notazione dell'intervallo primario e si crea un altro intervallo di tale elenco.
 
-\![](<../images/shorthand - advance range 01.jpg>)
+![](<../images/shorthand - advance range 01.jpg>)
 
 > 1\. Creando intervalli nidificati, confrontare la notazione con un simbolo "#" rispetto alla notazione senza. La stessa logica si applica agli intervalli di base, tranne per il fatto che diventa un po' più complesso.
 >
@@ -49,13 +49,13 @@ La creazione di intervalli avanzati consente di utilizzare l'elenco di elenchi i
 
 Come esercizio logico, confrontare le due sintassi abbreviate riportate sopra e provare ad analizzare il modo in cui i _sottointervalli_ e la notazione _#_ determinano l'output risultante.
 
-\![](<../images/shorthand - advance range 02.jpg>)
+![](<../images/shorthand - advance range 02.jpg>)
 
 ### Creazione di elenchi e recupero di voci da un elenco
 
 Oltre a creare elenchi con la sintassi abbreviata, è anche possibile creare elenchi al volo. Questo elenco può contenere una vasta gamma di tipi di elementi e può anche essere sottoposto ad una query (ricordare che gli elenchi sono oggetti di per sé). Per riepilogare, con Code Block si creano elenchi e si esegue una query sulle voci di un elenco con le parentesi quadre:
 
-\![](<../images/shorthand - list & get from list 01.jpg>)
+![](<../images/shorthand - list & get from list 01.jpg>)
 
 > 1\. Creare rapidamente elenchi con stringhe ed eseguire una query su di essi utilizzando l'indice delle voci.
 >
@@ -63,7 +63,7 @@ Oltre a creare elenchi con la sintassi abbreviata, è anche possibile creare ele
 
 La gestione di elenchi nidificati è un processo simile. Tenere presente l'ordine dell'elenco e richiamarlo utilizzando più gruppi di parentesi quadre:
 
-\![](<../images/shorthand - list & get from list 02.jpg>)
+![](<../images/shorthand - list & get from list 02.jpg>)
 
 > 1\. Definire un elenco di elenchi.
 >
@@ -83,58 +83,58 @@ In questo esercizio, si mostreranno le nuove competenze in termini di sintassi a
 
 Iniziare creando una superficie collegando i nodi riportati sopra. Anziché utilizzare un nodo del numero per definire la larghezza e la lunghezza, fare doppio clic sull'area di disegno e digitare `100;` in un Code Block.
 
-\![](<../images/shorthand - exercise 01.jpg>)
+![](<../images/shorthand - exercise 01.jpg>)
 
-\![](<../images/shorthand - exercise 02.jpg>)
+![](<../images/shorthand - exercise 02.jpg>)
 
 > 1. Definire un intervallo compreso tra 0 e 1 con 50 divisioni digitando `0..1..#50` in un **Code Block**.
 > 2. Collegare l'intervallo a **Surface.PointAtParameter**, che utilizza i valori u e v compresi tra 0 e 1 sulla superficie. Ricordarsi di modificare Collegamento in Globale facendo clic con il pulsante destro del mouse sul nodo **Surface.PointAtParameter**.
 
 In questo passaggio, si utilizza la prima funzione per spostare la griglia di punti verso l'alto nella direzione Z. Questa griglia determinerà una superficie generata in base alla funzione sottostante. Aggiungere nuovi nodi come mostrato nell'immagine seguente.
 
-\![](<../images/shorthand - exercise 03.jpg>)
+![](<../images/shorthand - exercise 03.jpg>)
 
 > 1. Utilizziamo un **Code Block** con la riga: `(0..Math.Sin(x*360)..#50)*5;`. Per suddividerlo rapidamente, definire un intervallo con una formula al suo interno. Questa formula è la funzione seno. La funzione seno riceve gli input di gradi in Dynamo, pertanto per ottenere un'onda seno completa, è necessario moltiplicare i valori x (questo è l'input di intervallo da 0 a 1) per 360. Successivamente, si desidera che il numero di divisioni corrisponda a quello dei punti della griglia di controllo per ogni riga, pertanto si definiscono 50 suddivisioni con #50. Infine, il moltiplicatore 5 aumenta semplicemente l'ampiezza della traslazione in modo da poter vedere l'effetto nell'anteprima di Dynamo.
 
-\![](<../images/shorthand - exercise 04.jpg>)
+![](<../images/shorthand - exercise 04.jpg>)
 
 > 1. Sebbene il **Code Block** precedente funzionasse correttamente, non era completamente parametrico. Si desidera animare dinamicamente i relativi parametri, pertanto si sostituirà la riga del passaggio precedente con `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`. In questo modo è possibile definire questi valori in base agli input.
 
 Modificando i dispositivi di scorrimento (compresi tra 0 e 10), si ottengono alcuni risultati interessanti.
 
-\![](<../images/shorthand - exercise 05.gif>)
+![](<../images/shorthand - exercise 05.gif>)
 
-\![](<../images/shorthand - exercise 06.jpg>)
+![](<../images/shorthand - exercise 06.jpg>)
 
 > 1. Eseguendo una trasposizione sull'intervallo di numeri, si inverte la direzione dell'onda della tenda: `transposeList = List.Transpose(sineList);`.
 
-\![](<../images/shorthand - exercise 07.jpg>)
+![](<../images/shorthand - exercise 07.jpg>)
 
 > 1. Quando si aggiungono sineList e tranposeList, viene visualizzata una superficie di guscio distorta: `eggShellList = sineList+transposeList;`.
 
 Modifichiamo i valori dei dispositivi di scorrimento specificati qui sotto per ottenere un algoritmo che consenta un maggiore controllo sulla superficie.
 
-\![](<../images/shorthand - exercise 08.jpg>)
+![](<../images/shorthand - exercise 08.jpg>)
 
 Infine, si esegue una query su parti isolate dei dati con Code Block. Per rigenerare la superficie con un intervallo specifico di punti, aggiungere il blocco di codice riportato sopra tra i nodi **Geometry.Translate** e **NurbsSurface.ByPoints**. Contiene la riga di testo: `sineStrips[0..15..1];`. Verranno selezionate le prime 16 righe di punti (su 50). Ricreando la superficie, si può vedere che è stata generata una parte isolata della griglia di punti.
 
-\![](<../images/shorthand - exercise 09.jpg>)
+![](<../images/shorthand - exercise 09.jpg>)
 
-\![](<../images/shorthand - exercise 10.jpg>)
+![](<../images/shorthand - exercise 10.jpg>)
 
 > 1. Nel passaggio finale, per rendere **Code Block** più parametrico, eseguire la query utilizzando un dispositivo di scorrimento compreso tra 0 e 1. Questa operazione viene eseguita con la seguente riga di codice: `sineStrips[0..((List.Count(sineStrips)-1)*u)];`. Ciò può sembrare confuso, ma la riga di codice offre un modo rapido per scalare la lunghezza dell'elenco in un moltiplicatore compreso tra 0 e 1.
 
 Un valore di `0.53` nel dispositivo di scorrimento consente di creare una superficie appena oltre il punto medio della griglia.
 
-\![](<../images/shorthand - exercise 11.jpg>)
+![](<../images/shorthand - exercise 11.jpg>)
 
 Come previsto, un dispositivo di scorrimento di `1` crea una superficie dalla griglia completa di punti.
 
-\![](<../images/shorthand - exercise 12.jpg>)
+![](<../images/shorthand - exercise 12.jpg>)
 
 Osservando il grafico visivo, è possibile evidenziare i Code Block e vedere ciascuna delle loro funzioni.
 
-\![](<../images/shorthand - exercise 13.jpg>)
+![](<../images/shorthand - exercise 13.jpg>)
 
 > 1\. Il primo **Code Block** sostituisce il nodo **Number**.
 >
