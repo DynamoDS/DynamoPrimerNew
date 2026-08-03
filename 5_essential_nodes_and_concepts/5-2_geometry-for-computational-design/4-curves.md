@@ -20,13 +20,13 @@ Le [curve](4-curves.md#deep-dive-into...) sono il primo tipo di dati geometrici 
 
 La [linea](4-curves.md#lines) è costituita da un gruppo di punti; ogni linea ha almeno 2 punti. Uno dei metodi più comuni per creare una linea in Dynamo consiste nell'utilizzare `Line.ByStartPointEndPoint` ![](../images/5-2/4/Linebystartpointendpoint.jpg) per creare una linea in Dynamo.
 
-\![](<../images/curves - line by start point end point.jpg>)
+![](<../images/curves - line by start point end point.jpg>)
 
 ### Curva NURBS
 
 [NURBS](4-curves.md#nurbs-+-polycurves) è un modello utilizzato per rappresentare in modo accurato curve e superfici. Si procederà con la creazione di una curva seno in Dynamo utilizzando due diversi metodi per creare curve NURBS e confrontare i risultati.
 
-\![](<../images/curves - Nurbs Curves.jpg>)
+![](<../images/curves - Nurbs Curves.jpg>)
 
 > 1. _NurbsCurve.ByControlPoints_ utilizza l'elenco di punti come punti di controllo.
 > 2. _NurbsCurve.ByPoints_ disegna una curva attraverso l'elenco di punti.
