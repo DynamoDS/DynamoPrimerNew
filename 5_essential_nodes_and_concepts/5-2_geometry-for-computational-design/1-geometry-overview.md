@@ -6,11 +6,11 @@ La **geometria** è il linguaggio per la progettazione. Quando un ambiente o un 
 
 La comprensione dei tipi di geometria e della [relativa correlazione](1-geometry-overview.md#stepping-through-the-hierarchy) consente di spostarsi all'interno della raccolta di **nodi della geometria** disponibili nella libreria. I nodi della geometria sono organizzati in ordine alfabetico, anziché gerarchico. Qui vengono visualizzati in modo simile al loro layout nell'interfaccia di Dynamo.
 
-\![](<../images/geometry overview - geometry in dynamo.jpg>)
+![](<../images/geometry overview - geometry in dynamo.jpg>)
 
 Inoltre, la realizzazione di modelli in Dynamo e la connessione dell'anteprima di ciò che viene visualizzato nell'anteprima sfondo al flusso di dati nel grafico dovrebbero diventare più intuitive nel tempo.
 
-\![](<../images/Geometry for Computational Design - Overview.jpg>)
+![](<../images/Geometry for Computational Design - Overview.jpg>)
 
 > 1. Si noti il sistema di coordinate presunto sottoposto a rendering mediante griglia e assi colorati.
 > 2. I nodi selezionati eseguiranno il rendering della geometria corrispondente (se il nodo crea la geometria) nel colore di evidenziazione dello sfondo.
@@ -42,7 +42,7 @@ In pratica, questi principi implicano che bisogna essere consapevoli di ciò che
 
 Sarà esaminata la relazione tra le descrizioni astratte e gerarchiche della geometria. Poiché questi due concetti sono correlati, ma non sempre ovvi all'inizio, è possibile arrivare rapidamente ad una barriera concettuale quando si iniziano a sviluppare modelli o workflow più profondi. Per i principianti, verrà utilizzata la dimensionalità come un facile descrittore del "materiale" che si modella. Il numero di dimensioni necessarie per descrivere una forma offre una finestra che mostra come la geometria è organizzata gerarchicamente.
 
-\![Computational Geometry](<../images/Geometry for - GeometryDimensionality.jpg>)
+![Computational Geometry](<../images/Geometry for - GeometryDimensionality.jpg>)
 
 > 1. Un **punto** (definito dalle coordinate) non ha dimensioni; sono solo numeri che descrivono ogni coordinata.
 > 2. Una **linea** (definita da due punti) ora presenta _una_ dimensione: è possibile "percorrere" la linea in avanti (direzione positiva) o all'indietro (direzione negativa).
