@@ -10,13 +10,13 @@ Ulteriori informazioni sulla [differenza tra **Dynamo Core**/**Revit**/**Sandbox
 
 Dynamo consentirà di lavorare all'interno di un processo di programmazione visiva in cui si collegano gli elementi per definire le relazioni e le sequenze di azioni che compongono algoritmi personalizzati. Si possono utilizzare gli algoritmi per una vasta gamma di applicazioni, dall'elaborazione dei dati alla generazione della geometria, il tutto in tempo reale e senza dover scrivere una riga di `code`.
 
-[](<../.gitbook/assets/nodes and wires - flow of data.jpg>)
+![](<../.gitbook/assets/nodes and wires - flow of data.jpg>)
 
 ### Collegamento di nodi con fili
 
 Nodi e fili sono i componenti chiave di Dynamo per supportare un processo di [programmazione visiva](../a_appendix/a-1_visual-programming-and-dynamo.md). Consente di stabilire forti relazioni visive e sistemiche tra le parti di un progetto. Con un semplice clic del mouse è possibile collegare facilmente i nodi, sviluppando e ottimizzando il workflow di progettazione.
 
-[](<images/what is dynamo - connecting nodes with wires.gif>)
+![](<images/what is dynamo - connecting nodes with wires.gif>)
 
 ## Cosa è possibile ottenere con Dynamo?
 
