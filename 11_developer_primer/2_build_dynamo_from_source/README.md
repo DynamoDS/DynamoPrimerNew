@@ -59,17 +59,17 @@ Dynamo 的原始碼託管在 DynamoDS GitHub 上的 [https://github.com/DynamoDS
 
 > .NET 和 DirectX 可能已經安裝。
 
-> **注意：**重大變更 - 需要 [**Visual Studio 2022**](https://visualstudio.microsoft.com/vs/community/) **/** [**Visual Studio 2026 Insider**](https://visualstudio.microsoft.com/insiders/)
+> **注意：** 重大變更 - 需要 [**Visual Studio 2022**](https://visualstudio.microsoft.com/vs/community/) **/** [**Visual Studio 2026 Insider**](https://visualstudio.microsoft.com/insiders/)
 >
 > 從 2025 年底開始，Dynamo 將導入 `dotnet10.0` 架構。若要針對此架構進行開發，您需要 Visual Studio 2022 Preview 或 Visual Studio 2026 Insider (或更高版本)，因為穩定版本還不支援 .NET 10.0。
 >
 > **將 Visual Studio 2022 Preview/2026 Insider 與現有安裝內容一起安裝：**
 >
 > 1. 開啟 **Visual Studio 安裝程式** (在「開始」功能表中搜尋)
-> 2. 按一下**「更新」**確定您有最新的安裝程式版本
-> 3. 移至**「可用」**頁籤
+> 2. 按一下 **「更新」** 確定您有最新的安裝程式版本
+> 3. 移至 **「可用」** 頁籤
 > 4. 尋找 **Visual Studio 2022 Preview/2026 Insider** (Community、Professional 或 Enterprise)
-> 5. 按一下**「安裝」**將它加入現有的 Visual Studio 安裝
+> 5. 按一下 **「安裝」** 將它加入現有的 Visual Studio 安裝
 
 ![Visual Studio preview](<../images/vs-preview.png>) ![Visual Studio 2026 insider](<../images/vs-2026-insiders.png>)
 
