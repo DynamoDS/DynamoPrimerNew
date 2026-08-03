@@ -4,7 +4,9 @@
 
 Se si pubblica un nodo localmente, questo sarà accessibile nella libreria di Dynamo quando si apre una nuova sessione. Senza pubblicare un nodo, un grafico di Dynamo che fa riferimento ad un nodo personalizzato deve anche contenere tale nodo personalizzato nella relativa cartella (o il nodo personalizzato deve essere importato in Dynamo utilizzando _File > Importa libreria_).
 
-{% hint style="warning" %} È possibile pubblicare nodi e pacchetti personalizzati da Dynamo Sandbox nella versione 2.17 e successive, purché non presentino dipendenze API host. Nelle versioni precedenti, la pubblicazione di nodi e pacchetti personalizzati è abilitata solo in Dynamo for Revit e Dynamo for Civil 3D. {% endhint %}
+{% hint style="warning" %}
+È possibile pubblicare nodi e pacchetti personalizzati da Dynamo Sandbox nella versione 2.17 e successive, purché non presentino dipendenze API host. Nelle versioni precedenti, la pubblicazione di nodi e pacchetti personalizzati è abilitata solo in Dynamo for Revit e Dynamo for Civil 3D.
+{% endhint %}
 
 ## Esercizio: Pubblicazione locale di un nodo personalizzato
 
@@ -16,11 +18,11 @@ Se si pubblica un nodo localmente, questo sarà accessibile nella libreria di Dy
 
 Procedere con il nodo personalizzato creato nella sezione precedente. Una volta aperto il nodo personalizzato PointsToSurface, viene visualizzato il grafico nell'Editor nodi personalizzati di Dynamo. È inoltre possibile aprire un nodo personalizzato facendovi doppio clic nell'editor dei grafici di Dynamo.
 
-\![](<../images/publish custom node exercise - 01.jpg>)
+![](<../images/publish custom node exercise - 01.jpg>)
 
 Per pubblicare un nodo personalizzato localmente, è sufficiente fare clic con il pulsante destro del mouse sull'area di disegno e selezionare _Pubblica questo nodo personalizzato_.
 
-\![](<../images/publish custom node exercise - 02.jpg>)
+![](<../images/publish custom node exercise - 02.jpg>)
 
 Compilare le informazioni pertinenti simili a quelle mostrate nell'immagine riportata sopra e selezionare _Pubblica localmente_. Notare che il campo Gruppo (facoltativo) definisce l'elemento principale accessibile dal menu di Dynamo.
 
@@ -28,7 +30,7 @@ Compilare le informazioni pertinenti simili a quelle mostrate nell'immagine ripo
 
 Scegliere una cartella in cui memorizzare tutti i nodi personalizzati che si prevede di pubblicare localmente. In Dynamo viene controllata questa cartella ad ogni caricamento del programma, quindi verificare che si trovi in una posizione permanente. Individuare la cartella e scegliere _Seleziona cartella_. Il nodo di Dynamo viene ora pubblicato localmente e rimarrà nella libreria di Dynamo ogni volta che si carica il programma.
 
-\![](<../images/publish custom node exercise - 04.jpg>)
+![](<../images/publish custom node exercise - 04.jpg>)
 
 Per verificare il percorso della cartella dei nodi personalizzati, accedere a _Dynamo > Preferenze > Impostazioni pacchetto > Percorsi di nodi e pacchetti_.
 
@@ -48,8 +50,8 @@ In questa finestra viene visualizzato un elenco di percorsi.
 
 Accedendo a questa cartella locale, è possibile trovare il nodo personalizzato originale nella cartella _dyf_, che è l'estensione del file di un nodo personalizzato di Dynamo. Si può modificare il file in questa cartella e il nodo verrà aggiornato nell'interfaccia utente. È inoltre possibile aggiungere altri nodi alla cartella _DynamoCustomNodes_ principale. In Dynamo verranno aggiunti alla libreria al riavvio.
 
-\![](<../images/publish custom node exercise - 08.jpg>)
+![](<../images/publish custom node exercise - 08.jpg>)
 
 Dynamo ora viene caricato ogni volta con PointsToSurface nel gruppo DynamoPrimer della libreria di Dynamo.
 
-\![](<../images/publish custom node exercise - 09.jpg>)
+![](<../images/publish custom node exercise - 09.jpg>)
