@@ -117,7 +117,9 @@ In alternativa, è possibile visualizzare i risultati della geometria tramite un
 
 Entrambi sono disponibili nella categoria View della libreria Core.
 
-{% hint style="info" %} Suggerimento Talvolta l'anteprima 3D può distrarre l'utente quando il programma visivo contiene molti nodi. Per visualizzare l'anteprima della geometria, è consigliabile deselezionare l'opzione Mostra anteprima sfondo 3D nel menu Impostazioni e utilizzare un nodo Watch 3D. {% endhint %}
+{% hint style="info" %}
+Suggerimento Talvolta l'anteprima 3D può distrarre l'utente quando il programma visivo contiene molti nodi. Per visualizzare l'anteprima della geometria, è consigliabile deselezionare l'opzione Mostra anteprima sfondo 3D nel menu Impostazioni e utilizzare un nodo Watch 3D.
+{% endhint %}
 
 #### Code Block
 
