@@ -6,7 +6,7 @@ Revit 内で、そこに含まれるデータの一部を使って検索しよ�
 
 下図では、Revit モデル内のすべての部屋を収集し、必要な部屋のインデックスを(部屋番号で)取得し、最終的にそのインデックスにある部屋がわかります。
 
-\![](<../images/dictionary - collect room in revit model.jpg>)
+![](<../images/dictionary - collect room in revit model.jpg>)
 
 > 1. モデル内のすべての部屋を収集します。
 > 2. 検索する部屋番号。
@@ -25,27 +25,27 @@ Revit 内で、そこに含まれるデータの一部を使って検索しよ�
 
 次に、ディクショナリを使用して、これを再作成してみましょう。まず、Revit モデル内のすべての部屋を収集する必要があります。
 
-\![](<../images/dictionary - exercise I - 01.jpg>)
+![](<../images/dictionary - exercise I - 01.jpg>)
 
 > 1. 操作する Revit カテゴリを選択します(ここでは部屋を操作します)。
 > 2. Dynamo に対して、これらの要素すべての収集を指示します。
 
 次に、このデータを検索するために使うキーを決定する必要があります。(キーに関する情報は、「[ディクショナリとは](1-what-is-a-dictionary.md)」セクションを参照してください)。
 
-\![](<../images/dictionary - exercise I - 02.jpg>)
+![](<../images/dictionary - exercise I - 02.jpg>)
 
 > 1. 使用するデータは部屋番号です。
 
 ここでは、指定されたキーと要素でディクショナリを作成します。
 
-\![](<../images/dictionary - exercise I - 03.jpg>)
+![](<../images/dictionary - exercise I - 03.jpg>)
 
 > 1. **Dictionary.ByKeysValues** ノードは、適切に入力されるとディクショナリを作成します。
 > 2. `Keys` は文字列であることが必要ですが、`values` はさまざまなオブジェクト タイプにすることができます。
 
 最終的に、部屋番号を使って、ディクショナリから部屋を取得することができます。
 
-\![](<../images/dictionary - exercise I - 04.jpg>)
+![](<../images/dictionary - exercise I - 04.jpg>)
 
 > 1. `String` は、ディクショナリからオブジェクトを検索するために使用しているキーです。
 > 2. **Dictionary.ValueAtKey** ノードで、ディクショナリからオブジェクトを取得します。
@@ -54,19 +54,19 @@ Revit 内で、そこに含まれるデータの一部を使って検索しよ�
 
 ディクショナリによるこの同じ方法を使用して、グループ化されたオブジェクトでディクショナリを作成することもできます。指定されたレベルですべての部屋を検索する場合、上のグラフを次のように修正できます。
 
-\![](<../images/dictionary - exercise II - 01.jpg>)
+![](<../images/dictionary - exercise II - 01.jpg>)
 
 > 1. キーとして部屋番号を使用するのではなく、パラメータの値(ここではレベル)を使用できます。
 
-\![](<../images/dictionary - exercise II - 02.jpg>)
+![](<../images/dictionary - exercise II - 02.jpg>)
 
 > 2. これで、部屋をそのレベルごとにグループ化することができます。
 
-\![](<../images/dictionary - exercise II - 03.jpg>)
+![](<../images/dictionary - exercise II - 03.jpg>)
 
 > 3. レベルごとにグループ化された要素を使用することで、共有のキー(固有のキー)をディクショナリのキーとして使用し、部屋のリストを要素として使用できるようになります。
 
-\![](<../images/dictionary - exercise II - 04.jpg>)
+![](<../images/dictionary - exercise II - 04.jpg>)
 
 > 4. 最終的に、Revit モデル内のレベルを使用して、ディクショナリ内で、そのレベルに配置されている部屋を検索できます。`Dictionary.ValueAtKey` は、レベル名を取得して、そのレベルの部屋オブジェクトを返します。
 
