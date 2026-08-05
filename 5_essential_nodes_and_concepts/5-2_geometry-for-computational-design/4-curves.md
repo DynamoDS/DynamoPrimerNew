@@ -20,13 +20,13 @@
 
 [線分](4-curves.md#lines)はポイントのセットで構成され、各ラインには最低 2 つのポイントがあります。Dynamo で線分を作成する最も一般的な方法の 1 つは、 ``Line.ByStartPointEndPoint` を使用して Dynamo で線分を作成することです。
 
-\![](<../images/curves - line by start point end point.jpg>)
+![](<../images/curves - line by start point end point.jpg>)
 
 ### NURBS 曲線
 
 [NURBS](4-curves.md#nurbs-+-polycurves) は、曲線やサーフェスを正確に表現するために使用されるモデルです。NURBS 曲線の作成には 2 つ方法があります。それぞれの方法で Dynamo で正弦曲線を作成し、結果を比較してみましょう。
 
-\![](<../images/curves - Nurbs Curves.jpg>)
+![](<../images/curves - Nurbs Curves.jpg>)
 
 > 1. _NurbsCurve.ByControlPoints_ ノードは、点のリストを制御点として使用します。
 > 2. _NurbsCurve.ByPoints_ ノードは、点のリストを使用して曲線を描画します。
