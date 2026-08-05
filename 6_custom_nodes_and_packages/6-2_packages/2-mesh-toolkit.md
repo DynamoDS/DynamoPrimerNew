@@ -2,7 +2,7 @@
 
 Dynamo Mesh Toolkit は、外部ファイル形式からメッシュを読み込む機能、Dynamo のジオメトリ オブジェクトからメッシュを作成する機能、頂点とインデックスからメッシュを手動で作成する機能を提供するライブラリです。このライブラリには、メッシュの変更や修復を行うためのツールや、製造処理で使用する水平方向のスライスを抽出するためのツールも用意されています。
 
-\![](<../../.gitbook/assets/meshToolkit case study 01.jpg>)
+\![](<../images/meshToolkit case study 01.jpg>)
 
 Dynamo Mesh Toolkit は、オートデスクによるメッシュ研究の一環として開発されているため、今後も拡張を続けていきます。このツールキットには、頻繁に新しいメソッドが追加される予定になっています。コメント、バグの報告、新機能の提案については、お気軽に Dynamo チームまでご連絡ください。
 
@@ -14,7 +14,7 @@ Dynamo Mesh Toolkit は、オートデスクによるメッシュ研究の一環
 
 Dynamo で、上部メニュー バーの[パッケージ] > [Package Manager]に移動します。検索フィールドに「MeshToolkit」と入力します。スペースを入れずに 1 つの単語として入力してください。[インストール]をクリックし、確認を承諾してダウンロードを開始します。非常に簡単です。
 
-<figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
 ## 演習: メッシュを交差させる
 
@@ -28,19 +28,19 @@ Dynamo で、上部メニュー バーの[パッケージ] > [Package Manager]�
 
 最初に、_Dynamo で Mesh-Toolkit_Intersect-Mesh.dyn_ を開きます。
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 01.jpg>)
+\![](<../images/meshToolkit case study - exercise 01.jpg>)
 
 > 1. **File Path** ノードで、読み込むメッシュ ファイル(_stanford_bunny_tri.obj_)の場所を指定します。サポートされるファイル タイプは、.mix と .obj です。
 > 2. **Mesh.ImportFile** ノードに File Path ノードを接続して、メッシュを読み込みます。
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 02.jpg>)
+\![](<../images/meshToolkit case study - exercise 02.jpg>)
 
 > 1. **Point.ByCoordinates** ノードで、点を作成します。この点が、円弧の中心になります。
 > 2. **Arc.ByCenterPointRadiusAngle** ノードで、上記の点を中心とする円弧を作成します。この曲線を使用して、一連の面が配置されます。 __設定は次のとおりです。__ `radius: 40, startAngle: -90, endAngle:0`
 
 円弧に沿って方向付けられた一連の平面を作成します。
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 03.jpg>)
+\![](<../images/meshToolkit case study - exercise 03.jpg>)
 
 > 1. **Code Block** ノードで、0 から 1 までの 25 個の数値を入力します。
 > 2. **Curve.PointAtParameter** ノードの _curve_ 入力に Arc.ByCenterPointRadiusAngle ノードの Arc 出力を接続し、_param_ 入力に Code Block ノードの出力を接続します。これにより、曲線に沿って一連の点が抽出されます。
@@ -49,7 +49,7 @@ Dynamo で、上部メニュー バーの[パッケージ] > [Package Manager]�
 
 次に、これらの平面を使用してメッシュを交差させます。
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 04.jpg>)
+\![](<../images/meshToolkit case study - exercise 04.jpg>)
 
 > 1. **Mesh.Intersect** ノードで、読み込んだメッシュと平面を交差させ、一連のポリカーブの輪郭線を作成します。ノードを右クリックして、レーシングを最長に設定します。
 > 2. **PolyCurve.Curves** ノードで、ポリカーブを曲線のフラグメントに分割します。
@@ -58,12 +58,12 @@ Dynamo で、上部メニュー バーの[パッケージ] > [Package Manager]�
 
 続行する前に、Mesh.ImportFile、Curve.EndPoint、Plane.ByOriginNormal および Arc.ByCenterPointRadiusAngle など、一部のノードのプレビューをオフにして、結果を見やすくします。
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 05.jpg>)
+\![](<../images/meshToolkit case study - exercise 05.jpg>)
 
 > 1. **Surface.ByPatch** ノードで、各輪郭線に対してサーフェスを作成して、メッシュの「スライス」を作成します。
 
 2 つ目のスライスの集合を追加すると、2 種類のスライスが格子のように表示されます。
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 06.jpg>)
+\![](<../images/meshToolkit case study - exercise 06.jpg>)
 
 メッシュを使用すると、交差の演算がソリッドよりも高速になることがわかります。この演習で紹介したようなワークフローには、メッシュが適しています。

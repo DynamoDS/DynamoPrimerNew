@@ -17,7 +17,7 @@ Dynamo in Forma は、現時点では早期アクセス用のオープン ベー
 1. Forma サイトで、左側のサイドバーの[**Extensions**]に移動し、[**Add extension**]をクリックします。これにより、Autodesk App Store の Web サイトが開きます。
 2. Dynamo を検索し、Dynamo Player Beta を追加します。免責事項を読んで、[**Agree**]をクリックします。
 
-<figure><img src="../.gitbook/assets/install-player.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/install-player.png" alt=""><figcaption></figcaption></figure>
 
 3. これで、Extensions の中に Dynamo Player が加わりました。これをクリックして開きます。
 4. これで、Dynamo Player を使用する準備が整いました。
@@ -67,11 +67,11 @@ Dynamo をインストールすると、Forma で使用できるようになり�
 1. Forma サイトで、左側のサイドバーの[**Extensions**]に移動し、[**Add extension**]をクリックします。これにより、Autodesk App Store の Web サイトが開きます。
 2. Dynamo を検索し、Dynamo Player Beta を追加します。免責事項を読んで、[**Agree**]をクリックします。
 
-<figure><img src="../.gitbook/assets/install-player.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/install-player.png" alt=""><figcaption></figcaption></figure>
 
 3. これで、Extensions の中に Dynamo Player が加わりました。これをクリックして開きます。
 4. 上部の[Desktop]をクリックして、Dynamo Desktop にアクセスします。
 
-<figure><img src="../.gitbook/assets/dynamo-desktop.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/dynamo-desktop.png" alt=""><figcaption></figcaption></figure>
 
 5. これで、Dynamo Player を使用する準備が整いました。Dynamo で既にグラフを開いている場合は、[**Connected graph**]の下の[Open]をクリックするだけで、Player にグラフが表示されます。

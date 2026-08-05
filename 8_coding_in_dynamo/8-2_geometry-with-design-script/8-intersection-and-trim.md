@@ -15,7 +15,7 @@ _Intersect_ メソッドは Dynamo のジオメトリのすべてのピース上
 
 次の非常に簡単な例では、平面と NURBS 曲面の交差を示しています。交差によって NURBS 曲線の配列が生成され、これを他の NURBS 曲線のように使用できます。
 
-![](../../.gitbook/assets/IntersectionAndTrim_01.png)
+![](../images/IntersectionAndTrim_01.png)
 
 ```js
 // python_points_5 is a set of Points generated with
@@ -42,12 +42,12 @@ _Trim_ メソッドは Intersect メソッドに非常によく似ており、�
 | ----------- | -------------- | ----- | ----- | ------- | ----- |
 | _対象:_ 曲線 | 可            | 不可    | 不可    | 不可      | 不可    |
 | ポリゴン     | -              | 不可    | はい   | 不可      | 不可    |
-| サーフェス     | -              | 可   | あり   | あり     | 可   |
-| ソリッド       | -              | -     | 可   | あり     | 可   |
+| サーフェス     | -              | 可   | 可   | 可     | 可   |
+| ソリッド       | -              | -     | 可   | 可     | 可   |
 
 _Trim_ メソッドについては、「選択」点が必要であることに注意が必要です。この点によってどのジオメトリを破棄してどの部分を保持するかが決まります。Dynamo は、選択点に最も近いトリムされたジオメトリを見つけて破棄します。
 
-![](../../.gitbook/assets/IntersectionAndTrim_02.png)
+![](../images/IntersectionAndTrim_02.png)
 
 ```js
 // python_points_5 is a set of Points generated with

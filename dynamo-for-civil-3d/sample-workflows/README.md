@@ -6,4 +6,4 @@
 
 さらに、これらのサンプルは、強力なグラフを構築するための実績のあるベスト プラクティスを具体化しています。サンプルを使用して作業する際に、強力で柔軟性があり、保守が可能なグラフを構築する方法についてのアイデアについて、「[9_best_practices](../../9\_best\_practices/ "mention")」セクションを読むことをお勧めします。
 
-<figure><img src="../../.gitbook/assets/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>

@@ -1,6 +1,6 @@
 # サービスの配置
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Dynamo (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Dynamo.gif" alt=""><figcaption></figcaption></figure>
 
 一般的な住宅開発のエンジニアリング設計には、汚水管、雨水排水、飲料水などの地下ユーティリティの使用が含まれます。この例では、Dynamo を使用して、配水本管から特定の区画にサービス接続を描画する方法を示します。これは、サービス接続を必要とするすべての区画で一般的であり、すべてのサービスを配置するには非常に面倒な作業が発生します。Dynamo を使用すると、必要なジオメトリを正確に自動的に描画したり、現地の関係機関の標準に合わせて調整できる柔軟な入力を提供したりすることで、プロセスをスピードアップすることができます。
 
@@ -46,7 +46,7 @@
 
 {% hint style="info" %} Dynamo の曲線ジオメトリを初めて使用する場合は、「 [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention") 」セクションを参照してください。 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Civil 3D からオブジェクトを取得し、すべてを単一のポリカーブに結合する</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_DistributionMain.png" alt=""><figcaption><p>Civil 3D からオブジェクトを取得し、すべてを単一のポリカーブに結合する</p></figcaption></figure>
 
 ### 区画線ジオメトリを取得する
 
@@ -54,7 +54,7 @@
 
 また、発生する可能性のある潜在的な問題にも対処する必要があります。区画線には始点と終点があります。つまり、方向があります。グラフで一貫した結果を生成するには、すべての区画線の方向が一貫している必要があります。この条件はグラフ ロジックで直接考慮できるため、グラフの弾力性が向上します。
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Selection (2).png" alt=""><figcaption><p>区画線を選択し、正しい方向を向くようにする</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Selection.png" alt=""><figcaption><p>区画線を選択し、正しい方向を向くようにする</p></figcaption></figure>
 
 > 1. 区画線の始点と終点を取得します。
 > 2. 各点から配水本管までの距離を測定し、どちらの距離が大きいかを特定します。
@@ -66,13 +66,13 @@
 
 {% hint style="info" %} 座標系を初めて使用する場合は、「 [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") 」セクションを参照してください。 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>サービス メーターの挿入点を作成する</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>サービス メーターの挿入点を作成する</p></figcaption></figure>
 
 ### 接続点を取得する
 
 次に、サービス メーターの位置に最も近い点を配水本管上で取得する必要があります。これにより、サービス接続が配水本管に対して常に垂直になるようにモデル空間にサービス接続を描画できます。**Geometry.ClosestPointTo** ノードは最適な対処法です。
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_GetPerpendicularPoints (1).png" alt="" width="339"><figcaption><p>配水本管上の垂直ポイントを取得する</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_GetPerpendicularPoints.png" alt="" width="339"><figcaption><p>配水本管上の垂直ポイントを取得する</p></figcaption></figure>
 
 > 1. これは配水本管のポリカーブです
 > 2. これらは、サービス メーターの挿入点です
@@ -81,29 +81,29 @@
 
 最後の手順は、モデル空間にオブジェクトを実際に作成することです。以前に生成した挿入点を使用してブロック参照を作成し、次に、配水本管上のポイントを使用してをサービス接続に線分を描画します。
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_CreateObjects.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_CreateObjects.png" alt=""><figcaption></figcaption></figure>
 
 ### 結果
 
 グラフを実行すると、モデル空間に新しいブロック参照とサービス接続線が表示されます。入力をいくつか変更して、すべてが自動的に更新されるのを確認してください。
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Dynamo (1).gif" alt=""><figcaption><p>Dynamo で入力パラメータを調整し、Civil 3D で結果を即座に確認する</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Dynamo.gif" alt=""><figcaption><p>Dynamo で入力パラメータを調整し、Civil 3D で結果を即座に確認する</p></figcaption></figure>
 
 ### ボーナス: 順次配置を有効にする
 
 1 つの区画線にオブジェクトを配置した後に、別の区画線を選択すると、オブジェクトが「移動」することがあります。
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Binding.gif" alt=""><figcaption><p>オブジェクト バインドがオンの場合の動作</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Binding.gif" alt=""><figcaption><p>オブジェクト バインドがオンの場合の動作</p></figcaption></figure>
 
 これは Dynamo の既定の動作で、多くの場合に非常に便利です。ただし、複数のサービス接続を順番に配置し、元の接続を変更するのではなく、Dynamo に実行ごとに新しいオブジェクトを作成させたい場合があるかもしれません。この動作は、オブジェクト バインドの設定を変更することでコントロールできます。
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Dynamo のオブジェクト バインド設定</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Dynamo のオブジェクト バインド設定</p></figcaption></figure>
 
 {% hint style="info" %} 詳細については、[object-binding.md](../../advanced-topics/object-binding.md "mention") セクションを参照してください。 {% endhint %}
 
 この設定を変更すると、Dynamo は各実行で作成されるオブジェクトを「忘れる」ようになります。次に、**Dynamo プレーヤ**を使用してオブジェクト バインドをオフに設定した状態でグラフを実行する例を示します。
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Dynamo プレーヤを使用してグラフを実行し、Civil 3D で結果を確認する</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Player.gif" alt=""><figcaption><p>Dynamo プレーヤを使用してグラフを実行し、Civil 3D で結果を確認する</p></figcaption></figure>
 
 {% hint style="info" %} Dynamo プレーヤを初めて使用する場合は、「 [dynamo-player.md](../../dynamo-player.md "mention") 」セクションを参照してください。 {% endhint %}
 

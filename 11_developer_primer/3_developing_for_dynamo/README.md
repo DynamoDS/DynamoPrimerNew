@@ -2,7 +2,7 @@
 
 経験のレベルに関係なく、Dynamo プラットフォームはすべてのユーザが開発に参加できるように設計されています。さまざまな能力やスキル レベルを対象とする開発オプションがあり、それぞれの目的によって利点と欠点があります。ここでは開発オプションの概要と、その選び方について説明します。
 
-![3 つの開発環境](../../.gitbook/assets/developing-for-dynamo.png)
+![3 つの開発環境](../images/developing-for-dynamo.png)
 
 > 次の 3 つの開発環境があります: Visual Studio、Python Editor、Code Block DesignScript
 
@@ -22,7 +22,7 @@ Dynamo の開発オプションは、主に Dynamo 向け_の_開発と、Dynamo
 
 次の説明では、Zero-Touch ノードおよび NodeModel ノードの開発環境として Visual Studio を使用します。
 
-![Visual Studio インタフェース](../../.gitbook/assets/vs-devenv.jpg)
+![Visual Studio インタフェース](../images/vs-devenv.jpg)
 
 > これから開発するプロジェクトがある Visual Studio インタフェース
 
@@ -42,7 +42,7 @@ Dynamo の開発オプションは、主に Dynamo 向け_の_開発と、Dynamo
 
 Dynamo ワークスペースでの開発は、即座にフィードバックが得られる強力な手段です。
 
-![Python ノードを使用して Dynamo ワークスペースで開発する](../../.gitbook/assets/python-example.jpg)
+![Python ノードを使用して Dynamo ワークスペースで開発する](../images/python-example.jpg)
 
 > Python ノードを使用して Dynamo ワークスペースで開発する
 
@@ -54,7 +54,7 @@ Dynamo の開発オプションは、カスタマイズの必要性に伴う複�
 
 これらは、Dynamo のビジュアル プログラミング環境でコードを書く場合の簡単なオプションです。Dynamo のビジュアル プログラミング ワークスペースから、Python や DesignScript にアクセスでき、カスタム ノード内に複数のノードを含めることができます。
 
-![Code Block、Python スクリプト、およびカスタム ノード](../../.gitbook/assets/Development-Icons.png)
+![Code Block、Python スクリプト、およびカスタム ノード](../images/Development-Icons.png)
 
 これらの方法を使用すると、次の操作が可能になります。
 
@@ -66,7 +66,7 @@ Dynamo の開発オプションは、カスタマイズの必要性に伴う複�
 
 Zero-Touch とは、C# ライブラリを読み込むための単純なポイント アンド クリック操作のことです。Dynamo は、`.dll` のパブリック メソッドを読み取って Dynamo ノードに変換します。Zero-Touch ノードを使用して、独自のカスタム ノードおよびパッケージを開発できます。
 
-![Zero-Touch ノード](../../.gitbook/assets/ZTImport.png)
+![Zero-Touch ノード](../images/ZTImport.png)
 
 この方法では、次の操作が可能になります。
 
@@ -78,7 +78,7 @@ Zero-Touch とは、C# ライブラリを読み込むための単純なポイン
 
 これらのノードは、Dynamo の構造をさらに一歩前進させたものです。これらは `NodeModel` クラスに基づいて C# で記述されます。この方法は最も柔軟で強力ですが、ノードのほとんどの要素を明示的に定義する必要があることと、関数は別のアセンブリに存在する必要があります。
 
-![NodeModel 派生ノード ](../../.gitbook/assets/Development-Icons-NodeModel.png)
+![NodeModel 派生ノード ](../images/Development-Icons-NodeModel.png)
 
 この方法では、次の操作が可能になります。
 
@@ -93,13 +93,13 @@ Dynamo は定期的に更新されるため、パッケージが使用する API
 
 API の変更は、[Dynamo GitHub Wiki](https://github.com/DynamoDS/Dynamo/wiki/API-Changes) で確認できます。ここでは DynamoCore、ライブラリ、ワークスペースの変更点について調べることができます。
 
-![Dynamo API の変更点に関するドキュメント](../../.gitbook/assets/api-changes.png)
+![Dynamo API の変更点に関するドキュメント](../images/api-changes.png)
 
 今後予定されている重要な変更の例として、バージョン 2.0 でファイル形式が XML から JSON に移行することが挙げられます。NodeModel 派生ノードには、[JSON コンストラクタ](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node)が必要になります。これがない場合、Dynamo 2.0 で開きません。
 
 現在の Dynamo API ドキュメントでは、コアな機能についてカバーしています。[http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI)
 
-![API ドキュメント](../../.gitbook/assets/api-docs.jpg)
+![API ドキュメント](../images/api-docs.jpg)
 
 ### パッケージのバイナリを配布する権限 <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 

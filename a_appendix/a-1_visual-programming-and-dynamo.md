@@ -42,7 +42,7 @@
 
 > 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> すべてのサンプル ファイルの一覧については、付録を参照してください。
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../.gitbook/assets/Visual Programming - Circle Through Point.dyn" %}
 
@@ -52,7 +52,7 @@
 
 **ビジュアル プログラミング:**
 
-\![](<../.gitbook/assets/visualProgramming (2).png>)
+![](<images/visualProgramming.png>)
 
 **テキスト プログラム:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 このアルゴリズムの結果は、次のようになります。
 
-\![](<../.gitbook/assets/visualProgramming (1).png>)
+![](<images/visualProgramming.png>)
 
 このように、ビジュアル プログラミングには、視覚的に理解しやすいという特徴があります。そのため、最初から簡単にプログラミングを実行することができ、設計者にとっても便利な仕様になっています。Dynamo はビジュアル プログラミングの範疇に分類されますが、アプリケーション内でテキストを使用してプログラミングを行うこともできます。これについては、後で説明します。

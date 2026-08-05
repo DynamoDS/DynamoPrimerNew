@@ -19,11 +19,11 @@ Dynamo のワークフローのデモを実際に見て確認できるよう、�
 
 * [パラメータを使用する花瓶](../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.md)
 
-![](../.gitbook/assets/vase1.gif)
+![](images/vase1.gif)
 
 * [アトラクタ ポイント](../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.md)
 
-\![](<../.gitbook/assets/attractor1 (1).gif>)
+![](<images/attractor1.gif>)
 
 {% hint style="info" %} Dynamo に関するトピックについては、後の章で詳しく説明します。また、トピックに合わせた演習も用意しています。**演習** は、通常各ページの最後のセクションにあります。 {% endhint %}
 
@@ -31,7 +31,7 @@ Dynamo のワークフローのデモを実際に見て確認できるよう、�
 
 現在の Dynamo があるのは、熱心なユーザと開発者のコミュニティによって支えられてきたからです。開発チームの[ブログ](http://dynamobim.org/blog/)を読む、作品をギャラリーに投稿する、[フォーラム](https://forum.dynamobim.com)で Dynamo について議論するなどの方法で、ぜひこのコミュニテイに参加してください。
 
-![The Forum](../.gitbook/assets/02-Community.png)
+![The Forum](images/02-Community.png)
 
 ### プラットフォーム
 
@@ -39,6 +39,6 @@ Dynamo は、設計者向けのビジュアル プログラミング ツール�
 
 プロジェクトのソース コードはオープン ソースとして公開されているため、個々のニーズに合わせて機能を拡張することができます。GitHub のプロジェクトにアクセスして、ユーザによる Dynamo のカスタマイズ作業の進行状況を確認してください。
 
-![Dynamo リポジトリ](../.gitbook/assets/03-TheRepo.png)
+![Dynamo リポジトリ](images/03-TheRepo.png)
 
 > プロジェクトにアクセスしてプロジェクトをフォークし、Dynamo をニーズに合わせて拡張することができます。

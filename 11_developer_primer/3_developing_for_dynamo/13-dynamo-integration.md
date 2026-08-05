@@ -377,7 +377,7 @@ Dynamo はライブ プログラミング 環境であり、グラフへの変�
 
 ***
 
-![壁を作成](../../.gitbook/assets/creates_walls.png)
+![壁を作成](../images/creates_walls.png)
 
 #### トレースと要素バインドの比較
 
@@ -466,15 +466,15 @@ TraceableId クラスは、トレースに保存する `TraceExampleItem` ごと
 
 1 つの `TraceExampleItem` を作成するグラフを 2 回連続して実行するフローは次のようになります。
 
-![1 回目の呼び出し](../../.gitbook/assets/Trace-first-call.png)
+![1 回目の呼び出し](../images/Trace-first-call.png)
 
-![2 回目の呼び出し](../../.gitbook/assets/Trace-second-call.png)
+![2 回目の呼び出し](../images/Trace-second-call.png)
 
 同じ考え方を、より現実的な DynamoRevit ノードの使用例である次の例に示します。
 
 #### トレース図
 
-![トレースのステップ](../../.gitbook/assets/trace_diagram.png) ![トレースのフロー](../../.gitbook/assets/trace_alt_diagram.png)
+![ステップをトレース](../images/trace_diagram.png) ![フローをトレース](../images/trace_alt_diagram.png)
 
 #### 注:
 
@@ -560,7 +560,7 @@ Dynamo の最新バージョンでは、TLS (スレッド ローカル ストレ
 
 * Dynamo 3.0 より前のバージョンで保存されたトレース オブジェクトは SOAP を使用して保存されるため、新しいバージョンではサポートされていません。以前に保存した要素バインド データは無視され、Dynamo 3.0 以降のバージョンでは次のメッセージが表示されます。要素バインド データは、次回ワークスペースを実行して保存したときに保存されます。
 
-![要素バインドの互換性](../../.gitbook/assets/element_binding_compatibility_message.jpg)
+![要素バインドの互換性](../images/element_binding_compatibility_message.jpg)
 
 #### ElementBinding は既定でオンにする必要がありますか?
 
@@ -574,7 +574,7 @@ Dynamo の最新バージョンでは、TLS (スレッド ローカル ストレ
 
 DynamoRevit には複数の `Selection` ノードがあります。これらは少なくとも 2 つのグループに分けることができます。
 
-![Revit 選択ノード](../../.gitbook/assets/revitSelectionNodes.png)
+![Revit 選択ノード](../images/revitSelectionNodes.png)
 
 1.  ユーザ UI の選択:
 
@@ -602,7 +602,7 @@ DynamoRevit には複数の `Selection` ノードがあります。これらは�
 
 D4C のワークフローは、上記で説明した Revit の場合と非常によく似ています。ここでは、D4C の典型的な 2 つの選択ノードのセットを紹介します。
 
-![Civil 3D 選択ノード](../../.gitbook/assets/civilSelectionNodes.png)
+![Civil 3D 選択ノード](../images/civilSelectionNodes.png)
 
 ### 指摘事項:
 
@@ -613,9 +613,9 @@ D4C のワークフローは、上記で説明した Revit の場合と非常に
 
 ### データ フロー図
 
-![選択フロー](../../.gitbook/assets/selectModelElement.png)
+![選択フロー](../images/selectModelElement.png)
 
-![選択フロー 2](../../.gitbook/assets/selectElementFace.png)
+![選択フロー 2](../images/selectElementFace.png)
 
 ### 技術的な実装: (上の図を参照):
 
@@ -624,7 +624,7 @@ D4C のワークフローは、上記で説明した Revit の場合と非常に
 * `BuildOutputAST` メソッドの実装: このメソッドは、将来のノードの実行時に実行される AST を返す必要があります。選択ノードの場合は、要素 ID から要素またはジオメトリを返す必要があります。[https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * `BuildOutputAST` の実装は、`NodeModel` / UI ノードの実装で最も難しい部分の 1 つです。できるだけ多くのロジックを C# 関数に組み込み、AST 関数呼び出しノードを AST に埋め込むのがベストです。ここで `node` は抽象構文ツリーの AST ノードであり、Dynamo グラフのノードではないことに注意してください。
 
-![選択フロー 2](../../.gitbook/assets/selectionAST.png)
+![選択フロー 2](../images/selectionAST.png)
 
 * シリアル化について
   *   これらは明示的な `NodeModel` 派生型(ZeroTouch ではない)であるため、.dyn ファイルからノードを逆シリアル化する際に使用される[JsonConstructor]を実装する必要もあります。

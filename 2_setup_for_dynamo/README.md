@@ -4,15 +4,15 @@
 
 Dynamo は、アクティブなオープンソース開発プロジェクトです。[Dynamo を利用できるソフトウェアの一覧](http://dynamobim.org/download/)をご確認いただけます。
 
-\![](<../.gitbook/assets/setup for dynamo - dynamo revit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo forma.png>)
+\![](<images/setup for dynamo - dynamo revit.png>) \![](<images/setup for dynamo - dynamo civil 3D.png>) \![](<images/setup for dynamo - dynamo alias design.png>) \![](<images/setup for dynamo - dynamo formit.png>) \![](<images/setup for dynamo - dynamo advance steel.png>) \![](<images/setup for dynamo - dynamo robot structural analysis.png>) \![](<images/setup for dynamo - dynamo forma.png>)
 
 ### 拡張機能としての Dynamo を起動する
 
 Dynamo は、**Revit3D**、**FormIt**、**Civil3D** などのソフトウェアに事前にインストールされています。
 
-使用を開始するには、ツールバー パネルから起動します。使用しているソフトウェアによって異なりますが、起動アイコンは通常、[メニュー] > [**管理**]タブにあります。Dynamo アイコン ![](../.gitbook/assets/dynamoCore-halfSize.png) をクリックして起動します。
+使用を開始するには、ツールバー パネルから起動します。使用しているソフトウェアによって異なりますが、起動アイコンは通常、[メニュー] > [**管理**]タブにあります。Dynamo アイコン ![](images/dynamoCore-halfSize.png) をクリックして起動します。
 
-\![](<../.gitbook/assets/launch dynamo from revit (1).jpg>)
+![](images/launchdynamofromrevit.jpg)
 
 特定のソフトウェアで Dynamo を使用する方法の詳細については、次のセクションを参照してください。
 
@@ -27,11 +27,11 @@ Dynamo は、**Revit3D**、**FormIt**、**Civil3D** などのソフトウェア�
 
 Dynamo アプリケーションは、[Dynamo の Web サイト](http://dynamobim.com)から入手できます。公式の過去またはプレリリース版のバージョンは、両方ともダウンロード ページから入手できます。「[Dynamo を取得](http://dynamobim.org/download/)」ページにアクセスし、[**ダウンロード**]をクリックして公式リリース バージョンをダウンロードしてください。
 
-\![](<../.gitbook/assets/image (4).png>)
+![](<images/image.png>)
 
 過去のリリースまたは「ブリーディング エッジ」開発リリースをお探しの場合は、同じページの下部セクションにすべてのバージョンがあります。
 
-\![](<../.gitbook/assets/03-02 Dynamo Sandbox All builds.png>)
+\![](<images/03-02 Dynamo Sandbox All builds.png>)
 
 {% hint style="info" %} 「ブリーディング エッジ」開発には、まだ完全にテストされていない新機能および実験的機能が含まれている可能性があるため、不安定になる可能性があります。これを使用して、バグや問題を発見したら、問題をチームに報告してアプリケーションの改善にご協力ください。
 
@@ -45,21 +45,21 @@ Dynamo アプリケーションは、[Dynamo の Web サイト](http://dynamobim
 
 ZIP ファイルを右クリックして、[**すべて展開**]を選択します。
 
-\![](<../.gitbook/assets/03-03 Extract zip file.png>)
+\![](<images/03-03 Extract zip file.png>)
 
 すべてのファイルを解凍する場所を選択します。
 
-\![](<../.gitbook/assets/03-04 Extract destination folder (1).png>)
+\![](<images/03-04 Extract destination folder.png>)
 
 #### 起動する
 
 宛先フォルダで、**DynamoSandbox.exe** をダブルクリックして起動します。
 
-\![](<../.gitbook/assets/03-05 Dynamo exe.jpg>)
+\![](<images/03-05 Dynamo exe.jpg>)
 
 次のように、DynamoSandbox の起動画面が表示されます。
 
-\![](<../.gitbook/assets/03-06 Dynamo startup screen.png>)
+\![](<images/03-06 Dynamo startup screen.png>)
 
 これで、DynamoSandbox を使用するための設定が完了しました。
 

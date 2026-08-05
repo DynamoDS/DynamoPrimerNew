@@ -2,7 +2,7 @@
 
 Dynamo には豊富な機能が用意されており、Dynamo の機能を大幅に拡張できる広範なパッケージ ライブラリも保持されています。パッケージは、カスタム ノードまたは追加機能のコレクションです。Dynamo Package Manager は、オンラインでパブリッシュされたパッケージをダウンロードするためのコミュニティ ポータルです。これらのツールセットは、Dynamo の基本機能を拡張するためにサード パーティによって開発されたもので、すべてのユーザがアクセスでき、ボタンをクリックするだけでダウンロードすることができます。
 
-![Package Manager サイト](../../.gitbook/assets/dpm.jpg)
+![Package Manager サイト](../images/dpm.jpg)
 
 Dynamo のようなオープンソース プロジェクトは、このようなコミュニティによって成長しています。サード パーティの専任開発者の取り組みにより、Dynamo はさまざまな業界のワークフローで採用されています。そのため、Dynamo チームは、パッケージの開発とパブリッシュの合理化を連携して進めています。これについては、以降のセクションで詳しく説明します。
 
@@ -12,21 +12,21 @@ Dynamo のようなオープンソース プロジェクトは、このような
 
 Dynamo で、_[パッケージ] > [Package Manager...]_ に移動します。
 
-<figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
 [検索]バーで、「quads from rectangular grid」を検索してみましょう。しばらくすると、この検索クエリーに一致するパッケージがすべて表示されます。一致する名前を持つ最初のパッケージを選択します。
 
 [インストール]をクリックしてこのパッケージをライブラリに追加し、確認を承諾します。以上です。
 
-<figure><img src="../../.gitbook/assets/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
 
 Dynamo ライブラリに「buildz」という名前の新しいグループが表示されます。この名前は、パッケージの開発者を参照して付けられます。また、カスタム ノードはこのグループ内に配置されます。このグループは、すぐに使用することができます。
 
-\![](<../../.gitbook/assets/package introduction - installing a package 03.jpg>)
+\![](<../images/package introduction - installing a package 03.jpg>)
 
 **Code Block** ノードを使用して長方形のグリッドをすばやく定義し、その結果を **Polygon.ByPoints** ノードに、続いて **Surface.ByPatch** ノードに出力して、作成した長方形のパネルのリストを表示します。
 
-\![](<../../.gitbook/assets/package introduction - installing a package 04.jpg>)
+\![](<../images/package introduction - installing a package 04.jpg>)
 
 ### パッケージ フォルダをインストールする - DynamoUnfold
 
@@ -36,23 +36,23 @@ Dynamo ライブラリに「buildz」という名前の新しいグループが�
 
 今回は、_「DynamoUnfold」_ という、スペースを入れない 1 つの単語を検索します。パッケージが表示されたら、[インストール]をクリックして Dynamo Unfold をダウンロードし、Dynamo ライブラリに追加します。
 
-<figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/unfold.png" alt=""><figcaption></figcaption></figure>
 
 Dynamo ライブラリに _DynamoUnfold_ グループが表示されます。このグループに、複数のカテゴリとカスタム ノードが含まれているのがわかります。
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 02.jpg>)
+\![](<../images/package introduction - installing package folder 02.jpg>)
 
 ここで、パッケージのファイル構造を確認しましょう。
 
 1. まず、[パッケージ] > [Package Manager] > [インストール済みパッケージ]に移動します。
-2. DynamoUnfold の横にあるオプション メニュー <img src="../../.gitbook/assets/package introduction - vertical dots menu.png" alt="" data-size="line"> を選択します。
+2. DynamoUnfold の横にあるオプション メニュー <img src="../images/package introduction - vertical dots menu.png" alt="" data-size="line"> を選択します。
 3. 次に、[ルート フォルダを表示]をクリックして、このパッケージのルート フォルダを開きます。
 
-<figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/view-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 この操作により、パッケージのルート フォルダが表示されます。このルート フォルダには、3 つのフォルダと 1 つのファイルが格納されています。
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 05.jpg>)
+\![](<../images/package introduction - installing package folder 05.jpg>)
 
 > 1. _bin_ フォルダには .dll ファイルが格納されます。この Dynamo パッケージは Zero-Touch を使用して開発されているため、カスタム ノードはこのフォルダに格納されます。
 > 2. _dyf_ フォルダにはカスタム ノードが格納されます。このパッケージは Dynamo カスタム ノードを使用して開発されたものではないため、このフォルダには格納されません。
@@ -63,11 +63,11 @@ extra フォルダを開くと、インストール時にダウンロードさ�
 
 ここで、SphereUnfold ファイルを開いてみましょう。
 
-![](../../.gitbook/assets/rd2.jpg)
+![](../images/rd2.jpg)
 
 ファイルを開いてからソルバで[実行]をクリックすると、展開された球形が表示されます。これらのサンプル ファイルは、新しい Dynamo パッケージの使用方法を理解するのに役立ちます。
 
-\![](<../../.gitbook/assets/packageintroduction-installingpackagefolder07 (1).jpg>)
+![](<../images/packageintroduction-installingpackagefolder07.jpg>)
 
 ### パッケージ情報を参照、表示する
 
@@ -81,13 +81,13 @@ Package Manager では、[パッケージの検索]タブで並べ替えとフ�
 
 Dynamo パッケージの仕組みを理解する別の方法として、[Dynamo Package Manager](http://dynamopackages.com) の Web サイトを参照する方法もあります。ここでは、パッケージ作成者が提供するパッケージの依存関係とホスト/バージョンの互換性情報を確認することができます。また、Dynamo Package Manager からパッケージ ファイルをダウンロードすることもできますが、Dynamo から直接ダウンロードした方が簡単です。
 
-![](../../.gitbook/assets/dpm2.jpg)
+![](../images/dpm2.jpg)
 
 ### ローカルでのパッケージ ファイルの保存場所
 
 パッケージ ファイルの保存場所を確認する場合は、一番上のナビゲーションで[Dynamo] > [基本設定] > [パッケージ設定] > [ノードとパッケージ ファイルの場所]をクリックします。ここから現在のルート フォルダを見つけることができます。
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 08.png>)
+\![](<../images/package introduction - installing package folder 08.png>)
 
 既定では、パッケージは _C:/Users/[ユーザ名]/AppData/Roaming/Dynamo/[Dynamo バージョン]_ というフォルダ パスにインストールされます。
 

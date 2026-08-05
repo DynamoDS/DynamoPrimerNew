@@ -2,12 +2,12 @@
 
 Dynamo 2.0 では、これまでに説明したディクショナリのノードだけでなく、コード ブロックにおけるディクショナリの新機能も導入されました。
 
-ノードについて次のような、または DesignScript ベースの表現のような構文を使用できます。
+次のような構文、つまりノードの DesignScript ベースの表現を使用できます。
 
-![](../../.gitbook/assets/dictionariesincb-syntax\(1\).jpg)
+\![](<../images/5-5/3/dictionaries in cb - syntax.jpg>)
 
 ディクショナリは Dynamo のオブジェクト タイプであるため、次のアクションを実行できます。
 
-\![](<../../.gitbook/assets/dictionaries in cb - actions with code blocks.jpg>)
+\![](<../images/dictionaries in cb - actions with code blocks.jpg>)
 
 このような操作は、Revit データを文字列に関連付ける場合に特に便利です。次に、Revit での使用例を見てみましょう。

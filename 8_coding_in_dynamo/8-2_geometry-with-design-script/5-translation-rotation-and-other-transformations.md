@@ -6,7 +6,7 @@
 
 最も単純な幾何学的変換は移動であり、オブジェクトを X、Y、Z 軸方向に指定した単位の数だけ動かします。
 
-![](../../.gitbook/assets/Transformations_01.png)
+![](../images/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -22,7 +22,7 @@ p2 = p.Translate(10, -20, 50);
 
 Dynamo 内のすべてのオブジェクトは、オブジェクト名の末尾に _.Translate_ メソッドを追加することで移動できますが、より複雑な変換では、基礎となる座標系から新しい座標系にオブジェクトを変換する必要があります。たとえば、オブジェクトを X 軸を中心にして 45 度回転させるには、回転していない既存の座標系から、_.Transform_ メソッドで X 軸を中心にして 45 度回転した座標系にオブジェクトを移動します。
 
-![](../../.gitbook/assets/Transformations_02.png)
+![](../images/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -42,7 +42,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 移動と回転に加えて、スケール変更やせん断変形された座標系も作成できます。座標系のスケールは _.Scale_ メソッドを使用して変更できます。
 
-![](../../.gitbook/assets/Transformations_03.png)
+![](../images/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -58,7 +58,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 せん断変形された座標系は、非直交ベクトルを CoordinateSystem コンストラクタに入力することで作成されます。
 
-![](../../.gitbook/assets/Transformations_04.png)
+![](../images/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(

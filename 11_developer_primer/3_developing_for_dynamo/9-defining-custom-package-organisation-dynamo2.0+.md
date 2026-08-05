@@ -112,7 +112,7 @@ MyZTLibrary/Utilities/doubleValue
 **警告!**\
 ノード名またはカテゴリにドット表記を使用すると、ネストされたサブカテゴリが追加されます。`.` は、追加の階層を決定するための区切り文字として機能します。これは、Dynamo 2.0 のライブラリの新しい動作です。
 
-![カスタム ノード プロパティ](../../.gitbook/assets/custom-node-properties.jpg)
+![カスタム ノード プロパティ](../images/custom-node-properties.jpg)
 
 カテゴリ名は、.dyf ファイル(XML または JSON)で後から更新できます。
 

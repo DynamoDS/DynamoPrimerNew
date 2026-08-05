@@ -4,7 +4,7 @@ Dynamo のビジュアル プログラミング環境で、テキスト プロ�
 
 **ビジュアル プログラミング:**
 
-\![](<../../.gitbook/assets/python node - visual vs textual programming.jpg>)
+\![](<../images/python node - visual vs textual programming.jpg>)
 
 **テキスト プログラム:**
 
@@ -38,15 +38,15 @@ OUT = solids
 
 Code Block ノードと同様に、Python Script ノードはビジュアル プログラミング環境内のスクリプト インタフェースです。Python Script ノードは、ライブラリの[Script] > [Editor] > [Python Script]にあります。
 
-\![](<../../.gitbook/assets/python node - the python node 01.jpg>)
+\![](<../images/python node - the python node 01.jpg>)
 
 このノードをダブルクリックすると、Python のスクリプト エディタが開きます。ノードを右クリックして[_編集..._]を選択することもできます。エディタ上部の定型文は、必要なライブラリを参照する際に役立ちます。Python Script ノードの入力値は、IN 配列に格納されます。値は、OUT 変数に割り当てられて Dynamo に返されます。
 
-\![](<../../.gitbook/assets/python node - the python node 02.jpg>)
+\![](<../images/python node - the python node 02.jpg>)
 
 Autodesk.DesignScript.Geometry ライブラリにより、Code Block ノードと同様のドット表記を使用することができます。Dynamo 構文の詳細については、「[7-2_design-script-syntax.md](../../coding-in-dynamo/7_code-blocks-and-design-script/7-2_design-script-syntax.md "mention")」および「[DesignScript ガイド](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf)」を参照してください(この PDF 文書をダウンロードするには、リンクを右クリックし、[名前を付けてリンク先を保存...]をクリックしてください)。「Point.」などのジオメトリ タイプを入力すると、点の作成や点のクエリーを実行するためのメソッドのリストが表示されます。
 
-\![](<../../.gitbook/assets/python node - the python node 03.jpg>)
+\![](<../images/python node - the python node 03.jpg>)
 
 > これらのメソッドには、_ByCoordinates_ などのコンストラクタ、_Add_ などのアクション、_X_、_Y_、_Z_ 座標などのクエリーがあります。
 
@@ -62,12 +62,12 @@ Autodesk.DesignScript.Geometry ライブラリにより、Code Block ノード�
 
 この例では、Python Script ノードを記述してソリッド モジュールからパターンを作成し、カスタム ノードに変換します。最初に、Dynamo ノードを使用してソリッド モジュールを作成します。
 
-\![](<../../.gitbook/assets/python node - exercise pt I-01.jpg>)
+\![](<../images/python node - exercise pt I-01.jpg>)
 
 > 1. **Rectangle.ByWidthLength:** ノードを使用して、ソリッドのベースとなる長方形を作成します。
 > 2. **Surface.ByPatch:** ノードの _closedCurve_ 入力に Rectangle 出力を接続し、下部サーフェスを作成します。
 
-\![](<../../.gitbook/assets/python node - exercise pt I-02.jpg>)
+\![](<../images/python node - exercise pt I-02.jpg>)
 
 > 1. **Geometry.Translate:** ノードの _geometry_ 入力に Rectangle 出力を接続し、長方形を上に移動します。次に、Code Block ノードを使用してソリッドの厚さを指定します。
 > 2. **Polygon.Points:** ノードを使用して、変換された長方形に対してクエリーを実行し、頂点を抽出します。
@@ -77,7 +77,7 @@ Autodesk.DesignScript.Geometry ライブラリにより、Code Block ノード�
 
 これで、上部サーフェスと下部サーフェスが作成されました。次に、2 つのプロファイルの間をロフトしてソリッドの側面を作成しましょう。
 
-\![](<../../.gitbook/assets/python node - exercise pt I-03.jpg>)
+\![](<../images/python node - exercise pt I-03.jpg>)
 
 > 1. **List.Create:** ノードの index 入力に、底面の長方形と上面のポリゴンを接続します。
 > 2. **Surface.ByLoft:** ノードを使用して 2 つのプロファイルをロフトし、ソリッドの側面を作成します。
@@ -86,13 +86,13 @@ Autodesk.DesignScript.Geometry ライブラリにより、Code Block ノード�
 
 これで、ソリッドが作成されました。次に、ワークスペースに Python Script ノードをドロップします。
 
-\![](<../../.gitbook/assets/python node - exercise pt I-04.jpg>)
+\![](<../images/python node - exercise pt I-04.jpg>)
 
 > 1. ノード上の[+]アイコンをクリックし、ノードに入力を追加します。入力には IN[0]、IN[1]などの名前が付いています。これらはリスト内の項目を表しています。
 
 最初に、入力と出力を定義しましょう。ノードをダブルクリックして、Python エディタを開きます。エディタ内のコードを修正するには、次のコードを実行します。
 
-\![](<../../.gitbook/assets/python node - exercise pt I-05.jpg>)
+\![](<../images/python node - exercise pt I-05.jpg>)
 
 ```py
 # Load the Python Standard and DesignScript Libraries
@@ -124,7 +124,7 @@ OUT = solids
 
 このコードの意味については、演習を進めながら説明していきます。ここで、ソリッド モジュールを配列化するためには、どのような情報が必要になるかを考慮する必要があります。最初に、移動距離を決定するために、ソリッドの寸法を知る必要があります。境界ボックスにはバグがあるため、境界ボックスを作成するにはエッジ曲線のジオメトリを使用する必要があります。
 
-![](../../.gitbook/assets/python07.png)
+![](../images/python07.png)
 
 > ここで、Dynamo の Python Script ノードを確認します。Dynamo のノードのタイトルと同じ構文が使用されていることがわかります。以下のコメント付きコードを確認してください。
 
@@ -169,7 +169,7 @@ OUT = solids
 
 ここでは、ソリッドのモジュールの移動と回転を行うため、Geometry.Transform の操作を使用しましょう。Geometry.Transform ノードを確認すると、ソリッドを変換するにはソース座標系とターゲット座標系が必要になることがわかります。この場合、ソース座標系はソリッドのコンテキストの座標系で、ターゲット座標系は配列化された各モジュールの別の座標系になります。そのため、x 値と y 値をループして、座標系を毎回異なる距離と方向で変換する必要があります。
 
-\![](<../../.gitbook/assets/python node - exercise pt I-06.jpg>)
+\![](<../images/python node - exercise pt I-06.jpg>)
 
 ```py
 # Load the Python Standard and DesignScript Libraries
@@ -225,7 +225,7 @@ OUT = solids
 
 [実行]をクリックし、コードを保存します。次のように、Python Script ノードを既存のスクリプトに接続します。
 
-\![](<../../.gitbook/assets/python node - exercise pt I-07.jpg>)
+\![](<../images/python node - exercise pt I-07.jpg>)
 
 > 1. **Solid.ByJoinedSurfaces** からの出力を、Python Script ノードの最初の入力として接続し、Code Block を使用してその他の入力を定義します。
 > 2. **Topology.Edges** ノードを作成し、Python Script ノードからの出力を入力として使用します。
@@ -233,25 +233,25 @@ OUT = solids
 
 シード値を変更すると、異なるパターンが作成されます。ソリッド モジュールのパラメータを変更して、異なるエフェクトを作成することもできます。
 
-![](../../.gitbook/assets/python10.png)
+![](../images/python10.png)
 
 ### パート II: Python Script ノードをカスタム ノードに変換する
 
 これで、便利な Python Script ノードが作成されました。このノードをカスタム ノードとして保存しましょう。Python Script ノードを選択し、ワークスペースを右クリックして、[カスタム ノードを作成]を選択します。
 
-\![](<../../.gitbook/assets/python node - exercise pt II-01.jpg>)
+\![](<../images/python node - exercise pt II-01.jpg>)
 
 名前、説明、カテゴリを設定します。
 
-\![](<../../.gitbook/assets/python node - exercise pt II-02.jpg>)
+\![](<../images/python node - exercise pt II-02.jpg>)
 
 この操作により、カスタム ノードを編集するための新しいワークスペースが開きます。
 
-\![](<../../.gitbook/assets/python node - exercise pt II-03.jpg>)
+\![](<../images/python node - exercise pt II-03.jpg>)
 
 > 1. **Inputs:** 入力名をわかりやすい名前に変更し、データ タイプと既定値を追加します。
 > 2. **Output:** 出力名を変更します。
 
 ノードを .dyf ファイルとして保存すると、先ほど行った変更がカスタム ノードに反映されます。
 
-\![](<../../.gitbook/assets/python node - exercise pt II-04.jpg>)
+\![](<../images/python node - exercise pt II-04.jpg>)

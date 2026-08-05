@@ -8,7 +8,7 @@ Dynamo が多様で複雑なジオメトリ形状を作成できる一方で、�
 
 x = 0、y = 0、z = 0 の点を中心とし、回転、スケーリング、せん断変形などの変換がない CoordinateSystem の作成に必要なのは、Identity コンストラクタを呼び出すことのみです。
 
-![](../../.gitbook/assets/GeometricPrimitives_01.png)
+![](../images/GeometricPrimitives_01.png)
 
 ```js
 // create a CoordinateSystem at x = 0, y = 0, z = 0,
@@ -19,7 +19,7 @@ cs = CoordinateSystem.Identity();
 
 _CoordinateSystem.ByOriginVectors_ という別のコンストラクタを使用すると、次のように特定の点に座標系を作成できますが、ジオメトリ変換された CoordinateSystem については、この章で説明しません。
 
-![](../../.gitbook/assets/GeometricPrimitives_02.png)
+![](../images/GeometricPrimitives_02.png)
 
 ```js
 // create a CoordinateSystem at a specific location,
@@ -41,7 +41,7 @@ cs = CoordinateSystem.ByOriginVectors(origin,
 
 この例は、さまざまな座標系で作成された点を示しています。
 
-![](../../.gitbook/assets/GeometricPrimitives_03.png)
+![](../images/GeometricPrimitives_03.png)
 
 ```js
 // create a point with x, y, and z coordinates
@@ -77,7 +77,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
 
 次に高い次元の Dynamo プリミティブは線分セグメントで、2 つの端点間にある無限の数の点を表します。_Line.ByStartPointEndPoint_ コンストラクタを使用して 2 つの境界点を明示的に指定するか、_Line.ByStartPointDirectionLength_ で開始点、方向、およびその方向の長さを指定することで、線分を作成できます。
 
-![](../../.gitbook/assets/GeometricPrimitives_04.png)
+![](../images/GeometricPrimitives_04.png)
 
 ```js
 p1 = Point.ByCoordinates(-2, -5, -10);
@@ -96,7 +96,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
 
 Dynamo には、最も基本的なタイプのジオメトリ プリミティブを 3 次元で表すオブジェクトがあります。_Cuboid.ByLengths_ で作成される直方体、_Cone.ByPointsRadius_ および _Cone.ByPointsRadii_ で作成される円錐、_Cylinder.ByRadiusHeight_ で作成される円柱、_Sphere.ByCenterPointRadius_ で作成される球です。
 
-![](../../.gitbook/assets/GeometricPrimitives_05.png)
+![](../images/GeometricPrimitives_05.png)
 
 ```js
 // create a cuboid with specified lengths

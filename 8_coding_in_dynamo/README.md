@@ -6,4 +6,4 @@ Dynamo は、AEC の世界に向けてコーディングを開始するのに最
 * [DesignScript を使用するジオメトリ](8-2_geometry-with-design-script/)
 * [Python](8-3_python/)
 
-![](../.gitbook/assets/image.png)
+![](images/image.png)

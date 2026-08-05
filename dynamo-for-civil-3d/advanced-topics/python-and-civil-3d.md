@@ -7,9 +7,7 @@ Dynamo は[ビジュアル プログラミング](../../a\_appendix/a-1\_visual-
 
 このセクションでは、Civil 3D 環境で Python を活用して、AutoCAD および Civil 3D .NET API を利用する方法について説明します。
 
-{% hint style="info" %}
- Dynamo での Python の使用に関する一般情報については、「 [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") 」セクションを参照してください。 
-{% endhint %} 
+{% hint style="info" %} Dynamo での Python の使用に関する一般情報については、「 [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") 」セクションを参照してください。 {% endhint %}
 
 ## API ドキュメント
 
@@ -23,15 +21,13 @@ AutoCAD と Civil 3D にはどちらにも、開発者がカスタム機能を�
 
 [Civil 3D .NET API リファレンス ガイド](https://help.autodesk.com/view/CIV3D/2024/JPN/?guid=73fd1950-ee31-00b8-4872-c3f328ea1331)
 
-{% hint style="info" %}
- このセクションを進めていくと、データベース、トランザクション、メソッド、プロパティなど、馴染みのない概念が出てくるかもしれません。これらの概念の多くは、.NET API を使用するための中核であり、Dynamo や Python に固有のものではありません。これらの項目の詳細については、Primer のこのセクションでは取り上げません。詳細については、上記のリンクを頻繁に参照することをお勧めします。 
-{% endhint %} 
+{% hint style="info" %} このセクションを進めていくと、データベース、トランザクション、メソッド、プロパティなど、馴染みのない概念が出てくるかもしれません。これらの概念の多くは、.NET API を使用するための中核であり、Dynamo や Python に固有のものではありません。これらの項目の詳細については、Primer のこのセクションでは取り上げません。詳細については、上記のリンクを頻繁に参照することをお勧めします。 {% endhint %}
 
 ## コード テンプレート
 
 新しい Python ノードを初めて編集すると、開始するためのテンプレート コードがあらかじめ入力されます。ここでは、テンプレートの概要と各ブロックに関する説明を示します。
 
-<figure><img src="../../.gitbook/assets/Python_Template (1).png" alt=""><figcaption><p>Civil 3D の既定の Python テンプレート</p></figcaption></figure>
+<figure><img src="../images/Python_Template.png" alt=""><figcaption><p>Civil 3D の既定の Python テンプレート</p></figcaption></figure>
 
 > 1. `sys` モジュールおよび `clr` モジュールを読み込みます。どちらも Python インタプリタが正しく機能するために必要なモジュールです。特に、`clr` モジュールを使用すると、.NET 名前空間を基本的に Python パッケージとして扱うことができます。
 > 2. AutoCAD および Civil 3D のマネージド .NET API を使用するための標準アセンブリ(DLL)をロードします。
@@ -43,10 +39,8 @@ AutoCAD と Civil 3D にはどちらにも、開発者がカスタム機能を�
 > 8. メインの作業が完了した後にトランザクションをコミットするには、この行のコメントを解除します。
 > 9. ノードからデータを出力する場合は、スクリプトの最後にある変数 `OUT` に出力するデータを割り当てます。
 
-{% hint style="info" %}
- **カスタマイズする場合**\
-既定の Python テンプレートは、`C:\ProgramData\Autodesk\C3D <version>\Dynamo` 内の `PythonTemplate.py` ファイルを編集することで修正できます。 
-{% endhint %} 
+{% hint style="info" %} **カスタマイズする場合**\
+既定の Python テンプレートは、`C:\ProgramData\Autodesk\C3D <version>\Dynamo` 内の `PythonTemplate.py` ファイルを編集することで修正できます。 {% endhint %}
 
 ## 例
 
@@ -84,7 +78,7 @@ Dynamo for Civil 3D で Python スクリプトを作成する場合の基本的�
 
 これで、グラフ ロジックの作成を開始することができます。最初に、ドキュメント内のすべての集水域のリストを取得します。これに使用できるノードがあるため、Python スクリプトに含める必要はありません。ノードを使用すると、(Python スクリプトに多くのコードを埋め込むんだ場合に比べて)、他のユーザはグラフを読みやすくなり、Python スクリプトは集水域の境界点を返すという 1 つの事柄にも対処できます。
 
-<figure><img src="../../.gitbook/assets/Python_Get_Catchments.png" alt=""><figcaption><p>ドキュメント内のすべての集水域をレイヤごとに取得する</p></figcaption></figure>
+<figure><img src="../images/Python_Get_Catchments.png" alt=""><figcaption><p>ドキュメント内のすべての集水域をレイヤごとに取得する</p></figcaption></figure>
 
 **All Objects on Layer** ノードからの出力は、CivilObjects のリストであることに注意してください。これは、Dynamo for Civil 3D には現在、集水域を操作するためのノードが存在しないためです。これが、Python を使用して API にアクセスする必要がある理由です。
 
@@ -94,16 +88,13 @@ Dynamo for Civil 3D で Python スクリプトを作成する場合の基本的�
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Dynamo タイプ</th><th width="373">ラップ</th></tr></thead><tbody><tr><td><strong>オブジェクト</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>図形</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>図形</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
-{% hint style="warning" %} 経験則として、`InternalObjectId` プロパティを使用してオブジェクト ID を取得し、トランザクションでラップされたオブジェクトにアクセスする方が一般的に安全です。これは、`InternalDBObject` プロパティは書き込み可能な状態でない AutoCAD DBObject を返すためです。 
-{% endhint %} 
+{% hint style="warning" %} 経験則として、`InternalObjectId` プロパティを使用してオブジェクト ID を取得し、トランザクションでラップされたオブジェクトにアクセスする方が一般的に安全です。これは、`InternalDBObject` プロパティは書き込み可能な状態でない AutoCAD DBObject を返すためです。 {% endhint %}
 
 ### Python スクリプト
 
 内部の集水域オブジェクトにアクセスして境界点を取得する作業を行う完全な Python スクリプトを以下に示します。ハイライト表示された行は、既定のテンプレート コードから修正または追加された行を表します。
 
-{% hint style="info" %}
-スクリプト内の下線付きのテキストをクリックすると、その行の説明が表示されます。
-{% endhint %} 
+{% hint style="info" %}スクリプト内の下線付きのテキストをクリックすると、その行の説明が表示されます。{% endhint %}
 
 <pre class="language-python" data-line-numbers><code class="lang-python"># Python 標準ライブラリと DesignScript ライブラリをロードします
 import sys
@@ -170,20 +161,19 @@ with adoc.LockDocument():
 <strong><a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
 </strong></code></pre>
 
-{% hint style="warning" %} 経験則として、スクリプト ロジックの大部分をトランザクション内に含めることをお勧めします。これにより、スクリプトが読み取り/書き込みを行うオブジェクトに安全にアクセスできるようになります。多くの場合、トランザクションを省略すると致命的なエラーが発生する可能性があります。 
-{% endhint %} 
+{% hint style="warning" %} 経験則として、スクリプト ロジックの大部分をトランザクション内に含めることをお勧めします。これにより、スクリプトが読み取り/書き込みを行うオブジェクトに安全にアクセスできるようになります。多くの場合、トランザクションを省略すると致命的なエラーが発生する可能性があります。 {% endhint %}
 
 ### ポリカーブを作成する
 
 この段階では、Python スクリプトは、背景プレビューで確認できるように Dynamo の点のリストを出力する必要があります。最後の手順は、点から単純にポリカーブを作成します。これは Python スクリプトで直接行うこともできますが、より見やすくするために、ノードのスクリプトの外側に意図的に配置しています。最終的なグラフは次のようなものになります。
 
-<figure><img src="../../.gitbook/assets/Python_Final_Script (1).png" alt=""><figcaption><p>最終的なグラフ</p></figcaption></figure>
+<figure><img src="../images/Python_Final_Script.png" alt=""><figcaption><p>最終的なグラフ</p></figcaption></figure>
 
 ### 結果
 
 最終的な Dynamo ジオメトリは次のとおりです。
 
-<figure><img src="../../.gitbook/assets/Python_Dynamo_Curves.png" alt=""><figcaption><p>集水域境界の、結果として生じた Dynamo ポリカーブ</p></figcaption></figure>
+<figure><img src="../images/Python_Dynamo_Curves.png" alt=""><figcaption><p>集水域境界の、結果として生じた Dynamo ポリカーブ</p></figcaption></figure>
 
 > :tada: ミッションが達成されました。
 
@@ -191,9 +181,7 @@ with adoc.LockDocument():
 
 最後に、注意事項を簡単に説明します。使用している Civil 3D のバージョンに応じて、Python ノードの設定が異なる場合があります。**Civil 3D 2020 および 2021** では、Dynamo は **IronPython** というツールを使用して .NET オブジェクトと Python スクリプトの間でデータを移動しました。**Civil 3D 2022** では、Dynamo は Python 3 を使用するのではなく、標準のネイティブ Python インタプリタ(**CPython** とも呼ばれる)を使用するように移行しました。この移行には、人気のある最新ライブラリや新しいプラットフォーム機能、基本的なメンテナンス、セキュリティ パッチへのアクセスなどのメリットがあります。
 
-{% hint style="info" %}
- この移行の詳細と、従来のスクリプトのアップグレード方法については、[Dynamo Blog](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/) を参照してください。IronPython を今後も使用する場合は、Dynamo Package Manager を使用して **DynamoIronPython2.7** パッケージをインストールする必要があります。 
-{% endhint %} 
+{% hint style="info" %} この移行の詳細と、従来のスクリプトのアップグレード方法については、[Dynamo Blog](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/) を参照してください。IronPython を今後も使用する場合は、Dynamo Package Manager を使用して **DynamoIronPython2.7** パッケージをインストールする必要があります。 {% endhint %}
 
 [^1]: 既定では、Dynamo ジオメトリ ライブラリは Python 環境に追加されません。このスクリプトの目的は、集水域境界の Dynamo の点のリストを出力することです。点を後で作成するには、この行を追加する必要があります。
 

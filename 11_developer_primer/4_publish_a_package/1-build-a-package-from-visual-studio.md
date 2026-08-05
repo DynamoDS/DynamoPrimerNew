@@ -24,7 +24,7 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![プロジェクト ファイルを移動する](../../.gitbook/assets/fe-proj-directory.jpg)
+![プロジェクト ファイルを移動する](../images/fe-proj-directory.jpg)
 
 > 1. プロジェクト ファイルを新しい `src` フォルダに移動します。
 
@@ -47,7 +47,7 @@ CustomNodeModel
   </Target>
 ```
 
-![AfterBuild ターゲットを配置する](../../.gitbook/assets/atom-afterbuild.jpg)
+![AfterBuild ターゲットを配置する](../images/atom-afterbuild.jpg)
 
 > ターゲットが(他のプロジェクト ファイルではなく) `CustomNodeModel.csproj` ファイルに追加されていること、およびプロジェクトに既存のビルド後の設定がないことを確認する必要があります。
 >
@@ -75,7 +75,7 @@ Dynamo パッケージには通常、Dynamo カスタム ノード用の `dyf` �
 
 プロジェクトをビルドすると、プロジェクト フォルダには、以前に作成された `src` フォルダの横に `packages` フォルダが作成されます。`packages` フォルダ内には、パッケージに必要なものがすべて格納されているフォルダがあります。また、`pkg.json` ファイルをパッケージ フォルダにコピーして、Dynamo でパッケージをロードできるようにする必要があります。
 
-![ファイルをコピーする](../../.gitbook/assets/fe-proj-directory-package.jpg)
+![ファイルをコピーする](../images/fe-proj-directory-package.jpg)
 
 > 1. AfterBuild ターゲットが作成した新しいパッケージ フォルダ
 > 2. プロジェクトの既存の src フォルダ

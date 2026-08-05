@@ -12,7 +12,7 @@ description: suggested exercise
 * ノードを使用してジオメトリ要素を作成および修正する。
 * 設計の結果をリアルタイムで視覚化する。
 
-![](../../.gitbook/assets/vase1.gif)
+![](../images/vase1.gif)
 
 ## 目標を定義する
 
@@ -22,7 +22,7 @@ Dynamo を始める前に、概念上の花瓶をデザインします。
 
 私たちも同様の方法で花瓶を定義します。異なる高さと半径を持つ 4 つの円を作成し、これらの円をロフトしてサーフェスを作成します。
 
-![](../../.gitbook/assets/vase2.png)
+![](../images/vase2.png)
 
 ## 基本操作
 
@@ -34,7 +34,7 @@ Dynamo を始める前に、概念上の花瓶をデザインします。
 
 Dynamo が実行するアクションの順番を表すノードが必要になります。ここでは円を作成することになるため、最初に、円を作成するノードを探しましょう。**[検索]フィールド**を使用するか、[**ライブラリ**]を参照して **Circle.ByCenterPointRadius** ノードを検索し、ワークスペースに追加します
 
-![](../../.gitbook/assets/vase8.png)
+![](../images/vase8.png)
 
 > 1. 検索 > 「Circle...」
 > 2. 選択 > [ByCenterPointRadius]
@@ -42,25 +42,25 @@ Dynamo が実行するアクションの順番を表すノードが必要にな�
 
 このノードについて詳しく見て行きましょう。左側にはノードの入力(_centerPoint_ と _radius_)があり、右側にはノードの出力(Circle)があります。出力が水色の線で表示されています。これは、入力に既定値があることを意味します。入力に関する詳細情報を取得するには、名前の上にカーソルを合わせます。_radius_ 入力には 2 重入力が必要で、既定値は 1 です。
 
-![](../../.gitbook/assets/vase10.png)
+![](../images/vase10.png)
 
 既定値の _centerPoint_ をそのままにして、半径をコントロールする **Number Slider** を追加します。**Circle.ByCenterPointRadius** ノードで行ったように、ライブラリを使用して **Number Slider** を検索し、グラフに追加します。
 
 このノードはスライダを含んでいるため、前のノードとは少し異なります。インタフェースを使用して、スライダの出力値を変更できます。
 
-\![](<../../.gitbook/assets/vase13 (1).gif>)
+![](<../images/vase13.gif>)
 
 スライダは、ノードの左側にあるドロップダウン ボタンを使用して設定できます。スライダを最大値 15 に制限してみましょう。
 
-![](../../.gitbook/assets/vase11.png)
+![](../images/vase11.png)
 
 **Circle.ByCenterPointRadius** ノードの左側に配置し、**Number Slider** 出力を選択して Radius 入力に接続することで、両方のノードを接続します。
 
-![](../../.gitbook/assets/vase12.png)
+![](../images/vase12.png)
 
 また、ノード名をダブルクリックして、Number Slider 名を「Top Radius」に変更します。
 
-![](../../.gitbook/assets/vase14.png)
+![](../images/vase14.png)
 
 ## 次のステップ
 
@@ -70,7 +70,7 @@ Dynamo が実行するアクションの順番を表すノードが必要にな�
 
 これらのノードを 4 回コピーして、これらの円がサーフェスを定義するようにし、次に示すように Number Slider の名前を変更します。
 
-\![](<../../.gitbook/assets/vase4 (1).png>)
+![](<../images/vase4.png>)
 
 > 1. 円は、中心点と半径によって作成されます
 
@@ -78,11 +78,11 @@ Dynamo が実行するアクションの順番を表すノードが必要にな�
 
 花瓶の高さに対するキー パラメータが欠落しています。花瓶の高さをコントロールするために、別の数値スライダを作成します。また、**Code Block** ノードも追加します。Code Block は、ワークフローにパーソナライズされたコード スニペットを追加する場合に役立ちます。Code Block を使用して高さスライダにさまざまな係数を掛け、花瓶の高さに沿って円を配置できるようにします。
 
-\![](<../../.gitbook/assets/vase15 (1).png>)
+![](<../images/vase15.png>)
 
 次に、**Geometry.Translate** ノードを使用して、円を目的の高さに配置します。花瓶全体に円を分布させるため、Code Block を使用して高さパラメータに係数を掛けます。
 
-![](../../.gitbook/assets/vase5.png)
+![](../images/vase5.png)
 
 > 2\.円は、Z 軸の変数によって変換(移動)されます。
 
@@ -92,7 +92,7 @@ Dynamo が実行するアクションの順番を表すノードが必要にな�
 
 また、他のノードのプレビューをオフにして、Surface.ByLoft 表示のみを表示します。
 
-![](../../.gitbook/assets/vase6.png)
+![](../images/vase6.png)
 
 > 3\.変換された円をロフトして、サーフェスを作成します。
 
@@ -100,6 +100,6 @@ Dynamo が実行するアクションの順番を表すノードが必要にな�
 
 ワークフローの準備ができました。これで、スクリプトで定義した **Number Slider** を使用して、さまざまな花瓶のデザインを作成できるようになりました。
 
-![](../../.gitbook/assets/vase1.gif)
+![](../images/vase1.gif)
 
-![](../../.gitbook/assets/vase7.png)
+![](../images/vase7.png)

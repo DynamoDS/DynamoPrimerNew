@@ -6,7 +6,7 @@ _Intersect_、_Trim_、および _SelectTrim_ は、点、曲線、サーフェ�
 
 _Union_ メソッドでは、2 つのソリッド オブジェクトが使用され、両方のオブジェクトによってカバーされる空間から単一のソリッド オブジェクトが作成されます。オブジェクト間で重複する空間は最終形状に結合されます。この例では、球と直方体が結合して単一のソリッドの球-立方体形状となります。
 
-![](../../.gitbook/assets/GeometricBooleans_01.png)
+![](../images/GeometricBooleans_01.png)
 
 ```js
 s1 = Sphere.ByCenterPointRadius(
@@ -23,7 +23,7 @@ combined = s1.Union(s2);
 
 _Difference_ メソッドでは、_Trim_ のように、ベースとなるソリッドから入力されたツールとなるソリッドの内容が取り除かれます。この例では、球から小さなくぼみが削り出されています。
 
-![](../../.gitbook/assets/GeometricBooleans_02.png)
+![](../images/GeometricBooleans_02.png)
 
 ```js
 s = Sphere.ByCenterPointRadius(
@@ -40,7 +40,7 @@ result = s.Difference(tool);
 
 _Intersect_ メソッドでは、2 つのソリッド入力間の重複するソリッドが生成されます。次の例では、_Difference_ が _Intersect_ に変更され、結果として得られるソリッドは、最初に削り出されていた空間がなくなっています。
 
-![](../../.gitbook/assets/GeometricBooleans_03.png)
+![](../images/GeometricBooleans_03.png)
 
 ```js
 s = Sphere.ByCenterPointRadius(

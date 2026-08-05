@@ -2,7 +2,7 @@
 
 Zero-Touch プロジェクトの作成方法を理解できたので、Dynamo GitHub にあるサンプル ZeroTouchEssentials を使用して、ノードの作成について詳しく説明します。
 
-![Zero-Touch ノード](../../.gitbook/assets/ootbzerotouch.png)
+![Zero-Touch ノード](../images/ootbzerotouch.png)
 
 > Dynamo の標準ノードの多くは基本的な Zero-Touch ノードです。上記のほとんどの Math、Color、DateTime ノードと同様です。
 
@@ -10,7 +10,7 @@ Zero-Touch プロジェクトの作成方法を理解できたので、Dynamo Gi
 
 Visual Studio で、ソリューション ファイル `ZeroTouchEssentials.sln` を開いてソリューションをビルドします。
 
-![Visual Studio の ZeroTouchEssentials](../../.gitbook/assets/vs-build-zte.jpg)
+![Visual Studio の ZeroTouchEssentials](../images/vs-build-zte.jpg)
 
 > `ZeroTouchEssentials.cs` ファイルには、Dynamo に読み込むメソッドがすべて含まれています。
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![既定値](../../.gitbook/assets/defaultval.jpg)
+![既定値](../images/defaultval.jpg)
 
 > 1. ノードの入力ポートにカーソルを合わせると、既定値が表示されます。
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 複数の出力を返すノードです。
 
-![複数の出力](../../.gitbook/assets/multipleoutputs.png)
+![複数の出力](../images/multipleoutputs.png)
 
 > 1. ディクショナリのキーに入力した文字列に従って、2 つの出力ポートに名前が付けられています。
 
@@ -90,7 +90,7 @@ namespace ZeroTouchEssentials
   * 例: `/// <summary>...</summary>`
 * `Project > [Project] Properties > Build > Output` を選択して `Documentation file` をオンにすることで、Visual Studio で XML ドキュメントを有効にします。
 
-![XML ファイルを生成する](../../.gitbook/assets/vs-xml.jpg)
+![XML ファイルを生成する](../images/vs-xml.jpg)
 
 > 1. Visual Studio は、指定された場所に XML ファイルを生成します。
 
@@ -141,7 +141,7 @@ namespace ZeroTouchEssentials
 * ノード ツールチップ内
 * ドキュメント ブラウザ内
 
-![ノードの説明](../../.gitbook/assets/node-description.png)
+![ノードの説明](../images/node-description.png)
 
 ここで説明するガイドラインに従うことで、一貫性を確保し、ノードの説明の作成または更新を効率的に行うことができます。
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 ZeroTouchEssentials dll が読み込まれると、ライブラリに ZeroTouchEssentials ノードが追加されます。このオブジェクトは、`ByTwoDoubles` ノードを使用して作成できます。
 
-![ByTwoDoubles ノード](../../.gitbook/assets/dyn-constructor.jpg)
+![ByTwoDoubles ノード](../images/dyn-constructor.jpg)
 
 ### Dynamo のジオメトリ タイプを使用する <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 曲線の長さを取得し、その値を倍にするノード。
 
-![曲線の入力](../../.gitbook/assets/doublelength.png)
+![曲線の入力](../images/doublelength.png)
 
 > 1. このノードは、入力として Curve ジオメトリタイプを受け取ります。
 
@@ -285,7 +285,7 @@ namespace ZeroTouchEssentials
 * マイグレーション要素内で、名前の変更ごとに `<priorNameHint>...</priorNameHint>` 要素を作成します。
 * 名前の変更ごとに、`<oldName>...</oldName>` および `<newName>...</newName>` 要素を指定します。
 
-![マイグレーション ファイル](../../.gitbook/assets/vs-migrations-file.jpg)
+![マイグレーション ファイル](../images/vs-migrations-file.jpg)
 
 > 1. 右クリックして、`Add > New Item` を選択します。
 > 2. `XML File` を選びます。

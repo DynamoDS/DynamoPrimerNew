@@ -2,7 +2,7 @@
 
 ビジュアル スクリプト環境内で、DesignScript、Python、ZeroTouch (C#)を使用してテキストベースのスクリプトを作成すると、機能性の高い視覚的な関係を構築することができます。同じワークスペース内で Python や C# を使用して、入力スライダなどの要素を画面上に表示したり、大規模な操作を DesignScript 内に集約したり、便利なツールやライブラリにアクセスすることができます。こうした方法を組み合わせて効率的に管理することにより、プログラム全体のカスタマイズ性、明確性、効率性が大幅に向上します。ここでは、テキスト スクリプトを使用してビジュアル スクリプトを拡張するための一連のガイドラインを紹介します。
 
-![](../.gitbook/assets/cad-chart-textual.jpg)
+![](images/cad-chart-textual.jpg)
 
 ### どのような場合にスクリプトを作成するのかを理解する
 
@@ -21,7 +21,7 @@
 |                    | **ループ** | **反復** | **ノードの集約** | **外部ライブラリへのアクセス** | **省略表記** |
 | **DesignScript**   | 可         | 可           | 可                | 不可                 | 可           |
 | **Python**         | 可         | 可           | 一部可          | 可                | 不可            |
-| **ZeroTouch (C#)** | 不可          | 不可            | 不可                 | 可                | 不可            |
+| **ZeroTouch (C#)** | 不可          | 不可            | 不可                 | はい                | 不可            |
 
 {% hint style="info" %} 各 Dynamo ライブラリでアクセスできるコンテンツのリストについては、「[スクリプトの参照情報](3-scripting-reference.md)」を参照してください。 {% endhint %}
 
@@ -37,7 +37,7 @@ Dynamo でスクリプトを作成する場合は必ずパラメトリック環�
   * 目的の出力
   * 定数
 
-\![](<../.gitbook/assets/think parametrically 01.jpg>)
+\![](<images/think parametrically 01.jpg>)
 
 > 一部の変数については、コードを記述する前に既に定義されています。
 >
@@ -55,7 +55,7 @@ Dynamo でスクリプトを作成する場合は必ずパラメトリック環�
 * 重要なパラメータだけを表示し、入力の数を最小限に抑えます。
   * 追加の親パラーメータから一連のパラメータを継承できる場合は、それらの親パラメータだけをスクリプトの入力として表示してください。こうすることにより、インタフェースの複雑さが軽減されるため、スクリプトが使いやすくなります。
 
-\![](<../.gitbook/assets/think parametrically 02.jpg>)
+\![](<images/think parametrically 02.jpg>)
 
 > 上記のコードは、[Python Script ノード](../8_coding_in_dynamo/8-3_python/1-python.md)の「modules」というサンプル コードです。
 >
@@ -102,7 +102,7 @@ for i in range(count):
 * モジュールは、隣接するコードから視覚的に離れた位置に記述します(関数、クラス、入力のグループ、読み込むライブラリなどがモジュールになります)。
 * モジュール単位でコードを記述すると、視覚的で直感的なノードの利点を活用できるだけなく、テキスト スクリプトでしか記述できない複雑な関係を使用することもできます。
 
-\![](<../.gitbook/assets/think parametrically 02.jpg>)
+\![](<images/think parametrically 02.jpg>)
 
 > 上記のループ処理では、「agent」というクラスを呼び出しています。このクラスは、次の演習で作成します。
 >
@@ -117,7 +117,7 @@ for i in range(count):
 
 上記の例では、中心点の Z 値に基づき、半径と色を指定して球体を作成しています。
 
-\![](<../.gitbook/assets/spot code resuse.jpg>)
+\![](<images/spot code resuse.jpg>)
 
 > 1. 中心線の Z 値に基づき、半径と表示色を指定して球体を作成する 2 つの「Worker」親関数。
 > 2. 2 つの Worker 関数を組み合わせる「Manager」親関数。この関数を呼び出すと、この関数に含まれている 2 つの Worker 関数が呼び出されることになります。
@@ -182,7 +182,7 @@ Dynamo でテキスト スクリプトを開発する場合は、目的とする
   * 正しいデータが返されるかどうかを簡単にテストします。
 * スクリプト内で使用する最新のデータを出力として割り当てます。これにより、スクリプトを更新するたびに、関連するデータがノードによって常に出力されるようになります。
 
-\![](<../.gitbook/assets/flex continuously.jpg>)
+\![](<images/flex continuously.jpg>)
 
 > 1. ソリッドのすべてのエッジが、境界ボックスを作成するための曲線として返されるかどうかを確認します。
 > 2. Count 入力が正しく Range に変換されるかどうかを確認します。
@@ -232,7 +232,7 @@ for i in range(xCount):
 * プログラムを修正する必要がある場合、コードがモジュール化されていれば、非常に簡単に修正を行うことができます。
   * プログラムの他の部分を変更することなく、新しいモジュールやデバッグ済みのモジュールを既存のプログラムに挿入することができます。
 
-\![](<../.gitbook/assets/leverage code's modularity.jpg>)
+\![](<images/leverage code's modularity.jpg>)
 
 > [Python Script ノード](../8_coding_in_dynamo/8-3_python/1-python.md)のサンプル ファイルをデバックすると、次のようになります。
 >
@@ -250,19 +250,19 @@ for i in range(xCount):
 
 アトラクタが変形しているサーフェスに適用されるスクリプト
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 01.jpg>)
+\![](<images/scripting strategies - exercise - 01.jpg>)
 
 最初に、必要な Dynamo ライブラリを読み込みます。これにより、Python 内で Dynamo の機能にグローバルにアクセスできるようになります。
 
 この段階で、必要なライブラリをすべて読み込む必要があります。
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 02.jpg>)
+\![](<images/scripting strategies - exercise - 02.jpg>)
 
 次に、スクリプトの入力と出力を定義する必要があります。定義した入力は、ノード上で入力ポートとして表示されます。これらの外部入力が、このスクリプトの基礎となり、パラメトリック環境を構築するための重要なデータになります。
 
 Python スクリプト内の変数に対応する入力を定義する必要があります。これらの入力により、目的とする出力が設定されます。
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 03.jpg>)
+\![](<images/scripting strategies - exercise - 03.jpg>)
 
 > 1. ベースとなるサーフェス。
 > 2. 使用するエージェントの数。
@@ -275,7 +275,7 @@ Python スクリプト内の変数に対応する入力を定義する必要が�
 
 サーフェス上を下降するエージェントに対して、その動作を指示するクラスを定義する必要があります。このクラスを使用して、エージェントがステップを進むたびに、最も急な方向へ移動することを選択します。
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 04.jpg>)
+\![](<images/scripting strategies - exercise - 04.jpg>)
 
 > 1. 名前。
 > 2. すべてのエージェントが共有するグローバル属性。
@@ -287,7 +287,7 @@ Python スクリプト内の変数に対応する入力を定義する必要が�
 
 サーフェスを下降するすべてのエージェントをインスタンス化し、それらのエージェントの初期属性を定義する必要があります。
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 05.jpg>)
+\![](<images/scripting strategies - exercise - 05.jpg>)
 
 > 1. 新しい空の基準線リスト。
 > 2. サーフェス上での下降の開始を指定するためのコード。
@@ -295,15 +295,15 @@ Python スクリプト内の変数に対応する入力を定義する必要が�
 
 ステップごとにそれぞれのエージェントを更新します。次に、エージェントとステップごとに、ネストされたループ処理を記述し、エージェントとステップの位置を更新してそれぞれの基準線リストに記録します。また、各ステップで、エージェントがサーフェス上の最終的な位置(それ以上は下降できない位置)にまだ到達していないことを確認します。エージェントがサーフェス上の最終的な位置に到達したら、エージェントの移動を停止します。
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 06.jpg>)
+\![](<images/scripting strategies - exercise - 06.jpg>)
 
 これで、各エージェントが完全に更新されました。次に、これらのエージェントを表すジオメトリを返してみましょう。すべてのエージェントが、それ以上は下降できない位置にまで達したことを確認した後で(または、ステップの最大数に達したことを確認した後で)、各エージェントの基準線リスト内の点を通過するポリカーブを作成し、そのポリカーブの基準線を出力します。
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 07.jpg>)
+\![](<images/scripting strategies - exercise - 07.jpg>)
 
 最も急なパスを探すためのスクリプト。
 
-\![](<../.gitbook/assets/scripting strategies - exercise - 08.jpg>)
+\![](<images/scripting strategies - exercise - 08.jpg>)
 
 > 1. ベースとなるサーフェス上の降雨をシミュレーションするためのプリセット。
 > 2. 最も急なパスを探す代わりに、エージェントを切り替えて、ベースとなるサーフェスを横断することもできます。

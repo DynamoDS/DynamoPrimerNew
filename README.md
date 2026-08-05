@@ -4,7 +4,7 @@
 
 ## Dynamo v2.13 以降の場合
 
-![Dynamo Logo](.gitbook/assets/dynamo_logo_dark-trim.jpg)
+![Dynamo Logo](images/dynamo_logo_dark-trim.jpg)
 
 > Dynamo は、設計者向けのオープン ソースのビジュアル プログラミング プラットフォームです。
 
@@ -37,31 +37,31 @@ Dynamo Primer は、オートデスクの Matt Jezyk 氏と Dynamo 開発チー�
 
 Dynamo Primer の初版は、**Mode Lab** によって作成されました。このような貴重なリソースの確立に取り組んでいただいたすべての方に感謝いたします。
 
-![](.gitbook/assets/MODELAB_Logo.png)
+![](images/modelab-logo.png)
 
 ***
 
 **Parallax Team の John Pierson** 氏は依頼により、Dynamo 2.0 の改訂を反映するよう Primer を更新しました。
 
-![](.gitbook/assets/PRLX_Logo.jpg)
+![](images/prlx-logo.jpg)
 
 ***
 
 **Matterlab** では依頼により、Dynamo 2.13 の改訂を反映するよう Primer を更新しました。
 
-\![](<.gitbook/assets/matterlab_final-07 (2).jpg>)
+![](images/matterlab-logo.jpg)
 
 ***
 
 **Archilizer** では依頼により、Dynamo 2.17 の改訂を反映するよう Primer を更新しました。
 
-<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 **Wood Rodgers** では依頼により、Dynamo for Civil 3D のコンテンツを使用して Primer を更新しました。
 
-<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
 
 ### 謝辞
 
