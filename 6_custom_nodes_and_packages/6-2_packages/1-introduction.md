@@ -22,11 +22,11 @@ Dynamo で、_[パッケージ] > [Package Manager...]_ に移動します。
 
 Dynamo ライブラリに「buildz」という名前の新しいグループが表示されます。この名前は、パッケージの開発者を参照して付けられます。また、カスタム ノードはこのグループ内に配置されます。このグループは、すぐに使用することができます。
 
-\![](<../images/package introduction - installing a package 03.jpg>)
+![](<../images/package introduction - installing a package 03.jpg>)
 
 **Code Block** ノードを使用して長方形のグリッドをすばやく定義し、その結果を **Polygon.ByPoints** ノードに、続いて **Surface.ByPatch** ノードに出力して、作成した長方形のパネルのリストを表示します。
 
-\![](<../images/package introduction - installing a package 04.jpg>)
+![](<../images/package introduction - installing a package 04.jpg>)
 
 ### パッケージ フォルダをインストールする - DynamoUnfold
 
@@ -40,7 +40,7 @@ Dynamo ライブラリに「buildz」という名前の新しいグループが�
 
 Dynamo ライブラリに _DynamoUnfold_ グループが表示されます。このグループに、複数のカテゴリとカスタム ノードが含まれているのがわかります。
 
-\![](<../images/package introduction - installing package folder 02.jpg>)
+![](<../images/package introduction - installing package folder 02.jpg>)
 
 ここで、パッケージのファイル構造を確認しましょう。
 
@@ -52,7 +52,7 @@ Dynamo ライブラリに _DynamoUnfold_ グループが表示されます。こ
 
 この操作により、パッケージのルート フォルダが表示されます。このルート フォルダには、3 つのフォルダと 1 つのファイルが格納されています。
 
-\![](<../images/package introduction - installing package folder 05.jpg>)
+![](<../images/package introduction - installing package folder 05.jpg>)
 
 > 1. _bin_ フォルダには .dll ファイルが格納されます。この Dynamo パッケージは Zero-Touch を使用して開発されているため、カスタム ノードはこのフォルダに格納されます。
 > 2. _dyf_ フォルダにはカスタム ノードが格納されます。このパッケージは Dynamo カスタム ノードを使用して開発されたものではないため、このフォルダには格納されません。
@@ -87,7 +87,7 @@ Dynamo パッケージの仕組みを理解する別の方法として、[Dynamo
 
 パッケージ ファイルの保存場所を確認する場合は、一番上のナビゲーションで[Dynamo] > [基本設定] > [パッケージ設定] > [ノードとパッケージ ファイルの場所]をクリックします。ここから現在のルート フォルダを見つけることができます。
 
-\![](<../images/package introduction - installing package folder 08.png>)
+![](<../images/package introduction - installing package folder 08.png>)
 
 既定では、パッケージは _C:/Users/[ユーザ名]/AppData/Roaming/Dynamo/[Dynamo バージョン]_ というフォルダ パスにインストールされます。
 
