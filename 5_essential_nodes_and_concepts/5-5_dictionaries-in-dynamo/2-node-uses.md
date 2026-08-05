@@ -2,7 +2,7 @@
 
 Dynamo 2.0 では[Dictionary]カテゴリのさまざまなノードが公開されており、使用することができます。_作成、アクション、クエリー_ のノードがあります。
 
-\![](<../images/dictionary nodes - nodes.jpg>)
+![](<../images/dictionary nodes - nodes.jpg>)
 
 #### 作成
 
