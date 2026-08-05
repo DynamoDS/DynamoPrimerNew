@@ -12,7 +12,7 @@ Dynamo では、面と頂点のデータ構造を使用してメッシュを定�
 
 メッシュを作成するには、頂点のリストと、それらの頂点をインデックス グループと呼ばれる面にグループ化するための仕組みが必要です。
 
-\![](<../images/meshes - mesh elements.jpg>)
+![](<../images/meshes - mesh elements.jpg>)
 
 > 1. 頂点のリスト
 > 2. 面を定義するためのインデックス グループのリスト
@@ -25,7 +25,7 @@ Dynamo のメッシュ機能は、[Mesh Toolkit](https://github.com/DynamoDS/Dyn
 
 このパッケージの使用例については、「[Mesh Toolkit のケース スタディ](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes)」を参照してください。
 
-\![メッシュ ツールキット](<../images/meshes - mesh toolkit standford bunny.jpg>)
+![メッシュ ツールキット](<../images/meshes - mesh toolkit standford bunny.jpg>)
 
 ## 詳細を説明します
 
