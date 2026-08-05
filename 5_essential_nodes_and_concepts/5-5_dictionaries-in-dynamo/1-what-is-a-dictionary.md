@@ -22,7 +22,7 @@ Dynamo 2.0 では、ディクショナリのデータ タイプをリストの�
 * ディクショナリを作成、編集、クエリーするための _新しいノード_ が、ライブラリに追加されました。
 * v1.x のコード ブロックで作成されたリストは、スクリプトのロード時に、角括弧 `[ ]` を波括弧 `{ }` の代わりに使用する新しいリスト構文に自動的に移行されます。
 
-\![](<../images/what is a dictionary - what are the changes.jpg>)
+![](<../images/what is a dictionary - what are the changes.jpg>)
 
 ***
 
@@ -32,7 +32,7 @@ Dynamo 2.0 では、ディクショナリのデータ タイプをリストの�
 
 次の画像では、可能性のあるディクショナリの使用例を示しています。多くの場合、ディクショナリを使用して、直接的な関係を持たない 2 つのデータを関連付けます。ここでは、スペイン語バージョンの単語を英語バージョンに接続して、後で検索できるようにしています。
 
-\![](<../images/what is a dictionary - what would you use these for.jpg>)
+![](<../images/what is a dictionary - what would you use these for.jpg>)
 
 > 1. 2 つのデータを関連付けるディクショナリを作成します。
 > 2. 指定されたキーを使用して値を取得します。
