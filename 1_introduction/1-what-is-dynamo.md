@@ -8,13 +8,13 @@ Dynamo は、スタンドアロンの「Sandbox」モードで、または Revit
 
 Dynamo を使用すると、要素を相互に接続して、カスタム アルゴリズムを構成できる動作の関係とシーケンスを定義するビジュアル プログラミングのプロセス内での作業を可能にします。データの処理からジオメトリの生成まで、すべてリアルタイムで `code` を記述せずに、さまざまな用途にアルゴリズムを使用できます。
 
-\![](<images/nodes and wires - flow of data.jpg>)
+![](<images/nodes and wires - flow of data.jpg>)
 
 ### ノードとワイヤを接続する
 
 ノードとワイヤは、[ビジュアル プログラミング](../a_appendix/a-1_visual-programming-and-dynamo.md) プロセスをサポートする Dynamo の主要なコンポーネントです。これにより、設計のパーツ間に明瞭な視覚的および体系的な関係を確立するのに役立ちます。マウスをクリックするだけでノードを簡単に接続しながら、設計ワークフローの開発および最適化ができます。
 
-\![](<images/what is dynamo - connecting nodes with wires.gif>)
+![](<images/what is dynamo - connecting nodes with wires.gif>)
 
 ## Dynamo で実現できること
 
