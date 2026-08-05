@@ -43,7 +43,7 @@ Dynamo では、これらの操作に似た操作を実行することができ�
 
 下の図は、2 つの円の間に線を引いて基本的なリスト操作を表しているベース グラフです。リスト内のデータを管理する方法を紹介し、次のリスト アクションを使用して視覚的な結果を示します。
 
-\![](<../images/working with list - list operation.jpg>)
+![](<../images/working with list - list operation.jpg>)
 
 > 1. 最初に、`500;` という値が表示されている **Code Block** ノードを使用します。
 > 2. 上記の Code Block ノードを **Point.ByCoordinates** ノードの x 入力に接続します。
@@ -65,7 +65,7 @@ Dynamo では、これらの操作に似た操作を実行することができ�
 
 _List.Count_ ノードは、リスト内の値の数をカウントしてその数を返すという単純なノードです。「リストのリスト」を操作する場合は、このノードの使用方法も多少複雑になりますが、それについてはこれ以降のセクションで説明します。
 
-\![カウント](<../images/working with list - list operation - list count.jpg>)
+![カウント](<../images/working with list - list operation - list count.jpg>)
 
 > 1. **List.Count** ノードは、**Line.ByStartPointEndPoint** ノード内の線分の数を返します。この場合は 10 という値が返されますが、これは、元の **Code Block** ノードで作成した点の数に対応しています。
 
@@ -79,14 +79,14 @@ _List.Count_ ノードは、リスト内の値の数をカウントしてその�
 
 **List.GetItemAtIndex** ノードは、リスト内の項目のクエリーを実行するための基本的な方法です。
 
-\![演習](<../images/working with list - get item index 01.jpg>)
+![演習](<../images/working with list - get item index 01.jpg>)
 
 > 1. まず、**Line.ByStartPointEndPoint** ノードを右クリックして、プレビューをオフにします。
 > 2. **List.GetItemAtIndex** ノードを使用して、インデックス値「_0_」を選択するか、線分のリスト内の先頭の項目を選択します。
 
 スライダの値を 0 から 9 の間で変更し、**List.GetItemAtIndex** ノードを使用して別の項目を選択します。
 
-\![](<../images/working with list - get item index 02.gif>)
+![](<../images/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
@@ -98,7 +98,7 @@ _List.Count_ ノードは、リスト内の値の数をカウントしてその�
 
 _List.Reverse_ ノードは、リスト内のすべての項目の順序を逆にします。
 
-\![演習](<../images/working with list - list reverse.jpg>)
+![演習](<../images/working with list - list reverse.jpg>)
 
 > 1. 順序が逆になった線分のリストをわかりやすく表示するために、**Code Block** を `0..1..#50;` に変更して線分の数を増やします。
 > 2. **Line.ByStartPointEndPoint** ノードを複製し、**Curve.PointAtParameter** ノードと 2 番目の **Line.ByStartPointEndPoint** ノードの間に List.Reverse ノードを挿入します。
@@ -114,7 +114,7 @@ _List.Reverse_ ノードは、リスト内のすべての項目の順序を逆�
 
 **List.ShiftIndices** ノードは、ねじれパターンやらせんパターンなどを作成する場合に便利なノードです。このノードは、指定されたインデックス値の分だけ、リスト内の項目を移動します。
 
-\![演習](<../images/working with list - shiftIndices 01.jpg>)
+![演習](<../images/working with list - shiftIndices 01.jpg>)
 
 > 1. List.Reverse ノードの場合と同様に、**List.ShiftIndices** ノードを **Curve.PointAtParameter** ノードと **Line.ByStartPointEndPoint** ノードの間に挿入します。
 > 2. **Code Block** ノードを使用して、リストを移動するインデックス値として「1」を指定します。
@@ -122,7 +122,7 @@ _List.Reverse_ ノードは、リスト内のすべての項目の順序を逆�
 
 **Code Block** ノードの値を「_30_」などの大きな値に変更すると、すべての線分が大きく変化することがわかります。元の円柱形状がこのように変化する動作は、カメラの絞りによく似ています。
 
-\![](<../images/working with list - shiftIndices 02.jpg>)
+![](<../images/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -136,7 +136,7 @@ _List.Reverse_ ノードは、リスト内のすべての項目の順序を逆�
 
 **List.FilterByBooleanMask** ノードは、ブール値のリストに基づいて、特定の項目を削除します。ブール値とは、「true」または「false」を読み取る値のことです。
 
-\![演習](<../images/working with list - filter by bool mask.jpg>)
+![演習](<../images/working with list - filter by bool mask.jpg>)
 
 「true」または「false」を読み取る値のリストを作成するには、次の手順を実行します。
 
