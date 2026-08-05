@@ -1,6 +1,6 @@
 # Revit との連携
 
-\![](<images/revit connection link.jpg>)
+![](<images/revit connection link.jpg>)
 
 Dynamo を Revit に組み込んで使用すると、Revit のビルディング インフォメーション モデリング(BIM)機能を、データとロジックに基づく Dynamo の視覚的なアルゴリズム編集環境によって拡張することができます。Dynamo の柔軟性を Revit の堅牢なデータベース機能と組み合わせることにより、BIM の新しい可能性が広がります。
 
@@ -43,7 +43,7 @@ Revit で Dynamo を起動すると、Dynamo のライブラリ内に[Revit]と�
 
 {% hint style="warning" %} *Revit 固有のファミリを扱うノードを使用する場合、Dynamo グラフは Revit 用の Dynamo から開いたときにのみ正常に動作します。たとえば、Revit 用の Dynamo のグラフを Dynamo Sandbox で開くと、Revit ノードが失われます。{% endhint %}
 
-\![](<images/revit connection - running dynamo in revit 02.jpg>)
+![](<images/revit connection - running dynamo in revit 02.jpg>)
 
 ### ノードをフリーズする
 
