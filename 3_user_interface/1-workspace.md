@@ -21,7 +21,9 @@ Dynamo ワークスペースは、4 つの主要な要素で構成されてい�
 
 ![](<images/workspace-custom-node-tab.png>)
 
-{% hint style="info" %} 各 Dynamo ウィンドウで使用できるホーム ワークスペースは 1 つのみですが、タブで複数のカスタム ノード ワークスペースを開くことができます。 {% endhint %}
+{% hint style="info" %}
+各 Dynamo ウィンドウで使用できるホーム ワークスペースは 1 つのみですが、タブで複数のカスタム ノード ワークスペースを開くことができます。
+{% endhint %}
 
 ### プレビュー モード
 
@@ -71,7 +73,7 @@ b.**3D プレビュー** モードで
   * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)拡大
   * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)ズームアウト
   * ![](<images/2.3-11-graph-preview-pan.jpg>)画面移動
-  * \![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)オービット
+  * ![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)オービット
 * マウスを使用して以下の動作ができます。
   * スクロール ホイールの上下 - 拡大/縮小ズーム
   * 中マウス ボタンをクリックしてドラッグ - 画面移動
