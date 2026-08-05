@@ -19,11 +19,11 @@ If ステートメントは、プログラミングにおける重要な概念�
 
 上の図では、_Boolean_ ノードの出力値が _True_ に設定されているため、その結果として _"this is the result if true"_ という文が表示されます。この場合、_If_ ステートメントを構成する 3 つのノードの動作は同じになります。
 
-\![](<../images/logic - conditional statements 01 false.jpg>)
+![](<../images/logic - conditional statements 01 false.jpg>)
 
 繰り返しますが、これら 3 つのノードの動作はすべて同じになります。_ブール値_ を _False_ に変更すると、元の _If_ ステートメントで定義されているとおりに、出力結果の値が _Pi_ になります。
 
-\![](<../images/logic - conditional statements 02 true.jpg>)
+![](<../images/logic - conditional statements 02 true.jpg>)
 
 ## 演習: ロジックとジオメトリ
 
@@ -37,7 +37,7 @@ If ステートメントは、プログラミングにおける重要な概念�
 
 1. ここでは、ロジックを使用して、数値のリストを偶数のリストと奇数のリストに分割してみましょう。
 
-\![](<../images/logic - exercise part I-01.jpg>)
+![](<../images/logic - exercise part I-01.jpg>)
 
 > a. **Number Range** ノードを使用して、数値の範囲をキャンバスに追加します。
 >
@@ -61,7 +61,7 @@ If ステートメントは、プログラミングにおける重要な概念�
 
 2\.ここでも、前の演習と同じノードを使用します。ただし、次のように、いくつか違いがあります。
 
-\![](<../images/logic - exercise part II-01.jpg>)
+![](<../images/logic - exercise part II-01.jpg>)
 
 > a. これらの入力値で **Sequence** ノードを使用します。
 >
@@ -69,7 +69,7 @@ If ステートメントは、プログラミングにおける重要な概念�
 
 3\.最初に、上の図に示されているように、グラフの別のグループを作成します。このノード グループは、曲線を定義するためのパラメータ制御式を表しています。ここで、次の点に注意する必要があります。
 
-\![](<../images/logic - exercise part II-02.jpg>)
+![](<../images/logic - exercise part II-02.jpg>)
 
 > a. 最初の **Number Slider** は、波の周波数を表します。最小 1、最大 4、ステップ 0.01 の値である必要があります。
 >
@@ -79,23 +79,23 @@ If ステートメントは、プログラミングにおける重要な概念�
 
 ここでは、静的なプロパティで Number ノードを使用し、動的なプロパティで Number Slider ノードを使用して入力を行います。この手順の最初で定義した元の数値の範囲をそのまま使用してもかまいませんが、ここで作成する正弦曲線に対して、ある程度の柔軟性を設定しておく必要があります。Number Slider ノードの値を変更して、曲線の周波数と振幅がどのように変化するかを確認してください。
 
-\![](<../images/logic - exercise part II-03.gif>)
+![](<../images/logic - exercise part II-03.gif>)
 
 4\.ここで少し先回りをして、最終的な結果を確認しましょう。個別に作成した最初の 2 つのステップを接続する必要があります。基本の正弦曲線を使用して、ジッパー状のコンポーネントの位置をコントロールし、真偽判定のロジックを使用して、小さなボックスと大きなボックスを交互に配置します。
 
-\![](<../images/logic - exercise part II-04.jpg>)
+![](<../images/logic - exercise part II-04.jpg>)
 
 > a. Sequence ノードの step 入力の値 2 で作成された数列の範囲を **Math.RemapRange** ノードで再マッピングして、新しい一連の数値を作成します。元の数値の範囲は、0 から 100 までになります(step 値 1)。新しい数値の範囲は、0 から 1 になります。最小値の 0 を _newMin_ 入力に接続し、最大値の 1 を _newMax_ 入力に接続します。
 
 5\.**Curve.PointAtParameter** ノードを作成し、ステップ 04 の **Math.RemapRange** 出力を _param_ 入力として接続します。
 
-\![](<../images/logic - exercise part II-05.jpg>)
+![](<../images/logic - exercise part II-05.jpg>)
 
 この操作により、曲線に沿って点群が作成されます。ここでは数値の範囲を 0 から 1 までの範囲に再マッピングしましたが、その理由は、_param_ 入力に 0 から 1 までの範囲の値を指定する必要があるためです。_0_ の値は始点を表し、_1_ の値は終点を表します。すべての中間値は、_[0,1]_ の範囲内で評価されます。
 
 6\.**Curve.PointAtParameter** ノードの出力を **List.FilterByBoolMask** ノードに接続し、奇数インデックスと偶数インデックスのリストを分離します。
 
-\![](<../images/logic - exercise part II-06.jpg>)
+![](<../images/logic - exercise part II-06.jpg>)
 
 > a. **List.FilterByBoolMask** ノードの _list_ 入力に、前の手順で使用した **Curve.PointAtParameter** ノードを接続します。
 >
@@ -105,7 +105,7 @@ If ステートメントは、プログラミングにおける重要な概念�
 
 **Cuboid.ByLengths** ノードを上の図のように接続し、正弦曲線に沿ったジッパー構造を作成します。ノード名の「Cuboid」とは、直方体という意味です。ここでは、直方体の中央に位置する曲線上の点を基準として、直方体のサイズを定義します。この操作により、偶数と奇数の除算ロジックがモデル内に明示的に定義されます。
 
-\![](<../images/logic - exercise part II-07.jpg>)
+![](<../images/logic - exercise part II-07.jpg>)
 
 > a. 偶数インデックスの直方体のリスト。
 >
