@@ -12,7 +12,7 @@
 
 コード ブロックを使用すると、入力値の指定方法を柔軟に決定することができます。_(10, 5, 0)_  という座標の基本的な点を作成するには、次のようにいくつかの方法があります。
 
-\![](<../images/codeblock brief overview.jpg>)
+![](<../images/codeblock brief overview.jpg>)
 
 ライブラリ内の使用可能な各種の関数に慣れてくると、「Point.ByCoordinates」と入力する方が、ライブラリ内を検索して目的のノードを探すよりも早いということがわかるようになります。「_Point._」と入力すると、点に対して適用できる関数のリストが表示されます。これにより、直感的にスクリプトを作成することができ、Dynamo で関数を適用する方法を理解することができます。
 
@@ -20,7 +20,7 @@
 
 Code Block ノードは、_[Core] > [Input] > [Actions] > [Code Block]_ で使用することができます。または、キャンバス上でダブルクリックするだけで Code Block ノードが表示されます。この方が簡単です。Code Block ノードは頻繁に使用されるため、キャンバス上でダブルクリックするだけで Code Block ノードが表示されるようになっています。
 
-\![](<../images/creating codeblock nodes.jpg>)
+![](<../images/creating codeblock nodes.jpg>)
 
 ### 数値、文字列、式
 
@@ -30,7 +30,7 @@ Code Block ノードを使用すると、データ タイプについても柔�
 
 数値ノードと文字列ノードは、Code Block ノードと比べた場合旧式のノードといえる Dynamo ノードの 2 つの例です。
 
-\![](<../images/old school vs code blocks nodes.jpg>)
+![](<../images/old school vs code blocks nodes.jpg>)
 
 > 1. 従来の方法
 > 2. コード ブロック
