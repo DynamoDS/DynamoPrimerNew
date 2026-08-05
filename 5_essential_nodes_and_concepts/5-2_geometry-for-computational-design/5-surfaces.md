@@ -10,7 +10,7 @@
 
 Dynamo のパラメータにサーフェスを読み込んで評価し、どのような情報を抽出できるかを確認します。
 
-\![](<../images/surfaces - surface in dynamo.jpg>)
+![](<../images/surfaces - surface in dynamo.jpg>)
 
 > 1. _Surface.PointAtParameter_ ノードは、指定された UV 座標における点を返します。
 > 2. _Surface.NormalAtParameter_ ノードは、指定された UV 座標における法線ベクトルを返します。
