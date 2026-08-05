@@ -23,7 +23,7 @@ Dynamo のノード名に共通の形式があることにお気付きでしょ�
 
 _Code Block_ ノードの構文 `Point.ByCoordinates(0,10);` は、Dynamo の _Point.ByCoordinates_ ノードと同じ結果を生成します。ただし、1 つのノードを使用して点を作成できるという違いがあります。_x_ 入力と _y_ 入力に異なるノードを接続する必要がないため、より効率的です。
 
-\![](<../images/codeblock dot notation.jpg>)
+![](<../images/codeblock dot notation.jpg>)
 
 > 1. Code Block で _Point.ByCoordinates_ を使用することにより、初期設定のままのノード _(x,y)_ と同じ順番で入力を指定します。
 
@@ -33,7 +33,7 @@ _Code Block_ ノードの構文 `Point.ByCoordinates(0,10);` は、Dynamo の _P
 
 通常の(ライブラリのほとんどの)ノードは一般的に 3 つのタイプに分けられます。ライブラリはこれらのカテゴリに基づいて編成されています。これらの 3 つのタイプのメソッド(ノード)では、Code Block で呼び出されるときの処理がそれぞれ異なります。
 
-\![](<../images/action create query category.jpg>)
+![](<../images/action create query category.jpg>)
 
 > 1. **Create** \- 何かを作成(または構築)します
 > 2. **Action** \- 何かに対してアクションを実行します
@@ -51,7 +51,7 @@ _Line.ByStartPointEndPoint_ ノードと、Code Block 内の対応する構文�
 
 このタイプのオブジェクトに対してはアクションを行います。Dynamo は(多くのコーディング言語で一般的な) _ドット表記_ を使用して、対象に対してアクションを適用します。対象とするオブジェクトを決めたら、ドットに続けてアクション名を入力します。Action タイプのメソッドの入力は、Create タイプのメソッドと同様、括弧で囲んで指定されます。ただし、対応するノードの最初の入力を指定する必要はありません。代わりに、アクションの実行対象の要素を指定します。
 
-\![](<../images/DesignScript - action.jpg>)
+![](<../images/DesignScript - action.jpg>)
 
 > 1. **Point.Add** ノードは Action タイプのノードであるため、構文の動作が多少異なります。
 > 2. 入力は(1) _point_ と、(2)その点に追加する _vector_ の 2 つです。**Code Block** では、点(対象)に「_pt_」という名前を付けています。*“vec” *という名前のベクトルを「_pt_」に追加するには、_pt.Add(vec)_、つまり「対象、ドット、アクション」の形式で書き込みます。Add アクションの入力は 1 つのみであるか、または **Point.Add** ノードの最初の入力を除くすべての入力になります。**Point.Add** ノードの最初の入力は点自体です。
@@ -66,7 +66,7 @@ Query タイプのメソッドはオブジェクトのプロパティを取得�
 
 ノードを使用するレーシングと、Code Block を使用するレーシングとは少々異なります。ノードを使用する場合、ユーザはノードを右クリックして、実行するレーシング オプションを選択します。Code Block を使用する場合、ユーザはデータを構築する方法をより詳しくコントロールできます。Code Block の省略表記では、_複製ガイド_ を使用して、複数の 1 次元リストをペアリングする方法を設定します。山括弧「<>」内の数値(<1>、<2>、<3> など)は、生成するネストされたリストの階層を設定します。
 
-\![](<../images/DesignScript - lacing.jpg>)
+![](<../images/DesignScript - lacing.jpg>)
 
 > 1. この例では、省略表記で 2 つの範囲を設定します(省略表記については、この章の次のセクションで詳しく説明します)。つまり、`0..1;` は `{0,1}` に相当し、`-3..-7` は `{-3,-4,-5,-6,-7}` に相当します。この結果、2 つの x 値と 5 つの y 値のリストが返されます。このような範囲が一致していないリストを持つ複製ガイドを使用しない場合は、2 つの点が含まれるリストが返され、リストの長さは短い方の長さになります。複製ガイドを使用すると、2 つの値と 5 つの値を組み合わせたすべての座標(または外積)を表示できます。
 > 2. 構文 **Point.ByCoordinates**`(x_vals<1>,y_vals<2>);` を使用すると、それぞれ _5_ つの項目を含む _2_ つのリストが生成されます。
@@ -78,7 +78,7 @@ Query タイプのメソッドはオブジェクトのプロパティを取得�
 
 Code Block を使用する上記の方法を使用するには多少の慣れが必要ですが、Dynamo には処理を容易にする[ノードをコード化]という機能があります。この機能を使用するには、Dynamo グラフでノードの配列を選択し、キャンバスを右クリックして、[ノードをコード化]を選択します。Dynamo はこれらのノードを、すべての入力と出力を含め、1 つの Code Block に統合します。このツールは Code Block の学習に役立つだけでなく、より効率的でパラメトリックな Dynamo グラフの使用を可能にします。次の演習では最後に[ノードをコード化]を使用します。
 
-\![](<../images/DesignScript - node to code.jpg>)
+![](<../images/DesignScript - node to code.jpg>)
 
 ## 演習: サーフェスのアトラクタ
 
@@ -92,28 +92,28 @@ Code Block の性能を紹介するため、既存のアトラクタ フィー�
 
 まず、上記の画像の設定を再作成します(またはサンプル ファイルを開きます)。
 
-\![](<../images/DesignScript - exercise - 01.jpg>)
+![](<../images/DesignScript - exercise - 01.jpg>)
 
 > 1. **Point.ByCoordinates** ノードのレーシングが _外積_ に設定されていることに注目してください。
 > 2. グリッド内の各点は、参照点までの距離に基づいて Z の正の向きに移動します。
 > 3. サーフェスが再作成されて厚みが付けられ、参照点までの距離を基準にしてジオメトリ内にふくらみが作成されます。
 
-\![](<../images/DesignScript - exercise - 02.jpg>)
+![](<../images/DesignScript - exercise - 02.jpg>)
 
 > 1. まず、参照点 **Point.ByCoordinates**`(x,y,0);` を定義します。参照点ノードの最上部で指定したものと同じ **Point.ByCoordinates** 構文を使用します。
 > 2. **Code Block** に変数 _x_ と _y_ が挿入され、スライダを使用してこれらを動的に更新できます。
 > 3. -50 から 50 までの範囲の _スライダ_ をいくつか **Code Block** ノードの入力に追加します。これにより、既定の Dynamo グリッド全体を使用できます。
 
-\![](<../images/DesignScript - exercise - 03.jpg>)
+![](<../images/DesignScript - exercise - 03.jpg>)
 
 > 1. **Code Block** ノードの 2 行目で、数値シーケンス ノードを置き換える省略表記を定義します。`coordsXY = (-50..50..#11);` これについては、次のセクションで詳しく説明します。ここでは、この省略表記がビジュアル スクリプトの **Number Sequence** ノードに相当していることを確認してください。
 
-\![](<../images/DesignScript - exercise - 04.jpg>)
+![](<../images/DesignScript - exercise - 04.jpg>)
 
 > 1. 次に、_coordsXY_ シーケンスから点のグリッドを作成します。これを行うには **Point.ByCoordinates** 構文を使用します。ただし、ビジュアル スクリプトで実行した場合と同様、リストにある_外積_を作成する必要もあります。これを行うには、行(`gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);`)を入力します。山括弧は外積参照を意味します。
 > 2. **Watch3D** ノードには Dynamo のグリッド全体に点のグリッドが表示されます。
 
-\![](<../images/DesignScript - exercise - 05.jpg>)
+![](<../images/DesignScript - exercise - 05.jpg>)
 
 > 1. 少し難しくなってきますが、ここで、点のグリッドを参照点までの距離に基づいて上方向に移動する必要があります。まず新しい点のセット _transPts_ を呼び出しましょう。変換は既存の要素に対するアクションであるため、`Geometry.Translate...` ではなく `gridPts.Translate` を使用します。
 > 2. キャンバス上の実際のノードから、3 つの入力があることが読み取れます。変換するジオメトリは既に宣言されています。この要素に対して、_gridPts.Translate_ を使用してアクションを実行しているためです。残りの 2 つの入力は関数 direction と _distance_ の括弧内に挿入されます。
@@ -121,11 +121,11 @@ Code Block の性能を紹介するため、既存のアトラクタ フィー�
 > 4. 参照点と各グリッド間の距離は計算する必要があります。これは同様に、参照点に対するアクションとして実行します: `refPt.DistanceTo(gridPts)`。
 > 5. 最後のコード行は、変換された点を示します: `transPts=gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));`。
 
-\![](<../images/DesignScript - exercise - 06.jpg>)
+![](<../images/DesignScript - exercise - 06.jpg>)
 
 > 1. これで適切なデータ構造を持つ点のグリッドを使用して NURBS サーフェスを作成できます。`srf = NurbsSurface.ByControlPoints(transPts);` を使用してサーフェスを作成します。
 
-\![](<../images/DesignScript - exercise - 07.jpg>)
+![](<../images/DesignScript - exercise - 07.jpg>)
 
 > 1. 最後に、サーフェスに深さを追加するため、`solid = srf.Thicken(5);` を使用してソリッドを構築します。ここではコードで 5 単位を指定して厚みを付けますが、これを変数として(thickness などの名前を付けて)宣言し、スライダを使用して値をコントロールすることも可能です。
 
@@ -133,10 +133,10 @@ Code Block の性能を紹介するため、既存のアトラクタ フィー�
 
 [ノードをコード化]機能を使用すると、先ほど終了した演習全体を、ボタンをクリックするだけで自動化できます。このツールはカスタム設定や再利用可能な Code Block の作成に優れているだけでなく、Dynamo でスクリプトを作成する方法を学習するのにも役立ちます。
 
-\![](<../images/DesignScript - exercise - 08.jpg>)
+![](<../images/DesignScript - exercise - 08.jpg>)
 
 > 1. まず、この演習の手順 1 で使用したビジュアル スクリプトを操作してみます。すべてのノードを選択し、キャンバスを右クリックして、[_ノードをコード化_]を選択します。非常に簡単です。
 
 Dynamo はビジュアル グラフ、レーシングなどの文字ベースのバージョンを自動化しています。これをビジュアル スクリプトでテストして、Code Block の性能をお試しください。
 
-\![](<../images/DesignScript - exercise - 09.jpg>)
+![](<../images/DesignScript - exercise - 09.jpg>)
