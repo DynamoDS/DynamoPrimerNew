@@ -6,7 +6,7 @@
 
 [ベクトル](2-vectors.md#vector-1)は大きさと方向を表すもので、特定の速度で特定の方向に向かって加速する矢印として描画できます。ベクトルは、Dynamo のモデルにおける主要なコンポーネントです。ベクトルは[Helper]という抽象的なカテゴリに分類されるため、ベクトルを作成しても背景プレビューには何も表示されないことに注意してください。
 
-\![Dynamo 内のベクトル](<../images/Geometry for Computational Design - vectors.jpg>)
+![Dynamo 内のベクトル](<../images/Geometry for Computational Design - vectors.jpg>)
 
 > 1. ベクトル プレビューの代わりに線分を使用することができます。
 
@@ -20,7 +20,7 @@
 
 [平面](2-vectors.md#plane-1)は 2 次元サーフェスで、無限に広がる平坦なサーフェスとして描画できます。各平面には、原点、X 方向、Y 方向、Z (上)方向があります。
 
-\![Dynamo内の平面](<../images/Geometry for Computational Design - plane.jpg>)
+![Dynamo内の平面](<../images/Geometry for Computational Design - plane.jpg>)
 
 > 1. 平面は抽象的な概念ですが、平面には基準点があるため、空間内で平面の場所を特定することができます。
 > 2. Dynamo では、平面は背景プレビューにレンダリングされます。
@@ -35,7 +35,7 @@
 
 [座標系](2-vectors.md#coordinate-system-1)は、点やその他のジオメトリ要素の位置を決定します。次の画像は、Dynamo での外観と各カラーの意味について説明しています。
 
-\![Dynamo の座標系](<../images/Geometry for Computational Design - Coordinate.jpg>)
+![Dynamo の座標系](<../images/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. 座標系は抽象的な概念ですが、座標系には基準点があるため、空間内で座標系の場所を特定することができます。
 > 2. Dynamo の座標系は、点(基準点)と 3 つの軸を定義する線分(X は赤、Y は緑、Z は青で表示)として背景プレビューにレンダリングされます。
