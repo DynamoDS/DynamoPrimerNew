@@ -10,17 +10,17 @@
 
 Dynamo で使用される最も一般的な種類の点は、3 次元のワールド座標系内に存在します。それらの点には、[X,Y,Z]の 3 つの座標があります(Dynamo の 3D 点)。
 
-\![](<../images/points - 3d point in dynamo.jpg>)
+![](<../images/points - 3d point in dynamo.jpg>)
 
 Dynamo の 2D 点には 2 つの座標[X,Y]があります。
 
-\![](<../images/points - 2d point in dynamo.jpg>)
+![](<../images/points - 2d point in dynamo.jpg>)
 
 ### 曲線とサーフェス上の点
 
 曲線とサーフェスのパラメータは連続しており、指定されたジオメトリのエッジを超えて拡張されます。パラメータ空間を定義する形状は 3 次元のワールド座標系内に存在しているため、パラメータ座標をいつでも「ワールド」座標に変換することができます。たとえば、サーフェス上の点[0.2, 0.5]は、ワールド座標系の点[1.8, 2.0, 4.1]と同一です。
 
-\![](<../images/points - xyz vs coord sys vs uv.jpg>)
+![](<../images/points - xyz vs coord sys vs uv.jpg>)
 
 > 1. ワールド XYZ 座標とみなされる座標で表された点
 > 2. 指定された座標系(円柱座標)で表された点
