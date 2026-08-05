@@ -24,7 +24,7 @@ Revit のパラメータの簡単な復習として、タイプ パラメータ�
 
 単位を素早く変換するには、_Convert Between Units_ ノードを使用します。このノードは、長さ、面積、体積の単位をその場で変換できる便利なツールです。
 
-\![](<images/editing - units.jpg>)
+![](<images/editing - units.jpg>)
 
 ## 演習
 
@@ -44,22 +44,22 @@ Revit のパラメータの簡単な復習として、タイプ パラメータ�
 
 Revit で建物のマスを選択すると、プロパティ パネルにインスタンス パラメータの配列が表示されます。
 
-\![](<images/editing - exercise 01.jpg>)
+![](<images/editing - exercise 01.jpg>)
 
 Dynamo では、ターゲット要素を選択してパラメータを取得できます。
 
-\![](<images/editing - exercise 02.jpg>)
+![](<images/editing - exercise 02.jpg>)
 
 > 1. _Select Model Element_ ノードを使用して、建物のマスを選択します。
 > 2. _Element.Parmaters_ ノードを使用して、このマスのすべてのパラメータのクエリーを実行できます。パラメータには、タイプ パラメータとインスタンス パラメータがあります。
 
-\![](<images/editing - exercise 03.jpg>)
+![](<images/editing - exercise 03.jpg>)
 
 > 1. _Element.Parameters_ ノードをクリックして、ターゲット パラメータを検索します。または、前の手順のプロパティ パネルを表示して、編集するパラメータ名を選択することもできます。この場合、建物のマスの形状に大きく影響するパラメータを探す必要があります。
 > 2. _Element.SetParameterByName_ ノードを使用して、Revit 要素に変更を加えます。
 > 3. Code Block ノードを使用してパラメータ リストを定義します。各項目は文字列を示す引用符で囲みます。List.Create ノードを使用して、_"文字列"_ で示した一連のノードを複数の入力に接続することもできますが、Code Block ノードを使用すると処理が高速かつ簡単になります。文字列が Revit の名前と一致していることを確認します(大文字と小文字は区別されます)。`{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
 
-\![](<images/editing - exercise 04.jpg>)
+![](<images/editing - exercise 04.jpg>)
 
 > 1. 各パラメータの値を指定します。_Integer Slider_ ノードを 6 つキャンバスに追加し、リスト内のパラメータに合わせて名前を変更します。また、各スライダの値を上の図のように設定します。上から下に、62、92、25、22、8、12 の順で設定します。
 > 2. パラメータ名の数と同じ長さのリストを使用して、別の _Code Block_ ノードを定義します。その際、_Code Block_ ノードの入力を作成する変数の名前を、引用符を使用せずに入力します。このリスト `{bw,bl,bh,ao,io,lu};` の各入力に _スライダ_ を接続します。
@@ -69,7 +69,7 @@ Dynamo では、ターゲット要素を選択してパラメータを取得で�
 
 Revit と同様に、これらのパラメータの多くは相互に依存関係があります。これらの中には、ジオメトリが壊れてしまう組み合わせもあります。この問題を解決するには、定義済みの式をパラメータ プロパティで使用するか、Dynamo の数値演算で同様のロジックを設定します。余裕があれば、この演習の追加の課題として取り組んでみてください。
 
-\![](<images/editing - exercise 05.jpg>)
+![](<images/editing - exercise 05.jpg>)
 
 > 1. 100、92、100、25、13、51 という組み合わせにより、特徴的な新しいデザインが建物のマスに追加されます。
 
@@ -77,12 +77,12 @@ Revit と同様に、これらのパラメータの多くは相互に依存関�
 
 次に、同様のプロセスを使用してファサードを編集する方法について説明します。
 
-\![](<images/editing - exercise 06.jpg>)
+![](<images/editing - exercise 06.jpg>)
 
 > 1. グラフをコピーして、トラス システムを格納するファサードのグレージングを確認します。この場合、4 つのパラメータを分離します。`{"DblSkin_SouthOffset","DblSkin_MidOffset","DblSkin_NorthOffset","Facade Bend Location"};`
 > 2. また、_Number Slider_ ノードを使用して、対応するパラメータに合わせて名前を変更します。上から 3 つのスライダは[0,10]の範囲に再マップし、一番下のスライダ(_Facade Bend Location_)は[0,1]の範囲に再マップします。次に、これらの値を 2.68、2.64、2.29、0.5 にそれぞれ設定します(実際は任意です)。
 > 3. 新しい Code Block ノードを定義し、スライダを接続します。`{so,mo,no,fbl};`
 
-\![](<images/editing - exercise 07.jpg>)
+![](<images/editing - exercise 07.jpg>)
 
 > 1. グラフのこの部分の _スライダ_ を使用して値をそれぞれ 9.98、10.0、9.71、0.31 に変更すると、ファサード ガラスがさらにがっしりとした形状になります。
