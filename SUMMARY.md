@@ -147,7 +147,7 @@
     * [Migrating from IronPython2 to PythonNet3](11_developer_primer/9_migrating_versions/2-migrating-to-pythonnet3.md)
     * [Migrating from CPython3 (PythonNet2.5) to PythonNet3](11_developer_primer/9_migrating_versions/3-migrating-from-cpython-to-pythonnet3.md)
     * [Obstacles encountered with PythonNet3 and workarounds](11_developer_primer/9_migrating_versions/4-obstacles-and-workaround.md)    
-* [AI Tools](12_ai_tools/12-1_autodesk-assistant/1-what-is-autodesk-assistant.md)
+* [AI Tools](12_ai_tools/README.md)
   * [Autodesk Assistant](12_ai_tools/12-1_autodesk-assistant/1-what-is-autodesk-assistant.md)
     * [What can Autodesk Assistant do](12_ai_tools/12-1_autodesk-assistant/2-what-can-autodesk-assistant-do.md)
     * [What is Autodesk Assistant Unable to do](12_ai_tools/12-1_autodesk-assistant/3-what-is-autodesk-assistant-unable-to-do.md)
