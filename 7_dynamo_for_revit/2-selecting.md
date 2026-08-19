@@ -30,7 +30,7 @@ _포인트 앤 클릭_ 은 Revit 요소를 직접 선택하는 가장 쉬운 방
 
 _드롭다운 메뉴_ 에서는 Revit 프로젝트에서 액세스할 수 있는 모든 요소 리스트를 작성합니다. 이 메뉴를 사용하여 뷰에서 반드시 보이지 않을 수 있는 Revit 요소를 참조할 수 있습니다. 이 도구는 Revit 프로젝트 또는 패밀리 편집기에서 기존 요소를 조회하거나 새 요소를 작성하는 데 유용합니다.
 
-\![](<images/2/selecting - database navigation with dynamo nodes 02.jpg>)
+![](<images/2/selecting - database navigation with dynamo nodes 02.jpg>)
 
 또한 _Revit 계층_ 에서 특정 계층별로 Revit 요소를 선택할 수도 있습니다. 이 옵션은 문서화 또는 생성 인스턴스화 및 사용자화 준비를 위해 대규모 데이터 배열을 사용자화하기 위한 강력한 옵션입니다.
 
@@ -81,7 +81,7 @@ _드롭다운 메뉴_ 에서는 Revit 프로젝트에서 액세스할 수 있는
 
 몇 가지 기본 리스트 작업을 사용하여 관심 면을 조회할 수 있습니다.
 
-\![](images/2/selecting - exercise 05.jpg)
+![](images/2/selecting - exercise 05.jpg)
 
 > 1. 먼저, 선택한 요소를 이전 노드에서 Element.Faces 노드로 출력합니다.
 > 2. 다음으로, _List.Count_ 노드에는 매스의 23개 표면으로 작업하고 있다고 표시됩니다.
