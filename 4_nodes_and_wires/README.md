@@ -8,7 +8,7 @@ No Dynamo, os **Nós** são os objetos que você conecta para formar um programa
 
 A maioria dos nós no Dynamo são compostos de cinco partes. Embora existam exceções, como os nós de entrada, a anatomia de cada nó pode ser descrita da seguinte maneira:
 
-\![](<images/nodes and wires - nodes anatomy.jpg>)
+![](<images/nodes and wires - nodes anatomy.jpg>)
 
 > 1. Nome – O nome do nó com uma convenção de nomenclatura `Category.Name`.
 > 2. Corpo principal – O corpo principal do nó: se clicar aqui com o botão direito do mouse, serão apresentadas opções de todo o nó
@@ -24,7 +24,7 @@ As portas esperam receber dados de um determinado tipo. Por exemplo, ao conectar
 
 {% hint style="info" %} Dica: Passe o cursor do mouse sobre uma porta para ver uma dica de ferramenta contendo o tipo de dados esperado. {% endhint %}
 
-\![](<images/nodes and wires - nodes input and tooltip.jpg>)
+![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
 > 1. Legenda da porta
 > 2. Dica de ferramenta
@@ -51,11 +51,11 @@ Quando você passa o cursor do mouse ou clica com o botão direito do mouse sobr
 
 #### Como lidar com nós com estado de erro ou de aviso
 
-Se o programa visual tiver avisos ou erros, o Dynamo fornecerá informações adicionais sobre o problema. Qualquer nó exibido em amarelo também terá uma dica de ferramenta acima do nome. Passe o cursor do mouse sobre o ícone da dica de ferramenta de aviso \![](<images/nodes and wires - node warning icon.png>) ou de erro \![](<images/nodes and wires - node error icon.png>) para expandi-la.
+Se o programa visual tiver avisos ou erros, o Dynamo fornecerá informações adicionais sobre o problema. Qualquer nó exibido em amarelo também terá uma dica de ferramenta acima do nome. Passe o cursor do mouse sobre o ícone da dica de ferramenta de aviso ![](<images/nodes and wires - node warning icon.png>) ou de erro ![](<images/nodes and wires - node error icon.png>) para expandi-la.
 
 {% hint style="info" %} Dica: Com essa informação da dica de ferramenta, examine os nós a montante para ver se o tipo de dados ou a estrutura de dados está com erro. {% endhint %}
 
-\![](<images/nodes and wires - nodes with warning tooltip.jpg>)
+![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
 > 1. Dica de ferramenta de aviso – “Nulo” ou nenhum dado não pode ser entendido como um Duplo, ou seja, um número
 > 2. Use o nó de inspeção para examinar os dados de entrada
@@ -81,7 +81,7 @@ Os fios conectam a porta de saída de um nó à porta de entrada de outro nó. E
 
 As portas de entrada estão no lado esquerdo e as portas de saída estão localizadas no lado direito dos nós; portanto, geralmente podemos dizer que o fluxo do programa se move da esquerda para a direita.
 
-\![](<images/nodes and wires - flow of data.jpg>)
+![](<images/nodes and wires - flow of data.jpg>)
 
 ### Criar fios <a href="#creating-wires" id="creating-wires"></a>
 
@@ -89,7 +89,7 @@ Crie um fio clicando com o botão esquerdo do mouse em uma porta e, em seguida, 
 
 Os dados sempre fluirão por esse fio da saída para a entrada; no entanto, podemos criar o fio em qualquer direção em termos da sequência de clicar nas portas conectadas.
 
-\![](<images/nodes and wires - creating a wire.gif>)
+![](<images/nodes and wires - creating a wire.gif>)
 
 ### Editar fios <a href="#editing-wires" id="editing-wires"></a>
 
@@ -101,21 +101,21 @@ Frequentemente, queremos ajustar o fluxo do programa em nosso programa visual ed
 
 * Para remover o fio, afaste o fio e clique com o botão esquerdo do mouse no espaço de trabalho
 
-\![](<images/nodes and wires - edit wires remove.gif>)
+![](<images/nodes and wires - edit wires remove.gif>)
 
 * Reconecte vários fios usando Shift+clique com o botão esquerdo do mouse
 
-\![](<images/nodes and wires - edit multi ports.gif>)
+![](<images/nodes and wires - edit multi ports.gif>)
 
 * Duplique um fio usando Ctrl+clique com o botão esquerdo do mouse
 
-\![](<images/nodes and wires - duplicate wire.gif>)
+![](<images/nodes and wires - duplicate wire.gif>)
 
 #### Fios padrão vs. realçados <a href="#wire-previews" id="wire-previews"></a>
 
 Por padrão, nossos fios serão visualizados com um traço cinza. Quando um nó é selecionado, ele vai renderizar qualquer fio de conexão com o mesmo realce azul-claro do nó.
 
-\![](<images/nodes and wires - default vs highlighted wires.jpg>)
+![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
 > 1. Fio realçado
 > 2. Fio padrão
@@ -126,10 +126,10 @@ Caso você prefira ocultar os fios no gráfico, pode encontrar essa opção em V
 
 Com essa configuração, somente os nós selecionados e seus fios unidos serão mostrados no realce azul-claro.
 
-\![](<images/nodes and wires - hide wires setting.gif>)
+![](<images/nodes and wires - hide wires setting.gif>)
 
 #### Ocultar somente fio individual
 
 Também é possível ocultar somente o fio selecionado clicando com o botão direito do mouse na saída Nós > e selecionando Ocultar fios
 
-\![](<images/nodes and wires - hide selected wire.gif>)
+![](<images/nodes and wires - hide selected wire.gif>)
