@@ -6,7 +6,7 @@
 
 [벡터](2-vectors.md#vector-1)는 크기 및 방향을 나타내는 표현으로, 지정된 속도로 특정 방향으로 가속하는 화살표라고 생각하면 됩니다. Dynamo에서 모델의 핵심 구성요소입니다. 추상적인 "도우미" 카테고리에 속하기 때문에 벡터를 작성할 때는 때 배경 미리보기에 아무것도 표시되지 않습니다.
 
-\![Dynamo의 벡터](<../images/Geometry for Computational Design - vectors.jpg>)
+![Dynamo의 벡터](<../images/Geometry for Computational Design - vectors.jpg>)
 
 > 1. 벡터 미리보기를 위한 자리 표시자로 선을 사용할 수 있습니다.
 
@@ -20,7 +20,7 @@
 
 [평면](2-vectors.md#plane-1)은 2차원 표면으로, 무한하게 확장되는 평평한 표면이라고 생각하면 됩니다. 각 평면에는 원점, X 방향, Y 방향 및 Z(위쪽) 방향이 있습니다.
 
-\![Dynamo의 평면](<../images/Geometry for Computational Design - plane.jpg>)
+![Dynamo의 평면](<../images/Geometry for Computational Design - plane.jpg>)
 
 > 1. 평면은 추상적이지만, 평면에는 원점 위치가 있어 이를 공간에서 찾을 수 있습니다.
 > 2. Dynamo에서 평면은 배경 미리보기에서 렌더링됩니다.
@@ -35,7 +35,7 @@
 
 [좌표계](2-vectors.md#coordinate-system-1)는 점 또는 기타 형상 요소의 위치를 결정하는 체계입니다. 아래 이미지는 Dynamo에서 어떻게 보이는지와 각 색상이 무엇을 나타내는지 설명합니다.
 
-\![Dynamo의 좌표계](<../images/Geometry for Computational Design - Coordinate.jpg>)
+![Dynamo의 좌표계](<../images/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. 평면은 추상적이지만, 좌표계에도 원점 위치가 있어 이를 공간에서 찾을 수 있습니다.
 > 2. Dynamo에서 좌표계는 배경 미리보기에서 축을 정의하는 점(원점)과 선으로 렌더링됩니다(규칙에 따라 X는 빨간색, Y는 초록색, Z는 파란색임).
