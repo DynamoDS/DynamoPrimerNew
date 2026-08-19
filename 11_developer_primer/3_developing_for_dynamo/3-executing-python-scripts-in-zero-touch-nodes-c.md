@@ -4,7 +4,7 @@
 
 Jeśli użytkownik potrafi pisać skrypty w języku Python i chce uzupełnić węzły standardowe dodatku w języku Python Dynamo o więcej funkcji, może utworzyć własny za pomocą funkcji Zero-Touch. Zacznijmy od prostego przykładu umożliwiającego przekazanie skryptu w języku Python jako ciągu do węzła Zero-Touch, w którym wykonywany jest skrypt i zwracany jest wynik. Ta analiza przypadku jest oparta na przewodnikach i przykładach z sekcji „Pierwsze kroki”. Użytkownicy dopiero zaczynający tworzenie węzłów Zero-Touch powinni się z nimi zapoznać.
 
-![Węzeł Zero-Touch wykonujący ciąg skryptu w języku Python](../../.gitbook/assets/python-case-study.png)
+![Węzeł Zero-Touch wykonujący ciąg skryptu w języku Python](../images/python-case-study.png)
 
 > Węzeł Zero-Touch wykonujący ciąg skryptu w języku Python
 
@@ -68,7 +68,7 @@ output = str(volume)
 
 Jednym z ograniczeń standardowych węzłów języka Python jest to, że mają one tylko jeden port wyjściowy. Jeśli więc chcemy zwrócić wiele obiektów, musimy utworzyć listę i umieścić na niej poszczególne obiekty. Jeśli zmodyfikujemy powyższy przykład tak, aby zwracał słownik, możemy dodać dowolną liczbę portów wyjściowych. Więcej informacji na temat słowników znajduje się w temacie „Dalsze kroki z Zero-Touch” w sekcji dotyczącej zwracania wielu wartości.
 
-![Ten węzeł umożliwia zwrócenie zarówno objętości prostopadłościanu, jak i jego centroidy.](../../.gitbook/assets/python-multi-case-study.png)
+![Ten węzeł umożliwia zwrócenie zarówno objętości prostopadłościanu, jak i jego centroidy.](../images/python-multi-case-study.png)
 
 > Ten węzeł umożliwia zwrócenie zarówno objętości prostopadłościanu, jak i jego centroidy.
 

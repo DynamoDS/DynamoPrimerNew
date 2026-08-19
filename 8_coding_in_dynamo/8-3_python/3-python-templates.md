@@ -6,13 +6,13 @@ Położenie tego szablonu to `APPDATA` dla instalacji dodatku Dynamo.
 
 Zwykle jest to ścieżka `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-\![](<../../.gitbook/assets/python templates - appdata folder location.jpg>)
+\![](<../images/python templates - appdata folder location.jpg>)
 
 ### Konfigurowanie szablonu
 
 Aby korzystać z tej funkcji, należy dodać następujący wiersz w pliku `DynamoSettings.xml`. _(Edytuj w Notatniku)_
 
-\![](<../../.gitbook/assets/python templates -dynamo settings xml file.png>)
+\![](<../images/python templates -dynamo settings xml file.png>)
 
 Część `<PythonTemplateFilePath />` można po prostu zastąpić następującą treścią:
 
@@ -71,10 +71,10 @@ Po zakończeniu zapisz ten plik jako `PythonTemplate.py` w lokalizacji `APPDATA`
 
 Po zdefiniowaniu szablonu w języku Python dodatek Dynamo będzie go szukać po każdym umieszczeniu węzła w języku Python. Jeśli go nie znajdzie, okno będzie wyglądać jak domyślne okno języka Python.
 
-\![](<../../.gitbook/assets/python templates - before setup template.jpg>)
+\![](<../images/python templates - before setup template.jpg>)
 
 Jeśli szablon w języku Python zostanie znaleziony (np. nasz szablon dotyczący programu Revit), zostaną wyświetlone wszystkie domyślne wbudowane elementy.
 
-\![](<../../.gitbook/assets/python templates - after setup template.jpg>)
+\![](<../images/python templates - after setup template.jpg>)
 
 Dodatkowe informacje dotyczące tego wspaniałego dodatku (którego autorem jest Radu Gidei) można znaleźć tutaj. https://github.com/DynamoDS/Dynamo/pull/8122

@@ -8,7 +8,7 @@ Obiekt CoordinateSystem, choć nie jest właściwym fragmentem geometrii, jest w
 
 Utworzenie obiektu CoordinateSystem wyśrodkowanego w punkcie x = 0, y = 0 i z = 0 bez rotacji, skalowania ani przekształceń pionowych wymaga po prostu wywołania konstruktora tożsamości:
 
-![](../../.gitbook/assets/GeometricPrimitives_01.png)
+![](../images/GeometricPrimitives_01.png)
 
 ```js
 // create a CoordinateSystem at x = 0, y = 0, z = 0,
@@ -19,7 +19,7 @@ cs = CoordinateSystem.Identity();
 
 Obiekty CoordinateSystem z transformacjami geometrycznymi wykraczają poza zakres tego rozdziału, choć warto wspomnieć, że inny konstruktor umożliwia utworzenie układu współrzędnych w określonym punkcie: _CoordinateSystem.ByOriginVectors_:
 
-![](../../.gitbook/assets/GeometricPrimitives_02.png)
+![](../images/GeometricPrimitives_02.png)
 
 ```js
 // create a CoordinateSystem at a specific location,
@@ -41,7 +41,7 @@ Najprostszym geometrycznym obiektem elementarnym jest punkt (Point), reprezentuj
 
 W tym przykładzie przedstawiono punkty utworzone w różnych układach współrzędnych:
 
-![](../../.gitbook/assets/GeometricPrimitives_03.png)
+![](../images/GeometricPrimitives_03.png)
 
 ```js
 // create a point with x, y, and z coordinates
@@ -77,7 +77,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
 
 Kolejnym obiektem elementarnym wyższego wymiaru w dodatku Dynamo jest segment linii reprezentujący nieskończoną liczbę punktów między dwoma punktami końcowymi. Linie można tworzyć przez jawne określenie dwóch punktów obwiedni za pomocą konstruktora _Line.ByStartPointEndPoint_ lub przez określenie punktu początkowego, kierunku i długości w tym kierunku: _Line.ByStartPointDirectionLength_.
 
-![](../../.gitbook/assets/GeometricPrimitives_04.png)
+![](../images/GeometricPrimitives_04.png)
 
 ```js
 p1 = Point.ByCoordinates(-2, -5, -10);
@@ -96,7 +96,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
 
 Dodatek Dynamo zawiera obiekty reprezentujące najbardziej podstawowe typy geometrycznych obiektów elementarnych w trzech wymiarach: prostopadłościany, tworzone za pomocą _Cuboid.ByLengths_; stożki tworzone za pomocą _Cone.ByPointsRadius_ i _Cone.ByPointsRadii_; walce tworzone za pomocą _Cylinder.ByRadiusHeight_; oraz sfery tworzone za pomocą _Sphere.ByCenterPointRadius_.
 
-![](../../.gitbook/assets/GeometricPrimitives_05.png)
+![](../images/GeometricPrimitives_05.png)
 
 ```js
 // create a cuboid with specified lengths

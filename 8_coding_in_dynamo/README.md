@@ -6,4 +6,4 @@ Dodatek Dynamo doskonale nadaje się do rozpoczęcia przygody z kodowaniem w św
 * [Geometria przy użyciu języka DesignScript](8-2_geometry-with-design-script/)
 * [Python](8-3_python/)
 
-![](../.gitbook/assets/image.png)
+![](images/image.png)

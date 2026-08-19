@@ -2,7 +2,7 @@
 
 Platformę Dynamo zaprojektowano tak, aby umożliwić współtworzenie wszystkim użytkownikom, niezależnie od poziomu doświadczenia. Dostępnych jest kilka opcji programowania odpowiednich do różnych rodzajów i poziomów umiejętności, z których każda ma zalety i wady w zależności od zamierzonego celu. Poniżej omówimy te różne opcje i sposób wyboru między nimi.
 
-![Trzy środowiska programistyczne](../../.gitbook/assets/developing-for-dynamo.png)
+![Trzy środowiska programistyczne](../images/developing-for-dynamo.png)
 
 > Trzy środowiska programistyczne: program Visual Studio, Edytor języka Python i język Code Block DesignScript
 
@@ -22,7 +22,7 @@ Te węzły umożliwiają najwyższy stopień dostosowania. Wiele pakietów jest 
 
 W poniższym omówieniu jako środowisko programistyczne dla węzłów Zero-Touch i NodeModel jest używany program Visual Studio.
 
-![Interfejs programu Visual Studio](../../.gitbook/assets/vs-devenv.jpg)
+![Interfejs programu Visual Studio](../images/vs-devenv.jpg)
 
 > Interfejs programu Visual Studio z projektem, który będziemy opracowywać
 
@@ -42,7 +42,7 @@ Mimo że te procesy istnieją w obszarze roboczym programowania wizualnego i są
 
 Programowanie w obszarze roboczym dodatku Dynamo to wydajne rozwiązanie umożliwiające natychmiastowe uzyskanie informacji zwrotnych.
 
-![Programowanie w obszarze roboczym dodatku Dynamo za pomocą węzła w języku Python](../../.gitbook/assets/python-example.jpg)
+![Programowanie w obszarze roboczym dodatku Dynamo za pomocą węzła w języku Python](../images/python-example.jpg)
 
 > Programowanie w obszarze roboczym dodatku Dynamo za pomocą węzła w języku Python
 
@@ -54,7 +54,7 @@ Opcje programowania dla dodatku Dynamo zaprojektowano z uwzględnieniem złożon
 
 Są to proste opcje pisania kodu w środowisku programowania wizualnego dodatku Dynamo. Obszar roboczy programowania wizualnego dodatku Dynamo zapewnia dostęp do języka Python i języka DesignScript oraz możliwość umieszczania wielu węzłów wewnątrz węzła niestandardowego.
 
-![Węzeł Code Block, skrypt w języku Python i węzeł niestandardowy](../../.gitbook/assets/Development-Icons.png)
+![Węzeł Code Block, skrypt w języku Python i węzeł niestandardowy](../images/Development-Icons.png)
 
 Te metody zapewniają następujące możliwości:
 
@@ -66,7 +66,7 @@ Te metody zapewniają następujące możliwości:
 
 Zero-Touch to prosta metoda importowania bibliotek C# przez wskazanie i kliknięcie. Dodatek Dynamo odczyta publiczne metody z pliku `.dll` i przekonwertuje je na węzły Dynamo. Za pomocą metody Zero-Touch można tworzyć własne pakiety i węzły niestandardowe.
 
-![Węzły Zero-Touch](../../.gitbook/assets/ZTImport.png)
+![Węzły Zero-Touch](../images/ZTImport.png)
 
 Co można zrobić za pomocą tej metody:
 
@@ -78,7 +78,7 @@ Co można zrobić za pomocą tej metody:
 
 Te węzły są osadzone nieco głębiej w strukturze dodatku Dynamo. Są one oparte na klasie `NodeModel` i napisane w języku C#. Mimo że ta metoda zapewnia największą elastyczność i największe możliwości, wymaga jednak wyraźnego zdefiniowania większości aspektów węzła i umieszczenia funkcji w osobnym zespole.
 
-![Węzły pochodne od klasy NodeModel](../../.gitbook/assets/Development-Icons-NodeModel.png)
+![Węzły pochodne od klasy NodeModel](../images/Development-Icons-NodeModel.png)
 
 Co można zrobić za pomocą tej metody:
 
@@ -93,13 +93,13 @@ Ponieważ dodatek Dynamo jest regularnie aktualizowany, w części interfejsu AP
 
 Zmiany interfejsu API są śledzone na [stronie wiki dodatku Dynamo w serwisie GitHub](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). Obejmuje to zmiany wprowadzone w pakiecie DynamoCore, bibliotekach i obszarach roboczych.
 
-![Dokument zmian w interfejsie API dodatku Dynamo](../../.gitbook/assets/api-changes.png)
+![Dokument zmian w interfejsie API dodatku Dynamo](../images/api-changes.png)
 
 Przykładem nadchodzącej istotnej zmiany jest przejście z formatu pliku XML na format pliku JSON w wersji 2.0. Węzły pochodne od klasy NodeModel będą teraz wymagać [konstruktora JSON](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node). W przeciwnym razie nie będą otwierane w dodatku Dynamo 2.0.
 
 Dokumentacja interfejsu API dodatku Dynamo obejmuje obecnie podstawowe funkcje: [http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI)
 
-![Dokumentacja interfejsu API](../../.gitbook/assets/api-docs.jpg)
+![Dokumentacja interfejsu API](../images/api-docs.jpg)
 
 ### Uprawnienia do dystrybucji plików binarnych w pakiecie <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 

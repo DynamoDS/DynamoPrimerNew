@@ -10,7 +10,7 @@ Jeśli chcemy tworzyć bardziej złożone modele, których nie można utworzyć 
 
 Do modyfikowania brył można używać [operacji logicznych](6-solids.md#boolean-operations). Użyjmy kilku operacji logicznych, by utworzyć kolczastą kulę.
 
-\![](<../../.gitbook/assets/solids - spiky ball.jpg>)
+\![](<../images/solids - spiky ball.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius**: utwórz bryłę bazową.
 > 2. **Topology.Faces**, **Face.SurfaceGeometry**: wykonaj zapytanie dotyczące powierzchni bryły i przekształć w geometrię powierzchni — w tym przypadku sfera ma tylko jedną powierzchnię.
@@ -29,7 +29,7 @@ Do modyfikowania brył można używać [operacji logicznych](6-solids.md#boolean
 
 Operacje logiczne są złożone i ich obliczanie może być powolne. Za pomocą funkcji „blokowania” można wstrzymać wykonywanie wybranych węzłów i zależnych od nich węzłów na dalszym etapie przepływu.
 
-\![](<../../.gitbook/assets/solids - freeze node.jpg>)
+\![](<../images/solids - freeze node.jpg>)
 
 > 1. Użyj menu kontekstowego wyświetlanego po kliknięciu prawym przyciskiem myszy, aby zablokować operację sumowania brył.
 > 2. Wybrany węzeł i wszystkie węzły na dalszym etapie przepływu będą wyświetlane w podglądzie z jasnoszarym cieniowaniem, a zależne przewody będą wyświetlane jako linie kreskowane. Także zależny podgląd geometrii będzie cieniowany. Teraz można zmienić wartości na wcześniejszym etapie przepływu bez obliczania sumy logicznej.
@@ -44,7 +44,7 @@ Operacje logiczne są złożone i ich obliczanie może być powolne. Za pomocą 
 
 Bryły składają się z jednej lub większej liczby powierzchni, które obejmują objętość w ramach zamkniętej obwiedni definiującej kierunek „do wewnątrz” lub „na zewnątrz”. Niezależnie od tego, ile jest tych powierzchni, muszą one tworzyć „szczelną” objętość, aby można było je uważać za bryłę. Bryły można tworzyć przez połączenie powierzchni lub polipowierzchni albo za pomocą operacji, takich jak wyciągnięcie złożone, przeciągnięcie i obrót. Obiekty elementarne takie jak sfera, sześcian, stożek i walec są również bryłami. Sześcian z usuniętą co najmniej jedną powierzchnią to polipowierzchnia, która ma podobne właściwości, ale nie jest bryłą.
 
-![Bryły](../../.gitbook/assets/Primitives.jpg)
+![Bryły](../images/Primitives.jpg)
 
 > 1. Płaszczyzna składa się z pojedynczej powierzchni i nie jest bryłą.
 > 2. Sfera składa się z pojedynczej powierzchni, ale _jest_ bryłą.
@@ -56,7 +56,7 @@ Bryły składają się z jednej lub większej liczby powierzchni, które obejmuj
 
 Bryły składają się z trzech typów elementów: wierzchołków, krawędzi i ścian. Ściany to powierzchnie tworzące bryłę. Krawędziami są krzywe definiujące połączenie pomiędzy przyległymi ścianami, a wierzchołki to punkty początkowe i końcowe tych krzywych. Te elementy mogą być przywoływane za pomocą węzłów topologii.
 
-![Topologia](../../.gitbook/assets/Solid-topology.jpg)
+![Topologia](../images/Solid-topology.jpg)
 
 > 1. Powierzchnie
 > 2. Krawędzie
@@ -66,7 +66,7 @@ Bryły składają się z trzech typów elementów: wierzchołków, krawędzi i �
 
 Bryły można modyfikować przez zaokrąglenie lub fazowanie ich krawędzi w celu wyeliminowania ostrych narożników i kątów. Operacja fazowania tworzy powierzchnię prostokreślną między dwiema ścianami, natomiast zaokrąglenie łączy ściany, aby zachować styczność.
 
-![](../../.gitbook/assets/SolidOperations.jpg)
+![](../images/SolidOperations.jpg)
 
 > 1. Sześcian bryłowy
 > 2. Sześcian z fazowaniem
@@ -81,13 +81,13 @@ Operacje logiczne na bryłach są metodami łączenia dwóch lub większej liczb
 3. **Usunięcie** niepotrzebnych części geometrii.
 4. **Połączenie** wszystkiego z powrotem.
 
-Dzięki temu operacje logiczne na bryłach są zaawansowanym i oszczędzającym czas procesem. Istnieją trzy operacje logiczne na bryłach rozróżniające, które części geometrii zostają zachowane. ![Operacja logiczna na bryle](../../.gitbook/assets/SolidBooleans.jpg)
+Dzięki temu operacje logiczne na bryłach są zaawansowanym i oszczędzającym czas procesem. Istnieją trzy operacje logiczne na bryłach rozróżniające, które części geometrii zostają zachowane. ![Operacja logiczna na bryle](../images/SolidBooleans.jpg)
 
 > 1. **Union (suma)**: usuń nakładające się części brył i połącz je w jedną bryłę.
 > 2. **Difference (różnica)**: odejmij jedną bryłę od drugiej. Bryła odejmowana jest określana jako narzędzie. Warto zauważyć, że można zamienić bryłę wskazaną jako narzędzie, aby zachować odwrotną objętość.
 > 3. **Intersection (przecięcie)**: zachowaj tylko przecinającą się objętość dwóch brył.
 
-Oprócz tych trzech operacji dodatek Dynamo udostępnia też węzły **Solid.DifferenceAll** i **Solid.UnionAll**, które umożliwiają wykonywanie operacji różnicy i sumy dla wielu brył. ![](../../.gitbook/assets/BooleanAll.jpg)
+Oprócz tych trzech operacji dodatek Dynamo udostępnia też węzły **Solid.DifferenceAll** i **Solid.UnionAll**, które umożliwiają wykonywanie operacji różnicy i sumy dla wielu brył. ![](../images/BooleanAll.jpg)
 
 > 1. **UnionAll**: operacja sumy ze sferą i stożkami skierowanymi na zewnątrz
 > 2. **DifferenceAll**: operacja różnicy ze sferą i stożkami skierowanymi do wewnątrz

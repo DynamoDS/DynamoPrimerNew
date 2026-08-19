@@ -112,7 +112,7 @@ Węzły niestandardowe są organizowane na podstawie wartości `Category Name` o
 **OSTRZEŻENIE!**\
  Użycie zapisu kropkowego w nazwach lub kategoriach węzłów spowoduje utworzenie dodatkowych podkategorii zagnieżdżonych. Kropka `.` będzie pełnić rolę separatora określającego dodatkową hierarchię. Jest to nowe zachowanie w bibliotece dodatku Dynamo 2.0.
 
-![Właściwości węzła niestandardowego](../../.gitbook/assets/custom-node-properties.jpg)
+![Właściwości węzła niestandardowego](../images/custom-node-properties.jpg)
 
 Nazwę kategorii można później zaktualizować w pliku .dyf (XML lub JSON)
 

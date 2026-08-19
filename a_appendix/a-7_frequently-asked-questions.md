@@ -38,29 +38,29 @@ Biblioteka geometrii (będzie dostępna tylko z określonymi narzędziami do mod
 
 Jeśli po rozpakowaniu kompilacji w ogóle nie możesz uruchomić programu DynamoSandbox.exe, koniecznie rozpakuj kompilację za pomocą programu [7zip](https://www.7-zip.org/download.html). Możesz również ręcznie odblokować archiwum .zip _przed_ wyodrębnieniem jego zawartości — jeśli masz uprawnienia na używanym komputerze.
 
-![](../.gitbook/assets/dynamo-builds-1.png)
+![](images/dynamo-builds-1.png)
 
 W przypadku braku któregokolwiek z wymaganych komponentów mogą wystąpić problemy podczas korzystania z dodatku Dynamo, a niektóre części interfejsu użytkownika mogą nie zostać wczytane.
 
 Przyjrzyjmy się poniższemu zrzutowi ekranu z przykładem: po rozpakowaniu pliku zip z kompilacją na czystej maszynie wirtualnej z systemem Windows 10 bez procesora graficznego (GPU) na maszynie brakuje obu wymaganych komponentów. Jest to wskazane w konsoli dodatku Dynamo.
 
-![](../.gitbook/assets/dynamo-builds-2.png)
+![](images/dynamo-builds-2.png)
 
 **Instalowanie programu DirectX**
 
 Postępuj zgodnie z instrukcjami firmy Microsoft, aby sprawdzić, czy masz już zainstalowany program DirectX. Jeśli nie, możesz otworzyć program DXSETUP.exe z naszego repozytorium dodatku Dynamo w serwisie GitHub [tutaj](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX). Gdy zobaczysz poniższe okno dialogowe, możesz kliknąć przycisk Dalej, aby zainstalować program DirectX w lokalizacji domyślnej.
 
-![](../.gitbook/assets/dynamo-builds-3.png)
+![](images/dynamo-builds-3.png)
 
 **Instalowanie komponentu Microsoft Visual C++ 2015–2024 Redistributable (x64)**
 
 Pobierz najnowszą wersję [stąd](https://aka.ms/vs/17/release/vc_redist.x64.exe). Następnie powinno być możliwe uruchomienie instalatora o nazwie vc_redist.x64.exe w lokalizacji pobierania przeglądarki. Po wyświetleniu poniższego okna dialogowego możesz kliknąć przycisk Zainstaluj, aby umieścić ten komponent w lokalizacji domyślnej.
 
-![](../.gitbook/assets/dynamo-builds-4.png)
+![](images/dynamo-builds-4.png)
 
 Po zainstalowaniu obu wymaganych komponentów pobranych za pomocą powyższego łącza ponownie uruchom program DynamoSandbox.exe. Powinien być widoczny następujący wynik:
 
-![](../.gitbook/assets/dynamo-builds-5.png)
+![](images/dynamo-builds-5.png)
 
 **Brak grafiki 3D.**
 
@@ -72,7 +72,7 @@ Ogólnie rzecz biorąc, podczas korzystania ze środowiska DynamoSandbox.exe pra
 
 _przykładowy panel sterowania nvidia:_
 
-![](../.gitbook/assets/dynamo-builds-6.png)
+![](images/dynamo-builds-6.png)
 
 **Instalowanie środowiska uruchomieniowego WebView2**
 
@@ -80,13 +80,13 @@ Obecnie kolejne moduły dodatku Dynamo korzystają z komponentu WebView2: przegl
 
 To jest łącze służące do instalacji środowiska uruchomieniowego WebView2: [https://developer.microsoft.com/pl-pl/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section)
 
-![](../.gitbook/assets/dynamo-builds-7.png)
+![](images/dynamo-builds-7.png)
 
 Komponenty, które powinny być zainstalowane (tylko jeden z nich) to Evergreen Bootstrapper lub Evergreen Standalone Installer — pierwszy pobiera instalator o rozmiarze 1,50 MB, a drugi pobiera instalator o rozmiarze 130 MB.
 
 Po zainstalowaniu środowiska uruchomieniowego kolejne komponenty dodatku Dynamo powinny działać poprawnie:
 
-![](../.gitbook/assets/dynamo-builds-8.png)
+![](images/dynamo-builds-8.png)
 
 **Problemy dotyczące węzłów programu Excel dodatku Dynamo**
 

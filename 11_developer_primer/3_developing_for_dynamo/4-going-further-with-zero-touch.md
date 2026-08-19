@@ -2,7 +2,7 @@
 
 Po omówieniu tworzenia projektu Zero-Touch możemy teraz lepiej zapoznać się z zagadnieniami dotyczącymi tworzenia węzła, analizując przykład ZeroTouchEssentials w witrynie dodatku Dynamo w serwisie GitHub.
 
-![Węzły Zero-Touch](../../.gitbook/assets/ootbzerotouch.png)
+![Węzły Zero-Touch](../images/ootbzerotouch.png)
 
 > Wiele węzłów standardowych dodatku Dynamo to w zasadzie węzły Zero-Touch, takie jak większość węzłów Math, Color i DateTime powyżej.
 
@@ -10,7 +10,7 @@ Aby rozpocząć, pobierz projekt ZeroTouchEssentials stąd: [https://github.com/
 
 W programie Visual Studio otwórz plik rozwiązania `ZeroTouchEssentials.sln` i skompiluj to rozwiązanie.
 
-![Projekt ZeroTouchEssentials w programie Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
+![Projekt ZeroTouchEssentials w programie Visual Studio](../images/vs-build-zte.jpg)
 
 > Plik `ZeroTouchEssentials.cs` zawiera wszystkie metody, które zaimportujemy do dodatku Dynamo.
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Wartość domyślna](../../.gitbook/assets/defaultval.jpg)
+![Wartość domyślna](../images/defaultval.jpg)
 
 > 1. Po umieszczeniu kursora na porcie wejściowym węzła zostanie wyświetlona wartość domyślna
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Węzeł zwracający wiele pozycji danych wyjściowych.
 
-![Wiele pozycji danych wyjściowych](../../.gitbook/assets/multipleoutputs.png)
+![Wiele pozycji danych wyjściowych](../images/multipleoutputs.png)
 
 > 1. Zwróć uwagę, że teraz istnieją dwa porty wyjściowe o nazwach zgodnych z ciągami wprowadzonymi dla kluczy słownika.
 
@@ -90,7 +90,7 @@ Do najlepszych rozwiązań należy dodawanie do węzłów dodatku Dynamo dokumen
   * Na przykład: `/// <summary>...</summary>`
 * Włącz dokumentację XML w programie Visual Studio, wybierając opcję `Project > [Project] Properties > Build > Output` i zaznaczając opcję `Documentation file`
 
-![Generowanie pliku XML](../../.gitbook/assets/vs-xml.jpg)
+![Generowanie pliku XML](../images/vs-xml.jpg)
 
 > 1. Program Visual Studio wygeneruje plik XML w określonej lokalizacji
 
@@ -141,7 +141,7 @@ Opisy węzłów to podsumowania funkcji węzła i danych wyjściowych. W dodatku
 * W etykiecie narzędzia węzła
 * W przeglądarce dokumentacji
 
-![Opis węzła](../../.gitbook/assets/node-description.png)
+![Opis węzła](../images/node-description.png)
 
 Przestrzeganie tych wskazówek zapewnia spójność i pomaga zaoszczędzić czas podczas pisania oraz aktualizowania opisów węzłów.
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 Po zaimportowaniu biblioteki DLL przykładu ZeroTouchEssentials w bibliotece będzie znajdował się węzeł ZeroTouchEssentials. Ten obiekt można utworzyć za pomocą węzła `ByTwoDoubles`.
 
-![Węzeł ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
+![Węzeł ByTwoDoubles](../images/dyn-constructor.jpg)
 
 ### Używanie typów geometrii dodatku Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Węzeł, który pobiera długość krzywej i podwaja ją.
 
-![Dane wejściowe określające krzywą](../../.gitbook/assets/doublelength.png)
+![Dane wejściowe określające krzywą](../images/doublelength.png)
 
 > 1. Ten węzeł przyjmuje jako dane wejściowe typ geometrii Curve (krzywa).
 
@@ -285,7 +285,7 @@ Wraz z opublikowaniem nowszej wersji biblioteki nazwy węzłów mogą ulec zmian
 * W tym elemencie migrations utwórz elementy `<priorNameHint>...</priorNameHint>` dla każdej zmiany nazwy
 * Dla każdej zmiany nazwy dodaj element `<oldName>...</oldName>` i element `<newName>...</newName>`
 
-![Plik migracji](../../.gitbook/assets/vs-migrations-file.jpg)
+![Plik migracji](../images/vs-migrations-file.jpg)
 
 > 1. Kliknij prawym przyciskiem myszy i wybierz polecenie `Add > New Item`
 > 2. Wybierz opcję `XML File`

@@ -8,13 +8,13 @@ Dynamo to aplikacja do [programowania wizualnego](https://primer2.dynamobim.org/
 
 Dodatek Dynamo umożliwia pracę w procesie programowania wizualnego, w którym łączy się elementy, aby zdefiniować zależności i sekwencje działań składających się na algorytmy niestandardowe. Algorytmów można używać do tworzenia szerokiej gamy aplikacji — od przetwarzania danych po generowanie geometrii — wszystko to w czasie rzeczywistym i bez pisania jakiegokolwiek kodu (`code`).
 
-\![](<../.gitbook/assets/nodes and wires - flow of data.jpg>)
+\![](<images/nodes and wires - flow of data.jpg>)
 
 ### Łączenie węzłów z przewodami
 
 Węzły i przewody są kluczowymi komponentami dodatku Dynamo, które obsługują proces [programowania wizualnego](../a_appendix/a-1_visual-programming-and-dynamo.md). Pomaga to w tworzeniu silnych powiązań wizualnych i systemowych między częściami projektu. Za pomocą prostego kliknięcia myszą można łatwo połączyć węzły podczas opracowywania i optymalizowania procesu roboczego projektowania.
 
-\![](<../.gitbook/assets/what is dynamo - connecting nodes with wires.gif>)
+\![](<images/what is dynamo - connecting nodes with wires.gif>)
 
 ## Co można osiągnąć za pomocą dodatku Dynamo?
 

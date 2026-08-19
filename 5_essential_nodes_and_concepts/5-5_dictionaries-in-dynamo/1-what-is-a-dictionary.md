@@ -22,7 +22,7 @@ Rozdzielenie słowników od list sprawia, że słowniki stają się pierwszoligo
 * W bibliotece wprowadzono _nowe węzły_, aby ułatwić tworzenie i modyfikowanie słowników oraz stosowanie do nich zapytań.
 * Listy tworzone w węzłach Code Block w wersji 1.x będą automatycznie migrowane po wczytaniu skryptu do nowej składni listy, w której są używane nawiasy kwadratowe `[ ]` zamiast nawiasów klamrowych `{ }` \\
 
-\![](<../../.gitbook/assets/what is a dictionary - what are the changes (1) (4).jpg>)
+\![](<../images/what is a dictionary - what are the changes.jpg>)
 
 ***
 
@@ -32,7 +32,7 @@ W informatyce słowniki — tak jak listy — to kolekcje obiektów. Listy mają
 
 Na poniższej ilustracji pokazano potencjalny przypadek zastosowania słownika. Często słowniki są używane do powiązania dwóch fragmentów danych, które mogą nie mieć bezpośredniej korelacji. W naszym przypadku połączymy hiszpańską wersję słowa z angielską do późniejszego wyszukania.
 
-\![](<../../.gitbook/assets/what is a dictionary - what would you use these for.jpg>)
+\![](<../images/what is a dictionary - what would you use these for.jpg>)
 
 > 1. Utwórz słownik, aby powiązać te dwa elementy danych.
 > 2. Pobierz wartość związaną z podanym kluczem.

@@ -2,7 +2,7 @@
 
 Węzły oparte na klasie NodeModel zapewniają znacznie większą elastyczność i możliwości niż węzły Zero-Touch. W tym przykładzie przeniesiemy węzeł siatki Zero-Touch na następny poziom, dodając zintegrowany suwak losowo ustawiający rozmiar prostokąta.
 
-![Wykres siatki prostokątnej](../../.gitbook/assets/cover-image-2.jpg)
+![Wykres siatki prostokątnej](../images/cover-image-2.jpg)
 
 > Ten suwak umożliwia skalowanie komórek względem ich rozmiaru, dzięki czemu użytkownik nie musi udostępniać suwaka z odpowiednim zakresem.
 
@@ -33,7 +33,7 @@ Węzeł NodeModel może tylko wywoływać funkcje, dlatego należy rozdzielić w
 
 Utwórz w rozwiązaniu dwa projekty biblioteki klas C#: jeden dla funkcji, a drugi dla interfejsu NodeModel.
 
-![Dodawanie nowej biblioteki klas](../../.gitbook/assets/vs-new-class-projects.jpg)
+![Dodawanie nowej biblioteki klas](../images/vs-new-class-projects.jpg)
 
 > 1. Kliknij prawym przyciskiem myszy rozwiązanie i wybierz pozycję `Add > New Project`
 > 2. Wybierz bibliotekę klas
@@ -43,7 +43,7 @@ Utwórz w rozwiązaniu dwa projekty biblioteki klas C#: jeden dla funkcji, a dru
 
 Następnie należy zmienić nazwy automatycznie utworzonych bibliotek klas i dodać je do projektu `CustomNodeModel`. Klasa `GridNodeModel` służy do zaimplementowania klasy abstrakcyjnej NodeModel, a `GridNodeView` do dostosowania widoku. Natomiast klasa `GridFunction` ma zawierać wszystkie funkcje, które będą wywoływane.
 
-![Eksplorator rozwiązań](../../.gitbook/assets/vs-new-class.jpg)
+![Eksplorator rozwiązań](../images/vs-new-class.jpg)
 
 > 1. Dodaj kolejną klasę, klikając prawym przyciskiem myszy projekt `CustomNodeModel`, wybierając polecenie `Add > New Item...` i wybierając opcję `Class`.
 > 2. W projekcie `CustomNodeModel` potrzebne są klasy `GridNodeModel.cs` i `GridNodeView.cs`
@@ -51,14 +51,14 @@ Następnie należy zmienić nazwy automatycznie utworzonych bibliotek klas i dod
 
 Przed dodaniem kodu do klas dodaj wymagane dla tego projektu pakiety. Projekt `CustomNodeModel` będzie wymagać bibliotek ZeroTouchLibrary i WpfUILibrary. Natomiast projekt `CustomNodeModelFunction` będzie wymagać tylko biblioteki ZeroTouchLibrary. Biblioteka WpfUILibrary zostanie użyta podczas dostosowywania interfejsu użytkownika, które wykonamy później, a biblioteka ZeroTouchLibrary — do tworzenia geometrii. Pakiety można dodawać dla projektów pojedynczo. Ponieważ te pakiety mają zależności, składniki Core i DynamoServices zostaną zainstalowane automatycznie.
 
-![Instalowanie pakietów](../../.gitbook/assets/vs-add-packages.jpg)
+![Instalowanie pakietów](../images/vs-add-packages.jpg)
 
 > 1. Kliknij prawym przyciskiem myszy projekt i wybierz pozycję `Manage NuGet Packages`
 > 2. Zainstaluj tylko wymagane pakiety dla tego projektu
 
 Program Visual Studio skopiuje pakiety NuGet, do których dodaliśmy odwołania w katalogu kompilacji. Dla tej pozycji można ustawić wartość false (fałsz), aby w pakiecie nie było żadnych niepotrzebnych plików.
 
-![Wyłączanie kopii lokalnej pakietu](../../.gitbook/assets/vs-disable-package-copying.jpg)
+![Wyłączanie kopii lokalnej pakietu](../images/vs-disable-package-copying.jpg)
 
 > 1. Wybierz pakiety NuGet dodatku Dynamo
 > 2. Ustaw wartość false (fałsz) dla pozycji `Copy Local`
@@ -199,7 +199,7 @@ Ta klasa funkcji jest bardzo podobna do tej z analizy przypadku siatki Zero-Touc
 
 Tak jak dodaliśmy odwołania do pakietów NuGet, projekt `CustomNodeModel` musi odwoływać się do projektu `CustomNodeModelFunction`, aby wywołać funkcję.
 
-![Dodawanie odwołania](../../.gitbook/assets/vs-add-project-reference.jpg)
+![Dodawanie odwołania](../images/vs-add-project-reference.jpg)
 
 > Instrukcja using dla projektu CustomNodeModel będzie nieaktywna, dopóki nie będzie odwołania do tej funkcji
 >
@@ -240,7 +240,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 Po skonfigurowaniu struktury projektu należy za pomocą środowiska projektowego programu Visual Studio utworzyć element sterujący użytkownika i zdefiniować jego parametry w pliku `.xaml`. Z pola przybornika dodaj suwak do części `<Grid>...</Grid>`.
 
-![Dodawanie nowego suwaka](../../.gitbook/assets/vs-usercontrol.jpg)
+![Dodawanie nowego suwaka](../images/vs-usercontrol.jpg)
 
 > 1. Kliknij prawym przyciskiem myszy pozycję `CustomNodeModel` i wybierz polecenie `Add > New Item`
 > 2. Wybierz opcję `WPF`
@@ -295,7 +295,7 @@ Plik `GridNodeModel.cs` definiuje logikę obliczeń suwaka.
 
 Ostatnią czynnością przed rozpoczęciem kompilowania projektu jest dodanie pliku `pkg.json`, aby umożliwić dodatkowi Dynamo odczytanie pakietu.
 
-![Dodawanie pliku JSON](../../.gitbook/assets/vs-pkg-json.jpg)
+![Dodawanie pliku JSON](../images/vs-pkg-json.jpg)
 
 > 1. Kliknij prawym przyciskiem myszy pozycję `CustomNodeModel` i wybierz polecenie `Add > New Item`
 > 2. Wybierz opcję `Web`
@@ -341,7 +341,7 @@ Ostatnią czynnością przed rozpoczęciem kompilowania projektu jest dodanie pl
 
 Typową przyczyną jest to, że węzeł utworzono za pomocą konstruktora ponownie tworzącego porty. Zamiast tego należało użyć konstruktora wczytującego porty. Te konstruktory mają zwykle oznaczenie `[JsonConstructor]` _zobacz przykłady poniżej_
 
-\![Broken JSON](<../../.gitbook/assets/broken-json (1).jpg>)
+![Uszkodzony kod JSON](<../images/broken-json.jpg>)
 
 Inna możliwa przyczyna:
 

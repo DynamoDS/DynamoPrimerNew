@@ -6,7 +6,7 @@ Program Revit to środowisko bogate w dane. Daje to wiele możliwości wybierani
 
 Biblioteka programu Revit w interfejsie użytkownika zawiera kategorię „Selection”, która umożliwia wybieranie geometrii na wiele sposobów.
 
-![](../.gitbook/assets/select_revit_elements_01.jpg)
+![](images/select_revit_elements_01.jpg)
 
 ### Hierarchia programu Revit
 
@@ -14,7 +14,7 @@ Aby prawidłowo wybrać elementy programu Revit, należy w pełni rozumieć hier
 
 Omówimy pokrótce hierarchię programu Revit.
 
-![](../.gitbook/assets/hierarchy.png)
+![](images/hierarchy.png)
 
 Pamiętasz systematykę organizmów z biologii? Królestwo, typ, gromada, rząd, rodzina, rodzaj, gatunek? Elementy programu Revit są skategoryzowane podobnie. Na poziomie podstawowym hierarchię programu Revit można podzielić na kategorie, rodziny, typy* i wystąpienia. Wystąpienie to pojedynczy element modelu (z unikatowym identyfikatorem), a kategoria definiuje ogólną grupę (na przykład „ściany” czy „stropy”). Dzięki uporządkowaniu bazy danych programu Revit w ten sposób można wybrać jeden element, a następnie wybrać wszystkie podobne elementy na podstawie określonego poziomu w hierarchii.
 
@@ -26,15 +26,15 @@ Trzy poniższe ilustracje przedstawiają główne kategorie wyboru elementów pr
 
 Najprostszym sposobem bezpośredniego wybrania elementu programu Revit jest _wskazanie i kliknięcie go_. Można wybrać cały element modelu lub części jego topologii (na przykład ścianę lub krawędź). Pozostają one dynamicznie połączone z tym obiektem programu Revit, więc gdy w pliku programu Revit zmieni się jego położenie lub parametry, odpowiedni element dodatku Dynamo zostanie zaktualizowany na wykresie.
 
-![](../.gitbook/assets/selecting_database_navigation_with_dynamo_nodes_01.jpg)
+![](images/selecting_database_navigation_with_dynamo_nodes_01.jpg)
 
 _Menu rozwijane_ zawierają listę wszystkich dostępnych elementów w projekcie programu Revit. Można ich użyć, aby tworzyć odniesienia do elementów programu Revit, które niekoniecznie są widoczne w widoku. Jest to doskonałe narzędzie do wykonywania zapytań dotyczących istniejących elementów oraz tworzenia nowych w projekcie programu Revit lub edytorze rodzin.
 
-\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+\![](<images/2/selecting - database navigation with dynamo nodes 02.jpg>)
 
 Można również wybrać element programu Revit na podstawie określonych poziomów w _hierarchii programu Revit_. Jest to zaawansowana opcja umożliwiająca dostosowywanie dużych zestawów danych w przygotowaniu do tworzenia dokumentacji lub generacyjnego tworzenia i dostosowywania wystąpień.
 
-\![Interfejs użytkownika](<../.gitbook/assets/allelements (1).jpg>)
+![Interfejs użytkownika](<images/allelements.jpg>)
 
 Pamiętając o trzech powyższych ilustracjach, przejdźmy do ćwiczenia polegającego na wybieraniu elementów z podstawowego projektu programu Revit w przygotowaniu do zastosowań parametrycznych, które będziemy tworzyć w pozostałych sekcjach tego rozdziału.
 
@@ -48,7 +48,7 @@ Pamiętając o trzech powyższych ilustracjach, przejdźmy do ćwiczenia polegaj
 
 Ten plik przykładowy programu Revit zawiera trzy typy elementów prostego budynku. Użyjemy tego przykładu do wybierania elementów programu Revit w kontekście hierarchii programu Revit.
 
-\![](<../.gitbook/assets/selecting_exercise_01 (1) (2).jpg>)
+![](<images/selecting_exercise_01.jpg>)
 
 > 1. Bryła budynku
 > 2. Belki (ramy konstrukcyjne)
@@ -58,7 +58,7 @@ Jakie wnioski można wyciągnąć z elementów aktualnie widocznych w widoku pro
 
 ### Wybieranie brył i powierzchni
 
-![](../.gitbook/assets/selecting_exercise_02.jpg)
+![](images/selecting_exercise_02.jpg)
 
 > 1. Ponieważ pracujemy z podstawową konfiguracją, wybierzmy bryłę budynku, wybierając opcję _„Mass”_ z menu rozwijanego w węźle Categories. Można go znaleźć na karcie Revit>Selection.
 > 2. Wynikiem kategorii Mass jest sama ta kategoria. Musimy wybrać elementy. W tym celu użyjemy węzła _„All Elements of Category”_.
@@ -67,13 +67,13 @@ Na tym etapie można zauważyć, że w dodatku Dynamo nie widać żadnej geometr
 
 W tym przypadku pracujemy z prostą geometrią, dlatego włączymy jej podgląd w dodatku Dynamo. Obok elementu „BldgMass” w powyższym węźle Watch znajduje się zielony numer. Oznacza on identyfikator elementu i informuje, że jest to element programu Revit, a nie geometria dodatku Dynamo. Następnym krokiem jest przekształcenie tego elementu programu Revit w geometrię dodatku Dynamo.
 
-![](../.gitbook/assets/selecting_exercise_03.jpg)
+![](images/selecting_exercise_03.jpg)
 
 > 1. Przy zastosowaniu węzła _Element.Faces_ otrzymujemy listę powierzchni reprezentujących poszczególne ściany bryły programu Revit. Teraz można wyświetlić geometrię w rzutni Dynamo i odwoływać się do tych ścian w celu wykonania operacji parametrycznych.
 
 Oto alternatywna metoda. W tym przypadku zamiast wybierać za pomocą hierarchii programu Revit _(„All Elements of Category”)_, będziemy jawnie wybierać geometrię w programie Revit.
 
-![](../.gitbook/assets/selecting_exercise_04.jpg)
+![](images/selecting_exercise_04.jpg)
 
 > 1. W węźle _„Select Model Element”_ kliknij przycisk *„select”*(lub _„change”_). W rzutni programu Revit wybierz żądany element. W tym przypadku wybieramy bryłę budynku.
 > 2. Zamiast węzła _Element.Faces_ można użyć węzła _Element.Geometry_, aby wybrać całą bryłę jako jedną geometrię. Spowoduje to wybranie całej geometrii zawartej w tej bryle.
@@ -90,25 +90,25 @@ Za pomocą podstawowych operacji listy można utworzyć zapytanie o interesując
 
 Poprzedni krok był mało wydajny. Możemy to zrobić znacznie szybciej, korzystając z węzła _„Select face”_. Dzięki temu można wyizolować ścianę, która sama nie jest elementem w projekcie programu Revit. Wykonujemy takie samo działanie jak w przypadku węzła _„Select Model Element”_, z tym że wybieramy powierzchnię, a nie cały element.
 
-![](../.gitbook/assets/selecting_exercise_06.jpg)
+![](images/selecting_exercise_06.jpg)
 
 Załóżmy, że chcemy wyizolować główne ściany fasadowe budynku. W tym celu można użyć węzła _„Select Faces”_. Kliknij przycisk „Select”, a następnie wybierz cztery główne fasady w programie Revit.
 
-![](../.gitbook/assets/selecting_exercise_07.jpg)
+![](images/selecting_exercise_07.jpg)
 
 Po wybraniu czterech ścian pamiętaj, aby kliknąć przycisk „Finish” w programie Revit.
 
-![](../.gitbook/assets/selecting_exercise_08.jpg)
+![](images/selecting_exercise_08.jpg)
 
 Ściany zostały teraz zaimportowane do dodatku Dynamo jako powierzchnie.
 
-![](../.gitbook/assets/selecting_exercise_09.jpg)
+![](images/selecting_exercise_09.jpg)
 
 ### Wybieranie belek
 
 Spójrzmy teraz na belki nad atrium.
 
-![](../.gitbook/assets/selecting_exercise_10.jpg)
+![](images/selecting_exercise_10.jpg)
 
 > 1. Za pomocą węzła _„Select Model Element”_ wybierz jedną z belek.
 > 2. Połącz element belki z węzłem _Element.Geometry_, aby wyświetlić belkę w rzutni dodatku Dynamo.
@@ -116,18 +116,18 @@ Spójrzmy teraz na belki nad atrium.
 
 Częste pytanie w procesach roboczych Revit/Dynamo brzmi: jak wybrać jeden element i otrzymać wszystkie podobne elementy? Ponieważ wybrany element programu Revit zawiera wszystkie informacje o hierarchii, można użyć zapytania o typ rodziny i wybrać wszystkie elementy tego typu.
 
-![](../.gitbook/assets/selecting_exercise_11.jpg)
+![](images/selecting_exercise_11.jpg)
 
 > 1. Połącz element belki z węzłem _Element.ElementType_.
 > 2. W węźle _Watch_ widać, że wynik to teraz symbol rodziny, a nie element programu Revit.
 > 3. _Element.ElementType_ to proste zapytanie, więc możemy równie łatwo użyć bloku kodu z poleceniem `x.ElementType;`, aby uzyskać takie same wyniki.
 
-![](../.gitbook/assets/selecting_exercise_12.jpg)
+![](images/selecting_exercise_12.jpg)
 
 > 1. Aby wybrać pozostałe belki, należy użyć węzła _„All Elements of Family Type”_.
 > 2. W węźle Watch widać, że wybraliśmy pięć elementów programu Revit.
 
-![](../.gitbook/assets/selecting_exercise_13.jpg)
+![](images/selecting_exercise_13.jpg)
 
 > 1. Można również przekonwertować wszystkie pięć elementów na geometrię dodatku Dynamo.
 
@@ -139,11 +139,11 @@ Czy importując 500 belek, potrzebujemy wszystkich powierzchni do wykonania zami
 
 Używając tego samego wykresu węzłów, wybierz element kratownicy zamiast elementu belki. Przed wykonaniem tej czynności usuń węzeł Element.Geometry z poprzedniego kroku.
 
-![](../.gitbook/assets/selecting_exercise_14.jpg)
+![](images/selecting_exercise_14.jpg)
 
 Następnie możemy wyodrębnić niektóre podstawowe informacje z typu rodziny kratownic.
 
-![](../.gitbook/assets/selecting_exercise_15.jpg)
+![](images/selecting_exercise_15.jpg)
 
 > 1. W węźle _Watch_ widać, że otrzymaliśmy listę komponentów adaptacyjnych wybranych z programu Revit. Chcemy wyodrębnić podstawowe informacje, dlatego zaczniemy od punktów adaptacyjnych.
 > 2. Połącz węzeł _„All Elements of Family Type”_ z węzłem _„AdaptiveComponent.Location”_. Otrzymamy listę list, z których każda zawiera trzy punkty reprezentujące położenie punktów adaptacyjnych.

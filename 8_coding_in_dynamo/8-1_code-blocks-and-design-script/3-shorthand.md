@@ -6,14 +6,14 @@ W węźle Code Block dostępnych jest kilka podstawowych metod o krótkiej skła
 
 | **Typ danych**          | **Standard dodatku Dynamo**                                      | **Odpowiednik w węźle Code Block**                                     |
 | ---------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
-| Liczby                | \![](<../../.gitbook/assets/01 node - numbers.jpg>)       | \![](<../../.gitbook/assets/01 codeblock - numbers.jpg>)       |
-| Ciągi                | \![](<../../.gitbook/assets/02 node - string.jpg>)        | \![](<../../.gitbook/assets/02 codeblock- string.jpg>)         |
-| Sekwencje              | \![](<../../.gitbook/assets/03 node- sequence.jpg>)       | \![](<../../.gitbook/assets/03 codeblock- sequence.jpg>)       |
-| Zakresy (przedziały)                 | \![](<../../.gitbook/assets/04 node- range.jpg>)          | \![](<../../.gitbook/assets/04 codeblock - range.jpg>)         |
-| Pobierz element o indeksie      | \![](<../../.gitbook/assets/05 node - list get item.jpg>) | \![](<../../.gitbook/assets/05 codeblock - list get item.jpg>) |
-| Tworzenie listy            | \![](<../../.gitbook/assets/06 node - list create.jpg>)   | \![](<../../.gitbook/assets/image (17).png>)                   |
-| Scalanie ciągów    | \![](<../../.gitbook/assets/07 node - string concat.jpg>) | \![](<../../.gitbook/assets/07 codeblock - string concat.jpg>) |
-| Instrukcje warunkowe | \![](<../../.gitbook/assets/08 node - conditional.jpg>)   | \![](<../../.gitbook/assets/08 codeblock - conditional.jpg>)   |
+| Liczby                | \![](<../images/01 node - numbers.jpg>)       | \![](<../images/01 codeblock - numbers.jpg>)       |
+| Ciągi                | \![](<../images/02 node - string.jpg>)        | \![](<../images/02 codeblock- string.jpg>)         |
+| Sekwencje              | \![](<../images/03 node- sequence.jpg>)       | \![](<../images/03 codeblock- sequence.jpg>)       |
+| Zakresy (przedziały)                 | \![](<../images/04 node- range.jpg>)          | \![](<../images/04 codeblock - range.jpg>)         |
+| Pobierz element o indeksie      | \![](<../images/05 node - list get item.jpg>) | \![](<../images/05 codeblock - list get item.jpg>) |
+| Tworzenie listy            | \![](<../images/06 node - list create.jpg>)   | ![](<../images/image.png>)                   |
+| Scalanie ciągów    | \![](<../images/07 node - string concat.jpg>) | \![](<../images/07 codeblock - string concat.jpg>) |
+| Instrukcje warunkowe | \![](<../images/08 node - conditional.jpg>)   | \![](<../images/08 codeblock - conditional.jpg>)   |
 
 ### Dodatkowa składnia
 
@@ -28,7 +28,7 @@ W węźle Code Block dostępnych jest kilka podstawowych metod o krótkiej skła
 
 Metoda definiowania zakresów i sekwencji może zostać zredukowana do krótkiej składni. Poniższa ilustracja przedstawia składnię „..”, która umożliwia definiowanie listy danych liczbowych za pomocą bloku kodu. Po zaznajomieniu się z tą notacją tworzenie danych liczbowych jest bardzo wydajnym procesem:
 
-\![](<../../.gitbook/assets/shorthand - ranges and sequences.jpg>)
+\![](<../images/shorthand - ranges and sequences.jpg>)
 
 > 1. W tym przykładzie zakres liczb zostaje zastąpiony podstawową składnią węzła **Code Block** definiującą `beginning..end..step-size;`. Liczbowo będzie to: `0..10..1;`
 > 2. Warto zauważyć, że składnia `0..10..1;` odpowiada `0..10;` Wielkość kroku równa 1 jest domyślną wartością w krótkiej składni. Dlatego `0..10;` daje sekwencję od 0 do 10 o kroku 1.
@@ -39,7 +39,7 @@ Metoda definiowania zakresów i sekwencji może zostać zredukowana do krótkiej
 
 Tworzenie zakresów zaawansowanych pozwala na łatwe korzystanie z listy list. W poniższych przykładach wyodrębniamy zmienną z notacji zakresu głównego i tworzymy inny zakres tej listy.
 
-\![](<../../.gitbook/assets/shorthand - advance range 01.jpg>)
+\![](<../images/shorthand - advance range 01.jpg>)
 
 > 1\. Tworząc zakresy zagnieżdżone, porównaj notację z „#” z notacją bez tego znaku. Zastosowanie ma ta sama logika co w zakresach podstawowych, choć rozwiązanie jest nieco bardziej złożone.
 >
@@ -49,13 +49,13 @@ Tworzenie zakresów zaawansowanych pozwala na łatwe korzystanie z listy list. W
 
 W ramach ćwiczenia logicznego porównaj dwie wersje krótkiej składni i spróbuj przeanalizować, w jaki sposób _zakresy podrzędne_ i notacja _#_ wpływają na wynik na wyjściu.
 
-\![](<../../.gitbook/assets/shorthand - advance range 02.jpg>)
+\![](<../images/shorthand - advance range 02.jpg>)
 
 ### Tworzenie list i pobieranie elementów z listy
 
 Poza tworzeniem list za pomocą krótkiej składni możemy również tworzyć listy na bieżąco. Te listy mogą zawierać szeroki zakres typów elementów i można stosować do nich zapytania (należy pamiętać, że listy to także obiekty). Podsumowując: blok kodu pozwala tworzyć listy i stosować zapytania o elementy z listy za pomocą nawiasów kwadratowych:
 
-\![](<../../.gitbook/assets/shorthand - list & get from list 01.jpg>)
+\![](<../images/shorthand - list & get from list 01.jpg>)
 
 > 1\. Szybko twórz listy za pomocą ciągów i stosuj do nich zapytania, korzystając z indeksu elementu.
 >
@@ -63,7 +63,7 @@ Poza tworzeniem list za pomocą krótkiej składni możemy również tworzyć li
 
 Zarządzanie z listami zagnieżdżonymi jest podobnym procesem. Pamiętaj o kolejności listy i o korzystaniu z wielu zestawów nawiasów kwadratowych:
 
-\![](<../../.gitbook/assets/shorthand - list & get from list 02.jpg>)
+\![](<../images/shorthand - list & get from list 02.jpg>)
 
 > 1\. Zdefiniuj listę list.
 >
@@ -83,58 +83,58 @@ W tym ćwiczeniu przećwiczymy nowe umiejętności dotyczące krótkiej składni
 
 Rozpocznij od utworzenia powierzchni przez połączenie powyższych węzłów. Zamiast używać węzła number do zdefiniowania szerokości i długości, kliknij dwukrotnie obszar rysunku i wpisz `100;` w bloku kodu.
 
-\![](<../../.gitbook/assets/shorthand - exercise 01.jpg>)
+\![](<../images/shorthand - exercise 01.jpg>)
 
-\![](<../../.gitbook/assets/shorthand - exercise 02.jpg>)
+\![](<../images/shorthand - exercise 02.jpg>)
 
 > 1. Zdefiniuj zakres od 0 do 1 z 50 podziałami, wpisując `0..1..#50` w węźle **Code Block**.
 > 2. Połącz ten zakres z węzłem **Surface.PointAtParameter**, który pobiera wartości u i v z zakresu od 0 do 1 na powierzchni. Pamiętaj, aby zmienić skratowanie na Iloczyn wektorowy, klikając prawym przyciskiem myszy węzeł **Surface.PointAtParameter**.
 
 W tym kroku użyjemy pierwszej funkcji do przesunięcia siatki punktów w górę na osi Z. Ta siatka będzie sterować generowaną powierzchnią na podstawie funkcji źródłowej. Dodaj nowe węzły, jak pokazano na ilustracji poniżej
 
-\![](<../../.gitbook/assets/shorthand - exercise 03.jpg>)
+\![](<../images/shorthand - exercise 03.jpg>)
 
 > 1. Używamy węzła **Code Block** z wierszem: `(0..Math.Sin(x*360)..#50)*5;`. Krótkie objaśnienie: definiujemy zakres z formułą w jego wnętrzu. Ta formuła jest funkcją sinus. Funkcja sinus przyjmuje w dodatku Dynamo dane wejściowe w stopniach, więc aby uzyskać pełny kształt funkcji sinus, należy przemnożyć wartości x (jest to wejście zakresu od 0 do 1) przez 360. Następnie chcemy uzyskać taką samą liczbę podziałów, ile jest punktów siatki sterującej dla każdego wiersza, dlatego zdefiniujemy pięćdziesiąt podziałów podrzędnych za pomocą instrukcji #50. Na koniec: mnożnik 5 po prostu zwiększa amplitudę przekształcenia, dzięki czemu możemy zobaczyć efekt w podglądzie Dynamo.
 
-\![](<../../.gitbook/assets/shorthand - exercise 04.jpg>)
+\![](<../images/shorthand - exercise 04.jpg>)
 
 > 1. Mimo że poprzedni węzeł **Code Block** działał dobrze, nie był całkowicie parametryczny. Chcemy dynamicznie sterować jego parametrami, dlatego zastąpimy wiersz z poprzedniego kroku wierszem `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`. Daje to możliwość zdefiniowania tych wartości na podstawie wejść.
 
 Zmieniając suwaki (w zakresie od 0 do 10), otrzymujemy interesujące wyniki.
 
-\![](<../../.gitbook/assets/shorthand - exercise 05.gif>)
+\![](<../images/shorthand - exercise 05.gif>)
 
-\![](<../../.gitbook/assets/shorthand - exercise 06.jpg>)
+\![](<../images/shorthand - exercise 06.jpg>)
 
 > 1. Transponując zakres liczb, odwrócimy kierunek fali kurtynowej: `transposeList = List.Transpose(sineList);`
 
-\![](<../../.gitbook/assets/shorthand - exercise 07.jpg>)
+\![](<../images/shorthand - exercise 07.jpg>)
 
 > 1. Po dodaniu wartości sineList i transposeList uzyskujemy zniekształconą „jajowatą” powierzchnię: `eggShellList = sineList+transposeList;`
 
 Zmienimy wartości suwaków określone poniżej, aby zmniejszyć zniekształcenia tworzone przez ten algorytm.
 
-\![](<../../.gitbook/assets/shorthand - exercise 08.jpg>)
+\![](<../images/shorthand - exercise 08.jpg>)
 
 Na koniec zastosujmy zapytania do wyodrębnionych części danych za pomocą węzła Code Block. Aby ponownie wygenerować powierzchnię za pomocą określonego zakresu punktów, dodaj węzeł Code Block powyżej między węzłami **Geometry.Translate** i **NurbsSurface.ByPoints**. Będzie on zawierać wiersz tekstu: `sineStrips[0..15..1];`. Spowoduje to wybranie pierwszych 16 wierszy punktów (spośród 50). Po ponownym utworzeniu powierzchni widać, że wygenerowaliśmy wyodrębnioną część siatki punktów.
 
-\![](<../../.gitbook/assets/shorthand - exercise 09.jpg>)
+\![](<../images/shorthand - exercise 09.jpg>)
 
-\![](<../../.gitbook/assets/shorthand - exercise 10.jpg>)
+\![](<../images/shorthand - exercise 10.jpg>)
 
 > 1. W ostatnim kroku, aby uczynić ten węzeł **Code Block** bardziej parametrycznym, będziemy sterować zapytaniem za pomocą suwaka o zakresie od 0 do 1. W tym celu dodamy ten wiersz kodu: `sineStrips[0..((List.Count(sineStrips)-1)*u)];`. Może to wydawać się skomplikowane, ale ten wiersz kodu pozwala szybko przeskalować długość listy do mnożnika z zakresu od 0 do 1.
 
 Wartość `0.53` na suwaku powoduje utworzenie powierzchni tuż za punktem środkowym siatki.
 
-\![](<../../.gitbook/assets/shorthand - exercise 11.jpg>)
+\![](<../images/shorthand - exercise 11.jpg>)
 
 Zgodnie z oczekiwaniami wartość `1` na suwaku tworzy powierzchnię z pełnej siatki punktów.
 
-\![](<../../.gitbook/assets/shorthand - exercise 12.jpg>)
+\![](<../images/shorthand - exercise 12.jpg>)
 
 Przyglądając się wykresowi wizualnemu, możemy wyróżnić bloki kodu i przejrzeć ich poszczególne funkcje.
 
-\![](<../../.gitbook/assets/shorthand - exercise 13.jpg>)
+\![](<../images/shorthand - exercise 13.jpg>)
 
 > 1\. Pierwszy węzeł **Code Block** zastępuje węzeł **Numer**.
 >

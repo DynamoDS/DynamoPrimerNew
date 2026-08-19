@@ -6,7 +6,7 @@ Ta strona informacyjna stanowi rozszerzenie wzorców postępowania omówionych w
 
 Biblioteki standardowe są zewnętrzne wobec dodatku Dynamo i są obecne w językach programowania Python i C# (Zerotouch). Dodatek Dynamo zawiera również własny zestaw bibliotek bezpośrednio odpowiadających hierarchii węzłów, umożliwiając użytkownikowi tworzenie dowolnego kodu, który może zostać utworzony za pomocą węzłów i przewodów. Poniżej przedstawiono wskazówki na temat tego, do czego każda biblioteka Dynamo zapewnia dostęp i kiedy należy używać standardowej.
 
-![](../.gitbook/assets/textual-programming.jpg)
+![](images/textual-programming.jpg)
 
 **Biblioteki standardowe i biblioteki Dynamo**
 

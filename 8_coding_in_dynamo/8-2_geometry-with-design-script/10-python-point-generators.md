@@ -2,7 +2,7 @@
 
 Poniższe skrypty w języku Python generują szyki punktów dla kilku przykładów. Powinny zostać wklejone do węzła skryptu w języku Python w następujący sposób:
 
-\![](<../../.gitbook/assets/python points 01.jpg>)
+\![](<../images/python points 01.jpg>)
 
 **python_points_1**
 

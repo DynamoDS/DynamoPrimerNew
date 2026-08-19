@@ -8,7 +8,7 @@ Dane to zestaw wartości zmiennych jakościowych lub ilościowych. Najprostszą 
 
 W dodatku Dynamo dodaje się/przekazuje się dane do portów wejściowych węzłów — można mieć dane bez operacji, ale aby przetworzyć operacje reprezentowane przez węzły, dane są niezbędne. Po dodaniu węzła do obszaru roboczego, jeśli nie ma on żadnych wejść, wynik będzie funkcją, a nie wynikiem samej operacji.
 
-\![Dane i operacje](<../../.gitbook/assets/data - what is data.jpg>)
+\![Dane i operacje](<../images/data - what is data.jpg>)
 
 > 1. Proste dane
 > 2. Pomyślne wykonanie danych i operacji (węzeł A)
@@ -22,7 +22,7 @@ Testowanie pod kątem wartości null i usuwanie ich ze struktury danych jest klu
 
 | Ikona                                                  | Nazwa/składnia   | Dane wejściowe | Dane wyjściowe |
 | ----------------------------------------------------- | ------------- | ------ | ------- |
-| \![](<../../.gitbook/assets/data - object IsNull.jpg>) | Object.IsNull | obj    | bool    |
+| \![](<../images/data - object IsNull.jpg>) | Object.IsNull | obj    | bool    |
 
 ### Struktury danych
 
@@ -35,7 +35,7 @@ Lista reprezentuje kolekcję elementów umieszczonych w jednej strukturze danych
 * Mam pięć palców (_elementy_) dłoni (_lista_).
 * Na mojej ulicy (_lista_) jest dziesięć domów (_elementy_).
 
-\![Podział listy](<../../.gitbook/assets/data - data structures.jpg>)
+\![List Breakdown](<../images/data - data structures.jpg>)
 
 > 1. Węzeł **Number Sequence** definiuje listę liczb za pomocą wejść _start_, _amount_ i _step_. Za pomocą tych węzłów utworzyliśmy dwie oddzielne listy dziesięciu liczb, jedna z nich obejmuje liczby _100–109_, a druga — _0–9_.
 > 2. Węzeł **List.GetItemAtIndex** wybiera element z listy o określonym indeksie. W przypadku wybrania indeksu _0_ pobieramy pierwszy element z listy (w tym przypadku _100_).
@@ -59,25 +59,25 @@ W pierwszym przykładzie złożymy walec z powłoką, stosując hierarchię geom
 
 1\. Dodaj węzeł **Point.ByCoordinates**. Po dodaniu węzła do obszaru rysunku widać punkt w początku siatki podglądu dodatku Dynamo. Domyślne wartości wejść _x, y_ i _z_ to _0,0_, co daje punkt w tym położeniu.
 
-\![](<../../.gitbook/assets/data - exercise step 1.jpg>)
+\![](<../images/data - exercise step 1.jpg>)
 
 2\. **Plane.ByOriginNormal —** następny krok w hierarchii geometrii to płaszczyzna. Istnieje kilka sposobów skonstruowania płaszczyzny — użyjemy dla wejścia pozycji origin i normal. Origin (początek) to węzeł punktu utworzony w poprzednim kroku.
 
 **Vector.ZAxis —** jest to wektor jednostkowy w kierunku z. Warto zwrócić uwagę, że nie ma wejść, tylko wektor o wartości [0,0,1]. Użyjemy go jako wejścia _normal_ dla węzła **Plane.ByOriginNormal**. Pozwala to uzyskać prostokątną płaszczyznę w podglądzie dodatku Dynamo.
 
-\![](<../../.gitbook/assets/data - exercise step 2.jpg>)
+\![](<../images/data - exercise step 2.jpg>)
 
 3\. **Circle.ByPlaneRadius —** dodając następny etap w hierarchii, tworzymy teraz krzywą z płaszczyzny w poprzednim kroku. Po utworzeniu podłączenia do węzła uzyskujemy okrąg w początku. Domyślna wartość promienia (radius) węzła wynosi _1_.
 
-\![](<../../.gitbook/assets/data - exercise step 3.jpg>)
+\![](<../images/data - exercise step 3.jpg>)
 
 4\. **Curve.Extrude —** teraz dodamy temu elementowi wyrazu, nadając mu głębię i dodając trzeci wymiar. Ten węzeł tworzy powierzchnię z krzywej poprzez jej wyciągnięcie. Domyślna odległość w węźle wynosi _1_, a w rzutni powinien być widoczny walec.
 
-\![](<../../.gitbook/assets/data - exercise step 4.jpg>)
+\![](<../images/data - exercise step 4.jpg>)
 
 5\. **Surface.Thicken —** ten węzeł umożliwia uzyskanie zamkniętej bryły przez odsunięcie powierzchni o określoną odległość i zamknięcie formy. Domyślna wartość grubości wynosi _1_, a w rzutni widoczny jest walec z powłoką, zgodny z tymi wartościami.
 
-\![](<../../.gitbook/assets/data - exercise step 5.jpg>)
+\![](<../images/data - exercise step 5.jpg>)
 
 6\. **Number Slider —** zamiast używać domyślnych wartości dla wszystkich tych wejść, dodajmy do modelu kontrolę parametryczną.
 
@@ -85,21 +85,21 @@ W pierwszym przykładzie złożymy walec z powłoką, stosując hierarchię geom
 
 **Min/Max/Step —** zmień wartości _min_, _max_ i _step_ na odpowiednio _0_, _2_ i _0,01_. Umożliwia to sterowanie wielkością całkowitej geometrii.
 
-\![](<../../.gitbook/assets/data - exercise step 6.gif>)
+\![](<../images/data - exercise step 6.gif>)
 
 7\. **Węzły Number Slider —** we wszystkich domyślnych wejściach skopiujmy i wklejmy kilka razy ten suwak liczby (wybierz suwak, naciśnij klawisze Ctrl+C, a następnie klawisze Ctrl+V), tak aby wszystkie wejścia z domyślnymi wartościami miały zamiast nich suwaki. Niektóre z wartości suwaka muszą być większe od zera, aby definicja działała (na przykład potrzebna jest głębokość wyciągnięcia w celu pogrubienia powierzchni).
 
-\![](<../../.gitbook/assets/data - exercise step 7a.gif>)
+\![](<../images/data - exercise step 7a.gif>)
 
-\![](<../../.gitbook/assets/data - exercise step 7b.gif>)
+\![](<../images/data - exercise step 7b.gif>)
 
 8\. Za pomocą tych suwaków utworzyliśmy teraz parametryczny walec z powłoką. Spróbuj zmieniać niektóre z tych parametrów i obserwuj, jak geometria jest aktualizowana dynamicznie w rzutni dodatku Dynamo.
 
-\![](<../../.gitbook/assets/data - exercise step 8a.gif>)
+\![](<../images/data - exercise step 8a.gif>)
 
 **Węzły Number Slider —** w ramach kontynuacji dodaliśmy wiele suwaków do obszaru rysunku i musimy oczyścić interfejs właśnie utworzonego narzędzia. Kliknij prawym przyciskiem myszy jeden suwak, wybierz polecenie „Zmień nazwę” i zmień nazwę każdego suwaka na odpowiednią dla danego parametru (thickness — „grubość”, Radius — „promień”, Height — „wysokość” itp.).
 
-\![](<../../.gitbook/assets/data - exercise step 8b step.jpg>)
+\![](<../images/data - exercise step 8b step.jpg>)
 
 ### Część II. Wypełnianie szyku walców z części I
 
@@ -107,11 +107,11 @@ W pierwszym przykładzie złożymy walec z powłoką, stosując hierarchię geom
 
 **Dodawanie (+) —** naszym celem jest dodanie wiersza walców obok utworzonego walca. Aby dodać jeden walec przylegający do bieżącego, musimy uwzględnić zarówno promień walca, jak i grubość jego powłoki. Uzyskamy tę liczbę przez dodanie dwóch wartości suwaków.
 
-\![](<../../.gitbook/assets/data - exercise step 9.jpg>)
+\![](<../images/data - exercise step 9.jpg>)
 
 10\. Ten krok jest trudniejszy, więc przeanalizujmy go powoli: celem końcowym jest utworzenie listy liczb definiujących położenie każdego walca w wierszu.
 
-\![](<../../.gitbook/assets/data - exercise step 10.jpg>)
+\![](<../images/data - exercise step 10.jpg>)
 
 > a. **Mnożenie —** najpierw pomnożymy wartość z poprzedniego kroku przez 2. Wartość z poprzedniego kroku reprezentuje promień. Chcemy przesunąć walec o pełną średnicę.
 >
@@ -123,8 +123,8 @@ W pierwszym przykładzie złożymy walec z powłoką, stosując hierarchię geom
 
 11\. Ten krok jest prosty — podłącz sekwencję zdefiniowaną w poprzednim kroku do wejścia _x_ oryginalnego węzła **Point.ByCoordinates**. Spowoduje to zastąpienie suwaka _pointX_, który można usunąć. Teraz widzimy szyk walców w rzutni (upewnij się, że suwak liczby całkowitej ma wartość większą niż 0).
 
-\![](<../../.gitbook/assets/data - exercise step 11.gif>)
+\![](<../images/data - exercise step 11.gif>)
 
 12\. Łańcuch cylindrów jest nadal dynamicznie połączony ze wszystkimi suwakami. Zmieniaj wartości poszczególnych suwaków i obserwuj aktualizację definicji.
 
-\![](<../../.gitbook/assets/data - exercise step 12.gif>)
+\![](<../images/data - exercise step 12.gif>)

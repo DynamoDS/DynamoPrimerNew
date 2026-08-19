@@ -6,7 +6,7 @@ Poprzednio omówiliśmy edycję podstawowej bryły budynku, a teraz dokładniej 
 
 Załóżmy, że utworzyliśmy zakres komponentów adaptacyjnych, a teraz chcemy edytować parametry w oparciu o położenia punktów. Te punkty mogą na przykład sterować parametrem grubości, powiązanym z powierzchnią elementu. Mogą też sterować parametrem nieprzezroczystości, powiązanym z ekspozycją na słońce w ciągu roku. Dodatek Dynamo umożliwia połączenie analiz z parametrami w kilku prostych krokach. W poniższym ćwiczeniu poznamy podstawowy wariant.
 
-\![](<../.gitbook/assets/customizing - point location.jpg>)
+\![](<images/customizing - point location.jpg>)
 
 > Wykonaj zapytanie o punkty adaptacyjne wybranego komponentu adaptacyjnego za pomocą węzła **AdaptiveComponent.Locations**. Dzięki temu możemy użyć abstrakcyjnej wersji elementu programu Revit do analizy.
 
@@ -14,7 +14,7 @@ Wyodrębniając położenie punktów komponentów adaptacyjnych, można wykonać
 
 ### Analiza kierunku oświetlenia naturalnego
 
-\![](<../.gitbook/assets/customizing - solar orientation analysis.jpg>)
+\![](<images/customizing - solar orientation analysis.jpg>)
 
 > Użyj ponownego odwzorowania, aby odwzorować zbiór danych w zakresie parametrów. Jest to podstawowe narzędzie używane w modelu parametrycznym, a jego działanie pokazano w poniższym ćwiczeniu.
 
@@ -30,40 +30,40 @@ W dodatku Dynamo można użyć położenia punktów komponentów adaptacyjnych d
 
 To ćwiczenie przedstawia rozszerzenie technik omówionych w poprzedniej sekcji. W tym przypadku definiujemy powierzchnię parametryczną na podstawie elementów programu Revit, tworząc wystąpienia czteropunktowych komponentów adaptacyjnych, a następnie edytując je na podstawie orientacji względem słońca.
 
-\![](<../.gitbook/assets/customizing - exercise 01.jpg>)
+\![](<images/customizing - exercise 01.jpg>)
 
 > 1. Najpierw wybierzemy dwie krawędzie, używając węzła _„Select Edge”_. Te dwie krawędzie to długie boki atrium.
 > 2. Połącz te dwie krawędzie w jedną listę, używając węzła _List.Create_.
 > 3. Utwórz powierzchnię między dwiema krawędziami za pomocą węzła _Surface.ByLoft_.
 
-\![](<../.gitbook/assets/customizing - exercise 02.jpg>)
+\![](<images/customizing - exercise 02.jpg>)
 
 > 1. Używając węzła _Code Block_, zdefiniuj zakres od 0 do 1 z 10 wartościami w równych odstępach: `0..1..#10;`
 > 2. Połącz węzeł _Code Block_ z elementami wejściowymi *u *i _v_ węzła _Surface.PointAtParameter_, a węzeł _Surface.ByLoft_ z elementem wejściowym _surface_. Kliknij węzeł prawym przyciskiem myszy i zmień opcję _skratowania_ na _Iloczyn wektorowy_. W ten sposób na powierzchni zostanie umieszczona siatka punktów.
 
 Ta siatka punktów posłuży jako punkty sterujące dla powierzchni zdefiniowanej parametrycznie. Chcemy wyodrębnić położenia u i v każdego z tych punktów, aby można je było wstawić do wzoru parametrycznego i zachować tę samą strukturę danych. Można to zrobić za pomocą zapytania o położenia parametrów punktów, które właśnie utworzyliśmy.
 
-\![](<../.gitbook/assets/customizing - exercise 03.jpg>)
+\![](<images/customizing - exercise 03.jpg>)
 
 > 1. Dodaj węzeł _Surface.ParameterAtPoint_ do obszaru rysunku i połącz elementy wejściowe tak, jak pokazano powyżej.
 > 2. Wykonaj zapytanie o wartości _u_ tych parametrów, używając węzła UV.U.
 > 3. Wykonaj zapytanie o wartości _v_ tych parametrów, używając węzła UV.V.
 > 4. Wyniki zawierają odpowiednie wartości _u_ i _v_ dla każdego punktu powierzchni. Teraz w odpowiedniej strukturze danych istnieje zakres od _0_ do _1_ dla każdej wartości, więc możemy zastosować algorytm parametryczny.
 
-\![](<../.gitbook/assets/customizing - exercise 04.jpg>)
+\![](<images/customizing - exercise 04.jpg>)
 
 > 1. Dodaj węzeł _Code Block_ do obszaru rysunku i wprowadź kod: `Math.Sin(u*180)*Math.Sin(v*180)*w;`. Jest to funkcja parametryczna umożliwiająca utworzenie sinusoidalnego wzniesienia na podstawie płaskiej powierzchni.
 > 2. Umożliwia połączenie _UV.U_ z wejściem _u_ oraz UV.V z wejściem _v_.
 > 3. Element wejściowy _w_ oznacza _amplitudę_ kształtu, dlatego należy dołączyć do niego węzeł _Number Slider_.
 
-\![](<../.gitbook/assets/customizing - exercise 05.jpg>)
+\![](<images/customizing - exercise 05.jpg>)
 
 > 1. Otrzymaliśmy listę wartości zdefiniowaną przez algorytm. Użyjemy tej listy wartości, aby przesunąć punkty w górę w kierunku _+Z_. Używając węzła _Geometry.Translate_, połącz węzeł *Code Block *z elementem wejściowym _zTranslation_, a węzeł _Surface.PointAtParameter_ z elementem wejściowym _geometry_. Nowe punkty powinny być widoczne w podglądzie dodatku Dynamo.
 > 2. Na koniec utworzymy powierzchnię za pomocą węzła _NurbsSurface.ByPoints_, łącząc węzeł z poprzedniego kroku z elementem wejściowym „points”. Otrzymaliśmy powierzchnię parametryczną. Możesz przeciągnąć suwak, aby zobaczyć, jak wzniesienie zmniejsza się i rośnie.
 
 Używając tej powierzchni parametrycznej, chcemy zdefiniować podział na panele w celu utworzenia szyku czteropunktowych komponentów adaptacyjnych. Dodatek Dynamo nie zawiera gotowej funkcji podziału powierzchni na panele, poszukamy więc przydatnych pakietów dodatku Dynamo w społeczności.
 
-\![](<../.gitbook/assets/customizing - exercise 06.jpg>)
+\![](<images/customizing - exercise 06.jpg>)
 
 > 1. Przejdź do obszaru _Pakiety>Wyszukaj pakiet..._
 > 2. Wyszukaj _„LunchBox”_ i zainstaluj pakiet _„LunchBox for Dynamo”_. To bardzo pomocny zestaw narzędzi do operacji geometrycznych takich jak ta.

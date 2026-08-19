@@ -2,7 +2,7 @@
 
 Dodatek Dynamo udostępnia wiele funkcji gotowych do użycia oraz obszerną bibliotekę pakietów, które mogą znacznie zwiększyć możliwości dodatku. Pakiet jest zbiorem węzłów niestandardowych lub dodatkowych funkcji. Dynamo Package Manager to portal dla społeczności umożliwiający pobranie dowolnego pakietu, który został opublikowany online. Te zestawy narzędzi zostały opracowane przez strony trzecie w celu rozszerzenia podstawowej funkcjonalności dodatku Dynamo i są dostępne dla wszystkich. Są gotowe do pobrania przez kliknięcie przycisku.
 
-![Witryna Menedżera pakietów](../../.gitbook/assets/dpm.jpg)
+![Witryna Menedżera pakietów](../images/dpm.jpg)
 
 Projekt open-source, taki jak dodatek Dynamo, rozwija się dzięki takiemu zaangażowaniu społeczności. Dzięki zaangażowanym programistom zewnętrznym dodatek Dynamo może rozszerzyć zasięg na procesy robocze w różnych branżach. Z tego powodu zespół dodatku Dynamo podjął skoncentrowane wysiłki w celu usprawnienia opracowywania i publikowania pakietów (zostanie to omówione bardziej szczegółowo w kolejnych sekcjach).
 
@@ -12,21 +12,21 @@ Najprostszym sposobem instalacji pakietu jest użycie opcji menu Pakiety w inter
 
 W dodatku Dynamo przejdź do obszaru _Pakiety > Menedżer pakietów_.
 
-<figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
 Na pasku wyszukiwania wyszukaj frazę „quads from rectangular grid”. Po kilku chwilach powinny pojawić się wszystkie pakiety zgodne z tym zapytaniem. Wybierzmy pierwszy pakiet z pasującą nazwą.
 
 Kliknij przycisk Zainstaluj, aby dodać ten pakiet do biblioteki, a następnie zaakceptuj potwierdzenie. Gotowe.
 
-<figure><img src="../../.gitbook/assets/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
 
 Zwróć uwagę, że w bibliotece Dynamo pojawiła się kolejna grupa o nazwie „buildz”. Ta nazwa odnosi się do programisty pakietu, a węzeł niestandardowy zostaje umieszczony w tej grupie. Możemy od razu zacząć z niego korzystać.
 
-\![](<../../.gitbook/assets/package introduction - installing a package 03.jpg>)
+\![](<../images/package introduction - installing a package 03.jpg>)
 
 Użyj węzła **Code Block**, aby szybko zdefiniować prostokątną siatkę, zapisać wynik w węźle **Polygon.ByPoints**, a następnie użyj węzła **Surface.ByPatch**, aby wyświetlić listę właśnie utworzonych prostokątnych paneli.
 
-\![](<../../.gitbook/assets/package introduction - installing a package 04.jpg>)
+\![](<../images/package introduction - installing a package 04.jpg>)
 
 ### Instalowanie folderu pakietu — DynamoUnfold
 
@@ -36,23 +36,23 @@ Tak jak w przykładzie powyżej, rozpocznij od wybrania opcji _Pakiety > Menedż
 
 Tym razem poszukamy jednego słowa, _„DynamoUnfold”_. Po wyświetleniu pakietów pobierz je, klikając przycisk Zainstaluj, aby dodać składniki Dynamo Unfold do biblioteki Dynamo.
 
-<figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/unfold.png" alt=""><figcaption></figcaption></figure>
 
 W bibliotece Dynamo dostępna jest grupa _DynamoUnfold_ z wieloma kategoriami i węzłami niestandardowymi.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 02.jpg>)
+\![](<../images/package introduction - installing package folder 02.jpg>)
 
 Spójrzmy teraz na strukturę plików pakietu.
 
 1. Najpierw przejdź do obszaru Pakiety > Menedżer pakietów > Zainstalowane pakiety.
-2. Obok węzła DynamoUnfold wybierz menu opcji <img src="../../.gitbook/assets/package introduction - vertical dots menu.png" alt="" data-size="line">.
+2. Obok węzła DynamoUnfold wybierz menu opcji <img src="../images/package introduction - vertical dots menu.png" alt="" data-size="line">.
 3. Następnie kliknij opcję Pokaż katalog główny, aby otworzyć folder główny dla tego pakietu.
 
-<figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/view-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Spowoduje to przejście do katalogu głównego pakietu. Zwróć uwagę, że mamy 3 foldery i plik.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 05.jpg>)
+\![](<../images/package introduction - installing package folder 05.jpg>)
 
 > 1. Folder _bin_ zawiera pliki .dll. Ten pakiet Dynamo został opracowany przy użyciu narzędzia Zero-Touch, więc węzły niestandardowe są przechowywane w tym folderze.
 > 2. Folder _dyf_ zawiera węzły niestandardowe. Ten pakiet nie został opracowany przy użyciu węzłów niestandardowych Dynamo, dlatego ten folder jest w przypadku tego pakietu pusty.
@@ -63,11 +63,11 @@ Po otwarciu folderu „extra” zostaje wyświetlona seria plików przykładowyc
 
 Otwórzmy plik „SphereUnfold”.
 
-![](../../.gitbook/assets/rd2.jpg)
+![](../images/rd2.jpg)
 
 Po otwarciu pliku i naciśnięciu przycisku „Uruchom” w solwerze dostępna jest rozwinięta sfera. Pliki przykładowe są przydatne do nauki pracy z nowym pakietem Dynamo.
 
-\![](<../../.gitbook/assets/packageintroduction-installingpackagefolder07 (1).jpg>)
+![](<../images/packageintroduction-installingpackagefolder07.jpg>)
 
 ### Przeglądanie i wyświetlanie informacji o pakiecie
 
@@ -81,13 +81,13 @@ Aby uzyskać dostęp do większej ilości szczegółowych informacji dotyczącyc
 
 Innym sposobem odkrywania pakietów Dynamo jest przeglądanie witryny [Dynamo Package Manager](http://dynamopackages.com). W tym miejscu można znaleźć zależności pakietów i informacje o zgodności hosta/wersji udostępnione przez autorów pakietów. Pliki pakietu można również pobrać z Menedżera pakietów Dynamo, ale robienie tego bezpośrednio z poziomu dodatku Dynamo stanowi płynniejszy proces.
 
-![](../../.gitbook/assets/dpm2.jpg)
+![](../images/dpm2.jpg)
 
 ### Gdzie lokalnie są przechowywane pliki pakietów?
 
 Jeśli chcesz zobaczyć, gdzie przechowywane są pliki pakietu, w górnym obszarze nawigacji kliknij kolejno opcje Dynamo > Preferencje > Ustawienia pakietów > Lokalizacje plików węzłów i pakietów. Tutaj znajdziesz bieżący katalog główny.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 08.png>)
+\![](<../images/package introduction - installing package folder 08.png>)
 
 Domyślnie pakiety są instalowane w położeniu podobnym do tej ścieżki folderu: _C:/Users/[nazwa_użytkownika]/AppData/Roaming/Dynamo/[wersja dodatku Dynamo]_.
 

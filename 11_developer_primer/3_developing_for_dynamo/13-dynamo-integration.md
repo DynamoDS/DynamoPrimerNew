@@ -377,7 +377,7 @@ Gdyby włączono powiązywanie elementów, można by było zachować dotychczaso
 
 ***
 
-![Tworzenie ścian](../../.gitbook/assets/creates_walls.png)
+![Tworzenie ścian](../images/creates_walls.png)
 
 #### Powiązywanie elementów w porównaniu ze śledzeniem
 
@@ -466,15 +466,15 @@ Przy następnym uruchomieniu wykresu szukamy w śladzie, znajdujemy zapisany tam
 
 Przepływ dwóch kolejnych wykonań wykresu, który tworzy pojedynczy obiekt `TraceExampleItem` wygląda następująco:
 
-![Pierwsze wywołanie](../../.gitbook/assets/Trace-first-call.png)
+![Pierwsze wywołanie](../images/Trace-first-call.png)
 
-![Drugie wywołanie](../../.gitbook/assets/Trace-second-call.png)
+![Drugie wywołanie](../images/Trace-second-call.png)
 
 Ten sam pomysł przedstawiono w następnym przykładzie z bardziej realistycznym przypadkiem użycia węzła DynamoRevit.
 
 #### Diagram śledzenia
 
-![Kroki śledzenia](../../.gitbook/assets/trace_diagram.png) ![Przepływ śledzenia](../../.gitbook/assets/trace_alt_diagram.png)
+![Kroki śledzenia](../images/trace_diagram.png) ![Przepływ śledzenia](../images/trace_alt_diagram.png)
 
 #### UWAGA:
 
@@ -560,7 +560,7 @@ Oto ważne etapy wykonywania konstruktora w odniesieniu do powiązywania element
 
 * Obiekty śledzenia zapisane w wersjach starszych niż Dynamo 3.0 są przechowywane przy użyciu protokołu SOAP, dlatego nie są obsługiwane w nowszych wersjach. Poprzednio zapisane dane powiązań elementów zostaną zignorowane, a poniższy komunikat będzie wyświetlany w dodatku Dynamo 3.0 i nowszych wersjach. Dane powiązań elementów zostaną zapisane następnym razem przy uruchomieniu i zapisaniu obszaru roboczego.
 
-![Zgodność powiązań elementów](../../.gitbook/assets/element_binding_compatibility_message.jpg)
+![Zgodność powiązań elementów](../images/element_binding_compatibility_message.jpg)
 
 #### Czy powiązywanie elementów (ElementBinding) powinno być domyślnie włączone?
 
@@ -574,7 +574,7 @@ Ogólnie rzecz biorąc, **dobrym sposobem myślenia o tych węzłach jest trakto
 
 W dodatku DynamoRevit istnieje wiele węzłów wyboru (`Selection`). Można je podzielić na co najmniej dwie grupy:
 
-![Węzły wyboru programu Revit](../../.gitbook/assets/revitSelectionNodes.png)
+![Węzły wyboru programu Revit](../images/revitSelectionNodes.png)
 
 1.  Wskazywanie w interfejsie użytkownika:
 
@@ -602,7 +602,7 @@ W dodatku DynamoRevit istnieje wiele węzłów wyboru (`Selection`). Można je p
 
 Procesy robocze w dodatku D4C są bardzo podobne do opisanych powyżej dla programu Revit. Poniżej przedstawiono dwa typowe zestawy węzłów wyboru w dodatku D4C:
 
-![Węzły wyboru programu Civil 3D](../../.gitbook/assets/civilSelectionNodes.png)
+![Węzły wyboru programu Civil 3D](../images/civilSelectionNodes.png)
 
 ### Problemy:
 
@@ -613,9 +613,9 @@ Procesy robocze w dodatku D4C są bardzo podobne do opisanych powyżej dla progr
 
 ### Diagramy przepływu danych
 
-![Przepływ wyboru](../../.gitbook/assets/selectModelElement.png)
+![Przepływ wyboru](../images/selectModelElement.png)
 
-![Przepływ wyboru2](../../.gitbook/assets/selectElementFace.png)
+![Przepływ wyboru2](../images/selectElementFace.png)
 
 ### Implementacja techniczna: (patrz powyższe schematy):
 
@@ -624,7 +624,7 @@ Węzły wyboru są implementowane przez dziedziczenie z typów ogólnych `Select
 * Implementacja metody `BuildOutputAST`: ta metoda musi zwrócić drzewo AST, które zostanie wykonane w pewnym momencie w przyszłości, kiedy ma zostać wykonany węzeł. W przypadku węzłów wyboru (Selection) powinny zostać zwrócone elementy lub geometria na podstawie identyfikatorów elementów. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * Implementacja metody `BuildOutputAST` jest jedną z najtrudniejszych części implementacji węzłów `NodeModel`/interfejsu użytkownika. Najlepiej jest umieścić jak największą część logiki w funkcji C# i po prostu osadzić węzeł z wywołaniem funkcji AST w drzewie AST. Należy pamiętać, że w tym przypadku `node` jest węzłem AST w drzewie składni abstrakcyjnej, a nie węzłem wykresu Dynamo.
 
-![Przepływ wyboru2](../../.gitbook/assets/selectionAST.png)
+![Przepływ wyboru2](../images/selectionAST.png)
 
 * Serializacja —
   *   Ponieważ są to jawne typy pochodne `NodeModel` (a nie ZeroTouch), wymagają one również zaimplementowania konstruktora [JsonConstructor], który będzie używany podczas deserializacji węzła z pliku .dyn.

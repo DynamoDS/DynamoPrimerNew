@@ -1,6 +1,6 @@
 # Połączenie programu Revit
 
-\![](<../.gitbook/assets/revit connection link.jpg>)
+\![](<images/revit connection link.jpg>)
 
 Dodatek Dynamo dla programu Revit rozszerza możliwości modelowania informacji o budynku (BIM) za pomocą środowiska danych i logiki graficznego edytora algorytmów. Jego elastyczność w połączeniu z solidną bazą danych programu Revit zapewnia nową perspektywę dla modelowania BIM.
 
@@ -23,7 +23,7 @@ Ponieważ zarówno program Revit, jak i dodatek Dynamo wciąż ewoluują, może 
 
 ### Historia dodatku Dynamo
 
-![Historia](../.gitbook/assets/earlyScreenshot.jpg)
+![Historia](images/earlyScreenshot.jpg)
 
 Dzięki dedykowanemu zespołowi programistów i pełnej zaangażowania społeczności ten projekt przebył długą drogę od skromnych początków.
 
@@ -37,13 +37,13 @@ W edytorze rodziny lub projekcie programu Revit przejdź do pozycji Dodatki i kl
 
 {% hint style="warning" %} *Dodatek Dynamo zostanie uruchomiony tylko w pliku, w którym został otwarty. {% endhint %}
 
-\![](<../.gitbook/assets/launch dynamo from revit (1).jpg>)
+![](images/1/launchdynamofromrevit.jpg)
 
 W przypadku otwarcia dodatku Dynamo w programie Revit dostępna jest nowa kategoria o nazwie „Revit”. Jest to kompleksowy dodatek do interfejsu użytkownika, który zawiera węzły opracowane konkretnie do procesów roboczych programu Revit*.
 
 {% hint style="warning" %}*W razie użycia rodziny węzłów charakterystycznej dla programu Revit wykres dodatku Dynamo będzie działać tylko po otwarciu w dodatku Dynamo dla programu Revit. Jeśli na przykład wykres dodatku Dynamo dla programu Revit zostanie otwarty w dodatku Dynamo w trybie „piaskownicy” (Sandbox), będzie brakować węzłów programu Revit. {% endhint %}
 
-\![](<../.gitbook/assets/revit connection - running dynamo in revit 02.jpg>)
+\![](<images/revit connection - running dynamo in revit 02.jpg>)
 
 ### Blokowanie węzłów
 
@@ -59,4 +59,4 @@ Dynamo to projekt typu open source, który ciągle ewoluuje, a znaczna część 
 
 Z dodatkiem Dynamo związany jest też aktywny blog. Przeczytaj najnowsze wpisy, aby zapoznać się z nowościami i wiadomościami.
 
-![Blog](../.gitbook/assets/blog.png)
+![Blog](images/blog.png)

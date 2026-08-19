@@ -8,7 +8,7 @@ Będziemy pracować z przykładowym pakietem demonstrującym odwzorowywanie punk
 
 Na tej ilustracji odwzorowujemy punkt z jednej powierzchni na drugą za pomocą współrzędnych UV. Pakiet jest oparty na tej koncepcji, ale z bardziej złożoną geometrią.
 
-![](../../.gitbook/assets/uvMap.jpg)
+![](../images/uvMap.jpg)
 
 ### Instalowanie pakietu
 
@@ -16,11 +16,11 @@ W poprzednim rozdziale omówiliśmy sposoby panelowania powierzchni w dodatku Dy
 
 W dodatku Dynamo kliknij kolejno opcje Pakiety > Menedżer pakietów i wyszukaj pakiet „MapToSurface” (jest to jeden wyraz). Kliknij przycisk Zainstaluj, aby rozpocząć pobieranie i dodać pakiet do biblioteki.
 
-<figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
 Po zainstalowaniu węzły niestandardowe powinny być dostępne w sekcji Dodatki > Przewodnik Dynamo Primer.
 
-\![](<../../.gitbook/assets/publish a package - publish locally 04.jpg>)
+\![](<../images/publish a package - publish locally 04.jpg>)
 
 Po zainstalowaniu pakietu przeanalizujmy jego konfigurację.
 
@@ -30,37 +30,37 @@ Tworzony pakiet zawiera pięć węzłów niestandardowych utworzonych na potrzeb
 
 To jest prosty pakiet z pięcioma węzłami niestandardowymi. W poniższych krokach omówiono krótko konfigurację każdego węzła niestandardowego.
 
-\![](<../../.gitbook/assets/develop package - custom nodes 01 (1) (3).jpg>)
+\![](<../images/develop package - custom nodes 01.jpg>)
 
 #### **PointsToSurface**
 
 Jest to podstawowy węzeł niestandardowy, na którym oparto wszystkie pozostałe węzły odwzorowania. Mówiąc prościej: węzeł odwzorowuje punkt ze współrzędnej UV powierzchni źródłowej na położenie współrzędnej UV powierzchni docelowej. Ponieważ punkty są najbardziej elementarną geometrią, z której zbudowana jest bardziej złożona geometria, za pomocą tej logiki można odwzorować geometrię 2D — a nawet geometrię 3D — z jednej powierzchni na inną.
 
-\![](<../../.gitbook/assets/develop package -pointToSurface.jpg>)
+\![](<../images/develop package -pointToSurface.jpg>)
 
 #### **PolygonsToSurface**
 
 Logika wydłużania odwzorowanych punktów z geometrii 1D do geometrii 2D została prosto przedstawiona tutaj za pomocą wieloboków. Należy zwrócić uwagę, że zagnieździliśmy węzeł _„PointsToSurface”_ w tym węźle niestandardowym. W ten sposób można odwzorować punkty każdego wieloboku na powierzchnię, a następnie ponownie wygenerować wielobok z tych odwzorowanych punktów. Zachowując właściwą strukturę danych (listę list punktów), możemy zachować osobne wieloboki po zredukowaniu ich do zbioru punktów.
 
-\![](<../../.gitbook/assets/develop package -polygonsToSurface.jpg>)
+\![](<../images/develop package -polygonsToSurface.jpg>)
 
 #### **NurbsCrvtoSurface**
 
 Tutaj ma zastosowanie ta sama logika co w węźle _„PolygonsToSurface”_. Jednak zamiast odwzorowywać punkty wieloboków, odwzorowujemy punkty kontrolne krzywej nurbs.
 
-\![](<../../.gitbook/assets/develop package -nurbsCrvtoSurface.jpg>)
+\![](<../images/develop package -nurbsCrvtoSurface.jpg>)
 
 **OffsetPointsToSurface**
 
 Ten węzeł staje się nieco bardziej złożony, ale koncepcja jest prosta: podobnie jak węzeł _„PointsToSurface”_ węzeł ten odwzorowuje punkty z jednej powierzchni na inną. Jednak uwzględnia również punkty, które nie znajdują się na oryginalnej powierzchni źródłowej, pobiera ich odległość do najbliższego parametru UV i odwzorowuje tę odległość na wektor normalny powierzchni docelowej w odpowiedniej współrzędnej UV. Będzie to bardziej zrozumiałe podczas analizowania plików przykładowych.
 
-\![](<../../.gitbook/assets/develop package -OffsetPointsToSurface.jpg>)
+\![](<../images/develop package -OffsetPointsToSurface.jpg>)
 
 #### **SampleSrf**
 
 Jest to prosty węzeł, który tworzy powierzchnię parametryczną do odwzorowania z siatki źródłowej na powierzchnię falistą w plikach przykładowych.
 
-\![](<../../.gitbook/assets/develop package -sampleSrf.jpg>)
+\![](<../images/develop package -sampleSrf.jpg>)
 
 ### Pliki przykładowe
 
@@ -68,7 +68,7 @@ Pliki przykładowe można znaleźć w folderze głównym pakietu. Kliknij kolejn
 
 Obok pozycji MapToSurface kliknij menu w postaci pionowych kropek > Pokaż katalog główny
 
-<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Następnie otwórz folder _„extra”_ zawierający wszystkie pliki w pakiecie, które nie są węzłami niestandardowymi. W tym miejscu przechowywane są pliki przykładowe (jeśli istnieją) dla pakietów Dynamo. Zrzuty ekranu poniżej ilustrują koncepcje przedstawione w poszczególnych plikach przykładowych.
 
@@ -76,40 +76,40 @@ Następnie otwórz folder _„extra”_ zawierający wszystkie pliki w pakiecie,
 
 Za pomocą tego pliku przykładowego przedstawiono, jak można wykorzystać węzeł _„PointsToSurface”_ do panelowania powierzchni w oparciu o siatkę prostokątów. Powinno to wyglądać znajomo, ponieważ podobny proces roboczy został przedstawiony w [poprzednim rozdziale](../6-1_custom-nodes/2-creating.md).
 
-\![](<../../.gitbook/assets/develop package -sample file 01.jpg>)
+\![](<../images/develop package -sample file 01.jpg>)
 
 #### **02-PanelingWithPolygons-II**
 
 Za pomocą podobnego procesu roboczego w tym pliku ćwiczeniowym przedstawiono konfigurację odwzorowywania okręgów (lub wieloboków reprezentujących okręgi) między powierzchniami. Wykorzystywany jest węzeł _„PolygonsToSurface”_.
 
-\![](<../../.gitbook/assets/develop package -sample file 02.jpg>)
+\![](<../images/develop package -sample file 02.jpg>)
 
 #### **03-NurbsCrvsAndSurface**
 
 Ten plik przykładowy zwiększa złożoność dzięki współdziałaniu z węzłem „NurbsCrvToSurface”. Powierzchnia docelowa jest odsunięta o daną odległość, a krzywa nurbs jest odwzorowana na oryginalną powierzchnię docelową i powierzchnię odsunięcia. Z tego miejsca dwie odwzorowane krzywe są wyciągane w celu utworzenia powierzchni, która następnie zostaje pogrubiona. Ta wynikowa bryła ma pofalowanie, które jest reprezentacją wektorów normalnych powierzchni docelowej.
 
-\![](<../../.gitbook/assets/develop package -sample file 03.jpg>)
+\![](<../images/develop package -sample file 03.jpg>)
 
 #### **04-PleatedPolysurface-OffsetPoints**
 
 W tym pliku przykładowym przedstawiono sposób odwzorowania powierzchni PolySurface z zakładką z powierzchni źródłowej na powierzchnię docelową. Powierzchnie źródłowa i docelowa są prostokątną powierzchnią łączącą odpowiednio siatkę i powierzchnię obrotową.
 
-\![](<../../.gitbook/assets/develop package -sample file 04a.jpg>)
+\![](<../images/develop package -sample file 04a.jpg>)
 
 Powierzchnia PolySurface odwzorowana z powierzchni źródłowej na powierzchnię docelową.
 
-\![](<../../.gitbook/assets/develop package -sample file 04b.jpg>)
+\![](<../images/develop package -sample file 04b.jpg>)
 
 #### **05-SVG-Import**
 
 Ponieważ węzły niestandardowe mogą odwzorowywać różne typy krzywych, ten ostatni plik odnosi się do pliku SVG wyeksportowanego z programu Illustrator i odwzorowuje zaimportowane krzywe na powierzchnię docelową.
 
-\![](<../../.gitbook/assets/develop package -sample file 05a.jpg>)
+\![](<../images/develop package -sample file 05a.jpg>)
 
 Przez przeanalizowanie składni pliku .svg krzywe są przekształcane z formatu .xml na krzywe PolyCurve dodatku Dynamo.
 
-\![](<../../.gitbook/assets/develop package -sample file 05b.jpg>)
+\![](<../images/develop package -sample file 05b.jpg>)
 
 Zaimportowane krzywe są odwzorowane na powierzchnię docelową. Dzięki temu można jawnie (punkt-i-kliknięcie) projektować panelowanie w programie Illustrator, importować je do dodatku Dynamo i stosować do powierzchni docelowej.
 
-\![](<../../.gitbook/assets/develop package -sample file 05c.jpg>)
+\![](<../images/develop package -sample file 05c.jpg>)

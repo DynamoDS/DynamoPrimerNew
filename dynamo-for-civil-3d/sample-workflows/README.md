@@ -6,4 +6,4 @@ Infrastruktura lądowa to wszystkie te elementy i wiele innych! W tej sekcji zaw
 
 Ponadto przykłady te zawierają sprawdzone najlepsze praktyki dotyczące tworzenia niezawodnych wykresów. Podczas pracy z tymi przykładami zachęcamy do zapoznania się z sekcją [9_best_practices](../../9\_best\_practices/ "mention"), w której znajdziesz więcej pomysłów na tworzenie zaawansowanych, elastycznych i łatwych w konserwacji wykresów.
 
-<figure><img src="../../.gitbook/assets/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>

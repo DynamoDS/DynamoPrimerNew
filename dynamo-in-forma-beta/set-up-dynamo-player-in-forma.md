@@ -17,7 +17,7 @@ Najpierw zainstalujmy program Dynamo Player w programie Forma.
 1. W witrynie Forma przejdź do obszaru **Extensions** na lewym pasku bocznym i kliknij przycisk **Add extension**. Spowoduje to otwarcie sklepu Autodesk App Store.
 2. Wyszukaj pozycję Dynamo i dodaj program Dynamo Player w wersji beta (Dynamo Player Beta). Przeczytaj zastrzeżenia i kliknij przycisk **Agree** (Zgadzam się).
 
-<figure><img src="../.gitbook/assets/install-player.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/install-player.png" alt=""><figcaption></figcaption></figure>
 
 3. Teraz program Dynamo Player jest dostępny w obszarze Rozszerzenia. Kliknij go, aby go otworzyć.
 4. Możesz teraz korzystać z programu Dynamo Player.
@@ -67,11 +67,11 @@ Najpierw zainstalujmy program Dynamo Player w programie Forma.
 1. W witrynie Forma przejdź do obszaru **Extensions** na lewym pasku bocznym i kliknij przycisk **Add extension**. Spowoduje to otwarcie sklepu Autodesk App Store.
 2. Wyszukaj pozycję Dynamo i dodaj program Dynamo Player w wersji beta (Dynamo Player Beta). Przeczytaj zastrzeżenia i kliknij przycisk **Agree** (Zgadzam się).
 
-<figure><img src="../.gitbook/assets/install-player.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/install-player.png" alt=""><figcaption></figcaption></figure>
 
 3. Teraz program Dynamo Player jest dostępny w obszarze Rozszerzenia. Kliknij go, aby go otworzyć.
 4. W górnej części kliknij przycisk Desktop, aby uzyskać dostęp do dodatku Dynamo na komputerze.
 
-<figure><img src="../.gitbook/assets/dynamo-desktop.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/dynamo-desktop.png" alt=""><figcaption></figcaption></figure>
 
 5. Możesz teraz korzystać z programu Dynamo Player. Jeśli wykres jest już otwarty w dodatku Dynamo, wystarczy kliknąć przycisk Open w obszarze **Connected graph**, aby wyświetlić go w programie Player.

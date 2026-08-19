@@ -49,7 +49,7 @@ Aby zademonstrować metodę `OnLogWarningMessage` w działaniu, poniżej przedst
 
 W tym przykładzie wykorzystaliśmy węzeł niestandardowy utworzony w poprzedniej części **„Analiza przypadku Zero-Touch — węzeł siatki”** do utworzenia metody o nazwie `RectangularGrid`, która generuje siatkę prostokątów na podstawie danych wejściowych `xCount` i `yCount`. Przeanalizujemy testowanie przypadku, w którym dane wejściowe są nieprawidłowe, i użyjemy metody `OnLogWarningMessage` do zarejestrowania ostrzeżenia oraz zatrzymamy przetwarzanie.
 
-![OnLogWarningMessage — przykład 1](../../.gitbook/assets/onlogwarningmessage-example-1.png)
+![OnLogWarningMessage — przykład 1](../images/onlogwarningmessage-example-1.png)
 
 **Używanie metody `OnLogWarningMessage` do weryfikowania danych wejściowych**
 
@@ -137,7 +137,7 @@ namespace CustomNodes
 
 Jeśli metoda wymaga listy punktów, ale użytkownik przekaże listę pustą lub listę o wartości null, możesz poinformować go o problemie za pomocą metody `OnLogWarningMessage`.
 
-![OnLogWarningMessage — przykład 2](../../.gitbook/assets/onlogwarningmessage-example-2.png)
+![OnLogWarningMessage — przykład 2](../images/onlogwarningmessage-example-2.png)
 
 ```
 public static Polygon CreatePolygonFromPoints(List<Point> points)
@@ -164,7 +164,7 @@ Ostrzega to użytkowników, że muszą przekazać prawidłową listę z co najmn
 
 W przypadku węzła, który przetwarza ścieżki plików, warto zadbać o to, aby dozwolone były tylko niektóre typy plików. Jeśli zostanie wykryty nieobsługiwany typ pliku, powinno zostać zarejestrowane ostrzeżenie.
 
-![OnLogWarningMessage — przykład 3](../../.gitbook/assets/onlogwarningmessage-example-3.png)
+![OnLogWarningMessage — przykład 3](../images/onlogwarningmessage-example-3.png)
 
 ```
 public static void ProcessFile(string filePath)
@@ -226,7 +226,7 @@ Poniżej przedstawiono różne scenariusze w celu zademonstrowania stosowania me
 
 W tym przykładzie wykorzystaliśmy węzeł niestandardowy utworzony w poprzedniej części **„Analiza przypadku Zero-Touch — węzeł siatki”** do utworzenia metody o nazwie `RectangularGrid`, która generuje siatkę prostokątów na podstawie danych wejściowych `xCount` i `yCount`. Przeanalizujemy testowanie przypadku, w którym dane wejściowe są nieprawidłowe, i użyjemy metody `OnLogInfoMessage` do podania informacji po ukończeniu działania węzła.
 
-![OnLogInfoMessage — przykład 1](../../.gitbook/assets/onloginfomessage-example-1.png)
+![OnLogInfoMessage — przykład 1](../images/onloginfomessage-example-1.png)
 
 **Używanie metody `OnLogInfoMessage` do weryfikowania danych wejściowych**
 
@@ -309,7 +309,7 @@ namespace CustomNodes
 
 Jeśli tworzysz węzeł, który przetwarza listę punktów, być może warto zarejestrować, ile punktów przetworzono pomyślnie. Może to być przydatne w przypadku dużych zestawów danych.
 
-![OnLogInfoMessage — przykład 2](../../.gitbook/assets/onloginfomessage-example-2.png)
+![OnLogInfoMessage — przykład 2](../images/onloginfomessage-example-2.png)
 
 ```
 public static List<Point> ProcessPoints(List<Point> points)
@@ -339,7 +339,7 @@ Ten komunikat pomoże użytkownikom zrozumieć wynik przetwarzania i potwierdzi�
 
 W niektórych przypadkach przydatne jest potwierdzenie parametrów wejściowych używanych przez węzeł do ukończenia działania. Jeśli na przykład węzeł eksportuje dane do pliku, zarejestrowanie nazwy i ścieżki pliku pozwala poinformować użytkowników, że został użyty poprawny plik.
 
-![OnLogInfoMessage — przykład 3](../../.gitbook/assets/onloginfomessage-example-3.png)
+![OnLogInfoMessage — przykład 3](../images/onloginfomessage-example-3.png)
 
 ```
 public static void ExportData(string filePath, List<string> data)
@@ -365,7 +365,7 @@ Ten komunikat potwierdza użytkownikom, że eksport zadziałał, i pokazuje dok�
 
 W przeszłości w dodatku Dynamo istniały ograniczenia dotyczące sposobu, w jaki autorzy pakietów mogli dostarczać dokumentację dla tworzonych węzłów. Autorów węzłów niestandardowych obowiązywało ograniczenie, w ramach którego mogli dodawać tylko krótki opis wyświetlany w etykiecie narzędzia węzła lub mogli dostarczać pakiet z intensywnie opisanymi wykresami przykładowymi.
 
-![Opis etykiety narzędzia węzła](../../.gitbook/assets/customnodedocumentation-overloads.png)
+![Opis etykiety narzędzia węzła](../images/customnodedocumentation-overloads.png)
 
 ### Nowy sposób
 
@@ -399,11 +399,11 @@ Wykonaj te kilka czynności, aby wyświetlić pliki Markdown w dodatku Dynamo.
 
 Dodatek Dynamo wyświetla dokumentację węzłów za pomocą rozszerzenia widoku Przeglądarka dokumentacji. Aby otworzyć dokumentację węzła, kliknij węzeł prawym przyciskiem myszy i wybierz polecenie Pomoc. Spowoduje to otwarcie Przeglądarki dokumentacji i wyświetlenie treści Markdown skojarzonej z tym węzłem, jeśli jest dostępna.
 
-![Przeglądarka dokumentacji](../../.gitbook/assets/customnodedocumentation-no-documentation-provided.png)
+![Przeglądarka dokumentacji](../images/customnodedocumentation-no-documentation-provided.png)
 
 Dokumentacja wyświetlana w Przeglądarce dokumentacji składa się z dwóch części. Pierwszą z nich jest sekcja `Node Info`, która jest generowana automatycznie na podstawie informacji wyodrębnionych z węzła, takich jak dane wejściowe/wyjściowe, kategoria węzła, nazwa/przestrzeń nazw węzłów i krótki opis węzłów. Druga część przedstawia dokumentację węzłów niestandardowych, która jest plikiem Markdown dostarczanym w celu udokumentowania węzła.
 
-![Dokumentacja węzłów niestandardowych](../../.gitbook/assets/customnodedocumentation-custom-node-documentation.png)
+![Dokumentacja węzłów niestandardowych](../images/customnodedocumentation-custom-node-documentation.png)
 
 #### Folder doc pakietu
 
@@ -417,13 +417,13 @@ Ta przestrzeń nazw powinna być nazwą pliku Markdown dla tego konkretnego węz
 
 W szczególnych przypadkach, gdy występują przeciążenia węzłów (występują węzły o tej samej nazwie, ale różnych zestawach danych wejściowych), należy dodać nazwy pozycji danych wejściowych ujęte w `()` po przestrzeni nazw węzła. Na przykład wbudowany węzeł `Geometry.Translate` ma wiele przeciążeń. W tym przypadku plikom Markdown dla poniższych węzłów nadamy następujące nazwy: `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction).md` `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction,distance).md`
 
-![Przeciążanie węzłów](../../.gitbook/assets/customnodedocumentation-overloads.png)
+![Przeciążanie węzłów](../images/customnodedocumentation-overloads.png)
 
 #### Modyfikowanie plików Markdown, gdy są otwarte w dodatku Dynamo
 
 Aby ułatwić modyfikowanie plików dokumentacji, Przeglądarka dokumentacji implementuje funkcję obserwatora plików w otwartym pliku dokumentacji. Umożliwia to wprowadzanie zmian w pliku Markdown i natychmiastowe oglądanie zmian w dodatku Dynamo.
 
-![Ponowne wczytywanie „na gorąco”](../../.gitbook/assets/customnodedocumentation-hot-reload.gif)
+![Ponowne wczytywanie „na gorąco”](../images/customnodedocumentation-hot-reload.gif)
 
 Nowe pliki dokumentacji można również dodawać, gdy dodatek Dynamo jest otwarty. Po prostu dodaj do folderu `/doc` nowy plik Markdown o nazwie odpowiadającej węzłowi, który dokumentuje.
 
@@ -441,9 +441,9 @@ Z tego podręcznika dowiesz się, jak dodawać ikony do węzłów Zero Touch.
 
 Aby rozpocząć, utwórz projekt biblioteki klas programu Visual Studio (.NET Framework) dla węzłów Zero Touch. Jeśli nie masz jeszcze projektu, zapoznaj się z sekcją **Pierwsze kroki**, aby uzyskać instrukcje krok po kroku dotyczące jego tworzenia.
 
-![Tworzenie nowego projektu programu Visual Studio](../../.gitbook/assets/vs-new-project-1.jpg)
+![Tworzenie nowego projektu programu Visual Studio](../images/vs-new-project-1.jpg)
 
-![Konfigurowanie nowego projektu w programie Visual Studio](../../.gitbook/assets/zerotouchicons-configure-new-project.jpg)
+![Konfigurowanie nowego projektu w programie Visual Studio](../images/zerotouchicons-configure-new-project.jpg)
 
 Upewnij się, że masz co najmniej jeden działający węzeł Zero Touch, ponieważ ikony można dodawać tylko do istniejących węzłów. Aby uzyskać wskazówki, zobacz **Analiza przypadku Zero-Touch — węzeł siatki**.
 
@@ -475,11 +475,11 @@ Aby osadzić ikony w pliku `.dll`, utwórz plik zasobów:
 
 * Kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań**.
 
-![Dodawanie nowego elementu](../../.gitbook/assets/zerotouchicons-add-resources-file-1.jpg)
+![Dodawanie nowego elementu](../images/zerotouchicons-add-resources-file-1.jpg)
 
 * Przejdź do obszaru **Dodaj > Nowy element** i wybierz opcję **Plik zasobów**.
 
-![Dodawanie pliku zasobów](../../.gitbook/assets/zerotouchicons-add-resources-file-2.jpg)
+![Dodawanie pliku zasobów](../images/zerotouchicons-add-resources-file-2.jpg)
 
 * Nadaj plikowi nazwę `<ProjectName>Images.resx`. Przykładowo: `ZeroTouchNodeIconsImages.resx`.
 
@@ -489,7 +489,7 @@ Aby osadzić ikony w pliku `.dll`, utwórz plik zasobów:
 3. **Ustaw opcję „Operacja kompilacji” na „Brak”**.
    * Niedługo samodzielnie skompilujemy ten zasób, więc nie trzeba tego robić automatycznie.
 
-![Czyszczenie właściwości narzędzia niestandardowego](../../.gitbook/assets/zerotouchicons-custom-tool-property-update.png)
+![Czyszczenie właściwości narzędzia niestandardowego](../images/zerotouchicons-custom-tool-property-update.png)
 
 > _UWAGA: wyczyszczenie pola narzędzia niestandardowego (Custom Tool) spowoduje, że program Visual Studio przekonwertuje kropki na podkreślenia w nazwach zasobów. Przed rozpoczęciem kompilacji sprawdź, czy nazwy zasobów mają kropki oddzielające nazwy klas, a nie podkreślenia._
 
@@ -500,7 +500,7 @@ Aby osadzić ikony w pliku `.dll`, utwórz plik zasobów:
    * Ustaw typ zasobu na **Plik**.
    * Przejdź do lokalizacji pliku obrazu i dołącz ikony węzła **Duży** oraz **Mały**.
 
-![Dodaj zasoby...](../../.gitbook/assets/zerotouchicons-open-resource-editor-update.png)
+![Dodaj zasoby...](../images/zerotouchicons-open-resource-editor-update.png)
 
 > _UWAGA: Umieszczenie obrazów w folderze **Zasoby**, a nawet w podfolderach **Duży** i **Mały**, nie jest wymagane, ale jest to dobra praktyka, która zapewnia porządek w zasobach._
 
@@ -510,26 +510,26 @@ Jeśli projekt nie jest jeszcze w stylu zestawu SDK (co jest wymagane do osadzen
 
 1. Zainstaluj rozszerzenie `.NET Upgrade Assistant` za pomocą menu **Rozszerzenia > Zarządzaj rozszerzeniami** programu Visual Studio.
 
-![Zarządzaj rozszerzeniami](../../.gitbook/assets/zerotouchicons-manage-extensions-update.png)
+![Zarządzaj rozszerzeniami](../images/zerotouchicons-manage-extensions-update.png)
 
-![Instalowanie narzędzia .NET Upgrade Assistant](../../.gitbook/assets/zerotouchicons-net-upgrade-assistant.jpg)
+![Instalowanie narzędzia .NET Upgrade Assistant](../images/zerotouchicons-net-upgrade-assistant.jpg)
 
 2. Kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** i wybierz polecenie **Uaktualnij > Przekonwertuj projekt na styl SDK**.
 
-![Uaktualnianie projektu](../../.gitbook/assets/zerotouchicons-upgrade-project.jpg)
+![Uaktualnianie projektu](../images/zerotouchicons-upgrade-project.jpg)
 
-![Konwertowanie na styl SDK](../../.gitbook/assets/zerotouchicons-convert-to-sdk-style.jpg)
+![Konwertowanie na styl SDK](../images/zerotouchicons-convert-to-sdk-style.jpg)
 
 3. Poczekaj na zakończenie konwersji.
 
-![Uaktualnianie ukończone](../../.gitbook/assets/zerotouchicons-upgrade-complete.jpg)
+![Uaktualnianie ukończone](../images/zerotouchicons-upgrade-complete.jpg)
 
 #### Krok 6\. Dodaj skrypt po kompilacji w celu osadzenia zasobów
 
 1. Usuń projekt z pamięci:
    * Kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** i wybierz opcję **Usuń projekt**.
 
-![Usuwanie projektu z pamięci](../../.gitbook/assets/zerotouchicons-unload-project.jpg)
+![Usuwanie projektu z pamięci](../images/zerotouchicons-unload-project.jpg)
 
 2. Edytuj plik `.csproj`:
    * Dodaj następujący element `<Target>` między elementami `</ItemGroup>` i `</Project>`:
@@ -550,26 +550,26 @@ Jeśli projekt nie jest jeszcze w stylu zestawu SDK (co jest wymagane do osadzen
 	</Target>
 ```
 
-![Dodawanie kodu po kompilacji](../../.gitbook/assets/zerotouchicons-after-build.jpg)
+![Dodawanie kodu po kompilacji](../images/zerotouchicons-after-build.jpg)
 
 1. Zastąp wszystkie wystąpienia `ZeroTouchNodeIcons` nazwą projektu.
 2. Wczytaj ponownie projekt:
    * Kliknij prawym przyciskiem myszy projekt usunięty z pamięci i wybierz opcję **Załaduj ponownie projekt**.
 
-![Ponowne wczytywanie projektu](../../.gitbook/assets/zerotouchicons-reload-project.jpg)
+![Ponowne wczytywanie projektu](../images/zerotouchicons-reload-project.jpg)
 
 #### Krok 7\. Skompiluj i wczytaj plik .dll do dodatku Dynamo
 
 1. Skompiluj projekt:
    * Po dodaniu skryptu po kompilacji skompiluj projekt w programie Visual Studio.
 
-![Kompilowanie rozwiązania](../../.gitbook/assets/zerotouchicons-build-solution.jpg)
+![Kompilowanie rozwiązania](../images/zerotouchicons-build-solution.jpg)
 
 2. Sprawdź pliki wyjściowe:
    * Upewnij się, że pliki `.dll` i `.customization.dll` znajdują się w folderze `bin`.
 3. Dodaj plik `.dll` do dodatku Dynamo:
    * W dodatku Dynamo użyj przycisku Importuj bibliotekę, aby zaimportować plik .dll do dodatku Dynamo.
 
-![Przycisk Importuj bibliotekę](../../.gitbook/assets/zerotouchicons-icon-in-dynamo.jpg)
+![Przycisk Importuj bibliotekę](../images/zerotouchicons-icon-in-dynamo.jpg)
 
 4. Węzły niestandardowe powinny być teraz wyświetlane z odpowiednimi ikonami.

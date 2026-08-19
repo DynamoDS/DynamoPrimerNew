@@ -6,7 +6,7 @@
 
 [Wektor](2-vectors.md#vector-1) jest reprezentacją wielkości i kierunku. Można go interpretować jako strzałkę zmierzającą w określonym kierunku z daną prędkością. Jest to kluczowy element modeli w dodatku Dynamo. Ponieważ należą one do kategorii abstrakcyjnych „elementów pomocniczych”, gdy utworzymy wektor, nie zobaczymy niczego w podglądzie tła.
 
-\![Wektory w dodatku Dynamo](<../../.gitbook/assets/Geometry for Computational Design - vectors.jpg>)
+\![Wektory w dodatku Dynamo](<../images/Geometry for Computational Design - vectors.jpg>)
 
 > 1. Można użyć linii jako symbolu zastępczego dla podglądu wektora.
 
@@ -20,7 +20,7 @@
 
 [Płaszczyzna](2-vectors.md#plane-1) jest powierzchnią dwuwymiarową. Można ją interpretować jako płaską powierzchnię, która rozciąga się w nieskończoność. Każda płaszczyzna ma początek, kierunek X, kierunek Y i kierunek Z (w górę).
 
-\![Płaszczyzny w dodatku Dynamo](<../../.gitbook/assets/Geometry for Computational Design - plane.jpg>)
+\![Płaszczyzny w dodatku Dynamo](<../images/Geometry for Computational Design - plane.jpg>)
 
 > 1. Chociaż płaszczyzny są abstrakcyjne, mają początek, więc można je umieścić w przestrzeni.
 > 2. W dodatku Dynamo płaszczyzny są renderowane w podglądzie tła.
@@ -35,7 +35,7 @@
 
 [Układ współrzędnych](2-vectors.md#coordinate-system-1) jest układem określającym położenie punktów lub innych elementów geometrycznych. Na poniższym rysunku wyjaśniono, jak to wygląda w dodatku Dynamo i co reprezentuje każdy kolor.
 
-\![Układ współrzędnych w dodatku Dynamo](<../../.gitbook/assets/Geometry for Computational Design - Coordinate.jpg>)
+\![Układ współrzędnych w dodatku Dynamo](<../images/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. Chociaż układy współrzędnych są abstrakcyjne, mają początek, więc można je umieścić w przestrzeni.
 > 2. W dodatku Dynamo układy współrzędnych są renderowane w podglądzie tła jako punkt (początek) oraz linie definiujące osie (oś X jest czerwona, oś Y — zielona, a oś Z — niebieska, zgodnie z konwencją).
@@ -50,19 +50,19 @@
 
 Wektory, płaszczyzny i układy współrzędnych tworzą podstawową grupę abstrakcyjnych typów geometrii. Pomagają definiować położenie, orientację i kontekst przestrzenny dla innych typów geometrii, które opisują kształty. Jeśli stwierdzam, że jestem w Nowym Jorku przy 42-tej ulicy oraz Broadwayu (układ współrzędnych), stoję na poziomie ulicy (płaszczyzna) i patrzę na północ (wektor), używam tych „elementów pomocniczych”, by określić, gdzie jestem. To samo dotyczy produktu takiego jak etui telefonu czy drapacza chmur — potrzebujemy tego kontekstu do opracowania modelu.
 
-![Wektory, płaszczyzny i współrzędne](../../.gitbook/assets/VectorsPlanesCoodinates.jpg)
+![Wektory, płaszczyzny i współrzędne](../images/VectorsPlanesCoodinates.jpg)
 
 ### Wektor
 
 Wektor jest wielkością geometryczną opisującą kierunek i wartość. Wektory są abstrakcyjne. To znaczy, że reprezentują wielkość, a nie element geometryczny. Wektory można łatwo pomylić z punktami, ponieważ i jedne, i drugie zawierają listę wartości. Istnieje jednak zasadnicza różnica: punkty opisują położenie w danym układzie współrzędnych, natomiast wektory opisują względną różnicę w pozycji, która odpowiada pojęciu „kierunku”.
 
-![Szczegóły wektora](../../.gitbook/assets/Vector-Detailed.jpg)
+![Szczegóły wektora](../images/Vector-Detailed.jpg)
 
 Jeśli pojęcie względnej różnicy jest niejasne, o wektorze AB można myśleć w ten sposób: „stoję w punkcie A, patrząc w kierunku punktu B”. Kierunek, stąd (A) dotąd (B), jest wektorem.
 
 Dalsze rozbicie wektorów na ich części przy użyciu tej samej notacji AB:
 
-![Wektor](../../.gitbook/assets/Vector.jpg)
+![Wektor](../images/Vector.jpg)
 
 > 1. **Punkt początkowy** wektora nosi nazwę **punktu zaczepienia**.
 > 2. **Punkt końcowy **wektora nazywamy **wierzchołkiem** lub **zwrotem**.
@@ -76,7 +76,7 @@ Z wektorów i ich abstrakcyjnej definicji można się pośmiać, oglądając kla
 
 Płaszczyzny to dwuwymiarowe abstrakcyjne „elementy pomocnicze”. Mówiąc konkretniej, płaszczyzny są „płaskie” i rozciągają się w dwóch kierunkach w nieskończoność. Zazwyczaj są one renderowane jako mniejsze prostokąty w pobliżu ich początku.
 
-![Płaszczyzna](../../.gitbook/assets/Plane.jpg)
+![Płaszczyzna](../images/Plane.jpg)
 
 W tym momencie zapewne myślisz sobie: „Chwileczkę! Początek? Brzmi to jak układ współrzędnych... Taki jak używany do modelowania w oprogramowaniu CAD”!
 
@@ -88,6 +88,6 @@ Jeśli pojęcie płaszczyzny jest już dla nas jasne, zrozumienie układów wsp�
 
 Istnieją jednak inne, alternatywne układy współrzędnych, takie jak walcowy lub sferyczny. Jak zostanie to przedstawione w kolejnych sekcjach, układy współrzędnych można również stosować do innych typów geometrii w celu zdefiniowania położenia w ramach takiej geometrii.
 
-![Układ współrzędnych](../../.gitbook/assets/CoordinateSystem.jpg)
+![Układ współrzędnych](../images/CoordinateSystem.jpg)
 
 > Dodawanie alternatywnych układów współrzędnych — walcowego, sferycznego
