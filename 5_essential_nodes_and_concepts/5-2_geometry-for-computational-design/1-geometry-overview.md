@@ -6,11 +6,11 @@
 
 형상 유형과 [형상 유형이 어떻게 관련되어 있는지](1-geometry-overview.md#stepping-through-the-hierarchy)를 잘 이해하면 라이브러리에서 사용할 수 있는 **Geometry 노드** 모음을 탐색할 수 있습니다. Geometry 노드는 계층이 아닌 알파벳순으로 정리되어 있습니다. 여기서는 Dynamo 인터페이스 내 배치와 유사하게 표시됩니다.
 
-\![](<../images/geometry overview - geometry in dynamo.jpg>)
+![](<../images/geometry overview - geometry in dynamo.jpg>)
 
 또한 Dynamo에서 모델을 만들고 배경 미리보기에 표시되는 항목의 미리보기를 그래프의 데이터 흐름에 연결하는 작업은 시간이 갈수록 점점 더 간단해집니다.
 
-\![](<../images/Geometry for Computational Design - Overview.jpg>)
+![](<../images/Geometry for Computational Design - Overview.jpg>)
 
 > 1. 가정된 좌표계는 그리드 및 색상 축으로 렌더링됩니다.
 > 2. 선택된 노드에서는 해당하는 형상(노드에서 형상을 작성하는 경우)을 강조 표시 색상으로 배경에 렌더링합니다.
@@ -42,7 +42,7 @@
 
 잠시 형상에 대한 추상적 설명 및 계층적 설명 간의 관계를 살펴보겠습니다. 이러한 두 가지 개념은 서로 관련되어 있지만 처음에는 명확하게 드러나지 않을 수 있으므로 좀 더 심층적인 워크플로우 또는 모델 개발을 시작하면 개념적 장애물에 빠르게 도달할 수 있습니다. 초보자인 경우 차원을 통해 우리가 모델링하는 "대상"을 쉽게 파악해 보십시오. 모양을 나타내는 데 필요한 차원을 통해 형상이 계층적으로 구성된 방식을 이해할 수 있습니다.
 
-\![계산 형상](<../images/Geometry for - GeometryDimensionality.jpg>)
+![계산 형상](<../images/Geometry for - GeometryDimensionality.jpg>)
 
 > 1. **점**(좌표로 정의됨)에는 차원이 없습니다. 이는 각 좌표를 나타내는 숫자일 뿐입니다.
 > 2. **선**(두 점으로 정의됨)은 _1_ 차원입니다. 선을 따라 앞으로(양의 방향) 또는 뒤로(음의 방향) "걸어갈 수 있습니다".
