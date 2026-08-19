@@ -1,6 +1,6 @@
 # Revit 연결
 
-\![](<images/revit connection link.jpg>)
+![](<images/revit connection link.jpg>)
 
 Revit용 Dynamo은 그래픽 알고리즘 편집기의 데이터 및 논리 환경으로 건물 정보 모델링을 확장했습니다. 이 제품은 대단히 유연하고 강력한 Revit 데이터베이스를 제공하므로 BIM을 새로운 차원에서 활용할 수 있게 됩니다.
 
@@ -43,7 +43,7 @@ Revit에서 Dynamo를 열면 "Revit"이라는 새 카테고리가 나타납니�
 
 {% hint style="warning" %} *Revit 전용 노드 패밀리를 사용하면 Dynamo 그래프가 Revit용 Dynamo에서 열 때만 작동합니다. 예를 들어 Revit용 Dynamo 그래프를 Dynamo 샌드박스에서 여는 경우 Revit 노드가 누락됩니다. {% endhint %}
 
-\![](<images/revit connection - running dynamo in revit 02.jpg>)
+![](<images/revit connection - running dynamo in revit 02.jpg>)
 
 ### 노드 동결
 
