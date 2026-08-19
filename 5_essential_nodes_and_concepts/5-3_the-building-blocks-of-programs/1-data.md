@@ -8,7 +8,7 @@
 
 Dynamo에서 노드의 입력 포트에 데이터를 추가/공급합니다. 작업이 없는 데이터가 있을 수 있지만 노드가 나타내는 작업을 처리하기 위해서는 데이터가 필요합니다. 노드를 작업공간에 추가할 때 입력을 제공하지 않으면 결과는 작업 자체의 결과가 아니라 함수가 됩니다.
 
-\![데이터 및 작업](<../images/data - what is data.jpg>)
+![데이터 및 작업](<../images/data - what is data.jpg>)
 
 > 1. 단순 데이터
 > 2. 데이터 및 작업(노드)이 성공적으로 실행됩니다.
@@ -22,7 +22,7 @@ null이 발생하는지 테스트하고 데이터 구조에서 null을 제거하
 
 | 아이콘                                                  | 이름/구문   | 입력 | 출력 |
 | ----------------------------------------------------- | ------------- | ------ | ------- |
-| \![](<../images/data - object IsNull.jpg>) | Object.IsNull | obj    | 부울    |
+| ![](<../images/data - object IsNull.jpg>) | Object.IsNull | obj    | 부울    |
 
 ### 데이터 구조
 
@@ -35,7 +35,7 @@ Dynamo에서는 리스트 기능을 통해 데이터에 계층을 추가합니�
 * 내 손(_리스트_)에는 5개의 손가락(_항목_)이 있습니다.
 * 도로(_리스트_)에는 10개의 가구(_항목_)가 있습니다.
 
-\![목록 분석](<../images/data - data structures.jpg>)
+![목록 분석](<../images/data - data structures.jpg>)
 
 > 1. **Number Sequence** 노드에서는 _start_, _amount_ 및 _step_ 입력을 사용하여 번호 리스트를 정의합니다. 이러한 노드를 사용하여 _100-109_ 범위 및 _0-9_ 범위에 대해 10개 숫자가 포함된 별도의 리스트 2개를 작성했습니다.
 > 2. **List.GetItemAtIndex** 노드에서는 특정 색인에 있는 리스트의 항목을 선택합니다. _0_ 을 선택하면 리스트의 첫 번째 항목이 표시됩니다(이 경우 _100_).
@@ -59,25 +59,25 @@ Dynamo의 데이터 계층을 이해하기 위한 주요 개념은 **데이터 �
 
 1\.**Point.ByCoordinates 추가 -** 캔버스에 노드를 추가하면 Dynamo 미리보기 그리드의 원점에 점이 표시됩니다. _x,y_ 및 _z_ 입력의 기본값은 _0.0_ 이며, 이 값을 사용하면 해당 위치에 점이 생깁니다.
 
-\![](<../images/data - exercise step 1.jpg>)
+![](<../images/data - exercise step 1.jpg>)
 
 2\. **Plane.ByOriginNormal -** 형상 계층의 다음 단계는 평면입니다. 평면은 여러 가지 방법으로 구성할 수 있는데 우리는 입력을 위해 원점과 법선을 사용하겠습니다. 원점은 이전 단계에서 작성한 점 노드입니다.
 
 **Vector.ZAxis -** z 방향으로 결합된 벡터입니다. 입력이 없으며 [0,0,1] 값의 벡터만 있습니다. 이 값을 **Plane.ByOriginNormal** 노드에 대한 _normal_ 입력으로 사용합니다. 그러면 Dynamo 미리보기에 직사각형 평면이 표시됩니다.
 
-\![](<../images/data - exercise step 2.jpg>)
+![](<../images/data - exercise step 2.jpg>)
 
 3\. **Circle.ByPlaneRadius -** 계층을 따라 위로 이동하면서 이제 이전 단계의 평면에서 곡선을 작성합니다. 노드에 연결한 후 원점에 원을 가져옵니다. 노드의 기본 반지름 값은 _1_ 입니다.
 
-\![](<../images/data - exercise step 3.jpg>)
+![](<../images/data - exercise step 3.jpg>)
 
 4\. **Curve.Extrude -** 이제 항목에 깊이를 지정하고 세 번째 치수로 이동하여 항목이 팝업되도록 합니다. 이 노드에서는 곡선을 돌출시켜 곡선에서 표면을 작성합니다. 노드의 기본 거리는 _1_이며 뷰포트에 원통이 표시됩니다.
 
-\![](<../images/data - exercise step 4.jpg>)
+![](<../images/data - exercise step 4.jpg>)
 
 5 **Surface.Thicken -** 이 노드에서는 표면을 지정된 거리만큼 간격띄우기하고 양식을 닫아 닫힌 솔리드를 제공합니다. 기본 두께 값은 _1_ 이고 뷰포트에서 쉘 원통이 이러한 값과 함께 표시됩니다.
 
-\![](<../images/data - exercise step 5.jpg>)
+![](<../images/data - exercise step 5.jpg>)
 
 6\. **Number Slider -** 이러한 모든 입력에 대해 기본값을 사용하는 대신, 파라메트릭 컨트롤을 몇 가지 모델에 추가해 보겠습니다.
 
@@ -85,21 +85,21 @@ Dynamo의 데이터 계층을 이해하기 위한 주요 개념은 **데이터 �
 
 **Min/Max/Step -** _min_, _max_ 및 _step_ 값을 각각 _0_,_2_ 및 _0.01_ 로 변경합니다. 이 작업은 전체 형상의 크기를 제어하기 위해 수행합니다.
 
-\![](<../images/data - exercise step 6.gif>)
+![](<../images/data - exercise step 6.gif>)
 
 7\. **Number Sliders -** 모든 기본 입력에서 기본값을 갖는 모든 입력에 슬라이더가 대신 생길 때까지 이 숫자 슬라이더를 여러 번 복사하여 붙여넣어 보겠습니다(슬라이더를 선택하고 Ctrl+C, Ctrl+V 키를 차례로 누름). 정의가 작동하려면 일부 슬라이더 값이 0보다 커야 합니다(즉, 표면을 두껍게 하려면 돌출 깊이가 있어야 함).
 
-\![](<../images/data - exercise step 7a.gif>)
+![](<../images/data - exercise step 7a.gif>)
 
-\![](<../images/data - exercise step 7b.gif>)
+![](<../images/data - exercise step 7b.gif>)
 
 8\. 이제 이러한 슬라이더를 사용하여 파라메트릭 쉘 원통을 작성했습니다. 이러한 매개변수 중 일부를 조정해 보고 Dynamo 뷰포트에서 형상이 동적으로 업데이트되는 것을 확인합니다.
 
-\![](<../images/data - exercise step 8a.gif>)
+![](<../images/data - exercise step 8a.gif>)
 
 **Number Sliders -** 이 작업에서 한 단계 더 나아가 캔버스에 슬라이더를 많이 추가했으며, 방금 작성한 도구의 인터페이스를 정리해야 합니다. 하나의 슬라이더를 마우스 오른쪽 버튼으로 클릭하고 "이름 바꾸기..."를 선택한 다음, 각 슬라이더의 이름을 해당 매개변수(thickness, Radius, Height 등)에 대해 적절한 이름으로 변경합니다.
 
-\![](<../images/data - exercise step 8b step.jpg>)
+![](<../images/data - exercise step 8b step.jpg>)
 
 ### 2부: 1부의 원통 배열 채우기
 
@@ -107,11 +107,11 @@ Dynamo의 데이터 계층을 이해하기 위한 주요 개념은 **데이터 �
 
 **Addition (+) -** 작성한 원통 옆에 원통 행을 추가하는 것이 목표입니다. 현재 원통과 인접한 원통을 추가하려는 경우 원통의 반지름과 해당 쉘의 두께를 둘 다 고려해야 합니다. 이 수는 슬라이더의 두 값을 더하여 얻습니다.
 
-\![](<../images/data - exercise step 9.jpg>)
+![](<../images/data - exercise step 9.jpg>)
 
 10\. 이 단계는 더 많이 관련되어 있으므로 좀 더 천천히 살펴보겠습니다. 최종 목표는 행에서 각 원통의 위치를 정의하는 숫자 리스트를 작성하는 것입니다.
 
-\![](<../images/data - exercise step 10.jpg>)
+![](<../images/data - exercise step 10.jpg>)
 
 > a. **Multiplication -** 먼저 이전 단계의 값에 2를 곱합니다. 이전 단계의 값은 반지름을 나타냅니다. 원통을 전체 지름만큼 이동하겠습니다.
 >
@@ -123,8 +123,8 @@ Dynamo의 데이터 계층을 이해하기 위한 주요 개념은 **데이터 �
 
 11\. 이 단계는 매우 간단합니다. 이전 단계에서 정의한 시퀀스를 원래 **Point.ByCoordinates**의 _x_ 입력에 연결합니다. 그러면 삭제할 수 있는 _pointX_ 슬라이더가 바뀝니다. 이제 뷰포트에 원통 배열이 표시됩니다(정수 슬라이더가 0보다 큰지 확인).
 
-\![](<../images/data - exercise step 11.gif>)
+![](<../images/data - exercise step 11.gif>)
 
 12 원통 체인은 여전히 모든 슬라이더에 동적으로 연결되어 있습니다. 각 슬라이더를 조정하며 정의가 업데이트되는 것을 확인해 보십시오.
 
-\![](<../images/data - exercise step 12.gif>)
+![](<../images/data - exercise step 12.gif>)
