@@ -71,7 +71,7 @@ b. No modo de **Visualização 3D**
   * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)Aproximar zoom
   * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)Afastar zoom
   * ![](<images/2.3-11-graph-preview-pan.jpg>)Pan
-  * \![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Orbit
+  * ![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Orbit
 * Com o mouse:
   * Role com botão do meio do mouse para cima e para baixo – Aproximar/afastar o zoom
   * Clique com o botão do meio do mouse e arraste – Pan
