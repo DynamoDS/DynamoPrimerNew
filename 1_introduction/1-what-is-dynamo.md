@@ -8,13 +8,13 @@ Dynamo는 독립 실행형 "Sandbox" 모드에서 다운로드하여 실행하�
 
 Dynamo를 통해 시각적 프로그래밍 프로세스 내에서 작업할 수 있는데, 이러한 프로세스에서 요소를 함께 연결하여 사용자 알고리즘을 구성하는 작업의 관계와 시퀀스를 정의하게 됩니다. 데이터 처리부터 형상 생성까지 다양한 응용 환경에서 `code` 한 줄을 작성하지 않고도 모두 실시간으로 이러한 알고리즘을 사용할 수 있습니다.
 
-\![](<images/nodes and wires - flow of data.jpg>)
+![](<images/nodes and wires - flow of data.jpg>)
 
 ### 노드 및 와이어 연결
 
 노드 및 와이어는 [시각적 프로그래밍](../a_appendix/a-1_visual-programming-and-dynamo.md) 프로세스를 지원하기 위한 Dynamo의 주요 구성요소입니다. 설계 부품 간에 강력한 시각적 및 체계적 관계를 구축하는 데 도움이 됩니다. 설계 워크플로우를 개발 및 최적화하는 동안 간단한 마우스 클릭을 사용하여 노드를 쉽게 연결할 수 있습니다.
 
-\![](<images/what is dynamo - connecting nodes with wires.gif>)
+![](<images/what is dynamo - connecting nodes with wires.gif>)
 
 ## Dynamo를 통해 얻을 수 있는 이점
 
