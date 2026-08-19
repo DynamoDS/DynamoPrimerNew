@@ -6,4 +6,4 @@
 
 또한 이러한 예제에는 강력한 그래프를 작성하기 위해 오랜 시간 동안 검증된 모범 사례가 구현되어 있습니다. 예제를 살펴보면서 강력하고 유연하며 유지 관리가 용이한 그래프를 작성하는 방법에 대한 더 많은 아이디어를 얻으려면 [9_best_practices](../../9\_best\_practices/ "mention") 섹션을 숙지하는 것이 좋습니다.
 
-<figure><img src="../../.gitbook/assets/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>

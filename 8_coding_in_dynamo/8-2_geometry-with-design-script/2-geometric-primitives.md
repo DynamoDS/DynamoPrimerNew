@@ -8,7 +8,7 @@ CoordinateSystem은 반드시 형상의 일부는 아니지만 형상을 생성�
 
 회전, 축척 또는 방향 전환 없이 한 점(x = 0, y = 0, z = 0)을 중심으로 CoordinateSystem을 작성하려면 ID 생성자를 호출하기만 하면 됩니다.
 
-![](../../.gitbook/assets/GeometricPrimitives_01.png)
+![](../images/GeometricPrimitives_01.png)
 
 ```js
 // create a CoordinateSystem at x = 0, y = 0, z = 0,
@@ -19,7 +19,7 @@ cs = CoordinateSystem.Identity();
 
 형상 변환이 있는 CoordinateSystem은 이 장의 범위를 벗어나지만 다른 생성자를 사용하여 특정 지점에서 _CoordinateSystem.ByOriginVectors_ 라는 좌표계를 작성할 수 있습니다.
 
-![](../../.gitbook/assets/GeometricPrimitives_02.png)
+![](../images/GeometricPrimitives_02.png)
 
 ```js
 // create a CoordinateSystem at a specific location,
@@ -41,7 +41,7 @@ cs = CoordinateSystem.ByOriginVectors(origin,
 
 이 예는 다양한 좌표계에서 작성된 점을 보여줍니다.
 
-![](../../.gitbook/assets/GeometricPrimitives_03.png)
+![](../images/GeometricPrimitives_03.png)
 
 ```js
 // create a point with x, y, and z coordinates
@@ -77,7 +77,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
 
 그 다음으로 높은 차원의 Dynamo 원형은 두 끝점 사이의 무한한 수의 점을 나타내는 선 세그먼트입니다. 생성자 _Line.ByStartPointEndPoint_ 로 두 개의 경계점을 명시적으로 지정하거나 해당 방향에서 시작점, 방향 및 길이(_Line.ByStartPointDirectionLength_)를 지정하여 선을 작성할 수 있습니다.
 
-![](../../.gitbook/assets/GeometricPrimitives_04.png)
+![](../images/GeometricPrimitives_04.png)
 
 ```js
 p1 = Point.ByCoordinates(-2, -5, -10);
@@ -96,7 +96,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
 
 Dynamo에는 3D로 만든 기하학적 원형의 가장 기본적인 유형을 나타내는 객체가 있습니다. 예를 들어 직육면체는 _Cuboid.ByLengths_ 로 작성되고, 원추는 _Cone.ByPointsRadius_ 및 _Cone.ByPointsRadii_ 로 작성됩니다. 원통은 _Cylinder.ByRadiusHeight_ 로 작성되고, 구는 _Sphere.ByCenterPointRadius_ 로 작성됩니다.
 
-![](../../.gitbook/assets/GeometricPrimitives_05.png)
+![](../images/GeometricPrimitives_05.png)
 
 ```js
 // create a cuboid with specified lengths

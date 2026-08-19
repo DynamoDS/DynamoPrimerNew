@@ -6,14 +6,14 @@ code block에는 데이터 관리를 _훨씬_ 더 쉽게 해주는 몇 가지 �
 
 | **데이터 유형**          | **표준 Dynamo**                                      | **해당하는 Code Block 항목**                                     |
 | ---------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
-| 숫자                | \![](<../../.gitbook/assets/01 node - numbers.jpg>)       | \![](<../../.gitbook/assets/01 codeblock - numbers.jpg>)       |
-| 문자열                | \![](<../../.gitbook/assets/02 node - string.jpg>)        | \![](<../../.gitbook/assets/02 codeblock- string.jpg>)         |
-| 시퀀스              | \![](<../../.gitbook/assets/03 node- sequence.jpg>)       | \![](<../../.gitbook/assets/03 codeblock- sequence.jpg>)       |
-| Ranges                 | \![](<../../.gitbook/assets/04 node- range.jpg>)          | \![](<../../.gitbook/assets/04 codeblock - range.jpg>)         |
-| 색인의 항목 가져오기      | \![](<../../.gitbook/assets/05 node - list get item.jpg>) | \![](<../../.gitbook/assets/05 codeblock - list get item.jpg>) |
-| 리스트 작성            | \![](<../../.gitbook/assets/06 node - list create.jpg>)   | \![](<../../.gitbook/assets/image (17).png>)                   |
-| 문자열 연결    | \![](<../../.gitbook/assets/07 node - string concat.jpg>) | \![](<../../.gitbook/assets/07 codeblock - string concat.jpg>) |
-| 조건문 | \![](<../../.gitbook/assets/08 node - conditional.jpg>)   | \![](<../../.gitbook/assets/08 codeblock - conditional.jpg>)   |
+| 숫자                | \![](<../images/01 node - numbers.jpg>)       | \![](<../images/01 codeblock - numbers.jpg>)       |
+| 문자열                | \![](<../images/02 node - string.jpg>)        | \![](<../images/02 codeblock- string.jpg>)         |
+| 시퀀스              | \![](<../images/03 node- sequence.jpg>)       | \![](<../images/03 codeblock- sequence.jpg>)       |
+| Ranges                 | \![](<../images/04 node- range.jpg>)          | \![](<../images/04 codeblock - range.jpg>)         |
+| 색인의 항목 가져오기      | \![](<../images/05 node - list get item.jpg>) | \![](<../images/05 codeblock - list get item.jpg>) |
+| 리스트 작성            | \![](<../images/06 node - list create.jpg>)   | ![](<../images/image.png>)                   |
+| 문자열 연결    | \![](<../images/07 node - string concat.jpg>) | \![](<../images/07 codeblock - string concat.jpg>) |
+| 조건문 | \![](<../images/08 node - conditional.jpg>)   | \![](<../images/08 codeblock - conditional.jpg>)   |
 
 ### 추가 구문
 
@@ -28,7 +28,7 @@ code block에는 데이터 관리를 _훨씬_ 더 쉽게 해주는 몇 가지 �
 
 범위 및 시퀀스를 정의하는 방법을 기본 축약형으로 줄일 수 있습니다. code block으로 숫자 데이터 리스트를 정의하기 위한 ".." 구문을 작성할 때 아래 이미지를 참고하십시오. 이 표기법을 이해한 후에는 숫자 데이터를 정말 효율적으로 작성할 수 있게 됩니다.
 
-\![](<../../.gitbook/assets/shorthand - ranges and sequences.jpg>)
+\![](<../images/shorthand - ranges and sequences.jpg>)
 
 > 1. 이 예에서는 숫자 범위가 `beginning..end..step-size;`를 정의하는 기본 **Code Block** 구문으로 대치됩니다. 숫자로 표현하면 `0..10..1;`입니다.
 > 2. `0..10..1;` 구문은 `0..10;`과 같습니다. 단계 크기 1은 축약형 표기의 기본값입니다. 따라서 `0..10;`을 사용하면 단계 크기가 1인 0~10의 시퀀스가 지정됩니다.
@@ -39,7 +39,7 @@ code block에는 데이터 관리를 _훨씬_ 더 쉽게 해주는 몇 가지 �
 
 고급 범위를 작성하면 리스트의 리스트를 간단하게 사용할 수 있습니다. 아래 예에서는 1차 범위 표기법에서 변수를 분리한 후 해당 리스트의 다른 범위를 작성합니다.
 
-\![](<../../.gitbook/assets/shorthand - advance range 01.jpg>)
+\![](<../images/shorthand - advance range 01.jpg>)
 
 > 1\. 중첩된 범위를 작성하여 "#"이 있는 표기법과 없는 표기법을 비교합니다. 약간 더 복잡해질 수 있지만 기본 범위와 동일한 논리가 적용됩니다.
 >
@@ -49,13 +49,13 @@ code block에는 데이터 관리를 _훨씬_ 더 쉽게 해주는 몇 가지 �
 
 논리 연습의 일환으로, 위의 두 축약형을 비교하고, _하위 범위_ 및 _#_ 표기법에 따라 결과 출력이 어떻게 달라지는지 구문 분석해 봅니다.
 
-\![](<../../.gitbook/assets/shorthand - advance range 02.jpg>)
+\![](<../images/shorthand - advance range 02.jpg>)
 
 ### 리스트 만들기 및 리스트에서 항목 가져오기
 
 또한 축약형을 사용해서 리스트를 만드는 것 외에, 리스트를 즉석에서 작성할 수도 있습니다. 이러한 리스트는 광범위한 요소 유형을 포함할 수 있으며 조회도 가능합니다(리스트는 그 자체가 객체임). 요약하면, Code Block을 통해 대괄호( “꺽쇠괄호”라고도 함)를 사용해서 리스트를 만들고, 리스트의 항목을 조회합니다.
 
-\![](<../../.gitbook/assets/shorthand - list & get from list 01.jpg>)
+\![](<../images/shorthand - list & get from list 01.jpg>)
 
 > 1\. 문자열을 사용하여 리스트를 빠르게 작성하고 항목 색인을 사용하여 조회합니다.
 >
@@ -63,7 +63,7 @@ code block에는 데이터 관리를 _훨씬_ 더 쉽게 해주는 몇 가지 �
 
 내포된 리스트로 관리하는 작업도 유사한 프로세스입니다. 리스트 순서를 인식하고 여러 대괄호 세트를 사용해서 명확히 구분합니다.
 
-\![](<../../.gitbook/assets/shorthand - list & get from list 02.jpg>)
+\![](<../images/shorthand - list & get from list 02.jpg>)
 
 > 1\. 리스트의 리스트를 정의합니다.
 >
@@ -83,58 +83,58 @@ code block에는 데이터 관리를 _훨씬_ 더 쉽게 해주는 몇 가지 �
 
 먼저 위의 노드를 연결하여 표면을 작성해 보겠습니다. 숫자 노드를 사용하여 폭과 길이를 정의하는 대신, 캔버스를 두 번 클릭하고 Code Block에 `100;`을 입력합니다.
 
-\![](<../../.gitbook/assets/shorthand - exercise 01.jpg>)
+\![](<../images/shorthand - exercise 01.jpg>)
 
-\![](<../../.gitbook/assets/shorthand - exercise 02.jpg>)
+\![](<../images/shorthand - exercise 02.jpg>)
 
 > 1. **Code Block**에 `0..1..#50`을 입력하여 0과 1 사이에 50개 분할 영역으로 구분된 범위를 정의합니다.
 > 2. 범위를 **Surface.PointAtParameter**에 연결합니다. 이 노드에서는 표면 전체에서 0과 1 사이의 u 및 v 값을 사용합니다. **Surface.PointAtParameter** 노드를 마우스 오른쪽 버튼으로 클릭하여 레이싱을 외적으로 변경해야 합니다.
 
 이 단계에서는 첫 번째 함수를 사용하여 Z에서 위쪽으로 점 그리드를 이동합니다. 이 그리드는 기본 함수를 기준으로 생성된 표면을 구동합니다. 아래 이미지에 표시된 대로 새 노드를 추가합니다.
 
-\![](<../../.gitbook/assets/shorthand - exercise 03.jpg>)
+\![](<../images/shorthand - exercise 03.jpg>)
 
 > 1. `(0..Math.Sin(x*360)..#50)*5;` 행이 있는 **Code Block**을 사용합니다. 빠른 분석을 위해 내부에 수식을 사용하여 범위를 정의합니다. 이 수식은 사인 함수입니다. 사인 함수에는 Dynamo에서 각도 입력이 수신되므로 전체 사인파를 가져오려면 x 값(0에서 1 범위의 입력)에 360을 곱합니다. 다음으로, 각 행의 제어 그리드 점과 동일한 수의 분할을 원하므로 #50을 사용하여 50개의 재분할 영역을 정의합니다. 마지막으로 승수 5는 변환의 진폭을 늘리므로 Dynamo 미리보기에서 결과를 확인할 수 있습니다.
 
-\![](<../../.gitbook/assets/shorthand - exercise 04.jpg>)
+\![](<../images/shorthand - exercise 04.jpg>)
 
 > 1. 이전 **Code Block**이 제대로 작동했지만 완전한 파라메트릭은 아니었습니다. 매개변수를 동적으로 구동하려고 하므로, 이전 단계의 줄을 `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`로 대치하겠습니다. 이렇게 하면 입력을 기준으로 이러한 값을 정의할 수 있습니다.
 
 0부터 10 사이에서 슬라이더를 변경하면 몇 가지 흥미로운 결과를 얻을 수 있습니다.
 
-\![](<../../.gitbook/assets/shorthand - exercise 05.gif>)
+\![](<../images/shorthand - exercise 05.gif>)
 
-\![](<../../.gitbook/assets/shorthand - exercise 06.jpg>)
+\![](<../images/shorthand - exercise 06.jpg>)
 
 > 1. 숫자 범위에서 행과 열을 바꾸어 커튼 파형의 방향을 반대로 바꿉니다. `transposeList = List.Transpose(sineList);`
 
-\![](<../../.gitbook/assets/shorthand - exercise 07.jpg>)
+\![](<../images/shorthand - exercise 07.jpg>)
 
 > 1. 다음과 같이 sineList 및 transposeList를 추가하면 왜곡된 달걀 껍질형 표면이 표시됩니다. `eggShellList = sineList+transposeList;`
 
 아래에 지정된 슬라이더 값을 변경하여 이 알고리즘의 '파형을 진정'시켜 보겠습니다.
 
-\![](<../../.gitbook/assets/shorthand - exercise 08.jpg>)
+\![](<../images/shorthand - exercise 08.jpg>)
 
 마지막으로, 이 Code Block을 사용하여 분리된 데이터 부분을 조회해 보겠습니다. 특정 점 범위를 사용해서 표면을 재생성하려면 위 code block을 **Geometry.Translate**와 **NurbsSurface.ByPoints** 노드 사이에 추가합니다. 여기에는 `sineStrips[0..15..1];` 텍스트 줄이 있습니다. 이는 50개 중에서 처음 16개의 점 행을 선택합니다. 표면을 재작성하면 점 그리드의 분리된 부분이 생성된 것을 볼 수 있습니다.
 
-\![](<../../.gitbook/assets/shorthand - exercise 09.jpg>)
+\![](<../images/shorthand - exercise 09.jpg>)
 
-\![](<../../.gitbook/assets/shorthand - exercise 10.jpg>)
+\![](<../images/shorthand - exercise 10.jpg>)
 
 > 1. 마지막 단계에서 이 **Code Block**을 좀 더 파라메트릭하게 만들기 위해 0에서 1 사이의 슬라이더를 사용하여 조회를 실행합니다. `sineStrips[0..((List.Count(sineStrips)-1)*u)];` 코드 줄을 사용하여 이 작업을 수행합니다. 혼란스러워 보일 수 있지만, 이 코드 줄을 사용하면 리스트 길이를 0에서 1 사이의 승수로 빠르게 축척할 수 있습니다.
 
 슬라이더에서 `0.53` 값을 사용하면 표면이 그리드의 중간점을 지나 작성됩니다.
 
-\![](<../../.gitbook/assets/shorthand - exercise 11.jpg>)
+\![](<../images/shorthand - exercise 11.jpg>)
 
 또한 예상대로 슬라이더에서 `1`을 사용하면 표면이 전체 점 그리드에서 작성됩니다.
 
-\![](<../../.gitbook/assets/shorthand - exercise 12.jpg>)
+\![](<../images/shorthand - exercise 12.jpg>)
 
 시각적 그래프를 보면 Code Block을 강조 표시하고 해당 기능을 확인할 수 있습니다.
 
-\![](<../../.gitbook/assets/shorthand - exercise 13.jpg>)
+\![](<../images/shorthand - exercise 13.jpg>)
 
 > 1\. 첫 번째 **Code Block**은 **Number** 노드를 대치합니다.
 >

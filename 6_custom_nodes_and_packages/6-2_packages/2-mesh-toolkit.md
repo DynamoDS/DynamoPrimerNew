@@ -2,7 +2,7 @@
 
 Dynamo Mesh Toolkit에서는 외부 파일 형식에서 메쉬를 가져오고, Dynamo 형상 객체에서 메쉬를 작성하고, 정점 및 색인으로 메쉬를 수동으로 작성하는 도구를 제공합니다. 라이브러리에서는 메쉬를 수정 또는 복구하거나 제작에 사용할 수평 슬라이스를 추출하는 도구도 제공합니다.
 
-\![](<../../.gitbook/assets/meshToolkit case study 01.jpg>)
+\![](<../images/meshToolkit case study 01.jpg>)
 
 Dynamo Mesh Toolkit은 Autodesk에서 지속적으로 연구하는 메쉬의 한 부분으로, 향후 몇 년 동안 지속적으로 발전할 것입니다. 툴킷에서 새로운 메서드가 자주 제공될 계획이니, 새 기능에 대한 의견, 버그 및 제안 사항과 관련하여 언제든지 Dynamo 팀에 연락해 주십시오.
 
@@ -14,7 +14,7 @@ Dynamo Mesh Toolkit은 Autodesk에서 지속적으로 연구하는 메쉬의 한
 
 Dynamo의 상단 메뉴 막대에서 패키지 > Package Manager...로 이동합니다. 검색 필드에 MeshToolkit을 한 글자씩 입력합니다. 설치를 클릭하고 확인을 수락하여 다운로드를 시작합니다. 아주 간단합니다.
 
-<figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
 ## 연습: 메쉬 교차
 
@@ -28,19 +28,19 @@ Dynamo의 상단 메뉴 막대에서 패키지 > Package Manager...로 이동합
 
 먼저 Dynamo에서 _Mesh-Toolkit_Intersect-Mesh.dyn in Dynamo_ 를 엽니다.
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 01.jpg>)
+\![](<../images/meshToolkit case study - exercise 01.jpg>)
 
 > 1. **File Path:** 가져올 메쉬 파일을 찾습니다(_stanford_bunny_tri.obj_). 지원되는 파일 유형은 .mix 및 .obj입니다.
 > 2. **Mesh.ImportFile:** 파일 경로를 연결하여 메쉬를 가져옵니다.
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 02.jpg>)
+\![](<../images/meshToolkit case study - exercise 02.jpg>)
 
 > 1. **Point.ByCoordinates:** 한 점을 생성합니다. 이 점이 호의 중심이 됩니다.
 > 2. **Arc.ByCenterPointRadiusAngle:** 점을 중심으로 호를 생성합니다. 이 곡선은 일련의 평면을 배치하는 데 사용됩니다. __ 설정은 다음과 같습니다. __ `radius: 40, startAngle: -90, endAngle:0`
 
 호를 따라 방향이 지정된 일련의 평면을 작성합니다.
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 03.jpg>)
+\![](<../images/meshToolkit case study - exercise 03.jpg>)
 
 > 1. **Code Block**: 0에서 1 사이의 25개 숫자를 작성합니다.
 > 2. **Curve.PointAtParameter:** 호를 _‘curve’_ 입력에 연결하고 코드 블록 출력을 _‘param’_ 입력에 연결하여 곡선을 따라 일련의 점을 추출합니다.
@@ -49,7 +49,7 @@ Dynamo의 상단 메뉴 막대에서 패키지 > Package Manager...로 이동합
 
 다음으로 이러한 평면을 사용하여 메쉬를 교차시키겠습니다.
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 04.jpg>)
+\![](<../images/meshToolkit case study - exercise 04.jpg>)
 
 > 1. **Mesh.Intersect:** 평면을 가져온 메쉬와 교차시켜 일련의 PolyCurve 윤곽을 작성합니다. 노드를 마우스 오른쪽 버튼으로 클릭하고 레이싱을 최장으로 설정합니다.
 > 2. **PolyCurve.Curves:** PolyCurve를 해당 곡선 조각으로 나눕니다.
@@ -58,12 +58,12 @@ Dynamo의 상단 메뉴 막대에서 패키지 > Package Manager...로 이동합
 
 계속하기 전에 결과를 더 잘 볼 수 있도록 Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal 및 Arc.ByCenterPointRadiusAngle 등의 일부 노드의 미리보기를 끕니다.
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 05.jpg>)
+\![](<../images/meshToolkit case study - exercise 05.jpg>)
 
 > 1. **Surface.ByPatch:** 각 윤곽에 대한 표면 패치를 생성하여 메쉬의 "슬라이스"를 작성합니다.
 
 와플/계란 상자 효과를 위해 두 번째 슬라이스 세트를 추가합니다.
 
-\![](<../../.gitbook/assets/meshToolkit case study - exercise 06.jpg>)
+\![](<../images/meshToolkit case study - exercise 06.jpg>)
 
 메쉬와 유사한 솔리드를 비교하면 교차 작업이 더 빠르게 계산되는 것을 알 수 있습니다. 이 연습에 설명된 것과 같은 워크플로우에는 메쉬 작업이 적합합니다.

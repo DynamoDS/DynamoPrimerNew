@@ -15,7 +15,7 @@ _Intersect_ 메서드는 Dynamo의 모든 형상 조각에 대해 정의됩니�
 
 다음의 간단한 예는 평면과 NurbsSurface의 교차점을 보여줍니다. 교차는 다른 모든 NurbsCurve처럼 사용할 수 있는 NurbsCurve 배열을 생성합니다.
 
-![](../../.gitbook/assets/IntersectionAndTrim_01.png)
+![](../images/IntersectionAndTrim_01.png)
 
 ```js
 // python_points_5 is a set of Points generated with
@@ -47,7 +47,7 @@ _Trim_ 메서드는 거의 모든 형상 조각에 정의된다는 점에서 Int
 
 _Trim_ 메서드에서 유의할 사항은 삭제할 형상 및 유지할 조각을 결정하는 "선택" 점이 필요하다는 것입니다. Dynamo는 선택 점에서 가장 가까운 잘린 형상을 찾아서 이를 버립니다.
 
-![](../../.gitbook/assets/IntersectionAndTrim_02.png)
+![](../images/IntersectionAndTrim_02.png)
 
 ```js
 // python_points_5 is a set of Points generated with

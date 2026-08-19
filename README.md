@@ -4,7 +4,7 @@
 
 ## Dynamo 2.13 이상 버전용
 
-![Dynamo 로고](.gitbook/assets/dynamo_logo_dark-trim.jpg)
+![Dynamo 로고](images/dynamo_logo_dark-trim.jpg)
 
 > Dynamo는 설계자를 위한 오픈 소스 시각적 프로그래밍 플랫폼입니다.
 
@@ -37,31 +37,31 @@ Dynamo Primer는 Matt Jezyk 및 Autodesk의 Dynamo 개발 팀에서 시작한 �
 
 **Mode Lab**은 본 입문서의 초판을 작성하는 책임을 맡았습니다. 이러한 소중한 리소스를 마련하는 데 들인 모든 노고에 감사드립니다.
 
-![](.gitbook/assets/MODELAB_Logo.png)
+![](images/modelab-logo.png)
 
 ***
 
 **Parallax 팀의 John Pierson**은 Dynamo 2.0 개정 내용을 반영하도록 입문서를 업데이트하는 업무를 맡았습니다.
 
-![](.gitbook/assets/PRLX_Logo.jpg)
+![](images/prlx-logo.jpg)
 
 ***
 
 **Matterlab**은 Dynamo 2.13 개정 내용을 반영하도록 입문서를 업데이트하는 업무를 맡았습니다.
 
-\![](<.gitbook/assets/matterlab_final-07 (2).jpg>)
+![](images/matterlab-logo.jpg)
 
 ***
 
 **Archilizer**는 Dynamo 2.17 개정 내용을 반영하도록 입문서를 업데이트하는 업무를 맡았습니다.
 
-<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 **Wood Rodgers**는 Dynamo for Civil 3D의 컨텐츠로 입문서를 업데이트하는 업무를 맡았습니다.
 
-<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
 
 ### 감사의 인사
 

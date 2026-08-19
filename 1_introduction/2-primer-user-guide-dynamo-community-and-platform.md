@@ -19,11 +19,11 @@ Dynamo 워크플로우의 데모를 보고 싶다면 샘플 워크플로우 섹�
 
 * [파라메트릭 꽃병](../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.md)
 
-![](../.gitbook/assets/vase1.gif)
+![](images/vase1.gif)
 
 * [어트랙터 점](../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.md)
 
-\![](<../.gitbook/assets/attractor1 (1).gif>)
+![](<images/attractor1.gif>)
 
 {% hint style="info" %} Dynamo에 대한 여러 항목을 다루므로 이후 장에서 더 많은 주제별 연습을 확인할 수 있습니다. **연습** 은 일반적으로 각 페이지의 마지막 섹션에서 찾을 수 있습니다. {% endhint %}
 
@@ -31,7 +31,7 @@ Dynamo 워크플로우의 데모를 보고 싶다면 샘플 워크플로우 섹�
 
 의욕적인 사용자 그룹과 활동적인 참가자가 없다면 Dynamo는 지금의 모습을 갖추지 못했을 것입니다. [블로그](http://dynamobim.org/blog/)를 팔로우하거나, 갤러리에 작업을 추가하거나, [포럼](https://forum.dynamobim.com)에서 Dynamo에 대해 토론하여 커뮤니티에 참여해 보십시오.
 
-![포럼](../.gitbook/assets/02-Community.png)
+![포럼](images/02-Community.png)
 
 ### 플랫폼
 
@@ -39,6 +39,6 @@ Dynamo는 설계자를 위한 시각적 프로그래밍 도구로 통용되며, 
 
 프로젝트의 소스 코드는 오픈 소스이므로 해당 기능을 핵심 컨텐츠로 확장할 수 있습니다. GitHub에서 프로젝트를 확인하고 Dynamo를 사용자화하고 있는 사용자의 진행 중 작업을 찾아보십시오.
 
-![리포지토리](../.gitbook/assets/03-TheRepo.png)
+![리포지토리](images/03-TheRepo.png)
 
 > 필요에 따라 찾아보기, 분기, Dynamo 확장

@@ -12,7 +12,7 @@ description: suggested exercise
 * 노드를 사용하여 형상 요소를 작성하고 수정합니다.
 * 설계 결과를 실시간으로 시각화합니다.
 
-![](../../.gitbook/assets/vase1.gif)
+![](../images/vase1.gif)
 
 ## 목표 정의
 
@@ -22,7 +22,7 @@ Dynamo를 사용하기 전에 꽃병을 개념적으로 설계해 보겠습니�
 
 꽃병을 정의하는 데에도 유사한 방법을 사용합니다. 서로 다른 높이와 반지름으로 4개의 원을 작성한 다음, 해당 원을 로프트하여 표면을 작성합니다.
 
-![](../../.gitbook/assets/vase2.png)
+![](../images/vase2.png)
 
 ## 시작하기
 
@@ -34,7 +34,7 @@ Dynamo를 사용하기 전에 꽃병을 개념적으로 설계해 보겠습니�
 
 Dynamo에서 실행할 작업의 순서를 나타내는 노드가 필요합니다. 원을 작성하려고 하므로 먼저 이러한 작업을 수행하는 노드를 찾아보겠습니다. **검색 필드**를 사용하거나 **라이브러리**를 탐색하여 **Circle.ByCenterPointRadius** 노드를 찾아 작업공간에 추가합니다.
 
-![](../../.gitbook/assets/vase8.png)
+![](../images/vase8.png)
 
 > 1. 검색 > "원..."
 > 2. 선택 > "ByCenterPointRadius"
@@ -42,25 +42,25 @@ Dynamo에서 실행할 작업의 순서를 나타내는 노드가 필요합니�
 
 이 노드를 좀 더 자세히 살펴보겠습니다. 왼쪽에는 노드의 입력(_centerPoint_ 및 _radius_)이 있고 오른쪽에는 노드의 출력(Circle)이 있습니다. 출력에 연한 파란색 선이 있습니다. 이것은 입력에 기본값이 있음을 의미합니다. 입력에 대한 자세한 정보를 확인하려면 해당 이름 위에 마우스를 놓습니다. _radius_ 입력은 이중 입력이 필요하며 기본값은 1입니다.
 
-![](../../.gitbook/assets/vase10.png)
+![](../images/vase10.png)
 
 기본값인 _centerPoint_ 를 그대로 두고 **Number Slider** 를 추가하여 반지름을 제어합니다. **Circle.ByCenterPointRadius** 노드에서와 마찬가지로 라이브러리를 사용하여 **Number Slider** 를 검색하고 그래프에 추가합니다.
 
 이 노드에는 슬라이더가 포함되어 있으므로 이전 노드와는 약간 다릅니다. 인터페이스를 사용하여 슬라이더의 출력 값을 변경할 수 있습니다.
 
-\![](<../../.gitbook/assets/vase13 (1).gif>)
+![](<../images/vase13.gif>)
 
 노드 왼쪽에 있는 드롭다운 버튼을 사용하여 슬라이더를 구성할 수 있습니다. 슬라이더를 최대값 15로 제한하겠습니다.
 
-![](../../.gitbook/assets/vase11.png)
+![](../images/vase11.png)
 
 이를 **Circle.ByCenterPointRadius** 노드의 왼쪽에 배치하고, **Number Slider** 출력을 선택한 후 이를 Radius 입력에 연결하여 두 노드를 연결하겠습니다.
 
-![](../../.gitbook/assets/vase12.png)
+![](../images/vase12.png)
 
 노드 이름을 두 번 클릭하여 Number Slider 이름을 "Top Radius"로 변경해 보겠습니다.
 
-![](../../.gitbook/assets/vase14.png)
+![](../images/vase14.png)
 
 ## 다음 단계
 
@@ -70,7 +70,7 @@ Dynamo에서 실행할 작업의 순서를 나타내는 노드가 필요합니�
 
 이러한 원이 표면을 정의하도록 이러한 노드를 네 번 복사하고, Number Slider의 이름을 아래와 같이 변경합니다.
 
-\![](<../../.gitbook/assets/vase4 (1).png>)
+![](<../images/vase4.png>)
 
 > 1. 중심점과 반지름으로 원을 작성합니다.
 
@@ -78,11 +78,11 @@ Dynamo에서 실행할 작업의 순서를 나타내는 노드가 필요합니�
 
 꽃병의 핵심 매개변수인 높이가 누락되어 있습니다. 꽃병의 높이를 제어하기 위해 또 다른 Number Slider를 작성합니다. 또한 **Code Block** 노드도 추가합니다. 코드 블록은 워크플로우에 맞춤 코드 조각을 추가하는 데 도움이 됩니다. 꽃병의 높이를 따라 원을 배치할 수 있도록 코드 블록을 사용하여 높이 슬라이더에 다른 배율을 곱하겠습니다.
 
-\![](<../../.gitbook/assets/vase15 (1).png>)
+![](<../images/vase15.png>)
 
 그런 다음, **Geometry.Translate** 노드를 사용하여 원하는 높이에 원을 배치합니다. 꽃병을 따라 원을 분배하려고 하므로 코드 블록을 사용하여 높이 매개변수에 배율을 곱합니다.
 
-![](../../.gitbook/assets/vase5.png)
+![](../images/vase5.png)
 
 > 2\. 원은 Z축의 변수에 따라 변환(이동)됩니다.
 
@@ -92,7 +92,7 @@ Dynamo에서 실행할 작업의 순서를 나타내는 노드가 필요합니�
 
 다른 노드의 미리보기를 꺼서 Surface.ByLoft 화면만 표시해 보겠습니다.
 
-![](../../.gitbook/assets/vase6.png)
+![](../images/vase6.png)
 
 > 3\. 변환된 원을 로프트하여 표면을 작성합니다.
 
@@ -100,6 +100,6 @@ Dynamo에서 실행할 작업의 순서를 나타내는 노드가 필요합니�
 
 워크플로우가 준비되었습니다! 이제 스크립트에 정의한 **Number Sliders**를 사용하여 여러 꽃병 설계를 작성할 수 있습니다.
 
-![](../../.gitbook/assets/vase1.gif)
+![](../images/vase1.gif)
 
-![](../../.gitbook/assets/vase7.png)
+![](../images/vase7.png)

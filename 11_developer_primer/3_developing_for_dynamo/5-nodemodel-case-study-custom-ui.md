@@ -2,7 +2,7 @@
 
 NodeModel 기반 노드는 Zero-Touch 노드보다 훨씬 더 뛰어난 유연성과 강력한 기능을 제공합니다. 이 예에서는 직사각형 크기를 임의 지정하는 통합 슬라이더를 추가하여 Zero-Touch 그리드 노드를 한 단계 높여 보겠습니다.
 
-![직사각형 그리드 그래프](../../.gitbook/assets/cover-image-2.jpg)
+![직사각형 그리드 그래프](../images/cover-image-2.jpg)
 
 > 슬라이더는 셀의 크기를 기준으로 셀의 크기를 조정하므로 사용자가 슬라이더의 범위를 정확하게 지정할 필요가 없습니다.
 
@@ -33,7 +33,7 @@ NodeModel 노드는 함수를 호출할 수만 있으므로 NodeModel 및 함수
 
 솔루션에서 C# 클래스 라이브러리 프로젝트 2개(함수용 프로젝트와 NodeModel 인터페이스를 구현하기 위한 프로젝트)를 생성합니다.
 
-![새 클래스 라이브러리 추가하기](../../.gitbook/assets/vs-new-class-projects.jpg)
+![새 클래스 라이브러리 추가하기](../images/vs-new-class-projects.jpg)
 
 > 1. 솔루션을 마우스 오른쪽 버튼으로 클릭하고 `Add > New Project`를 선택합니다.
 > 2. 클래스 라이브러리를 선택합니다.
@@ -43,7 +43,7 @@ NodeModel 노드는 함수를 호출할 수만 있으므로 NodeModel 및 함수
 
 다음으로, 자동으로 생성된 클래스 라이브러리의 이름을 바꾸고 하나를 `CustomNodeModel` 프로젝트에 추가해야 합니다. 클래스 `GridNodeModel`은 추상 NodeModel 클래스를 구현하고 `GridNodeView`는 뷰를 사용자 지정하는 데 사용되고, `GridFunction`에는 호출해야 하는 함수가 포함되어 있습니다.
 
-![솔루션 탐색기](../../.gitbook/assets/vs-new-class.jpg)
+![솔루션 탐색기](../images/vs-new-class.jpg)
 
 > 1. `CustomNodeModel` 프로젝트를 마우스 오른쪽 버튼으로 클릭하고 `Add > New Item...`을 선택한 후 `Class`를 선택하여 다른 클래스를 추가합니다.
 > 2. `CustomNodeModel` 프로젝트에는 `GridNodeModel.cs` 및 `GridNodeView.cs` 클래스가 필요합니다.
@@ -51,14 +51,14 @@ NodeModel 노드는 함수를 호출할 수만 있으므로 NodeModel 및 함수
 
 클래스에 코드를 추가하기 전에 이 프로젝트에 필요한 패키지를 추가합니다. `CustomNodeModel`에는 ZeroTouchLibrary 및 WpfUILlibrary가 필요하고 `CustomNodeModelFunction`에는 ZeroTouchLibrary만 필요합니다. WpfUILlibrary는 나중에 UI를 사용자 지정하는 데 사용되며 ZeroTouchLibrary는 형상을 생성하는 데 사용됩니다. 패키지는 프로젝트에 대해 개별적으로 추가할 수 있습니다. 이러한 패키지에는 종속성이 있으므로 Core 및 DynamoServices가 자동으로 설치됩니다.
 
-![패키지 설치하기](../../.gitbook/assets/vs-add-packages.jpg)
+![패키지 설치하기](../images/vs-add-packages.jpg)
 
 > 1. 프로젝트를 마우스 오른쪽 버튼으로 클릭하고 `Manage NuGet Packages`를 선택합니다.
 > 2. 해당 프로젝트에 필요한 패키지만 설치합니다.
 
 Visual Studio는 빌드 디렉토리에 참조한 NuGet 패키지를 복사합니다. 패키지에 불필요한 파일이 포함되지 않도록 이 값을 false로 설정할 수 있습니다.
 
-![로컬 패키지 사본을 사용하지 않도록 설정하기](../../.gitbook/assets/vs-disable-package-copying.jpg)
+![로컬 패키지 사본을 사용하지 않도록 설정하기](../images/vs-disable-package-copying.jpg)
 
 > 1. Dynamo NuGet 패키지를 선택합니다.
 > 2. `Copy Local`를 false로 설정합니다.
@@ -199,7 +199,7 @@ namespace CustomNodeModel.CustomNodeModelFunction
 
 NuGet 패키지에 대한 참조를 추가한 것처럼, 함수를 호출하려면 `CustomNodeModel`이 `CustomNodeModelFunction`을 참조해야 합니다.
 
-![참조 추가하기](../../.gitbook/assets/vs-add-project-reference.jpg)
+![참조 추가하기](../images/vs-add-project-reference.jpg)
 
 > CustomNodeModel에 대한 using 문은 함수를 참조할 때까지 비활성화됩니다.
 >
@@ -240,7 +240,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 프로젝트 구조를 설정한 후 Visual Studio의 설계 환경을 사용하여 사용자 컨트롤을 빌드하고 해당 매개변수를 `.xaml` 파일에 정의합니다. 도구 상자에서 슬라이더를 `<Grid>...</Grid>`에 추가합니다.
 
-![새 슬라이더 추가하기](../../.gitbook/assets/vs-usercontrol.jpg)
+![새 슬라이더 추가하기](../images/vs-usercontrol.jpg)
 
 > 1. `CustomNodeModel`을 마우스 오른쪽 버튼으로 클릭하고 `Add > New Item`을 선택합니다.
 > 2. `WPF`를 선택합니다.
@@ -295,7 +295,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 프로젝트를 빌드하기 전 마지막 단계는 Dynamo에서 패키지를 읽을 수 있도록 `pkg.json` 파일을 추가하는 것입니다.
 
-![JSON 파일 추가하기](../../.gitbook/assets/vs-pkg-json.jpg)
+![JSON 파일 추가하기](../images/vs-pkg-json.jpg)
 
 > 1. `CustomNodeModel`을 마우스 오른쪽 버튼으로 클릭하고 `Add > New Item`을 선택합니다.
 > 2. `Web`을 선택합니다.
@@ -341,7 +341,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 일반적인 근본 원인은 노드를 만들 때 포트를 다시 만든 생성자를 사용했기 때문입니다. 그 대신 포트를 로드한 생성자를 사용했어야 합니다. 이러한 생성자는 일반적으로 `[JsonConstructor]`로 표시됩니다. _예제는 아래를 참조하십시오._
 
-\![Broken JSON](<../../.gitbook/assets/broken-json (1).jpg>)
+![손상된 JSON](<../images/broken-json.jpg>)
 
 이 문제는 다음과 같은 이유로 발생할 수 있습니다.
 

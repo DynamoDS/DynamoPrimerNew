@@ -52,7 +52,7 @@
 
 **시각적 프로그램:**
 
-\![](<../.gitbook/assets/visualProgramming (2).png>)
+![](<images/visualProgramming.png>)
 
 **텍스트 프로그램:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 이 알고리즘의 결과는 다음과 같습니다.
 
-\![](<../.gitbook/assets/visualProgramming (1).png>)
+![](<images/visualProgramming.png>)
 
 진입 장벽을 낮추고 설계자에게 자주 정보를 제공할 수 있는 프로그래밍의 시각적 특성입니다. Dynamo는 시각적 프로그래밍 패러다임에 속하지만, 응용프로그램에서 텍스트 프로그래밍도 계속 사용할 수 있습니다. 이 내용은 나중에 살펴보겠습니다.

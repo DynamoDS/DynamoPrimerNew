@@ -6,4 +6,4 @@ Dynamo에서 AEC 세계에 대한 코딩을 시작하면 좋습니다. 코딩 �
 * [DesignScript를 사용한 형상](8-2_geometry-with-design-script/)
 * [Python](8-3_python/)
 
-![](../.gitbook/assets/image.png)
+![](images/image.png)

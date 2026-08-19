@@ -49,7 +49,7 @@ LogWarningMessageEvents.OnLogWarningMessage("Your warning message here.");
 
 이 예제에서는 이전의 "**Zero-Touch 사례 연구 - 그리드 노드"** 에서 생성한 사용자 정의 노드를 기반으로 구축할 것입니다. 그리도 노드는 `xCount` 및 `yCount` 입력을 바탕으로 직사각형 그리드를 생성하는 `RectangularGrid`라는 메서드를 포함합니다. 입력이 유효하지 않은지를 테스트한 다음, `OnLogWarningMessage`를 사용하여 경고를 기록하고 처리를 중지하는 과정을 살펴보겠습니다.
 
-![OnLogWarningMessage 예제 1](../../.gitbook/assets/onlogwarningmessage-example-1.png)
+![OnLogWarningMessage 예제 1](../images/onlogwarningmessage-example-1.png)
 
 **입력 유효성 검사에 `OnLogWarningMessage` 사용**
 
@@ -137,7 +137,7 @@ namespace CustomNodes
 
 메서드에 점의 리스트가 필요하지만 사용자가 빈 리스트 또는 null 리스트를 전달하면 `OnLogWarningMessage`를 사용하여 문제를 사용자에게 알릴 수 있습니다.
 
-![OnLogWarningMessage 예제 2](../../.gitbook/assets/onlogwarningmessage-example-2.png)
+![OnLogWarningMessage 예제 2](../images/onlogwarningmessage-example-2.png)
 
 ```
 public static Polygon CreatePolygonFromPoints(List<Point> points)
@@ -164,7 +164,7 @@ public static Polygon CreatePolygonFromPoints(List<Point> points)
 
 파일 경로를 처리하는 노드의 경우 특정 파일 유형만 허용되도록 하고자 할 수 있습니다. 지원되지 않는 파일 유형이 감지되면 경고를 기록합니다.
 
-![OnLogWarningMessage 예제 3](../../.gitbook/assets/onlogwarningmessage-example-3.png)
+![OnLogWarningMessage 예제 3](../images/onlogwarningmessage-example-3.png)
 
 ```
 public static void ProcessFile(string filePath)
@@ -226,7 +226,7 @@ LogWarningMessageEvents.OnLogInfoMessage("Your info message here.");
 
 이 예제에서는 이전의 "**Zero-Touch 사례 연구 - 그리드 노드"** 에서 생성한 사용자 정의 노드를 기반으로 구축할 것입니다. 그리도 노드는 `xCount` 및 `yCount` 입력을 바탕으로 직사각형 그리드를 생성하는 `RectangularGrid`라는 메서드를 포함합니다. 입력이 유효하지 않은지를 테스트한 다음, 노드 실행이 완료된 후 `OnLogInfoMessage`를 사용하여 정보를 제공하는 과정을 살펴보겠습니다.
 
-![OnLogInfoMessage 예제 1](../../.gitbook/assets/onloginfomessage-example-1.png)
+![OnLogInfoMessage 예제 1](../images/onloginfomessage-example-1.png)
 
 **입력 유효성 검사에 `OnLogInfoMessage` 사용**
 
@@ -309,7 +309,7 @@ namespace CustomNodes
 
 점 리스트를 처리하는 노드를 생성하는 경우 성공적으로 처리된 점의 수를 기록하고자 할 수 있습니다. 이는 대규모 데이터 세트에 유용할 수 있습니다.
 
-![OnLogInfoMessage 예제 2](../../.gitbook/assets/onloginfomessage-example-2.png)
+![OnLogInfoMessage 예제 2](../images/onloginfomessage-example-2.png)
 
 ```
 public static List<Point> ProcessPoints(List<Point> points)
@@ -339,7 +339,7 @@ public static List<Point> ProcessPoints(List<Point> points)
 
 어떤 경우에는 노드가 작업을 완료하기 위해 사용한 입력 매개 변수를 확인하는 것이 유용할 수 있습니다. 예를 들어, 노드가 데이터를 파일로 내보낼 경우 파일 이름과 경로를 기록하면 사용자가 올바른 파일이 사용되었음을 확인할 수 있습니다.
 
-![OnLogInfoMessage 예제 3](../../.gitbook/assets/onloginfomessage-example-3.png)
+![OnLogInfoMessage 예제 3](../images/onloginfomessage-example-3.png)
 
 ```
 public static void ExportData(string filePath, List<string> data)
@@ -365,7 +365,7 @@ public static void ExportData(string filePath, List<string> data)
 
 과거에 Dynamo에서는 패키지 작성자가 노드에 대한 문서를 제공할 수 있는 방법에 대한 제한이 있었습니다. 사용자 지정 노드 작성자는 노드의 툴팁에 표시되는 간단한 설명만 추가하거나 패키지를 주석이 많이 달린 샘플 그래프와 함께 패키지를 배포할 수 밖에 없었습니다.
 
-![노드 툴팁 설명](../../.gitbook/assets/customnodedocumentation-overloads.png)
+![노드 툴팁 설명](../images/customnodedocumentation-overloads.png)
 
 ### 새로운 방법
 
@@ -399,11 +399,11 @@ Markdown은 매우 유연하며, 훌륭한 문서를 쉽게 만들 수 있는 �
 
 Dynamo는 문서 탐색기 뷰 확장을 사용하여 노드 문서를 표시합니다. 노드 문서를 열려면 노드를 마우스 오른쪽 버튼으로 클릭하고 도움말을 선택합니다. 그러면 문서 탐색기가 열리고 해당 노드와 연결된 Markdown이 표시됩니다(제공된 경우).
 
-![문서 탐색기](../../.gitbook/assets/customnodedocumentation-no-documentation-provided.png)
+![문서 탐색기](../images/customnodedocumentation-no-documentation-provided.png)
 
 문서 탐색기에 표시되는 문서는 두 부분으로 구성됩니다. 첫 번째는 `Node Info` 섹션으로, 입력/출력, 노드 카테고리, 노드 이름/네임스페이스, 노드의 간단한 설명과 같이 노드에서 추출된 정보에서 자동으로 생성됩니다. 두 번째 부분은 노드를 문서화하기 위해 제공된 Markdown 파일인 사용자 지정 노드 문서를 보여줍니다.
 
-![사용자 지정 노드 문서](../../.gitbook/assets/customnodedocumentation-custom-node-documentation.png)
+![사용자 지정 노드 문서](../images/customnodedocumentation-custom-node-documentation.png)
 
 #### 패키지 doc 폴더
 
@@ -417,13 +417,13 @@ Dynamo가 특정 노드에 대해 요청을 받을 때 어떤 파일을 열어�
 
 노드에 오버로드가 있는 특별한 경우(이름은 같지만 입력이 다른 노드) 노드 네임스페이스 뒤의 `()`에 입력 이름을 추가해야 합니다. 예를 들어, 기본 제공 노드 `Geometry.Translate`에는 여러 오버로드가 있습니다. 이 경우 아래 노드의 Markdown 파일 이름은 다음과 같이 지정합니다. `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction).md` `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction,distance).md`
 
-![오버로드된 노드](../../.gitbook/assets/customnodedocumentation-overloads.png)
+![오버로드된 노드](../images/customnodedocumentation-overloads.png)
 
 #### Dynamo에서 열려 있는 Markdown 파일 수정
 
 문서 파일을 쉽게 수정할 수 있도록 문서 탐색기는 열려 있는 문서 파일에 File Watcher(파일 감시자)를 구현했습니다. 이를 통해 Markdown 파일을 변경하면 Dynamo에서 즉시 변경 사항을 확인할 수 있습니다.
 
-![핫 리로딩](../../.gitbook/assets/customnodedocumentation-hot-reload.gif)
+![핫 리로딩](../images/customnodedocumentation-hot-reload.gif)
 
 Dynamo가 열려 있는 동안에도 새 문서 파일을 추가할 수 있습니다. `/doc` 폴더에 문서화할 노드에 해당하는 이름으로 새 Markdown 파일을 추가하기만 하면 됩니다.
 
@@ -441,9 +441,9 @@ Dynamo에서 Zero Touch 노드에 사용자 정의 아이콘을 추가하면 노
 
 시작하려면 Zero Touch 노드에 대한 Visual Studio 클래스 라이브러리(.NET Framework) 프로젝트를 생성합니다. 생성한 프로젝트가 아직 없는 경우 **시작하기** 섹션에서 프로젝트 생성에 대한 단계별 지침을 참조하십시오.
 
-![새 Visual Studio 프로젝트 생성하기](../../.gitbook/assets/vs-new-project-1.jpg)
+![새 Visual Studio 프로젝트 생성하기](../images/vs-new-project-1.jpg)
 
-![Visual Studio에서 새 프로젝트 구성하기](../../.gitbook/assets/zerotouchicons-configure-new-project.jpg)
+![Visual Studio에서 새 프로젝트 구성하기](../images/zerotouchicons-configure-new-project.jpg)
 
 작동하는 Zero Touch 노드가 하나 이상 있어야 합니다. 그 이유는 기존 노드에만 아이콘을 추가할 수 있기 때문입니다. 자세한 내용은 **Zero Touch 사례 연구 - 그리드 노드**를 참조하십시오.
 
@@ -475,11 +475,11 @@ Dynamo에서 Zero Touch 노드에 사용자 정의 아이콘을 추가하면 노
 
 * **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 버튼으로 클릭합니다.
 
-![새 항목 추가](../../.gitbook/assets/zerotouchicons-add-resources-file-1.jpg)
+![새 항목 추가](../images/zerotouchicons-add-resources-file-1.jpg)
 
 * **추가 > 새 항목**으로 이동하고 **리소스 파일**을 선택합니다.
 
-![리소스 파일 추가](../../.gitbook/assets/zerotouchicons-add-resources-file-2.jpg)
+![리소스 파일 추가](../images/zerotouchicons-add-resources-file-2.jpg)
 
 * 파일 이름을 `<ProjectName>Images.resx`로 지정합니다. `ZeroTouchNodeIconsImages.resx`를 예로 들 수 있습니다.
 
@@ -489,7 +489,7 @@ Dynamo에서 Zero Touch 노드에 사용자 정의 아이콘을 추가하면 노
 3. **'빌드 작업'을 '없음'으로 설정**
    * 이 리소스는 이후에 직접 빌드할 예정이므로, 자동으로 빌드할 필요는 없습니다.
 
-![사용자 정의 도구 특성 정리](../../.gitbook/assets/zerotouchicons-custom-tool-property-update.png)
+![사용자 정의 도구 특성 정리](../images/zerotouchicons-custom-tool-property-update.png)
 
 > _참고: "사용자 정의 도구" 필드를 지우지 않으면 Visual Studio가 리소스 이름의 마침표를 밑줄로 변환합니다. 빌드하기 전에 클래스 이름을 구분하는 데 밑줄이 아닌 마침표가 사용되었는지 리소스 이름을 확인하십시오._
 
@@ -500,7 +500,7 @@ Dynamo에서 Zero Touch 노드에 사용자 정의 아이콘을 추가하면 노
    * 리소스 유형을 **파일**로 설정합니다.
    * 이미지 파일이 있는 위치로 이동하여 **Large** 및 **Small** 노드 아이콘을 포함합니다.
 
-![리소스 추가...](../../.gitbook/assets/zerotouchicons-open-resource-editor-update.png)
+![리소스 추가...](../images/zerotouchicons-open-resource-editor-update.png)
 
 > _참고: 이미지를 **Resource** 폴더(또는 **Large** 및 **Small** 하위 폴더)로 정리하는 것은 필수는 아니지만, 이는 리소스를 체계적으로 정리하는 좋은 방법입니다._
 
@@ -510,26 +510,26 @@ Dynamo에서 Zero Touch 노드에 사용자 정의 아이콘을 추가하면 노
 
 1. Visual Studio의 **확장 > 확장 관리** 메뉴에서 `.NET Upgrade Assistant` 확장을 설치합니다.
 
-![확장 관리](../../.gitbook/assets/zerotouchicons-manage-extensions-update.png)
+![확장 관리](../images/zerotouchicons-manage-extensions-update.png)
 
-![.NET 업그레이드 도우미 설치](../../.gitbook/assets/zerotouchicons-net-upgrade-assistant.jpg)
+![.NET 업그레이드 도우미 설치](../images/zerotouchicons-net-upgrade-assistant.jpg)
 
 2. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 버튼으로 클릭하고 **업그레이드 > 프로젝트를 SDK 스타일로 변환**을 선택합니다.
 
-![프로젝트 업그레이드](../../.gitbook/assets/zerotouchicons-upgrade-project.jpg)
+![프로젝트 업그레이드](../images/zerotouchicons-upgrade-project.jpg)
 
-![SDK 스타일로 변환](../../.gitbook/assets/zerotouchicons-convert-to-sdk-style.jpg)
+![SDK 스타일로 변환](../images/zerotouchicons-convert-to-sdk-style.jpg)
 
 3. 변환이 완료될 때까지 기다립니다.
 
-![업그레이드 완료](../../.gitbook/assets/zerotouchicons-upgrade-complete.jpg)
+![업그레이드 완료](../images/zerotouchicons-upgrade-complete.jpg)
 
 #### 6단계: 리소스를 포함시키기 위해 After-Build 스크립트 추가
 
 1. 다음과 같이 프로젝트를 언로드합니다.
    * **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 버튼으로 클릭하고 **프로젝트 언로드**를 선택합니다.
 
-![프로젝트 언로드](../../.gitbook/assets/zerotouchicons-unload-project.jpg)
+![프로젝트 언로드](../images/zerotouchicons-unload-project.jpg)
 
 2. 다음과 같이 `.csproj` 파일을 편집합니다.
    * `</ItemGroup>`과 `</Project>` 사이에 다음 `<Target>` 요소를 추가합니다.
@@ -550,26 +550,26 @@ Dynamo에서 Zero Touch 노드에 사용자 정의 아이콘을 추가하면 노
 	</Target>
 ```
 
-![After-Build 코드 추가](../../.gitbook/assets/zerotouchicons-after-build.jpg)
+![After-Build 코드 추가](../images/zerotouchicons-after-build.jpg)
 
 1. `ZeroTouchNodeIcons`의 모든 인스턴스를 프로젝트 이름으로 바꿉니다.
 2. 다음과 같이 프로젝트를 다시 로드합니다.
    * 언로드된 프로젝트를 마우스 오른쪽 버튼으로 클릭하고 **프로젝트 다시 로드**를 선택합니다.
 
-![프로젝트 다시 로드](../../.gitbook/assets/zerotouchicons-reload-project.jpg)
+![프로젝트 다시 로드](../images/zerotouchicons-reload-project.jpg)
 
 #### 7단계: .dll을 빌드한 후 Dynamo에 로드
 
 1. 다음과 같이 프로젝트를 빌드합니다.
    * After-Build 스크립트를 추가한 후 Visual Studio에서 프로젝트를 빌드합니다.
 
-![솔루션 빌드](../../.gitbook/assets/zerotouchicons-build-solution.jpg)
+![솔루션 빌드](../images/zerotouchicons-build-solution.jpg)
 
 2. 다음과 같이 출력 파일을 확인합니다.
    * `.dll`과 `.customization.dll`이 `bin` 폴더에 있는지 확인합니다.
 3. Dynamo에 `.dll`을 추가합니다.
    * Dynamo에서 라이브러리 가져오기 버튼을 사용하여 .dll을 Dynamo로 가져옵니다.
 
-![라이브러리 가져오기 버튼](../../.gitbook/assets/zerotouchicons-icon-in-dynamo.jpg)
+![라이브러리 가져오기 버튼](../images/zerotouchicons-icon-in-dynamo.jpg)
 
 4. 이제 사용자 정의 노드가 해당 아이콘과 함께 표시됩니다.

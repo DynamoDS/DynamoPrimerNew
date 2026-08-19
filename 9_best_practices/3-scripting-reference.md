@@ -6,7 +6,7 @@
 
 표준 라이브러리는 Dynamo 외부에 있으며 프로그래밍 언어 Python 및 C#(Zerotouch)에 있습니다. Dynamo에는 노드 계층에 바로 해당되는 고유한 라이브러리 세트도 있으므로, 사용자는 노드 및 와이어로 만들 수 있는 모든 요소를 코드에서 만들 수 있습니다. 아래에는 각 Dynamo 라이브러리를 통해 액세스할 수 있는 항목과 표준 라이브러리를 사용해야 하는 경우에 대한 지침이 나와 있습니다.
 
-![](../.gitbook/assets/textual-programming.jpg)
+![](images/textual-programming.jpg)
 
 **표준 라이브러리 및 Dynamo 라이브러리**
 

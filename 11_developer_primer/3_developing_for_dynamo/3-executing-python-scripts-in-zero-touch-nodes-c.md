@@ -4,7 +4,7 @@
 
 Python에서 스크립트를 작성하는 데 익숙하고 표준 Dynamo Python 노드에서 더 많은 기능을 사용하고자 하는 경우 Zero-Touch를 사용하여 자체 노드를 만들 수 있습니다. Python 스크립트를 문자열로 Zero-Touch 노드에 전달하여 스크립트가 실행되고 결과가 반환되는 간단한 예로 시작하겠습니다. 이 사례 연구는 연습과 시작하기 섹션의 예제를 기반으로 합니다. Zero-Touch 노드를 만드는 것이 완전히 처음인 경우 해당 섹션을 참조하십시오.
 
-![Python 스크립트 문자열을 실행할 Zero-Touch 노드](../../.gitbook/assets/python-case-study.png)
+![Python 스크립트 문자열을 실행할 Zero-Touch 노드](../images/python-case-study.png)
 
 > Python 스크립트 문자열을 실행할 Zero-Touch 노드
 
@@ -68,7 +68,7 @@ output = str(volume)
 
 표준 Python 노드의 한 가지 한계는 출력 포트가 하나뿐이므로 여러 객체를 반환하려면 리스트를 구성하고 각 객체를 가져와야 한다는 것입니다. 위의 예를 수정하여 사전을 반환하는 경우 원하는 만큼 출력 포트를 추가할 수 있습니다. 사전에 대한 자세한 내용은’ Zero-Touch로 한 단계 더 나아가기’의 여러 값 반환하기 섹션을 참조하십시오.
 
-![이 노드를 사용하면 직육면체의 체적과 중심을 모두 반환할 수 있습니다.](../../.gitbook/assets/python-multi-case-study.png)
+![이 노드를 사용하면 직육면체의 체적과 중심을 모두 반환할 수 있습니다.](../images/python-multi-case-study.png)
 
 > 이 노드를 사용하면 직육면체의 체적과 중심을 모두 반환할 수 있습니다.
 

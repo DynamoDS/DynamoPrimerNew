@@ -21,7 +21,7 @@ DynamoRevit 프로젝트에 대한 코드는 핵심 Dynamo 소스 코드와는 �
 
 DynamoRevit 소스는 [https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit)에 호스팅됩니다.
 
-![GitHub의 DynamoRevit](../../.gitbook/assets/github-dynamorevit.jpg)
+![GitHub의 DynamoRevit](../images/github-dynamorevit.jpg)
 
 > 1. 리포지토리 복제 또는 다운로드
 > 2. DynamoRevit의 분기는 Revit 버전을 참조합니다.
@@ -34,13 +34,13 @@ Dynamo 리포지토리를 끌어오는 것과 유사한 프로세스로 git 복�
 
 > `username`을 사용자 이름으로 바꿉니다.
 
-![명령행 인터페이스](../../.gitbook/assets/cli-cd-revit.jpg)
+![명령행 인터페이스](../images/cli-cd-revit.jpg)
 
 이제 리포지토리를 이 디렉토리에 복제할 수 있습니다. 리포지토리의 분기를 지정해야 하지만, 복제 후 이 분기로 전환할 수 있습니다.
 
 `git clone https://github.com/DynamoDS/DynamoRevit.git`은 원격 URL에서 리포지토리를 복제하고 기본적으로 마스터 분기로 전환합니다.
 
-![리포지토리를 복제한 후 나타나는 명령행 인터페이스](../../.gitbook/assets/cli-clone-revit.jpg)
+![리포지토리를 복제한 후 나타나는 명령행 인터페이스](../images/cli-clone-revit.jpg)
 
 리포지토리의 복제가 완료되면 현재 디렉토리를 리포지토리 폴더로 변경하고 설치된 Revit 버전과 일치하는 분기로 전환합니다. 이 예에서는 Revit RC2.13.1_Revit2023을 사용합니다. 모든 원격 분기는 GitHub 페이지의 분기 드롭다운 메뉴에서 확인할 수 있습니다.
 
@@ -48,7 +48,7 @@ Dynamo 리포지토리를 끌어오는 것과 유사한 프로세스로 git 복�
  `git checkout RC2.13.1_Revit2023`은 현재 분기를 `RC2.13.1_Revit2023`으로 설정합니다.\
  `git branch`는 현재 사용 중인 분기를 확인하고, 로컬에 있는 다른 분기를 표시합니다.
 
-![분기로 전환된 디렉토리](../../.gitbook/assets/cli-branch-revit.jpg)
+![분기로 전환된 디렉토리](../images/cli-branch-revit.jpg)
 
 > 별표가 있는 분기는 현재 체크아웃된 분기입니다. `Revit2018` 분기가 표시되는 이유는 이전에 체크아웃하여 로컬에 존재하기 때문입니다.
 
@@ -58,19 +58,19 @@ Visual Studio에서 프로젝트를 빌드할 때 올바른 버전의 Revit 설�
 
 리포지토리를 빌드하기 전에 `src` 폴더에 있는 `restorepackages.bat` 파일을 사용하여 NuGet 패키지를 복원해야 합니다. 이 bat 파일은 [NuGet](https://www.nuget.org) 패키지 관리자를 사용하여 DynamoRevit에 필요한 Dynamo Core의 빌드된 바이너리를 끌어옵니다. DynamoRevit만 변경하고 Dynamo Core는 변경하지 않는 경우에는 이러한 바이너리를 수동으로 빌드하도록 선택할 수도 있습니다. 이렇게 하면 더 빠르게 시작할 수 있습니다. 이 파일을 관리자 권한으로 실행해야 합니다.
 
-![관리자 권한으로 실행](../../.gitbook/assets/fe-restorepackages.jpg)
+![관리자 권한으로 실행](../images/fe-restorepackages.jpg)
 
 > 1. 마우스 오른쪽 버튼으로 `restorepackages.bat`를 클릭하여 `Run as administrator`를 선택합니다.
 
 패키지가 성공적으로 복원되면 최신 베타 NuGet 패키지가 있는 `packages` 폴더가 `src` 폴더에 추가됩니다.
 
-![최신 베타 Dynamo NuGet 패키지](../../.gitbook/assets/fe-packages.jpg)
+![최신 베타 Dynamo NuGet 패키지](../images/fe-packages.jpg)
 
 > 1. 최신 베타 Dynamo NuGet 패키지
 
 패키지가 복원되면 `src`에서 `DynamoRevit.All.sln` Visual Studio 솔루션 파일을 열고 솔루션을 빌드합니다. 빌드 초기에는 `AssemblySharedInfo.cs`를 찾는 데 어려움이 있을 수 있습니다. 이러한 경우 빌드를 다시 실행하면 이 이슈가 해결됩니다.
 
-![솔루션 빌드하기](../../.gitbook/assets/vs-build-dynamorevit.jpg)
+![솔루션 빌드하기](../images/vs-build-dynamorevit.jpg)
 
 > 1. `Build > Build Solution`을 선택합니다.
 > 2. 출력 창에서 빌드가 성공적으로 수행되었는지 확인합니다. `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`라는 메시지가 표시되어야 합니다.
@@ -118,7 +118,7 @@ Revit은 [설치 프로그램](http://dynamobim.org/download/)이 자동으로 �
 
 또한 Revit과 함께 제공되는 기존 Dynamo를 제거해야 합니다. 이를 위해 `C:\\Program Files\Autodesk\Revit 2023\AddIns`로 이동하여 **Dynamo** - `DynamoForRevit` 및 `DynamoPlayerForRevit`이 포함된 두 개의 폴더를 제거합니다. 원래 Dynamo for Revit을 복구해야 하는 경우 개별 폴더에서 삭제하거나 백업할 수 있습니다.
 
-![DynamoForRevit 및 DynamoPlayerforRevit 폴더](../../.gitbook/assets/fe-dynamo-folders-remove.jpg)
+![DynamoForRevit 및 DynamoPlayerforRevit 폴더](../images/fe-dynamo-folders-remove.jpg)
 
 두 번째 단계는 Dynamo 코어 어셈블리의 파일 경로를 DynamoRevit의 `bin` 폴더에 있는 `Dynamo.config` 파일에 추가하는 것입니다. DynamoRevit은 애드인이 Revit에서 열릴 때 이러한 파일을 로드합니다. 이 구성 파일을 사용하면 DynamoRevit 애드인이 Dynamo Core의 다른 버전을 가리키도록 지정하여 Core와 DynamoRevit 모두에서 변경 사항을 개발 및 테스트할 수 있습니다.
 
@@ -139,7 +139,7 @@ Revit은 [설치 프로그램](http://dynamobim.org/download/)이 자동으로 �
 
 이제 Revit을 열면 관리 탭에 Dynamo 애드인이 있습니다.
 
-![관리 탭에 있는 Dynamo 애드인](../../.gitbook/assets/revit-dynamo.jpg)
+![관리 탭에 있는 Dynamo 애드인](../images/revit-dynamo.jpg)
 
 > 1. `Manage`를 선택합니다.
 > 2. Dynamo 애드인 아이콘을 클릭합니다.
@@ -160,13 +160,13 @@ Revit은 [설치 프로그램](http://dynamobim.org/download/)이 자동으로 �
 
 **Wall.ByCurveAndHeight** 노드는 곡선 입력으로 PolyCurve가 지정되면 _"BSPlineCurve까지가 구현되지 않음"_ 이라는 메시지와 함께 예외를 발생시킵니다. 디버깅을 통해 노드가 이 형상 유형을 곡선 매개변수의 입력으로 허용하지 않는 이유를 정확히 파악할 수 있습니다. 이 예에서는 DynamoRevit이 성공적으로 빌드되어 Revit용 애드인으로 실행할 수 있다고 가정합니다.
 
-![예외를 발생시키는 Wall.ByCurveAndHeight 노드](../../.gitbook/assets/dyn-wallbycurveandheight.jpg)
+![예외를 발생시키는 Wall.ByCurveAndHeight 노드](../images/dyn-wallbycurveandheight.jpg)
 
 > 1. 예외를 발생시키는 Wall.ByCurveAndHeight 노드
 
 먼저 `DynamoRevit.All.sln` 솔루션 파일을 열고 Revit을 시작한 다음 DynamoRevit 애드인을 시작합니다. 그런 다음 `Attach to Process` 창을 사용하여 Visual Studio를 Revit 프로세스에 연결합니다.
 
-![프로세스에 연결 창](../../.gitbook/assets/vs-debug-attachprocess.jpg)
+![프로세스에 연결 창](../images/vs-debug-attachprocess.jpg)
 
 > 사용 가능한 프로세스로 표시하려면 Revit과 DynamoRevit이 실행 중이어야 합니다.
 >
@@ -177,21 +177,21 @@ Revit은 [설치 프로그램](http://dynamobim.org/download/)이 자동으로 �
 
 Visual Studio가 Revit에 연결된 상태로 `Wall.cs`에서 Wall.ByCurveAndHeight 소스 코드를 엽니다. 솔루션 탐색기에서 파일의 `Public static constructors` 영역에 있는 `Libraries > RevitNodes > Elements` 아래에서 찾을 수 있습니다. 벽 유형의 생성자에서 중단점을 설정하여 Dynamo에서 노드가 실행될 때 프로세스가 중단되고 코드의 각 줄을 개별적으로 실행해 볼 수 있도록 합니다. 일반적으로 Dynamo zero touch 유형 생성자는 `By<parameters>`로 시작합니다.
 
-![중단점 설정하기](../../.gitbook/assets/vs-debugging-breakpoint.jpg)
+![중단점 설정하기](../images/vs-debugging-breakpoint.jpg)
 
 > 1. Wall.ByCurveAndHeight의 생성자가 있는 클래스 파일
 > 2. 줄 번호 왼쪽을 클릭하거나 코드 줄을 마우스 오른쪽 버튼으로 클릭하여 중단점을 설정하고 `Breakpoint > Insert Breakpoint`를 선택합니다.
 
 중단점을 설정한 후에는 Wall.ByCurveAndHeight 함수를 통해 프로세스를 실행해야 합니다. 포트 중 하나에 와이어를 다시 연결하면 노드가 강제로 다시 실행되므로, 이 함수를 다시 실행할 수 있습니다. 중단점이 Visual Studio에서 적중됩니다.
 
-![Visual Studio에서 중단점 적중](../../.gitbook/assets/vs-breakpoint.jpg)
+![Visual Studio에서 중단점 적중](../images/vs-breakpoint.jpg)
 
 > 1. 중단점 아이콘은 적중되면 변경됩니다.
 > 2. 다음 메서드를 보여주는 호출 스택 창이 표시됩니다.
 
 이제 예외에 도달할 때까지 생성자의 각 줄을 실행합니다. 노란색으로 강조 표시된 코드가 다음에 실행될 문입니다.
 
-![Visual Studio에서 실행하기](../../.gitbook/assets/vs-stepover.jpg)
+![Visual Studio에서 실행하기](../images/vs-stepover.jpg)
 
 > 1. 코드 탐색용 디버깅 도구
 > 2. `Step Over`를 눌러 강조 표시된 코드를 실행한 다음 함수가 반환되면 실행을 일시 중단합니다.
@@ -201,7 +201,7 @@ Visual Studio가 Revit에 연결된 상태로 `Wall.cs`에서 Wall.ByCurveAndHei
 
 이 라이브러리는 오픈 소스 라이브러리가 아니므로 변경할 수 없습니다. 지금까지 많은 정보를 살펴보았으므로, 이제 GitHub [이슈](https://guides.github.com/features/issues/)를 제기하여 더 많은 컨텍스트와 함께 이슈를 보고하거나 끌어오기 요청을 통해 이 이슈에 대한 해결 방법을 제안할 수 있습니다.
 
-![Visual Studio의 예외](../../.gitbook/assets/vs-exception.jpg)
+![Visual Studio의 예외](../images/vs-exception.jpg)
 
 > 1. `Walls.cs`에서 예외를 유발하는 문에 도달하면 디버깅 프로세스를 통해 `ProtoToRevitCurve.cs` 내의 사용자 코드에서 이슈의 근본 원인에 최대한 가깝게 이동할 수 있습니다
 > 2. 예외를 유발하는 문은 `ProtoToRevitCurve.cs`입니다.
@@ -220,7 +220,7 @@ Visual Studio가 Revit에 연결된 상태로 `Wall.cs`에서 Wall.ByCurveAndHei
 
 원점은 단순히 복제한 원래 URL을 가리킵니다.
 
-![명령행 인터페이스에서 디렉토리 설정하기](../../.gitbook/assets/cli-pull-revit.jpg)
+![명령행 인터페이스에서 디렉토리 설정하기](../images/cli-pull-revit.jpg)
 
 > 예를 들어 `RC2.13.1_Revit2023`에서 `Revit2018`로 변경 사항을 끌어오지 않도록, 현재 어느 분기에 있고 어떤 분기에서 끌어오고 있는지 확인해야 합니다.
 

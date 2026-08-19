@@ -17,7 +17,7 @@ Dynamo in Forma는 현재 얼리 액세스 오픈 베타로 제공되고 있으�
 1. Forma 사이트에서 왼쪽 사이드바의 **Extensions**으로 이동하고 **Add extension**을 클릭합니다. 그러면 Autodesk App Store가 열립니다.
 2. Dynamo를 검색하고 Dynamo Player 베타를 추가합니다. 고지 사항을 읽고 **Agree**를 클릭합니다.
 
-<figure><img src="../.gitbook/assets/install-player.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/install-player.png" alt=""><figcaption></figcaption></figure>
 
 3. 이제 Dynamo Player를 확장 프로그램으로 사용할 수 있습니다. 클릭하여 엽니다.
 4. 이제 Dynamo Player를 사용할 준비가 되었습니다.
@@ -67,11 +67,11 @@ Dynamo를 설치하고 나면 Forma에서 사용할 수 있습니다. Forma에�
 1. Forma 사이트에서 왼쪽 사이드바의 **Extensions**으로 이동하고 **Add extension**을 클릭합니다. 그러면 Autodesk App Store가 열립니다.
 2. Dynamo를 검색하고 Dynamo Player 베타를 추가합니다. 고지 사항을 읽고 **Agree**를 클릭합니다.
 
-<figure><img src="../.gitbook/assets/install-player.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/install-player.png" alt=""><figcaption></figcaption></figure>
 
 3. 이제 Dynamo Player를 확장 프로그램으로 사용할 수 있습니다. 클릭하여 엽니다.
 4. 상단 근처에서 Desktop을 클릭하여 Dynamo Desktop에 액세스합니다.
 
-<figure><img src="../.gitbook/assets/dynamo-desktop.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/dynamo-desktop.png" alt=""><figcaption></figcaption></figure>
 
 5. 이제 Dynamo Player를 사용할 준비가 되었습니다. Dynamo에서 이미 그래프를 열어 둔 경우 **Connected graph** 아래의 Open을 클릭하기만 하면 Player에서 해당 그래프를 볼 수 있습니다.

@@ -8,7 +8,7 @@ GitHub는 변경 사항을 추적하고 작업자 간 작업을 조정하기 위
 
 Dynamo의 소스는 [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo) 리포지토리의 DynamoDS GitHub에서 호스팅됩니다.
 
-![Dynamo 소스 파일](../../.gitbook/assets/github.jpg)
+![Dynamo 소스 파일](../images/github.jpg)
 
 > Dynamo 소스 파일입니다.
 >
@@ -23,7 +23,7 @@ Dynamo의 소스는 [https://github.com/DynamoDS/Dynamo](https://github.com/Dyna
 
 복제할 Dynamo 리포지토리의 URL을 파악해야 합니다. 이 기능은 리포지토리 페이지의 "복제 또는 다운로드" 버튼에서 찾을 수 있습니다. URL을 복사하여 명령 프롬프트에 붙여넣습니다.
 
-![리포지토리 복제하기](../../.gitbook/assets/github-clone.png)
+![리포지토리 복제하기](../images/github-clone.png)
 
 > 1. "복제 또는 다운로드"를 선택합니다.
 > 2. URL을 복사합니다.
@@ -34,17 +34,17 @@ git이 설치되어 있으면 Dynamo 리포지토리를 복제할 수 있습니�
 
 > "username"을 사용자 이름으로 바꿉니다.
 
-![명령 프롬프트](../../.gitbook/assets/cli-1.jpg)
+![명령 프롬프트](../images/cli-1.jpg)
 
 다음 단계에서는 git 명령을 실행하여 Dynamo 리포지토리를 지정한 위치에 복제합니다. 명령의 URL은 GitHub에서 "복제 또는 다운로드" 버튼을 클릭하여 확인할 수 있습니다. 명령 터미널에서 이 명령을 실행합니다. 그러면 Dynamo의 가장 최신 업데이트 코드인 Dynamo 리포지토리 마스터 분기가 복제되고 최신 버전의 Dynamo 코드가 포함됩니다. 이 분기는 매일 변경됩니다.
 
 `git clone https://github.com/DynamoDS/Dynamo.git`
 
-![Git 복제 작업의 결과](../../.gitbook/assets/cli-2.jpg)
+![Git 복제 작업의 결과](../images/cli-2.jpg)
 
 복제 작업이 성공적으로 완료되면 git이 잘 작동하는 것입니다. 파일 탐색기에서 복제한 디렉토리로 이동하여 소스 파일을 확인합니다. 디렉토리 구조는 GitHub의 Dynamo 리포지토리의 마스터 분기와 동일할 것입니다.
 
-![Dynamo의 소스 파일](../../.gitbook/assets/source-files.jpg)
+![Dynamo의 소스 파일](../images/source-files.jpg)
 
 > 1. Dynamo의 소스 파일
 > 2. Git 파일
@@ -71,11 +71,11 @@ git이 설치되어 있으면 Dynamo 리포지토리를 복제할 수 있습니�
 > 4. **Visual Studio 2022 Preview/2026 Insider**(Community, Professional 또는 Enterprise)를 찾습니다.
 > 5. **설치**를 클릭하여 기존 Visual Studio 설치와 함께 추가합니다.
 
-\![Visual Studio preview](<../../.gitbook/assets/vs-preview (1).png>) \![Visual Studio 2026 insider](<../../.gitbook/assets/vs-2026-insiders (1).png>)
+![Visual Studio preview](<../images/vs-preview.png>) ![Visual Studio 2026 insider](<../images/vs-2026-insiders.png>)
 
 설치가 모두 완료되면 Visual Studio를 시작하고 `Dynamo\src`에 있는 `Dynamo.All.sln` 솔루션을 열 수 있습니다.
 
-![솔루션 파일 열기](../../.gitbook/assets/vs-open-dynamo.jpg)
+![솔루션 파일 열기](../images/vs-open-dynamo.jpg)
 
 > 1. `File > Open > Project/Solution`을 선택합니다.
 > 2. Dynamo 리포지토리로 이동하여 `src` 폴더를 엽니다.
@@ -84,7 +84,7 @@ git이 설치되어 있으면 Dynamo 리포지토리를 복제할 수 있습니�
 
 솔루션을 빌드하려면 먼저 몇 가지 설정을 지정해야 합니다. 먼저 Visual Studio가 디버깅하면서 개발하는 데 도움이 되는 더 많은 정보를 수집할 수 있도록 Dynamo의 디버그 버전을 빌드해야 합니다. 여기서는 AnyCPU를 대상 플랫폼으로 지정하겠습니다.
 
-![솔루션 설정](../../.gitbook/assets/vs-dynamo-build-settings.jpg)
+![솔루션 설정](../images/vs-dynamo-build-settings.jpg)
 
 > `bin` 폴더 안에 폴더가 생성됩니다.
 >
@@ -93,7 +93,7 @@ git이 설치되어 있으면 Dynamo 리포지토리를 복제할 수 있습니�
 
 프로젝트가 열리면 솔루션을 빌드할 수 있습니다. 이 프로세스를 수행하면 실행할 수 있는 DynamoSandbox.exe 파일이 생성됩니다.
 
-![솔루션 빌드하기](../../.gitbook/assets/vs-build-dynamo.jpg)
+![솔루션 빌드하기](../images/vs-build-dynamo.jpg)
 
 > 프로젝트를 빌드하면 NuGet 종속성이 복원됩니다.
 >
@@ -104,7 +104,7 @@ git이 설치되어 있으면 Dynamo 리포지토리를 복제할 수 있습니�
 
 Dynamo가 성공적으로 빌드되면 DynamoSandbox.exe 파일이 있는 `bin` 폴더가 Dynamo 리포지토리에 생성됩니다. 이 예에서는 디버그 옵션을 사용하여 빌드하고 있으므로 실행 파일은 `bin\AnyCPU\Debug`에 있습니다. 이 파일을 실행하면 Dynamo의 로컬 빌드가 열립니다.
 
-![DynamoSandbox 실행 파일](../../.gitbook/assets/ex-dynamosandbox.jpg)
+![DynamoSandbox 실행 파일](../images/ex-dynamosandbox.jpg)
 
 > 1. 방금 빌드한 DynamoSandbox 실행 파일입니다. 이 실행 파일을 실행하여 Dynamo를 시작합니다.
 
@@ -123,7 +123,7 @@ Dynamo가 성공적으로 빌드되면 DynamoSandbox.exe 파일이 있는 `bin` 
 
 Visual Studio에서 Dynamo를 시작하면 필요한 경우 모든 디버깅 세션에 대해 솔루션이 다시 빌드되므로, 소스를 변경하면 디버깅할 때 변경 사항이 포함됩니다. `Dynamo.All.sln` 솔루션이 열려 있는 상태로 드롭다운 메뉴에서 `Debug`, `AnyCPU` 및 `DynamoSandbox`를 선택한 다음 `Start`를 클릭합니다. 이렇게 하면 Dynamo가 빌드되고 새 프로세스(DynamoSandbox.exe)가 시작되고 Visual Studio의 디버거가 이 프로세스에 연결됩니다.
 
-![Visual Studio에서 응용프로그램 빌드 및 시작하기](../../.gitbook/assets/vs-debug-options.jpg)
+![Visual Studio에서 응용프로그램 빌드 및 시작하기](../images/vs-debug-options.jpg)
 
 > Visual Studio에서 직접 응용프로그램 빌드 및 시작하기
 >
@@ -134,7 +134,7 @@ Visual Studio에서 Dynamo를 시작하면 필요한 경우 모든 디버깅 세
 
 또는 특정 그래프가 열려 있거나 패키지에 대한 이슈를 해결하기 위해 이미 실행 중인 Dynamo 프로세스를 디버깅할 수도 있습니다. 이렇게 하려면 Visual Studio에서 프로젝트의 소스 파일을 열고 `Attach to Process` 디버그 메뉴 항목을 사용하여 실행 중인 Dynamo 프로세스에 연결합니다.
 
-![프로세스에 연결 대화상자](../../.gitbook/assets/vs-attach-dynamosandbox.jpg)
+![프로세스에 연결 대화상자](../images/vs-attach-dynamosandbox.jpg)
 
 > 실행 중인 프로세스를 Visual Studio에 연결하기
 >
@@ -144,7 +144,7 @@ Visual Studio에서 Dynamo를 시작하면 필요한 경우 모든 디버깅 세
 
 두 상황에서 모두 디버깅하려는 프로세스에 디버거를 연결하겠습니다. 디버거를 시작하기 전이나 후에 코드에서 중단점을 설정하여 해당 코드 줄을 실행하기 직전에 프로세스가 중지되도록 할 수 있습니다. 디버깅하는 동안 예기치 않은 예외가 발생하면 Visual Studio는 소스 코드에서 예외가 발생한 위치로 이동됩니다. 이 방법은 단순한 충돌과 처리되지 않은 예외를 찾고 응용프로그램의 실행 흐름을 파악하는 데 효율적입니다.
 
-![중단점 설정하기](../../.gitbook/assets/vs-debug-dynamocore.jpg)
+![중단점 설정하기](../images/vs-debug-dynamocore.jpg)
 
 > DynamoSandbox를 디버깅하는 동안, 노드가 인스턴스화될 때 Dynamo 프로세스가 일시 중지되도록 Color.ByARGB 노드의 생성자에 중단점을 설정했습니다. 이 노드로 인해 예외가 발생하거나 Dynamo가 충돌하는 경우 생성자의 각 줄을 단계별로 실행하여 이슈가 발생한 위치를 찾을 수 있습니다.
 >
@@ -167,7 +167,7 @@ Dynamo 소스는 GitHub에서 호스팅되므로 로컬 소스 파일을 업데�
 
 `git pull origin master`
 
-![업데이트된 로컬 리포지토리](../../.gitbook/assets/cli-pull-changes.jpg)
+![업데이트된 로컬 리포지토리](../images/cli-pull-changes.jpg)
 
 > 1. 로컬 리포지토리가 원격 변경 사항으로 업데이트된 것을 볼 수 있습니다.
 

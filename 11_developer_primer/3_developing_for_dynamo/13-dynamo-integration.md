@@ -377,7 +377,7 @@ Dynamo는 라이브 프로그래밍 환경이며 그래프를 변경하면 새�
 
 ***
 
-![벽 작성](../../.gitbook/assets/creates_walls.png)
+![벽 작성](../images/creates_walls.png)
 
 #### 추적과 요소 바인딩 비교
 
@@ -466,15 +466,15 @@ TraceableId 클래스는 추적에 저장하려는 각 `TraceExampleItem`에 대
 
 단일 `TraceExampleItem`을 작성하는 그래프를 두 번 연속으로 실행하는 흐름은 다음과 같습니다.
 
-![첫 번째 호출](../../.gitbook/assets/Trace-first-call.png)
+![첫 번째 호출](../images/Trace-first-call.png)
 
-![두 번째 호출](../../.gitbook/assets/Trace-second-call.png)
+![두 번째 호출](../images/Trace-second-call.png)
 
 다음 예에서는 같은 개념을 더 실제적인 DynamoRevit 노드 사용 사례를 사용하여 보여줍니다.
 
 #### 추적 다이어그램
 
-![추적 단계](../../.gitbook/assets/trace_diagram.png) ![추적 흐름](../../.gitbook/assets/trace_alt_diagram.png)
+![추적 단계](../images/trace_diagram.png) ![추적 흐름](../images/trace_alt_diagram.png)
 
 #### 참고:
 
@@ -560,7 +560,7 @@ DynamoRevit용으로 구현될 때 요소 바인딩을 사용하는 노드가 �
 
 * Dynamo 3.0 이전 버전에서 저장된 추적 객체는 SOAP를 사용하여 저장되어 있기 때문에 최신 버전에서는 지원되지 않습니다. 이로 인해 이전에 저장된 요소 바인딩 데이터는 무시되며, Dynamo 3.0 이상 버전에서는 아래 메시지가 표시됩니다. 요소 바인딩 데이터는 작업공간을 다시 실행한 후 저장할 때 저장됩니다.
 
-![요소 바인딩 호환성](../../.gitbook/assets/element_binding_compatibility_message.jpg)
+![요소 바인딩 호환성](../images/element_binding_compatibility_message.jpg)
 
 #### ElementBinding을 기본적으로 설정해야 합니까?
 
@@ -574,7 +574,7 @@ DynamoRevit용으로 구현될 때 요소 바인딩을 사용하는 노드가 �
 
 DynamoRevit에는 여러 개의 `Selection` 노드가 있습니다. 최소 두 개의 그룹으로 나눌 수 있습니다.
 
-![Revit 선택 노드](../../.gitbook/assets/revitSelectionNodes.png)
+![Revit 선택 노드](../images/revitSelectionNodes.png)
 
 1.  사용자 UI 선택:
 
@@ -602,7 +602,7 @@ DynamoRevit에는 여러 개의 `Selection` 노드가 있습니다. 최소 두 �
 
 D4C의 워크플로우는 위에서 Revit에 대해 설명한 내용과 매우 유사하며 D4C에서 일반적인 두 가지 선택 노드 세트는 다음과 같습니다.
 
-![Civil 3D 선택 노드](../../.gitbook/assets/civilSelectionNodes.png)
+![Civil 3D 선택 노드](../images/civilSelectionNodes.png)
 
 ### 문제:
 
@@ -613,9 +613,9 @@ D4C의 워크플로우는 위에서 Revit에 대해 설명한 내용과 매우 �
 
 ### 데이터 흐름 다이어그램
 
-![선택 흐름](../../.gitbook/assets/selectModelElement.png)
+![선택 흐름](../images/selectModelElement.png)
 
-![선택 흐름2](../../.gitbook/assets/selectElementFace.png)
+![선택 흐름2](../images/selectElementFace.png)
 
 ### 기술 구현: (위 다이어그램 참조):
 
@@ -624,7 +624,7 @@ D4C의 워크플로우는 위에서 Revit에 대해 설명한 내용과 매우 �
 * `BuildOutputAST` 메서드 구현. 이 메서드는 노드가 실행되는 미래의 어느 시점에 실행될 AST를 반환해야 합니다. 선택 노드의 경우 요소 ID에서 요소 또는 형상을 반환해야 합니다. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * `BuildOutputAST` 구현은 `NodeModel`/UI 노드를 구현하는 데 있어 가장 어려운 부분 중 하나입니다. C# 함수에 가능한 한 많은 논리를 포함하고 AST 함수 호출 노드를 AST에 포함하는 것이 가장 좋습니다. 여기에서 `node`는 Dynamo 그래프의 노드가 아니라 추상 구문 트리의 AST 노드입니다.
 
-![선택 흐름2](../../.gitbook/assets/selectionAST.png)
+![선택 흐름2](../images/selectionAST.png)
 
 * 직렬화 -
   *   명시적인 `NodeModel` 파생 유형(ZeroTouch가 아님)이므로 .dyn 파일에서 노드를 역직렬화하는 동안 사용할 [JsonConstructor]도 구현해야 합니다.
