@@ -71,7 +71,7 @@ b. **3D 미리보기** 모드에서
   * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)줌 확대합니다.
   * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)줌 축소합니다.
   * ![](<images/2.3-11-graph-preview-pan.jpg>)초점이동
-  * \![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Orbit
+  * ![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Orbit
 * 마우스 사용:
   * 마우스 가운데 버튼을 클릭하고 위/아래로 스크롤 - 줌 확대/축소
   * 마우스 가운데 버튼을 클릭하고 끌기 - 초점이동
