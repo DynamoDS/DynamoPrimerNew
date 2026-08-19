@@ -2,7 +2,7 @@
 
 이전 섹션에서는 사용자 노드 및 예제 파일을 사용하여 _MapToSurface_ 패키지를 설정하는 방법을 자세히 살펴보았습니다. 하지만 로컬로 개발된 패키지를 게시하려면 어떻게 해야 할까요? 이 성공 사례에서는 로컬 폴더의 파일 세트에서 패키지를 게시하는 방법을 보여 줍니다.
 
-\![](<../images/develop package - custom nodes 01.jpg>)
+![](<../images/develop package - custom nodes 01.jpg>)
 
 패키지를 게시하는 방법에는 여러 가지가 있습니다. 권장되는 프로세스는 **로컬로 게시하고 로컬로 개발한 후 온라인으로 게시**하는 것입니다. 패키지에 모든 파일이 포함된 폴더로 시작하겠습니다.
 
@@ -28,7 +28,7 @@
 
 이는 패키지에 대한 첫 번째 제출이며, 모든 예시 파일 및 사용자 노드를 하나의 폴더에 배치했습니다. 이 폴더가 준비되면 Dynamo Package Manager로 업로드할 준비가 된 것입니다.
 
-\![](<../images/publish a package - publish locally 01.jpg>)
+![](<../images/publish a package - publish locally 01.jpg>)
 
 > 1. 이 폴더에는 5개의 사용자 노드(.dyf)가 포함되어 있습니다.
 > 2. 또한 이 폴더에는 5개의 예시 파일(.dyn)과 1개의 가져온 벡터 파일(.svg)도 포함되어 있습니다. 이러한 파일은 사용자에게 사용자 노드를 사용하는 방법을 보여 주기 위해 입문 연습으로 사용됩니다.
@@ -55,7 +55,7 @@ MapToSurface 폴더를 선택한 후에는 Package Manager에 폴더 내용이 �
 
 게시하고 나면 "DynamoPrimer" 그룹 또는 Dynamo 라이브러리에서 사용자 노드를 사용할 수 있게 됩니다.
 
-\![](<../images/develop package - install package 02.jpg>)
+![](<../images/develop package - install package 02.jpg>)
 
 이제 루트 디렉토리를 확인하여 Dynamo에서 방금 작성한 패키지의 형식을 어떻게 지정했는지 살펴보겠습니다. 이렇게 하려면 설치된 패키지 탭으로 이동하고 MapToSurface 옆에 있는 세로 점 메뉴를 클릭하고 루트 디렉토리 표시를 선택합니다.
 
@@ -63,7 +63,7 @@ MapToSurface 폴더를 선택한 후에는 Package Manager에 폴더 내용이 �
 
 루트 디렉토리는 패키지의 로컬 위치에 있습니다(패키지를 "로컬"로 게시함). Dynamo에서는 현재 이 폴더를 참조하여 사용자 노드를 읽고 있습니다. 따라서 영구적인 폴더 위치(예: 데스크톱 아님)에 디렉토리를 로컬로 게시하는 것이 중요합니다. 다음은 Dynamo 패키지 폴더를 분석한 것입니다.
 
-\![](<../images/publish a package - publish locally 06.jpg>)
+![](<../images/publish a package - publish locally 06.jpg>)
 
 > 1. _bin_ 폴더에는 C# 또는 Zero-Touch 라이브러리로 작성된 .dll 파일이 있습니다. 이 패키지에 대한 항목은 없으므로 이 예에서는 이 폴더가 비어 있습니다.
 > 2. _dyf_ 폴더에는 사용자 노드가 있습니다. 이 폴더를 열면 이 패키지의 모든 사용자 노드(.dyf 파일)가 표시됩니다.
