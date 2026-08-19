@@ -22,11 +22,11 @@ Dynamo에서 _패키지 > Package Manager..._ 로 이동합니다.
 
 이제 Dynamo 라이브러리에 "buildz"라는 다른 그룹이 있는 것을 확인할 수 있습니다. 이 이름은 패키지의 개발자를 나타내며, 사용자 노드가 이 그룹에 배치됩니다. 이것을 바로 사용할 수 있습니다.
 
-\![](<../images/package introduction - installing a package 03.jpg>)
+![](<../images/package introduction - installing a package 03.jpg>)
 
 **Code Block**을 사용하여 직사각형 그리드를 빠르게 정의하고 그 결과를 **Polygon.ByPoints** 노드로 출력한 다음, **Surface.ByPatch** 노드를 사용하여 방금 작성한 직사각형 패널 리스트를 봅니다.
 
-\![](<../images/package introduction - installing a package 04.jpg>)
+![](<../images/package introduction - installing a package 04.jpg>)
 
 ### 패키지 폴더 설치 - DynamoUnfold
 
@@ -40,7 +40,7 @@ Dynamo에서 _패키지 > Package Manager..._ 로 이동합니다.
 
 Dynamo 라이브러리에는 여러 카테고리와 사용자 노드가 있는 _DynamoUnfold_ 그룹이 있습니다.
 
-\![](<../images/package introduction - installing package folder 02.jpg>)
+![](<../images/package introduction - installing package folder 02.jpg>)
 
 이제 패키지의 파일 구조를 살펴보겠습니다.
 
@@ -52,7 +52,7 @@ Dynamo 라이브러리에는 여러 카테고리와 사용자 노드가 있는 _
 
 이렇게 하면 패키지의 루트 디렉토리로 이동됩니다. 3개의 폴더와 1개의 파일이 있는지 확인합니다.
 
-\![](<../images/package introduction - installing package folder 05.jpg>)
+![](<../images/package introduction - installing package folder 05.jpg>)
 
 > 1. _bin_ 폴더에는 .dll 파일이 있습니다. 이 Dynamo 패키지는 Zero-Touch를 사용하여 개발되었으므로 사용자 노드가 이 폴더에 저장됩니다.
 > 2. _dyf_ 폴더에는 사용자 노드가 있습니다. 이 패키지는 Dynamo 사용자 노드를 사용하여 개발되지 않았으므로 이 패키지의 경우 이 폴더는 비어 있습니다.
@@ -87,7 +87,7 @@ Dynamo 패키지를 찾는 또 다른 방법은 [Dynamo Package Manager](http://
 
 패키지 파일이 저장되는 위치를 확인하려면 상단 탐색에서 Dynamo > 기본 설정 > 패키지 설정 > 노드 및 패키지 파일 위치를 클릭합니다. 여기에서 현재 루트 폴더 디렉토리를 찾을 수 있습니다.
 
-\![](<../images/package introduction - installing package folder 08.png>)
+![](<../images/package introduction - installing package folder 08.png>)
 
 기본적으로 패키지는 _C:/Users/[사용자 이름]/AppData/Roaming/Dynamo/[Dynamo 버전]_ 폴더 경로와 비슷한 위치에 설치됩니다.
 
