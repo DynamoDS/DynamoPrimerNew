@@ -42,7 +42,7 @@
 
 이 섹션에서 배울 기본 개념은 **Dynamo에서는 리스트를 자체의 내부 객체로 취급한다**는 점입니다. 이 하향식 계층은 객체 지향적 프로그래밍을 염두에 두고 개발되었습니다. Dynamo에서는 **List.GetItemAtIndex**와 같은 명령으로 하위 요소를 선택하는 대신, 데이터 구조에서 주 리스트의 색인을 선택합니다. 그리고 해당 항목은 다른 리스트가 될 수 있습니다. 다음과 같이 예시 이미지로 자세히 살펴보겠습니다.
 
-\![하향식](<../images/lists of lists - top down hierachy.jpg>)
+![하향식](<../images/lists of lists - top down hierachy.jpg>)
 
 > 1. **Code Block**을 사용하여 두 개의 범위(`0..2; 0..3;`)를 정의했습니다.
 > 2. 이러한 범위는 레이싱이 _"외적"_ 으로 설정된 **Point.ByCoordinates** 노드에 연결됩니다. 이렇게 하면 점 그리드가 작성되고, 또한 리스트의 리스트가 출력으로 반환됩니다.
@@ -59,14 +59,14 @@
 
 Flatten을 사용하면 데이터 구조에서 데이터의 모든 티어가 제거됩니다. 이는 데이터 계층이 작업에 필요하지 않은 경우에 유용하지만, 정보가 제거되므로 위험할 수 있습니다. 아래 예에서는 데이터 리스트를 단순화한 결과를 보여줍니다.
 
-\![연습](<../images/lists of lists - flatten 01.jpg>)
+![연습](<../images/lists of lists - flatten 01.jpg>)
 
 > 1. 코드 줄을 하나 삽입하여 **Code Block**의 범위(`-250..-150..#4;`)를 정의합니다.
 > 2. _code block_ 을 **Point.ByCoordinates** 노드의 _x_ 및 _y_ 입력에 플러깅하면 레이싱이 _"외적"_ 으로 설정되어 점의 그리드가 가져와집니다.
 > 3. **Watch** 노드는 리스트의 리스트가 있음을 보여줍니다.
 > 4. **PolyCurve.ByPoints** 노드는 각 리스트를 참조하고 각 polycurve를 작성합니다. Dynamo 미리보기에는 그리드의 각 행을 나타내는 4개의 polycurve가 있습니다.
 
-\![연습](<../images/lists of lists - flatten 02.jpg>)
+![연습](<../images/lists of lists - flatten 02.jpg>)
 
 > 1. polycurve 노드 앞에 _flatten_ 을 삽입하여 모든 점에 대해 하나의 리스트를 작성했습니다. **PolyCurve.ByPoints** 노드는 리스트를 참조하여 하나의 곡선을 작성합니다. 모든 점은 하나의 리스트에 있으므로, 전체 점 리스트를 통과하는 하나의 지그재그 polycurve를 얻게 됩니다.
 
@@ -84,7 +84,7 @@ Flatten을 사용하면 데이터 구조에서 데이터의 모든 티어가 제
 
 chop 명령을 사용하면 지정된 리스트 길이를 기준으로 리스트가 분할됩니다. 어떤 면에서 chop은 flatten과 반대입니다. 즉, 데이터 구조를 제거하는 것이 아니라 새로운 티어를 데이터 구조에 추가합니다. 이 도구는 아래 예처럼 형상 작업에 유용한 도구입니다.
 
-\![연습](<../images/lists of lists - chop.jpg>)
+![연습](<../images/lists of lists - chop.jpg>)
 
 ### List.Map
 
@@ -102,7 +102,7 @@ _참고: 이 연습은 이전 버전의 Dynamo로 작성되었습니다. _  **Li
 
 **List.Count** 노드는 리스트의 모든 항목을 계산합니다. 이를 사용하여 **List.Map** 의 작동 방식을 보여드리겠습니다.
 
-\![](<../images/lists of lists - map 01.jpg>)
+![](<../images/lists of lists - map 01.jpg>)
 
 > 1.  **Code Block**에 다음 두 줄의 코드를 삽입합니다. `-50..50..#Nx; -50..50..#Ny;`
 >
@@ -111,7 +111,7 @@ _참고: 이 연습은 이전 버전의 Dynamo로 작성되었습니다. _  **Li
 > 3. code block의 각 줄을 **Point.ByCoordinates** 노드의 각 _X_ 및 _Y_ 입력에 연결합니다. 노드를 마우스 오른쪽 버튼으로 클릭하고 "레이싱"을 선택한 다음 _"외적"_ 을 선택합니다. 그러면 점의 그리드가 작성됩니다. 범위는 -50에서 50 사이로 정의했으므로 기본 Dynamo 그리드에 걸쳐 있습니다.
 > 4. _**Watch**_ 노드에 작성된 점이 표시됩니다. 데이터 구조를 알 수 있습니다. 리스트의 리스트를 작성했습니다. 각 리스트에는 그리드 점의 행이 나타납니다.
 
-\![연습](<../images/lists of lists - map 02.jpg>)
+![연습](<../images/lists of lists - map 02.jpg>)
 
 > 1. 이전 단계에서 Watch 노드의 출력에 **List.Count** 노드를 부착합니다.
 > 2. **Watch** 노드를 **List.Count** 출력에 연결합니다.
@@ -121,7 +121,7 @@ List.Count 노드는 5 값을 제공합니다. 이는 code block에 정의된 "N
 * 먼저, **Point.ByCoordinates** 노드는 리스트를 작성하기 위한 기본 입력으로 "x" 입력을 사용합니다. Nx가 5이고 Ny가 3인 경우 각각 3개의 항목이 포함된 리스트의 리스트를 5개 얻게 됩니다.
 * Dynamo에서는 리스트를 자체의 내부 객체로 취급하므로 **List.Count** 노드가 계층의 주 리스트에 적용됩니다. 결과는 값 5 또는 주 리스트의 리스트 수입니다.
 
-\![연습](<../images/lists of lists - map 03.jpg>)
+![연습](<../images/lists of lists - map 03.jpg>)
 
 > 1. **List.Map** 노드를 사용하여 계층에서 한 단계 내려가 이 레벨에서 _"함수"_ 를 수행합니다.
 > 2. **List.Count** 노드에 입력이 없습니다. 이 노드는 함수로 사용되고 있으므로 계층에서 한 단계 아래의 모든 개별 리스트에 **List.Count** 노드가 적용됩니다. **List.Count**의 빈 입력은 **List.Map**의 리스트 입력에 해당합니다.
@@ -135,7 +135,7 @@ _참고: 이 연습은 이전 버전의 Dynamo로 작성되었습니다. List.Co
 
 먼저 두 점 리스트를 설정합니다.
 
-\![연습](<../images/lists of lists - combined 01.jpg>)
+![연습](<../images/lists of lists - combined 01.jpg>)
 
 > 1. **Sequence** 노드를 사용하여 각각 10단계로 증분하는 10개의 값을 생성합니다.
 > 2. 결과를 **Point.ByCoordinates** 노드의 x 입력에 연결합니다. 이렇게 하면 Dynamo에 점 리스트가 작성됩니다.
@@ -143,7 +143,7 @@ _참고: 이 연습은 이전 버전의 Dynamo로 작성되었습니다. List.Co
 
 다음으로 **List.Combine**을 사용하여 두 개의 개별 리스트에 있는 객체에 함수를 적용합니다. 이 경우 간단한 선 그리기 함수가 됩니다.
 
-\![연습](<../images/lists of lists - combined 02.jpg>)
+![연습](<../images/lists of lists - combined 02.jpg>)
 
 > 1. **List.Combine**을 작업공간에 추가하고 두 점 세트를 list0 및 list1 입력으로 연결합니다.
 > 2. **Line.ByStartPointEndPoint**를 **List.Combine**에 대한 입력 함수로 사용합니다.
@@ -164,7 +164,7 @@ _참고: 이 연습은 이전 버전의 Dynamo로 작성되었습니다. List.Co
 
 이 연습에서는 **List@Level** 기능을 사용하여 특정 레벨의 데이터를 격리합니다.
 
-\![List@Level](<../images/lists of lists - list at level 01.jpg>)
+![List@Level](<../images/lists of lists - list at level 01.jpg>)
 
 간단한 3D 점 그리드부터 시작하겠습니다.
 
@@ -172,7 +172,7 @@ _참고: 이 연습은 이전 버전의 Dynamo로 작성되었습니다. List.Co
 > 2. 이러한 티어는 서로 다른 **레벨**에 존재합니다. 레벨은 미리보기 버블 아래에 표시됩니다. 리스트 레벨 열은 위 리스트 데이터에 해당하므로 그 안에서 작업할 레벨을 식별하는 데 도움이 됩니다.
 > 3. 리스트 레벨은 가장 낮은 레벨 데이터가 항상 "L1"에 오도록 역순으로 구성됩니다. 그러면 그래프가 업스트림으로 변경되는 경우에도 계획대로 작동할지 확인할 수 있습니다.
 
-\![List@Level](<../images/lists of lists - list at level 02.jpg>)
+![List@Level](<../images/lists of lists - list at level 02.jpg>)
 
 > 1. **List@Level** 함수를 사용하려면 '>'을 클릭합니다. 이 메뉴 내에 두 개의 확인란이 있습니다.
 > 2. **레벨 사용** - **List@Level** 기능을 사용할 수 있습니다. 이 옵션을 클릭하면 노드를 사용할 입력 리스트 레벨을 클릭하여 선택할 수 있습니다. 이 메뉴를 사용하면 위 또는 아래를 클릭하여 여러 레벨 옵션을 빠르게 시도할 수 있습니다.
@@ -180,7 +180,7 @@ _참고: 이 연습은 이전 버전의 Dynamo로 작성되었습니다. List.Co
 
 간단한 3D 그리드를 사용하면 리스트 레벨을 통해 전환하여 리스트 구조를 액세스하고 시각화할 수 있습니다. 각 리스트 레벨과 색인 조합은 원래 3D 세트와 다른 점 세트를 반환합니다.
 
-\![](<../images/lists of lists - list at level 03.jpg>)
+![](<../images/lists of lists - list at level 03.jpg>)
 
 > 1. DesignScript의 "@L2"에서는 레벨 2의 리스트만 선택할 수 있습니다. 색인 0이 있는 레벨 2의 리스트는 첫 번째 Y 점 세트만 포함하여 XZ 그리드만 반환합니다.
 > 2. 레벨 필터를 "L1"로 변경하면 첫 번째 리스트 레벨의 모든 항목을 볼 수 있습니다. 색인 0이 있는 레벨 1의 리스트는 모든 3D 점을 단순 리스트로 포함합니다.
@@ -189,7 +189,7 @@ _참고: 이 연습은 이전 버전의 Dynamo로 작성되었습니다. List.Co
 
 이 특정 예는 **List.Map**에서도 작성할 수 있지만, **List@Level**에서는 상호작용을 크게 단순화하여 노드 데이터에 쉽게 액세스할 수 있게 합니다. 아래에서 **List.Map** 및 **List@Level** 메서드를 서로 비교하며 살펴보십시오.
 
-\![](<../images/lists of lists - list at level 04.jpg>)
+![](<../images/lists of lists - list at level 04.jpg>)
 
 > 1. 두 메서드 모두 동일한 점에 대한 액세스를 제공하지만, **List@Level** 메서드를 사용하면 단일 노드 내의 데이터 도면층 간에 쉽게 전환할 수 있습니다.
 > 2. **List.Map**을 사용하여 점 그리드에 액세스하려면 **List.Map**과 함께 **List.GetItemAtIndex** 노드를 사용해야 합니다. 단계를 내려가는 모든 리스트 레벨마다 추가 **List.Map** 노드를 사용해야 합니다. 리스트의 복잡도에 따라 적절한 레벨의 정보에 액세스하려면 그래프에 상당한 양의 **List.Map** 노드를 추가해야 할 수 있습니다.
@@ -209,12 +209,12 @@ Transpose는 리스트의 리스트를 다룰 때 기본적인 함수입니다. 
 
 이전 연습에서 **List.Count** 노드를 삭제하고 일부 형상으로 이동하여 데이터 구조 방식을 살펴보겠습니다.
 
-\![](<../images/lists of lists - transpose 01.jpg>)
+![](<../images/lists of lists - transpose 01.jpg>)
 
 > 1. **PolyCurve.ByPoints**를 **Point.ByCoordinates**의 Watch 노드의 출력에 연결합니다.
 > 2. 출력에는 5개의 polycurve가 표시되며 Dynamo 미리보기에서는 곡선을 볼 수 있습니다. Dynamo 노드에서는 점 리스트(또는 이 경우 점 리스트의 리스트)를 찾고 여기에서 단일 polycurve를 작성합니다. 기본적으로 각 리스트가 데이터 구조에서 곡선으로 변환되었습니다.
 
-\![](<../images/lists of lists - transpose 02.jpg>)
+![](<../images/lists of lists - transpose 02.jpg>)
 
 > 1. **List.Transpose** 노드는 모든 항목을 리스트의 리스트에 있는 모든 리스트로 바꿉니다. 이 방법은 복잡하게 들리지만 Microsoft Excel의 transpose와 동일한 논리입니다. 즉, 데이터 구조에서 열을 행으로 바꿉니다.
 > 2. 추상 결과 확인: transpose로 인해 리스트 구조가 각각 3개의 항목이 있는 5개의 리스트에서 각각 5개의 항목이 있는 3개의 리스트로 바뀌었습니다.
@@ -224,13 +224,13 @@ Transpose는 리스트의 리스트를 다룰 때 기본적인 함수입니다. 
 
 Code block 줄임에서는 "[]"을 사용하여 리스트를 정의합니다. 그러면 **List.Create** 노드보다 훨씬 빠르고 효율적인 방법으로 리스트를 작성할 수 있습니다. **Code Block**에 대해서는 [Code Blocks 및 DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/)에서 자세히 설명합니다. +아래 이미지를 참조하여 여러 표현식이 포함된 리스트를 code block으로 정의할 수 있는 방법을 확인하십시오.
 
-\![](<../images/lists of lists - codeblock for list creation 01.jpg>)
+![](<../images/lists of lists - codeblock for list creation 01.jpg>)
 
 #### Code Block 조회
 
 **Code block** 축약형은 "[]"를 사용하여 복잡한 데이터 구조에서 원하는 특정 항목을 빠르고 쉽게 선택할 수 있습니다. **Code Block**에 대해서는 [Code Block 및 DesignScript 장](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/)에서 자세히 설명합니다. 아래 이미지를 참조하여 여러 데이터 유형이 포함된 리스트를 code block으로 조회할 수 있는 방법을 확인하십시오.
 
-\![](<../images/lists of lists - codeblock for list creation 02.jpg>)
+![](<../images/lists of lists - codeblock for list creation 02.jpg>)
 
 ## 연습 - 데이터 조회 및 삽입
 
@@ -244,7 +244,7 @@ Code block 줄임에서는 "[]"을 사용하여 리스트를 정의합니다. �
 
 위 노드의 문자열로 시작합니다. 기본 Dynamo 그리드에 걸쳐 있는 기본 표면을 작성하고 있습니다.
 
-\![](<../images/list of lists - exercise cb insert & query 01.jpg>)
+![](<../images/list of lists - exercise cb insert & query 01.jpg>)
 
 > 1. **Code Block**을 사용하여 다음 두 코드 줄을 삽입하고 **Surface.PointAtParameter**의 _u_ 및 _v_ 입력에 각각 연결합니다. `-50..50..#3;` `-50..50..#5;`
 > 2. **Surface.PointAtParameter**의 레이싱을 _"외적"_ 으로 설정해야 합니다.
@@ -252,20 +252,20 @@ Code block 줄임에서는 "[]"을 사용하여 리스트를 정의합니다. �
 
 이 단계에서는 우리가 작성한 그리드의 중심점을 조회하려고 합니다. 이렇게 하려면 중간 리스트에서 중간 점을 선택합니다. 이해되시죠?
 
-\![](<../images/list of lists - exercise cb insert & query 02.jpg>)
+![](<../images/list of lists - exercise cb insert & query 02.jpg>)
 
 > 1. 이것이 올바른 점인지 확인하려면 Watch 노드 항목을 클릭하여 올바른 항목을 대상으로 하는지 확인할 수도 있습니다.
 > 2. **Code Block**을 사용하여 다음과 같이 리스트의 리스트를 조회하기 위한 기본 코드 줄을 작성하겠습니다.\
  `points[1][2];`
 > 3. **Geometry.Translate**를 사용하여 선택한 점을 _Z_ 방향으로 _20_ 단위씩 위로 이동할 것입니다.
 
-\![](<../images/list of lists - exercise cb insert & query 03.jpg>)
+![](<../images/list of lists - exercise cb insert & query 03.jpg>)
 
 > 1. **List.GetItemAtIndex** 노드가 있는 점의 중간 행도 선택하겠습니다. 참고: 이전 단계와 마찬가지로, `points[1];` 줄을 사용하여 **Code Block**으로 리스트를 조회할 수도 있습니다.
 
 지금까지 중심점을 성공적으로 조회하여 위로 이동했습니다. 이제 이동한 이 점을 원래 데이터 구조에 다시 삽입해야 합니다.
 
-\![](<../images/list of lists - exercise cb insert & query 04.jpg>)
+![](<../images/list of lists - exercise cb insert & query 04.jpg>)
 
 > 1. 먼저, 이전 단계에서 격리한 리스트의 항목을 대치하려고 합니다.
 > 2. **List.ReplaceItemAtIndex**를 사용하여 _"2"_ 의 색인으로 중간 항목을 이동된 점에 연결된 대치 항목(**Geometry.Translate**)으로 대치할 것입니다.
@@ -273,7 +273,7 @@ Code block 줄임에서는 "[]"을 사용하여 리스트를 정의합니다. �
 
 이제 리스트를 수정했으므로 이 리스트를 원본 데이터 구조(리스트의 리스트)에 다시 삽입해야 합니다.
 
-\![](<../images/list of lists - exercise cb insert & query 05.jpg>)
+![](<../images/list of lists - exercise cb insert & query 05.jpg>)
 
 > 1. 동일한 논리 다음에 **List.ReplaceItemAtIndex**를 사용하여 중간 리스트를 수정된 리스트로 대치합니다.
 > 2. 이러한 두 노드의 색인을 정의하는 **Code Block** __ 은 1과 2이며, **Code Block**(_points[1][2]_)의 원래 조회와 일치합니다.
@@ -281,10 +281,10 @@ Code block 줄임에서는 "[]"을 사용하여 리스트를 정의합니다. �
 
 이 점 세트에서 표면을 만드는 여러 가지 방법이 있습니다. 이 경우 곡선을 함께 로프트하여 표면을 작성하겠습니다.
 
-\![](<../images/list of lists - exercise cb insert & query 06.jpg>)
+![](<../images/list of lists - exercise cb insert & query 06.jpg>)
 
 > 1. **NurbsCurve.ByPoints** 노드를 작성하고 새 데이터 구조를 연결하여 세 개의 NURBS 곡선을 작성합니다.
 
-\![](<../images/list of lists - exercise cb insert & query 07.jpg>)
+![](<../images/list of lists - exercise cb insert & query 07.jpg>)
 
 > 1. **Surface.ByLoft**를 **NurbsCurve.ByPoints**의 출력에 연결합니다. 이제 수정된 표면이 있습니다. 형상의 원래 _Z_ 값을 변경할 수 있습니다. 변환 후 형상 업데이트를 확인하십시오!
