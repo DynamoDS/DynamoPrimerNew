@@ -8,7 +8,7 @@ W dodatku Dynamo **węzły** są obiektami, które można połączyć w celu utw
 
 Większość węzłów w dodatku Dynamo składa się z pięciu części. Istnieją wyjątki, takie jak węzły Input, ale budowę każdego węzła można opisać w następujący sposób:
 
-\![](<images/nodes and wires - nodes anatomy.jpg>)
+![](<images/nodes and wires - nodes anatomy.jpg>)
 
 > 1. Nazwa — nazwa węzła w konwencji nazewnictwa `Category.Name`
 > 2. Część główna — treść główna węzła, kliknięcie której prawym przyciskiem myszy powoduje przedstawienie opcji na poziomie całego węzła
@@ -24,7 +24,7 @@ Porty oczekują, że otrzymają dane określonego typu. Na przykład podłączen
 
 {% hint style="info" %} Wskazówka: umieść kursor na porcie, aby wyświetlić etykietę narzędzia zawierającą oczekiwany typ danych. {% endhint %}
 
-\![](<images/nodes and wires - nodes input and tooltip.jpg>)
+![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
 > 1. Etykieta portu
 > 2. Etykieta narzędzia
@@ -51,11 +51,11 @@ Po ustawieniu wskaźnika myszy na nazwie lub portach albo kliknięciu ich prawym
 
 #### Obsługa węzłów z błędami lub ostrzeżeniami
 
-Jeśli program wizualny zawiera ostrzeżenie lub błędy, dodatek Dynamo dostarczy dodatkowe informacje na temat problemu. Każdy żółty węzeł ma również etykietę narzędzia nad nazwą. Ustaw wskaźnik myszy na ikonie etykiety narzędzia ostrzeżenia \![](<images/nodes and wires - node warning icon.png>) lub błędu \![](<images/nodes and wires - node error icon.png>), aby ją rozwinąć.
+Jeśli program wizualny zawiera ostrzeżenie lub błędy, dodatek Dynamo dostarczy dodatkowe informacje na temat problemu. Każdy żółty węzeł ma również etykietę narzędzia nad nazwą. Ustaw wskaźnik myszy na ikonie etykiety narzędzia ostrzeżenia ![](<images/nodes and wires - node warning icon.png>) lub błędu ![](<images/nodes and wires - node error icon.png>), aby ją rozwinąć.
 
 {% hint style="info" %} Wskazówka: na podstawie informacji z etykiety narzędzia sprawdź we wcześniejszych węzłach, czy wymagane typy danych lub struktury danych nie są błędne. {% endhint %}
 
-\![](<images/nodes and wires - nodes with warning tooltip.jpg>)
+![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
 > 1. Etykieta narzędzia z ostrzeżeniem — wartość „null” lub nie można zinterpretować danych jako wartości typu Double, czyli liczby
 > 2. Użyj węzła Watch, aby sprawdzić dane wejściowe
@@ -81,7 +81,7 @@ Przewód łączy port wyjściowy jednego węzła z portem wejściowym innego wę
 
 Porty wejściowe znajdują się po lewej stronie węzłów, a porty wyjściowe — po ich prawej stronie, dlatego możemy ogólnie powiedzieć, że program przepływa od lewej strony do prawej.
 
-\![](<images/nodes and wires - flow of data.jpg>)
+![](<images/nodes and wires - flow of data.jpg>)
 
 ### Tworzenie przewodów <a href="#creating-wires" id="creating-wires"></a>
 
@@ -89,7 +89,7 @@ Utwórz przewód, klikając lewym przyciskiem myszy port, a następnie klikając
 
 Dane zawsze będą przepływać przez ten przewód z wyjścia do wejścia. Można jednak utworzyć przewód w dowolnym kierunku, jeśli chodzi o sekwencję klikania połączonych portów.
 
-\![](<images/nodes and wires - creating a wire.gif>)
+![](<images/nodes and wires - creating a wire.gif>)
 
 ### Edytowanie przewodów <a href="#editing-wires" id="editing-wires"></a>
 
@@ -101,21 +101,21 @@ Często chcemy dostosować przepływ programu w programie wizualnym, edytując p
 
 * Aby usunąć przewód, odciągnij przewód, a następnie kliknij lewym przyciskiem myszy obszar roboczy
 
-\![](<images/nodes and wires - edit wires remove.gif>)
+![](<images/nodes and wires - edit wires remove.gif>)
 
 * Połącz ponownie wiele przewodów, używając kombinacji Shift+lewy przycisk myszy
 
-\![](<images/nodes and wires - edit multi ports.gif>)
+![](<images/nodes and wires - edit multi ports.gif>)
 
 * Powiel przewód, używając kombinacji Ctrl+lewy przycisk myszy
 
-\![](<images/nodes and wires - duplicate wire.gif>)
+![](<images/nodes and wires - duplicate wire.gif>)
 
 #### Przewody domyślne a przewody wyróżnione <a href="#wire-previews" id="wire-previews"></a>
 
 Domyślnie podgląd wszystkich przewodów jest wyświetlany jako szare pociągnięcie. Po wybraniu węzła wszystkie łączące przewody są renderowane z tym samym wyróżnieniem w kolorze błękitnym co węzeł.
 
-\![](<images/nodes and wires - default vs highlighted wires.jpg>)
+![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
 > 1. Wyróżniony przewód
 > 2. Domyślny przewód
@@ -126,10 +126,10 @@ Jeśli wolisz ukryć przewody na wykresie, anuluj zaznaczenie opcji Widok > Zł�
 
 To ustawienie sprawia, że będą wyświetlane tylko wybrane węzły i połączone z nimi przewody z delikatnym niebieskim wyróżnieniem.
 
-\![](<images/nodes and wires - hide wires setting.gif>)
+![](<images/nodes and wires - hide wires setting.gif>)
 
 #### Ukrywanie tylko pojedynczego przewodu
 
 Można również ukryć wybrany przewód, klikając prawym przyciskiem myszy wyjście węzła i wybierając opcję Ukryj przewody.
 
-\![](<images/nodes and wires - hide selected wire.gif>)
+![](<images/nodes and wires - hide selected wire.gif>)
