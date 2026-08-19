@@ -71,7 +71,7 @@ b.在 **3D 預覽**模式中
   * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)拉近。
   * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)拉遠。
   * ![](<images/2.3-11-graph-preview-pan.jpg>)平移。
-  * [](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Orbit
+  * ![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Orbit
 * 使用滑鼠：
   * 中鍵向上/向下捲動 - 拉近/拉遠
   * 按一下中鍵並拖曳 - 平移
