@@ -2,7 +2,7 @@
 
 Dynamo 2.0은 다양한 사전 노드를 제공하는데, 그러한 노드 중에는 _create, action 및 query_ 노드가 있습니다.
 
-\![](<../images/dictionary nodes - nodes.jpg>)
+![](<../images/dictionary nodes - nodes.jpg>)
 
 #### Create
 
