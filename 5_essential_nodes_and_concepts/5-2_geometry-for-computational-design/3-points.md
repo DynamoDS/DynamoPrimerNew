@@ -10,17 +10,17 @@
 
 Dynamo에서 가장 일반적인 종류의 점은 3D 표준 좌표계에 있으며 3개의 좌표 [X,Y,Z]를 갖습니다(Dynamo의 3D 점).
 
-\![](<../images/points - 3d point in dynamo.jpg>)
+![](<../images/points - 3d point in dynamo.jpg>)
 
 Dynamo의 2D 점에는 두 개의 좌표 [X,Y]가 있습니다.
 
-\![](<../images/points - 2d point in dynamo.jpg>)
+![](<../images/points - 2d point in dynamo.jpg>)
 
 ### 곡선 및 표면 상의 점
 
 곡선과 표면 모두에 대한 매개변수는 연속적이며 지정된 형상의 모서리를 넘어 연장됩니다. 매개변수 공간을 정의하는 모양은 3D 표준 좌표계에 있기 때문에 파라메트릭 좌표를 항상 "표준" 좌표로 변환할 수 있습니다. 예를 들어 표면의 점 [0.2, 0.5]는 표준 좌표의 점 [1.8, 2.0, 4.1]과 같습니다.
 
-\![](<../images/points - xyz vs coord sys vs uv.jpg>)
+![](<../images/points - xyz vs coord sys vs uv.jpg>)
 
 > 1. 가정된 표준 XYZ 좌표의 점
 > 2. 지정된 좌표계(원통형)를 기준으로 하는 점
