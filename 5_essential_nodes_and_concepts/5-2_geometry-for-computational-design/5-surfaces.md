@@ -10,7 +10,7 @@
 
 Dynamo의 매개변수에서 표면을 가져와 평가하여 추출할 수 있는 정보의 종류를 알아보겠습니다.
 
-\![](<../images/surfaces - surface in dynamo.jpg>)
+![](<../images/surfaces - surface in dynamo.jpg>)
 
 > 1. _Surface.PointAtParameter_ 는 지정된 UV 좌표의 점을 반환합니다.
 > 2. _Surface.NormalAtParameter_ 는 지정된 UV 좌표의 법선 벡터를 반환합니다.
