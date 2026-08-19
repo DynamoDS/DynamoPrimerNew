@@ -12,7 +12,7 @@ Dynamo에서는 면-정점 데이터 구조를 사용하여 메쉬를 정의합�
 
 메쉬를 작성하려면 정점 리스트와 이러한 정점을 색인 그룹이라는 면으로 그룹화하는 시스템이 필요합니다.
 
-\![](<../images/meshes - mesh elements.jpg>)
+![](<../images/meshes - mesh elements.jpg>)
 
 > 1. 정점 리스트
 > 2. 면을 정의할 색인 그룹 리스트
@@ -25,7 +25,7 @@ Dynamo에서는 면-정점 데이터 구조를 사용하여 메쉬를 정의합�
 
 이 패키지 사용에 대한 예를 확인하려면 [Mesh Toolkit 사례 연구](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes)를 참조하십시오.
 
-\![메쉬 툴킷](<../images/meshes - mesh toolkit standford bunny.jpg>)
+![메쉬 툴킷](<../images/meshes - mesh toolkit standford bunny.jpg>)
 
 ## 자세히 알아보기...
 
