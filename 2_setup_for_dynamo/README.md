@@ -4,7 +4,7 @@
 
 Dynamo to aktywny projekt programowania typu open source. Zapoznaj się z [listą oprogramowania obsługującego dodatek Dynamo](http://dynamobim.org/download/).
 
-\![](<images/setup for dynamo - dynamo revit.png>) \![](<images/setup for dynamo - dynamo civil 3D.png>) \![](<images/setup for dynamo - dynamo alias design.png>) \![](<images/setup for dynamo - dynamo formit.png>) \![](<images/setup for dynamo - dynamo advance steel.png>) \![](<images/setup for dynamo - dynamo robot structural analysis.png>) \![](<images/setup for dynamo - dynamo forma.png>)
+![](<images/setup for dynamo - dynamo revit.png>) ![](<images/setup for dynamo - dynamo civil 3D.png>) ![](<images/setup for dynamo - dynamo alias design.png>) ![](<images/setup for dynamo - dynamo formit.png>) ![](<images/setup for dynamo - dynamo advance steel.png>) ![](<images/setup for dynamo - dynamo robot structural analysis.png>) ![](<images/setup for dynamo - dynamo forma.png>)
 
 ### Uruchamianie dodatku Dynamo jako rozszerzenia
 
@@ -31,7 +31,7 @@ Aplikacja Dynamo jest dostępna w [witrynie Dynamo](http://dynamobim.com). Na st
 
 Jeśli szukasz wersji poprzednich lub eksperymentalnych („bleeding edge”), wszystkie wersje można znaleźć w dolnej sekcji na tej samej stronie.
 
-\![](<images/03-02 Dynamo Sandbox All builds.png>)
+![](<images/03-02 Dynamo Sandbox All builds.png>)
 
 {% hint style="info" %} W wersjach eksperymentalnych („bleeding edge”) mogą być dostępne niektóre nowe i eksperymentalne funkcje, które nie zostały jeszcze w pełni przetestowane, dlatego mogą być niestabilne. Korzystając z takiej wersji, możesz wykryć błędy lub problemy i pomóc nam doskonalić tę aplikację przez zgłoszenie problemów naszemu zespołowi.
 
@@ -45,21 +45,21 @@ Aby wykonać ten krok, pobierz i zainstaluj na komputerze program [7zip](https:/
 
 Kliknij prawym przyciskiem myszy plik zip i wybierz opcję **Wyodrębnij wszystkie**.
 
-\![](<images/03-03 Extract zip file.png>)
+![](<images/03-03 Extract zip file.png>)
 
 Wybierz miejsce docelowe, aby rozpakować wszystkie pliki.
 
-\![](<images/03-04 Extract destination folder.png>)
+![](<images/03-04 Extract destination folder.png>)
 
 #### Uruchamianie
 
 W folderze docelowym kliknij dwukrotnie plik **DynamoSandbox.exe**, aby go uruchomić.
 
-\![](<images/03-05 Dynamo exe.jpg>)
+![](<images/03-05 Dynamo exe.jpg>)
 
 Zostanie wyświetlony ekran startowy aplikacji DynamoSandbox, jak to tutaj pokazano.
 
-\![](<images/03-06 Dynamo startup screen.png>)
+![](<images/03-06 Dynamo startup screen.png>)
 
 Gratulacje, konfiguracja do korzystania z aplikacji DynamoSandbox jest gotowa.
 
