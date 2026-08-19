@@ -20,13 +20,13 @@
 
 [선](4-curves.md#lines)은 여러 점으로 이루어지며 각 선에는 최소 2개의 점이 있습니다. Dynamo에서 선을 작성하는 가장 일반적인 방법 중 하나는  ``Line.ByStartPointEndPoint`를 사용하여 Dynamo에서 선을 작성하는 것입니다.
 
-\![](<../images/curves - line by start point end point.jpg>)
+![](<../images/curves - line by start point end point.jpg>)
 
 ### NURBS 곡선
 
 [NURBS](4-curves.md#nurbs-+-polycurves)는 곡선과 표면을 정확하게 표현하는 데 사용되는 모델입니다. 결과를 비교하기 위해 NURBS 곡선을 작성하는 두 개의 서로 다른 방법을 사용하여 Dynamo에서 사인 곡선을 작성합니다.
 
-\![](<../images/curves - Nurbs Curves.jpg>)
+![](<../images/curves - Nurbs Curves.jpg>)
 
 > 1. _NurbsCurve.ByControlPoints_ 는 점 리스트를 제어점으로 사용합니다.
 > 2. _NurbsCurve.ByPoints_ 는 점 리스트를 통해 곡선을 그립니다.
