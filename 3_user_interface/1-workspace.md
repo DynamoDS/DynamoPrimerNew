@@ -71,7 +71,7 @@ b. W trybie **podglądu 3D**
   * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)Powiększ
   * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)Pomniejsz
   * ![](<images/2.3-11-graph-preview-pan.jpg>)Przesuń
-  * \![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Orbit
+  * ![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Orbit
 * Używanie myszy:
   * Przewinięcie środkowym przyciskiem myszy w górę/w dół — powiększenie/pomniejszenie
   * Kliknięcie środkowym przyciskiem myszy i przeciągnięcie — przesunięcie
