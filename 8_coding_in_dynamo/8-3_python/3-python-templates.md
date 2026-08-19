@@ -6,13 +6,13 @@
 
 Обычно используется следующий путь: `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-\![](<../../.gitbook/assets/python templates - appdata folder location.jpg>)
+\![](<../images/python templates - appdata folder location.jpg>)
 
 ### Настройка шаблона
 
 Для использования этой функции необходимо добавить в файл `DynamoSettings.xml` следующую строку _(правки вносятся в Блокноте)_.
 
-\![](<../../.gitbook/assets/python templates -dynamo settings xml file.png>)
+\![](<../images/python templates -dynamo settings xml file.png>)
 
 Найдите строку `<PythonTemplateFilePath />` и замените ее следующим кодом:
 
@@ -71,10 +71,10 @@ OUT = element
 
 После того как шаблон Python задан в приложении Dynamo, каждый раз при размещении узла Python будет выполняться поиск этого шаблона. Если шаблон не найден, отображается стандартное окно Python.
 
-\![](<../../.gitbook/assets/python templates - before setup template.jpg>)
+\![](<../images/python templates - before setup template.jpg>)
 
 Если шаблон Python найден (как в случае с созданным шаблоном для работы с Revit), отображаются встроенные в него функции по умолчанию.
 
-\![](<../../.gitbook/assets/python templates - after setup template.jpg>)
+\![](<../images/python templates - after setup template.jpg>)
 
 Подробные сведения об этом дополнении см. в следующем материале (автор: Раду Гидей [Radu Gidei]): https://github.com/DynamoDS/Dynamo/pull/8122

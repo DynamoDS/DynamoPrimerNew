@@ -2,11 +2,11 @@
 
 После настройки Dynamo Player можно открывать файлы в проигрывателе. Если используется классическая версия, также необходимо открыть Dynamo. 
 
-<figure><img src="../.gitbook/assets/open-connected-graph.png" alt=""><figcaption><p>Открытие подключенного графа в классическом приложении Dynamo</p></figcaption></figure>
+<figure><img src="images/open-connected-graph.png" alt=""><figcaption><p>Открытие подключенного графа в классическом приложении Dynamo</p></figcaption></figure>
 
 При использовании классического приложения Dynamo проигрыватель распознает граф, который в данный момент открыт в Dynamo, и дает возможность открыть его в проигрывателе.
 
-<figure><img src="../.gitbook/assets/access-graphs.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/access-graphs.png" alt=""><figcaption></figcaption></figure>
 
 На вкладках Service и Desktop есть область **Upload graph** [ 1 ], куда можно перетащить файлы DYN, чтобы добавить их в проигрыватель. Кроме того, можно щелкнуть эту область, чтобы открыть диалоговое окно для просмотра и добавления файлов.
 
@@ -14,7 +14,9 @@
 
 Графами можно поделиться на сайте или в хабе [ 3 ]. Хаб включает в себя несколько сайтов. Чтобы поделиться графом, щелкните **Share graph** и введите сведения о графе. Можно выбрать, где предоставлять общий доступ к графу: на сайте или в хабе. После нажатия кнопки **Share** граф становится доступным для других пользователей, имеющих доступ к данному сайту или хабу. 
 
-<figure><img src="../.gitbook/assets/share-graph.png" alt=""><figcaption><p>Общий доступ к графу</p></figcaption></figure>
+<figure><img src="images/share-graph.png" alt=""><figcaption><p>Общий доступ к графу</p></figcaption></figure>
 
 Dynamo Player поставляется с несколькими готовыми графами, которые приведены в разделе **Graphs provided by Autodesk** [ 4 ]. Это отличная отправная точка для исследований и экспериментов.
+
+
 

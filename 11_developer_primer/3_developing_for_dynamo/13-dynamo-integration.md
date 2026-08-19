@@ -377,7 +377,7 @@ _Трассировка_ — это механизм в ядре Dynamo, кот
 
 ***
 
-![Создание стен](../../.gitbook/assets/creates_walls.png)
+![Создание стен](../images/creates_walls.png)
 
 #### Сравнение привязки элементов с трассировкой
 
@@ -466,15 +466,15 @@ public static void SetTraceData(string key, string value)
 
 Поток из двух последовательных выполнений графа, который создает один элемент `TraceExampleItem`, выглядит следующим образом:
 
-![Первый вызов](../../.gitbook/assets/Trace-first-call.png)
+![Первый вызов](../images/Trace-first-call.png)
 
-![Второй вызов](../../.gitbook/assets/Trace-second-call.png)
+![Второй вызов](../images/Trace-second-call.png)
 
 Эта же идея демонстрируется в следующем более реалистичном примере использования узла DynamoRevit.
 
 #### Диаграмма трассировки
 
-![Шаги трассировки](../../.gitbook/assets/trace_diagram.png) ![Поток трассировки](../../.gitbook/assets/trace_alt_diagram.png)
+![Шаги трассировки](../images/trace_diagram.png) ![Поток трассировки](../images/trace_alt_diagram.png)
 
 #### ПРИМЕЧАНИЕ.
 
@@ -560,7 +560,7 @@ public static void SetTraceData(string key, string value)
 
 * Для хранения объектов трассировки, сохраненных в версиях до Dynamo 3.0, используется SOAP, поэтому такие объекты не поддерживаются в более поздних версиях. Ранее сохраненные данные привязки элемента будут игнорироваться, и в Dynamo 3.0 или более поздней версии будет отображаться указанное ниже сообщение. Данные привязки элементов будут сохранены при следующем запуске и сохранении рабочего пространства.
 
-![Совместимость привязки элементов](../../.gitbook/assets/element_binding_compatibility_message.jpg)
+![Совместимость привязки элементов](../images/element_binding_compatibility_message.jpg)
 
 #### Должна ли привязка элемента быть включена по умолчанию?
 
@@ -574,7 +574,7 @@ public static void SetTraceData(string key, string value)
 
 В DynamoRevit есть несколько узлов `Selection`. Их можно разделить по крайней мере на две группы:
 
-![Узлы Selection Revit](../../.gitbook/assets/revitSelectionNodes.png)
+![Узлы Selection Revit](../images/revitSelectionNodes.png)
 
 1.  Выбор в пользовательском интерфейсе:
 
@@ -602,7 +602,7 @@ public static void SetTraceData(string key, string value)
 
 Рабочие процессы в D4C очень похожи на описанные выше для Revit. Ниже представлено два типовых набора узлов выбора в D4C.
 
-![Узлы Selection Civil 3D](../../.gitbook/assets/civilSelectionNodes.png)
+![Узлы Selection Civil 3D](../images/civilSelectionNodes.png)
 
 ### Проблемы
 
@@ -613,9 +613,9 @@ public static void SetTraceData(string key, string value)
 
 ### Диаграммы потоков данных
 
-![Поток выбора](../../.gitbook/assets/selectModelElement.png)
+![Поток выбора](../images/selectModelElement.png)
 
-![Поток выбора 2](../../.gitbook/assets/selectElementFace.png)
+![Поток выбора 2](../images/selectElementFace.png)
 
 ### Техническая реализация (см. диаграммы выше)
 
@@ -624,7 +624,7 @@ public static void SetTraceData(string key, string value)
 * Реализация метода `BuildOutputAST` — этот метод должен возвращать AST, который будет выполнен в какой-то момент в будущем, когда узел должен быть выполнен. В случае с узлами Selection он должен возвращать элементы или геометрию по идентификаторам элементов. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * Реализация `BuildOutputAST` — одна из самых сложных частей реализации узлов `NodeModel`/пользовательского интерфейса. Лучше всего вложить в функцию C# как можно больше логики и просто встроить в AST узел вызова функции AST. Обратите внимание, что в данном случае `node` является узлом AST в абстрактном дереве синтаксиса, а не узлом в графе Dynamo.
 
-![Поток выбора 2](../../.gitbook/assets/selectionAST.png)
+![Поток выбора 2](../images/selectionAST.png)
 
 * Сериализация
   *   Поскольку это явные производные типы `NodeModel` (не ZeroTouch), для них также необходимо реализовать компонент [JsonConstructor], который будет использоваться во время десериализации узла из файла DYN.

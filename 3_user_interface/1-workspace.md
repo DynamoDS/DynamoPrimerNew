@@ -4,7 +4,7 @@
 
 Рабочее пространство Dynamo состоит из четырех основных элементов.
 
-\![](<../.gitbook/assets/workspace - ui.png>)
+![](<images/workspace-ui.png>)
 
 > 1. Все активные вкладки
 > 2. Режим предварительного просмотра
@@ -15,11 +15,11 @@
 
 При открытии нового файла по умолчанию открывается новое исходное рабочее пространство.
 
-\![](<../.gitbook/assets/workspace - home tab.png>)
+![](<images/workspace-home-tab.png>)
 
 Можно создать пользовательский узел и открыть его в рабочем пространстве пользовательского узла.
 
-\![](<../.gitbook/assets/workspace - custom node tab.png>)
+![](<images/workspace-custom-node-tab.png>)
 
 {% hint style="info" %} В каждом окне Dynamo можно использовать только одно исходное рабочее пространство, однако на вкладках можно открыть несколько рабочих пространств пользовательского узла. {% endhint %}
 
@@ -29,18 +29,18 @@
 
 a. Использование значков в верхней части экрана справа
 
-* \![](<../.gitbook/assets/2.3-04 Graph preview icon.jpg>)Предварительный просмотр графа
-* \![](<../.gitbook/assets/2.3-05 3D preview icon.jpg>)3D-просмотр
+* ![](<images/2.3-04-graph-preview-icon.jpg>)Предварительный просмотр графика
+* ![](<images/2.3-05-3d-preview-icon.jpg>)Предварительный 3D-просмотр
 
 b. Щелчком правой кнопкой мыши в рабочем пространстве
 
 * Переключение из режима 3D-просмотра в режим предварительного просмотра графика
 
-\![](<../.gitbook/assets/workspace - right click switch to graph view.jpg>)
+![](<images/workspace-right-click-switch-to-graph-view.jpg>)
 
 * Переключение из режима предварительного просмотра графика в режим 3D-просмотра
 
-\![](<../.gitbook/assets/workspace - right click switch to geometry.jpg>)
+![](<images/workspace-right-click-switch-to-geometry.jpg>)
 
 c. С помощью горячей клавиши (CTRL + B)
 
@@ -51,10 +51,10 @@ c. С помощью горячей клавиши (CTRL + B)
 a. В режиме **Предварительный просмотр графика**
 
 * Использование значков:
-  * \![](<../.gitbook/assets/2.3-08 graph preview zoom to fitpsd.jpg>)Вписать
-  * \![](<../.gitbook/assets/2.3-09 graph preview zoom in.jpg>)Увеличить
-  * \![](<../.gitbook/assets/2.3-10 graph preview zoom out.jpg>)Уменьшить
-  * \![](<../.gitbook/assets/2.3-11 graph preview pan.jpg>)Панорамировать
+  * ![](<images/2.3-08-graph-preview-zoom-to-fitpsd.jpg>)Вписать
+  * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)Увеличение масштаба
+  * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)Уменьшение масштаба
+  * ![](<images/2.3-11-graph-preview-pan.jpg>)Панорамирование
 * Использование мыши:
   * Щелчок левой кнопкой мыши — выбор
   * Щелчок левой кнопкой мыши и перетаскивание — выбор нескольких точек
@@ -62,16 +62,16 @@ a. В режиме **Предварительный просмотр графи�
   * Перетаскивание с удерживаемой средней кнопкой мыши — панорамирование
   * Щелчок правой кнопкой мыши в любом месте активного окна — открытие окна поиска в активном окне
 
-\![](<../.gitbook/assets/workspace - in canvas search.gif>)
+![](<images/workspace-in-canvas-search.gif>)
 
 b. В режиме **3D-просмотра**
 
 * Использование значков:
-  * \![](<../.gitbook/assets/2.3-08 graph preview zoom to fitpsd.jpg>)Вписать
-  * \![](<../.gitbook/assets/2.3-09 graph preview zoom in.jpg>)Увеличить
-  * \![](<../.gitbook/assets/2.3-10 graph preview zoom out.jpg>)Уменьшить
-  * \![](<../.gitbook/assets/2.3-11 graph preview pan.jpg>)Панорамировать
-  * ![](images/3-1/3-1-133Dprevieworbit.jpg)Орбита
+  * ![](<images/2.3-08-graph-preview-zoom-to-fitpsd.jpg>)Вписать
+  * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)Увеличение масштаба
+  * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)Уменьшение масштаба
+  * ![](<images/2.3-11-graph-preview-pan.jpg>)Панорамирование
+  * \![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)Орбита
 * Использование мыши:
   * Прокрутка колесика вперед/назад — увеличение/уменьшение
   * Перетаскивание с удерживаемой средней кнопкой мыши — панорамирование
@@ -83,4 +83,4 @@ b. В режиме **3D-просмотра**
 
 Чтобы выбрать несколько узлов, щелкните и перетащите указатель для создания рамки выбора.
 
-\![](<../.gitbook/assets/workspace - selection box.gif>)
+![](<images/workspace-selection-box.gif>)

@@ -2,4 +2,4 @@
 
 В этом разделе представлены простые рабочие процессы, помогающие приступить к работе с Dynamo.
 
-![](../../.gitbook/assets/sampleWorkflows.gif)
+![](../images/sampleWorkflows.gif)

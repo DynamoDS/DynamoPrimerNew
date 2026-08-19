@@ -2,7 +2,7 @@
 
 В Dynamo представлено огромное количество готовых функций, а также имеется обширная библиотека пакетов, которая позволяет существенно расширить возможности Dynamo. Пакет — это набор пользовательских узлов или дополнительных функций. Dynamo Package Manager — это портал для сообщества пользователей, где можно скачать любые пакеты, которые были опубликованы в интернете. Эти инструментарии разрабатываются сторонними поставщиками и предназначены для расширения базовых функций Dynamo, доступных каждому пользователю по первому требованию.
 
-![Веб-сайт Package Manager](../../.gitbook/assets/dpm.jpg)
+![Веб-сайт Package Manager](../images/dpm.jpg)
 
 Проекты с открытым исходным кодом, такие как Dynamo, активно развиваются благодаря подобному участию сообщества. Благодаря узкоспециализированным сторонним разработчикам Dynamo может использоваться в самых различных отраслях. По этой причине команда Dynamo сконцентрировала свои усилия на оптимизации разработки и публикации пакетов (подробнее эта тема будет обсуждаться в следующих разделах).
 
@@ -12,21 +12,21 @@
 
 В Dynamo выберите _Пакеты > Package Manager..._
 
-<figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
 В строке поиска введите «quads from rectangular grid». Через некоторое время отобразятся все пакеты, соответствующие поисковому запросу. Выберем первый пакет с соответствующим именем.
 
 Нажмите кнопку «Установить», чтобы добавить пакет в библиотеку, а затем подтвердите действие. Готово!
 
-<figure><img src="../../.gitbook/assets/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
 
 Обратите внимание, что в библиотеке Dynamo появилась группа с именем buildz. Это имя разработчика пакета, а в группе содержится пользовательский узел. Его можно сразу использовать.
 
-\![](<../../.gitbook/assets/package introduction - installing a package 03.jpg>)
+\![](<../images/package introduction - installing a package 03.jpg>)
 
 Используйте узел **Code Block** для быстрого определения прямоугольной сетки, вывода результата в узел **Polygon.ByPoints**, а затем узел **Surface.ByPatch** для просмотра списка только что созданных прямоугольных панелей.
 
-\![](<../../.gitbook/assets/package introduction - installing a package 04.jpg>)
+\![](<../images/package introduction - installing a package 04.jpg>)
 
 ### Установка папки пакета — DynamoUnfold
 
@@ -36,23 +36,23 @@
 
 На этот раз выполним поиск по слову _DynamoUnfold_. Когда пакеты отобразятся, скачайте их, нажав кнопку «Установить», чтобы добавить Dynamo Unfold в библиотеку Dynamo.
 
-<figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/unfold.png" alt=""><figcaption></figcaption></figure>
 
 В библиотеке Dynamo появилась группа _DynamoUnfold_ с несколькими категориями и пользовательскими узлами.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 02.jpg>)
+\![](<../images/package introduction - installing package folder 02.jpg>)
 
 Рассмотрим структуру файлов и папок пакета.
 
 1. Сначала выберите «Пакеты» > «Package Manager» > «Установленные пакеты».
-2. Рядом с DynamoUnfold выберите меню параметров <img src="../../.gitbook/assets/package introduction - vertical dots menu.png" alt="" data-size="line">.
+2. Рядом с DynamoUnfold выберите меню параметров <img src="../images/package introduction - vertical dots menu.png" alt="" data-size="line">.
 3. Затем нажмите «Показать корневую папку», чтобы открыть корневую папку для этого пакета.
 
-<figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/view-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Откроется корневая папка пакета. Обратите внимание, что в ней содержится три папки и файл.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 05.jpg>)
+\![](<../images/package introduction - installing package folder 05.jpg>)
 
 > 1. В папке _bin_ находятся файлы DLL. Этот пакет Dynamo был разработан с помощью функции Zero-Touch, поэтому пользовательские узлы хранятся в этой папке.
 > 2. В папке _dyf_ хранятся пользовательские узлы. Так как данный пакет был разработан без пользовательских узлов Dynamo, папка пуста.
@@ -63,11 +63,11 @@
 
 Откроем файл SphereUnfold.
 
-![](../../.gitbook/assets/rd2.jpg)
+![](../images/rd2.jpg)
 
 Нажав после этого кнопку «Запуск» в решателе, получим развернутую сферу. Файлы примеров, подобные этим, используются для обучения работе с новыми пакетами Dynamo.
 
-\![](<../../.gitbook/assets/packageintroduction-installingpackagefolder07 (1).jpg>)
+![](<../images/packageintroduction-installingpackagefolder07.jpg>)
 
 ### Просмотр информации о пакете
 
@@ -81,13 +81,13 @@
 
 Еще один способ найти пакеты Dynamo — воспользоваться веб-сайтом [Dynamo Package Manager](http://dynamopackages.com). Здесь вы можете найти зависимости пакета и сведения о совместимости основной программы/версии, предоставленные разработчиками пакетов. Кроме того, из Dynamo Package Manager можно скачивать файлы пакетов Dynamo, но делать это непосредственно из Dynamo проще.
 
-![](../../.gitbook/assets/dpm2.jpg)
+![](../images/dpm2.jpg)
 
 ### Расположение файлов пакетов на локальном компьютере.
 
 Если требуется узнать, где хранятся файлы пакетов, в верхней части окна навигации выберите «Dynamo» > «Настройки» > «Параметры пакета» > «Пути к узлу и файлу пакета», чтобы найти текущую корневую папку.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 08.png>)
+\![](<../images/package introduction - installing package folder 08.png>)
 
 По умолчанию пакеты устанавливаются в следующей папке: _C:/Users/[имя пользователя]/AppData/Roaming/Dynamo/[версия Dynamo_.
 

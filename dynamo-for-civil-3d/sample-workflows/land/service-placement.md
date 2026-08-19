@@ -1,6 +1,6 @@
 # Размещение коммуникаций
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Dynamo (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Dynamo.gif" alt=""><figcaption></figcaption></figure>
 
 Разработка проекта стандартного жилого здания подразумевает работу с определенными подземными коммуникациями, такими как канализация, ливневая канализация, водопровод и т. п. В этом примере демонстрируется использование Dynamo для подключения того или иного участка застройки к распределительной магистрали. Обычно подключение к магистрали требуется на каждом участке, и потому размещение всех коммуникаций отнимает много времени. Dynamo позволяет ускорить этот процесс за счет автоматического создания точных геометрических объектов, а также гибкого ввода данных с возможностью настройки в соответствии со стандартами местных надзорных органов.
 
@@ -46,7 +46,7 @@
 
 {% hint style="info" %} Если вы еще не знакомы с кривыми Dynamo, см. раздел [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Объединение объектов из Civil 3D в одну сложную кривую</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_DistributionMain.png" alt=""><figcaption><p>Объединение объектов из Civil 3D в одну сложную кривую</p></figcaption></figure>
 
 ### Получение геометрии линии участка
 
@@ -54,7 +54,7 @@
 
 Нам также необходимо решить одну потенциальную проблему. Линия участка имеет начальную и конечную точки, а это значит, что у нее есть направление. Чтобы график давал последовательные результаты, все линии участка должны иметь одинаковое направление. Это условие можно задать непосредственно в логике графика, что сделает наш график более стабильным. 
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Selection (2).png" alt=""><figcaption><p>Выбор линии участка и проверка ее направления</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Selection.png" alt=""><figcaption><p>Выбор линии участка и проверка ее направления</p></figcaption></figure>
 
 > 1. Получаем начальную и конечную точки линии участка.
 > 2. Измеряем расстояние от каждой точки до распределительной магистрали, а затем определяем, какое расстояние больше.
@@ -66,13 +66,13 @@
 
 {% hint style="info" %} Если вы еще не знакомы с системами координат, см. раздел [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Создание точек вставки для счетчиков</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Создание точек вставки для счетчиков</p></figcaption></figure>
 
 ### Получение точек подключения
 
 Теперь нужно получить точки на распределительной магистрали, которые находятся ближе всего к счетчикам. Это позволит нам нарисовать линии подключения в пространстве модели так, чтобы они всегда были перпендикулярны к распределительной магистрали. Для этого идеально подойдет узел **Geometry.ClosestPointTo**.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_GetPerpendicularPoints (1).png" alt="" width="339"><figcaption><p>Получение точек на перпендикулярах к распределительной магистрали</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_GetPerpendicularPoints.png" alt="" width="339"><figcaption><p>Получение точек на перпендикулярах к распределительной магистрали</p></figcaption></figure>
 
 > 1. Сложная кривая распределительной магистрали.
 > 2. Точки вставки счетчиков.
@@ -81,29 +81,29 @@
 
 Наконец, последний шаг — создание объектов в пространстве модели. Сначала мы используем созданные ранее точки вставки для создания вхождений блоков, а затем — точки на распределительной магистрали для построения линий подключения коммуникаций.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_CreateObjects.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_CreateObjects.png" alt=""><figcaption></figcaption></figure>
 
 ### Результат
 
 При запуске графика в пространстве модели должны отображаться новые вхождения блоков и линии подключения коммуникаций. Попробуйте изменить входные данные, чтобы увидеть, как программа автоматически обновит результаты.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Dynamo (1).gif" alt=""><figcaption><p>Регулировка входных параметров в Dynamo и немедленное отображение результатов в Civil 3D</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Dynamo.gif" alt=""><figcaption><p>Регулировка входных параметров в Dynamo и немедленное отображение результатов в Civil 3D</p></figcaption></figure>
 
 ### Бонус: включение функции последовательного размещения
 
 Вы могли заметить, что после размещения объектов для одной линии участка эти объекты «перемещаются» при выборе другой линии участка.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Binding.gif" alt=""><figcaption><p>Поведение при включенной привязке объекта</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Binding.gif" alt=""><figcaption><p>Поведение при включенной привязке объекта</p></figcaption></figure>
 
 Это стандартное поведение Dynamo, которое является желанным и полезным во многих случаях. Однако иногда может потребоваться разместить несколько последовательных подключений к коммуникациям так, чтобы программа Dynamo создавала при каждом запуске сценария новые объекты, а не изменяла исходные. Этим поведением можно управлять, изменив параметры привязки объекта.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Параметры привязки объекта Dynamo</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Параметры привязки объекта Dynamo</p></figcaption></figure>
 
 {% hint style="info" %} Дополнительные сведения см. в разделе [object-binding.md](../../advanced-topics/object-binding.md "mention"). {% endhint %}
 
 Изменив этот параметр, мы заставляем программу Dynamo «забывать» объекты, создаваемые при каждом запуске графика. Ниже приведен пример запуска графика с отключенной привязкой объектов в **проигрывателе Dynamo**.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Запуск графика с помощью проигрывателя Dynamo и просмотр результатов в Civil 3D</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Player.gif" alt=""><figcaption><p>Запуск графика с помощью проигрывателя Dynamo и просмотр результатов в Civil 3D</p></figcaption></figure>
 
 {% hint style="info" %} Если вы еще не знакомы с проигрывателем Dynamo, см. раздел [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
 

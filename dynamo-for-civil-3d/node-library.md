@@ -2,24 +2,19 @@
 
 Ранее мы упомянули, что **узлы** являются основными компоновочными блоками графика Dynamo. Узлы хранятся в **библиотеке**, где они сгруппированы по логическим признакам. В Dynamo for Civil 3D в библиотеке есть две категории (или **полки**), содержащие специальные узлы для работы с объектами AutoCAD и Civil 3D, такими как трассы, профили, коридоры, вхождения блоков и т. д. Прочие разделы библиотеки содержат универсальные узлы, одинаковые во всех версиях Dynamo (например, в Dynamo для Revit, Dynamo Sandbox и т. д.).
 
-{% hint style="info" %} 
-Подробные сведения об организации узлов в корневой библиотеке Dynamo см. в разделе [2-library.md](../3_user_interface/2-library.md "mention") . 
-{% endhint %}
+{% hint style="info" %} Подробные сведения об организации узлов в корневой библиотеке Dynamo см. в разделе [2-library.md](../3\_user\_interface/2-library.md "mention"). {% endhint %}
 
-<figure><img src="../.gitbook/assets/c3d-node-library.png" alt="" width="563"><figcaption><p>Библиотека узлов в Dynamo for Civil 3D</p></figcaption></figure>
+<figure><img src="images/c3d-node-library.png" alt="" width="563"><figcaption><p>Библиотека узлов в Dynamo for Civil 3D</p></figcaption></figure>
 
 > 1. Специальные узлы для работы с объектами AutoCAD и Civil 3D
 > 2. Узлы общего назначения
 > 3. Узлы из **пакетов** сторонних разработчиков, которые можно установить отдельно
 
-{% hint style="warning" %} График Dynamo, в котором используются узлы из разделов AutoCAD и Civil 3D библиотеки, будет работать только в Dynamo for Civil 3D. Если открыть такой график Dynamo for Civil 3D в другой версии программы (например, в Dynamo для Revit), эти узлы будут помечены предупреждением и не будут запускаться. 
-{% endhint %}
+{% hint style="warning" %} График Dynamo, в котором используются узлы из разделов AutoCAD и Civil 3D библиотеки, будет работать только в Dynamo for Civil 3D. Если открыть такой график Dynamo for Civil 3D в другой версии программы (например, в Dynamo для Revit), эти узлы будут помечены предупреждением и не будут запускаться. {% endhint %}
 
-{% hint style="info" %} 
-**Зачем нужны отдельные полки для AutoCAD и Civil 3D**
+{% hint style="info" %} **Зачем нужны отдельные полки для AutoCAD и Civil 3D**
 
-Такой подход позволяет отделить узлы для собственных объектов AutoCAD (линии, полилинии, вхождения блоков и т. д.) от узлов для объектов Civil 3D (трассы, коридоры, поверхности и т. д.). С технической точки зрения, AutoCAD и Civil 3D — это два разных инструмента. AutoCAD — это базовое приложение, а Civil 3D — приложение, созданное на его основе. 
-{% endhint %}
+Такой подход позволяет отделить узлы для собственных объектов AutoCAD (линии, полилинии, вхождения блоков и т. д.) от узлов для объектов Civil 3D (трассы, коридоры, поверхности и т. д.). С технической точки зрения, AutoCAD и Civil 3D — это два разных инструмента. AutoCAD — это базовое приложение, а Civil 3D — приложение, созданное на его основе. {% endhint %}
 
 ## Иерархия узлов
 
@@ -29,11 +24,11 @@
 
 Рассмотрим в качестве примера трассу.
 
-<figure><img src="../.gitbook/assets/c3d-node-library-alignment.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/c3d-node-library-alignment.png" alt=""><figcaption></figcaption></figure>
 
 Допустим, требуется изменить имя трассы. Для этого добавим к имеющемуся графику узел **CivilObject.SetName**.
 
-<figure><img src="../.gitbook/assets/c3d-node-library-alignment-set-name (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/c3d-node-library-alignment-set-name.png" alt=""><figcaption></figcaption></figure>
 
 Поначалу все это может показаться довольно сложным. Что это за **CivilObject** и почему в библиотеке нет узла **Alignment.SetName**? Все дело в стремлении к _возможности многократного использования_ и _простоте_. Если подумать, процесс изменения имени объекта Civil 3D всегда одинаков, будь то трасса, коридор, профиль или любой другой объект. Поэтому, вместо того чтобы создавать несколько узлов (например, **Alignment.SetName, Corridor.SetName, Profile.SetName** и т. д.), по сути выполняющих одну и ту же работу, все эти функции были заложены в один узел. В нашем случае это узел **CivilObject.SetName**.
 
@@ -43,7 +38,7 @@
 
 Идем дальше. Предположим, требуется изменить слой трассы. Для этого нам понадобится узел **Object.SetLayer**.
 
-<figure><img src="../.gitbook/assets/c3d-node-library-alignment-set-layer.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/c3d-node-library-alignment-set-layer.png" alt=""><figcaption></figcaption></figure>
 
 Почему он называется не **CivilObject.SetLayer**? Причина все та же: принципы простоты и возможности повторного использования, которые мы обсуждали ранее. Свойство _layer_ есть у любого объекта AutoCAD, который можно нарисовать или вставить, например у линии, полилинии, текста, вхождения блока и т. д. Такие объекты Civil 3D, как трассы и коридоры, относятся к той же категории, поэтому любой узел, который применяется к категории **Object**, можно также использовать с любым **объектом Civil**.
 

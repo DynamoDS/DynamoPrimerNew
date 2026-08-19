@@ -2,7 +2,7 @@
 
 Понимая, как создать проект Zero-Touch, мы можем подробно рассмотреть особенности создания узла, изучив пример ZeroTouchEssentials на Dynamo GitHub.
 
-![Узлы Zero-Touch](../../.gitbook/assets/ootbzerotouch.png)
+![Узлы Zero-Touch](../images/ootbzerotouch.png)
 
 > Многие стандартные узлы Dynamo, по сути, являются узлами Zero-Touch, как и большинство узлов Math, Color и DateTime.
 
@@ -10,7 +10,7 @@
 
 В Visual Studio откройте файл решения `ZeroTouchEssentials.sln` и выполните сборку.
 
-![ZeroTouchEssentials в Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
+![ZeroTouchEssentials в Visual Studio](../images/vs-build-zte.jpg)
 
 > Файл `ZeroTouchEssentials.cs` содержит все методы, которые будут импортированы в Dynamo.
 
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Значение по умолчанию](../../.gitbook/assets/defaultval.jpg)
+![Значение по умолчанию](../images/defaultval.jpg)
 
 > 1. Значение по умолчанию отображается при наведении курсора на входной порт узла.
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Узел, возвращающий несколько выходных данных.
 
-![Несколько выходных данных](../../.gitbook/assets/multipleoutputs.png)
+![Несколько выходных данных](../images/multipleoutputs.png)
 
 > 1. Обратите внимание, что теперь существует два выходных порта, названных в соответствии с указанными ключами словаря.
 
@@ -84,13 +84,13 @@ namespace ZeroTouchEssentials
 
 Рекомендуется прикреплять к узлам Dynamo документацию, описывающую функции узла, входные и выходные данные, теги поиска и т. д. Для этого используются теги XML-документации. XML-документация создается следующим образом.
 
-* Документацией считается любой текст комментария после значка «///» (три наклонные черты).
+* Документацией считается любой текст комментария после значка «///» (три наклонные черты), 
   * Например: `/// Documentation text and XML goes here` (Текст документации и XML размещается здесь)
 * После трех наклонных черт создайте теги XML над методами, которые Dynamo будет считывать при импорте DLL-файла.
   * Например: `/// <summary>...</summary>`
 * Включите XML-документацию в Visual Studio, выбрав `Project > [Project] Properties > Build > Output` и установив флажок `Documentation file` (Файл XML-документации).
 
-![Создание XML-файла](../../.gitbook/assets/vs-xml.jpg)
+![Создание XML-файла](../images/vs-xml.jpg)
 
 > 1. Visual Studio создаст XML-файл в указанной папке.
 
@@ -141,7 +141,7 @@ namespace ZeroTouchEssentials
 * во всплывающей подсказке для узла;
 * в обозревателе документации.
 
-![Описание узла](../../.gitbook/assets/node-description.png)
+![Описание узла](../images/node-description.png)
 
 Ниже представлены рекомендации, которые позволят обеспечить единообразие и сэкономить время при составлении или обновлении описаний узлов.
 
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 После импорта DLL-файла ZeroTouchEssentials в библиотеке появится узел ZeroTouchEssentials. Этот объект можно создать с помощью узла `ByTwoDoubles`.
 
-![Узел ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
+![Узел ByTwoDoubles](../images/dyn-constructor.jpg)
 
 ### Использование типов геометрии Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Узел, который получает длину кривой и удваивает ее.
 
-![Входные данные кривой](../../.gitbook/assets/doublelength.png)
+![Входные данные кривой](../images/doublelength.png)
 
 > 1. В качестве входных данных для этого узла можно использовать геометрию кривой.
 
@@ -285,7 +285,7 @@ namespace ZeroTouchEssentials
 * Внутри элемента миграции создайте элементы `<priorNameHint>...</priorNameHint>` для каждого изменения имени.
 * При каждом изменении имени укажите `<oldName>...</oldName>` и `<newName>...</newName>`
 
-![Файл миграции](../../.gitbook/assets/vs-migrations-file.jpg)
+![Файл миграции](../images/vs-migrations-file.jpg)
 
 > 1. Щелкните правой кнопкой мыши и выберите `Add > New Item` (Добавить > Новый элемент).
 > 2. Выберите `XML File` (XML-файл).

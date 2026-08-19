@@ -4,7 +4,7 @@
 
 Это руководство поможет вам освоить различные возможности разработки на языке C# для Dynamo — от создания узлов Zero-Touch до сборки расширений.
 
-![Репозиторий Dynamo на GitHub](../../.gitbook/assets/dynamogithub.png)
+![Репозиторий Dynamo на GitHub](../images/dynamogithub.png)
 
 > Репозиторий Dynamo на GitHub
 

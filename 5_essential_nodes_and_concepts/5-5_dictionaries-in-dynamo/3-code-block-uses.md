@@ -4,10 +4,10 @@ Dynamo 2.0 не только включает в себя узлы для ра�
 
 Можно использовать как приведенный ниже синтаксис, так и представления узлов на основе DesignScript.
 
-![](../../.gitbook/assets/dictionariesincb-syntax\(1\).jpg)
+\![](<../images/5-5/3/dictionaries in cb - syntax.jpg>)
 
 Поскольку словарь является типом объекта в Dynamo, с ним можно выполнять следующие действия.
 
-\![](<../../.gitbook/assets/dictionaries in cb - actions with code blocks.jpg>)
+\![](<../images/dictionaries in cb - actions with code blocks.jpg>)
 
 Подобные виды взаимодействия особенно важны при соотнесении данных Revit со строками. Далее приводятся примеры использования этой функции Revit.

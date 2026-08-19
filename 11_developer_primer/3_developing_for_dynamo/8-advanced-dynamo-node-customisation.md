@@ -49,7 +49,7 @@ LogWarningMessageEvents.OnLogWarningMessage("Your warning message here.");
 
 В этом примере применяется пользовательский узел, созданный ранее в разделе **Пример использования узлов Zero-Touch — узел сетки**; метод `RectangularGrid`, который создает сетку из прямоугольников на основе входных данных `xCount` и `yCount`. Мы проверим, действительны ли входные данные, а затем с помощью `OnLogWarningMessage` зарегистрируем предупреждение и остановим обработку.
 
-![OnLogWarningMessage, пример 1](../../.gitbook/assets/onlogwarningmessage-example-1.png)
+![OnLogWarningMessage, пример 1](../images/onlogwarningmessage-example-1.png)
 
 **Использование `OnLogWarningMessage` для проверки входных данных**
 
@@ -137,7 +137,7 @@ namespace CustomNodes
 
 Если для метода требуется список точек, но пользователь передает пустой или нулевой список, можно использовать `OnLogWarningMessage`, чтобы сообщить о проблеме.
 
-![OnLogWarningMessage, пример 2](../../.gitbook/assets/onlogwarningmessage-example-2.png)
+![OnLogWarningMessage, пример 2](../images/onlogwarningmessage-example-2.png)
 
 ```
 public static Polygon CreatePolygonFromPoints(List<Point> points)
@@ -164,7 +164,7 @@ public static Polygon CreatePolygonFromPoints(List<Point> points)
 
 Для узла, обрабатывающего пути к файлам, может потребоваться убедиться, что используются только разрешенные типы файлов. При обнаружении неподдерживаемого типа файла регистрируется предупреждение.
 
-![OnLogWarningMessage, пример 3](../../.gitbook/assets/onlogwarningmessage-example-3.png)
+![OnLogWarningMessage, пример 3](../images/onlogwarningmessage-example-3.png)
 
 ```
 public static void ProcessFile(string filePath)
@@ -226,7 +226,7 @@ LogWarningMessageEvents.OnLogInfoMessage("Your info message here.");
 
 В этом примере применяется пользовательский узел, созданный ранее в разделе **Пример использования узлов Zero-Touch — узел сетки**; метод `RectangularGrid`, который создает сетку из прямоугольников на основе входных данных `xCount` и `yCount`. Мы проверим, действительны ли входные данные, а затем с помощью `OnLogInfoMessage` предоставим информацию после выполнения операции узла.
 
-![OnLogInfoMessage, пример 1](../../.gitbook/assets/onloginfomessage-example-1.png)
+![OnLogInfoMessage, пример 1](../images/onloginfomessage-example-1.png)
 
 **Использование `OnLogInfoMessage` для проверки входных данных**
 
@@ -309,7 +309,7 @@ namespace CustomNodes
 
 Если вы создаете узел, который обрабатывает список точек, может потребоваться зарегистрировать количество точек, которые были успешно обработаны. Это может быть полезно при наличии больших наборов данных.
 
-![OnLogInfoMessage, пример 2](../../.gitbook/assets/onloginfomessage-example-2.png)
+![OnLogInfoMessage, пример 2](../images/onloginfomessage-example-2.png)
 
 ```
 public static List<Point> ProcessPoints(List<Point> points)
@@ -339,7 +339,7 @@ public static List<Point> ProcessPoints(List<Point> points)
 
 В некоторых случаях полезно подтвердить входные параметры, которые использовались в узле для выполнения действия. Например, если узел экспортирует данные в файл, регистрация имени файла и пути может служить для пользователей подтверждением того, что был использован правильный файл.
 
-![OnLogInfoMessage, пример 3](../../.gitbook/assets/onloginfomessage-example-3.png)
+![OnLogInfoMessage, пример 3](../images/onloginfomessage-example-3.png)
 
 ```
 public static void ExportData(string filePath, List<string> data)
@@ -365,7 +365,7 @@ public static void ExportData(string filePath, List<string> data)
 
 В Dynamo всегда существовали ограничения на предоставление разработчиками пакетов документации по узлам. Авторы пользовательских узлов могли только добавлять краткое описание, отображаемое в подсказке для узла, или поставлять пакет с графиками со множеством примечаний.
 
-![Описание в подсказке для узла](../../.gitbook/assets/customnodedocumentation-overloads.png)
+![Описание в подсказке для узла](../images/customnodedocumentation-overloads.png)
 
 ### Новый способ
 
@@ -399,11 +399,11 @@ Markdown является гибким инструментом с широки�
 
 Для отображения документации по узлам в Dynamo используется расширение вида «Обозреватель документации». Чтобы открыть документацию по узлу, щелкните узел правой кнопкой мыши и выберите «Справка». При этом откроется Обозреватель документации и отобразится текст с разметкой Markdown для этого узла, если он предоставлен.
 
-![Обозреватель документации](../../.gitbook/assets/customnodedocumentation-no-documentation-provided.png)
+![Обозреватель документации](../images/customnodedocumentation-no-documentation-provided.png)
 
 Документация, отображаемая в Обозревателе, представлена в виде двух частей. Первая — раздел `Node Info` с информацией об узле. Он генерируется автоматически на основе информации, извлеченной из узла: входные и выходные данные, категория узла, имя/пространство имен узла и краткое описание. Вторая часть содержит документацию по пользовательскому узлу в виде файла Markdown, который предоставляется разработчиком.
 
-![Документация по пользовательскому узлу](../../.gitbook/assets/customnodedocumentation-custom-node-documentation.png)
+![Документация по пользовательскому узлу](../images/customnodedocumentation-custom-node-documentation.png)
 
 #### Папка с документацией по пакету
 
@@ -417,13 +417,13 @@ Markdown является гибким инструментом с широки�
 
 В особых случаях при перегрузках узлов (узлы с одинаковым именем, но с разными входными данными) необходимо добавить имена входных данных в `()` после пространства имен узла. Например, встроенный узел `Geometry.Translate` имеет несколько перегрузок. В этом случае файлам Markdown для следующих узлов нужно присвоить следующие имена: `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction).md` `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction,distance).md`
 
-![Узлы перегрузки](../../.gitbook/assets/customnodedocumentation-overloads.png)
+![Узлы перегрузки](../images/customnodedocumentation-overloads.png)
 
 #### Изменение файлов Markdown при открытии в Dynamo
 
 Чтобы упростить изменение файлов документации, Обозреватель документации реализует File Watcher для открытого файла. Это позволяет вносить в файл Markdown правки, которые сразу будут отображаться в Dynamo.
 
-![Горячая перезагрузка](../../.gitbook/assets/customnodedocumentation-hot-reload.gif)
+![Горячая перезагрузка](../images/customnodedocumentation-hot-reload.gif)
 
 Кроме того, можно добавлять новые файлы документации, когда программа Dynamo открыта. Просто добавьте новый файл Markdown в папку `/doc` с именем, соответствующим узлу.
 
@@ -441,9 +441,9 @@ Markdown является гибким инструментом с широки�
 
 Для начала создайте проект библиотеки классов Visual Studio (.NET Framework) для узлов Zero Touch. Если у вас еще нет проекта, обратитесь к разделу **Начало работы** для получения пошаговых инструкций по его созданию.
 
-![Создание проекта Visual Studio](../../.gitbook/assets/vs-new-project-1.jpg)
+![Создание проекта Visual Studio](../images/vs-new-project-1.jpg)
 
-![Настройка нового проекта в Visual Studio](../../.gitbook/assets/zerotouchicons-configure-new-project.jpg)
+![Настройка нового проекта в Visual Studio](../images/zerotouchicons-configure-new-project.jpg)
 
 Убедитесь, что имеется хотя бы один функциональный узел Zero Touch, поскольку значки можно добавлять только в существующие узлы. Инструкции см. в разделе **Пример использования Zero Touch — узел сетки**.
 
@@ -475,11 +475,11 @@ Markdown является гибким инструментом с широки�
 
 * Щелкните правой кнопкой мыши проект в обозревателе **Solution Explorer**.
 
-![Добавление нового XML](../../.gitbook/assets/zerotouchicons-add-resources-file-1.jpg)
+![Добавление нового XML](../images/zerotouchicons-add-resources-file-1.jpg)
 
 * Выберите **Add > New Item** и выберите **Resources File**.
 
-![Добавление файла ресурсов](../../.gitbook/assets/zerotouchicons-add-resources-file-2.jpg)
+![Добавление файла ресурсов](../images/zerotouchicons-add-resources-file-2.jpg)
 
 * Присвойте имя файлу `<ProjectName>Images.resx`. Пример: `ZeroTouchNodeIconsImages.resx`.
 
@@ -489,7 +489,7 @@ Markdown является гибким инструментом с широки�
 3. **Установите для параметра «Build Action» значение «None»**
    * Поскольку далее планируется создать этот ресурс самостоятельно, его не требуется создавать автоматически.
 
-![Очистка свойства пользовательского инструмента](../../.gitbook/assets/zerotouchicons-custom-tool-property-update.png)
+![Очистка свойства пользовательского инструмента](../images/zerotouchicons-custom-tool-property-update.png)
 
 > _ПРИМЕЧАНИЕ. Если не очистить поле Custom Tool, Visual Studio преобразует точки в символы подчеркивания в именах ресурсов. Перед созданием убедитесь, что имена классов в именах ресурсов разделены точками, а не знаками подчеркивания._
 
@@ -500,7 +500,7 @@ Markdown является гибким инструментом с широки�
    * В качестве типа ресурса выберите **File**.
    * Перейдите к папке с файлом изображения и добавьте значки узла **Large** и **Small**.
 
-![Добавление ресурсов...](../../.gitbook/assets/zerotouchicons-open-resource-editor-update.png)
+![Добавление ресурсов...](../images/zerotouchicons-open-resource-editor-update.png)
 
 > _ПРИМЕЧАНИЕ. Не обязательно размещать изображения в папке **Resource** и тем более во вложенных папках **Large** и **Small**, но это поможет их упорядочить._
 
@@ -510,26 +510,26 @@ Markdown является гибким инструментом с широки�
 
 1. Установите расширение `.NET Upgrade Assistant` в меню **Extensions > Manage Extensions** в Visual Studio.
 
-![Управление расширениями](../../.gitbook/assets/zerotouchicons-manage-extensions-update.png)
+![Управление расширениями](../images/zerotouchicons-manage-extensions-update.png)
 
-![Установка .NET Upgrade Assistant](../../.gitbook/assets/zerotouchicons-net-upgrade-assistant.jpg)
+![Установка .NET Upgrade Assistant](../images/zerotouchicons-net-upgrade-assistant.jpg)
 
 2. Щелкните правой кнопкой мыши проект в **Solution Explorer** и выберите **Upgrade > Convert project to SDK-style**.
 
-![Обновление проекта](../../.gitbook/assets/zerotouchicons-upgrade-project.jpg)
+![Обновление проекта](../images/zerotouchicons-upgrade-project.jpg)
 
-![Преобразование в стиль SDK](../../.gitbook/assets/zerotouchicons-convert-to-sdk-style.jpg)
+![Преобразование в стиль SDK](../images/zerotouchicons-convert-to-sdk-style.jpg)
 
 3. Дождитесь завершения преобразования.
 
-![Обновление завершено](../../.gitbook/assets/zerotouchicons-upgrade-complete.jpg)
+![Обновление завершено](../images/zerotouchicons-upgrade-complete.jpg)
 
 #### Шаг 6\. Добавление сценария After-Build для внедрения ресурсов
 
 1. Выгрузите проект.
    * Щелкните правой кнопкой мыши проект в **Solution Explorer** и выберите **Unload Project**.
 
-![Выгрузка проекта](../../.gitbook/assets/zerotouchicons-unload-project.jpg)
+![Выгрузка проекта](../images/zerotouchicons-unload-project.jpg)
 
 2. Отредактируйте файл `.csproj`.
    * Добавьте следующий элемент `<Target>` между `</ItemGroup>` и `</Project>`:
@@ -550,26 +550,26 @@ Markdown является гибким инструментом с широки�
 	</Target>
 ```
 
-![Добавление кода After-Build](../../.gitbook/assets/zerotouchicons-after-build.jpg)
+![Добавление кода After-Build](../images/zerotouchicons-after-build.jpg)
 
 1. Замените все экземпляры `ZeroTouchNodeIcons` на имя проекта.
 2. Загрузите проект повторно.
    * Щелкните правой кнопкой мыши выгруженный проект и выберите **Reload Project**.
 
-![Повторная загрузка проекта](../../.gitbook/assets/zerotouchicons-reload-project.jpg)
+![Повторная загрузка проекта](../images/zerotouchicons-reload-project.jpg)
 
 #### Шаг 7\. Создание и загрузка собственного файла DLL в Dynamo
 
 1. Выполните сборку проекта.
    * После добавления сценария After-Build выполните сборку проекта в Visual Studio.
 
-![Сборка решения](../../.gitbook/assets/zerotouchicons-build-solution.jpg)
+![Сборка решения](../images/zerotouchicons-build-solution.jpg)
 
 2. Проверьте наличие выходных файлов.
    * Убедитесь, что файлы `.dll` и `.customization.dll` находятся в папке `bin`.
 3. Добавьте `.dll` в Dynamo.
    * В Dynamo используйте кнопку «Импорт библиотеки», чтобы импортировать DLL в Dynamo.
 
-![Кнопка «Импорт библиотеки»](../../.gitbook/assets/zerotouchicons-icon-in-dynamo.jpg)
+![Кнопка «Импорт библиотеки»](../images/zerotouchicons-icon-in-dynamo.jpg)
 
 4. Теперь пользовательские узлы отобразятся с соответствующими значками.

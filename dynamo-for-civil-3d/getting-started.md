@@ -2,37 +2,31 @@
 
 Теперь, когда вы получили общее представление об этой программе, перейдем к созданию вашего первого графика Dynamo в Civil 3D.
 
-{% hint style="info" %} 
-Это простой пример, демонстрирующий основные функции Dynamo. Рекомендуем работать с ним в новом, пустом документе Civil 3D. 
-{% endhint %}
+{% hint style="info" %} Это простой пример, демонстрирующий основные функции Dynamo. Рекомендуем работать с ним в новом, пустом документе Civil 3D. {% endhint %}
 
 ## Открытие Dynamo
 
 Сначала откройте пустой документ в Civil 3D. Перейдите на вкладку **Управление** на ленте Civil 3D и найдите панель **Визуальное программирование**.
 
-![](<../.gitbook/assets/image (7).png>)
+![](<images/image.png>)
 
 Нажмите кнопку **Dynamo**, чтобы запустить Dynamo в отдельном окне.
 
-{% hint style="info" %} 
-**В чем разница между Dynamo и проигрывателем Dynamo** 
+{% hint style="info" %} **В чем разница между Dynamo и проигрывателем Dynamo**
 
 Dynamo — это приложение, используемое для построения и выполнения графиков. Проигрыватель Dynamo — это инструмент для легкого запуска графиков без необходимости открывать их в Dynamo.
 
-Если вы хотите опробовать проигрыватель в действии, см. раздел [dynamo-player.md](dynamo-player.md "mention") . 
-{% endhint %}
+Если вы хотите опробовать проигрыватель в действии, см. раздел [dynamo-player.md](dynamo-player.md "mention"). {% endhint %}
 
 ## Создание нового графика
 
 После открытия Dynamo отобразится начальный экран. Нажмите кнопку **Создать**, чтобы открыть пустое рабочее пространство.
 
-<figure><img src="../.gitbook/assets/c3d-start.png" alt=""><figcaption><p>Начальный экран Dynamo</p></figcaption></figure>
+<figure><img src="images/c3d-start.png" alt=""><figcaption><p>Начальный экран Dynamo</p></figcaption></figure>
 
-{% hint style="info" %} 
-**Где найти примеры**
+{% hint style="info" %} **Где найти примеры**
 
-Dynamo for Civil 3D содержит несколько готовых графиков, которые помогут понять, как именно можно использовать Dynamo. Рекомендуем ознакомиться с ними, а также с разделом [sample-workflows](sample-workflows/ "mention") данного руководства. 
-{% endhint %}
+Dynamo for Civil 3D содержит несколько готовых графиков, которые помогут понять, как именно можно использовать Dynamo. Рекомендуем ознакомиться с ними, а также с разделом [sample-workflows](sample-workflows/ "mention") данного руководства. {% endhint %}
 
 ## Добавление узлов
 
@@ -44,33 +38,29 @@ Dynamo for Civil 3D содержит несколько готовых граф�
 
 Основные компоновочные блоки графика Dynamo называются **узлами**. Каждый узел подобен маленькому компьютеру: мы вводим в него данные, он их обрабатывает и выводит результат. В Dynamo for Civil 3D есть **библиотека** узлов, которые можно соединять друг с другом **проводами** для получения **графика**. График позволяет решать более масштабные задачи, чем отдельный узел.
 
-{% hint style="info" %} 
-**Если вы никогда не работали с Dynamo**
+{% hint style="info" %} **Если вы никогда не работали с Dynamo**
 
 Некоторые понятия могут быть вам незнакомы, и это нормально. Следующие разделы помогут вам во всем разобраться.
 
 [3_user_interface](../3\_user\_interface/ "mention")\
  [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention")\
- [5_essential_nodes_and_concepts](../5\_essential\_nodes\_and\_concepts/ "mention") 
-{% endhint %}
+ [5_essential_nodes_and_concepts](../5\_essential\_nodes\_and\_concepts/ "mention") {% endhint %}
 
 Итак, приступим к построению графика. Вот все узлы, которые нам понадобятся.
 
-<figure><img src="../.gitbook/assets/c3d-create-text-node-list.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/c3d-create-text-node-list.png" alt=""><figcaption></figcaption></figure>
 
 Чтобы найти эти узлы, введите их имена в строке поиска в библиотеке либо щелкните правой кнопкой мыши в любом месте рабочей области и выполните поиск там.
 
-<figure><img src="../.gitbook/assets/c3d-create-text-node-placement.gif" alt=""><figcaption><p>Узлы можно разместить путем поиска в библиотеке или щелчком правой кнопкой мыши в рабочей области.</p></figcaption></figure>
+<figure><img src="images/c3d-create-text-node-placement.gif" alt=""><figcaption><p>Узлы можно разместить путем поиска в библиотеке или щелчком правой кнопкой мыши в рабочей области.</p></figcaption></figure>
 
-{% hint style="info" %} 
-**Как узнать, какие узлы нужно использовать и где их найти**
+{% hint style="info" %} **Как узнать, какие узлы нужно использовать и где их найти**
 
-Узлы в библиотеке группируются по логическим категориям в зависимости от назначения. Подробную информацию см. в разделе [node-library.md](node-library.md "mention"). 
-{% endhint %}
+Узлы в библиотеке группируются по логическим категориям в зависимости от назначения. Подробную информацию см. в разделе [node-library.md](node-library.md "mention"). {% endhint %}
 
 Итоговый график должен выглядеть следующим образом.
 
-<figure><img src="../.gitbook/assets/c3d-text-create-final (2).png" alt=""><figcaption><p>Готовый график</p></figcaption></figure>
+<figure><img src="images/c3d-text-create-final.png" alt=""><figcaption><p>Готовый график</p></figcaption></figure>
 
 Подведем итог выполненной работе.
 
@@ -88,11 +78,9 @@ Dynamo for Civil 3D содержит несколько готовых граф�
 
 Вернитесь в Civil 3D и убедитесь, что выбрана вкладка **Модель**. На ней должен отобразиться новый текстовый объект, созданный в Dynamo.
 
-{% hint style="info" %} 
-Если текст не отображается, возможно, нужно выполнить команду ПОКАЗАТЬ -> ГРАНИЦЫ, чтобы увеличить изображение. 
-{% endhint %}
+{% hint style="info" %} Если текст не отображается, возможно, нужно выполнить команду ПОКАЗАТЬ -> ГРАНИЦЫ, чтобы увеличить изображение. {% endhint %}
 
-<figure><img src="../.gitbook/assets/c3d-create-text-result.png" alt="" width="413"><figcaption></figcaption></figure>
+<figure><img src="images/c3d-create-text-result.png" alt="" width="413"><figcaption></figcaption></figure>
 
 Отлично! Теперь внесем в этот текст некоторые изменения.
 
@@ -100,15 +88,13 @@ Dynamo for Civil 3D содержит несколько готовых граф�
 
 <div data-full-width="false">
 
-<figure><img src="../.gitbook/assets/c3d-create-text.gif" alt=""><figcaption><p>Готовый график в действии</p></figcaption></figure>
+<figure><img src="images/c3d-create-text.gif" alt=""><figcaption><p>Готовый график в действии</p></figcaption></figure>
 
 </div>
 
-{% hint style="info" %} 
-**Почему Dynamo не вставляет новый текстовый объект при каждом запуске графика**
+{% hint style="info" %} **Почему Dynamo не вставляет новый текстовый объект при каждом запуске графика**
 
-По умолчанию программа Dynamo «запоминает» объекты, которые создает. При изменении входных значений узлов объекты в Civil 3D обновляются, а не создаются заново. Подробные сведения об этом механизме см. в разделе [object-binding.md](advanced-topics/object-binding.md "mention"). 
-{% endhint %}
+По умолчанию программа Dynamo «запоминает» объекты, которые создает. При изменении входных значений узлов объекты в Civil 3D обновляются, а не создаются заново. Подробные сведения об этом механизме см. в разделе [object-binding.md](advanced-topics/object-binding.md "mention"). {% endhint %}
 
 > :tada: Миссия выполнена!
 

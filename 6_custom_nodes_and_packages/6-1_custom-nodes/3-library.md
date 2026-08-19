@@ -16,27 +16,27 @@
 
 Продолжайте работу с пользовательским узлом, созданным в предыдущем разделе. После открытия пользовательского узла PointsToSurface график отображается в редакторе пользовательских узлов Dynamo. Пользовательский узел также можно открыть, дважды щелкнув его в редакторе графиков Dynamo.
 
-\![](<../../.gitbook/assets/publish custom node exercise - 01.jpg>)
+\![](<../images/publish custom node exercise - 01.jpg>)
 
 Чтобы опубликовать пользовательский узел локально, щелкните правой кнопкой мыши в рабочей области и выберите _Опубликовать данный пользовательский узел..._
 
-\![](<../../.gitbook/assets/publish custom node exercise - 02.jpg>)
+\![](<../images/publish custom node exercise - 02.jpg>)
 
 Введите все необходимые сведения, как показано на изображении выше, и выберите _Опубликовать локально_. Обратите внимание, что в поле «Группа» задается основной элемент, который будет доступен в меню Dynamo.
 
-<figure><img src="../../.gitbook/assets/publish_a_package.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/publish_a_package.png" alt=""><figcaption></figcaption></figure>
 
 Выберите папку для хранения всех пользовательских узлов, которые планируется опубликовать локально. Приложение Dynamo будет проверять эту папку каждый раз при загрузке, поэтому она должна находиться в постоянном расположении. Перейдите к этой папке и нажмите _Выбрать папку_. Пользовательский узел Dynamo опубликован локально и теперь будет отображаться в библиотеке Dynamo при каждой загрузке программы.
 
-\![](<../../.gitbook/assets/publish custom node exercise - 04 (1).jpg>)
+\![](<../images/publish custom node exercise - 04.jpg>)
 
 Чтобы проверить расположение папки пользовательского узла, откройте меню _Dynamo > Настройки > Параметры пакета > Пути к узлу и пакету._
 
-<figure><img src="../../.gitbook/assets/settings.png" alt="" width="520"><figcaption></figcaption></figure>
+<figure><img src="../images/settings.png" alt="" width="520"><figcaption></figcaption></figure>
 
 В этом окне отображается список путей.
 
-<figure><img src="../../.gitbook/assets/package-locations.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/package-locations.png" alt=""><figcaption></figcaption></figure>
 
 > 1. _Documents\\DynamoCustomNodes..._ — расположение пользовательских узлов, которые были опубликованы локально.
 > 2. _AppData\\Roaming\\Dynamo..._ — путь по умолчанию к пакетам Dynamo, установленным из интернета.
@@ -44,12 +44,12 @@
 
 Порядок путей к папкам изменен, чтобы в качестве пути по умолчанию в Dynamo использовалась папка установки пакетов.
 
-<figure><img src="../../.gitbook/assets/updated-package-locations.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/updated-package-locations.png" alt=""><figcaption></figcaption></figure>
 
 Перейдите в эту локальную папку. Исходный пользовательский узел находится в папке _.dyf_, имя которой является расширением для файлов пользовательских узлов Dynamo. Если отредактировать файл в этой папке, соответствующий узел будет обновлен в пользовательском интерфейсе. Кроме того, можно добавить дополнительные узлы в главную папку _DynamoCustomNode_, и после перезапуска Dynamo они появятся в библиотеке.
 
-\![](<../../.gitbook/assets/publish custom node exercise - 08.jpg>)
+\![](<../images/publish custom node exercise - 08.jpg>)
 
 Теперь при каждой загрузке Dynamo узел PointsToSurface будет отображаться в группе DynamoPrimer библиотеки Dynamo.
 
-\![](<../../.gitbook/assets/publish custom node exercise - 09.jpg>)
+\![](<../images/publish custom node exercise - 09.jpg>)

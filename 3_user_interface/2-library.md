@@ -2,7 +2,7 @@
 
 Библиотека содержит все загруженные узлы, включая десять узлов по умолчанию, входящих в установочный пакет, а также все дополнительно загруженные пользовательские узлы и пакеты. Узлы в библиотеке организованы иерархически в виде библиотек, категорий и подкатегорий (если это необходимо).
 
-\![](<../.gitbook/assets/library - library UI.png>)
+![](<images/library-library-ui.png>)
 
 * Основные узлы: входят в установку по умолчанию.
 * Пользовательские узлы: сохраняйте часто используемые процедуры или специальные графики в качестве пользовательских узлов. Ими также можно поделиться с сообществом.
@@ -18,7 +18,7 @@
 
 {% hint style="info" %} Начинать знакомство с программой рекомендуется с меню Geometry, так как в них представлено наибольшее количество узлов. {% endhint %}
 
-\![](<../.gitbook/assets/library - modified and resize library categories.jpg>)
+![](<images/library-modified-and-resize-library-categories.jpg>)
 
 > 1. Библиотека
 > 2. Категория
@@ -27,13 +27,13 @@
 
 Далее внутри подкатегории выполняется распределение узлов в зависимости от их функции: **создание** данных, выполнение **действия** или **запрос** данных.
 
-* \![](<../.gitbook/assets/user interface - create.jpg>) **Create**: создание и построение геометрии с нуля. Например, окружности.
-* \![](<../.gitbook/assets/user interface - action.jpg>) **Action**: выполнение действия с объектом. Например, масштабирование окружности.
-* \![](<../.gitbook/assets/user interface - query.jpg>) **Query**: получение свойства уже существующего объекта. Например, получение радиуса окружности.
+* ![](<images/user-interface-create.jpg>) **Создание**: создание или построение геометрии с нуля. Например, окружности.
+* ![](<images/user-interface-action.jpg>) **Действие**: выполнение действия с объектом. Например, масштабирование окружности.
+* ![](<images/user-interface-query.jpg>) **Запрос**: получение свойства уже существующего объекта. Например, получение радиуса окружности.
 
 Наведите указатель на узел, чтобы посмотреть подробные сведения, помимо его имени и значка. Такие подсказки позволяют быстро определить функции, выполняемые узлом, какие данные ему требуются на входе, и что он выдает на выходе.
 
-\![](<../.gitbook/assets/user interface - node description.jpg>)
+![](<images/user-interface-node-description.jpg>)
 
 > 1. Описание: описание узла на обычном языке.
 > 2. Значок: увеличенная версия значка, используемого в меню библиотеки.
@@ -46,7 +46,7 @@
 
 Щелчком выберите необходимый узел или нажмите клавишу ENTER, чтобы добавить выделенные узлы в центр рабочего пространства.
 
-\![](<../.gitbook/assets/user interface - search.jpg>)
+![](<images/user-interface-search.jpg>)
 
 #### Поиск по иерархии
 
@@ -58,15 +58,15 @@
 
 * `library.category.nodeName`
 
-\![](<../.gitbook/assets/library - search by hierarchy 1 geometry point by coordinates.jpg>)
+![](<images/library-search-by-hierarchy-1-geometry-point-by-coordinates.jpg>)
 
 * `category.nodeName`
 
-\![](<../.gitbook/assets/library - search by hierarchy 2 point by coordinates.jpg>)
+![](<images/library-search-by-hierarchy-2-point-by-coordinates.jpg>)
 
 * `nodeName` или `keyword`
 
-\![](<../.gitbook/assets/library - search by hierarchy 3 by coordinates.jpg>)
+![](<images/library-search-by-hierarchy-3-by-coordinates.jpg>)
 
 В рабочем пространстве имя узла обычно представлено в формате `category.nodeName`. Есть некоторые исключения, в частности, узлы категорий Input и View.
 
@@ -74,15 +74,15 @@
 
 * Узлы из большинства библиотек содержат формат категории.
 
-\![](<../.gitbook/assets/library - node category differences 1.jpg>)
+![](<images/library-node-category-differences-1.jpg>)
 
 * Узлы `Point.ByCoordinates` и `UV.ByCoordinates` имеют одинаковое имя, но относятся к разным категориям.
 
-\![](<../.gitbook/assets/library - node category differences 2.jpg>)
+![](<images/library-node-category-differences-2.jpg>)
 
 * К исключениям относятся встроенные функции, узлы Core.Input, Core.View и логические операторы.
 
-\![](<../.gitbook/assets/library - node category differences 3.jpg>)
+![](<images/library-node-category-differences-3.jpg>)
 
 ### Часто используемые узлы
 
@@ -94,24 +94,24 @@
 
 | Узел           |                                                        | Узел           |                                                        |
 | -------------- | ------------------------------------------------------ | -------------- | ------------------------------------------------------ |
-| Логическое        | \![](<../.gitbook/assets/library - boolean.jpg>)        | Number         | \![](<../.gitbook/assets/library - number.jpg>)         |
-| String         | \![](<../.gitbook/assets/library - string.jpg>)         | Number Slider  | \![](<../.gitbook/assets/library - number slider.jpg>)  |
-| Directory Path | \![](<../.gitbook/assets/library - directory path.jpg>) | Integer Slider | \![](<../.gitbook/assets/library - integer slider.jpg>) |
-| File Path      | \![](<../.gitbook/assets/library - file path.jpg>)      |                |                                                        |
+| Логический        | ![](<images/library-boolean.jpg>)        | Количество         | ![](<images/library-number.jpg>)         |
+| String         | ![](<images/library-string.jpg>)         | Number Slider  | ![](<images/library-number-slider.jpg>)  |
+| Directory Path | ![](<images/library-directory-path.jpg>) | Integer Slider | ![](<images/library-integer-slider.jpg>) |
+| File Path      | ![](<images/library-file-path.jpg>)      |                |                                                        |
 
 #### Узлы Watch и Watch3D
 
 Узлы Watch играют важную роль в управлении потоком данных в визуальной программе. Результат работы узла можно увидеть в окне **предварительного просмотра данных узла**, наведя курсор на узел.
 
-\![](<../.gitbook/assets/library - node preview.jpg>)
+![](<images/library-node-preview.jpg>)
 
 Элемент удобно просматривать в узле **Watch**.
 
-\![](<../.gitbook/assets/library - watch node.jpg>)
+![](<images/library-watch-node.jpg>)
 
 Кроме того, результаты геометрии можно просмотреть с помощью узла **Watch3D**.
 
-\![](<../.gitbook/assets/library - watch3d node.gif>)
+![](<images/library-watch3d-node.gif>)
 
 Оба этих узла находятся в категории видов основной библиотеки.
 
@@ -125,7 +125,7 @@
 
 Ниже приведен простой пример (с инструкциями) по использованию Code Block в сценарии.
 
-![](../.gitbook/assets/library-codeblockdemo.gif)
+![](images/library-codeblockdemo.gif)
 
 1. Дважды щелкните мышью для создания узла Code Block.
 2. Введите `Circle.ByCenterPointRadius(x,y);`.

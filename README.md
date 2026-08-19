@@ -4,7 +4,7 @@
 
 ## Для Dynamo 2.13 и более поздних версий
 
-![Логотип Dynamo](.gitbook/assets/dynamo_logo_dark-trim.jpg)
+![Логотип Dynamo](images/dynamo_logo_dark-trim.jpg)
 
 > Dynamo — это платформа визуального программирования с открытым исходным кодом для проектировщиков.
 
@@ -37,31 +37,31 @@ Dynamo Primer — это проект с открытым исходным ко
 
 Первая версия этого руководства была составлена специалистами **Mode Lab**. Мы выражаем им благодарность за то, что положили начало этому ценному ресурсу.
 
-![](.gitbook/assets/MODELAB_Logo.png)
+![](images/modelab-logo.png)
 
 ***
 
 Обновление этого руководства в соответствии с изменениями, внесенными в Dynamo 2.0, было выполнено **Джоном Пирсоном (John Pierson) из компании Parallax Team**.
 
-![](.gitbook/assets/PRLX_Logo.jpg)
+![](images/prlx-logo.jpg)
 
 ***
 
 Обновление этого руководства в соответствии с изменениями, внесенными в Dynamo 2.13, было выполнено специалистами **Matterlab**.
 
-\![](<.gitbook/assets/matterlab_final-07 (2).jpg>)
+![](images/matterlab-logo.jpg)
 
 ***
 
 Обновление этого руководства в соответствии с изменениями, внесенными в Dynamo 2.17, было выполнено специалистами **Archilizer**.
 
-<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 Обновление этого руководства в соответствии с изменениями, внесенными в Dynamo for Civil 3D, было выполнено специалистами **Wood Rodgers**.
 
-<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
 
 ### Благодарности
 
