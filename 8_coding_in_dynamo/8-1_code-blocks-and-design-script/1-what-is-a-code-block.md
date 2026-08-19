@@ -12,7 +12,7 @@
 
 코드 블록을 사용하면 사용자가 입력 지정 방식을 유연하게 결정할 수 있습니다. 아래에 좌표 _(10, 5, 0)_ 으로 기본 점을 만드는 다양한 방법이 나와 있습니다.
 
-\![](<../images/codeblock brief overview.jpg>)
+![](<../images/codeblock brief overview.jpg>)
 
 라이브러리의 사용 가능한 함수에 대해 자세히 알아볼 때 라이브러리에서 검색한 후 적절한 노드를 찾는 것보다 "Point.ByCoordinates"를 입력하는 것이 더 빠르다는 것을 알게 될 것입니다. _"Point."_ 를 입력하면 점에 적용할 수 있는 함수 리스트가 Dynamo에 표시됩니다. 이렇게 하면 스크립팅을 더 직관적으로 사용할 수 있으며 Dynamo에서 함수를 적용하는 방식을 배우는 데 도움이 됩니다.
 
@@ -20,7 +20,7 @@
 
 코드 블록은 _코어>입력>작업>코드 블록_ 에서 찾을 수 있습니다. 하지만 단순히 캔버스를 두 번 클릭하기만 하면 코드 블록이 더 빠르게 나타납니다. 이 노드는 너무 자주 사용되어 두 번 클릭 권한이 완전하게 부여되어 있습니다.
 
-\![](<../images/creating codeblock nodes.jpg>)
+![](<../images/creating codeblock nodes.jpg>)
 
 ### 숫자, 문자열 및 수식
 
@@ -30,7 +30,7 @@
 
 숫자 노드와 문자열 노드는 코드 블록과 비교했을 때 다소 구식이라고 볼 수 있는 Dynamo 노드의 두 가지 예입니다.
 
-\![](<../images/old school vs code blocks nodes.jpg>)
+![](<../images/old school vs code blocks nodes.jpg>)
 
 > 1. "구식"
 > 2. 코드 블록
