@@ -2,7 +2,7 @@
 
 O Dynamo oferece um grande número de recursos prontos para uso e também mantém uma ampla biblioteca de pacotes que pode estender significativamente a capacidade do Dynamo. Um pacote é uma coleção de nós personalizados ou funcionalidades adicionais. O Dynamo Package Manager é um portal para a comunidade fazer download de qualquer pacote que tenha sido publicado on-line. Esses conjuntos de ferramentas são desenvolvidos por terceiros para estender a funcionalidade central do Dynamo, acessível a todos, e prontos para download com o clique do botão.
 
-![Site do Package Manager](../../.gitbook/assets/dpm.jpg)
+![Site do Package Manager](../images/dpm.jpg)
 
 Um projeto de código aberto, como o Dynamo, prospera com esse tipo de envolvimento da comunidade. Com desenvolvedores de terceiros dedicados, o Dynamo é capaz de estender seu alcance para os fluxos de trabalho em uma variedade de setores. Por esse motivo, a equipe do Dynamo tem feito esforços em conjunto para simplificar o desenvolvimento e a publicação de pacotes (que serão discutidos mais detalhadamente nas seções a seguir).
 
@@ -12,21 +12,21 @@ A maneira mais fácil de instalar um pacote é usando a opção de menu Pacotes 
 
 No Dynamo, vá para _Pacotes > Package Manager..._
 
-<figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
 Na barra de pesquisa, vamos procurar “quadrados na grade retangular”. Após alguns momentos, você deverá ver todos os pacotes que correspondem a essa consulta de pesquisa. Queremos selecionar o primeiro pacote com o nome correspondente.
 
 Clique em Instalar para adicionar esse pacote à biblioteca e, em seguida, aceite a confirmação. Concluído.
 
-<figure><img src="../../.gitbook/assets/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
 
 Observe que agora temos outro grupo em nossa biblioteca do Dynamo, chamado “buildz”. Esse nome se refere ao desenvolvedor do pacote e o nó personalizado é colocado nesse grupo. Podemos começar a usá-lo imediatamente.
 
-\![](<../../.gitbook/assets/package introduction - installing a package 03.jpg>)
+\![](<../images/package introduction - installing a package 03.jpg>)
 
 Use **Code Block** para definir rapidamente um eixo retangular, gere a saída do resultado para um nó **Polygon.ByPoints** e, subsequentemente, um nó **Surface.ByPatch** para visualizar a lista de painéis retangulares que você acabou de criar.
 
-\![](<../../.gitbook/assets/package introduction - installing a package 04.jpg>)
+\![](<../images/package introduction - installing a package 04.jpg>)
 
 ### Pasta Instalar pacote – DynamoUnfold
 
@@ -36,23 +36,23 @@ Como no exemplo acima, comece selecionando _Pacotes > Package Manager..._
 
 Desta vez, vamos procurar _“DynamoUnfold”_, uma palavra. Quando os pacotes forem exibidos, faça o download clicando em Instalar para adicionar o Dynamo Unfold à biblioteca do Dynamo.
 
-<figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/unfold.png" alt=""><figcaption></figcaption></figure>
 
 Na biblioteca do Dynamo, temos um grupo _DynamoUnfold_ com várias categorias e vários nós personalizados.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 02.jpg>)
+\![](<../images/package introduction - installing package folder 02.jpg>)
 
 Agora, vamos analisar a estrutura de arquivos do pacote.
 
 1. Primeiro, vá para Pacotes > Package Manager > Pacotes instalados.
-2. Ao lado de DynamoUnfold, selecione o menu de opções <img src="../../.gitbook/assets/package introduction - vertical dots menu.png" alt="" data-size="line">.
+2. Ao lado de DynamoUnfold, selecione o menu de opções <img src="../images/package introduction - vertical dots menu.png" alt="" data-size="line">.
 3. Em seguida, clique em Mostrar diretório raiz para abrir a pasta raiz desse pacote.
 
-<figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/view-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Isso nos leva ao diretório raiz do pacote. Observe que temos três pastas e um arquivo.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 05.jpg>)
+\![](<../images/package introduction - installing package folder 05.jpg>)
 
 > 1. A pasta _bin_ contém os arquivos .dll. Esse pacote do Dynamo foi desenvolvido usando a funcionalidade Sem toque; por isso, os nós personalizados são mantidos nessa pasta.
 > 2. A pasta _dyf_ contém os nós personalizados. Esse pacote não foi desenvolvido usando os nós personalizados do Dynamo; portanto, a pasta está vazia para esse pacote.
@@ -63,11 +63,11 @@ Abrindo a pasta “extra”, vemos muitos arquivos de exemplo que foram obtidos 
 
 Vamos abrir “SphereUnfold”.
 
-![](../../.gitbook/assets/rd2.jpg)
+![](../images/rd2.jpg)
 
 Após abrir o arquivo e pressionar “Executar” no solucionador, teremos uma esfera desdobrada. Arquivos de exemplo como esses são úteis para saber como trabalhar com um novo pacote do Dynamo.
 
-\![](<../../.gitbook/assets/packageintroduction-installingpackagefolder07 (1).jpg>)
+![](<../images/packageintroduction-installingpackagefolder07.jpg>)
 
 ### Procurar e visualizar informações dos pacotes
 
@@ -81,13 +81,13 @@ Também é possível acessar mais detalhes em cada pacote clicando em Exibir det
 
 Outra forma de descobrir pacotes do Dynamo é explorar o site do [Dynamo Package Manager](http://dynamopackages.com). Aqui, você pode encontrar dependências do pacote e informações de compatibilidade de hospedeiros/versões fornecidas pelos autores do pacote. Também é possível fazer o download dos arquivos do pacote no Dynamo Package Manager, mas fazer isso diretamente no Dynamo é um processo mais intuitivo.
 
-![](../../.gitbook/assets/dpm2.jpg)
+![](../images/dpm2.jpg)
 
 ### Onde estão armazenados os arquivos dos pacotes localmente?
 
 Se você quiser ver onde os arquivos dos pacotes estão armazenados, na parte superior da navegação, clique em Dynamo > Preferências > Configurações do pacote > Localizações dos arquivos de nós e pacotes. Você poderá encontrar o diretório da pasta raiz atual aqui.
 
-\![](<../../.gitbook/assets/package introduction - installing package folder 08.png>)
+\![](<../images/package introduction - installing package folder 08.png>)
 
 Por padrão, os pacotes são instalados em uma localização similar a este caminho de pasta: _C:/Usuários/[nome de usuário]/AppData/Roaming/Dynamo/[versão do Dynamo]_.
 

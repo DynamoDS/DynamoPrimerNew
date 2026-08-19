@@ -8,7 +8,7 @@ Embora não seja estritamente uma geometria, o CoordinateSystem é uma ferrament
 
 Criar um CoordinateSystem centralizado em um ponto com x = 0, y = 0, z = 0, sem rotações, escala ou transformações de cisalhamento, requer simplesmente a chamada do construtor Identity:
 
-![](../../.gitbook/assets/GeometricPrimitives_01.png)
+![](../images/GeometricPrimitives_01.png)
 
 ```js
 // create a CoordinateSystem at x = 0, y = 0, z = 0,
@@ -19,7 +19,7 @@ cs = CoordinateSystem.Identity();
 
 Os CoordinateSystems com transformações geométricas estão fora do escopo deste capítulo, embora outro construtor permita criar um sistema de coordenadas em um ponto específico, _CoordinateSystem.ByOriginVectors_:
 
-![](../../.gitbook/assets/GeometricPrimitives_02.png)
+![](../images/GeometricPrimitives_02.png)
 
 ```js
 // create a CoordinateSystem at a specific location,
@@ -41,7 +41,7 @@ A primitiva geométrica mais simples é um Ponto, representando uma localizaçã
 
 Este exemplo mostra pontos criados em vários sistemas de coordenadas:
 
-![](../../.gitbook/assets/GeometricPrimitives_03.png)
+![](../images/GeometricPrimitives_03.png)
 
 ```js
 // create a point with x, y, and z coordinates
@@ -77,7 +77,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
 
 A próxima primitiva dimensional superior do Dynamo é um segmento de linha, representando um número infinito de pontos entre dois pontos finais. É possível criar as linhas explicitamente especificando os dois pontos de limite com o construtor _Line.ByStartPointEndPoint_ ou especificando um ponto inicial, uma direção e um comprimento nessa direção, _Line.ByStartPointDirectionLength_.
 
-![](../../.gitbook/assets/GeometricPrimitives_04.png)
+![](../images/GeometricPrimitives_04.png)
 
 ```js
 p1 = Point.ByCoordinates(-2, -5, -10);
@@ -96,7 +96,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
 
 O Dynamo tem objetos que representam os tipos mais básicos de primitivas geométricas em três dimensões: cuboides, criados com _Cuboid.ByLengths_; cones, criados com _Cone.ByPointsRadius_ e _Cone.ByPointsRadii_; cilindros, criados com _Cylinder.ByRadiusHeight_; e esferas, criadas com _Sphere.ByCenterPointRadius_.
 
-![](../../.gitbook/assets/GeometricPrimitives_05.png)
+![](../images/GeometricPrimitives_05.png)
 
 ```js
 // create a cuboid with specified lengths

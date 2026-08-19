@@ -2,7 +2,7 @@
 
 Antes deste capítulo, a introdução abordou como implementar os recursos avançados de scripts visuais do Dynamo. Uma boa compreensão desses recursos é uma base sólida e a primeiro etapa para criação de programas visuais robustos. Quando usamos nossos programas visuais no campo, os compartilhamos com colegas, solucionamos erros ou testamos limites adicionais com os quais você precisa lidar. Se outra pessoa usar seu programa no futuro ou se você estiver esperando abri-lo daqui a seis meses, ele precisará ter uma clareza gráfica e lógica imediata. O Dynamo tem muitas ferramentas para gerenciar a complexidade do programa, e este capítulo fornecerá diretrizes sobre quando usá-las.
 
-![grupos](../.gitbook/assets/cad-chart-visual.jpg)
+![grupos](images/cad-chart-visual.jpg)
 
 ## Reduzir a complexidade
 
@@ -15,7 +15,7 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
 * É possível alterar a **cor do grupo para diferenciar** o que os grupos estão fazendo (entradas versus funções)
 * É possível usar grupos para iniciar a **organização do gráfico para simplificar a criação do nó personalizado**
 
-![](../.gitbook/assets/graphstrategy2.png)
+![](images/graphstrategy2.png)
 
 > As cores deste programa identificam o propósito de cada grupo. Essa estratégia pode ser usada para criar hierarquia em qualquer norma gráfica ou modelo que você desenvolver.
 >
@@ -30,7 +30,7 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
 * Às vezes, é possível usar um bloco de código para **digitar um método de nó ou número mais rapidamente do que pesquisando** (Point.ByCoordinates, Number, String, Formula)
 * Os blocos de código são úteis **quando você deseja definir funções personalizadas no DesignScript para reduzir o número de nós em um gráfico**
 
-![](../.gitbook/assets/graphstrategy3.png)
+![](images/graphstrategy3.png)
 
 > Tanto 1 quanto 2 executam a mesma função. Era muito mais rápido escrever algumas linhas de código do que procurar e adicionar cada nó individualmente. O bloco de código também é muito mais conciso.
 >
@@ -53,7 +53,7 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
   * É mais difícil de entender para outros usuários
   * Não há uma forma fácil de retornar à versão de programação visual
 
-![](../.gitbook/assets/graphstrategy3_1.png)
+![](images/graphstrategy3_1.png)
 
 > 1. Programa existente
 > 2. Bloco de código criado usando Nó para código
@@ -65,7 +65,7 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
 * O uso do recurso List@Level pode ajudar a **reduzir a complexidade do gráfico substituindo os nós List.Map e List.Combine**, que podem ocupar um volume considerável de espaço da tela
 * O recurso List@Level oferece uma** forma mais rápida do que List.Map/List.Combine para criar a lógica do nó** permitindo acessar dados em qualquer nível de uma lista diretamente da porta de entrada de um nó
 
-![](../.gitbook/assets/graphstrategy4.png)
+![](images/graphstrategy4.png)
 
 > É possível verificar quantos valores verdadeiros BoundingBox.Contains retorna e em quais listas, ativando List@Level para a entrada de “lista” de CountTrue. O recurso List@Level permite que o usuário determine de qual nível a entrada extrairá os dados. O uso de List@Level é flexível, eficiente e altamente recomendável em relação a outros métodos que envolvem List.Map e List.Combine.
 >
@@ -84,7 +84,7 @@ Além de tornar o gráfico o mais simples e eficiente possível, tente obter mai
 * Se outras pessoas estiverem trabalhando com o gráfico, você deverá **garantir que o layout fio/nó flua com facilidade antes do envio**
 * Para ajudar com o alinhamento, **use o recurso “Limpeza do layout do nó” para alinhar automaticamente** o gráfico, porém de forma menos precisa do que se você fizesse isso manualmente
 
-\![](<../.gitbook/assets/graphstrategy5 (1).png>)
+![](<images/graphstrategy5.png>)
 
 > 1. Gráfico não organizado
 > 2. Gráfico alinhado
@@ -96,7 +96,7 @@ Além de tornar o gráfico o mais simples e eficiente possível, tente obter mai
 * A renomeação de entradas poderá ajudar outras pessoas a entender facilmente o gráfico, **principalmente se o item a que elas se conectam estiver fora da tela**
 * **Tenha cuidado ao renomear nós que não sejam entradas.** Uma alternativa para isso é criar um nó personalizado de um cluster de nós e renomeá-lo; assim, ficará subentendido que ele contém outra coisa
 
-![](../.gitbook/assets/graphstrategy6.png)
+![](images/graphstrategy6.png)
 
 > 1. Entradas para manipulação de superfície
 > 2. Entradas para parâmetros arquitetônicos
@@ -109,7 +109,7 @@ Além de tornar o gráfico o mais simples e eficiente possível, tente obter mai
 * Adicione uma nota se algo no **gráfico necessitar de uma explicação em linguagem simples** que os nós não podem expressar
 * Você deverá adicionar uma nota se um conjunto de **nós ou um grupo for muito grande ou complexo e não puder ser facilmente compreendido de imediato**
 
-![](../.gitbook/assets/graphstrategy7.png)
+![](images/graphstrategy7.png)
 
 > 1. Uma nota que descreve a parte do programa que retorna as distâncias brutas de conversão
 > 2. Uma nota que descreve o código que mapeia esses valores para uma onda sinusoidal
@@ -124,7 +124,7 @@ Ao criar o script visual, é importante verificar se o que está sendo retornado
 
 * Use balões de visualização ou inspeção durante a criação do programa para **verificar se as saídas principais estão retornando o que você esperava**
 
-![](../.gitbook/assets/graphstrategy8.png)
+![](images/graphstrategy8.png)
 
 > Os nós de inspeção são usados para comparar:
 >
@@ -155,7 +155,7 @@ Ao criar o script visual, é importante verificar se o que está sendo retornado
 * Você deverá usar um nó personalizado **quando uma parte do gráfico for reutilizada com frequência** em outros programas
 * Você deverá usar um nó personalizado se desejar **compartilhar uma funcionalidade com a comunidade do Dynamo**
 
-![](../.gitbook/assets/graphstrategy9.png)
+![](images/graphstrategy9.png)
 
 > A coleta do programa de conversão de pontos em um nó personalizado torna portátil e muito mais fácil de entender um programa robusto e exclusivo. Portas de entrada bem nomeadas ajudarão outros usuários a entender como usar o nó. Lembre-se de adicionar descrições e tipos de dados necessários a cada entrada.
 >
@@ -170,7 +170,7 @@ Ao criar o script visual, é importante verificar se o que está sendo retornado
 * Durante a criação de um modelo, é possível padronizar **as cores de grupo e os tamanhos de fonte** para categorizar os tipos de fluxos de trabalho ou as ações de dados.
 * Durante a criação de um modelo, é possível até mesmo padronizar como você quer **definir legendas, cores ou estilos para diferenciar entre os fluxos de trabalho de front-end e back-end** no gráfico.
 
-![](../.gitbook/assets/graphstrategy10.png)
+![](images/graphstrategy10.png)
 
 > 1. A interface do usuário, ou o front-end, do programa inclui um nome de projeto, controles deslizantes de entrada e geometria de importação.
 > 2. O back-end do programa.
@@ -184,40 +184,40 @@ Ao criar o script visual, é importante verificar se o que está sendo retornado
 
 Agora que estabelecemos várias práticas recomendadas, vamos aplicá-las a um programa que foi montado rapidamente. Embora o programa seja bem-sucedido na geração do telhado, o estado do gráfico é um “mapa mental” do autor. Ele não possui nenhuma organização ou descrição de seu uso. Vamos examinar as práticas recomendadas para organizar, descrever e analisar o programa de modo que outros usuários possam entender como usá-lo.
 
-![](../.gitbook/assets/graphstrategy11.png)
+![](images/graphstrategy11.png)
 
 > O programa está funcionando, mas o gráfico está desorganizado.
 
 Vamos começar determinando os dados e a geometria retornados pelo programa.
 
-![](../.gitbook/assets/graphstrategy12.png)
+![](images/graphstrategy12.png)
 
 > A compreensão de quando ocorrem as principais alterações nos dados é crucial para estabelecer divisões lógicas ou modularidade. Tente inspecionar o restante do programa com os nós de inspeção para ver se é possível determinar grupos antes de passar para a próxima etapa.
 >
 > 1. Esse **bloco de código** com uma equação matemática se parece com uma parte crucial do programa. Um nó de **inspeção** mostra que ele está retornando listas de distâncias de conversão.
-> 2. O objetivo dessa área não é evidente. A disposição dos valores True no nível de lista L2 de **BoundingBox.Contains** e a presença de **List.FilterByBoolMask** sugerem que estamos fazendo uma amostragem de uma parte do eixo de pontos.
+> 2. O objetivo dessa área não é evidente. A disposição dos valores True no nível de lista L2 de **BoundingBox.Contains** e a presença de **List.FilterByBoolMask** sugerem que estamos fazendo uma amostragem de uma parte da grade de pontos.
 
 Quando entendermos as partes elementares do programa, vamos colocá-las em grupos.
 
-![](../.gitbook/assets/graphstrategy13.png)
+![](images/graphstrategy13.png)
 
 > Os grupos permitem que o usuário diferencie visualmente as partes do programa.
 >
 > 1. Importar o modelo de terreno 3D
-> 2. Converter o eixo de pontos com base na equação de seno
-> 3. Parte de exemplo do eixo de pontos
+> 2. Converter a grade de ponto com base na equação de seno
+> 3. Parte de exemplo da grade de pontos
 > 4. Criar a superfície de telhado arquitetônico
 > 5. Criar a parede cortina de vidro
 
 Com os grupos estabelecidos, alinhe os nós para criar a continuidade visual no gráfico.
 
-![](../.gitbook/assets/graphstrategy14.png)
+![](images/graphstrategy14.png)
 
 > A continuidade visual ajuda o usuário a ver o fluxo do programa e as relações implícitas entre os nós.
 
 Torne o programa mais acessível adicionando mais uma camada de melhorias gráficas. Adicione notas para descrever como funciona uma área específica do programa, atribua nomes personalizados às entradas e atribua cores a diferentes tipos de grupos.
 
-![](../.gitbook/assets/graphstrategy15.png)
+![](images/graphstrategy15.png)
 
 > Essas melhorias gráficas dão mais informações ao usuário sobre o que o programa está fazendo. As diferentes cores de grupo ajudam a diferenciar as entradas das funções.
 >
@@ -226,7 +226,7 @@ Torne o programa mais acessível adicionando mais uma camada de melhorias gráfi
 
 Antes de começarmos a condensar o programa, vamos encontrar uma localização estratégica para introduzir o simulador de drenagem do script do Python. Conecte a saída da primeira superfície de telhado dimensionado à respectiva entrada de script.
 
-![](../.gitbook/assets/graphstrategy16.png)
+![](images/graphstrategy16.png)
 
 > Escolhemos integrar scripts neste ponto no programa para que a simulação de drenagem possa ser executada na superfície original de telhado único. Essa superfície específica não está sendo visualizada, mas nos poupa a necessidade de escolher a superfície superior da PolySurface chanfrada.
 >
@@ -237,23 +237,23 @@ Antes de começarmos a condensar o programa, vamos encontrar uma localização e
 
 Vamos simplificar o gráfico agora que tudo está em seu devido lugar.
 
-![](../.gitbook/assets/graphstrategy17.png)
+![](images/graphstrategy17.png)
 
 > A condensação do nosso programa com Nó para código e Nó personalizado reduziu consideravelmente o tamanho do gráfico. Os grupos que criam a superfície do telhado e as paredes foram convertidos em código, já que são muito específicos deste programa. O grupo de conversão de pontos está contido em um Nó personalizado, pois ele pode ser usado em outro programa. No arquivo de exemplo, crie seu próprio nó personalizado com base no grupo de conversão de pontos.
 >
-> 1. Nó personalizado para conter o grupo “converter eixo de pontos”
+> 1. Nó personalizado para conter o grupo “converter grade de pontos”
 > 2. Nó para código para condensar os grupos “criar superfície de telhado arquitetônico e parede cortina”
 
 Como etapa final, crie predefinições de formas de telhado exemplares.
 
-![](../.gitbook/assets/graphstrategy18.png)
+![](images/graphstrategy18.png)
 
 > Essas entradas são os principais acionadores da forma do telhado e ajudarão os usuários a ver o potencial do programa.
 
 Nosso programa com vistas de duas predefinições.
 
-![](../.gitbook/assets/graphstrategy19.png)
+![](images/graphstrategy19.png)
 
-![](../.gitbook/assets/graphstrategy20.png)
+![](images/graphstrategy20.png)
 
 > Os padrões de drenagem do telhado fornecem ao usuário uma vista analítica das predefinições respectivas.

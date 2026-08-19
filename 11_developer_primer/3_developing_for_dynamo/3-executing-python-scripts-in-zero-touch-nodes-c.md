@@ -4,7 +4,7 @@
 
 Se você estiver familiarizado com a escrita de scripts no Python e desejar mais funcionalidade dos nós padrão do Dynamo Python, poderemos usar o recurso Sem toque para criar nossos próprios. Vamos começar com um exemplo simples que nos permite passar um script Python como uma sequência de caracteres para um nó Sem toque, onde o script é executado e um resultado é retornado. Este estudo de caso será baseado nos tutoriais virtuais e nos exemplos na seção Introdução. Consulte os exemplos se você for completamente novo na criação de nós Sem toque.
 
-![Um nó Sem toque que executará uma sequência de caracteres de script Python](../../.gitbook/assets/python-case-study.png)
+![Um nó Sem toque que executará uma sequência de caracteres de script Python](../images/python-case-study.png)
 
 > Um nó Sem toque que executará uma sequência de caracteres de script Python
 
@@ -68,7 +68,7 @@ output = str(volume)
 
 Uma limitação dos nós Python padrão é que eles têm somente uma única porta de saída, portanto, se desejarmos retornar vários objetos, deveremos criar uma lista e recuperar cada objeto. Se modificarmos o exemplo acima para retornar um dicionário, poderemos adicionar quantas portas de saída desejarmos. Consulte a seção Retornar vários valores em “Aprofundar o conhecimento sobre o nó Sem toque” para obter informações mais específicas sobre os dicionários.
 
-![Esse nó está nos permitindo retornar o volume do cuboide e seu centroide.](../../.gitbook/assets/python-multi-case-study.png)
+![Esse nó está nos permitindo retornar o volume do cuboide e seu centroide.](../images/python-multi-case-study.png)
 
 > Esse nó está nos permitindo retornar o volume do cuboide e seu centroide.
 

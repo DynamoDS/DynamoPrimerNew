@@ -8,7 +8,7 @@ As cores no Dynamo são criadas usando entradas ARGB. Isso corresponde aos canai
 
 | Ícone                                          | Nome (Sintaxe)                 | Entradas  | Saídas |
 | --------------------------------------------- | ----------------------------- | ------- | ------- |
-| \![](<../../.gitbook/assets/Color byARGB.jpg>) | Cor ARGB (**Color.ByARGB**) | A,R,G,B | cor   |
+| \![](<../images/Color byARGB.jpg>) | Cor ARGB (**Color.ByARGB**) | A,R,G,B | cor   |
 
 ### Consultar os valores de cor
 
@@ -16,19 +16,19 @@ As cores na tabela abaixo consultam as propriedades usadas para definir a cor: A
 
 | Ícone                                             | Nome (Sintaxe)                     | Entradas | Saídas    |
 | ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| \![](<../../.gitbook/assets/Color Alpha.jpg>)     | Alfa (**Color.Alpha**)           | cor  | A          |
-| \![](<../../.gitbook/assets/Color Red.jpg>)       | Vermelho (**Color.Red**)               | cor  | R          |
-| \![](<../../.gitbook/assets/Color Green.jpg>)     | Verde (**Color.Green**)           | cor  | G          |
-| \![](<../../.gitbook/assets/Color Blue.jpg>)      | Azul (**Color.Blue**)             | cor  | B          |
-| \![](<../../.gitbook/assets/Color Component.jpg>) | Componentes (**Color.Components**) | cor  | A, R, G, B |
+| \![](<../images/Color Alpha.jpg>)     | Alfa (**Color.Alpha**)           | cor  | A          |
+| \![](<../images/Color Red.jpg>)       | Vermelho (**Color.Red**)               | cor  | R          |
+| \![](<../images/Color Green.jpg>)     | Verde (**Color.Green**)           | cor  | G          |
+| \![](<../images/Color Blue.jpg>)      | Azul (**Color.Blue**)             | cor  | B          |
+| \![](<../images/Color Component.jpg>) | Componentes (**Color.Components**) | cor  | A, R, G, B |
 
 As cores na tabela abaixo correspondem ao **espaço de cores HSB**. A divisão das cores em matiz, saturação e brilho é, sem dúvida, algo mais intuitivo para a maneira como interpretamos as cores: qual deve ser a cor? Quão colorido deve ser? E quão clara ou escura deve ser a cor? Este é o detalhamento de matiz, saturação e brilho, respectivamente.
 
 | Ícone                                                  | Nome (Sintaxe)                     | Entradas | Saídas    |
 | ----------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| \![](<../../.gitbook/assets/Color Hue.jpg>)            | Matiz (**Color.Hue**)               | cor  | Matiz        |
-| \![](<../../.gitbook/assets/Color Saturation (1).jpg>) | Saturação (**Color.Saturation**) | cor  | Saturação |
-| \![](<../../.gitbook/assets/Color Brightness.jpg>)     | Brilho (**Color.Brightness**) | cor  | Brilho |
+| \![](<../images/Color Hue.jpg>)            | Matiz (**Color.Hue**)               | cor  | Matiz        |
+| \![](<../images/Color Saturation.jpg>) | Saturação (**Color.Saturation**) | cor  | Saturação |
+| \![](<../images/Color Brightness.jpg>)     | Brilho (**Color.Brightness**) | cor  | Brilho |
 
 ### Faixa de cores
 
@@ -36,7 +36,7 @@ A faixa de cores é similar ao nó **Remap Range** do exercício [\#part-ii-from
 
 O nó atual funciona bem, mas pode ser um pouco estranho fazer com que tudo funcione da primeira vez. A melhor forma de se familiarizar com o gradiente de cores é testar o resultado de forma interativa. Vamos fazer um exercício rápido para rever como configurar um gradiente com cores de saída correspondentes aos números.
 
-\![](<../../.gitbook/assets/color - color range.jpg>)
+\![](<../images/color - color range.jpg>)
 
 > 1. Definir três cores: usando um nó **Code Block** defina _vermelho, verde_ e _azul_ inserindo as combinações apropriadas de _0_ e _255_.
 > 2. **Criar lista:** mescle as três cores em uma lista.
@@ -47,13 +47,13 @@ O nó atual funciona bem, mas pode ser um pouco estranho fazer com que tudo func
 
 O nó **Display.ByGeometry** fornece a capacidade de colorir a geometria na viewport do Dynamo. Isso é útil para separar diferentes tipos de geometria, demonstrando um conceito paramétrico ou definindo uma legenda de análise para simulação. As entradas são simples: geometria e cor. Para criar um gradiente como a imagem acima, a entrada de cor é conectada ao nó **Color** **Range**.
 
-\![](<../../.gitbook/assets/color - color preview.jpg>)
+\![](<../images/color - color preview.jpg>)
 
 ### Cor em superfícies
 
 O nó **Display.BySurfaceColors** fornece a capacidade de mapear dados em uma superfície usando a cor. Essa funcionalidade apresenta algumas possibilidades interessantes para visualizar os dados obtidos por meio de análise discreta, como solar, energia e proximidade. A aplicação de cor a uma superfície no Dynamo é semelhante à aplicação de uma textura a um material em outros ambientes CAD. Vamos demonstrar como usar essa ferramenta no breve exercício abaixo.
 
-\![](<../../.gitbook/assets/12 (1).jpg>)
+![](<../images/12.jpg>)
 
 ## Exercício
 
@@ -67,14 +67,14 @@ O nó **Display.BySurfaceColors** fornece a capacidade de mapear dados em uma su
 
 Este exercício foca no controle de cores parametricamente em paralelo com a geometria. A geometria é uma hélice básica, que definimos abaixo usando o **Bloco de código**. Essa é uma maneira rápida e fácil de criar uma função paramétrica; e, como nosso foco está na cor (e não na geometria), usamos o bloco de código para criar a hélice de forma eficiente sem sobrecarregar a tela. Usaremos o bloco de código com mais frequência à medida que o manual passar a abordar um material mais avançado.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 01.jpg>)
+\![](<../images/color - basic helix with colors 01.jpg>)
 
 > 1. **Code Block:** define os dois blocos de código com as fórmulas acima. Esse é um método paramétrico rápido para criar uma espiral.
 > 2. **Point.ByCoordinates**: conecta as três saídas do bloco de código às coordenadas do nó.
 
 Agora, vemos uma matriz de pontos criando uma hélice. A próxima etapa é criar uma curva através dos pontos de forma que possamos visualizar a hélice.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 02.jpg>)
+\![](<../images/color - basic helix with colors 02.jpg>)
 
 > 1. **PolyCurve.ByPoints:** conecta a saída **Point.ByCoordinates** à entrada _pontos_ do nó. Obtemos uma curva helicoidal.
 > 2. **Curve.PointAtParameter:** conecta a saída **PolyCurve.ByPoints** à entrada _curva_. O propósito dessa etapa é criar um ponto paramétrico atrativo que desliza ao longo da curva. Como a curva está avaliando um ponto no parâmetro, precisaremos inserir um valor de _parâmetro_ entre 0 e 1.
@@ -82,14 +82,14 @@ Agora, vemos uma matriz de pontos criando uma hélice. A próxima etapa é criar
 
 Com o ponto de referência criado, agora comparamos a distância do ponto de referência com os pontos originais que definem a hélice. Esse valor de distância determinará a geometria e a cor.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 03.jpg>)
+\![](<../images/color - basic helix with colors 03.jpg>)
 
 > 1. **Geometry.DistanceTo:** conecta a saída **Curve.PointAtParameter** à _entrada_. Conecte **Point.ByCoordinates** à entrada da geometria.
 > 2. **Inspeção:** o resultado mostra uma lista de distâncias entre cada ponto helicoidal e o ponto de referência ao longo da curva.
 
 A próxima etapa é determinar os parâmetros com a lista de distâncias, entre os pontos helicoidais e o ponto de referência. Usamos esses valores de distância para definir os raios de uma série de esferas ao longo da curva. Para manter as esferas em um tamanho adequado, precisamos _remapear_ os valores da distância.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 04.jpg>)
+\![](<../images/color - basic helix with colors 04.jpg>)
 
 > 1. **Math.RemapRange:** conecta a saída **Geometry.DistanceTo** à entrada dos números.
 > 2. **Bloco de código:** conecta um bloco de código com um valor de _0,01_ à entrada _newMin_ e um bloco de código com um valor de _1_ à entrada _newMax_.
@@ -97,41 +97,41 @@ A próxima etapa é determinar os parâmetros com a lista de distâncias, entre 
 
 Essa etapa remapeou a lista de distâncias para um intervalo menor. Podemos editar os valores _newMin_ e _newMax_, conforme necessário. Os valores serão remapeados e terão a mesma _relação de distribuição_ em todo o domínio.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 05.jpg>)
+\![](<../images/color - basic helix with colors 05.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius:** conecta a saída **Math.RemapRange** à entrada _raio_ e a saída original **Point.ByCoordinates** à entrada _centerPoint_.
 
 Altere o valor do controle deslizante de número e observe o tamanho das esferas atualizadas. Agora, temos um modelo paramétrico
 
-\![](<../../.gitbook/assets/color - basic helix with colors 06.gif>)
+\![](<../images/color - basic helix with colors 06.gif>)
 
 O tamanho das esferas demonstra a matriz paramétrica definida por um ponto de referência ao longo da curva. Vamos usar o mesmo conceito para o raio da esfera para determinar sua cor.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 07.jpg>)
+\![](<../images/color - basic helix with colors 07.jpg>)
 
 > 1. **Color Range:** adiciona a parte superior da tela. Quando passamos o cursor sobre a entrada _valor_, notamos que os números solicitados estão entre 0 e 1. Precisamos remapear os números da saída **Geometry.DistanceTo** para que sejam compatíveis com esse domínio.
 > 2. **Sphere.ByCenterPointRadius:** por enquanto, vamos desativar a visualização nesse nó (_clique com o botão direito do mouse > Visualização_).
 
-\![](<../../.gitbook/assets/color - basic helix with colors 08.jpg>)
+\![](<../images/color - basic helix with colors 08.jpg>)
 
 > 1. **Math.RemapRange:** esse processo deverá ser familiar. Conecte a saída **Geometry.DistanceTo** à entrada de números.
 > 2. **Bloco de código:** de forma semelhante a uma etapa anterior, crie um valor de _0_ para a entrada _newMin_ e um valor de _1_ para a entrada _newMax_. Neste caso, observe que podemos definir duas saídas de um único bloco de código.
 > 3. **Color Range:** conecte a saída **Math.RemapRange** à entrada _valor_.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 09.jpg>)
+\![](<../images/color - basic helix with colors 09.jpg>)
 
 > 1. **Color.ByARGB:** esse é o processo para criar duas cores. Embora esse processo possa parecer estranho, é o mesmo que as cores RGB em outro software, estamos apenas usando a programação visual para fazer isso.
 > 2. **Bloco de código:** crie dois valores de _0_ e _255_. Conecte as duas saídas às duas entradas **Color.ByARGB** de acordo com a imagem acima (ou crie as duas cores favoritas).
 > 3. **Faixa de cores:** a entrada _cores_ solicita uma lista de cores. É necessário criar essa lista com base nas duas cores criadas na etapa anterior.
 > 4. **List.Create:** mescla as duas cores em uma lista. Conecte a saída à entrada _cores_ para **Color Range**.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 10.jpg>)
+\![](<../images/color - basic helix with colors 10.jpg>)
 
 > 1. **Display.ByGeometryColor:** conecta **Sphere.ByCenterPointRadius** à entrada _geometria_ e _Color Range_ à entrada _cor_. Agora temos um gradiente suave no domínio da curva.
 
 Se alterarmos o valor do **Controle deslizante de número** anterior na definição, as cores e os tamanhos serão atualizados. As cores e o tamanho do raio estão diretamente relacionados neste caso: agora temos uma ligação visual entre dois parâmetros.
 
-\![](<../../.gitbook/assets/color - basic helix with colors 11.gif>)
+\![](<../images/color - basic helix with colors 11.gif>)
 
 ### Exercício de cor em superfícies
 
@@ -143,12 +143,12 @@ Se alterarmos o valor do **Controle deslizante de número** anterior na definiç
 
 Primeiro, é preciso criar (ou referenciar) uma superfície para usar como uma entrada para o nó **Display.BySurfaceColors**. Neste exemplo, estamos fazendo a transição entre uma curva seno e cosseno.
 
-\![](<../../.gitbook/assets/color - color on surface 01.jpg>)
+\![](<../images/color - color on surface 01.jpg>)
 
 > 1. Esse grupo de nós está criando pontos ao longo do eixo Z e, em seguida, deslocando-os com base nas funções de seno e cosseno. As duas listas de pontos são, em seguida, usadas para gerar curvas NURBS.
 > 2. **Surface.ByLoft**: gera uma superfície interpolada entre a lista de curvas NURBS.
 
-\![](<../../.gitbook/assets/color - color on surface 02.jpg>)
+\![](<../images/color - color on surface 02.jpg>)
 
 > 1. **File Path**: selecione um arquivo de imagem de amostra para obter os dados de pixel a jusante
 > 2. **File.FromPath** para converter o caminho do arquivo em um arquivo e, em seguida, passar para **Image.ReadFromFile** para gerar uma imagem de amostra
@@ -158,4 +158,4 @@ Primeiro, é preciso criar (ou referenciar) uma superfície para usar como uma e
 
 Visualização aproximada da superfície de saída com resolução de 400 x 300 amostras
 
-\![](<../../.gitbook/assets/color - color on surface 03.jpg>)
+\![](<../images/color - color on surface 03.jpg>)

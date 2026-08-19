@@ -6,11 +6,11 @@
 
 A compreensão dos tipos de geometria e [como eles estão relacionados](1-geometry-overview.md#stepping-through-the-hierarchy) permitirá navegar no conjunto de **Nós de geometria** disponíveis na biblioteca. Os nós de geometria são organizados em ordem alfabética, ao contrário da hierarquia; aqui eles são exibidos de forma similar ao layout na interface do Dynamo.
 
-\![](<../../.gitbook/assets/geometry overview - geometry in dynamo.jpg>)
+\![](<../images/geometry overview - geometry in dynamo.jpg>)
 
 Além disso, a criação de modelos no Dynamo e conexão da visualização de plano fundo ao fluxo de dados em nosso gráfico são processos que devem se tornar mais intuitivos com o passar do tempo.
 
-\![](<../../.gitbook/assets/Geometry for Computational Design - Overview.jpg>)
+\![](<../images/Geometry for Computational Design - Overview.jpg>)
 
 > 1. Observe o sistema de coordenadas assumido renderizado pelo eixo e pelos eixos coloridos
 > 2. Os nós selecionados irão renderizar a geometria correspondente (se o nó criar geometria) no plano de fundo, a cor de realce
@@ -25,7 +25,7 @@ Além disso, a criação de modelos no Dynamo e conexão da visualização de pl
 
 A geometria, tradicionalmente definida, é o estudo de forma, tamanho, posição relativa das imagens e as propriedades de espaço. Este campo tem uma história rica que remonta a milhares de anos. Com o advento e a popularização do computador, ganhamos uma poderosa ferramenta na definição, na exploração e na geração de geometria. Agora é muito fácil calcular o resultado de interações geométricas complexas, o fato de que estamos fazendo isso é quase transparente.
 
-![Stanford Bunny](../../.gitbook/assets/StanfordBunny.jpg)
+![Stanford Bunny](../images/StanfordBunny.jpg)
 
 > Se você tem curiosidade em descobrir como a geometria pode ser diversa e complexa com o poder do computador, faça uma pesquisa rápida pelo Stanford Bunny, um modelo tradicional usado para testar algoritmos.
 
@@ -51,7 +51,7 @@ Vamos separar um momento para analisar a relação entre as descrições de geom
 
 A cotagem é uma forma conveniente de começar a classificar a geometria, mas não é necessariamente a melhor. Afinal, não modelamos apenas com pontos, linhas, planos e caixas; e se eu quiser algum modelo curvado? Além disso, há toda uma outra categoria de tipos de geometria que é completamente abstrata, ou seja, define propriedades como orientação, volume ou relações entre as peças. Não podemos considerar um vetor, e então como o definimos em relação ao que vemos no espaço? Uma categorização mais detalhada da hierarquia geométrica deve acomodar a diferença entre Tipos abstratos ou “Auxiliares”, cada um dos quais podemos agrupar pelo que eles ajudam a fazer e os tipos que ajudam a descrever a forma dos elementos do modelo.
 
-![Hierarquia da geometria](../../.gitbook/assets/GeometryHierarchy.jpg)
+![Hierarquia da geometria](../images/GeometryHierarchy.jpg)
 
 ## Aprofundar a geometria
 

@@ -2,7 +2,7 @@
 
 Os seguintes scripts Python geram matrizes de pontos para diversos exemplos. Elas devem ser coladas em um nó de script do Python da seguinte forma:
 
-\![](<../../.gitbook/assets/python points 01.jpg>)
+\![](<../images/python points 01.jpg>)
 
 **python_points_1**
 

@@ -112,7 +112,7 @@ Os nós personalizados são organizados com base no `Category Name` especificado
 **AVISO**\
  O uso da notação de ponto em nomes de nós ou categorias resultará em subcategorias aninhadas adicionais. O `.` funcionará como um delimitador para determinar a hierarquia adicional. Esse é um novo comportamento na biblioteca para o Dynamo 2.0.
 
-![Propriedades do nó personalizado](../../.gitbook/assets/custom-node-properties.jpg)
+![Propriedades do nó personalizado](../images/custom-node-properties.jpg)
 
 O nome da categoria pode ser atualizado posteriormente no arquivo .dyf (XML ou JSON)
 

@@ -1,6 +1,6 @@
 # Posicionamento de serviço
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Dynamo (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Dynamo.gif" alt=""><figcaption></figcaption></figure>
 
 O projeto de engenharia de uma construção habitacional típica envolve o trabalho com várias concessionárias subterrâneas, como esgoto sanitário, drenagem de águas pluviais, água potável ou outras. Este exemplo demonstrará como o Dynamo pode ser usado para desenhar as conexões de serviço de uma linha principal de distribuição até um determinada subdivisão de propriedade (por exemplo, um lote). É comum que todos os lotes exijam uma conexão de serviço, o que introduz um trabalho tedioso significativo para colocar todos os serviços. O Dynamo pode acelerar o processo desenhando automaticamente a geometria necessária com precisão, além de fornecer entradas flexíveis que podem ser ajustadas para se adequarem às normas de órgãos locais.
 
@@ -46,7 +46,7 @@ Nossa primeira etapa é obter a geometria da linha de distribuição principal n
 
 {% hint style="info" %} Se a geometria da curva do Dynamo for nova para você, veja a seção [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Obtenção dos objetos do Civil 3D e união de tudo em uma única PolyCurve</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_DistributionMain.png" alt=""><figcaption><p>Obtenção dos objetos do Civil 3D e união de tudo em uma única PolyCurve</p></figcaption></figure>
 
 ### Obter a geometria da linha do lote
 
@@ -54,7 +54,7 @@ Em seguida, precisamos colocar a geometria de uma linha do lote selecionada no D
 
 Também precisamos lidar com um possível problema que surja. A linha do lote tem um ponto inicial e um ponto final, o que significa que ela tem uma direção. Para que o gráfico produza resultados consistentes, precisamos que todas as linhas do lote tenham uma direção consistente. Podemos levar em conta essa condição diretamente na lógica do gráfico, o que torna o gráfico mais resiliente. 
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Selection (2).png" alt=""><figcaption><p>Seleção de uma linha do lote e certificação de que ela tenha a direção correta</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Selection.png" alt=""><figcaption><p>Seleção de uma linha do lote e certificação de que ela tenha a direção correta</p></figcaption></figure>
 
 > 1. Obtenha os pontos inicial e final da linha do lote.
 > 2. Meça a distância de cada ponto até a linha principal de distribuição e, em seguida, descubra qual distância é maior.
@@ -66,13 +66,13 @@ Também precisamos lidar com um possível problema que surja. A linha do lote te
 
 {% hint style="info" %} Se os sistemas de coordenadas forem algo novo para você, veja a seção [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Criação de pontos de inserção para os medidores de serviço</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Criação de pontos de inserção para os medidores de serviço</p></figcaption></figure>
 
 ### Obter os pontos de conexão
 
 Agora precisamos obter os pontos na linha principal de distribuição que estão mais próximos da localizações do medidor de serviço Isso nos permitirá desenhar as conexões de serviço no espaço do modelo para que elas sempre sejam perpendiculares à linha principal de distribuição. O nó **Geometry.ClosestPointTo** é a solução perfeita.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_GetPerpendicularPoints (1).png" alt="" width="339"><figcaption><p>Obtenção de pontos perpendiculares na linha principal de distribuição</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_GetPerpendicularPoints.png" alt="" width="339"><figcaption><p>Obtenção de pontos perpendiculares na linha principal de distribuição</p></figcaption></figure>
 
 > 1. Essa é a PolyCurve da linha principal de distribuição
 > 2. Esses são os pontos de inserção do medidor de serviço
@@ -81,29 +81,29 @@ Agora precisamos obter os pontos na linha principal de distribuição que estão
 
 A última etapa é efetivamente criar objetos no espaço do modelo. Usaremos os pontos de inserção que geramos anteriormente para criar referências de bloco e, em seguida, usaremos os pontos na linha principal de distribuição para desenhar linhas para as conexões de serviço.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_CreateObjects.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_CreateObjects.png" alt=""><figcaption></figcaption></figure>
 
 ### Resultado
 
 Quando você executar o gráfico, deverá ver novas referências de bloco e linhas de conexão de serviço no espaço do modelo. Tente alterar algumas das entradas e veja como tudo é atualizado automaticamente.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Dynamo (1).gif" alt=""><figcaption><p>Ajuste dos parâmetros de entrada no Dynamo e visualização imediata dos resultados no Civil 3D</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Dynamo.gif" alt=""><figcaption><p>Ajuste dos parâmetros de entrada no Dynamo e visualização imediata dos resultados no Civil 3D</p></figcaption></figure>
 
 ### Bônus: ativar a colocação sequencial
 
 Você pode observar que, após colocar os objetos para uma linha do lote, selecionar uma linha do lote diferente resulta na “movimentação” dos objetos.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Binding.gif" alt=""><figcaption><p>Comportamento quando a vinculação de objetos está ativada</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Binding.gif" alt=""><figcaption><p>Comportamento quando a vinculação de objetos está ativada</p></figcaption></figure>
 
 Esse é o comportamento padrão do Dynamo e é muito útil em muitos casos. No entanto, você pode achar conveniente colocar várias conexões de serviço sequencialmente e fazer com que o Dynamo crie novos objetos a cada execução em vez de modificar os originais. É possível controlar esse comportamento ao alterar as configurações de vinculação de objetos.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Configurações da vinculação de objetos do Dynamo</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Configurações da vinculação de objetos do Dynamo</p></figcaption></figure>
 
 {% hint style="info" %} Veja a seção [object-binding.md](../../advanced-topics/object-binding.md "menção") para obter mais informações. {% endhint %}
 
 Alterar essa configuração forçará o Dynamo a “esquecer” os objetos que cria a cada execução. Veja a seguir um exemplo de como executar o gráfico com a vinculação de objetos desativada usando o **Reprodutor do Dynamo**.
 
-<figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Execução do gráfico usando o Reprodutor do Dynamo e visualização dos resultados no Civil 3D</p></figcaption></figure>
+<figure><img src="../../images/Land_ServicePlacement_Player.gif" alt=""><figcaption><p>Execução do gráfico usando o Reprodutor do Dynamo e visualização dos resultados no Civil 3D</p></figcaption></figure>
 
 {% hint style="info" %} Se o Reprodutor do Dynamo for algo novo para você, veja a seção [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
 

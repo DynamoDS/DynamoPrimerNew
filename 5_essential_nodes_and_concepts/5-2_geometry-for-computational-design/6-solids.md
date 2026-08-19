@@ -10,7 +10,7 @@ Se quisermos criar modelos mais complexos que não possam ser criados com base e
 
 É possível usar [operações booleanas](6-solids.md#boolean-operations) para modificar os sólidos. Vamos usar algumas operações booleanas para criar uma bola pontiaguda.
 
-\![](<../../.gitbook/assets/solids - spiky ball.jpg>)
+\![](<../images/solids - spiky ball.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius**: crie o sólido da base.
 > 2. **Topology.Faces**, **Face.SurfaceGeometry**: consulte as faces do sólido e converta-as em geometria da superfície. Neste caso, a esfera tem apenas uma face.
@@ -29,22 +29,22 @@ Se quisermos criar modelos mais complexos que não possam ser criados com base e
 
 As operações booleanas são complexas e seu cálculo pode ser lento. É possível usar a funcionalidade “congelar” para suspender a execução dos nós selecionados e dos nós a jusante afetados.
 
-\![](<../../.gitbook/assets/solids - freeze node.jpg>)
+\![](<../images/solids - freeze node.jpg>)
 
 > 1. Use o menu de contexto do botão direito do mouse para congelar a operação União de sólidos.
 > 2. O nó selecionado e todos os nós a jusante serão visualizados em um modo duplicado cinza claro, e os fios afetados serão exibidos como linhas tracejadas. A visualização da geometria afetada também será duplicada. Agora é possível alterar os valores anteriores sem calcular a união booleana.
 > 3. Para descongelar os nós, clique com o botão direito do mouse e desmarque Congelar.
 > 4. Todos os nós afetados e as visualizações de geometria associadas serão atualizados e revertidos para o modo de visualização padrão.
 
-{% hint style="info" %} Você pode obter mais informações sobre o congelamento de nós na seção [4_nodes_and_wires](../../4_nodes_and_wires/ "menção"). {% endhint %}
+{% hint style="info" %} Você pode obter mais informações sobre o congelamento de nós na seção [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
 
-## Análise abrangente...
+## Análise abrangente de...
 
 ### Sólidos
 
 Os sólidos consistem em uma ou mais superfícies que contêm volume por meio de um limite fechado que define a “entrada” ou a “saída”. Independentemente de quantas superfícies existem, elas devem formar um volume “hermético” para serem consideradas como um sólido. Os sólidos podem ser criados unindo superfícies ou Polysurfaces ou usando operações como elevação, varredura e revolução. As primitivas Esfera, Cubo, Cone e Cilindro também são sólidos. Um cubo com, pelo menos, uma face removida conta como uma Polysurface, que tem algumas propriedades similares, mas não é um sólido.
 
-![Sólidos](../../.gitbook/assets/Primitives.jpg)
+![Sólidos](../images/Primitives.jpg)
 
 > 1. Um plano é composto por uma única superfície e não é um sólido.
 > 2. Uma esfera é composta por uma superfície, mas _é_ um sólido.
@@ -56,7 +56,7 @@ Os sólidos consistem em uma ou mais superfícies que contêm volume por meio de
 
 Os sólidos são compostos de três tipos de elementos: vértices, arestas e faces. As faces são as superfícies que compõem o sólido. As arestas são as curvas que definem a conexão entre as faces adjacentes e os vértices são os pontos inicial e final dessas curvas. É possível consultar esses elementos usando os nós de topologia.
 
-![Topologia](../../.gitbook/assets/Solid-topology.jpg)
+![Topologia](../images/Solid-topology.jpg)
 
 > 1. Faces
 > 2. Arestas
@@ -66,7 +66,7 @@ Os sólidos são compostos de três tipos de elementos: vértices, arestas e fac
 
 É possível modificar os sólidos arredondando ou chanfrando suas bordas para eliminar os cantos e os ângulos agudos. A operação de chanfro cria uma superfície regular entre duas faces, enquanto o arredondamento é mesclado entre as faces para manter a tangência.
 
-![](../../.gitbook/assets/SolidOperations.jpg)
+![](../images/SolidOperations.jpg)
 
 > 1. Cubo sólido
 > 2. Cubo chanfrado
@@ -81,13 +81,13 @@ As operações booleanas de sólidos são métodos para combinar dois ou mais s�
 3. **Excluir** as partes indesejadas da geometria.
 4. **Unir** tudo novamente.
 
-Isso faz com que os booleanos de sólidos sejam um processo eficaz para economizar tempo. Existem três operações booleanas de sólidos que distinguem quais partes da geometria são mantidas. ![Booleano de sólido](../../.gitbook/assets/SolidBooleans.jpg)
+Isso faz com que os booleanos de sólidos sejam um processo eficaz para economizar tempo. Existem três operações booleanas de sólidos que distinguem quais partes da geometria são mantidas. ![Booleano de sólido](../images/SolidBooleans.jpg)
 
 > 1. **União:** remove as partes sobrepostas dos sólidos e une-as em um único sólido.
 > 2. **Diferença:** subtrai um sólido de outro. O sólido a ser subtraído é chamado de ferramenta. Observe que é possível alternar qual sólido é a ferramenta para manter o volume inverso.
 > 3. **Interseção:** mantém somente o volume de interseção dos dois sólidos.
 
-Além dessas três operações, o Dynamo tem os nós **Solid.DifferenceAll** e **Solid.UnionAll** para executar operações de diferença e união com vários sólidos. ![](../../.gitbook/assets/BooleanAll.jpg)
+Além dessas três operações, o Dynamo tem os nós **Solid.DifferenceAll** e **Solid.UnionAll** para executar operações de diferença e união com vários sólidos. ![](../images/BooleanAll.jpg)
 
 > 1. **UnionAll:** operação de união com esfera e cones virados para fora
 > 2. **DifferenceAll:** operação de diferença com esfera e cones virados para dentro

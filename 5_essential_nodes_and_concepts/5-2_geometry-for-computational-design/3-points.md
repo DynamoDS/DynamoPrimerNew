@@ -10,17 +10,17 @@ Um [ponto](3-points.md#deep-dive-into...) é definido por nada mais que um ou ma
 
 O tipo mais comum de ponto no Dynamo existe em nosso Sistema de coordenadas universais tridimensional e tem três coordenadas [X,Y,Z] (Ponto 3D no Dynamo).
 
-\![](<../../.gitbook/assets/points - 3d point in dynamo.jpg>)
+\![](<../images/points - 3d point in dynamo.jpg>)
 
 Um ponto 2D no Dynamo tem duas coordenadas [X,Y].
 
-\![](<../../.gitbook/assets/points - 2d point in dynamo.jpg>)
+\![](<../images/points - 2d point in dynamo.jpg>)
 
 ### Ponto em curvas e superfícies
 
 Os parâmetros para curvas e superfícies são contínuos e se estendem além da aresta da geometria fornecida. Como as formas que definem o espaço paramétrico residem em um Sistema de coordenadas universais tridimensional, sempre podemos converter uma coordenada paramétrica em uma coordenada “Universal”. O ponto [0,2; 0,5] na superfície, por exemplo, é o mesmo que o ponto [1,8; 2,0; 4,1] nas coordenadas universais.
 
-\![](<../../.gitbook/assets/points - xyz vs coord sys vs uv.jpg>)
+\![](<../images/points - xyz vs coord sys vs uv.jpg>)
 
 > 1. Ponto em coordenadas XYZ universais assumidas
 > 2. Ponto relativo a um determinado sistema de coordenadas (cilíndrico)
@@ -36,7 +36,7 @@ Os parâmetros para curvas e superfícies são contínuos e se estendem além da
 
 Se a geometria é o idioma de um modelo, então os pontos são o alfabeto. Os pontos são a fundação na qual todas as outras geometrias são criadas: precisamos de ao menos dois pontos para criar uma curva, precisamos de ao menos três pontos para criar um polígono ou uma face de malha, e assim por diante. A definição de posição, ordem e relação entre os pontos (tente uma função de seno) nos permite definir uma geometria de ordem superior como as coisas que reconhecemos como círculos ou curvas.
 
-![Ponto para curva](../../.gitbook/assets/PointsAsBuildingBlocks-1.jpg)
+![Ponto para curva](../images/PointsAsBuildingBlocks-1.jpg)
 
 > 1. Um círculo que usa as funções `x=r*cos(t)` e `y=r*sin(t)`
 > 2. Uma curva senoidal que usa as funções `x=(t)` e `y=r*sin(t)`
@@ -45,7 +45,7 @@ Se a geometria é o idioma de um modelo, então os pontos são o alfabeto. Os po
 
 Os pontos também podem existir em um sistema de coordenadas bidimensional. A convenção tem uma notação de letra diferente dependendo do tipo de espaço com que estamos trabalhando: podemos usar [X,Y] em um plano ou [U,V] se estivermos em uma superfície.
 
-![Ponto como coordenadas](../../.gitbook/assets/Coordinates.jpg)
+![Ponto como coordenadas](../images/Coordinates.jpg)
 
 > 1. Um ponto no Sistema de coordenadas euclidianas: [X,Y,Z]
 > 2. Um ponto em um sistema de coordenadas de parâmetro de curva: [t]

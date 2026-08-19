@@ -6,7 +6,7 @@ Esta página de referência estende as melhores práticas descritas em Estratég
 
 As bibliotecas padrão são externas ao Dynamo e estão presentes nas linguagens de programação Python e C# (Zerotouch). O Dynamo também tem seu próprio conjunto de bibliotecas que correspondem diretamente à sua hierarquia de nós, permitindo que o usuário crie qualquer coisa em código que possa ser feito com nós e fios. A seguir está um guia a indicar os acessos fornecidos por cada biblioteca do Dynamo e quando usar uma biblioteca padrão.
 
-![](../.gitbook/assets/textual-programming.jpg)
+![](images/textual-programming.jpg)
 
 **Bibliotecas padrão e bibliotecas do Dynamo**
 

@@ -377,7 +377,7 @@ Se a vinculação de elementos tiver sido ativada, será possível manter o trab
 
 ***
 
-![Criar paredes](../../.gitbook/assets/creates_walls.png)
+![Criar paredes](../images/creates_walls.png)
 
 #### Vinculação de elementos em comparação com rastreamento
 
@@ -466,15 +466,15 @@ Na próxima execução do gráfico, procuramos no rastreamento, encontramos a ID
 
 O fluxo de duas execuções consecutivas do gráfico que cria um único `TraceExampleItem` é assim:
 
-![Primeira chamada](../../.gitbook/assets/Trace-first-call.png)
+![Primeira chamada](../images/Trace-first-call.png)
 
-![Segunda chamada](../../.gitbook/assets/Trace-second-call.png)
+![Segunda chamada](../images/Trace-second-call.png)
 
 A mesma ideia é ilustrada no próximo exemplo com um caso de uso de nó DynamoRevit mais realista.
 
 #### Diagrama de rastreamento
 
-![Etapas de rastreamento](../../.gitbook/assets/trace_diagram.png) – ![Fluxo de rastreamento](../../.gitbook/assets/trace_alt_diagram.png)
+![Etapas de rastreamento](../images/trace_diagram.png) – ![Fluxo de rastreamento](../images/trace_alt_diagram.png)
 
 #### OBSERVAÇÃO:
 
@@ -560,7 +560,7 @@ Fases importantes da execução do construtor em relação à vinculação de el
 
 * Os objetos de rastreamento salvos em versões anteriores ao Dynamo 3.0 são armazenados usando SOAP; portanto, não são compatíveis com versões mais recentes. Os dados de vinculação de elementos salvos anteriormente serão ignorados e a mensagem abaixo será exibida no Dynamo 3.0 e em versões superiores. Os dados de vinculação de elementos serão salvos na próxima vez que você executar e salvar o espaço de trabalho.
 
-![Compatibilidade de vinculação de elementos](../../.gitbook/assets/element_binding_compatibility_message.jpg)
+![Compatibilidade de vinculação de elementos](../images/element_binding_compatibility_message.jpg)
 
 #### O ElementBinding deve estar ativado por padrão?
 
@@ -574,7 +574,7 @@ Em um nível superior, **uma boa maneira de conceituar esses nós é como uma fu
 
 Há vários nós `Selection` no DynamoRevit. Podemos dividi-los em pelo menos dois grupos:
 
-![Nós de seleção do Revit](../../.gitbook/assets/revitSelectionNodes.png)
+![Nós de seleção do Revit](../images/revitSelectionNodes.png)
 
 1.  Seleção da interface do usuário:
 
@@ -602,7 +602,7 @@ Há vários nós `Selection` no DynamoRevit. Podemos dividi-los em pelo menos do
 
 Os fluxos de trabalho no D4C são muito semelhantes à descrição acima para o Revit. Veja dois conjuntos típicos de nós de seleção no D4C:
 
-![Nós de seleção do Civil 3D](../../.gitbook/assets/civilSelectionNodes.png)
+![Nós de seleção do Civil 3D](../images/civilSelectionNodes.png)
 
 ### Problemas:
 
@@ -613,9 +613,9 @@ Os fluxos de trabalho no D4C são muito semelhantes à descrição acima para o 
 
 ### Diagramas de fluxo de dados
 
-![Fluxo de seleção](../../.gitbook/assets/selectModelElement.png)
+![Fluxo de seleção](../images/selectModelElement.png)
 
-![Fluxo de seleção2](../../.gitbook/assets/selectElementFace.png)
+![Fluxo de seleção2](../images/selectElementFace.png)
 
 ### Implementação técnica: (consulte os diagramas acima):
 
@@ -624,7 +624,7 @@ Os nós de seleção são implementados herdando os tipos de `SelectionBase` gen
 * Implementação de um método `BuildOutputAST`. Esse método precisa retornar um AST, que será executado em algum momento no futuro, quando o nó for executado. No caso de nós de seleção, ele deve retornar elementos ou geometria das IDs de elementos. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
 * A implementação do `BuildOutputAST` é uma das partes mais difíceis da implementação de nós `NodeModel`/da interface do usuário. É melhor colocar o máximo de lógica possível em uma função c# e simplesmente incorporar um nó de chamada de função AST no AST. Observe que aqui, o `node` é um nó AST na árvore de sintaxe abstrata, não um nó no gráfico do Dynamo.
 
-![Fluxo de seleção2](../../.gitbook/assets/selectionAST.png)
+![Fluxo de seleção2](../images/selectionAST.png)
 
 * Serialização
   *   Como esses são tipos derivados explícitos do `NodeModel` (não do ZeroTouch), eles também exigem a implementação de um [JsonConstructor] que será usado durante a desserialização do nó em um arquivo .dyn.

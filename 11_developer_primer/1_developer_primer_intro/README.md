@@ -4,7 +4,7 @@
 
 O objetivo deste guia é ajudar você a navegar pela gama de possibilidades de desenvolvimento em C# para o Dynamo, desde como criar nós sem toque até extensões de compilação.
 
-![Origem do Dynamo no GitHub](../../.gitbook/assets/dynamogithub.png)
+![Origem do Dynamo no GitHub](../images/dynamogithub.png)
 
 > Origem do Dynamo no GitHub
 

@@ -12,7 +12,7 @@ Este fluxo de trabalho ensinará o seguinte:
 * Criar e modificar elementos geométricos usando nós.
 * Visualizar os resultados do projeto em tempo real.
 
-![](../../.gitbook/assets/vase1.gif)
+![](../images/vase1.gif)
 
 ## Definição dos nossos objetivos
 
@@ -22,7 +22,7 @@ Digamos que vamos projetar um vaso de argila que leve em conta as práticas de f
 
 Podemos usar uma metodologia semelhante para definir o nosso vaso. Vamos criar quatro círculos com diferentes alturas e raios e depois uma superfície elevando esses círculos.
 
-![](../../.gitbook/assets/vase2.png)
+![](../images/vase2.png)
 
 ## Introdução
 
@@ -34,7 +34,7 @@ Podemos usar uma metodologia semelhante para definir o nosso vaso. Vamos criar q
 
 Precisamos dos nós que representarão a sequência de ações que o Dynamo executará. Como sabemos que estamos tentando criar um círculo, vamos começar localizando um nó que faz isso. Use o campo **Pesquisar** ou navegue através da **Biblioteca** para localizar o nó **Circle.ByCenterPointRadius** e adicione-o ao espaço de trabalho
 
-![](../../.gitbook/assets/vase8.png)
+![](../images/vase8.png)
 
 > 1. Pesquisar > “Círculo...”
 > 2. Selecione > “ByCenterPointRadius”
@@ -42,25 +42,25 @@ Precisamos dos nós que representarão a sequência de ações que o Dynamo exec
 
 Vamos dar uma olhada mais detalhada nesse nó. No lado esquerdo, encontram-se as entradas do nó (_centerPoint_ e _raio_) e, no lado direito, a saída do nó (Círculo). Observe que as saídas têm uma linha azul clara. Isso significa que a entrada tem um valor padrão. Para obter mais informações sobre a entrada, passe o cursor do mouse sobre seu nome. A entrada _raio_ precisa de uma entrada dupla e tem um valor padrão de 1.
 
-![](../../.gitbook/assets/vase10.png)
+![](../images/vase10.png)
 
 Vamos manter o valor padrão de _centerPoint_, mas adicionaremos um **Controle deslizante de número** para controlar o raio. Como fizemos com o nó **Circle.ByCenterPointRadius**, use a biblioteca para procurar o **Controle deslizante de número** e adicioná-lo ao gráfico.
 
 Esse nó é um pouco diferente do nó anterior, pois contém um controle deslizante. É possível usar a interface para alterar o valor de saída do controle deslizante.
 
-\![](<../../.gitbook/assets/vase13 (1).gif>)
+![](<../images/vase13.gif>)
 
 É possível configurar o controle deslizante usando o botão do menu suspenso à esquerda do nó. Vamos limitar o controle deslizante a um valor máximo de 15.
 
-![](../../.gitbook/assets/vase11.png)
+![](../images/vase11.png)
 
 Vamos colocá-lo à esquerda do nó **Circle.ByCenterPointRadius** e conectar ambos os nós selecionando a saída **Controle deslizante de número** e conectando-a à entrada Raio.
 
-![](../../.gitbook/assets/vase12.png)
+![](../images/vase12.png)
 
 Também vamos alterar o nome do controle deslizante de número para “Raio superior”, clicando duas vezes no nome do nó.
 
-![](../../.gitbook/assets/vase14.png)
+![](../images/vase14.png)
 
 ## Próximas etapas
 
@@ -70,7 +70,7 @@ Vamos continuar adicionando alguns nós e conexões à nossa lógica para defini
 
 Vamos copiar esses nós quatro vezes para que os círculos definam nossa superfície. Altere os nomes do Controle deslizante de número, como mostrado abaixo.
 
-\![](<../../.gitbook/assets/vase4 (1).png>)
+![](<../images/vase4.png>)
 
 > 1. Os círculos são criados por um ponto central e um raio
 
@@ -78,11 +78,11 @@ Vamos copiar esses nós quatro vezes para que os círculos definam nossa superf�
 
 Falta um parâmetro-chave para o nosso vaso: a altura. Para controlar a altura do vaso, criamos outro controle deslizante de número. Também adicionamos um nó **Bloco de código**. Os blocos de código podem ajudar durante a adição de fragmentos de código personalizados ao nosso fluxo de trabalho. Usaremos o bloco de código para multiplicar o controle deslizante de altura por diferentes fatores, para que possamos posicionar nossos círculos ao longo da altura do vaso.
 
-\![](<../../.gitbook/assets/vase15 (1).png>)
+![](<../images/vase15.png>)
 
 Em seguida, usamos um nó **Geometry.Translate** para inserir círculos na altura desejada. Como queremos distribuir nossos círculos ao longo do vaso, usamos blocos de código para multiplicar o parâmetro de altura por um fator.
 
-![](../../.gitbook/assets/vase5.png)
+![](../images/vase5.png)
 
 > 2\. Os círculos são convertidos (movidos) por uma variável no eixo z.
 
@@ -92,7 +92,7 @@ Para criar uma superfície usando o nó **Surface.ByLoft**, precisamos combinar 
 
 Também vamos desativar a visualização em outros nós para exibir somente a exibição Surface.ByLoft.
 
-![](../../.gitbook/assets/vase6.png)
+![](../images/vase6.png)
 
 > 3\. Uma superfície é criada elevando os círculos convertidos.
 
@@ -100,6 +100,6 @@ Também vamos desativar a visualização em outros nós para exibir somente a ex
 
 Nosso fluxo de trabalho está pronto. Agora podemos usar os **Controles deslizantes de número** que definimos em nosso script para criar diferentes projetos de vasos.
 
-![](../../.gitbook/assets/vase1.gif)
+![](../images/vase1.gif)
 
-![](../../.gitbook/assets/vase7.png)
+![](../images/vase7.png)

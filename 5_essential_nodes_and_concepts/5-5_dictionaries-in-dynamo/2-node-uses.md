@@ -2,7 +2,7 @@
 
 O Dynamo 2.0 expõe uma variedade de nós de dicionário para serem usados. Isso inclui os nós _criar, ação e consultar_.
 
-\![](<../../.gitbook/assets/dictionary nodes - nodes.jpg>)
+\![](<../images/dictionary nodes - nodes.jpg>)
 
 #### Criar
 
@@ -18,7 +18,7 @@ O Dynamo 2.0 expõe uma variedade de nós de dicionário para serem usados. Iss
 
 5. `Dictionary.ValueAtKey` retornará o valor na chave de entrada.
 
-#### Consultar
+#### Consulta
 
 6. `Dictionary.Count` informará quantos pares de valores-chave estão no dicionário.
 

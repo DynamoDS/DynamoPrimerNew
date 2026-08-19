@@ -6,4 +6,4 @@ A infraestrutura civil é tudo isso e muito mais. Esta seção contém diversos 
 
 Além disso, esses exemplos incorporam práticas recomendadas, que já passaram pelo teste do tempo, para a construção de gráficos sólidos. À medida que você trabalha nos exemplos, recomendamos que se familiarize também com a seção [9_best_practices](../../9\_best\_practices/ "mention") para obter mais ideias sobre como criar gráficos poderosos, flexíveis e sustentáveis.
 
-<figure><img src="../../.gitbook/assets/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../images/aec-bim-infrastructure-design-image_transparent.jpg" alt=""><figcaption></figcaption></figure>

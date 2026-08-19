@@ -12,7 +12,7 @@ No navegador, procure pacotes e visualize as estatísticas: [https://dynamopacka
 
 * No Dynamo, o Gerenciador de pacotes inclui pacotes de instalação, publicação e atualização.
 
-![Procurar pacotes](../../.gitbook/assets/dynamopackagemanager.png)
+![Procurar pacotes](../images/dynamopackagemanager.png)
 
 > 1. Procurar pacotes on-line: `Packages > Search for a Package...`
 > 2. Visualizar/editar pacotes instalados: `Packages > Manage Packages...`
@@ -24,7 +24,7 @@ Os pacotes são publicados do Gerenciador de pacotes no Dynamo. O processo recom
 
 Inicie o Dynamo e selecione `Packages > Publish New Package...` para abrir a janela `Publish a Package`.
 
-![Publicar um pacote](../../.gitbook/assets/dyn-publish-package-add-files.png)
+![Publicar um pacote](../images/dyn-publish-package-add-files.png)
 
 > 1. Selecionar `Add file...` para procurar arquivos para adicionar ao pacote
 > 2. Selecionar os dois arquivos `.dll` no estudo de caso NodeModel
@@ -32,7 +32,7 @@ Inicie o Dynamo e selecione `Packages > Publish New Package...` para abrir a jan
 
 Com os arquivos adicionados ao conteúdo do pacote, atribua um nome, uma descrição e uma versão ao pacote. A publicação de um pacote usando o Dynamo cria automaticamente um arquivo `pkg.json`.
 
-![Configurações do pacote](../../.gitbook/assets/dyn-publish-package.png)
+![Configurações do pacote](../images/dyn-publish-package.png)
 
 > Um pacote pronto para ser publicado.
 >
@@ -41,13 +41,13 @@ Com os arquivos adicionados ao conteúdo do pacote, atribua um nome, uma descri�
 
 Após a publicação de um pacote, os nós estarão disponíveis na biblioteca do Dynamo na categoria `CustomNodeModel`.
 
-![Pacote na biblioteca do Dynamo](../../.gitbook/assets/dyn-publish-package-library.jpg)
+![Pacote na biblioteca do Dynamo](../images/dyn-publish-package-library.jpg)
 
 > 1. O pacote que acabamos de criar na biblioteca do Dynamo
 
 Quando o pacote estiver pronto para publicação on-line, abra o Gerenciador de pacotes, escolha `Publish` e, em seguida, `Publish Online`.
 
-![Publicar um pacote no Gerenciador de pacotes](../../.gitbook/assets/dyn-publish-package-directory.jpg)
+![Publicar um pacote no Gerenciador de pacotes](../images/dyn-publish-package-directory.jpg)
 
 > 1. Para ver como o Dynamo formatou o pacote, clicar nos três pontos verticais à direita de “CustomNodeModel” e escolher “Mostrar diretório raiz”
 > 2. Selecionar `Publish` e, em seguida, `Publish Online` na janela “Publicar um pacote do Dynamo”.
@@ -57,7 +57,7 @@ Quando o pacote estiver pronto para publicação on-line, abra o Gerenciador de 
 
 A atualização de um pacote é um processo semelhante ao da publicação. Abra o Gerenciador de pacotes e selecione `Publish Version...` no pacote que precisa ser atualizado e insira uma versão posterior.
 
-![Publicar uma versão do pacote](../../.gitbook/assets/dyn-publish-package-version.jpg)
+![Publicar uma versão do pacote](../images/dyn-publish-package-version.jpg)
 
 > 1. Selecionar `Publish Version` para atualizar um pacote existente com novos arquivos no diretório raiz e, em seguida, escolher se ele deve ser publicado localmente ou on-line.
 
@@ -69,7 +69,7 @@ Para obter mais informações sobre esses recursos, consulte a postagem do blog 
 
 É possível acessar o cliente Web do Gerenciador de pacotes neste link: [https://dynamopackages.com/](https://dynamopackages.com)
 
-![Cliente Web do gerenciador de pacotes](../../.gitbook/assets/packagemanager-browser.jpg)
+![Cliente Web do gerenciador de pacotes](../images/packagemanager-browser.jpg)
 
 **Atualizar os detalhes do pacote**
 
@@ -82,13 +82,13 @@ Os autores podem editar a descrição do pacote, o link do site e o link do repo
 
 **Observação**: As atualizações podem levar até 15 minutos para serem atualizadas no Gerenciador de pacotes no Dynamo, já que as atualizações de servidor levam algum tempo. Há esforços em andamento para reduzir esse atraso.
 
-![Nova interface do usuário para atualizar os detalhes do pacote para pacotes publicados](../../.gitbook/assets/Package-Manager_Image_5.png)
+![Nova interface do usuário para atualizar os detalhes do pacote para pacotes publicados](../images/Package-Manager_Image_5.png)
 
 **Editar informações de compatibilidade para versões de pacote publicadas**
 
 É possível atualizar as informações de compatibilidade retroativamente para versões de pacotes publicadas anteriormente. Siga estas etapas:
 
-![Editar informações de compatibilidade para pacotes publicados – Etapa 1](../../.gitbook/assets/Package-Manager_Image_6.png)
+![Editar informações de compatibilidade para pacotes publicados – Etapa 1](../images/Package-Manager_Image_6.png)
 
 **Etapa 1:**
 
@@ -100,7 +100,7 @@ Os autores podem editar a descrição do pacote, o link do site e o link do repo
 
 Siga o fluxograma abaixo e consulte a tabela abaixo para entender qual opção funciona melhor para o pacote.
 
-![Qual opção escolher para o fluxo de trabalho “Editar informações de compatibilidade”](../../.gitbook/assets/Package-Manager_Image_7.png)
+![Qual opção escolher para o fluxo de trabalho “Editar informações de compatibilidade”](../images/Package-Manager_Image_7.png)
 
 Vamos usar alguns exemplos para analisar alguns cenários:
 
@@ -110,8 +110,8 @@ Vamos usar alguns exemplos para analisar alguns cenários:
 
 **Exemplo de pacote nº 3** – Kit de ferramentas de malha: esse pacote é um pacote do Dynamo Core que é uma coleção de nós de geometria que não tem dependências de hospedeiro. Então, nesse caso, a alternativa ideal seria a Opção 3. O pacote será mostrado como Compatível no Dynamo e em todos os ambientes de hospedeiro que correspondam ao intervalo de versões e/ou à lista de versões individuais.
 
-![Editar opções de informações de compatibilidade](../../.gitbook/assets/Package-Manager_Image_8.png)
+![Editar opções de informações de compatibilidade](../images/Package-Manager_Image_8.png)
 
 Dependendo da opção selecionada, os campos específicos do Dynamo e/ou do hospedeiro serão exibidos conforme mostrado na imagem abaixo.
 
-![Editar informações de compatibilidade – Etapa 2](../../.gitbook/assets/Package-Manager_Image_9.png)
+![Editar informações de compatibilidade – Etapa 2](../images/Package-Manager_Image_9.png)

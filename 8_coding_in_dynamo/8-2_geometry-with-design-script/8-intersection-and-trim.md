@@ -15,7 +15,7 @@ O método _Intersect_ é definido em todas as partes da geometria no Dynamo, o q
 
 O exemplo a seguir demonstra a interseção de um plano com uma NurbsSurface. A intersecção gera uma matriz NurbsCurve, que pode ser usada como qualquer outra NurbsCurve.
 
-![](../../.gitbook/assets/IntersectionAndTrim_01.png)
+![](../images/IntersectionAndTrim_01.png)
 
 ```js
 // python_points_5 is a set of Points generated with
@@ -40,14 +40,14 @@ O método _Trim_ é muito similar ao método Intersect, pois é definido para qu
 
 |             | _Usando:_ Ponto | Curva | Plano | Superfície | Sólido |
 | ----------- | -------------- | ----- | ----- | ------- | ----- |
-| _Em:_ curva | Sim            | No    | No    | No      | Não    |
+| _Em:_ curva | Sim            | No    | Não    | Não      | Não    |
 | Polígono     | -              | Não    | Sim   | No      | Não    |
 | Superfície     | -              | Sim   | Sim   | Sim     | Sim   |
 | Sólido       | -              | -     | Sim   | Sim     | Sim   |
 
 Algo a ser observado sobre os métodos _Trim_ é o requisito de um ponto de “seleção”, um ponto que determina qual geometria será descartada e quais elementos devem ser mantidos. O Dynamo localiza e descarta a geometria recortada mais próxima do ponto selecionado.
 
-![](../../.gitbook/assets/IntersectionAndTrim_02.png)
+![](../images/IntersectionAndTrim_02.png)
 
 ```js
 // python_points_5 is a set of Points generated with

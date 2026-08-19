@@ -4,7 +4,7 @@
 
 ## Para o Dynamo v2.13 e mais recente
 
-![Logotipo do Dynamo](.gitbook/assets/dynamo_logo_dark-trim.jpg)
+![Logotipo do Dynamo](images/dynamo_logo_dark-trim.jpg)
 
 > O Dynamo é uma plataforma de programação visual de código aberto para projetistas.
 
@@ -37,31 +37,31 @@ O Dynamo Primer é um projeto de código aberto, iniciado por Matt Jezyk e a equ
 
 A **Mode Lab** foi contratada para elaborar a primeira edição do manual. Agradecemos por todos seus esforços no estabelecimento desse recurso valioso.
 
-![](.gitbook/assets/MODELAB_Logo.png)
+![](images/modelab-logo.png)
 
 ***
 
 A **John Pierson of Parallax Team** foi contratada para atualizar o manual para refletir as revisões do Dynamo 2.0.
 
-![](.gitbook/assets/PRLX_Logo.jpg)
+![](images/prlx-logo.jpg)
 
 ***
 
 A **Matterlab** foi contratada para atualizar o manual para refletir as revisões do Dynamo 2.13.
 
-\![](<.gitbook/assets/matterlab_final-07 (2).jpg>)
+![](images/matterlab-logo.jpg)
 
 ***
 
 A **Archilizer** foi contratada para atualizar o manual para refletir as revisões do Dynamo 2.17.
 
-<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 A **Wood Rodgers** foi contratada para atualizar o manual com conteúdo para o Dynamo for Civil 3D.
 
-<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
 
 ### Agradecimentos
 
@@ -81,7 +81,7 @@ Obrigado a Matt Jezyk, Ian Keough, Zach Kron, Racel Amour e Colin McCrone pela c
 
 [https://dynamobim.org](https://dynamobim.org/)
 
-**Dynamo no GitHub** O Dynamo é um projeto de desenvolvimento de código aberto no GitHub. Para contribuir, confira o DynamoDS.
+**Dynamo GitHub** O Dynamo é um projeto de desenvolvimento de código aberto no GitHub. Para contribuir, confira o DynamoDS.
 
 [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
