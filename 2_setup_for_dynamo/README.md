@@ -4,7 +4,7 @@
 
 Dynamo 是進行中的開放原始碼開發專案。瞭解[支援 Dynamo 的軟體清單](http://dynamobim.org/download/)。
 
-[](<images/setup for dynamo - dynamo revit.png>) [](<images/setup for dynamo - dynamo civil 3D.png>) [](<images/setup for dynamo - dynamo alias design.png>) [](<images/setup for dynamo - dynamo formit.png>) [](<images/setup for dynamo - dynamo advance steel.png>) [](<images/setup for dynamo - dynamo robot structural analysis.png>) [](<images/setup for dynamo - dynamo forma.png>)
+![](<images/setup for dynamo - dynamo revit.png>) ![](<images/setup for dynamo - dynamo civil 3D.png>) ![](<images/setup for dynamo - dynamo alias design.png>) ![](<images/setup for dynamo - dynamo formit.png>) ![](<images/setup for dynamo - dynamo advance steel.png>) ![](<images/setup for dynamo - dynamo robot structural analysis.png>) ![](<images/setup for dynamo - dynamo forma.png>)
 
 ### 以延伸模組形式啟動 Dynamo
 
@@ -31,7 +31,7 @@ Dynamo 隨附於如 **Revit3D**、**FormIt**、**Civil3D** 等軟體而預先安
 
 如果您要尋找舊版或「最尖端」的開發版本，在同一頁面的下半部分可以找到所有版本。
 
-[](<images/03-02 Dynamo Sandbox All builds.png>)
+![](<images/03-02 Dynamo Sandbox All builds.png>)
 
 {% hint style="info" %}「最尖端」的開發內容可能包含一些尚未完全測試的新功能和實驗性功能，因此或許不太穩定。使用這類版本，您可能會發現錯誤或問題，請向我們的團隊回報問題，協助我們改善應用程式。
 
@@ -45,21 +45,21 @@ Dynamo 隨附於如 **Revit3D**、**FormIt**、**Civil3D** 等軟體而預先安
 
 在壓縮檔案上按一下右鍵，然後選取 **「解壓縮全部...」**
 
-[](<images/03-03 Extract zip file.png>)
+![](<images/03-03 Extract zip file.png>)
 
 選擇要解壓縮所有檔案的目的地。
 
-[](<images/03-04 Extract destination folder.png>)
+![](<images/03-04 Extract destination folder.png>)
 
 #### 啟動
 
 在目的地資料夾中，按兩下 **DynamoSandbox.exe** 即可啟動
 
-[](<images/03-05 Dynamo exe.jpg>)
+![](<images/03-05 Dynamo exe.jpg>)
 
 您會看到下面的 DynamoSandbox 啟動畫面。
 
-[](<images/03-06 Dynamo startup screen.png>)
+![](<images/03-06 Dynamo startup screen.png>)
 
 恭喜您，您現在已經完成使用 DynamoSandbox 的設定！
 
