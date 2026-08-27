@@ -48,7 +48,7 @@ Vamos manter o valor padrão de _centerPoint_, mas adicionaremos um **Controle d
 
 Esse nó é um pouco diferente do nó anterior, pois contém um controle deslizante. É possível usar a interface para alterar o valor de saída do controle deslizante.
 
-\![](<../../.gitbook/assets/vase13 (1).gif>)
+![](<../../.gitbook/assets/vase13 (1).gif>)
 
 É possível configurar o controle deslizante usando o botão do menu suspenso à esquerda do nó. Vamos limitar o controle deslizante a um valor máximo de 15.
 
@@ -70,7 +70,7 @@ Vamos continuar adicionando alguns nós e conexões à nossa lógica para defini
 
 Vamos copiar esses nós quatro vezes para que os círculos definam nossa superfície. Altere os nomes do **Controle deslizante de número**, como mostrado abaixo.
 
-\![](<../../.gitbook/assets/vase4 (1).png>)
+![](<../../.gitbook/assets/vase4 (1).png>)
 
 > 1. Os círculos são criados por um ponto central e um raio
 
@@ -78,7 +78,7 @@ Vamos copiar esses nós quatro vezes para que os círculos definam nossa superf�
 
 Falta um parâmetro-chave para o nosso vaso: a altura. Para controlar a altura do vaso, criamos outro controle deslizante de número. Também adicionamos um nó **Bloco de código**. Os blocos de código podem ajudar durante a adição de fragmentos de código personalizados ao nosso fluxo de trabalho. Usaremos o bloco de código para multiplicar o controle deslizante de altura por diferentes fatores, para que possamos posicionar nossos círculos ao longo da altura do vaso.
 
-\![](<../../.gitbook/assets/vase15 (1).png>)
+![](<../../.gitbook/assets/vase15 (1).png>)
 
 Em seguida, usamos um nó **Geometry.Translate** para inserir círculos na altura desejada. Como queremos distribuir nossos círculos ao longo do vaso, usamos blocos de código para multiplicar o parâmetro de altura por um fator.
 
