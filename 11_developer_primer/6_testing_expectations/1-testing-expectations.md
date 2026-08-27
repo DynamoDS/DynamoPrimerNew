@@ -2,12 +2,12 @@
 
 Esta página descreve o que buscamos ao testar o novo código que está sendo adicionado ao Dynamo.
 
-Então. Você tem um novo nó que quer adicionar. Ótimo. É hora de adicionar alguns testes. Há dois principais motivos para isso:
+Você tem um novo nó que deseja adicionar. Ótimo. É hora de adicionar alguns testes. Há dois principais motivos para isso:
 
-1. Ajuda a descobrir onde não funciona
+1. Isso ajuda a descobrir onde ele não funciona.
 2. Quando alguém altera algo que quebra o nó, isso deve quebrar os testes. Dessa forma, a pessoa que quebrou os testes precisa corrigi-los. Se isso não quebrar os testes, será em grande parte seu problema lidar com os usuários cujos modelos foram quebrados.
 
-Os testes no Dynamo vêm em dois tipos gerais: testes de unidade e testes de sistema.
+Os testes no Dynamo são oferecidos em dois tipos gerais: testes de unidade e testes de sistema.
 
 ## Testes de unidade
 
@@ -15,9 +15,9 @@ Os testes de unidade devem testar o mínimo possível. Se você construiu um nó
 
 Deveriam incluir:
 
-* Testes positivos (faz a coisa certa)
-* Testes negativos (não falha quando recebe entradas inválidas)
-* Testes de regressão (quando alguém encontrar um bug no código, escreva um teste para garantir que ele não ocorra novamente)
+* Testes positivos (a unidade faz a coisa certa).
+* Testes negativos (a unidade não falha quando recebe entradas inválidas).
+* Testes de regressão (quando alguém encontrar um bug no código, escreva um teste para garantir que ele não ocorra novamente).
 
 Eles devem ser pequenos, rápidos e confiáveis. A maioria dos testes deve ser testes de unidade.
 
@@ -33,15 +33,15 @@ O ideal seria que houvesse uma série progressiva de testes cobrindo conjuntos c
 
 Exemplos de coisas que precisam de testes de sistema:
 
-* Um novo tipo de nó Revit que armazena vários elementos no rastreamento em vez de um único elemento
-* Um novo nó de inspeção que exibe dados de forma diferente
+* Um novo tipo de nó do Revit que armazena vários elementos no rastreamento em vez de um único elemento.
+* Um novo nó de inspeção que exibe dados de forma diferente.
 
 Exemplo de coisas que não precisam de testes de sistema:
 
-* Um novo nó matemático
-* Uma biblioteca de processamento de sequência de caracteres
+* Um novo nó matemático.
+* Uma biblioteca de processamento de sequência de caracteres.
 
 Os testes de sistema devem:
 
-* Afirmar o comportamento correto
-* Afirmar ausência de comportamentos patológicos, por exemplo, sem exceções
+* Afirmar o comportamento correto.
+* Afirmar a ausência de comportamentos patológicos, por exemplo, sem exceções.

@@ -4,7 +4,7 @@
 
 Agora que estabelecemos o que é uma lista, vamos falar sobre as operações que podemos realizar nela. Imagine uma lista como um baralho de cartas. O baralho é a lista e cada carta representa um item.
 
-![cartas](../images/Playing_cards_modified.jpg)
+![cartas](../../.gitbook/assets/Playing_cards_modified.jpg)
 
 > Foto de [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
@@ -43,15 +43,15 @@ Todas as operações listadas acima têm nós análogos do Dynamo para trabalhar
 
 A imagem abaixo é o gráfico de base no qual estamos desenhando linhas entre dois círculos para representar operações básicas de lista. Vamos explorar como gerenciar dados em uma lista e demonstrar os resultados visuais através das ações da lista abaixo.
 
-\![](<../images/working with list - list operation.jpg>)
+\![](<../../.gitbook/assets/working with list - list operation.jpg>)
 
-> 1. Comece com um **Code Block** com um valor de `500;`
+> 1. Comece com um **Bloco de código** com um valor de `500;`.
 > 2. Conecte-se à entrada x de um nó **Point.ByCoordinates**.
 > 3. Conecte o nó da etapa anterior à entrada de origem de um nó **Plane.ByOriginNormal**.
 > 4. Usando um nó **Circle.ByPlaneRadius**, conecte o nó da etapa anterior à entrada do plano.
 > 5. Usando o **Bloco de código**, designe um valor de `50;` para o raio. Esse é o primeiro círculo que criaremos.
 > 6. Com um nó **Geometry.Translate**, movimente o círculo 100 unidades para cima na direção Z.
-> 7. Com um nó de **Bloco de código**, defina um intervalo de dez números entre 0 e 1 com esta linha de código: `0..1..#10;`
+> 7. Com um nó de **Bloco de código**, defina um intervalo de dez números entre 0 e 1 com esta linha de código: `0..1..#10;`.
 > 8. Conecte o bloco de código da etapa anterior à entrada _parâmetro_ de dois nós **Curve.PointAtParameter**. Conecte **Circle.ByPlaneRadius** à entrada de curva do nó superior e **Geometry.Translate** à entrada de curva do nó abaixo dele.
 > 9. Usando **Line.ByStartPointEndPoint**, conecte os dois nós **Curve.PointAtParameter**.
 
@@ -65,7 +65,7 @@ A imagem abaixo é o gráfico de base no qual estamos desenhando linhas entre do
 
 O nó _List.Count_ é simples: conta o número de valores em uma lista e retorna esse número. Esse nó ganha mais nuances à medida que trabalhamos com listas de listas, mas vamos demonstrar isso nas seções a seguir.
 
-\![Count](<../images/working with list - list operation - list count.jpg>)
+\![Contagem](<../../.gitbook/assets/working with list - list operation - list count.jpg>)
 
 > 1. O nó **List.Count** retorna o número de linhas no nó **Line.ByStartPointEndPoint**. Neste caso, o valor é 10, que concorda com o número de pontos criados no nó original do **Bloco de código**.
 
@@ -79,14 +79,14 @@ O nó _List.Count_ é simples: conta o número de valores em uma lista e retorna
 
 **List.GetItemAtIndex** é uma forma fundamental de consultar um item na lista.
 
-\![Exercício](<../images/working with list - get item index 01.jpg>)
+\![Exercício](<../../.gitbook/assets/working with list - get item index 01.jpg>)
 
 > 1. Primeiro, clique com o botão direito do mouse no nó **Line.ByStartPointEndPoint** para desativar sua visualização.
 > 2. Usando o nó **List.GetItemAtIndex**, estamos selecionando o índice _“0”_ ou o primeiro item na lista de linhas.
 
 Altere o valor do controle deslizante entre 0 e 9 para selecionar outro item usando **List.GetItemAtIndex**.
 
-\![](<../images/working with list - get item index 02.gif>)
+\![](<../../.gitbook/assets/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
@@ -98,10 +98,10 @@ Altere o valor do controle deslizante entre 0 e 9 para selecionar outro item usa
 
 _List.Reverse_ inverte a ordem de todos os itens em uma lista.
 
-\![Exercício](<../images/working with list - list reverse.jpg>)
+\![Exercício](<../../.gitbook/assets/working with list - list reverse.jpg>)
 
-> 1. Para visualizar corretamente a lista de linhas invertida, crie mais linhas alterando o **Code Block** para `0..1..#50;`
-> 2. Duplique o nó **Line.ByStartPointEndPoint**, insira um nó List.Reverse entre **Curve.PointAtParameter** e o segundo **Line.ByStartPointEndPoint**
+> 1. Para visualizar corretamente a lista de linhas invertida, crie mais linhas alterando o **Bloco de código** para `0..1..#50;`
+> 2. Duplique o nó **Line.ByStartPointEndPoint**, insira um nó **List.Reverse** entre **Curve.PointAtParameter** e o segundo **Line.ByStartPointEndPoint**
 > 3. Use os nós **Watch3D** para visualizar dois resultados diferentes. O primeiro mostra o resultado sem uma lista invertida. As linhas se conectam verticalmente aos pontos adjacentes. A lista invertida, no entanto, conectará todos os pontos à ordem oposta na outra lista.
 
 ### List.ShiftIndices <a href="#listshiftindices" id="listshiftindices"></a>
@@ -114,7 +114,7 @@ _List.Reverse_ inverte a ordem de todos os itens em uma lista.
 
 **List.ShiftIndices** é uma boa ferramenta para criar padrões de torções ou helicoidais, ou qualquer outra manipulação de dados semelhante. Esse nó altera os itens em uma lista por um determinado número de índices.
 
-\![Exercício](<../images/working with list - shiftIndices 01.jpg>)
+\![Exercício](<../../.gitbook/assets/working with list - shiftIndices 01.jpg>)
 
 > 1. No mesmo processo que a lista inversa, insira um **List.ShiftIndices** no **Curve.PointAtParameter** e no **Line.ByStartPointEndPoint**.
 > 2. Usando um **Bloco de código**, foi designado o valor de “1” para mudar a lista em um índice.
@@ -122,7 +122,7 @@ _List.Reverse_ inverte a ordem de todos os itens em uma lista.
 
 Se o **Bloco de código** for alterado para um valor maior, _“30”_, por exemplo, perceberemos uma diferença significativa nas linhas diagonais. A mudança está funcionando como a íris da câmera nesse caso, criando uma torção na forma cilíndrica original.
 
-\![](<../images/working with list - shiftIndices 02.jpg>)
+\![](<../../.gitbook/assets/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -132,11 +132,11 @@ Se o **Bloco de código** for alterado para um valor maior, _“30”_, por exem
 
 {% file src="../../.gitbook/assets/List-FilterByBooleanMask.dyn" %}
 
-![](../images/ListFilterBool.png)
+![](../../.gitbook/assets/ListFilterBool.png)
 
 **List.FilterByBooleanMask** removerá determinados itens com base em uma lista de booleanos ou valores “true” ou “false”.
 
-\![Exercício](<../images/working with list - filter by bool mask.jpg>)
+\![Exercício](<../../.gitbook/assets/working with list - filter by bool mask.jpg>)
 
 Para criar uma lista de valores “true” ou “false”, é necessário um pouco mais de trabalho...
 

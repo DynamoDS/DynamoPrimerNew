@@ -1,10 +1,12 @@
 # Sobre
 
-{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %} Vídeo promocional do Dynamo {% endembed %}
+{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %}
+Dynamo Hype Video
+{% endembed %}
 
-## Para o Dynamo v2.13 e mais recente
+## Para o Dynamo v2.13 e mais recente
 
-![Logotipo do Dynamo](images/dynamo_logo_dark-trim.jpg)
+\![Logotipo do Dynamo](<.gitbook/assets/dynamo_logo_dark-trim (1).jpg>)
 
 > O Dynamo é uma plataforma de programação visual de código aberto para projetistas.
 
@@ -27,9 +29,9 @@ Estamos continuamente aprimorando o Dynamo; portanto, alguns recursos podem pare
 
 ### Código aberto
 
-O projeto Dynamo Primer é de código aberto. Estamos empenhados em fornecer conteúdo de qualidade e agradecemos se enviar seus comentários sobre o projeto. Se você desejar relatar algum tipo de problema, poste-o em nossa página de problemas do GitHub: [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues) 
+O projeto Dynamo Primer é de código aberto. Estamos empenhados em fornecer conteúdo de qualidade e agradecemos se enviar seus comentários sobre o projeto. Se você desejar relatar algum tipo de problema, poste-o em nossa página de problemas do GitHub: [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues)
 
-Se você desejar contribuir com uma nova seção, edições ou qualquer outra coisa para este projeto, confira o repositório GitHub para começar: [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew) 
+Se você desejar contribuir com uma nova seção, edições ou qualquer outra coisa para este projeto, confira o repositório GitHub para começar: [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew)
 
 ### Projeto Dynamo Primer
 
@@ -37,31 +39,31 @@ O Dynamo Primer é um projeto de código aberto, iniciado por Matt Jezyk e a equ
 
 A **Mode Lab** foi contratada para elaborar a primeira edição do manual. Agradecemos por todos seus esforços no estabelecimento desse recurso valioso.
 
-![](images/modelab-logo.png)
+![](.gitbook/assets/modelab-logo.png)
 
 ***
 
 A **John Pierson of Parallax Team** foi contratada para atualizar o manual para refletir as revisões do Dynamo 2.0.
 
-![](images/prlx-logo.jpg)
+![](.gitbook/assets/prlx-logo.jpg)
 
 ***
 
 A **Matterlab** foi contratada para atualizar o manual para refletir as revisões do Dynamo 2.13.
 
-![](images/matterlab-logo.jpg)
+![](.gitbook/assets/matterlab-logo.jpg)
 
 ***
 
 A **Archilizer** foi contratada para atualizar o manual para refletir as revisões do Dynamo 2.17.
 
-<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 A **Wood Rodgers** foi contratada para atualizar o manual com conteúdo para o Dynamo for Civil 3D.
 
-<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### Agradecimentos
 
@@ -71,9 +73,9 @@ Obrigado a Matt Jezyk, Ian Keough, Zach Kron, Racel Amour e Colin McCrone pela c
 
 ### Software e recursos
 
-**Dynamo** Consulte os seguintes sites para obter a versão **estável** mais atual do Dynamo.
+**Dynamo** Consulte o site a seguir para obter a versão **estável** mais atual do Dynamo.
 
-[https://dynamobim.com/download/](https://dynamobim.com/download/) ou [https://dynamobuilds.com](https://dynamobuilds.com/)
+[https://dynamobuilds.com](https://dynamobuilds.com/)
 
 *Observação: A partir do Revit 2020, o Dynamo é fornecido com as versões do Revit; portanto, não é necessário fazer a instalação manual. Mais informações estão disponíveis neste [post do blog](https://dynamobim.org/dynamo-core-2-1-release/).
 

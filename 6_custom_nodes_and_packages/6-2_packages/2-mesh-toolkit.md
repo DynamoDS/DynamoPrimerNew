@@ -1,20 +1,20 @@
 # Estudo de caso do pacote – Kit de ferramentas de malha
 
-O Kit de ferramentas de malha do Dynamo fornece ferramentas para importar malhas de formatos de arquivos externos, para criar uma malha com base nos objetos de geometria do Dynamo e para criar manualmente malhas de acordo com seus vértices e índices. A biblioteca também fornece ferramentas para modificar malhas, reparar malhas ou extrair camadas horizontais para uso na fabricação.
+O Kit de ferramentas de malha do Dynamo fornece ferramentas para criar malhas com base em objetos de geometria do Dynamo e criar malhas manualmente com base em seus vértices e índices. A biblioteca também fornece ferramentas para modificar malhas, reparar malhas ou extrair camadas horizontais para uso na fabricação. Embora esse kit de ferramentas também possa ser usado para importar e consultar arquivos de malha externa, este exemplo tem a malha incluída no script como um conjunto de vértices e índices para que nenhum arquivo extra seja necessário. Em vez de um arquivo de malha externo, o gráfico fornecido usa nós **Data.Remember** para armazenar todas as informações necessárias para reconstruir a famosa malha do Coelho de Stanford.
 
-\![](<../images/meshToolkit case study 01.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study 01.jpg>)
 
 O Kit de ferramentas de malha do Dynamo faz parte da pesquisa contínua sobre malhas da Autodesk e, como tal, continuará a crescer nos próximos anos. Pode contar com o aparecimento frequente de novos métodos no kit de ferramentas. Sinta-se à vontade para entrar em contato com a equipe do Dynamo com comentários, bugs e sugestões de novos recursos.
 
 ### Malhas vs. sólidos
 
-O exercício abaixo demonstra algumas operações básicas de malha usando o Kit de ferramentas de malha. No exercício, intersecionamos uma malha com uma série de planos, que podem ser computacionalmente caros usando sólidos. Ao contrário de um sólido, uma malha tem uma “resolução” definida e não é definida matematicamente, e sim topologicamente, sendo possível definir essa resolução com base na tarefa em questão. Para obter mais detalhes sobre as relações entre malhas e sólidos, consulte o capítulo [Geometria do projeto computacional](../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/) neste manual. Para uma análise mais completa do Kit de ferramentas de malha, consulte a [página Wiki do Dynamo.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Vamos analisar o pacote no exercício abaixo.
+O exercício abaixo demonstra algumas operações básicas de malha usando o Kit de ferramentas de malha. No exercício, intersecionamos uma malha com uma série de planos, que podem ser computacionalmente caros usando sólidos. Ao contrário de um sólido, uma malha tem uma “resolução” definida e não é definida matematicamente, mas topologicamente, sendo possível definir essa resolução com base na tarefa em questão. Para obter mais detalhes sobre as relações entre malhas e sólidos, consulte o capítulo [Geometria do projeto computacional](../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/) neste manual. Para uma análise mais completa do Kit de ferramentas de malha, consulte a [página Wiki do Dynamo.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Vamos analisar o pacote no exercício abaixo.
 
 ### Instalar o Kit de ferramentas de malha
 
 No Dynamo, vá para Pacotes > Package Manager... na barra de menus superior. No campo de pesquisa, digite MeshToolkit, uma única palavra. Clique em Instalar e aceite as confirmações para iniciar o download. É tão simples quanto isso.
 
-<figure><img src="../images/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
 ## Exercício: Interseção de malha
 
@@ -24,23 +24,23 @@ No Dynamo, vá para Pacotes > Package Manager... na barra de menus superior. No 
 
 {% file src="../../.gitbook/assets/MeshToolkit.zip" %}
 
-Neste exemplo, vamos analisar o nó Intersect no kit de ferramentas de malha. Vamos importar uma malha e intersecioná-la com uma série de planos de entrada para criar fatias. Esse é o ponto inicial para preparar o modelo para fabricação de um cortador a laser, um cortador a jato de água ou uma fresa CNC.
+Neste exemplo, vamos analisar o nó Intersect no kit de ferramentas de malha. Vamos gerar uma malha de vértices armazenados e fazer a interseção com uma série de planos de entrada para criar fatias. Esse é o ponto inicial para preparar o modelo para fabricação de um cortador a laser, um cortador a jato de água ou uma fresa CNC.
 
 Para começar, abra _Mesh-Toolkit_Intersect-Mesh.dyn in Dynamo._
 
-\![](<../images/meshToolkit case study - exercise 01.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 01.jpg>)
 
-> 1. **Caminho do arquivo:** localize o arquivo de malha a ser importado (_stanford_bunny_tri.obj_). Os tipos de arquivo suportados são .mix e .obj
-> 2. **Mesh.ImportFile:** conecte o caminho do arquivo para importar a malha
+> 1. **Data.Remember:** esses dois nós contêm os vértices de malha, que são armazenados como pontos, e os índices de malha, que são uma série de números inteiros. Juntos, eles fornecem todas as informações necessárias para reconstruir a malha.
+> 2. **Mesh.ByVerticesAndIndices:** conecte os vértices e os índices dos nós de dados para construir a malha.
 
-\![](<../images/meshToolkit case study - exercise 02.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 02.jpg>)
 
 > 1. **Point.ByCoordinates:** crie um ponto, ele será o centro de um arco.
 > 2. **Arc.ByCenterPointRadiusAngle:** crie um arco em torno do ponto. Essa curva será usada para posicionar uma série de planos. __ As configurações são as seguintes: __ `radius: 40, startAngle: -90, endAngle:0`
 
 Crie uma série de planos orientados ao longo do arco.
 
-\![](<../images/meshToolkit case study - exercise 03.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 03.jpg>)
 
 > 1. **Code Block**: crie 25 números entre 0 e 1.
 > 2. **Curve.PointAtParameter:** conecte o arco à entrada _“curva”_ e a saída do bloco de código à entrada _“parâmetro”_ para extrair uma série de pontos ao longo da curva.
@@ -49,21 +49,21 @@ Crie uma série de planos orientados ao longo do arco.
 
 Em seguida, usaremos esses planos para fazer a interseção com a malha.
 
-\![](<../images/meshToolkit case study - exercise 04.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 04.jpg>)
 
-> 1. **Mesh.Intersect:** faça a interseção dos planos com a malha importada, criando uma série de contornos de policurvas. Clique com o botão direito do mouse em Nó e defina a amarra como a mais longa
+> 1. **Mesh.Intersect:** faça a interseção dos planos com a malha gerada, criando uma série de contornos de policurvas. Clique com o botão direito do mouse em Nó e defina a amarra como a mais longa
 > 2. **PolyCurve.Curves:** divida as policurvas em seus fragmentos de curva.
 > 3. **Curve.EndPoint:** extraia os pontos finais de cada curva.
 > 4. **NurbsCurve.ByPoints:** use os pontos para criar uma curva Nurbs. Use um nó Booleano definido como _True_ para fechar as curvas.
 
-Antes de continuar, desative a visualização de alguns dos nós, como: Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal e Arc.ByCenterPointRadiusAngle para ver melhor o resultado.
+Antes de continuar, desative a visualização de alguns dos nós, como: Mesh.ByVerticesAndIndices, Curve.EndPoint, Plane.ByOriginNormal e Arc.ByCenterPointRadiusAngle para ver melhor o resultado.
 
-\![](<../images/meshToolkit case study - exercise 05.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 05.jpg>)
 
 > 1. **Surface.ByPatch:** crie as correções de superfícies para cada contorno para criar “fatias” da malha.
 
 Adicione um segundo conjunto de fatias para obter um efeito waffle/caixa de ovos.
 
-\![](<../images/meshToolkit case study - exercise 06.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 06.jpg>)
 
 Você pode ter notado que as operações de intersecção são calculadas mais rapidamente com uma malha do que com um sólido comparável. Fluxos de trabalho como o demonstrado neste exercício ajudam a trabalhar com malhas.

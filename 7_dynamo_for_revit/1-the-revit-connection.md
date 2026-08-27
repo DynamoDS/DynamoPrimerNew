@@ -1,6 +1,6 @@
 # Conexão do Revit
 
-\![](<images/revit connection link.jpg>)
+\![](<../.gitbook/assets/revit connection link.jpg>)
 
 O Dynamo for Revit estende a modelagem de informação da construção com o ambiente de dados e de lógica de um editor de algoritmo gráfico. Sua flexibilidade, juntamente com um banco de dados robusto do Revit, oferece uma nova perspectiva para o BIM.
 
@@ -19,11 +19,11 @@ Este capítulo é voltado para os fluxos de trabalho do Dynamo para o BIM. As se
 | 2017          | [0.9.0](https://downloads.dynamobuilds.com/DynamoInstall0.9.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
 | 2018          | [1.3.0](https://downloads.dynamobuilds.com/DynamoInstall1.3.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
 | 2019          | [1.3.3](https://downloads.dynamobuilds.com/DynamoInstall1.3.3.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.4](https://downloads.dynamobuilds.com/DynamoInstall2.0.4.exe) |
-| 2020 e versões posteriores         | 2.1.0 – O Revit 2020 e posterior agora inclui o Dynamo e recebe atualizações como faz o Revit. | N/D                                                                                                                                     |
+| 2020 e versões posteriores         | 2.1.0 — O Revit 2020 e posterior agora inclui o Dynamo e recebe atualizações como o Revit.  | N/D                                                                                                                                     |
 
 ### História do Dynamo
 
-![História](images/earlyScreenshot.jpg)
+![História](../.gitbook/assets/earlyScreenshot.jpg)
 
 Com uma equipe dedicada de desenvolvedores e uma comunidade entusiasmada, o projeto percorreu um longo caminho desde seu humilde começo.
 
@@ -35,28 +35,34 @@ Usando os principais nós do Dynamo juntamente com os nós personalizados do Rev
 
 Em um editor de família ou um projeto do Revit, navegue para Complementos e clique em Dynamo.*
 
-{% hint style="warning" %} *O Dynamo será executado somente no arquivo no qual foi aberto. {% endhint %}
+{% hint style="warning" %}
+Observação: O Dynamo será executado somente no arquivo no qual foi aberto.
+{% endhint %}
 
-![](images/1/launchdynamofromrevit.jpg)
+\![](<../.gitbook/assets/launchdynamofromrevit (1).jpg>)
 
 Quando o Dynamo é aberto no Revit, há uma nova categoria chamada “Revit”. Essa é uma adição abrangente à interface de usuário, oferecendo nós especificamente voltados para os fluxos de trabalho do Revit.*
 
-{% hint style="warning" %} *Usando a família de nós específica do Revit, o gráfico do Dynamo só funcionará quando for aberto no Dynamo para Revit. Se um gráfico do Dynamo for Revit for aberto no Dynamo Sandbox, por exemplo, os nós do Revit estarão ausentes. {% endhint %}
+{% hint style="warning" %}
+*Usando a família de nós específica do Revit, o gráfico do Dynamo só funcionará quando for aberto no Dynamo for Revit. Se um gráfico do Dynamo for Revit for aberto no Dynamo Sandbox, por exemplo, os nós do Revit estarão ausentes.
+{% endhint %}
 
-\![](<images/revit connection - running dynamo in revit 02.jpg>)
+\![](<../.gitbook/assets/revit connection - running dynamo in revit 02.jpg>)
 
 ### Congelar nós
 
 Como o Revit é uma plataforma que fornece um gerenciamento robusto de projetos, as operações paramétricas no Dynamo podem ser complexas e seu cálculo pode ser lento. Se o Dynamo estiver demorando muito para calcular os nós, será recomendável usar a funcionalidade do nó “congelar” para pausar a execução das operações do Revit enquanto desenvolve o gráfico.
 
-{% hint style="info" %} Você pode obter mais informações sobre o congelamento de nós na seção [4_nodes_and_wires](../4_nodes_and_wires/ "menção"). {% endhint %}
+{% hint style="info" %}
+É possível obter mais informações sobre o congelamento de nós na seção [4_nodes_and_wires](../4_nodes_and_wires/ "menção").
+{% endhint %}
 
 ### Comunidade e blog do Dynamo
 
 Desde que o Dynamo foi originalmente criado para o AEC, sua grande e crescente comunidade é um grande recurso para aprender e entrar em contato com especialistas no setor. A comunidade do Dynamo é formada por arquitetos, engenheiros, programadores e designers, apaixonados por compartilhar e criar.
 
-O Dynamo é um projeto de código aberto que está em constante evolução e muitos desenvolvimentos são relacionados ao Revit. Se você não estiver familiarizado com essa área, entre no fórum de discussão e comece a [fazer perguntas](http://dynamobim.org/forums/forum/dyn/). Se você for um programador e quiser participar do desenvolvimento do Dynamo, confira o [repositório do Github](https://github.com/DynamoDS/Dynamo) Além disso, o [gerenciador de pacotes do Dynamo](http://dynamopackages.com) é um ótimo recurso para as bibliotecas de terceiros. Muitos desses pacotes são feitos com o AEC em mente. Vamos também analisar os pacotes de terceiros para obter uma panorâmica neste capítulo.
+O Dynamo é um projeto de código aberto que está em constante evolução e muitos desenvolvimentos são relacionados ao Revit. Se você não estiver familiarizado com essa área, entre no fórum de discussão e comece a [fazer perguntas](http://dynamobim.org/forums/forum/dyn/). Se você for um programador e quiser participar do desenvolvimento do Dynamo, confira o [repositório do GitHub](https://github.com/DynamoDS/Dynamo). Além disso, o [gerenciador de pacotes do Dynamo](http://dynamopackages.com) é um ótimo recurso para as bibliotecas de terceiros. Muitos desses pacotes são feitos com o AEC em mente. Vamos também analisar os pacotes de terceiros para obter uma panorâmica neste capítulo.
 
 O Dynamo também mantém um blog ativo. Leia os artigos recentes para saber mais sobre os últimos acontecimentos.
 
-![Blog](images/blog.png)
+![Blog](../.gitbook/assets/blog.png)

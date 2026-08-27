@@ -2,7 +2,7 @@
 
 #### O que é a programação visual? <a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
 
-A criação de projetos frequentemente envolve o estabelecimento de relações visuais, sistêmicas ou geométricas entre as partes de um projeto. Frequentemente, essas relações são desenvolvidas por fluxos de trabalho que nos levam do conceito ao resultado final por meio de regras. Talvez sem saber, estamos trabalhando algoritmicamente - definindo um conjunto passo a passo de ações que seguem uma lógica básica de entrada, processamento e saída. A programação nos permite continuar a trabalhar dessa maneira, mas formalizando nossos algoritmos.
+A criação de projetos frequentemente envolve o estabelecimento de relações visuais, sistêmicas ou geométricas entre as partes de um projeto. Na maioria das vezes, essas relações são desenvolvidas por fluxos de trabalho que nos levam do conceito ao resultado por meio de regras. Talvez sem saber, estamos trabalhando de forma algorítmica – definindo um conjunto de ações passo a passo que seguem uma lógica básica de entrada, processamento e saída. A programação nos permite continuar a trabalhar dessa maneira, mas formalizando nossos algoritmos.
 
 #### Algoritmos em causa <a href="#algorithms-in-hand" id="algorithms-in-hand"></a>
 
@@ -34,7 +34,7 @@ Então, onde está o algoritmo? Trata-se do conjunto abstrato de etapas, que pod
 
 #### Definição de programação <a href="#programming-defined" id="programming-defined"></a>
 
-O uso de qualquer um desses conjuntos de instruções deve resultar em um pássaro e, se você seguiu o processo, aplicou um algoritmo. A única diferença é a maneira como lemos a formalização desse conjunto de instruções e isso nos leva à **Programação**. A programação, frequentemente o uso abreviado de _Programação de computadores_, é o ato de formalizar o processamento de uma série de ações em um programa executável. Se transformarmos as instruções acima para criar um pássaro em um formato que nosso computador possa ler e executar, estamos programando.
+O uso de qualquer um desses conjuntos de instruções deve resultar em um pássaro e, se você seguiu o processo, aplicou um algoritmo. A única diferença é a maneira como lemos a formalização desse conjunto de instruções e isso nos leva à **Programação**. Programação, frequentemente abreviada de _Programação de computadores_, é o ato de formalizar o processamento de uma série de ações em um programa executável. Se transformarmos as instruções acima para criar um guindaste em um formato que nosso computador possa ler e executar, estaremos programando.
 
 A chave e o primeiro obstáculo que encontraremos na programação é que precisamos depender de alguma forma de abstração para nos comunicarmos efetivamente com o computador. Isso assume a forma de qualquer número de linguagens de programação, como JavaScript, Python ou C. Se pudermos escrever um conjunto repetitivo de instruções, como para o origami em formato de pássaro, precisamos apenas traduzi-lo para o computador. Estamos no caminho de fazer com que o computador seja capaz de fazer um pássaro ou até uma infinidade de pássaros diferentes, com pequenas variações. Esse é o poder da programação: o computador executará repetidamente qualquer tarefa ou conjunto de tarefas que atribuímos a ele, sem demora e sem erro humano.
 
@@ -52,11 +52,11 @@ Se sua resposta for gráficos, a **Programação visual** será definitivamente 
 
 **Programa visual:**
 
-![](<images/visualProgramming.png>)
+![](../.gitbook/assets/visualProgramming.png)
 
 **Programa textual:**
 
-```
+```py
 myPoint = Point.ByCoordinates(0.0,0.0,0.0);
 x = 5.6;
 y = 11.5;
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 Os resultados de nosso algoritmo:
 
-![](<images/visualProgramming.png>)
+![](../.gitbook/assets/visualProgramming.png)
 
 A característica visual da programação diminui a barreira de iniciar as atividades e frequentemente é bem compreendida pelos designers. O Dynamo se encaixa no paradigma de programação visual, mas como veremos mais tarde, ainda podemos usar a programação textual no aplicativo.

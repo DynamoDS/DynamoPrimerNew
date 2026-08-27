@@ -11,7 +11,7 @@ Esse guia foi projetado para atender aos leitores de diferentes níveis de conhe
 * [Interface do usuário](../3_user_interface/)
 * [Nós e fios](../4_nodes_and_wires/)
 
-Para os usuários que desejam desenvolver uma compreensão mais profunda de cada elemento, como um nó específico e o conceito por trás dele, abordamos os fundamentos em um capítulo próprio.
+Para os usuários que desejam desenvolver uma compreensão mais profunda de cada elemento, como um nó específico e o conceito por trás dele, abordamos os fundamentos em um capítulo dedicado.
 
 * [Nós e conceitos essenciais](../5_essential_nodes_and_concepts/)
 
@@ -19,19 +19,21 @@ Se você quiser ver a demonstração dos fluxos de trabalho do Dynamo, incluímo
 
 * [Vaso paramétrico](../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.md)
 
-![](images/vase1.gif)
+\![](<../.gitbook/assets/vase1 (3).gif>)
 
 * [Pontos de atração](../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.md)
 
-![](<images/attractor1.gif>)
+\![](<../.gitbook/assets/attractor1 (1).gif>)
 
-{% hint style="info" %} Há mais exercícios específicos de tópicos que podem ser encontrados em capítulos posteriores, pois abordamos diferentes tópicos sobre o Dynamo. Os **exercícios** podem ser encontrados normalmente na última seção de cada página.
+{% hint style="info" %}
+Existem mais exercícios específicos sobre o tema nos capítulos posteriores, à medida que abordamos diferentes tópicos sobre o Dynamo. Normalmente, os **exercícios** podem ser encontrados na última seção de cada página.
+{% endhint %}
 
 ### A Comunidade
 
 O Dynamo não seria o que é sem um forte grupo de usuários ávidos e colaboradores ativos. Participe da comunidade seguindo o [blog](http://dynamobim.org/blog/), adicionando seu trabalho à galeria ou discutindo o Dynamo no [fórum](https://forum.dynamobim.com).
 
-![O fórum](images/02-Community.png)
+![O fórum](../.gitbook/assets/02-Community.png)
 
 ### A plataforma
 
@@ -39,6 +41,6 @@ O Dynamo é idealizado como uma ferramenta de programação visual para os desig
 
 O código-fonte do projeto é de código aberto, o que nos permite estender a funcionalidade conforme desejarmos. Confira o projeto no GitHub e procure os trabalhos em andamento dos usuários personalizando o Dynamo.
 
-![O repositório](images/03-TheRepo.png)
+![O repositório](../.gitbook/assets/03-TheRepo.png)
 
 > Pesquise e comece a estender o Dynamo de acordo com suas necessidades

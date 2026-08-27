@@ -1,12 +1,12 @@
 # Transformações de conversão, rotação e outras
 
-Determinados objetos de geometria podem ser criados explicitamente especificando as coordenadas x, y e z no espaço tridimensional. Mais frequentemente, no entanto, a geometria é movida para sua posição final usando transformações geométricas no próprio objeto ou em seu CoordinateSystem subjacente.
+Determinados objetos de geometria podem ser criados explicitamente especificando as coordenadas x, y e z no espaço tridimensional. No entanto, mais frequentemente a geometria é movida para sua posição final usando transformações geométricas no próprio objeto ou em seu sistema de coordenadas subjacente.
 
-### Conversão
+### Tradução
 
 A transformação geométrica mais simples é uma conversão, que move um objeto um número especificado de unidades nas direções x, y e z.
 
-![](../images/Transformations_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -20,9 +20,9 @@ p2 = p.Translate(10, -20, 50);
 
 ### Rotação
 
-Embora todos os objetos no Dynamo possam ser convertidos anexando o método _.Translate_ ao final do nome do objeto, as transformações mais complexas exigem a transformação do objeto de um CoordinateSystem subjacente em um novo CoordinateSystem. Por exemplo, para rotacionar um objeto 45° em torno do eixo x, vamos transformar o objeto de seu CoordinateSystem existente sem rotação em um CoordinateSystem que foi rotacionado 45° em torno do eixo x com o método _.Transform_:
+Embora todos os objetos no Dynamo possam ser convertidos anexando o método _.Translate_ ao final do nome do objeto, as transformações mais complexas exigem a transformação do objeto de um sistema de coordenadas subjacente em um novo sistema de coordenadas. Por exemplo, para rotacionar um objeto 45° em torno do eixo x, vamos transformar o objeto de seu sistema de coordenadas existente sem rotação em um sistema de coordenadas que foi rotacionado 45° em torno do eixo x com o método _.Transform_:
 
-![](../images/Transformations_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -38,11 +38,11 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-### Dimensionar
+### Escala
 
-Além de serem convertidos e rotacionados, também é possível criar os CoordinateSystems com escala ou cisalhamento. Um CoordinateSystem pode ser dimensionado com o método _.Scale_:
+Além de serem convertidos e rotacionados, também é possível criar os sistemas de coordenadas com escala ou cisalhamento. É possível dimensionar um sistema de coordenadas com o método _.Scale_:
 
-![](../images/Transformations_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -56,9 +56,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-Os CoordinateSystems de cisalhamento são criados inserindo vetores não ortogonais no construtor CoordinateSystem.
+Os sistemas de coordenadas de cisalhamento são criados inserindo vetores não ortogonais no construtor do sistema de coordenadas.
 
-![](../images/Transformations_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(
@@ -74,18 +74,18 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-A escala e o cisalhamento são, comparativamente, transformações geométricas mais complexas do que a rotação e a conversão, de modo que nem todos os objetos do Dynamo podem sofrer essas transformações. A tabela a seguir descreve quais objetos do Dynamo podem ter CoordinateSystems com escala não uniforme e CoordinateSystems com cisalhamento.
+A escala e o cisalhamento são, comparativamente, transformações geométricas mais complexas do que a rotação e a conversão, de modo que nem todos os objetos do Dynamo podem sofrer essas transformações. A tabela a seguir descreve quais objetos do Dynamo podem ter sistemas de coordenadas com escala não uniforme e sistemas de coordenadas com cisalhamento.
 
-| Classe        | CoordinateSystem com escala não uniforme | CoordinateSystem com cisalhamento |
+| Classe        | Sistema de coordenadas com escala não uniforme| Sistema de coordenadas com cisalhamento |
 | ------------ | ------------------------------------- | ------------------------ |
-| Arco          | No                                    | Não                       |
+| Arco          | Não                                    | Não                       |
 | NurbsCurve   | Sim                                   | Sim                      |
-| NurbsSurface | No                                    | Não                       |
-| Círculo       | No                                    | Não                       |
+| NurbsSurface | Não                                    | Não                       |
+| Círculo       | Não                                    | Não                       |
 | Linha         | Sim                                   | Sim                      |
-| Plano        | No                                    | Não                       |
+| Plano        | Não                                    | Não                       |
 | Ponto        | Sim                                   | Sim                      |
-| Polígono      | No                                    | Não                       |
-| Sólido        | No                                    | Não                       |
-| Superfície      | No                                    | Não                       |
-| Texto         | No                                    | Não                       |
+| Polígono      | Não                                    | Não                       |
+| Sólido        | Não                                    | Não                       |
+| Superfície      | Não                                    | Não                       |
+| Texto         | Não                                    | Não                       |

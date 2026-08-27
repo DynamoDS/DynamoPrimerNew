@@ -6,7 +6,7 @@ Apesar de anteriormente termos examinado a edição de uma massa de construção
 
 Suponha que criamos uma faixa de componentes adaptativos e que desejamos editar os parâmetros com base nas localizações dos pontos. Os pontos, por exemplo, podem determinar um parâmetro de espessura que está relacionado com a área do elemento. Ou, eles poderiam determinar um parâmetro de opacidade relacionado à exposição solar durante o ano. O Dynamo permite a conexão entre análise e parâmetros por meio de algumas etapas simples. Vamos explorar uma versão básica no exercício abaixo.
 
-\![](<images/customizing - point location.jpg>)
+\![](<../.gitbook/assets/customizing - point location.jpg>)
 
 > Consulte os pontos adaptativos de um componente adaptativo selecionado usando o nó **AdaptiveComponent.Locations**. Isso nos permite trabalhar com uma versão abstrata de um elemento do Revit para análise.
 
@@ -14,7 +14,7 @@ Ao extrair a localização dos pontos dos componentes adaptativos, podemos execu
 
 ### Análise da orientação solar
 
-\![](<images/customizing - solar orientation analysis.jpg>)
+\![](<../.gitbook/assets/customizing - solar orientation analysis.jpg>)
 
 > Use o remapeamento para mapear um conjunto de dados para um intervalo de parâmetros. Essa é uma ferramenta fundamental usada em um modelo paramétrico e vamos demonstrá-la no exercício abaixo.
 
@@ -30,54 +30,59 @@ Usando o Dynamo, é possível usar as localizações dos pontos dos componentes 
 
 Este exercício permite expandir as técnicas demonstradas na seção anterior. Neste caso, estamos definindo uma superfície paramétrica com base em elementos do Revit, instanciando componentes adaptativos de quatro pontos e, em seguida, editando-os com base na orientação em relação ao sol.
 
-\![](<images/customizing - exercise 01.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 01.jpg>)
 
 > 1. Comece selecionando duas arestas com o nó _“Selecionar aresta”_. As duas arestas são os vãos longos do átrio.
 > 2. Combine as duas arestas em uma lista com o nó _List.Create_.
 > 3. Crie uma superfície entre as duas arestas com _Surface.ByLoft_.
 
-\![](<images/customizing - exercise 02.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 02.jpg>)
 
 > 1. Usando o _bloco de código_, defina um intervalo de 0 a 1 com 10 valores uniformemente espaçados: `0..1..#10;`
 > 2. Conecte o _bloco de código_ às entradas *u* e _v_ de um nó _Surface.PointAtParameter_ e conecte o nó _Surface.ByLoft_ à entrada _superfície_. Clique com o botão direito do mouse no nó e altere a _amarra_ para _Produto transversal_. Isso fornecerá uma grade de pontos na superfície.
 
 Essa grade de pontos serve como os pontos de controle para uma superfície definida parametricamente. Queremos extrair as posições “u” e “v” de cada um desses pontos para que possamos conectá-los em uma fórmula paramétrica e manter a mesma estrutura de dados. É possível fazer isso consultando as localizações dos parâmetros dos pontos que acabamos de criar.
 
-\![](<images/customizing - exercise 03.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 03.jpg>)
 
 > 1. Adicione um nó _Surface.ParameterAtPoint_ à tela e conecte as entradas como mostrado acima.
 > 2. Consulte os valores _u_ desses parâmetros com o nó UV.U.
 > 3. Consulte os valores _v_ desses parâmetros com o nó UV.V.
 > 4. Os resultados mostram os valores _u_ e _v_ correspondentes a cada ponto da superfície. Agora, temos um intervalo de _0_ a _1_ para cada valor, na estrutura de dados apropriada; portanto, estamos prontos para aplicar um algoritmo paramétrico.
 
-\![](<images/customizing - exercise 04.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 04.jpg>)
 
 > 1. Adicione um _bloco de código_ à tela e insira o código: `Math.Sin(u*180)*Math.Sin(v*180)*w;` Essa é uma função paramétrica que cria um montículo senoidal de uma superfície plana.
 > 2. Conecta o _UV.U_ à entrada _u_ e o UV.V à entrada _v_.
 > 3. A entrada _w_ representa a _amplitude_ da forma; portanto, anexamos um _controle deslizante de número_ a ela.
 
-\![](<images/customizing - exercise 05.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 05.jpg>)
 
 > 1. Agora, temos uma lista de valores conforme definido pelo algoritmo. Vamos usar essa lista de valores para mover os pontos para cima na direção _+Z_. Usando _Geometry.Translate_, conecte o *bloco de código* a _zTranslation_ e _Surface.PointAtParameter_ à entrada _geometria_. Você deve ver os novos pontos exibidos na visualização do Dynamo.
 > 2. Finalmente, criamos uma superfície com o nó _NurbsSurface.ByPoints_, conectando o nó da etapa anterior à entrada de pontos. Dessa forma, obtemos uma superfície paramétrica. Sinta-se à vontade para arrastar o controle deslizante para ver o encolhimento e aumento dos montículos.
 
-Com a superfície paramétrica, queremos definir uma forma de aplicar painéis para criar matrizes em quatro pontos de componentes adaptativos. O Dynamo não tem uma funcionalidade pronta para uso para aplicar painéis à superfície; portanto, podemos consultar a comunidade para obter pacotes úteis do Dynamo.
+Com a superfície paramétrica, queremos definir uma forma de aplicar painéis para criar matrizes em quatro pontos de componentes adaptativos. O Dynamo agora tem uma funcionalidade pronta para uso para aplicar painéis à superfície.
 
-\![](<images/customizing - exercise 06.jpg>)
+Será necessário ativar os nós **PanelSurface** selecionando-os na guia Experimental em Preferências.
 
-> 1. Vá para _Pacotes>Procurar um pacote..._
-> 2. Procure _“LunchBox”_ e instale _“LunchBox for Dynamo”_. Esse pacote tem um conjunto de ferramentas muito útil para operações de geometria, como esta.
 
-> 1. Após o fazer o download, você terá acesso completo ao conjunto LunchBox. Procure _“Quad Grid”_ e selecione _“LunchBox Quad Grid By Face”_. Conecte a superfície paramétrica à entrada _superfície_ e defina as divisões _U_ e _V_ como _15_. Você deve ver uma superfície com painéis quad na visualização do Dynamo.
+\![](<../.gitbook/assets/experimental preferences.jpg>)
 
-> Se tiver curiosidade sobre a configuração, clique duas vezes no nó _Lunch Box_ e veja como foi feito.
+> 1. Procure _“PanelSurface”_ e selecione _“ByQuads”_. Conecte a superfície paramétrica à entrada _superfície_ e defina as divisões _numU_ e _numV_ como _15_.
 
-> De volta ao Revit, vamos dar uma olhada rápida no componente adaptativo que estamos usando aqui. Não é necessário seguir, mas este é o painel do telhado que vamos instanciar. É um componente adaptativo de quatro pontos que é uma representação bruta de um sistema ETFE. A abertura do vazio central está em um parâmetro chamado _“ApertureRatio”_.
+\![](<../.gitbook/assets/surfaces divide by UV.jpg>)
+
+> De volta ao Revit, vamos dar uma olhada rápida no componente adaptativo que estamos usando aqui. Não é necessário seguir, mas este é o painel do telhado que vamos instanciar. É um componente adaptativo de quatro pontos que é uma representação bruta de um sistema ETFE. A abertura do vazio central está em um parâmetro chamado _“ApertureRatio”_. 
+
 
 > 1. Estamos prestes a instanciar uma grande quantidade de geometria no Revit; portanto, certifique-se de ativar o solucionador do Dynamo na opção _“Manual”_.
 > 2. Adicione um nó _Tipos de família_ à tela e selecione _“ROOF-PANEL-4PT”_.
-> 3. Adicione um nó _AdaptiveComponent.ByPoints_ à tela, conecte _Pts do painel_ da saída _“LunchBox Quad Grid by Face”_ à entrada _pontos_. Conecte o nó _Tipos de família_ à entrada _familySymbol_.
-> 4. Pressione _Executar_. O Revit terá que _pensar_ um pouco enquanto a geometria está sendo criada. Se demorar muito, reduza o número de _“15” do bloco de código_ para um número menor. Isso reduzirá o número de painéis no telhado.
+> 3. Adicione um **PanelSurface.GetPoints** à tela e conecte _panelSurface_ de **PanelSurface.ByQuads** à entrada correspondente.
+> 4. Adicione um nó **AdaptiveComponent.ByPoint** à tela, conecte _Pts do painel_ da saída **PanelSurface.GetPanelPoints** à entrada _pontos_. Conecte o nó _Tipos de família_ à entrada _familyType_.
+> 5. Pressione _Executar_. O Revit terá que _pensar_ um pouco enquanto a geometria está sendo criada. Se demorar muito, reduza o número de _“15” do bloco de código_ para um número menor. Isso reduzirá o número de painéis no telhado.
+
+\![](<../.gitbook/assets/panelising script.jpg>)
+
 
 _Observação: Se o Dynamo estiver demorando muito para calcular os nós, talvez seja recomendável usar a funcionalidade do nó “congelar” para pausar a execução das operações do Revit enquanto desenvolve o gráfico. Para obter mais informações sobre o congelamento de nós, consulte a seção “Congelar” no capítulo de sólidos._
 
@@ -85,12 +90,12 @@ _Observação: Se o Dynamo estiver demorando muito para calcular os nós, talvez
 
 > Aproximando o zoom, podemos ver mais de perto suas qualidades de superfície.
 
+\![](<../.gitbook/assets/adaptive panels.jpg>)
+
 ### Análise
 
-> 1. Continuando com a etapa anterior, vamos avançar mais e determinar a abertura de cada painel com base em sua exposição solar. Aproximando o zoom no Revit e selecionando um painel, vemos que na barra de propriedades há um parâmetro chamado _“Proporção de abertura”_. A família é configurada de forma que a abertura se estenda, aproximadamente, de _0,05_ a _0,45_.
-
+> 1. Continuando com a etapa anterior, vamos avançar mais e determinar a abertura de cada painel com base em sua exposição solar. Aproximando o zoom no Revit e selecionando um painel, vemos que na barra de propriedades há um parâmetro chamado _“Proporção de abertura”_. A família está configurada de forma que a abertura se estenda, aproximadamente, de _0,05_ a _0,45_.
 > 2. Se ativarmos o caminho solar, será possível ver a localização atual do sol no Revit.
-
 > 3. É possível referenciar a localização do sol usando o nó _SunSettings.Current_.
 
 1. Conecte as configurações do sol a _Sunsetting.SunDirection_ para obter o vetor solar.

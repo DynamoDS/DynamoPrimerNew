@@ -10,20 +10,20 @@ As variáveis numéricas podem armazenar um intervalo completo de números difer
 
 A declaração “If” é um conceito-chave em programação: “se _isso_ for verdadeiro, _aquilo_ acontecerá; caso contrário, _outra coisa_ acontecerá. A ação resultante da declaração é controlada por um valor booleano. Há várias maneiras de definir uma declaração “If” no Dynamo:
 
-| Ícone                                     | Nome (Sintaxe)             | Entradas            | Saídas |
-| ---------------------------------------- | ------------------------- | ----------------- | ------- |
-| ![](../images/If.jpg)        | Se (**If**)               | teste, true, false | resultado  |
-| ![](../images/CodeBlock.jpg) | Bloco de código (**(x?y:z);**) | x? y, z           | resultado  |
+| Ícone                                           | Nome (Sintaxe)             | Entradas            | Saídas |
+| ---------------------------------------------- | ------------------------- | ----------------- | ------- |
+| \![](<../../.gitbook/assets/If (1).jpg>)        | Se (**If**)               | teste, true, false | resultado  |
+| \![](<../../.gitbook/assets/CodeBlock (2).jpg>) | Bloco de código (**(x?y:z);**) | x? y, z           | resultado  |
 
 Vamos examinar um breve exemplo de cada um desses três nós em ação usando a declaração condicional “Se”.
 
 Nessa imagem, o valor _booleano_ está definido como _true_, o que significa que o resultado é uma sequência de caracteres com a inscrição: _“this is the result if true”_ (esse será o resultado se for verdadeiro). Os três nós que criam a declaração _If_ estão funcionando de forma idêntica aqui.
 
-\![](<../images/logic - conditional statements 01 false.jpg>)
+\![](<../../.gitbook/assets/logic - conditional statements 01 false.jpg>)
 
 Novamente, os nós estão funcionando de forma idêntica. Se o valor _booleano_ for alterado para _false_, nosso resultado será o número _Pi_, conforme definido na declaração _If_ original.
 
-\![](<../images/logic - conditional statements 02 true.jpg>)
+\![](<../../.gitbook/assets/logic - conditional statements 02 true.jpg>)
 
 ## Exercício: Lógica e geometria
 
@@ -37,13 +37,13 @@ Novamente, os nós estão funcionando de forma idêntica. Se o valor _booleano_ 
 
 1. Vamos usar a lógica para separar uma lista de números em uma lista de números pares e uma lista de números ímpares.
 
-\![](<../images/logic - exercise part I-01.jpg>)
+\![](<../../.gitbook/assets/logic - exercise part I-01.jpg>)
 
 > a. **Intervalo de números** – adicione um intervalo de números à tela.
 >
 > b. **Números** – adicione três nós de número à tela. O valor para cada nó de número deve ser: _0,0_ para _início_, _10,0_ para _fim_ e _1,0_ para _etapa_.
 >
-> c. **Saída** – nossa saída é uma lista de 11 números que varia entre 0 e 10.
+> c. **Saída** — nossa saída é uma lista de 11 números que variam entre 0 e 10.
 >
 > d. **Módulo (%)** – **Intervalo de números** em _x_ e _2,0_ em _y_. Isso calcula o resto de cada número na lista dividida por 2. A saída dessa lista fornece uma lista de valores alternados entre 0 e 1.
 >
@@ -61,7 +61,7 @@ Desenvolvendo a lógica estabelecida no primeiro exercício, vamos aplicar essa 
 
 2\. Vamos passar do exercício anterior com os mesmos nós. As únicas exceções (além da alteração do formato) são:
 
-\![](<../images/logic - exercise part II-01.jpg>)
+\![](<../../.gitbook/assets/logic - exercise part II-01.jpg>)
 
 > a. Use um nó **Sequência** com esses valores de entrada.
 >
@@ -69,7 +69,7 @@ Desenvolvendo a lógica estabelecida no primeiro exercício, vamos aplicar essa 
 
 3\. Vamos começar criando um grupo separado de gráficos, como mostrado na imagem acima. Esse grupo de nós representa uma equação paramétrica para definir uma curva de linha. Algumas observações:
 
-\![](<../images/logic - exercise part II-02.jpg>)
+\![](<../../.gitbook/assets/logic - exercise part II-02.jpg>)
 
 > a. O primeiro **Controle deslizante de número** representa a frequência da onda; deve ter um mínimo de 1, um máximo de 4 e uma etapa de 0,01.
 >
@@ -79,25 +79,25 @@ Desenvolvendo a lógica estabelecida no primeiro exercício, vamos aplicar essa 
 
 Método para as entradas: use os nós de número nas propriedades mais estáticas e os controles deslizantes de número nas mais flexíveis. Queremos manter o intervalo de números original que estávamos definindo no início desta etapa. No entanto, a curva seno criada aqui deve ter alguma flexibilidade. É possível mover esses controles deslizantes para observar a curva atualizar sua frequência e amplitude.
 
-\![](<../images/logic - exercise part II-03.gif>)
+\![](<../../.gitbook/assets/logic - exercise part II-03.gif>)
 
 4\. Vamos pular um pouco a definição e examinar o resultado final para que possamos fazer referência ao ponto em que estamos chegando. As duas primeiras etapas são feitas separadamente. Agora queremos conectar as duas. Usaremos a curva sinusoidal base para controlar a localização dos componentes do compactador e usaremos a lógica true/false para alternar entre caixas pequenas e caixas maiores.
 
-\![](<../images/logic - exercise part II-04.jpg>)
+\![](<../../.gitbook/assets/logic - exercise part II-04.jpg>)
 
 > a. **Math.RemapRange** – usando a sequência de números criada na etapa 02, vamos criar uma nova série de números remapeando o intervalo. Os números originais da etapa 01 variam entre 0 e 100. Esses números variam entre 0 e 1 nas entradas _newMin_ e _newMax_, respectivamente.
 
 5\. Crie um nó **Curve.PointAtParameter** e, em seguida, conecte a saída **Math.RemapRange** da etapa 04 como sua entrada de _parâmetro_.
 
-\![](<../images/logic - exercise part II-05.jpg>)
+\![](<../../.gitbook/assets/logic - exercise part II-05.jpg>)
 
 Essa etapa cria pontos ao longo da curva. Remapeamos os números de 0 a 1, pois a entrada _parâmetro_ está procurando valores nesse intervalo. Um valor de _0_ representa o ponto inicial e um valor de _1_ representa os pontos finais. Todos os números entre esses valores avaliam dentro do intervalo _[0,1]_.
 
 6\. Conecte a saída de **Curve.PointAtParameter** a **List.FilterByBoolMask** para separar a lista de índices ímpares e pares.
 
-\![](<../images/logic - exercise part II-06.jpg>)
+\![](<../../.gitbook/assets/logic - exercise part II-06.jpg>)
 
-> a. **List.FilterByBoolMask** – conecte **Curve.PointAtParameter** da etapa anterior à entrada _lista_.
+> a. **List.FilterByBoolMask** — conecte **Curve.PointAtParameter** da etapa anterior à entrada _lista_.
 >
 > b. **Inspeção** – um nó de inspeção para _in_ e um nó de inspeção para _out_ mostram que temos duas listas que representam índices pares e ímpares. Esses pontos estão ordenados da mesma maneira na curva, o que demonstramos na próxima etapa.
 
@@ -105,7 +105,7 @@ Essa etapa cria pontos ao longo da curva. Remapeamos os números de 0 a 1, pois 
 
 **Cuboid.ByLengths** – recrie as conexões vistas na imagem acima para obter um compactador ao longo da curva sinusoidal. Um cuboide é apenas uma caixa aqui, e estamos definindo seu tamanho com base no ponto da curva no centro da caixa. A lógica da divisão par/ímpar agora deve estar clara no modelo.
 
-\![](<../images/logic - exercise part II-07.jpg>)
+\![](<../../.gitbook/assets/logic - exercise part II-07.jpg>)
 
 > a. Lista de cuboides em índices pares.
 >

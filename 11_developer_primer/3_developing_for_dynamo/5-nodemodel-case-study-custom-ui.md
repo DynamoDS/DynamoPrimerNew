@@ -2,13 +2,13 @@
 
 Os nós baseados no NodeModel fornecem significativamente mais flexibilidade e potência do que os nós Sem toque. Neste exemplo, levaremos o nó de grade Sem toque para o próximo nível ao adicionar um controle deslizante integrado que randomiza o tamanho do retângulo.
 
-![Gráfico de grade retangular](../images/cover-image-2.jpg)
+![Gráfico de grade retangular](../../.gitbook/assets/cover-image-2.jpg)
 
 > O controle deslizante dimensiona as células em relação a seu tamanho, de modo que o usuário não precise fornecer um controle deslizante com o intervalo correto.
 
 #### Padrão “Model-View-Viewmodel”<a href="#the-model-view-viewmodel-pattern" id="the-model-view-viewmodel-pattern"></a>
 
-O Dynamo é baseado no padrão de arquitetura do software [model-view-viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) (MVVM) para manter a interface do usuário separada do back-end. Ao criar nós Sem toque, o Dynamo faz a associação de dados entre os dados de um nó e sua interface de usuário. Para criar uma interface de usuário personalizada, é preciso adicionar a lógica de vinculação de dados.
+O Dynamo é baseado no padrão de arquitetura do software [model-view-viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) (MVVM) para manter a interface do usuário separada do back-end. Ao criar nós Sem toque, o Dynamo faz a associação entre os dados de um nó e sua interface do usuário. Para criar uma interface de usuário personalizada, é preciso adicionar a lógica de vinculação de dados.
 
 Em um alto nível, há duas partes para estabelecer uma relação de vista de modelo no Dynamo:
 
@@ -33,7 +33,7 @@ Um nó NodeModel pode chamar somente funções, portanto, precisamos separar o N
 
 Crie dois projetos de biblioteca de classes C# na solução: um para as funções e outro para implementar a interface NodeModel.
 
-![Adicionar uma nova biblioteca de classes](../images/vs-new-class-projects.jpg)
+![Adicionar uma nova biblioteca de classes](../../.gitbook/assets/vs-new-class-projects.jpg)
 
 > 1. Clicar com o botão direito do mouse na Solução e selecionar `Add > New Project`
 > 2. Escolher a biblioteca de classes
@@ -43,7 +43,7 @@ Crie dois projetos de biblioteca de classes C# na solução: um para as funçõe
 
 Em seguida, precisamos renomear as bibliotecas de classes que foram criadas automaticamente e adicionar uma ao projeto `CustomNodeModel`. A classe `GridNodeModel` implementa a classe NodeModel abstrata, `GridNodeView` é usada para personalizar a vista e `GridFunction` contém as funções que precisamos chamar.
 
-![Gerenciador de soluções](../images/vs-new-class.jpg)
+![Gerenciador de soluções](../../.gitbook/assets/vs-new-class.jpg)
 
 > 1. Adicionar outra classe clicando com o botão direito do mouse no projeto `CustomNodeModel`, selecionando `Add > New Item...` e escolhendo `Class`.
 > 2. No projeto `CustomNodeModel`, precisamos das classes `GridNodeModel.cs` e `GridNodeView.cs`
@@ -51,14 +51,14 @@ Em seguida, precisamos renomear as bibliotecas de classes que foram criadas auto
 
 Antes de adicionarmos qualquer código às classes, adicione os pacotes necessários para este projeto. `CustomNodeModel` precisará de ZeroTouchLibrary e WpfUILibrary e `CustomNodeModelFunction` só precisará de ZeroTouchLibrary. A biblioteca WpfUIL será usada na personalização da interface do usuário que faremos mais tarde, e a biblioteca ZeroTouchLibrary será usada para criar a geometria. É possível adicionar os pacotes individualmente para os projetos. Como esses pacotes têm dependências, o Core e o DynamoServices serão instalados automaticamente.
 
-![Instalar os pacotes](../images/vs-add-packages.jpg)
+![Instalar os pacotes](../../.gitbook/assets/vs-add-packages.jpg)
 
 > 1. Clicar com o botão direito do mouse em um projeto e selecionar `Manage NuGet Packages`
 > 2. Instalar somente os pacotes necessários para aquele projeto
 
 O Visual Studio copiará os pacotes NuGet aos quais fizemos referência para o diretório de compilação. Isso pode ser definido como false, para que não tenhamos arquivos desnecessários no pacote.
 
-![Desativar a cópia do pacote local](../images/vs-disable-package-copying.jpg)
+![Desativar a cópia do pacote local](../../.gitbook/assets/vs-disable-package-copying.jpg)
 
 > 1. Selecionar pacotes do Dynamo NuGet
 > 2. Definir `Copy Local` como false
@@ -69,7 +69,7 @@ Como mencionado anteriormente, o aspecto principal que torna um nó NodeModel di
 
 Copie o seguinte código para o `GridNodeModel.cs`.
 
-```
+```c#
 using System;
 using System.Collections.Generic;
 using Dynamo.Graph.Nodes;
@@ -144,7 +144,7 @@ O projeto `CustomNodeModelFunction` será compilado em uma montagem separada de 
 
 Copie o seguinte código para `GridFunction.cs`.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 using Autodesk.DesignScript.Runtime;
 using System;
@@ -199,7 +199,7 @@ Essa classe de função é muito similar ao estudo de caso de Grade sem Toque, c
 
 Assim como adicionamos referências para pacotes NuGet, `CustomNodeModel` precisará fazer referência a `CustomNodeModelFunction` para chamar a função.
 
-![Adicionar uma referência](../images/vs-add-project-reference.jpg)
+![Adicionar uma referência](../../.gitbook/assets/vs-add-project-reference.jpg)
 
 > A declaração de uso para CustomNodeModel estará inativa até que a função seja referenciada
 >
@@ -214,7 +214,7 @@ Para criar um controle deslizante, é preciso personalizar a interface do usuár
 
 Copie o seguinte código para `GridNodeView.cs`
 
-```
+```c#
 using Dynamo.Controls;
 using Dynamo.Wpf;
 
@@ -238,9 +238,9 @@ namespace CustomNodeModel.CustomNodeModel
 
 * `public class CustomNodeModelView : INodeViewCustomization<GridNodeModel>` define as funções necessárias para personalizar a interface do usuário.
 
-Após a estrutura do projeto ter sido configurada, use o ambiente de projeto do Visual Studio para compilar um controle de usuário e definir seus parâmetros em um arquivo `.xaml`. Na caixa de ferramentas, adicione um controle deslizante a `<Grid>...</Grid>`.
+Após a configuração da estrutura do projeto, use o ambiente de projeto do Visual Studio para compilar um controle de usuário e definir seus parâmetros em um arquivo `.xaml`. Na caixa de ferramentas, adicione um controle deslizante a `<Grid>...</Grid>`.
 
-![Adicionar um novo controle deslizante](../images/vs-usercontrol.jpg)
+![Adicionar um novo controle deslizante](../../.gitbook/assets/vs-usercontrol.jpg)
 
 > 1. Clicar com o botão direito do mouse em `CustomNodeModel` e selecionar `Add > New Item`
 > 2. Selecionar `WPF`
@@ -249,7 +249,7 @@ Após a estrutura do projeto ter sido configurada, use o ambiente de projeto do 
 
 Copie o seguinte código para `Slider.xaml`
 
-```
+```xml
 <UserControl x:Class="CustomNodeModel.CustomNodeModel.Slider"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -269,7 +269,7 @@ Copie o seguinte código para `Slider.xaml`
 
 Quando criamos o arquivo `Slider.xaml`, o Visual Studio criou automaticamente um arquivo C# chamado `Slider.xaml.cs` que inicializa o controle deslizante. Altere o namespace nesse arquivo.
 
-```
+```c#
 using System.Windows.Controls;
 
 namespace CustomNodeModel.CustomNodeModel
@@ -295,7 +295,7 @@ O `GridNodeModel.cs` define a lógica de cálculo do controle deslizante.
 
 Antes de compilarmos o projeto, a etapa final é adicionar um arquivo `pkg.json` para que o Dynamo possa ler o pacote.
 
-![Adicionar um arquivo JSON](../images/vs-pkg-json.jpg)
+![Adicionar um arquivo JSON](../../.gitbook/assets/vs-pkg-json.jpg)
 
 > 1. Clicar com o botão direito do mouse em `CustomNodeModel` e selecionar `Add > New Item`
 > 2. Selecionar `Web`
@@ -305,7 +305,7 @@ Antes de compilarmos o projeto, a etapa final é adicionar um arquivo `pkg.json`
 
 * Copie o seguinte código para `pkg.json`
 
-```
+```json
 {
   "license": "MIT",
   "file_hash": null,
@@ -337,11 +337,11 @@ Antes de compilarmos o projeto, a etapa final é adicionar um arquivo `pkg.json`
 
 #### Problemas comuns: <a href="#common-issues" id="common-issues"></a>
 
-1) Durante a abertura de um gráfico, alguns nós têm várias portas com o mesmo nome, mas o gráfico parecia correto ao salvar. Esse problema pode ter algumas causas.
+1) Durante a abertura de um gráfico, alguns nós têm várias portas com o mesmo nome, mas o gráfico parece correto ao salvar. Esse problema pode ter algumas causas.
 
 A causa raiz comum é porque o nó foi criado usando um construtor que recriou as portas. Em vez disso, o construtor que carregou as portas deveria ter sido usado. Esses construtores são geralmente marcados `[JsonConstructor]`_veja exemplos abaixo_
 
-![JSON quebrado](<../images/broken-json.jpg>)
+\![Broken JSON](<../../.gitbook/assets/broken-json (1).jpg>)
 
 Isso pode ocorrer porque:
 

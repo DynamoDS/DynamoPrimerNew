@@ -4,22 +4,23 @@ Com um projeto do Visual Studio ativo e em execução, vamos analisar como compi
 
 Este exemplo abordará alguns dos recursos e conceitos a serem considerados ao criar um nó Sem toque. Depois de compilarmos o nó personalizado e adicioná-lo ao Dynamo, verifique se a página “Aprofundar o conhecimento sobre o nó Sem Toque” fornece uma visão mais profunda dos valores de entrada padrão, retornando vários valores, documentação, objetos, usando tipos de geometria do Dynamo e migrações.
 
-![Gráfico de grade retangular](../images/cover-image.jpg)
+![Gráfico de grade retangular](../../.gitbook/assets/cover-image.jpg)
 
 ### Nó de grade retangular personalizado <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 Para começar a compilar o nó de grade, crie um novo projeto de biblioteca de classes do Visual Studio. Consulte a página Introdução para obter uma visão geral detalhada de como configurar um projeto.
 
-![Criar um novo projeto no Visual Studio](../images/vs-new-project-1.jpg)
+![Criar um novo projeto no Visual Studio](../../.gitbook/assets/vs-new-project-1.jpg)
 
-![Configurar um novo projeto no Visual Studio](../images/vs-new-project-2.jpg)
+![Configurar um novo projeto no Visual Studio](../../.gitbook/assets/vs-new-project-2.jpg)
 
 > 1. Escolher `Class Library` para o tipo de projeto
 > 2. Nomear o projeto `CustomNodes`
+> 3. Clicar para criar o projeto
 
 Como vamos criar geometria, precisamos fazer referência ao pacote NuGet apropriado. Instale o pacote ZeroTouchLibrary do Gerenciador de pacotes NuGet. Esse pacote é necessário para a declaração `using Autodesk.DesignScript.Geometry;`.
 
-![Pacote ZeroTouchLibrary](../images/vs-nugetpackage.jpg)
+![Pacote ZeroTouchLibrary](../../.gitbook/assets/vs-nugetpackage.jpg)
 
 > 1. Procure o pacote ZeroTouchLibrary
 > 2. Usaremos esse nó na compilação atual do Dynamo. Selecione a versão do pacote que corresponde à sua versão do Dynamo.
@@ -84,13 +85,13 @@ namespace CustomNodes
 
 Se o projeto for semelhante a este, vá em frente e tente compilar o `.dll`.
 
-![Compilar um DLL](../images/vs-grids.jpg)
+![Compilar um DLL](../../.gitbook/assets/vs-grids.jpg)
 
 > 1. Escolher Compilar > Compilar solução
 
 Verifique a pasta `bin` do projeto para obter um `.dll`. Se a compilação tiver sido bem-sucedida, poderemos adicionar o `.dll` ao Dynamo.
 
-![Nós personalizados no Dynamo](../images/RectangularGrid-Dynamo.png)
+![Nós personalizados no Dynamo](../../.gitbook/assets/RectangularGrid-Dynamo.png)
 
 > 1. O nó personalizado RectangularGrids na Biblioteca do Dynamo
 > 2. O nó personalizado na tela
@@ -100,14 +101,14 @@ Verifique a pasta `bin` do projeto para obter um `.dll`. Se a compilação tiver
 
 No exemplo acima, criamos um nó bastante simples que não definiu muito mais fora do método `RectangularGrids`. No entanto, podemos desejar criar dicas de ferramentas para portas de entrada ou fornecer ao nó um resumo, como os nós padrão do Dynamo. Adicionar esses recursos a nós personalizados facilita seu uso, especialmente se um usuário desejar pesquisá-los na biblioteca.
 
-![Dica de ferramenta de entrada](../images/nodemodification.png)
+![Dica de ferramenta de entrada](../../.gitbook/assets/nodemodification.png)
 
 > 1. Um valor de entrada padrão
 > 2. Uma dica de ferramenta para a entrada xCount
 
 O nó RetangularGrid precisa de alguns desses recursos básicos. No código abaixo, adicionamos descrições de porta de entrada e saída, um resumo e valores de entrada padrão.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 using System.Collections.Generic;
 
@@ -155,7 +156,7 @@ namespace CustomNodes
 
 Para adicionar dicas de ferramentas, precisamos de um arquivo xml no diretório do projeto. É possível gerar um `.xml` automaticamente pelo Visual Studio ativando a opção.
 
-![Ativar a documentação XML](../images/vs-xml.jpg)
+![Ativar a documentação XML](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Ative o arquivo de documentação XML aqui e especifique um caminho de arquivo. Isso gera um arquivo XML.
 

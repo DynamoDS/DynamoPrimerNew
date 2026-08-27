@@ -22,7 +22,7 @@ Essas amostras são modelos do Visual Studio que você pode usar para iniciar se
     * Determinar a lógica de interação do controle deslizante: [Código](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
 * [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**:** modelos para o nó Sem toque, interface do usuário personalizada, testes e extensões de vista.
   * [Amostras de interface do usuário](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
-    * Criar um nó de interface de usuário básico e personalizado: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs)
+    * Criar um nó de interface do usuário básico e personalizado: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/LocalizedCustomNodeModel.cs)
     * Criar um menu suspenso: [DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs)
   * [Testes](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryTests)
     * Testes do sistema: [HelloDynamoSystemTests.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryTests/HelloDynamoSystemTests.cs)

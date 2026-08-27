@@ -2,7 +2,7 @@
 
 Independentemente do nível de experiência, a plataforma do Dynamo foi projetada para que todos os usuários sejam colaboradores. Há diversas opções de desenvolvimento voltadas para diferentes capacidades e níveis de habilidades, cada uma com seus pontos fortes e fracos, dependendo do objetivo. Abaixo, descreveremos as diferentes opções e como escolher uma em detrimento de outra.
 
-![Três ambientes de desenvolvimento](../images/developing-for-dynamo.png)
+![Três ambientes de desenvolvimento](../../.gitbook/assets/developing-for-dynamo.png)
 
 > Três ambientes de desenvolvimento: Visual Studio, Editor do Python e DesignScript com Blocos de código
 
@@ -18,11 +18,11 @@ Estes nós permitem o maior grau de personalização. Muitos pacotes são criado
 * Nós derivados do NodeModel
 * Extensões
 
-> O Manual tem um guia sobre como [Importar bibliotecas Sem toque](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
+> O Manual tem um guia sobre como [Importar bibliotecas Sem toque](https://primer2.dynamobim.org/pt-br/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
 
 Para a discussão abaixo, o Visual Studio é usado como o ambiente de desenvolvimento para os nós Sem toque e NodeModel.
 
-![Interface do Visual Studio](../images/vs-devenv.jpg)
+![Interface do Visual Studio](../../.gitbook/assets/vs-devenv.jpg)
 
 > A interface do Visual Studio com um projeto que desenvolveremos
 
@@ -42,7 +42,7 @@ Embora esses processos existam no espaço de trabalho de programação visual e 
 
 O desenvolvimento no espaço de trabalho do Dynamo é uma ferramenta poderosa para obter feedback imediato.
 
-![Desenvolvimento no espaço de trabalho do Dynamo com o nó Python](../images/python-example.jpg)
+![Desenvolvimento no espaço de trabalho do Dynamo com o nó Python](../../.gitbook/assets/python-example.jpg)
 
 > Desenvolvimento no espaço de trabalho do Dynamo com o nó Python
 
@@ -54,7 +54,7 @@ As opções de desenvolvimento do Dynamo foram projetadas para lidar com a compl
 
 Essas são opções simples para escrever código no ambiente de programação visual do Dynamo. O espaço de trabalho de programação visual do Dynamo fornece acesso ao Python, ao DesignScript e à capacidade de conter vários nós dentro de um nó personalizado.
 
-![Bloco de código, script Python e nó personalizado](../images/Development-Icons.png)
+![Bloco de código, script Python e nó personalizado](../../.gitbook/assets/Development-Icons.png)
 
 Com esses métodos, podemos:
 
@@ -66,7 +66,7 @@ Com esses métodos, podemos:
 
 O nó Sem toque é um método simples de apontar e clicar para importar bibliotecas C#. O Dynamo lê os métodos públicos de um `.dll` e os converte em nós do Dynamo. É possível usar o nó Sem toque para desenvolver seus próprios nós e pacotes personalizados.
 
-![Nós Sem toque](../images/ZTImport.png)
+![Nós Sem toque](../../.gitbook/assets/ZTImport.png)
 
 Com esse método, podemos:
 
@@ -78,7 +78,7 @@ Com esse método, podemos:
 
 Esses nós são um passo mais profundo na estrutura do Dynamo. Eles são baseados na classe `NodeModel` e escritos em C#. Embora esse método forneça a maior flexibilidade e potência, a maioria dos aspectos do nó precisa ser explicitamente definida e as funções precisam residir em uma montagem separada.
 
-![Nós derivados do NodeModel](../images/Development-Icons-NodeModel.png)
+![Nós derivados do NodeModel](../../.gitbook/assets/Development-Icons-NodeModel.png)
 
 Com esse método, podemos:
 
@@ -93,13 +93,13 @@ Como o Dynamo está sendo atualizado regularmente, as alterações podem ser fei
 
 As alterações da API são rastreadas no [Wiki do Dynamo no GitHub](https://github.com/DynamoDS/Dynamo/wiki/API-Changes). Isso abrange as alterações no DynamoCore, nas bibliotecas e nos espaços de trabalho.
 
-![A API do Dynamo altera o documento](../images/api-changes.png)
+![A API do Dynamo altera o documento](../../.gitbook/assets/api-changes.png)
 
 Um exemplo de uma mudança significativa futura é a transição do formato de arquivo XML para o formato JSON na versão 2.0. Os nós derivados do NodeModel agora precisarão de um [construtor JSON](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node); caso contrário, eles não serão abertos no Dynamo 2.0.
 
 A documentação da API do Dynamo atualmente cobre a funcionalidade principal: [http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI)
 
-![Documentação da API](../images/api-docs.jpg)
+![Documentação da API](../../.gitbook/assets/api-docs.jpg)
 
 ### Permissão para distribuir binários em um pacote <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 

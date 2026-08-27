@@ -4,7 +4,7 @@ Por que você usaria a programação textual no ambiente de programação visual
 
 **Programa visual:**
 
-\![](<../images/python node - visual vs textual programming.jpg>)
+\![](<../../.gitbook/assets/python node - visual vs textual programming.jpg>)
 
 **Programa textual:**
 
@@ -38,15 +38,15 @@ OUT = solids
 
 Como os blocos de código, os nós do Python são uma interface de scripts dentro de um ambiente de programação visual. O nó do Python pode ser encontrado em Script>Editor>Script do Python na biblioteca.
 
-\![](<../images/python node - the python node 01.jpg>)
+\![](<../../.gitbook/assets/python node - the python node 01.jpg>)
 
-Clicando duas vezes no nó, é aberto o editor de scripts do Python (também é possível clicar com o botão direito do mouse no nó e selecionar _Editar..._). Você observará algum texto padronizado na parte superior, que pretende ajudar você a consultar as bibliotecas necessárias. As entradas estão armazenadas na matriz IN. Os valores são retornados ao Dynamo quando são atribuídos à variável OUT
+Clicando duas vezes no nó, é aberto o editor de scripts do Python (também é possível clicar com o botão direito do mouse no nó e selecionar _Editar..._). Você observará algum texto padronizado na parte superior, que pretende ajudar você a consultar as bibliotecas necessárias. As entradas estão armazenadas na matriz IN. Os valores são retornados ao Dynamo quando são atribuídos à variável OUT.
 
-\![](<../images/python node - the python node 02.jpg>)
+\![](<../../.gitbook/assets/python node - the python node 02.jpg>)
 
-A biblioteca Autodesk.DesignScript.Geometry permite usar a notação de pontos similar aos blocos de código. Para obter mais informações sobre a sintaxe do Dynamo, consulte [7-2_design-script-syntax.md](../../coding-in-dynamo/7_code-blocks-and-design-script/7-2_design-script-syntax.md "menção"), bem como o [Guia do DesignScript](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf) (Para fazer o download desse documento PDF, clique com o botão direito do mouse no link e escolha “Salvar link como...”). Digitar um tipo de geometria como “Point.” exibirá uma lista de métodos para criar e consultar pontos.
+A biblioteca Autodesk.DesignScript.Geometry permite usar a notação de pontos similar aos blocos de código. Para obter mais informações sobre a sintaxe do Dynamo, consulte [Sintaxe do DesignScript](../8-1_code-blocks-and-design-script/2-design-script-syntax.md), bem como o [Guia do DesignScript](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf) (Para fazer o download desse documento PDF, clique com o botão direito do mouse no link e escolha “Salvar link como...”). Digitar um tipo de geometria como “Point.” exibirá uma lista de métodos para criar e consultar pontos.
 
-\![](<../images/python node - the python node 03.jpg>)
+\![](<../../.gitbook/assets/python node - the python node 03.jpg>)
 
 > Os métodos incluem construtores como _ByCoordinates_, ações como _Add_ e consultas como coordenadas _X_, _Y_ e _Z_.
 
@@ -62,12 +62,12 @@ A biblioteca Autodesk.DesignScript.Geometry permite usar a notação de pontos s
 
 Neste exemplo, escreveremos um script do Python que cria padrões de um módulo sólido e o transforma em um nó personalizado. Primeiro, vamos criar nosso módulo sólido usando os nós do Dynamo.
 
-\![](<../images/python node - exercise pt I-01.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt I-01.jpg>)
 
 > 1. **Rectangle.ByWidthLength:** crie um retângulo que será a base do nosso sólido.
 > 2. **Surface.ByPatch:** conecte o retângulo à entrada “_closedCurve_” para criar a superfície inferior.
 
-\![](<../images/python node - exercise pt I-02.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt I-02.jpg>)
 
 > 1. **Geometry.Translate:** conecte o retângulo à entrada “_geometry_” para movê-lo para cima, usando um bloco de código para especificar a espessura da base do nosso sólido.
 > 2. **Polygon.Points:** consulte o retângulo convertido para extrair os pontos de canto.
@@ -77,7 +77,7 @@ Neste exemplo, escreveremos um script do Python que cria padrões de um módulo 
 
 Agora que temos as superfícies superior e inferior, vamos elevar os dois perfis para criar os lados do sólido.
 
-\![](<../images/python node - exercise pt I-03.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt I-03.jpg>)
 
 > 1. **List.Create:** conecte o retângulo inferior e o polígono superior às entradas do índice.
 > 2. **Surface.ByLoft:** eleve os dois perfis para criar os lados do sólido.
@@ -86,13 +86,13 @@ Agora que temos as superfícies superior e inferior, vamos elevar os dois perfis
 
 Agora que temos nosso sólido, vamos colocar um nó do script do Python no espaço de trabalho.
 
-\![](<../images/python node - exercise pt I-04.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt I-04.jpg>)
 
-> 1. Para adicionar mais entradas ao nó, clique no ícone + no nó. As entradas são nomeadas IN[0], IN[1], etc. para indicar que representam itens em uma lista.
+> 1. Para adicionar mais entradas ao nó, clique no ícone + no nó. As entradas são nomeadas IN[0], IN[1] etc. para indicar que representam itens em uma lista.
 
 Vamos começar definindo nossas entradas e saídas. Clique duas vezes no nó para abrir o editor do Python. Siga o código abaixo para modificar o código no editor.
 
-\![](<../images/python node - exercise pt I-05.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt I-05.jpg>)
 
 ```py
 # Load the Python Standard and DesignScript Libraries
@@ -102,17 +102,17 @@ clr.AddReference('ProtoGeometry')
 from Autodesk.DesignScript.Geometry import *
 
 # The inputs to this node will be stored as a list in the IN variables.
-#The solid module to be arrayed
+# The solid module to be arrayed
 solid = IN[0]
 
-#A Number that determines which rotation pattern to use
+# A Number that determines which rotation pattern to use
 seed = IN[1]
 
-#The number of solids to array in the X and Y axes
+# The number of solids to array in the X and Y axes
 xCount = IN[2]
 yCount = IN[3]
 
-#Create an empty list for the arrayed solids
+# Create an empty list for the arrayed solids
 solids = []
 
 # Place your code below this line
@@ -124,7 +124,7 @@ OUT = solids
 
 Esse código fará mais sentido à medida que progredirmos no exercício. Em seguida, precisaremos pensar sobre quais informações são necessárias para organizar o módulo de sólido. Primeiro, precisamos conhecer as dimensões do sólido para determinar a distância de conversão. Devido a uma falha da caixa delimitadora, será necessário usar a geometria de curva de aresta para criar uma caixa delimitadora.
 
-![](../images/python07.png)
+![](../../.gitbook/assets/python07.png)
 
 > Veja o nó do Python no Dynamo. Observe que estamos usando a mesma sintaxe que vemos nos títulos dos nós no Dynamo. Confira o código comentado abaixo.
 
@@ -139,27 +139,27 @@ from Autodesk.DesignScript.Geometry import *
 #The solid module to be arrayed
 solid = IN[0]
 
-#A Number that determines which rotation pattern to use
+# A number that determines which rotation pattern to use
 seed = IN[1]
 
-#The number of solids to array in the X and Y axes
+# The number of solids to array in the X and Y axes
 xCount = IN[2]
 yCount = IN[3]
 
-#Create an empty list for the arrayed solids
+# Create an empty list for the arrayed solids
 solids = []
-#Create an empty list for the edge curves
+# Create an empty list for the edge curves
 crvs = []
 
 # Place your code below this line
-#Loop through edges an append corresponding curve geometry to the list
+# Loop through edges an append corresponding curve geometry to the list
 for edge in solid.Edges:
     crvs.append(edge.CurveGeometry)
 
-#Get the bounding box of the curves
+# Get the bounding box of the curves
 bbox = BoundingBox.ByGeometry(crvs)
 
-#Get the x and y translation distance based on the bounding box
+# Get the x and y translation distance based on the bounding box
 yDist = bbox.MaxPoint.Y-bbox.MinPoint.Y
 xDist = bbox.MaxPoint.X-bbox.MinPoint.X
 
@@ -169,7 +169,7 @@ OUT = solids
 
 Como vamos converter e girar os módulos de sólido, usaremos a operação Geometry.Transform. Observando o nó Geometry.Transform, sabemos que precisaremos de um sistema de coordenadas de origem e um sistema de coordenadas de destino para transformar o sólido. A origem é o sistema de coordenadas do contexto do nosso sólido, enquanto o destino será um sistema de coordenadas diferente para cada módulo com matriz. Isso significa que teremos que fazer um loop pelos valores x e y para transformar o sistema de coordenadas de forma diferente a cada vez.
 
-\![](<../images/python node - exercise pt I-06.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt I-06.jpg>)
 
 ```py
 # Load the Python Standard and DesignScript Libraries
@@ -182,34 +182,34 @@ from Autodesk.DesignScript.Geometry import *
 #The solid module to be arrayed
 solid = IN[0]
 
-#A Number that determines which rotation pattern to use
+# A Number that determines which rotation pattern to use
 seed = IN[1]
 
-#The number of solids to array in the X and Y axes
+# The number of solids to array in the X and Y axes
 xCount = IN[2]
 yCount = IN[3]
 
-#Create an empty list for the arrayed solids
+# Create an empty list for the arrayed solids
 solids = []
-#Create an empty list for the edge curves
+# Create an empty list for the edge curves
 crvs = []
 
 # Place your code below this line
-#Loop through edges an append corresponding curve geometry to the list
+# Loop through edges an append corresponding curve geometry to the list
 for edge in solid.Edges:
     crvs.append(edge.CurveGeometry)
 
-#Get the bounding box of the curves
+# Get the bounding box of the curves
 bbox = BoundingBox.ByGeometry(crvs)
 
-#Get the x and y translation distance based on the bounding box
+# Get the x and y translation distance based on the bounding box
 yDist = bbox.MaxPoint.Y-bbox.MinPoint.Y
 xDist = bbox.MaxPoint.X-bbox.MinPoint.X
 
-#Get the source coordinate system
+# Get the source coordinate system
 fromCoord = solid.ContextCoordinateSystem
 
-#Loop through x and y
+# Loop through x and y
 for i in range(xCount):
     for j in range(yCount):
         #Rotate and translate the coordinate system
@@ -225,7 +225,7 @@ OUT = solids
 
 Clique em Executar e, em seguida, salve o código. Conecte o nó do Python ao nosso script existente da seguinte maneira.
 
-\![](<../images/python node - exercise pt I-07.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt I-07.jpg>)
 
 > 1. Conecte a saída de **Solid.ByJoinedSurfaces** como a primeira entrada para o nó do Python e use um Code Block para definir as outras entradas.
 > 2. Crie um nó **Topology.Edges** e use a saída do nó do Python como entrada.
@@ -233,25 +233,25 @@ Clique em Executar e, em seguida, salve o código. Conecte o nó do Python ao no
 
 Tente alterar o valor gerador para criar diferentes padrões. Também é possível alterar os parâmetros do próprio módulo sólido para obter diferentes efeitos.
 
-![](../images/python10.png)
+![](../../.gitbook/assets/python10.png)
 
 ### Parte II: Transformar o nó do script do Python em nó personalizado
 
 Agora que criamos um script Python útil, vamos salvá-lo como um nó personalizado. Selecione o nó do script do Python, clique com o botão direito do mouse no espaço de trabalho e selecione “Criar nó personalizado”.
 
-\![](<../images/python node - exercise pt II-01.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt II-01.jpg>)
 
 Atribua um nome, uma descrição e uma categoria.
 
-\![](<../images/python node - exercise pt II-02.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt II-02.jpg>)
 
 Isso abrirá um novo espaço de trabalho no qual o nó personalizado será editado.
 
-\![](<../images/python node - exercise pt II-03.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt II-03.jpg>)
 
 > 1. **Entradas:** altere os nomes das entradas para que sejam mais descritivos e adicione tipos de dados e valores padrão.
 > 2. **Saída:** altere o nome da saída
 
 Salve o nó como um arquivo .dyf. Em seguida, você deverá ver que o nó personalizado reflete as alterações que acabamos de fazer.
 
-\![](<../images/python node - exercise pt II-04.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt II-04.jpg>)

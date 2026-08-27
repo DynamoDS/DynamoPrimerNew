@@ -1,13 +1,15 @@
 # Python e Civil 3D
 
-Embora o Dynamo seja extremamente poderoso como uma ferramenta de [programação visual](../../a\_appendix/a-1\_visual-programming-and-dynamo.md), também é possível ir além dos nós e fios e escrever código em forma textual. Há duas maneiras de fazer isso:
+Embora o Dynamo seja extremamente poderoso como uma ferramenta de [programação visual](../../a_appendix/a-1_visual-programming-and-dynamo.md), também é possível ir além dos nós e fios e escrever código em forma textual. Há duas maneiras de fazer isso:
 
 1. Escrever **DesignScript** usando um bloco de código
 2. Escrever **Python** usando um nó Python
 
 Esta seção se concentrará em como aproveitar o Python no ambiente do Civil 3D para tirar proveito das APIs .NET do AutoCAD e do Civil 3D.
 
-{% hint style="info" %} Dê uma olhada na seção [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") para obter informações mais gerais sobre como usar o Python no Dynamo. {% endhint %}
+{% hint style="info" %}
+Consulte a seção [8-3_python](../../8_coding_in_dynamo/8-3_python/ "menção") para obter informações mais gerais sobre como usar o Python no Dynamo.
+{% endhint %}
 
 ## Documentação das APIs
 
@@ -15,19 +17,21 @@ O AutoCAD e o Civil 3D têm várias APIs disponíveis que permitem que desenvol
 
 [Guia do Desenvolvedor da API .NET do AutoCAD](https://help.autodesk.com/view/OARX/2024/PTB/?guid=GUID-C3F3C736-40CF-44A0-9210-55F6A939B6F2)
 
-[Guia de Referência da API .NET do AutoCAD](https://help.autodesk.com/view/OARX/2024/PTB/?guid=OARX-ManagedRefGuide-What_s_New)
+[Guia de Referência da API .NET do AutoCAD](https://help.autodesk.com/view/OARX/2024/ENU/?guid=OARX-ManagedRefGuide-What_s_New)
 
 [Guia do Desenvolvedor de API .NET do Civil 3D](https://help.autodesk.com/view/CIV3D/2024/PTB/?guid=GUID-DA303320-B66D-4F4F-A4F4-9FBBEC0754E0)
 
 [Guia de Referência da API .NET do Civil 3D](https://help.autodesk.com/view/CIV3D/2024/PTB/?guid=73fd1950-ee31-00b8-4872-c3f328ea1331)
 
-{% hint style="info" %} Ao longo desta seção, pode haver alguns conceitos com os quais você não está familiarizado, como bancos de dados, transações, métodos, propriedades etc. Muitos desses conceitos são fundamentais para trabalhar com as APIs .NET e não são específicos do Dynamo ou do Python. Está além do escopo desta seção do Manual discutir esses itens em detalhes; portanto, recomendamos consultar os links acima com frequência para obter mais informações. {% endhint %}
+{% hint style="info" %}
+Ao longo desta seção, pode haver alguns conceitos com os quais você não está familiarizado, como bancos de dados, transações, métodos, propriedades etc. Muitos desses conceitos são fundamentais para trabalhar com as APIs .NET e não são específicos do Dynamo ou do Python. Está além do escopo desta seção do Manual discutir esses itens em detalhes; portanto, recomendamos consultar os links acima com frequência para obter mais informações.
+{% endhint %}
 
 ## Modelo de código
 
 Quando você editar um novo nó Python pela primeira vez, ele será preenchido previamente com o código do modelo para começar. Veja a seguir um detalhamento do modelo com explicações sobre cada bloco.
 
-<figure><img src="../images/Python_Template.png" alt=""><figcaption><p>Modelo Python padrão no Civil 3D</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Template (1).png" alt=""><figcaption><p>Modelo Python padrão no Civil 3D</p></figcaption></figure>
 
 > 1. Importa os módulos `sys` e `clr`, que são necessários para que o interpretador Python funcione corretamente. Em particular, o módulo `clr` permite que os namespaces .NET sejam tratados essencialmente como pacotes Python.
 > 2. Carrega as montagens padrão (ou seja, DLLs) para trabalhar com as APIs .NET gerenciadas para o AutoCAD e o Civil 3D.
@@ -39,8 +43,10 @@ Quando você editar um novo nó Python pela primeira vez, ele será preenchido p
 > 8. Retire o comentário dessa linha para confirmar a transação após seu trabalho principal ter sido concluído.
 > 9. Se desejar gerar dados do nó, atribua-os à variável `OUT` no final do script.
 
-{% hint style="info" %} **Deseja personalizar?**\
- É possível modificar o modelo Python padrão editando o arquivo `PythonTemplate.py` localizado em `C:\ProgramData\Autodesk\C3D <versão>\Dynamo`. {% endhint %}
+{% hint style="info" %}
+**Deseja personalizar?**\
+ É possível modificar o modelo Python padrão editando o arquivo `PythonTemplate.py` localizado em `C:\ProgramData\Autodesk\C3D <version>\Dynamo`.
+{% endhint %}
 
 ## Exemplo
 
@@ -78,7 +84,7 @@ Antes de começarmos a criar nosso gráfico e escrever código, é uma boa ideia
 
 Agora podemos começar a criar nossa lógica do gráfico. A primeira coisa a fazer é obter uma lista de todas as áreas de contribuição no documento. Há nós disponíveis para isso; portanto, não precisamos incluí-los no script Python. O uso de nós oferece uma melhor visibilidade para outra pessoa que possa ler o gráfico (em vez de encher o script Python de código) e também mantém o script Python focado em uma coisa: retornar os pontos de limite das áreas de contribuição.
 
-<figure><img src="../images/Python_Get_Catchments.png" alt=""><figcaption><p>Obtenção de todas as áreas de contribuição no documento por camada</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Get_Catchments.png" alt=""><figcaption><p>Obtenção de todas as áreas de contribuição no documento por camada</p></figcaption></figure>
 
 Observe aqui que a saída do nó **Todos os objetos na camada** é uma lista de CivilObjects. Isso ocorre porque o Dynamo for Civil 3D não tem nós atualmente para trabalhar com áreas de contribuição, o que é a razão pela qual precisamos acessar a API por meio do Python.
 
@@ -88,13 +94,17 @@ Antes de avançarmos, temos de abordar brevemente um conceito importante. Na se�
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Tipo do Dynamo</th><th width="373">Pacotes</th></tr></thead><tbody><tr><td><strong>Objeto</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>Entidade</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>Entidade</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
-{% hint style="warning" %} Como regra geral, é mais seguro obter a ID de objeto usando a propriedade `InternalObjectId` e, em seguida, acessar o objeto empacotado em uma transação. Isso ocorre porque a propriedade `InternalDBObject` retornará um DBObject do AutoCAD que não está em um estado gravável. {% endhint %}
+{% hint style="warning" %}
+Como regra geral, é mais seguro obter a ID de objeto usando a propriedade `InternalObjectId` e, em seguida, acessar o objeto empacotado em uma transação. Isso ocorre porque a propriedade `InternalDBObject` retornará um DBObject do AutoCAD que não está em um estado gravável.
+{% endhint %}
 
 ### Script Python
 
 Aqui está o script Python completo que faz o trabalho de acessar os objetos de área de contribuição internos que estão obtendo seus pontos de limite. As linhas realçadas representam as que são modificadas/adicionadas do código do modelo padrão.
 
-{% hint style="info" %} Clique no texto sublinhado no script para obter uma explicação sobre cada linha. {% endhint %}
+{% hint style="info" %}
+Clique no texto sublinhado no script para obter uma explicação sobre cada linha.
+{% endhint %}
 
 <pre class="language-python" data-line-numbers><code class="lang-python"># Carregar as bibliotecas Standard e do DesignScript do Python
 import sys
@@ -108,8 +118,8 @@ clr.AddReference('AecBaseMgd')
 clr.AddReference('AecPropDataMgd')
 clr.AddReference('AeccDbMgd')
 
-<strong><a data-footnote-ref href="#user-content-fn-1">clr.AddReference('ProtoGeometry')</a>
-</strong>
+<a data-footnote-ref href="#user-content-fn-1">clr.AddReference('ProtoGeometry')</a>
+
 # Importar referências do AutoCAD
 from Autodesk.AutoCAD.Runtime import *
 from Autodesk.AutoCAD.ApplicationServices import *
@@ -121,18 +131,18 @@ from Autodesk.AutoCAD.Geometry import *
 from Autodesk.Civil.ApplicationServices import *
 from Autodesk.Civil.DatabaseServices import *
 
-<strong><a data-footnote-ref href="#user-content-fn-2">from Autodesk.DesignScript.Geometry import Point as DynPoint</a>
-</strong>
+<a data-footnote-ref href="#user-content-fn-2">from Autodesk.DesignScript.Geometry import Point as DynPoint</a>
+
 # As entradas para esse nó serão armazenadas como uma lista nas variáveis IN.
 <strong><a data-footnote-ref href="#user-content-fn-3">objs</a> = <a data-footnote-ref href="#user-content-fn-4">IN[0]</a>
 </strong>
 <strong><a data-footnote-ref href="#user-content-fn-5">output = []</a> 
 </strong>
-<strong><a data-footnote-ref href="#user-content-fn-6">if objs is None:</a>
-</strong><strong>    <a data-footnote-ref href="#user-content-fn-7">sys.exit(“A entrada é nula ou está vazia.”)</a>
+<a data-footnote-ref href="#user-content-fn-6">if objs is None:</a>
+<strong>    <a data-footnote-ref href="#user-content-fn-7">sys.exit("A entrada é nula ou está vazia.")</a>
 </strong>
-<strong><a data-footnote-ref href="#user-content-fn-8">if not isinstance(objs, list):</a>
-</strong><strong>    <a data-footnote-ref href="#user-content-fn-9">objs = [objs]</a>
+<a data-footnote-ref href="#user-content-fn-8">if not isinstance(objs, list):</a>
+<strong>    <a data-footnote-ref href="#user-content-fn-9">objs = [objs]</a>
 </strong>    
 adoc = Application.DocumentManager.MdiActiveDocument
 editor = adoc.Editor
@@ -158,22 +168,24 @@ with adoc.LockDocument():
 </strong>            pass
             
 # Atribua a saída à variável OUT.
-<strong><a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
-</strong></code></pre>
+<a data-footnote-ref href="#user-content-fn-22">OUT = saída</a>
+</code></pre>
 
-{% hint style="warning" %} Como regra geral, é recomendável incluir a maior parte da lógica do script dentro de uma transação. Isso garante o acesso seguro aos objetos que o script está lendo/gravando. Em muitos casos, a omissão de uma transação pode causar um erro fatal. {% endhint %}
+{% hint style="warning" %}
+Como regra geral, é recomendável incluir a maior parte da lógica do script dentro de uma transação. Isso garante o acesso seguro aos objetos que o script está lendo/gravando. Em muitos casos, a omissão de uma transação pode causar um erro fatal.
+{% endhint %}
 
 ### Criar PolyCurves
 
 Nesta fase, o script Python deve gerar uma lista de pontos do Dynamo que você pode ver na visualização do plano de fundo. A última etapa é simplesmente criar PolyCurves com base nos pontos. Observe que isso também pode ser feito diretamente no script Python, mas nós o colocamos intencionalmente fora do script em um nó para que ele fique mais visível. Veja a seguir a aparência final do gráfico.
 
-<figure><img src="../images/Python_Final_Script.png" alt=""><figcaption><p>Gráfico final</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Final_Script (1).png" alt=""><figcaption><p>Gráfico final</p></figcaption></figure>
 
 ### Resultado
 
 E aqui está a geometria final do Dynamo.
 
-<figure><img src="../images/Python_Dynamo_Curves.png" alt=""><figcaption><p>PolyCurves do Dynamo resultantes para os limites da área de contribuição</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Dynamo_Curves.png" alt=""><figcaption><p>PolyCurves do Dynamo resultantes para os limites da área de contribuição</p></figcaption></figure>
 
 > :tada: Missão cumprida.
 
@@ -181,7 +193,9 @@ E aqui está a geometria final do Dynamo.
 
 Apenas uma rápida observação aqui antes de finalizarmos. Dependendo de qual versão do Civil 3D você está usando, o nó Python pode ser configurado de forma diferente. No **Civil 3D 2020 e 2021**, o Dynamo usava uma ferramenta chamada **IronPython** para mover dados entre objetos .NET e scripts Python. No entanto, no **Civil 3D 2022**, o Dynamo fez a transição para usar o interpretador Python nativo padrão (também conhecido como **CPython**), que usa o Python 3. Os benefícios dessa transição incluem o acesso a bibliotecas modernas e populares, além de novos recursos de plataforma, manutenção essencial e patches de segurança.
 
-{% hint style="info" %} Você pode ler mais sobre essa transição e sobre como atualizar os scripts herdados no [Blog do Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Se você desejar continuar usando o IronPython, basta instalar o pacote **DynamoIronPython2.7** usando o Dynamo Package Manager. {% endhint %}
+{% hint style="info" %}
+Você pode ler mais sobre essa transição e sobre como atualizar os scripts herdados no [Blog do Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Se você desejar continuar usando o IronPython, basta instalar o pacote **DynamoIronPython2.7** usando o Dynamo Package Manager.
+{% endhint %}
 
 [^1]: Por padrão, a biblioteca de geometria do Dynamo não é adicionada ao ambiente Python. Nosso objetivo com este script é gerar uma lista de pontos do Dynamo para os limites da área de contribuição; portanto, precisamos adicionar essa linha para criar os pontos mais tarde.
 
@@ -205,7 +219,7 @@ Apenas uma rápida observação aqui antes de finalizarmos. Dependendo de qual v
 
 [^11]: “Expanda” o objeto do Dynamo obtendo sua ID de objeto.
 
-[^12]: Recupere o objeto “empacotado” do banco de dados do AutoCAD. Observe que o OpenMode está definido como `ForRead` aqui porque não estamos planejando fazer nenhuma edição nos objetos. Estamos simplificando a “consulta” de dados.
+[^12]: Recupere o objeto “empacotado” do banco de dados do AutoCAD. Observe que o OpenMode está definido como `ForRead` aqui porque não estamos planejando fazer nenhuma edição nos objetos. Estamos simplesmente “consultando” dados.
 
 [^13]: É possível que a lista de entrada de objetos contenha uma mistura de áreas de contribuição e outros itens que não sejam áreas de contribuição. Precisamos verificar essa situação e lidar com ela adequadamente (ou seja, só continue esta iteração do contorno se o item for de fato uma área de contribuição).
 

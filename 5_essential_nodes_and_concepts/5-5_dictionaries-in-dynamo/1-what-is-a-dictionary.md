@@ -22,17 +22,17 @@ A separação dos dicionários das listas apresenta os dicionários como um elem
 * _Novos nós_ foram introduzidos na biblioteca para ajudar a criar, modificar e consultar dicionários.
 * As listas criadas em blocos de código v1.x migrarão automaticamente durante o carregamento do script com a nova sintaxe de lista que usa colchetes `[ ]` em vez de chaves `{ }` \\
 
-\![](<../images/what is a dictionary - what are the changes.jpg>)
+\![](<../../.gitbook/assets/what is a dictionary - what are the changes (3).jpg>)
 
 ***
 
 ### **Por que isso é importante para mim? Para que você usaria isso?**
 
-Em ciência de computação, os dicionários, como as listas, são conjuntos de objetos. Embora as listas estejam em uma ordem específica, os dicionários são conjuntos _não ordenados_. Eles não dependem de números sequenciais (índices); em vez disso, usam _chaves._
+Em ciência de computação, os dicionários, como as listas, são coleções de objetos. Embora as listas estejam em uma ordem específica, os dicionários são conjuntos _não ordenados_. Eles não dependem de números sequenciais (índices); em vez disso, usam _chaves._
 
 Na imagem abaixo, demonstramos um caso de uso potencial de um dicionário. Muitas vezes, os dicionários são usados para relacionar duas partes dos dados que podem não ter uma correlação direta. No nosso caso, estamos ligando a versão em espanhol de uma palavra à versão em inglês para uma pesquisa posterior.
 
-\![](<../images/what is a dictionary - what would you use these for.jpg>)
+\![](<../../.gitbook/assets/what is a dictionary - what would you use these for.jpg>)
 
 > 1. Crie um dicionário para relacionar as duas partes dos dados.
 > 2. Obtenha o valor com a chave fornecida.

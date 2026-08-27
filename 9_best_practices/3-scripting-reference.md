@@ -1,12 +1,12 @@
 # Referência dos scripts
 
-Esta página de referência estende as melhores práticas descritas em Estratégias de script com mais detalhes sobre bibliotecas de códigos, legendagem e estilização. Usaremos o Python para ilustrar os conceitos abaixo, mas os mesmos princípios se aplicam a Python e C# (Zerotouch), mas com sintaxe diferente.
+Esta página de referência estende as melhores práticas descritas em Estratégias de script com mais detalhes sobre bibliotecas de códigos, legendagem e estilização. Usaremos o Python para ilustrar os conceitos abaixo, mas os mesmos princípios se aplicam ao Python e ao C# (Zerotouch) com sintaxe diferente.
 
 ## Quais bibliotecas devem ser usadas
 
 As bibliotecas padrão são externas ao Dynamo e estão presentes nas linguagens de programação Python e C# (Zerotouch). O Dynamo também tem seu próprio conjunto de bibliotecas que correspondem diretamente à sua hierarquia de nós, permitindo que o usuário crie qualquer coisa em código que possa ser feito com nós e fios. A seguir está um guia a indicar os acessos fornecidos por cada biblioteca do Dynamo e quando usar uma biblioteca padrão.
 
-![](images/textual-programming.jpg)
+![](../.gitbook/assets/textual-programming.jpg)
 
 **Bibliotecas padrão e bibliotecas do Dynamo**
 
@@ -28,11 +28,13 @@ As bibliotecas padrão são externas ao Dynamo e estão presentes nas linguagens
    * Funcionalidade: Excel.
    * Como importar: `import DSOffice`
 
-{% hint style="warning" %} *Observação: Durante o uso de **ProtoGeometry** com o Python ou C#, você está criando objetos não gerenciados, que precisam ter memória gerenciada manualmente. Consulte a seção abaixo: **Objetos não gerenciados** para obter mais informações. {% endhint %}
+{% hint style="warning" %}
+*Observação: Ao usar **ProtoGeometry** com o Python ou C#, você está criando objetos não gerenciados, que precisam ter memória gerenciada manualmente. Consulte a seção abaixo: **Objetos não gerenciados**, para obter mais informações.
+{% endhint %}
 
 ## Rotular cuidadosamente
 
-Enquanto cria scripts, estamos constantemente usando identificadores para indicar coisas como variáveis, tipos, funções e outras entidades. Por meio desse sistema de notação simbólica, ao criar algoritmos, podemos convenientemente nos referir às informações através de rótulos, geralmente compostos de uma sequência de caracteres. Atribuir nomes a coisas desempenha um papel importante em códigos de escrita que podem ser facilmente lidos e compreendidos por outras pessoas, bem como por você no futuro. Veja algumas dicas para se ter em mente ao nomear os itens no script:
+Enquanto cria scripts, estamos constantemente usando identificadores para indicar coisas como variáveis, tipos, funções e outras entidades. Por meio desse sistema de notação simbólica podemos, ao criar algoritmos, referir-nos convenientemente às informações através de rótulos, geralmente compostos de uma sequência de caracteres. Atribuir nomes a coisas desempenha um papel importante em códigos de escrita que podem ser facilmente lidos e compreendidos por outras pessoas, bem como por você no futuro. Veja algumas dicas para se ter em mente ao nomear os itens no script:
 
 **É aceitável usar abreviações, mas explique a abreviação com um comentário:**
 

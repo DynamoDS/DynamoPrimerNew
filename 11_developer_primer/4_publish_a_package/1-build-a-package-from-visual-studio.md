@@ -24,11 +24,11 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![Mover os arquivos de projeto](../images/fe-proj-directory.jpg)
+![Mover os arquivos de projeto](../../.gitbook/assets/fe-proj-directory.jpg)
 
 > 1. Mover os arquivos de projeto para a nova pasta `src`
 
-Agora que os arquivos de origem estão em uma pasta separada, adicione um destino `AfterBuild` ao arquivo `CustomNodeModel.csproj` no Visual Studio. Isso deve copiar os arquivos necessários para uma nova pasta de pacote. Abra o arquivo `CustomNodeModel.csproj` em um editor de texto (usamos o [Atom](https://atom.io)) e coloque o destino da compilação antes do identificador de fechamento `</Project>`. Esse destino AfterBuild copiará todos os arquivos .dll, .pbd, .xml e .config para uma nova pasta bin e criará as pastas dyf e extras.
+Agora que os arquivos de origem estão em uma pasta separada, adicione um destino `AfterBuild` ao arquivo `CustomNodeModel.csproj` no Visual Studio. Isso deve copiar os arquivos necessários para uma nova pasta de pacote. Abra o arquivo `CustomNodeModel.csproj` em um editor de texto (usamos o [Atom](https://atom.io)) e coloque o destino da compilação antes do identificador de fechamento `</Project>`. Esse destino AfterBuild copiará todos os arquivos .dll, .pbd, .xml e .config para uma nova pasta /bin e criará as pastas dyf e extra.
 
 ```
   <Target Name="AfterBuild">
@@ -47,7 +47,7 @@ Agora que os arquivos de origem estão em uma pasta separada, adicione um destin
   </Target>
 ```
 
-![Colocar o destino AfterBuild](../images/atom-afterbuild.jpg)
+![Colocar o destino AfterBuild](../../.gitbook/assets/atom-afterbuild.jpg)
 
 > Precisamos ter certeza de que o destino foi adicionado ao arquivo `CustomNodeModel.csproj` (não a outro arquivo de projeto) e que o projeto não tem nenhuma configuração Pós-compilação existente.
 >
@@ -55,7 +55,7 @@ Agora que os arquivos de origem estão em uma pasta separada, adicione um destin
 
 Na seção `<ItemGroup>`, são definidas um número de variáveis para representar tipos de arquivo específicos. Por exemplo, a variável `Dll` representa todos os arquivos no diretório de saída cuja extensão é `.dll`.
 
-```
+```xml
 <ItemGroup>
   <Dlls Include="$(OutDir)*.dll" />
 </ItemGroup>
@@ -63,19 +63,19 @@ Na seção `<ItemGroup>`, são definidas um número de variáveis para represent
 
 O objetivo da tarefa `Copy` é copiar todos os arquivos `.dll` para um diretório, especificamente a pasta de pacotes para a qual estamos compilando.
 
-```
+```xml
 <Copy SourceFiles="@(Dlls)" DestinationFolder="$(SolutionDir)..\packages\CustomNodeModel\bin\" />
 ```
 
 Os pacotes do Dynamo normalmente têm uma pasta `dyf` e `extra` para os nós personalizados do Dynamo e outros recursos, como imagens. Para criar essas pastas, é preciso usar uma tarefa `MakeDir`. Essa tarefa criará uma pasta se ela não existir. É possível adicionar arquivos manualmente a essa pasta.
 
-```
+```xml
 <MakeDir Directories="$(SolutionDir)..\packages\CustomNodeModel\extra" />
 ```
 
 Se você compilar o projeto, a pasta do projeto agora deverá ter uma pasta `packages` junto com a pasta `src` criada anteriormente. Dentro do diretório `packages`, há uma pasta que contém tudo o que é necessário para o pacote. Também precisamos copiar o arquivo `pkg.json` para a pasta do pacote para que o Dynamo saiba como carregar o pacote.
 
-![Copiar arquivos](../images/fe-proj-directory-package.jpg)
+![Copiar arquivos](../../.gitbook/assets/fe-proj-directory-package.jpg)
 
 > 1. A nova pasta de pacotes que o destino AfterBuild criou
 > 2. A pasta src existente com o projeto
