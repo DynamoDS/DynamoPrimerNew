@@ -45,6 +45,7 @@
     * [Package Case Study - Mesh Toolkit](6_custom_nodes_and_packages/6-2_packages/2-mesh-toolkit.md)
     * [Developing a Package](6_custom_nodes_and_packages/6-2_packages/3-developing.md)
     * [Publishing a Package](6_custom_nodes_and_packages/6-2_packages/4-publishing.md)
+    * [Package Thumbnails for Dynamo Home](6_custom_nodes_and_packages/6-2_packages/6-package-thumbnails.md)
     * [Zero-Touch Importing](6_custom_nodes_and_packages/6-2_packages/5-zero-touch.md)
 * [Dynamo for Revit](7_dynamo_for_revit/README.md)
   * [The Revit Connection](7_dynamo_for_revit/1-the-revit-connection.md)

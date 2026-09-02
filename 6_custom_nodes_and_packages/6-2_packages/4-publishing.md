@@ -41,6 +41,10 @@ In the _Publish a Package_ tab, fill out the relevant fields on the left side of
 
 <figure><img src="../../.gitbook/assets/package-details.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+Graphs that appear on Dynamo Home need a thumbnail that survives Home's crop. Compose and attach that image before you publish. See [Package Thumbnails for Dynamo Home](6-package-thumbnails.md).
+{% endhint %}
+
 Next, we’ll add package files. You can add files one by one or entire folders by selecting Add Folder (1). To add files that are not .dyf files, be sure to change your file type in the browser window to **"All Files(**_._**)"**. Notice that we’ll be adding every file, custom node (.dyf) or example file (.dyn), indiscriminately. Dynamo will categorize these items when we publish the package.
 
 <figure><img src="../../.gitbook/assets/map-to-surface-contents.png" alt=""><figcaption></figcaption></figure>
