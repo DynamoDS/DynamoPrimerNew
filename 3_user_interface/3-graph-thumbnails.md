@@ -1,8 +1,10 @@
-# Package Thumbnails for Dynamo Home
+# Graph Thumbnails for Dynamo Home
 
 Dynamo Home shows graph thumbnails on a wide card. The card is 16:9. Home centers the image and crops the top and bottom.
 
 A square thumbnail can look complete in Generative Design, which shows the full square. The same image can lose titles or logos in Home.
+
+This applies to any graph (`.dyn`), not only graphs inside a package. Set the image in Graph Properties. The image is stored in the graph file.
 
 {% hint style="info" %}
 Keep titles, logos, and the main image in the center **safe area**. Use the top and bottom of a square thumbnail as background only.
@@ -14,11 +16,11 @@ Download a template and design on top of it. The darker center band is what Home
 
 > Download the SVG template to edit in a vector app, or the PNG template to place artwork in an image editor.
 
-{% file src="../../.gitbook/assets/Template_Thumbnail.svg" %}
+{% file src="../.gitbook/assets/Template_Thumbnail.svg" %}
 
-{% file src="../../.gitbook/assets/DynamoThumbnailTemplate.png" %}
+{% file src="../.gitbook/assets/DynamoThumbnailTemplate.png" %}
 
-<figure><img src="../../.gitbook/assets/DynamoThumbnailTemplate.png" alt="Square thumbnail template. The darker center band is visible in Dynamo Home. The lighter top and bottom bands are cropped in Home and remain visible in Generative Design."><figcaption><p>The darker center band is visible in Home. The lighter top and bottom bands are cropped.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/DynamoThumbnailTemplate.png" alt="Square thumbnail template. The darker center band is visible in Dynamo Home. The lighter top and bottom bands are cropped in Home and remain visible in Generative Design."><figcaption><p>The darker center band is visible in Home. The lighter top and bottom bands are cropped.</p></figcaption></figure>
 
 ## Compose the thumbnail
 
@@ -38,7 +40,8 @@ Home reads the thumbnail from the graph file (`.dyn`), not from the Package Mana
 2. Go to **File > Show Graph Properties > General**.
 3. Add your exported PNG in the image field.
 4. Save the graph.
-5. If the graph ships in a package, include that `.dyn` when you publish. See [Publishing a Package](4-publishing.md).
+
+If the graph ships in a package, include that `.dyn` when you publish. See [Publishing a Package](../6_custom_nodes_and_packages/6-2_packages/4-publishing.md).
 
 ## Check the result in Home
 
