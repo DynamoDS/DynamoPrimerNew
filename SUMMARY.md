@@ -8,6 +8,7 @@
 * [User Interface](3_user_interface/README.md)
   * [Workspace](3_user_interface/1-workspace.md)
   * [Library](3_user_interface/2-library.md)
+  * [Graph Thumbnails for Dynamo Home](3_user_interface/3-graph-thumbnails.md)
 * [Nodes and Wires](4_nodes_and_wires/README.md)
 * [Essential Nodes & Concepts](5_essential_nodes_and_concepts/README.md)
   * [Index of Nodes](5_essential_nodes_and_concepts/index-of-nodes.md)
