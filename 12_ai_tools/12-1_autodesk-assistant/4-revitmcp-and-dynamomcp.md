@@ -6,7 +6,7 @@ When you work in Revit, two of those servers matter: **RevitMCP** and **DynamoMC
 
 ### RevitMCP: direct model operations
 
-RevitMCP wraps a curated set of Revit API operations as MCP tools. Each tool maps to a defined action in the model, such as reading elements or querying model data.
+RevitMCP, delivered as the [Revit Public MCP Server](https://help.autodesk.com/cloudhelp/2027/ENU/Revit-WhatsNew/files/GUID-97697CBF-0E11-484E-96E5-4277E3E8D61F.htm), wraps a curated set of Revit API operations as MCP tools. Each tool maps to a defined action in the model: finding elements, checking parameters and counts, editing parameters in bulk, and capturing snapshots of views.
 
 This is the shortest path for a task the tool set already covers. One request becomes one call, and the model changes immediately. There is no graph to build and nothing to run afterward.
 
@@ -54,3 +54,9 @@ In Dynamo Sandbox, Assistant reaches DynamoMCP only, because there is no Revit m
 You do not need to name a server in your prompt. Describing the outcome is enough, and Assistant selects the tools.
 
 If you want a graph specifically, say so. Prompts such as *"build me a graph that tags the doors on Level 2"* tell Assistant that the reusable version is the point, not only the tagged doors.
+
+### Further reading
+
+- [Autodesk Assistant (Tech Preview)](https://help.autodesk.com/cloudhelp/2027/ENU/Revit-WhatsNew/files/GUID-68D8FE6D-C5B0-4503-AE27-02C715BAC25B.htm) — what Assistant does in Revit, in the Revit 2027 help.
+- [Revit Public MCP Server (Tech Preview)](https://help.autodesk.com/cloudhelp/2027/ENU/Revit-WhatsNew/files/GUID-97697CBF-0E11-484E-96E5-4277E3E8D61F.htm) — the Revit side of MCP, in the Revit 2027 help.
+- [Autodesk Assistant: overview and frequently asked questions](https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Autodesk-Assistant-Supported-Products-and-How-to-Use-It.html) — which products include Assistant, and how to use it.
