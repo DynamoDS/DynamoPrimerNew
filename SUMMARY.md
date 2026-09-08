@@ -152,6 +152,7 @@
   * [Autodesk Assistant](12_ai_tools/12-1_autodesk-assistant/1-what-is-autodesk-assistant.md)
     * [What can Autodesk Assistant do](12_ai_tools/12-1_autodesk-assistant/2-what-can-autodesk-assistant-do.md)
     * [What is Autodesk Assistant Unable to do](12_ai_tools/12-1_autodesk-assistant/3-what-is-autodesk-assistant-unable-to-do.md)
+    * [RevitMCP and DynamoMCP](12_ai_tools/12-1_autodesk-assistant/4-revitmcp-and-dynamomcp.md)
   * [Dynamo MCP](12_ai_tools/12-2_dynamo-mcp/1-what-is-dynamo-mcp.md)
 * [Appendix](a_appendix/README.md)
   * [Frequently Asked Questions](a_appendix/a-7_frequently-asked-questions.md)
