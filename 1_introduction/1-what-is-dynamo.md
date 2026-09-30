@@ -16,7 +16,7 @@ Dynamo 将使我们能够在可视化编程过程中工作，从而将各元素�
 
 节点和导线是 Dynamo 中支持[可视化编程](../a_appendix/a-1_visual-programming-and-dynamo.md)过程的关键组件。它有助于在设计的各个部分之间建立强大的视觉和系统关系。在开发和优化设计工作流时，使用简单的鼠标单击即可轻松连接节点。
 
-![](<../.gitbook/assets/what is dynamo - connecting nodes with wires.gif>)
+![](<1_introduction/images/what is dynamo - connecting nodes with wires.gif>)
 
 ## Dynamo 有哪些用途？
 
