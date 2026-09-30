@@ -10,7 +10,7 @@ Dynamo 是一款[可视化编程](https://primer2.dynamobim.org/zh-cn/a_appendix
 
 Dynamo 将使我们能够在可视化编程过程中工作，从而将各元素连接在一起以定义关系和构成自定义算法的操作序列。我们可以使用算法来处理各种应用程序（从处理数据到生成几何图形），所有操作均可实时完成，无需编写任何 `code`。
 
-![](<../.gitbook/assets/nodes and wires - flow of data.jpg>)
+![](<../1_introduction/images/nodes and wires - flow of data.jpg>)
 
 ### 连接节点和导线
 
