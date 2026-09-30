@@ -1,6 +1,6 @@
 # Python 和 Civil 3D
 
-虽然 Dynamo 是一款功能非常强大的[可视化编程](../../a\_appendix/a-1\_visual-programming-and-dynamo.md)工具，但也可以越过节点和导线，以文本形式编写代码。有两种方法可以执行此操作：
+虽然 Dynamo 是一款功能非常强大的[可视化编程](../../a_appendix/a-1_visual-programming-and-dynamo.md)工具，但也可以越过节点和导线，以文本形式编写代码。有两种方法可以执行此操作：
 
 1. 使用代码块编写 **DesignScript**
 2. 使用 Python 节点编写 **Python**
@@ -8,7 +8,7 @@
 本部分将重点介绍如何在 Civil 3D 环境中利用 Python，来利用 AutoCAD 和 Civil 3D .NET API。
 
 {% hint style="info" %}
-有关如何在 Dynamo 中使用 Python 的更多常规信息，请参见 [8-3_Python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") 部分。
+有关如何在 Dynamo 中使用 Python 的更多常规信息，请参见 [8-3_Python](../../8_coding_in_dynamo/8-3_python/ "mention") 部分。
 {% endhint %}
 
 ## API 文档
@@ -17,19 +17,21 @@ AutoCAD 和 Civil 3D 都提供了多个 API，使像您这样的开发人员能�
 
 [AutoCAD .NET API 开发人员手册](https://help.autodesk.com/view/OARX/2024/CHS/?guid=GUID-C3F3C736-40CF-44A0-9210-55F6A939B6F2)
 
-[AutoCAD .NET API 参考手册](https://help.autodesk.com/view/OARX/2024/CHS/?guid=OARX-ManagedRefGuide-What_s_New)
+[AutoCAD .NET API 参考手册](https://help.autodesk.com/view/OARX/2024/ENU/?guid=OARX-ManagedRefGuide-What_s_New)
 
 [Civil 3D .NET API 开发人员手册](https://help.autodesk.com/view/CIV3D/2024/CHS/?guid=GUID-DA303320-B66D-4F4F-A4F4-9FBBEC0754E0)
 
 [Civil 3D .NET API 参考手册](https://help.autodesk.com/view/CIV3D/2024/CHS/?guid=73fd1950-ee31-00b8-4872-c3f328ea1331)
 
-{% hint style="info" %}在您浏览此部分时，可能会有一些您不熟悉的概念（如数据库、事务、方法、特性等）。其中许多概念是使用 .NET API 的核心，并不是 Dynamo 或 Python 特有的。本 Primer 的此部分不会详细讨论这些项目，因此建议您经常参见上述链接以了解详细信息。{% endhint %}
+{% hint style="info" %}
+在您浏览此部分时，可能会有一些您不熟悉的概念（如数据库、事务、方法、特性等）。其中许多概念是使用 .NET API 的核心，并不是 Dynamo 或 Python 特有的。本 Primer 的此部分不会详细讨论这些项目，因此建议您经常参见上述链接以了解详细信息。
+{% endhint %}
 
 ## 代码模板
 
 当第一次编辑一个新的 Python 节点时，该节点会预填充模板代码以便于您快速开始。以下是模板的详细介绍，其中包含有关每个块的说明。
 
-<figure><img src="../images/Python_Template.png" alt=""><figcaption><p>Civil 3D 中的默认 Python 模板</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Template (1).png" alt=""><figcaption><p>Civil 3D 中的默认 Python 模板</p></figcaption></figure>
 
 > 1. 输入 `sys` 和 `clr` 模块，这两个模块都是 Python 解释器能够正常运行所必需的。特别是，`clr` 模块使 .NET 名称空间能够基本上被视为 Python 软件包。
 > 2. 加载标准程序集（即 DLL），以使托管 .NET API 能够用于 AutoCAD 和 Civil 3D。
@@ -41,8 +43,10 @@ AutoCAD 和 Civil 3D 都提供了多个 API，使像您这样的开发人员能�
 > 8. 在主要工作完成后，取消注释此行以提交事务。
 > 9. 如果要输出节点中的任何数据，请在脚本末尾将该节点指定给 `OUT` 变量。
 
-{% hint style="info" %}**要自定义？**\
-可以通过编辑位于 `C:\ProgramData\Autodesk\C3D <version>\Dynamo` 中的 `PythonTemplate.py` 文件，来修改默认 Python 模板。  {% endhint %}
+{% hint style="info" %}
+**想要自定义？**\
+可以通过编辑位于 `C:\ProgramData\Autodesk\C3D <version>\Dynamo` 中的 `PythonTemplate.py` 文件，来修改默认 Python 模板。
+{% endhint %}
 
 ## 示例
 
@@ -80,7 +84,7 @@ AutoCAD 和 Civil 3D 都提供了多个 API，使像您这样的开发人员能�
 
 现在，我们可以开始构建图形逻辑。首先，获取文档中所有汇流的列表。有节点可用于此操作，因此我们不需要将其包含在 Python 脚本中。使用节点可以为可能读取图形的其他人提供更好的可见性（而不是在 Python 脚本中隐藏大量代码），它还使 Python 脚本能够专注于一件事：返回汇流的边界点。
 
-<figure><img src="../images/Python_Get_Catchments.png" alt=""><figcaption><p>按图层获取文档中的所有汇流</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Get_Catchments.png" alt=""><figcaption><p>按图层获取文档中的所有汇流</p></figcaption></figure>
 
 请注意，**All Objects on Layer** 节点的输出内容是 CivilObject 的列表。这是因为 Dynamo for Civil 3D 当前没有任何用于处理汇流的节点，这正是我们需要通过 Python 访问 API 的原因。
 
@@ -90,13 +94,17 @@ AutoCAD 和 Civil 3D 都提供了多个 API，使像您这样的开发人员能�
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Dynamo 类型</th><th width="373">包裹</th></tr></thead><tbody><tr><td><strong>Object</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>Entity</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>Entity</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
-{% hint style="warning" %} 根据经验，通常使用 `InternalObjectId` 特性获取对象 ID，然后在事务中访问包裹对象更安全。这是因为 `InternalDBObject` 特性会返回一个不处于可写状态的 AutoCAD DBObject。 {% endhint %}
+{% hint style="warning" %}
+根据经验，通常使用 `InternalObjectId` 特性获取对象 ID，然后在事务中访问包裹对象更安全。这是因为 `InternalDBObject` 特性会返回一个不处于可写状态的 AutoCAD DBObject。
+{% endhint %}
 
 ### Python 脚本
 
 以下是一个完整的 Python 脚本，用于访问内部汇流对象以获取其边界点。亮显行表示基于默认模板代码修改/添加的行。
 
-{% hint style="info" %}单击脚本中带下划线的文字，可了解每行的说明。{% endhint %}
+{% hint style="info" %}
+单击脚本中带下划线的文字，可了解每行的说明。
+{% endhint %}
 
 <pre class="language-python" data-line-numbers><code class="lang-python"># 加载 Python 标准库和 DesignScript 库
 import sys
@@ -110,8 +118,8 @@ clr.AddReference('AecBaseMgd')
 clr.AddReference('AecPropDataMgd')
 clr.AddReference('AeccDbMgd')
 
-<strong><a data-footnote-ref href="#user-content-fn-1">clr.AddReference('ProtoGeometry')</a>
-</strong>
+<a data-footnote-ref href="#user-content-fn-1">clr.AddReference('ProtoGeometry')</a>
+
 # 从 AutoCAD 输入参照
 from Autodesk.AutoCAD.Runtime import *
 from Autodesk.AutoCAD.ApplicationServices import *
@@ -123,18 +131,18 @@ from Autodesk.AutoCAD.Geometry import *
 from Autodesk.Civil.ApplicationServices import *
 from Autodesk.Civil.DatabaseServices import *
 
-<strong><a data-footnote-ref href="#user-content-fn-2">from Autodesk.DesignScript.Geometry import Point as DynPoint</a>
-</strong>
+<a data-footnote-ref href="#user-content-fn-2">from Autodesk.DesignScript.Geometry import Point as DynPoint</a>
+
 # 此节点的输入内容将以列表形式存储在 IN 变量中。
 <strong><a data-footnote-ref href="#user-content-fn-3">objs</a> = <a data-footnote-ref href="#user-content-fn-4">IN[0]</a>
 </strong>
 <strong><a data-footnote-ref href="#user-content-fn-5">output = []</a>
 </strong>
-<strong><a data-footnote-ref href="#user-content-fn-6">if objs is None:</a>
-</strong><strong>    <a data-footnote-ref href="#user-content-fn-7">sys.exit("The input is null or empty.")</a>
+<a data-footnote-ref href="#user-content-fn-6">if objs is None:</a>
+<strong>    <a data-footnote-ref href="#user-content-fn-7">sys.exit("The input is null or empty.")</a>
 </strong>
-<strong><a data-footnote-ref href="#user-content-fn-8">if not isinstance(objs, list):</a>
-</strong><strong>    <a data-footnote-ref href="#user-content-fn-9">objs = [objs]</a>
+<a data-footnote-ref href="#user-content-fn-8">if not isinstance(objs, list):</a>
+<strong>    <a data-footnote-ref href="#user-content-fn-9">objs = [objs]</a>
 </strong>   
 adoc = Application.DocumentManager.MdiActiveDocument
 editor = adoc.Editor
@@ -160,22 +168,24 @@ with adoc.LockDocument():
 </strong>            pass
             
 # 将输出内容指定给 OUT 变量。
-<strong><a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
-</strong></code></pre>
+<a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
+</code></pre>
 
-{% hint style="warning" %}根据经验，最好将大部分脚本逻辑包含在事务中。这可确保安全访问脚本正在读/写的对象。在许多情况下，忽略事务可能会导致出现致命错误。{% endhint %}
+{% hint style="warning" %}
+根据经验，最好将大部分脚本逻辑包含在事务中。这可确保安全访问脚本正在读/写的对象。在许多情况下，忽略事务可能会导致出现致命错误。
+{% endhint %}
 
 ### 创建 PolyCurve
 
 在此阶段，Python 脚本应该会输出可在后台预览中看到的 Dynamo 点列表。最后一步是从这些点创建 PolyCurve。请注意，这也可以直接在 Python 脚本中完成，但我们有意将其放置在脚本之外的节点中，以便它更明显。最终图形如下所示。
 
-<figure><img src="../images/Python_Final_Script.png" alt=""><figcaption><p>最终图形</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Final_Script (1).png" alt=""><figcaption><p>最终图形</p></figcaption></figure>
 
 ### 结果
 
 以下最终的 Dynamo 几何图形。
 
-<figure><img src="../images/Python_Dynamo_Curves.png" alt=""><figcaption><p>生成的汇流边界的 Dynamo PolyCurve</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Dynamo_Curves.png" alt=""><figcaption><p>生成的汇流边界的 Dynamo PolyCurve</p></figcaption></figure>
 
 > :tada: 任务完成！
 
@@ -184,7 +194,7 @@ with adoc.LockDocument():
 在我们结束之前，作一个简短说明。根据您正在使用的 Civil 3D 版本，Python 节点的配置可能会有所不同。在 **Civil 3D 2020 和 2021** 中，Dynamo 使用名为 **IronPython** 的工具在 .NET 对象和 Python 脚本之间移动数据。但在 **Civil 3D 2022** 中，Dynamo 转变为使用标准的本地 Python 解释器（也称为 **CPython**），而不是使用 Python 3。此转变的好处包括能够访问常用现代库和新平台功能、基本维护和安全修补程序。
 
 {% hint style="info" %}
-可以在 [Dynamo 博客](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/) 上，详细了解此转变以及如何升级旧脚本。如果要继续使用 IronPython，只需使用 Dynamo Package Manager 安装 **DynamoIronPython2.7** 软件包。
+可以在 [Dynamo 博客](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/)上，详细了解此转变以及如何升级旧脚本。如果要继续使用 IronPython，只需使用 Dynamo Package Manager 安装 **DynamoIronPython2.7** 软件包。
 {% endhint %}
 
 [^1]: 默认情况下，Dynamo 几何图形库不会添加到 Python 环境中。我们使用此脚本的目标是输出汇流边界的 Dynamo 点列表，因此我们需要添加此行以便稍后创建点。
@@ -209,7 +219,7 @@ with adoc.LockDocument():
 
 [^11]: 通过获取 Dynamo 对象的对象 ID，“展开”该对象。
 
-[^12]: 从 AutoCAD 数据库中检索“包裹”对象。请注意，由于我们不打算对对象进行任何编辑，因此 OpenMode 在此处设置为 `ForRead`。我们只是在简单地“查询”数据。
+[^12]: 从 AutoCAD 数据库中检索“包裹”对象。请注意，由于我们不打算对对象进行任何编辑，因此 OpenMode 在此处设置为 `ForRead`。我们只是在“查询”数据。
 
 [^13]: 输入的对象列表可能同时包含汇流和其他非汇流项目。我们需要检查是否存在此情况，并进行相应处理（即，仅当项目确实是汇流时，才继续循环的此迭代）。
 

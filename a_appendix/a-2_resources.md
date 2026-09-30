@@ -12,7 +12,7 @@
 
 此博客是 Dynamo 团队编写的最新文章集合，这些文章讨论了新功能、工作流和有关 Dynamo 的所有内容。
 
-[http://dynamobim.com/blog/](http://dynamobim.com/blog/)
+[https://dynamobim.org/blog/](https://dynamobim.org/blog/)
 
 ### **DesignScript 手册**
 
@@ -76,8 +76,3 @@ https://github.com/architecture-building-systems/revitpythonshell
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
-### **建筑编码器**
-
-来自 BIM 领域的一位顶尖专家的强大 Revit API 工作流目录。
-
-[http://thebuildingcoder.typepad.com/](http://thebuildingcoder.typepad.com)

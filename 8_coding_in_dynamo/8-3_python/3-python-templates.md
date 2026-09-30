@@ -4,25 +4,27 @@
 
 此模板的位置位于 Dynamo 安装的 `APPDATA` 位置。
 
-这通常如下所示：`( %appdata%DynamoDynamo Core{version} )`。
+这通常如下所示：`( %appdata%\Dynamo\Dynamo Core\{version}\ )`。
 
-![](<../images/python templates - appdata folder location.jpg>)
+\![](<../../.gitbook/assets/python templates - appdata folder location.jpg>)
 
 ### 设置模板
 
 为了能够利用此功能，我们需要在 `DynamoSettings.xml` 文件中添加以下行。_（在记事本中编辑）_
 
-![](<../images/python templates -dynamo settings xml file.png>)
+\![](<../../.gitbook/assets/python templates -dynamo settings xml file.png>)
 
 在我们看到 `<PythonTemplateFilePath />` 的位置，只需将其替换为以下内容：
 
 ```
 <PythonTemplateFilePath>
-<string>C:UsersCURRENTUSERAppDataRoamingDynamoDynamo Core2.0PythonTemplate.py</string>
+<string>C:\Users\CURRENTUSER\AppData\Roaming\Dynamo\Dynamo Core\2.0\PythonTemplate.py</string>
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} _注意：将 CURRENTUSER 替换为您的用户名_ {% endhint %}
+{% hint style="warning" %}
+_注意：请将 CURRENTUSER 替换为您的用户名_
+{% endhint %}
 
 接下来，我们需要使用要内置的功能构建模板。在本例中，我们在使用 Revit 时嵌入 Revit 相关的导入和一些其他典型项目。
 
@@ -54,10 +56,10 @@ from RevitServices.Transactions import TransactionManager
 doc = DocumentManager.Instance.CurrentDBDocument
 uidoc=DocumentManager.Instance.CurrentUIApplication.ActiveUIDocument
 
-#Preparing input from dynamo to revit
+# Preparing input from dynamo to revit
 element = UnwrapElement(IN[0])
 
-#Do some action in a Transaction
+# Do some action in a Transaction
 TransactionManager.Instance.EnsureInTransaction(doc)
 
 TransactionManager.Instance.TransactionTaskDone()
@@ -71,10 +73,10 @@ OUT = element
 
 定义了 Python 模板后，在每次放置 Python 节点时，Dynamo 都会查找该模板。如果找不到，它将看起来像默认的 Python 窗口。
 
-![](<../images/python templates - before setup template.jpg>)
+\![](<../../.gitbook/assets/python templates - before setup template.jpg>)
 
 如果找到 Python 模板（如我们的 Revit 模板），则您会看到所有内置的默认项目。
 
-![](<../images/python templates - after setup template.jpg>)
+\![](<../../.gitbook/assets/python templates - after setup template.jpg>)
 
 有关此出色附加功能（由 Radu Gidei 提供）的其他信息可以在此处找到。https://github.com/DynamoDS/Dynamo/pull/8122

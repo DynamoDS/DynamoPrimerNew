@@ -4,7 +4,7 @@
 
 既然我们已经建立了列表，那么让我们来介绍如何对它执行操作。将一个列表想象为一副纸牌。一副纸牌即是列表，每张纸牌表示一个项目。
 
-![纸牌](../images/Playing_cards_modified.jpg)
+![纸牌](../../.gitbook/assets/Playing_cards_modified.jpg)
 
 > 照片由 [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg) 提供
 
@@ -12,8 +12,8 @@
 
 我们可以在列表中进行哪些**查询**？这将访问现有特性。
 
-* 一副纸牌中纸牌的张数？52.
-* 玩家人数？4.
+* 一副纸牌中纸牌的张数？52\.
+* 玩家人数？4\.
 * 材料？纸。
 * 长度？3.5" 或 89mm。
 * 宽度？2.5" 或 64mm。
@@ -43,15 +43,15 @@
 
 下图是我们在两个圆之间绘制直线以表示基本列表操作的基础图形。我们将探讨如何管理列表中的数据，并通过下面的列表操作演示可视结果。
 
-![](<../images/working with list - list operation.jpg>)
+\![](<../../.gitbook/assets/working with list - list operation.jpg>)
 
-> 1. 从 **“代码块”** 开始，其中值为 `500;`
+> 1. 从 **“代码块”** 开始，其中值为 `500;`。
 > 2. 连接到 **“Point.ByCoordinates”** 节点的 x 输入。
 > 3. 将上一步中的节点连接到 **“Plane.ByOriginNormal”** 节点的原点输入。
 > 4. 使用 **“Circle.ByPlaneRadius”** 节点，将上一步中的节点连接到平面输入。
 > 5. 使用 **“代码块”** ，为半径指定值 `50;`。这是我们将创建的第一个圆。
 > 6. 使用 **“Geometry.Translate”** 节点，将圆沿 Z 方向向上移动 100 个单位。
-> 7. 使用 **“Code Block”** 节点，通过以下一行代码定义一系列 10 个介于 0 和 1 之间的数字：`0..1..#10;`
+> 7. 使用 **“Code Block”** 节点，通过以下一行代码定义一系列 10 个介于 0 和 1 之间的数字：`0..1..#10;`。
 > 8. 将上一步中的代码块连接到两个 **“Curve.PointAtParameter”** 节点的 _“param”_ 输入。将 **“Circle.ByPlaneRadius”** 插入到顶部节点的曲线输入，并将 **“Geometry.Translate”** 连接到其下节点的曲线输入。
 > 9. 使用 **Line.ByStartPointEndPoint**，连接两个 **Curve.PointAtParameter** 节点。
 
@@ -65,7 +65,7 @@
 
 _“List.Count”_ 节点简单明了：它计算列表中值的数量，并返回该数量。随着我们使用列表的列表，此节点会变得更加微妙，但我们会在接下来的各部分中进行演示。
 
-![计数](<../images/working with list - list operation - list count.jpg>)
+\![Count](<../../.gitbook/assets/working with list - list operation - list count.jpg>)
 
 > 1. **“List.Count”**节点会返回**“Line.ByStartPointEndPoint”**节点中线的数量。在本例中，该值为 10，表示与从原始 **“Code Block”** 节点创建的点数一致。
 
@@ -79,14 +79,14 @@ _“List.Count”_ 节点简单明了：它计算列表中值的数量，并返�
 
 **“List.GetItemAtIndex”** 是用于查询列表中项的基本方法。
 
-![练习](<../images/working with list - get item index 01.jpg>)
+\![Exercise](<../../.gitbook/assets/working with list - get item index 01.jpg>)
 
 > 1. 首先，在 **“Line.ByStartPointEndPoint”** 节点上单击鼠标右键以关闭其预览。
 > 2. 使用 **“List.GetItemAtIndex”** 节点，我们选择索引 _“0”_ 或线列表中的第一项。
 
 将滑块值更改为介于 0 和 9 之间，以使用 **“List.GetItemAtIndex”** 选择其他项目。
 
-![](<../images/working with list - get item index 02.gif>)
+\![](<../../.gitbook/assets/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
@@ -98,10 +98,10 @@ _“List.Count”_ 节点简单明了：它计算列表中值的数量，并返�
 
 _“List.Reverse”_ 可反转列表中所有项的顺序。
 
-![练习](<../images/working with list - list reverse.jpg>)
+\![Exercise](<../../.gitbook/assets/working with list - list reverse.jpg>)
 
 > 1. 要正确显示反转的线列表，请通过将 **“代码块”** 更改为 `0..1..#50;` 来创建更多线
-> 2. 复制 **“Line.ByStartPointEndPoint”** 节点，在 **“Curve.PointAtParameter”** 和第二个 **“Line.ByStartPointEndPoint”** 之间插入“List.Reverse”节点
+> 2. 复制**“Line.ByStartPointEndPoint”**节点，在**“Curve.PointAtParameter”**和第二个**“Line.ByStartPointEndPoint”**之间插入**“List.Reverse”**节点
 > 3. 使用 **“Watch3D”** 节点预览两个不同的结果。第一个显示没有反向列表的结果。这些线垂直连接到相邻点。但是，反转列表会将所有点以相反顺序连接到其他列表。
 
 ### List.ShiftIndices <a href="#listshiftindices" id="listshiftindices"></a>
@@ -114,7 +114,7 @@ _“List.Reverse”_ 可反转列表中所有项的顺序。
 
 **“List.ShiftIndices”** 是适用于创建扭曲或螺旋图案或者任何其他类似数据操作的工具。此节点会将列表中的项目移动给定数量的索引。
 
-![练习](<../images/working with list - shiftIndices 01.jpg>)
+\![Exercise](<../../.gitbook/assets/working with list - shiftIndices 01.jpg>)
 
 > 1. 在与反转列表相同的过程中，将 **“List.ShiftIndices”** 插入到 **“Curve.PointAtParameter”** 和 **“Line.ByStartPointEndPoint”** 中。
 > 2. 使用 **“代码块”**，指定值为“1”以将列表移动一个索引。
@@ -122,7 +122,7 @@ _“List.Reverse”_ 可反转列表中所有项的顺序。
 
 例如，通过将 **“代码块”** 更改为较大值（_“30”_），我们注意到对角线存在明显差异。在本例中，该移动类似于照相机的光圈，从而以原始圆柱形式创建扭曲。
 
-![](<../images/working with list - shiftIndices 02.jpg>)
+\![](<../../.gitbook/assets/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -132,11 +132,11 @@ _“List.Reverse”_ 可反转列表中所有项的顺序。
 
 {% file src="../../.gitbook/assets/List-FilterByBooleanMask.dyn" %}
 
-![](../images/ListFilterBool.png)
+![](../../.gitbook/assets/ListFilterBool.png)
 
 **“List.FilterByBooleanMask”** 将基于布尔值列表移除某些项目，或通过读取“true”或“false”值来移除某些项目。
 
-![练习](<../images/working with list - filter by bool mask.jpg>)
+\![Exercise](<../../.gitbook/assets/working with list - filter by bool mask.jpg>)
 
 为了创建读取“true”或“false”的值列表，我们需要做更多的工作...
 

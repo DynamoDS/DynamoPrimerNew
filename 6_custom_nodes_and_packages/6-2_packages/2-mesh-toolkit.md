@@ -1,8 +1,8 @@
 # 软件包案例研究 - Mesh Toolkit
 
-Dynamo Mesh Toolkit 包提供了多种工具，可从外部文件格式输入网格、从 Dynamo 几何体对象创建网格，以及按顶点和索引手动构建网格。该库还提供了一些工具，可用于修改网格、修复网格或提取水平切片以在制造中使用。
+Dynamo Mesh Toolkit 提供了一些工具，用于从 Dynamo 几何图形对象创建网格，以及按顶点和索引手动构建网格。该库还提供了一些工具，可用于修改网格、修复网格或提取水平切片以在制造中使用。虽然此工具包还可用于导入和查询外部网格文件，但此示例将网格作为顶点和索引集包含在脚本中，因此不需要额外的文件。提供的图形利用 **Data.Remember** 节点来存储重建著名的斯坦福兔网格所需的所有信息，而不是外部网格文件。
 
-![](<../images/meshToolkit case study 01.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study 01.jpg>)
 
 Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未来几年内将继续增长。希望新方法经常出现在工具包中，您可以随时与 Dynamo 团队联系并提供评论、错误和新功能建议。
 
@@ -14,7 +14,7 @@ Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未�
 
 在 Dynamo 中，转到顶部菜单栏中的“软件包”>“软件包管理器...”。在搜索字段中，键入“MeshToolkit”，全部写为一个单词。单击“安装”并接受确认以开始下载。就这么简单！
 
-<figure><img src="../images/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
 ## 练习：使网格相交
 
@@ -24,23 +24,23 @@ Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未�
 
 {% file src="../../.gitbook/assets/MeshToolkit.zip" %}
 
-在此示例中，我们将查看网格工具包中的“相交”节点。我们将导入网格并与一系列输入平面相交以创建切片。这是准备模型以在激光刀具、水射流刀具或 CNC 铣削上进行加工的起点。
+在此示例中，我们将查看网格工具包中的“相交”节点。我们将从存储的顶点生成网格，并将其与一系列输入平面相交以创建切片。这是准备模型以在激光刀具、水射流刀具或 CNC 铣削上进行加工的起点。
 
 首先，在 Dynamo 中打开 _“Mesh-Toolkit_Intersect-Mesh.dyn”_。
 
-![](<../images/meshToolkit case study - exercise 01.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 01.jpg>)
 
-> 1. **File Path**：找到要输入的网格文件（_“stanford_bunny_tri.obj”_）。支持的文件类型包括 .mix 和 .obj
-> 2. **Mesh.ImportFile**：连接文件路径以输入网格
+> 1. **Data.Remember：**这两个节点包含存储为点的网格顶点和网格索引（由一系列整数组成）。它们一起提供重建网格所需的所有信息。
+> 2. **Mesh.ByVerticesAndIndices：**连接数据节点中的顶点和索引以构建网格。
 
-![](<../images/meshToolkit case study - exercise 02.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 02.jpg>)
 
 > 1. **Point.ByCoordinates**：构造点 - 这将是圆弧的中心。
 > 2. **Arc.ByCenterPointRadiusAngle**：围绕点构造圆弧。此曲线将用于定位一系列平面。设置如下所示：`radius: 40, startAngle: -90, endAngle:0`
 
 创建一系列沿圆弧定向的平面。
 
-![](<../images/meshToolkit case study - exercise 03.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 03.jpg>)
 
 > 1. **代码块**：创建 25 个介于 0 和 1 之间的数字。
 > 2. **Curve.PointAtParameter**：将圆弧连接到 _“curve”_ 输入，将代码块输出连接到 _“param”_ 输入以沿曲线提取一系列点。
@@ -49,21 +49,21 @@ Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未�
 
 接下来，我们将使用这些平面来与网格相交。
 
-![](<../images/meshToolkit case study - exercise 04.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 04.jpg>)
 
-> 1. **Mesh.Intersect**：使平面与输入的网格相交，从而创建一系列复合线轮廓。在节点上单击鼠标右键并将连缀设置为最长
+> 1. **Mesh.Intersect**：使平面与生成的网格相交，从而创建一系列复合线轮廓。在节点上单击鼠标右键并将连缀设置为最长
 > 2. **PolyCurve.Curves**：将复合线断开为其曲线片段。
 > 3. **Curve.EndPoint**：提取每条曲线的端点。
 > 4. **NurbsCurve.ByPoints**：使用点来构建 NURBS 曲线。使用设定为 _True_ 的布尔节点闭合曲线。
 
-在继续操作之前，请关闭某些节点（例如：Mesh.ImportFile、Curve.EndPoint、Plane.ByOriginNormal 和 Arc.ByCenterPointRadiusAngle）的预览，以便更好地查看结果。
+在继续之前，请转换某些节点（例如：Mesh.ByVerticesAndIndices、Curve.EndPoint、Plane.ByOriginNormal 和 Arc.ByCenterPointRadiusAngle）的预览，以便更好地查看结果。
 
-![](<../images/meshToolkit case study - exercise 05.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 05.jpg>)
 
 > 1. **Surface.ByPatch**：为每个轮廓构造曲面面片以创建网格的“切片”。
 
 为一个格子/卵形木箱效果添加第二组切片。
 
-![](<../images/meshToolkit case study - exercise 06.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 06.jpg>)
 
 您可能已注意到，相交操作通过网格与类似实体进行更快的计算。此练习中演示的工作流适合于与网格结合使用。

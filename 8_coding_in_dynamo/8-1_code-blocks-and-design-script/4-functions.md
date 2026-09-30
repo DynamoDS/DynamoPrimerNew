@@ -6,9 +6,9 @@
 
 第一行包含关键字“def”，接着是函数名称，然后是括号中的输入名称。大括号定义函数的主体。使用“return =”返回值。定义函数的代码块没有输入或输出端口，因为它们是从其他代码块调用的。
 
-![](<../images/functions parent def.jpg>)
+\![](<../../.gitbook/assets/functions parent def.jpg>)
 
-```
+```js
 /*This is a multi-line comment,
 which continues for
 multiple lines*/
@@ -24,9 +24,9 @@ return sum;
 
 通过提供名称和相同数量的参数，调用同一文件中具有另一代码块的函数。其工作原理与库中现成的节点一样。
 
-![](<../images/functions children call def.jpg>)
+\![](<../../.gitbook/assets/functions children call def.jpg>)
 
-```
+```c#
 FunctionName(in1,in2);
 ```
 
@@ -42,15 +42,15 @@ FunctionName(in1,in2);
 
 首先从 0 到 100 的十个值范围开始。将这些值插入到 **“Point.ByCoordinates”** 节点，以创建对角线。
 
-![](<../images/functions - exercise - 01.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 01.jpg>)
 
 创建 **“代码块”**，然后引入我们的定义。
 
-![](<../images/functions - exercise - 02.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 02.jpg>)
 
-> 1.  使用以下代码行：
+> 1. 使用以下代码行：
 >
->     ```
+>     ```py
 >     def sphereByZ(inputPt)
 >     {
 >
@@ -59,11 +59,11 @@ FunctionName(in1,in2);
 >
 > _“inputPt”_ 是我们提供的名称，用于表示将驱动函数的点。目前，该函数不会执行任何操作，但我们会在后续步骤中构建此函数。
 
-![](<../images/functions - exercise - 03.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 03.jpg>)
 
 > 1. 通过添加到 **“代码块”** 函数，我们放置注释和 _“sphereRadius”_ 变量（该变量会查询每个点的 _“Z”_ 位置）。请记住，_“inputPt.Z”_不需要圆括号用作方法。这是对现有图元特性的_“查询”_，因此不需要输入：
 >
-> ```
+> ```py
 > def sphereByZ(inputPt,radiusRatio)
 > {
 > //get Z Value, ise ot to drive radius of sphere
@@ -71,62 +71,62 @@ FunctionName(in1,in2);
 > };
 > ```
 
-![](<../images/functions - exercise - 04.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 04.jpg>)
 
 > 1. 现在，我们再次调用在另一个 **“代码块”** 中创建的函数。如果双击画布以创建新的 _“代码块”_，然后键入 _“sphereB”_，我们会注意到 Dynamo 建议使用已定义的 _“sphereByZ”_ 函数。您的函数已添加到智能库！非常棒。
 
-![](<../images/functions - exercise - 05.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 05.jpg>)
 
 > 1.  现在，我们调用相应函数并创建一个名为 _“Pt”_ 的变量，以连接在之前步骤中创建的点：
 >
->     ```
+>     ```py
 >     sphereByZ(Pt)
 >     ```
 > 2. 在输出中，我们注意到所有值都为空值。这是为什么呢？在定义函数后，我们会计算 _“sphereRadius”_ 变量，但是我们未定义函数应 _“返回”_ 为 _“输出”_ 的内容。可以在下一个步骤中修复该问题。
 
-![](<../images/functions - exercise - 06.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 06.jpg>)
 
 > 1. 一个重要步骤是，我们需要定义函数的输出，方法是将一行代码 `return = sphereRadius;` 添加到 _“sphereByZ”_ 函数。
 > 2. 现在，我们看到“代码块”的输出为我们提供了每个点的 Z 坐标。
 
 现在，让我们通过编辑 _“父”_ 函数，来创建实际球体。
 
-![](<../images/functions - exercise - 07.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 07.jpg>)
 
 > 1. 首先，我们使用代码行定义一个球体：`sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);`
 > 2. 接下来，我们将返回值更改为 _“sphere”_，而不是 _“sphereRadius”_：`return = sphere;`。这会在 Dynamo 预览中为我们提供一些巨大的球体！
 
-![](<../images/functions - exercise - 08.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 08.jpg>)
 
-> 1.要调整这些球体的大小，我们通过添加分隔器来更新“sphereRadius”值：`sphereRadius = inputPt.Z/20;`。现在，我们可以看到单独的球体，然后开始了解半径和 Z 值之间的关系。
+> 1. 要调整这些球体的大小，我们通过添加分隔器来更新“sphereRadius”值：`sphereRadius = inputPt.Z/20;`。现在，我们可以看到单独的球体，然后开始了解半径和 Z 值之间的关系。
 
-![](<../images/functions - exercise - 09.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 09.jpg>)
 
 > 1. 在 **“Point.ByCoordinates”** 节点上，通过将连缀从“最短列表”更改为“叉积”，我们将创建点栅格。_“sphereByZ”_ 函数仍然完全有效，因此所有点都会使用基于 Z 值的半径创建球体。
 
-![](<../images/functions - exercise - 10.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 10.jpg>)
 
 > 1. 仅是为了测试水域，我们将原始数字列表连接到 **“Point.ByCoordinates”** 的 X 输入。现在，我们得到了一个球体的立方体。
 > 2. 注意：如果在计算机上的计算需要较长时间，请尝试将 _“#10”_ 更改为 _“#5”_ 之类的值。
 
 请记住，我们创建的 _“sphereByZ”_ 函数是一个通用函数，因此我们可以调用前一课中的螺旋，然后对其应用该函数。
 
-![](<../images/functions - exercise - 11.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 11.jpg>)
 
 最后一步：使用用户定义的参数来控制半径比。为此，我们需要为该函数创建新输入，并将 _“20”_ 除数替换为参数。
 
-![](<../images/functions - exercise - 12.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 12.jpg>)
 
 > 1.  将 _“sphereByZ”_ 定义更新为以下内容：
 >
->     ```
+>     ```py
 >     def sphereByZ(inputPt,radiusRatio)
 >     {
->     //get Z Value, use it to drive radius of sphere
+>     # Get Z Value, use it to drive radius of sphere
 >     sphereRadius=inputPt.Z/radiusRatio;
->     //Define Sphere Geometry
+>     # Define Sphere Geometry
 >     sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);
->     //Define output for function
+>     # Define output for function
 >     return sphere;
 >     };
 >     ```

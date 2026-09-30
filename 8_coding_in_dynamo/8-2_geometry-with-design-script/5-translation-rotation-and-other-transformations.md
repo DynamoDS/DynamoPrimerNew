@@ -2,11 +2,11 @@
 
 通过在三维空间中明确指出 x、y 和 z 坐标，可以创建特定的几何体对象。但是，通常在对象本身或其基本 CoordinateSystem 上使用几何变换将几何体移动到其最终位置。
 
-### 平移
+### 译文
 
 最简单的几何变换是平移，可在 x、y 和 z 方向上将对象移动指定的单位数。
 
-![](../images/Transformations_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -22,7 +22,7 @@ p2 = p.Translate(10, -20, 50);
 
 虽然 Dynamo 中的所有对象均可通过在对象名称末尾附加 _.Translate_ 方法进行转换，但更复杂的变换需要将对象从一个基础坐标系变换到新坐标系。例如，要绕 x 轴将对象旋转 45 度，我们将对象从其现有 CoordinateSystem（不旋转）变换为 CoordinateSystem（已使用 _.Transform_ 方法绕 x 轴旋转 45 度）：
 
-![](../images/Transformations_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -40,9 +40,9 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 ### 缩放
 
-除了平移和旋转外，还可以缩放或剪切 CoordinateSystems。可以使用 _.Scale_ 方法缩放 CoordinateSystem：
+除了平移和旋转外，还可以缩放或剪切坐标系。可以使用 _.Scale_ 方法缩放坐标系：
 
-![](../images/Transformations_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -56,9 +56,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-通过将非正交向量输入 CoordinateSystem 构造函数，可以创建剪切的 CoordinateSystem。
+通过将非正交向量输入坐标系构造函数，可以创建剪切的坐标系。
 
-![](../images/Transformations_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(
@@ -74,11 +74,11 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-缩放和剪切是比旋转和平移更复杂的几何变换，因此并非每个 Dynamo 对象都能进行这些变换。下表概述了 Dynamo 对象可以具有非统一比例缩放的 CoordinateSystems 和剪切的 CoordinateSystems。
+缩放和剪切是比旋转和平移更复杂的几何变换，因此并非每个 Dynamo 对象都能进行这些变换。下表概述了 Dynamo 对象可以具有非统一比例缩放的坐标系和剪切的坐标系。
 
-| 类        | 非统一比例缩放的 CoordinateSystem | 剪切的 CoordinateSystem |
+| 类        | 非统一比例缩放的坐标系| 剪切的坐标系 |
 | ------------ | ------------------------------------- | ------------------------ |
-| 弧          | 否                                    | 否                       |
+| 圆弧          | 否                                    | 否                       |
 | NurbsCurve   | 是                                   | 是                      |
 | Nurbs 曲面 | 否                                    | 否                       |
 | 圆       | 否                                    | 否                       |

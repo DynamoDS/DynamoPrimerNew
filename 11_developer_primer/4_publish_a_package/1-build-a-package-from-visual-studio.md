@@ -24,11 +24,11 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![移动项目文件](../images/fe-proj-directory.jpg)
+![移动项目文件](../../.gitbook/assets/fe-proj-directory.jpg)
 
 > 1. 将项目文件移动到新的 `src` 文件夹
 
-由于源文件位于单独的文件夹中，因此在 Visual Studio 中将 `AfterBuild` 目标添加到 `CustomNodeModel.csproj` 文件。这应该会将必需文件复制到新的软件包文件夹中。在文本编辑器（我们使用的是 [Atom](https://atom.io)）中，打开 `CustomNodeModel.csproj` 文件，然后在结束标记 `</Project>` 之前放置构建目标。此 AfterBuild 目标会将所有 .dll、.pbd、.xml 和 .config 文件复制到新的 bin 文件夹中，并创建 dyf 文件夹和 extra 文件夹。
+由于源文件位于单独的文件夹中，因此在 Visual Studio 中将 `AfterBuild` 目标添加到 `CustomNodeModel.csproj` 文件。这应该会将必需文件复制到新的软件包文件夹中。在文本编辑器（我们使用的是 [Atom](https://atom.io)）中，打开 `CustomNodeModel.csproj` 文件，然后在结束标记 `</Project>` 之前放置构建目标。此 AfterBuild 目标会将所有 .dll、.pbd、.xml 和 .config 文件复制到新的 /bin 文件夹中，并创建 dyf 文件夹和 extra 文件夹。
 
 ```
   <Target Name="AfterBuild">
@@ -47,7 +47,7 @@ CustomNodeModel
   </Target>
 ```
 
-![放置 AfterBuild 目标](../images/atom-afterbuild.jpg)
+![放置 AfterBuild 目标](../../.gitbook/assets/atom-afterbuild.jpg)
 
 > 我们需要确保目标已添加到 `CustomNodeModel.csproj` 文件（而非其他项目文件）中，并确保项目没有任何现有的“构建后”设置。
 >
@@ -55,7 +55,7 @@ CustomNodeModel
 
 在 `<ItemGroup>` 部分中，定义了许多变量来表示特定的文件类型。例如，`.dll` 变量表示输出目录中扩展名为 `Dll` 的所有文件。
 
-```
+```xml
 <ItemGroup>
   <Dlls Include="$(OutDir)*.dll" />
 </ItemGroup>
@@ -63,19 +63,19 @@ CustomNodeModel
 
 `Copy` 任务是将所有 `.dll` 文件复制到某个目录，尤其是我们要构建到的软件包文件夹。
 
-```
+```xml
 <Copy SourceFiles="@(Dlls)" DestinationFolder="$(SolutionDir)..\packages\CustomNodeModel\bin\" />
 ```
 
 Dynamo 软件包通常有 `dyf` 和 `extra` 文件夹，用于 Dynamo 自定义节点和其他资源（如图像）。要创建这些文件夹，我们需要使用 `MakeDir` 任务。如果某个文件夹不存在，则此任务会创建该文件夹。可以手动将文件添加到此文件夹。
 
-```
+```xml
 <MakeDir Directories="$(SolutionDir)..\packages\CustomNodeModel\extra" />
 ```
 
 如果您构建项目，则项目文件夹现在应该有 `packages` 文件夹以及之前创建的 `src` 文件夹。`packages` 目录内是一个文件夹，其中包含软件包所需的所有内容。我们还需要将 `pkg.json` 文件复制到软件包文件夹中，以使 Dynamo 知道要载入软件包。
 
-![复制文件](../images/fe-proj-directory-package.jpg)
+![复制文件](../../.gitbook/assets/fe-proj-directory-package.jpg)
 
 > 1. AfterBuild 目标创建的新软件包文件夹
 > 2. 项目的现有 src 文件夹

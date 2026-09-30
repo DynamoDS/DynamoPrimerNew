@@ -1,12 +1,12 @@
 # 脚本参考
 
-本参考页面扩展了脚本编写策略中涵盖的最佳实践，并对代码库、标签和样式进行了更加详细的介绍。我们将使用 Python 说明下面的概念，但相同原则在 Python 和 C#(Zerotouch) 中适用，语法却不同。
+本参考页面扩展了脚本编写策略中涵盖的最佳实践，并对代码库、标签和样式进行了更加详细的介绍。我们将使用 Python 说明下面的概念，但相同原则适用于语法不同的 Python 和 C#(Zerotouch)。
 
 ## 要使用的库
 
 标准库位于 Dynamo 外部，并以编程语言 Python 和 C# (Zerotouch) 呈现。Dynamo 还有自己的库集，这些库直接对应于其节点层次结构，使用户能够使用代码构建可以由节点和线生成的任何内容。下面介绍了每个 Dynamo 库对哪些内容提供访问以及何时使用标准库。
 
-![](images/textual-programming.jpg)
+![](../.gitbook/assets/textual-programming.jpg)
 
 **标准库和 Dynamo 库**
 
@@ -28,7 +28,9 @@
    * 功能：Excel。
    * 如何输入：`import DSOffice`
 
-{% hint style="warning" %} *注意：通过 Python 或 C# 使用 **“ProtoGeometry”** 时，正在创建的是非托管对象，这些对象需要手动对其内存进行管理 - 请参见以下部分： **“非托管对象”** 以了解详细信息。{% endhint %}
+{% hint style="warning" %}
+通过 Python 或 C# 使用 **ProtoGeometry** 时请注意，正在创建的是非托管对象，这些对象需要手动对其内存进行管理 - 请参见以下部分：**非托管对象**，以了解详细信息。
+{% endhint %}
 
 ## 小心标记
 
@@ -147,15 +149,15 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
 
 **命名约定：**（为代码中每类实体选择以下约定之一并坚持使用！）
 
-* 变量、函数、方法、软件包、模块：
+* 变量、函数、方法、软件包、模块：\
  `lower_case_with_underscores`
-* 类和例外：
+* 类和例外：\
  `CapWords`
-* 受保护的方法和内部函数：
+* 受保护的方法和内部函数：\
  `_single_leading_underscore(self, ...)`
-* 私有方法：
+* 私有方法：\
  `__double_leading_underscore(self, ...)`
-* 常数：
+* 常数：\
  `ALL_CAPS_WITH_UNDERSCORES`
 
 > 技巧：避免使用单字母变量（尤其是 l、O、I），但在非常短的块中，当其含义从即时上下文中清晰可见时除外。

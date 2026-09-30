@@ -6,7 +6,7 @@
 
 假定我们创建了一系列自适应构件，并希望根据其点位置编辑参数。例如，这些点可以驱动与图元面积相关的厚度参数。或者，它们可以驱动一年内与日光曝晒相关的不透明度参数。Dynamo 支持通过几个简单步骤将分析与参数相连接，我们将在下面的练习中探讨基本版本。
 
-![](<images/customizing - point location.jpg>)
+\![](<../.gitbook/assets/customizing - point location.jpg>)
 
 > 使用 **“AdaptiveComponent.Locations”** 节点查询选定自适应构件的自适应点。这样，我们便可以使用 Revit 图元的抽象版本进行分析。
 
@@ -14,7 +14,7 @@
 
 ### 日光方向分析
 
-![](<images/customizing - solar orientation analysis.jpg>)
+\![](<../.gitbook/assets/customizing - solar orientation analysis.jpg>)
 
 > 使用“重映射”将一组数据映射到参数范围。这是参数化模型中所使用的基本工具，我们将在下面的练习中进行演示。
 
@@ -30,54 +30,59 @@
 
 本练习将进一步介绍上一节中演示的技术。在本例中，我们将基于 Revit 图元定义参数化曲面、实例化四点自适应构件，然后根据太阳的方向对其进行编辑。
 
-![](<images/customizing - exercise 01.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 01.jpg>)
 
 > 1. 首先，使用 _“Select Edge”_ 节点选择两条边。这两条边是中庭的长跨度。
 > 2. 使用 _“List.Create”_ 节点将两条边合并为一个列表。
 > 3. 使用 _“Surface.ByLoft”_ 在两条边之间创建曲面。
 
-![](<images/customizing - exercise 02.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 02.jpg>)
 
 > 1. 使用 _“代码块”_，定义介于 0 到 1 之间的一个范围（包含 10 个等间距值）：`0..1..#10;`
 > 2. 将 _“代码块”_ 连接到 _“Surface.PointAtParameter”_ 节点的*“u”*和 _“v”_ 输入，并将 _“Surface.ByLoft”_ 节点连接到 _“surface”_ 输入。在节点上单击鼠标右键，并将 _“连缀”_ 更改为 _“笛卡尔积”_。这将在曲面上提供点栅格。
 
 该点栅格用作参数化定义的曲面的控制点。我们要提取其中每个点的 u 和 v 位置，以便可以将它们连接到参数化公式并保持相同的数据结构。可以通过查询刚才创建的点的参数位置来执行此操作。
 
-![](<images/customizing - exercise 03.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 03.jpg>)
 
 > 1. 将 _“Surface.ParameterAtPoint”_ 节点添加到画布，连接输入，如上所示。
 > 2. 使用“UV.U”节点查询这些参数的 _“u”_ 值。
 > 3. 使用“UV.V”节点查询这些参数的 _“v”_ 值。
 > 4. 输出显示曲面每个点对应的 _“u”_ 和 _“v”_ 值。现在，在正确的数据结构中，每个值的范围介于 _0_ 到 _1_ 之间，因此我们准备好应用参数算法。
 
-![](<images/customizing - exercise 04.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 04.jpg>)
 
 > 1. 将 _“代码块”_ 添加到画布，然后输入代码：`Math.Sin(u*180)*Math.Sin(v*180)*w;`。这是一个参数化函数，可从平面创建正弦平滑。
 > 2. 将 _“UV.U”_ 连接到 _“u”_ 输入，并将“UV.V”连接到 _“v”_ 输入。
 > 3. _“w”_ 输入表示形状的 _“振幅”_，因此我们向其附加 _“数字滑块”_。
 
-![](<images/customizing - exercise 05.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 05.jpg>)
 
 > 1. 现在，我们得到了由算法定义的一列值。让我们使用该列值在 _“+Z”_ 方向上上移点。使用 _“Geometry.Translate”_，将*“代码块”*连接到 _“zTranslation”_，并将 _“Surface.PointAtParameter”_ 连接到 _“geometry”_ 输入。您应该会看到新点显示在 Dynamo 预览中。
 > 2. 最后，我们使用 _“NurbsSurface.ByPoints”_ 节点创建曲面，从而将上一步中的节点连接到点输入。我们自己有一个参数化曲面。可以随意拖动滑块来观察多边形收缩和扩展。
 
-使用参数化曲面，我们需要定义一种方法来进行镶板，以便布置四点自适应构件。Dynamo 没有现成的功能来进行曲面镶板，因此我们可以向社区寻求有用的 Dynamo 软件包。
+使用参数化曲面，我们需要定义一种方法来进行镶板，以便布置四点自适应构件。Dynamo 现在具有用于表面镶板的现成功能。
 
-![](<images/customizing - exercise 06.jpg>)
+您需要启用 **PanelSurface** 节点，方法是在首选项下的实验选项卡中选择这些节点。
 
-> 1. 转到 _“软件包”>“搜索软件包...”_
-> 2. 搜索 _“LunchBox”_，然后安装 _“LunchBox for Dynamo”_。对于此种情况，这是一组非常有用的几何图形操作工具。
 
-> 1. 完成下载后，现在可以完全访问 LunchBox 套件。搜索 _“四边形栅格”_，然后选择 _“LunchBox 四边形栅格(按面)”_。将参数化曲面连接到 _“surface”_ 输入，并分别将 _“U”_ 和 _“V”_ 设置为 _“15”_。您应该会在 Dynamo 预览中看到四分面板的曲面。
+\![](<../.gitbook/assets/experimental preferences.jpg>)
 
-> 如果您对其设置很满意，可以双击 _“Lunch Box”_ 节点，查看其设置。
+> 1. 搜索_“PanelSurface”_，然后选择_“ByQuads”_。将参数化曲面连接到 _surface_ 输入，并将 _numU_ 和 _numV_ 分段数设置为 _15_。
 
-> 返回 Revit，让我们快速看一下在此处使用的自适应构件。无需再继续，但这是我们要实例化的屋顶嵌板。它是四点自适应构件，是 ETFE 系统的粗略表示。中心空心的光圈位于名为 _“ApertureRatio”_ 的参数上。
+\![](<../.gitbook/assets/surfaces divide by UV.jpg>)
+
+> 返回 Revit，让我们快速看一下在此处使用的自适应构件。无需再继续，但这是我们要实例化的屋顶嵌板。它是四点自适应构件，是 ETFE 系统的粗略表示。中心空心的光圈位于名为 _“ApertureRatio”_ 的参数上。 
+
 
 > 1. 我们要在 Revit 中实例化许多几何图形，因此请确保将 Dynamo 解算器设置为 _“手动”_。
 > 2. 向画布添加 _“Family Types”_ 节点，然后选择 _“ROOF-PANEL-4PT”_。
-> 3. 将 _“AdaptiveComponent.ByPoints”_ 节点添加到画布，将 _“LunchBox 四边形栅格(按面)”_ 输出中的 _“Panel Pts”_ 连接到 _“points”_ 输入。将 _“Family Types”_ 节点连接到 _“familySymbol”_ 输入。
-> 4. 点击 _“运行”_。当创建几何图形时，Revit 必定会_考虑_一下。如果需要太长时间，请将 _代码块的“15”_ 减少到较小数字。这将减少屋顶上嵌板的数量。
+> 3. 将 **PanelSurface.GetPoints** 添加到画布，并将 _panelSurface_ 从 **PanelSurface.ByQuads** 连接到匹配的输入。
+> 4. 将 **AdaptiveComponent.ByPoint** 节点添加到画布，将 _Panel Pts_ 从 **PanelSurface.GetPanelPoints** 输出连接到 _points_ 输入。将 _Family Types_ 节点连接到 _familyType_ 输入。
+> 5. 点击 _“运行”_。当创建几何图形时，Revit 必定会_考虑_一下。如果需要太长时间，请将 _代码块的“15”_ 减少到较小数字。这将减少屋顶上嵌板的数量。
+
+\![](<../.gitbook/assets/panelising script.jpg>)
+
 
 _注意：如果 Dynamo 计算节点需要较长时间，可能需要使用“冻结”节点功能，以便在开发图形时暂停执行 Revit 操作。有关冻结节点的详细信息，请参见“实体”章节中的“冻结”部分。_
 
@@ -85,12 +90,12 @@ _注意：如果 Dynamo 计算节点需要较长时间，可能需要使用“�
 
 > 放大后，可以更仔细地查看其曲面质量。
 
+\![](<../.gitbook/assets/adaptive panels.jpg>)
+
 ### 分析
 
-> 1. 从上一步继续操作，我们进一步根据每个嵌板到太阳的曝光来驱动其光圈。放大 Revit 并选择一个嵌板，我们在特性栏中可以看到有一个名为 _“Aperture Ratio”_ 的参数。设置族，以便使光圈范围大致介于 _“0.05”_ 到 _“0.45”_ 之间。
-
+> 1. 从上一步继续操作，我们进一步根据每个嵌板到太阳的曝光来驱动其光圈。放大 Revit 并选择一个嵌板，我们在特性栏中可以看到有一个名为_“Aperture Ratio”_的参数。设置族以便光圈范围大致介于 _0.05_ 到 _0.45_ 之间。
 > 2. 如果打开日光路径，可以在 Revit 中看到当前的太阳位置。
-
 > 3. 我们可以使用 _“SunSettings.Current”_ 节点来参照此太阳的位置。
 
 1. 将“日光设置”连接到 _“Sunsetting.SunDirection”_ 以获得太阳向量。

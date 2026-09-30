@@ -22,7 +22,7 @@
     * 确定滑块的交互逻辑：[代码](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
 * [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**：** 用于 ZeroTouch、自定义 UI、测试和视图扩展的模板。
   * [UI 样例](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
-    * 创建基本的自定义 UI 节点：[CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs)
+    * 创建基本的自定义 UI 节点：[CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/LocalizedCustomNodeModel.cs)
     * 创建下拉菜单：[DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs)
   * [测试](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryTests)
     * 系统测试：[HelloDynamoSystemTests.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryTests/HelloDynamoSystemTests.cs)

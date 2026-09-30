@@ -2,7 +2,7 @@
 
 #### 什么是可视化编程？<a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
 
-设计工作经常涉及在设计的各部分之间建立视觉、系统或几何关系。多数情况下，这些关系由工作流开发，工作流按一定规则实现从概念到结果的形成。也许并不了解，其实我们是按一定算法进行工作的 - 定义一组循序渐进的操作，这些操作遵循输入、处理和输出的基本逻辑。编程让我们可以继续通过这种方式进行工作，但采用的方法是对算法进行规范化。
+设计工作经常涉及在设计的各部分之间建立视觉、系统或几何关系。通常情况下，这些关系由工作流开发，工作流按一定规则实现从概念到结果的形成。也许并不了解，其实我们是按一定算法进行工作的 - 定义一组循序渐进的操作，这些操作遵循输入、处理和输出的基本逻辑。编程让我们可以继续通过这种方式进行工作，但采用的方法是对算法进行规范化。
 
 #### 现有算法 <a href="#algorithms-in-hand" id="algorithms-in-hand"></a>
 
@@ -52,11 +52,11 @@
 
 **可视化程序：**
 
-![](<images/visualProgramming.png>)
+![](../.gitbook/assets/visualProgramming.png)
 
 **文本程序：**
 
-```
+```py
 myPoint = Point.ByCoordinates(0.0,0.0,0.0);
 x = 5.6;
 y = 11.5;
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 我们的算法结果：
 
-![](<images/visualProgramming.png>)
+![](../.gitbook/assets/visualProgramming.png)
 
 以此类方式进行编程的可视化特性降低了入门门槛，无需与设计师经常沟通。Dynamo 属于可视化编程范例，但正如我们稍后所见到的，我们仍可以在应用程序中使用文本编程。
