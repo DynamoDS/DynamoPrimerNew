@@ -19,11 +19,11 @@
 
 * [参数化花瓶](../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.md)
 
-\![](<../.gitbook/assets/vase1 (3).gif>)
+![](<../.gitbook/assets/vase1 (3).gif>)
 
 * [吸引器点](../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.md)
 
-\![](<../.gitbook/assets/attractor1 (1).gif>)
+![](<../.gitbook/assets/attractor1 (1).gif>)
 
 {% hint style="info" %}
 我们会介绍有关 Dynamo 的不同主题，因此可以在后面的章节中找到更多特定于主题的练习。**“练习”**通常位于每个页面的最后一部分。
