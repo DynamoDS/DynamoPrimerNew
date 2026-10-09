@@ -341,7 +341,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 常见的根本原因是，节点是使用重新创建端口的构造函数创建的。反之，应使用已载入端口的构造函数。这些构造函数通常标记为 `[JsonConstructor]` _参见下文以了解示例_
 
-\![Broken JSON](<../../.gitbook/assets/broken-json (1).jpg>)
+![Broken JSON](<../../.gitbook/assets/broken-json (1).jpg>)
 
 这可能是因为：
 
