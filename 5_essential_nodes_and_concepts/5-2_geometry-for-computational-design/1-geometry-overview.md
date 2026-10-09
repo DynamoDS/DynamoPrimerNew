@@ -6,11 +6,11 @@
 
 了解几何图形类型及[其之间的关系](1-geometry-overview.md#stepping-through-the-hierarchy)，将使我们能够浏览库中可用的 **“几何图形节点”** 的集合。几何图形节点按字母顺序组织，而不是按层次组织 - 它们在此处的显示类似于其在 Dynamo 界面中的布局。
 
-\![](<../../.gitbook/assets/geometry overview - geometry in dynamo.jpg>)
+![](<../../.gitbook/assets/geometry overview - geometry in dynamo.jpg>)
 
 此外，随着时间的流逝，在 Dynamo 中制作模型并将在“背景预览”中所看到内容的预览连接到图形中的数据流应会变得更加直观。
 
-\![](<../../.gitbook/assets/Geometry for Computational Design - Overview.jpg>)
+![](<../../.gitbook/assets/Geometry for Computational Design - Overview.jpg>)
 
 > 1. 请注意，假定坐标系由栅格和彩色轴渲染
 > 2. “选定节点”将在背景中以亮显颜色渲染相应的几何图形（如果节点创建几何图形）
@@ -42,7 +42,7 @@
 
 让我们花点时间了解一下几何图形的“抽象”说明和“层次”说明之间的关系。由于这两个概念是相关的，但起初并不总是很明显，因此一旦我们开始开发更深的工作流或模型，我们可能会快速遇到概念上的障碍。首先，我们使用维数作为所建模“素材”的简单描述符。描述形状所需的维数为我们提供了一个窗口，让我们可以了解几何图形是如何按层次组织的。
 
-\![Computational Geometry](<../../.gitbook/assets/Geometry for - GeometryDimensionality.jpg>)
+![Computational Geometry](<../../.gitbook/assets/Geometry for - GeometryDimensionality.jpg>)
 
 > 1. **“点”**（由坐标定义）没有任何维数 - 它只是描述每个坐标的数字
 > 2. **“线”**（由两个点定义）现在有 _一_ 个维数 - 我们可以向前（正方向）或向后（负方向）“漫游”直线
