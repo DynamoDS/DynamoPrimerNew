@@ -6,7 +6,7 @@ Dynamo Hype 视频
 
 ## 适用于 Dynamo v2.13 及更高版本
 
-\![Dynamo Logo](<.gitbook/assets/dynamo_logo_dark-trim (1).jpg>)
+![Dynamo Logo](<.gitbook/assets/dynamo_logo_dark-trim (1).jpg>)
 
 > Dynamo 是面向设计师的开源可视化编程平台。
 
