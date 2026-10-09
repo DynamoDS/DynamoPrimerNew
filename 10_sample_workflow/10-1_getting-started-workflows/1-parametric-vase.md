@@ -48,7 +48,7 @@ description: suggested exercise
 
 该节点与我们之前的节点稍有不同，因为它包含一个滑块。可以使用该界面更改滑块的输出值。
 
-\![](<../../.gitbook/assets/vase13 (1).gif>)
+![](<../../.gitbook/assets/vase13 (1).gif>)
 
 可以使用节点左侧的下拉按钮配置滑块。我们将滑块限制为最大值“15”。
 
@@ -70,7 +70,7 @@ description: suggested exercise
 
 我们将这些节点复制 4 次，以便这些圆定义曲面，更改**“Number Slider”**的名称，如下所示。
 
-\![](<../../.gitbook/assets/vase4 (1).png>)
+![](<../../.gitbook/assets/vase4 (1).png>)
 
 > 1. 圆由圆心和半径创建
 
@@ -78,7 +78,7 @@ description: suggested exercise
 
 我们的花瓶缺少一个关键参数，即花瓶的高度。为了控制花瓶的高度，我们创建了另一个数字滑块。我们还添加了 **“Code Block”** 节点。代码块有助于将个性化代码段添加到我们的工作流中。我们将使用代码块将高度滑块乘以不同的因子，以便可以沿花瓶高度放置圆。
 
-\![](<../../.gitbook/assets/vase15 (1).png>)
+![](<../../.gitbook/assets/vase15 (1).png>)
 
 然后，我们使用 **“Geometry.Translate”** 节点在所需高度放置圆。由于我们要沿花瓶分布圆，因此我们使用代码块将高度参数乘以一个因子。
 
