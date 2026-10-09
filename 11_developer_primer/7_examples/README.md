@@ -22,7 +22,7 @@
     * 決定滑棒的互動邏輯：[程式碼](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
 * [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**：** ZeroTouch、自訂使用者介面、測試和視圖延伸的樣板。
   * [使用者介面範例](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
-    * 建立基本的自訂使用者介面節點：[CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs)
+    * 建立基本的自訂使用者介面節點：[CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/LocalizedCustomNodeModel.cs)
     * 建立下拉式功能表：[DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs)
   * [測試](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryTests)
     * 系統測試：[HelloDynamoSystemTests.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryTests/HelloDynamoSystemTests.cs)

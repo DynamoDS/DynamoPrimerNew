@@ -13,13 +13,13 @@
 
 如果您的 Dynamo 圖表有許多物件，而且在執行過程中變慢，可以從圖表中移除鑲嵌步驟來加快速度。  
 
-Dynamo 中的幾何圖形節點永遠是經過鑲嵌的*。您有兩個選項來處理未鑲嵌的幾何圖形：Python 節點和 ZeroTouch 節點。只要您沒有從 Python 或 ZeroTouch 節點傳回物件幾何圖形，就不會鑲嵌幾何圖形。舉例來說，如果您的圖表有幾個點節點、連接到幾個線節點、連接至幾個斷面混成節點、連接到幾個增厚節點，幾何圖形在每一步都會進行鑲嵌。您可以改為將此邏輯綁定到 Python 或 ZeroTouch 節點，只傳回節點中的最終物件。
+Dynamo 中的幾何圖形節點永遠是經過鑲嵌的。您有兩個選項來處理未鑲嵌的幾何圖形：Python 節點和 ZeroTouch 節點。只要您沒有從 Python 或 ZeroTouch 節點傳回物件幾何圖形，就不會鑲嵌幾何圖形。舉例來說，如果您的圖表有幾個點節點、連接到幾個線節點、連接至幾個斷面混成節點、連接到幾個增厚節點，幾何圖形在每一步都會進行鑲嵌。您可以改為將此邏輯綁定到 Python 或 ZeroTouch 節點，只傳回節點中的最終物件。
 
-如需使用 ZeroTouch 節點的更多資訊，請參閱本 Primer 的[為 Dynamo 開發](11\_developer\_primer/3\_developing\_for\_dynamo/README.md)一節。
+如需使用 ZeroTouch 節點的更多資訊，請參閱本 Primer 的[為 Dynamo 開發](../11_developer_primer/3_developing_for_dynamo/README.md)一節。
 
 ### 記憶體使用
 
-如果您不再鑲嵌幾何圖形，則可能會因為累積過多幾何圖形而遇到記憶體瓶頸。Dynamo 中的幾何圖形物件在建立時會消耗少量但並非可忽視不計的記憶體。如果您處理的是數十萬或數百萬個物件，這加總起來可能會導致 Dynamo 或 Revit 當機。在 Dynamo 2.5 版及更高版本中會透過處置未使用的物件來隱性處理，但如果使用 2.5 之前的版本，則避免建立大量幾何圖形的一種方法，是在用完物件後就加以處置。舉例來說，假設您要建立幾十萬條 NurbsCurve，每條都需要幾十個點。建立這些曲線的一種方式是在 Dynamo 中建立一個二維清單，並提供給 NurbsCurve.ByPoints 節點。但是這要建立幾百萬個點。另一種方法是使用 Python 或 ZeroTouch 節點。在這類節點中，您可以建立十幾個點，將這些點提供給 NurbsCurve.ByPoints，然後使用 .Dispose() 方法呼叫來處置這十幾個點。如需使用 ZeroTouch 節點的更多資訊，請參閱本 Primer 的[為 Dynamo 開發](11\_developer\_primer/3\_developing\_for\_dynamo/README.md)一節。建立幾何圖形物件後加以處置，在某些情況下可以顯著減少您使用的記憶體量，雖然我們會在 Dynamo 2.5 及更高版本中為使用者處理這個問題，但如果使用案例需要在明確的時間點減少記憶體用量，我們建議使用者仍需明確處置幾何圖形。請參閱 [Dynamo 幾何圖形穩定性的改進](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297)，以進一步瞭解 Dynamo 2.5 中引入的新穩定性功能。
+如果您不再鑲嵌幾何圖形，則可能會因為累積過多幾何圖形而遇到記憶體瓶頸。Dynamo 中的幾何圖形物件在建立時會消耗少量但並非可忽視不計的記憶體。如果您處理的是數十萬或數百萬個物件，這加總起來可能會導致 Dynamo 或 Revit 當機。在 Dynamo 2.5 版及更高版本中會透過處置未使用的物件來隱性處理，但如果使用 2.5 之前的版本，則避免建立大量幾何圖形的一種方法，是在用完物件後就加以處置。舉例來說，假設您要建立幾十萬條 NurbsCurve，每條都需要幾十個點。建立這些曲線的一種方式是在 Dynamo 中建立一個二維清單，並提供給 **NurbsCurve.ByPoints** 節點。但是這要建立幾百萬個點。另一種方法是使用 Python 或 ZeroTouch 節點。在這類節點中，您可以建立十幾個點，將這些點提供給 **NurbsCurve.ByPoints**，然後使用 _.Dispose()_ 方法呼叫來處置這十幾個點。如需使用 ZeroTouch 節點的更多資訊，請參閱本 Primer 的[為 Dynamo 開發](../11_developer_primer/3_developing_for_dynamo/README.md)一節。建立幾何圖形物件後加以處置，在某些情況下可以顯著減少您使用的記憶體量，雖然我們會在 Dynamo 2.5 及更高版本中為使用者處理這個問題，但如果使用案例需要在明確的時間點減少記憶體用量，我們建議使用者仍需明確處置幾何圖形。請參閱 [Dynamo 幾何圖形穩定性的改進](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297)，以進一步瞭解 Dynamo 2.5 中引入的新穩定性功能。
 
 ### Revit API
 

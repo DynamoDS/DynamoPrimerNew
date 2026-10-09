@@ -1,12 +1,12 @@
 # 平移、旋轉和其他轉換
 
-透過在三維空間中明確指出 x、y、z 座標，可以建立某些幾何圖形物件。但是，我們更常對物件本身或對其基本的 CoordinateSystem 使用幾何轉換，將幾何圖形移動到最終位置。
+透過在三維空間中明確指出 x、y、z 座標，可以建立某些幾何圖形物件。但是，我們更常對物件本身或對其基本的座標系統使用幾何轉換，將幾何圖形移動到最終位置。
 
-### 翻譯
+### 平移
 
 最簡單的幾何轉換是平移，亦即將一個物件沿著 x、y、z 方向移動指定的單位數。
 
-![](../images/Transformations_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -20,9 +20,9 @@ p2 = p.Translate(10, -20, 50);
 
 ### 旋轉
 
-在 Dynamo 中，雖然可以在物件名稱的結尾附加 _.Translate_ 方法平移所有物件，但是還有更複雜的轉換需要將物件從一個基本的 CoordinateSystem 轉換到新的 CoordinateSystem。例如，若要讓物件繞 x 軸旋轉 45 度，我們要使用 _.Transform_ 方法，將物件從其既有無旋轉的 CoordinateSystem，轉換到一個已經繞 x 軸旋轉 45 度的 CoordinateSystem：
+在 Dynamo 中，雖然可以在物件名稱的結尾附加 _.Translate_ 方法平移所有物件，但是還有更複雜的轉換需要將物件從一個基本的座標系統轉換到新的座標系統。例如，若要讓物件繞 x 軸旋轉 45 度，我們要使用 _.Transform_ 方法，將物件從其既有無旋轉的座標系統，轉換到一個已經繞 x 軸旋轉 45 度的座標系統：
 
-![](../images/Transformations_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -40,9 +40,9 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 ### 調整比例
 
-除了平移和旋轉，也可以用調整比例或切變方式建立 CoordinateSystem。CoordinateSystem 可以使用 _.Scale_ 方法調整比例：
+除了平移和旋轉，也可以用調整比例或切變方式建立座標系統。使用 _.Scale_ 方法可以調整座標系統的比例：
 
-![](../images/Transformations_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -56,9 +56,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-在 CoordinateSystem 建構函式中輸入非正交的向量可以建立切變的 CoordinateSystem。
+在座標系統建構函式中輸入非正交的向量可以建立切變的座標系統。
 
-![](../images/Transformations_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(
@@ -74,9 +74,9 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-比起旋轉和平移，調整比例和切變是相對比較複雜的幾何轉換，所以並非每個 Dynamo 物件都能經過這些轉換。下表概述哪些 Dynamo 物件可以有非等比例調整的 CoordinateSystem，以及切變的 CoordinateSystem。
+比起旋轉和平移，調整比例和切變是相對比較複雜的幾何轉換，所以並非每個 Dynamo 物件都能經過這些轉換。下表概述哪些 Dynamo 物件可以有非等比例調整的座標系統，以及切變的座標系統。
 
-| 類別        | 非等比例調整的 CoordinateSystem | 切變的 CoordinateSystem |
+| 類別        | 非等比例調整的座標系統| 切變的座標系統 |
 | ------------ | ------------------------------------- | ------------------------ |
 | Arc          | 否                                    | 否                       |
 | NurbsCurve   | 是                                   | 是                      |

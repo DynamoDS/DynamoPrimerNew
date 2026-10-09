@@ -12,10 +12,12 @@
 | 3.7            | .NET 10            |
 | 4.0+           | .NET 10            |
 
-{% hint style="info" %} 3.3.2 和 3.7 是從 4.0 候選版本向後移植 .NET 10 的特殊版本。{% endhint %}
+{% hint style="info" %}
+3.3.2 和 3.7 是從 4.0 候選發行版本向後移植 .NET 10 的特殊版本。
+{% endhint %}
 
 如需將套件更新為新版 .NET 的指導意見，請參閱 Developer Primer 中的移轉指南：
 
-* [針對 Dynamo 2.x 更新套件](../11\_developer\_primer/3\_developing\_for\_dynamo/6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
-* [針對 Dynamo 3.x / .NET 8 更新套件](../11\_developer\_primer/3\_developing\_for\_dynamo/6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
-* [針對 Dynamo 4.x / .NET 10 更新套件](../11\_developer\_primer/3\_developing\_for\_dynamo/6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
+ * [針對 Dynamo 2.x 更新套件](../11_developer_primer/8_updating_packages/1-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+ * [針對 Dynamo 3.x / .NET 8 更新套件](../11_developer_primer/8_updating_packages/2-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+ * [針對 Dynamo 4.x / .NET 10 更新套件](../11_developer_primer/8_updating_packages/3-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)

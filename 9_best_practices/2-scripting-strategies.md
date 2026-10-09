@@ -2,7 +2,7 @@
 
 使用 DesignScript、Python 和 ZeroTouch (C#) 在視覺指令碼撰寫環境中進行文字指令碼撰寫，可建立功能強大的視覺關係。使用者可以在相同的工作區內執行以下所有作業：顯示如輸入滑棒等的元素、將大型作業壓縮並輸入至 DesignScript，以及透過 Python 或 C# 存取功能強大的工具和資源庫。如果有效管理，結合這些策略可為整體程式增添極大的自訂成份、透明度和效率。以下是一組準則，協助您利用文字指令碼擴充您的視覺指令碼。
 
-![](images/cad-chart-textual.jpg)
+![](../.gitbook/assets/cad-chart-textual.jpg)
 
 ### 瞭解何時撰寫指令碼
 
@@ -23,7 +23,9 @@
 | **Python**         | 是         | 是           | 局部          | 是                | 否            |
 | **ZeroTouch (C#)** | 否          | 否            | 否                 | 是                | 否            |
 
-{% hint style="info" %} 請參閱[指令碼撰寫參考](3-scripting-reference.md)以瞭解每個 Dynamo 資源庫可讓您存取的功能清單。{% endhint %}
+{% hint style="info" %}
+請參閱[指令碼撰寫參考](3-scripting-reference.md)，瞭解每個 Dynamo 資源庫可讓您存取的功能清單。
+{% endhint %}
 
 ### 以參數方式思考
 
@@ -37,7 +39,7 @@
   * 預期的輸出
   * 常數
 
-[](<images/think parametrically 01.jpg>)
+\![](<../.gitbook/assets/think parametrically 01.jpg>)
 
 > 撰寫程式碼之前已建立多個變數。
 >
@@ -55,7 +57,7 @@
 * 只顯示關鍵參數來最小化輸入的數量：
   * 如果一組參數可從多個父系參數推導而來，就只顯示父系參數為指令碼輸入。這會降低指令碼介面的複雜性，進而提高可用性。
 
-[](<images/think parametrically 02.jpg>)
+\![](<../.gitbook/assets/think parametrically 02.jpg>)
 
 > 來自 [Python 節點](../8_coding_in_dynamo/8-3_python/1-python.md)中範例的程式碼「模組」。
 >
@@ -63,7 +65,9 @@
 > 2. 指令碼內部的變數。
 > 3. 使用這些輸入和變數執行其函數的迴圈。
 
-{% hint style="info" %} 秘訣：強調程序，如同您強調解決方案一樣。{% endhint %}
+{% hint style="info" %}
+秘訣：強調製程，如同您強調解決方案一樣。
+{% endhint %}
 
 ### **不要重複自己 (DRY 原則)：**
 
@@ -90,7 +94,9 @@ for i in range(count):
     points.append(point)
 ```
 
-{% hint style="info" %} 秘訣：在指令碼中複製實體前 (例如上述範例中的常數)，先檢查是否可以改為連結至來源。{% endhint %}
+{% hint style="info" %}
+秘訣：在腳本中複製圖元前 (例如上述範例中的「固定」)，先檢查是否可以連結至來源。
+{% endhint %}
 
 ### 模組化結構
 
@@ -102,7 +108,7 @@ for i in range(count):
 * 這可以是任何需要在視覺上從相鄰程式碼分離的內容 (函數、類別、一組輸入，或您要匯入的資源庫)。
 * 以模組開發程式碼這一方法利用節點的視覺和直覺特性，以及只有文字指令碼可以辦到的複雜關係。
 
-[](<images/think parametrically 02.jpg>)
+\![](<../.gitbook/assets/think parametrically 02.jpg>)
 
 > 這些迴圈呼叫一個名為「代理程式」的類別，我們將在練習中開發。
 >
@@ -117,7 +123,7 @@ for i in range(count):
 
 此範例使用根據中心點的 Z 值所設定的半徑和顏色建立圓球。
 
-[](<images/spot code resuse.jpg>)
+\![](<../.gitbook/assets/spot code resuse.jpg>)
 
 > 1. 兩個「工作者」父系函數：一個根據中心點的 Z 值以半徑建立圓球，一個根據中心點的 Z 值顯示顏色。
 > 2. 結合兩個工作者函數的「管理員」父系函數。呼叫此父系函數時將一同呼叫包含在其內的兩個函數。
@@ -172,7 +178,7 @@ for i in range(count):
 
 ### 持續調整
 
-在 Dynamo 開發文字指令碼時，應時常確定您實際建立的內容與您的預期相符。這確保在意外事件 (語法錯誤、邏輯差異、值錯誤、異常輸出等) 一出現就可以快速發現並處理，而非最後才一次處理。因為文字指令碼位於圖元區的節點內部，它們已經整合到視覺程式的資料流。這會讓指令碼的連續監視變得十分簡單：包括分配要輸出的資料、執行程式，以及使用 Watch 節點計算流出指令碼的內容。以下是在建構指令碼時不斷檢查它們的一些秘訣。
+在 Dynamo 開發文字指令碼時，應時常確定您實際建立的內容與您的預期相符。這可確保在意外事件、語法錯誤、邏輯差異、值錯誤、異常輸出等問題一出現就快速發現並處理，而非最後才一次處理。因為文字指令碼位於圖元區的節點內部，它們已經整合到視覺程式的資料流。這會讓指令碼的連續監視變得十分簡單：包括分配要輸出的資料、執行程式，以及使用 Watch 節點計算流出指令碼的內容。以下是在建構指令碼時不斷檢查它們的一些秘訣。
 
 **建構時同時進行測試：**
 
@@ -182,7 +188,7 @@ for i in range(count):
   * 進行快速測試，以確定它傳回「有意義」的資料。
 * 指定指令碼中最近使用的資料為輸出，當指令碼更新時，節點永遠會輸出相關的資料：
 
-[](<images/flex continuously.jpg>)
+\![](<../.gitbook/assets/flex continuously.jpg>)
 
 > 1. 檢查實體的所有邊以曲線方式傳回，以建立一個邊界框。
 > 2. 檢查已將計數輸入成功轉換為範圍。
@@ -195,9 +201,11 @@ for i in range(count):
 * 有時候，反映指令碼某些基本問題的錯誤只會在這些極端情形下出現。
   * 瞭解錯誤的成因，然後決定是否需要進行內部的修正，或是需要重新定義某個參數範圍以避免此問題。
 
-{% hint style="info" %} 秘訣：永遠假定使用者將使用他/她會看到的每一個輸入值的每個組合。這樣有助於避免不必要的意外。{% endhint %}
+{% hint style="info" %}
+秘訣：永遠假定使用者將使用他們看到的每個輸入值的每種組合。這樣有助於避免不必要的意外。
+{% endhint %}
 
-### 有效率地除錯
+### 有效除錯
 
 除錯是從指令碼中消除「錯誤」的過程。錯誤可能是誤差、低效率、不精確，或任何非預期的結果。解決錯誤可以是簡單地修正拼錯的變數名稱，或者是指令碼中更普遍的結構問題。在理想狀態下，建置指令碼時同時調整它可以幫助及早發現這些潛在問題，但這不能保證指令碼沒有錯誤。以下是對上述幾個最佳實踐的回顧，以協助您有系統地解決錯誤。
 
@@ -205,7 +213,7 @@ for i in range(count):
 
 * 將程式碼指定給 OUT 變數，檢查程式碼不同位置傳回的資料，類似於調整程式的概念。
 
-**撰寫有意義的註釋：**
+**撰寫有意義的註解：**
 
 * 如果清楚說明了預期結果，程式碼的模組將會更容易除錯。
 
@@ -215,8 +223,8 @@ for i in range(xCount):
   for j in range(yCount):
 
     # Rotate and translate the coordinate system
-    toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordinates(0,0,1),(90*(i+j%seed)))
-    vec = Vector.ByCoordinates((xDist*i),(yDist*j),0)
+    toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin, Vector.ByCoordinates(0,0,1), (90*(i+j%seed)))
+    vec = Vector.ByCoordinates((xDist*i), (yDist*j), 0)
     toCoord = toCoord.Translate(vec)
 
     # Transform the solid from the source coord system to the target coord system and append to the list
@@ -232,7 +240,7 @@ for i in range(xCount):
 * 如果必須修改程式，就可以更輕鬆地變更開發成為模組的程式碼：
   * 您可以將新的或已除錯的模組插入既有的程式，確信程式的其餘部分不會改變。
 
-[](<images/leverage code's modularity.jpg>)
+\![](<../.gitbook/assets/leverage code's modularity.jpg>)
 
 > 在 [Python 節點](../8_coding_in_dynamo/8-3_python/1-python.md)的範例檔案中除錯。
 >
@@ -242,7 +250,7 @@ for i in range(xCount):
 
 ## 練習：最陡的路徑
 
-> 按一下下方的連結下載範例檔案。
+> 按下方的連結下載範例檔案。
 >
 > 附錄中提供完整的範例檔案清單。
 
@@ -250,19 +258,19 @@ for i in range(xCount):
 
 我們的指令碼已套用至牽引點變形的曲面。
 
-[](<images/scripting strategies - exercise - 01.jpg>)
+\![](<../.gitbook/assets/scripting strategies - exercise - 01.jpg>)
 
 我們首先需要匯入必要的 Dynamo 資源庫。首先執行此作業可取得 Python 中對 Dynamo 功能的整體存取。
 
 我們需要將想使用的所有資源庫匯入此處。
 
-[](<images/scripting strategies - exercise - 02.jpg>)
+\![](<../.gitbook/assets/scripting strategies - exercise - 02.jpg>)
 
 接下來，我們需要定義指令碼的輸入和輸出，它將顯示為節點的輸入埠。這些外部輸入是指令碼的基礎，以及建立參數式環境的關鍵。
 
 我們需要定義對應 Python 指令碼中變數的輸入，並決定所需的輸出：
 
-[](<images/scripting strategies - exercise - 03.jpg>)
+\![](<../.gitbook/assets/scripting strategies - exercise - 03.jpg>)
 
 > 1. 我們想要沿著走的曲面。
 > 2. 我們想要走動的代理程式數目。
@@ -275,7 +283,7 @@ for i in range(xCount):
 
 我們必須為代理程式定義一個類別 (或稱藍圖)，讓它每走一步後都會選擇最陡的方向沿著曲面繼續前進：
 
-[](<images/scripting strategies - exercise - 04.jpg>)
+\![](<../.gitbook/assets/scripting strategies - exercise - 04.jpg>)
 
 > 1. 名稱。
 > 2. 所有代理程式共用的全域屬性。
@@ -287,7 +295,7 @@ for i in range(xCount):
 
 我們需要將所有我們要觀察它沿著曲面走的代理程式實體化，並定義其初始屬性：
 
-[](<images/scripting strategies - exercise - 05.jpg>)
+\![](<../.gitbook/assets/scripting strategies - exercise - 05.jpg>)
 
 > 1. 新的空白軌跡清單。
 > 2. 代理程式在曲面上開始路程的位置。
@@ -295,20 +303,20 @@ for i in range(xCount):
 
 在每一步更新每個代理程式。然後，我們需要為每個代理程式及每一步輸入巢狀迴路，並且在軌跡清單中更新和記錄位置。在每一步，我們也要確保代理程式始終能夠在曲面上保持行走以允許其下降。如果滿足該條件，我們就結束代理程式的路程。
 
-[](<images/scripting strategies - exercise - 06.jpg>)
+\![](<../.gitbook/assets/scripting strategies - exercise - 06.jpg>)
 
 現在我們的代理程式已完全更新，我們來傳回代表它們的幾何圖形。當所有代理程式都達到它們的下降限制或最大步數時，我們將建立一條穿過軌跡清單中各點的 polycurve，並輸出 polycurve 軌跡。
 
-[](<images/scripting strategies - exercise - 07.jpg>)
+\![](<../.gitbook/assets/scripting strategies - exercise - 07.jpg>)
 
 尋找最陡路徑的指令碼。
 
-[](<images/scripting strategies - exercise - 08.jpg>)
+\![](<../.gitbook/assets/scripting strategies - exercise - 08.jpg>)
 
 > 1. 在基本曲面上模擬降雨的預置。
 > 2. 代理程式可切換為穿過基本曲面，而不是尋找最陡的路徑。
 
-完整的 Python 文字指令碼。
+完整的 Python 指令碼。
 
 ```
 ### STEEPEST PATH ALGORITHM

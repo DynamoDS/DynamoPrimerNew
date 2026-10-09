@@ -12,7 +12,7 @@
 
 此部落格包含 Dynamo 團隊撰寫的最新文章集合，討論新功能、工作流程和所有 Dynamo 相關資訊。
 
-[http://dynamobim.com/blog/](http://dynamobim.com/blog/)
+[https://dynamobim.org/blog/](https://dynamobim.org/blog/)
 
 ### **DesignScript 指南**
 
@@ -76,8 +76,3 @@ https://github.com/architecture-building-systems/revitpythonshell
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
-### **The Building Coder**
-
-由 BIM 其中一位頂尖專家開發、功能強大的 Revit API 工作流程。
-
-[http://thebuildingcoder.typepad.com/](http://thebuildingcoder.typepad.com)

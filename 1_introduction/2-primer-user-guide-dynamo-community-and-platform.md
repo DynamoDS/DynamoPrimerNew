@@ -11,7 +11,7 @@
 * [使用者介面](../3_user_interface/)
 * [節點和線路](../4_nodes_and_wires/)
 
-對於想要更深入瞭解每個元素 (例如特定節點及其背後的概念) 的使用者，我們將在各自的章節中探討基礎知識。
+對於想要更深入瞭解每個元素 (例如特定節點及其背後的概念) 的使用者，我們將在專屬的章節探討基礎知識。
 
 * [基本節點和概念](../5_essential_nodes_and_concepts/)
 
@@ -19,21 +19,21 @@
 
 * [參數式花瓶](../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.md)
 
-![](images/vase1.gif)
+\![](<../.gitbook/assets/vase1 (3).gif>)
 
 * [牽引點](../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.md)
 
-![](<images/attractor1.gif>)
+\![](<../.gitbook/assets/attractor1 (1).gif>)
 
-{% hint style="info" %} 
-在稍後的章節中，我們會介紹有關 Dynamo 的不同主題，您可以找到更多主題特定的練習。**練習**通常可在每頁的最後一節看到。
+{% hint style="info" %}
+在稍後的章節中，我們會介紹有關 Dynamo 的不同主題，您可以找到更多該主題特有的練習。您通常可在每頁的最後一節找到**練習**。
 {% endhint %}
 
 ### 社群
 
 如果沒有一群強大的活躍使用者和積極貢獻者，Dynamo 就沒有今天。請關注[部落格](http://dynamobim.org/blog/)、將您的工作新增到展示區或在[論壇](https://forum.dynamobim.com)中討論 Dynamo，以參與社群。
 
-![論壇](images/02-Community.png)
+![論壇](../.gitbook/assets/02-Community.png)
 
 ### 平台
 
@@ -41,6 +41,6 @@ Dynamo 是針對設計人員的一種視覺程式設計工具，我們可使用�
 
 專案的原始碼是開源的，我們可隨心所欲地延伸其功能。出庫使用 GitHub 上的專案，並瀏覽使用者自訂 Dynamo 的「進行中工作」。
 
-![報告](images/03-TheRepo.png)
+![報告](../.gitbook/assets/03-TheRepo.png)
 
 > 根據需要瀏覽、分支並開始延伸 Dynamo

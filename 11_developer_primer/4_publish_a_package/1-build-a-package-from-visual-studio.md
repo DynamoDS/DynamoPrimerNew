@@ -24,11 +24,11 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![移動專案檔](../images/fe-proj-directory.jpg)
+![移動專案檔](../../.gitbook/assets/fe-proj-directory.jpg)
 
 > 1. 將專案檔移到新的 `src` 資料夾
 
-由於原始碼檔案位於不同的資料夾，因此請在 Visual Studio 的 `CustomNodeModel.csproj` 檔案加入 `AfterBuild` 目標。這會將必要的檔案複製到新的套件資料夾中。在文字編輯器 (我們使用 [Atom](https://atom.io)) 中開啟 `CustomNodeModel.csproj` 檔案，在 `</Project>` 結束標籤之前放置建置目標。此 AfterBuild 目標會將所有 .dll、.pbd、.xml 和 .config 檔案複製到新的 bin 資料夾中，並建立 dyf 和 extra 資料夾。
+由於原始碼檔案位於不同的資料夾，因此請在 Visual Studio 的 `CustomNodeModel.csproj` 檔案加入 `AfterBuild` 目標。這會將必要的檔案複製到新的套件資料夾中。在文字編輯器 (我們使用 [Atom](https://atom.io)) 中開啟 `CustomNodeModel.csproj` 檔案，在 `</Project>` 結束標籤之前放置建置目標。此 AfterBuild 目標會將所有 .dll、.pbd、.xml 和 .config 檔案複製到新的 /bin 資料夾中，並建立 dyf 和 extra 資料夾。
 
 ```
   <Target Name="AfterBuild">
@@ -47,7 +47,7 @@ CustomNodeModel
   </Target>
 ```
 
-![放置 AfterBuild 目標](../images/atom-afterbuild.jpg)
+![放置 AfterBuild 目標](../../.gitbook/assets/atom-afterbuild.jpg)
 
 > 我們需要確保目標已加到 `CustomNodeModel.csproj` 檔案 (而不是另一個專案檔) 中，而且專案沒有任何既有的「建置後」設定。
 >
@@ -55,7 +55,7 @@ CustomNodeModel
 
 `<ItemGroup>` 區段中定義了許多變數來表示特定檔案類型。例如，`Dll` 變數表示輸出目錄中其副檔名為 `.dll` 的所有檔案。
 
-```
+```xml
 <ItemGroup>
   <Dlls Include="$(OutDir)*.dll" />
 </ItemGroup>
@@ -63,19 +63,19 @@ CustomNodeModel
 
 `Copy` 工作是將所有 `.dll` 檔案複製到目錄，具體來說是要建置到的套件資料夾。
 
-```
+```xml
 <Copy SourceFiles="@(Dlls)" DestinationFolder="$(SolutionDir)..\packages\CustomNodeModel\bin\" />
 ```
 
 Dynamo 套件通常會有 `dyf` 和 `extra` 資料夾，分別給 Dynamo 自訂節點和其他資產 (例如影像) 使用。若要建立這些資料夾，我們需要使用 `MakeDir` 工作。如果資料夾不存在，此工作會建立一個。您可以手動將檔案加到此資料夾中。
 
-```
+```xml
 <MakeDir Directories="$(SolutionDir)..\packages\CustomNodeModel\extra" />
 ```
 
 如果您建置專案，現在專案資料夾在先前建立的 `src` 資料夾旁邊應該會有一個 `packages` 資料夾。`packages` 目錄內有一個資料夾，其中包含套件所需的所有內容。我們也需要將 `pkg.json` 檔案複製到套件資料夾，讓 Dynamo 知道要載入套件。
 
-![複製檔案](../images/fe-proj-directory-package.jpg)
+![複製檔案](../../.gitbook/assets/fe-proj-directory-package.jpg)
 
 > 1. AfterBuild 目標建立的新套件資料夾
 > 2. 專案既有的 src 資料夾

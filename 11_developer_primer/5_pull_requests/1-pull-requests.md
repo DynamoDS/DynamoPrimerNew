@@ -6,9 +6,9 @@ Dynamo 取決於社群的創意和承諾，Dynamo 團隊鼓勵貢獻者探索各
 
 Dynamo 團隊希望提取請求遵循一些準則：
 
-* 遵循我們的[程式碼撰寫標準](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)和[節點命名標準](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
-* 加入新功能時需納入單元測試
-* 修正錯誤時，請加入一個能突顯目前行為是如何造成問題的單元測試
+* 遵循我們的[程式碼撰寫標準](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)和[節點命名標準](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)。
+* 加入新功能時需納入單元測試。
+* 修正錯誤時，請加入一個能突顯目前行為是如何造成問題的單元測試。
 * 將討論集中在一個問題。如果出現新主題或相關主題，請建立新問題。
 
 不要這樣做的準則：
@@ -22,12 +22,12 @@ Dynamo 團隊希望提取請求遵循一些準則：
 
 提交提取請求時，請使用[預設的 PR 樣板](https://github.com/DynamoDS/Dynamo/blob/master/.github/PULL\_REQUEST\_TEMPLATE.md)。在提交您的 PR 之前，請確定清楚描述目的，並且確認所有聲明都真實：
 
-* 提出此 PR 之後，程式碼庫會處於更佳狀態
-* 根據[標準](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)製作文件
-* 此 PR 所包含的測試階層是適當的
-* 向使用者顯示的字串 (如果有) 已擷取到 `*.resx` 檔案中
-* 使用自助服務 CI 通過所有測試
-* 使用者介面變更的快照 (如果有)
+* 提出此 PR 之後，程式碼庫會處於更佳狀態。
+* 根據[標準](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)製作文件。
+* 此 PR 所包含的測試階層是適當的。
+* 向使用者顯示的字串 (如果有) 已擷取到 `*.resx` 檔案中。
+* 使用自助服務 CI 通過所有測試。
+* 使用者介面變更的快照 (如果有)。
 * 對 API 的變更遵循[語意版本管理](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Versions)，並記錄在 [API 變更](https://github.com/DynamoDS/Dynamo/wiki/API-Changes)文件中。
 
 Dynamo 團隊將為您的提取請求指定適當的審閱者。
@@ -38,7 +38,7 @@ Dynamo 團隊將為您的提取請求指定適當的審閱者。
 
 * Dynamo 團隊每個月開會一次，檢閱最舊到最新的提取請求。
 * 如果審閱過的提取請求需要擁有者進行變更，PR 的擁有者有 30 天時間可以回覆。如果該 PR 在下一次會議之前沒有任何活動，則會被團隊關閉，或視其實用性由團隊中的某人接管。
-* 提取請求應使用 Dynamo 的預設 PR 樣板
+* 提取請求應使用 Dynamo 的預設 PR 樣板。
 * 不會審閱未完整填寫 Dynamo PR 樣板且確信所有聲明為真的提取請求。
 
 #### 精選 Dynamo Revit 認可內容 <a href="#cherry-picking-dynamo-revit-commits" id="cherry-picking-dynamo-revit-commits"></a>

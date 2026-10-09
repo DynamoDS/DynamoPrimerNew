@@ -2,7 +2,7 @@
 
 瞭解如何建立 Zero-Touch 專案後，我們可以逐步瀏覽 Dynamo GitHub 上的 ZeroTouchEssentials 範例，更深入地瞭解建立節點的詳細資訊。
 
-![Zero-touch 節點](../images/ootbzerotouch.png)
+![Zero-touch 節點](../../.gitbook/assets/ootbzerotouch.png)
 
 > 許多 Dynamo 的標準節點本質上是 Zero-Touch 節點，如上面大多數的 Math、Color 和 DateTime 節點。
 
@@ -10,7 +10,7 @@
 
 在 Visual Studio 中，開啟 `ZeroTouchEssentials.sln` 方案檔並建置方案。
 
-![Visual Studio 中的 ZeroTouchEssentials](../images/vs-build-zte.jpg)
+![Visual Studio 中的 ZeroTouchEssentials](../../.gitbook/assets/vs-build-zte.jpg)
 
 > `ZeroTouchEssentials.cs` 檔案包含我們要匯入至 Dynamo 的所有方法。
 
@@ -24,7 +24,7 @@ Dynamo 支援定義節點上輸入埠的預設值。如果埠沒有連接，則�
 
 * 將方法參數設定為預設值：`inputNumber = 2.0`
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![預設值](../images/defaultval.jpg)
+![預設值](../../.gitbook/assets/defaultval.jpg)
 
 > 1. 將游標懸停在節點輸入埠上時，會出現預設值
 
@@ -51,7 +51,7 @@ namespace ZeroTouchEssentials
 * 在方法中加入 `[MultiReturn(new[] { "string1", "string2", ... more strings here })]` 屬性。字串會參考字典中的鍵，並成為輸出埠名稱。
 * 從函數傳回 `Dictionary<>`，其中的鍵與屬性中的參數名稱相符：`return new Dictionary<string, object>`
 
-```
+```c#
 using System.Collections.Generic;
 using Autodesk.DesignScript.Runtime;
 
@@ -66,8 +66,8 @@ namespace ZeroTouchEssentials
 
                 { "add", (a + b) },
                 { "mult", (a * b) }
-            };
-        }
+            
+        };
     }
 }
 ```
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 傳回多個輸出的節點。
 
-![多個輸出](../images/multipleoutputs.png)
+![多個輸出](../../.gitbook/assets/multipleoutputs.png)
 
 > 1. 請注意，現在有兩個輸出埠，根據我們為字典的鍵輸入的字串進行命名。
 
@@ -90,7 +90,7 @@ namespace ZeroTouchEssentials
   * 例如：`/// <summary>...</summary>`
 * 在 Visual Studio 中選取「`Project > [Project] Properties > Build > Output`」並勾選「`Documentation file`」以啟用 XML 文件
 
-![產生 XML 檔案](../images/vs-xml.jpg)
+![產生 XML 檔案](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Visual Studio 將在指定位置產生 XML 檔案
 
@@ -104,7 +104,7 @@ namespace ZeroTouchEssentials
 
 以下是包含輸入和輸出描述的範例節點，以及將顯示在資源庫中的摘要。
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -141,7 +141,7 @@ namespace ZeroTouchEssentials
 * 在節點工具提示中
 * 在文件瀏覽器中
 
-![節點描述](../images/node-description.png)
+![節點描述](../../.gitbook/assets/node-description.png)
 
 請按照這些準則，在編寫或更新節點描述時，可確保一致性並幫助節省時間。
 
@@ -180,9 +180,9 @@ Dynamo 沒有 `new` 關鍵字，因此需要使用靜態建構方法建構物件
 * 除非另有要求，否則將建構函式設為內部的 `internal ZeroTouchEssentials()`
 * 使用靜態方法建構物件，例如 `public static ZeroTouchEssentials ByTwoDoubles(a, b)`
 
-> 注意事項：Dynamo 使用「By」字首指出靜態方法是建構函式，雖然這是選擇性的，但使用「By」可協助您的資源庫更符合既有的 Dynamo 型式。
+> 注意：Dynamo 使用「By」字首指出靜態方法是建構函式，雖然這是選擇性的，但使用「By」可協助您的資源庫更符合既有的 Dynamo 型式。
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 匯入 ZeroTouchEssentials dll 後，資源庫中將會有 ZeroTouchEssentials 節點。使用 `ByTwoDoubles` 節點可以建立此物件。
 
-![ByTwoDoubles 節點](../images/dyn-constructor.jpg)
+![ByTwoDoubles 節點](../../.gitbook/assets/dyn-constructor.jpg)
 
 ### 使用 Dynamo 幾何圖形類型 <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -219,9 +219,9 @@ Dynamo 資源庫可以使用原生 Dynamo 幾何圖形類型做為輸入，並�
 * 在專案中的 C# 檔案頂端包括 `using Autodesk.DesignScript.Geometry;` 參考「ProtoGeometry.dll」，並將 ZeroTouchLibrary NuGet 套件加入專案。
 * **重要事項：** 管理未從函數傳回的幾何圖形資源，請參閱下方的〈**Dispose/using 陳述式**〉一節。
 
-> 注意事項：Dynamo 幾何圖形物件的使用方式與任何其他傳入函數的物件相同。
+> 注意：Dynamo 幾何圖形物件的使用方式與任何其他傳入函數的物件相同。
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 取得曲線長度後加倍的節點。
 
-![曲線輸入](../images/doublelength.png)
+![曲線輸入](../../.gitbook/assets/doublelength.png)
 
 > 1. 此節點接受曲線幾何圖形類型做為輸入。
 
@@ -252,7 +252,7 @@ namespace ZeroTouchEssentials
 
 *   使用 using 陳述式：
 
-    ```
+    ```c#
     using (Point p1 = Point.ByCoordinates(0, 0, 0))
     {
       using (Point p2 = Point.ByCoordinates(10, 10, 0))
@@ -267,7 +267,7 @@ namespace ZeroTouchEssentials
     > 請參閱 [Dynamo 幾何圖形穩定性的改進](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297)，以進一步瞭解 Dynamo 2.5 中引入的新穩定性功能
 *   使用手動的 Dispose 呼叫：
 
-    ```
+    ```c#
     Point p1 = Point.ByCoordinates(0, 0, 0);
     Point p2 = Point.ByCoordinates(10, 10, 0);
     Line l = Line.ByStartPointEndPoint(p1, p2);
@@ -285,15 +285,15 @@ namespace ZeroTouchEssentials
 * 在 migrations 元素內，為每個名稱變更建立 `<priorNameHint>...</priorNameHint>` 元素
 * 對每個名稱變更，提供 `<oldName>...</oldName>` 和 `<newName>...</newName>` 元素
 
-![移轉檔案](../images/vs-migrations-file.jpg)
+![移轉檔案](../../.gitbook/assets/vs-migrations-file.jpg)
 
 > 1. 按一下右鍵，然後選取「`Add > New Item`」
-> 2. 選擇 `XML File`
+> 2. 選擇「`XML File`」
 > 3. 對於此專案，我們將移轉檔案命名為 `ZeroTouchEssentials.Migrations.xml`
 
 此範例程式碼告訴 Dynamo，任何名為 `GetClosestPoint` 的節點現在都命名為 `ClosestPointTo`。
 
-```
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -311,7 +311,7 @@ Zero-Touch 目前不支援使用泛型。可以使用泛型，但不能在直接
 
 在以下範例中，不會匯入類型為 `T` 的 Zero-Touch 節點。如果將剩餘的資源庫匯入至 Dynamo，則會發生缺少類型的例外狀況。
 
-```
+```c#
 public class SomeGenericClass<T>
 {
     public SomeGenericClass()
@@ -323,7 +323,7 @@ public class SomeGenericClass<T>
 
 在此範例中設定類型的情況下使用泛型類型，將匯入至 Dynamo。
 
-```
+```c#
 public class SomeWrapper
 {
     public object wrapped;

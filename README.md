@@ -1,10 +1,12 @@
 # 關於
 
-{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
+{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %}
+Dynamo 宣傳影片
+{% endembed %}
 
 ## 適用於 Dynamo 2.13 版和更高版本 
 
-![Dynamo 標誌](images/dynamo_logo_dark-trim.jpg)
+\![Dynamo Logo](<.gitbook/assets/dynamo_logo_dark-trim (1).jpg>)
 
 > Dynamo 是一種適用於設計人員的開放原始碼視覺程式設計平台。
 
@@ -37,31 +39,31 @@ Dynamo Primer 是一個開放原始碼專案，由 Autodesk 的 Matt Jezyk 和 D
 
 **Mode Lab** 受託撰寫 Primer 的第一個版本。我們感謝他們為了建立這個寶貴資源付出的所有心力。
 
-![](images/modelab-logo.png)
+![](.gitbook/assets/modelab-logo.png)
 
 ***
 
 **Parallax Team 的 John Pierson** 受託更新 Primer 以反映 Dynamo 2.0 的修訂。
 
-![](images/prlx-logo.jpg)
+![](.gitbook/assets/prlx-logo.jpg)
 
 ***
 
 **Matterlab** 受託更新 Primer，以反映 Dynamo 2.13 的修訂。
 
-![](images/matterlab-logo.jpg)
+![](.gitbook/assets/matterlab-logo.jpg)
 
 ***
 
 **Archilizer** 受託更新 Primer，以反映 Dynamo 2.17 的修訂。
 
-<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 **Wood Rodgers** 受託更新 Primer 有關 Dynamo for Civil 3D 的內容。
 
-<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### 致謝
 
@@ -73,7 +75,7 @@ Dynamo Primer 是一個開放原始碼專案，由 Autodesk 的 Matt Jezyk 和 D
 
 **Dynamo** 請參閱以下網站，以取得 Dynamo 最新的**穩定**版本。
 
-[https://dynamobim.com/download/](https://dynamobim.com/download/) 或 [https://dynamobuilds.com](https://dynamobuilds.com/)
+[https://dynamobuilds.com](https://dynamobuilds.com/)
 
 *注意事項：從 Revit 2020 開始，Dynamo 會與 Revit 版本搭售，您不需要再手動安裝。如需更多資訊，請參閱此[部落格文章](https://dynamobim.org/dynamo-core-2-1-release/)。
 

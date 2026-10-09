@@ -2,7 +2,7 @@
 
 以 NodeModel 為基礎的節點提供的靈活性和功能比 Zero-Touch 節點要大得多。在此範例中，我們將加入一個可隨機顯示矩形大小的整合滑棒，將 Zero-Touch 網格節點提升到下一個層次。
 
-![矩形網格圖表](../images/cover-image-2.jpg)
+![矩形網格圖表](../../.gitbook/assets/cover-image-2.jpg)
 
 > 滑棒會相對於儲存格的大小調整比例，因此使用者不必為滑棒提供正確範圍。
 
@@ -33,7 +33,7 @@ NodeModel 節點只能呼叫函數，因此我們需要將 NodeModel 和函數�
 
 在方案中建立兩個 C# 類別資源庫專案：一個用於函數，一個用於實作 NodeModel 介面。
 
-![新增類別資源庫](../images/vs-new-class-projects.jpg)
+![新增類別資源庫](../../.gitbook/assets/vs-new-class-projects.jpg)
 
 > 1. 在「方案」上按一下右鍵，然後選取「`Add > New Project`」
 > 2. 選擇「類別庫」
@@ -43,7 +43,7 @@ NodeModel 節點只能呼叫函數，因此我們需要將 NodeModel 和函數�
 
 接下來，我們需要將自動建立的類別資源庫更名，並在 `CustomNodeModel` 專案中加入一個資源庫。`GridNodeModel` 類別實作抽象 NodeModel 類別，`GridNodeView` 用於自訂視圖，`GridFunction` 包含我們需要呼叫的任何函數。
 
-![方案總管](../images/vs-new-class.jpg)
+![方案總管](../../.gitbook/assets/vs-new-class.jpg)
 
 > 1. 在 `CustomNodeModel` 專案上按一下右鍵，選取「`Add > New Item...`」並選擇「`Class`」，以加入其他類別。
 > 2. 在 `CustomNodeModel` 專案中，我們需要 `GridNodeModel.cs` 和 `GridNodeView.cs` 類別
@@ -51,14 +51,14 @@ NodeModel 節點只能呼叫函數，因此我們需要將 NodeModel 和函數�
 
 在類別中加入任何程式碼之前，請先為此專案加入必要的套件。`CustomNodeModel` 需要 ZeroTouchLibrary 和 WpfUILibrary，`CustomNodeModelFunction` 只需要 ZeroTouchLibrary。WpfUILibrary 將用於我們稍後執行的使用者介面自訂，ZeroTouchLibrary 將用於建立幾何圖形。可以個別為專案加入套件。由於這些套件具有相依性，因此將自動安裝 Core 和 DynamoServices。
 
-![安裝套件](../images/vs-add-packages.jpg)
+![安裝套件](../../.gitbook/assets/vs-add-packages.jpg)
 
 > 1. 在專案上按一下右鍵，然後選取「`Manage NuGet Packages`」
 > 2. 只會為該專案安裝必要的套件
 
 Visual Studio 會複製我們參考建置目錄的 NuGet 套件。這可以設定為 False，讓套件中沒有任何不必要的檔案。
 
-![停用本端套件複本](../images/vs-disable-package-copying.jpg)
+![停用本端套件複本](../../.gitbook/assets/vs-disable-package-copying.jpg)
 
 > 1. 選取 Dynamo NuGet 套件
 > 2. 將 `Copy Local` 設定為 False
@@ -69,7 +69,7 @@ Visual Studio 會複製我們參考建置目錄的 NuGet 套件。這可以設�
 
 將以下程式碼複製到 `GridNodeModel.cs`。
 
-```
+```c#
 using System;
 using System.Collections.Generic;
 using Dynamo.Graph.Nodes;
@@ -144,7 +144,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 將以下程式碼複製到 `GridFunction.cs`。
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 using Autodesk.DesignScript.Runtime;
 using System;
@@ -199,7 +199,7 @@ namespace CustomNodeModel.CustomNodeModelFunction
 
 正如我們加入 NuGet 套件的參考一樣，`CustomNodeModel` 需要參考 `CustomNodeModelFunction` 才能呼叫函數。
 
-![加入參考](../images/vs-add-project-reference.jpg)
+![加入參考](../../.gitbook/assets/vs-add-project-reference.jpg)
 
 > CustomNodeModel 的 using 陳述式將處於非作用中狀態，直到我們參考該函數
 >
@@ -214,7 +214,7 @@ namespace CustomNodeModel.CustomNodeModelFunction
 
 將以下程式碼複製到 `GridNodeView.cs`
 
-```
+```c#
 using Dynamo.Controls;
 using Dynamo.Wpf;
 
@@ -240,7 +240,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 設定專案結構後，請使用 Visual Studio 的設計環境建置使用者控制項，並在 `.xaml` 檔案中定義其參數。從工具方塊中，將滑棒加入 `<Grid>...</Grid>`。
 
-![新增滑棒](../images/vs-usercontrol.jpg)
+![新增滑棒](../../.gitbook/assets/vs-usercontrol.jpg)
 
 > 1. 在 `CustomNodeModel` 上按一下右鍵，然後選取「`Add > New Item`」
 > 2. 選取「`WPF`」
@@ -249,7 +249,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 將以下程式碼複製到 `Slider.xaml`
 
-```
+```xml
 <UserControl x:Class="CustomNodeModel.CustomNodeModel.Slider"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -269,7 +269,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 建立 `Slider.xaml` 檔案時，Visual Studio 會自動建立一個名為 `Slider.xaml.cs` 的 C# 檔案以初始化滑棒。變更此檔案中的名稱空間。
 
-```
+```c#
 using System.Windows.Controls;
 
 namespace CustomNodeModel.CustomNodeModel
@@ -295,17 +295,17 @@ namespace CustomNodeModel.CustomNodeModel
 
 在建置專案之前，最後一步是加入 `pkg.json` 檔案，讓 Dynamo 可以讀取套件。
 
-![加入 JSON 檔案](../images/vs-pkg-json.jpg)
+![加入 JSON 檔案](../../.gitbook/assets/vs-pkg-json.jpg)
 
 > 1. 在 `CustomNodeModel` 上按一下右鍵，然後選取「`Add > New Item`」
 > 2. 選取「`Web`」
-> 3. 選取 `JSON File`
+> 3. 選取「`JSON File`」
 > 4. 將檔案命名為 `pkg.json`
 > 5. 按一下「`Add`」
 
 * 將以下程式碼複製到 `pkg.json`
 
-```
+```json
 {
   "license": "MIT",
   "file_hash": null,
@@ -341,7 +341,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 常見的根本原因是，節點是使用重新建立埠的建構函式建立的。應該使用載入埠的建構函式。這些建構函式通常會標記 `[JsonConstructor]` _請參閱下方範例_
 
-![JSON 損毀](<../images/broken-json.jpg>)
+\![損壞的 JSON](<../../.gitbook/assets/broken-json (1).jpg>)
 
 這可能是因為：
 
