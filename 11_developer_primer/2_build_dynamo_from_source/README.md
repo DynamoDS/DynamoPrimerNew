@@ -71,7 +71,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 > 4. 查找 **Visual Studio 2022 预览版/2026 Insider**（社区版、专业版或企业版）
 > 5. 单击**“安装”**，将其与现有 Visual Studio 安装一起添加
 
-\![Visual Studio preview](<../../.gitbook/assets/vs-preview (1).png>) \![Visual Studio 2026 insider](<../../.gitbook/assets/vs-2026-insiders (1).png>)
+![Visual Studio preview](<../../.gitbook/assets/vs-preview (1).png>) ![Visual Studio 2026 insider](<../../.gitbook/assets/vs-2026-insiders (1).png>)
 
 在完成所有安装后，我们就可以启动 Visual Studio，然后打开位于 `Dynamo\src` 中的 `Dynamo.All.sln` 解决方案。
 
