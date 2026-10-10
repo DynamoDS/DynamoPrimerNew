@@ -2,7 +2,7 @@
 
 前のセクションでは、カスタム ノードとサンプル ファイルを使用して _MapToSurface_ パッケージを設定する方法について確認しました。では、ローカルで作成したパッケージはどのようにパブリッシュすればよいでしょうか。このケース スタディでは、ローカル フォルダ内のファイル セットを使用してパッケージをパブリッシュする方法について確認します。
 
-![](<../images/develop package - custom nodes 01.jpg>)
+\![](<../../.gitbook/assets/develop package - custom nodes 01 (2).jpg>)
 
 パッケージは、さまざまな方法でパブリッシュできます。ここでは、**パッケージをローカルにパブリッシュして作成し、オンラインでパブリッシュする**方法を確認していきます。最初に、パッケージ内のすべてのファイルを格納するフォルダを作成します。
 
@@ -12,13 +12,15 @@
 
 まず、[パッケージ] > [Package Manager] > [インストール済みパッケージ]タブ > [MapToSurface]の横にある縦のドット メニュー> [削除]をクリックします。
 
-<figure><img src="../images/delete-map-to-surface.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/delete-map-to-surface.png" alt=""><figcaption></figcaption></figure>
 
 次に、Dynamo を再起動します。[_パッケージを管理_]ウィンドウをもう一度開いて、_MapToSurface_ が表示されていないことを確認してください。これで、作業を開始する準備ができました。
 
 ### パッケージをローカルにパブリッシュする
 
-{% hint style="warning" %} ホスト API の依存関係がない限り、バージョン 2.17 以降で Dynamo Sandbox からカスタム ノードとパッケージをパブリッシュすることができます。旧バージョンでは、カスタム ノードとパッケージのパブリッシュは、Dynamo for Revit と Dynamo for Civil 3D でのみ有効です。 {% endhint %}
+{% hint style="warning" %}
+ホスト API の依存関係がない限り、バージョン 2.17 以降で Dynamo Sandbox からカスタム ノードとパッケージをパブリッシュすることができます。旧バージョンでは、カスタム ノードとパッケージのパブリッシュは、Dynamo for Revit と Dynamo for Civil 3D でのみ有効です。
+{% endhint %}
 
 > 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
@@ -28,7 +30,7 @@
 
 この演習で、パッケージを初めて送信することになります。サンプル ファイルとカスタム ノードは、すべて 1 つのフォルダ内に格納されています。このフォルダが作成されていれば、Dynamo Package Manager にパッケージをアップロードすることができます。
 
-![](<../images/publish a package - publish locally 01.jpg>)
+\![](<../../.gitbook/assets/publish a package - publish locally 01.jpg>)
 
 > 1. このフォルダには、5 つのカスタム ノード(.dyf)が格納されています。
 > 2. このフォルダには、5 つのサンプル ファイル(.dyn)と、1 つの読み込み済みベクトル ファイル(.svg)も格納されています。これらのファイルは、カスタム ノードの使用方法を理解するための演習用のファイルです。
@@ -37,33 +39,33 @@ Dynamo で、_[パッケージ] > [Package Manager] > [新しいパッケージ�
 
 _[パッケージをパブリッシュ]_ タブで、ウィンドウの左側にある関連フィールドに入力します。
 
-<figure><img src="../images/package-details.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/package-details.png" alt=""><figcaption></figcaption></figure>
 
-次に、パッケージ ファイルを追加します。[フォルダを追加(1)]を選択すると、1 つまたはすべてのフォルダにファイルを追加できます。.dyf ファイル以外のファイルを追加するには、ブラウザ ウィンドウでファイル タイプを必ず **[すべてのファイル(**_._**)]** に変更してください。カスタム ノード(.dyf)やサンプル ファイル(.dyn)など、すべてのファイルが追加されていることを確認してください。パッケージをパブリッシュすると、Dynamo によってこれらのファイルが分類されます。
+次に、パッケージ ファイルを追加します。ファイルを 1 つずつ追加するか、[フォルダを追加] (1)を選択してフォルダ全体を追加します。.dyf ファイル以外のファイルを追加するには、ブラウザ ウィンドウでファイル タイプを必ず **[すべてのファイル(**_._**)]** に変更してください。カスタム ノード(.dyf)やサンプル ファイル(.dyn)など、すべてのファイルが追加されていることを確認してください。パッケージをパブリッシュすると、Dynamo によってこれらのファイルが分類されます。
 
-<figure><img src="../images/map-to-surface-contents.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/map-to-surface-contents.png" alt=""><figcaption></figcaption></figure>
 
 MapToSurface フォルダを選択すると、フォルダの内容が Package Manager に表示されます。複雑なフォルダ構造を持つ独自のパッケージをアップロードする場合に、Dynamo でフォルダ構造を変更したくない場合は、[フォルダ構造を保持]切り替えを有効にします。このオプションは上級者向けのため、パッケージが意図的に特定の方法で設定されているのでなければ、この切り替えをオフのままにして、必要に応じて Dynamo でファイルを整理できるようにしておくことをお勧めします。[次へ]をクリックして続行します。
 
-<figure><img src="../images/map-to-surface-contents-preview.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/map-to-surface-contents-preview.png" alt=""><figcaption></figcaption></figure>
 
 ここでは、パブリッシュする前に Dynamo がパッケージ ファイルを整理する方法をプレビューすることができます。[完了]をクリックして続行します。
 
-<figure><img src="../images/publish-locally.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/publish-locally.png" alt=""><figcaption></figcaption></figure>
 
-[ローカルにパブリッシュ] (1)をクリックして、パッケージをパブリッシュします。次に、[_オンラインでパブリッシュ_]**ではなく**[_ローカルにパブリッシュ_]をクリックします。これは、多数の複製パッケージを Package Manager にパブリッシュしないようにするためです。
+[ローカルにパブリッシュ] (1)をクリックして、パッケージをパブリッシュします。この手順に従って操作する場合、_[オンラインでパブリッシュ]_**ではなく**、必ず_[ローカルにパブリッシュ]_をクリックします。これは、Package Manager に多数の複製パッケージを表示しないようにするためです。
 
 パブリッシュが完了すると、DynamoPrimer グループまたは Dynamo ライブラリで目的のカスタム ノードを使用できるようになります。
 
-![](<../images/develop package - install package 02.jpg>)
+\![](<../../.gitbook/assets/develop package - install package 02 (2).jpg>)
 
 次に、ルート フォルダを開き、作成したパッケージが Dynamo でどのようにフォーマットされているかを確認します。これを行うには、[インストール済みパッケージ]タブ > [MapToSurface]の横にある縦のドット メニューをクリックし、[ルート フォルダを表示]を選択します。
 
-<figure><img src="../images/show-root-directory.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 ルート フォルダは、パッケージのローカルの場所にあります(ここまでの手順で、パッケージはローカルにパブリッシュされています)。Dynamo は、このフォルダを参照してカスタム ノードを読み込みます。そのため、デスクトップではなく、ローカルの永続的な場所にパブリッシュする必要があります。Dynamo パッケージ フォルダの内容は次のとおりです。
 
-![](<../images/publish a package - publish locally 06.jpg>)
+\![](<../../.gitbook/assets/publish a package - publish locally 06.jpg>)
 
 > 1. _bin_ フォルダには、C# ライブラリまたは Zero-Touch ライブラリを使用して作成された .dll ファイルが格納されます。このパッケージにはこうしたファイルがないため、このフォルダは空になっています。
 > 2. _dyf_ フォルダにはカスタム ノードが格納されます。このフォルダを開くと、このパッケージのすべてのカスタム ノード(.dyf ファイル)が表示されます。
@@ -72,11 +74,13 @@ MapToSurface フォルダを選択すると、フォルダの内容が Package M
 
 ### パッケージをオンラインでパブリッシュする
 
-{% hint style="warning" %}注: 独自のパッケージを実際にパブリッシュしない場合は、この手順を実行しないでください。{% endhint %}
+{% hint style="warning" %}
+注: 独自のパッケージを実際にパブリッシュしない場合は、この手順を実行しないでください。
+{% endhint %}
 
-<figure><img src="../images/publish-version.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/publish-version.png" alt=""><figcaption></figcaption></figure>
 
-1. パブリッシュの準備ができたら、[パッケージ] > [Package Manager] > [インストール済みパッケージ]ウィンドウで、パブリッシュするパッケージの右側にあるボタンを選択し、[パブリッシュ]を選択します。
+1. パブリッシュの準備ができたら、[パッケージ] > [Package Manager] > [インストール済みパッケージ]ウィンドウへと進み、パブリッシュするパッケージの右側にあるボタンを選択して[パブリッシュ]を選択します。
 2. 既にパブリッシュされているパッケージを更新する場合、[パブリッシュ バージョン]を選択すると、パッケージのルート フォルダ内の新しいファイルに基づいて、パッケージがオンラインで更新されます。
 
 ### [パブリッシュ バージョン...]オプション

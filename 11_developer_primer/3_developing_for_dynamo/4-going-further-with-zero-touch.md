@@ -2,7 +2,7 @@
 
 Zero-Touch プロジェクトの作成方法を理解できたので、Dynamo GitHub にあるサンプル ZeroTouchEssentials を使用して、ノードの作成について詳しく説明します。
 
-![Zero-Touch ノード](../images/ootbzerotouch.png)
+![Zero-Touch ノード](../../.gitbook/assets/ootbzerotouch.png)
 
 > Dynamo の標準ノードの多くは基本的な Zero-Touch ノードです。上記のほとんどの Math、Color、DateTime ノードと同様です。
 
@@ -10,7 +10,7 @@ Zero-Touch プロジェクトの作成方法を理解できたので、Dynamo Gi
 
 Visual Studio で、ソリューション ファイル `ZeroTouchEssentials.sln` を開いてソリューションをビルドします。
 
-![Visual Studio の ZeroTouchEssentials](../images/vs-build-zte.jpg)
+![Visual Studio の ZeroTouchEssentials](../../.gitbook/assets/vs-build-zte.jpg)
 
 > `ZeroTouchEssentials.cs` ファイルには、Dynamo に読み込むメソッドがすべて含まれています。
 
@@ -24,7 +24,7 @@ Dynamo では、ノードの入力ポートに対する既定値の定義がサ�
 
 * メソッドのパラメータを既定値 `inputNumber = 2.0` に設定します
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![既定値](../images/defaultval.jpg)
+![既定値](../../.gitbook/assets/defaultval.jpg)
 
 > 1. ノードの入力ポートにカーソルを合わせると、既定値が表示されます。
 
@@ -51,7 +51,7 @@ namespace ZeroTouchEssentials
 * `[MultiReturn(new[] { "string1", "string2", ... more strings here })]` 属性をメソッドに追加します。文字列はディクショナリ内のキーを参照して、出力ポート名になります。
 * 属性のパラメータ名に一致するキーを使用して関数から `Dictionary<>` を返します。`return new Dictionary<string, object>`
 
-```
+```c#
 using System.Collections.Generic;
 using Autodesk.DesignScript.Runtime;
 
@@ -66,8 +66,8 @@ namespace ZeroTouchEssentials
 
                 { "add", (a + b) },
                 { "mult", (a * b) }
-            };
-        }
+            
+        };
     }
 }
 ```
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 複数の出力を返すノードです。
 
-![複数の出力](../images/multipleoutputs.png)
+![複数の出力](../../.gitbook/assets/multipleoutputs.png)
 
 > 1. ディクショナリのキーに入力した文字列に従って、2 つの出力ポートに名前が付けられています。
 
@@ -90,7 +90,7 @@ namespace ZeroTouchEssentials
   * 例: `/// <summary>...</summary>`
 * `Project > [Project] Properties > Build > Output` を選択して `Documentation file` をオンにすることで、Visual Studio で XML ドキュメントを有効にします。
 
-![XML ファイルを生成する](../images/vs-xml.jpg)
+![XML ファイルを生成する](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Visual Studio は、指定された場所に XML ファイルを生成します。
 
@@ -104,7 +104,7 @@ namespace ZeroTouchEssentials
 
 入力と出力の説明と、ライブラリに表示される概要を含むサンプル ノードを次に示します。
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -141,7 +141,7 @@ namespace ZeroTouchEssentials
 * ノード ツールチップ内
 * ドキュメント ブラウザ内
 
-![ノードの説明](../images/node-description.png)
+![ノードの説明](../../.gitbook/assets/node-description.png)
 
 ここで説明するガイドラインに従うことで、一貫性を確保し、ノードの説明の作成または更新を効率的に行うことができます。
 
@@ -182,7 +182,7 @@ Dynamo には `new` キーワードがないため、静的な作成メソッド
 
 > 注: Dynamo では、静的メソッドがコンストラクタであることを示すために接頭辞「By」が使用されます。これは省略可能ですが、「By」を使用すると、ライブラリを Dynamo の既存のスタイルに合わせることができます。
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 ZeroTouchEssentials dll が読み込まれると、ライブラリに ZeroTouchEssentials ノードが追加されます。このオブジェクトは、`ByTwoDoubles` ノードを使用して作成できます。
 
-![ByTwoDoubles ノード](../images/dyn-constructor.jpg)
+![ByTwoDoubles ノード](../../.gitbook/assets/dyn-constructor.jpg)
 
 ### Dynamo のジオメトリ タイプを使用する <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -221,7 +221,7 @@ Dynamo ライブラリでは、ネイティブの Dynamo ジオメトリ タイ�
 
 > 注: Dynamo ジオメトリ オブジェクトは、関数に渡されるその他のオブジェクトと同様に使用されます。
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 曲線の長さを取得し、その値を倍にするノード。
 
-![曲線の入力](../images/doublelength.png)
+![曲線の入力](../../.gitbook/assets/doublelength.png)
 
 > 1. このノードは、入力として Curve ジオメトリタイプを受け取ります。
 
@@ -252,7 +252,7 @@ namespace ZeroTouchEssentials
 
 *   using ステートメントを使用する場合は次のようになります。
 
-    ```
+    ```c#
     using (Point p1 = Point.ByCoordinates(0, 0, 0))
     {
       using (Point p2 = Point.ByCoordinates(10, 10, 0))
@@ -267,7 +267,7 @@ namespace ZeroTouchEssentials
     > Dynamo 2.5 で導入された安定性に関する新機能の詳細については、「[Dynamo ジオメトリの安定性の向上](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297)」を参照してください
 *   手動の Dispose の呼び出しを使用する場合は次のようになります。
 
-    ```
+    ```c#
     Point p1 = Point.ByCoordinates(0, 0, 0);
     Point p2 = Point.ByCoordinates(10, 10, 0);
     Line l = Line.ByStartPointEndPoint(p1, p2);
@@ -285,7 +285,7 @@ namespace ZeroTouchEssentials
 * マイグレーション要素内で、名前の変更ごとに `<priorNameHint>...</priorNameHint>` 要素を作成します。
 * 名前の変更ごとに、`<oldName>...</oldName>` および `<newName>...</newName>` 要素を指定します。
 
-![マイグレーション ファイル](../images/vs-migrations-file.jpg)
+![マイグレーション ファイル](../../.gitbook/assets/vs-migrations-file.jpg)
 
 > 1. 右クリックして、`Add > New Item` を選択します。
 > 2. `XML File` を選びます。
@@ -293,7 +293,7 @@ namespace ZeroTouchEssentials
 
 このサンプル コードでは、`GetClosestPoint` という名前のノードが `ClosestPointTo` に変更されたことを Dynamo に伝えています。
 
-```
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -311,7 +311,7 @@ Zero-Touch は現在、ジェネリクスの使用をサポートしていませ
 
 下の例では、タイプ `T` の Zero-Touch ノードは読み込まれません。ライブラリの残りの部分を Dynamo に読み込むと、タイプの例外が失われます。
 
-```
+```c#
 public class SomeGenericClass<T>
 {
     public SomeGenericClass()
@@ -323,7 +323,7 @@ public class SomeGenericClass<T>
 
 次の例では、タイプを設定して汎用的なタイプを使用すると、Dynamo に読み込まれます。
 
-```
+```c#
 public class SomeWrapper
 {
     public object wrapped;

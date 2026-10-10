@@ -2,13 +2,13 @@
 
 NodeModel ベースのノードは、Zero-Touch ノードよりも大幅に柔軟性に優れ強力です。この例では、矩形のサイズをランダム化する統合されたスライダを追加して、Zero-Touch グリッド ノードのレベルを高めます。
 
-![矩形グリッドのグラフ](../images/cover-image-2.jpg)
+![矩形グリッドのグラフ](../../.gitbook/assets/cover-image-2.jpg)
 
 > スライダでセルのスケールをそのサイズに対して相対的に変更するため、スライダで正確な範囲を設定する必要はありません。
 
 #### モデル - ビュー - ビューモデル パターン <a href="#the-model-view-viewmodel-pattern" id="the-model-view-viewmodel-pattern"></a>
 
-Dynamo は、UI をバックエンドから分離しておくための[モデル - ビュー - ビューモデル](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)(MVVM)ソフトウェア アーキテクチャ パターンに基づいています。ZeroTouch ノードを作成する場合は、Dynamo はノードのデータとその UI の間でデータ バインドを実行します。カスタム UI を作成するには、データバインド ロジックを追加する必要があります。
+Dynamo は、UI をバックエンドから分離しておくための[モデル - ビュー - ビューモデル](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)(MVVM)ソフトウェア アーキテクチャ パターンに基づいています。ZeroTouch ノードを作成する場合、Dynamo ではノードのデータとその UI の間でデータ バインドが実行されます。カスタム UI を作成するには、データバインド ロジックを追加する必要があります。
 
 大まかには、Dynamo では次の 2 つのパーツでモデルとビューの関係を確立します。
 
@@ -33,7 +33,7 @@ NodeModel ノードは関数のみを呼び出すことができるため、Node
 
 ソリューションで 2 つの C# クラス ライブラリ プロジェクトを作成します。関数用のプロジェクトと、NodeModel インタフェースを実装するためのプロジェクトです。
 
-![新しいクラス ライブラリを追加する](../images/vs-new-class-projects.jpg)
+![新しいクラス ライブラリを追加する](../../.gitbook/assets/vs-new-class-projects.jpg)
 
 > 1. ソリューションを右クリックして、`Add > New Project` を選択します。
 > 2. クラス ライブラリを選びます。
@@ -43,7 +43,7 @@ NodeModel ノードは関数のみを呼び出すことができるため、Node
 
 次に、自動的に作成されたクラス ライブラリの名前を変更し、`CustomNodeModel` プロジェクトに追加する必要があります。クラス `GridNodeModel` は抽象クラス NodeModel を実装し、ビューのカスタマイズには `GridNodeView` が使用され、`GridFunction` には呼び出す必要のある関数が含まれています。
 
-![ソリューション エクスプローラ](../images/vs-new-class.jpg)
+![ソリューション エクスプローラ](../../.gitbook/assets/vs-new-class.jpg)
 
 > 1. `CustomNodeModel` プロジェクトを右クリックして `Add > New Item...` を選択し、`Class` を選んで別のクラスを追加します。
 > 2. `CustomNodeModel` プロジェクトには `GridNodeModel.cs` クラスと `GridNodeView.cs` クラスが必要です
@@ -51,14 +51,14 @@ NodeModel ノードは関数のみを呼び出すことができるため、Node
 
 クラスにコードを追加する前に、このプロジェクトに必要なパッケージを追加します。`CustomNodeModel` には ZeroTouchLibrary と WpfUILibrary が必要で、`CustomNodeModelFunction` には ZeroTouchLibrary のみが必要です。WpfUILibrary は、後で説明する UI のカスタマイズに使用し、ZeroTouchLibrary はジオメトリの作成に使用します。パッケージは、プロジェクトに個別に追加できます。これらのパッケージには依存関係があるため、Core および DynamoServices が自動的にインストールされます。
 
-![パッケージをインストールする](../images/vs-add-packages.jpg)
+![パッケージをインストールする](../../.gitbook/assets/vs-add-packages.jpg)
 
 > 1. プロジェクトを右クリックして、`Manage NuGet Packages` を選択します。
 > 2. そのプロジェクトに必要なパッケージのみをインストールします。
 
 Visual Studio は、参照した NuGet パッケージをビルド フォルダにコピーします。これを false に設定できるため、パッケージ内に不要なファイルはありません。
 
-![ローカルへのパッケージのコピーを無効にする](../images/vs-disable-package-copying.jpg)
+![ローカルへのパッケージのコピーを無効にする](../../.gitbook/assets/vs-disable-package-copying.jpg)
 
 > 1. Dynamo NuGet パッケージを選択します。
 > 2. `Copy Local` を false に設定します。
@@ -69,7 +69,7 @@ Visual Studio は、参照した NuGet パッケージをビルド フォルダ�
 
 次のコードを `GridNodeModel.cs` にコピーします。
 
-```
+```c#
 using System;
 using System.Collections.Generic;
 using Dynamo.Graph.Nodes;
@@ -144,7 +144,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 次のコードを `GridFunction.cs` にコピーします。
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 using Autodesk.DesignScript.Runtime;
 using System;
@@ -199,7 +199,7 @@ namespace CustomNodeModel.CustomNodeModelFunction
 
 NuGet パッケージの参照の追加と同様に、`CustomNodeModel` は関数を呼び出すために `CustomNodeModelFunction` を参照する必要があります。
 
-![参照を追加する](../images/vs-add-project-reference.jpg)
+![参照を追加する](../../.gitbook/assets/vs-add-project-reference.jpg)
 
 > CustomNodeModel の using ステートメントは、関数を参照するまで非アクティブになります。
 >
@@ -214,7 +214,7 @@ NuGet パッケージの参照の追加と同様に、`CustomNodeModel` は関�
 
 次のコードを `GridNodeView.cs` にコピーします。
 
-```
+```c#
 using Dynamo.Controls;
 using Dynamo.Wpf;
 
@@ -240,7 +240,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 プロジェクトの構造を設定したら、Visual Studio の設計環境を使用してユーザ コントロールを作成し、`.xaml` ファイルでそのパラメータを定義します。ツール ボックスから、`<Grid>...</Grid>` にスライダを追加します。
 
-![新規スライダを追加する](../images/vs-usercontrol.jpg)
+![新規スライダを追加する](../../.gitbook/assets/vs-usercontrol.jpg)
 
 > 1. `CustomNodeModel` を右クリックして、`Add > New Item` を選択します。
 > 2. `WPF` を選択します。
@@ -249,7 +249,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 次のコードを `Slider.xaml` にコピーします。
 
-```
+```xml
 <UserControl x:Class="CustomNodeModel.CustomNodeModel.Slider"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -269,7 +269,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 `Slider.xaml` ファイルを作成すると、Visual Studio によって自動的に `Slider.xaml.cs` という C# ファイルが作成され、スライダが初期化されます。このファイルの名前空間を変更します。
 
-```
+```c#
 using System.Windows.Controls;
 
 namespace CustomNodeModel.CustomNodeModel
@@ -295,7 +295,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 プロジェクトをビルドする前に、最後の手順として、`pkg.json` ファイルを追加して Dynamo でパッケージの読み込みができるようにします。
 
-![JSON ファイルを追加する](../images/vs-pkg-json.jpg)
+![JSON ファイルを追加する](../../.gitbook/assets/vs-pkg-json.jpg)
 
 > 1. `CustomNodeModel` を右クリックして、`Add > New Item` を選択します。
 > 2. `Web` を選択します。
@@ -305,7 +305,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 * 次のコードを `pkg.json` にコピーします。
 
-```
+```json
 {
   "license": "MIT",
   "file_hash": null,
@@ -341,7 +341,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 一般的な原因は、ポートを再作成するコンストラクタを使用してノードを作成したことによるものです。その場合、ポートをロードしたコンストラクタを使用する必要があります。これらのコンストラクタには通常、`[JsonConstructor]` マークが付いています。_次のサンプルを参照してください_。
 
-![JSON が壊れている](<../images/broken-json.jpg>)
+\![破損した JSON](<../../.gitbook/assets/broken-json (1).jpg>)
 
 これは次のような場合に発生します。
 

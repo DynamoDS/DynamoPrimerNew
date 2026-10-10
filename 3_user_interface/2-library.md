@@ -2,7 +2,7 @@
 
 ライブラリには、付属の 10 の既定カテゴリ ノード、追加でロードされるカスタム ノードやパッケージなど、ロードされたすべてのノードが格納されます。ライブラリ内のノードは、ライブラリ、カテゴリ、サブカテゴリ(該当する場合)内で階層で整理されます。
 
-![](<images/library-library-ui.png>)
+![](../.gitbook/assets/library-library-ui.png)
 
 * 基本ノード: 既定のインストールに付属します。
 * カスタム ノード: 頻繁に使用するルーチンまたは特殊なグラフをカスタム ノードとして格納します。また、カスタム ノードをコミュニティに共有することもできます。
@@ -16,24 +16,26 @@
 
 メニューをクリックしてライブラリを参照し、各カテゴリとそのサブカテゴリを展開します。
 
-{% hint style="info" %}[Geometry]には最も多くのノードが含まれているため、ノードを探す場合は最初にこれらのカテゴリを使用することをお勧めします。{% endhint %}
+{% hint style="info" %}
+[Geometry]には最も多くのノードが含まれているため、ノードを探す場合は最初にこれらのカテゴリを使用することをお勧めします。
+{% endhint %}
 
-![](<images/library-modified-and-resize-library-categories.jpg>)
+![](../.gitbook/assets/library-modified-and-resize-library-categories.jpg)
 
 > 1. ライブラリ
 > 2. カテゴリ
 > 3. サブカテゴリ
 > 4. ノード
 
-これらにより、**Create** データ、**Action** の実行、または **Query** データのいずれかのノードに基づいて、同じサブカテゴリ内のノードがさらに分類されます。
+この階層によってノードは細かく分類され、データを **Create** するノードか、**Action** を実行するノードか、データを **Query** するノードかに基づいて、同じサブカテゴリに分類されます。
 
-* ![](<images/user-interface-create.jpg>) **Create**: ジオメトリを最初から作成または構築します。円など。
-* ![](<images/user-interface-action.jpg>) **Action**: オブジェクトに対してアクションを実行します。たとえば、円をスケーリングします。
-* ![](<images/user-interface-query.jpg>) **Query**: 既に存在するオブジェクトのプロパティを取得します。たとえば、円の半径を取得します。
+* ![](../.gitbook/assets/user-interface-create.jpg) **Create**: ジオメトリを最初から作成または構築します。円など。
+* ![](../.gitbook/assets/user-interface-action.jpg) **Action**: オブジェクトに対してアクションを実行します。たとえば、円をスケーリングします。
+* ![](../.gitbook/assets/user-interface-query.jpg) **Query**: 既に存在するオブジェクトのプロパティを取得します。たとえば、円の半径を取得します。
 
 ノードの名前とアイコン以外の詳細情報を表示するには、ノードにマウスを合わせます。これにより、そのノードの機能、必要な入力、生成される出力について、すばやく確認することができます。
 
-![](<images/user-interface-node-description.jpg>)
+![](../.gitbook/assets/user-interface-node-description.jpg)
 
 > 1. ノードに関する簡単な説明
 > 2. [ライブラリ]メニューの大きなアイコン
@@ -46,7 +48,7 @@
 
 追加するノードをクリックして選択するか、Enter キーを押してハイライト表示されたノードをワークスペースの中心に追加します。
 
-![](<images/user-interface-search.jpg>)
+![](../.gitbook/assets/user-interface-search.jpg)
 
 #### 階層ごとの検索
 
@@ -58,15 +60,15 @@
 
 * `library.category.nodeName`
 
-![](<images/library-search-by-hierarchy-1-geometry-point-by-coordinates.jpg>)
+![](../.gitbook/assets/library-search-by-hierarchy-1-geometry-point-by-coordinates.jpg)
 
 * `category.nodeName`
 
-![](<images/library-search-by-hierarchy-2-point-by-coordinates.jpg>)
+![](../.gitbook/assets/library-search-by-hierarchy-2-point-by-coordinates.jpg)
 
 * `nodeName`または`keyword`
 
-![](<images/library-search-by-hierarchy-3-by-coordinates.jpg>)
+![](../.gitbook/assets/library-search-by-hierarchy-3-by-coordinates.jpg)
 
 通常、ワークスペース内のノードの名前は `category.nodeName` という形式で表示されますが、いくつかの例外があります。特に注意が必要な例外は、Input カテゴリと View カテゴリです。
 
@@ -74,15 +76,15 @@
 
 * ほとんどのライブラリのノードには、カテゴリ形式が含まれています。
 
-![](<images/library-node-category-differences-1.jpg>)
+![](../.gitbook/assets/library-node-category-differences-1.jpg)
 
 * `Point.ByCoordinates` ノードと `UV.ByCoordinates` ノードは、名前は同じですがカテゴリが異なっています。
 
-![](<images/library-node-category-differences-2.jpg>)
+![](../.gitbook/assets/library-node-category-differences-2.jpg)
 
 * 注意する例外としては、Built-in Functions、Core.Input、Core.View、Operators などがあります。
 
-![](<images/library-node-category-differences-3.jpg>)
+![](../.gitbook/assets/library-node-category-differences-3.jpg)
 
 ### 頻繁に使用されるノード
 
@@ -90,32 +92,34 @@ Dynamo の既定のインストールには、数百個のノードが付属し�
 
 #### Input ノード
 
-Input ノードは、ビジュアル プログラムのユーザが重要なパラメータを使用する場合の主要な手段です。Core ライブラリから以下のものを利用できます。
+Input ノードは、ビジュアル プログラムのユーザが(自分または他のユーザに関わらず)重要なパラメータを使用する場合の主要な手段です。Core ライブラリから以下のものを利用できます。
 
-| ノード           |                                                        | ノード           |                                                        |
-| -------------- | ------------------------------------------------------ | -------------- | ------------------------------------------------------ |
-| Boolean        | ![](<images/library-boolean.jpg>)        | Number         | ![](<images/library-number.jpg>)         |
-| String         | ![](<images/library-string.jpg>)         | Number Slider  | ![](<images/library-number-slider.jpg>)  |
-| Directory Path | ![](<images/library-directory-path.jpg>) | Integer Slider | ![](<images/library-integer-slider.jpg>) |
-| File Path      | ![](<images/library-file-path.jpg>)      |                |                                                        |
+| ノード           |                                                    | ノード           |                                                    |
+| -------------- | -------------------------------------------------- | -------------- | -------------------------------------------------- |
+| Boolean        | ![](../.gitbook/assets/library-boolean.jpg)        | Number         | ![](../.gitbook/assets/library-number.jpg)         |
+| String         | ![](../.gitbook/assets/library-string.jpg)         | Number Slider  | ![](../.gitbook/assets/library-number-slider.jpg)  |
+| Directory Path | ![](../.gitbook/assets/library-directory-path.jpg) | Integer Slider | ![](../.gitbook/assets/library-integer-slider.jpg) |
+| File Path      | ![](../.gitbook/assets/library-file-path.jpg)      |                |                                                    |
 
 #### Watch と Watch3D
 
 Watch ノードは、ビジュアル プログラムを経由してやり取りされるデータを管理するために必要なノードです。ノードの上にマウス カーソルを合わせると、**ノード データのプレビュー**でノードの結果を表示できます。
 
-![](<images/library-node-preview.jpg>)
+![](../.gitbook/assets/library-node-preview.jpg)
 
 **Watch** ノードで表示したままにしておくと便利です。
 
-![](<images/library-watch-node.jpg>)
+![](../.gitbook/assets/library-watch-node.jpg)
 
 または、**Watch3D** ノードを使用してジオメトリの結果を確認します。
 
-![](<images/library-watch3d-node.gif>)
+![](../.gitbook/assets/library-watch3d-node.gif)
 
 これらのノードは、どちらも Core ライブラリの View カテゴリに含まれています。
 
-{% hint style="info" %}ヒント: ビジュアル プログラムに多数のノードが含まれている場合、3D プレビューの表示が見にくくなることがあります。その場合は、[設定]メニューの[背景 3D プレビューの表示]オプションを選択解除し、Watch3D ノードを使用してジオメトリをプレビューすることをお勧めします。{% endhint %}
+{% hint style="info" %}
+ヒント: ビジュアル プログラムに多数のノードが含まれている場合、3D プレビューの表示が見にくくなることがあります。その場合は、[設定]メニューの[背景 3D プレビューの表示]オプションを選択解除し、Watch3D ノードを使用してジオメトリをプレビューすることをお勧めします。
+{% endhint %}
 
 #### Code Block
 
@@ -125,7 +129,7 @@ Code Block ノードでセミコロン区切りの行を使用して、Code Bloc
 
 次に、スクリプトで Code Block を使用するための簡単なデモンストレーションを示します(手順を含む)。
 
-![](images/library-codeblockdemo.gif)
+![](../.gitbook/assets/library-codeblockdemo.gif)
 
 1. ダブルクリックして Code Block ノードを作成します。
 2. `Circle.ByCenterPointRadius(x,y);` と入力します。

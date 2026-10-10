@@ -4,7 +4,7 @@
 
 Dynamo ワークスペースは、4 つの主要な要素で構成されています。
 
-![](<images/workspace-ui.png>)
+![](../.gitbook/assets/workspace-ui.png)
 
 > 1. すべてのアクティブなタブ
 > 2. プレビュー モード
@@ -15,14 +15,14 @@ Dynamo ワークスペースは、4 つの主要な要素で構成されてい�
 
 新しいファイルを開くと、既定で新しいホーム ワークスペースが開きます。
 
-![](<images/workspace-home-tab.png>)
+![](../.gitbook/assets/workspace-home-tab.png)
 
 カスタム ノードを作成し、カスタム ノード ワークスペースで開くことができます。
 
-![](<images/workspace-custom-node-tab.png>)
+![](../.gitbook/assets/workspace-custom-node-tab.png)
 
 {% hint style="info" %}
-各 Dynamo ウィンドウで使用できるホーム ワークスペースは 1 つのみですが、タブで複数のカスタム ノード ワークスペースを開くことができます。
+Dynamo ウィンドウで使用できるホーム ワークスペースは 1 つのみですが、タブで複数のカスタム ノード ワークスペースを開くことができます。
 {% endhint %}
 
 ### プレビュー モード
@@ -31,18 +31,18 @@ Dynamo ワークスペースは、4 つの主要な要素で構成されてい�
 
 a.右上のアイコンを使用する
 
-* ![](<images/2.3-04-graph-preview-icon.jpg>)グラフ プレビュー
-* ![](<images/2.3-05-3d-preview-icon.jpg>)3D プレビュー
+* ![](../.gitbook/assets/2.3-04-graph-preview-icon.jpg)グラフ プレビュー
+* ![](../.gitbook/assets/2.3-05-3d-preview-icon.jpg)3D プレビュー
 
 b.ワークスペースを右クリックする
 
 * 3D プレビューからグラフ プレビューに切り替える
 
-![](<images/workspace-right-click-switch-to-graph-view.jpg>)
+![](../.gitbook/assets/workspace-right-click-switch-to-graph-view.jpg)
 
 * グラフ プレビューから 3D プレビューに切り替える
 
-![](<images/workspace-right-click-switch-to-geometry.jpg>)
+![](../.gitbook/assets/workspace-right-click-switch-to-geometry.jpg)
 
 c.キーボード ショートカットを使用する(Ctrl + B)
 
@@ -53,10 +53,10 @@ c.キーボード ショートカットを使用する(Ctrl + B)
 a.**グラフ プレビュー** モードで
 
 * アイコンを使用して以下の動作ができます。
-  * ![](<images/2.3-08-graph-preview-zoom-to-fitpsd.jpg>)全体表示
-  * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)拡大
-  * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)ズームアウト
-  * ![](<images/2.3-11-graph-preview-pan.jpg>)画面移動
+  * ![](../.gitbook/assets/2.3-08-graph-preview-zoom-to-fitpsd.jpg)全体表示
+  * ![](../.gitbook/assets/2.3-09-graph-preview-zoom-in.jpg)拡大表示
+  * ![](../.gitbook/assets/2.3-10-graph-preview-zoom-out.jpg)拡小表示
+  * ![](../.gitbook/assets/2.3-11-graph-preview-pan.jpg)画面移動
 * マウスを使用して以下の動作ができます。
   * 左クリック - 選択する
   * 左クリックしてドラッグ - 選択ボックスで複数のノードを選択する
@@ -64,16 +64,16 @@ a.**グラフ プレビュー** モードで
   * 中マウス ボタンをクリックしてドラッグ - 画面移動
   * キャンバス上の任意の場所を右クリック - キャンバス内検索を開く
 
-![](<images/workspace-in-canvas-search.gif>)
+![](../.gitbook/assets/workspace-in-canvas-search.gif)
 
 b.**3D プレビュー** モードで
 
 * アイコンを使用して以下の動作ができます。
-  * ![](<images/2.3-08-graph-preview-zoom-to-fitpsd.jpg>)全体表示
-  * ![](<images/2.3-09-graph-preview-zoom-in.jpg>)拡大
-  * ![](<images/2.3-10-graph-preview-zoom-out.jpg>)ズームアウト
-  * ![](<images/2.3-11-graph-preview-pan.jpg>)画面移動
-  * ![](<images/3-1/3-1-13 3Dprevieworbit.jpg>)オービット
+  * ![](../.gitbook/assets/2.3-08-graph-preview-zoom-to-fitpsd.jpg)全体表示
+  * ![](../.gitbook/assets/2.3-09-graph-preview-zoom-in.jpg)拡大表示
+  * ![](../.gitbook/assets/2.3-10-graph-preview-zoom-out.jpg)拡小表示
+  * ![](../.gitbook/assets/2.3-11-graph-preview-pan.jpg)画面移動
+  * \![](<../.gitbook/assets/3-1-13 3Dprevieworbit.jpg>)Orbit
 * マウスを使用して以下の動作ができます。
   * スクロール ホイールの上下 - 拡大/縮小ズーム
   * 中マウス ボタンをクリックしてドラッグ - 画面移動
@@ -85,4 +85,4 @@ b.**3D プレビュー** モードで
 
 複数のノードを選択するには、クリックおよびドラッグで選択ボックスを作成します。
 
-![](<images/workspace-selection-box.gif>)
+![](../.gitbook/assets/workspace-selection-box.gif)

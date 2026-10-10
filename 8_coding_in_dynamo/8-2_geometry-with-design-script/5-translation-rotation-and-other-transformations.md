@@ -2,11 +2,11 @@
 
 3 次元空間で X、Y、Z 座標を明示的に指定することで、特定のジオメトリ オブジェクトを作成できます。ただし、多くの場合、オブジェクト自体またはその基礎となる座標系でジオメトリ変換を使用して、ジオメトリを最終的な位置に移動します。
 
-### 移動
+### 翻訳
 
 最も単純な幾何学的変換は移動であり、オブジェクトを X、Y、Z 軸方向に指定した単位の数だけ動かします。
 
-![](../images/Transformations_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -22,7 +22,7 @@ p2 = p.Translate(10, -20, 50);
 
 Dynamo 内のすべてのオブジェクトは、オブジェクト名の末尾に _.Translate_ メソッドを追加することで移動できますが、より複雑な変換では、基礎となる座標系から新しい座標系にオブジェクトを変換する必要があります。たとえば、オブジェクトを X 軸を中心にして 45 度回転させるには、回転していない既存の座標系から、_.Transform_ メソッドで X 軸を中心にして 45 度回転した座標系にオブジェクトを移動します。
 
-![](../images/Transformations_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -40,9 +40,9 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 ### スケール
 
-移動と回転に加えて、スケール変更やせん断変形された座標系も作成できます。座標系のスケールは _.Scale_ メソッドを使用して変更できます。
+移動や回転に加えて、スケールまたはせん断することで座標系を作成することもできます。座標系のスケールは _.Scale_ メソッドを使用して変更できます。
 
-![](../images/Transformations_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -56,9 +56,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-せん断変形された座標系は、非直交ベクトルを CoordinateSystem コンストラクタに入力することで作成されます。
+せん断された座標系は、非直交ベクトルを座標系コンストラクタに入力することで作成されます。
 
-![](../images/Transformations_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(
@@ -74,9 +74,9 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-スケール変更とせん断変形は回転や移動よりも比較的複雑なジオメトリ変換であるため、すべての Dynamo オブジェクトで実行できるわけではありません。次の表は、スケールが均一でない座標系およびせん断変形された座標系を持つことができる Dynamo オブジェクトの概略です。
+スケール変更とせん断変形は回転や移動よりも比較的複雑なジオメトリ変換であるため、すべての Dynamo オブジェクトで実行できるわけではありません。次の表は、不均等にスケールされた座標系およびせん断された座標系を持つことができる Dynamo オブジェクトの概要です。
 
-| クラス        | スケールが均一でない座標系 | せん断変形された座標系 |
+| クラス        | 不均等にスケールされた座標系| せん断された座標系 |
 | ------------ | ------------------------------------- | ------------------------ |
 | 円弧          | 不可                                    | 不可                       |
 | NURBS 曲線   | 可                                   | 可                      |

@@ -12,11 +12,11 @@ pts = [ [p1, p2, p3],
 
 p1 のパラメータは u = 0 v = 0 で、p9 のパラメータは u = 1 v = 1 です。
 
-パラメータ化は、曲線の生成に使用する点を決定する場合にはそれほど有用ではなく、主に、中間点が NurbsCurve コンストラクタおよび NurbsSurface コンストラクタで生成された場合にその位置を判断するために使用します。
+パラメータ化は、曲線の生成に使用する点を決定する場合にはそれほど有用ではなく、主に、中間点が NurbsCurve コンストラクタや NurbsSurface コンストラクタで生成された場合にその位置を決定するために使用します。
 
 曲線には _PointAtParameter_ メソッドがあり、0 から 1 の double 型の引数を 1 つ使用して、そのパラメータの Point オブジェクトを返します。たとえば、このスクリプトでは、パラメータが 0、0.1、0.2、0.3、0.4、0.5、0.6、0.7、0.8、0.9、1 の点を見つけます。
 
-![](../images/GeometricParameterization_01.png)
+![](../../.gitbook/assets/GeometricParameterization_01.png)
 
 ```js
 pts = {};
@@ -41,7 +41,7 @@ lines = Line.ByStartPointEndPoint(pts_at_param,
 
 曲線上およびサーフェス上の個々の点を抽出することは便利ですが、スクリプトでは通常、曲線やサーフェスが向いている方向など、パラメータの特定の幾何学的特性を知る必要があります。_CoordinateSystemAtParameter_ メソッドでは、曲線やサーフェスのパラメータでの位置だけでなく、方向が設定された座標系も見つかります。たとえば、次のスクリプトによって、回転サーフェスに沿って方向が設定された座標系が抽出され、その座標系の向きを使用して、サーフェスに垂直な線分が生成されます。
 
-![](../images/GeometricParameterization_02.png)
+![](../../.gitbook/assets/GeometricParameterization_02.png)
 
 ```js
 pts = {};
@@ -59,8 +59,7 @@ crv = NurbsCurve.ByPoints(pts);
 axis_origin = Point.ByCoordinates(0, 0, 0);
 axis = Vector.ByCoordinates(0, 0, 1);
 
-surf = Surface.ByRevolve(crv, axis_origin, axis, 90,
-    140);
+surf = Surface.ByRevolve(crv, axis_origin, axis, 90, 140);
 
 cs_array = surf.CoordinateSystemAtParameter(
     (0..1..#7)<1>, (0..1..#7)<2>);
@@ -69,8 +68,7 @@ def make_line(cs : CoordinateSystem) {
 	lines_start = cs.Origin;
     lines_end = cs.Origin.Translate(cs.ZAxis, -0.75);
 
-    return = Line.ByStartPointEndPoint(lines_start,
-        lines_end);
+    return = Line.ByStartPointEndPoint(lines_start, lines_end);
 }
 
 lines = make_line(Flatten(cs_array));

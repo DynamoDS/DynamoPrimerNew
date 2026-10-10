@@ -12,10 +12,12 @@
 | 3.7            | .NET 10            |
 | 4.0+           | .NET 10            |
 
-{% hint style="info" %} 3.3.2 および 3.7 は、.NET 10 が 4.0 リリース候補からバックポートされた特別なリリースです。{% endhint %}
+{% hint style="info" %}
+3.3.2 および 3.7 は、.NET 10 が 4.0 リリース候補からバックポートされた特別なリリースです。
+{% endhint %}
 
 パッケージを新しい .NET バージョンに更新する場合のガイダンスについては、Developer Primer のマイグレーション ガイドを参照してください。
 
-* [Dynamo 2.x のパッケージを更新する](../11\_developer\_primer/3\_developing\_for\_dynamo/6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
-* [Dynamo 3.x / .NET 8 のパッケージを更新する](../11\_developer\_primer/3\_developing\_for\_dynamo/6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
-* [Dynamo 4.x / .NET 10 のパッケージを更新する](../11\_developer\_primer/3\_developing\_for\_dynamo/6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
+ * [Dynamo 2.x のパッケージを更新する](../11_developer_primer/8_updating_packages/1-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+ * [Dynamo 3.x / .NET 8 のパッケージを更新する](../11_developer_primer/8_updating_packages/2-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+ * [Dynamo 4.x / .NET 10 のパッケージを更新する](../11_developer_primer/8_updating_packages/3-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)

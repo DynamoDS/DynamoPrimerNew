@@ -8,7 +8,7 @@ GitHub は、利用者間の変更を追跡し、作業を調整するための�
 
 Dynamo のソースは、次のリポジトリの DynamoDS GitHub でホストされます。[https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
-![Dynamo ソース ファイル](../images/github.jpg)
+![Dynamo ソース ファイル](../../.gitbook/assets/github.jpg)
 
 > Dynamo ソース ファイルです。
 >
@@ -23,7 +23,7 @@ Dynamo のソースは、次のリポジトリの DynamoDS GitHub でホスト�
 
 クローン作成する Dynamo リポジトリの URL が必要です。これは、リポジトリのページの「クローンまたはダウンロード」ボタンにあります。URL をコピーしてコマンド プロンプトに貼り付けます。
 
-![リポジトリをクローン作成する](../images/github-clone.png)
+![リポジトリをクローン作成する](../../.gitbook/assets/github-clone.png)
 
 > 1. 「クローンまたはダウンロード」を選択する
 > 2. URL をコピーする
@@ -34,17 +34,17 @@ git がインストールされていると、Dynamo リポジトリをクロー
 
 > 「username」をユーザ名と置き換えます
 
-![コマンド プロンプト](../images/cli-1.jpg)
+![コマンド プロンプト](../../.gitbook/assets/cli-1.jpg)
 
 次の手順では、git コマンドを実行して、指定した場所に Dynamo リポジトリをクローン作成します。コマンドの URL は、GitHub の「クローンまたはダウンロード」ボタンをクリックして取得します。コマンド ターミナルでこのコマンドを実行します。これにより、Dynamo の最新のコードである Dynamoリポジトリのマスター ブランチをクローン作成します。このマスター ブランチには、最新バージョンの Dynamo コードが含まれます。このブランチは毎日変更されます。
 
 `git clone https://github.com/DynamoDS/Dynamo.git`
 
-![git のクローン作成操作の結果](../images/cli-2.jpg)
+![git のクローン作成操作の結果](../../.gitbook/assets/cli-2.jpg)
 
-クローン作成操作が正常に完了したことで、git が動作していることを確認できました。ファイルのエクスプローラで、クローン作成したフォルダに移動してソース ファイルを表示します。フォルダ構造は、GitHub の Dynamo リポジトリのマスター ブランチと同じに見える必要があります。
+クローン作成操作が正常に完了したことで、git が動作していることを確認できました。ファイル エクスプローラで、クローンを作成したフォルダにナビゲートして、ソース ファイルを確認します。フォルダ構造は、GitHub 上の Dynamo リポジトリのマスター ブランチと同じになっているはずです。
 
-![Dynamo のソース ファイル](../images/source-files.jpg)
+![Dynamo のソース ファイル](../../.gitbook/assets/source-files.jpg)
 
 > 1. Dynamo のソース ファイル
 > 2. git ファイル
@@ -59,9 +59,9 @@ git がインストールされていると、Dynamo リポジトリをクロー
 
 > .NET および DirectX は、すでにインストールされている可能性があります。
 
-> **注:** 重大な変更として、[**Visual Studio 2022**](https://visualstudio.microsoft.com/vs/community/) **/** [**Visual Studio 2026 Insider**](https://visualstudio.microsoft.com/insiders/) が必須になりました
+> **注:** 重大な変更として、[**Visual Studio 2022 Preview**](https://visualstudio.microsoft.com/vs/community/) **/** [**Visual Studio 2026 Insider**](https://visualstudio.microsoft.com/insiders/) が必須になりました
 >
-> 2025 年後半から、Dynamo は `dotnet10.0` フレームワークを実装します。安定バージョンではまだ .NET 10.0 がサポートされていないため、このフレームワークに対して開発するには Visual Studio 2022 Preview または Visual Studio 2026 Insider (またはそれ以降)が必要です。
+> Dynamo の現在の安定版では、`dotnet10.0` フレームワークが実装されています。このフレームワークを使用して開発するには、Visual Studio 2022 Preview または Visual Studio 2026 Insider (またはそれ以降)が必要です。
 >
 > **既存のインストールとともに Visual Studio 2022 Preview / 2026 Insider をインストールする:**
 >
@@ -71,11 +71,11 @@ git がインストールされていると、Dynamo リポジトリをクロー
 > 4. **Visual Studio 2022 Preview /2026 Insider**(コミュニティ、Professional、または Enterprise)を検索します
 > 5. **[インストール]**をクリックして、既存の Visual Studio インストールとともに追加します
 
-![Visual Studio preview](<../images/vs-preview.png>) ![Visual Studio 2026 insider](<../images/vs-2026-insiders.png>)
+\![Visual Studio Preview](<../../.gitbook/assets/vs-preview (1).png>) \![Visual Studio 2026 Insider](<../../.gitbook/assets/vs-2026-insiders (1).png>)
 
 インストールがすべて完了したら、Visual Studio を起動して、`Dynamo\src` にある `Dynamo.All.sln` ソリューションを開きます。
 
-![ソリューション ファイルを開く](../images/vs-open-dynamo.jpg)
+![ソリューション ファイルを開く](../../.gitbook/assets/vs-open-dynamo.jpg)
 
 > 1. `File > Open > Project/Solution` を選択します。
 > 2. Dynamo リポジトリを参照して `src` フォルダを開きます。
@@ -84,7 +84,7 @@ git がインストールされていると、Dynamo リポジトリをクロー
 
 ソリューションを構築する前に、いくつか設定が必要です。まず、Dynamo のデバッグバージョンを構築し、デバッグ中に Visual Studio が詳細情報を収集することで、それを開発に役立てることができます。また、AnyCPU をターゲットにします。
 
-![ソリューション設定](../images/vs-dynamo-build-settings.jpg)
+![ソリューション設定](../../.gitbook/assets/vs-dynamo-build-settings.jpg)
 
 > `bin` フォルダ内のフォルダとして設定されます。
 >
@@ -93,7 +93,7 @@ git がインストールされていると、Dynamo リポジトリをクロー
 
 プロジェクトを開いて、ソリューションを構築できます。このプロセスでは、実行可能な DynamoSandbox.exe ファイルを作成します。
 
-![ソリューションをビルドする](../images/vs-build-dynamo.jpg)
+![ソリューションをビルドする](../../.gitbook/assets/vs-build-dynamo.jpg)
 
 > プロジェクトをビルドすると、NuGet の依存関係が復元されます。
 >
@@ -104,7 +104,7 @@ git がインストールされていると、Dynamo リポジトリをクロー
 
 Dynamo が正常にビルドを完了すると、DynamoSandbox.exe ファイルを含む `bin` フォルダが Dynamo リポジトリに作成されます。このサンプルでは、デバッグ オプションを使用してビルドしているため、実行可能ファイルは `bin\AnyCPU\Debug` に配置されます。これ実行すると、Dynamo のローカル ビルドが開きます。
 
-![DynamoSandbox 実行ファイル](../images/ex-dynamosandbox.jpg)
+![DynamoSandbox 実行ファイル](../../.gitbook/assets/ex-dynamosandbox.jpg)
 
 > 1. 先ほどビルドした DynamoSandbox の実行可能ファイルです。これを実行して Dynamo を起動します。
 
@@ -123,7 +123,7 @@ Dynamo が正常にビルドを完了すると、DynamoSandbox.exe ファイル�
 
 Visual Studio から Dynamo を起動すると、必要に応じてデバッグ セッションごとにソリューションが再構築されるため、ソースに変更を加えた場合は、デバッグ時に反映されます。`Dynamo.All.sln` ソリューションを開いたまま、ドロップダウン メニューから `Debug`、`AnyCPU`、`DynamoSandbox` を選択し、[`Start`]をクリックします。これにより、Dynamo が構築され、新しいプロセス(DynamoSandbox.exe)が開始されて、Visual Studio のデバッガがアタッチされます。
 
-![Visual Studio からアプリケーションをビルドおよび開始する](../images/vs-debug-options.jpg)
+![Visual Studio からアプリケーションをビルドおよび開始する](../../.gitbook/assets/vs-debug-options.jpg)
 
 > Visual Studio から直接アプリケーションを構築して起動します
 >
@@ -134,7 +134,7 @@ Visual Studio から Dynamo を起動すると、必要に応じてデバッグ 
 
 あるいは、特定のグラフやパッケージが開いている場合の問題をトラブルシューティングするために、すでに実行中の Dynamo プロセスをデバッグすることもできます。そのためには、Visual Studio でプロジェクトのソース ファイルを開き、`Attach to Process` デバッグ メニュー項目を使用して実行中の Dynamo プロセスにアタッチします。
 
-![プロセス ダイアログにアタッチする](../images/vs-attach-dynamosandbox.jpg)
+![プロセス ダイアログにアタッチする](../../.gitbook/assets/vs-attach-dynamosandbox.jpg)
 
 > 実行中のプロセスを Visual Studio にアタッチする
 >
@@ -144,9 +144,9 @@ Visual Studio から Dynamo を起動すると、必要に応じてデバッグ 
 
 いずれの場合も、デバッグするプロセスにデバッガをアタッチしています。デバッガを起動する前または後に、コードが実行される直前にプロセスを一時停止させるブレーク ポイントをコードに設定することができます。デバッグ中にキャッチされていない例外が発生した場合、Visual Studio はソース コード内の発生した場所にジャンプします。これは、単純なクラッシュ、未処理の例外を検出し、アプリケーションの実行フローを理解できる効率的な方法です。
 
-![ブレーク ポイントを設定する](../images/vs-debug-dynamocore.jpg)
+![ブレーク ポイントを設定する](../../.gitbook/assets/vs-debug-dynamocore.jpg)
 
-> DynamoSandbox のデバッグ中に、Color.ByARGB ノードのコンストラクタにブレーク ポイントを設定します。このコンストラクタにより、ノードがインスタンス化されたときに Dynamo プロセスが一時停止します。このノードが例外をスローしたり、Dynamo がクラッシュする原因となっている場合は、コンストラクタの各行をステップごとに調べて、問題が発生している場所を特定することができます。
+> DynamoSandbox のデバッグ中に、**Color.ByARGB** ノードのコンストラクタにブレーク ポイントを設定します。このコンストラクタにより、ノードがインスタンス化されたときに Dynamo プロセスが一時停止します。このノードが例外をスローしたり、Dynamo がクラッシュする原因となっている場合は、コンストラクタの各行をステップごとに調べて、問題が発生している場所を特定することができます。
 >
 > 1. ブレーク ポイント
 > 2. 現在実行中の関数と以前の関数呼び出しを示すコール スタック
@@ -167,7 +167,7 @@ Dynamo ソースは GitHub でホストされていることから、ローカ�
 
 `git pull origin master`
 
-![更新されたローカル リポジトリ](../images/cli-pull-changes.jpg)
+![更新されたローカル リポジトリ](../../.gitbook/assets/cli-pull-changes.jpg)
 
 > 1. ここでは、ローカル リポジトリがリモートからの変更によって更新されていることが確認できます。
 

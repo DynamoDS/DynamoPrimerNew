@@ -22,7 +22,7 @@ Dynamo の開発事例をお探しの場合は、次のリソースを参照し�
     * スライダの相互作用ロジックを決定する: [コード](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
 * [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**:** ZeroTouch、カスタム UI、テスト、ビュー拡張機能のテンプレートです。
   * [UI サンプル](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
-    * 基本的なカスタム UI ノードを作成する: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs)
+    * 基本的なカスタム UI ノードを作成する: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/LocalizedCustomNodeModel.cs)
     * ドロップダウン メニューを作成する: [DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs)
   * [テスト](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryTests)
     * システムのテスト: [HelloDynamoSystemTests.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryTests/HelloDynamoSystemTests.cs)

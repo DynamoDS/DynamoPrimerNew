@@ -1,12 +1,14 @@
-# この Web サイトについて
+# バージョン情報
 
-{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
+{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %}
+Dynamo Hype Video
+{% endembed %}
 
 ## Dynamo v2.13 以降の場合
 
-![Dynamo Logo](images/dynamo_logo_dark-trim.jpg)
+\![Dynamo Logo](<.gitbook/assets/dynamo_logo_dark-trim (1).jpg>)
 
-> Dynamo は、設計者向けのオープン ソースのビジュアル プログラミング プラットフォームです。
+> Dynamo はオープン ソースの設計者向けビジュアル プログラミング プラットフォームです。
 
 ### ようこそ
 
@@ -37,31 +39,31 @@ Dynamo Primer は、オートデスクの Matt Jezyk 氏と Dynamo 開発チー�
 
 Dynamo Primer の初版は、**Mode Lab** によって作成されました。このような貴重なリソースの確立に取り組んでいただいたすべての方に感謝いたします。
 
-![](images/modelab-logo.png)
+![](.gitbook/assets/modelab-logo.png)
 
 ***
 
 **Parallax Team の John Pierson** 氏は依頼により、Dynamo 2.0 の改訂を反映するよう Primer を更新しました。
 
-![](images/prlx-logo.jpg)
+![](.gitbook/assets/prlx-logo.jpg)
 
 ***
 
 **Matterlab** では依頼により、Dynamo 2.13 の改訂を反映するよう Primer を更新しました。
 
-![](images/matterlab-logo.jpg)
+![](.gitbook/assets/matterlab-logo.jpg)
 
 ***
 
 **Archilizer** では依頼により、Dynamo 2.17 の改訂を反映するよう Primer を更新しました。
 
-<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 **Wood Rodgers** では依頼により、Dynamo for Civil 3D のコンテンツを使用して Primer を更新しました。
 
-<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### 謝辞
 
@@ -71,9 +73,9 @@ Dynamo プロジェクトの創立と指揮に携わった Ian Keough 氏に、�
 
 ### ソフトウェアとリソース
 
-**Dynamo** Dynamo の最新の**安定した**リリースについては、次のサイトを参照してください。
+**Dynamo** Dynamo の最新の**安定版**リリースについては、次のサイトを参照してください。
 
-[https://dynamobim.com/download/](https://dynamobim.com/download/) または [https://dynamobuilds.com](https://dynamobuilds.com/)(英語)
+[https://dynamobuilds.com](https://dynamobuilds.com/)
 
 *注: Revit 2020 以降、Dynamo は Revit リリースにバンドルされているため、手動でインストールする必要はありません。詳細については、この[ブログの投稿](https://dynamobim.org/dynamo-core-2-1-release/)をご覧ください。
 

@@ -4,15 +4,15 @@
 
 Dynamo は、アクティブなオープンソース開発プロジェクトです。[Dynamo を利用できるソフトウェアの一覧](http://dynamobim.org/download/)をご確認いただけます。
 
-![](<images/setup for dynamo - dynamo revit.png>) ![](<images/setup for dynamo - dynamo civil 3D.png>) ![](<images/setup for dynamo - dynamo alias design.png>) ![](<images/setup for dynamo - dynamo formit.png>) ![](<images/setup for dynamo - dynamo advance steel.png>) ![](<images/setup for dynamo - dynamo robot structural analysis.png>) ![](<images/setup for dynamo - dynamo forma.png>)
+\![](<../.gitbook/assets/setup for dynamo - dynamo revit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>) \![](<../.gitbook/assets/setup for dynamo - dynamo forma.png>)
 
 ### 拡張機能としての Dynamo を起動する
 
 Dynamo は、**Revit3D**、**FormIt**、**Civil3D** などのソフトウェアに事前にインストールされています。
 
-使用を開始するには、ツールバー パネルから起動します。使用しているソフトウェアによって異なりますが、起動アイコンは通常、[メニュー] > [**管理**]タブにあります。Dynamo アイコン ![](images/dynamoCore-halfSize.png) をクリックして起動します。
+使用を開始するには、ツールバー パネルから起動します。使用しているソフトウェアによって異なりますが、起動アイコンは通常、[メニュー] > [**管理**]タブにあります。Dynamo アイコン ![](../.gitbook/assets/dynamoCore-halfSize.png) をクリックして起動します。
 
-![](images/launchdynamofromrevit.jpg)
+![](../.gitbook/assets/launchdynamofromrevit.jpg)
 
 特定のソフトウェアで Dynamo を使用する方法の詳細については、次のセクションを参照してください。
 
@@ -25,13 +25,13 @@ Dynamo は、**Revit3D**、**FormIt**、**Civil3D** などのソフトウェア�
 
 #### ダウンロード
 
-Dynamo アプリケーションは、[Dynamo の Web サイト](http://dynamobim.com)から入手できます。公式の過去またはプレリリース版のバージョンは、両方ともダウンロード ページから入手できます。「[Dynamo を取得](http://dynamobim.org/download/)」ページにアクセスし、[**ダウンロード**]をクリックして公式リリース バージョンをダウンロードしてください。
+公式の過去またはプレリリース版のバージョンは、両方ともダウンロード ページから入手できます。「[Dynamo を取得](http://dynamobim.org/download/)」ページにアクセスし、[**ダウンロード**]をクリックして公式リリース バージョンをダウンロードしてください。
 
-![](<images/image.png>)
+\![](<../.gitbook/assets/image (1).png>)
 
 過去のリリースまたは「ブリーディング エッジ」開発リリースをお探しの場合は、同じページの下部セクションにすべてのバージョンがあります。
 
-![](<images/03-02 Dynamo Sandbox All builds.png>)
+\![](<../.gitbook/assets/03-02 Dynamo Sandbox All builds.png>)
 
 {% hint style="info" %}
 「ブリーディング エッジ」開発には、まだ完全にテストされていない新機能および実験的機能が含まれている可能性があるため、不安定になる可能性があります。これを使用して、バグや問題を発見したら、問題をチームに報告してアプリケーションの改善にご協力ください。
@@ -47,24 +47,24 @@ Dynamo アプリケーションは、[Dynamo の Web サイト](http://dynamobim
 
 ZIP ファイルを右クリックして、[**すべて展開**]を選択します。
 
-![](<images/03-03 Extract zip file.png>)
+\![](<../.gitbook/assets/03-03 Extract zip file.png>)
 
 すべてのファイルを解凍する場所を選択します。
 
-![](<images/03-04 Extract destination folder.png>)
+\![](<../.gitbook/assets/03-04 Extract destination folder.png>)
 
 #### 起動する
 
 宛先フォルダで、**DynamoSandbox.exe** をダブルクリックして起動します。
 
-![](<images/03-05 Dynamo exe.jpg>)
+\![](<../.gitbook/assets/03-05 Dynamo exe.jpg>)
 
 次のように、DynamoSandbox の起動画面が表示されます。
 
-![](<images/03-06 Dynamo startup screen.png>)
+\![](<../.gitbook/assets/03-06 Dynamo startup screen.png>)
 
 これで、DynamoSandbox を使用するための設定が完了しました。
 
 {% hint style="info" %}
-**Geometry** は、Dynamo Sandbox の追加機能です。この機能は、現在 Revit、Robot Structural Analysis、FormIt、Civil 3D の Autodesk ソフトウェアのサブスクリプションまたはライセンスを所有しているユーザのみが使用できます。**Geometry** を使用すると、Dynamo Sandbox からジオメトリを読み込み、作成、編集、書き出すことができます。
+**Geometry** は、Dynamo Sandbox の追加機能です。この機能は、現在 Revit、Robot Structural Analysis、FormIt、Civil 3D のオートデスク ソフトウェアのサブスクリプションまたはライセンスを所有しているユーザのみが使用できます。**Geometry** を使用すると、Dynamo Sandbox からジオメトリの読み込み、作成、編集、書き出しができます。
 {% endhint %}

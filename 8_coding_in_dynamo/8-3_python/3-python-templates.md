@@ -6,13 +6,13 @@ Dynamo 2.0 では、初めて Python ウィンドウを開く際に、既定で�
 
 通常は次のように計算されます。`( %appdata%\Dynamo\Dynamo Core\{version}\ )`
 
-![](<../images/python templates - appdata folder location.jpg>)
+\![](<../../.gitbook/assets/python templates - appdata folder location.jpg>)
 
 ### テンプレートを設定する
 
 この機能を使用するには、 `DynamoSettings.xml` ファイルで次の行を追加する必要があります。_(メモ帳で編集します)_
 
-![](<../images/python templates -dynamo settings xml file.png>)
+\![](<../../.gitbook/assets/python templates -dynamo settings xml file.png>)
 
 `<PythonTemplateFilePath />` を見つけて、これを次のように置き換えるだけです。
 
@@ -22,7 +22,9 @@ Dynamo 2.0 では、初めて Python ウィンドウを開く際に、既定で�
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} _注: CURRENTUSER を自分のユーザ名に置き換えてください_ {% endhint %}
+{% hint style="warning" %}
+_注: CURRENTUSER を自分のユーザ名に置き換えます_
+{% endhint %}
 
 次に、使用する機能を組み込んだテンプレートを作成する必要があります。ここでは、Revit に関連するインポートおよび Revit で作業する際の他の一般的な項目の一部を組み込みます。
 
@@ -54,10 +56,10 @@ from RevitServices.Transactions import TransactionManager
 doc = DocumentManager.Instance.CurrentDBDocument
 uidoc=DocumentManager.Instance.CurrentUIApplication.ActiveUIDocument
 
-#Preparing input from dynamo to revit
+# Preparing input from dynamo to revit
 element = UnwrapElement(IN[0])
 
-#Do some action in a Transaction
+# Do some action in a Transaction
 TransactionManager.Instance.EnsureInTransaction(doc)
 
 TransactionManager.Instance.TransactionTaskDone()
@@ -71,10 +73,10 @@ OUT = element
 
 Python テンプレートが定義されると、Python Script ノードが配置されるたびに、Dynamo はこのテンプレートを検索します。見つからない場合、既定の Python ウィンドウのように表示されます。
 
-![](<../images/python templates - before setup template.jpg>)
+\![](<../../.gitbook/assets/python templates - before setup template.jpg>)
 
 Python テンプレート(たとえばここで作成した Revit でのテンプレート)が見つかった場合、組み込んだ既定の項目がすべて表示されます。
 
-![](<../images/python templates - after setup template.jpg>)
+\![](<../../.gitbook/assets/python templates - after setup template.jpg>)
 
 この優れた追加機能(Radu Gidei 氏による)に関する詳細は、こちらを参照してください。https://github.com/DynamoDS/Dynamo/pull/8122
