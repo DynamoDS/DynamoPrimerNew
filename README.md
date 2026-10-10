@@ -1,10 +1,12 @@
 # 정보
 
-{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %} Dynamo Hype 비디오{% endembed %}
+{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %}
+Dynamo Hyper 비디오
+{% endembed %}
 
 ## Dynamo 2.13 이상 버전용
 
-![Dynamo 로고](images/dynamo_logo_dark-trim.jpg)
+\![Dynamo Logo](<.gitbook/assets/dynamo_logo_dark-trim (1).jpg>)
 
 > Dynamo는 설계자를 위한 오픈 소스 시각적 프로그래밍 플랫폼입니다.
 
@@ -27,9 +29,9 @@ Autodesk에서는 Dynamo를 지속적으로 개선하고 있으므로 일부 기
 
 ### 오픈 소스
 
-Dynamo Primer 프로젝트는 오픈 소스입니다. Autodesk는 고품질 컨텐츠를 제공하기 위해 노력하고 있으며 여러분이 제공하는 피드백을 소중하게 생각하고 있습니다. 어떤 사항이든 문제를 보고하고자 하는 경우 GitHub 문제 페이지([https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues))에 게시해 주십시오. 
+Dynamo Primer 프로젝트는 오픈 소스입니다. Autodesk는 고품질 컨텐츠를 제공하기 위해 노력하고 있으며 여러분이 제공하는 피드백을 소중하게 생각하고 있습니다. 어떤 사항이든 문제를 보고하고자 하는 경우 GitHub 문제 페이지([https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues))에 게시해 주십시오.
 
-이 프로젝트에 새로운 섹션을 추가하거나 프로젝트를 편집하거나 그 밖의 기여를 하고자 하는 경우 GitHub 리포지토리를 확인하여 시작하십시오([https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew)). 
+이 프로젝트에 새로운 섹션을 추가하거나 프로젝트를 편집하거나 그 밖의 기여를 하고자 하는 경우 GitHub 리포지토리를 확인하여 시작하십시오([https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew)).
 
 ### Dynamo Primer 프로젝트
 
@@ -37,31 +39,31 @@ Dynamo Primer는 Matt Jezyk 및 Autodesk의 Dynamo 개발 팀에서 시작한 �
 
 **Mode Lab**은 본 입문서의 초판을 작성하는 책임을 맡았습니다. 이러한 소중한 리소스를 마련하는 데 들인 모든 노고에 감사드립니다.
 
-![](images/modelab-logo.png)
+![](.gitbook/assets/modelab-logo.png)
 
 ***
 
 **Parallax 팀의 John Pierson**은 Dynamo 2.0 개정 내용을 반영하도록 입문서를 업데이트하는 업무를 맡았습니다.
 
-![](images/prlx-logo.jpg)
+![](.gitbook/assets/prlx-logo.jpg)
 
 ***
 
 **Matterlab**은 Dynamo 2.13 개정 내용을 반영하도록 입문서를 업데이트하는 업무를 맡았습니다.
 
-![](images/matterlab-logo.jpg)
+![](.gitbook/assets/matterlab-logo.jpg)
 
 ***
 
 **Archilizer**는 Dynamo 2.17 개정 내용을 반영하도록 입문서를 업데이트하는 업무를 맡았습니다.
 
-<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 **Wood Rodgers**는 Dynamo for Civil 3D의 컨텐츠로 입문서를 업데이트하는 업무를 맡았습니다.
 
-<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### 감사의 인사
 
@@ -71,9 +73,9 @@ Dynamo 프로젝트를 시작하도록 도와주시고 지침을 주신 Ian Keou
 
 ### 소프트웨어 및 리소스
 
-**Dynamo** Dynamo의 최신 **안정적인** 릴리즈는 다음 사이트를 참조하십시오.
+**Dynamo** Dynamo의 최신 **안정** 버전은 다음 사이트를 참조하십시오.
 
-[https://dynamobim.com/download/](https://dynamobim.com/download/) 또는 [https://dynamobuilds.com](https://dynamobuilds.com/)
+[https://dynamobuilds.com](https://dynamobuilds.com/)
 
 *참고: Revit 2020부터 Dynamo는 Revit 릴리스와 함께 번들로 제공되므로 수동 설치가 필요하지 않습니다. 자세한 내용은 이 [블로그 게시물](https://dynamobim.org/dynamo-core-2-1-release/)에서 확인할 수 있습니다.
 

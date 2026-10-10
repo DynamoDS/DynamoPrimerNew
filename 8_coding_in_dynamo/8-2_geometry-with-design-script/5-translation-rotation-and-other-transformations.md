@@ -1,12 +1,12 @@
 # 전환, 회전 및 기타 변환
 
-3D 공간에서 x, y, z 좌표를 명시적으로 지정하여 특정 형상 객체를 작성할 수 있습니다. 그러나 형상은 객체 자체 또는 기본 CoordinateSystem에서 기하학적 변환을 사용하여 최종 위치로 이동되는 경우가 더 많습니다.
+3D 공간에서 x, y, z 좌표를 명시적으로 지정하여 특정 형상 객체를 작성할 수 있습니다. 하지만 대부분의 경우 객체 자체 또는 그 기반이 되는 좌표계에 기하 변환을 적용하여 객체를 최종 위치로 이동합니다.
 
 ### 이동
 
 가장 간단한 기하학적 변환은 x, y, z 방향으로 지정된 단위 수만큼 객체를 이동하는 전환입니다.
 
-![](../images/Transformations_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -20,9 +20,9 @@ p2 = p.Translate(10, -20, 50);
 
 ### 회전
 
-Dynamo의 모든 객체는 _.Translate_ 메서드를 객체 이름의 끝에 추가하여 변환할 수 있지만, 좀 더 복잡한 변환은 기본 CoordinateSystem에서 새 CoordinateSystem으로 객체를 변환해야 합니다. 예를 들어 객체를 x축을 중심으로 45도 회전하려면 객체를 회전 없는 기존 CoordinateSystem에서 _.Transform_ 메서드를 사용하여 x축을 중심으로 45도 회전한 CoordinateSystem으로 변환해야 합니다.
+Dynamo의 모든 객체는 객체 이름 끝에 _.Translate_ 메서드를 추가하여 이동할 수 있지만, 더 복잡한 변환을 수행하려면 객체의 기반 좌표계를 새로운 좌표계로 변환해야 합니다. 예를 들어, 객체를 x축을 중심으로 45도 회전하려면 _.Transform_ 메서드를 사용하여 회전이 적용되지 않은 기존 좌표계에서 x축을 중심으로 45도 회전한 좌표계로 객체를 변환해야 합니다.
 
-![](../images/Transformations_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -40,9 +40,9 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 ### 축척
 
-CoordinateSystem은 변환 및 회전뿐 아니라 축척 또는 전단이 조정되어 작성될 수도 있습니다. CoordinateSystem은 다음과 같이 _.Scale_ 메서드로 축척할 수 있습니다.
+좌표계는 이동 및 회전할 수 있을 뿐만 아니라, 크기가 조정되거나 전단된 상태로 작성할 수도 있습니다. _.Scale_ 메서드를 사용하여 좌표계의 크기를 조정할 수 있습니다.
 
-![](../images/Transformations_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -56,9 +56,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-전단된 CoordinateSystem은 직교하지 않는 벡터를 CoordinateSystem 생성자에 입력하여 작성합니다.
+전단된 좌표계는 직교하지 않는 벡터를 좌표계 생성자에 입력하여 작성합니다.
 
-![](../images/Transformations_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(
@@ -74,9 +74,9 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-축척 및 전단은 회전 및 변환보다 비교적 더 복잡한 기하학적 변환이므로 모든 Dynamo 객체가 이러한 변환을 거치는 것은 아닙니다. 다음 표는 균일하지 않게 축척이 조정된 CoordinateSystem 및 전단된 CoordinateSystem이 있을 수 있는 Dynamo 객체를 간략하게 설명합니다.
+축척 및 전단은 회전 및 변환보다 비교적 더 복잡한 기하학적 변환이므로 모든 Dynamo 객체가 이러한 변환을 거치는 것은 아닙니다. 다음 표에는 어떤 Dynamo 객체가 비균일하게 스케일링된 좌표계와 전단 좌표계를 사용할 수 있는지 정리되어 있습니다.
 
-| 클래스        | 균일하지 않게 축척이 조정된 CoordinateSystem | 전단 CoordinateSystem |
+| 클래스        | 비균일하게 스케일링된 좌표계| 전단된 좌표계 |
 | ------------ | ------------------------------------- | ------------------------ |
 | 호          | 아니요                                    | 아니오                       |
 | NurbsCurve   | 예                                   | 예                      |

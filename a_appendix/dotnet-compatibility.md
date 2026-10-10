@@ -12,10 +12,12 @@
 | 3.7            | .NET 10            |
 | 4.0+           | .NET 10            |
 
-{% hint style="info" %} 3.3.2 및 3.7은 4.0 릴리스 후보에서 .NET 10이 백포트된 특별 릴리스입니다. {% endhint %}
+{% hint style="info" %}
+3.3.2와 3.7은 4.0 릴리즈 후보에서 .NET 10을 백포트한 특별 릴리즈입니다.
+{% endhint %}
 
 패키지를 새 .NET 버전으로 업데이트하는 방법에 대한 지침은 개발자 입문서의 마이그레이션 가이드를 참조하십시오.
 
-* [Dynamo 2.x용 패키지 업데이트](../11\_developer\_primer/3\_developing\_for\_dynamo/6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
-* [Dynamo 3.x/.NET 8용 패키지 업데이트](../11\_developer\_primer/3\_developing\_for\_dynamo/6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
-* [Dynamo 4.x/.NET 10용 패키지 업데이트](../11\_developer\_primer/3\_developing\_for\_dynamo/6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
+ * [Dynamo 2.x용 패키지 업데이트](../11_developer_primer/8_updating_packages/1-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+ * [Dynamo 3.x/.NET 8용 패키지 업데이트](../11_developer_primer/8_updating_packages/2-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+ * [Dynamo 4.x/.NET 10용 패키지 업데이트](../11_developer_primer/8_updating_packages/3-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)

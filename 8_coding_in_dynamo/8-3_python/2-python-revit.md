@@ -27,7 +27,7 @@ import System
 
 이렇게 하면 Revit API에 액세스할 수 있으며 모든 Revit 작업에 대한 사용자 스크립트가 제공됩니다. 시각적 프로그래밍 프로세스와 Revit API 스크립팅을 결합하면 공동 작업 및 도구 개발이 크게 개선됩니다. 예를 들어 BIM 관리자와 구조도 설계자는 동일한 그래프에서 함께 작업할 수 있습니다. 이러한 공동 작업을 통해 모델의 설계 및 실행을 개선할 수 있습니다.
 
-![](<../images/python & revit - 01.jpg>)
+\![](<../../.gitbook/assets/python & revit - 01 (1).jpg>)
 
 ### 플랫폼별 API
 
@@ -51,7 +51,7 @@ Dynamo Project 이면의 계획은 플랫폼 구현 범위를 넓히는 것입�
 
 Dynamo에서 Revit 서비스를 가져오고 문서 데이터를 검색하는 방법은 다음과 같습니다.
 
-![](<../images/python & revit - exercise 01 - 01.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 01 - 01.jpg>)
 
 Dynamo의 Python 노드를 살펴봅니다. 아래에서 코드를 찾을 수도 있습니다.
 
@@ -60,17 +60,17 @@ Dynamo의 Python 노드를 살펴봅니다. 아래에서 코드를 찾을 수도
 import sys
 import clr
 
-#Import DocumentManager
+# Import DocumentManager
 clr.AddReference("RevitServices")
 import RevitServices
 from RevitServices.Persistence import DocumentManager
 
-#Place your code below this line
+# Place your code below this line
 doc = DocumentManager.Instance.CurrentDBDocument
 uiapp = DocumentManager.Instance.CurrentUIApplication
 app = uiapp.Application
 
-#Assign your output to the OUT variable
+# Assign your output to the OUT variable
 OUT = [doc,uiapp,app]
 ```
 
@@ -86,19 +86,19 @@ OUT = [doc,uiapp,app]
 
 Revit에서 새로운 개념 매스 패밀리를 작성하여 시작합니다.
 
-![](<../images/python & revit - exercise 02 - 01.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 01.jpg>)
 
 _개념 매스 폴더_ 를 열고 _Metric Mass.rft_ 템플릿 파일을 사용합니다.
 
-![](<../images/python & revit - exercise 02 - 02.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 02.jpg>)
 
 Revit에서 키보드 단축키 **`un`** 을 사용하여 프로젝트 단위 설정을 표시하고 길이 단위를 미터로 변경합니다.
 
-![](<../images/python & revit - exercise 02 - 03.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 03.jpg>)
 
 Dynamo를 시작하고 아래 이미지의 노드 세트를 작성합니다. 먼저 Dynamo 노드에서 Revit에 두 개의 참조점을 작성합니다.
 
-![](<../images/python & revit - exercise 02 - 04.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 04.jpg>)
 
 > 1. **Code Block**을 작성하고 값을 `"0;"`으로 지정합니다.
 > 2. 이 값을 X, Y 및 Z 입력에 대한 **ReferencePoint.ByCoordinates** 노드에 연결합니다.
@@ -108,7 +108,7 @@ Dynamo를 시작하고 아래 이미지의 노드 세트를 작성합니다. 먼
 
 Dynamo의 Python 노드를 살펴봅니다. 아래에서 전체 코드를 찾습니다.
 
-![](<../images/python & revit - exercise 02 - 05.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 05.jpg>)
 
 > 1. **System.Array:** Revit에는 입력으로 Python 리스트가 아닌 **시스템 배열**이 필요합니다. 이 경우 코드 줄이 1개 더 추가될 뿐이지만 인수 유형에 신경 쓰면 Revit에서 Python 프로그래밍을 쉽게 처리할 수 있습니다.
 
@@ -119,24 +119,25 @@ import clr
 # Import RevitNodes
 clr.AddReference("RevitNodes")
 import Revit
+
 #Import Revit elements
 from Revit.Elements import *
 import System
 
-#define inputs
+# Define inputs
 startRefPt = IN[0]
 endRefPt = IN[1]
 
-#define system array to match with required inputs
+# Define system array to match with required inputs
 refPtArray = System.Array[ReferencePoint]([startRefPt, endRefPt])
 
-#create curve by reference points in Revit
+# Create curve by reference points in Revit
 OUT = CurveByPoints.ByReferencePoints(refPtArray)
 ```
 
 Dynamo에서 Python을 사용하여 하나의 선으로 연결된 참조점 두 개를 작성했습니다. 다음 연습에서 좀 더 자세히 살펴보겠습니다.
 
-![](<../images/python & revit - exercise 02 - 06.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 06.jpg>)
 
 ## 연습 3
 
@@ -148,55 +149,61 @@ Dynamo에서 Python을 사용하여 하나의 선으로 연결된 참조점 두 
 
 이 연습은 간단하지만, Revit에서 Dynamo로, 그리고 그 반대로 데이터와 형상을 연결하는 항목을 이해하는 데 도움이 됩니다. 먼저 Revit-StructuralFraming.rvt를 열어 보겠습니다. 이 파일이 열리면 Dynamo를 시작하고 Revit-StructuralFraming.dyn 파일을 엽니다.
 
-![](../images/python&revit-exercise03-01.jpg)
+![](../../.gitbook/assets/python\&revit-exercise03-01.jpg)
 
 이 Revit 파일에는 기본적인 내용이 포함됩니다. 2개의 참조 곡선(레벨 1에 1개, 레벨 2에 1개)이 그려집니다. 이러한 곡선을 Dynamo로 가져와 라이브 링크를 유지하려고 합니다.
 
 이 파일에는 Python 노드의 5개 입력에 연결된 노드 세트가 있습니다.
 
-![](<../images/python & revit - exercise 03 - 02.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 02.jpg>)
 
 > 1. **Select Model Element Nodes:** 각각에 대해 선택 버튼을 누르고 Revit에서 해당 곡선을 선택합니다.
-> 2. **Code Block:** `0..1..#x;`_,_ 구문을 사용하여 0에서 20 사이의 정수 슬라이더를 _x_ 입력에 연결합니다. 이렇게 하면 두 곡선 사이에 그릴 빔 수가 지정됩니다.
+> 2. **Code Block:** `0..1..#x;`_,_ 구문을 사용하여 0에서 20 사이의 정수 슬라이더를 _x_입력에 연결합니다. 이렇게 하면 두 곡선 사이에 그릴 빔 수가 지정됩니다.
 > 3. **Structural Framing Types:** 드롭다운 메뉴에서 기본 W12x26 빔을 선택합니다.
 > 4. **Levels:** "레벨 1"을 선택합니다.
 
 Python의 이 코드는 약간 더 조밀하지만, 코드 내의 해설에 프로세스에서 발생하는 상황이 설명되어 있습니다.
 
-![](<../images/python & revit - exercise 03 - 03.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 03.jpg>)
 
 ```py
 import clr
-#import Dynamo Geometry
+
+# Import Dynamo Geometry
 clr.AddReference('ProtoGeometry')
 from Autodesk.DesignScript.Geometry import *
+
 # Import RevitNodes
 clr.AddReference("RevitNodes")
 import Revit
+
 # Import Revit elements
 from Revit.Elements import *
 import System
 
-#Query Revit elements and convert them to Dynamo Curves
+# Query Revit elements and convert them to Dynamo Curves
 crvA=IN[0].Curves[0]
 crvB=IN[1].Curves[0]
 
-#Define input Parameters
+# Define input Parameters
 framingType=IN[3]
 designLevel=IN[4]
 
-#Define "out" as a list
+# Define "out" as a list
 OUT=[]
 
 for val in IN[2]:
-	#Define Dynamo Points on each curve
+	# Define Dynamo Points on each curve
 	ptA=Curve.PointAtParameter(crvA,val)
 	ptB=Curve.PointAtParameter(crvB,val)
-	#Create Dynamo line
+	
+	# Create Dynamo line
 	beamCrv=Line.ByStartPointEndPoint(ptA,ptB)
-	#create Revit Element from Dynamo Curves
+	
+	# Create Revit Element from Dynamo Curves
 	beam = StructuralFraming.BeamByCurve(beamCrv,designLevel,framingType)
-	#convert Revit Element into list of Dynamo Surfaces
+	
+	# Convert Revit Element into list of Dynamo Surfaces
 	OUT.append(beam.Faces)
 ```
 
@@ -204,7 +211,7 @@ Revit에는 두 곡선을 구조적 요소로 스패닝하는 빔 배열이 있�
 
 Dynamo에서는 결과도 볼 수 있습니다. **Watch3D** 노드의 빔은 Revit 요소에서 조회된 형상을 나타냅니다.
 
-![](<../images/python & revit - exercise 03 - 05.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 05.jpg>)
 
 Revit 환경에서 Dynamo 환경으로 데이터를 변환하는 프로세스가 지속됩니다. 요약하면 프로세스가 진행되는 방식은 다음과 같습니다.
 
@@ -219,4 +226,4 @@ Revit 환경에서 Dynamo 환경으로 데이터를 변환하는 프로세스가
 
 Revit에서 참조 곡선을 업데이트하여 새로운 빔 배열을 얻게 됩니다.
 
-![](<../images/python & revit - ex 03 - 06.gif>)
+\![](<../../.gitbook/assets/python & revit - ex 03 - 06.gif>)

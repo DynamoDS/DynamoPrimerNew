@@ -24,11 +24,11 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![프로젝트 파일 이동하기](../images/fe-proj-directory.jpg)
+![프로젝트 파일 이동하기](../../.gitbook/assets/fe-proj-directory.jpg)
 
 > 1. 프로젝트 파일을 새 `src` 폴더로 이동합니다.
 
-이제 소스 파일이 별도의 폴더에 있으므로 Visual Studio의 `CustomNodeModel.csproj` 파일에 `AfterBuild` 대상을 추가합니다. 이렇게 하면 필요한 파일이 새 패키지 폴더에 복사됩니다. 텍스트 편집기([Atom](https://atom.io))에서 `CustomNodeModel.csproj` 파일을 열고, 닫는 `</Project>` 태그 앞에 빌드 대상을 넣습니다. 이 AfterBuild 대상은 모든 .dll, .pbd, .xml 및 .config 파일을 새 bin 폴더에 복사하고 dyf 및 추가 폴더를 생성합니다.
+이제 소스 파일이 별도의 폴더에 있으므로 Visual Studio의 `CustomNodeModel.csproj` 파일에 `AfterBuild` 대상을 추가합니다. 이렇게 하면 필요한 파일이 새 패키지 폴더에 복사됩니다. 텍스트 편집기([Atom](https://atom.io))에서 `CustomNodeModel.csproj` 파일을 열고, 닫는 `</Project>` 태그 앞에 빌드 대상을 넣습니다. 이 AfterBuild 대상은 모든 .dll, .pbd, .xml 및 .config 파일을 새 /bin 폴더에 복사하고 dyf 파일과 추가 폴더를 생성합니다.
 
 ```
   <Target Name="AfterBuild">
@@ -47,7 +47,7 @@ CustomNodeModel
   </Target>
 ```
 
-![AfterBuild 대상 넣기](../images/atom-afterbuild.jpg)
+![AfterBuild 대상 넣기](../../.gitbook/assets/atom-afterbuild.jpg)
 
 > 대상이 `CustomNodeModel.csproj` 파일(다른 프로젝트 파일 아님)에 추가되었고 프로젝트에 기존 빌드 후 설정이 없는지 확인해야 합니다.
 >
@@ -55,7 +55,7 @@ CustomNodeModel
 
 `<ItemGroup>` 섹션에는 특정 파일 유형을 나타내는 여러 변수가 정의되어 있습니다. 예를 들어, `Dll` 변수는 확장자가 `.dll`인 출력 디렉토리의 모든 파일을 나타냅니다.
 
-```
+```xml
 <ItemGroup>
   <Dlls Include="$(OutDir)*.dll" />
 </ItemGroup>
@@ -63,19 +63,19 @@ CustomNodeModel
 
 `Copy` 작업은 모든 `.dll` 파일을 디렉토리, 특히 빌드 중인 패키지 폴더에 복사하는 것입니다.
 
-```
+```xml
 <Copy SourceFiles="@(Dlls)" DestinationFolder="$(SolutionDir)..\packages\CustomNodeModel\bin\" />
 ```
 
 Dynamo 패키지에는 일반적으로 Dynamo 사용자 지정 노드 및 이미지와 같은 기타 자산을 위한 `dyf` 및 `extra` 폴더가 있습니다. 이러한 폴더를 생성하려면 `MakeDir` 작업을 사용해야 합니다. 이 작업은 폴더가 없는 경우 폴더를 생성합니다. 이 폴더에 파일을 수동으로 추가할 수 있습니다.
 
-```
+```xml
 <MakeDir Directories="$(SolutionDir)..\packages\CustomNodeModel\extra" />
 ```
 
 프로젝트를 빌드하면 이제 프로젝트 폴더에 이전에 생성한 `src` 폴더와 나란히 `packages` 폴더가 생성됩니다. `packages` 디렉토리 내에는 패키지에 필요한 모든 항목이 포함된 폴더가 있습니다. 또한 `pkg.json` 파일을 패키지 폴더에 복사하여 Dynamo가 패키지를 로드하도록 해야 합니다.
 
-![파일 복사하기](../images/fe-proj-directory-package.jpg)
+![파일 복사하기](../../.gitbook/assets/fe-proj-directory-package.jpg)
 
 > 1. AfterBuild 대상이 생성한 새 패키지 폴더
 > 2. 프로젝트가 있는 기존 src 폴더

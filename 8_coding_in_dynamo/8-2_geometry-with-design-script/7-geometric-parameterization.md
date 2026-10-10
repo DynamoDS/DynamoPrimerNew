@@ -2,7 +2,7 @@
 
 계산 방식 설계에서 곡선과 표면은 후속 형상을 구성하기 위한 기본 비계로 자주 사용됩니다. 이러한 초기 형상을 이후 형상의 기반으로 사용하려면 스크립트는 객체의 전체 영역에서 위치 및 방향 등의 품질을 추출할 수 있어야 합니다. 곡선과 표면 모두 이러한 추출을 지원하는데, 이를 매개변수화라고 합니다.
 
-곡선의 모든 점은 0에서 1 사이의 고유한 매개변수를 갖는 것으로 간주될 수 있습니다. 여러 제어점이나 보간된 점을 기준으로 NurbsCurve를 작성하려는 경우 첫 번째 점은 매개변수 0이 되고 마지막 점은 매개변수 1이 됩니다. 정확히 어떤 매개변수가 중간점인지 미리 알 수는 없습니다. 이러한 상황은 심각한 제한 사항처럼 들릴 수 있지만, 이는 일련의 유틸리티 함수를 통해 완화될 수 있습니다. 표면의 매개변수화는 곡선과 유사하지만, 표면에는 하나의 매개변수 대신 u 및 v라는 두 개의 매개변수개가 있습니다. 다음 점을 사용하여 표면을 작성하려는 경우:
+곡선의 모든 점은 0에서 1 사이의 고유한 매개변수를 갖는 것으로 간주될 수 있습니다. 여러 제어점이나 보간된 점을 기준으로 NurbsCurve를 작성하려는 경우 첫 번째 점은 매개변수 0이 되고 마지막 점은 매개변수 1이 됩니다. 중간점의 정확한 매개변수 값을 미리 알 수 없다는 점은 심각한 제한처럼 보일 수 있지만, 일련의 유틸리티 함수로 이를 보완할 수 있습니다. 표면의 매개변수화는 곡선과 유사하지만, 표면에는 하나의 매개변수 대신 u 및 v라는 두 개의 매개변수개가 있습니다. 다음 점을 사용하여 표면을 작성하려는 경우:
 
 ```js
 pts = [ [p1, p2, p3],
@@ -12,11 +12,11 @@ pts = [ [p1, p2, p3],
 
 p1에는 매개변수 u = 0 v = 0을 지정하고, p9에는 매개변수u = 1 v = 1을 지정할 수 있습니다.
 
-매개변수화는 곡선을 생성하는 데 사용되는 점을 결정할 때는 별로 유용하지 않습니다. 매개변수화의 주요 용도는 중간점이 NurbsCurve 및 NurbsSurface 생성자로 생성된 경우 위치를 결정하는 것입니다.
+매개변수화는 곡선을 생성하는 데 사용되는 점을 결정할 때는 그다지 유용하지 않으며, 주로 NurbsCurve 및 NurbsSurface 생성자로 생성되는 중간점의 위치를 결정하는 데 사용됩니다.
 
 곡선에는 0에서 1 사이의 단일 실수 인수를 사용하여 해당 매개변수에서 Point 객체를 반환하는 _PointAtParameter_ 메서드가 있습니다. 예를 들어 이 스크립트는 매개변수 0, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1에서 점을 찾습니다.
 
-![](../images/GeometricParameterization_01.png)
+![](../../.gitbook/assets/GeometricParameterization_01.png)
 
 ```js
 pts = {};
@@ -41,7 +41,7 @@ lines = Line.ByStartPointEndPoint(pts_at_param,
 
 곡선과 표면의 개별 점을 추출하는 것이 유용할 수 있지만, 스크립트에서는 곡선 또는 표면이 향하는 방향과 같은 매개변수의 특정 기하학적 특성을 지정해야 하는 경우가 많습니다. _CoordinateSystemAtParameter_ 메서드는 해당 위치 뿐만 아니라 곡선이나 표면의 매개변수에서 방향이 지정된 CoordinateSystem을 찾습니다. 예를 들어 다음 스크립트는 회전된 표면을 따라 방향이 지정된 CoordinateSystem을 추출하고, CoordinateSystems의 방향을 사용하여 표면에 수직으로 진행되는 선을 생성합니다.
 
-![](../images/GeometricParameterization_02.png)
+![](../../.gitbook/assets/GeometricParameterization_02.png)
 
 ```js
 pts = {};
@@ -59,8 +59,7 @@ crv = NurbsCurve.ByPoints(pts);
 axis_origin = Point.ByCoordinates(0, 0, 0);
 axis = Vector.ByCoordinates(0, 0, 1);
 
-surf = Surface.ByRevolve(crv, axis_origin, axis, 90,
-    140);
+surf = Surface.ByRevolve(crv, axis_origin, axis, 90, 140);
 
 cs_array = surf.CoordinateSystemAtParameter(
     (0..1..#7)<1>, (0..1..#7)<2>);
@@ -69,8 +68,7 @@ def make_line(cs : CoordinateSystem) {
 	lines_start = cs.Origin;
     lines_end = cs.Origin.Translate(cs.ZAxis, -0.75);
 
-    return = Line.ByStartPointEndPoint(lines_start,
-        lines_end);
+    return = Line.ByStartPointEndPoint(lines_start, lines_end);
 }
 
 lines = make_line(Flatten(cs_array));

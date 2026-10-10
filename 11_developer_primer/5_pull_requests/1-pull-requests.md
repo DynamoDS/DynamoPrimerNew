@@ -38,7 +38,7 @@ Dynamo 팀은 끌어오기 요청이 다음과 같은 몇 가지 지침을 준�
 
 * Dynamo 팀은 한 달에 한 번 모여서 가장 오래된 끌어오기 요청부터 최신 끌어오기 요청까지 검토합니다.
 * 검토된 끌어오기 요청에 소유자의 변경이 필요한 경우 PR 소유자는 30일 이내에 응답해야 합니다. 다음 세션까지 PR에 대한 활동이 진행되지 않으면 팀에서 종료하거나 유용성에 따라 팀원이 넘겨받습니다.
-* 끌어오기 요청은 Dynamo의 기본 PR 템플릿을 사용해야 합니다.
+* PR(Pull Request)은 Dynamo의 기본 PR 템플릿을 사용해야 합니다.
 * 모든 선언이 충족되었지만 Dynamo PR 템플릿이 완전히 작성되지 않은 끌어오기 요청은 검토되지 않습니다.
 
 #### Dynamo Revit 커밋 cherry-pick하기 <a href="#cherry-picking-dynamo-revit-commits" id="cherry-picking-dynamo-revit-commits"></a>

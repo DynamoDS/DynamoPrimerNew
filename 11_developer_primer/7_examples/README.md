@@ -22,7 +22,7 @@ Dynamo를 개발하는 방법에 대한 예제를 보려면 아래 리소스를 
     * 슬라이더에 대한 상호 작용 논리 확인: [코드](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
 * [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**:** ZeroTouch, 사용자 지정 UI, 테스트 및 뷰 확장을 위한 템플릿입니다.
   * [UI 샘플](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
-    * 기본 사용자 지정 UI 노드 생성: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs)
+    * 기본 사용자 지정 UI 노드 생성: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/LocalizedCustomNodeModel.cs)
     * 드롭다운 메뉴 생성: [DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs)
   * [테스트](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryTests)
     * 시스템 테스트: [HelloDynamoSystemTests.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryTests/HelloDynamoSystemTests.cs)
