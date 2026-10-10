@@ -2,7 +2,7 @@
 
 #### Co je vizuální programování? <a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
 
-Návrh často zahrnuje vytváření vizuálních, systémových nebo geometrických vztahů mezi jednotlivými součástmi. Mnohdy jsou tyto vztahy vytvářeny pracovními postupy, které nás prostřednictvím pravidel provedou od konceptu až k výsledku. Možná, aniž bychom to věděli, pracujeme algoritmicky – definujeme krok za krokem sadu akcí, které se řídí základní logikou vstupu, zpracování a výstupu. Programování nám umožňuje pokračovat v práci tímto způsobem, ale formalizací našich algoritmů.
+Návrh často zahrnuje vytváření vizuálních, systémových nebo geometrických vztahů mezi jednotlivými součástmi. Často jsou tyto vztahy vytvářeny pracovními postupy, které nás prostřednictvím pravidel provedou od konceptu až k výsledku. Možná, aniž bychom to věděli, pracujeme algoritmicky – definujeme krok za krokem sadu akcí, které se řídí základní logikou vstupu, zpracování a výstupu. Programování nám umožňuje pokračovat v práci tímto způsobem, ale formalizací našich algoritmů.
 
 #### Algoritmy v praxi <a href="#algorithms-in-hand" id="algorithms-in-hand"></a>
 
@@ -34,7 +34,7 @@ Tak kde je algoritmus? Je to abstraktní posloupnost kroků, kterou můžeme vyj
 
 #### Definování programování <a href="#programming-defined" id="programming-defined"></a>
 
-Použitím jedné z těchto posloupnosti pokynů by mělo vést ke složení jeřába, a pokud jste je následovali, použili jste algoritmus. Jediným rozdílem je způsob, jakým jsme si přečetli formulaci posloupnosti pokynů, a to nás vede k části **programování**. Programování, často zkrácené z _počítačového programování_, je úkon formalizace zpracování posloupnosti akcí do spustitelného programu. Pokud změníme výše uvedené pokyny pro složení jeřába na formát, který může náš počítač číst a spustit, programujeme.
+Použitím jedné z těchto posloupnosti pokynů by mělo vést ke složení jeřába, a pokud jste je následovali, použili jste algoritmus. Jediným rozdílem je způsob, jakým jsme si přečetli formulaci posloupnosti pokynů, a to nás vede k části **programování**. Programování, často zkrácené z _počítačového programování_, je úkon formalizace zpracování posloupnosti akcí do spustitelného programu. Pokud bychom výše uvedené pokyny pro vytvoření jeřába převedli do formátu, který náš počítač dokáže přečíst a spustit, programujeme.
 
 Klíčem k programování a současně první velkou překážkou je, že se musíme spolehnout na určitou formu abstrakce, abychom mohli s počítačem efektivně komunikovat. To má podobu množství programovacích jazyků, například JavaScript, Python nebo C. Pokud můžeme napsat opakovatelnou posloupnost instrukcí, například pro origami jeřába, stačí ji pouze přeložit pro počítač. Jsme na cestě k tomu, aby mohl počítač složit jeřába nebo dokonce i řadu různých jeřábů, kde se každý z nich mírně liší. Toto je síla programování – počítač opakovaně vykoná jakoukoli úlohu nebo sadu úloh, které mu předáme, bez prodlení a bez lidské chyby.
 
@@ -52,11 +52,11 @@ Pokud je vaše odpověď grafika, pak byste rozhodně měli zvolit **vizuální 
 
 **Vizuální program:**
 
-![](<images/visualProgramming.png>)
+![](../.gitbook/assets/visualProgramming.png)
 
 **Textový program:**
 
-```
+```py
 myPoint = Point.ByCoordinates(0.0,0.0,0.0);
 x = 5.6;
 y = 11.5;
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 Výsledky našeho algoritmu:
 
-![](<images/visualProgramming.png>)
+![](../.gitbook/assets/visualProgramming.png)
 
 Vizuální charakteristika programování tímto způsobem snižuje obtížnost pro začátečníky a lépe oslovuje návrháře. Aplikace Dynamo spadá do paradigmatu vizuálního programování, ale jak uvidíme později, stále můžeme používat také textové programování v aplikaci.

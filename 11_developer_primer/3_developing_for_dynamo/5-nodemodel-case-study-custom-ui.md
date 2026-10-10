@@ -2,7 +2,7 @@
 
 Uzly založené na uzlech NodeModel poskytují podstatně větší flexibilitu a výkon než uzly Zero-Touch. V tomto příkladu posuneme uzel mřížky Zero-Touch na další úroveň přidáním integrovaného posuvníku, který náhodně nastaví velikost obdélníku.
 
-![Graf obdélníkové osnovy](../images/cover-image-2.jpg)
+![Graf obdélníkové osnovy](../../.gitbook/assets/cover-image-2.jpg)
 
 > Posuvník změní měřítko buněk vzhledem k jejich velikosti, takže uživatel nemusí zadávat posuvník se správným rozsahem.
 
@@ -33,7 +33,7 @@ Uzel NodeModel může volat pouze funkce, takže je potřeba rozdělit uzel Node
 
 Vytvořte v řešení dva projekty knihovny třídy C#: jeden pro funkce a jeden pro implementaci rozhraní NodeModel.
 
-![Přidání nové knihovny tříd](../images/vs-new-class-projects.jpg)
+![Přidání nové knihovny tříd](../../.gitbook/assets/vs-new-class-projects.jpg)
 
 > 1. Klikněte pravým tlačítkem na položku Řešení a vyberte `Add > New Project`.
 > 2. Vyberte knihovnu tříd.
@@ -43,7 +43,7 @@ Vytvořte v řešení dva projekty knihovny třídy C#: jeden pro funkce a jede
 
 Dále je nutné přejmenovat knihovny tříd, které byly automaticky vytvořeny, a jednu přidat do projektu `CustomNodeModel`. Třída `GridNodeModel` implementuje abstraktní třídu NodeModel, třída `GridNodeView` se používá k přizpůsobení pohledu a třída `GridFunction` obsahuje všechny funkce, které je nutné volat.
 
-![Průzkumník řešení](../images/vs-new-class.jpg)
+![Průzkumník řešení](../../.gitbook/assets/vs-new-class.jpg)
 
 > 1. Klikněte pravým tlačítkem na projekt `CustomNodeModel`, vyberte položku `Add > New Item...` a výběrem položky `Class` přidejte další třídu.
 > 2. V projektu `CustomNodeModel` potřebujeme třídy `GridNodeModel.cs` a `GridNodeView.cs`.
@@ -51,14 +51,14 @@ Dále je nutné přejmenovat knihovny tříd, které byly automaticky vytvořeny
 
 Než přidáme kód do tříd, přidejte potřebné balíčky pro tento projekt. Projekt `CustomNodeModel` bude potřebovat ZeroTouchLibrary a WpfUILibrary a projekt `CustomNodeModelFunction` bude potřebovat pouze ZeroTouchLibrary. Balíček WpfUILibrary bude použit při pozdějším přizpůsobení uživatelského rozhraní a balíček ZeroTouchLibrary bude použit k vytvoření geometrie. Balíčky lze přidávat jednotlivě pro projekty. Protože tyto balíčky mají závislosti, budou automaticky nainstalovány knihovny Core a DynamoServices.
 
-![Instalace balíčků](../images/vs-add-packages.jpg)
+![Instalace balíčků](../../.gitbook/assets/vs-add-packages.jpg)
 
 > 1. Klikněte pravým tlačítkem na projekt a vyberte `Manage NuGet Packages`.
 > 2. Nainstalujte pouze balíčky požadované pro daný projekt.
 
 Aplikace Visual Studio zkopíruje balíčky NuGet, na které jsme odkazovali v adresáři sestavení. Tuto možnost můžeme nastavit na hodnotu false, aby v balíčku nebyly žádné nepotřebné soubory.
 
-![Zakázání místní kopie balíčku](../images/vs-disable-package-copying.jpg)
+![Zakázání místní kopie balíčku](../../.gitbook/assets/vs-disable-package-copying.jpg)
 
 > 1. Vyberte balíčky Dynamo NuGet.
 > 2. Nastavte `Copy Local` na hodnotu False.
@@ -69,7 +69,7 @@ Jak bylo zmíněno výše, primárním aspektem, který odlišuje uzel NodeModel
 
 Zkopírujte následující kód do `GridNodeModel.cs`.
 
-```
+```c#
 using System;
 using System.Collections.Generic;
 using Dynamo.Graph.Nodes;
@@ -144,7 +144,7 @@ Projekt `CustomNodeModelFunction` bude z projektu `CustomNodeModel` vyčleněn 
 
 Zkopírujte následující kód do třídy `GridFunction.cs`.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 using Autodesk.DesignScript.Runtime;
 using System;
@@ -199,7 +199,7 @@ Tato třída funkce je velmi podobná případové studii funkce Zero-Touch – 
 
 Stejně jako jsme přidali odkazy na balíčky NuGet, bude nutné `CustomNodeModel` odkazovat na `CustomNodeModelFunction`, aby bylo možné volat funkci.
 
-![Přidání reference](../images/vs-add-project-reference.jpg)
+![Přidání reference](../../.gitbook/assets/vs-add-project-reference.jpg)
 
 > Příkaz using pro CustomNodeModel bude neaktivní, dokud neodkážeme na funkci.
 >
@@ -214,7 +214,7 @@ Abychom mohli vytvořit posuvník, je nutné přizpůsobit uživatelské rozhran
 
 Zkopírujte následující kód do `GridNodeView.cs`.
 
-```
+```c#
 using Dynamo.Controls;
 using Dynamo.Wpf;
 
@@ -240,7 +240,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 Po nastavení struktury projektu vytvořte pomocí návrhového prostředí aplikace Visual Studio uživatelský ovládací prvek a definujte jeho parametry v souboru `.xaml`. Ze sady nástrojů přidejte posuvník do části `<Grid>...</Grid>`.
 
-![Přidání nového posuvníku](../images/vs-usercontrol.jpg)
+![Přidání nového posuvníku](../../.gitbook/assets/vs-usercontrol.jpg)
 
 > 1. Klikněte pravým tlačítkem na `CustomNodeModel` a vyberte `Add > New Item`.
 > 2. Vyberte `WPF`.
@@ -249,7 +249,7 @@ Po nastavení struktury projektu vytvořte pomocí návrhového prostředí apli
 
 Zkopírujte následující kód do souboru `Slider.xaml`.
 
-```
+```xml
 <UserControl x:Class="CustomNodeModel.CustomNodeModel.Slider"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -269,7 +269,7 @@ Zkopírujte následující kód do souboru `Slider.xaml`.
 
 Když jsme vytvořili soubor `Slider.xaml`, aplikace Visual Studio automaticky vytvořila soubor C# s názvem `Slider.xaml.cs`, který inicializuje posuvník. Změňte jmenný prostor v tomto souboru.
 
-```
+```c#
 using System.Windows.Controls;
 
 namespace CustomNodeModel.CustomNodeModel
@@ -295,7 +295,7 @@ Soubor `GridNodeModel.cs` definuje logiku výpočtu posuvníku.
 
 Před vytvořením projektu je posledním krokem přidání souboru `pkg.json`, aby aplikace Dynamo mohla načíst balíček.
 
-![Přidání souboru JSON](../images/vs-pkg-json.jpg)
+![Přidání souboru JSON](../../.gitbook/assets/vs-pkg-json.jpg)
 
 > 1. Klikněte pravým tlačítkem na `CustomNodeModel` a vyberte `Add > New Item`.
 > 2. Vyberte `Web`.
@@ -305,7 +305,7 @@ Před vytvořením projektu je posledním krokem přidání souboru `pkg.json`, 
 
 * Zkopírujte následující kód do souboru `pkg.json`.
 
-```
+```json
 {
   "license": "MIT",
   "file_hash": null,
@@ -341,7 +341,7 @@ Před vytvořením projektu je posledním krokem přidání souboru `pkg.json`, 
 
 Obvyklou hlavní příčinou je, že uzel byl vytvořen pomocí konstruktoru, který znovu vytvořil porty. Místo toho měl být použit konstruktor, který porty načte. Tyto konstruktory jsou obvykle označeny `[JsonConstructor]` _viz příklady níže_.
 
-![Poškozený JSON](<../images/broken-json.jpg>)
+\![Poškozený JSON](<../../.gitbook/assets/broken-json (1).jpg>)
 
 K tomu může dojít z následujících důvodů:
 

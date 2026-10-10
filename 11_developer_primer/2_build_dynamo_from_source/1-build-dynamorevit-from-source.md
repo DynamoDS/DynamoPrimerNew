@@ -21,7 +21,7 @@ Kód projektu doplňku DynamoRevit se nachází v samostatném úložišti na G
 
 Zdroj doplňku DynamoRevit je hostován zde: [https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit)
 
-![DynamoRevit na Githubu](../images/github-dynamorevit.jpg)
+![DynamoRevit na Githubu](../../.gitbook/assets/github-dynamorevit.jpg)
 
 > 1. Klonování nebo stáhnutí úložiště
 > 2. Větve doplňku DynamoRevit odkazují na verze aplikace Revit.
@@ -34,13 +34,13 @@ Podobně jako při získávání úložiště aplikace Dynamo použijeme příka
 
 > Parametr `username` nahraďte svým uživatelským jménem.
 
-![Rozhraní příkazového řádku](../images/cli-cd-revit.jpg)
+![Rozhraní příkazového řádku](../../.gitbook/assets/cli-cd-revit.jpg)
 
 Nyní můžeme do tohoto adresáře naklonovat úložiště. I když bude nutné zadat větev úložiště, můžeme se na ni po klonování přepnout.
 
 Příkaz `git clone https://github.com/DynamoDS/DynamoRevit.git` naklonuje úložiště ze vzdálené adresy URL a ve výchozím nastavení přepne na hlavní větev.
 
-![Rozhraní příkazového řádku po klonování úložiště](../images/cli-clone-revit.jpg)
+![Rozhraní příkazového řádku po klonování úložiště](../../.gitbook/assets/cli-clone-revit.jpg)
 
 Po dokončení klonování úložiště změňte aktuální adresář na složku úložiště a přepněte na větev, která odpovídá nainstalované verzi aplikace Revit. V tomto příkladu používáme aplikaci Revit RC2.13.1_Revit2023. Všechny vzdálené větve lze zobrazit na stránce GitHubu v rozevírací nabídce Branch (Větev).
 
@@ -48,7 +48,7 @@ Příkaz `cd C:\Users\username\Documents\GitHub\DynamoRevit` změní adresář n
  Příkaz `git checkout RC2.13.1_Revit2023` nastaví aktuální větev na `RC2.13.1_Revit2023`. \
  Příkaz `git branch` ověří, ve které větvi se nacházíme, a zobrazí ostatní větve, které existují místně.
 
-![Adresář přepnutý na větev](../images/cli-branch-revit.jpg)
+![Adresář přepnutý na větev](../../.gitbook/assets/cli-branch-revit.jpg)
 
 > Větev s hvězdičkou je aktuálně rezervovaná větev. Větev `Revit2018` se zobrazuje, protože jsme ji dříve zarezervovali, takže existuje místně.
 
@@ -58,19 +58,19 @@ Je důležité vybrat správnou větev úložiště, abyste zajistili, že při 
 
 Před vytvořením úložiště bude nutné obnovit balíčky NuGet se souborem `restorepackages.bat` umístěným ve složce `src`. Tento soubor BAT používá správce balíčku [NuGet](https://www.nuget.org) k získání vestavěných sestavených binárních souborů jádra aplikace Dynamo, které potřebuje doplněk DynamoRevit. Můžete se také rozhodnout sestavit je ručně, ale pouze pokud provádíte změny v doplňku DynamoRevit a ne v jádře aplikace Dynamo. Díky tomu bude začátek práce rychlejší. Nezapomeňte tento soubor spustit jako správce.
 
-![![Spustit jako správce](../images/fe-restorepackages.jpg).](../images/fe-restorepackages.jpg)
+![Spustit jako správce](../../.gitbook/assets/fe-restorepackages.jpg).
 
 > 1. Klikněte pravým tlačítkem myši na soubor `restorepackages.bat` a vyberte příkaz `Run as administrator`.
 
 Pokud jsou balíčky úspěšně obnoveny, složka `packages` bude přidána do složky `src` s nejnovějšími balíčky NuGet beta verze aplikace.
 
-![Nejnovější balíčky NuGet beta verze aplikace Dynamo](../images/fe-packages.jpg)
+![Nejnovější balíčky NuGet beta verze aplikace Dynamo](../../.gitbook/assets/fe-packages.jpg)
 
 > 1. Nejnovější balíčky NuGet beta verze aplikace Dynamo
 
 Po obnovení balíčků otevřete soubor řešení aplikace Visual Studio `DynamoRevit.All.sln` ve složce `src` a vytvořte řešení. Sestavení může mít zpočátku potíže s vyhledáním souboru `AssemblySharedInfo.cs`. Pokud se tak stane, vyřešte tento problém opětovným spuštěním sestavení.
 
-![Sestavení řešení](../images/vs-build-dynamorevit.jpg)
+![Sestavení řešení](../../.gitbook/assets/vs-build-dynamorevit.jpg)
 
 > 1. Vyberte `Build > Build Solution`.
 > 2. V okně Výstup ověřte, zda sestavení proběhlo úspěšně. Měla by se zobrazit následující zpráva: `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`.
@@ -118,7 +118,7 @@ Případně můžeme nechat doplněk načíst nástroj pro výběr verze místo 
 
 Kromě toho je nutné odebrat existující aplikaci Dynamo dodávanou s aplikací Revit. Přejděte do složky `C:\\Program Files\Autodesk\Revit 2023\AddIns` a odstraňte dvě složky, které obsahují aplikaci **Dynamo** – `DynamoForRevit` a `DynamoPlayerForRevit`. Můžete je buď odstranit, nebo je zálohovat do samostatné složky, pokud potřebujete obnovit původní aplikaci Dynamo pro aplikaci Revit.
 
-![Složky DynamoForRevit a DynamoPlayerforRevit](../images/fe-dynamo-folders-remove.jpg)
+![Složky DynamoForRevit a DynamoPlayerforRevit](../../.gitbook/assets/fe-dynamo-folders-remove.jpg)
 
 Druhým krokem je přidání cesty k souborům sestav jádra aplikace Dynamo do souboru `Dynamo.config` ve složce `bin` doplňku DynamoRevit. Doplněk DynamoRevit je načte při otevření doplňku v aplikaci Revit. Tento konfigurační soubor umožňuje odkazovat doplněk DynamoRevit na různé verze jádra aplikace Dynamo při vývoji a testování změn v jádru i v doplňku DynamoRevit.
 
@@ -139,7 +139,7 @@ Kód by měl vypadat následovně:
 
 Když nyní otevřete aplikaci Revit, měl by se na kartě Správa nacházet doplněk Dynamo.
 
-![Doplněk Dynamo umístěný na kartě Správa](../images/revit-dynamo.jpg)
+![Doplněk Dynamo umístěný na kartě Správa](../../.gitbook/assets/revit-dynamo.jpg)
 
 > 1. Vyberte kartu `Manage`.
 > 2. Klikněte na ikonu doplňku Dynamo.
@@ -151,22 +151,22 @@ Pokud se zobrazí chybové okno s chybějícími sestavami, je pravděpodobné,
 
 V předchozí části popisující **sestavení aplikace Dynamo ze zdroje** jsme stručně představili ladění v aplikaci Visual Studio a způsob připojení aplikace Visual Studio k procesu. Na příkladu výjimky v uzlu Wall.ByCurveAndHeight si ukážeme, jak se připojit k procesu, nastavíme body přerušení, projdeme kód a pomocí zásobníku volání určíme zdroj výjimky. Tyto nástroje pro ladění platí obecně pro pracovní postupy vývoje v prostředí .net a stojí za to je prozkoumat i mimo tuto příručku.
 
-* **Připojení k procesu** propojí spuštěnou aplikaci s aplikací Visual Studio za účelem ladění. Pokud chceme ladit chování, které se vyskytuje v sestavení doplňku DynamoRevit, můžeme otevřít zdrojové soubory doplňku DynamoRevit v aplikaci Visual Studio a připojit proces `Revit.exe`, který je nadřazeným procesem doplňku DynamoRevit. Aplikace Visual Studio používá k vytvoření připojení mezi sestavami spouštěné doplňkem DynamoRevit a zdrojovým kódem [soubor symbolů](https://msdn.microsoft.com/en-us/library/ms241613.aspx) (`.pbd`).
+* **Připojení k procesu** propojí spuštěnou aplikaci s aplikací Visual Studio za účelem ladění. Pokud chceme ladit chování, které se vyskytuje v sestavení doplňku DynamoRevit, můžeme otevřít zdrojové soubory doplňku DynamoRevit v aplikaci Visual Studio a připojit proces `Revit.exe`, který je nadřazeným procesem doplňku DynamoRevit. Aplikace Visual Studio používá k vytvoření připojení mezi sestavami spouštěné doplňkem DynamoRevit a zdrojovým kódem [soubor symbolů](https://learn.microsoft.com/en-us/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger?view=visualstudio) (`.pdb`).
 * **Body přerušení** vytvoří ve zdrojovém kódu řádky, ve kterých bude aplikace před spuštěním pozastavena. Pokud nějaký uzel způsobuje selhání doplňku DynamoRevit nebo vrací neočekávaný výsledek, můžeme do zdroje uzlu přidat bod přerušení a proces pozastavit, zobrazit kód a kontrolovat živé hodnoty proměnných, dokud nenajdeme příčinu problému.
 * **Krokování kódem** prochází zdrojový kód řádek po řádku. Můžeme spouštět funkce jednu po druhé, vstoupit do volání funkce nebo vyskočit z právě prováděné funkce.
-*   **Zásobník volání** zobrazuje funkci, kterou proces právě spouští, ve vztahu k předchozím voláním funkcí, která vyvolala toto volání funkce. Aplikace Visual Studio nabízí k tomuto zobrazení okno zásobníku volání. Pokud například dojde k výjimce mimo zdrojový kód, můžeme v zásobníku volání vidět cestu k volajícímu kódu.
+* **Zásobník volání** zobrazuje funkci, kterou proces právě spouští, ve vztahu k předchozím voláním funkcí, která vyvolala toto volání funkce. Aplikace Visual Studio nabízí k tomuto zobrazení okno zásobníku volání. Pokud například dojde k výjimce mimo zdrojový kód, můžeme v zásobníku volání vidět cestu k volajícímu kódu.
 
-    > Na webu [2 000 Things You Should Know About C#](https://csharp.2000things.com/2013/05/20/847-how-the-call-stack-works/) (2 000 věcí, které byste měli vědět o C#) naleznete podrobnější vysvětlení zásobníků hovorů.
+    > [Zobrazte zásobník volání a použijte okno Zásobník volání v ladicím programu](https://learn.microsoft.com/en-us/visualstudio/debugger/how-to-use-the-call-stack-window?view=visualstudio) poskytuje podrobnější vysvětlení zásobníků volání.
 
 Uzel **Wall.ByCurveAndHeight** vyvolá výjimku, pokud je jako vstup křivky zadán objekt PolyCurve, s následující zprávou: _„Metoda převodu na objekt BSPlineCurve není implementována.“_ Pomocí ladění můžeme zjistit, proč přesně tento typ geometrie uzel nepřijme jako vstup pro parametr křivky. V tomto příkladu předpokládáme, že doplněk DynamoRevit byl úspěšně vytvořen a lze jej spustit jako doplněk aplikace Revit.
 
-![Uzel Wall.ByCurbeAndHeight vyvolávající výjimku](../images/dyn-wallbycurveandheight.jpg)
+![Uzel Wall.ByCurbeAndHeight vyvolávající výjimku](../../.gitbook/assets/dyn-wallbycurveandheight.jpg)
 
-> 1. Uzel Wall.ByCurveAndHeight vyvolávající výjimku
+> 1. Uzel **Wall.ByCurveAndHeight** vyvolávající výjimku
 
 Začněte otevřením souboru řešení `DynamoRevit.All.sln`, spuštěním aplikace Revit a spuštěním doplňku DynamoRevit. Poté pomocí okna `Attach to Process` připojte aplikaci Visual Studio k procesu aplikace Revit.
 
-![Okno Attach to Process (Připojit k procesu)](../images/vs-debug-attachprocess.jpg)
+![Okno Attach to Process (Připojit k procesu)](../../.gitbook/assets/vs-debug-attachprocess.jpg)
 
 > Aplikace Revit a doplněk DynamoRevit je třeba spustit, aby se zobrazily jako dostupný proces.
 >
@@ -175,23 +175,23 @@ Začněte otevřením souboru řešení `DynamoRevit.All.sln`, spuštěním apli
 > 3. Vyberte proces `Revit.exe`.
 > 4. Klikněte na tlačítko `Attach`.
 
-S aplikací Visual Studio připojenou k aplikaci Revit otevřete zdrojový kód uzlu Wall.ByCurveAndHeight v souboru `Wall.cs`. Tento kód naleznete v Průzkumníku řešení v části `Libraries > RevitNodes > Elements` v oblasti `Public static constructors` souboru. Nastavte bod přerušení v konstruktoru typu stěny tak, aby se při spuštění uzlu v aplikaci Dynamo proces přerušil a mohli jsme jednotlivě procházet každý řádek kódu. Konstruktory typu Zero-Touch aplikace Dynamo obvykle začínají na `By<parameters>`.
+V aplikaci Visual Studio připojenou k aplikaci Revit otevřete zdrojový kód uzlu **Wall.ByCurveAndHeight** v souboru `Wall.cs`. Tento kód naleznete v Průzkumníku řešení v části `Libraries > RevitNodes > Elements` v oblasti `Public static constructors` souboru. Nastavte bod přerušení v konstruktoru typu stěny tak, aby se při spuštění uzlu v aplikaci Dynamo proces přerušil a mohli jsme jednotlivě procházet každý řádek kódu. Konstruktory typu Zero-Touch aplikace Dynamo obvykle začínají na `By<parameters>`.
 
-![Nastavení bodu přerušení](../images/vs-debugging-breakpoint.jpg)
+![Nastavení bodu přerušení](../../.gitbook/assets/vs-debugging-breakpoint.jpg)
 
-> 1. Soubor třídy s konstruktorem pro uzel Wall.ByCurveAndHeight
+> 1. Soubor třídy s konstruktorem pro uzel **Wall.ByCurveAndHeight**.
 > 2. Bod přerušení nastavíte buď kliknutím vlevo od čísla řádku, nebo kliknutím pravým tlačítkem myši na řádek kódu a výběrem možnosti `Breakpoint > Insert Breakpoint`.
 
-Po nastavení bodu přerušení je potřeba, aby proces proběhl včetně spuštění funkce Wall.ByCurveAndHeight. Funkci lze v aplikaci Dynamo znovu spustit opakovaným připojením drátu k jednomu z portů uzlu, což vynutí opakované spuštění uzlu. Proces dojde v aplikaci Visual Studio až do bodu přerušení.
+Po nastavení bodu přerušení je potřeba, aby proces proběhl včetně spuštění funkce **Wall.ByCurveAndHeight**. Funkci lze v aplikaci Dynamo znovu spustit opakovaným připojením drátu k jednomu z portů uzlu, což vynutí opakované spuštění uzlu. Proces dojde v aplikaci Visual Studio až do bodu přerušení.
 
-![Bod přerušení dosažený v aplikaci Visual Studio.](../images/vs-breakpoint.jpg)
+![Bod přerušení dosažený v aplikaci Visual Studio.](../../.gitbook/assets/vs-breakpoint.jpg)
 
 > 1. Po dosažení bodu přerušení se změní jeho ikona.
 > 2. Okno Call Stack (Zásobník volání) zobrazující metodu, která je na řadě.
 
 Nyní procházejte jednotlivé řádky v konstruktoru, dokud nenarazíte na výjimku. Kód zvýrazněný žlutě je další příkaz, který má být spuštěn.
 
-![Procházení kódu v aplikaci Visual Studio](../images/vs-stepover.jpg)
+![Procházení kódu v aplikaci Visual Studio](../../.gitbook/assets/vs-stepover.jpg)
 
 > 1. Nástroje ladění pro navigaci v kódu
 > 2. Stisknutím ikony `Step Over` spustíte zvýrazněný kód a po návratu funkce pozastavíte jeho provádění.
@@ -201,7 +201,7 @@ Když budeme funkcí dále procházet, narazíme na výjimku, která se zobrazí
 
 Protože se nejedná o knihovnu s otevřeným zdrojovým kódem, nemůžeme zde provádět změny. Když nyní máme více informací, můžeme problém nahlásit s poskytnutím širšího kontextu vyplněním [problému](https://guides.github.com/features/issues/) na GitHubu nebo můžeme navrhnout řešení tohoto problému podáním žádosti o přijetí změn.
 
-![Výjimka v aplikaci Visual Studio](../images/vs-exception.jpg)
+![Výjimka v aplikaci Visual Studio](../../.gitbook/assets/vs-exception.jpg)
 
 > 1. Když narazíme na příkaz způsobující výjimku v souboru `Walls.cs`, proces ladění nás přivede co nejblíže k jádru problému v uživatelském kódu uvnitř souboru `ProtoToRevitCurve.cs`.
 > 2. Příkaz způsobující výjimku v souboru `ProtoToRevitCurve.cs`.
@@ -220,7 +220,7 @@ Příkaz `cd C:\Users\username\Documents\GitHub\DynamoRevit` nastaví aktuální
 
 Parametr origin jednoduše odkazuje na původní adresu URL, kterou jsme klonovali.
 
-![Nastavení adresáře v rozhraní příkazového řádku](../images/cli-pull-revit.jpg)
+![Nastavení adresáře v rozhraní příkazového řádku](../../.gitbook/assets/cli-pull-revit.jpg)
 
 > Chceme si být vědomi, ve které větvi se momentálně nacházíme a ze které se získáváme změny, abychom se vyhnuli například získávání změn z `RC2.13.1_Revit2023` do `Revit2018`.
 

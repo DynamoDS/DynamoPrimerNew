@@ -6,13 +6,13 @@ V aplikaci Dynamo 2.0 je možné určit výchozí šablonu `(.py extension)`, k
 
 Obvykle je to následující umístění: `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-\![](<../images/python templates - appdata folder location.jpg>)
+\![](<../../.gitbook/assets/python templates - appdata folder location.jpg>)
 
 ### Nastavení šablony
 
 Aby bylo možné tuto funkci používat, je nutné přidat do souboru `DynamoSettings.xml` následující řádek. _(Upravte v poznámkovém bloku)_
 
-\![](<../images/python templates -dynamo settings xml file.png>)
+\![](<../../.gitbook/assets/python templates -dynamo settings xml file.png>)
 
 Řetězec `<PythonTemplateFilePath />` je možné jednoduše nahradit následujícím řetězcem:
 
@@ -22,7 +22,9 @@ Aby bylo možné tuto funkci používat, je nutné přidat do souboru `DynamoSet
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} _Poznámka: Nahraďte proměnnou CURRENTUSER svým uživatelským jménem._ {% endhint %}
+{% hint style="warning" %}
+_Poznámka: část CURRENTUSER nahraďte svým uživatelským jménem_
+{% endhint %}
 
 Dále je nutné vytvořit šablonu s funkcemi, které má obsahovat. V tomto případě do ní zahrneme importy související s aplikací Revit a další položky, které se s aplikací Revit obvykle používají.
 
@@ -54,10 +56,10 @@ from RevitServices.Transactions import TransactionManager
 doc = DocumentManager.Instance.CurrentDBDocument
 uidoc=DocumentManager.Instance.CurrentUIApplication.ActiveUIDocument
 
-#Preparing input from dynamo to revit
+# Preparing input from dynamo to revit
 element = UnwrapElement(IN[0])
 
-#Do some action in a Transaction
+# Do some action in a Transaction
 TransactionManager.Instance.EnsureInTransaction(doc)
 
 TransactionManager.Instance.TransactionTaskDone()
@@ -71,10 +73,10 @@ Poté tento soubor uložte pod názvem `PythonTemplate.py` do umístění `APPDA
 
 Po definování šablony jazyka Python aplikace Dynamo tuto šablonu vyhledá při každém vložení uzlu jazyka Python. Pokud ji nenajde, okno jazyka Python bude vypadat jako ve výchozím nastavení.
 
-\![](<../images/python templates - before setup template.jpg>)
+\![](<../../.gitbook/assets/python templates - before setup template.jpg>)
 
 Pokud se podaří šablonu jazyka Python nalézt (například náš skript pro aplikaci Revit), zobrazí se všechny položky, které obsahuje.
 
-\![](<../images/python templates - after setup template.jpg>)
+\![](<../../.gitbook/assets/python templates - after setup template.jpg>)
 
 Další informace o této skvělé nové funkci (autor: Radu Gidei) naleznete zde: https://github.com/DynamoDS/Dynamo/pull/8122

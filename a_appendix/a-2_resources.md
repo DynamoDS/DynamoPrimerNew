@@ -12,7 +12,7 @@ Tato wiki slouží k seznámení s vývojem pomocí API aplikace Dynamo, kter�
 
 Tento blog je nejaktuálnější sbírkou článků od týmu aplikace Dynamo, obsahuje informace o nových funkcích, pracovních postupech a dalších tématech.
 
-[http://dynamobim.com/blog/](http://dynamobim.com/blog/)
+[https://dynamobim.org/blog/](https://dynamobim.org/blog/)
 
 ### **Příručka k jazyku DesignScript**
 
@@ -76,8 +76,3 @@ Blog pro vývojáře:
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
-### **The Building Coder**
-
-Robustní katalog pracovních postupů pro API aplikace Revit od jednoho z předních odborníků na BIM.
-
-[http://thebuildingcoder.typepad.com/](http://thebuildingcoder.typepad.com)

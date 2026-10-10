@@ -4,7 +4,7 @@
 
 Teď, když jsme stanovili, co je to seznam, pojďme si promluvit o operacích, které s ním můžeme provádět. Představte si seznam jako balíček karet. Seznam je balíček a každá karta představuje položku.
 
-![karty](../images/Playing_cards_modified.jpg)
+![karty](../../.gitbook/assets/Playing_cards_modified.jpg)
 
 > Autor fotografie: [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
@@ -43,7 +43,7 @@ Všechny výše uvedené operace mají analogické uzly aplikace Dynamo pro prá
 
 Obrázek níže je základní graf, ve kterém nakreslíme čáry mezi dvěma kružnicemi, které představují základní operace se seznamy. Prozkoumáme, jak spravovat data v seznamu a jak prezentovat vizuální výsledky pomocí akcí v seznamu níže.
 
-\![](<../images/working with list - list operation.jpg>)
+\![](<../../.gitbook/assets/working with list - list operation.jpg>)
 
 > 1. Začněte uzlem **Code Block** s hodnotou `500;`.
 > 2. Propojte jej se vstupem x uzlu **Point.ByCoordinates**.
@@ -51,7 +51,7 @@ Obrázek níže je základní graf, ve kterém nakreslíme čáry mezi dvěma kr
 > 4. Pomocí uzlu **Circle.ByPlaneRadius** spojte uzel z předchozího kroku se vstupem plane.
 > 5. Pomocí uzlu **Code Block** určete hodnotu `50;` pro vstup radius. Toto je první kruh, který vytvoříme.
 > 6. Pomocí uzlu **Geometry.Translate** posuňte kružnici o 100 jednotek ve směru osy Z.
-> 7. Pomocí uzlu **Code Block** definujte rozsah deseti čísel mezi 0 a 1 s tímto řádkem kódu: `0..1..#10;`
+> 7. Pomocí uzlu **Code Block** definujte rozsah deseti čísel mezi 0 a 1 s tímto řádkem kódu: `0..1..#10;`.
 > 8. Blok kódu z předchozího kroku propojte se vstupem _param_ dvou uzlů **Curve.PointAtParameter**. Propojte uzel **Circle.ByPlaneRadius** se vstupem curve horního uzlu a uzel **Geometry.Translate** se vstupem curve dolního uzlu.
 > 9. Pomocí uzlu **Line.ByStartPointEndPoint** spojte dva uzly **Curve.PointAtParameter**.
 
@@ -65,7 +65,7 @@ Obrázek níže je základní graf, ve kterém nakreslíme čáry mezi dvěma kr
 
 Uzel _List.Count_ je jednoduchý: spočítá počet hodnot v seznamu a vrátí výsledné číslo. Tento uzel je při práci se seznamy seznamů složitější, ale to si předvedeme v následujících částech.
 
-\![Počet](<../images/working with list - list operation - list count.jpg>)
+\![Počet](<../../.gitbook/assets/working with list - list operation - list count.jpg>)
 
 > 1. Uzel **List.Count** vrací počet řádků v uzlu **Line.ByStartPointEndPoint**. V tomto případě je to hodnota 10, která souhlasí s počtem bodů vytvořených z původního uzlu **Code Block**.
 
@@ -79,14 +79,14 @@ Uzel _List.Count_ je jednoduchý: spočítá počet hodnot v seznamu a vrátí 
 
 **List.GetItemAtIndex** je základní způsob, jak dotazovat položku v seznamu.
 
-\![Cvičení](<../images/working with list - get item index 01.jpg>)
+\![Exercise](<../../.gitbook/assets/working with list - get item index 01.jpg>)
 
 > 1. Nejprve kliknutím pravým tlačítkem myši na uzel **Line.ByStartPointEndPoint** vypněte jeho náhled.
 > 2. Pomocí uzlu **List.GetItemAtIndex** vybereme index _0_ nebo první položku v seznamu řádků.
 
 Chcete-li pomocí uzlu **List.GetItemAtIndex** vybrat jinou položku, změňte hodnotu posuvníku v rozmezí od 0 do 9.
 
-\![](<../images/working with list - get item index 02.gif>)
+\![](<../../.gitbook/assets/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
@@ -98,10 +98,10 @@ Chcete-li pomocí uzlu **List.GetItemAtIndex** vybrat jinou položku, změňte h
 
 Možnost _List.Reverse_ obrátí pořadí všech položek v seznamu.
 
-\![Cvičení](<../images/working with list - list reverse.jpg>)
+\![Cvičení](<../../.gitbook/assets/working with list - list reverse.jpg>)
 
 > 1. Chcete-li správně zobrazit obrácený seznam čar, vytvořte více čar změnou uzlu **Code Block** na `0..1..#50;`.
-> 2. Duplikujte uzel **Line.ByStartPointEndPoint**, vložte uzel List.Reverse mezi uzel **Curve.PointAtParameter** a druhý uzel **Line.ByStartPointEndPoint**.
+> 2. Duplikujte uzel **Line.ByStartPointEndPoint**, vložte uzel **List.Reverse** mezi uzel **Curve.PointAtParameter** a druhý uzel **Line.ByStartPointEndPoint**.
 > 3. Pomocí uzlů **Watch3D** zobrazte náhled dvou různých výsledků. První zobrazí výsledek bez obráceného seznamu. Čáry se připojují vertikálně k sousedním bodům. Obrácený seznam však spojí všechny body v opačném pořadí v druhém seznamu.
 
 ### List.ShiftIndices <a href="#listshiftindices" id="listshiftindices"></a>
@@ -114,7 +114,7 @@ Možnost _List.Reverse_ obrátí pořadí všech položek v seznamu.
 
 **List.ShiftIndices** je dobrý nástroj ke tvorbě zkroucení, šroubovicových vzorů nebo jiných podobných manipulací s daty. Tento uzel přemístí položky v seznamu do daného počtu indexů.
 
-\![Cvičení](<../images/working with list - shiftIndices 01.jpg>)
+\![Cvičení](<../../.gitbook/assets/working with list - shiftIndices 01.jpg>)
 
 > 1. Stejným postupem jako při otáčení seznamu připojte uzel **List.ShiftIndices** k uzlu **Curve.PointAtParameter** a **Line.ByStartPointEndPoint**.
 > 2. Pomocí uzlu **Code Block** s hodnotou 1 posuňte seznam o jeden index.
@@ -122,7 +122,7 @@ Možnost _List.Reverse_ obrátí pořadí všech položek v seznamu.
 
 Pokud například změníme uzel **Code Block** na větší hodnotu, například _30_, všimneme si významného rozdílu mezi příčnými čarami. V tomto případě funguje posun jako čočka kamery, což vytváří v původní válcové formě otočení.
 
-\![](<../images/working with list - shiftIndices 02.jpg>)
+\![](<../../.gitbook/assets/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -132,11 +132,11 @@ Pokud například změníme uzel **Code Block** na větší hodnotu, například
 
 {% file src="../../.gitbook/assets/List-FilterByBooleanMask.dyn" %}
 
-![](../images/ListFilterBool.png)
+![](../../.gitbook/assets/ListFilterBool.png)
 
 Uzel **List.FilterByBooleanMask** odebere určité položky podle seznamu logických hodnot nebo podle hodnot true nebo false.
 
-\![Cvičení](<../images/working with list - shiftIndices 01.jpg>)
+\![Cvičení](<../../.gitbook/assets/working with list - filter by bool mask.jpg>)
 
 Aby bylo možné vytvořit seznam hodnot true nebo false, je třeba ještě trochu pracovat...
 

@@ -8,7 +8,7 @@ Ačkoliv se nejedná o geometrii, objekt CoordinateSystem je důležitým nást
 
 Chcete-li vytvořit objekt CoordinateSystem na souřadnicích X = 0, Y = 0, Z = 0 bez otočení, změny měřítka nebo kolmého posunu, jednoduše zavolejte konstruktor Identity:
 
-![](../images/GeometricPrimitives_01.png)
+![](../../.gitbook/assets/GeometricPrimitives_01.png)
 
 ```js
 // create a CoordinateSystem at x = 0, y = 0, z = 0,
@@ -19,7 +19,7 @@ cs = CoordinateSystem.Identity();
 
 Objekty CoordinateSystems s geometrickými transformacemi jsou mimo rozsah této kapitoly, nicméně souřadnicový systém v zadaném bodě je možné vytvořit pomocí konstruktoru _CoordinateSystem.ByOriginVectors_:
 
-![](../images/GeometricPrimitives_02.png)
+![](../../.gitbook/assets/GeometricPrimitives_02.png)
 
 ```js
 // create a CoordinateSystem at a specific location,
@@ -41,7 +41,7 @@ Nejjednodušším geometrickým primitivem je bod, který představuje bezrozmě
 
 Tento příklad ukazuje body vytvořené v různých souřadnicových systémech:
 
-![](../images/GeometricPrimitives_03.png)
+![](../../.gitbook/assets/GeometricPrimitives_03.png)
 
 ```js
 // create a point with x, y, and z coordinates
@@ -53,8 +53,7 @@ pCoord = Point.ByCoordinates(x_pos, y_pos, z_pos);
 
 // create a point in a specific coordinate system
 cs = CoordinateSystem.Identity();
-pCoordSystem = Point.ByCartesianCoordinates(cs, x_pos,
-    y_pos, z_pos);
+pCoordSystem = Point.ByCartesianCoordinates(cs, x_pos, y_pos, z_pos);
 
 // create a point on a cylinder with the following
 // radius and height
@@ -62,22 +61,20 @@ radius = 5;
 height = 15;
 theta = 75.5;
 
-pCyl = Point.ByCylindricalCoordinates(cs, radius, theta,
-    height);
+pCyl = Point.ByCylindricalCoordinates(cs, radius, theta, height);
 
 // create a point on a sphere with radius and two angles
 
 phi = 120.3;
 
-pSphere = Point.BySphericalCoordinates(cs, radius,
-    theta, phi);
+pSphere = Point.BySphericalCoordinates(cs, radius, theta, phi);
 ```
 
 ### Čára
 
 Primitivum s vyšším rozměrem v aplikaci Dynamo je úsečka, která představuje nekonečné množství bodů mezi dvěma koncovými body. Čáry lze vytvořit explicitním zadáním dvou okrajových bodů do konstruktoru _Line.ByStartPointEndPoint_ nebo zadáním počátečního bodu, směru a délky v tomto směru do konstruktoru _Line.ByStartPointDirectionLength_.
 
-![](../images/GeometricPrimitives_04.png)
+![](../../.gitbook/assets/GeometricPrimitives_04.png)
 
 ```js
 p1 = Point.ByCoordinates(-2, -5, -10);
@@ -88,7 +85,7 @@ l2pts = Line.ByStartPointEndPoint(p1, p2);
 
 // a line segment at p1 in direction 1, 1, 1 with
 // length 10
-lDir = Line.ByStartPointDirectionLength(p1,
+lDir = Line.ByStartPointDirectionLength(p1, 
     Vector.ByCoordinates(1, 1, 1), 10);
 ```
 
@@ -96,7 +93,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
 
 Aplikace Dynamo nabízí objekty reprezentující nejzákladnější trojrozměrná geometrická primitiva: kvádry vytvářené konstruktorem _Cuboid.ByLengths_, kužely vytvářené konstruktory _Cone.ByPointsRadius_ a _Cone.ByPointsRadii_, válce vytvářené konstruktorem _Cylinder.ByRadiusHeight_ a koule vytvářené konstruktorem _Sphere.ByCenterPointRadius_.
 
-![](../images/GeometricPrimitives_05.png)
+![](../../.gitbook/assets/GeometricPrimitives_05.png)
 
 ```js
 // create a cuboid with specified lengths

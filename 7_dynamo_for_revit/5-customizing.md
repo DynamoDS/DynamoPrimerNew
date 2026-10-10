@@ -6,7 +6,7 @@ Zatímco v předchozích částech byl kladen důraz na úpravu základního ob
 
 Řekněme, že byl vytvořen určitý počet adaptivních komponent a vy chcete upravit parametry podle jejich umístění bodů. Body by mohly například řídit parametr tloušťky, který souvisí s plochou prvku. Nebo by mohly řídit parametr průhlednosti, který souvisí s vystavením slunečnímu záření po celý rok. Aplikace Dynamo umožňuje analýzu parametrů v několika snadných krocích, přičemž základní verze analýzy je popsána ve cvičení níže.
 
-\![](<images/customizing - point location.jpg>)
+\![](<../.gitbook/assets/customizing - point location.jpg>)
 
 > Zadejte dotaz na adaptivní body vybrané adaptivní komponenty pomocí uzlu **AdaptiveComponent.Locations**. Toto vám umožní pracovat během analýzy s abstrahovanou verzí prvku aplikace Revit.
 
@@ -14,7 +14,7 @@ Extrahování umístění bodu adaptivních komponent vám umožní spustit celo
 
 ### Analýza orientace slunečního záření
 
-\![](<images/customizing - solar orientation analysis.jpg>)
+\![](<../.gitbook/assets/customizing - solar orientation analysis.jpg>)
 
 > Pomocí přemapování můžete namapovat sadu dat na rozsah parametru. Jedná se o základní nástroj používaný v parametrických modelech a je znázorněn v níže uvedeném cvičení.
 
@@ -30,54 +30,59 @@ V aplikaci Dynamo je možné pomocí umístění bodů adaptivních komponent v
 
 Toto cvičení rozšiřuje techniky znázorněné v předchozí části. V tomto případě definujeme parametrický povrch z prvků aplikace Revit, dále vytvoříme instance čtyřbodových adaptivních komponent a poté je upravíme podle orientace vzhledem ke slunci.
 
-\![](<images/customizing - exercise 01.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 01.jpg>)
 
 > 1. Začněte výběrem dvou hran pomocí uzlu _Select Edge_. Tyto dvě hrany jsou dvě dlouhá rozpětí atria.
 > 2. Spojte dvě hrany do jednoho seznamu pomocí uzlu _List.Create_.
 > 3. Vytvořte mezi dvěma hranami povrch pomocí uzlu _Surface.ByLoft_.
 
-\![](<images/customizing - exercise 02.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 02.jpg>)
 
 > 1. Pomocí _bloku kódu_ definujte rozsah od 0 do 1 s 10 rovnoměrně rozmístěnými hodnotami: `0..1..#10;`.
 > 2. Připojte _blok kódu_ ke vstupům *u *a _v_ uzlu _Surface.PointAtParameter_ a připojte uzel _Surface.ByLoft_ ke vstupu _surface_. Klikněte pravým tlačítkem na uzel a změňte _vázání_ na _Kartézský součin_. Tím se vytvoří osnova bodů na povrchu.
 
 Tato osnova bodů slouží jako řídicí body parametricky definovaného povrchu. Je třeba extrahovat pozice u a v každého z těchto bodů, aby bylo možné je připojit k parametrickému vzorci a zachovat stejnou datovou strukturu. Toho dosáhnete zadáním dotazu na umístění parametrů bodů, které jste právě vytvořili.
 
-\![](<images/customizing - exercise 03.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 03.jpg>)
 
 > 1. Přidejte na kreslicí plochu uzel _Surface.ParameterAtPoint_ a připojte vstupy, jak je znázorněno výše.
 > 2. Zadejte dotaz na hodnoty _u_ těchto parametrů pomocí uzlu UV.U.
 > 3. Zadejte dotaz na hodnoty _v_ těchto parametrů pomocí uzlu UV.V.
 > 4. Výstup zobrazuje odpovídající hodnoty _u_ a _v_ pro každý bod povrchu. Nyní existuje rozsah od _0_ do _1_ pro každou hodnotu ve správné datové struktuře, čili je vše připraveno k použití parametrického algoritmu.
 
-\![](<images/customizing - exercise 04.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 04.jpg>)
 
 > 1. Přidejte na kreslicí plochu _blok kódu_ a zadejte tento kód: `Math.Sin(u*180)*Math.Sin(v*180)*w;`. Jedná se o parametrickou funkci, která z plochého povrchu vytvoří sinusový oblouk.
 > 2. Připojte uzel _UV.U_ ke vstupu _u_ a UV.V ke vstupu _v_.
 > 3. Vstup _w_ představuje _amplitudu_ tvaru, takže k němu připojíme _posuvník čísel_.
 
-\![](<images/customizing - exercise 05.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 05.jpg>)
 
 > 1. Nyní máme seznam hodnot definovaných algoritmem. Pomocí tohoto seznamu hodnot přesuňte body nahoru ve směru _+Z_. Pomocí uzlu _Geometry.Translate_ připojte *blok kódu* ke vstupu _zTranslation_ a uzel _Surface.PointAtParameter_ připojte ke vstupu _geometry_. Nyní by se v náhledu aplikace Dynamo měly zobrazit nové body.
 > 2. Nakonec vytvořte povrch pomocí uzlu _NurbsSurface.ByPoints_ tím, že ke vstupu bodů připojíte uzel z předchozího kroku. Nyní máme parametrický povrch. Můžete volně přetahovat posuvník a pozorovat, jak se oblouk zmenšuje a zvětšuje.
 
-U parametrického povrchu nyní chceme definovat způsob, jak z něj vytvořit panely a umístit tak čtyřbodové adaptivní komponenty do pole. Aplikace Dynamo nemá ve výchozím stavu funkci k vytvoření panelů z povrchu, čili je třeba prozkoumat komunitu a najít užitečné balíčky pro aplikaci Dynamo.
+U parametrického povrchu nyní chceme definovat způsob, jak z něj vytvořit panely a umístit tak čtyřbodové adaptivní komponenty do pole. Aplikace Dynamo nyní obsahuje integrované funkce pro panelizaci povrchu.
 
-\![](<images/customizing - exercise 06.jpg>)
+Uzly **PanelSurface** budete muset povolit tak, že je vyberete na kartě Experimentální v předvolbách.
 
-> 1. Přejděte do nabídky _Balíčky > Vyhledat balíček_.
-> 2. Vyhledejte řetězec _LunchBox_ a nainstalujte si balíček _LunchBox for Dynamo_. Jedná se o skutečně užitečnou sadu nástrojů pro operace geometrií, jako je právě tato.
 
-> 1. Po stažení máte nyní plný přístup k sadě LunchBox. Vyhledejte řetězec _Quad Grid_ a vyberte položku _LunchBox Quad Grid By Face_. Připojte parametrický povrch ke vstupu _surface_ a nastavte podíly _U_ a _V_ na hodnotu _15_. Nyní byste v náhledu aplikace Dynamo měli vidět povrch se čtyřmi panely.
+\![](<../.gitbook/assets/experimental preferences.jpg>)
 
-> Pokud vás zajímá nastavení tohoto balíčku, klikněte dvakrát na uzel _Lunch Box_ a zjistěte, jak funguje.
+> 1. Vyhledejte _PanelSurface_ a vyberte _ByQuads_. Připojte parametrický povrch ke vstupu _surface_ a nastavte podíly _numU_ a _numV_ na hodnotu _15_.
 
-> Opět v aplikaci Revit se v rychlosti podíváme na adaptivní komponentu, kterou používáme. Není třeba ji stále sledovat, ale toto je o panel střechy, od kterého vytvoříme instanci. Jedná se o čtyřbodovou adaptivní komponentu, která je jednoduchou reprezentací systému ETFE. Otvor středového vybrání je u parametru s názvem _ApertureRatio_.
+\![](<../.gitbook/assets/surfaces divide by UV.jpg>)
+
+> Opět v aplikaci Revit se v rychlosti podíváme na adaptivní komponentu, kterou používáme. Není třeba ji stále sledovat, ale toto je o panel střechy, od kterého vytvoříme instanci. Jedná se o čtyřbodovou adaptivní komponentu, která je jednoduchou reprezentací systému ETFE. Otvor středového vybrání je u parametru s názvem _ApertureRatio_. 
+
 
 > 1. Chystáte se vytvořit instanci geometrie v aplikaci Revit, proto se ujistěte, že je řešič aplikace Dynamo nastaven na možnost _Ruční_.
 > 2. Přidejte na kreslicí plochu uzel _Family Types_ a vyberte položku _ROOF-PANEL-4PT_.
-> 3. Přidejte na kreslicí plochu uzel _AdaptiveComponent.ByPoints_ a připojte _Panel Pts_ z výstupu balíčku _LunchBox Quad Grid by Face_ ke vstupu _points_. Připojte uzel _Family Types_ ke vstupu _familySymbol_.
-> 4. Klikněte na možnost _Spustit_. Během tvorby geometrie bude aplikace Revit chvíli _zaneprázdněna_. Pokud to trvá příliš dlouho, snižte hodnotu v _bloku kódu z 15_ na nižší hodnotu. Tím se sníží počet panelů na střeše.
+> 3. Přidejte na kreslicí plochu uzel **PanelSurface.GetPoints** a připojte _panelSurface_ z uzlu **PanelSurface.ByQuads** k odpovídajícímu vstupu.
+> 4. Přidejte na kreslicí plochu uzel **AdaptiveComponent.ByPoint** a připojte _Panel Pts_ z výstupu **PanelSurface.GetPanelPoints** ke vstupu _points_. Připojte uzel _Family Types_ ke vstupu _familyType_.
+> 5. Klikněte na možnost _Spustit_. Během tvorby geometrie bude aplikace Revit chvíli _zaneprázdněna_. Pokud to trvá příliš dlouho, snižte hodnotu v _bloku kódu z 15_ na nižší hodnotu. Tím se sníží počet panelů na střeše.
+
+\![](<../.gitbook/assets/panelising script.jpg>)
+
 
 _Poznámka: Pokud aplikaci Dynamo trvá výpočet uzlů dlouho, bude možná užitečné využít funkce uzlu „freeze“, která pozastaví provádění operací aplikace Revit, zatímco vyvíjíte graf. Další informace o zmrazení uzlů najdete v části Zmrazení v kapitole Tělesa._
 
@@ -85,12 +90,12 @@ _Poznámka: Pokud aplikaci Dynamo trvá výpočet uzlů dlouho, bude možná už
 
 > Po přiblížení se můžete blíže podívat na kvality jejich povrchů.
 
+\![](<../.gitbook/assets/adaptive panels.jpg>)
+
 ### Analýza
 
-> 1. V rámci pokračování z předchozího kroku nastavte otvor každého panelu podle jeho vystavení slunci. Pokud přiblížíte pohled v aplikaci Revit a vyberete jeden panel, uvidíte na panelu vlastností, že je zde parametr s názvem _Poměr otvoru_. Rodina je nastavena, tak aby měl otvor rozsah zhruba od _0.05_ do _0.45_.
-
+> 1. V rámci pokračování z předchozího kroku nastavte otvor každého panelu podle jeho vystavení slunci. Pokud přiblížíte pohled v aplikaci Revit a vyberete jeden panel, uvidíte na panelu vlastností, že je zde parametr s názvem _Aperture Ratio_ (Poměr otvoru). Rodina je nastavena, tak aby měl otvor rozsah zhruba od _0.05_ do _0.45_.
 > 2. Pokud zapnete dráhu slunce, uvidíte v aplikaci Revit aktuální polohu slunce.
-
 > 3. Na tuto polohu slunce se můžete odkázat pomocí uzlu _SunSettings.Current_.
 
 1. Připojením nastavení slunce k uzlu _Sunsetting.SunDirection_ získejte vektor slunečního záření.
@@ -100,7 +105,7 @@ _Poznámka: Pokud aplikaci Dynamo trvá výpočet uzlů dlouho, bude možná už
 5. Použijte _absolutní hodnotu_ výsledku. Tím zajistíte, že bude skalární součin přesný, pokud je normála roviny otočena opačným směrem.
 6. Klikněte na možnost _Spustit_.
 
-> 1) Při pohledu na _skalární součin_ je vidět, že máme k dispozici velký rozsah čísel. Chceme použít jejich relativní rozložení, ale je potřeba zhustit čísla do vhodného rozsahu parametru _Poměr otvoru_, který chceme upravit.
+> 1) Při pohledu na _skalární součin_ je vidět, že máme k dispozici velký rozsah čísel. Chceme použít jejich relativní rozložení, ale je potřeba zhustit čísla do vhodného rozsahu parametru _Aperture Ratio_ (Poměr otvoru), který chceme upravit.
 
 1. K tomuto účelu se skvěle hodí uzel _Math.RemapRange_. Ten vezme vstupní seznam a přemapuje jeho hranice na dvě cílové hodnoty.
 2. Definujte cílové hodnoty _0.15_ a _0.45_ v _bloku kódu_.

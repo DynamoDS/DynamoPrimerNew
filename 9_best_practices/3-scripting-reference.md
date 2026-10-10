@@ -6,7 +6,7 @@ Tato referenční stránka rozšiřuje doporučené postupy popsané ve skriptov
 
 Standardní knihovny jsou externí pro aplikaci Dynamo a jsou k dispozici v programovacích jazycích Python a C# (Zerotouch). Aplikace Dynamo má také vlastní sadu knihoven, které přímo odpovídají hierarchii uzlu aplikace Dynamo, což uživateli umožňuje vytvořit v kódu cokoliv, co by mohlo být vytvořeno pomocí uzlů a drátů. V následující části je uveden postup, jak jednotlivé knihovny aplikace Dynamo poskytují přístup a kdy mají používat standardní knihovnu.
 
-![](images/textual-programming.jpg)
+![](../.gitbook/assets/textual-programming.jpg)
 
 **Standardní knihovny a knihovny aplikace Dynamo**
 
@@ -28,11 +28,13 @@ Standardní knihovny jsou externí pro aplikaci Dynamo a jsou k dispozici v pr
    * Funkce: Excel.
    * Způsob importu: `import DSOffice`
 
-{% hint style="warning" %} *Poznámka: Při použití knihovny **protoGeometry** prostřednictvím jazyka Python nebo C# vytváříte nespravované objekty, které vyžadují ruční správu paměti. Další informace najdete níže v části **Nespravované objekty**. {% endhint %}
+{% hint style="warning" %}
+*Poznámka: Při použití knihovny **ProtoGeometry** prostřednictvím jazyka Python nebo C# vytváříte nespravované objekty, které vyžadují ruční správu paměti. Další informace najdete v části níže: **Nespravované objekty**.
+{% endhint %}
 
 ## Pečlivé použití popisků
 
-Během skriptování používáme identifikátory k označení různých položek, jako jsou proměnné, typy, funkce a další entity. Pomocí tohoto systému symbolické notace, můžeme při vytváření algoritmů využít informace pomocí popisků – obvykle tvořených posloupností znaků. Názorné pojmenování věcí hraje důležitou roli v psaní kódu, který mohou snadno číst a chápat i ostatní uživatelé, stejně jako vaše budoucí já. Zde jsou tipy, které vám pomohou při pojmenování položek ve skriptu:
+Během skriptování používáme identifikátory k označení různých položek, jako jsou proměnné, typy, funkce a další entity. Pomocí tohoto systému symbolické notace, můžeme při vytváření algoritmů využít informace pomocí popisků, obvykle tvořených posloupností znaků. Názorné pojmenování věcí hraje důležitou roli v psaní kódu, který mohou snadno číst a chápat i ostatní uživatelé, stejně jako vaše budoucí já. Zde jsou tipy, které vám pomohou při pojmenování položek ve skriptu:
 
 **Zkratky jsou v pořádku, ale vysvětlete je pomocí komentáře:**
 

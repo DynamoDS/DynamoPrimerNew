@@ -1,10 +1,12 @@
 # O aplikaci
 
-{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %} Propagační videofilm o aplikaci Dynamo {% endembed %}
+{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %}
+Propagační videofilm o aplikaci Dynamo
+{% endembed %}
 
 ## Pro aplikaci Dynamo verze 2.13 a novější
 
-![Logo aplikace Dynamo](images/dynamo_logo_dark-trim.jpg)
+\![Dynamo Logo](<.gitbook/assets/dynamo_logo_dark-trim (1).jpg>)
 
 > Aplikace Dynamo je platforma vizuálního programování s otevřeným kódem určená pro konstruktéry.
 
@@ -27,9 +29,9 @@ Aplikaci Dynamo neustále vylepšujeme, takže některé funkce mohou vypadat ji
 
 ### Otevřený zdrojový kód
 
-Projekt Dynamo Primer má otevřený zdrojový kód. Naším cílem je nabídnout uživatelům kvalitní obsah a oceníme jakoukoliv zpětnou vazbu. Pokud chcete ohlásit problém nebo připomínku, zadejte svou zpětnou vazbu na stránce s problémy na GitHubu: [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues). 
+Projekt Dynamo Primer má otevřený zdrojový kód. Naším cílem je nabídnout uživatelům kvalitní obsah a oceníme jakoukoliv zpětnou vazbu. Pokud chcete ohlásit problém nebo připomínku, zadejte svou zpětnou vazbu na stránce s problémy na GitHubu: [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues).
 
-Pokud do projektu chcete přidat novou část, úpravy nebo něco jiného, začněte u našeho repozitáře na GitHubu: [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew) 
+Pokud do projektu chcete přidat novou část, úpravy nebo něco jiného, začněte u našeho repozitáře na GitHubu: [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew)
 
 ### Projekt Dynamo Primer
 
@@ -37,31 +39,31 @@ Dynamo Primer je projekt s otevřeným zdrojovým kódem, který vytvořil Matt
 
 Společnost **Mode Lab** sepsala první edici příručky Primer. Děkujeme jim za jejich úsilí při vytváření tohoto hodnotného zdroje.
 
-![](images/modelab-logo.png)
+![](.gitbook/assets/modelab-logo.png)
 
 ***
 
 **John Pierson ze společnosti Parallax Team** aktualizoval příručku Primer podle verze aplikace Dynamo 2.0.
 
-![](images/prlx-logo.jpg)
+![](.gitbook/assets/prlx-logo.jpg)
 
 ***
 
 Společnost **Matterlab** byla pověřena aktualizací příručky Primer tak, aby odrážela revize aplikace Dynamo 2.13.
 
-![](images/matterlab-logo.jpg)
+![](.gitbook/assets/matterlab-logo.jpg)
 
 ***
 
 Společnost **Archilizer** byla pověřena aktualizací příručky Primer tak, aby odrážela revize aplikace Dynamo 2.17.
 
-<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 Společnost **Wood Rodgers** byla pověřena aktualizací příručky Primer obsahem týkajícím se aplikace Dynamo for Civil 3D.
 
-<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### Poděkování
 
@@ -73,7 +75,7 @@ Děkujeme Mattu Jezykovi, Ianu Keoughovi, Zachu Kronovi, Racel Amourové a Colin
 
 **Dynamo** Nejnovější **stabilní** verzi aplikace Dynamo naleznete na následujících webových stránkách.
 
-[https://dynamobim.com/download/](https://dynamobim.com/download/) nebo [https://dynamobuilds.com](https://dynamobuilds.com/)
+[https://dynamobuilds.com](https://dynamobuilds.com/)
 
 *Poznámka: Počínaje aplikací Revit 2020 je aplikace Dynamo součástí vydání aplikace Revit a nemusí být ručně instalována. Další informace jsou k dispozici na tomto příspěvku na [blogu](https://dynamobim.org/dynamo-core-2-1-release/).
 

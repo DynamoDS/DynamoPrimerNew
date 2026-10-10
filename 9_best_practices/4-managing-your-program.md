@@ -1,49 +1,51 @@
 # Správa programu
 
-Vizuální programování může být kreativní činnost, tok programu a uživatelské vstupy se však můžou velmi rychle stát složitými a na pracovní ploše nepřehlednými. Podívejme se na některé osvědčené postupy pro správu programu.
+Vizuální programování může být kreativní činnost, ale složitost nebo rozvržení pracovního prostoru mohou velmi rychle znepřehlednit tok programu a uživatelské vstupy. Podívejme se na některé osvědčené postupy pro správu programu.
 
 ### Zarovnání
 
-Jakmile na pracovní plochu přidáte několik uzlů, můžete je chtít přeuspořádat, aby byly přehledné. Výběrem více než jednoho uzlu a kliknutím pravým tlačítkem myši na pracovní plochu se v místním okně zobrazí nabídka **Zarovnat výběr** s možnostmi pro zarovnání a rozmístění po osách X a Y.
+Jakmile do pracovního prostoru přidáte několik uzlů, můžete chtít změnit jejich uspořádání, aby byly přehledné. Výběrem více než jednoho uzlu a kliknutím pravým tlačítkem myši do pracovního prostoru se v místním okně zobrazí nabídka **Zarovnat výběr** s možnostmi pro zarovnání a rozmístění po osách X a Y.
 
-\![](<images/managing your program - alignment.jpg>)
+\![](<../.gitbook/assets/managing your program - alignment.jpg>)
 
 > 1. Vyberte více než jeden uzel.
-> 2. Klikněte pravým tlačítkem myši na pracovní plochu.
+> 2. Klikněte pravým tlačítkem myši do pracovního prostoru.
 > 3. Použijte možnosti funkce **Zarovnat výběr**.
 
 ### Poznámky
 
-S trochou zkušeností můžeme vizuální program „číst“ tak, že se podíváme na názvy uzlů a budeme sledovat tok programu. Dobrým zvykem je vkládat na pracovní plochu popisy. Aplikace Dynamo obsahuje uzel **Poznámky** s upravitelným textovým polem. Poznámky lze na pracovní plochu přidávat dvěma způsoby:
+S trochou zkušeností můžeme vizuální program „číst“ tak, že se podíváme na názvy uzlů a budeme sledovat tok programu. Dobrým zvykem je vkládat na pracovní plochu popisy. Aplikace Dynamo obsahuje uzel **Poznámky** s upravitelným textovým polem. Poznámky lze do pracovního prostoru přidávat dvěma způsoby:
 
-\![](<images/managing your program - notes.jpg>)
+\![](<../.gitbook/assets/managing your program - notes.jpg>)
 
 > 1. Přejděte do nabídky Upravit > Vytvořit poznámku
 > 2. Použijte kombinaci kláves Ctrl+W
 
-Po přidání poznámky na pracovní plochu se zobrazí textové pole pro úpravu textu. Po vytvoření lze poznámku upravit dvojitým kliknutím nebo kliknutím pravým tlačítkem na uzel Note.
+Po přidání poznámky do pracovního prostoru se zobrazí textové pole pro úpravu textu. Po vytvoření lze poznámku upravit dvojitým kliknutím nebo kliknutím pravým tlačítkem na uzel Note.
 
-\![](<images/managing your program - notes 02.jpg>)
+\![](<../.gitbook/assets/managing your program - notes 02.jpg>)
 
 ### Seskupování
 
 S tím, jak se vizuální program zvětšuje, může být užitečné označit větší kroky jako celky. Větší kolekce uzlů můžeme zvýraznit jako **skupinu** a označit je barevným obdélníkem na pozadí a názvem. Pokud je vybrán více než jeden uzel, skupinu lze vytvořit třemi způsoby:
 
-\![](<images/managing your program - grouping 01.jpg>)
+\![](<../.gitbook/assets/managing your program - grouping 01.jpg>)
 
-> 1. Přejděte do nabídky Upravit > Vytvořit skupinu
-> 2. Použijte kombinaci kláves Ctrl+G
-> 3. Klikněte pravým tlačítkem myši na pracovní plochu a vyberte možnost „Vytvořit skupinu“
+> 1. Přejděte do nabídky Upravit > Vytvořit skupinu.
+> 2. Použijte kombinaci kláves Ctrl+G.
+> 3. Klikněte pravým tlačítkem myši do pracovního prostoru a vyberte možnost Vytvořit skupinu.
 
 Po vytvoření skupiny je možné upravit její nastavení, například název a barvu.
 
-\![](<images/managing your program - grouping 02.jpg>)
+\![](<../.gitbook/assets/managing your program - grouping 02.jpg>)
 
-{% hint style="info" %} Tip: Použití poznámek a skupin je účinný způsob, jak zvýšit přehlednost a srozumitelnost v souboru. {% endhint %}
+{% hint style="info" %}
+Tip: Použití poznámek a skupin je účinný způsob, jak zvýšit přehlednost a srozumitelnost v souboru.
+{% endhint %}
 
 Zde je příklad programu s přidanými poznámkami a skupinami:
 
-\![](<images/managing your program - grouping 03.jpg>)
+\![](<../.gitbook/assets/managing your program - grouping 03.jpg>)
 
 > 1. Poznámka: „Parametry mřížky“
 > 2. Poznámka: „Body mřížky“

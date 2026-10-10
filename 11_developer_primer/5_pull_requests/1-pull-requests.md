@@ -23,7 +23,7 @@ A několik pokynů, co nedělat:
 Při odesílání žádosti o přijetí změn použijte [výchozí šablonu žádosti o přijetí změn](https://github.com/DynamoDS/Dynamo/blob/master/.github/PULL\_REQUEST\_TEMPLATE.md). Před odesláním své žádosti o přijetí změn se ujistěte, že je jasně popsán účel a jsou splněna všechna následující prohlášení:
 
 * Základ kódu bude po této žádosti o přijetí změn v lepším stavu.
-* Základ kódu je dokumentován podle [standardů](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards).
+* Dokumentace ke kódu je vytvořena podle [standardů](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards).
 * Úroveň testování, kterou tato žádost o přijetí změn zahrnuje, je přiměřená.
 * Případné řetězce zaměřené na uživatele jsou extrahovány do souborů `*.resx`.
 * Všechny testy projdou pomocí samoobslužného CI.

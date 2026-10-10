@@ -22,7 +22,7 @@ Tyto vzory jsou šablony aplikace Visual Studio, které můžete použít k zah
     * Určení logiky interakce pro posuvník: [Kód](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
 * [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**:** Šablony pro ZeroTouch, vlastní uživatelské rozhraní, testy a rozšíření pohledů.
   * [Vzory uživatelského rozhraní](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
-    * Vytvoření základního vlastního uzlu uživatelského rozhraní: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs)
+    * Vytvoření základního vlastního uzlu uživatelského rozhraní: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/LocalizedCustomNodeModel.cs)
     * Vytvoření rozevírací nabídky: [DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs)
   * [Testy](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryTests)
     * Systémové testy: [HelloDynamoSystemTesting.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryTests/HelloDynamoSystemTests.cs)

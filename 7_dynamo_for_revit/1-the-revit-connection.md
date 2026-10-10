@@ -1,6 +1,6 @@
 # Propojení s aplikací Revit
 
-\![](<images/revit connection link.jpg>)
+\![](<../.gitbook/assets/revit connection link.jpg>)
 
 Modul Dynamo pro aplikaci Revit rozšiřuje informační model budovy o data a logiku grafického editoru algoritmů. Jeho flexibilita spolu s robustní databázi aplikace Revit umožňují pracovat na BIM inovativním způsobem.
 
@@ -19,11 +19,11 @@ Protože se aplikace Revit i aplikace Dynamo neustále vyvíjejí, může dojí
 | 2017          | [0.9.0](https://downloads.dynamobuilds.com/DynamoInstall0.9.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
 | 2018          | [1.3.0](https://downloads.dynamobuilds.com/DynamoInstall1.3.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
 | 2019          | [1.3.3](https://downloads.dynamobuilds.com/DynamoInstall1.3.3.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.4](https://downloads.dynamobuilds.com/DynamoInstall2.0.4.exe) |
-| 2020+         | 2.1.0 – Aplikace Revit 2020 a novější nyní obsahuje aplikaci Dynamo, která je aktualizována, stejně jako Revit.) | Není použito                                                                                                                                     |
+| 2020+         | 2.1.0 – Aplikace Revit 2020 a novější nyní obsahuje aplikaci Dynamo, která je aktualizována, stejně jako Revit.  | Není k dispozici                                                                                                                                     |
 
 ### Historie aplikace Dynamo
 
-![Historie](images/earlyScreenshot.jpg)
+![Historie](../.gitbook/assets/earlyScreenshot.jpg)
 
 Díky specializovanému týmu vývojářů a aktivní komunitě ušel projekt od svým počátku dlouhou cestu.
 
@@ -35,21 +35,27 @@ Pomocí základních uzlů aplikace Dynamo spolu s uzly pro aplikaci Revit je m
 
 V projektu aplikace Revit nebo Editoru rodiny přejděte na doplňky a klikněte na možnost Dynamo.*
 
-{% hint style="warning" %} *Aplikace Dynamo se spustí pouze v souboru, ve kterém byla otevřena. {% endhint %}
+{% hint style="warning" %}
+*Aplikace Dynamo se spustí pouze v souboru, ve kterém byla otevřena.
+{% endhint %}
 
-![](images/1/launchdynamofromrevit.jpg)
+\![](<../.gitbook/assets/launchdynamofromrevit (1).jpg>)
 
 Po otevření aplikace Dynamo v aplikaci Revit je k dispozici nová kategorie s názvem „Revit“. Jedná se o rozšíření uživatelského rozhraní, které nabízí uzly pro práci s aplikací Revit.*
 
-{% hint style="warning" %} *Pokud použijete uzly určené pro práci v aplikaci Revit, graf aplikace Dynamo bude fungovat pouze při otevření v modulu Dynamo pro aplikaci Revit. Pokud graf modulu Dynamo pro aplikaci Revit otevřete například v aplikaci Dynamo Sandbox, uzly aplikace Revit budou chybět. {% endhint %}
+{% hint style="warning" %}
+*Pokud použijete uzly určené pro práci v aplikaci Revit, graf aplikace Dynamo bude fungovat pouze při otevření v modulu Dynamo pro aplikaci Revit. Pokud graf modulu Dynamo pro aplikaci Revit otevřete například v aplikaci Dynamo Sandbox, uzly aplikace Revit budou chybět.
+{% endhint %}
 
-\![](<images/revit connection - running dynamo in revit 02.jpg>)
+\![](<../.gitbook/assets/revit connection - running dynamo in revit 02.jpg>)
 
 ### Zmrazení uzlů
 
 Protože Revit je platforma s robustními funkcemi pro správu projektů, výpočet parametrických operací v aplikaci Dynamo může být složitý a pomalý. Pokud aplikaci Dynamo trvá výpočet uzlů dlouho, může být užitečné využít funkci „zmrazení“ uzlu, která pozastaví provádění operací aplikace Revit, zatímco vyvíjíte graf.
 
-{% hint style="info" %} Další informace o zmrazení uzlů naleznete v části [4_nodes_and_wires](../4_nodes_and_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+Další informace o zmrazení uzlů naleznete v části [4_nodes_and_wires](../4_nodes_and_wires/ "mention").
+{% endhint %}
 
 ### Komunita a blog aplikace Dynamo
 
@@ -59,4 +65,4 @@ Aplikace Dynamo je projekt s otevřeným zdrojovým kódem, která se neustále
 
 Aplikace Dynamo také provozuje aktivní blog. Přečtěte si nejnovější příspěvky z vývoje.
 
-![Blog](images/blog.png)
+![Blog](../.gitbook/assets/blog.png)

@@ -1,12 +1,12 @@
 # Posunutí, otočení a další transformace
 
-Určité geometrické objekty je možné vytvářet přímým zadáním souřadnic X, Y a Z v trojrozměrném prostoru. Geometrie se však častěji do konečné pozice přesunují pomocí geometrických transformací samotného objektu nebo souvisejícího objektu CoordinateSystem.
+Určité geometrické objekty je možné vytvářet přímým zadáním souřadnic X, Y a Z v trojrozměrném prostoru. Geometrie se však častěji do konečné pozice přesunují pomocí geometrických transformací samotného objektu nebo jeho základního souřadnicového systému.
 
 ### Posunutí
 
 Nejjednodušší geometrickou transformací je posunutí, čímž se objekt posune o zadaný počet jednotek ve směru X, Y a Z.
 
-![](../images/Transformations_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -20,9 +20,9 @@ p2 = p.Translate(10, -20, 50);
 
 ### Otočení
 
-Ačkoliv lze všechny objekty v aplikaci Dynamo posunout připojením metody _.Translate_ na konec názvu objektu, pro složitější transformace je nutné provést transformaci souvisejícího objektu CoordinateSystem na nový. Například pro otočení objektu o 45 stupňů okolo osy Z je nutné pomocí metody _.Transform_ provést transformaci existujícího objektu CoordinateSystem bez otočení na objekt CoordinateSystem s otočením 45 stupňů kolem osy X:
+Ačkoliv lze všechny objekty v aplikaci Dynamo posunout připojením metody _.Translate_ na konec názvu objektu, pro složitější transformace je nutné provést transformaci souvisejícího objektu z jednoho základního souřadnicového systému do nového souřadnicového systému. Jestliže například potřebujeme otočit objekt o 45 stupňů kolem osy X, převedeme objekt z jeho původního souřadnicového systému bez otočení do souřadnicového systému otočeného o 45 stupňů kolem osy X pomocí metody _.Transform_.
 
-![](../images/Transformations_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -40,9 +40,9 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 ### Měřítko
 
-Kromě posunutí a otočení lze u objektů CoordinateSystem také měnit měřítko nebo provádět kolmý posun. Měřítko objektu CoordinateSystem lze změnit metodou _.Scale_:
+Kromě posunutí a otočení lze souřadnicové systémy vytvářet také se změněným měřítkem nebo kolmým posunem. Měřítko souřadnicového systému lze změnit metodou _.Scale_:
 
-![](../images/Transformations_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -56,9 +56,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-Objekty CoordinateSystem s kolmým posunem lze vytvořit zadáním neortogonálních vektorů jako vstup konstruktoru CoordinateSystem.
+Souřadnicové systémy s kolmým posunem lze vytvořit zadáním neortogonálních vektorů do konstruktoru souřadnicového systému.
 
-![](../images/Transformations_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(
@@ -74,9 +74,9 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-Změny měřítka a kolmý posun jsou mnohem složitější geometrické transformace než otočení nebo posunutí, proto je na některé objekty aplikace Dynamo nemusí být možné použít. Následující tabulka uvádí, u kterých objektů aplikace Dynamo lze provést nerovnoměrnou změnu měřítka nebo kolmý posun u jejich objektů CoordinateSystem.
+Změny měřítka a kolmý posun jsou mnohem složitější geometrické transformace než otočení nebo posunutí, proto je na některé objekty aplikace Dynamo nemusí být možné použít. Následující tabulka uvádí, které objekty aplikace Dynamo mohou mít souřadnicové systémy s nestejnoměrným měřítkem nebo souřadnicové systémy s kolmým posunem.
 
-| Třída        | CoordinateSystem s nerovnoměrně změněným měřítkem | CoordinateSystem s kolmým posunem |
+| Třída        | Souřadnicový systém s nestejnoměrným měřítkem| Souřadnicový systém s kolmým posunem |
 | ------------ | ------------------------------------- | ------------------------ |
 | Oblouk          | Ne                                    | Ne                       |
 | NurbsCurve   | Ano                                   | Ano                      |

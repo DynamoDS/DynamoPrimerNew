@@ -2,9 +2,9 @@
 
 Tato stránka popisuje, co hledáme při testování nového kódu přidávaného do aplikace Dynamo.
 
-Máte nový uzel, který chcete přidat. Výborně. Je čas přidat nějaké testy. Existují dva důvody, proč to udělat.
+Máte tedy nový uzel, který chcete přidat. Výborně. Je čas přidat nějaké testy. Existují dva důvody, proč to udělat.
 
-1. Testování pomáhá zjistit, kde to případně nefunguje.
+1. Testování pomáhá zjistit, kde to nefunguje.
 2. Když někdo jiný změní něco, co způsobí nefunkčnost vašeho uzlu, mělo by to způsobit selhání testování. Osoba, která způsobila neúspěšné testování, pak musí problém opravit. Pokud chybu neodhalí testování, budete se muset sami vypořádat s uživateli, jejichž modely přestanou fungovat.
 
 Testování v aplikaci Dynamo se dělí na dva základní typy: jednotkové testy a systémové testy.

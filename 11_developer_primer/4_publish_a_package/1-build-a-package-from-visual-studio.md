@@ -24,7 +24,7 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![Přesouvání souborů projektu](../images/fe-proj-directory.jpg)
+![Přesouvání souborů projektu](../../.gitbook/assets/fe-proj-directory.jpg)
 
 > 1. Přesuňte soubory projektu do nové složky `src`.
 
@@ -47,7 +47,7 @@ Nyní, když jsou zdrojové soubory v samostatné složce, přidejte v aplikac
   </Target>
 ```
 
-![Umístění cíle AfterBuild](../images/atom-afterbuild.jpg)
+![Umístění cíle AfterBuild](../../.gitbook/assets/atom-afterbuild.jpg)
 
 > Je třeba zajistit, aby byl cíl přidán do souboru `CustomNodeModel.csproj` (nikoli do jiného souboru projektu) a aby projekt neměl žádná existující nastavení po sestavení.
 >
@@ -55,7 +55,7 @@ Nyní, když jsou zdrojové soubory v samostatné složce, přidejte v aplikac
 
 V části `<ItemGroup>` je definováno množství proměnných, které představují konkrétní typy souborů. Například proměnná `Dll` představuje všechny soubory ve výstupním adresáři, jejichž přípona je `.dll`.
 
-```
+```xml
 <ItemGroup>
   <Dlls Include="$(OutDir)*.dll" />
 </ItemGroup>
@@ -63,19 +63,19 @@ V části `<ItemGroup>` je definováno množství proměnných, které předsta
 
 Úloha `Copy` zkopíruje všechny soubory `.dll` do adresáře, konkrétně do složky balíčku, do které provádíme sestavení.
 
-```
+```xml
 <Copy SourceFiles="@(Dlls)" DestinationFolder="$(SolutionDir)..\packages\CustomNodeModel\bin\" />
 ```
 
 Balíčky aplikace Dynamo obvykle obsahují složky `dyf` a `extra` pro vlastní uzly aplikace Dynamo a další komponenty, například obrázky. Chcete-li vytvořit tyto složky, je nutné použít úlohu `MakeDir`. Tato úloha vytvoří příslušnou složku, pokud neexistuje. Soubory můžete do této složky přidat ručně.
 
-```
+```xml
 <MakeDir Directories="$(SolutionDir)..\packages\CustomNodeModel\extra" />
 ```
 
 Pokud projekt sestavíte, měla by se nyní ve složce projektu vedle dříve vytvořené složky `src` nacházet i složka `packages`. V adresáři `packages` je složka obsahující vše, co je pro balíček potřeba. Do složky balíčku je také nutné zkopírovat soubor `pkg.json`, aby aplikace Dynamo věděla, že má balíček načíst.
 
-![Kopírování souborů](../images/fe-proj-directory-package.jpg)
+![Kopírování souborů](../../.gitbook/assets/fe-proj-directory-package.jpg)
 
 > 1. Nová složka packages vytvořená cílem AfterBuild.
 > 2. Existující složka src s projektem.

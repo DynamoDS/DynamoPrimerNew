@@ -2,7 +2,7 @@
 
 Když nyní víme, jak vytvořit projekt Zero-Touch, můžeme se podrobněji seznámit se specifiky vytváření uzlu a projít si příklad ZeroTouchEssentials na GitHubu aplikace Dynamo.
 
-![Uzly Zero-Touch](../images/ootbzerotouch.png)
+![Uzly Zero-Touch](../../.gitbook/assets/ootbzerotouch.png)
 
 > Mnoho standardních uzlů aplikace Dynamo jsou v podstatě uzly Zero-Touch, například většina výše uvedených uzlů Math, Color a DateTime.
 
@@ -10,7 +10,7 @@ Nejprve si stáhněte projekt ZeroTouchEssentials z tohoto umístění: [https:
 
 V aplikaci Visual Studio otevřete soubor řešení `ZeroTouchEssentials.sln` a sestavte řešení.
 
-![ZeroTouchEssentials v aplikaci Visual Studio](../images/vs-build-zte.jpg)
+![ZeroTouchEssentials v aplikaci Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
 
 > Soubor `ZeroTouchEssentials.cs` obsahuje všechny metody, které budeme importovat do aplikace Dynamo.
 
@@ -20,11 +20,11 @@ Příklady kódu jsou získány ze souboru [ZeroTouchEssentials.cs](https://gith
 
 ### Výchozí vstupní hodnota <a href="#default-input-values" id="default-input-values"></a>
 
-Aplikace Dynamo podporuje definici výchozích hodnot vstupních portů v uzlu. Tyto výchozí hodnoty budou do uzlu zadány, pokud porty nemají žádná připojení. Výchozí hodnoty jsou vyjádřeny pomocí mechanismu jazyka C# pro zadávání volitelných argumentů popsaném v [Příručce programování v jazyce C#](https://msdn.microsoft.com/cs-cz/library/dd264739.aspx). Výchozí hodnoty jsou určeny následujícím způsobem:
+Aplikace Dynamo podporuje definici výchozích hodnot vstupních portů v uzlu. Tyto výchozí hodnoty budou do uzlu zadány, pokud porty nemají žádná připojení. Výchozí hodnoty jsou vyjádřeny pomocí mechanismu jazyka C# pro zadávání volitelných argumentů popsaném v [Příručce programování v jazyce C#](https://msdn.microsoft.com/en-us/library/dd264739.aspx). Výchozí hodnoty jsou určeny následujícím způsobem:
 
 * Nastavte parametry metody na výchozí hodnotu: `inputNumber = 2.0`
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Výchozí hodnota](../images/defaultval.jpg)
+![Výchozí hodnota](../../.gitbook/assets/defaultval.jpg)
 
 > 1. Výchozí hodnota se zobrazí, když umístíte kurzor nad vstupní port uzlu.
 
@@ -51,7 +51,7 @@ Vracení více hodnot je o něco složitější než vytváření více vstupů
 * Přidejte do metody atribut `[MultiReturn(new[] { "string1", "string2", ... more strings here })]`. Řetězce odkazují na klíče ve slovníku a stanou se názvy výstupních portů.
 * Vraťte `Dictionary<>` z funkce s klíči, které odpovídají názvům parametrů v atributu: `return new Dictionary<string, object>`
 
-```
+```c#
 using System.Collections.Generic;
 using Autodesk.DesignScript.Runtime;
 
@@ -66,8 +66,8 @@ namespace ZeroTouchEssentials
 
                 { "add", (a + b) },
                 { "mult", (a * b) }
-            };
-        }
+            
+        };
     }
 }
 ```
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Uzel, který vrací více výstupů.
 
-![Více výstupů](../images/multipleoutputs.png)
+![Více výstupů](../../.gitbook/assets/multipleoutputs.png)
 
 > 1. Všimněte si, že nyní existují dva výstupní porty pojmenované podle řetězců, které jsme zadali pro klíče slovníku.
 
@@ -90,7 +90,7 @@ Osvědčeným postupem je přidat k uzlům aplikace Dynamo dokumentaci, která 
   * Například: `/// <summary>...</summary>`
 * Povolte dokumentaci XML v aplikaci Visual Studio výběrem možnosti `Project > [Project] Properties > Build > Output` a zaškrtnutím políčka `Documentation file`.
 
-![Generování souboru XML](../images/vs-xml.jpg)
+![Generování souboru XML](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Aplikace Visual Studio vygeneruje soubor XML v zadaném umístění.
 
@@ -104,7 +104,7 @@ Typy štítků jsou následující:
 
 Níže je uveden příklad uzlu s popisem vstupu a výstupu a také souhrnem, který se zobrazí v knihovně.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -141,7 +141,7 @@ Popisy uzlů stručně popisují funkci a výstup uzlu. V aplikaci Dynamo se ob
 * V popisku nástroje uzlu.
 * V Prohlížeči dokumentace.
 
-![Popis uzlu](../images/node-description.png)
+![Popis uzlu](../../.gitbook/assets/node-description.png)
 
 Dodržováním těchto pokynů zajistíte konzistenci a ušetříte čas při psaní nebo aktualizaci popisů uzlů.
 
@@ -182,7 +182,7 @@ Aplikace Dynamo nemá klíčové slovo `new`, takže objekty bude nutné konstru
 
 > Poznámka: Aplikace Dynamo používá předponu „By“ pro označení statické metody jako konstruktoru, a i když je to volitelné, použití předpony „By“ pomůže vaší knihovně lépe se přizpůsobit existujícímu stylu aplikace Dynamo.
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 Po importu knihovny dll ZeroTouchEssentials bude v knihovně uzel ZeroTouchEssentials. Tento objekt lze vytvořit pomocí uzlu `ByTwoDoubles`.
 
-![Uzel ByTwoDoubles](../images/dyn-constructor.jpg)
+![Uzel ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
 
 ### Použití typů geometrie aplikace Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -221,7 +221,7 @@ Knihovny aplikace Dynamo mohou jako vstupy použít nativní typy geometrie apli
 
 > Poznámka: Objekty geometrie aplikace Dynamo jsou používány jako jakékoli jiné objekty předávané funkcím.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Uzel, který získá délku křivky a zdvojnásobí ji.
 
-![Vstup Křivka](../images/doublelength.png)
+![Vstup Křivka](../../.gitbook/assets/doublelength.png)
 
 > 1. Tento uzel přijímá jako vstup typ geometrie Křivka.
 
@@ -252,7 +252,7 @@ Zdroje geometrie, které nejsou vráceny z funkcí, bude nutné spravovat ručn
 
 *   Pomocí příkazu using:
 
-    ```
+    ```c#
     using (Point p1 = Point.ByCoordinates(0, 0, 0))
     {
       using (Point p2 = Point.ByCoordinates(10, 10, 0))
@@ -262,12 +262,12 @@ Zdroje geometrie, které nejsou vráceny z funkcí, bude nutné spravovat ručn
     }
     ```
 
-    > Příkaz using je zdokumentován [zde](https://msdn.microsoft.com/cs-cz/library/yh598w02.aspx).
+    > Příkaz using je zdokumentován [zde](https://msdn.microsoft.com/en-us/library/yh598w02.aspx).
     >
     > Další informace o nových funkcích stability v aplikaci Dynamo 2.5 naleznete v části [Vylepšení stability geometrie aplikace Dynamo](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297).
 *   Pomocí ručního volání příkazu Dispose:
 
-    ```
+    ```c#
     Point p1 = Point.ByCoordinates(0, 0, 0);
     Point p2 = Point.ByCoordinates(10, 10, 0);
     Line l = Line.ByStartPointEndPoint(p1, p2);
@@ -285,7 +285,7 @@ Při publikování novější verze knihovny se mohou změnit názvy uzlů. Změ
 * V prvku migrace vytvořte prvky `<priorNameHint>...</priorNameHint>` pro každou změnu názvu.
 * Pro každou změnu názvu zadejte prvek `<oldName>...</oldName>` a `<newName>...</newName>`.
 
-![Soubor migrace](../images/vs-migrations-file.jpg)
+![Soubor migrace](../../.gitbook/assets/vs-migrations-file.jpg)
 
 > 1. Klikněte pravým tlačítkem myši a vyberte příkaz `Add > New Item`.
 > 2. Zvolte `XML File`.
@@ -293,7 +293,7 @@ Při publikování novější verze knihovny se mohou změnit názvy uzlů. Změ
 
 Tento vzorový kód sděluje aplikaci Dynamo, že každý uzel s názvem `GetClosestPoint` má nyní název `ClosestPointTo`.
 
-```
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -311,7 +311,7 @@ Funkce Zero-Touch v současné době nepodporuje použití generických typů. L
 
 V níže uvedeném příkladu nebude importován uzel Zero-Touch typu `T`. Pokud bude zbytek knihovny importován do aplikace Dynamo, budou existovat výjimky chybějících typů.
 
-```
+```c#
 public class SomeGenericClass<T>
 {
     public SomeGenericClass()
@@ -323,7 +323,7 @@ public class SomeGenericClass<T>
 
 Použití obecného typu s typem nastaveným v tomto příkladu bude importováno do aplikace Dynamo.
 
-```
+```c#
 public class SomeWrapper
 {
     public object wrapped;
