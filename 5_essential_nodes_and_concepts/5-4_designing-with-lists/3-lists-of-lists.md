@@ -104,9 +104,7 @@ El nodo **List.Count** realiza un recuento de todos los elementos de una lista. 
 
 \![](<../../.gitbook/assets/lists of lists - map 01.jpg>)
 
-> 1.  Inserte dos líneas de código en el **bloque de código**: `-50..50..#Nx; -50..50..#Ny;`.
->
->     Después de escribir este código, el bloque de código creará dos entradas para Nx y Ny.
+> 1.  Inserte dos líneas de código en el **bloque de código**: `-50..50..#Nx; -50..50..#Ny;`. Después de escribir este código, el bloque de código creará dos entradas para Nx y Ny.
 > 2. Con dos _controles deslizantes de enteros_, defina los valores de _Nx_ y _Ny_ conectándolos al **bloque de código**.
 > 3. Conecte cada línea del bloque de código a las entradas _X_ e _Y_ respectivas de un nodo **Point.ByCoordinates**. Haga clic con el botón derecho en el nodo, seleccione "Encaje" y, a continuación, elija _"Producto vectorial"_. Esta acción crea una rejilla de puntos. Como hemos definido el intervalo de -50 a 50, se extiende la rejilla de Dynamo por defecto.
 > 4. En el nodo _**Watch**_, se muestran los puntos creados. Observe la estructura de datos. Hemos creado una lista de listas. Cada lista representa una fila de puntos de la rejilla.
@@ -129,7 +127,7 @@ Observe que el nodo List.Count ofrece el valor 5. Este es igual a la variable "N
 
 ### **List.Combine**
 
-_Nota: Este ejercicio se ha creado con una versión anterior de Dynamo. Gran parte de la funcionalidad de List.Combine se ha resuelto con la adición de la función_ **List@Level**_. Para obtener más información, consulte_ [_List@Level a continuación_](6-3_lists-of-lists.md#listlevel)_._
+_Nota: Este ejercicio se ha creado con una versión anterior de Dynamo. Gran parte de la funcionalidad de List.Combine se ha resuelto con la adición de la función_ **List@Level**_. Para obtener más información, consulte_ [_List@Level_](#ListLevel) _a continuación._
 
 En este ejercicio, utilizaremos **List.Combine** para mostrar cómo se puede utilizar para aplicar una función en listas de objetos independientes.
 
@@ -150,7 +148,9 @@ A continuación, utilizaremos **List.Combine** para aplicar una función a los o
 
 Una vez completado, los dos conjuntos de puntos se comprimen o se emparejan mediante una función **Line.ByStartPointEndPoint** y se devuelven 10 líneas en Dynamo.
 
-{% hint style="info" %} Consulte el ejercicio de listas de n dimensiones para ver otro ejemplo de uso de List.Combine. {% endhint %}
+{% hint style="info" %}
+Consulte el ejercicio de listas de n dimensiones para ver otro ejemplo de uso de List.Combine.
+{% endhint %}
 
 ### List@Level
 
@@ -228,7 +228,7 @@ El modo de bloque de código abreviado utiliza "[]" para definir una lista. Esta
 
 #### Consulta del bloque de código
 
-La abreviatura de **bloque de código** utiliza "[]" como método rápido y sencillo para seleccionar elementos específicos deseados en una estructura de datos compleja. Los **bloques de código** se describen con más detalle en el capítulo [Bloques de código y DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/). Consulte la imagen mostrada a continuación para observar cómo se puede consultar una lista con varios tipos de datos con un bloque de código.
+La abreviatura de **bloque de código** utiliza "[]" como método rápido y sencillo para seleccionar elementos específicos deseados en una estructura de datos compleja. Los **bloques de código** se describen con más detalle en el capítulo [Bloques de código y DesignScript](../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/). Consulte la imagen mostrada a continuación para observar cómo se puede consultar una lista con varios tipos de datos con los **bloques de código**.
 
 \![](<../../.gitbook/assets/lists of lists - codeblock for list creation 02.jpg>)
 
@@ -276,7 +276,7 @@ Ahora que hemos modificado la lista, debemos volver a insertarla en la estructur
 \![](<../../.gitbook/assets/list of lists - exercise cb insert & query 05.jpg>)
 
 > 1. Siguiendo la misma lógica, utilice **List.ReplaceItemAtIndex** para reemplazar la lista central por la lista modificada.
-> 2. Observe que los **bloques de código**_ _ que definen el índice de estos dos nodos son 1 y 2, que coinciden con la consulta original del **bloque de código** (_points[1][2]_).
+> 2. Observe que los **bloques de código**__ que definen el índice de estos dos nodos son 1 y 2, que coinciden con la consulta original del **bloque de código** (_points[1][2]_).
 > 3. Al seleccionar la lista en el _índice 1_, veremos la estructura de datos resaltada en la vista preliminar de Dynamo. Hemos fusionado correctamente el punto desplazado con la estructura de datos original.
 
 Hay muchas formas de crear una superficie a partir de este conjunto de puntos. En este caso, vamos a crear una superficie mediante la solevación conjunta de curvas.

@@ -2,7 +2,7 @@
 
 En los diseños computacionales, las curvas y las superficies se utilizan con frecuencia como el andamiaje subyacente para crear la geometría posterior. Para que esta geometría inicial se pueda utilizar como base para la geometría posterior, la secuencia de comandos debe poder extraer cualidades como, por ejemplo, la posición y la orientación en toda el área del objeto. Tanto las curvas como las superficies admiten esta extracción y este proceso se denomina parametrización.
 
-Todos los puntos de una curva se pueden considerar como si tuvieran un parámetro único que oscila entre 0 y 1. Si creáramos una NurbsCurve a partir de varios puntos de control o interpolación, el primer punto tendría el parámetro 0 y el último, el parámetro 1. Es imposible saber por adelantado cuál es el parámetro exacto para cualquier punto intermedio, lo que puede parecer una limitación grave, aunque se mitiga mediante una serie de funciones de utilidad. Las superficies tienen una parametrización similar a la de las curvas, aunque con dos parámetros en lugar de uno, denominados u y v. Si creáramos una superficie con los siguientes puntos:
+Todos los puntos de una curva se pueden considerar como si tuvieran un parámetro único que oscila entre 0 y 1. Si creáramos una NurbsCurve a partir de varios puntos de control o interpolación, el primer punto tendría el parámetro 0 y el último, el parámetro 1. Es imposible saber por adelantado cuál es el parámetro exacto para cualquier punto intermedio, lo que puede parecer una limitación grave, pero se mitiga mediante una serie de funciones de utilidad. Las superficies tienen una parametrización similar a la de las curvas, aunque con dos parámetros en lugar de uno, denominados u y v. Si creáramos una superficie con los siguientes puntos:
 
 ```js
 pts = [ [p1, p2, p3],
@@ -12,11 +12,11 @@ pts = [ [p1, p2, p3],
 
 p1 tendría el parámetro u = 0 v = 0, mientras que p9 tendría los parámetros u = 1 v = 1.
 
-La parametrización no resulta especialmente útil a la hora de determinar los puntos utilizados para generar curvas. Su principal finalidad es determinar las ubicaciones si se utilizan los puntos intermedios generados por los constructores NurbsCurve y NurbsSurface.
+La parametrización no resulta especialmente útil a la hora de determinar los puntos utilizados para generar curvas. Su principal finalidad es determinar las ubicaciones de los puntos intermedios generados por los constructores NurbsCurve y NurbsSurface.
 
 Las curvas presentan el método _PointAtParameter_, que utiliza un único argumento doble entre 0 y 1, y devuelve el objeto de punto en ese parámetro. Por ejemplo, esta secuencia de comandos busca los puntos en los parámetros 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 y 1:
 
-![](../images/GeometricParameterization_01.png)
+![](../../.gitbook/assets/GeometricParameterization_01.png)
 
 ```js
 pts = {};
@@ -41,7 +41,7 @@ De forma similar, las superficies presentan el método _PointAtParameter_, que u
 
 Aunque la extracción de puntos individuales en una curva y una superficie puede ser útil, a menudo, es necesario que las secuencias de comandos conozcan las características geométricas específicas de un parámetro, como la dirección hacia la que está orientada la curva o la superficie. El método _CoordinateSystemAtParameter_ no solo busca la posición, sino un CoordinateSystem orientado en el parámetro de una curva o una superficie. Por ejemplo, el siguiente archivo de comandos extrae objetos CoordinateSystem orientados a lo largo de una superficie de revolución y utiliza la orientación de los objetos CoordinateSystem para generar líneas que permanecen en la dirección normal a la superficie:
 
-![](../images/GeometricParameterization_02.png)
+![](../../.gitbook/assets/GeometricParameterization_02.png)
 
 ```js
 pts = {};
@@ -59,8 +59,7 @@ crv = NurbsCurve.ByPoints(pts);
 axis_origin = Point.ByCoordinates(0, 0, 0);
 axis = Vector.ByCoordinates(0, 0, 1);
 
-surf = Surface.ByRevolve(crv, axis_origin, axis, 90,
-    140);
+surf = Surface.ByRevolve(crv, axis_origin, axis, 90, 140);
 
 cs_array = surf.CoordinateSystemAtParameter(
     (0..1..#7)<1>, (0..1..#7)<2>);
@@ -69,8 +68,7 @@ def make_line(cs : CoordinateSystem) {
 	lines_start = cs.Origin;
     lines_end = cs.Origin.Translate(cs.ZAxis, -0.75);
 
-    return = Line.ByStartPointEndPoint(lines_start,
-        lines_end);
+    return = Line.ByStartPointEndPoint(lines_start, lines_end);
 }
 
 lines = make_line(Flatten(cs_array));

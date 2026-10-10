@@ -2,15 +2,15 @@
 
 Antes de iniciar el proceso de desarrollo, es importante sentar unas bases sólidas para un nuevo proyecto. Hay varias plantillas de proyectos en la comunidad de desarrolladores de Dynamo que suponen excelentes puntos de partida, pero es más valioso conocer cómo iniciar un proyecto desde cero. Compilar un proyecto desde el principio nos permitirá comprender mejor el proceso de desarrollo.
 
-![Visual Studio](../images/visual-studio.jpg)
+![Visual Studio](../../.gitbook/assets/visual-studio.jpg)
 
 ### Creación de un proyecto de Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 Visual Studio es un eficaz IDE en el que podemos crear un proyecto, añadir referencias, compilar archivos `.dlls` y depurar. Al crear un nuevo proyecto, Visual Studio también creará una solución, una estructura para organizar los proyectos. Pueden existir varios proyectos dentro de una misma solución y compilarse juntos. Para crear un nodo Zero-Touch, deberemos iniciar un nuevo proyecto de Visual Studio en el que escribiremos una biblioteca de clases de C# y compilaremos un archivo `.dll`.
 
-![Creación de un nuevo proyecto en Visual Studio](../images/vs-new-project-1.jpg)
+![Creación de un nuevo proyecto en Visual Studio](../../.gitbook/assets/vs-new-project-1.jpg)
 
-![Configuración de un nuevo proyecto en Visual Studio](../images/vs-new-project-2.jpg)
+![Configuración de un nuevo proyecto en Visual Studio](../../.gitbook/assets/vs-new-project-2.jpg)
 
 > La ventana Nuevo proyecto en Visual Studio
 >
@@ -25,7 +25,7 @@ Visual Studio creará y abrirá automáticamente un archivo de C#. Se recomienda
 ```
  namespace MyCustomNode
  {
-     public class SampleFunctions
+     public class SampleFunction
      {
          public static double MultiplyByTwo(double inputNumber)
          {
@@ -35,17 +35,17 @@ Visual Studio creará y abrirá automáticamente un archivo de C#. Se recomienda
  }
 ```
 
-![Uso del Explorador de soluciones](../images/vs-edit-class.jpg)
+![Uso del Explorador de soluciones](../../.gitbook/assets/vs-edit-class.jpg)
 
 > 1. Abra el Explorador de soluciones y las ventanas de salida desde `View`.
-> 2. Cambie el nombre del archivo `Class1.cs` a `SampleFunctions.cs` en el Explorador de soluciones ubicado a la derecha.
+> 2. Cambie el nombre del archivo `Class1.cs` a `SampleFunction.cs` en el Explorador de soluciones ubicado a la derecha.
 > 3. Añada el código anterior para la función de multiplicación. Más adelante, abordaremos cómo Dynamo leerá sus clases de C#.
 > 4. El Explorador de soluciones: esta herramienta le proporciona acceso a todo lo que contiene el proyecto.
 > 5. La ventana de salida: la necesitaremos más adelante para ver si la compilación se ha realizado correctamente.
 
 El siguiente paso es compilar el proyecto, pero, antes de ello, hay que comprobar algunos parámetros. Asegúrese de que `Any CPU` o `x64` esté seleccionado como destino de la plataforma y de que `Prefer 32-bit` está desactivado en Propiedades del proyecto.
 
-![Configuración de compilación de Visual Studio](../images/vs-build-settings.jpg)
+![Configuración de compilación de Visual Studio](../../.gitbook/assets/vs-build-settings.jpg)
 
 > 1. Seleccione `Project > "ProjectName" Properties` para abrir las propiedades del proyecto.
 > 2. Seleccione la página `Build`.
@@ -54,14 +54,14 @@ El siguiente paso es compilar el proyecto, pero, antes de ello, hay que comproba
 
 Ahora podemos compilar el proyecto para crear un archivo `.dll`. Para ello, seleccione `Build Solution` en el menú `Build` o utilice el método abreviado `CTRL+MAYÚS+B`.
 
-![Compilación de una solución](../images/vs-build.jpg)
+![Compilación de una solución](../../.gitbook/assets/vs-build.jpg)
 
 > 1. Seleccione `Build > Build Solution`.
 > 2. Puede comprobar la ventana de salida para determinar si el proyecto se ha compilado correctamente.
 
 Si es así, habrá un archivo `.dll` denominado `MyCustomNode` en la carpeta `bin` del proyecto. Para este ejemplo, hemos dejado la ruta de archivo del proyecto como la ruta por defecto de Visual Studio en `c:\users\username\documents\visual studio 2015\Projects`. Veamos la estructura de archivos del proyecto.
 
-![Estructura de archivos del proyecto](../images/folder-structure.jpg)
+![Estructura de archivos del proyecto](../../.gitbook/assets/folder-structure.jpg)
 
 > 1. La carpeta `bin` contiene el archivo `.dll` generado desde Visual Studio.
 > 2. El archivo de proyecto de Visual Studio.
@@ -70,7 +70,7 @@ Si es así, habrá un archivo `.dll` denominado `MyCustomNode` en la carpeta `bi
 
 Ahora podemos abrir Dynamo e importar el archivo `.dll`. Con la función Agregar, acceda a la ubicación del proyecto `bin` y seleccione el archivo `.dll` para abrirlo.
 
-![Abrir el archivo dll del proyecto](../images/dyn-import-dll.jpg)
+![Abrir el archivo dll del proyecto](../../.gitbook/assets/dyn-import-dll.jpg)
 
 > 1. Seleccione el botón Agregar para importar un archivo `.dll`.
 > 2. Acceda a la ubicación del proyecto. El proyecto se encuentra en la ruta de archivo por defecto de Visual Studio, `C:\Users\username\Documents\Visual Studio 2015\Projects\MyCustomNode`.
@@ -79,31 +79,31 @@ Ahora podemos abrir Dynamo e importar el archivo `.dll`. Con la función Agregar
 
 Si se ha creado una categoría en la biblioteca denominada `MyCustomNode`, el archivo .dll se ha importado correctamente. Sin embargo, Dynamo ha creado dos nodos a partir de lo que deseábamos que fuera un único nodo. En la siguiente sección, explicaremos por qué sucede esto y cómo Dynamo lee un archivo .dll.
 
-![Nodos personalizados](../images/dyn-customnode.png)
+![Nodos personalizados](../../.gitbook/assets/dyn-customnode.png)
 
 > 1. "MyCustomNode" en la biblioteca de Dynamo. La categoría Biblioteca viene determinada por el nombre del archivo `.dll`.
-> 2. SampleFunctions.MultiplyByTwo en el lienzo.
+> 2. SampleFunction.MultiplyByTwo en el lienzo.
 
 ### Cómo lee Dynamo las clases y los métodos <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 
 Cuando Dynamo carga un archivo .dll, se muestran todos los métodos estáticos públicos como nodos. Los constructores, los métodos y las propiedades se convertirán en nodos de creación, acción y consulta respectivamente. En el ejemplo de multiplicación, el método `MultiplyByTwo()` se convierte en un nodo de acción en Dynamo. Esto se debe a que al nodo se le ha asignado un nombre en función de su método y clase.
 
-![Nodo SampleFunction.MultiplyByTwo en un gráfico](../images/multiplybytwo.png)
+![Nodo SampleFunction.MultiplyByTwo en un gráfico](../../.gitbook/assets/multiplybytwo.png)
 
 > 1. La entrada se denomina `inputNumber` en función del nombre de parámetro del método.
 > 2. La salida se denomina `double` por defecto, ya que es el tipo de datos que se devuelve.
-> 3. El nodo se denomina `SampleFunctions.MultiplyByTwo` porque este nombre hace referencia a su clase y método.
+> 3. El nodo se denomina `SampleFunction.MultiplyByTwo` porque este nombre hace referencia a su clase y método.
 
-En el ejemplo anterior, se ha creado el nodo de creación adicional `SampleFunctions` porque no hemos proporcionado explícitamente un constructor y, por lo tanto, se ha creado uno automáticamente. Para evitar esto, se puede crear un constructor privado vacío en la clase `SampleFunctions`.
+En el ejemplo anterior, se ha creado el nodo de creación adicional `SampleFunction` porque no hemos proporcionado explícitamente un constructor y, por lo tanto, se ha creado uno automáticamente. Para evitar esto, se puede crear un constructor privado vacío en la clase `SampleFunction`.
 
-```
+```c#
 namespace MyCustomNode
 {
-    public class SampleFunctions
+    public class SampleFunction
     {
         //The empty private constructor.
         //This will be not imported into Dynamo.
-        private SampleFunctions() { }
+        private SampleFunction() { }
 
         //The public multiplication method. 
         //This will be imported into Dynamo.
@@ -115,7 +115,7 @@ namespace MyCustomNode
 }
 ```
 
-![Método importado como un nodo de creación](../images/private-constructor.jpg)
+![Método importado como un nodo de creación](../../.gitbook/assets/private-constructor.jpg)
 
 > 1. Dynamo ha importado el método como un nodo de creación.
 
@@ -132,21 +132,21 @@ El nodo de multiplicación es muy sencillo y no se requieren referencias a Dynam
 
 Para hacer referencia a estos paquetes en un proyecto de Visual Studio, descargue el paquete NuGet en los vínculos anteriores y haga referencia manualmente a los archivos .dll o utilice el administrador de paquetes NuGet en Visual Studio. Podemos ver primero cómo instalarlos con NuGet en Visual Studio.
 
-![Abrir el administrador de paquetes NuGet](../images/vs-nuget-package-manager2.jpg)
+![Abrir el administrador de paquetes NuGet](../../.gitbook/assets/vs-nuget-package-manager2.jpg)
 
 > 1. Abra el administrador de paquetes NuGet. Para ello, seleccione `Tools > NuGet Package Manager > Manage NuGet Packages for Solution...`.
 
 Este es el administrador de paquetes NuGet. En esta ventana, se muestran los paquetes que se han instalado para el proyecto y permite al usuario buscar otros. Si se publica una nueva versión del paquete DynamoServices, los paquetes pueden actualizarse desde aquí o restablecerse a una versión anterior.
 
-![Administrador de paquetes NuGet](../images/vs-nuget-package-manager.jpg)
+![Administrador de paquetes NuGet](../../.gitbook/assets/vs-nuget-package-manager.jpg)
 
 > 1. Seleccione Examinar y busque DynamoVisualProgramming para abrir los paquetes de Dynamo.
 > 2. Los paquetes de Dynamo. Al seleccionar uno, se mostrará su versión actual y la descripción de su contenido.
-> 3. Seleccione la versión del paquete que necesita y haga clic en Instalar. Esta acción instala un paquete para el proyecto específico en el que está trabajando. Dado que utilizamos la versión estable más reciente de Dynamo, la 1.3, elija la versión del paquete correspondiente.
+> 3. Seleccione la versión del paquete que necesita y haga clic en Instalar. Esta acción instala un paquete para el proyecto específico en el que está trabajando. Como estamos utilizando la versión estable más reciente de Dynamo, elija la versión del paquete que corresponda a la versión de Dynamo con la que está trabajando.
 
 Para añadir manualmente un paquete descargado desde el navegador, abra el Administrador de referencias desde el Explorador de soluciones y busque el paquete.
 
-![Administrador de referencias](../images/vs-manual-dynamo-package.jpg)
+![Administrador de referencias](../../.gitbook/assets/vs-manual-dynamo-package.jpg)
 
 > 1. Haga clic con el botón derecho en `References` y seleccione `Add Reference`.
 > 2. Seleccione `Browse` para acceder a la ubicación del paquete.

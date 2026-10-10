@@ -4,7 +4,7 @@
 
 Si sabe cómo escribir secuencias de comandos en Python y desea obtener más funcionalidad de los nodos estándar de Python de Dynamo, podemos utilizar Zero-Touch para crear nuestros propios nodos. Comencemos con un ejemplo sencillo que nos permite pasar una secuencia de comandos de Python como una cadena a un nodo Zero-Touch donde se ejecuta la secuencia de comandos y se devuelve un resultado. Este caso real se basará en los recorridos y los ejemplos de la sección Introducción. Consulte estos ejemplos si es la primera vez que crea nodos Zero-Touch.
 
-![Un nodo Zero-Touch que ejecutará una cadena de secuencia de comandos de Python.](../images/python-case-study.png)
+![Un nodo Zero-Touch que ejecutará una cadena de secuencia de comandos de Python.](../../.gitbook/assets/python-case-study.png)
 
 > Un nodo Zero-Touch que ejecutará una cadena de secuencia de comandos de Python.
 
@@ -26,7 +26,7 @@ Este nodo se basa en una instancia del motor de secuencias de comandos de IronPy
 
 El siguiente código proporciona un ejemplo del paso mencionado anteriormente. La compilación de la solución creará un nuevo archivo `.dll` ubicado en la carpeta bin del proyecto. Este archivo `.dll` ahora se puede importar en Dynamo como parte de un paquete o accediendo a `File < Import Library...`.
 
-```
+```c#
 using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
 
@@ -52,7 +52,7 @@ namespace PythonLibrary
 }
 ```
 
-La secuencia de comandos de Python devuelve la variable `output`, lo que significa que necesitaremos una variable `output` en la secuencia de comandos de Python. Utilice esta secuencia de comandos de ejemplo para probar el nodo en Dynamo. Si alguna vez ha utilizado el nodo de Python en Dynamo, debería resultarle familiar lo siguiente. Para obtener más información, consulte la [sección sobre Python de Dynamo Primer](https://primer2.dynamobim.org/8_coding_in_dynamo/8-3_python/1-python).
+La secuencia de comandos de Python devuelve la variable `output`, lo que significa que necesitaremos una variable `output` en la secuencia de comandos de Python. Utilice esta secuencia de comandos de ejemplo para probar el nodo en Dynamo. Si alguna vez ha utilizado el nodo de Python en Dynamo, debería resultarle familiar lo siguiente. Para obtener más información, consulte la [sección sobre Python de Dynamo Primer](https://primer2.dynamobim.org/es/8_coding_in_dynamo/8-3_python/1-python).
 
 ```
 import clr
@@ -68,7 +68,7 @@ output = str(volume)
 
 Una limitación de los nodos estándar de Python es que solo tienen un único puerto de salida, por lo que si deseamos devolver varios objetos, debemos crear una lista y recuperar cada objeto. Si modificamos el ejemplo anterior para devolver un diccionario, podemos añadir tantos puertos de salida como deseemos. Consulte la sección Devolución de varios valores de Conceptos avanzados de Zero-Touch para obtener información detallada sobre los diccionarios.
 
-![Este nodo nos permite devolver tanto el volumen del ortoedro como su centroide.](../images/python-multi-case-study.png)
+![Este nodo nos permite devolver tanto el volumen del ortoedro como su centroide.](../../.gitbook/assets/python-multi-case-study.png)
 
 > Este nodo nos permite devolver tanto el volumen del ortoedro como su centroide.
 
@@ -125,47 +125,47 @@ output1 = str(volume)
 output2 = str(centroid)
 ```
 
-#### Limitaciones conocidas y soluciones alternativas de PythonNet3<a href="#pythonnet3-known-Issues-Workarounds" id="pythonnet3-known-Issues-Workarounds"></a>
+#### Limitaciones conocidas y soluciones alternativas de PythonNet3 <a href="#pythonnet3-known-issues-workarounds" id="pythonnet3-known-issues-workarounds"></a>
 
 A continuación, se enumeran algunas limitaciones conocidas y soluciones alternativas al utilizar PythonNet3.
 
 * Las colecciones de .NET no se convierten automáticamente en listas de Python.
-    * Debe convertir explícitamente matrices o colecciones ```.NET``` mediante ```list(...)``` antes de utilizar ```len()```, la indexación o la iteración.
+  * Debe convertir explícitamente matrices o colecciones `.NET` mediante `list(...)` antes de utilizar `len()`, la indexación o la iteración.
 * Los métodos .NET genéricos pueden requerir parámetros de tipo explícitos.
-    * Algunos métodos (por ejemplo, ```GroupBy```) fallarán a menos que especifique manualmente los tipos genéricos en lugar de basarse en la deducción automática.
-* Los métodos de extensión no se pueden detectar mediante ```dir()``` o autocompletar.
-    * Los métodos de extensión pueden seguir funcionando cuando se les llama explícitamente, pero no aparecen en la introspección ni en la finalización de código.
+  * Algunos métodos (por ejemplo, `GroupBy`) fallarán a menos que especifique manualmente los tipos genéricos en lugar de basarse en la deducción automática.
+* Los métodos de extensión no se pueden detectar mediante `dir()` o autocompletar.
+  * Los métodos de extensión pueden seguir funcionando cuando se les llama explícitamente, pero no aparecen en la introspección ni en la finalización de código.
 * No se admiten los métodos de extensión de DataTable.
-    * Error al importar ```System.Data.DataTableExtensions```; estos métodos auxiliares no se pueden utilizar directamente.
+  * Error al importar `System.Data.DataTableExtensions`; estos métodos auxiliares no se pueden utilizar directamente.
 * Algunos métodos principales de Dynamo se comportan de forma diferente en PythonNet3.
-    * Es posible que algunas funciones (por ejemplo, el aplanamiento de listas) no funcionen según lo esperado debido a una gestión más estricta de las colecciones.
+  * Es posible que algunas funciones (por ejemplo, el aplanamiento de listas) no funcionen según lo esperado debido a una gestión más estricta de las colecciones.
 * Las clases de Python no se pueden transferir entre nodos si se heredan de tipos .NET.
-    * Las clases derivadas de tipos o interfaces .NET no se pueden transferir de forma segura entre nodos de Python.
-* Python ```set()``` no acepta algunos objetos .NET.
-    * En su lugar, los objetos como ```InvalidElementId``` deben filtrarse o gestionarse mediante colecciones .NET.
-* Las llamadas frecuentes a ```print()``` pueden provocar un aumento en el uso de memoria.
-    * Evite el uso intensivo de ```print()``` en bucles o secuencias de comandos de larga duración.
+  * Las clases derivadas de tipos o interfaces .NET no se pueden transferir de forma segura entre nodos de Python.
+* Python `set()` no acepta algunos objetos .NET.
+  * En su lugar, los objetos como `InvalidElementId` deben filtrarse o gestionarse mediante colecciones .NET.
+* Las llamadas frecuentes a `print()` pueden provocar un aumento en el uso de memoria.
+  * Evite el uso intensivo de `print()` en bucles o secuencias de comandos de larga duración.
 * La interoperabilidad de los diccionarios entre Dynamo y Python es limitada.
-    * Los diccionarios de Dynamo y Python no son totalmente intercambiables y pueden requerir una conversión manual.
-* El método ```Marshal.GetActiveObject()``` para obtener el ejemplar COM en ejecución de un objeto especificado ya no está disponible.
-    * Utilice ```BindToMoniker``` si conoce la ruta del archivo en uso.
-    * Codificación de una biblioteca en C# mediante la estructura de clases ```Marshal.GetActiveObject()```.
+  * Los diccionarios de Dynamo y Python no son totalmente intercambiables y pueden requerir una conversión manual.
+* El método `Marshal.GetActiveObject()` para obtener el ejemplar COM en ejecución de un objeto especificado ya no está disponible.
+  * Utilice `BindToMoniker` si conoce la ruta del archivo en uso.
+  * Codificación de una biblioteca en C# mediante la estructura de clases `Marshal.GetActiveObject()`.
 
-#### Migración de CPython3 a PythonNet3<a href="#migrating-from-cpython-pythonnet3" id="migrating-from-cpython-pythonnet3"></a>
+#### Migración de CPython3 a PythonNet3 <a href="#migrating-from-cpython-pythonnet3" id="migrating-from-cpython-pythonnet3"></a>
 
 Dynamo migrará automáticamente los nodos de CPython a PythonNet 3. A continuación, se describe el proceso:
 
 > 1. Se crea automáticamente una copia de seguridad del archivo original.
-> 2. Todos los nodos de CPython (incluidos los nodos personalizados que utilizan CPython) se convierten en nodos de PythonNet3. 
+> 2. Todos los nodos de CPython (incluidos los nodos personalizados que utilizan CPython) se convierten en nodos de PythonNet3.
 > 3. Una notificación del sistema le permite saber cuántos nodos se han migrado.
-> 4. Al guardar, aparecerá un recordatorio de que los nodos de Python utilizarán ahora PythonNet3. Una vez más, no se preocupe por la compatibilidad con versiones anteriores; aquellos que trabajen en plataformas con varias versiones (por ejemplo, Revit o Civil 3D 2025/2026) deben instalar el paquete del motor de PythonNet3 en Dynamo 3.3-3.6 para mantener la compatibilidad. 
+> 4. Al guardar, aparecerá un recordatorio de que los nodos de Python utilizarán ahora PythonNet3. Una vez más, no se preocupe por la compatibilidad con versiones anteriores; aquellos que trabajen en plataformas con varias versiones (por ejemplo, Revit o Civil 3D 2025/2026) deben instalar el paquete del motor de PythonNet3 en Dynamo 3.3-3.6 para mantener la compatibilidad.
 
-#### Migración de IronPython2 a PythonNet3<a href="#migrating-from-cpython-pythonnet3" id="migrating-from-cpython-pythonnet3"></a>
+#### Migración de IronPython2 a PythonNet3 <a href="#migrating-from-cpython-pythonnet3" id="migrating-from-cpython-pythonnet3"></a>
 
-Si el gráfico utiliza un motor de IronPython, no habrá migración automática. 
+Si el gráfico utiliza un motor de IronPython, no habrá migración automática.
 
-Si está instalado el paquete de IronPython coincidente, el gráfico se ejecutará con normalidad. Si falta, aparecerá una advertencia de dependencia en la extensión Referencia de los espacios de trabajo que le pedirá que descargue el paquete. Vuelva a instalar el paquete para seguir utilizando IronPython. No obstante, como IronPython no se ha actualizado en años y Dynamo lleva bastante tiempo sin ofrecer soporte activo para estos motores en Dynamo, recomendamos encarecidamente migrar a PythonNet3 para garantizar que los gráficos sigan funcionando de forma fiable en el futuro. Aunque DynamoIronPython2.7 y DynamoIronPython3 seguirán estando disponibles como paquetes en Dynamo Package Manager, el equipo de Dynamo ya no se encargará de su mantenimiento. 
+Si está instalado el paquete de IronPython coincidente, el gráfico se ejecutará con normalidad. Si falta, aparecerá una advertencia de dependencia en la extensión Referencia de los espacios de trabajo que le pedirá que descargue el paquete. Vuelva a instalar el paquete para seguir utilizando IronPython. No obstante, como IronPython no se ha actualizado en años y Dynamo lleva bastante tiempo sin ofrecer soporte activo para estos motores en Dynamo, recomendamos encarecidamente migrar a PythonNet3 para garantizar que los gráficos sigan funcionando de forma fiable en el futuro. Aunque DynamoIronPython2.7 y DynamoIronPython3 seguirán estando disponibles como paquetes en Dynamo Package Manager, el equipo de Dynamo ya no se encargará de su mantenimiento.
 
-En este caso, la opción disponible es la migración nodo por nodo mediante el Asistente de migración del editor de Python.  
+En este caso, la opción disponible es la migración nodo por nodo mediante el Asistente de migración del editor de Python.
 
 Puede encontrar más información sobre la migración en este [blog](https://dynamobim.org/dynamo-pythonnet3-upgrade-a-practical-guide-to-migrating-your-dynamo-graphs/).

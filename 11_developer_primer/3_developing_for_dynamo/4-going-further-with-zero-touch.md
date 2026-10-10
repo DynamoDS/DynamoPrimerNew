@@ -2,7 +2,7 @@
 
 Una vez que sabemos cómo crear un proyecto Zero-Touch, podemos profundizar en los detalles de la creación de un nodo mediante el ejemplo ZeroTouchEssentials en el GitHub de Dynamo.
 
-![Nodos Zero-Touch](../images/ootbzerotouch.png)
+![Nodos Zero-Touch](../../.gitbook/assets/ootbzerotouch.png)
 
 > Muchos de los nodos estándar de Dynamo son básicamente nodos Zero-Touch, como la mayoría de los nodos Math, Color y DateTime anteriores.
 
@@ -10,7 +10,7 @@ Para empezar, descargue el proyecto ZeroTouchEssentials desde aquí: [https://gi
 
 En Visual Studio, abra el archivo `ZeroTouchEssentials.sln` y compile la solución.
 
-![ZeroTouchEssentials en Visual Studio](../images/vs-build-zte.jpg)
+![ZeroTouchEssentials en Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
 
 > El archivo `ZeroTouchEssentials.cs` contiene todos los métodos que se importarán en Dynamo.
 
@@ -24,7 +24,7 @@ Dynamo admite la definición de valores por defecto para los puertos de entrada 
 
 * Establezca los parámetros del método en un valor por defecto: `inputNumber = 2.0`.
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Valor por defecto](../images/defaultval.jpg)
+![Valor por defecto](../../.gitbook/assets/defaultval.jpg)
 
 > 1. El valor por defecto se mostrará al colocar el cursor sobre el puerto de entrada del nodo.
 
@@ -51,7 +51,7 @@ La devolución de varios valores es algo más complejo que crear varias entradas
 * Añada el atributo `[MultiReturn(new[] { "string1", "string2", ... more strings here })]` al método. Las cadenas hacen referencia a claves del diccionario y se convertirán en nombres de puertos de salida.
 * Se devuelve `Dictionary<>` desde la función con claves que coinciden con los nombres de parámetro del atributo, `return new Dictionary<string, object>`.
 
-```
+```c#
 using System.Collections.Generic;
 using Autodesk.DesignScript.Runtime;
 
@@ -66,8 +66,8 @@ namespace ZeroTouchEssentials
 
                 { "add", (a + b) },
                 { "mult", (a * b) }
-            };
-        }
+            
+        };
     }
 }
 ```
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Un nodo que devuelve varias salidas.
 
-![Varias salidas](../images/multipleoutputs.png)
+![Varias salidas](../../.gitbook/assets/multipleoutputs.png)
 
 > 1. Observe que ahora hay dos puertos de salida a los que se les ha asignado un nombre en función de las cadenas que hemos introducido para las claves del diccionario.
 
@@ -90,7 +90,7 @@ Se recomienda añadir documentación a los nodos de Dynamo que describa su funci
   * Por ejemplo, `/// <summary>...</summary>`.
 * Active la documentación XML en Visual Studio. Para ello, seleccione `Project > [Project] Properties > Build > Output` y active `Documentation file`.
 
-![Generar un archivo XML](../images/vs-xml.jpg)
+![Generar un archivo XML](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Visual Studio generará un archivo XML en la ubicación especificada.
 
@@ -104,7 +104,7 @@ Los tipos de etiquetas son los siguientes:
 
 A continuación, se muestra un nodo de ejemplo con descripciones de entrada y salida, así como un resumen que aparecerá en la biblioteca.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -141,13 +141,13 @@ Las descripciones de nodos explican brevemente la función y el resultado de un 
 * En la información de herramientas del nodo
 * En el navegador de documentación
 
-![Descripción del nodo](../images/node-description.png)
+![Descripción del nodo](../../.gitbook/assets/node-description.png)
 
 Siga estas directrices para garantizar la coherencia y ahorrar tiempo al escribir o actualizar las descripciones de los nodos.
 
 **Información general**
 
-Las descripciones deben componerse de una o dos oraciones. Si necesita incluir más información, hágalo en la sección En profundidad del navegador de documentación.
+Las descripciones deben componerse de una o dos oraciones. Si necesita incluir más información, hágalo en la sección "En profundidad" del navegador de documentación.
 
 Mayúscula inicial en cada frase (llevan mayúscula inicial la primera palabra de una oración y los nombres propios). Sin punto al final.
 
@@ -182,7 +182,7 @@ Dynamo no cuenta con una palabra clave `new`, por lo que los objetos deberán ge
 
 > Nota: Dynamo utiliza el prefijo "By" para indicar que un método estático es un constructor y, aunque es opcional, su uso ayudará a que la biblioteca se ajuste mejor al estilo de Dynamo existente.
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 Una vez que se haya importado el archivo dll ZeroTouchEssentials, habrá un nodo ZeroTouchEssentials en la biblioteca. Este objeto se puede crear mediante el nodo `ByTwoDoubles`.
 
-![Nodo ByTwoDoubles](../images/dyn-constructor.jpg)
+![Nodo ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
 
 ### Uso de tipos de geometría de Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -221,7 +221,7 @@ Las bibliotecas de Dynamo pueden utilizar tipos de geometría nativa de Dynamo c
 
 > Nota: Los objetos de geometría de Dynamo se utilizan como cualquier otro objeto transferido a funciones.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Un nodo que obtiene la longitud de una curva y la duplica.
 
-![Entrada de curva](../images/doublelength.png)
+![Entrada de curva](../../.gitbook/assets/doublelength.png)
 
 > 1. Este nodo acepta un tipo de geometría de curva como entrada.
 
@@ -252,7 +252,7 @@ Los recursos de geometría que no se devuelven a partir de las funciones deberá
 
 *   Con una instrucción "using", como se muestra a continuación:
 
-    ```
+    ```c#
     using (Point p1 = Point.ByCoordinates(0, 0, 0))
     {
       using (Point p2 = Point.ByCoordinates(10, 10, 0))
@@ -267,7 +267,7 @@ Los recursos de geometría que no se devuelven a partir de las funciones deberá
     > Consulte el artículo sobre [mejoras en la estabilidad de la geometría de Dynamo](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297) para obtener más información sobre las nuevas funciones de estabilidad introducidas en Dynamo 2.5.
 *   Se muestra lo siguiente con llamadas manuales a "Dispose":
 
-    ```
+    ```c#
     Point p1 = Point.ByCoordinates(0, 0, 0);
     Point p2 = Point.ByCoordinates(10, 10, 0);
     Line l = Line.ByStartPointEndPoint(p1, p2);
@@ -285,7 +285,7 @@ Al publicar una versión más reciente de una biblioteca, los nombres de nodo pu
 * En el elemento de migraciones, cree elementos `<priorNameHint>...</priorNameHint>` para cada cambio de nombre.
 * Para cada cambio de nombre, proporcione un elemento `<oldName>...</oldName>` y `<newName>...</newName>`.
 
-![Archivo de migraciones](../images/vs-migrations-file.jpg)
+![Archivo de migraciones](../../.gitbook/assets/vs-migrations-file.jpg)
 
 > 1. Haga clic con el botón derecho y seleccione `Add > New Item`.
 > 2. Seleccione `XML File`.
@@ -293,7 +293,7 @@ Al publicar una versión más reciente de una biblioteca, los nombres de nodo pu
 
 Este código de ejemplo indica a Dynamo que cualquier nodo con el nombre `GetClosestPoint` ahora se denomina `ClosestPointTo`.
 
-```
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -311,7 +311,7 @@ Zero-Touch no admite actualmente el uso de genéricos. Se pueden utilizar, pero 
 
 En el siguiente ejemplo, no se importará un nodo Zero-Touch de tipo `T`. Si el resto de la biblioteca se importa en Dynamo, se mostrarán excepciones de tipo no encontrado.
 
-```
+```c#
 public class SomeGenericClass<T>
 {
     public SomeGenericClass()
@@ -323,7 +323,7 @@ public class SomeGenericClass<T>
 
 Si se utiliza un tipo genérico con el tipo definido en este ejemplo, se importará a Dynamo.
 
-```
+```c#
 public class SomeWrapper
 {
     public object wrapped;

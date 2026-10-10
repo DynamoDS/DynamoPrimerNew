@@ -22,7 +22,7 @@ Estos ejemplos son plantillas de Visual Studio que puede utilizar para iniciar s
     * Determinar la lógica de interacción del control deslizante: [código](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
 * [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**:** plantillas para Zero-Touch, la interfaz de usuario personalizada, pruebas y extensiones de vista.
   * [Ejemplos de la interfaz de usuario](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
-    * Crear un nodo de interfaz de usuario personalizado básico: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs)
+    * Crear un nodo de interfaz de usuario personalizado básico: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/LocalizedCustomNodeModel.cs)
     * Crear un menú desplegable: [DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs)
   * [Pruebas](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryTests)
     * Pruebas del sistema: [HelloDynamoSystemTests.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryTests/HelloDynamoSystemTests.cs)

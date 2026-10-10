@@ -6,7 +6,7 @@ Esta página de referencia amplía las prácticas recomendadas incluidas en las 
 
 Las bibliotecas estándar son externas a Dynamo y están presentes en los lenguajes de programación Python y C# (Zerotouch). Dynamo también tiene su propio conjunto de bibliotecas que corresponden directamente con su jerarquía de nodos, lo que permite al usuario crear mediante código cualquier elemento que se pueda crear con nodos y líneas. A continuación, se muestra una guía sobre los elementos a los que cada biblioteca de Dynamo proporciona acceso y cuándo utilizar una biblioteca estándar.
 
-![](images/textual-programming.jpg)
+![](../.gitbook/assets/textual-programming.jpg)
 
 **Bibliotecas estándar y bibliotecas de Dynamo**
 
@@ -29,12 +29,12 @@ Las bibliotecas estándar son externas a Dynamo y están presentes en los lengua
    * Cómo importar: `import DSOffice`
 
 {% hint style="warning" %}
-*Nota: Tenga en cuenta que, al utilizar **ProtoGeometry** a través de Python o C#, se crean objetos no administrados, que requieren que la memoria se administre manualmente. Consulte la sección **Objetos no administrados** mostrada a continuación para obtener más información.
+*Nota: al utilizar **ProtoGeometry** a través de Python o C#, se crean objetos no administrados, que requieren que su memoria se administre manualmente. Consulte la sección **Objetos no administrados** más abajo para obtener más información.
 {% endhint %}
 
 ## Atención en el uso de etiquetas
 
-Durante la creación de secuencias de comandos, utilizamos constantemente identificadores para indicar elementos como variables, tipos, funciones y otras entidades. A través de este sistema de notación simbólica, podemos hacer referencia cómodamente a la información mediante etiquetas (normalmente compuestas por una secuencia de caracteres) mientras creamos los algoritmos. En la escritura de código, una correcta denominación de los elementos es importante para que este se pueda leer y entender con facilidad por parte de otras personas y por usted mismo en un momento posterior. A continuación se indican algunos consejos que se deben tener en cuenta al asignar nombres a los elementos de su secuencia de comandos:
+Durante la creación de secuencias de comandos, utilizamos constantemente identificadores para indicar elementos como variables, tipos, funciones y otras entidades. A través de este sistema de notación simbólica, podemos hacer referencia cómodamente a la información mediante etiquetas, normalmente compuestas por una secuencia de caracteres, mientras creamos los algoritmos. En la escritura de código, una correcta denominación de los elementos es importante para que este se pueda leer y entender con facilidad por parte de otras personas y por usted mismo en un momento posterior. A continuación se indican algunos consejos que se deben tener en cuenta al asignar nombres a los elementos de su secuencia de comandos:
 
 **Está bien utilizar abreviaturas, pero explique la abreviatura con un comentario:**
 

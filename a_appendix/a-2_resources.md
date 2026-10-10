@@ -12,7 +12,7 @@ Esta página wiki se ha diseñado para obtener información sobre el desarrollo 
 
 Este blog es la colección más actualizada de artículos del equipo de Dynamo, donde se explican las nuevas funciones, los flujos de trabajo y todos los aspectos relacionados con Dynamo.
 
-[http://dynamobim.com/blog/](http://dynamobim.com/blog/)
+[https://dynamobim.org/blog/](https://dynamobim.org/blog/)
 
 ### **Guía de DesignScript**
 
@@ -76,8 +76,3 @@ Blog del desarrollador:
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
-### **The Building Coder**
-
-Un completo catálogo de flujos de trabajo de la API de Revit de uno de los expertos más importantes de BIM.
-
-[http://thebuildingcoder.typepad.com/](http://thebuildingcoder.typepad.com)

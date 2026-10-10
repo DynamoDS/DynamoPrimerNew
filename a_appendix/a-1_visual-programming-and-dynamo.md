@@ -52,11 +52,11 @@ Si su respuesta es con gráficos, la **programación visual** es definitivamente
 
 **Programa visual:**
 
-![](<images/visualProgramming.png>)
+![](../.gitbook/assets/visualProgramming.png)
 
 **Programa textual:**
 
-```
+```py
 myPoint = Point.ByCoordinates(0.0,0.0,0.0);
 x = 5.6;
 y = 11.5;
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 Los resultados del algoritmo:
 
-![](<images/visualProgramming.png>)
+![](../.gitbook/assets/visualProgramming.png)
 
 El aspecto visual de la programación permite reducir la barrera en relación con la entrada y, con frecuencia, ofrece mayor claridad a los diseñadores. Dynamo se incluye en el paradigma de la programación visual, pero, como veremos más adelante, podemos seguir utilizando también la programación textual en la aplicación.

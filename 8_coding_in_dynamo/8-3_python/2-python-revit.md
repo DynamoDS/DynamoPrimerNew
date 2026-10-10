@@ -27,7 +27,7 @@ import System
 
 Esto nos permite acceder a la API de Revit y disponer de secuencias de comandos personalizadas para cualquier tarea de Revit. La combinación del proceso de programación visual con las secuencias de comandos de la API de Revit, mejora significativamente la colaboración y el desarrollo de herramientas. Por ejemplo, un administrador de BIM y un diseñador de esquemas pueden trabajar juntos en el mismo gráfico. En esta colaboración, pueden mejorar el diseño y la ejecución del modelo.
 
-![](<../images/python & revit - 01.jpg>)
+\![](<../../.gitbook/assets/python & revit - 01 (1).jpg>)
 
 ### API específicas de plataforma
 
@@ -51,7 +51,7 @@ Este es un método sencillo para recuperar los elementos _doc_, _uiapp_ y _app_ 
 
 A continuación, se indica cómo vamos a importar los servicios de Revit y recuperar los datos del documento en Dynamo.
 
-![](<../images/python & revit - exercise 01 - 01.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 01 - 01.jpg>)
 
 Eche un vistazo al nodo de Python en Dynamo. También puede encontrar el código a continuación:
 
@@ -60,17 +60,17 @@ Eche un vistazo al nodo de Python en Dynamo. También puede encontrar el código
 import sys
 import clr
 
-#Import DocumentManager
+# Import DocumentManager
 clr.AddReference("RevitServices")
 import RevitServices
 from RevitServices.Persistence import DocumentManager
 
-#Place your code below this line
+# Place your code below this line
 doc = DocumentManager.Instance.CurrentDBDocument
 uiapp = DocumentManager.Instance.CurrentUIApplication
 app = uiapp.Application
 
-#Assign your output to the OUT variable
+# Assign your output to the OUT variable
 OUT = [doc,uiapp,app]
 ```
 
@@ -86,19 +86,19 @@ En este ejercicio, crearemos una curva de modelo simple en Revit mediante el nod
 
 Empiece creando una nueva familia de masas conceptuales en Revit.
 
-![](<../images/python & revit - exercise 02 - 01.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 01.jpg>)
 
 Abra la _carpeta de masas conceptuales_ y utilice el archivo de plantilla _Metric Mass.rft_.
 
-![](<../images/python & revit - exercise 02 - 02.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 02.jpg>)
 
 En Revit, utilice el método abreviado de teclado **`un`** para que se muestre la configuración de unidades del proyecto y cambie la unidad de longitud a metros.
 
-![](<../images/python & revit - exercise 02 - 03.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 03.jpg>)
 
 Inicie Dynamo y cree el conjunto de nodos de la imagen siguiente. Crearemos primero dos puntos de referencia en Revit a partir de los nodos de Dynamo.
 
-![](<../images/python & revit - exercise 02 - 04.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 04.jpg>)
 
 > 1. Cree un **bloque de código** y asígnele el valor `"0;"`.
 > 2. Conecte este valor a un nodo **ReferencePoint.ByCoordinates** para las entradas X, Y y Z.
@@ -108,7 +108,7 @@ Inicie Dynamo y cree el conjunto de nodos de la imagen siguiente. Crearemos prim
 
 Eche un vistazo al nodo de Python en Dynamo. A continuación, se muestra el código completo.
 
-![](<../images/python & revit - exercise 02 - 05.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 05.jpg>)
 
 > 1. **System.Array:** Revit necesita una **matriz del sistema** como entrada (en lugar de una lista de Python). Esta es solo una línea de código más, pero prestar atención a los tipos de argumentos facilitará la programación de Python en Revit.
 
@@ -119,24 +119,25 @@ import clr
 # Import RevitNodes
 clr.AddReference("RevitNodes")
 import Revit
+
 #Import Revit elements
 from Revit.Elements import *
 import System
 
-#define inputs
+# Define inputs
 startRefPt = IN[0]
 endRefPt = IN[1]
 
-#define system array to match with required inputs
+# Define system array to match with required inputs
 refPtArray = System.Array[ReferencePoint]([startRefPt, endRefPt])
 
-#create curve by reference points in Revit
+# Create curve by reference points in Revit
 OUT = CurveByPoints.ByReferencePoints(refPtArray)
 ```
 
 En Dynamo, hemos creado dos puntos de referencia con una línea que los conecta mediante Python. Vamos a ir un poco más lejos en el siguiente ejercicio.
 
-![](<../images/python & revit - exercise 02 - 06.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 06.jpg>)
 
 ## Ejercicio 3
 
@@ -148,13 +149,13 @@ En Dynamo, hemos creado dos puntos de referencia con una línea que los conecta 
 
 Este es un ejercicio sencillo, pero hace hincapié en la conexión de los datos y la geometría de Revit con Dynamo y viceversa. Comencemos abriendo Revit-StructuralFraming.rvt. Una vez abierto, inicie Dynamo y abra el archivo Revit-StructuralFraming.dyn.
 
-![](../images/python&revit-exercise03-01.jpg)
+![](../../.gitbook/assets/python\&revit-exercise03-01.jpg)
 
 Este archivo de Revit es totalmente básico. Dos curvas de referencia: una dibujada en el nivel 1 y la otra dibujada en el nivel 2. Queremos llevar estas curvas a Dynamo y mantener una conexión activa.
 
 En este archivo, tenemos un conjunto de nodos conectados a cinco entradas de un nodo de Python.
 
-![](<../images/python & revit - exercise 03 - 02.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 02.jpg>)
 
 > 1. **Nodos Select Model Element:** pulse el botón de selección para cada uno de ellos y seleccione la curva correspondiente en Revit.
 > 2. **Code Block:** mediante la sintaxis `0..1..#x;`_,_ conecte un control deslizante de enteros que abarque de 0 a 20 en la entrada _x_. De este modo, se designa el número de vigas que se dibujarán entre las dos curvas.
@@ -163,40 +164,46 @@ En este archivo, tenemos un conjunto de nodos conectados a cinco entradas de un 
 
 Este código de Python es un poco más denso, pero los comentarios del código describen lo que sucede en el proceso.
 
-![](<../images/python & revit - exercise 03 - 03.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 03.jpg>)
 
 ```py
 import clr
-#import Dynamo Geometry
+
+# Import Dynamo Geometry
 clr.AddReference('ProtoGeometry')
 from Autodesk.DesignScript.Geometry import *
+
 # Import RevitNodes
 clr.AddReference("RevitNodes")
 import Revit
+
 # Import Revit elements
 from Revit.Elements import *
 import System
 
-#Query Revit elements and convert them to Dynamo Curves
+# Query Revit elements and convert them to Dynamo Curves
 crvA=IN[0].Curves[0]
 crvB=IN[1].Curves[0]
 
-#Define input Parameters
+# Define input Parameters
 framingType=IN[3]
 designLevel=IN[4]
 
-#Define "out" as a list
+# Define "out" as a list
 OUT=[]
 
 for val in IN[2]:
-	#Define Dynamo Points on each curve
+	# Define Dynamo Points on each curve
 	ptA=Curve.PointAtParameter(crvA,val)
 	ptB=Curve.PointAtParameter(crvB,val)
-	#Create Dynamo line
+	
+	# Create Dynamo line
 	beamCrv=Line.ByStartPointEndPoint(ptA,ptB)
-	#create Revit Element from Dynamo Curves
+	
+	# Create Revit Element from Dynamo Curves
 	beam = StructuralFraming.BeamByCurve(beamCrv,designLevel,framingType)
-	#convert Revit Element into list of Dynamo Surfaces
+	
+	# Convert Revit Element into list of Dynamo Surfaces
 	OUT.append(beam.Faces)
 ```
 
@@ -204,7 +211,7 @@ En Revit, tenemos una matriz de vigas que abarca las dos curvas como elementos e
 
 En Dynamo, también podemos ver los resultados. Las vigas del nodo **Watch3D** hacen referencia a la geometría consultada desde los elementos de Revit.
 
-![](<../images/python & revit - exercise 03 - 05.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 05.jpg>)
 
 Observe que existe un proceso continuo de traslación de datos del entorno de Revit al entorno de Dynamo. En resumen, así es como se desarrolla el proceso:
 
@@ -219,4 +226,4 @@ Esto puede parecer un poco pesado, pero la secuencia de comandos hace que sea ta
 
 Con una actualización de las curvas de referencia de Revit, obtenemos una nueva matriz de vigas.
 
-![](<../images/python & revit - ex 03 - 06.gif>)
+\![](<../../.gitbook/assets/python & revit - ex 03 - 06.gif>)

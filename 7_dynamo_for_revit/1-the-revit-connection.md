@@ -1,6 +1,6 @@
 # La conexión de Revit
 
-![](<images/revit connection link.jpg>)
+\![](<../.gitbook/assets/revit connection link.jpg>)
 
 Dynamo para Revit amplía el modelado de información de construcción mediante el entorno de datos y lógica de un editor gráfico de algoritmos. Su flexibilidad, junto con una base de datos de Revit robusta, ofrece una nueva perspectiva para BIM.
 
@@ -19,11 +19,11 @@ A medida que Revit y Dynamo continúan evolucionando, es posible que observe que
 | 2017          | [0.9.0](https://downloads.dynamobuilds.com/DynamoInstall0.9.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
 | 2018          | [1.3.0](https://downloads.dynamobuilds.com/DynamoInstall1.3.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
 | 2019          | [1.3.3](https://downloads.dynamobuilds.com/DynamoInstall1.3.3.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.4](https://downloads.dynamobuilds.com/DynamoInstall2.0.4.exe) |
-| 2020         | 2.1.0: Revit 2020 o superior ahora incluye Dynamo y recibe actualizaciones al igual que Revit. | N/A                                                                                                                                     |
+| 2020         | 2.1.0: Revit 2020 o superior ahora incluye Dynamo y recibe actualizaciones al igual que Revit.  | N/A                                                                                                                                     |
 
 ### Historia de Dynamo
 
-![Historia](images/earlyScreenshot.jpg)
+![Historia](../.gitbook/assets/earlyScreenshot.jpg)
 
 Con un equipo dedicado de desarrolladores y una ferviente comunidad, el proyecto ha avanzado mucho desde sus humildes inicios.
 
@@ -35,26 +35,26 @@ Mediante el uso de los nodos principales de Dynamo, junto con los nodos personal
 
 En un editor de proyectos o familias de Revit, vaya a Complementos y haga clic en Dynamo.*
 
-{% hint style="warning" %}*
-Tenga en cuenta que Dynamo solo se ejecutará en el archivo en el que se abrió.
+{% hint style="warning" %}
+*Dynamo solo se ejecutará en el archivo en el que se abrió.
 {% endhint %}
 
-![](images/1/launchdynamofromrevit.jpg)
+\![](<../.gitbook/assets/launchdynamofromrevit (1).jpg>)
 
 Al abrir Dynamo en Revit, hay una nueva categoría denominada "Revit". Se trata de una adición completa a la interfaz de usuario que ofrece nodos que se adaptan específicamente a los flujos de trabajo de Revit.*
 
-{% hint style="warning" %}*
-El gráfico de Dynamo solo funcionará al abrirse en Dynamo para Revit mediante la familia de nodos específica de Revit. Si se abre un gráfico de Dynamo para Revit en Dynamo Sandbox, por ejemplo, no aparecerán los nodos de Revit.
+{% hint style="warning" %}
+*El gráfico de Dynamo solo funcionará al abrirse en Dynamo para Revit mediante la familia de nodos específica de Revit. Si se abre un gráfico de Dynamo para Revit en Dynamo Sandbox, por ejemplo, no aparecerán los nodos de Revit.
 {% endhint %}
 
-![](<images/revit connection - running dynamo in revit 02.jpg>)
+\![](<../.gitbook/assets/revit connection - running dynamo in revit 02.jpg>)
 
 ### Bloqueo de nodos
 
 Como Revit es una plataforma que proporciona una sólida gestión de proyectos, las operaciones paramétricas de Dynamo pueden ser complejas y lentas de calcular. Si Dynamo tarda mucho tiempo en calcular los nodos, puede usar la función "Bloquear" para poner en pausa la ejecución de operaciones de Revit mientras desarrolla el gráfico.
 
 {% hint style="info" %}
-Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../4_nodes_and_wires/ "mention").
+{% hint style="info" %} Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../4_nodes_and_wires/ "mention"). {% endhint %}
 {% endhint %}
 
 ### Comunidad y blog de Dynamo
@@ -65,4 +65,4 @@ Dynamo es un proyecto de código abierto que evoluciona constantemente y gran pa
 
 Dynamo también mantiene un blog activo. Lea las últimas publicaciones para obtener información sobre los avances más recientes.
 
-![Blog](images/blog.png)
+![Blog](../.gitbook/assets/blog.png)

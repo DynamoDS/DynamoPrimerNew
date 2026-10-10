@@ -4,33 +4,33 @@ La sección Cambios en el lenguaje proporciona una descripción general de las a
 
 ## Cambios en el lenguaje de Dynamo 2.0
 
-1. Cambio en la sintaxis de list@level de "@-1" a "@L1"
+1. Cambio en la sintaxis de list@level de "@-1" a "@L1".
 
 * Nueva sintaxis de list@level para usar list@L1 en lugar de list@-1.
 * Motivo: alinear la sintaxis del código con la vista previa y la interfaz de usuario; las pruebas de usuario muestran que esta nueva sintaxis es más comprensible.
 
-2. Implementación de los tipos Int y Double en TS para que coincidan con los tipos de Dynamo
-3. No se permiten las funciones sobrecargadas en las que los argumentos solo difieren por cardinalidad
+2. Implementación de los tipos Int y Double en TS para que coincidan con los tipos de Dynamo.
+3. No se permiten las funciones sobrecargadas en las que los argumentos solo difieren por cardinalidad.
 
 * Los gráficos antiguos que utilizan sobrecargas que se han eliminado deben usar por defecto las sobrecargas de mayor rango.
-* Motivo: eliminar la ambigüedad sobre qué función específica se está ejecutando.
+* Motivo: eliminar la ambigüedad sobre qué función específica se está ejecutando..
 
-4. Desactivación de la promoción de matriz con guías de replicación
-5. Conversión de las variables de los bloques imperativos en locales al ámbito del bloque imperativo
+4. Desactivación de la promoción de matriz con guías de replicación.
+5. Conversión de las variables de los bloques imperativos en locales al ámbito del bloque imperativo.
 
 * Los valores de variable definidos dentro de los bloques de código imperativo no se verán alterados por los cambios realizados dentro de los bloques imperativos que hacen referencia a ellos.
 
-6. Conversión de las variables en inmutables para desactivar la actualización asociativa en los nodos de bloque de código
-7. Compilación de todos los nodos de la interfaz de usuario en métodos estáticos
-8. Admisión de sentencias de retorno sin asignación
+6. Conversión de las variables en inmutables para desactivar la actualización asociativa en los nodos de bloque de código.
+7. Compilación de todos los nodos de la interfaz de usuario en métodos estáticos.
+8. Admisión de sentencias de retorno sin asignación.
 
 * "=" no es necesario ni en definiciones de función ni en código imperativo.
 
-9. Migración de los nombres de métodos antiguos en CBN
+9. Migración de los nombres de métodos antiguos en CBN.
 
 * Se ha cambiado el nombre de muchos nodos para mejorar la legibilidad y la ubicación en la interfaz de usuario del navegador de biblioteca.
 
-10. Lista como limpieza de diccionario
+10. Lista como limpieza de diccionario.
 
 ***
 
@@ -59,12 +59,12 @@ Se han realizado varias mejoras en el lenguaje de la versión 2.0 de Dynamo. El 
 A continuación se muestra la lista de cambios de la versión 2.0 explicada:
 
 * Sintaxis de List@Level simplificada
-* Los métodos sobrecargados con parámetros que solo difieren por rango no son válidos
-* Compilación de todos los nodos de la interfaz de usuario como métodos estáticos
-* Desactivada la promoción a lista cuando se utiliza con guías de replicación/encaje
-* Las variables de los bloques asociativos son inmutables para evitar la actualización asociativa
-* Las variables de los bloques imperativos son locales al ámbito imperativo
-* Separación de listas y diccionarios
+* Los métodos sobrecargados con parámetros que solo difieren por rango no son válidos.
+* Compilados todos los nodos de la interfaz de usuario como métodos estáticos.
+* Desactivada la promoción a lista cuando se utiliza con guías de replicación/encaje.
+* Las variables de los bloques asociativos son ahora inmutables para evitar la actualización asociativa.
+* Las variables de los bloques imperativos son ahora locales al ámbito imperativo.
+* Se han separado las listas y los diccionarios.
 
 ## 1\. Sintaxis de list@level simplificada
 
@@ -228,7 +228,7 @@ lo que genera una lista de puntos 3D con una lista exterior redundante.
 
 Este efecto secundario de compilar nodos de interfaz de usuario en métodos estáticos podría provocar regresiones en los casos de uso existentes. Este problema se ha solucionado desactivando la promoción de las entradas de un solo valor a listas cuando se utilizan con guías de replicación o encaje (consulte el siguiente punto).
 
-**4\. Desactivada la promoción a lista con guías de replicación/encaje**
+**3\. Desactivada la promoción a lista con guías de replicación/encaje**
 
 En la versión 1.x había dos casos en los que los valores únicos se promovían a listas:
 

@@ -10,7 +10,7 @@ Si deseamos crear modelos más complejos que no se puedan crear a partir de una 
 
 Puede utilizar [operaciones booleanas](6-solids.md#boolean-operations) para modificar sólidos. Vamos a utilizar algunas operaciones booleanas para crear una bola llena de puntas.
 
-\![](<../../.gitbook/assets/solids - spiky ball.jpg>)
+\![](<../../.gitbook/assets/solids  - spiky ball.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius**: cree el sólido base.
 > 2. **Topology.Faces**, **Face.SurfaceGeometry**: consulte las caras del sólido y conviértalas en geometría de superficie; en este caso, la esfera solo tiene una cara.
@@ -36,7 +36,9 @@ Las operaciones booleanas son complejas y pueden resultar lentas de calcular. Pu
 > 3. Para desbloquear los nodos, haga clic con el botón derecho y desactive la opción Bloquear.
 > 4. Todos los nodos afectados y las vistas preliminares de la geometría asociada se actualizarán y se restablecerán al modo de vista preliminar estándar.
 
-{% hint style="info" %} Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../../4_nodes_and_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../../4_nodes_and_wires/ "mention").
+{% endhint %}
 
 ## Información más detallada sobre...
 

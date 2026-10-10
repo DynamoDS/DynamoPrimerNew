@@ -8,7 +8,7 @@ GitHub es un servicio de alojamiento basado en [git](https://help.github.com/art
 
 El código fuente de Dynamo está alojado en el GitHub de DynamoDS, en este repositorio: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo).
 
-![Los archivos de código fuente de Dynamo](../images/github.jpg)
+![Los archivos de código fuente de Dynamo](../../.gitbook/assets/github.jpg)
 
 > Los archivos de código fuente de Dynamo
 >
@@ -23,7 +23,7 @@ Antes de poder clonar el repositorio, debemos instalar git. Siga esta [breve gu�
 
 Necesitamos una dirección URL desde la que clonar el repositorio de Dynamo. Para obtenerla, se puede utilizar el botón para clonar o descargar de la página del repositorio. Copie la dirección URL para pegarla en la solicitud de comando.
 
-![Clonación de un repositorio](../images/github-clone.png)
+![Clonación de un repositorio](../../.gitbook/assets/github-clone.png)
 
 > 1. Seleccione la opción para clonar o descargar.
 > 2. Copie la dirección URL.
@@ -34,7 +34,7 @@ Con git instalado, podemos clonar el repositorio de Dynamo. Abra primero la soli
 
 > Sustituya "username" por su nombre de usuario.
 
-![Solicitud de comando](../images/cli-1.jpg)
+![Solicitud de comando](../../.gitbook/assets/cli-1.jpg)
 
 En el paso siguiente, ejecutaremos un comando de git para clonar el repositorio de Dynamo en la ubicación especificada. Para obtener la dirección URL del comando, haga clic en el botón para clonar o descargar en GitHub. Ejecute este comando en el terminal de comando. Tenga en cuenta que esto clonará la ramificación principal del repositorio de Dynamo, que es el código más actualizado para Dynamo, y contendrá la última versión del código de Dynamo. Esta ramificación cambia diariamente.
 
@@ -42,7 +42,7 @@ En el paso siguiente, ejecutaremos un comando de git para clonar el repositorio 
 
 ![Resultados de la operación de clonación de git](../../.gitbook/assets/cli-2.jpg)
 
-Sabemos que git funciona sin problemas si la operación de clonación se ha completado correctamente. En el explorador de archivos, desplácese al directorio en el que se ha realizado la clonación para ver los archivos de código fuente. La estructura de directorios debe ser idéntica a la ramificación principal del repositorio de Dynamo en GitHub.
+Sabemos que git funciona sin problemas si la operación de clonación se ha completado correctamente. En el explorador de archivos, vaya al directorio donde ha efectuado la clonación para ver los archivos de origen. La estructura de directorios debe tener el mismo aspecto que la rama principal del repositorio de Dynamo en GitHub.
 
 ![Archivos de código fuente de Dynamo](../../.gitbook/assets/source-files.jpg)
 
@@ -59,9 +59,9 @@ Ahora que los archivos de código fuente se han clonado en el equipo local, pode
 
 > Es posible que .NET y DirectX ya estén instalados.
 
-> **Nota:** Cambio importante: [**Visual Studio 2022**](https://visualstudio.microsoft.com/vs/community/) **/** [**Visual Studio 2026 Insider**](https://visualstudio.microsoft.com/insiders/) necesario
+> **Nota:** Cambio importante: [**Visual Studio 2022 Preview**](https://visualstudio.microsoft.com/vs/community/)**/**[**Visual Studio 2026 Insider**](https://visualstudio.microsoft.com/insiders/) necesario
 >
-> A partir de finales de 2025, Dynamo implementará `dotnet10.0` Framework. Para llevar a cabo el desarrollo en esta plataforma, necesitará Visual Studio 2022 Preview o Visual Studio 2026 Insider (o posterior), ya que las versiones estables aún no admiten .NET 10.0.
+> Las versiones estables actuales de Dynamo implementan la plataforma `dotnet10.0`. Para llevar a cabo el desarrollo en esta plataforma, necesitará Visual Studio 2022 Preview o Visual Studio 2026 Insider (o posterior).
 >
 > **Instalación de Visual Studio 2022 Preview/2026 Insider junto con la instalación existente:**
 >
@@ -146,7 +146,7 @@ En ambas situaciones, se asocia el depurador a un proceso que deseamos depurar. 
 
 ![Establecimiento de un punto de interrupción](../../.gitbook/assets/vs-debug-dynamocore.jpg)
 
-> Al depurar DynamoSandbox, establecemos un punto de interrupción en el constructor del nodo Color.ByARGB que provoca que el proceso de Dynamo se detenga cuando se crea una instancia del nodo. Si este nodo genera una excepción o provoca el bloqueo de Dynamo, podemos recorrer cada línea del constructor para identificar dónde se produce el problema.
+> Al depurar DynamoSandbox, establecemos un punto de interrupción en el constructor del nodo **Color.ByARGB** que provoca que el proceso de Dynamo se detenga cuando se crea una instancia del nodo. Si este nodo genera una excepción o provoca el bloqueo de Dynamo, podemos recorrer cada línea del constructor para identificar dónde se produce el problema.
 >
 > 1. El punto de interrupción
 > 2. La pila de llamadas que muestra la función que se está ejecutando en ese momento y las llamadas a funciones anteriores

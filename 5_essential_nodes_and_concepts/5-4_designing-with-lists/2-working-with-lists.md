@@ -101,7 +101,7 @@ _List.Reverse_ invierte el orden de todos los elementos de una lista.
 \![Ejercicio](<../../.gitbook/assets/working with list - list reverse.jpg>)
 
 > 1. Para visualizar correctamente la lista de líneas invertida, cree más líneas. Para ello, cambie el nodo **Code Block** a `0..1..#50;`.
-> 2. Duplique el nodo **Line.ByStartPointEndPoint**, inserte un nodo List.Reverse entre **Curve.PointAtParameter** y el segundo nodo **Line.ByStartPointEndPoint**.
+> 2. Duplique el nodo **Line.ByStartPointEndPoint**, inserte un nodo **List.Reverse** entre **Curve.PointAtParameter** y el segundo nodo **Line.ByStartPointEndPoint**.
 > 3. Utilice los nodos **Watch3D** para obtener una vista preliminar de dos resultados diferentes. El primero muestra el resultado sin una lista invertida. Las líneas se conectan verticalmente con los puntos adyacentes. Sin embargo, la lista invertida conectará todos los puntos con la otra lista en el orden opuesto.
 
 ### List.ShiftIndices <a href="#listshiftindices" id="listshiftindices"></a>

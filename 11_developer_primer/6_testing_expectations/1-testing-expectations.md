@@ -2,7 +2,7 @@
 
 En esta página, se describe lo que buscamos con las pruebas del nuevo código que se añadirá a Dynamo.
 
-Entonces, tiene un nuevo nodo que desea añadir. Genial. Es hora de añadir algunas pruebas. Existen dos razones principales para ello:
+Tiene un nuevo nodo que desea añadir. Genial. Es hora de añadir algunas pruebas. Existen dos razones principales para ello:
 
 1. Ayuda a descubrir los puntos en los que no funciona.
 2. Cuando alguien modifica algo que interrumpe el nodo, esto debería mostrarse en las pruebas. De ese modo, la persona que interrumpió las pruebas deberá solucionarlo. Si no interrumpe las pruebas, deberá ocuparse en gran medida de los usuarios cuyos modelos no funcionen correctamente.
@@ -17,7 +17,7 @@ Deben incluir lo siguiente:
 
 * Pruebas positivas (hace lo correcto).
 * Pruebas negativas (no genera resultados erróneos cuando se le da una entrada incorrecta).
-* Pruebas de regresión (cuando alguien encuentra un error en el código, escriba una prueba para asegurarse de que no se repite)
+* Pruebas de regresión (cuando alguien encuentra un error en el código, escriba una prueba para asegurarse de que no se repite).
 
 Deben ser pequeñas, rápidas y fiables. La mayoría de las pruebas deben ser pruebas unitarias.
 
@@ -33,8 +33,8 @@ Lo ideal sería una serie progresiva de pruebas que abarquen conjuntos creciente
 
 Entre los ejemplos de los elementos que requieren pruebas del sistema, se incluyen los siguientes:
 
-* Un nuevo tipo de nodo de Revit que almacena varios elementos en el seguimiento en lugar de un único elemento
-* Un nuevo nodo Watch que muestra los datos de forma diferente
+* Un nuevo tipo de nodo de Revit que almacena varios elementos en el seguimiento en lugar de un único elemento.
+* Un nuevo nodo Watch que muestra los datos de forma diferente.
 
 Entre los ejemplos de los elementos que no requieren pruebas del sistema, se incluyen los siguientes:
 
