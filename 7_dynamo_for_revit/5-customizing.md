@@ -6,7 +6,7 @@ Mentre in precedenza è stata esaminata la modifica della massa di un edificio d
 
 Si supponga di aver creato un'ampia gamma di componenti adattivi e di voler modificare i parametri in base alle relative posizioni dei punti. I punti, ad esempio, potrebbero controllare un parametro di spessore correlato all'area dell'elemento. Oppure potrebbero controllare un parametro di opacità correlato all'esposizione solare durante tutto l'anno. Dynamo consente il collegamento dell'analisi ai parametri in pochi semplici passaggi. Verrà analizzata una versione di base nell'esercizio riportato di seguito.
 
-![](<images/customizing - point location.jpg>)
+\![](<../.gitbook/assets/customizing - point location.jpg>)
 
 > Eseguire una query sui punti adattivi del componente adattivo selezionato utilizzando il nodo **AdaptiveComponent.Locations**. Questo consente di utilizzare una versione astratta di un elemento di Revit per l'analisi.
 
@@ -14,7 +14,7 @@ Estraendo la posizione dei punti dei componenti adattivi, è possibile eseguire 
 
 ### Analisi dell'orientamento solare
 
-![](<images/customizing - solar orientation analysis.jpg>)
+\![](<../.gitbook/assets/customizing - solar orientation analysis.jpg>)
 
 > Utilizzare il rimappaggio per associare un gruppo di dati ad un intervallo di parametri. Questo è uno strumento fondamentale utilizzato in un modello parametrico e verrà dimostrato nell'esercizio riportato di seguito.
 
@@ -30,67 +30,72 @@ Utilizzando Dynamo, le posizioni dei punti dei componenti adattivi possono esser
 
 Questo esercizio verterà sulle tecniche illustrate nella sezione precedente. In questo caso, verrà definita una superficie parametrica degli elementi di Revit, saranno create istanze di componenti adattivi a quattro punti, che verranno poi modificati in base all'orientamento rispetto al sole.
 
-![](<images/customizing - exercise 01.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 01.jpg>)
 
 > 1. Iniziare selezionando due spigoli con il nodo _Select Edge_. I due spigoli sono i tratti lunghi dell'atrio.
 > 2. Combinare i due spigoli in un elenco con il nodo _List.Create_.
 > 3. Creare una superficie tra i due spigoli con _Surface.ByLoft_.
 
-![](<images/customizing - exercise 02.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 02.jpg>)
 
 > 1. Utilizzando _Code Block_, definire un intervallo da 0 a 1 con 10 valori a spaziatura uniforme: `0..1..#10;`.
 > 2. Collegare _Code Block_ agli input *u* e _v_ di un nodo _Surface.PointAtParameter_ e collegare il nodo _Surface.ByLoft_ all'input _surface_. Fare clic con il pulsante destro del mouse sul nodo e modificare _Collegamento_ in _Globale_. In questo modo si ottiene una griglia di punti sulla superficie.
 
 Questa griglia di punti funge da punti di controllo per una superficie definita in modo parametrico. Si desidera estrarre le posizioni u e v di ciascuno di questi punti in modo da poterle collegare ad una formula parametrica e mantenere la stessa struttura di dati. A tale scopo, è possibile eseguire una query sulle posizioni dei parametri dei punti appena creati.
 
-![](<images/customizing - exercise 03.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 03.jpg>)
 
 > 1. Aggiungere un nodo _Surface.ParameterAtPoint_ all'area di disegno e collegare gli input come mostrato in precedenza.
 > 2. Eseguire una query sui valori _u_ di questi parametri con il nodo UV.U.
 > 3. Eseguire una query sui valori _v_ di questi parametri con il nodo UV.V.
 > 4. Gli output mostrano i valori _u_ e _v_ corrispondenti per ogni punto della superficie. Ora è disponibile un intervallo compreso tra _0_ e _1_ per ogni valore, nella struttura di dati corretta, pertanto è possibile applicare un algoritmo parametrico.
 
-![](<images/customizing - exercise 04.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 04.jpg>)
 
 > 1. Aggiungere _Code Block_ all'area di disegno e immettere il codice: `Math.Sin(u*180)*Math.Sin(v*180)*w;`. Si tratta di una funzione parametrica che crea una protuberanza sinusoidale da una superficie piana.
 > 2. Collega _UV.U_ all'input _u_ e UV.V all'input _v_.
 > 3. L'input _w_ rappresenta l'_ampiezza_ della forma, pertanto si associa _Number Slider_ ad esso.
 
-![](<images/customizing - exercise 05.jpg>)
+\![](<../.gitbook/assets/customizing - exercise 05.jpg>)
 
 > 1. Ora è disponibile un elenco di valori come definito dall'algoritmo. Utilizzare questo elenco di valori per spostare i punti verso l'alto nella direzione _+Z_. Utilizzando _Geometry.Translate_, collegare *Code Block* a _zTranslation_ e _Surface.PointAtParameter_ all'input _geometry_. I nuovi punti dovrebbero essere visualizzati nell'anteprima di Dynamo.
 > 2. Infine, creare una superficie con il nodo _NurbsSurface.ByPoints_, collegando il nodo del passaggio precedente all'input points. Si ottiene una superficie parametrica. È possibile trascinare il dispositivo di scorrimento per restringere e ingrandire la protuberanza.
 
-Con la superficie parametrica, si vuole definire un modo per suddividerla in pannelli al fine di creare la serie di componenti adattivi a quattro punti. Dynamo non dispone di funzionalità predefinite per la suddivisione della superficie in pannelli, pertanto è possibile accedere alla community per i pacchetti di Dynamo utili.
+Con la superficie parametrica, si vuole definire un modo per suddividerla in pannelli al fine di creare la serie di componenti adattivi a quattro punti. Dynamo ora dispone di funzionalità pronte all'uso per la suddivisione in pannelli della superficie.
 
-![](<images/customizing - exercise 06.jpg>)
+È necessario attivare i nodi **PanelSurface** selezionandoli nella scheda Sperimentale in Preferenze.
 
-> 1. Passare a _Pacchetti > Cerca pacchetto_.
-> 2. Cercare _LunchBox_ e installare _LunchBox for Dynamo_. Si tratta di un insieme veramente utile di strumenti per le operazioni di geometria come questa.
 
-> 1. Dopo il download, si dispone ora dell'accesso completo alla suite LunchBox. Cercare _Quad Grid_ e selezionare _LunchBox Quad Grid By Face_. Collegare la superficie parametrica all'input _Surface_ e impostare le divisioni _U_ e _V_ su _15_. Nell'anteprima di Dynamo dovrebbe essere visualizzata una superficie in quattro pannelli.
+\![](<../.gitbook/assets/experimental preferences.jpg>)
 
-> Se si desidera conoscere la relativa impostazione, è possibile fare doppio clic sul nodo _Lunch Box_ e vedere come viene eseguita.
+> 1. Cercare _PanelSurface_ e selezionare _ByQuads_. Collegare la superficie parametrica all'input _Surface_ e impostare le divisioni _numU_ e _numV_ su _15_.
 
-> Tornando a Revit, si darà un rapido sguardo al componente adattivo utilizzato qui. Non occorre seguirlo, ma questo è il pannello del tetto di cui verrà creata un'istanza. Si tratta di un componente adattivo a quattro punti, che è una rappresentazione approssimata di un sistema ETFE. L'apertura del vuoto centrale si trova su un parametro denominato _Aperture Ratio_.
+\![](<../.gitbook/assets/surfaces divide by UV.jpg>)
+
+> Tornando a Revit, si darà un rapido sguardo al componente adattivo utilizzato qui. Non occorre seguirlo, ma questo è il pannello del tetto di cui verrà creata un'istanza. Si tratta di un componente adattivo a quattro punti, che è una rappresentazione approssimata di un sistema ETFE. L'apertura del vuoto centrale si trova su un parametro denominato _Aperture Ratio_. 
+
 
 > 1. Verrà creata un'istanza di molti elementi della geometria in Revit. Assicurarsi quindi di impostare il risolutore Dynamo su _Manuale_.
 > 2. Aggiungere un nodo _Family Types_ all'area di disegno e selezionare _ROOF-PANEL-4PT_.
-> 3. Aggiungere un nodo _AdaptiveComponent.ByPoints_ all'area di disegno, collegare _Panel Pts_ dall'output _LunchBox Quad Grid by Face_ all'input _points_. Collegare il nodo _Family Types_ all'input _familySymbol._
-> 4. Fare clic su _Esegui_. La creazione della geometria in Revit _richiederà_ un po' di tempo. Se richiede troppo tempo, ridurre il valore 15 di _Code Block_ ad un numero inferiore. In questo modo si riduce il numero di pannelli sul tetto.
+> 3. Aggiungere **PanelSurface.GetPoints** all'area di disegno e collegare _panelSurface_ da **PanelSurface.ByQuads** all'input corrispondente.
+> 4. Aggiungere un nodo **AdaptiveComponent.ByPoint** all'area di disegno, collegare _Panel Pts_ dall'output **PanelSurface.GetPanelPoints** all'input _points_. Collegare il nodo _Family Types_ all'input _familyType_.
+> 5. Fare clic su _Esegui_. La creazione della geometria in Revit _richiederà_ un po' di tempo. Se richiede troppo tempo, ridurre il valore 15 di _Code Block_ ad un numero inferiore. In questo modo si riduce il numero di pannelli sul tetto.
 
-_Nota: se Dynamo richiede molto tempo per il calcolo dei nodi, potrebbe essere necessario utilizzare la funzionalità del nodo Congela per mettere in pausa l'esecuzione delle operazioni di Revit durante lo sviluppo del grafico. Per ulteriori informazioni sul congelamento dei nodi, controllare la sezione Congelamento nel capitolo sui solidi._
+\![](<../.gitbook/assets/panelising script.jpg>)
+
+
+_Nota Se Dynamo richiede molto tempo per il calcolo dei nodi, potrebbe essere necessario utilizzare la funzionalità del nodo Congela per mettere in pausa l'esecuzione delle operazioni di Revit durante lo sviluppo del grafico. Per ulteriori informazioni sul congelamento dei nodi, controllare la sezione Congelamento nel capitolo sui solidi._
 
 > Tornando in Revit, ecco la serie di pannelli sul tetto.
 
 > Eseguendo lo zoom avanti, è possibile osservare più da vicino la qualità della superficie.
 
+\![](<../.gitbook/assets/adaptive panels.jpg>)
+
 ### Analisi
 
 > 1. Continuando dal passaggio precedente, proseguire e controllare l'apertura di ogni pannello in base alla sua esposizione al sole. Se si esegue lo zoom in Revit e si seleziona un pannello, sulla barra delle proprietà viene visualizzato il parametro _Aperture Ratio_. La famiglia è impostata in modo che l'apertura sia compresa, approssimativamente, tra _0.05_ e _0.45_.
-
 > 2. Se si osserva il percorso solare, è possibile vedere la posizione corrente del sole in Revit.
-
 > 3. È possibile fare riferimento a questa posizione del sole utilizzando il nodo _SunSettings.Current_.
 
 1. Collegare le impostazioni del sole a _Sunsetting.SunDirection_ per ottenere il vettore solare.

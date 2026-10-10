@@ -24,11 +24,11 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![Spostamento dei file di progetto](../images/fe-proj-directory.jpg)
+![Spostamento dei file di progetto](../../.gitbook/assets/fe-proj-directory.jpg)
 
 > 1. Spostare i file di progetto nella nuova cartella `src`
 
-Ora che i file di origine si trovano in una cartella separata, aggiungere una destinazione `AfterBuild` al file `CustomNodeModel.csproj` in Visual Studio. In questo modo, i file necessari dovrebbero essere copiati in una nuova cartella del pacchetto. Aprire il file `CustomNodeModel.csproj` in un editor di testo (è stato utilizzato [Atom](https://atom.io)) e posizionare la destinazione della build prima del tag `</Project>` di chiusura. Questa destinazione AfterBuild copierà tutti i file .dll, .pbd, .xml e .config in una nuova cartella bin e creerà una cartella dyf e cartelle extra.
+Ora che i file di origine si trovano in una cartella separata, aggiungere una destinazione `AfterBuild` al file `CustomNodeModel.csproj` in Visual Studio. In questo modo, i file necessari dovrebbero essere copiati in una nuova cartella del pacchetto. Aprire il file `CustomNodeModel.csproj` in un editor di testo (è stato utilizzato [Atom](https://atom.io)) e posizionare la destinazione della build prima del tag `</Project>` di chiusura. Questa destinazione AfterBuild copierà tutti i file .dll, .pbd, .xml e .config in una nuova cartella /bin e creerà una cartella dyf e cartelle extra.
 
 ```
   <Target Name="AfterBuild">
@@ -47,7 +47,7 @@ Ora che i file di origine si trovano in una cartella separata, aggiungere una de
   </Target>
 ```
 
-![Posizionamento della destinazione AfterBuild](../images/atom-afterbuild.jpg)
+![Posizionamento della destinazione AfterBuild](../../.gitbook/assets/atom-afterbuild.jpg)
 
 > Sarà necessario verificare che la destinazione sia stata aggiunta al file `CustomNodeModel.csproj` (non ad un altro file di progetto) e che per il progetto non siano state definite impostazioni post-compilazione esistenti.
 >
@@ -55,7 +55,7 @@ Ora che i file di origine si trovano in una cartella separata, aggiungere una de
 
 Nella sezione `<ItemGroup>`, vengono definite diverse variabili per rappresentare tipi di file specifici. Ad esempio, la variabile `Dll` rappresenta tutti i file nella directory di output con estensione `.dll`.
 
-```
+```xml
 <ItemGroup>
   <Dlls Include="$(OutDir)*.dll" />
 </ItemGroup>
@@ -63,19 +63,19 @@ Nella sezione `<ItemGroup>`, vengono definite diverse variabili per rappresentar
 
 L'operazione `Copy` consiste nel copiare tutti i file `.dll` in una directory, in particolare nella cartella del pacchetto in cui si sta eseguendo la compilazione.
 
-```
+```xml
 <Copy SourceFiles="@(Dlls)" DestinationFolder="$(SolutionDir)..\packages\CustomNodeModel\bin\" />
 ```
 
 I pacchetti di Dynamo in genere dispongono di una cartella `dyf` e `extra` per i nodi personalizzati di Dynamo e altri componenti di progetto, ad esempio le immagini. Per creare queste cartelle, è necessario utilizzare un'attività `MakeDir`. Questa operazione creerà una cartella se non esiste. È possibile aggiungere i file manualmente a questa cartella.
 
-```
+```xml
 <MakeDir Directories="$(SolutionDir)..\packages\CustomNodeModel\extra" />
 ```
 
 Se si crea il progetto, la cartella di progetto dovrebbe ora avere una cartella `packages` accanto alla cartella `src` creata in precedenza. All'interno della directory `packages` è presente una cartella contenente tutti gli elementi necessari per il pacchetto. È inoltre necessario copiare il file `pkg.json` nella cartella del pacchetto in modo che Dynamo sappia di caricare il pacchetto.
 
-![Copia di file](../images/fe-proj-directory-package.jpg)
+![Copia di file](../../.gitbook/assets/fe-proj-directory-package.jpg)
 
 > 1. La nuova cartella del pacchetto creata dalla destinazione AfterBuild
 > 2. La cartella src esistente con il progetto

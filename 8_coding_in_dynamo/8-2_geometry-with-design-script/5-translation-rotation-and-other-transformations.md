@@ -1,12 +1,12 @@
 # Traslazione, rotazione e altre trasformazioni
 
-Alcuni oggetti della geometria possono essere creati indicando in modo esplicito le coordinate x, y e z nello spazio tridimensionale. Più spesso, tuttavia, la geometria viene spostata nella sua posizione finale utilizzando le trasformazioni geometriche sull'oggetto stesso o sul relativo CoordinateSystem sottostante.
+Alcuni oggetti della geometria possono essere creati indicando in modo esplicito le coordinate x, y e z nello spazio tridimensionale. Più spesso, tuttavia, la geometria viene spostata nella sua posizione finale utilizzando le trasformazioni geometriche sull'oggetto stesso o sul relativo sistema di coordinate sottostante.
 
-### Conversione
+### Traduzione
 
 La trasformazione geometrica più semplice è una traslazione, che sposta un oggetto in base ad un numero specificato di unità nelle direzioni x, y e z.
 
-![](../images/Transformations_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -20,9 +20,9 @@ p2 = p.Translate(10, -20, 50);
 
 ### Rotazione
 
-Sebbene tutti gli oggetti in Dynamo possano essere convertiti aggiungendo il metodo _.Translate_ alla fine del nome dell'oggetto, le trasformazioni più complesse richiedono la trasformazione dell'oggetto da un CoordinateSystem sottostante ad un nuovo CoordinateSystem. Ad esempio, per ruotare un oggetto di 45 gradi attorno all'asse x, è necessario trasformare l'oggetto dal CoordinateSystem esistente senza rotazione ad un CoordinateSystem che è stato ruotato di 45 gradi attorno all'asse x con il metodo _.Transform_:
+Sebbene tutti gli oggetti in Dynamo possano essere convertiti aggiungendo il metodo _.Translate_ alla fine del nome dell'oggetto, le trasformazioni più complesse richiedono la trasformazione dell'oggetto da un sistema di coordinate sottostante ad un nuovo sistema di coordinate. Ad esempio, per ruotare un oggetto di 45 gradi attorno all'asse x, è necessario trasformare l'oggetto dal sistema di coordinate esistente senza rotazione ad un sistema di coordinate che è stato ruotato di 45 gradi attorno all'asse x con il metodo _.Transform_:
 
-![](../images/Transformations_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -40,9 +40,9 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 ### Scala
 
-Oltre a essere traslati e ruotati, è possibile creare anche CoordinateSystems messi in scala o tagliati. Un CoordinateSystem può essere messa in scala con il metodo _.Scale_:
+Oltre a essere traslati e ruotati, è possibile creare anche sistemi di coordinate messi in scala o tagliati. Un sistema di coordinate può essere messo in scala con il metodo _.Scale_:
 
-![](../images/Transformations_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -56,9 +56,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-I CoordinateSystems tagliati vengono creati mediante l'inserimento di vettori non ortogonali nel costruttore CoordinateSystem.
+I sistemi di coordinate tagliati vengono creati mediante l'inserimento di vettori non ortogonali nel costruttore Sistema di coordinate.
 
-![](../images/Transformations_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(
@@ -74,9 +74,9 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-La messa in scala e il taglio sono trasformazioni geometriche relativamente più complesse rispetto alla rotazione e alla traslazione, pertanto non tutti gli oggetti di Dynamo possono essere sottoposti a queste trasformazioni. Nella seguente tabella sono riportati i contorni degli oggetti di Dynamo che possono presentare CoordinateSystem messi in scala in modo non uniforme e i CoordinateSystem tagliati.
+La messa in scala e il taglio sono trasformazioni geometriche relativamente più complesse rispetto alla rotazione e alla traslazione, pertanto non tutti gli oggetti di Dynamo possono essere sottoposti a queste trasformazioni. Nella seguente tabella sono riportati i contorni degli oggetti di Dynamo che possono presentare sistemi di coordinate messi in scala in modo non uniforme e i sistemi di coordinate tagliati.
 
-| Classe        | CoordinateSystem messo in scala in modo non uniforme | CoordinateSystem tagliato |
+| Classe        | Sistema di coordinate messo in scala in modo non uniforme| Sistema di coordinate tagliato |
 | ------------ | ------------------------------------- | ------------------------ |
 | Arco          | No                                    | No                       |
 | NurbsCurve   | Sì                                   | Sì                      |

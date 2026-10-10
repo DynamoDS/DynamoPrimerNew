@@ -2,7 +2,7 @@
 
 Dopo aver capito come si crea un progetto zero-touch, possiamo approfondire le specifiche della creazione di un nodo, illustrando l'esempio ZeroTouchEssentials nella pagina di Dynamo su Github.
 
-![Nodi zero-touch](../images/ootbzerotouch.png)
+![Nodi zero-touch](../../.gitbook/assets/ootbzerotouch.png)
 
 > Molti dei nodi standard di Dynamo sono essenzialmente nodi zero-touch, come la maggior parte dei nodi Math, Color e DateTime riportati sopra.
 
@@ -10,7 +10,7 @@ Per iniziare, scaricare il progetto ZeroTouchEssentials da qui: [https://github.
 
 In Visual Studio, aprire il file della soluzione `ZeroTouchEssentials.sln` e creare la soluzione.
 
-![ZeroTouchEssentials in Visual Studio](../images/vs-build-zte.jpg)
+![ZeroTouchEssentials in Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
 
 > Il file `ZeroTouchEssentials.cs` contiene tutti i metodi che importeremo in Dynamo.
 
@@ -24,7 +24,7 @@ Dynamo supporta la definizione dei valori di default per le porte di input in un
 
 * Impostare i parametri del metodo su un valore di default: `inputNumber = 2.0`.
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Valore di default](../images/defaultval.jpg)
+![Valore di default](../../.gitbook/assets/defaultval.jpg)
 
 > 1. Il valore di default verrà mostrato quando si posiziona il cursore sulla porta di input del nodo.
 
@@ -51,7 +51,7 @@ La restituzione di più valori è un po' più complessa rispetto alla creazione 
 * Aggiungere l'attributo `[MultiReturn(new[] { "string1", "string2", ... more strings here })]` al metodo. Le stringhe fanno riferimento alle chiavi del dizionario e diventeranno i nomi delle porte di output.
 * Restituire `Dictionary<>` dalla funzione con le chiavi che corrispondono ai nomi dei parametri nell'attributo: `return new Dictionary<string, object>`.
 
-```
+```c#
 using System.Collections.Generic;
 using Autodesk.DesignScript.Runtime;
 
@@ -66,8 +66,8 @@ namespace ZeroTouchEssentials
 
                 { "add", (a + b) },
                 { "mult", (a * b) }
-            };
-        }
+            
+        };
     }
 }
 ```
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Un nodo che restituisce più output.
 
-![Più output](../images/multipleoutputs.png)
+![Più output](../../.gitbook/assets/multipleoutputs.png)
 
 > 1. Notare che ora sono presenti due porte di output denominate in base alle stringhe immesse per le chiavi del dizionario.
 
@@ -90,7 +90,7 @@ Un nodo che restituisce più output.
   * Ad esempio: `/// <summary>...</summary>`
 * Attivare la documentazione XML in Visual Studio scegliendo `Project > [Project] Properties > Build > Output` e selezionando `Documentation file`.
 
-![Generazione di un file XML](../images/vs-xml.jpg)
+![Generazione di un file XML](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Visual Studio genererà un file XML nella posizione specificata.
 
@@ -104,7 +104,7 @@ I tipi di tag sono i seguenti:
 
 Di seguito è riportato un nodo di esempio con descrizioni di input e output, nonché una sintesi che verrà visualizzata nella libreria.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -141,7 +141,7 @@ Le descrizioni dei nodi illustrano brevemente la funzione e l'output di un nodo.
 * Nella descrizione comando del nodo
 * Nel Browser della documentazione
 
-![Descrizione del nodo](../images/node-description.png)
+![Descrizione del nodo](../../.gitbook/assets/node-description.png)
 
 Seguire queste linee guida per garantire la coerenza e risparmiare tempo durante la scrittura o l'aggiornamento delle descrizioni dei nodi.
 
@@ -163,7 +163,7 @@ Dare sempre priorità alla chiarezza, anche se ciò significa discostarsi da que
 | <p>Utilizzare "Restituisce", "Crea" o un altro verbo descrittivo invece di "Ottiene".</p><ul><li>Esempio: <em>Restituisce</em> una rappresentazione NURBS di una superficie</li></ul>                                                                                                                                                                                                                                                                                                                                                                              | <p>Non utilizzare "Ottenere" o "Ottiene". È meno specifico e ha diverse possibili traduzioni.</p><ul><li>Esempio: <em>Ottiene</em> una rappresentazione NURBS della superficie</li></ul>                                                                                                                                                                                                                                       |
 | <p>Quando si fa riferimento agli input, utilizzare "dato" o "input" invece di "specificato" o qualsiasi altro termine. Omettere "dato" o "input", quando possibile, per semplificare la descrizione e ridurre il numero di parole.</p><ul><li>Esempio: Elimina il file <em>dato</em></li><li>Esempio: Proietta una curva lungo la direzione di proiezione <em>data</em> sulla geometria di base <em>data</em></li></ul><p>È possibile utilizzare "specificato" quando non si fa riferimento diretto ad un input.</p><ul><li>Esempio: Scrive il contenuto di testo in un file <em>specificato</em> dal percorso dato</li></ul> | <p>Quando si fa riferimento agli input, per garantire la coerenza, non utilizzare "specificato" o qualsiasi altro termine tranne "dato" o "input". Non combinare "dato" e "input" nella stessa descrizione, a meno che non sia necessario per motivi di chiarezza.</p><ul><li>Esempio: Elimina il file <em>specificato</em></li><li>Esempio: Proietta una curva di <em>input</em> lungo una direzione di proiezione <em>data</em> su una geometria di base <em>specificata</em></li></ul> |
 | <p>Utilizzare "un/uno" o "un'/una" quando si fa riferimento per la prima volta ad un input. Utilizzare "il dato" o "l'input" invece di "un/uno" o "un'/una", secondo necessità, per chiarezza.</p><ul><li>Esempio: Esegue l'estrusione su percorso di <em>una</em> curva lungo la traiettoria della curva</li></ul>                                                                                                                                                                                                                                                                                                                                | <p>Non utilizzare "questo/a" quando si fa riferimento per la prima volta ad un input.</p><ul><li>Esempio: Esegue l'estrusione su percorso di <em>questa</em> curva lungo la traiettoria della curva</li></ul>                                                                                                                                                                                                                                                                             |
-| <p>Quando si fa riferimento per la prima volta ad un output o a un altro sostantivo che è la destinazione dell'operazione del nodo, utilizzare "un/uno" o "un'/una". Utilizzare solo " quando associato ad "input" o "dato".</p><ul><li>Esempio: Copia <em>un</em> file</li><li>Esempio: Copia <em>il dato</em> file</li></ul>                                                                                                                                                                                                                                                                   | <p>Quando si fa riferimento per la prima volta ad un output o a un altro sostantivo che è la destinazione dell'operazione del nodo, non utilizzare "il/la" da solo.</p><ul><li>Esempio: Copia <em>il</em> file</li></ul>                                                                                                                                                                                                                                  |
+| <p>Quando si fa riferimento per la prima volta ad un output o ad un altro sostantivo che è la destinazione dell'operazione del nodo, utilizzare "un/uno" o "un'/una". Utilizzare solo " quando associato ad "input" o "dato".</p><ul><li>Esempio: Copia <em>un</em> file</li><li>Esempio: Copia <em>il dato</em> file</li></ul>                                                                                                                                                                                                                                                                   | <p>Quando si fa riferimento per la prima volta ad un output o a un altro sostantivo che è la destinazione dell'operazione del nodo, non utilizzare "il/la" da solo.</p><ul><li>Esempio: Copia <em>il</em> file</li></ul>                                                                                                                                                                                                                                  |
 | <p>Scrivere in maiuscolo la prima parola di una frase e tutti i nomi propri, come i nomi e i sostantivi tradizionalmente maiuscoli.</p><ul><li>Esempio: Restituisce l'intersezione di due <em>BoundingBox</em></li></ul>                                                                                                                                                                                                                                                                                                                                     | <p>Non scrivere in maiuscolo oggetti e concetti di geometria comuni a meno che non sia necessario per fare maggiore chiarezza.</p><ul><li>Esempio: Scala in modo non uniforme attorno al <em>Piano</em> dato</li></ul>                                                                                                                                                                                                                                          |
 | <p>Scrivere in maiuscolo Booleano. Scrivere in maiuscolo True e False quando si fa riferimento all'output dei valori Booleani.</p><ul><li>Esempio: Restituisce <em>True</em> se i due valori sono diversi</li><li>Esempio: Converte una stringa in tutti caratteri maiuscoli o minuscoli in base ad un parametro <em>Booleano</em></li></ul>                                                                                                                                                                                                                                        | <p>Non scrivere in minuscolo Booleano. Non scrivere in minuscolo True e False in quando si fa riferimento all'output di valori Booleani.</p><ul><li>Esempio: Restituisce <em>True</em> se i due valori sono diversi</li><li>Esempio: Converte una stringa in tutti caratteri maiuscoli o minuscoli in base ad un parametro <em>booleano</em></li></ul>                                                                                       |
 
@@ -182,7 +182,7 @@ Dynamo non dispone di una parola chiave `new`, pertanto gli oggetti dovranno ess
 
 > Nota Dynamo utilizza il prefisso "By" per indicare che un metodo statico è un costruttore e, sebbene sia facoltativo, l'utilizzo di "By" aiuterà la libreria ad adattarsi meglio allo stile esistente di Dynamo.
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 Dopo l'importazione del file .dll ZeroTouchEssentials, nella libreria sarà presente un nodo ZeroTouchEssentials. Questo oggetto può essere creato utilizzando il nodo `ByTwoDoubles`
 
-![Nodo ByTwoDoubles](../images/dyn-constructor.jpg)
+![Nodo ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
 
 ### Utilizzo dei tipi di geometria di Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -221,7 +221,7 @@ Le librerie di Dynamo possono utilizzare tipi di geometria di Dynamo nativi come
 
 > Nota Gli oggetti geometrici di Dynamo vengono utilizzati come qualsiasi altro oggetto trasferito alle funzioni.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Un nodo che ottiene la lunghezza di una curva e la raddoppia.
 
-![Input curve](../images/doublelength.png)
+![Input curve](../../.gitbook/assets/doublelength.png)
 
 > 1. Questo nodo accetta un tipo di geometria curve come input.
 
@@ -252,7 +252,7 @@ Le risorse della geometria che non vengono restituite dalle funzioni dovranno es
 
 *   Con un'istruzione using:
 
-    ```
+    ```c#
     using (Point p1 = Point.ByCoordinates(0, 0, 0))
     {
       using (Point p2 = Point.ByCoordinates(10, 10, 0))
@@ -267,7 +267,7 @@ Le risorse della geometria che non vengono restituite dalle funzioni dovranno es
     > Per ulteriori informazioni sulle nuove funzionalità di stabilità introdotte in Dynamo 2.5, vedere [Dynamo Geometry Stability Improvements](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297).
 *   Con le chiamate manuali di Dispose:
 
-    ```
+    ```c#
     Point p1 = Point.ByCoordinates(0, 0, 0);
     Point p2 = Point.ByCoordinates(10, 10, 0);
     Line l = Line.ByStartPointEndPoint(p1, p2);
@@ -285,7 +285,7 @@ Quando si pubblica una versione più recente di una libreria, i nomi dei nodi po
 * All'interno dell'elemento migrations, creare elementi `<priorNameHint>...</priorNameHint>` per ogni modifica del nome.
 * Per ogni modifica del nome, fornire un elemento `<oldName>...</oldName>` e `<newName>...</newName>`.
 
-![File Migrations](../images/vs-migrations-file.jpg)
+![File Migrations](../../.gitbook/assets/vs-migrations-file.jpg)
 
 > 1. Fare clic con il pulsante destro del mouse e selezionare `Aggiungi > Nuovo elemento`.
 > 2. Scegliere `File XML`.
@@ -293,7 +293,7 @@ Quando si pubblica una versione più recente di una libreria, i nomi dei nodi po
 
 Questo codice di esempio indica a Dynamo che qualsiasi nodo denominato `GetClosestPoint` è ora denominato `ClosestPointTo`.
 
-```
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -311,7 +311,7 @@ Zero-Touch attualmente non supporta l'uso di generics. Possono essere utilizzati
 
 Nell'esempio seguente, un nodo zero-touch di tipo `T` non verrà importato. Se il resto della libreria viene importato in Dynamo, ci saranno eccezioni del tipo mancanti.
 
-```
+```c#
 public class SomeGenericClass<T>
 {
     public SomeGenericClass()
@@ -323,7 +323,7 @@ public class SomeGenericClass<T>
 
 L'utilizzo di un tipo generico con il tipo impostato in questo esempio verrà importato in Dynamo.
 
-```
+```c#
 public class SomeWrapper
 {
     public object wrapped;

@@ -12,7 +12,7 @@ Questa Wiki serve per imparare a sviluppare l'interfaccia API di Dynamo, support
 
 Questo blog è la raccolta di articoli più aggiornata del team di Dynamo, che discute di nuove funzionalità, workflow e tutto ciò che riguarda Dynamo.
 
-[http://dynamobim.com/blog/](http://dynamobim.com/blog/)
+[https://dynamobim.org/blog/](https://dynamobim.org/blog/)
 
 ### **Guida di DesignScript**
 
@@ -76,8 +76,3 @@ Blog per sviluppatori:
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
-### **The Building Coder**
-
-Un catalogo affidabile di workflow dell'API di Revit, creato da uno dei principali esperti del BIM.
-
-[http://thebuildingcoder.typepad.com/](http://thebuildingcoder.typepad.com)

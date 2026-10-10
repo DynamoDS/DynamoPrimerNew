@@ -27,7 +27,7 @@ import System
 
 Questo consente di accedere all'API di Revit e offre scripting personalizzato per qualsiasi operazione di Revit. Combinando il processo di programmazione visiva con lo scripting, la collaborazione e lo sviluppo di strumenti dell'API di Revit, si ottiene un miglioramento significativo. Ad esempio, un responsabile BIM e un progettista di schemi possono lavorare insieme sullo stesso grafico. In questa collaborazione, possono migliorare la progettazione e l'esecuzione del modello.
 
-![](<../images/python & revit - 01.jpg>)
+\![](<../../.gitbook/assets/python & revit - 01 (1).jpg>)
 
 ### API specifiche della piattaforma
 
@@ -51,7 +51,7 @@ Questo è un metodo molto semplice per il recupero di _doc_, _uiapp_ e _app_ del
 
 Di seguito è mostrato il modo in cui si importano i servizi di Revit e si recuperano i dati dei documenti in Dynamo.
 
-![](<../images/python & revit - exercise 01 - 01.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 01 - 01.jpg>)
 
 Osservare il nodo Python in Dynamo. Il codice è disponibile anche di seguito:
 
@@ -60,17 +60,17 @@ Osservare il nodo Python in Dynamo. Il codice è disponibile anche di seguito:
 import sys
 import clr
 
-#Import DocumentManager
+# Import DocumentManager
 clr.AddReference("RevitServices")
 import RevitServices
 from RevitServices.Persistence import DocumentManager
 
-#Place your code below this line
+# Place your code below this line
 doc = DocumentManager.Instance.CurrentDBDocument
 uiapp = DocumentManager.Instance.CurrentUIApplication
 app = uiapp.Application
 
-#Assign your output to the OUT variable
+# Assign your output to the OUT variable
 OUT = [doc,uiapp,app]
 ```
 
@@ -86,19 +86,19 @@ In questo esercizio, verrà creata una semplice curva di modello in Revit median
 
 Iniziare creando una nuova famiglia di masse concettuali in Revit.
 
-![](<../images/python & revit - exercise 02 - 01.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 01.jpg>)
 
 Aprire la _cartella Conceptual Mass_ e utilizzare il file modello _Metric Mass.rft_.
 
-![](<../images/python & revit - exercise 02 - 02.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 02.jpg>)
 
 In Revit, utilizzare il tasto di scelta rapida **`un`** per visualizzare le impostazioni Unità di misura, quindi modificare l'unità di lunghezza in metri.
 
-![](<../images/python & revit - exercise 02 - 03.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 03.jpg>)
 
 Avviare Dynamo e creare il gruppo di nodi nell'immagine riportata sotto. Innanzitutto, verranno creati due punti di riferimento in Revit dai nodi di Dynamo.
 
-![](<../images/python & revit - exercise 02 - 04.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 04.jpg>)
 
 > 1. Creare un **Code Block** e assegnargli un valore di `"0;"`.
 > 2. Collegare questo valore ad un nodo **ReferencePoint.ByCoordinates** per gli input X, Y e Z.
@@ -108,7 +108,7 @@ Avviare Dynamo e creare il gruppo di nodi nell'immagine riportata sotto. Innanzi
 
 Osservare il nodo Python in Dynamo. Per il codice completo, vedere di seguito.
 
-![](<../images/python & revit - exercise 02 - 05.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 05.jpg>)
 
 > 1. **System.Array:** Revit richiede una **matrice di sistema** come input (anziché un elenco di Python). Si tratta solo di un'altra riga di codice, ma prestare attenzione ai tipi di argomento faciliterà la programmazione di Python in Revit.
 
@@ -119,24 +119,25 @@ import clr
 # Import RevitNodes
 clr.AddReference("RevitNodes")
 import Revit
+
 #Import Revit elements
 from Revit.Elements import *
 import System
 
-#define inputs
+# Define inputs
 startRefPt = IN[0]
 endRefPt = IN[1]
 
-#define system array to match with required inputs
+# Define system array to match with required inputs
 refPtArray = System.Array[ReferencePoint]([startRefPt, endRefPt])
 
-#create curve by reference points in Revit
+# Create curve by reference points in Revit
 OUT = CurveByPoints.ByReferencePoints(refPtArray)
 ```
 
 In Dynamo, sono stati creati due punti di riferimento con una linea che li collega utilizzando Python. Si aumenterà un po' il livello di complessità nel prossimo esercizio.
 
-![](<../images/python & revit - exercise 02 - 06.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 06.jpg>)
 
 ## Esercizio 3
 
@@ -148,63 +149,69 @@ In Dynamo, sono stati creati due punti di riferimento con una linea che li colle
 
 Questo esercizio semplifica la procedura, ma enfatizza gli argomenti relativi al collegamento di dati e geometria da Revit a Dynamo e viceversa. Per iniziare, aprire Revit-StructuralFraming.rvt. Una volta aperto il file, avviare Dynamo e aprire il file Revit-StructuralFraming.dyn.
 
-![](../images/python&revit-exercise03-01.jpg)
+![](../../.gitbook/assets/python\&revit-exercise03-01.jpg)
 
 Questo file di Revit contiene dati di base. Due curve di riferimento: una disegnata sul livello 1 e l'altra sul livello 2. Si desidera ottenere queste curve in Dynamo e mantenere un collegamento attivo.
 
 In questo file è presente un gruppo di nodi che si collegano a cinque input di un nodo Python.
 
-![](<../images/python & revit - exercise 03 - 02.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 02.jpg>)
 
 > 1. **Nodi Select Model Element:** fare clic sul pulsante Seleziona per ogni elemento e selezionare una curva corrispondente in Revit.
 > 2. **Code Block:** utilizzando la sintassi `0..1..#x;`_,_ collegare un dispositivo di scorrimento di numeri interi compreso tra 0 e 20 all'input _x_. Questo indica il numero di travi da disegnare tra le due curve.
 > 3. **Structural Framing Types:** dal menu a discesa, scegliere la trave di default W12x26.
-> 4. **Levels:** selezionare "Livello 1".
+> 4. **Levels:** selezionare Level 1.
 
 Questo codice in Python è un po' più denso, ma i commenti all'interno del codice descrivono cosa sta accadendo nel processo:
 
-![](<../images/python & revit - exercise 03 - 03.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 03.jpg>)
 
 ```py
 import clr
-#import Dynamo Geometry
+
+# Import Dynamo Geometry
 clr.AddReference('ProtoGeometry')
 from Autodesk.DesignScript.Geometry import *
+
 # Import RevitNodes
 clr.AddReference("RevitNodes")
 import Revit
+
 # Import Revit elements
 from Revit.Elements import *
 import System
 
-#Query Revit elements and convert them to Dynamo Curves
+# Query Revit elements and convert them to Dynamo Curves
 crvA=IN[0].Curves[0]
 crvB=IN[1].Curves[0]
 
-#Define input Parameters
+# Define input Parameters
 framingType=IN[3]
 designLevel=IN[4]
 
-#Define "out" as a list
+# Define "out" as a list
 OUT=[]
 
 for val in IN[2]:
-	#Define Dynamo Points on each curve
+	# Define Dynamo Points on each curve
 	ptA=Curve.PointAtParameter(crvA,val)
 	ptB=Curve.PointAtParameter(crvB,val)
-	#Create Dynamo line
+	
+	# Create Dynamo line
 	beamCrv=Line.ByStartPointEndPoint(ptA,ptB)
-	#create Revit Element from Dynamo Curves
+	
+	# Create Revit Element from Dynamo Curves
 	beam = StructuralFraming.BeamByCurve(beamCrv,designLevel,framingType)
-	#convert Revit Element into list of Dynamo Surfaces
+	
+	# Convert Revit Element into list of Dynamo Surfaces
 	OUT.append(beam.Faces)
 ```
 
-In Revit, è presente una serie di travi che si estendono sulle due curve come elementi strutturali. Nota: questo non è un esempio realistico; gli elementi strutturali vengono utilizzati come esempio per le istanze native di Revit create da Dynamo.
+In Revit, è presente una serie di travi che si estendono sulle due curve come elementi strutturali. Nota Questo non è un esempio realistico; gli elementi strutturali vengono utilizzati come esempio per le istanze native di Revit create da Dynamo.
 
 In Dynamo, è possibile visualizzare anche i risultati. Le travi del nodo **Watch 3D** fanno riferimento alla geometria sottoposta a query dagli elementi di Revit.
 
-![](<../images/python & revit - exercise 03 - 05.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 05.jpg>)
 
 Notare che è presente un processo continuo di conversione dei dati dall'ambiente di Revit all'ambiente di Dynamo. In sintesi, ecco come viene riprodotto il processo:
 
@@ -219,4 +226,4 @@ Questo processo può sembrare un po' complicato, ma lo script lo rende semplice 
 
 Con un aggiornamento delle curve di riferimento in Revit, si ottiene una nuova serie di travi.
 
-![](<../images/python & revit - ex 03 - 06.gif>)
+\![](<../../.gitbook/assets/python & revit - ex 03 - 06.gif>)

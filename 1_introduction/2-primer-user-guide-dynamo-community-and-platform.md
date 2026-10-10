@@ -11,7 +11,7 @@ Questa guida è stata progettata per fornire ai lettori contenuti su diversi liv
 * [Interfaccia utente](../3_user_interface/)
 * [Nodi e fili](../4_nodes_and_wires/)
 
-Per gli utenti che desiderano sviluppare una comprensione più approfondita di ciascun elemento, ad esempio un nodo specifico e il concetto che sta alla base, vengono trattati i concetti fondamentali nel capitolo dedicato.
+Per gli utenti che desiderano sviluppare una comprensione più approfondita di ciascun elemento, ad esempio un nodo specifico e il concetto che sta alla base, vengono trattati i concetti fondamentali in un capitolo dedicato.
 
 * [Nodi e concetti essenziali](../5_essential_nodes_and_concepts/)
 
@@ -19,11 +19,11 @@ Se si desidera visualizzare la dimostrazione dei workflow di Dynamo, sono stati 
 
 * [Vaso parametrico](../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.md)
 
-![](images/vase1.gif)
+\![](<../.gitbook/assets/vase1 (3).gif>)
 
 * [Punti attrattore](../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.md)
 
-![](<images/attractor1.gif>)
+\![](<../.gitbook/assets/attractor1 (1).gif>)
 
 {% hint style="info" %}
 Nei capitoli successivi sono disponibili altri esercizi specifici per gli argomenti, poiché vengono trattati argomenti diversi su Dynamo. Gli **esercizi** sono in genere disponibili nell'ultima sezione di ogni pagina.
@@ -33,7 +33,7 @@ Nei capitoli successivi sono disponibili altri esercizi specifici per gli argome
 
 Dynamo non sarebbe quello che è senza un forte gruppo di utenti avidi e collaboratori attivi. Per coinvolgere la comunità, è possibile seguire il [blog](http://dynamobim.org/blog/), aggiungere il proprio lavoro alla galleria o discutere di Dynamo nel [forum](https://forum.dynamobim.com).
 
-![Forum](images/02-Community.png)
+![Forum](../.gitbook/assets/02-Community.png)
 
 ### Piattaforma
 
@@ -41,6 +41,6 @@ Dynamo è concepito come uno strumento di programmazione visiva per i progettist
 
 Il codice sorgente del progetto è open source e permette di estenderne le funzionalità nel modo desiderato. È possibile consultare il progetto su GitHub e individuare le iniziative in corso di personalizzazione di Dynamo da parte degli utenti.
 
-![Repository](images/03-TheRepo.png)
+![Repository](../.gitbook/assets/03-TheRepo.png)
 
 > È possibile sfogliare, creare una copia tramite fork e iniziare ad estendere Dynamo in base alle proprie esigenze.

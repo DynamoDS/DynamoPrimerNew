@@ -1,10 +1,12 @@
 # Informazioni su
 
-{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
+{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %}
+Video di Dynamo Hype
+{% endembed %}
 
 ## Per Dynamo v2.13 e versioni successive
 
-![Logo Dynamo](images/dynamo_logo_dark-trim.jpg)
+\![Dynamo Logo](<.gitbook/assets/dynamo_logo_dark-trim (1).jpg>)
 
 > Dynamo è una piattaforma di programmazione visiva open source per progettisti.
 
@@ -27,9 +29,9 @@ Stiamo migliorando costantemente Dynamo, pertanto alcune funzionalità potrebber
 
 ### Open source
 
-Il progetto Dynamo Primer è open source. Siamo dedicati a fornire contenuto di qualità e apprezziamo qualsiasi eventuale feedback fornito. Se si desidera segnalare un problema su qualsiasi aspetto, pubblicare il messaggio nella pagina dei problemi su GitHub: [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues) 
+Il progetto Dynamo Primer è open source. Siamo dedicati a fornire contenuto di qualità e apprezziamo qualsiasi eventuale feedback fornito. Se si desidera segnalare un problema su qualsiasi aspetto, pubblicare il messaggio nella pagina dei problemi su GitHub: [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues)
 
-Per contribuire ad una nuova sezione, a modifiche o a qualsiasi altro elemento del progetto, controllare il repository su GitHub per iniziare: [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew) 
+Per contribuire ad una nuova sezione, a modifiche o a qualsiasi altro elemento del progetto, controllare il repository su GitHub per iniziare: [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew)
 
 ### Progetto Dynamo Primer
 
@@ -37,31 +39,31 @@ Dynamo Primer è un progetto open source avviato da Matt Jezyk e dal team di svi
 
 **Mode Lab** è stata incaricata di scrivere la prima edizione della Guida introduttiva. La ringraziamo per tutti gli sforzi profusi nel creare questa preziosa risorsa.
 
-![](images/modelab-logo.png)
+![](.gitbook/assets/modelab-logo.png)
 
 ***
 
 **John Pierson del team Parallax** è stato incaricato di aggiornare la Guida introduttiva in modo che rifletta le revisioni di Dynamo 2.0.
 
-![](images/prlx-logo.jpg)
+![](.gitbook/assets/prlx-logo.jpg)
 
 ***
 
 **Matterlab** è stato incaricato di aggiornare la Guida introduttiva in modo che rifletta le revisioni di Dynamo 2.13.
 
-![](images/matterlab-logo.jpg)
+![](.gitbook/assets/matterlab-logo.jpg)
 
 ***
 
 **Matterlab** è stato incaricato di aggiornare la Guida introduttiva in modo che rifletta le revisioni di Dynamo 2.17.
 
-<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 **Wood Rodgers** è stato incaricato di aggiornare la Guida introduttiva con il contenuto per Dynamo for Civil 3D.
 
-<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### Riconoscimenti
 
@@ -71,11 +73,11 @@ Grazie a Matt Jezyk, Ian Keough, Zach Kron, Racel Amour e Colin McCrone per la c
 
 ### Software e risorse
 
-**Dynamo** Consultare i seguenti siti per la release **stabile** più recente di Dynamo.
+**Dynamo** Consultare il seguente sito per la release **stabile** più recente di Dynamo.
 
-[https://dynamobim.com/download/](https://dynamobim.com/download/) o [https://dynamobuilds.com](https://dynamobuilds.com/)
+[https://dynamobuilds.com](https://dynamobuilds.com/)
 
-*Nota: a partire da Revit 2020, Dynamo è incluso con le release di Revit e pertanto non è necessaria l'installazione manuale. Ulteriori informazioni sono disponibili in questo [post del blog](https://dynamobim.org/dynamo-core-2-1-release/).
+*Nota A partire da Revit 2020, Dynamo è incluso con le release di Revit e pertanto non è necessaria l'installazione manuale. Ulteriori informazioni sono disponibili in questo [post del blog](https://dynamobim.org/dynamo-core-2-1-release/).
 
 **DynamoBIM** La migliore fonte per ulteriori informazioni, contenuto di formazione e forum è il sito Web di DynamoBIM.
 

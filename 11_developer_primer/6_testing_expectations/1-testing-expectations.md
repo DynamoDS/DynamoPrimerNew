@@ -2,7 +2,7 @@
 
 In questa pagina viene descritto ciò che si cerca di ottenere con i test sul nuovo codice aggiunto a Dynamo.
 
-Quindi, si desidera aggiungere un nuovo nodo. Bene! È arrivato il momento di aggiungere alcuni test. Ci sono due motivi per farlo.
+Quindi, è necessario aggiungere un nuovo nodo. Bene! È arrivato il momento di aggiungere alcuni test. Ci sono due motivi per farlo.
 
 1. Serve a scoprire dove non funziona.
 2. Quando un altro utente modifica qualcosa che interrompe il nodo, questo dovrebbe interrompere i test. In questo modo la persona che ha interrotto i test deve andare a correggerlo. Se non interrompe i test, il problema è in gran parte dell'utente che deve occuparsi dei modelli che si danneggiano.
@@ -15,9 +15,9 @@ Gli unit test dovrebbero testare il meno possibile. Se è stato creato un nodo c
 
 Dovrebbero includere:
 
-* Test positivi (verificano se il codice viene eseguito correttamente)
-* Test negativi (verificano che il codice non si blocchi quando viene immesso input non valido)
-* Test di regressione (in caso di bug del codice, servono per assicurarsi che non si ripresenti)
+* Test positivi (verificano se il codice viene eseguito correttamente).
+* Test negativi (verificano che il codice non si blocchi quando viene immesso input non valido).
+* Test di regressione (in caso di bug del codice, servono per assicurarsi che non si ripresenti).
 
 Dovrebbero essere brevi, veloci e affidabili. La maggior parte dei test dovrebbe essere unit test.
 
@@ -33,15 +33,15 @@ L'ideale sarebbe una serie progressiva di test che coprano insiemi crescenti di 
 
 Esempi di operazioni che richiedono test di sistema:
 
-* Un nuovo tipo di nodo di Revit che memorizza più elementi nella traccia anziché un singolo elemento
+* Un nuovo tipo di nodo di Revit che memorizza più elementi nella traccia anziché un singolo elemento.
 * Un nuovo nodo Watch che visualizza i dati in modo diverso.
 
 Esempio di elementi che non richiedono test di sistema:
 
-* Un nuovo nodo Math
+* Un nuovo nodo Math.
 * Una libreria di elaborazione delle stringhe.
 
 I test di sistema dovrebbero:
 
-* Asserire il comportamento corretto
+* Asserire il comportamento corretto.
 * Asserire l'assenza di comportamenti patologici, ad es. nessuna eccezione.

@@ -2,7 +2,7 @@
 
 I nodi basati su NodeModel offrono una flessibilità e una potenza notevolmente superiori rispetto ai nodi zero-touch. In questo esempio, si porta il nodo griglia zero-touch al livello successivo aggiungendo un dispositivo di scorrimento integrato che imposta dimensioni casuali del rettangolo.
 
-![Grafico a griglia rettangolare](../images/cover-image-2.jpg)
+![Grafico a griglia rettangolare](../../.gitbook/assets/cover-image-2.jpg)
 
 > Il dispositivo di scorrimento consente di mettere in scala le celle rispetto alle relative dimensioni, in modo che l'utente non debba fornire un dispositivo di scorrimento con l'intervallo corretto.
 
@@ -33,7 +33,7 @@ Un nodo NodeModel può chiamare solo funzioni, pertanto è necessario separare N
 
 Creare due progetti di libreria di classi C# nella soluzione: uno per le funzioni e uno per implementare l'interfaccia NodeModel.
 
-![Aggiunta di una nuova libreria di classi](../images/vs-new-class-projects.jpg)
+![Aggiunta di una nuova libreria di classi](../../.gitbook/assets/vs-new-class-projects.jpg)
 
 > 1. Fare clic con il pulsante destro del mouse sulla soluzione e selezionare `Add > New Project`.
 > 2. Scegliere Class Library.
@@ -43,7 +43,7 @@ Creare due progetti di libreria di classi C# nella soluzione: uno per le funzion
 
 Successivamente, è necessario rinominare le librerie di classi create automaticamente e aggiungerne una al progetto `CustomNodeModel`. La classe `GridNodeModel` implementa la classe astratta NodeModel, la classe `GridNodeView` viene utilizzata per personalizzare la vista e `GridFunction` contiene eventuali funzioni che è necessario chiamare.
 
-![Solution Explorer](../images/vs-new-class.jpg)
+![Solution Explorer](../../.gitbook/assets/vs-new-class.jpg)
 
 > 1. Aggiungere un'altra classe facendo clic con il pulsante destro del mouse sul progetto `CustomNodeModel`, selezionando `Add > New Item...` e scegliendo `Class`.
 > 2. Nel progetto `CustomNodeModel`, sono necessarie le classi `GridNodeModel.cs` e `GridNodeView.cs`.
@@ -51,14 +51,14 @@ Successivamente, è necessario rinominare le librerie di classi create automatic
 
 Prima di aggiungere qualsiasi codice alle classi, aggiungere i pacchetti necessari per questo progetto. `CustomNodeModel` richiede ZeroTouchLibrary e WpfUILibrary e `CustomNodeModelFunction` richiede solo ZeroTouchLibrary. Si utilizzerà WpfUILibrary nella personalizzazione dell'interfaccia utente che verrà eseguita in seguito e si userà ZeroTouchLibrary per la creazione della geometria. I pacchetti possono essere aggiunti singolarmente per i progetti. Poiché questi pacchetti presentano dipendenze, Core e DynamoServices verranno installati automaticamente.
 
-![Installazione dei pacchetti](../images/vs-add-packages.jpg)
+![Installazione dei pacchetti](../../.gitbook/assets/vs-add-packages.jpg)
 
 > 1. Fare clic con il pulsante destro del mouse su un progetto e selezionare `Manage NuGet Packages`.
 > 2. Installare solo i pacchetti necessari per il progetto.
 
 Visual Studio copierà i pacchetti NuGet a cui si fa riferimento nella directory della build. Questa opzione può essere impostata su False, in modo da non includere eventuali file non necessari nel pacchetto.
 
-![Disattivazione della copia locale del pacchetto](../images/vs-disable-package-copying.jpg)
+![Disattivazione della copia locale del pacchetto](../../.gitbook/assets/vs-disable-package-copying.jpg)
 
 > 1. Seleziona i pacchetti NuGet di Dynamo.
 > 2. Impostare `Copy Local` su False.
@@ -69,7 +69,7 @@ Come accennato in precedenza, l'aspetto principale che rende un nodo NodeModel d
 
 Copiare il seguente codice in `GridNodeModel.cs`.
 
-```
+```c#
 using System;
 using System.Collections.Generic;
 using Dynamo.Graph.Nodes;
@@ -144,7 +144,7 @@ Il progetto `CustomNodeModelFunction` verrà integrato in un assieme separato da
 
 Copiare il seguente codice in `GridFunction.cs`.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 using Autodesk.DesignScript.Runtime;
 using System;
@@ -199,7 +199,7 @@ Questa classe di funzioni è molto simile al case study del nodo griglia zero-to
 
 Così come sono stati aggiunti i riferimenti per i pacchetti NuGet, `CustomNodeModel` dovrà fare riferimento a `CustomNodeModelFunction` per chiamare la funzione.
 
-![Aggiunta di un riferimento](../images/vs-add-project-reference.jpg)
+![Aggiunta di un riferimento](../../.gitbook/assets/vs-add-project-reference.jpg)
 
 > L'istruzione using per CustomNodeModel sarà inattiva fino a quando non si fa riferimento alla funzione.
 >
@@ -214,7 +214,7 @@ Per creare un dispositivo di scorrimento, è necessario personalizzare l'interfa
 
 Copiare il seguente codice in `GridNodeView.cs`.
 
-```
+```c#
 using Dynamo.Controls;
 using Dynamo.Wpf;
 
@@ -240,7 +240,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 Dopo aver impostato la struttura del progetto, utilizzare l'ambiente di progettazione di Visual Studio per creare un controllo utente e definirne i parametri in un file `.xaml`. Dalla casella degli strumenti, aggiungere un dispositivo di scorrimento a `<Grid>...</Grid>`.
 
-![Aggiunta di un nuovo dispositivo di scorrimento](../images/vs-usercontrol.jpg)
+![Aggiunta di un nuovo dispositivo di scorrimento](../../.gitbook/assets/vs-usercontrol.jpg)
 
 > 1. Fare clic con il pulsante destro del mouse su `CustomNodeModel` e selezionare `Add > New Item`.
 > 2. Selezionare `WPF`.
@@ -249,7 +249,7 @@ Dopo aver impostato la struttura del progetto, utilizzare l'ambiente di progetta
 
 Copiare il seguente codice in `Slider.xaml`.
 
-```
+```xml
 <UserControl x:Class="CustomNodeModel.CustomNodeModel.Slider"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -269,7 +269,7 @@ Copiare il seguente codice in `Slider.xaml`.
 
 Quando è stato creato il file `Slider.xaml`, Visual Studio ha creato automaticamente un file C# denominato `Slider.xaml.cs` che inizializza il dispositivo di scorrimento. Modificare lo spazio dei nomi in questo file.
 
-```
+```c#
 using System.Windows.Controls;
 
 namespace CustomNodeModel.CustomNodeModel
@@ -295,7 +295,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 Prima di creare il progetto, il passaggio finale consiste nell'aggiungere un file `pkg.json` in modo che Dynamo possa leggere il pacchetto.
 
-![Aggiunta di un file JSON](../images/vs-pkg-json.jpg)
+![Aggiunta di un file JSON](../../.gitbook/assets/vs-pkg-json.jpg)
 
 > 1. Fare clic con il pulsante destro del mouse su `CustomNodeModel` e selezionare `Add > New Item`.
 > 2. Selezionare `Web`.
@@ -305,7 +305,7 @@ Prima di creare il progetto, il passaggio finale consiste nell'aggiungere un fil
 
 * Copiare il seguente codice in `pkg.json`.
 
-```
+```json
 {
   "license": "MIT",
   "file_hash": null,
@@ -341,7 +341,7 @@ Prima di creare il progetto, il passaggio finale consiste nell'aggiungere un fil
 
 La causa principale comune è che il nodo è stato creato utilizzando un costruttore che ha ricreato le porte. Invece, avrebbe dovuto essere utilizzato un costruttore che ha caricato le porte. Questi costruttori sono generalmente contrassegnati `[JsonConstructor]`. _Per alcuni esempi, vedere di seguito._
 
-![File JSON danneggiato](<../images/broken-json.jpg>)
+\![Broken JSON](<../../.gitbook/assets/broken-json (1).jpg>)
 
 Ciò può verificarsi perché:
 

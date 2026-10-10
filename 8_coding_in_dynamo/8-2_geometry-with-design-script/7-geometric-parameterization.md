@@ -16,7 +16,7 @@ La parametrizzazione non è particolarmente utile per determinare i punti utiliz
 
 Le curve hanno un metodo _PointAtParameter_, che utilizza un singolo argomento doppio compreso tra 0 e 1 e restituisce l'oggetto Point in corrispondenza di tale parametro. Ad esempio, questo script trova i Point in corrispondenza dei parametri 0, .1, .2, .3, .4, .5, .6, .7, .8, .9 e 1:
 
-![](../images/GeometricParameterization_01.png)
+![](../../.gitbook/assets/GeometricParameterization_01.png)
 
 ```js
 pts = {};
@@ -41,7 +41,7 @@ Analogamente, le superfici hanno un metodo _PointAtParameter_ che utilizza due a
 
 Sebbene l'estrazione di punti singoli su una curva e una superficie possa essere utile, gli script spesso richiedono la conoscenza delle particolari caratteristiche geometriche in corrispondenza di un parametro, ad esempio qual è la direzione della curva o della superficie. Il metodo _CoordinateSystemAtParameter_ non solo individua la posizione, ma anche un CoordinateSystem orientato in corrispondenza del parametro di una curva o superficie. Ad esempio, il seguente script estrae i CoordinateSystem orientati lungo una superficie di rivoluzione e utilizza l'orientamento dei CoordinateSystem per generare linee che si staccano dalla normale alla superficie:
 
-![](../images/GeometricParameterization_02.png)
+![](../../.gitbook/assets/GeometricParameterization_02.png)
 
 ```js
 pts = {};
@@ -59,8 +59,7 @@ crv = NurbsCurve.ByPoints(pts);
 axis_origin = Point.ByCoordinates(0, 0, 0);
 axis = Vector.ByCoordinates(0, 0, 1);
 
-surf = Surface.ByRevolve(crv, axis_origin, axis, 90,
-    140);
+surf = Surface.ByRevolve(crv, axis_origin, axis, 90, 140);
 
 cs_array = surf.CoordinateSystemAtParameter(
     (0..1..#7)<1>, (0..1..#7)<2>);
@@ -69,8 +68,7 @@ def make_line(cs : CoordinateSystem) {
 	lines_start = cs.Origin;
     lines_end = cs.Origin.Translate(cs.ZAxis, -0.75);
 
-    return = Line.ByStartPointEndPoint(lines_start,
-        lines_end);
+    return = Line.ByStartPointEndPoint(lines_start, lines_end);
 }
 
 lines = make_line(Flatten(cs_array));

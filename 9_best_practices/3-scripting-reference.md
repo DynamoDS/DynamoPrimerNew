@@ -1,12 +1,12 @@
 # Riferimento per lo scripting
 
-Questa pagina di riferimento estende le procedure ottimali descritte in Strategie di scripting con maggiori dettagli su librerie di codici, etichettatura e applicazione di stili. Per illustrare i concetti riportati di seguito, verrà utilizzato Python, ma gli stessi principi si applicano a Python e C# (zero-touch) ma con una sintassi diversa.
+Questa pagina di riferimento estende le procedure ottimali descritte in Strategie di scripting con maggiori dettagli su librerie di codici, etichettatura e applicazione di stili. Per illustrare i concetti riportati di seguito, verrà utilizzato Python, ma gli stessi principi si applicano a Python e C# (zero-touch) con una sintassi diversa.
 
 ## Quali librerie utilizzare
 
 Le librerie standard sono esterne a Dynamo e sono presenti nei linguaggi di programmazione Python e C# (zero-touch). Dynamo dispone anche di un suo gruppo di librerie che corrispondono direttamente alla gerarchia dei nodi, consentendo all'utente di creare qualsiasi elemento nel codice che potrebbe essere creato con nodi e fili. Di seguito è riportata una guida per gli elementi a cui ciascuna libreria di Dynamo consente di accedere e per quando utilizzarne una standard.
 
-![](images/textual-programming.jpg)
+![](../.gitbook/assets/textual-programming.jpg)
 
 **Librerie standard e librerie di Dynamo**
 
@@ -28,7 +28,9 @@ Le librerie standard sono esterne a Dynamo e sono presenti nei linguaggi di prog
    * Funzionalità: Excel.
    * Modalità di importazione: `import DSOffice`
 
-{% hint style="warning" %} *Nota Quando si utilizza **ProtoGeometry** tramite Python o C#, si stanno creando oggetti non gestiti, che richiedono la gestione manuale della memoria. Per ulteriori informazioni, vedere la sezione riportata di seguito: **Oggetti non gestiti**. {% endhint %}
+{% hint style="warning" %}
+*Nota Quando si utilizza **ProtoGeometry** tramite Python o C#, si stanno creando oggetti non gestiti, che richiedono la gestione manuale della memoria. Per ulteriori informazioni, vedere la sezione riportata di seguito: **Oggetti non gestiti**.
+{% endhint %}
 
 ## Etichettatura con attenzione
 
@@ -158,7 +160,7 @@ In generale, esistono più modi per programmare qualsiasi cosa, quindi lo "stile
 * Costanti:\
  `ALL_CAPS_WITH_UNDERSCORES`
 
-> Suggerimento: evitare variabili con una lettera (soprattutto l, O, I) tranne che in blocchi molto corti, quando il significato è chiaramente visibile dal contesto immediato.
+> Suggerimento Evitare variabili con una lettera (soprattutto l, O, I) tranne che in blocchi molto corti, quando il significato è chiaramente visibile dal contesto immediato.
 
 **Utilizzo di righe vuote:**
 
@@ -251,7 +253,7 @@ In generale, esistono più modi per programmare qualsiasi cosa, quindi lo "stile
         print form_input_state()
     ```
 
-> Suggerimento: i commenti indicano perché, il codice indica come.
+> Suggerimento I commenti indicano perché, il codice indica come.
 
 **Verificare il codice open source:**
 

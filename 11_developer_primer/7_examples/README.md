@@ -22,14 +22,14 @@ Di seguito sono riportati alcuni esempi di modelli di Visual Studio che è possi
     * Determinare la logica di interazione per il dispositivo di scorrimento: [codice](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
 * [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**:** modelli per nodi zero-touch, interfaccia utente personalizzata, test ed estensioni delle viste.
   * [Esempi di interfaccia utente](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
-    * Creare un nodo dell'interfaccia utente personalizzato di base: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs)
+    * Creare un nodo dell'interfaccia utente personalizzato di base: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/LocalizedCustomNodeModel.cs)
     * Creare un menu a discesa: [DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs)
   * [Test](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryTests)
     * Test di sistema: [HelloDynamoSystemTests.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryTests/HelloDynamoSystemTests.cs)
-    * Test zero-touch: [HelloDynamoZeroTouchTests.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryTests/HelloDynamoZeroTouchTests.cs)
+    * Test ZeroTouch: [HelloDynamoZeroTouchTests.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryTests/HelloDynamoZeroTouchTests.cs)
   * [Esempi zero-touch](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryZeroTouch/Examples):
-    * Esempio di nodi zero-touch, incluso uno che implementa `IGraphicItem` per influenzare il rendering della geometria: [BasicExample.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryZeroTouch/Examples/BasicExample.cs)
-    * Esempio di nodi zero-touch per colorare la geometria utilizzando `IRenderPackage`: [ColorExample.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryZeroTouch/Examples/ColorExample.cs)
+    * Esempio di nodi ZeroTouch, incluso uno che implementa `IGraphicItem` per influenzare il rendering della geometria: [BasicExample.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryZeroTouch/Examples/BasicExample.cs)
+    * Esempio di nodi ZeroTouch per colorare la geometria utilizzando `IRenderPackage`: [ColorExample.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryZeroTouch/Examples/ColorExample.cs)
   * [Esempi di estensione della vista](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleViewExtension): un'implementazione IViewExtension che mostra una finestra non modale quando si fa clic sul relativo MenuItem.
 * [**NodeModelsEssentials**](https://github.com/nonoesp/DynamoNodeModelsEssentials)**:** modelli per lo sviluppo di pacchetti di Dynamo avanzati utilizzando NodeModel.
   * Esempi di Essentials:
