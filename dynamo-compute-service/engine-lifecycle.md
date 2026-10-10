@@ -33,7 +33,7 @@ Comprendre combien de temps chaque version de moteur reste prise en charge vous 
 
 ### Moteur stable
 
-Le moteur stable est mis à jour lorsque Dynamo publie une nouvelle version stable de Dynamo Core dans Revit. Chaque version stable reste disponible et prise en charge jusqu’à ce que la prochaine version stable soit déployée sur le service.
+Le moteur stable est mis à jour lorsque Dynamo publie une nouvelle version stable de Dynamo Core dans Revit. Chaque version stable reste disponible et prise en charge jusqu’à ce que la prochaine version stable soit déployée sur le service.
 
 Par exemple, si le service exécute actuellement Dynamo 3.6 (stable), il continuera d’exécuter cette version jusqu’à ce que Dynamo 4.0 soit généralement disponible pour les utilisateurs (généralement lorsqu’il sera livré dans Revit). À ce moment-là, le service sera mis à jour vers Dynamo 4.0 (stable).
 

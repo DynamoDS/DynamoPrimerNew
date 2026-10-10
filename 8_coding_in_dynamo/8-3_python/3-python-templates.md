@@ -1,20 +1,20 @@
 # Configuration de votre propre gabarit Python
 
-Avec Dynamo 2.0, vous pouvez spécifier un gabarit par défaut `(.py extension)` à utiliser lors de la première ouverture de la fenêtre Python. Cette option a longtemps été attendue, car elle accélère l'utilisation de Python dans Dynamo. La possibilité d'utiliser un gabarit vous permet d'obtenir des importations par défaut prêtes à l'emploi lorsque vous voulez développer un script Python personnalisé.
+Avec Dynamo 2.0, vous pouvez spécifier un gabarit par défaut `(.py extension)` à utiliser lors de la première ouverture de la fenêtre Python. Cette option a longtemps été attendue, car elle accélère l'utilisation de Python dans Dynamo. La possibilité d'utiliser un gabarit vous permet d'obtenir des importations par défaut prêtes à l'emploi lorsque vous voulez développer un script Python personnalisé.
 
 Ce gabarit se trouve à l’emplacement `APPDATA` de votre installation de Dynamo.
 
-L’emplacement habituel est le suivant : `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
+L’emplacement habituel est le suivant : `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-![](<../../.gitbook/assets/python templates - appdata folder location (1).jpg>)
+\![](<../../.gitbook/assets/python templates - appdata folder location.jpg>)
 
 ### Configuration du gabarit
 
 Pour utiliser cette fonctionnalité, vous devez ajouter la ligne suivante dans le fichier `DynamoSettings.xml`. _(Modifier dans le bloc-notes)_
 
-![](<../../.gitbook/assets/python templates -dynamo settings xml file (1).png>)
+\![](<../../.gitbook/assets/python templates -dynamo settings xml file.png>)
 
-Vous pouvez simplement remplacer `<PythonTemplateFilePath />` par ce qui suit :
+Vous pouvez simplement remplacer `<PythonTemplateFilePath />` par ce qui suit :
 
 ```
 <PythonTemplateFilePath>
@@ -23,12 +23,12 @@ Vous pouvez simplement remplacer `<PythonTemplateFilePath />` par ce qui suit :
 ```
 
 {% hint style="warning" %}
-\_Remarque : remplacez CURRENTUSER par votre nom d’utilisateur\_
+_Remarque : remplacez CURRENTUSER par votre nom d’utilisateur_
 {% endhint %}
 
 Ensuite, vous devez créer un gabarit en intégrant la fonctionnalité que vous voulez utiliser. Dans cet exemple, vous allez incorporer les importations liées à Revit et d'autres éléments que vous utilisez généralement lorsque vous travaillez avec Revit.
 
-Vous pouvez ouvrir un document de bloc-notes vide et coller le code suivant à l'intérieur :
+Vous pouvez ouvrir un document de bloc-notes vide et coller le code suivant à l'intérieur :
 
 ```py
 import clr
@@ -56,10 +56,10 @@ from RevitServices.Transactions import TransactionManager
 doc = DocumentManager.Instance.CurrentDBDocument
 uidoc=DocumentManager.Instance.CurrentUIApplication.ActiveUIDocument
 
-#Preparing input from dynamo to revit
+# Preparing input from dynamo to revit
 element = UnwrapElement(IN[0])
 
-#Do some action in a Transaction
+# Do some action in a Transaction
 TransactionManager.Instance.EnsureInTransaction(doc)
 
 TransactionManager.Instance.TransactionTaskDone()
@@ -73,10 +73,10 @@ Une fois cela fait, enregistrez ce fichier sous le nom `PythonTemplate.py` à l�
 
 Une fois le gabarit Python défini, Dynamo le recherche à chaque fois qu'un nœud Python est positionné. Si le gabarit est introuvable, l’affichage sera comparable à la fenêtre Python par défaut.
 
-![](<../../.gitbook/assets/python templates - before setup template (1).jpg>)
+\![](<../../.gitbook/assets/python templates - before setup template.jpg>)
 
 Si Dynamo trouve le gabarit Python (par exemple, notre gabarit Revit), il affiche tous les éléments par défaut que vous avez intégrés.
 
-![](<../../.gitbook/assets/python templates - after setup template (1).jpg>)
+\![](<../../.gitbook/assets/python templates - after setup template.jpg>)
 
 Vous trouverez ici des informations supplémentaires sur cet ajout important (par Radu Gidei). https://github.com/DynamoDS/Dynamo/pull/8122

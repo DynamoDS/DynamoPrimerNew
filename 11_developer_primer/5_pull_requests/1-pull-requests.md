@@ -6,9 +6,9 @@ Dynamo repose sur la créativité et l’engagement de sa communauté, et l’é
 
 L’équipe Dynamo s’attend à ce que les demandes de tirage suivent ces quelques règles :
 
-* respecter les [normes de codage](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards) et les [normes d’attribution de noms de nœud ;](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
-* intégrer les tests unitaires lors de l’ajout de nouvelles fonctionnalités ;
-* lors de la correction d’un bogue, ajouter un test unitaire qui illustre le dysfonctionnement actuel ;
+* respecter les [normes de codage](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards) et les [normes d’attribution de noms de nœud](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards) ;
+* intégrer des tests unitaires lors de l’ajout de nouvelles fonctionnalités ;
+* lors de la correction d’un bogue, ajouter un test unitaire qui met en évidence le dysfonctionnement actuel ;
 * garder la discussion centrée sur une seule demande. Créez une nouvelle question si un nouveau sujet ou un sujet connexe est abordé.
 
 Quelques indications sur ce qu’il ne faut pas faire :
@@ -22,12 +22,12 @@ Quelques indications sur ce qu’il ne faut pas faire :
 
 Lors de la soumission d’une demande de tirage, utilisez le [modèle de demande de tirage par défaut](https://github.com/DynamoDS/Dynamo/blob/master/.github/PULL\_REQUEST\_TEMPLATE.md). Avant de soumettre votre demande de tirage, assurez-vous que l’objectif est clairement décrit et que toutes les affirmations suivantes sont exactes :
 
-* le code base est de meilleur qualité après cette demande de tirage ;
+* la base de code est en meilleur état après cette demande de tirage ;
 * est documenté selon les [normes](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards) ;
-* le niveau de test inclus dans cette demande de tirage est approprié ;
-* les éventuelles chaînes de caractères destinées à l’utilisateur sont extraites dans des fichiers `*.resx` ;
-* tous les tests sont réussis grâce à l’intégration continue en libre-service ;
-* capture d’écran des modifications apportées à l’interface utilisateur, le cas échéant ;
+* le niveau de test prévu par cette demande de tirage est approprié ;
+* les éventuelles chaînes destinées à l’utilisateur sont extraites dans des fichiers `*.resx` ;
+* tous les tests réussissent avec l’intégration continue en libre-service ;
+* capture d’écran des modifications de l’interface utilisateur, le cas échéant ;
 * les modifications apportées à l’API sont conformes à la procédure de [gestion des versions sémantique](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Versions) et sont décrites dans le document [Modifications apportées à l’API](https://github.com/DynamoDS/Dynamo/wiki/API-Changes).
 
 Un réviseur approprié sera affecté à votre demande de tirage par l’équipe Dynamo.

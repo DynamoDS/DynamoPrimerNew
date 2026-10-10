@@ -1,11 +1,11 @@
-# Test des attentes
+# Attentes concernant les tests
 
-Cette page décrit ce que nous recherchons avec les tests exécutés sur le nouveau code ajouté à Dynamo.
+Cette page décrit ce qui est attendu lors des tests du nouveau code ajouté à Dynamo.
 
-Bien. Vous avez un nouveau nœud que vous souhaitez ajouter. Très bien. Il est temps d’ajouter quelques tests. Cette étape est recommandée pour deux raisons principales.
+Vous avez donc un nouveau nœud à ajouter. Très bien. Il est temps d’ajouter quelques tests. Cette étape est recommandée pour deux raisons principales.
 
-1. Il est utile de savoir où le code ne fonctionne pas
-2. Lorsque quelqu’un d’autre modifie quelque chose qui brise votre nœud, les tests devraient échouer. De cette façon, la personne qui a fait échouer les tests peut le réparer. Si les tests n’échouent pas, alors c’est en grande partie votre problème, et vous devez gérer les utilisateurs dont les modèles sont brisés.
+1. Cela aide à découvrir les cas où il ne fonctionne pas.
+2. Lorsque quelqu’un d’autre modifie quelque chose qui brise votre nœud, les tests devraient échouer. De cette façon, la personne qui a fait échouer les tests peut le réparer. Si les tests n’échouent pas, alors c’est en grande partie votre problème, et vous devez gérer les utilisateurs dont les modèles ne fonctionnent plus.
 
 Il existe deux grands types de tests dans Dynamo : les tests unitaires et les tests système.
 
@@ -15,9 +15,9 @@ Les tests unitaires doivent tester le moins possible. Si vous avez créé un nœ
 
 Ils doivent comprendre :
 
-* Des tests positifs (fonctionnement correct)
-* Des tests négatifs (pas de plantage même en cas d’entrée erronée)
-* Des tests de régression (lorsqu’un bogue est détecté dans votre code, écrivez un test pour vous assurer qu’il ne se reproduise pas)
+* Tests positifs (le code fait ce qu’il doit faire).
+* Tests négatifs (le code ne casse pas lorsqu’on lui fournit des données aberrantes).
+* Tests de régression (lorsqu’un bogue est détecté dans votre code, écrivez un test pour vous assurer qu’il ne se reproduit pas).
 
 Ils doivent être courts, rapides et fiables. La majorité des tests devraient être des tests unitaires.
 
@@ -33,15 +33,15 @@ Idéalement, il doit y avoir une série progressive de tests couvrant des ensemb
 
 Exemples d’éléments qui nécessitent des tests système :
 
-* Un nouveau type de nœud Revit qui stocke plusieurs éléments dans Trace au lieu d’un seul
-* Un nouveau nœud d’observation qui affiche les données différemment
+* Un nouveau type de nœud Revit qui stocke plusieurs éléments dans Trace au lieu d’un seul.
+* Un nouveau nœud Watch qui affiche les données différemment.
 
 Exemple d’éléments qui ne nécessitent pas de tests système :
 
-* Un nouveau nœud mathématique
-* Une bibliothèque de traitement de chaînes
+* Un nouveau nœud mathématique.
+* Une bibliothèque de traitement de chaînes.
 
 Les tests système doivent :
 
-* Confirmer le bon comportement
-* Confirmer l’absence de comportements pathologiques, c’est-à-dire l’absence d’exceptions
+* Vérifier que le comportement est correct.
+* Vérifier l’absence de comportements pathologiques, p. ex. l’absence d’exceptions.

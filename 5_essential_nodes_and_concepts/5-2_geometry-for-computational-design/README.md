@@ -1,5 +1,5 @@
 # Géométrie pour la conception informatique
 
-En tant qu'environnement de programmation visuelle, Dynamo vous permet de définir la manière dont les données sont traitées. Les données sont des nombres ou du texte, et il en va de même pour la géométrie. Tel qu'un ordinateur le comprend, la géométrie (aussi appelée géométrie de calcul) représente les données que vous pouvez utiliser pour créer des modèles beaux et complexes à la fois, ou des modèles axés sur la performance. Pour ce faire, vous devez comprendre les entrées et les sorties des différents types de géométrie que vous pouvez utiliser.
+En tant qu'environnement de programmation visuelle, Dynamo vous permet de définir la manière dont les données sont traitées. Les données sont des nombres ou du texte, et il en va de même pour la géométrie. Telle que l’ordinateur la comprend, la géométrie, parfois appelée géométrie de calcul, représente les données qui permettent de créer des modèles à la fois beaux et complexes, ou axés sur la performance. Pour ce faire, vous devez comprendre en détail les différents types de géométrie que vous pouvez utiliser.
 
-![](<../../.gitbook/assets/Geometry for Computational Design-01 (1).jpg>)
+\![](<../../.gitbook/assets/Geometry for Computational Design-01.jpg>)

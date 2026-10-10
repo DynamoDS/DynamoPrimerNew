@@ -2,13 +2,13 @@
 
 Quel que soit le niveau d’expérience, la plateforme Dynamo est conçue pour que tous les utilisateurs soient des contributeurs. Il existe plusieurs options de développement qui ciblent des capacités et des niveaux de compétence différents, chacune avec ses forces et ses faiblesses selon l’objectif. Nous présentons ci-dessous les différentes options et comment les choisir.
 
-![Trois environnements de développement](<../../.gitbook/assets/developing-for-dynamo (1).png>)
+![Trois environnements de développement](../../.gitbook/assets/developing-for-dynamo.png)
 
-> Trois environnements de développement : Visual Studio, Python Editor et Code Block DesignScript
+> Trois environnements de développement : Visual Studio, Python Editor et Code Block DesignScript
 
-### Quelles sont les options proposées ? <a href="#what-are-my-options" id="what-are-my-options"></a>
+### Quelles sont les options proposées ? <a href="#what-are-my-options" id="what-are-my-options"></a>
 
-Les options de développement de Dynamo sont principalement réparties en deux catégories : _pour_ Dynamo et _dans_ Dynamo. Les deux catégories peuvent être considérées comme : « dans » Dynamo implique un contenu créé à l’aide de l’environnement de développement intégré (IDE) de Dynamo pour être utilisé dans Dynamo, et « pour » Dynamo implique l’utilisation d’outils externes pour créer du contenu qui sera importé dans Dynamo pour être utilisé. Bien que ce guide soit axé sur le développement _pour_ Dynamo, les ressources pour tous les processus sont décrites ci-dessous.
+Les options de développement de Dynamo sont principalement réparties en deux catégories : _pour_ Dynamo et _dans_ Dynamo. Les deux catégories peuvent être considérées comme : « dans » Dynamo implique un contenu créé à l’aide de l’environnement de développement intégré (IDE) de Dynamo pour être utilisé dans Dynamo, et « pour » Dynamo implique l’utilisation d’outils externes pour créer du contenu qui sera importé dans Dynamo pour être utilisé. Bien que ce guide soit axé sur le développement _pour_ Dynamo, les ressources pour tous les processus sont décrites ci-dessous.
 
 ### Pour Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
 
@@ -18,13 +18,13 @@ Ces nœuds permettent le plus haut degré de personnalisation. De nombreux packa
 * Nœuds dérivés de NodeModel
 * Extensions
 
-> Le guide contient des instructions sur l’[importation de bibliothèques Zero-Touch](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
+> Le guide contient des instructions sur l’[importation de bibliothèques Zero-Touch](https://primer2.dynamobim.org/fr/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
 
-Visual Studio est utilisé comme environnement de développement pour les nœuds Zero Touch et NodeModel dans les explications ci-dessous.
+Visual Studio est utilisé comme environnement de développement pour les nœuds Zero Touch et NodeModel dans les explications ci-dessous.
 
-![Interface Visual Studio](<../../.gitbook/assets/vs-devenv (1).jpg>)
+![Interface Visual Studio](../../.gitbook/assets/vs-devenv.jpg)
 
-> L’interface Visual Studio avec un projet que nous allons développer
+> L’interface Visual Studio avec un projet que nous allons développer
 
 ### Dans Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
@@ -42,52 +42,52 @@ Bien que ces processus existent dans l’espace de travail de programmation visu
 
 Le développement dans l’espace de travail de Dynamo est un outil puissant qui permet d’obtenir un retour immédiat.
 
-![Développement dans l’espace de travail Dynamo avec le nœud Python](<../../.gitbook/assets/python-example (1).jpg>)
+![Développement dans l’espace de travail Dynamo avec le nœud Python](../../.gitbook/assets/python-example.jpg)
 
 > Développement dans l’espace de travail Dynamo avec le nœud Python
 
-### Quels sont les avantages/inconvénients de chacun ? <a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
+### Quels sont les avantages/inconvénients de chacun ? <a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
 
 Les options de développement de Dynamo ont été conçues pour répondre à la complexité d’un besoin de personnalisation. Que ce soit pour écrire un script récursif en Python ou pour générer une interface utilisateur de nœud entièrement personnalisée, il existe des options d’implémentation de code qui n’impliquent que ce qui est nécessaire pour être opérationnel.
 
 **Blocs de code, nœud Python et nœuds personnalisés dans Dynamo**
 
-Ces options sont simples pour écrire du code dans l’environnement de programmation visuelle Dynamo. L’espace de programmation visuelle Dynamo permet d’accéder à Python, DesignScript et de contenir plusieurs nœuds dans un nœud personnalisé.
+Ces options sont simples pour écrire du code dans l’environnement de programmation visuelle Dynamo. L’espace de travail de programmation visuelle Dynamo donne accès à Python et à DesignScript et permet de regrouper plusieurs nœuds dans un nœud personnalisé.
 
-![Bloc de code, script Python et nœud personnalisé](<../../.gitbook/assets/Development-Icons (1).png>)
+![Bloc de code, script Python et nœud personnalisé](../../.gitbook/assets/Development-Icons.png)
 
-Avec ces méthodes, vous pouvez :
+Avec ces méthodes, vous pouvez :
 
-* commencer à écrire des scripts Python ou DesignScript avec peu ou pas de configuration ;
-* importer des bibliothèques Python dans Dynamo ;
+* commencer à écrire des scripts Python ou DesignScript avec peu ou pas de configuration ;
+* importer des bibliothèques Python dans Dynamo ;
 * partager des blocs de code, des nœuds Python et des nœuds personnalisés avec la communauté Dynamo dans un package.
 
 **Nœuds Zero-Touch**
 
-Zero Touch fait référence à une méthode pointer-cliquer simple permettant d’importer des bibliothèques C#. Dynamo lit les méthodes publiques d’un fichier `.dll` et les convertit en nœuds Dynamo. Vous pouvez utiliser le Zero-Touch pour développer vos propres nœuds et packages personnalisés.
+Zero Touch fait référence à une méthode pointer-cliquer simple permettant d’importer des bibliothèques C#. Dynamo lit les méthodes publiques d’un fichier `.dll` et les convertit en nœuds Dynamo. Vous pouvez utiliser le Zero-Touch pour développer vos propres nœuds et packages personnalisés.
 
-![Nœuds Zero-Touch](<../../.gitbook/assets/ZTImport (1).png>)
+![Nœuds Zero-Touch](../../.gitbook/assets/ZTImport.png)
 
-Avec cette méthode, vous pouvez :
+Avec cette méthode, vous pouvez :
 
-* importer une bibliothèque qui n’a pas nécessairement été développée pour Dynamo et créer automatiquement une suite de nouveaux nœuds, comme l’[exemple d’A-Forge](../../6_custom_nodes_and_packages/6-2_packages/5-zero-touch.md#case-study-importing-aforge) dans le guide ;
-* écrire des méthodes C# et les utiliser facilement comme nœuds dans Dynamo ;
-* partager une bibliothèque C# en tant que nœuds avec la communauté Dynamo dans un package.
+* importer une bibliothèque qui n’a pas nécessairement été développée pour Dynamo et créer automatiquement une suite de nouveaux nœuds, comme l’[exemple d’A-Forge](../../6_custom_nodes_and_packages/6-2_packages/5-zero-touch.md#case-study-importing-aforge) dans le guide ;
+* écrire des méthodes C# et les utiliser facilement comme nœuds dans Dynamo ;
+* partager une bibliothèque C# en tant que nœuds avec la communauté Dynamo dans un package.
 
 **Nœuds dérivés de NodeModel**
 
-Ces nœuds permettent d’approfondir la structure de Dynamo. Ils sont basés sur la classe `NodeModel` et écrits en C#. Bien que cette méthode soit la plus souple et la plus puissante, la plupart des aspects du nœud doivent être définis de manière explicite et les fonctions doivent se trouver dans un ensemble séparé.
+Ces nœuds permettent d’approfondir la structure de Dynamo. Ils sont basés sur la classe `NodeModel` et écrits en C#. Bien que cette méthode soit la plus souple et la plus puissante, la plupart des aspects du nœud doivent être définis de manière explicite et les fonctions doivent se trouver dans un ensemble séparé.
 
-![Nœuds dérivés de NodeModel](<../../.gitbook/assets/Development-Icons-NodeModel (1).png>)
+![Nœuds dérivés de NodeModel](../../.gitbook/assets/Development-Icons-NodeModel.png)
 
-Avec cette méthode, vous pouvez :
+Avec cette méthode, vous pouvez :
 
-* créer une interface utilisateur de nœuds entièrement personnalisable avec des curseurs, des images, des couleurs, etc. (p. ex. un nœud ColorRange) ;
-* accéder et agir sur la zone de dessin Dynamo ;
-* personnaliser la combinaison ;
+* créer une interface utilisateur de nœuds entièrement personnalisable avec des curseurs, des images, des couleurs, etc. (p. ex. un nœud ColorRange) ;
+* accéder et agir sur la zone de dessin Dynamo ;
+* personnaliser la combinaison ;
 * charger dans Dynamo comme un package.
 
-### Présentation du contrôle des versions de Dynamo et des modifications apportées à l’API (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
+### Présentation du contrôle des versions de Dynamo et des modifications apportées à l’API (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
 
 Comme Dynamo est régulièrement mis à jour, des modifications peuvent être apportées à une partie de l’API utilisée par un package. Il est important de suivre ces modifications pour s’assurer que les packages existants continuent à fonctionner correctement.
 
@@ -95,20 +95,20 @@ Les modifications de l’API sont répertoriées sur le [Wiki de GitHub sur Dyna
 
 ![Document des modifications de l’API Dynamo](../../.gitbook/assets/api-changes.png)
 
-Le passage du format de fichier XML au format JSON dans la version 2.0 est un exemple de changement important à venir. Les nœuds dérivés de NodeModel auront désormais besoin d’un [constructeur JSON](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node), sinon ils ne s’ouvriront pas dans Dynamo 2.0.
+Le passage du format de fichier XML au format JSON dans la version 2.0 est un exemple de changement important à venir. Les nœuds dérivés de NodeModel auront désormais besoin d’un [constructeur JSON](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node), sinon ils ne s’ouvriront pas dans Dynamo 2.0.
 
-La documentation de l’API Dynamo couvre actuellement les fonctionnalités de base : [http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI)
+La documentation de l’API Dynamo couvre actuellement les fonctionnalités de base : [http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI)
 
-![Documentation de l’API](<../../.gitbook/assets/api-docs (1).jpg>)
+![Documentation de l’API](../../.gitbook/assets/api-docs.jpg)
 
 ### Autorisation de distribuer des binaires dans un package <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 
-Faites attention aux fichiers .dll inclus dans un package qui sont téléchargés dans le gestionnaire de package. Si l’auteur du package n’a pas créé le fichier .dll, il doit disposer des droits nécessaires pour le partager.
+Faites attention aux fichiers .dll inclus dans un package qui sont téléchargés dans le gestionnaire de package. Si l’auteur du package n’a pas créé le fichier .dll, il doit disposer des droits nécessaires pour le partager.
 
 Si un package comprend des binaires, les utilisateurs doivent être avertis lors du téléchargement que celui-ci en contient.
 
 ### Considérations relatives aux performances de l’interface utilisateur Dynamo
 
-À l’heure où nous écrivons ces lignes, Dynamo utilise principalement WPF (Windows Presentation Foundation) pour afficher son interface utilisateur. WPF est un système complexe et puissant basé sur xaml et les liaisons. Comme Dynamo a une interface utilisateur complexe, elle peut facilement se bloquer ou engendrer des fuites de mémoire. L’exécution du graphe et les mises à jour de l’interface utilisateur peuvent se mêler et entraîner une dégradation des performances.
+À l’heure où nous écrivons ces lignes, Dynamo utilise principalement WPF (Windows Presentation Foundation) pour afficher son interface utilisateur. WPF est un système complexe et puissant basé sur xaml et les liaisons. Comme Dynamo a une interface utilisateur complexe, elle peut facilement se bloquer ou engendrer des fuites de mémoire. L’exécution du graphique et les mises à jour de l’interface utilisateur peuvent se mêler et entraîner une dégradation des performances.
 
-Reportez-vous à la page Wiki [Considérations relatives aux performances Dynamo](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance) qui vous aidera à éviter quelques pièges courants lors de la modification du code de Dynamo.
+Reportez-vous à la [page wiki Considérations relatives aux performances de Dynamo](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance), qui vous aidera à éviter quelques pièges courants lors de la modification du code de Dynamo.

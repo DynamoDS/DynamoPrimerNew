@@ -22,7 +22,7 @@ Ces exemples sont des modèles Visual Studio que vous pouvez utiliser pour dém
     * Déterminer la logique d’interaction pour le curseur : [code](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
 * [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**:** modèles pour ZeroTouch, interface utilisateur personnalisée, tests et extensions de vue.
   * [Exemples d’interface utilisateur](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
-    * Créer un nœud d’interface utilisateur de base et personnalisé : [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs)
+    * Créer un nœud d’interface utilisateur personnalisé de base : [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/LocalizedCustomNodeModel.cs)
     * Créer un menu déroulant : [DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs)
   * [Tests](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryTests)
     * Tests système : [HelloDynamoSystemTests.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryTests/HelloDynamoSystemTests.cs)

@@ -6,7 +6,7 @@ L’espace de travail de Dynamo se compose de quatre éléments principaux.
 
 ![](../.gitbook/assets/workspace-ui.png)
 
-> 1. Tous les onglets actifs.
+> 1. Tous les onglets actifs
 > 2. Mode aperçu
 > 3. Commandes Zoom/Panoramique
 > 4. Nœud dans l’espace de travail
@@ -22,12 +22,12 @@ Vous pouvez créer un nœud personnalisé et l’ouvrir dans un espace de travai
 ![](../.gitbook/assets/workspace-custom-node-tab.png)
 
 {% hint style="info" %}
-Vous ne pouvez ouvrir qu’un seul espace de travail d’accueil dans chaque fenêtre Dynamo, mais vous pouvez ouvrir plusieurs espaces de travail de nœud personnalisé dans les onglets.
+Chaque fenêtre Dynamo n’admet qu’un seul espace de travail d’accueil, mais vous pouvez ouvrir plusieurs espaces de travail de nœud personnalisé dans des onglets.
 {% endhint %}
 
 ### Mode aperçu
 
-Il existe 3 méthodes permettant de passer d’un aperçu à un autre :
+Il existe 3 méthodes permettant de passer d’un aperçu à un autre :
 
 a. Utilisation des icônes situées en haut à droite
 
@@ -36,11 +36,11 @@ a. Utilisation des icônes situées en haut à droite
 
 b. Clic avec le bouton droit de la souris dans l’espace de travail
 
-* Passage de l’aperçu 3D à l’aperçu du graphique
+* Passage de l’aperçu 3D à l’aperçu du graphique
 
 ![](../.gitbook/assets/workspace-right-click-switch-to-graph-view.jpg)
 
-* Passage de l’aperçu du graphique à l’aperçu 3D
+* Passage de l’aperçu du graphique à l’aperçu 3D
 
 ![](../.gitbook/assets/workspace-right-click-switch-to-geometry.jpg)
 
@@ -52,32 +52,32 @@ Vous pouvez utiliser des icônes ou la souris pour naviguer dans l’un ou l’a
 
 a. En mode **Aperçu du graphique**
 
-* À l’aide d’icônes :
-  * ![](../.gitbook/assets/2.3-08-graph-preview-zoom-to-fitpsd.jpg)Zoom fenêtre.
-  * ![](../.gitbook/assets/2.3-09-graph-preview-zoom-in.jpg)Effectuer un zoom avant.
-  * ![](../.gitbook/assets/2.3-10-graph-preview-zoom-out.jpg)Effectuer un zoom arrière.
-  * ![](../.gitbook/assets/2.3-11-graph-preview-pan.jpg)Panoramique.
-* À l’aide de la souris :
-  * Clic avec le bouton gauche de la souris – Sélection
-  * Clic avec le bouton gauche de la souris et glissement – Zone de sélection permettant de sélectionner plusieurs nœuds
-  * Défilement vers le haut/bas au milieu – Zoom avant/arrière
-  * Clic avec le bouton du milieu de la souris et glissement – Panoramique
-  * Clic avec le bouton droit de la souris n’importe où dans la zone de dessin – Ouvrir la recherche dans la zone de dessin
+* À l’aide d’icônes :
+  * ![](../.gitbook/assets/2.3-08-graph-preview-zoom-to-fitpsd.jpg)Zoom étendu
+  * ![](../.gitbook/assets/2.3-09-graph-preview-zoom-in.jpg)Zoom avant
+  * ![](../.gitbook/assets/2.3-10-graph-preview-zoom-out.jpg)Zoom arrière
+  * ![](../.gitbook/assets/2.3-11-graph-preview-pan.jpg)Panoramique
+* À l’aide de la souris :
+  * Clic avec le bouton gauche de la souris – Sélection
+  * Clic avec le bouton gauche de la souris et glissement – Zone de sélection permettant de sélectionner plusieurs nœuds
+  * Défilement vers le haut/bas au milieu – Zoom avant/arrière
+  * Clic avec le bouton du milieu de la souris et glissement – Panoramique
+  * Clic avec le bouton droit de la souris n’importe où dans la zone de dessin – Ouvrir la recherche dans la zone de dessin
 
 ![](../.gitbook/assets/workspace-in-canvas-search.gif)
 
-b. En mode **Aperçu 3D**
+b. En mode **Aperçu 3D**
 
-* À l’aide d’icônes :
-  * ![](../.gitbook/assets/2.3-08-graph-preview-zoom-to-fitpsd.jpg)Zoom fenêtre.
-  * ![](../.gitbook/assets/2.3-09-graph-preview-zoom-in.jpg)Effectuer un zoom avant.
-  * ![](../.gitbook/assets/2.3-10-graph-preview-zoom-out.jpg)Effectuer un zoom arrière.
-  * ![](../.gitbook/assets/2.3-11-graph-preview-pan.jpg)Panoramique.
-  * ![](<../.gitbook/assets/3-1-13 3D preview orbit.jpg>)Orbit
-* À l’aide de la souris :
-  * Défilement vers le haut/bas au milieu – Zoom avant/arrière
-  * Clic avec le bouton du milieu de la souris et glissement – Panoramique
-  * Clic avec le bouton droit de la souris et glissement – Orbite
+* À l’aide d’icônes :
+  * ![](../.gitbook/assets/2.3-08-graph-preview-zoom-to-fitpsd.jpg)Zoom étendu
+  * ![](../.gitbook/assets/2.3-09-graph-preview-zoom-in.jpg)Zoom avant
+  * ![](../.gitbook/assets/2.3-10-graph-preview-zoom-out.jpg)Zoom arrière
+  * ![](../.gitbook/assets/2.3-11-graph-preview-pan.jpg)Panoramique
+  * \![](<../.gitbook/assets/3-1-13 3Dprevieworbit.jpg>)Orbit
+* À l’aide de la souris :
+  * Défilement vers le haut/bas au milieu – Zoom avant/arrière
+  * Clic avec le bouton du milieu de la souris et glissement – Panoramique
+  * Clic avec le bouton droit de la souris et glissement – Orbite
 
 ### Nœud dans l’espace de travail
 

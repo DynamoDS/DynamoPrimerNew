@@ -6,15 +6,15 @@ Dynamo Hype Video
 
 ## Pour Dynamo v2.13 et plus récent
 
-![Dynamo Logo](.gitbook/assets/dynamo_logo_dark-trim.jpg)
+\![Dynamo Logo](<.gitbook/assets/dynamo_logo_dark-trim (1).jpg>)
 
-> Dynamo est une plate-forme de programmation visuelle open source pour les concepteurs.
+> Dynamo est une plate-forme de programmation visuelle Open Source pour les concepteurs.
 
 ### Bienvenue
 
-Vous venez d’ouvrir le guide Dynamo, un guide complet de programmation visuelle dans Autodesk Dynamo. Ce guide est un projet en cours de partage des fondamentaux de la programmation. Les rubriques suivantes concernent l'utilisation de la géométrie de calcul, les recommandations pour la conception basée sur des règles, des applications de programmation pluridisciplinaires et plus encore, avec la plate-forme Dynamo.
+Vous venez d’ouvrir le guide Dynamo, un guide complet de programmation visuelle dans Autodesk Dynamo. Ce guide est un projet en cours de partage des fondamentaux de la programmation. Les rubriques suivantes concernent l'utilisation de la géométrie de calcul, les recommandations pour la conception basée sur des règles, des applications de programmation pluridisciplinaires et plus encore, avec la plate-forme Dynamo.
 
-La puissance de Dynamo est offerte par une large gamme d'activités liées à la conception. Dynamo vous offre une liste étendue de méthodes facilement accessibles pour commencer à utiliser les logiciels suivants :
+La puissance de Dynamo est offerte par une large gamme d'activités liées à la conception. Dynamo vous offre une liste étendue de méthodes facilement accessibles pour commencer à utiliser les logiciels suivants :
 
 * **Découvrez** la programmation visuelle
 * **Connectez** les workflows de différents logiciels
@@ -29,13 +29,13 @@ Nous améliorons constamment Dynamo, c'est pourquoi certaines fonctionnalités p
 
 ### Open Source
 
-Le projet Dynamo Primer est open source. Nous nous efforçons de fournir du contenu de qualité et prenons en compte vos commentaires. Si vous souhaitez signaler un problème à un niveau quelconque, veuillez le publier sur la page des problèmes GitHub : [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues)
+Le projet Dynamo Primer est open source. Nous nous efforçons de fournir du contenu de qualité et prenons en compte vos commentaires. Si vous souhaitez signaler un problème à un niveau quelconque, veuillez le publier sur la page des problèmes GitHub : [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues)
 
-Si vous souhaitez contribuer à une nouvelle section, à des modifications ou à tout autre élément de ce projet, consultez le référentiel GitHub pour commencer : [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew)
+Si vous souhaitez contribuer à une nouvelle section, à des modifications ou à tout autre élément de ce projet, consultez le référentiel GitHub pour commencer : [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew)
 
-### Le projet Dynamo Primer
+### Le projet Dynamo Primer
 
-Le guide Dynamo est un projet open source, initié par Matt Jezyk et l’équipe de développement Dynamo chez Autodesk.
+Le guide Dynamo est un projet open source, initié par Matt Jezyk et l’équipe de développement Dynamo chez Autodesk.
 
 **Mode Lab** a été chargé d’écrire la première édition du guide. Nous remercions l’équipe pour tous ses efforts afin d’établir cette précieuse ressource.
 
@@ -43,27 +43,27 @@ Le guide Dynamo est un projet open source, initié par Matt Jezyk et l’équipe
 
 ***
 
-**John Pierson de Parallax Team** a été chargé de mettre à jour le guide pour qu’il contienne les révisions de Dynamo 2.0.
+**John Pierson de Parallax Team** a été chargé de mettre à jour le guide pour qu’il contienne les révisions de Dynamo 2.0.
 
 ![](.gitbook/assets/prlx-logo.jpg)
 
 ***
 
-**Matterlab** a été chargé de mettre à jour le guide pour refléter les révisions de Dynamo 2.13.
+**Matterlab** a été chargé de mettre à jour le guide pour refléter les révisions de Dynamo 2.13.
 
 ![](.gitbook/assets/matterlab-logo.jpg)
 
 ***
 
-**Archilizer** a été chargé de mettre à jour le guide pour refléter les révisions de Dynamo 2.17.
+**Archilizer** a été chargé de mettre à jour le guide pour refléter les révisions de Dynamo 2.17.
 
-<figure><img src=".gitbook/assets/Archilizer_2020 (1).png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 **Wood Rodgers** a été chargé de mettre à jour le guide avec le contenu de Dynamo for Civil 3D.
 
-<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### Remerciements
 
@@ -73,13 +73,13 @@ Merci à Matt Jezyk, Ian Keough, Zach Kron, Racel Amour et Colin McCrone pour le
 
 ### Logiciels et ressources
 
-**Dynamo** Reportez-vous aux sites suivants pour la version **stable** la plus récente de Dynamo.
+**Dynamo** Reportez-vous au site suivant pour obtenir la version **stable** la plus récente de Dynamo.
 
-[https://dynamobim.com/download/](https://dynamobim.com/download/) ou [https://dynamobuilds.com](https://dynamobuilds.com/)
+[https://dynamobuilds.com](https://dynamobuilds.com/)
 
-\*Remarque : à partir de Revit 2020, Dynamo est fourni avec les versions de Revit, ce qui fait que l'installation manuelle n'est pas requise. Pour plus d'informations, consultez ce [billet de blog](https://dynamobim.org/dynamo-core-2-1-release/).
+*Remarque : à partir de Revit 2020, Dynamo est fourni avec les versions de Revit, de sorte qu’aucune installation manuelle n’est nécessaire. Pour plus d'informations, consultez ce [billet de blog](https://dynamobim.org/dynamo-core-2-1-release/).
 
-**DynamoBIM** : la meilleure source d’informations supplémentaires, de contenu de formation et de forums est le site Web DynamoBIM.
+**DynamoBIM** : la meilleure source d’informations supplémentaires, de contenu de formation et de forums est le site Web DynamoBIM.
 
 [https://dynamobim.org](https://dynamobim.org/)
 
@@ -93,9 +93,9 @@ Dynamo@autodesk.com
 
 ### Licence
 
-Copyright 2023 Autodesk.
+Copyright 2023 Autodesk.
 
-Autorisé par la Licence Apache, version 2.0 (la "Licence") ; vous ne devez utiliser ce fichier que conformément à la Licence. Vous pouvez obtenir une copie de la Licence à l'adresse
+Autorisé par la Licence Apache, version 2.0 (la "Licence") ; vous ne devez utiliser ce fichier que conformément à la Licence. Vous pouvez obtenir une copie de la Licence à l'adresse
 
 [https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
 

@@ -16,7 +16,7 @@ L’interface utilisateur de Dynamo est organisée en cinq zones principales. No
 
 ![](../.gitbook/assets/userinterface-menu.jpg)
 
-Voici les menus des fonctionnalités de base de l’application Dynamo. Comme la plupart des logiciels Windows, les deux premiers menus concernent la gestion des fichiers, les opérations de sélection et la modification du contenu. Les autres menus sont plus spécifiques de Dynamo.
+Voici les menus des fonctionnalités de base de l’application Dynamo. Comme dans la plupart des logiciels Windows, les deux premiers menus concernent la gestion des fichiers, les opérations de sélection et la modification du contenu. Les autres menus sont plus spécifiques de Dynamo.
 
 #### Menus Dynamo
 
@@ -24,36 +24,36 @@ Des informations générales et des paramètres sont disponibles dans le menu d�
 
 ![](../.gitbook/assets/user-interface-dynamo-menu.jpg)
 
-> 1. À propos de : découvrez la version de Dynamo installée sur votre ordinateur.
-> 2. Accord sur la collecte des données d’utilisation : permet d’accepter ou de refuser le partage de vos données utilisateur pour améliorer Dynamo.
-> 3. Préférences : inclut des paramètres tels que la précision décimale de l’application et la qualité du rendu de la géométrie.
-> 4. Quitter Dynamo.
+> 1. À propos de : découvrez la version de Dynamo installée sur votre ordinateur.
+> 2. Accord sur la collecte des données d’utilisation : permet d’accepter ou de refuser le partage de vos données utilisateur pour améliorer Dynamo.
+> 3. Préférences : inclut des paramètres tels que la définition de la précision décimale de l’application et de la qualité du rendu de la géométrie.
+> 4. Quitter Dynamo
 
 #### Aide
 
 Si vous êtes bloqué, consultez le menu **Aide**. Vous pouvez accéder à l’un des sites Web de référence Dynamo via votre navigateur Internet.
 
-![](<../.gitbook/assets/help-menu (1).png>)
+![](../.gitbook/assets/help-menu.png)
 
-> 1. Guides interactifs : des visites guidées qui vous guident pas à pas à travers les différentes fonctionnalités de Dynamo.
-> 2. Échantillons : fichiers d'exemple de référence. Disponible uniquement dans les programmes hôtes, notamment Revit et Civil 3D.
-> 3. Dictionnaire Dynamo : ressource avec documentation sur tous les nœuds.
-> 4. Site Web Dynamo = un site Web pour obtenir des informations sur Dynamo et des liens vers des ressources telles que le forum, le blog, etc.
-> 5. Dynamo Repository : consultez le projet Dynamo sur GitHub.
-> 6. Wiki du projet Dynamo : permet de consulter le wiki pour en savoir plus sur le développement à l’aide de l’API Dynamo, qui prend en charge les bibliothèques et les outils.
-> 7. Afficher la page de démarrage : permet de revenir à la page de démarrage de Dynamo lorsque vous vous trouvez dans un document.
-> 8. Signaler un bogue : permet d'ouvrir un problème sur GitHub.
+> 1. Guides interactifs : des visites guidées qui vous guident pas à pas à travers les différentes fonctionnalités de Dynamo.
+> 2. Échantillons : fichiers d'exemple de référence. Disponible uniquement dans les programmes hôtes, notamment Revit et Civil 3D.
+> 3. Dictionnaire Dynamo : ressource avec documentation sur tous les nœuds.
+> 4. Site Web Dynamo = un site Web pour obtenir des informations sur Dynamo et des liens vers des ressources telles que le forum, le blog, etc.
+> 5. Dynamo Repository : consultez le projet Dynamo sur GitHub.
+> 6. Wiki du projet Dynamo : permet de consulter le wiki pour en savoir plus sur le développement à l’aide de l’API Dynamo, qui prend en charge les bibliothèques et les outils.
+> 7. Afficher la page de démarrage : permet de revenir à la page de démarrage de Dynamo lorsque vous vous trouvez dans un document.
+> 8. Signaler un bogue : permet d'ouvrir un problème sur GitHub.
 
 ### Barre d’outils
 
-La barre d'outils de Dynamo contient une série de boutons permettant d'accéder rapidement aux fichiers et aux commandes Annuler \[Ctrl + Z] et Rétablir \[Ctrl + Y]. À l’extrémité droite se trouve un autre bouton qui permet d’exporter un cliché de l’espace de travail, ce qui est extrêmement utile pour la documentation et le partage.
+La barre d'outils de Dynamo contient une série de boutons permettant d'accéder rapidement aux fichiers et aux commandes Annuler [Ctrl + Z] et Rétablir [Ctrl + Y]. À l’extrémité droite se trouve un autre bouton qui permet d’exporter un cliché de l’espace de travail, ce qui est extrêmement utile pour la documentation et le partage.
 
-* ![](../.gitbook/assets/user-interface-new-file.jpg) Nouveau : permet de créer un fichier .dyn
-* ![](../.gitbook/assets/user-interface-open.png) Ouvrir : permet d’ouvrir un fichier .dyn (espace de travail) ou .dyf (nœud personnalisé) existant
-* ![](../.gitbook/assets/user-interface-save.png) Enregistrer/Enregistrer sous : permet d’enregistrer votre fichier .dyn ou .dyf actif
-* ![](../.gitbook/assets/user-interface-undo.jpg) Annuler : permet d’annuler la dernière action
-* ![](../.gitbook/assets/user-interface-redo.jpg) Rétablir : permet de rétablir la prochaine action
-* ![](../.gitbook/assets/user-interface-screenshot.png) Exporter l’espace de travail en tant qu’image : permet d’exporter l’espace de travail visible en tant que fichier PNG.
+* ![](../.gitbook/assets/user-interface-new-file.jpg) Nouveau : permet de créer un fichier .dyn
+* ![](../.gitbook/assets/user-interface-open.png) Ouvrir : permet d’ouvrir un fichier .dyn (espace de travail) ou .dyf (nœud personnalisé) existant
+* ![](../.gitbook/assets/user-interface-save.png) Enregistrer/Enregistrer sous : permet d’enregistrer le fichier .dyn ou .dyf actif
+* ![](../.gitbook/assets/user-interface-undo.jpg) Annuler : permet d’annuler la dernière action
+* ![](../.gitbook/assets/user-interface-redo.jpg) Rétablir : permet de rétablir l’action suivante
+* ![](../.gitbook/assets/user-interface-screenshot.png) Exporter l’espace de travail en tant qu’image : permet d’exporter l’espace de travail visible sous forme de fichier PNG
 
 ### Bibliothèque
 
@@ -63,7 +63,7 @@ La bibliothèque Dynamo est un ensemble de bibliothèques fonctionnelles, chaque
 
 ### Espace de travail
 
-L’espace de travail est l’endroit où vous composez vos programmes visuels, vous pouvez également modifier son paramètre d’aperçu pour afficher les géométries 3D à partir d’ici. Pour plus d’informations, reportez-vous à [1-workspace.md](1-workspace.md "mention").
+L’espace de travail est l’endroit où vous composez vos programmes visuels, vous pouvez également modifier son paramètre d’aperçu pour afficher les géométries 3D à partir d’ici. Pour plus d’informations, reportez-vous à [1-workspace.md](1-workspace.md "mention").
 
 ![](../.gitbook/assets/user-interface-workspace.gif)
 
@@ -73,8 +73,8 @@ Exécutez votre script Dynamo à partir d’ici. Cliquez sur l’icône déroula
 
 ![](../.gitbook/assets/user-interface-execution-bar.gif)
 
-* Automatique : exécute votre script automatiquement. Les modifications sont mises à jour en temps réel.
-* Manuel : le script s’exécute uniquement lorsque vous cliquez sur le bouton « Exécuter ». Utile pour modifier des scripts complexes.
-* Périodique : cette option est grisée par défaut. Disponible uniquement lorsque le nœud _DateTime.Now_ est utilisé. Vous pouvez définir l’exécution automatique du graphique à un intervalle spécifié.
+* Automatique : exécute votre script automatiquement. Les modifications sont mises à jour en temps réel.
+* Manuel : le script s’exécute uniquement lorsque vous cliquez sur le bouton « Exécuter ». Utile pour modifier des scripts complexes.
+* Périodique : cette option est grisée par défaut. Disponible uniquement lorsque le nœud _DateTime.Now_ est utilisé. Vous pouvez définir l’exécution automatique du graphique à un intervalle spécifié.
 
 ![](../.gitbook/assets/user-interface-execution-bar-datetime-node.jpg)
