@@ -8,7 +8,7 @@
 
 Для создания объекта CoordinateSystem, центрованного по точке с координатами x = 0, y = 0, z = 0 без поворота, масштабирования или сдвига, достаточно вызвать конструктор Identity:
 
-![](../images/GeometricPrimitives_01.png)
+![](../../.gitbook/assets/GeometricPrimitives_01.png)
 
 ```js
 // create a CoordinateSystem at x = 0, y = 0, z = 0,
@@ -19,7 +19,7 @@ cs = CoordinateSystem.Identity();
 
 Объекты CoordinateSystem, к которым были применены геометрические преобразования, в этой главе не рассматриваются, однако стоит упомянуть один конструктор, который позволяет создать систему координат в определенной точке, — _CoordinateSystem.ByOriginVectors_:
 
-![](../images/GeometricPrimitives_02.png)
+![](../../.gitbook/assets/GeometricPrimitives_02.png)
 
 ```js
 // create a CoordinateSystem at a specific location,
@@ -41,7 +41,7 @@ cs = CoordinateSystem.ByOriginVectors(origin,
 
 В этом примере показаны точки, созданные в разных системах координат:
 
-![](../images/GeometricPrimitives_03.png)
+![](../../.gitbook/assets/GeometricPrimitives_03.png)
 
 ```js
 // create a point with x, y, and z coordinates
@@ -53,8 +53,7 @@ pCoord = Point.ByCoordinates(x_pos, y_pos, z_pos);
 
 // create a point in a specific coordinate system
 cs = CoordinateSystem.Identity();
-pCoordSystem = Point.ByCartesianCoordinates(cs, x_pos,
-    y_pos, z_pos);
+pCoordSystem = Point.ByCartesianCoordinates(cs, x_pos, y_pos, z_pos);
 
 // create a point on a cylinder with the following
 // radius and height
@@ -62,22 +61,20 @@ radius = 5;
 height = 15;
 theta = 75.5;
 
-pCyl = Point.ByCylindricalCoordinates(cs, radius, theta,
-    height);
+pCyl = Point.ByCylindricalCoordinates(cs, radius, theta, height);
 
 // create a point on a sphere with radius and two angles
 
 phi = 120.3;
 
-pSphere = Point.BySphericalCoordinates(cs, radius,
-    theta, phi);
+pSphere = Point.BySphericalCoordinates(cs, radius, theta, phi);
 ```
 
 ### Линия
 
 Следующим по сложности примитивом Dynamo является отрезок, который представляет собой бесконечное количество точек, лежащее между двумя конечными точками. Чтобы создать отрезок, можно либо явным образом задать две граничные точки с помощью конструктора _Line.ByStartPointEndPoint_, либо задать начальную точку, направление и длину с помощью конструктора _Line.ByStartPointDirectionLength_.
 
-![](../images/GeometricPrimitives_04.png)
+![](../../.gitbook/assets/GeometricPrimitives_04.png)
 
 ```js
 p1 = Point.ByCoordinates(-2, -5, -10);
@@ -88,7 +85,7 @@ l2pts = Line.ByStartPointEndPoint(p1, p2);
 
 // a line segment at p1 in direction 1, 1, 1 with
 // length 10
-lDir = Line.ByStartPointDirectionLength(p1,
+lDir = Line.ByStartPointDirectionLength(p1, 
     Vector.ByCoordinates(1, 1, 1), 10);
 ```
 
@@ -96,7 +93,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
 
 В Dynamo доступны объекты, представляющие базовые типы геометрических трехмерных примитивов: кубоиды, для создания которых используется _Cuboid.ByLength_; конусы, создаваемые с помощью _Cone.ByPointsRadius_ и _Cone.ByPointsRadii_; цилиндры, получаемые при помощи _Cylinder.ByRadiusHeight_; и сферы, создаваемые с помощью _Sphere.ByCenterPointRadius_.
 
-![](../images/GeometricPrimitives_05.png)
+![](../../.gitbook/assets/GeometricPrimitives_05.png)
 
 ```js
 // create a cuboid with specified lengths

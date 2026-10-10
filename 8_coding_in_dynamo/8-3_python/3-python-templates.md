@@ -6,13 +6,13 @@
 
 Обычно используется следующий путь: `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-\![](<../images/python templates - appdata folder location.jpg>)
+\![](<../../.gitbook/assets/python templates - appdata folder location.jpg>)
 
 ### Настройка шаблона
 
 Для использования этой функции необходимо добавить в файл `DynamoSettings.xml` следующую строку _(правки вносятся в Блокноте)_.
 
-\![](<../images/python templates -dynamo settings xml file.png>)
+\![](<../../.gitbook/assets/python templates -dynamo settings xml file.png>)
 
 Найдите строку `<PythonTemplateFilePath />` и замените ее следующим кодом:
 
@@ -22,7 +22,9 @@
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}_Примечание. Замените CURRENTUSER на имя пользователя._{% endhint %}
+{% hint style="warning" %}
+_Примечание. Вместо CURRENTUSER укажите имя пользователя._
+{% endhint %}
 
 Теперь нужно создать шаблон, включающий функции для встраивания. В данном случае требуется встроить функции импорта определенных данных из Revit, а также некоторые другие функции, обычно используемые при работе с Revit.
 
@@ -54,10 +56,10 @@ from RevitServices.Transactions import TransactionManager
 doc = DocumentManager.Instance.CurrentDBDocument
 uidoc=DocumentManager.Instance.CurrentUIApplication.ActiveUIDocument
 
-#Preparing input from dynamo to revit
+# Preparing input from dynamo to revit
 element = UnwrapElement(IN[0])
 
-#Do some action in a Transaction
+# Do some action in a Transaction
 TransactionManager.Instance.EnsureInTransaction(doc)
 
 TransactionManager.Instance.TransactionTaskDone()
@@ -71,10 +73,10 @@ OUT = element
 
 После того как шаблон Python задан в приложении Dynamo, каждый раз при размещении узла Python будет выполняться поиск этого шаблона. Если шаблон не найден, отображается стандартное окно Python.
 
-\![](<../images/python templates - before setup template.jpg>)
+\![](<../../.gitbook/assets/python templates - before setup template.jpg>)
 
 Если шаблон Python найден (как в случае с созданным шаблоном для работы с Revit), отображаются встроенные в него функции по умолчанию.
 
-\![](<../images/python templates - after setup template.jpg>)
+\![](<../../.gitbook/assets/python templates - after setup template.jpg>)
 
 Подробные сведения об этом дополнении см. в следующем материале (автор: Раду Гидей [Radu Gidei]): https://github.com/DynamoDS/Dynamo/pull/8122

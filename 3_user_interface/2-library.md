@@ -2,7 +2,7 @@
 
 Библиотека содержит все загруженные узлы, включая десять узлов по умолчанию, входящих в установочный пакет, а также все дополнительно загруженные пользовательские узлы и пакеты. Узлы в библиотеке организованы иерархически в виде библиотек, категорий и подкатегорий (если это необходимо).
 
-![](<images/library-library-ui.png>)
+![](../.gitbook/assets/library-library-ui.png)
 
 * Основные узлы: входят в установку по умолчанию.
 * Пользовательские узлы: сохраняйте часто используемые процедуры или специальные графики в качестве пользовательских узлов. Ими также можно поделиться с сообществом.
@@ -16,9 +16,11 @@
 
 Откройте библиотеку, щелкнув меню, чтобы развернуть каждую категорию и ее подкатегорию.
 
-{% hint style="info" %} Начинать знакомство с программой рекомендуется с меню Geometry, так как в них представлено наибольшее количество узлов. {% endhint %}
+{% hint style="info" %}
+Начинать знакомство с программой рекомендуется с меню Geometry, в котором представлено наибольшее количество узлов.
+{% endhint %}
 
-![](<images/library-modified-and-resize-library-categories.jpg>)
+![](../.gitbook/assets/library-modified-and-resize-library-categories.jpg)
 
 > 1. Библиотека
 > 2. Категория
@@ -27,13 +29,13 @@
 
 Далее внутри подкатегории выполняется распределение узлов в зависимости от их функции: **создание** данных, выполнение **действия** или **запрос** данных.
 
-* ![](<images/user-interface-create.jpg>) **Создание**: создание или построение геометрии с нуля. Например, окружности.
-* ![](<images/user-interface-action.jpg>) **Действие**: выполнение действия с объектом. Например, масштабирование окружности.
-* ![](<images/user-interface-query.jpg>) **Запрос**: получение свойства уже существующего объекта. Например, получение радиуса окружности.
+* ![](../.gitbook/assets/user-interface-create.jpg) **Создание**: создание или построение геометрии с нуля. Например, окружности.
+* ![](../.gitbook/assets/user-interface-action.jpg) **Действие**: выполнение действия с объектом. Например, масштабирование окружности.
+* ![](../.gitbook/assets/user-interface-query.jpg) **Запрос**: получение свойства уже существующего объекта. Например, получение радиуса окружности.
 
 Наведите указатель на узел, чтобы посмотреть подробные сведения, помимо его имени и значка. Такие подсказки позволяют быстро определить функции, выполняемые узлом, какие данные ему требуются на входе, и что он выдает на выходе.
 
-![](<images/user-interface-node-description.jpg>)
+![](../.gitbook/assets/user-interface-node-description.jpg)
 
 > 1. Описание: описание узла на обычном языке.
 > 2. Значок: увеличенная версия значка, используемого в меню библиотеки.
@@ -46,7 +48,7 @@
 
 Щелчком выберите необходимый узел или нажмите клавишу ENTER, чтобы добавить выделенные узлы в центр рабочего пространства.
 
-![](<images/user-interface-search.jpg>)
+![](../.gitbook/assets/user-interface-search.jpg)
 
 #### Поиск по иерархии
 
@@ -58,15 +60,15 @@
 
 * `library.category.nodeName`
 
-![](<images/library-search-by-hierarchy-1-geometry-point-by-coordinates.jpg>)
+![](../.gitbook/assets/library-search-by-hierarchy-1-geometry-point-by-coordinates.jpg)
 
 * `category.nodeName`
 
-![](<images/library-search-by-hierarchy-2-point-by-coordinates.jpg>)
+![](../.gitbook/assets/library-search-by-hierarchy-2-point-by-coordinates.jpg)
 
 * `nodeName` или `keyword`
 
-![](<images/library-search-by-hierarchy-3-by-coordinates.jpg>)
+![](../.gitbook/assets/library-search-by-hierarchy-3-by-coordinates.jpg)
 
 В рабочем пространстве имя узла обычно представлено в формате `category.nodeName`. Есть некоторые исключения, в частности, узлы категорий Input и View.
 
@@ -74,15 +76,15 @@
 
 * Узлы из большинства библиотек содержат формат категории.
 
-![](<images/library-node-category-differences-1.jpg>)
+![](../.gitbook/assets/library-node-category-differences-1.jpg)
 
 * Узлы `Point.ByCoordinates` и `UV.ByCoordinates` имеют одинаковое имя, но относятся к разным категориям.
 
-![](<images/library-node-category-differences-2.jpg>)
+![](../.gitbook/assets/library-node-category-differences-2.jpg)
 
 * К исключениям относятся встроенные функции, узлы Core.Input, Core.View и логические операторы.
 
-![](<images/library-node-category-differences-3.jpg>)
+![](../.gitbook/assets/library-node-category-differences-3.jpg)
 
 ### Часто используемые узлы
 
@@ -92,30 +94,32 @@
 
 Узлы Input — это ключевой инструмент, благодаря которому пользователи визуальных программ могут работать с основными параметрами. Ниже перечислены некоторые узлы, доступные в основной библиотеке.
 
-| Узел           |                                                        | Узел           |                                                        |
-| -------------- | ------------------------------------------------------ | -------------- | ------------------------------------------------------ |
-| Логический        | ![](<images/library-boolean.jpg>)        | Количество         | ![](<images/library-number.jpg>)         |
-| String         | ![](<images/library-string.jpg>)         | Number Slider  | ![](<images/library-number-slider.jpg>)  |
-| Directory Path | ![](<images/library-directory-path.jpg>) | Integer Slider | ![](<images/library-integer-slider.jpg>) |
-| File Path      | ![](<images/library-file-path.jpg>)      |                |                                                        |
+| Узел           |                                                    | Узел           |                                                    |
+| -------------- | -------------------------------------------------- | -------------- | -------------------------------------------------- |
+| Логический        | ![](../.gitbook/assets/library-boolean.jpg)        | Количество         | ![](../.gitbook/assets/library-number.jpg)         |
+| String         | ![](../.gitbook/assets/library-string.jpg)         | Number Slider  | ![](../.gitbook/assets/library-number-slider.jpg)  |
+| Directory Path | ![](../.gitbook/assets/library-directory-path.jpg) | Integer Slider | ![](../.gitbook/assets/library-integer-slider.jpg) |
+| File Path      | ![](../.gitbook/assets/library-file-path.jpg)      |                |                                                    |
 
 #### Узлы Watch и Watch3D
 
 Узлы Watch играют важную роль в управлении потоком данных в визуальной программе. Результат работы узла можно увидеть в окне **предварительного просмотра данных узла**, наведя курсор на узел.
 
-![](<images/library-node-preview.jpg>)
+![](../.gitbook/assets/library-node-preview.jpg)
 
 Элемент удобно просматривать в узле **Watch**.
 
-![](<images/library-watch-node.jpg>)
+![](../.gitbook/assets/library-watch-node.jpg)
 
 Кроме того, результаты геометрии можно просмотреть с помощью узла **Watch3D**.
 
-![](<images/library-watch3d-node.gif>)
+![](../.gitbook/assets/library-watch3d-node.gif)
 
 Оба этих узла находятся в категории видов основной библиотеки.
 
-{% hint style="info" %} Совет. Иногда при работе с большим количеством узлов пользоваться функцией 3D-просмотра может быть неудобно. В этом случае можно снять флажок фонового просмотра в меню «Параметры» и использовать узел Watch3D для предварительного просмотра геометрии. {% endhint %}
+{% hint style="info" %}
+Совет. Иногда при работе с большим количеством узлов пользоваться функцией 3D-просмотра может быть неудобно. В этом случае можно снять флажок фонового просмотра в меню параметров и использовать узел Watch3D для предварительного просмотра геометрии.
+{% endhint %}
 
 #### Code Block
 
@@ -123,9 +127,9 @@
 
 Кроме того, узлы Code Block можно использовать как горячую клавишу для ввода чисел или вызова другой функции узла. Для этого используется синтаксис, соответствующий соглашению об именовании для текстового языка Dynamo — [DesignScript](../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md).
 
-Ниже приведен простой пример (с инструкциями) по использованию Code Block в сценарии.
+Ниже приведен простой пример (с инструкциями) по использованию узлов Code Block в сценарии.
 
-![](images/library-codeblockdemo.gif)
+![](../.gitbook/assets/library-codeblockdemo.gif)
 
 1. Дважды щелкните мышью для создания узла Code Block.
 2. Введите `Circle.ByCenterPointRadius(x,y);`.

@@ -1,33 +1,37 @@
 # Python и Civil 3D
 
-Dynamo — это чрезвычайно мощный инструмент [визуального программирования](../../a\_appendix/a-1\_visual-programming-and-dynamo.md), однако его можно использовать не только для работы с узлами и проводами, но и для написания кода в текстовом формате. Сделать это можно двумя способами.
+Dynamo — это чрезвычайно мощный инструмент [визуального программирования](../../a_appendix/a-1_visual-programming-and-dynamo.md), однако его можно использовать не только для работы с узлами и проводами, но и для написания кода в текстовом формате. Сделать это можно двумя способами.
 
 1. Написать код **DesignScript** с помощью Code Block.
 2. Написать код **Python** с помощью узла Python.
 
 В этом разделе рассматривается использование Python в среде Civil 3D для работы с .NET API программ AutoCAD и Civil 3D.
 
-{% hint style="info" %} Общие сведения об использовании Python в Dynamo см. в разделе [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention"). {% endhint %}
+{% hint style="info" %}
+Общие сведения об использовании Python в Dynamo см. в разделе [8-3_python](../../8_coding_in_dynamo/8-3_python/ "mention").
+{% endhint %}
 
 ## Документация по API
 
 В AutoCAD и Civil 3D есть несколько API-интерфейсов, которые позволяют разработчикам расширять базовые возможности этих программ за счет пользовательских функций. В отношении Dynamo для этого применяются **управляемые .NET API**. По ссылкам ниже можно ознакомиться со сведениями, необходимыми для понимания структуры API-интерфейсов и принципа их работы.
 
-[Руководство разработчика .NET API AutoCAD](https://help.autodesk.com/view/OARX/2024/RUS/?guid=GUID-C3F3C736-40CF-44A0-9210-55F6A939B6F2) (англ.)
+[Руководство разработчика API AutoCAD на основе .NET](https://help.autodesk.com/view/OARX/2024/ENU/?guid=GUID-C3F3C736-40CF-44A0-9210-55F6A939B6F2) (англ.)
 
-[Справочное руководство по .NET API AutoCAD](https://help.autodesk.com/view/OARX/2024/RUS/?guid=OARX-ManagedRefGuide-What_s_New) (англ.)
+[Справочное руководство по API AutoCAD на основе .NET](https://help.autodesk.com/view/OARX/2024/ENU/?guid=OARX-ManagedRefGuide-What_s_New) (англ.)
 
-[Руководство разработчика .NET API Civil 3D](https://help.autodesk.com/view/CIV3D/2024/RUS/?guid=GUID-DA303320-B66D-4F4F-A4F4-9FBBEC0754E0) (англ.)
+[Руководство разработчика API Civil 3D на основе .NET](https://help.autodesk.com/view/CIV3D/2024/ENU/?guid=GUID-DA303320-B66D-4F4F-A4F4-9FBBEC0754E0) (англ.)
 
-[Справочное руководство по .NET API Civil 3D](https://help.autodesk.com/view/CIV3D/2024/RUS/?guid=73fd1950-ee31-00b8-4872-c3f328ea1331) (англ.)
+[Справочное руководство по API Civil 3D на основе .NET](https://help.autodesk.com/view/CIV3D/2024/ENU/?guid=73fd1950-ee31-00b8-4872-c3f328ea1331) (англ.)
 
-{% hint style="info" %} В этом разделе могут встречаться незнакомые вам понятия, такие как базы данных, транзакции, методы, свойства и т. д. Многие из этих понятий необходимо знать для работы с .NET API, и они не относятся исключительно к Dynamo или Python. Мы не будем подробно рассматривать эти понятия в данном руководстве и потому рекомендуем обратиться к приведенным выше ссылкам для получения дополнительной информации. {% endhint %}
+{% hint style="info" %}
+В этом разделе могут встречаться незнакомые вам понятия, такие как базы данных, транзакции, методы, свойства и т. д. Многие из этих понятий необходимо знать для работы с .NET API, и они не относятся исключительно к Dynamo или Python. Мы не будем подробно рассматривать эти понятия в данном руководстве, поэтому рекомендуем обратиться к приведенным выше ссылкам для получения дополнительной информации.
+{% endhint %}
 
 ## Шаблон кода
 
 Когда вы впервые откроете новый узел Python для его редактирования, он будет по умолчанию заполнен шаблонным кодом. Ниже приводится описание данного шаблона с пояснениями по каждому блоку.
 
-<figure><img src="../images/Python_Template.png" alt=""><figcaption><p>Шаблон Python по умолчанию в Civil 3D</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Template (1).png" alt=""><figcaption><p>Шаблон Python по умолчанию в Civil 3D</p></figcaption></figure>
 
 > 1. Импорт модулей `sys` и `clr`, необходимых для правильной работы интерпретатора Python. В частности, модуль `clr` позволяет обрабатывать пространства имен .NET как пакеты Python.
 > 2. Загрузка стандартных сборок (например, файлов DLL) для работы с управляемыми .NET API для AutoCAD и Civil 3D.
@@ -39,8 +43,10 @@ Dynamo — это чрезвычайно мощный инструмент [в�
 > 8. Раскомментируйте эту строку, чтобы зафиксировать транзакцию после выполнения основного объема работы.
 > 9. Если требуется вывести какие-либо данные из узла, назначьте их переменной `OUT` в конце сценария.
 
-{% hint style="info" %} **Хотите адаптировать шаблон?**\
- Шаблон Python по умолчанию можно изменить, отредактировав файл `PythonTemplate.py`, расположенный в папке `C:\ProgramData\Autodesk\C3D <version>\Dynamo`. {% endhint %}
+{% hint style="info" %}
+**Хотите настроить?**\
+ Шаблон Python по умолчанию можно изменить, отредактировав файл `PythonTemplate.py`, расположенный в папке `C:\ProgramData\Autodesk\C3D <version>\Dynamo`.
+{% endhint %}
 
 ## Пример
 
@@ -78,7 +84,7 @@ Dynamo — это чрезвычайно мощный инструмент [в�
 
 Теперь можно приступить к выстраиванию логики графика. Сначала необходимо получить список всех водосборов в документе. Для решения этой задачи можно использовать узлы, поэтому мы не будем включать ее в сценарий Python. Использование узлов упрощает визуальное восприятие графика (не нужно пробираться через большой объем кода Python), а также позволяет посвятить сценарий Python выполнению одной задачи: получение точек контура водосборов.
 
-<figure><img src="../images/Python_Get_Catchments.png" alt=""><figcaption><p>Получение всех водосборов в документе по слоям</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Get_Catchments.png" alt=""><figcaption><p>Получение всех водосборов в документе по слоям</p></figcaption></figure>
 
 Обратите внимание, что выходные данные узла **All Objects on Layer** представляют собой список элементов CivilObjects. Это связано с тем, что в Dynamo for Civil 3D в данный момент нет узлов для работы с водосборами, и именно поэтому нам требуется получить доступ к API через Python.
 
@@ -88,13 +94,17 @@ Dynamo — это чрезвычайно мощный инструмент [в�
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Тип Dynamo</th><th width="373">Оболочка для</th></tr></thead><tbody><tr><td><strong>Object</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>Entity</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>Entity</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
-{% hint style="warning" %} На практике в большинстве случаев надежнее сначала получить идентификатор объекта с помощью свойства `InternalObjectId`, а затем получить доступ к объекту-оболочке в транзакции. Причина в том, что свойство `InternalDBObject` возвращает элемент DBObject AutoCAD, недоступный для записи. {% endhint %}
+{% hint style="warning" %}
+На практике в большинстве случаев надежнее сначала получить идентификатор объекта с помощью свойства `InternalObjectId`, а затем получить доступ к объекту-оболочке в транзакции. Причина в том, что свойство `InternalDBObject` возвращает элемент DBObject AutoCAD, недоступный для записи.
+{% endhint %}
 
 ### Сценарий Python
 
 Вот полный сценарий Python, который обращается к внутренним объектам водосбора и получает их точки контура. В сценарии выделены строки, содержащие измененный шаблонный код или новый пользовательский код.
 
-{% hint style="info" %} Для просмотра пояснений щелкните подчеркнутые строки сценария. {% endhint %}
+{% hint style="info" %}
+Для просмотра пояснений щелкните подчеркнутые строки сценария.
+{% endhint %}
 
 <pre class="language-python" data-line-numbers><code class="lang-python"># Загрузка стандартной библиотеки Python и библиотеки DesignScript
 import sys
@@ -108,8 +118,8 @@ clr.AddReference('AecBaseMgd')
 clr.AddReference('AecPropDataMgd')
 clr.AddReference('AeccDbMgd')
 
-<strong><a data-footnote-ref href="#user-content-fn-1">clr.AddReference('ProtoGeometry')</a>
-</strong>
+<a data-footnote-ref href="#user-content-fn-1">clr.AddReference('ProtoGeometry')</a>
+
 # Импорт ссылок из AutoCAD
 from Autodesk.AutoCAD.Runtime import *
 from Autodesk.AutoCAD.ApplicationServices import *
@@ -121,18 +131,18 @@ from Autodesk.AutoCAD.Geometry import *
 from Autodesk.Civil.ApplicationServices import *
 from Autodesk.Civil.DatabaseServices import *
 
-<strong><a data-footnote-ref href="#user-content-fn-2">from Autodesk.DesignScript.Geometry import Point as DynPoint</a>
-</strong>
+<a data-footnote-ref href="#user-content-fn-2">from Autodesk.DesignScript.Geometry import Point as DynPoint</a>
+
 # Входные данные для этого узла будут храниться в виде списка в переменных IN.
 <strong><a data-footnote-ref href="#user-content-fn-3">objs</a> = <a data-footnote-ref href="#user-content-fn-4">IN[0]</a>
 </strong>
 <strong><a data-footnote-ref href="#user-content-fn-5">output = []</a> 
 </strong>
-<strong><a data-footnote-ref href="#user-content-fn-6">if objs is None:</a>
-</strong><strong>    <a data-footnote-ref href="#user-content-fn-7">sys.exit("The input is null or empty.")</a>
+<a data-footnote-ref href="#user-content-fn-6">if objs is None:</a>
+<strong>    <a data-footnote-ref href="#user-content-fn-7">sys.exit("The input is null or empty.")</a>
 </strong>
-<strong><a data-footnote-ref href="#user-content-fn-8">if not isinstance(objs, list):</a>
-</strong><strong>    <a data-footnote-ref href="#user-content-fn-9">objs = [objs]</a>
+<a data-footnote-ref href="#user-content-fn-8">if not isinstance(objs, list):</a>
+<strong>    <a data-footnote-ref href="#user-content-fn-9">objs = [objs]</a>
 </strong>    
 adoc = Application.DocumentManager.MdiActiveDocument
 editor = adoc.Editor
@@ -158,22 +168,24 @@ with adoc.LockDocument():
 </strong>            pass
             
 # Назначение выходных данных переменной OUT
-<strong><a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
-</strong></code></pre>
+<a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
+</code></pre>
 
-{% hint style="warning" %} На практике основной объем логики сценария рекомендуется размещать внутри транзакции. Это обеспечивает безопасный доступ к объектам, которые сценарий считывает или записывает. Если пропустить транзакцию, во многих случаях это может привести к неустранимой ошибке. {% endhint %}
+{% hint style="warning" %}
+На практике основной объем логики сценария рекомендуется размещать внутри транзакции. Это обеспечивает безопасный доступ к объектам, которые сценарий считывает или записывает. Если пропустить транзакцию, во многих случаях это может привести к неустранимой ошибке.
+{% endhint %}
 
 ### Создание сложных кривых
 
 На этом этапе сценарий Python должен вывести список точек Dynamo, который можно увидеть в фоновом просмотре. Нам осталось просто создать сложных кривые на основе этих точек. Обратите внимание, что сделать это можно напрямую в сценарии Python, однако мы намеренно размещаем эту операцию за пределами сценария, в узле, чтобы сделать ее более заметной. Вот как выглядит итоговый график.
 
-<figure><img src="../images/Python_Final_Script.png" alt=""><figcaption><p>Итоговый график</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Final_Script (1).png" alt=""><figcaption><p>Итоговый график</p></figcaption></figure>
 
 ### Результат
 
 А вот итоговая геометрия Dynamo.
 
-<figure><img src="../images/Python_Dynamo_Curves.png" alt=""><figcaption><p>Полученные сложные кривые Dynamo для границ водосборов</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Dynamo_Curves.png" alt=""><figcaption><p>Полученные сложные кривые Dynamo для границ водосборов</p></figcaption></figure>
 
 > :tada: Миссия выполнена!
 
@@ -181,7 +193,9 @@ with adoc.LockDocument():
 
 Небольшой комментарий перед завершением данного раздела. Настройка узла Python может выполняться по-разному в зависимости от используемой версии Civil 3D. В **Civil 3D 2020 и 2021** в Dynamo использовался инструмент **IronPython**, который позволял переносить данные между объектами .NET и сценариями Python. Однако в **Civil 3D 2022** в Dynamo применяется стандартный встроенный интерпретатор Python (**CPython**), в котором используется Python 3. Переход на этот вариант обеспечивает ряд преимуществ, в том числе доступ к популярным современным библиотекам и новым возможностям платформы, а также установку обновлений и исправлений для системы безопасности.
 
-{% hint style="info" %} Подробные сведения об этом переходе и обновлении сценариев предыдущих версий можно найти в [блоге Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Если вы хотите и дальше работать с IronPython, установите пакет **DynamoIronPython2.7** с помощью Dynamo Package Manager. {% endhint %}
+{% hint style="info" %}
+Подробные сведения об этом переходе и обновлении сценариев предыдущих версий можно найти в [блоге Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Если вы хотите и дальше работать с IronPython, установите пакет **DynamoIronPython2.7** с помощью Dynamo Package Manager.
+{% endhint %}
 
 [^1]: По умолчанию библиотека геометрии Dynamo не добавляется в среду Python. Мы создаем этот сценарий, чтобы с его помощью вывести список точек Dynamo для границ водосбора, поэтому необходимо добавить эту строку, чтобы создать эти точки позднее.
 
@@ -207,7 +221,7 @@ with adoc.LockDocument():
 
 [^12]: Извлекаем «завернутый» объект из базы данных AutoCAD. Обратите внимание, что для OpenMode установлено значение `ForRead`, так как мы не планируем вносить изменения в объекты. Мы просто «запрашиваем» данные.
 
-[^13: Входной список объектов может содержать не только водосборы, но и другие элементы. Необходимо проверить, так ли это, и принять соответствующие меры (итерация цикла продолжается только в том случае, если элемент действительно является водосбором).
+[^13]: Входной список объектов может содержать не только водосборы, но и другие элементы. Необходимо проверить, так ли это, и принять соответствующие меры (итерация цикла продолжается только в том случае, если элемент действительно является водосбором).
 
 [^14]: Если мы добрались до этой строки, значит, объект является водосбором. Добавим новую переменную, чтобы обеспечить понятное именование.
 

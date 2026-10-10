@@ -22,7 +22,7 @@
     * Определение логики взаимодействия для регулятора: [код](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
 * [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**:** шаблоны для ZeroTouch, персонализированного пользовательского интерфейса, тестов и расширений видов.
   * [Примеры API](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
-    * Создание базового узла персонализированного пользовательского интерфейса: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs).
+    * Создание базового узла персонализированного пользовательского интерфейса: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/LocalizedCustomNodeModel.cs).
     * Создание раскрывающегося меню: [DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs).
   * [Тесты](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryTests)
     * Системные тесты: [HelloDynamoSystemTests.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryTests/HelloDynamoSystemTests.cs)

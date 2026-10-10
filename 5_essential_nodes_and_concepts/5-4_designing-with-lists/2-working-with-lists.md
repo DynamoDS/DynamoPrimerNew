@@ -4,7 +4,7 @@
 
 Определившись с тем, что такое список, поговорим о том, какие операции можно выполнять с ним. Представим список в виде колоды карт. Колода — это список, а каждая карта — элемент.
 
-![карты](../images/Playing_cards_modified.jpg)
+![карты](../../.gitbook/assets/Playing_cards_modified.jpg)
 
 > Фото предоставлено [Кристианом Гидлефом (Christian Gidlöf)](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
@@ -43,7 +43,7 @@
 
 На изображении ниже показан базовый график для построения линий между двумя окружностями с целью представления основных операций со списками. Далее рассматривается управление данными в списке и демонстрируются визуальные результаты с помощью действий со списком.
 
-\![](<../images/working with list - list operation.jpg>)
+\![](<../../.gitbook/assets/working with list - list operation.jpg>)
 
 > 1. Начните с узла **Code Block** со значением `500;`.
 > 2. Соедините его с входным параметром «x» узла **Point.ByCoordinates**.
@@ -51,7 +51,7 @@
 > 4. Соединим узел из предыдущего шага с входным параметром plane узла **Circle.ByPlaneRadius**
 > 5. С помощью узла **Code Block** укажите значение `50;` в качестве значения параметра radius. Это будет первая окружность.
 > 6. С помощью узла **Geometry.Translate** переместим окружность вверх на 100 единиц в направлении Z.
-> 7. С помощью узла **Code Block** задайте диапазон из десяти чисел от 0 до 1, используя следующую строку кода: `0..1..#10;`.
+> 7. С помощью узла **Code Block** задайте диапазон из десяти чисел от 0 до 1, используя следующую строку кода: `0..1..#10;`.
 > 8. Соединим блок кода из предыдущего шага с входным значением _param_ двух узлов **Curve.PointAtParameter**. Соединим узел **Circle.ByPlaneRadius** с входным параметром curve верхнего узла, а узел **Geometry.Translate** с входным параметром curve узла под ним.
 > 9. С помощью узла **Line.ByStartPointEndPoint** соедините два узла **Curve.PointAtParameter**.
 
@@ -65,7 +65,7 @@
 
 Узел _List.Count_ сравнительно прост: он подсчитывает количество значений в списке и возвращает это число. При работе со списками списков в использовании этого узла появляются дополнительные нюансы. О них мы поговорим в следующих разделах.
 
-\![Count](<../images/working with list - list operation - list count.jpg>)
+\![Количество](<../../.gitbook/assets/working with list - list operation - list count.jpg>)
 
 > 1. Узел **List.Count** возвращает количество линий в узле **Line.ByStartPointEndPoint**. В данном случае значение равно 10, что соответствует количеству точек, созданных с помощью исходного узла **Code Block**.
 
@@ -79,14 +79,14 @@
 
 **List.GetItemAtIndex** — основной способ запроса элемента в списке.
 
-\![Упражнение](<../images/working with list - get item index 01.jpg>)
+\![Упражнение](<../../.gitbook/assets/working with list - get item index 01.jpg>)
 
 > 1. Сначала щелкните правой кнопкой мыши узел **Line.ByStartPointEndPoint**, чтобы отключить его предварительный просмотр.
 > 2. С помощью узла **List.GetItemAtIndex** выбираем индекс _0_ или первый элемент в списке линий.
 
 Измените значение регулятора от 0 до 9, чтобы выбрать другой элемент с помощью **List.GetItemAtIndex**.
 
-\![](<../images/working with list - get item index 02.gif>)
+\![](<../../.gitbook/assets/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
@@ -98,10 +98,10 @@
 
 Узел _List.Reverse_ располагает все элементы в списке в обратном порядке.
 
-\![Упражнение](<../images/working with list - list reverse.jpg>)
+\![Упражнение](<../../.gitbook/assets/working with list - list reverse.jpg>)
 
 > 1. Для корректной визуализации обращенного списка линий создайте дополнительные линии, изменив значение узла **Code Block** на `0..1..#50;`.
-> 2. Создайте копию узла **Line.ByStartPointEndPoint**, вставьте узел List.Reverse между узлом **Curve.PointAtParameter** и вторым узлом **Line.ByStartPointEndPoint**.
+> 2. Создайте копию узла **Line.ByStartPointEndPoint**, вставьте узел **List.Reverse** между узлом **Curve.PointAtParameter** и вторым узлом **Line.ByStartPointEndPoint**.
 > 3. Используйте узлы **Watch3D** для предварительного просмотра двух различных результатов. Первый узел показывает результат без обращенного списка. Линии соединяются вертикально с точками напротив. Второй узел показывает результат обращения списка, где все точки соединяются с точками напротив в обратном порядке.
 
 ### List.ShiftIndices <a href="#listshiftindices" id="listshiftindices"></a>
@@ -114,7 +114,7 @@
 
 **List.ShiftIndices** — это удобный инструмент для создания скручиваний или спиралей и других подобных манипуляций с данными. Этот узел смещает элементы в списке на заданное количество индексов.
 
-\![Упражнение](<../images/working with list - shiftIndices 01.jpg>)
+\![Упражнение](<../../.gitbook/assets/working with list - shiftIndices 01.jpg>)
 
 > 1. В том же сценарии, где был создан обращенный список, вставьте узел **List.ShiftIndices** между узлами **Curve.PointAtParameter** и **Line.ByStartPointEndPoint**.
 > 2. С помощью узла **Code Block** укажите значение 1 для сдвига списка на один индекс.
@@ -122,7 +122,7 @@
 
 Если увеличить значение в узле **Block Code**, например, до _30_, в диагональных линиях появляется существенное различие. В данном случае сдвиг работает аналогично диафрагме камеры, закручивая исходную цилиндрическую форму.
 
-\![](<../images/working with list - shiftIndices 02.jpg>)
+\![](<../../.gitbook/assets/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -132,11 +132,11 @@
 
 {% file src="../../.gitbook/assets/List-FilterByBooleanMask.dyn" %}
 
-![](../images/ListFilterBool.png)
+![](../../.gitbook/assets/ListFilterBool.png)
 
 Узел **List.FilterByBooleanMask** удаляет определенные элементы на основе списка логических операций или значений «Истина»/«Ложь».
 
-\![Упражнение](<../images/working with list - filter by bool mask.jpg>)
+\![Упражнение](<../../.gitbook/assets/working with list - filter by bool mask.jpg>)
 
 Чтобы создать список значений «Истина» или «Ложь», необходимо выполнить несколько дополнительных действий.
 

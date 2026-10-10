@@ -6,9 +6,9 @@
 
 Первая строка содержит ключевое слово «def», затем название функции и наименования входных данных в скобках. Тело функции заключено в фигурные скобки. Значение возвращается с помощью оператора «return =». В узлах Code Block, определяющих функцию, отсутствуют порты ввода и вывода, так как они вызываются из других блоков кода.
 
-\![](<../images/functions parent def.jpg>)
+\![](<../../.gitbook/assets/functions parent def.jpg>)
 
-```
+```js
 /*This is a multi-line comment,
 which continues for
 multiple lines*/
@@ -24,9 +24,9 @@ return sum;
 
 Функцию можно вызвать с помощью другого узла Code Block в том же файле, указав имя и такое же число аргументов. Этот процесс аналогичен использованию готовых узлов из библиотеки.
 
-\![](<../images/functions children call def.jpg>)
+\![](<../../.gitbook/assets/functions children call def.jpg>)
 
-```
+```c#
 FunctionName(in1,in2);
 ```
 
@@ -42,15 +42,15 @@ FunctionName(in1,in2);
 
 Для начала зададим десять числовых значений в диапазоне от 0 до 100. Соединим этот узел с узлом **Point.ByCoordinates** для создания диагональной линии.
 
-\![](<../images/functions - exercise - 01.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 01.jpg>)
 
 Создайте узел **Code Block** и введите определение.
 
-\![](<../images/functions - exercise - 02.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 02.jpg>)
 
-> 1.  Используйте следующие строки кода:
+> 1. Используйте следующие строки кода:
 >
->     ```
+>     ```py
 >     def sphereByZ(inputPt)
 >     {
 >
@@ -59,11 +59,11 @@ FunctionName(in1,in2);
 >
 > _inputPt_ — это имя, заданное для точек, которые будут определять функцию. В настоящее время эта функция не выполняет никаких действий, но она будет дополнена по ходу работы.
 
-\![](<../images/functions - exercise - 03.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 03.jpg>)
 
 > 1. Дополните функцию **Code Block**, разместив комментарий и переменную _sphereRadius_, которая запрашивает положение каждой точки по оси _Z_. Напомним, что метод _inputPt.Z_ не нужно заключать в скобки. Это _запрос_ свойств существующего элемента, поэтому указывать входные данные не требуется.
 >
-> ```
+> ```py
 > def sphereByZ(inputPt,radiusRatio)
 > {
 > //get Z Value, ise ot to drive radius of sphere
@@ -71,62 +71,62 @@ FunctionName(in1,in2);
 > };
 > ```
 
-\![](<../images/functions - exercise - 04.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 04.jpg>)
 
 > 1. Вызовите функцию, созданную в другом узле **Code Block**. Если дважды щелкнуть в активном окне для создания нового узла _Code Block_ и ввести _sphereB_, то вы увидите, что Dynamo предложит использовать созданную выше функцию _sphereByZ_. Функция была добавлена в библиотеку IntelliSense! Неплохо.
 
-\![](<../images/functions - exercise - 05.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 05.jpg>)
 
 > 1.  Теперь вызовем функцию и создадим переменную _Pt_, чтобы использовать созданные ранее точки.
 >
->     ```
+>     ```py
 >     sphereByZ(Pt)
 >     ```
 > 2. Обратите внимание, что на выходе мы получили нулевые значения. Почему? При определении функции был задан расчет переменной _sphereRadius_, но не было указано, что именно функция должна _возвращать_ в качестве _выходных данных_. Наших следующим шагом будет исправление этого упущения.
 
-\![](<../images/functions - exercise - 06.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 06.jpg>)
 
 > 1. Это важный шаг: необходимо задать выходные данные функции, добавив строку `return = sphereRadius;` в функцию _sphereByZ_.
 > 2. Теперь Code Block выводит координаты Z каждой точки.
 
 Создадим сферы, отредактировав _родительскую_ функцию.
 
-\![](<../images/functions - exercise - 07.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 07.jpg>)
 
 > 1. Сначала определите сферу с помощью строки кода: `sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);`.
 > 2. Теперь измените возвращаемое значение на _sphere_ вместо _sphereRadius_: `return = sphere;`. В области предварительного просмотра Dynamo появятся гигантские сферы.
 
-\![](<../images/functions - exercise - 08.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 08.jpg>)
 
-> 1\. Чтобы уменьшить размер этих сфер, обновите значение sphereRadius, добавив разделитель: `sphereRadius = inputPt.Z/20;`. Теперь видно отдельные сферы, что позволяет понять взаимосвязь между радиусом и значением Z.
+> 1. Чтобы уменьшить размер этих сфер, обновите значение sphereRadius, добавив разделитель: `sphereRadius = inputPt.Z/20;`. Теперь видно отдельные сферы, что позволяет понять взаимосвязь между радиусом и значением Z.
 
-\![](<../images/functions - exercise - 09.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 09.jpg>)
 
 > 1. В узле **Point.ByCoordinates** измените режим переплетения с «Самый короткий список» на «Векторное произведение», в результате чего будет создана сетка точек. Функция _sphereByZ_ все еще действует, поэтому все точки создают сферы с радиусами, основанными на значениях Z.
 
-\![](<../images/functions - exercise - 10.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 10.jpg>)
 
 > 1. Для проверки соединим исходный список чисел с входным портом X узла **Point.ByCoordinates**. Мы получили куб из сфер.
 > 2. Примечание. Если для расчета компьютеру требуется много времени, попробуйте уменьшить значение _\#10_ и задать вместо него, например, _\#5_.
 
 Поскольку созданная нами функция _sphereByZ_ является типовой, можно вызвать спираль из предыдущего урока и применить эту функцию к ней.
 
-\![](<../images/functions - exercise - 11.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 11.jpg>)
 
 И последний шаг: настройка коэффициента радиуса с помощью пользовательских параметров. Для этого необходимо создать новый входной порт для функции и заменить делитель _20_ параметром.
 
-\![](<../images/functions - exercise - 12.jpg>)
+\![](<../../.gitbook/assets/functions - exercise - 12.jpg>)
 
 > 1.  Изменим определение _sphereByZ_ на следующее:
 >
->     ```
+>     ```py
 >     def sphereByZ(inputPt,radiusRatio)
 >     {
->     //get Z Value, use it to drive radius of sphere
+>     # Get Z Value, use it to drive radius of sphere
 >     sphereRadius=inputPt.Z/radiusRatio;
->     //Define Sphere Geometry
+>     # Define Sphere Geometry
 >     sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);
->     //Define output for function
+>     # Define output for function
 >     return sphere;
 >     };
 >     ```

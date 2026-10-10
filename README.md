@@ -1,10 +1,12 @@
-# Об этом руководстве
+# О программе
 
-{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %} Трейлер к Dynamo {% endembed %}
+{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %}
+Трейлер к Dynamo
+{% endembed %}
 
 ## Для Dynamo 2.13 и более поздних версий
 
-![Логотип Dynamo](images/dynamo_logo_dark-trim.jpg)
+\![Логотип Dynamo](<.gitbook/assets/dynamo_logo_dark-trim (1).jpg>)
 
 > Dynamo — это платформа визуального программирования с открытым исходным кодом для проектировщиков.
 
@@ -27,9 +29,9 @@
 
 ### Открытый исходный код
 
-Проект Dynamo Primer открыт для всех. Мы стремимся предоставлять качественную информацию и будем рады вашим отзывам. Если вы хотите сообщить о какой-либо проблеме, опубликуйте свой вопрос на соответствующей странице GitHub: [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues). 
+Проект Dynamo Primer открыт для всех. Мы стремимся предоставлять качественную информацию и будем рады вашим отзывам. Если вы хотите сообщить о какой-либо проблеме, опубликуйте свой вопрос на соответствующей странице GitHub: [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues).
 
-Если вы хотите предложить новый раздел, правки или другие изменения по этому проекту, ознакомьтесь с нашим проектом на GitHub: [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew). 
+Если вы хотите предложить новый раздел, правки или другие изменения по этому проекту, ознакомьтесь с нашим проектом на GitHub: [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew).
 
 ### Проект Dynamo Primer
 
@@ -37,43 +39,43 @@ Dynamo Primer — это проект с открытым исходным ко
 
 Первая версия этого руководства была составлена специалистами **Mode Lab**. Мы выражаем им благодарность за то, что положили начало этому ценному ресурсу.
 
-![](images/modelab-logo.png)
+![](.gitbook/assets/modelab-logo.png)
 
 ***
 
 Обновление этого руководства в соответствии с изменениями, внесенными в Dynamo 2.0, было выполнено **Джоном Пирсоном (John Pierson) из компании Parallax Team**.
 
-![](images/prlx-logo.jpg)
+![](.gitbook/assets/prlx-logo.jpg)
 
 ***
 
 Обновление этого руководства в соответствии с изменениями, внесенными в Dynamo 2.13, было выполнено специалистами **Matterlab**.
 
-![](images/matterlab-logo.jpg)
+![](.gitbook/assets/matterlab-logo.jpg)
 
 ***
 
 Обновление этого руководства в соответствии с изменениями, внесенными в Dynamo 2.17, было выполнено специалистами **Archilizer**.
 
-<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 Обновление этого руководства в соответствии с изменениями, внесенными в Dynamo for Civil 3D, было выполнено специалистами **Wood Rodgers**.
 
-<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### Благодарности
 
 Выражаем особую благодарность Иэну Кио (Ian Keough) за то, что положил начало проекту Dynamo.
 
-Мы благодарим Мэтта Йежика (Matt Jezyk), Иэна Кио (Ian Keough), Зака Крона (Zach Kron), Рэйсель Амур (Racel Amour) и Колина МакКрона (Colin McCrone) за активную совместную работу и возможность принять участие в широком спектре проектов Dynamo.
+Мы благодарим Мэтта Джезика (Matt Jezyk), Иэна Кио (Ian Keough), Зака Крона (Zach Kron), Рэйсель Амур (Racel Amour) и Колина МакКрона (Colin McCrone) за активную совместную работу и возможность принять участие в широком спектре проектов Dynamo.
 
 ### Программное обеспечение и ресурсы
 
-**Dynamo** Последнюю **стабильную** версию Dynamo можно найти на следующих веб-сайтах.
+**Dynamo**. Последнюю **стабильную** версию Dynamo можно найти на следующем веб-сайте.
 
-[https://dynamobim.com/download/](https://dynamobim.com/download/) или [https://dynamobuilds.com](https://dynamobuilds.com/)
+[https://dynamobuilds.com](https://dynamobuilds.com/)
 
 * Примечание. Начиная с версии Revit 2020, Dynamo включается в комплект установки Revit, поэтому устанавливать Dynamo вручную не требуется. Подробные сведения см. в этом [блоге](https://dynamobim.org/dynamo-core-2-1-release/).
 

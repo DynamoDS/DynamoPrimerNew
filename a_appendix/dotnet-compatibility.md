@@ -12,10 +12,12 @@
 | 3.7            | .NET 10            |
 | 4.0 и более поздние версии           | .NET 10            |
 
-{% hint style="info" %}Версии 3.3.2 и 3.7 являются специальными версиями, в которых поддержка .NET 10 была перенесена из версии-кандидата 4.0.{% endhint %}
+{% hint style="info" %}
+Версии 3.3.2 и 3.7 являются специальными версиями, в которых поддержка .NET 10 была перенесена из версии-кандидата 4.0.
+{% endhint %}
 
 Инструкции по обновлению .NET в пакетах до новой версии см. в руководстве по переносу для разработчиков:
 
-* [Обновление пакетов для Dynamo 2.x](../11\_developer\_primer/3\_developing\_for\_dynamo/6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
-* [Обновление пакетов для Dynamo 3.x/.NET 8](../11\_developer\_primer/3\_developing\_for\_dynamo/6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
-* [Обновление пакетов для Dynamo 4.x/.NET 10](../11\_developer\_primer/3\_developing\_for\_dynamo/6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
+ * [Обновление пакетов для Dynamo 2.x](../11_developer_primer/8_updating_packages/1-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+ * [Обновление пакетов для Dynamo 3.x/.NET 8](../11_developer_primer/8_updating_packages/2-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+ * [Обновление пакетов для Dynamo 4.x/.NET 10](../11_developer_primer/8_updating_packages/3-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)

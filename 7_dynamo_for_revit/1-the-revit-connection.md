@@ -1,6 +1,6 @@
 # Подключение к Revit
 
-\![](<images/revit connection link.jpg>)
+\![](<../.gitbook/assets/revit connection link.jpg>)
 
 Надстройка Dynamo для Revit расширяет возможности информационного моделирования зданий за счет среды логики и данных, предоставляемой графическим редактором алгоритмов. Ее гибкие возможности в сочетании с обширной базой данных Revit позволяют перевести BIM на новый уровень.
 
@@ -19,11 +19,11 @@
 | 2017          | [0.9.0](https://downloads.dynamobuilds.com/DynamoInstall0.9.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
 | 2018          | [1.3.0](https://downloads.dynamobuilds.com/DynamoInstall1.3.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
 | 2019          | [1.3.3](https://downloads.dynamobuilds.com/DynamoInstall1.3.3.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.4](https://downloads.dynamobuilds.com/DynamoInstall2.0.4.exe) |
-| 2020+         | 2.1.0 (Revit 2020 или более поздней версии теперь включает Dynamo и обновляется в соответствии с графиком обновлений Revit.) | Отсутствует                                                                                                                                     |
+| 2020+         | 2.1.0 (Revit 2020 или более поздней версии теперь включает Dynamo и обновляется в соответствии с графиком обновлений Revit.)  | Отсутствует                                                                                                                                     |
 
 ### История Dynamo
 
-![История](images/earlyScreenshot.jpg)
+![История](../.gitbook/assets/earlyScreenshot.jpg)
 
 Благодаря упорству разработчиков и активному вкладу сообщества пользователей этот проект прошел большой путь от скромной надстройки до того, чем он является сейчас.
 
@@ -35,21 +35,27 @@
 
 В редакторе проектов или семейств Revit перейдите в раздел «Надстройки» и выберите Dynamo*.
 
-{% hint style="warning" %} * Программа Dynamo будет выполняться только в том файле, в котором была открыта. {% endhint %}
+{% hint style="warning" %}
+* Надстройка Dynamo будет работать только в том файле, в котором она была открыта.
+{% endhint %}
 
-![](images/1/launchdynamofromrevit.jpg)
+\![](<../.gitbook/assets/launchdynamofromrevit (1).jpg>)
 
 При открытии Dynamo в Revit отображается новая категория с именем Revit. Это мощное дополнение к пользовательскому интерфейсу, включающее узлы, специально предназначенные для использования в рабочих процессах Revit*.
 
-{% hint style="warning" %}* При использовании семейства узлов, предназначенного для Revit, график Dynamo будет работать только при открытии в Dynamo для Revit. Если график, предназначенный для работы в Dynamo для Revit, открыть в однопользовательской версии Dynamo, то все узлы Revit из него пропадут. {% endhint %}
+{% hint style="warning" %}
+* При использовании семейства узлов, предназначенного для Revit, граф Dynamo будет работать только при открытии в Dynamo для Revit. Если график, предназначенный для работы в Dynamo для Revit, открыть в однопользовательской версии Dynamo, то все узлы Revit из него пропадут.
+{% endhint %}
 
-\![](<images/revit connection - running dynamo in revit 02.jpg>)
+\![](<../.gitbook/assets/revit connection - running dynamo in revit 02.jpg>)
 
 ### Замораживание узлов
 
 Поскольку Revit является платформой, которая обеспечивает широкие возможности по управлению проектами, параметрические операции в Dynamo могут быть сложными, а их расчет может занимать много времени. Если Dynamo требуется много времени для расчета узлов, возможно, следует воспользоваться функцией заморозки, чтобы приостановить выполнение операций Revit во время создания графика.
 
-{% hint style="info" %} Подробные сведения о замораживании узлов см. в разделе [4_nodes_and_wires](../4_nodes_and_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+Подробные сведения о замораживании узлов см. в разделе [4_nodes_and_wires](../4_nodes_and_wires/ "mention").
+{% endhint %}
 
 ### Блог и сообщество Dynamo
 
@@ -59,4 +65,4 @@ Dynamo — это проект с открытым исходным кодом,
 
 Разработчики Dynamo также ведут активный блог. Ознакомьтесь с последними публикациями, чтобы быть в курсе всех новостей.
 
-![Блог](images/blog.png)
+![Блог](../.gitbook/assets/blog.png)

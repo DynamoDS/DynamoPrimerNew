@@ -27,7 +27,7 @@ import System
 
 Это обеспечит доступ к API Revit и позволит создавать пользовательские сценарии для любых задач Revit. Благодаря объединению процесса визуального программирования с написанием сценариев в API Revit возможности совместной работы и разработки инструментов значительно увеличиваются. Например, специалист по BIM и проектировщик схем могут совместно работать над одним и тем же графиком. В результате эффективность проектирования и реализации модели повысится.
 
-\![](<../images/python & revit - 01.jpg>)
+\![](<../../.gitbook/assets/python & revit - 01 (1).jpg>)
 
 ### API для конкретных платформ
 
@@ -37,7 +37,7 @@ import System
 
 ## Упражнение 1
 
-> Создайте новый проект Revit.
+> Создайте проект Revit.
 >
 > Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
@@ -51,7 +51,7 @@ import System
 
 Ниже описывается процедура импорта служб Revit и извлечения данных документа в Dynamo.
 
-\![](<../images/python & revit - exercise 01 - 01.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 01 - 01.jpg>)
 
 Посмотрите, как выглядит узел Python в Dynamo. Код также можно найти ниже.
 
@@ -60,17 +60,17 @@ import System
 import sys
 import clr
 
-#Import DocumentManager
+# Import DocumentManager
 clr.AddReference("RevitServices")
 import RevitServices
 from RevitServices.Persistence import DocumentManager
 
-#Place your code below this line
+# Place your code below this line
 doc = DocumentManager.Instance.CurrentDBDocument
 uiapp = DocumentManager.Instance.CurrentUIApplication
 app = uiapp.Application
 
-#Assign your output to the OUT variable
+# Assign your output to the OUT variable
 OUT = [doc,uiapp,app]
 ```
 
@@ -86,19 +86,19 @@ OUT = [doc,uiapp,app]
 
 Для начала добавьте в Revit новое семейство концептуальных формообразующих элементов.
 
-\![](<../images/python & revit - exercise 02 - 01.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 01.jpg>)
 
 Откройте _папку Conceptual Mass_ и используйте файл шаблона _Metric Mass.rft_.
 
-\![](<../images/python & revit - exercise 02 - 02.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 02.jpg>)
 
 В Revit используйте комбинацию клавиш **`un`**, чтобы вызвать окно параметров«Единицы проекта», и измените единицы измерения длины на метры.
 
-\![](<../images/python & revit - exercise 02 - 03.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 03.jpg>)
 
 Запустите Dynamo и сформируйте набор узлов, как показано на изображении ниже. Сначала создайте две опорные точки в Revit с помощью узлов Dynamo.
 
-\![](<../images/python & revit - exercise 02 - 04.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 04.jpg>)
 
 > 1. Создайте узел **Code Block** и присвойте ему значение `"0;"`.
 > 2. Соедините это значение с портами ввода X, Y и Z узла **ReferencePoint.ByCoordinates**.
@@ -108,7 +108,7 @@ OUT = [doc,uiapp,app]
 
 Посмотрите, как выглядит узел Python в Dynamo. Полный код см. ниже.
 
-\![](<../images/python & revit - exercise 02 - 05.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 05.jpg>)
 
 > 1. **System.Array**. Приложению Revit в качестве входного параметра требуется **системный массив** (а не список Python). Для этого необходима лишь еще одна строка кода, но следует уделить особое внимание типам аргументов, чтобы упростить программирование на языке Python в Revit.
 
@@ -119,24 +119,25 @@ import clr
 # Import RevitNodes
 clr.AddReference("RevitNodes")
 import Revit
+
 #Import Revit elements
 from Revit.Elements import *
 import System
 
-#define inputs
+# Define inputs
 startRefPt = IN[0]
 endRefPt = IN[1]
 
-#define system array to match with required inputs
+# Define system array to match with required inputs
 refPtArray = System.Array[ReferencePoint]([startRefPt, endRefPt])
 
-#create curve by reference points in Revit
+# Create curve by reference points in Revit
 OUT = CurveByPoints.ByReferencePoints(refPtArray)
 ```
 
 В Dynamo с помощью Python мы создали две опорные точки, соединенные линией. Продолжим работу с этим примером в следующем упражнении.
 
-\![](<../images/python & revit - exercise 02 - 06.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 06.jpg>)
 
 ## Упражнение 3
 
@@ -148,55 +149,61 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 
 Это упражнение довольно несложное, однако оно хорошо иллюстрирует процесс обмена данными и геометрией между Revit и Dynamo. Сначала откройте файл Revit-StructuralFraming.rvt. Затем запустите Dynamo и откройте файл Revit-StructuralFraming.dyn.
 
-![](../images/python&revit-exercise03-01.jpg)
+![](../../.gitbook/assets/python\&revit-exercise03-01.jpg)
 
 Этот файл Revit содержит лишь самые базовые данные. Имеются две опорные кривые: одна на уровне 1, другая — на уровне 2. Эти кривые необходимо добавить в Dynamo, сохранив динамическую связь.
 
 В файле имеется набор узлов, соединяемых с пятью портами ввода узла Python.
 
-\![](<../images/python & revit - exercise 03 - 02.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 02.jpg>)
 
 > 1. **Узлы Select Model Element**. Нажмите кнопку выбора в каждом узле и выберите соответствующую кривую в Revit.
-> 2. **Code Block**. Используя синтаксис `0..1..#x;`_,_ соедините регулятор целых чисел от 0 до 20 с портом ввода _x_. Этот регулятор задает количество балок, которые будут построены между двумя кривыми.
+> 2. **Code Block**. Используя синтаксис `0..1..#x;`_,_ соедините регулятор целых чисел от 0 до 20 с портом ввода _x_. Этот регулятор задает количество балок, которые будут построены между двумя кривыми.
 > 3. **Structural Framing Types**. В раскрывающемся меню выберите балку по умолчанию (W12x26).
 > 4. **Levels**. Выберите Level 1.
 
 Этот код Python чуть более сложен, но весь процесс снабжен подробными комментариями.
 
-\![](<../images/python & revit - exercise 03 - 03.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 03.jpg>)
 
 ```py
 import clr
-#import Dynamo Geometry
+
+# Import Dynamo Geometry
 clr.AddReference('ProtoGeometry')
 from Autodesk.DesignScript.Geometry import *
+
 # Import RevitNodes
 clr.AddReference("RevitNodes")
 import Revit
+
 # Import Revit elements
 from Revit.Elements import *
 import System
 
-#Query Revit elements and convert them to Dynamo Curves
+# Query Revit elements and convert them to Dynamo Curves
 crvA=IN[0].Curves[0]
 crvB=IN[1].Curves[0]
 
-#Define input Parameters
+# Define input Parameters
 framingType=IN[3]
 designLevel=IN[4]
 
-#Define "out" as a list
+# Define "out" as a list
 OUT=[]
 
 for val in IN[2]:
-	#Define Dynamo Points on each curve
+	# Define Dynamo Points on each curve
 	ptA=Curve.PointAtParameter(crvA,val)
 	ptB=Curve.PointAtParameter(crvB,val)
-	#Create Dynamo line
+	
+	# Create Dynamo line
 	beamCrv=Line.ByStartPointEndPoint(ptA,ptB)
-	#create Revit Element from Dynamo Curves
+	
+	# Create Revit Element from Dynamo Curves
 	beam = StructuralFraming.BeamByCurve(beamCrv,designLevel,framingType)
-	#convert Revit Element into list of Dynamo Surfaces
+	
+	# Convert Revit Element into list of Dynamo Surfaces
 	OUT.append(beam.Faces)
 ```
 
@@ -204,7 +211,7 @@ for val in IN[2]:
 
 Результаты также можно увидеть в Dynamo. Балки в узле **Watch3D** ссылаются на геометрию, запрошенную из элементов Revit.
 
-\![](<../images/python & revit - exercise 03 - 05.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 05.jpg>)
 
 Обратите внимание, что полученный процесс преобразования данных из среды Revit в среду Dynamo является непрерывным. Вкратце этот процесс происходит следующим образом:
 
@@ -219,4 +226,4 @@ for val in IN[2]:
 
 Обновив опорные кривые в Revit, мы получим новый массив балок.
 
-\![](<../images/python & revit - ex 03 - 06.gif>)
+\![](<../../.gitbook/assets/python & revit - ex 03 - 06.gif>)

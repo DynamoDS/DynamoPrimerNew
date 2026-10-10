@@ -12,7 +12,7 @@
 
 В этом блоге собраны наиболее актуальные статьи разработчиков Dynamo, посвященные новым функциям, рабочим процессам и всему, что связано с Dynamo.
 
-[http://dynamobim.com/blog/](http://dynamobim.com/blog/)
+[https://dynamobim.org/blog/](https://dynamobim.org/blog/)
 
 ### **Руководство по DesignScript**
 
@@ -76,8 +76,3 @@ https://github.com/architecture-building-systems/revitpythonshell
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
-### **The Building Coder**
-
-Исчерпывающий каталог рабочих процессов на основе API Revit от одного из ведущих специалистов по BIM.
-
-[http://thebuildingcoder.typepad.com/](http://thebuildingcoder.typepad.com)
