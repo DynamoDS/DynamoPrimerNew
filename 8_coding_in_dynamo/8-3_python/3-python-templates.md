@@ -6,13 +6,13 @@ Die Vorlage befindet sich im Ordner `APPDATA` Ihrer Dynamo-Installation.
 
 Dies ist in der Regel wie folgt `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-![](<../images/python templates - appdata folder location.jpg>)
+\![](<../../.gitbook/assets/python templates - appdata folder location.jpg>)
 
 ### Einrichten der Vorlage
 
 Um diese Funktion nutzen zu können, müssen wir unserer Datei `DynamoSettings.xml` die folgende Zeile hinzufügen. _(in Editor bearbeiten)_
 
-![](<../images/python templates -dynamo settings xml file.png>)
+\![](<../../.gitbook/assets/python templates -dynamo settings xml file.png>)
 
 Ersetzen Sie alle Vorkommen von `<PythonTemplateFilePath />` durch das Folgende:
 
@@ -22,7 +22,9 @@ Ersetzen Sie alle Vorkommen von `<PythonTemplateFilePath />` durch das Folgende:
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} _Anmerkung: Ersetzen Sie CURRENTUSER durch Ihren Benutzernamen_ {% endhint %}
+{% hint style="warning" %}
+_Hinweis: Ersetzen Sie CURRENTUSER mit Ihrem Benutzernamen._
+{% endhint %}
 
 Als Nächstes müssen wir eine Vorlage mit den Funktionen erstellen, die wir integrieren möchten. In diesem Fall können wir die Revit-bezogenen Importe und einige andere typische Elemente einbetten, die wir bei der Arbeit mit Revit verwenden.
 
@@ -54,10 +56,10 @@ from RevitServices.Transactions import TransactionManager
 doc = DocumentManager.Instance.CurrentDBDocument
 uidoc=DocumentManager.Instance.CurrentUIApplication.ActiveUIDocument
 
-#Preparing input from dynamo to revit
+# Preparing input from dynamo to revit
 element = UnwrapElement(IN[0])
 
-#Do some action in a Transaction
+# Do some action in a Transaction
 TransactionManager.Instance.EnsureInTransaction(doc)
 
 TransactionManager.Instance.TransactionTaskDone()
@@ -71,10 +73,10 @@ Anschließend speichern Sie diese Datei als `PythonTemplate.py` am Speicherort `
 
 Nach dem Definieren der Python-Vorlage sucht Dynamo jedes Mal danach, wenn Sie einen Python-Block einfügen. Wenn sie nicht gefunden wird, wird das vorgabemäßige Python-Fenster angezeigt.
 
-![](<../images/python templates - before setup template.jpg>)
+\![](<../../.gitbook/assets/python templates - before setup template.jpg>)
 
 Wenn die Python-Vorlage gefunden wird (beispielsweise für Revit), werden alle vorgegebenen Elemente angezeigt, die Sie integriert haben.
 
-![](<../images/python templates - after setup template.jpg>)
+\![](<../../.gitbook/assets/python templates - after setup template.jpg>)
 
 Weitere Informationen zu dieser großartigen Ergänzung (von Radu Gidei) finden Sie hier. https://github.com/DynamoDS/Dynamo/pull/8122

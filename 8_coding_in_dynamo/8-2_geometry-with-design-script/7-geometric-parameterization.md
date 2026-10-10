@@ -16,7 +16,7 @@ Parametrisierung ist nicht sehr hilfreich, wenn Sie Punkte zum Erstellen von Kur
 
 Kurven haben die Methode _PointAtParameter_, die ein einzelnes double-Argument zwischen 0 und 1 annimmt und das Punktobjekt an diesem Parameter zurückgibt. Dieses Skript ermittelt beispielsweise die Punkte an den Parametern 0, .1, .2, .3, .4, .5, .6, .7, .8, .9 und 1:
 
-![](../images/GeometricParameterization_01.png)
+![](../../.gitbook/assets/GeometricParameterization_01.png)
 
 ```js
 pts = {};
@@ -41,7 +41,7 @@ Analog dazu haben Oberflächen eine Methode _PointAtParameter_, die zwei Argumen
 
 Das Extrahieren einzelner Punkte auf einer Kurve und Oberfläche kann nützlich sein, Skripte erfordern jedoch häufig die genauen geometrischen Merkmale an einem Parameter, z. B., in welche Richtung die Kurve bzw. Oberfläche gewandt ist. Die Methode _CoordinateSystemAtParameter_ findet nicht nur die Position, sondern ein ausgerichtetes Koordinatensystem am Parameter einer Kurve oder Oberfläche. Beispielsweise extrahiert das folgende Skript ausgerichtete Koordinatensysteme entlang einer Rotationsfläche und verwendet die Ausrichtung der Koordinatensysteme, um Linien zu generieren, die senkrecht zur Oberfläche stehen:
 
-![](../images/GeometricParameterization_02.png)
+![](../../.gitbook/assets/GeometricParameterization_02.png)
 
 ```js
 pts = {};
@@ -59,8 +59,7 @@ crv = NurbsCurve.ByPoints(pts);
 axis_origin = Point.ByCoordinates(0, 0, 0);
 axis = Vector.ByCoordinates(0, 0, 1);
 
-surf = Surface.ByRevolve(crv, axis_origin, axis, 90,
-    140);
+surf = Surface.ByRevolve(crv, axis_origin, axis, 90, 140);
 
 cs_array = surf.CoordinateSystemAtParameter(
     (0..1..#7)<1>, (0..1..#7)<2>);
@@ -69,8 +68,7 @@ def make_line(cs : CoordinateSystem) {
 	lines_start = cs.Origin;
     lines_end = cs.Origin.Translate(cs.ZAxis, -0.75);
 
-    return = Line.ByStartPointEndPoint(lines_start,
-        lines_end);
+    return = Line.ByStartPointEndPoint(lines_start, lines_end);
 }
 
 lines = make_line(Flatten(cs_array));

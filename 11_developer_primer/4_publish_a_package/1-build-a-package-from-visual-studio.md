@@ -24,11 +24,11 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![Verschieben von Projektdateien](../images/fe-proj-directory.jpg)
+![Verschieben von Projektdateien](../../.gitbook/assets/fe-proj-directory.jpg)
 
 > 1. Verschieben Sie die Projektdateien in den neuen `src`-Ordner.
 
-Nachdem sich die Quelldateien in einem separaten Ordner befinden, fügen Sie der Datei `CustomNodeModel.csproj` in Visual Studio ein `AfterBuild`-Ziel hinzu. Dadurch sollten die erforderlichen Dateien in einen neuen Paketordner kopiert werden. Öffnen Sie die Datei `CustomNodeModel.csproj` in einem Texteditor (wir haben [Atom](https://atom.io) verwendet), und platzieren Sie das Build-Ziel vor dem schließenden `</Project>`-Tag. Dieses AfterBuild-Ziel kopiert alle DLL-, PBD-, XML- und CONFIG-Dateien in einen neuen bin-Ordner und erstellt einen dyf-Ordner sowie zusätzliche Ordner.
+Nachdem sich die Quelldateien in einem separaten Ordner befinden, fügen Sie der Datei `CustomNodeModel.csproj` in Visual Studio ein `AfterBuild`-Ziel hinzu. Dadurch sollten die erforderlichen Dateien in einen neuen Paketordner kopiert werden. Öffnen Sie die Datei `CustomNodeModel.csproj` in einem Texteditor (wir haben [Atom](https://atom.io) verwendet), und platzieren Sie das Build-Ziel vor dem schließenden `</Project>`-Tag. Dieses AfterBuild-Ziel kopiert alle DLL-, PBD-, XML- und CONFIG-Dateien in einen neuen /bin-Ordner und erstellt einen dyf-Ordner sowie zusätzliche Ordner.
 
 ```
   <Target Name="AfterBuild">
@@ -47,7 +47,7 @@ Nachdem sich die Quelldateien in einem separaten Ordner befinden, fügen Sie der
   </Target>
 ```
 
-![Platzieren des AfterBuild-Ziels](../images/atom-afterbuild.jpg)
+![Platzieren des AfterBuild-Ziels](../../.gitbook/assets/atom-afterbuild.jpg)
 
 > Wir müssen sicherstellen, dass das Ziel der Datei `CustomNodeModel.csproj` hinzugefügt wurde (nicht einer anderen Projektdatei) und dass das Projekt keine vorhandenen Postbuild-Einstellungen aufweist.
 >
@@ -55,7 +55,7 @@ Nachdem sich die Quelldateien in einem separaten Ordner befinden, fügen Sie der
 
 Im Abschnitt `<ItemGroup>` sind eine Reihe von Variablen definiert, die bestimmte Dateitypen darstellen. Die Variable `Dll` stellt beispielsweise alle Dateien im Ausgabeverzeichnis mit der Erweiterung `.dll` dar.
 
-```
+```xml
 <ItemGroup>
   <Dlls Include="$(OutDir)*.dll" />
 </ItemGroup>
@@ -63,19 +63,19 @@ Im Abschnitt `<ItemGroup>` sind eine Reihe von Variablen definiert, die bestimmt
 
 Die Aufgabe `Copy` besteht darin, alle `.dll`-Dateien in ein Verzeichnis zu kopieren, insbesondere den Paketordner, in dem die Erstellung erfolgt.
 
-```
+```xml
 <Copy SourceFiles="@(Dlls)" DestinationFolder="$(SolutionDir)..\packages\CustomNodeModel\bin\" />
 ```
 
 Dynamo-Pakete verfügen in der Regel über einen `dyf`- und einen `extra`-Ordner für benutzerdefinierte Dynamo-Blöcke und andere Objekte, z. B. Bilder. Um diese Ordner zu erstellen, müssen wir eine `MakeDir`-Aufgabe verwenden. Diese Aufgabe erstellt einen Ordner, wenn er noch nicht vorhanden ist. Sie können diesem Ordner manuell Dateien hinzufügen.
 
-```
+```xml
 <MakeDir Directories="$(SolutionDir)..\packages\CustomNodeModel\extra" />
 ```
 
 Wenn Sie das Projekt erstellen, sollte der Projektordner jetzt einen `packages`-Ordner neben dem zuvor erstellten `src`-Ordner enthalten. Im `packages`-Verzeichnis befindet sich ein Ordner, der alle für das Paket erforderlichen Elemente enthält. Außerdem müssen wir die Datei `pkg.json` in den Paketordner kopieren, damit Dynamo erkennt, dass das Paket geladen werden soll.
 
-![Kopieren von Dateien](../images/fe-proj-directory-package.jpg)
+![Kopieren von Dateien](../../.gitbook/assets/fe-proj-directory-package.jpg)
 
 > 1. Der neue Paketordner, den das AfterBuild-Ziel erstellt hat.
 > 2. Der vorhandene src-Ordner mit dem Projekt.

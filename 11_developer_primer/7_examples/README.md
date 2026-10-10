@@ -22,7 +22,7 @@ Diese Beispiele sind Visual Studio-Vorlagen, mit denen Sie Ihr eigenes Projekt s
     * Bestimmen der Interaktionslogik für den Schieberegler: [Code](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
 * [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**:** Vorlagen für ZeroTouch, angepasste Benutzeroberfläche, Tests und Ansichtserweiterungen
   * [Beispiele für die Benutzeroberfläche](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
-    * Erstellen eines angepassten Benutzeroberflächen-Basisblocks: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs)
+    * Erstellen eines angepassten Benutzeroberflächen-Basisblocks: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/LocalizedCustomNodeModel.cs)
     * Erstellen eines Dropdown-Menüs: [DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs)
   * [Tests](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryTests)
     * Systemtests: [HelloDynamoSystemTests.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryTests/HelloDynamoSystemTests.cs)

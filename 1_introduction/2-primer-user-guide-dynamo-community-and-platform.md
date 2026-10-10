@@ -11,7 +11,7 @@ Dieser Leitfaden richtet sich an Leser mit unterschiedlichen Hintergründen und 
 * [Benutzeroberfläche](../3_user_interface/)
 * [Blöcke und Drähte](../4_nodes_and_wires/)
 
-Für Benutzer, die ein tieferes Verständnis der einzelnen Elemente, z. B. bestimmter Blöcke und des Konzepts dahinter entwickeln möchten, werden die Grundlagen in einem eigenen Kapitel behandelt.
+Für Benutzer, die ein tieferes Verständnis der einzelnen Elemente, z. B. bestimmter Blöcke und des Konzepts dahinter entwickeln möchten, werden die Grundlagen in einem speziellen Kapitel behandelt.
 
 * [Wichtige Blöcke und Konzepte](../5_essential_nodes_and_concepts/)
 
@@ -19,19 +19,21 @@ Wenn Sie eine Demonstration der Dynamo-Arbeitsabläufe sehen möchten, finden Si
 
 * [Parametrische Vase](../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.md)
 
-![](images/vase1.gif)
+\![](<../.gitbook/assets/vase1 (3).gif>)
 
 * [Attraktorpunkte](../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.md)
 
-![](<images/attractor1.gif>)
+\![](<../.gitbook/assets/attractor1 (1).gif>)
 
-{% hint style="info" %} In den folgenden Kapiteln finden Sie themenspezifische Übungen, die sich mit unterschiedlichen Themen zu Dynamo befassen.  **Übungen** finden Sie normalerweise im letzten Abschnitt jeder Seite. {% endhint %}
+{% hint style="info" %}
+In den folgenden Kapiteln finden Sie themenspezifische Übungen, die sich mit unterschiedlichen Themen zu Dynamo befassen. **Übungen** finden Sie normalerweise im letzten Abschnitt jeder Seite.
+{% endhint %}
 
 ### Community
 
 Ohne seine starke Community engagierter Benutzer und aktiver Beitragender hätte sich Dynamo nie so weit entwickelt. Engagieren auch Sie sich in der Community, indem Sie den [Blog](http://dynamobim.org/blog/) lesen, Ihre Arbeiten zur Galerie hinzufügen oder an [Forumsdiskussionen](https://forum.dynamobim.com) zu Dynamo teilnehmen.
 
-![Das Forum](images/02-Community.png)
+![Das Forum](../.gitbook/assets/02-Community.png)
 
 ### Die Plattform
 
@@ -39,6 +41,6 @@ Dynamo ist als visuelles Programmierwerkzeug für Designer konzipiert. Dies erm�
 
 Da der Quellcode für dieses Projekt als Open Source zur Verfügung steht, können Sie seine Funktionen ganz nach Ihren Vorstellungen erweitern. Besuchen Sie das Projekt auf GitHub und sehen Sie sich die laufenden Beiträge der Benutzer an, die Dynamo anpassen.
 
-![Das Repo](images/03-TheRepo.png)
+![Das Repo](../.gitbook/assets/03-TheRepo.png)
 
 > Durchsuchen, Verzweigen und Erweitern von Dynamo für Ihre Anforderungen

@@ -26,7 +26,7 @@ Platzieren Sie alle Assembly-Dateien im Ordner `bin` und die Manifestdatei im Or
 
 Beispiel für .XML-Manifestdatei:
 
-```
+```xml
 <ViewExtensionDefinition>
   <AssemblyPath>..\bin\MyViewExtension.dll</AssemblyPath>
   <TypeName>MyViewExtension.MyViewExtension</TypeName>
@@ -35,11 +35,11 @@ Beispiel für .XML-Manifestdatei:
 
 ### Hochladen <a href="#uploading" id="uploading"></a>
 
-Sobald Sie einen Ordner mit den oben aufgeführten Unterverzeichnissen erstellt haben, können Sie mit dem Übertragen (Hochladen) in den Package Manager beginnen. Beachten Sie, dass Sie derzeit keine Pakete aus Dynamo Sandbox publizieren können. Dies bedeutet, dass Sie Dynamo Revit verwenden müssen. Navigieren Sie in Dynamo Revit zu Pakete => Neues Paket publizieren. Dadurch wird der Benutzer aufgefordert, sich bei seinem Konto bei Autodesk Account anzumelden, mit dem er das Paket verknüpfen möchte.
+Sobald Sie einen Ordner mit den oben aufgeführten Unterverzeichnissen erstellt haben, können Sie mit dem Übertragen (Hochladen) in den Package Manager beginnen. Beachten Sie, dass Sie derzeit keine Pakete aus Dynamo Sandbox publizieren können. Dies bedeutet, dass Sie Dynamo Revit verwenden müssen. Navigieren Sie in Dynamo Revit zu Pakete => Neues Paket publizieren. Dadurch wird der Benutzer aufgefordert, sich bei dem Konto bei Autodesk Account anzumelden, mit dem er das Paket verknüpfen möchte.
 
 An dieser Stelle sollten Sie sich im normalen Fenster zum Publizieren des Pakets befinden, in dem Sie alle erforderlichen Felder für Ihr Paket/Ihre Erweiterung ausfüllen. Es gibt einen **sehr wichtigen** zusätzlichen Schritt, bei dem Sie sicherstellen müssen, dass keine der Assembly-Dateien als Blockbibliothek markiert ist. Klicken Sie dazu mit der rechten Maustaste auf die importierten Dateien (den oben erstellten Paketordner). Ein Kontextmenü wird angezeigt, in dem Sie diese Option aktivieren (oder deaktivieren) können. Alle Erweiterungs-Assemblys sollten deaktiviert werden.
 
-![Publizieren eines Pakets](../images/ViewExtension_Search.png)
+![Publizieren eines Pakets](../../.gitbook/assets/ViewExtension_Search.png)
 
 Vor dem öffentlichen Publizieren sollten Sie immer lokal publizieren, um sicherzustellen, dass alles wie erwartet funktioniert. Nachdem Sie sich dahingehend vergewissert haben, können Sie durch Auswahl von Publizieren die Publizierung starten.
 
@@ -47,4 +47,4 @@ Vor dem öffentlichen Publizieren sollten Sie immer lokal publizieren, um sicher
 
 Um zu überprüfen, ob das Paket erfolgreich hochgeladen wurde, können Sie es anhand des im Publizierungsschritt angegebenen Namens und der Schlüsselwörter suchen. Beachten Sie zum Schluss noch, dass die Erweiterungen einen Neustart von Dynamo erfordern, bevor sie funktionieren. In der Regel erfordern diese Erweiterungen Parameter, die beim Starten von Dynamo angegeben werden.
 
-![Suchen nach Paketen](../images/ViewExtension_Search.jpg)
+![Suchen nach Paketen](../../.gitbook/assets/ViewExtension_Search.jpg)

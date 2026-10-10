@@ -4,7 +4,9 @@ Sie haben einen benutzerdefinierten Block erstellt und ihn auf einen bestimmten 
 
 Indem Sie den Block lokal veröffentlichen, stellen Sie ihn in Ihrer Dynamo-Bibliothek bereit und können darauf zugreifen, wenn Sie eine neue Sitzung öffnen. Wenn ein Block nicht publiziert wird, muss er für ein Dynamo-Diagramm, das diesen benutzerdefinierten Block referenziert, in dessen Ordner enthalten sein (oder über _Datei > Bibliothek importieren_ in Dynamo importiert werden).
 
-{% hint style="warning" %} Sie können benutzerdefinierte Blöcke und Pakete aus Dynamo Sandbox in Version 2.17 und höher publizieren, sofern diese keine Abhängigkeiten zur Host-API aufweisen. In älteren Versionen ist das Publizieren von benutzerdefinierten Blöcken und Paketen nur in Dynamo for Revit und Dynamo for Civil 3D aktiviert. {% endhint %}
+{% hint style="warning" %}
+Sie können benutzerdefinierte Blöcke und Pakete aus Dynamo Sandbox in Version 2.17 und höher publizieren, sofern diese keine Abhängigkeiten zur Host-API aufweisen. In älteren Versionen ist das Publizieren von benutzerdefinierten Blöcken und Paketen nur in Dynamo for Revit und Dynamo for Civil 3D aktiviert.
+{% endhint %}
 
 ## Übung: Lokales Veröffentlichen eines benutzerdefinierten Blocks
 
@@ -16,27 +18,27 @@ Indem Sie den Block lokal veröffentlichen, stellen Sie ihn in Ihrer Dynamo-Bibl
 
 Verwenden Sie weiterhin den benutzerdefinierten Block, den Sie im vorigen Abschnitt erstellt haben. Nachdem Sie den benutzerdefinierten PointsToSurface-Block geöffnet haben, wird das Diagramm im Editor für benutzerdefinierte Blöcke von Dynamo angezeigt. Sie können einen benutzerdefinierten Block auch durch Doppelklicken im Diagrammeditor von Dynamo öffnen.
 
-![](<../images/publish custom node exercise - 01.jpg>)
+\![](<../../.gitbook/assets/publish custom node exercise - 01.jpg>)
 
 Um einen benutzerdefinierten Block lokal zu veröffentlichen, klicken Sie mit der rechten Maustaste in den Ansichtsbereich und wählen Sie _Diesen benutzerdefinierten Block veröffentlichen_.
 
-![](<../images/publish custom node exercise - 02.jpg>)
+\![](<../../.gitbook/assets/publish custom node exercise - 02.jpg>)
 
 Geben Sie wie in der Abbildung oben gezeigt die nötigen Informationen ein und wählen Sie _Lokal publizieren_. Beachten Sie, dass das Feld Gruppe den Haupteintrag angibt, der über das Dynamo-Menü aufgerufen wird.
 
-<figure><img src="../images/publish_a_package.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/publish_a_package.png" alt=""><figcaption></figcaption></figure>
 
 Wählen Sie einen Ordner, in dem alle benutzerdefinierten Blöcke gespeichert werden sollen, die Sie lokal veröffentlichen werden. Dynamo prüft diesen Ordner jedes Mal beim Laden der Anwendung. Achten Sie daher darauf, dass der Ordner sich an einem dauerhaften Speicherort befindet. Navigieren Sie zu diesem Ordner und wählen Sie _Ordner auswählen_. Damit haben Sie den Dynamo-Block lokal publiziert. Er steht jetzt jedes Mal, wenn Sie das Programm laden, in der Dynamo-Bibliothek zur Verfügung.
 
-![](<../images/publish custom node exercise - 04.jpg>)
+\![](<../../.gitbook/assets/publish custom node exercise - 04 (1).jpg>)
 
 Um den Speicherort des benutzerdefinierten Blocks zu überprüfen, wechseln Sie zu _Dynamo > Voreinstellungen > Paketeinstellungen > Pfade für Blöcke und Pakete_.
 
-<figure><img src="../images/settings.png" alt="" width="520"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/settings.png" alt="" width="520"><figcaption></figcaption></figure>
 
 In diesem Fenster wird eine Liste von Pfaden angezeigt.
 
-<figure><img src="../images/package-locations.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/package-locations.png" alt=""><figcaption></figcaption></figure>
 
 > 1. _Documents\\DynamoCustomNodes..._ gibt den Speicherort der von Ihnen lokal veröffentlichten benutzerdefinierten Blöcke an.
 > 2. _AppData\\Roaming\\Dynamo..._ bezieht sich auf den vorgegebenen Speicherort der online installierten Dynamo-Pakete.
@@ -44,12 +46,12 @@ In diesem Fenster wird eine Liste von Pfaden angezeigt.
 
 Hier wurde die Reihenfolge der Pfadnamen vertauscht, damit Pakete unter dem Vorgabepfad von Dynamo installiert werden.
 
-<figure><img src="../images/updated-package-locations.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/updated-package-locations.png" alt=""><figcaption></figcaption></figure>
 
 Wenn Sie zu diesem lokalen Ordner navigieren, finden Sie den ursprünglichen benutzerdefinierten Block im Ordner _dyf_. Dies ist die Erweiterung von Dateien für benutzerdefinierte Dynamo-Blöcke. Sie können die Datei in diesem Ordner bearbeiten. Der Block wird dann in der Benutzeroberfläche aktualisiert. Sie können auch weitere Blöcke im Ordner _DynamoCustomNode_ hinzufügen. Diese werden beim Neustart von Dynamo Ihrer Bibliothek hinzugefügt.
 
-![](<../images/publish custom node exercise - 08.jpg>)
+\![](<../../.gitbook/assets/publish custom node exercise - 08.jpg>)
 
 Wenn Sie Dynamo jetzt laden, wird der Block PointsToSurface jedes Mal in der Gruppe DynamoPrimer Ihrer Dynamo-Bibliothek angezeigt.
 
-![](<../images/publish custom node exercise - 09.jpg>)
+\![](<../../.gitbook/assets/publish custom node exercise - 09.jpg>)

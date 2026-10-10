@@ -2,11 +2,11 @@
 
 Bestimmte geometrische Objekte können erstellt werden, indem Sie die x-, y- und z-Koordinaten im dreidimensionalen Raum explizit angeben. Häufiger wird die Geometrie jedoch mithilfe von geometrischen Transformationen auf das Objekt selbst oder auf das zugrunde liegende Koordinatensystem in ihre endgültige Position verschoben.
 
-### Translation
+### Verschiebung
 
 Die einfachste geometrische Transformation ist eine Verschiebung, bei der ein Objekt um eine bestimmte Anzahl von Einheiten in x-, y- und z-Richtung verschoben wird.
 
-![](../images/Transformations_01.png)
+![](../../.gitbook/assets/Transformations_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -22,7 +22,7 @@ p2 = p.Translate(10, -20, 50);
 
 Zwar können alle Objekte in Dynamo durch Anhängen der Methode _.Translate_ ans Ende des Objektnamens verschoben werden, jedoch erfordern komplexere Transformationen, dass das Objekt von einem zugrunde liegenden Koordinatensystem in ein neues Koordinatensystem überführt wird. Um beispielsweise ein Objekt um 45 Grad um die X-Achse zu drehen, können wir das Objekt aus seinem bisherigen Koordinatensystem ohne Drehung in ein Koordinatensystem überführen, das mit der Methode _.Transform_ um 45 Grad um die X-Achse gedreht wurde:
 
-![](../images/Transformations_02.png)
+![](../../.gitbook/assets/Transformations_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -42,7 +42,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Zusätzlich zu den Möglichkeiten, Koordinatensysteme zu verschieben und zu drehen, können sie auch skaliert oder geschert erstellt werden. Ein Koordinatensystem kann mit der Methode _.Scale_ skaliert werden:
 
-![](../images/Transformations_03.png)
+![](../../.gitbook/assets/Transformations_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -56,9 +56,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-Gescherte Koordinatensysteme werden erstellt, indem nicht-orthogonale Vektoren in den Konstruktor CoordinateSystem eingegeben werden.
+Gescherte Koordinatensysteme werden erstellt, indem nicht-orthogonale Vektoren in den Koordinatensystem-Konstruktor eingegeben werden.
 
-![](../images/Transformations_04.png)
+![](../../.gitbook/assets/Transformations_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(
@@ -76,7 +76,7 @@ new_curves = cube.Transform(old_cs, new_cs);
 
 Skalieren und Scheren sind erheblich komplexere geometrische Transformationen als Drehen und Verschieben, daher können sie nicht auf alle Dynamo-Objekte angewendet werden. Die folgende Tabelle gibt Aufschluss darüber, welche Dynamo-Objekte ungleichmäßig skalierte sowie gescherte Koordinatensysteme aufweisen können.
 
-| Klasse        | Ungleichmäßig skaliertes Koordinatensystem | Geschertes Koordinatensystem |
+| Klasse        | Ungleichmäßig skaliertes Koordinatensystem| Geschertes Koordinatensystem |
 | ------------ | ------------------------------------- | ------------------------ |
 | Bogen          | Nein                                    | No                       |
 | NurbsCurve   | Ja                                   | Ja                      |
@@ -88,4 +88,4 @@ Skalieren und Scheren sind erheblich komplexere geometrische Transformationen al
 | Polygon      | Nein                                    | No                       |
 | Volumenkörper        | Nein                                    | No                       |
 | Oberfläche      | Nein                                    | No                       |
-| Text         | Nein                                    | No                       |
+| Text         | Nein                                    | Nein                       |

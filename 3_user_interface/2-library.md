@@ -2,7 +2,7 @@
 
 Die Bibliothek enthält alle geladenen Blöcke, einschließlich der zehn vorgabemäßigen Kategorieblöcke, die zum Lieferumfang gehören, sowie der zusätzlich geladenen benutzerdefinierten Blöcke und Pakete. Die Blöcke in der Bibliothek sind hierarchisch in Bibliotheken, Kategorien und gegebenenfalls Unterkategorien angeordnet.
 
-![](<images/library-library-ui.png>)
+![](../.gitbook/assets/library-library-ui.png)
 
 * Basisblöcke: Im Lieferumfang der Vorgabeinstallation enthalten.
 * Benutzerdefinierte Blöcke: Speichern Sie häufig verwendete Routinen oder spezielle Diagramme als benutzerdefinierte Blöcke. Sie können Ihre benutzerdefinierten Blöcke auch für die Community freigeben.
@@ -16,24 +16,26 @@ Das Durchsuchen dieser Kategorien stellt die schnellste Möglichkeit dar, um die
 
 Durchsuchen Sie die Bibliothek, indem Sie durch die Menüs klicken, um die einzelnen Kategorien und ihre Unterkategorien zu erweitern.
 
-{% hint style="info" %} Am besten untersuchen Sie zunächst die Menüs unter Geometry, da sie die größte Anzahl an Blöcken enthalten. {% endhint %}
+{% hint style="info" %}
+Am besten untersuchen Sie zunächst die Menüs unter Geometry, da sie die größte Anzahl an Blöcken enthalten.
+{% endhint %}
 
-![](<images/library-modified-and-resize-library-categories.jpg>)
+![](../.gitbook/assets/library-modified-and-resize-library-categories.jpg)
 
 > 1. Bibliothek
 > 2. Kategorie
 > 3. Unterkategorie
-> 4. Block
+> 4. Knoten
 
-Mit diesen werden die Blöcke weiter in derselben Unterkategorie eingeteilt, je nachdem, ob die Blöcke Daten **erstellen**, eine **Aktion** ausführen oder Daten **abfragen**.
+Mit diesen werden die Blöcke weiter in derselben Unterkategorie kategorisiert, je nachdem, ob die Blöcke Daten **erstellen**, eine **Aktion** ausführen oder Daten **abfragen**.
 
-* ![](<images/user-interface-create.jpg>) **Erstellen**: Erstellt oder konstruiert eine neue Geometrie. Beispiel: Kreis.
-* ![](<images/user-interface-action.jpg>) **Aktion**: Führt einen Vorgang für ein Objekt aus. Beispiel: Skalieren eines Kreises.
-* ![](<images/user-interface-query.jpg>) **Abfrage**: Ruft eine Eigenschaft eines bestehenden Objekts ab. Beispiel: Abrufen des Radius eines Kreises.
+* ![](../.gitbook/assets/user-interface-create.jpg) **Erstellen**: Erstellt oder konstruiert eine neue Geometrie. Beispiel: Kreis.
+* ![](../.gitbook/assets/user-interface-action.jpg) **Aktion**: Führt einen Vorgang für ein Objekt aus. Beispiel: Skalieren eines Kreises.
+* ![](../.gitbook/assets/user-interface-query.jpg) **Abfrage**: Ruft eine Eigenschaft eines bestehenden Objekts ab. Beispiel: Abrufen des Radius eines Kreises.
 
 Bewegen Sie den Mauszeiger über einen Block, um weitere Informationen über seinen Namen und sein Symbol hinaus anzuzeigen. Dadurch können Sie schnell nachvollziehen, welche Aktion der Block ausführt, welche Eingaben erforderlich sind und was von dem Block ausgegeben wird.
 
-![](<images/user-interface-node-description.jpg>)
+![](../.gitbook/assets/user-interface-node-description.jpg)
 
 > 1. Beschreibung: Kurze Beschreibung des Blocks
 > 2. Symbol: Größere Version des Symbols im Menü Bibliothek
@@ -46,7 +48,7 @@ Wenn Sie relativ genau wissen, welchen Block Sie zu Ihrem Arbeitsbereich hinzuf�
 
 Treffen Sie Ihre Auswahl, indem Sie auf den hinzuzufügenden Block klicken, oder drücken Sie die EINGABETASTE, um die markierten Blöcke in der Mitte des Arbeitsbereichs hinzuzufügen.
 
-![](<images/user-interface-search.jpg>)
+![](../.gitbook/assets/user-interface-search.jpg)
 
 #### Nach Hierarchie suchen
 
@@ -58,15 +60,15 @@ Durch die Eingabe verschiedener Teile der Position des Blocks in der Bibliotheks
 
 * `library.category.nodeName`
 
-![](<images/library-search-by-hierarchy-1-geometry-point-by-coordinates.jpg>)
+![](../.gitbook/assets/library-search-by-hierarchy-1-geometry-point-by-coordinates.jpg)
 
 * `category.nodeName`
 
-![](<images/library-search-by-hierarchy-2-point-by-coordinates.jpg>)
+![](../.gitbook/assets/library-search-by-hierarchy-2-point-by-coordinates.jpg)
 
 * `nodeName` oder `keyword`
 
-![](<images/library-search-by-hierarchy-3-by-coordinates.jpg>)
+![](../.gitbook/assets/library-search-by-hierarchy-3-by-coordinates.jpg)
 
 In der Regel wird der Name eines Blocks im Arbeitsbereich im Format `category.nodeName` gerendert, wobei einige Ausnahme insbesondere bei der Eingabe- und Ansichtskategorie bestehen.
 
@@ -74,15 +76,15 @@ Beachten Sie bei ähnlich benannten Blöcken den Kategorieunterschied:
 
 * Blöcke aus den meisten Bibliotheken schließen das Kategorieformat ein.
 
-![](<images/library-node-category-differences-1.jpg>)
+![](../.gitbook/assets/library-node-category-differences-1.jpg)
 
 * `Point.ByCoordinates` und `UV.ByCoordinates` weisen denselben Namen auf, stammen jedoch aus unterschiedlichen Kategorien.
 
-![](<images/library-node-category-differences-2.jpg>)
+![](../.gitbook/assets/library-node-category-differences-2.jpg)
 
 * Zu den wichtigsten Ausnahmen gehören Built-in Functions, Core.Input, Core.View und Operators.
 
-![](<images/library-node-category-differences-3.jpg>)
+![](../.gitbook/assets/library-node-category-differences-3.jpg)
 
 ### Häufig verwendete Blöcke
 
@@ -92,32 +94,34 @@ Welche der zahlreichen Blöcke, die zum Lieferumfang der Basisinstallation von D
 
 Eingabeblöcke stellen das primäre Mittel für die Benutzer eines visuellen Programms – sowohl für Sie selbst als auch für andere Benutzer – zur Verwendung der Schlüsselparameter dar. Hier sehen Sie einige, die in der Core-Bibliothek verfügbar sind:
 
-| Block           |                                                        | Block           |                                                        |
-| -------------- | ------------------------------------------------------ | -------------- | ------------------------------------------------------ |
-| Boolean        | ![](<images/library-boolean.jpg>)        | Zahl         | ![](<images/library-number.jpg>)         |
-| String         | ![](<images/library-string.jpg>)         | Number Slider  | ![](<images/library-number-slider.jpg>)  |
-| Verzeichnispfad | ![](<images/library-directory-path.jpg>) | Integer Slider | ![](<images/library-integer-slider.jpg>) |
-| File Path      | ![](<images/library-file-path.jpg>)      |                |                                                        |
+| Block           |                                                    | Block           |                                                    |
+| -------------- | -------------------------------------------------- | -------------- | -------------------------------------------------- |
+| Boolean        | ![](../.gitbook/assets/library-boolean.jpg)        | Zahl         | ![](../.gitbook/assets/library-number.jpg)         |
+| String         | ![](../.gitbook/assets/library-string.jpg)         | Number Slider  | ![](../.gitbook/assets/library-number-slider.jpg)  |
+| Verzeichnispfad | ![](../.gitbook/assets/library-directory-path.jpg) | Integer Slider | ![](../.gitbook/assets/library-integer-slider.jpg) |
+| File Path      | ![](../.gitbook/assets/library-file-path.jpg)      |                |                                                    |
 
 #### Watch und Watch3D
 
 Die Beobachtungsblöcke sind für die Verwaltung der Daten, die ein visuelles Programm durchlaufen, von grundlegender Bedeutung. Sie können das Ergebnis eines Blocks in der **Datenvorschau des Blocks** anzeigen, indem Sie den Mauszeiger über den Block bewegen.
 
-![](<images/library-node-preview.jpg>)
+![](../.gitbook/assets/library-node-preview.jpg)
 
 Es ist hilfreich, sie in einem **Watch**-Block offen zu halten.
 
-![](<images/library-watch-node.jpg>)
+![](../.gitbook/assets/library-watch-node.jpg)
 
 Sie können die Geometrieergebnisse auch über einen **Watch3D**-Block anzeigen.
 
-![](<images/library-watch3d-node.gif>)
+![](../.gitbook/assets/library-watch3d-node.gif)
 
 Beide Blöcke sind in der Kategorie View der Core-Bibliothek enthalten.
 
-{% hint style="info" %} Tipp: Die 3D-Vorschau kann bisweilen unübersichtlich sein, wenn Ihr visuelles Programm viele Blöcke enthält. Ziehen Sie in diesem Fall in Betracht, im Einstellungsmenü die Option zum Anzeigen der Hintergrundvorschau zu deaktivieren und einen Watch3D-Block zu verwenden, um eine Vorschau der Geometrie anzuzeigen. {% endhint %}
+{% hint style="info" %}
+Tipp: Die 3D-Vorschau kann bisweilen unübersichtlich sein, wenn Ihr visuelles Programm viele Blöcke enthält. Ziehen Sie in diesem Fall in Betracht, im Einstellungsmenü die Option zum Anzeigen der Hintergrundvorschau zu deaktivieren und einen Watch3D-Block zu verwenden, um eine Vorschau der Geometrie anzuzeigen.
+{% endhint %}
 
-#### Code Block
+#### Codeblock
 
 Code Block-Blöcke können verwendet werden, um einen Codeblock mit Linien durch Semikolons getrennt zu definieren. Dies kann ganz einfach sein: `X/Y`.
 
@@ -125,7 +129,7 @@ Wir können auch Codeblöcke als Abkürzung verwenden, um einen Number Input-Blo
 
 Hier sehen Sie eine einfache Demonstration (mit Anweisungen) zur Verwendung von Codeblöcken in Ihrem Skript.
 
-![](images/library-codeblockdemo.gif)
+![](../.gitbook/assets/library-codeblockdemo.gif)
 
 1. Doppelklicken Sie, um einen Code Block-Block zu erstellen.
 2. Geben Sie `Circle.ByCenterPointRadius(x,y);` ein.

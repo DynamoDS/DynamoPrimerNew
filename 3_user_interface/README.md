@@ -4,7 +4,7 @@
 
 Die Benutzeroberfläche (UI) für Dynamo ist in fünf Hauptbereiche unterteilt. Wir verschaffen uns hier kurz einen Überblick und erläutern den Arbeitsbereich und die Bibliothek in den folgenden Abschnitten näher.
 
-![](<images/user-interface-ui.png>)
+![](../.gitbook/assets/user-interface-ui.png)
 
 > 1. Menüs
 > 2. Werkzeugkasten
@@ -14,7 +14,7 @@ Die Benutzeroberfläche (UI) für Dynamo ist in fünf Hauptbereiche unterteilt. 
 
 ### Menüs
 
-![](images/userinterface-menu.jpg)
+![](../.gitbook/assets/userinterface-menu.jpg)
 
 Hier finden Sie Menüs für die grundlegenden Funktionen der Dynamo-Anwendung. Wie bei den meisten Windows-Programmen beziehen sich die ersten beiden Menüs auf die Verwaltung von Dateien, die Auswahl und die Bearbeitung von Inhalten. Die übrigen Menüs sind spezifisch für Dynamo.
 
@@ -22,7 +22,7 @@ Hier finden Sie Menüs für die grundlegenden Funktionen der Dynamo-Anwendung. W
 
 Allgemeine Informationen und Einstellungen finden Sie im Dropdown-Menü **Dynamo**.
 
-![](<images/user-interface-dynamo-menu.jpg>)
+![](../.gitbook/assets/user-interface-dynamo-menu.jpg)
 
 > 1. Info: Hier sehen Sie, welche Version von Dynamo auf Ihrem Computer installiert ist.
 > 2. Vereinbarung zur Erfassung von Benutzerdaten: Hier können Sie Ihre Benutzerdaten freigeben, um Dynamo zu verbessern.
@@ -33,13 +33,13 @@ Allgemeine Informationen und Einstellungen finden Sie im Dropdown-Menü **Dynamo
 
 Wenn Sie nicht weiterkommen, verwenden Sie das Menü **Hilfe**. Sie können über Ihren Internetbrowser auf eine der Referenz-Websites von Dynamo zugreifen.
 
-![](images/help-menu.png)
+![](../.gitbook/assets/help-menu.png)
 
 > 1. Interaktive Leitfäden: Touren, die Sie Schritt für Schritt durch die verschiedenen Funktionen von Dynamo führen.
 > 2. Beispiele: Beispieldateien als Referenz. Nur verfügbar in Host-Programmen wie Revit und Civil 3D.
 > 3. Dynamo-Wörterbuch: Ressource mit Dokumentation für alle Blöcke.
 > 4. Dynamo-Website: Eine Website mit Informationen zu Dynamo und Links zu Ressourcen wie Foren, Blogs usw.
-> 5. Dynamo-Repository: Zeigen Sie Ihr Dynamo-Projekt auf GitHub an. 
+> 5. Dynamo-Repository: Zeigen Sie Ihr Dynamo-Projekt auf GitHub an.
 > 6. Dynamo-Projekt-Wiki: Im Wiki erhalten Sie Entwicklungsinformationen mithilfe der Dynamo-API, unterstützenden Bibliotheken und Tools.
 > 7. Startseite anzeigen: Kehren Sie von einem Dokument aus zur Dynamo-Startseite zurück.
 > 8. Fehler melden: Melden Sie ein Problem auf GitHub.
@@ -48,33 +48,33 @@ Wenn Sie nicht weiterkommen, verwenden Sie das Menü **Hilfe**. Sie können übe
 
 Der Werkzeugkasten von Dynamo enthält eine Reihe von Schaltflächen für den Schnellzugriff zum Arbeiten mit Dateien sowie die Befehle Rückgängig [Ctrl + Z] und Wiederholen [Ctrl + Y]. Ganz rechts befindet sich eine weitere Schaltfläche, über die Sie einen Snapshot des Arbeitsbereichs exportieren können. Dies ist für die Dokumentation und die gemeinsame Bearbeitung mit anderen äußerst nützlich.
 
-* ![](<images/user-interface-new-file.jpg>) Neu: Neue DYN-Datei erstellen
-* ![](<images/user-interface-open.png>) Öffnen: Vorhandene .dyn-Datei (Arbeitsbereich) oder .dyf-Datei (benutzerdefinierter Block) öffnen
-* ![](<images/user-interface-save.png>) Speichern/Speichern unter: Aktive DYN- oder DYF-Datei speichern
-* ![](<images/user-interface-undo.jpg>) Rückgängig: Die letzte Aktion rückgängig machen
-* ![](<images/user-interface-redo.jpg>) Wiederholen: Die nächste Aktion wiederherstellen
-* ![](<images/user-interface-screenshot.png>) Arbeitsbereich als Bild exportieren: Den angezeigten Arbeitsbereich als PNG-Datei exportieren
+* ![](../.gitbook/assets/user-interface-new-file.jpg) Neu: Neue DYN-Datei erstellen
+* ![](../.gitbook/assets/user-interface-open.png) Öffnen: Vorhandene DYN-Datei (Arbeitsbereich) oder DYF-Datei (benutzerdefinierter Block) öffnen
+* ![](../.gitbook/assets/user-interface-save.png) Speichern/Speichern unter: Aktive DYN- oder DYF-Datei speichern
+* ![](../.gitbook/assets/user-interface-undo.jpg) Rückgängig: Die letzte Aktion rückgängig machen
+* ![](../.gitbook/assets/user-interface-redo.jpg) Wiederholen: Die nächste Aktion wiederherstellen
+* ![](../.gitbook/assets/user-interface-screenshot.png) Arbeitsbereich als Bild exportieren: Den angezeigten Arbeitsbereich als PNG-Datei exportieren
 
 ### Bibliothek
 
 Die Dynamo-Bibliothek ist eine Sammlung funktionaler Bibliotheken, in der jede Bibliothek Blöcke enthält, die nach Kategorie gruppiert sind. Sie besteht aus grundlegenden Bibliotheken, die während der Vorgabeinstallation von Dynamo hinzugefügt werden. Während die Verwendung des Programms weiter vorgestellt wird, wird gezeigt, wie die Basisfunktionen um benutzerdefinierte Blöcke und zusätzliche Pakete erweitert werden können. Der Abschnitt [2-library.md](2-library.md "mention") enthält eine ausführlichere Anleitung zur Verwendung der Bibliothek.
 
-![](<images/user-interface-library.gif>)
+![](../.gitbook/assets/user-interface-library.gif)
 
 ### Arbeitsbereich
 
 Im Arbeitsbereich erstellen wir unsere visuellen Programme. Sie können auch die Vorschaueinstellung ändern, um die 3D-Geometrien hier anzuzeigen. Weitere Informationen finden Sie unter [1-workspace.md](1-workspace.md "mention").
 
-![](<images/user-interface-workspace.gif>)
+![](../.gitbook/assets/user-interface-workspace.gif)
 
 ### Ausführungsleiste
 
 Führen Sie das Dynamo-Skript von hier aus. Klicken Sie auf das Dropdown-Symbol auf der Schaltfläche Ausführung, um zwischen den verschiedenen Modi zu wechseln.
 
-![](<images/user-interface-execution-bar.gif>)
+![](../.gitbook/assets/user-interface-execution-bar.gif)
 
 * Automatisch: Führt das Skript automatisch aus. Änderungen werden in Echtzeit aktualisiert.
 * Manuell: Das Skript wird nur ausgeführt, wenn Sie auf die Schaltfläche Ausführen klicken. Nützlich, wenn Sie Änderungen an einem komplizierten und "schweren" Skript vornehmen.
 * Periodisch: Diese Option ist vorgabemäßig abgeblendet. Nur verfügbar, wenn der _DateTime.Now_-Block verwendet wird. Sie können festlegen, dass das Diagramm in einem bestimmten Intervall automatisch ausgeführt wird.
 
-![](<images/user-interface-execution-bar-datetime-node.jpg>)
+![](../.gitbook/assets/user-interface-execution-bar-datetime-node.jpg)

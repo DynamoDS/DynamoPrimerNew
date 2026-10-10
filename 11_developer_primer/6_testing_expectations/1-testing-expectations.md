@@ -2,7 +2,7 @@
 
 Auf dieser Seite wird beschrieben, was wir beim Testen von neuem Code, der zu Dynamo hinzugefügt wird, erreichen möchten.
 
-Also, ... Sie möchten einen neuen Block hinzufügen. Sehr gut. Es ist an der Zeit, einige Tests durchzuführen. Dafür gibt es zwei Gründe.
+Sie möchten einen neuen Block hinzufügen. Sehr gut. Es ist an der Zeit, einige Tests durchzuführen. Dafür gibt es zwei Gründe.
 
 1. Tests helfen herauszufinden, an welchen Stellen der Block nicht funktioniert.
 2. Wenn ein anderer Benutzer Änderungen vornimmt, wodurch Ihr Block beschädigt wird, sollte dies in Tests erkannt werden. Auf diese Weise muss die Person, die das Fehlschlagen des Tests verursacht hat, das Problem beheben. Wenn die Tests dabei nicht fehlschlagen, müssen Sie sich mit dem Problem und dem Benutzer auseinandersetzen, der für das Fehlschlagen eines Modells verantwortlich ist.

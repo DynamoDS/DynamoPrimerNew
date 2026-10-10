@@ -2,7 +2,7 @@
 
 Wenn wir wissen, wie wir ein Zero-Touch-Projekt erstellen, können wir uns die Details zum Erstellen eines Blocks anhand des Beispiels ZeroTouchEssentials im Dynamo-GitHub genauer ansehen.
 
-![Zero-Touch-Blöcke](../images/ootbzerotouch.png)
+![Zero-Touch-Blöcke](../../.gitbook/assets/ootbzerotouch.png)
 
 > Viele der Standardblöcke von Dynamo sind im Wesentlichen Zero-Touch-Blöcke, wie die meisten der oben genannten Mathematik-, Farb- und DateTime-Blöcke.
 
@@ -10,7 +10,7 @@ Laden Sie zunächst hier das Projekt ZeroTouchEssentials herunter: [https://gith
 
 Öffnen Sie in Visual Studio die Projektmappendatei `ZeroTouchEssentials.sln`, und erstellen Sie die Projektmappe.
 
-![ZeroTouchEssentials in Visual Studio](../images/vs-build-zte.jpg)
+![ZeroTouchEssentials in Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
 
 > Die Datei `ZeroTouchEssentials.cs` enthält alle Methoden, die wir in Dynamo importieren.
 
@@ -24,7 +24,7 @@ Dynamo unterstützt die Definition von Vorgabewerten für Eingabeanschlüsse auf
 
 * Stellen Sie die Methodenparameter auf einen Vorgabewert ein: `inputNumber = 2.0`
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Vorgabewert](../images/defaultval.jpg)
+![Vorgabewert](../../.gitbook/assets/defaultval.jpg)
 
 > 1. Der Vorgabewert wird angezeigt, wenn Sie den Mauszeiger über den Eingabeanschluss des Blocks bewegen.
 
@@ -51,7 +51,7 @@ Das Zurückgeben mehrerer Werte ist etwas komplexer als die Erstellung mehrerer 
 * Fügen Sie der Methode das Attribut `[MultiReturn(new[] { "string1", "string2", ... more strings here })]` hinzu. Die Zeichenfolgen verweisen auf Schlüssel im Wörterbuch und werden zu den Namen der Ausgabeanschlüsse.
 * Geben Sie ein `Dictionary<>` mit Schlüsseln aus der Funktion zurück, die den Parameternamen im Attribut entsprechen: `return new Dictionary<string, object>`.
 
-```
+```c#
 using System.Collections.Generic;
 using Autodesk.DesignScript.Runtime;
 
@@ -66,8 +66,8 @@ namespace ZeroTouchEssentials
 
                 { "add", (a + b) },
                 { "mult", (a * b) }
-            };
-        }
+            
+        };
     }
 }
 ```
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Ein Block, der mehrere Ausgaben zurückgibt.
 
-![Mehrere Ausgaben](../images/multipleoutputs.png)
+![Mehrere Ausgaben](../../.gitbook/assets/multipleoutputs.png)
 
 > 1. Beachten Sie, dass nun zwei Ausgabeanschlüsse vorhanden sind, die entsprechend den Zeichenfolgen benannt sind, die wir für die Wörterbuchschlüssel eingegeben haben.
 
@@ -90,7 +90,7 @@ Es wird empfohlen, Dynamo-Blöcken Dokumentation hinzuzufügen, die die Funktion
   * Beispiel: `/// <summary>...</summary>`
 * Aktivieren Sie die XML-Dokumentation in Visual Studio, indem Sie `Project > [Project] Properties > Build > Output` auswählen und `Documentation file` aktivieren.
 
-![Erstellen einer XML-Datei](../images/vs-xml.jpg)
+![Erstellen einer XML-Datei](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Visual Studio generiert eine XML-Datei am angegebenen Speicherort.
 
@@ -104,7 +104,7 @@ Folgende Tag-Typen stehen zur Verfügung:
 
 Im Folgenden sehen Sie einen Beispielblock mit Eingabe- und Ausgabebeschreibungen sowie eine Zusammenfassung, die in der Bibliothek angezeigt wird.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -141,7 +141,7 @@ Blockbeschreibungen erläutern kurz die Funktion und die Ausgabe eines Blocks. I
 * In der QuickInfo des Blocks
 * Im Dokumentationsbrowser
 
-![Blockbeschreibung](../images/node-description.png)
+![Blockbeschreibung](../../.gitbook/assets/node-description.png)
 
 Befolgen Sie diese Richtlinien, um beim Schreiben oder Aktualisieren von Blockbeschreibungen Konsistenz zu gewährleisten und Zeit zu sparen.
 
@@ -182,7 +182,7 @@ Dynamo verfügt nicht über das Schlüsselwort `new`, sodass Objekte unter Verwe
 
 > Anmerkung: Dynamo verwendet das Präfix Von, um anzugeben, dass eine statische Methode ein Konstruktor ist. Diese Option ist zwar optional, doch die Verwendung von Von hilft Ihnen dabei, die Bibliothek besser in den vorhandenen Dynamo-Stil einzupassen.
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 Nachdem die DLL-Datei ZeroTouchEssentials importiert wurde, befindet sich ein ZeroTouchEssentials-Block in der Bibliothek. Dieses Objekt kann mithilfe des Blocks `ByTwoDoubles` erstellt werden.
 
-![Block ByTwoDoubles](../images/dyn-constructor.jpg)
+![Block ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
 
 ### Verwenden von Dynamo-Geometrietypen <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -221,7 +221,7 @@ Dynamo-Bibliotheken können native Dynamo-Geometrietypen als Eingaben verwenden 
 
 > Anmerkung: Dynamo-Geometrieobjekte werden wie alle anderen übergebenen Objekte für Funktionen verwendet.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Ein Block, der die Länge einer Kurve abruft und diese verdoppelt.
 
-![Kurveneingabe](../images/doublelength.png)
+![Kurveneingabe](../../.gitbook/assets/doublelength.png)
 
 > 1. Dieser Block akzeptiert einen Kurvengeometrietyp als Eingabe.
 
@@ -252,7 +252,7 @@ Geometrieressourcen, die nicht aus Funktionen zurückgegeben werden, müssen man
 
 *   Mit einer using-Anweisung:
 
-    ```
+    ```c#
     using (Point p1 = Point.ByCoordinates(0, 0, 0))
     {
       using (Point p2 = Point.ByCoordinates(10, 10, 0))
@@ -267,7 +267,7 @@ Geometrieressourcen, die nicht aus Funktionen zurückgegeben werden, müssen man
     > Weitere Informationen zu den neuen Stabilitätsfunktionen ab Dynamo 2.5 finden Sie im Artikel zu [Verbesserungen der Stabilität der Dynamo-Geometrie](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297).
 *   Mit manuellen Dispose-Aufrufen:
 
-    ```
+    ```c#
     Point p1 = Point.ByCoordinates(0, 0, 0);
     Point p2 = Point.ByCoordinates(10, 10, 0);
     Line l = Line.ByStartPointEndPoint(p1, p2);
@@ -285,7 +285,7 @@ Beim Publizieren einer neueren Version einer Bibliothek können sich Blocknamen 
 * Erstellen Sie im migrations-Element für jede Namensänderung `<priorNameHint>...</priorNameHint>`-Elemente.
 * Geben Sie für jede Namensänderung ein `<oldName>...</oldName>`- und ein `<newName>...</newName>`-Element an.
 
-![Migrationsdatei](../images/vs-migrations-file.jpg)
+![Migrationsdatei](../../.gitbook/assets/vs-migrations-file.jpg)
 
 > 1. Klicken Sie mit der rechten Maustaste, und wählen Sie `Add > New Item` aus.
 > 2. Wählen Sie `XML File`.
@@ -293,7 +293,7 @@ Beim Publizieren einer neueren Version einer Bibliothek können sich Blocknamen 
 
 Dieser Beispielcode weist Dynamo an, dass alle Blöcke mit dem Namen `GetClosestPoint` jetzt den Namen `ClosestPointTo` erhalten.
 
-```
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -311,7 +311,7 @@ Zero-Touch unterstützt derzeit keine Generika. Sie können verwendet werden, je
 
 Im folgenden Beispiel wird ein Zero-Touch-Block des Typs `T` nicht importiert. Wenn die restliche Bibliothek in Dynamo importiert wird, fehlen Typausnahmen.
 
-```
+```c#
 public class SomeGenericClass<T>
 {
     public SomeGenericClass()
@@ -323,7 +323,7 @@ public class SomeGenericClass<T>
 
 Wenn Sie in diesem Beispiel einen generischen Typ mit dem festgelegtem Typ verwenden, wird dieser in Dynamo importiert.
 
-```
+```c#
 public class SomeWrapper
 {
     public object wrapped;
