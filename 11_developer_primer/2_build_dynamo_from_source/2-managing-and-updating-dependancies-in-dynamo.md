@@ -15,6 +15,6 @@ Podczas pracy nad nową funkcją lub po prostu aktualizowania istniejącej zale�
    * Czy ma natywne komponenty (takie jak `CEFSharp` lub `ImageMagick`)? Utrudni to wdrażanie na wielu platformach
    * Czy ma odniesienia tylko do systemu Windows? W takim przypadku nie powinna funkcjonować jako zależność od DynamoCore lub innych wieloplatformowych części dodatku Dynamo (warstwy modelu).
 4. Czy zależność jest poprawnie pakowana w folderze bin podczas kompilacji ze wszystkimi wymaganymi zależnościami?
-   * W przypadku aktualizacji: czy jakieś pliki są usuwane w wyniku aktualizacji? Czy ta wersja dodatku Dynamo jest przeznaczona dla wersji przyrostowych produktów nadrzędnych? Jeśli tak, musisz zachować stare pliki binarne do roku premiery globalnej, aby obsługiwać instalatory poprawek. Zobacz [tutaj](https://github.com/DynamoDS/Dynamo/tree/master/extern/legacy_remove_me).
+   * W przypadku aktualizacji: czy jakieś pliki są usuwane w wyniku aktualizacji? Czy ta wersja dodatku Dynamo jest przeznaczona dla wersji przyrostowych produktów nadrzędnych? Jeśli tak, musisz zachować stare pliki binarne do roku premiery globalnej, aby obsługiwać instalatory poprawek.
 5. Czy zależność lub jej drzewo zależności nie koliduje z innymi istniejącymi zależnościami w dodatku Dynamo?
 6. Czy zależność lub jej drzewo zależności nie jest w konflikcie z istniejącymi zależnościami w produktach, które integrują dodatek Dynamo w procesie (Revit, Civil itp.) — **jest to ważne, ponieważ te problemy można wykryć tylko w czasie integracji, chyba że praca jest wykonywana na początku.**

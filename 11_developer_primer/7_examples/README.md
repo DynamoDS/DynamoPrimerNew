@@ -22,7 +22,7 @@ Te przykładowe szablony programu Visual Studio umożliwiają rozpoczęcie włas
     * Określanie logiki interakcji dla suwaka: [kod](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
 * [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**:** szablony dla rozwiązań ZeroTouch, niestandardowy interfejs użytkownika, testy i rozszerzenia widoku.
   * [Przykłady interfejsu użytkownika](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
-    * Tworzenie podstawowego niestandardowego węzła interfejsu użytkownika: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs)
+    * Tworzenie podstawowego niestandardowego węzła interfejsu użytkownika: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/LocalizedCustomNodeModel.cs).
     * Tworzenie menu rozwijanego: [DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs)
   * [Testy](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryTests)
     * Testy systemu: [HelloDynamoSystemTests.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryTests/HelloDynamoSystemTests.cs)

@@ -2,7 +2,7 @@
 
 Po omówieniu tworzenia projektu Zero-Touch możemy teraz lepiej zapoznać się z zagadnieniami dotyczącymi tworzenia węzła, analizując przykład ZeroTouchEssentials w witrynie dodatku Dynamo w serwisie GitHub.
 
-![Węzły Zero-Touch](../images/ootbzerotouch.png)
+![Węzły Zero-Touch](../../.gitbook/assets/ootbzerotouch.png)
 
 > Wiele węzłów standardowych dodatku Dynamo to w zasadzie węzły Zero-Touch, takie jak większość węzłów Math, Color i DateTime powyżej.
 
@@ -10,7 +10,7 @@ Aby rozpocząć, pobierz projekt ZeroTouchEssentials stąd: [https://github.com/
 
 W programie Visual Studio otwórz plik rozwiązania `ZeroTouchEssentials.sln` i skompiluj to rozwiązanie.
 
-![Projekt ZeroTouchEssentials w programie Visual Studio](../images/vs-build-zte.jpg)
+![Projekt ZeroTouchEssentials w programie Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
 
 > Plik `ZeroTouchEssentials.cs` zawiera wszystkie metody, które zaimportujemy do dodatku Dynamo.
 
@@ -24,7 +24,7 @@ Dodatek Dynamo obsługuje definiowanie wartości domyślnych dla portów wejści
 
 * Ustaw domyślną wartość parametrów metody: `inputNumber = 2.0`
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![Wartość domyślna](../images/defaultval.jpg)
+![Wartość domyślna](../../.gitbook/assets/defaultval.jpg)
 
 > 1. Po umieszczeniu kursora na porcie wejściowym węzła zostanie wyświetlona wartość domyślna
 
@@ -51,7 +51,7 @@ Zwracanie wielu wartości jest nieco bardziej złożone niż tworzenie wielu dan
 * Dodaj do metody atrybut `[MultiReturn(new[] { "string1", "string2", ... more strings here })]`. Te ciągi odwołują się do kluczy w słowniku i staną się one nazwami portów wyjściowych.
 * Zwróć słownik `Dictionary<>` z funkcji z kluczami odpowiadającymi nazwom parametrów w atrybucie: `return new Dictionary<string, object>`
 
-```
+```c#
 using System.Collections.Generic;
 using Autodesk.DesignScript.Runtime;
 
@@ -66,8 +66,8 @@ namespace ZeroTouchEssentials
 
                 { "add", (a + b) },
                 { "mult", (a * b) }
-            };
-        }
+            
+        };
     }
 }
 ```
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 Węzeł zwracający wiele pozycji danych wyjściowych.
 
-![Wiele pozycji danych wyjściowych](../images/multipleoutputs.png)
+![Wiele pozycji danych wyjściowych](../../.gitbook/assets/multipleoutputs.png)
 
 > 1. Zwróć uwagę, że teraz istnieją dwa porty wyjściowe o nazwach zgodnych z ciągami wprowadzonymi dla kluczy słownika.
 
@@ -90,7 +90,7 @@ Do najlepszych rozwiązań należy dodawanie do węzłów dodatku Dynamo dokumen
   * Na przykład: `/// <summary>...</summary>`
 * Włącz dokumentację XML w programie Visual Studio, wybierając opcję `Project > [Project] Properties > Build > Output` i zaznaczając opcję `Documentation file`
 
-![Generowanie pliku XML](../images/vs-xml.jpg)
+![Generowanie pliku XML](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Program Visual Studio wygeneruje plik XML w określonej lokalizacji
 
@@ -104,7 +104,7 @@ Typy tagów są następujące:
 
 Poniżej przedstawiono przykładowy węzeł z opisami danych wejściowych i wyjściowych oraz podsumowanie, które będzie wyświetlane w bibliotece.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -141,13 +141,13 @@ Opisy węzłów to podsumowania funkcji węzła i danych wyjściowych. W dodatku
 * W etykiecie narzędzia węzła
 * W przeglądarce dokumentacji
 
-![Opis węzła](../images/node-description.png)
+![Opis węzła](../../.gitbook/assets/node-description.png)
 
 Przestrzeganie tych wskazówek zapewnia spójność i pomaga zaoszczędzić czas podczas pisania oraz aktualizowania opisów węzłów.
 
 **Przegląd**
 
-Opisy powinny składać się z jednego lub dwóch zdań. Jeśli potrzebnych jest więcej informacji, należy podać je w obszarze Szczegółowe informacje w przeglądarce dokumentacji.
+Opisy powinny składać się z jednego lub dwóch zdań. Jeśli potrzebnych jest więcej informacji, należy podać je w obszarze „Szczegółowe informacje” w przeglądarce dokumentacji.
 
 Stosuj wielkość liter jak w zdaniu (pierwsza litera pierwszego słowa zdania i pierwsza litera każdej nazwy własnej powinna być wielka). Nie stawiaj kropki na końcu.
 
@@ -182,7 +182,7 @@ W dodatku Dynamo nie ma słowa kluczowego `new`, dlatego obiekty należy konstru
 
 > Uwaga: w dodatku Dynamo używa się prefiksu „By”, aby wskazać, że metoda statyczna jest konstruktorem. Chociaż jest to opcjonalne, używanie prefiksu „By” ułatwia zapewnienie zgodności tworzonej biblioteki z istniejącym stylem dodatku Dynamo.
 
-```
+```c#
 namespace ZeroTouchEssentials
 {
     public class ZeroTouchEssentials
@@ -210,7 +210,7 @@ namespace ZeroTouchEssentials
 
 Po zaimportowaniu biblioteki DLL przykładu ZeroTouchEssentials w bibliotece będzie znajdował się węzeł ZeroTouchEssentials. Ten obiekt można utworzyć za pomocą węzła `ByTwoDoubles`.
 
-![Węzeł ByTwoDoubles](../images/dyn-constructor.jpg)
+![Węzeł ByTwoDoubles](../../.gitbook/assets/dyn-constructor.jpg)
 
 ### Używanie typów geometrii dodatku Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -221,7 +221,7 @@ W bibliotekach Dynamo można używać własnych typów geometrii dodatku Dynamo 
 
 > Uwaga: obiekty geometrii dodatku Dynamo są używane tak samo jak wszystkie inne obiekty przekazywane do funkcji.
 
-```
+```c#
 using Autodesk.DesignScript.Geometry;
 
 namespace ZeroTouchEssentials
@@ -242,7 +242,7 @@ namespace ZeroTouchEssentials
 
 Węzeł, który pobiera długość krzywej i podwaja ją.
 
-![Dane wejściowe określające krzywą](../images/doublelength.png)
+![Dane wejściowe określające krzywą](../../.gitbook/assets/doublelength.png)
 
 > 1. Ten węzeł przyjmuje jako dane wejściowe typ geometrii Curve (krzywa).
 
@@ -252,7 +252,7 @@ Zasobami geometrii, które nie są zwracane z funkcji, należy zarządzać ręcz
 
 *   Za pomocą instrukcji using:
 
-    ```
+    ```c#
     using (Point p1 = Point.ByCoordinates(0, 0, 0))
     {
       using (Point p2 = Point.ByCoordinates(10, 10, 0))
@@ -267,7 +267,7 @@ Zasobami geometrii, które nie są zwracane z funkcji, należy zarządzać ręcz
     > Aby dowiedzieć się więcej na temat nowych funkcji zwiększających stabilność wprowadzonych w dodatku Dynamo 2.5, zobacz [Ulepszenia stabilności geometrii w dodatku Dynamo](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297).
 *   Za pomocą ręcznych wywołań metody Dispose:
 
-    ```
+    ```c#
     Point p1 = Point.ByCoordinates(0, 0, 0);
     Point p2 = Point.ByCoordinates(10, 10, 0);
     Line l = Line.ByStartPointEndPoint(p1, p2);
@@ -285,7 +285,7 @@ Wraz z opublikowaniem nowszej wersji biblioteki nazwy węzłów mogą ulec zmian
 * W tym elemencie migrations utwórz elementy `<priorNameHint>...</priorNameHint>` dla każdej zmiany nazwy
 * Dla każdej zmiany nazwy dodaj element `<oldName>...</oldName>` i element `<newName>...</newName>`
 
-![Plik migracji](../images/vs-migrations-file.jpg)
+![Plik migracji](../../.gitbook/assets/vs-migrations-file.jpg)
 
 > 1. Kliknij prawym przyciskiem myszy i wybierz polecenie `Add > New Item`
 > 2. Wybierz opcję `XML File`
@@ -293,7 +293,7 @@ Wraz z opublikowaniem nowszej wersji biblioteki nazwy węzłów mogą ulec zmian
 
 Ten kod przykładowy informuje dodatek Dynamo, że każdy węzeł o nazwie `GetClosestPoint` ma teraz nazwę `ClosestPointTo`.
 
-```
+```xml
 <?xml version="1.0"?>
 <migrations>
   <priorNameHint>
@@ -311,7 +311,7 @@ W projekcie Zero-Touch nie jest obecnie obsługiwane używanie typów ogólnych.
 
 W poniższym przykładzie węzeł Zero-Touch typu `T` nie zostanie zaimportowany. Jeśli pozostała część biblioteki zostanie zaimportowana do dodatku Dynamo, pojawią się wyjątki wynikające z brakujących typów.
 
-```
+```c#
 public class SomeGenericClass<T>
 {
     public SomeGenericClass()
@@ -323,7 +323,7 @@ public class SomeGenericClass<T>
 
 Użycie typu ogólnego z typem ustawionym w tym przykładzie spowoduje zaimportowanie do dodatku Dynamo.
 
-```
+```c#
 public class SomeWrapper
 {
     public object wrapped;

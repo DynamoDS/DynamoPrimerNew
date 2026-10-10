@@ -12,10 +12,12 @@ W poniższej tabeli przedstawiono wersje platformy .NET przeznaczone dla każdej
 | 3.7            | .NET 10            |
 | 4.0+           | .NET 10            |
 
-{% hint style="info" %} 3.3.2 i 3.7 to wydania specjalne z platformą .NET 10 przeniesioną z wersji 4.0 Release Candidate. {% endhint %}
+{% hint style="info" %}
+3.3.2 i 3.7 to wydania specjalne z platformą .NET 10 przeniesioną z wersji 4.0 Release Candidate.
+{% endhint %}
 
 Aby uzyskać wytyczne dotyczące aktualizowania pakietów do nowej wersji platformy .NET, zobacz przewodniki migracji w przewodniku Primer dla programisty:
 
-* [Aktualizowanie pakietów dla dodatku Dynamo 2.x](../11\_developer\_primer/3\_developing\_for\_dynamo/6-0-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
-* [Aktualizowanie pakietów dla dodatku Dynamo 3.x / .NET 8](../11\_developer\_primer/3\_developing\_for\_dynamo/6-1-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
-* [Aktualizowanie pakietów dla dodatku Dynamo 4.x / .NET 10](../11\_developer\_primer/3\_developing\_for\_dynamo/6-2-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)
+ * [Aktualizowanie pakietów dla dodatku Dynamo 2.x](../11_developer_primer/8_updating_packages/1-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+ * [Aktualizowanie pakietów dla dodatku Dynamo 3.x / .NET 8](../11_developer_primer/8_updating_packages/2-updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
+ * [Aktualizowanie pakietów dla dodatku Dynamo 4.x / .NET 10](../11_developer_primer/8_updating_packages/3-updating-your-packages-and-dynamo-libraries-for-dynamo-4x.md)

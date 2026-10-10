@@ -24,7 +24,7 @@ CustomNodeModel
   > CustomNodeModel.sln
 ```
 
-![Przenoszenie plików projektu](../images/fe-proj-directory.jpg)
+![Przenoszenie plików projektu](../../.gitbook/assets/fe-proj-directory.jpg)
 
 > 1. Przenieś pliki projektu do nowego folderu `src`
 
@@ -47,7 +47,7 @@ Pliki źródłowe znajdują się już w oddzielnym folderze. Dodaj obiekt docelo
   </Target>
 ```
 
-![Umieszczanie obiektu docelowego AfterBuild](../images/atom-afterbuild.jpg)
+![Umieszczanie obiektu docelowego AfterBuild](../../.gitbook/assets/atom-afterbuild.jpg)
 
 > Musimy upewnić się, że obiekt docelowy dodano do pliku `CustomNodeModel.csproj` (a nie innego pliku projektu) i że projekt nie ma żadnych istniejących ustawień po kompilacji (Post-Build).
 >
@@ -55,7 +55,7 @@ Pliki źródłowe znajdują się już w oddzielnym folderze. Dodaj obiekt docelo
 
 W sekcji `<ItemGroup>` zdefiniowano szereg zmiennych reprezentujących określone typy plików. Na przykład zmienna `Dll` reprezentuje wszystkie pliki w katalogu wyjściowym mające rozszerzenie `.dll`.
 
-```
+```xml
 <ItemGroup>
   <Dlls Include="$(OutDir)*.dll" />
 </ItemGroup>
@@ -63,19 +63,19 @@ W sekcji `<ItemGroup>` zdefiniowano szereg zmiennych reprezentujących określon
 
 Zadanie `Copy` polega na skopiowaniu wszystkich plików `.dll` do katalogu, a konkretnie do folderu kompilowanego pakietu.
 
-```
+```xml
 <Copy SourceFiles="@(Dlls)" DestinationFolder="$(SolutionDir)..\packages\CustomNodeModel\bin\" />
 ```
 
 Pakiety dodatku Dynamo zazwyczaj zawierają foldery `dyf` i `extra` na węzły niestandardowe dodatku Dynamo i inne zasoby, takie jak obrazy. Aby utworzyć te foldery, należy użyć zadania `MakeDir`. To zadanie utworzy folder, jeśli on nie istnieje. Pliki można dodać do tego folderu ręcznie.
 
-```
+```xml
 <MakeDir Directories="$(SolutionDir)..\packages\CustomNodeModel\extra" />
 ```
 
 W przypadku kompilowania projektu folder projektu powinien teraz zawierać folder `packages` obok utworzonego wcześniej folderu `src`. W katalogu `packages` znajduje się folder zawierający wszystkie elementy potrzebne do utworzenia pakietu. Musimy również skopiować plik `pkg.json` do folderu pakietu, aby dodatek Dynamo wiedział, że ma wczytać pakiet.
 
-![Kopiowanie plików](../images/fe-proj-directory-package.jpg)
+![Kopiowanie plików](../../.gitbook/assets/fe-proj-directory-package.jpg)
 
 > 1. Nowy folder packages utworzony przez obiekt docelowy AfterBuild
 > 2. Istniejący folder src z projektem

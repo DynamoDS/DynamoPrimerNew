@@ -12,7 +12,7 @@ Ten proces roboczy ilustruje:
 * Tworzenie i modyfikowanie elementów geometrycznych za pomocą węzłów.
 * Wizualizowanie wyników projektu w czasie rzeczywistym.
 
-![](../images/vase1.gif)
+![](../../.gitbook/assets/vase1.gif)
 
 ## Definiowanie celów
 
@@ -22,7 +22,7 @@ Załóżmy, że zaprojektujemy wazon gliniany z uwzględnieniem praktyk wytwarza
 
 Do zdefiniowania wazonu użyjemy podobnej metodologii. Utworzymy 4 okręgi na różnych wysokościach i o różnych promieniach, a następnie utworzymy powierzchnię przez wyciągnięcie tych okręgów.
 
-![](../images/vase2.png)
+![](../../.gitbook/assets/vase2.png)
 
 ## Pierwsze kroki
 
@@ -34,7 +34,7 @@ Do zdefiniowania wazonu użyjemy podobnej metodologii. Utworzymy 4 okręgi na r�
 
 Potrzebne są węzły reprezentujące sekwencję operacji wykonywanych przez dodatek Dynamo. Ponieważ wiemy, że chcemy utworzyć okrąg, zacznijmy od zlokalizowania węzła, który do tego służy. Użyj **pola wyszukiwania** lub przejdź do **biblioteki**, aby znaleźć węzeł **Circle.ByCenterPointRadius**, i dodaj go do obszaru roboczego
 
-![](../images/vase8.png)
+![](../../.gitbook/assets/vase8.png)
 
 > 1. Wyszukaj > „Circle...”
 > 2. Wybierz > „ByCenterPointRadius”
@@ -42,25 +42,25 @@ Potrzebne są węzły reprezentujące sekwencję operacji wykonywanych przez dod
 
 Przyjrzyjmy się bliżej temu węzłowi. Po lewej stronie znajdują się dane wejściowe węzła (_centerPoint_ i _radius_), a po prawej stronie znajdują się dane wyjściowe węzła (Circle). Zwróć uwagę, że dane wyjściowe mają jasnoniebieską linię. Oznacza to, że dane wejściowe mają wartość domyślną. Aby uzyskać więcej informacji na temat danych wejściowych, ustaw kursor na nazwie odpowiedniego wejścia. Dane wejściowe _radius_ wymagają wprowadzenia liczby o podwójnej precyzji (double) i mają wartość domyślną 1.
 
-![](../images/vase10.png)
+![](../../.gitbook/assets/vase10.png)
 
 Zostawimy wartość domyślną _centerPoint_, ale dodamy suwak liczb, **Number Slider**, aby sterować promieniem. Podobnie jak w przypadku węzła **Circle.ByCenterPointRadius**, użyj biblioteki, aby wyszukać **Number Slider**, i dodaj go do wykresu.
 
 Ten węzeł jest nieco inny niż poprzedni węzeł, ponieważ zawiera suwak. Interfejs umożliwia zmianę wartości wyjściowej suwaka.
 
-![](<../images/vase13.gif>)
+\![](<../../.gitbook/assets/vase13 (1).gif>)
 
 Suwak można skonfigurować za pomocą przycisku listy rozwijanej po lewej stronie węzła. Ograniczmy suwak do maksymalnej wartości 15.
 
-![](../images/vase11.png)
+![](../../.gitbook/assets/vase11.png)
 
 Umieśćmy go po lewej stronie węzła **Circle.ByCenterPointRadius** i połączmy oba węzły, wybierając wyjście **Number Slider** oraz łącząc je z wejściem Radius.
 
-![](../images/vase12.png)
+![](../../.gitbook/assets/vase12.png)
 
-Zmieńmy również nazwę suwaka Number Slider na „Top Radius”, klikając dwukrotnie nazwę węzła.
+Zmieńmy również nazwę suwaka **Number Slider** na „Top Radius”, klikając dwukrotnie nazwę węzła.
 
-![](../images/vase14.png)
+![](../../.gitbook/assets/vase14.png)
 
 ## Następne kroki
 
@@ -68,9 +68,9 @@ Kontynuujmy dodawanie węzłów i połączeń do logiki w celu zdefiniowania waz
 
 ### Tworzenie okręgów o różnych promieniach
 
-Skopiujmy te węzły 4 razy, aby uzyskać okręgi definiujące powierzchnię. Zmień nazwy suwaków Number Slider, jak pokazano poniżej.
+Skopiujmy te węzły 4 razy, aby uzyskać okręgi definiujące powierzchnię. Zmień nazwy suwaków **Number Slider**, jak pokazano poniżej.
 
-![](<../images/vase4.png>)
+\![](<../../.gitbook/assets/vase4 (1).png>)
 
 > 1. Okręgi są tworzone za pomocą punktu środkowego i promienia
 
@@ -78,11 +78,11 @@ Skopiujmy te węzły 4 razy, aby uzyskać okręgi definiujące powierzchnię. Zm
 
 Brakuje nam kluczowego parametru wazonu: jego wysokości. Aby sterować wysokością wazonu, należy utworzyć kolejny suwak liczb. Dodamy również węzeł bloku kodu: **Code Block**. Bloki kodu ułatwiają dodawanie do procesu roboczego spersonalizowanych fragmentów kodu. Użyjemy bloku kodu do pomnożenia suwaka wysokości przez różne współczynniki, co pozwoli nam rozmieścić okręgi wzdłuż wysokości wazonu.
 
-![](<../images/vase15.png>)
+\![](<../../.gitbook/assets/vase15 (1).png>)
 
 Następnie za pomocą węzła **Geometry.Translate** umieścimy okręgi na żądanej wysokości. Ponieważ chcemy rozmieścić okręgi w wazonie, użyjemy bloków kodu do pomnożenia parametru wysokości przez współczynnik.
 
-![](../images/vase5.png)
+![](../../.gitbook/assets/vase5.png)
 
 > 2\. Okręgi są przesuwane (przekształcane) o zmienną na osi Z.
 
@@ -90,9 +90,9 @@ Następnie za pomocą węzła **Geometry.Translate** umieścimy okręgi na żąd
 
 Aby utworzyć powierzchnię za pomocą węzła **Surface.ByLoft**, należy połączyć wszystkie przekształcone okręgi w listę. Użyjemy węzła **List.Create**, aby połączyć wszystkie okręgi w jedną listę, a następnie wyprowadzimy tę listę do węzła **Surface.ByLoft**, aby wyświetlić wyniki.
 
-Wyłączmy również podgląd w innych węzłach, aby wyświetlić tylko wyświetlanie Surface.ByLoft.
+Wyłączmy również podgląd w innych węzłach, aby wyświetlić tylko wyświetlanie **Surface.ByLoft**.
 
-![](../images/vase6.png)
+![](../../.gitbook/assets/vase6.png)
 
 > 3\. Przez wyciągnięcie przekształconych okręgów zostanie utworzona powierzchnia.
 
@@ -100,6 +100,6 @@ Wyłączmy również podgląd w innych węzłach, aby wyświetlić tylko wyświe
 
 Nasz proces roboczy jest gotowy. Teraz możemy użyć węzła **Number Slider** zdefiniowanego w skrypcie, aby utworzyć różne projekty wazonów.
 
-![](../images/vase1.gif)
+![](../../.gitbook/assets/vase1.gif)
 
-![](../images/vase7.png)
+![](../../.gitbook/assets/vase7.png)

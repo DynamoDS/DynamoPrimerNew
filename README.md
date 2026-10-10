@@ -1,10 +1,12 @@
 # Informacje
 
-{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %} Dynamo Hype — nagranie wideo {% endembed %}
+{% embed url="https://www.youtube.com/embed/9vafneOBgYs" %}
+Dynamo Hype — nagranie wideo
+{% endembed %}
 
 ## Dla dodatku Dynamo 2.13 i nowszych wersji
 
-![Logo dodatku Dynamo](images/dynamo_logo_dark-trim.jpg)
+\![Dynamo Logo](<.gitbook/assets/dynamo_logo_dark-trim (1).jpg>)
 
 > Dynamo to platforma programowania wizualnego typu Open Source dla projektantów.
 
@@ -27,9 +29,9 @@ Nieustannie ulepszamy dodatek Dynamo, więc niektóre funkcje mogą wyglądać i
 
 ### Otwórz źródło
 
-Przewodnik Dynamo Primer jest projektem typu open source. Dokładamy starań, aby dostarczać wysokiej jakości zawartość, i doceniamy wszelkie przekazywane nam opinie. Jeśli chcesz zgłosić jakikolwiek problem, opublikuj go na naszej stronie problemów w serwisie GitHub: [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues) 
+Przewodnik Dynamo Primer jest projektem typu open source. Dokładamy starań, aby dostarczać wysokiej jakości zawartość, i doceniamy wszelkie przekazywane nam opinie. Jeśli chcesz zgłosić jakikolwiek problem, opublikuj go na naszej stronie problemów w serwisie GitHub: [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues)
 
-Jeśli chcesz wziąć udział w opracowywaniu nowej sekcji, pomóc w edycji lub w inny sposób współtworzyć ten projekt, zapoznaj się z repozytorium w serwisie GitHub, aby rozpocząć: [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew) 
+Jeśli chcesz wziąć udział w opracowywaniu nowej sekcji, pomóc w edycji lub w inny sposób współtworzyć ten projekt, zapoznaj się z repozytorium w serwisie GitHub, aby rozpocząć: [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew)
 
 ### Projekt przewodnika Dynamo Primer
 
@@ -37,31 +39,31 @@ Przewodnik Dynamo Primer to projekt typu open source zainicjowany przez Matta Je
 
 Napisanie pierwszej wersji tego przewodnika Primer zlecono **Mode Lab**. Dziękujemy im za wszystkie starania mające na celu ustanowienie tego cennego zasobu.
 
-![](images/modelab-logo.png)
+![](.gitbook/assets/modelab-logo.png)
 
 ***
 
 Aktualizację przewodnika Primer w celu odzwierciedlenia zmian w dodatku Dynamo 2.0 zlecono **Johnowi Piersonowi z Parallax Team**.
 
-![](images/prlx-logo.jpg)
+![](.gitbook/assets/prlx-logo.jpg)
 
 ***
 
 Aktualizację przewodnika Primer w celu odzwierciedlenia zmian w dodatku Dynamo 2.13 zlecono **Matterlab**.
 
-![](images/matterlab-logo.jpg)
+![](.gitbook/assets/matterlab-logo.jpg)
 
 ***
 
 Aktualizację przewodnika Primer w celu odzwierciedlenia zmian w dodatku Dynamo 2.17 zlecono **Archilizer**.
 
-<figure><img src="images/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
 ***
 
 Aktualizację przewodnika Primer o treści związane z dodatkiem Dynamo for Civil 3D zlecono **Wood Rodgers**.
 
-<figure><img src="images/WR_Logo_NoTagLine_Color.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### Podziękowania
 
@@ -73,7 +75,7 @@ Dziękujemy Mattowi Jezykowi, Ianowi Keoughowi, Zachowi Kronowi, Racel Amour i C
 
 **Dynamo** Najbardziej aktualną **stabilną** wersję dodatku Dynamo można znaleźć w witrynach przedstawionych poniżej.
 
-[https://dynamobim.com/download/](https://dynamobim.com/download/) lub [https://dynamobuilds.com](https://dynamobuilds.com/)
+[https://dynamobuilds.com](https://dynamobuilds.com/)
 
 *Uwaga: od programu Revit 2020 dodatek Dynamo jest dostarczany z wersjami programu Revit, dzięki czemu ręczna instalacja nie jest wymagana. Więcej informacji można znaleźć w tym [wpisie na blogu](https://dynamobim.org/dynamo-core-2-1-release/).
 

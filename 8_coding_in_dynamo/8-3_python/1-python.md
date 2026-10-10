@@ -4,7 +4,7 @@ Dlaczego w środowisku programowania wizualnego Dynamo warto używać programowa
 
 **Program wizualny:**
 
-\![](<../images/python node - visual vs textual programming.jpg>)
+\![](<../../.gitbook/assets/python node - visual vs textual programming.jpg>)
 
 **Program tekstowy:**
 
@@ -38,15 +38,15 @@ OUT = solids
 
 Podobnie jak bloki kodu węzły języka Python są interfejsem skryptowym w środowisku programowania wizualnego. Węzeł Python można znaleźć w bibliotece w obszarze Skrypt>Edytor>Skrypt w języku Python.
 
-\![](<../images/python node - the python node 01.jpg>)
+\![](<../../.gitbook/assets/python node - the python node 01.jpg>)
 
-Dwukrotne kliknięcie węzła powoduje otwarcie edytora skryptów języka Python (można również kliknąć prawym przyciskiem myszy węzeł i wybrać polecenie _Edytuj_). Na górze jest wyświetlany tekst wstępny, który ma ułatwić odnoszenie się do potrzebnych bibliotek. Dane wejściowe są przechowywane w szyku IN. Wartości są zwracane do dodatku Dynamo przez przypisanie ich do zmiennej OUT
+Dwukrotne kliknięcie węzła powoduje otwarcie edytora skryptów języka Python (można również kliknąć prawym przyciskiem myszy węzeł i wybrać polecenie _Edytuj_). Na górze jest wyświetlany tekst wstępny, który ma ułatwić odnoszenie się do potrzebnych bibliotek. Dane wejściowe są przechowywane w szyku IN. Wartości są zwracane do dodatku Dynamo przez przypisanie ich do zmiennej OUT.
 
-\![](<../images/python node - the python node 02.jpg>)
+\![](<../../.gitbook/assets/python node - the python node 02.jpg>)
 
-Biblioteka Autodesk.DesignScript.Geometry umożliwia używanie zapisu kropkowego podobnego do bloków kodu (Code Block). Aby uzyskać więcej informacji na temat składni dodatku Dynamo, zapoznaj się z materiałem [7-2_design-script-scritax.md](../../coding-in-dynamo/7_code-blocks-and-design-script/7-2_design-script-syntax.md "mention") oraz [Przewodnikiem języka DesignScript](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf). (Aby pobrać ten dokument PDF, kliknij prawym przyciskiem myszy łącze i wybierz opcję „Zapisz łącze jako...”). Wpisanie typu geometrii, takiego jak „Point.”, spowoduje pojawienie się listy metod tworzenia punktów i stosowania do nich zapytań.
+Biblioteka Autodesk.DesignScript.Geometry umożliwia używanie zapisu kropkowego podobnego do bloków kodu (Code Block). Aby uzyskać więcej informacji na temat składni dodatku Dynamo, zapoznaj się z materiałem [Składnia języka DesignScript](../8-1_code-blocks-and-design-script/2-design-script-syntax.md) oraz [Przewodnikiem języka DesignScript](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf). (Aby pobrać ten dokument PDF, kliknij prawym przyciskiem myszy łącze i wybierz opcję „Zapisz łącze jako...”). Wpisanie typu geometrii, takiego jak „Point.”, spowoduje pojawienie się listy metod tworzenia punktów i stosowania do nich zapytań.
 
-\![](<../images/python node - the python node 03.jpg>)
+\![](<../../.gitbook/assets/python node - the python node 03.jpg>)
 
 > Metody obejmują konstruktory, takie jak _ByCoordinates_, akcje, takie jak _Add_, oraz zapytania, takie jak współrzędne _X_, _Y_ i _Z_.
 
@@ -62,12 +62,12 @@ Biblioteka Autodesk.DesignScript.Geometry umożliwia używanie zapisu kropkowego
 
 W tym przykładzie napiszemy skrypt w języku Python, który tworzy wzorce z modułu bryłowego, i zmienimy go w węzeł niestandardowy. Najpierw utworzymy moduł bryłowy za pomocą węzłów Dynamo.
 
-\![](<../images/python node - exercise pt I-01.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt I-01.jpg>)
 
 > 1. **Rectangle.ByWidthLength:** utwórz prostokąt, który będzie podstawą bryły.
 > 2. **Surface.ByPatch:** połącz prostokąt z wejściem _„closedCurve”_, aby utworzyć dolną powierzchnię.
 
-\![](<../images/python node - exercise pt I-02.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt I-02.jpg>)
 
 > 1. **Geometry.Translate:** połącz prostokąt z wejściem _„geometry”_, aby przesunąć go w górę, używając węzła Code Block do określenia grubości bazowej bryły.
 > 2. **Polygon.Points:** zastosuj zapytanie do przekształconego prostokąta w celu wyodrębnienia punktów narożnych.
@@ -77,7 +77,7 @@ W tym przykładzie napiszemy skrypt w języku Python, który tworzy wzorce z mod
 
 Teraz gdy mamy górną i dolną powierzchnię, wyciągnijmy między dwoma profilami, aby utworzyć boki bryły.
 
-\![](<../images/python node - exercise pt I-03.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt I-03.jpg>)
 
 > 1. **List.Create:** połącz dolny prostokąt i górny wielobok z wejściami indeksu.
 > 2. **Surface.ByLoft:** wyciągnij dwa profile w celu utworzenia boków bryły.
@@ -86,13 +86,13 @@ Teraz gdy mamy górną i dolną powierzchnię, wyciągnijmy między dwoma profil
 
 Po uzyskaniu bryły upuść węzeł skryptu w języku Python w obszarze roboczym.
 
-\![](<../images/python node - exercise pt I-04.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt I-04.jpg>)
 
 > 1. Aby dodać kolejne wejścia do węzła, kliknij ikonę „+” na węźle. Nazwy wejść to IN[0], IN[1] itd., aby wskazać, że reprezentują one elementy na liście.
 
 Zacznijmy od zdefiniowania wejść i wyjść. Kliknij dwukrotnie węzeł, aby otworzyć edytor języka Python. Zmodyfikuj kod w edytorze na podstawie poniższego kodu.
 
-\![](<../images/python node - exercise pt I-05.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt I-05.jpg>)
 
 ```py
 # Load the Python Standard and DesignScript Libraries
@@ -102,17 +102,17 @@ clr.AddReference('ProtoGeometry')
 from Autodesk.DesignScript.Geometry import *
 
 # The inputs to this node will be stored as a list in the IN variables.
-#The solid module to be arrayed
+# The solid module to be arrayed
 solid = IN[0]
 
-#A Number that determines which rotation pattern to use
+# A Number that determines which rotation pattern to use
 seed = IN[1]
 
-#The number of solids to array in the X and Y axes
+# The number of solids to array in the X and Y axes
 xCount = IN[2]
 yCount = IN[3]
 
-#Create an empty list for the arrayed solids
+# Create an empty list for the arrayed solids
 solids = []
 
 # Place your code below this line
@@ -124,7 +124,7 @@ OUT = solids
 
 Ten kod będzie bardziej przejrzysty w trakcie dalszej analizy tego ćwiczenia. Następnie należy zastanowić się, jakie informacje są wymagane, aby ułożyć moduł bryłowy w szyku. Najpierw musimy znać wymiary bryły, aby określić odległość przekształcenia. Z powodu błędu ramki ograniczającej należy użyć geometrii krzywej krawędzi, aby utworzyć ramkę ograniczającą.
 
-![](../images/python07.png)
+![](../../.gitbook/assets/python07.png)
 
 > Przyjrzyj się węzłowi Python w dodatku Dynamo. Zauważ, że używamy tej samej składni, która jest używana w węzłach w dodatku Dynamo. Zapoznaj się z poniższym skomentowanym kodem.
 
@@ -139,27 +139,27 @@ from Autodesk.DesignScript.Geometry import *
 #The solid module to be arrayed
 solid = IN[0]
 
-#A Number that determines which rotation pattern to use
+# A number that determines which rotation pattern to use
 seed = IN[1]
 
-#The number of solids to array in the X and Y axes
+# The number of solids to array in the X and Y axes
 xCount = IN[2]
 yCount = IN[3]
 
-#Create an empty list for the arrayed solids
+# Create an empty list for the arrayed solids
 solids = []
-#Create an empty list for the edge curves
+# Create an empty list for the edge curves
 crvs = []
 
 # Place your code below this line
-#Loop through edges an append corresponding curve geometry to the list
+# Loop through edges an append corresponding curve geometry to the list
 for edge in solid.Edges:
     crvs.append(edge.CurveGeometry)
 
-#Get the bounding box of the curves
+# Get the bounding box of the curves
 bbox = BoundingBox.ByGeometry(crvs)
 
-#Get the x and y translation distance based on the bounding box
+# Get the x and y translation distance based on the bounding box
 yDist = bbox.MaxPoint.Y-bbox.MinPoint.Y
 xDist = bbox.MaxPoint.X-bbox.MinPoint.X
 
@@ -169,7 +169,7 @@ OUT = solids
 
 Ponieważ będziemy zarówno przekształcać, jak i obracać moduły brył, użyjmy operacji Geometry.Transform. Z węzła Geometry.Transform wynika, że będziemy potrzebować źródłowego układu współrzędnych i docelowego układu współrzędnych do przekształcenia bryły. Źródłem jest kontekstowy układ współrzędnych bryły, natomiast elementem docelowym będzie inny układ współrzędnych dla każdego modułu ustawionego w szyku. Oznacza to, że należy utworzyć pętlę przez wartości x i y, aby przekształcić układ współrzędnych za każdym razem w inny sposób.
 
-\![](<../images/python node - exercise pt I-06.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt I-06.jpg>)
 
 ```py
 # Load the Python Standard and DesignScript Libraries
@@ -182,34 +182,34 @@ from Autodesk.DesignScript.Geometry import *
 #The solid module to be arrayed
 solid = IN[0]
 
-#A Number that determines which rotation pattern to use
+# A Number that determines which rotation pattern to use
 seed = IN[1]
 
-#The number of solids to array in the X and Y axes
+# The number of solids to array in the X and Y axes
 xCount = IN[2]
 yCount = IN[3]
 
-#Create an empty list for the arrayed solids
+# Create an empty list for the arrayed solids
 solids = []
-#Create an empty list for the edge curves
+# Create an empty list for the edge curves
 crvs = []
 
 # Place your code below this line
-#Loop through edges an append corresponding curve geometry to the list
+# Loop through edges an append corresponding curve geometry to the list
 for edge in solid.Edges:
     crvs.append(edge.CurveGeometry)
 
-#Get the bounding box of the curves
+# Get the bounding box of the curves
 bbox = BoundingBox.ByGeometry(crvs)
 
-#Get the x and y translation distance based on the bounding box
+# Get the x and y translation distance based on the bounding box
 yDist = bbox.MaxPoint.Y-bbox.MinPoint.Y
 xDist = bbox.MaxPoint.X-bbox.MinPoint.X
 
-#Get the source coordinate system
+# Get the source coordinate system
 fromCoord = solid.ContextCoordinateSystem
 
-#Loop through x and y
+# Loop through x and y
 for i in range(xCount):
     for j in range(yCount):
         #Rotate and translate the coordinate system
@@ -225,7 +225,7 @@ OUT = solids
 
 Kliknij przycisk Uruchom, a następnie Zapisz kod. Połącz węzeł w języku Python z istniejącym skryptem w następujący sposób.
 
-\![](<../images/python node - exercise pt I-07.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt I-07.jpg>)
 
 > 1. Połącz dane wyjściowe z węzła **Solid.ByJoinedSurfaces** z pierwszym wejściem węzła Python i użyj węzła Code Block, aby zdefiniować pozostałe wejścia.
 > 2. Utwórz węzeł **Topology.Edges** i użyj danych wyjściowych z węzła Python jako jego danych wejściowych.
@@ -233,25 +233,25 @@ Kliknij przycisk Uruchom, a następnie Zapisz kod. Połącz węzeł w języku Py
 
 Spróbuj zmienić wartość źródłową, aby utworzyć różne wzorce. Można również zmienić parametry samego modułu bryły w celu uzyskania różnych efektów.
 
-![](../images/python10.png)
+![](../../.gitbook/assets/python10.png)
 
 ### Część II. Przekształcanie węzła skryptu w języku Python w węzeł niestandardowy
 
 Teraz po utworzeniu przydatnego skryptu w języku Python zapiszemy go jako węzeł niestandardowy. Wybierz węzeł skryptu w języku Python, kliknij prawym przyciskiem myszy obszar roboczy i wybierz opcję „Utwórz węzeł niestandardowy”.
 
-\![](<../images/python node - exercise pt II-01.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt II-01.jpg>)
 
 Przypisz nazwę, opis i kategorię.
 
-\![](<../images/python node - exercise pt II-02.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt II-02.jpg>)
 
 Spowoduje to otwarcie nowego obszaru roboczego, w którym będzie edytowany węzeł niestandardowy.
 
-\![](<../images/python node - exercise pt II-03.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt II-03.jpg>)
 
 > 1. **Wejścia Input:** zmień nazwy wejść na bardziej opisowe i dodaj typy danych oraz wartości domyślne.
 > 2. **Wyjście Output:** zmień nazwę węzła danych wyjściowych
 
 Zapisz węzeł jako plik .dyf. Węzeł niestandardowy powinien odzwierciedlać wprowadzone zmiany.
 
-\![](<../images/python node - exercise pt II-04.jpg>)
+\![](<../../.gitbook/assets/python node - exercise pt II-04.jpg>)

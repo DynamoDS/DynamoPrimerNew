@@ -1,13 +1,15 @@
 # Język Python i program Civil 3D
 
-Dodatek Dynamo daje niezwykłe możliwości jako narzędzie do [programowania wizualnego](../../a\_appendix/a-1\_visual-programming-and-dynamo.md). Można jednak pominąć węzły i przewody, aby pisać kod w postaci tekstowej. Można to zrobić na dwa sposoby:
+Dodatek Dynamo daje niezwykłe możliwości jako narzędzie do [programowania wizualnego](../../a_appendix/a-1_visual-programming-and-dynamo.md). Można jednak pominąć węzły i przewody, aby pisać kod w postaci tekstowej. Można to zrobić na dwa sposoby:
 
 1. Pisanie kodu **DesignScript** za pomocą węzła Code Block
 2. Pisanie kodu **Python** za pomocą węzła Python
 
 W tej sekcji omówiono używanie języka Python w środowisku programu Civil 3D w celu wykorzystywania interfejsów API .NET programów AutoCAD i Civil 3D.
 
-{% hint style="info" %} Aby uzyskać bardziej ogólne informacje na temat używania języka Python w dodatku Dynamo, skorzystaj z sekcji [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention"). {% endhint %}
+{% hint style="info" %}
+Aby uzyskać bardziej ogólne informacje na temat używania języka Python w dodatku Dynamo, skorzystaj z sekcji [8-3_python](../../8_coding_in_dynamo/8-3_python/ "mention").
+{% endhint %}
 
 ## Dokumentacja interfejsu API
 
@@ -15,19 +17,21 @@ Dla programów AutoCAD i Civil 3D jest dostępnych po kilka interfejsów API, kt
 
 [Podręcznik programisty interfejsu API .NET dla programu AutoCAD](https://help.autodesk.com/view/OARX/2024/PLK/?guid=GUID-C3F3C736-40CF-44A0-9210-55F6A939B6F2)
 
-[Podręcznik użytkownika interfejsu API .NET dla programu AutoCAD](https://help.autodesk.com/view/OARX/2024/PLK/?guid=OARX-ManagedRefGuide-What_s_New)
+[Podręcznik użytkownika interfejsu API .NET dla programu AutoCAD](https://help.autodesk.com/view/OARX/2024/ENU/?guid=OARX-ManagedRefGuide-What_s_New)
 
 [Podręcznik programisty interfejsu API .NET dla programu Civil 3D](https://help.autodesk.com/view/CIV3D/2024/PLK/?guid=GUID-DA303320-B66D-4F4F-A4F4-9FBBEC0754E0)
 
 [Podręcznik użytkownika interfejsu API .NET dla programu Civil 3D](https://help.autodesk.com/view/CIV3D/2024/PLK/?guid=73fd1950-ee31-00b8-4872-c3f328ea1331)
 
-{% hint style="info" %} Podczas zapoznawania się z tą sekcją możesz zetknąć się z pewnymi nowymi dla Ciebie pojęciami, takimi jak bazy danych, transakcje, metody, właściwości itp. Wiele z tych pojęć należy do podstaw pracy z interfejsami API .NET i nie są one charakterystyczne ani dla dodatku Dynamo, ani dla języka Python. Szczegółowe omówienie tych elementów wykracza poza zakres tej sekcji przewodnika Primer, dlatego zaleca się częste korzystanie z informacji, do których prowadzą powyższe łącza. {% endhint %}
+{% hint style="info" %}
+Podczas zapoznawania się z tą sekcją możesz zetknąć się z pewnymi nowymi dla Ciebie pojęciami, takimi jak bazy danych, transakcje, metody, właściwości itp. Wiele z tych pojęć należy do podstaw pracy z interfejsami API .NET i nie są one charakterystyczne ani dla dodatku Dynamo, ani dla języka Python. Szczegółowe omówienie tych elementów wykracza poza zakres tej sekcji przewodnika Primer, dlatego zaleca się częste korzystanie z informacji, do których prowadzą powyższe łącza.
+{% endhint %}
 
 ## Szablon kodu
 
 Podczas pierwszej edycji nowego węzła w języku Python jest on wstępnie wypełniany kodem-szablonem, aby przyspieszyć rozpoczęcie pracy. Oto podział szablonu z objaśnieniami dotyczącymi każdego bloku.
 
-<figure><img src="../images/Python_Template.png" alt=""><figcaption><p>Domyślny szablon węzła w języku Python w programie Civil 3D</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Template (1).png" alt=""><figcaption><p>Domyślny szablon węzła w języku Python w programie Civil 3D</p></figcaption></figure>
 
 > 1. Importuje moduły `sys` i `clr`, które są niezbędne do poprawnego działania interpretera języka Python. W szczególności moduł `clr` umożliwia traktowanie przestrzeni nazw .NET jako pakietów Python.
 > 2. Wczytuje standardowe zespoły (np. pliki DLL) do pracy z interfejsami API kodu zarządzanego .NET dla programów AutoCAD i Civil 3D.
@@ -39,8 +43,10 @@ Podczas pierwszej edycji nowego węzła w języku Python jest on wstępnie wype�
 > 8. Usuń oznaczenie komentarza tego wiersza, aby zatwierdzić transakcję po zakończeniu głównej pracy.
 > 9. Aby zapisać dane wyjściowe węzła, należy przypisać je do zmiennej `OUT` na końcu skryptu.
 
-{% hint style="info" %} **Chcesz wprowadzić dostosowania?**\
- Domyślny szablon w języku Python można zmodyfikować, edytując plik `PythonTemplate.py` znajdujący się w folderze `C:\ProgramData\Autodesk\C3D <version>\Dynamo`. {% endhint %}
+{% hint style="info" %}
+**Chcesz dostosować?**\
+ Domyślny szablon w języku Python można zmodyfikować, edytując plik `PythonTemplate.py` znajdujący się w folderze `C:\ProgramData\Autodesk\C3D <version>\Dynamo`.
+{% endhint %}
 
 ## Przykład
 
@@ -78,7 +84,7 @@ Przed rozpoczęciem tworzenia wykresu i pisania kodu warto zapoznać się z doku
 
 Teraz możemy zacząć tworzyć logikę wykresu. Pierwszą czynnością, którą należy wykonać, jest pobranie listy wszystkich zlewni w dokumencie. Dostępne są węzły do obsługi tej operacji, więc nie trzeba uwzględniać jej w skrypcie w języku Python. Używanie węzłów zapewnia lepszą przejrzystość dla innych osób czytających wykres (w przeciwieństwie do używania dużej ilości kodu w skrypcie w języku Python) i pozwala skupić się w kodzie w języku Python na jednej rzeczy: zwróceniu punktów obwiedni zlewni.
 
-<figure><img src="../images/Python_Get_Catchments.png" alt=""><figcaption><p>Pobieranie wszystkich zlewni w dokumencie na podstawie warstwy</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Get_Catchments.png" alt=""><figcaption><p>Pobieranie wszystkich zlewni w dokumencie na podstawie warstwy</p></figcaption></figure>
 
 Warto zwrócić uwagę, że wyjście z węzła **All Objects on Layer** jest listą obiektów programu Civil (CivilObject). Jest to spowodowane tym, że dodatek Dynamo for Civil 3D nie zawiera obecnie żadnych węzłów do pracy ze zlewniami. Dlatego właśnie należy uzyskać dostęp do interfejsu API za pośrednictwem języka Python.
 
@@ -88,13 +94,17 @@ Zanim przejdziemy dalej, musimy krótko odnieść się do ważnego pojęcia. W s
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Typ dodatku Dynamo</th><th width="373">Opakowania</th></tr></thead><tbody><tr><td><strong>Obiekt</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>Element</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>Element</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
-{% hint style="warning" %} Ogólnie bezpieczniej jest uzyskać identyfikator obiektu za pomocą właściwości `InternalObjectId`, a następnie uzyskać dostęp do opakowanego obiektu w transakcji. Wynika to z tego, że właściwość `InternalDBObject` zwraca obiekt DBObject programu AutoCAD, który nie jest w stanie zapisywalnym. {% endhint %}
+{% hint style="warning" %}
+Ogólnie bezpieczniej jest uzyskać identyfikator obiektu za pomocą właściwości `InternalObjectId`, a następnie uzyskać dostęp do opakowanego obiektu w transakcji. Wynika to z tego, że właściwość `InternalDBObject` zwraca obiekt DBObject programu AutoCAD, który nie jest w stanie zapisywalnym.
+{% endhint %}
 
 ### Skrypt w języku Python
 
 Oto pełny skrypt w języku Python, który wykonuje operacje polegające na uzyskaniu dostępu do wewnętrznych obiektów zlewni i pobraniu ich punktów obwiedni. Wyróżnione wiersze to te zmodyfikowane lub dodane w domyślnym kodzie-szablonie.
 
-{% hint style="info" %} Klikaj podkreślony tekst w skrypcie, aby uzyskać wyjaśnienia dotyczące poszczególnych wierszy. {% endhint %}
+{% hint style="info" %}
+Klikaj podkreślony tekst w skrypcie, aby uzyskać wyjaśnienia dotyczące poszczególnych wierszy.
+{% endhint %}
 
 <pre class="language-python" data-line-numbers><code class="lang-python"># Wczytywanie bibliotek standardowych języka Python i bibliotek języka DesignScript
 import sys
@@ -108,8 +118,8 @@ clr.AddReference('AecBaseMgd')
 clr.AddReference('AecPropDataMgd')
 clr.AddReference('AeccDbMgd')
 
-<strong><a data-footnote-ref href="#user-content-fn-1">clr.AddReference('ProtoGeometry')</a>
-</strong>
+<a data-footnote-ref href="#user-content-fn-1">clr.AddReference('ProtoGeometry')</a>
+
 # Importowanie odniesień z programu AutoCAD
 from Autodesk.AutoCAD.Runtime import *
 from Autodesk.AutoCAD.ApplicationServices import *
@@ -121,18 +131,18 @@ from Autodesk.AutoCAD.Geometry import *
 from Autodesk.Civil.ApplicationServices import *
 from Autodesk.Civil.DatabaseServices import *
 
-<strong><a data-footnote-ref href="#user-content-fn-2">from Autodesk.DesignScript.Geometry import Point as DynPoint</a>
-</strong>
+<a data-footnote-ref href="#user-content-fn-2">from Autodesk.DesignScript.Geometry import Point as DynPoint</a>
+
 # Dane wejściowe tego węzła będą przechowywane jako lista w zmiennych IN.
 <strong><a data-footnote-ref href="#user-content-fn-3">objs</a> = <a data-footnote-ref href="#user-content-fn-4">IN[0]</a>
 </strong>
 <strong><a data-footnote-ref href="#user-content-fn-5">output = []</a> 
 </strong>
-<strong><a data-footnote-ref href="#user-content-fn-6">if objs is None:</a>
-</strong><strong>    <a data-footnote-ref href="#user-content-fn-7">sys.exit("Dane wejściowe są puste lub mają wartość null.")</a>
+<a data-footnote-ref href="#user-content-fn-6">if objs is None:</a>
+<strong>    <a data-footnote-ref href="#user-content-fn-7">sys.exit("Dane wejściowe są puste lub mają wartość null.")</a>
 </strong>
-<strong><a data-footnote-ref href="#user-content-fn-8">if not isinstance(objs, list):</a>
-</strong><strong>    <a data-footnote-ref href="#user-content-fn-9">objs = [objs]</a>
+<a data-footnote-ref href="#user-content-fn-8">if not isinstance(objs, list):</a>
+<strong>    <a data-footnote-ref href="#user-content-fn-9">objs = [objs]</a>
 </strong>    
 adoc = Application.DocumentManager.MdiActiveDocument
 editor = adoc.Editor
@@ -158,22 +168,24 @@ with adoc.LockDocument():
 </strong>            pass
             
 # Przypisanie danych wyjściowych do zmiennej OUT.
-<strong><a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
-</strong></code></pre>
+<a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
+</code></pre>
 
-{% hint style="warning" %} Ogólnie najlepszą praktyką jest umieszczenie większości kodu logiki skryptu wewnątrz transakcji. Zapewnia to bezpieczny dostęp do obiektów, które są odczytywane/zapisywane przez skrypt. W wielu przypadkach pominięcie transakcji może spowodować błąd krytyczny. {% endhint %}
+{% hint style="warning" %}
+Ogólnie najlepszą praktyką jest umieszczenie większości kodu logiki skryptu wewnątrz transakcji. Zapewnia to bezpieczny dostęp do obiektów, które są odczytywane/zapisywane przez skrypt. W wielu przypadkach pominięcie transakcji może spowodować błąd krytyczny.
+{% endhint %}
 
 ### Tworzenie krzywych PolyCurve
 
 Na tym etapie skrypt w języku Python powinien zwrócić listę punktów dodatku Dynamo, które można wyświetlić w podglądzie w tle. Ostatnią czynnością jest utworzenie krzywych PolyCurve na podstawie punktów. Warto zauważyć, że można to również zrobić bezpośrednio w skrypcie w języku Python. Jednak celowo umieściliśmy tę operację poza skryptem w węźle, aby była bardziej widoczna. Oto ostateczny wykres.
 
-<figure><img src="../images/Python_Final_Script.png" alt=""><figcaption><p>Ostateczny wykres</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Final_Script (1).png" alt=""><figcaption><p>Ostateczny wykres</p></figcaption></figure>
 
 ### Wynik
 
 Oto ostateczna geometria dodatku Dynamo.
 
-<figure><img src="../images/Python_Dynamo_Curves.png" alt=""><figcaption><p>Wynikowe krzywe PolyCurve dodatku Dynamo dla obwiedni zlewni</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python_Dynamo_Curves.png" alt=""><figcaption><p>Wynikowe krzywe PolyCurve dodatku Dynamo dla obwiedni zlewni</p></figcaption></figure>
 
 > :tada: Misja wykonana!
 
@@ -181,7 +193,9 @@ Oto ostateczna geometria dodatku Dynamo.
 
 Zanim zakończymy tę część, omówmy jeszcze jedną kwestię. W zależności od używanej wersji programu Civil 3D węzeł w języku Python może być skonfigurowany w określony sposób. W programach **Civil 3D 2020 i 2021** dodatek Dynamo używał narzędzia o nazwie **IronPython** do przenoszenia danych między obiektami .NET a skryptami w języku Python. Jednak w programie **Civil 3D 2022** dodatek Dynamo używa standardowego natywnego interpretera języka Python (znanego jako **CPython**), w którym jest używany język Python 3. Korzyści płynące z przejścia na nowy model obejmują dostęp do popularnych nowoczesnych bibliotek i nowych funkcji platformy, niezbędne poprawki konserwacyjne i poprawki zabezpieczeń.
 
-{% hint style="info" %} Więcej informacji na temat tego przejścia i uaktualniania starszych skryptów można znaleźć w [blogu dotyczącym dodatku Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Aby nadal używać mechanizmu IronPython, wystarczy zainstalować pakiet **DynamoIronPython2.7** za pomocą Menedżera pakietów Dynamo. {% endhint %}
+{% hint style="info" %}
+Więcej informacji na temat tego przejścia i uaktualniania starszych skryptów można znaleźć w [blogu dotyczącym dodatku Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Aby nadal używać mechanizmu IronPython, wystarczy zainstalować pakiet **DynamoIronPython2.7** za pomocą Menedżera pakietów Dynamo.
+{% endhint %}
 
 [^1]: Domyślnie biblioteka geometrii dodatku Dynamo nie jest dodawana do środowiska języka Python. Celem tego skryptu jest utworzenie listy punktów dodatku Dynamo dla obwiedni zlewni, dlatego należy dodać ten wiersz, aby utworzyć punkty później.
 
@@ -205,7 +219,7 @@ Zanim zakończymy tę część, omówmy jeszcze jedną kwestię. W zależności 
 
 [^11]: „Odpakowanie” obiektu Dynamo przez pobranie jego identyfikatora obiektu.
 
-[^12]: Pobranie „opakowanego” obiektu z bazy danych programu AutoCAD. W tym miejscu tryb OpenMode jest ustawiony na `ForRead`, ponieważ nie planujemy wprowadzania zmian w obiektach. Upraszczamy „dane zapytania”.
+[^12]: Pobranie „opakowanego” obiektu z bazy danych programu AutoCAD. W tym miejscu tryb OpenMode jest ustawiony na `ForRead`, ponieważ nie planujemy wprowadzania zmian w obiektach. Po prostu „badamy” dane za pomocą zapytań.
 
 [^13]: Możliwe, że lista wejściowa obiektów zawiera kombinację zlewni i innych elementów innych niż zlewnie. Musimy sprawdzić, czy nie występuje taka sytuacja, i odpowiednio ją obsłużyć (tzn. kontynuować tę iterację pętli tylko wtedy, gdy element jest zlewnią).
 

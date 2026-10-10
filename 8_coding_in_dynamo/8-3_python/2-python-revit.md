@@ -27,7 +27,7 @@ import System
 
 Zapewnia to dostęp do interfejsu API programu Revit i obsługę skryptów niestandardowych dla dowolnego zadania programu Revit. Połączenie programowania wizualnego z obsługą skryptów z użyciem interfejsu API programu Revit znacznie usprawnia współpracę i opracowywanie narzędzi. Na przykład menedżer BIM i projektant schematów mogą współpracować na tym samym wykresem. W ramach tej współpracy mogą poprawić projekt i realizację modelu.
 
-\![](<../images/python & revit - 01.jpg>)
+\![](<../../.gitbook/assets/python & revit - 01 (1).jpg>)
 
 ### Interfejsy API dla konkretnych platform
 
@@ -51,7 +51,7 @@ Jest to oczywista metoda pobierania pozycji _doc_, _uiapp_ i _app_ pliku program
 
 W ten sposób importujemy usługi programu Revit i pobieramy dane dokumentów w dodatku Dynamo.
 
-\![](<../images/python & revit - exercise 01 - 01.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 01 - 01.jpg>)
 
 Przyjrzyj się węzłowi Python w dodatku Dynamo. Można również skorzystać z kodu z poniższego materiału:
 
@@ -60,17 +60,17 @@ Przyjrzyj się węzłowi Python w dodatku Dynamo. Można również skorzystać z
 import sys
 import clr
 
-#Import DocumentManager
+# Import DocumentManager
 clr.AddReference("RevitServices")
 import RevitServices
 from RevitServices.Persistence import DocumentManager
 
-#Place your code below this line
+# Place your code below this line
 doc = DocumentManager.Instance.CurrentDBDocument
 uiapp = DocumentManager.Instance.CurrentUIApplication
 app = uiapp.Application
 
-#Assign your output to the OUT variable
+# Assign your output to the OUT variable
 OUT = [doc,uiapp,app]
 ```
 
@@ -86,19 +86,19 @@ W tym ćwiczeniu utworzymy prostą krzywą modelu w programie Revit za pomocą w
 
 Rozpocznij od utworzenia nowej rodziny brył koncepcyjnych w programie Revit.
 
-\![](<../images/python & revit - exercise 02 - 01.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 01.jpg>)
 
 Otwórz _folder Conceptual Mass_ i użyj pliku szablonu _Metric Mass.rft_.
 
-\![](<../images/python & revit - exercise 02 - 02.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 02.jpg>)
 
 W programie Revit użyj skrótu klawiaturowego **`un`**, aby wywołać ustawienia jednostki projektu, a następnie zmień jednostkę długości na metry.
 
-\![](<../images/python & revit - exercise 02 - 03.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 03.jpg>)
 
 Uruchom dodatek Dynamo i utwórz zestaw węzłów na ilustracji poniżej. Najpierw utworzymy dwa punkty odniesienia w programie Revit z węzłów Dynamo.
 
-\![](<../images/python & revit - exercise 02 - 04.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 04.jpg>)
 
 > 1. Utwórz węzeł **Code Block** i nadaj mu wartość `"0;"`
 > 2. Podłącz tę wartość do węzła **ReferencePoint.ByCoordinates** dla wejść X, Y i Z.
@@ -108,7 +108,7 @@ Uruchom dodatek Dynamo i utwórz zestaw węzłów na ilustracji poniżej. Najpie
 
 Przyjrzyj się węzłowi Python w dodatku Dynamo. Pełny kod podano poniżej.
 
-\![](<../images/python & revit - exercise 02 - 05.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 05.jpg>)
 
 > 1. **System.Array**: program Revit wymaga jako wejścia **szyku systemowego** (a nie listy języka Python). To jeden więcej wiersz kodu, ale zwracanie uwagi na typy argumentów ułatwia programowanie w języku Python w programie Revit.
 
@@ -119,24 +119,25 @@ import clr
 # Import RevitNodes
 clr.AddReference("RevitNodes")
 import Revit
+
 #Import Revit elements
 from Revit.Elements import *
 import System
 
-#define inputs
+# Define inputs
 startRefPt = IN[0]
 endRefPt = IN[1]
 
-#define system array to match with required inputs
+# Define system array to match with required inputs
 refPtArray = System.Array[ReferencePoint]([startRefPt, endRefPt])
 
-#create curve by reference points in Revit
+# Create curve by reference points in Revit
 OUT = CurveByPoints.ByReferencePoints(refPtArray)
 ```
 
 W dodatku Dynamo utworzyliśmy za pomocą języka Python dwa punkty odniesienia z łączącą je linią. W następnym ćwiczeniu rozwiniemy to.
 
-\![](<../images/python & revit - exercise 02 - 06.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 02 - 06.jpg>)
 
 ## Ćwiczenie 3
 
@@ -148,55 +149,61 @@ W dodatku Dynamo utworzyliśmy za pomocą języka Python dwa punkty odniesienia 
 
 To ćwiczenie jest proste, ale pozwala wyjaśnić tematy łączenia danych i geometrii z programu Revit do dodatku Dynamo i odwrotnie. Zacznijmy od otwarcia pliku Revit-StructuralFraming.rvt. Po jego otwarciu uruchom dodatek Dynamo i otwórz plik Revit-StructuralFraming.dyn.
 
-![](../images/python&revit-exercise03-01.jpg)
+![](../../.gitbook/assets/python\&revit-exercise03-01.jpg)
 
 Ten plik programu Revit jest tak prosty, jak to tylko możliwe. Dwie krzywe odniesienia: jedna narysowana na poziomie 1, a druga na poziomie 2. Chcemy umieścić te krzywe w dodatku Dynamo i utrzymać aktywne połączenie.
 
 W tym pliku znajduje się zestaw węzłów podłączonych do pięciu wejść węzła w języku Python.
 
-\![](<../images/python & revit - exercise 03 - 02.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 02.jpg>)
 
 > 1. **Wybierz węzły elementów modelu**: naciśnij przycisk wyboru dla każdego z nich i wybierz odpowiednią krzywą w programie Revit.
 > 2. **Code Block**: za pomocą składni `0..1..#x;`_,_ połącz suwak liczby całkowitej o zakresie od 0 do 20 z wejściem _x_. Ta opcja określa liczbę belek do narysowania między dwiema krzywymi.
 > 3. **Typy ram konstrukcyjnych**: z menu rozwijanego wybierzemy domyślną belkę W12x26.
 > 4. **Poziomy**: wybierz „Poziom 1”.
 
-Ten kod Python jest nieco gęściejszy, ale komentarze znajdujące się w kodzie oddają to, co się dzieje w tym procesie
+Ten kod Python jest nieco gęściejszy, ale komentarze znajdujące się w kodzie oddają to, co się dzieje w tym procesie.
 
-\![](<../images/python & revit - exercise 03 - 03.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 03.jpg>)
 
 ```py
 import clr
-#import Dynamo Geometry
+
+# Import Dynamo Geometry
 clr.AddReference('ProtoGeometry')
 from Autodesk.DesignScript.Geometry import *
+
 # Import RevitNodes
 clr.AddReference("RevitNodes")
 import Revit
+
 # Import Revit elements
 from Revit.Elements import *
 import System
 
-#Query Revit elements and convert them to Dynamo Curves
+# Query Revit elements and convert them to Dynamo Curves
 crvA=IN[0].Curves[0]
 crvB=IN[1].Curves[0]
 
-#Define input Parameters
+# Define input Parameters
 framingType=IN[3]
 designLevel=IN[4]
 
-#Define "out" as a list
+# Define "out" as a list
 OUT=[]
 
 for val in IN[2]:
-	#Define Dynamo Points on each curve
+	# Define Dynamo Points on each curve
 	ptA=Curve.PointAtParameter(crvA,val)
 	ptB=Curve.PointAtParameter(crvB,val)
-	#Create Dynamo line
+	
+	# Create Dynamo line
 	beamCrv=Line.ByStartPointEndPoint(ptA,ptB)
-	#create Revit Element from Dynamo Curves
+	
+	# Create Revit Element from Dynamo Curves
 	beam = StructuralFraming.BeamByCurve(beamCrv,designLevel,framingType)
-	#convert Revit Element into list of Dynamo Surfaces
+	
+	# Convert Revit Element into list of Dynamo Surfaces
 	OUT.append(beam.Faces)
 ```
 
@@ -204,7 +211,7 @@ W programie Revit mamy szyk belek obejmujący dwie krzywe jako elementy konstruk
 
 Również w dodatku Dynamo można wyświetlić wyniki. Belki w węźle **Watch3D** odnoszą się do geometrii przywołanej z elementów programu Revit.
 
-\![](<../images/python & revit - exercise 03 - 05.jpg>)
+\![](<../../.gitbook/assets/python & revit - exercise 03 - 05.jpg>)
 
 Warto zauważyć, że mamy ciągły proces przekształcania danych ze środowiska programu Revit do środowiska dodatku Dynamo. Podsumowując: oto przebieg tego procesu:
 
@@ -219,4 +226,4 @@ Może to wydawać się nieco skomplikowane, ale skrypt sprawia, że wystarczy ed
 
 Po zaktualizowaniu krzywych odniesienia w programie Revit uzyskuje się nowy szyk belek.
 
-\![](<../images/python & revit - ex 03 - 06.gif>)
+\![](<../../.gitbook/assets/python & revit - ex 03 - 06.gif>)

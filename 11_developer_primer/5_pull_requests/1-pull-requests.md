@@ -22,12 +22,12 @@ Oto kilka wskazówek dotyczących tego, czego nie należy robić:
 
 W przypadku przesyłania prośby o ściągnięcie (pull) należy użyć [domyślnego szablonu prośby o ściągnięcie](https://github.com/DynamoDS/Dynamo/blob/master/.github/PULL\_REQUEST\_TEMPLATE.md). Przed przesłaniem prośby o ściągnięcie (pull) należy się upewnić, że cel został jasno opisany i wszystkie poniższe stwierdzenia można uznać za prawdziwe:
 
-* Po przesłaniu tej prośby o ściągnięcie (pull) baza kodu będzie w lepszym stanie
-* Rozwiązanie udokumentowano zgodnie ze [standardami](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
-* Poziom przetestowania rozwiązania, którego dotyczy ta prośba o ściągnięcie (pull), jest odpowiedni
-* Jeśli istnieją ciągi widoczne dla użytkownika, są one wyodrębnione do plików `*.resx`
-* Wszystkie testy zostały zakończone pomyślnie z wykorzystaniem samoobsługowej ciągłej integracji
-* Migawka zmian interfejsu użytkownika, jeśli takie zmiany istnieją
+* Po przesłaniu tej prośby o ściągnięcie (pull) baza kodu będzie w lepszym stanie.
+* Rozwiązanie udokumentowano zgodnie ze [standardami](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards).
+* Poziom przetestowania rozwiązania, którego dotyczy ta prośba o ściągnięcie (pull), jest odpowiedni.
+* Jeśli istnieją ciągi widoczne dla użytkownika, są one wyodrębnione do plików `*.resx`.
+* Wszystkie testy zostały zakończone pomyślnie z wykorzystaniem samoobsługowej ciągłej integracji.
+* Migawka zmian interfejsu użytkownika, jeśli takie zmiany istnieją.
 * Zmiany w interfejsie API są zgodne z [semantyczną obsługą wersji](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Versions) i są opisane w [dokumencie zmian w interfejsie API](https://github.com/DynamoDS/Dynamo/wiki/API-Changes).
 
 Zespół Dynamo przypisze do prośby o ściągnięcie (pull) odpowiedniego recenzenta.

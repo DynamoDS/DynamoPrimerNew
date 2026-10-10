@@ -12,7 +12,7 @@
 
 Ten blog jest najbardziej aktualnym zbiorem artykułów przygotowanych przez zespół dodatku Dynamo z omówieniami nowych funkcji, procesów roboczych i wszystkiego, co jest związane z dodatkiem Dynamo.
 
-[http://dynamobim.com/blog/](http://dynamobim.com/blog/)
+[https://dynamobim.org/blog/](https://dynamobim.org/blog/)
 
 ### **Przewodnik języka DesignScript**
 
@@ -76,8 +76,3 @@ Blog dla programistów:
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
-### **The Building Coder**
-
-Obszerny katalog procesów roboczych interfejsu API programu Revit od jednego z najlepszych ekspertów w dziedzinie BIM.
-
-[http://thebuildingcoder.typepad.com/](http://thebuildingcoder.typepad.com)

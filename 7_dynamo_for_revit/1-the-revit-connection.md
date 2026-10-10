@@ -1,6 +1,6 @@
 # Połączenie programu Revit
 
-\![](<images/revit connection link.jpg>)
+\![](<../.gitbook/assets/revit connection link.jpg>)
 
 Dodatek Dynamo dla programu Revit rozszerza możliwości modelowania informacji o budynku (BIM) za pomocą środowiska danych i logiki graficznego edytora algorytmów. Jego elastyczność w połączeniu z solidną bazą danych programu Revit zapewnia nową perspektywę dla modelowania BIM.
 
@@ -19,11 +19,11 @@ Ponieważ zarówno program Revit, jak i dodatek Dynamo wciąż ewoluują, może 
 | 2017          | [0.9.0](https://downloads.dynamobuilds.com/DynamoInstall0.9.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
 | 2018          | [1.3.0](https://downloads.dynamobuilds.com/DynamoInstall1.3.0.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
 | 2019          | [1.3.3](https://downloads.dynamobuilds.com/DynamoInstall1.3.3.exe)           | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.4](https://downloads.dynamobuilds.com/DynamoInstall2.0.4.exe) |
-| 2020+         | 2.1.0 — program Revit od wersji 2020 zawiera teraz dodatek Dynamo, który jest aktualizowany razem z programem Revit. | Nie dotyczy                                                                                                                                     |
+| 2020+         | 2.1.0 — program Revit od wersji 2020 zawiera teraz dodatek Dynamo, który jest aktualizowany razem z programem Revit.  | NIE DOTYCZY                                                                                                                                     |
 
 ### Historia dodatku Dynamo
 
-![Historia](images/earlyScreenshot.jpg)
+![Historia](../.gitbook/assets/earlyScreenshot.jpg)
 
 Dzięki dedykowanemu zespołowi programistów i pełnej zaangażowania społeczności ten projekt przebył długą drogę od skromnych początków.
 
@@ -35,21 +35,27 @@ Używając podstawowych węzłów Dynamo wraz z węzłami niestandardowymi progr
 
 W edytorze rodziny lub projekcie programu Revit przejdź do pozycji Dodatki i kliknij opcję Dynamo*.
 
-{% hint style="warning" %} *Dodatek Dynamo zostanie uruchomiony tylko w pliku, w którym został otwarty. {% endhint %}
+{% hint style="warning" %}
+*Dodatek Dynamo zostanie uruchomiony tylko w pliku, w którym został otwarty.
+{% endhint %}
 
-![](images/1/launchdynamofromrevit.jpg)
+\![](<../.gitbook/assets/launchdynamofromrevit (1).jpg>)
 
 W przypadku otwarcia dodatku Dynamo w programie Revit dostępna jest nowa kategoria o nazwie „Revit”. Jest to kompleksowy dodatek do interfejsu użytkownika, który zawiera węzły opracowane konkretnie do procesów roboczych programu Revit*.
 
-{% hint style="warning" %}*W razie użycia rodziny węzłów charakterystycznej dla programu Revit wykres dodatku Dynamo będzie działać tylko po otwarciu w dodatku Dynamo dla programu Revit. Jeśli na przykład wykres dodatku Dynamo dla programu Revit zostanie otwarty w dodatku Dynamo w trybie „piaskownicy” (Sandbox), będzie brakować węzłów programu Revit. {% endhint %}
+{% hint style="warning" %}
+*W razie użycia rodziny węzłów charakterystycznej dla programu Revit wykres dodatku Dynamo będzie działać tylko po otwarciu w dodatku Dynamo dla programu Revit. Jeśli na przykład wykres dodatku Dynamo dla programu Revit zostanie otwarty w dodatku Dynamo w trybie „piaskownicy” (Sandbox), będzie brakować węzłów programu Revit.
+{% endhint %}
 
-\![](<images/revit connection - running dynamo in revit 02.jpg>)
+\![](<../.gitbook/assets/revit connection - running dynamo in revit 02.jpg>)
 
 ### Blokowanie węzłów
 
 Ponieważ program Revit jest platformą zapewniającą zaawansowane zarządzanie projektem, operacje parametryczne w dodatku Dynamo mogą być skomplikowane, a ich obliczanie — powolne. Jeśli w dodatku Dynamo obliczanie węzłów trwa zbyt długo, można użyć funkcji zablokowania węzła, aby wstrzymać wykonywanie operacji programu Revit podczas tworzenia wykresu.
 
-{% hint style="info" %} Więcej informacji na temat blokowania węzłów można znaleźć w sekcji [4_nodes_and_wires](../4_nodes_and_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+Więcej informacji na temat blokowania węzłów można znaleźć w sekcji [4_nodes_and_wires](../4_nodes_and_wires/ "mention").
+{% endhint %}
 
 ### Społeczność i blog poświęcone dodatkowi Dynamo
 
@@ -59,4 +65,4 @@ Dynamo to projekt typu open source, który ciągle ewoluuje, a znaczna część 
 
 Z dodatkiem Dynamo związany jest też aktywny blog. Przeczytaj najnowsze wpisy, aby zapoznać się z nowościami i wiadomościami.
 
-![Blog](images/blog.png)
+![Blog](../.gitbook/assets/blog.png)

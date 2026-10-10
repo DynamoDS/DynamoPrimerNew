@@ -4,33 +4,33 @@ Sekcja Zmiany języka zawiera przegląd aktualizacji i modyfikacji wprowadzonych
 
 ## Zmiany dotyczące języka dodatku Dynamo 2.0
 
-1. Zmiana składni lista@poziom z „@-1” na „@L1” (L— „level”, czyli „poziom”)
+1. Zmiana składni lista@poziom z „@-1” na „@L1” (L— „level”, czyli „poziom”).
 
-* Nowa składnia dla lista@poziom pozwalająca używać zapisu lista@L1 zamiast lista@-1
-* Motywacja: dostosowanie składni kodu do podglądu/interfejsu użytkownika; z testów z udziałem użytkowników wynika, że ta nowa składnia jest bardziej zrozumiała
+* Nowa składnia dla lista@poziom pozwalająca używać zapisu lista@L1 zamiast lista@-1.
+* Motywacja: dostosowanie składni kodu do podglądu/interfejsu użytkownika; z testów z udziałem użytkowników wynika, że ta nowa składnia jest bardziej zrozumiała.
 
-2. Zaimplementowanie typów Int i Double w TS w celu dostosowania do typów dodatku Dynamo
-3. Niezezwalanie na przeciążenia funkcji, w których argumenty różnią się tylko kardynalnością
+2. Zaimplementowanie typów Int i Double w TS w celu dostosowania do typów dodatku Dynamo.
+3. Niezezwalanie na przeciążenia funkcji, w których argumenty różnią się tylko kardynalnością.
 
 * Stare wykresy, w których używa się usuniętych przeciążeń, powinny domyślnie używać przeciążeń o wyższej randze.
-* Motywacja: wyeliminowanie niejasności co do tego, która konkretnie funkcja jest wykonywana
+* Motywacja: wyeliminowanie niejasności co do tego, która konkretnie funkcja jest wykonywana.
 
-4. Wyłączenie podwyższania poziomu szyku (tablicy) za pomocą prowadnic replikacji
-5. Ustawienie zmiennych w blokach imperatywnych jako lokalnych w zakresie bloku imperatywnego
+4. Wyłączenie podwyższania poziomu szyku (tablicy) za pomocą prowadnic replikacji.
+5. Ustawienie zmiennych w blokach imperatywnych jako lokalnych w zakresie bloku imperatywnego.
 
 * Wartości zmiennych zdefiniowane wewnątrz imperatywnych bloków kodu nie zostaną zmodyfikowane przez zmiany wewnątrz bloków imperatywnych, które się do nich odnoszą.
 
-6. Ustawienie zmiennych jako niemodyfikowalnych w celu wyłączenia aktualizacji asocjacyjnej w węzłach bloku kodu
-7. Kompilowanie wszystkich węzłów interfejsu użytkownika do metod statycznych
-8. Obsługa instrukcji return bez przypisania
+6. Ustawienie zmiennych jako niemodyfikowalnych w celu wyłączenia aktualizacji asocjacyjnej w węzłach bloku kodu.
+7. Kompilowanie wszystkich węzłów interfejsu użytkownika do metod statycznych.
+8. Obsługa instrukcji return bez przypisania.
 
 * Używanie znaku „=” nie jest konieczne ani w definicjach funkcji, ani w kodzie imperatywnym.
 
-9. Migracja starych nazw metod w węzłach bloku kodu
+9. Migracja starych nazw metod w węzłach bloku kodu.
 
 * Nazwy wielu węzłów zostały zmienione w celu zwiększenia czytelności i umieszczenia w interfejsie użytkownika Przeglądarki biblioteki.
 
-10. Oczyszczenie list prezentowanych jako słowniki
+10. Oczyszczenie list prezentowanych jako słowniki.
 
 ***
 
@@ -60,15 +60,15 @@ Poniżej znajduje się lista zmian w wersji 2.0 wraz z objaśnieniami:
 
 * Uproszczono składnię lista@poziom
 * Przeciążane metody z parametrami, które różnią się tylko rangą, są niedozwolone
-* Kompilowanie wszystkich węzłów interfejsu użytkownika jako metod statycznych
+* Skompilowano wszystkich węzłów interfejsu użytkownika jako metod statycznych
 * Wyłączono podwyższanie poziomu do listy w przypadku używania z prowadnicami replikacji/skratowaniem
-* Zmienne w blokach asocjacyjnych są niemodyfikowalne, aby zapobiec aktualizacji asocjacyjnej
-* Zmienne w blokach imperatywnych są lokalne w zakresie imperatywnym
-* Oddzielenie list i słowników
+* Zmienne w blokach asocjacyjnych zmieniono na niemodyfikowalne, aby zapobiec aktualizacji asocjacyjnej
+* Zmienne w blokach imperatywnych zmieniono na lokalne w zakresie imperatywnym
+* Rozdzielane listy i słowniki
 
 ## 1\. Uproszczono składnię lista@poziom
 
-Nowa składnia dla lista@poziom (list@level) pozwalająca używać zapisu `list@L1` zamiast `list@-1` ![](../images/lang2_1.png)
+Nowa składnia dla lista@poziom (list@level) pozwalająca używać zapisu `list@L1` zamiast `list@-1` ![](../../.gitbook/assets/lang2_1.png)
 
 ## 2\. Przeciążane funkcje z parametrami, które różnią się tylko rangą, są niedozwolone
 
@@ -85,7 +85,7 @@ BoundingBox BoundingBox.ByGeometry(geometry: Geometry) {...}
 BoundingBox BoundingBox.ByGeometry(geometry: Geometry[]) {...}
 ```
 
-Jeśli użytkownik upuścił pierwszy węzeł w obszarze rysunku i połączył z nim listę geometrii, będzie oczekiwał uruchomienia replikacji, ale nigdy tak się nie stanie, ponieważ w czasie wykonywania zostanie wywołane drugie przeciążenie, jak pokazano na ilustracji: ![](../images/lang2_2.png)
+Jeśli użytkownik upuścił pierwszy węzeł w obszarze rysunku i połączył z nim listę geometrii, będzie oczekiwał uruchomienia replikacji, ale nigdy tak się nie stanie, ponieważ w czasie wykonywania zostanie wywołane drugie przeciążenie, jak pokazano na ilustracji: ![](../../.gitbook/assets/lang2_2.png)
 
 Z tego powodu w wersji 2.0 nie zezwalamy na przeciążane funkcje, które różnią się tylko kardynalnością parametrów. Oznacza to, że w przypadku przeciążanych funkcji, które mają tę samą liczbę i typy parametrów, ale mają co najmniej jeden parametr, który różni się tylko rangą, przeciążenie, które jest zdefiniowane jako pierwsze, zawsze wygrywa, podczas gdy reszta jest odrzucana przez kompilator. Główną zaletą tego uproszczenia jest uproszczenie logiki rozpoznawania metod dzięki szybkiej ścieżce wyboru kandydujących funkcji.
 
@@ -105,7 +105,7 @@ W poniższym przykładzie zdefiniowano dwa przeciążenia funkcji `foo`. W wersj
 
 W wersji 2.0 zawsze wybierana jest pierwsza zdefiniowana metoda. Zastosowanie ma zasada „kto pierwszy, ten lepszy”.
 
-![](../images/lang2_3.png)
+![](../../.gitbook/assets/lang2_3.png)
 
 W każdym z poniższych przypadków zostanie przyjęte pierwsze zdefiniowane przeciążenie. Należy pamiętać, że wybór opiera się wyłącznie na kolejności definiowania funkcji, a nie na rangach parametrów, chociaż zaleca się preferowanie metod o parametrach z wyższymi rangami dla węzłów zdefiniowanych przez użytkownika i węzłów Zero Touch.
 
@@ -137,7 +137,7 @@ Na przykład jeśli do `Arc.CenterPoint` przekazano dane wejściowe w postaci li
 
 ### W dodatku Dynamo 1.x: testowany jest tylko pierwszy element listy danych wejściowych w celu rozpoznania metody
 
-![](../images/lang2_4.png)
+![](../../.gitbook/assets/lang2_4.png)
 
 ```
 x = [arc, line];
@@ -164,7 +164,7 @@ Oto co dzieje się w wersji 2.0:
 
 Ten przykład działał wcześniej w wersji 1.x, ponieważ wykres był kompilowany do postaci `point.X;` i właściwość `X` była znajdowana w obiekcie punktu. Teraz jego skompilowany kod nie działa on w wersji 2.0 — metoda `Vector.X(point)` oczekuje wyłącznie typu `Vector`:
 
-![](../images/lang2_5.png)
+![](../../.gitbook/assets/lang2_5.png)
 
 ### Zalety:
 
@@ -176,7 +176,7 @@ Ten przykład działał wcześniej w wersji 1.x, ponieważ wykres był kompilowa
 
 ### Zastrzeżenie: nierozstrzygnięte niejasne sytuacje z przeciążonymi metodami
 
-Ponieważ dodatek Dynamo ogólnie obsługuje przeciążenia funkcji, mogą w nim wystąpić niejasności, jeśli istnieje inna przeciążana funkcja o tej samej liczbie parametrów. Na przykład jeśli na poniższym wykresie połączymy wartość liczbową z pozycją danych wejściowych `direction` węzła `Curve.Extrude`, a wektor z pozycją danych wejściowych `distance` węzła `Curve.Extrude`, oba węzły będą nadal działać, co jest nieoczekiwane. W takim przypadku mimo że węzły są kompilowane do metod statycznych, silnik nadal nie jest w stanie dostrzec różnicy w czasie wykonywania i wybiera jedną z nich w zależności od typu danych wejściowych. ![](../images/lang2_6.png)
+Ponieważ dodatek Dynamo ogólnie obsługuje przeciążenia funkcji, mogą w nim wystąpić niejasności, jeśli istnieje inna przeciążana funkcja o tej samej liczbie parametrów. Na przykład jeśli na poniższym wykresie połączymy wartość liczbową z pozycją danych wejściowych `direction` węzła `Curve.Extrude`, a wektor z pozycją danych wejściowych `distance` węzła `Curve.Extrude`, oba węzły będą nadal działać, co jest nieoczekiwane. W takim przypadku mimo że węzły są kompilowane do metod statycznych, silnik nadal nie jest w stanie dostrzec różnicy w czasie wykonywania i wybiera jedną z nich w zależności od typu danych wejściowych. ![](../../.gitbook/assets/lang2_6.png)
 
 ### Rozwiązane problemy:
 
@@ -186,11 +186,11 @@ Przejście na semantykę metod statycznych ma następujące skutki uboczne, o kt
 
 Rozważmy przykład z węzłów `TSpline` w `ProtoGeometry` (uwaga: typ `TSplineTopology` dziedziczy po typie podstawowym `Topology`): węzeł `Topology.Edges`, który był wcześniej kompilowany do metody wystąpienia `object.Edges`, jest teraz kompilowany do metody statycznej `Topology.Edges(object)`. Poprzednie wywołanie zostałoby polimorficznie rozpoznane jako metoda klasy pochodnej `TsplineTopology.Edges` po wybraniu metody na podstawie typu obiektu środowiska wykonawczego.
 
-![](../images/lang2_7.png)
+![](../../.gitbook/assets/lang2_7.png)
 
 Natomiast nowe zachowanie statyczne obejmowało wymuszanie wywołania metody klasy bazowej `Topology.Edges`. W rezultacie ten węzeł zwracał obiekty klasy bazowej `Edge` zamiast obiektów klasy pochodnej typu `TSplineEdge`.
 
-![](../images/lang2_8.png)
+![](../../.gitbook/assets/lang2_8.png)
 
 Była to regresja, ponieważ węzły `TSpline` na dalszym etapie programu oczekujące obiektów `TSplineEdges` zwracały niepowodzenia.
 
@@ -198,13 +198,13 @@ Ten problem został rozwiązany przez dodanie sprawdzania w środowisku wykonawc
 
 **Nowe zachowanie polimorficzne w wersji 2.0:**
 
-![](../images/lang2_9.png)
+![](../../.gitbook/assets/lang2_9.png)
 
 W takim przypadku ponieważ pierwszy element `a` to `TSpline`, w czasie wykonywania wywoływana jest metoda pochodna `TSplineTopology.Edges`. W rezultacie zwracana jest wartość `null` dla `b` — typu bazowego `Topology`.
 
 W drugim przypadku ponieważ typ ogólny `Topology` `b` jest pierwszym elementem, wywoływana jest metoda bazowa `Topology.Edges`. Ponieważ `Topology.Edges` akceptuje jako dane wejściowe również typ pochodny `TSplineTopology`, `a`, zwraca `Edges` zarówno dla pozycji danych wejściowych, `a`, jak i dla pozycji danych wejściowych `b`.
 
-![](../images/lang2_10.png)
+![](../../.gitbook/assets/lang2_10.png)
 
 **2\. Regresje wynikające z tworzenia nadmiarowych list zewnętrznych**
 
@@ -228,7 +228,7 @@ Powoduje to utworzenie listy 3D punktów z nadmiarową najbardziej zewnętrzną 
 
 Ten efekt uboczny kompilowania węzłów interfejsu użytkownika do postaci metod statycznych może potencjalnie powodować regresje w takich istniejących przypadkach użycia. Ten problem rozwiązano przez wyłączenie podwyższania poziomu pozycji danych wejściowych o pojedynczych wartościach do listy w przypadku używania ich z prowadnicami replikacji/skratowaniem (patrz następny element).
 
-**4\. Wyłączono podwyższanie poziomu do listy w przypadku prowadnic replikacji/skratowania**
+**3\. Wyłączono podwyższanie poziomu do listy w przypadku prowadnic replikacji/skratowania**
 
 W wersji 1.x występowały dwa przypadki, w których poziom pojedynczych wartości był podwyższany do list:
 
@@ -248,13 +248,13 @@ p = Point.ByCoordinates(x<1>, y<2>, z<3>); // cross-lacing
 
 ### Dodatek Dynamo w wersji 1.x: lista punktów 3D
 
-![](../images/lang2_11.png)
+![](../../.gitbook/assets/lang2_11.png)
 
 W wersji 2.0 obecność prowadnic replikacji dla każdego z argumentów o pojedynczej wartości `y` i `z` nie powoduje podwyższenia poziomu, więc wynikiem jest lista o takim samym wymiarze co wejściowa lista 1D dla `x`.
 
 ### Dodatek Dynamo w wersji 2.0: lista punktów 1D
 
-![](../images/lang2_12.png)
+![](../../.gitbook/assets/lang2_12.png)
 
 Również problem wspomnianej powyżej regresji spowodowanej kompilacją metod statycznych z generowaniem nadmiarowych list zewnętrznych został rozwiązany przez tę zmianę dotyczącą języka.
 
@@ -268,7 +268,7 @@ powoduje utworzenie listy punktów 3D w dodatku Dynamo 1.x. Jest tak z powodu po
 
 ### Dodatek Dynamo 1.x: podwyższanie poziomu argumentu z prowadnicą replikacji do listy
 
-![](../images/lang2_13.png)
+![](../../.gitbook/assets/lang2_13.png)
 
 W wersji 2.0 wyłączyliśmy podwyższanie poziomu argumentów o pojedynczych wartościach do list, gdy są używane z prowadnicami replikacji lub ze skratowaniem. W związku z tym teraz wywołanie:
 
@@ -280,7 +280,7 @@ zwraca po prostu listę 2D, ponieważ poziom powierzchni nie jest podwyższany.
 
 ### Dodatek Dynamo 2.0.x: wyłączono podwyższanie poziomu argumentu o pojedynczej wartości z prowadnicą replikacji do listy
 
-![](../images/lang2_14.png)
+![](../../.gitbook/assets/lang2_14.png)
 
 Ta zmiana usuwa teraz dodawanie nadmiarowego poziomu listy, a także rozwiązuje problem regresji spowodowanej przejściem na kompilację do postaci metody statycznej.
 
@@ -295,7 +295,7 @@ Ta zmiana usuwa teraz dodawanie nadmiarowego poziomu listy, a także rozwiązuje
 * Metody wystąpień i metody statyczne są spójne (rozwiązano problemy z semantyką metod statycznych)
 * Węzły z pozycjami danych wejściowych i z argumentami domyślnymi zachowują się spójnie (patrz poniżej)
 
-![](../images/lang2_15.png)
+![](../../.gitbook/assets/lang2_15.png)
 
 ## 5\. Zmienne są niemodyfikowalne w węzłach bloku kodu, aby zapobiec aktualizacji asocjacyjnej
 
@@ -336,7 +336,7 @@ a = 4;         // b = 10 or b = 7?
 
 W tym przykładzie geometrii: skoro zmienna `b` sześcianu zależy od samej siebie oraz od walca `a`, to czy przesunięcie suwaka powinno spowodować przesunięcie otworu wzdłuż bloku, czy też wywoływać kumulowanie się otworów wzdłuż jego ścieżki przy każdej aktualizacji pozycji suwaka?
 
-![](../images/lang2_16.gif)
+![](../../.gitbook/assets/lang2_16.gif)
 
 **3\. Aktualizowanie właściwości zmiennych:**
 
@@ -359,7 +359,7 @@ Z naszego doświadczenia wynika, że aktualizacja asocjacyjna nie okazuje się p
 
 Jeśli ten mechanizm w ogóle był używany przez niektórych użytkowników, najprawdopodobniej był przez nich używany nieświadomie i powodował więcej szkody niż pożytku. Dlatego w wersji 2.0 zdecydowaliśmy się ukryć asocjacyjność w kontekście używania węzłów bloku kodu, czyniąc zmienne niemodyfikowalnymi i zachowując aktualizację asocjacyjną jako natywną funkcję tylko silnika języka DS. Jest to kolejna zmiana wprowadzona z myślą o uproszczeniu obsługi skryptów dla użytkowników.
 
-**Aktualizacja asocjacyjna została wyłączona w węzłach bloku kodu poprzez uniemożliwienie ponownego definiowania zmiennej:** ![](../images/lang2_17.png)
+**Aktualizacja asocjacyjna została wyłączona w węzłach bloku kodu poprzez uniemożliwienie ponownego definiowania zmiennej:** ![](../../.gitbook/assets/lang2_17.png)
 
 **Indeksowanie listy jest nadal dozwolone w węzłach bloku kodu**
 
@@ -367,7 +367,7 @@ Wprowadzono wyjątek dotyczący indeksowania list — jest to nadal dozwolone w 
 
 W następnym przykładzie widać, że lista `a` zostaje zainicjowana, ale może być później nadpisana za pomocą przypisania operatora indeksu, a wszelkie zmienne zależne od listy `a` zostaną zaktualizowane w sposób asocjacyjny, jak wskazuje wartość `c`. Ponadto w podglądzie węzła wyświetlane są wartości listy `a` zaktualizowane po ponownym zdefiniowaniu jednego lub większej liczby elementów.
 
-![](../images/lang2_18.png)
+![](../../.gitbook/assets/lang2_18.png)
 
 ## 6\. Zmienne w blokach imperatywnych są zmiennymi lokalnymi w zakresie bloku imperatywnego
 
@@ -483,11 +483,11 @@ dict = {<key> : <value>, …};
 
 formacie par klucz-wartość, w którym jako kluczy `<key>` można używać tylko ciągów, a poszczególne pary klucz-wartość są oddzielone przecinkami.
 
-![](../images/lang2_19.png)
+![](../../.gitbook/assets/lang2_19.png)
 
 Metoda Zero Touch `Dictionary.ByKeysValues` może być używana jako bardziej wszechstronny sposób inicjowania słownika poprzez przekazanie odpowiednio listy kluczy i listy wartości oraz stosowanie wszelkich rozszerzeń związanych z używaniem metod Zero Touch, takich jak prowadnice replikacji itp.
 
-![](../images/lang2_20.png)
+![](../../.gitbook/assets/lang2_20.png)
 
 ### Dlaczego nie używamy wyrażeń dowolnych w składni inicjowania słownika?
 
@@ -507,21 +507,21 @@ _Moglibyśmy_ w przyszłości rozszerzyć obsługę kluczy słowników tak, aby 
 
 **1\. Węzeł Zero Touch zwracający słownik .NET jest zwracany jako słownik dodatku Dynamo**
 
-**Rozważmy następującą metodę języka C# Zero Touch zwracającą obiekt IDictionary:** ![](../images/lang2_21.png)
+**Rozważmy następującą metodę języka C# Zero Touch zwracającą obiekt IDictionary:** ![](../../.gitbook/assets/lang2_21.png)
 
-**Odpowiednia wartość zwracana przez węzeł ZT jest organizowana jako słownik dodatku Dynamo:** ![](../images/lang2_22.png)
+**Odpowiednia wartość zwracana przez węzeł ZT jest organizowana jako słownik dodatku Dynamo:** ![](../../.gitbook/assets/lang2_22.png)
 
 **2\. Węzły z wieloma pozycjami zwracanymi są wyświetlane w podglądzie jako słowniki**
 
-**Węzeł Zero Touch zwracający obiekt IDictionary z atrybutem określającym wiele pozycji zwracanych zwraca słownik dodatku Dynamo:** ![](../images/lang2_23.png)
+**Węzeł Zero Touch zwracający obiekt IDictionary z atrybutem określającym wiele pozycji zwracanych zwraca słownik dodatku Dynamo:** ![](../../.gitbook/assets/lang2_23.png)
 
-![](../images/lang2_24.png)
+![](../../.gitbook/assets/lang2_24.png)
 
 **3\. Słownik dodatku Dynamo można przekazać jako dane wejściowe do węzła Zero Touch akceptującego słownik .NET**
 
-**Metoda ZT z parametrem IDictionary:** ![](../images/lang2_25.png)
+**Metoda ZT z parametrem IDictionary:** ![](../../.gitbook/assets/lang2_25.png)
 
-**Węzeł ZT akceptuje słownik dodatku Dynamo jako dane wejściowe:** ![](../images/lang2_26.png)
+**Węzeł ZT akceptuje słownik dodatku Dynamo jako dane wejściowe:** ![](../../.gitbook/assets/lang2_26.png)
 
 ### Podgląd słownika w węzłach z wieloma pozycjami zwracanymi
 
@@ -529,4 +529,4 @@ Słowniki to nieuporządkowane pary klucz-wartość. Zgodnie z tą ideą nie ma 
 
 Zrobiliśmy jednak wyjątek dla węzłów z wieloma pozycjami zwracanymi, które mają zdefiniowany atrybut `MultiReturnAttribute`. W poniższym przykładzie węzeł `DateTime.Components` jest węzłem z wieloma pozycjami zwracanymi i podgląd tego węzła odzwierciedla jego pary klucz-wartość w kolejności zgodnej z kolejnością portów wyjściowych w węźle — jest to również kolejność, w jakiej pozycje danych wyjściowych są określone na podstawie atrybutu `MultiReturnAttribute` w definicji węzła.
 
-Należy również pamiętać, że podglądy bloków kodu nie są uporządkowane — w przeciwieństwie do węzła interfejsu użytkownika, ponieważ dla węzła bloku kodu nie istnieją informacje dotyczące portów danych wyjściowych (w postaci atrybutu określającego wiele pozycji zwracanych): ![](../images/lang2_27.png)
+Należy również pamiętać, że podglądy bloków kodu nie są uporządkowane — w przeciwieństwie do węzła interfejsu użytkownika, ponieważ dla węzła bloku kodu nie istnieją informacje dotyczące portów danych wyjściowych (w postaci atrybutu określającego wiele pozycji zwracanych): ![](../../.gitbook/assets/lang2_27.png)

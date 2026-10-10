@@ -4,7 +4,7 @@
 
 Ustaliliśmy już, czym jest lista. Omówmy teraz operacje, które możemy na niej wykonać. Wyobraź sobie listę jako talię kart do gry. Talia jest listą, a każda karta reprezentuje element.
 
-![karty](../images/Playing_cards_modified.jpg)
+![karty](../../.gitbook/assets/Playing_cards_modified.jpg)
 
 > Autor zdjęcia: [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
@@ -43,15 +43,15 @@ Dla wszystkich operacji wymienionych powyżej istnieją analogiczne węzły Dyna
 
 Poniższy rysunek przedstawia wykres bazowy, na którym rysujemy linie między dwoma okręgami, aby przedstawić podstawowe operacje na listach. Przeanalizujemy sposób zarządzania danymi na liście i przedstawimy wyniki wizualne za pomocą poniższych operacji na liście.
 
-\![](<../images/working with list - list operation.jpg>)
+\![](<../../.gitbook/assets/working with list - list operation.jpg>)
 
-> 1. Rozpocznij od węzła **Code Block** o wartości `500;`
+> 1. Rozpocznij od węzła **Code Block** o wartości `500;`.
 > 2. Połącz wejście x z węzłem **Point.ByCoordinates**.
 > 3. Podłącz węzeł z poprzedniego kroku do wejścia origin węzła **Plane.ByOriginNormal**.
 > 4. Za pomocą węzła **Circle.ByPlaneRadius** podłącz węzeł z poprzedniego kroku do wejścia plane.
 > 5. Używając węzła **Code Block**, oznacz wartość `50;` dla pozycji radius. To pierwszy okrąg, który utworzymy.
 > 6. Za pomocą węzła **Geometry.Translate** przesuń okrąg w górę o 100 jednostek w kierunku Z.
-> 7. Za pomocą węzła **Code Block** zdefiniuj zakres dziesięciu liczb z zakresu od 0 do 1 przy użyciu tego wiersza kodu: `0..1..#10;`
+> 7. Za pomocą węzła **Code Block** zdefiniuj zakres dziesięciu liczb z zakresu od 0 do 1 przy użyciu tego wiersza kodu: `0..1..#10;`.
 > 8. Wstaw blok kodu z poprzedniego kroku do wejścia _param_ dwóch węzłów **Curve.PointAtParameter**. Podłącz węzeł **Circle.ByPlaneRadius** do wejścia curve górnego węzła i węzeł **Geometry.Translate** do wejścia curve węzła poniżej.
 > 9. Za pomocą węzła **Line.ByStartPointEndPoint** połącz dwa węzły **Curve.PointAtParameter**.
 
@@ -65,7 +65,7 @@ Poniższy rysunek przedstawia wykres bazowy, na którym rysujemy linie między d
 
 Węzeł _List.Count_ jest prosty: zlicza wartości na liście i zwraca ich liczbę. Jego działanie jest nieco bardziej złożone podczas pracy z listami list, ale zilustrujemy to w późniejszych sekcjach.
 
-\![Zliczanie](<../images/working with list - list operation - list count.jpg>)
+\![Zliczanie](<../../.gitbook/assets/working with list - list operation - list count.jpg>)
 
 > 1. Węzeł **List.Count** zwraca liczbę linii w węźle **Line.ByStartPointEndPoint**. W tym przypadku wynosi ona 10, co odpowiada liczbie punktów utworzonych z oryginalnego węzła **Code Block**.
 
@@ -79,14 +79,14 @@ Węzeł _List.Count_ jest prosty: zlicza wartości na liście i zwraca ich liczb
 
 Węzeł **List.GetItemAtIndex** zapewnia podstawowy sposób stosowania zapytania dotyczącego elementu listy.
 
-\![Ćwiczenie](<../images/working with list - get item index 01.jpg>)
+\![Ćwiczenie](<../../.gitbook/assets/working with list - get item index 01.jpg>)
 
 > 1. Najpierw kliknij prawym przyciskiem myszy węzeł **Line.ByStartPointEndPoint**, aby wyłączyć jego podgląd.
 > 2. Za pomocą węzła **List.GetItemAtIndex** wybieramy indeks _„0”_, czyli pierwszy element na liście linii.
 
 Zmień wartość suwaka na od 0 do 9, aby wybrać inny element za pomocą węzła **List.GetItemAtIndex**.
 
-\![](<../images/working with list - get item index 02.gif>)
+\![](<../../.gitbook/assets/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
@@ -98,10 +98,10 @@ Zmień wartość suwaka na od 0 do 9, aby wybrać inny element za pomocą węzł
 
 Węzeł _List.Reverse_ odwraca kolejność wszystkich elementów na liście.
 
-\![Ćwiczenie](<../images/working with list - list reverse.jpg>)
+\![Ćwiczenie](<../../.gitbook/assets/working with list - list reverse.jpg>)
 
 > 1. Aby poprawnie zwizualizować odwróconą listę linii, utwórz więcej linii, zmieniając węzeł **Code Block** na `0..1..#50;`
-> 2. Powiel węzeł **Line.ByStartPointEndPoint** oraz wstaw węzeł List.Reverse między węzłem **Curve.PointAtParameter** i drugim węzłem **Line.ByStartPointEndPoint**
+> 2. Powiel węzeł **Line.ByStartPointEndPoint** oraz wstaw węzeł **List.Reverse** między węzłem **Curve.PointAtParameter** i drugim węzłem **Line.ByStartPointEndPoint**
 > 3. Użyj węzłów **Watch3D**, aby wyświetlić podgląd dwóch różnych wyników. Pierwszy pokazuje wynik bez odwróconej listy. Linie łączą się pionowo z sąsiednimi punktami. Natomiast odwrócona lista powoduje połączenie wszystkich punktów w kolejności odwrotnej na drugiej liście.
 
 ### List.ShiftIndices <a href="#listshiftindices" id="listshiftindices"></a>
@@ -114,7 +114,7 @@ Węzeł _List.Reverse_ odwraca kolejność wszystkich elementów na liście.
 
 Węzeł **List.ShiftIndices** jest dobrym narzędziem do tworzenia skrętów lub wzorców śrubowych albo do innych podobnych manipulacji danymi. Ten węzeł przesuwa elementy na liście o podaną wartość indeksu.
 
-\![Ćwiczenie](<../images/working with list - shiftIndices 01.jpg>)
+\![Ćwiczenie](<../../.gitbook/assets/working with list - shiftIndices 01.jpg>)
 
 > 1. W tym samym procesie, w którym występuje odwrócona lista, wstaw węzeł **List.ShiftIndices** do węzłów **Curve.PointAtParameter** i **Line.ByStartPointEndPoint**.
 > 2. Używając węzła **Code Block**, określ wartość „1”, aby przesunąć listę o jeden indeks.
@@ -122,7 +122,7 @@ Węzeł **List.ShiftIndices** jest dobrym narzędziem do tworzenia skrętów lub
 
 Po zmianie wartości w węźle **Code Block** na większą, na przykład _„30”_, zauważamy znaczną różnicę w liniach ukośnych. W tym przypadku przesunięcie działa jak obiektyw aparatu, tworząc skręt w oryginalnej formie walcowej.
 
-\![](<../images/working with list - shiftIndices 02.jpg>)
+\![](<../../.gitbook/assets/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -132,11 +132,11 @@ Po zmianie wartości w węźle **Code Block** na większą, na przykład _„30�
 
 {% file src="../../.gitbook/assets/List-FilterByBooleanMask.dyn" %}
 
-![](../images/ListFilterBool.png)
+![](../../.gitbook/assets/ListFilterBool.png)
 
 Węzeł **List.FilterByBooleanMask** usuwa niektóre elementy w oparciu o listę wartości logicznych lub wartości odczytywanych jako „true” lub „false”.
 
-\![Ćwiczenie](<../images/working with list - filter by bool mask.jpg>)
+\![Ćwiczenie](<../../.gitbook/assets/working with list - filter by bool mask.jpg>)
 
 Aby utworzyć listę wartości odczytywanych jako „true” lub „false”, musimy wykonać nieco więcej pracy.
 

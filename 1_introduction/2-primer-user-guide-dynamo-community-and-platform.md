@@ -19,19 +19,21 @@ Z myślą o użytkownikach chcących zobaczyć prezentację procesów roboczych 
 
 * [Wazon parametryczny](../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.md)
 
-![](images/vase1.gif)
+\![](<../.gitbook/assets/vase1 (3).gif>)
 
 * [Punkty przyciągania](../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.md)
 
-![](<images/attractor1.gif>)
+\![](<../.gitbook/assets/attractor1 (1).gif>)
 
-{% hint style="info" %} W kolejnych rozdziałach znajduje się więcej ćwiczeń dotyczących różnych omawianych tematów związanych z dodatkiem Dynamo. **Ćwiczenia** można zazwyczaj znaleźć w ostatniej sekcji każdej strony. {% endhint %}
+{% hint style="info" %}
+W kolejnych rozdziałach znajduje się więcej ćwiczeń dotyczących różnych omawianych tematów związanych z dodatkiem Dynamo. **Ćwiczenia** można zazwyczaj znaleźć w ostatniej sekcji każdej strony.
+{% endhint %}
 
 ### Społeczność
 
 Dodatek Dynamo nie byłby tak przydatny bez silnej grupy aktywnych użytkowników i współtwórców. Przyłącz się do społeczności, obserwując [blog](http://dynamobim.org/blog/), dodając swoje prace do galerii lub dyskutując na temat dodatku Dynamo na [forum](https://forum.dynamobim.com).
 
-![Forum](images/02-Community.png)
+![Forum](../.gitbook/assets/02-Community.png)
 
 ### Platforma
 
@@ -39,6 +41,6 @@ Dodatek Dynamo ma być narzędziem do programowania wizualnego dla projektantów
 
 Kod źródłowy projektu jest typu open source, co pozwala rozszerzać jego funkcjonalność bez ograniczeń. Zajrzyj na stronę tego projektu w serwisie GitHub — przejdź do części „Works in Progress”, aby przekonać się, jak użytkownicy dostosowują dodatek Dynamo.
 
-![Repozytorium](images/03-TheRepo.png)
+![Repozytorium](../.gitbook/assets/03-TheRepo.png)
 
 > Przeglądaj, twórz odgałęzienia i rozpocznij rozszerzanie dodatku Dynamo stosownie do własnych potrzeb

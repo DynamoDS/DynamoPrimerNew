@@ -2,7 +2,7 @@
 
 Biblioteka zawiera wszystkie wczytane węzły, w tym dziesięć domyślnych kategorii węzłów dołączonych do instalacji oraz dodatkowo wczytane węzły niestandardowe lub pakiety. Węzły w bibliotece są zorganizowane hierarchicznie w obrębie bibliotek, kategorii i, w razie potrzeby, podkategorii.
 
-![](<images/library-library-ui.png>)
+![](../.gitbook/assets/library-library-ui.png)
 
 * Węzły podstawowe: dostarczane z instalacją domyślną.
 * Węzły niestandardowe: zapisz często używane procedury lub wykres specjalny jako węzły niestandardowe. Węzły niestandardowe można również udostępniać społeczności
@@ -16,9 +16,11 @@ Przeglądanie tych kategorii jest najszybszym sposobem zrozumienia hierarchii te
 
 Przeglądaj bibliotekę, klikając poszczególne menu, aby rozwijać kategorie i ich podkategorie
 
-{% hint style="info" %} Geometria to świetne menu, które doskonale nadają się do rozpoczęcia przeglądania, ponieważ zawierają największą liczbę węzłów. {% endhint %}
+{% hint style="info" %}
+Geometria to świetne menu, które doskonale nadają się do rozpoczęcia przeglądania, ponieważ zawierają największą liczbę węzłów.
+{% endhint %}
 
-![](<images/library-modified-and-resize-library-categories.jpg>)
+![](../.gitbook/assets/library-modified-and-resize-library-categories.jpg)
 
 > 1. Biblioteka
 > 2. Kategoria
@@ -27,13 +29,13 @@ Przeglądaj bibliotekę, klikając poszczególne menu, aby rozwijać kategorie i
 
 Zapewnia to dodatkowe skategoryzowanie węzłów należących do tej samej podkategorii w zależności od tego, czy węzły **tworzą** dane, wykonują **operacje**, czy wysyłają **zapytania** dotyczące danych.
 
-* ![](<images/user-interface-create.jpg>) **Create** — węzły tworzenia: tworzą lub konstruują geometrię od podstaw. Np. okrąg.
-* ![](<images/user-interface-action.jpg>) **Action** — węzły działań: wykonują operacje na obiekcie. Np. skalowanie okręgu.
-* ![](<images/user-interface-query.jpg>) **Query** — węzły zapytań: pobierają właściwość obiektu, który już istnieje. Np. pobieranie promienia okręgu.
+* ![](../.gitbook/assets/user-interface-create.jpg) **Create** — węzły tworzenia: tworzą lub konstruują geometrię od podstaw. Np. okrąg.
+* ![](../.gitbook/assets/user-interface-action.jpg) **Action** — węzły działań: wykonują operacje na obiekcie. Np. skalowanie okręgu.
+* ![](../.gitbook/assets/user-interface-query.jpg) **Query** — węzły zapytań: pobierają właściwość obiektu, który już istnieje. Np. pobieranie promienia okręgu.
 
 Umieść wskaźnik myszy na węźle, aby wyświetlić informacje bardziej szczegółowe od jego nazwy i ikony. Dzięki temu można szybko zrozumieć, do czego służy węzeł, jakich wejść wymaga i jakie będą jego dane wyjściowe.
 
-![](<images/user-interface-node-description.jpg>)
+![](../.gitbook/assets/user-interface-node-description.jpg)
 
 > 1. Opis — prosty opis węzła
 > 2. Ikona — większa wersja ikony w menu Biblioteka
@@ -46,7 +48,7 @@ Jeśli dosyć dobrze wiadomo, jaki węzeł ma zostać dodany do obszaru roboczeg
 
 Wybierz, klikając węzeł, który chcesz dodać, lub naciśnij klawisz Enter, aby dodać wyróżnione węzły do środka obszaru roboczego.
 
-![](<images/user-interface-search.jpg>)
+![](../.gitbook/assets/user-interface-search.jpg)
 
 #### Wyszukiwanie według hierarchii
 
@@ -58,15 +60,15 @@ Wpisanie różnych części miejsca węzła w hierarchii biblioteki w formacie `
 
 * `library.category.nodeName`
 
-![](<images/library-search-by-hierarchy-1-geometry-point-by-coordinates.jpg>)
+![](../.gitbook/assets/library-search-by-hierarchy-1-geometry-point-by-coordinates.jpg)
 
 * `category.nodeName`
 
-![](<images/library-search-by-hierarchy-2-point-by-coordinates.jpg>)
+![](../.gitbook/assets/library-search-by-hierarchy-2-point-by-coordinates.jpg)
 
 * `nodeName` lub `keyword`
 
-![](<images/library-search-by-hierarchy-3-by-coordinates.jpg>)
+![](../.gitbook/assets/library-search-by-hierarchy-3-by-coordinates.jpg)
 
 Zazwyczaj nazwa węzła w obszarze roboczym jest renderowana w formacie `category.nodeName`, z pewnymi ważnymi wyjątkami, szczególnie w przypadku kategorii widoków i wejść.
 
@@ -74,15 +76,15 @@ Należy zwrócić uwagę na podobnie nazwane węzły i na różnicę ich kategor
 
 * Węzły z większości bibliotek mają format kategorii
 
-![](<images/library-node-category-differences-1.jpg>)
+![](../.gitbook/assets/library-node-category-differences-1.jpg)
 
 * Węzły `Point.ByCoordinates` i `UV.ByCoordinates` mają tę samą nazwę, ale pochodzą z różnych kategorii
 
-![](<images/library-node-category-differences-2.jpg>)
+![](../.gitbook/assets/library-node-category-differences-2.jpg)
 
 * Istotne wyjątki to funkcje wbudowane, Core.Input, Core.View i operatory
 
-![](<images/library-node-category-differences-3.jpg>)
+![](../.gitbook/assets/library-node-category-differences-3.jpg)
 
 ### Często używane węzły
 
@@ -92,30 +94,32 @@ Do podstawowej instalacji dodatku Dynamo dołączono setki węzłów — które 
 
 Węzły Input (wejścia) są podstawowym sposobem obsługi kluczowych parametrów programu wizualnego przez użytkownika — Ciebie lub kogoś innego. Oto kilka pozycji dostępnych w bibliotece podstawowej:
 
-| Węzeł           |                                                        | Węzeł           |                                                        |
-| -------------- | ------------------------------------------------------ | -------------- | ------------------------------------------------------ |
-| Boolean        | ![](<images/library-boolean.jpg>)        | Number         | ![](<images/library-number.jpg>)         |
-| String         | ![](<images/library-string.jpg>)         | Number Slider  | ![](<images/library-number-slider.jpg>)  |
-| Directory Path | ![](<images/library-directory-path.jpg>) | Integer Slider | ![](<images/library-integer-slider.jpg>) |
-| File Path      | ![](<images/library-file-path.jpg>)      |                |                                                        |
+| Węzeł           |                                                    | Węzeł           |                                                    |
+| -------------- | -------------------------------------------------- | -------------- | -------------------------------------------------- |
+| Boolean        | ![](../.gitbook/assets/library-boolean.jpg)        | Number         | ![](../.gitbook/assets/library-number.jpg)         |
+| String         | ![](../.gitbook/assets/library-string.jpg)         | Number Slider  | ![](../.gitbook/assets/library-number-slider.jpg)  |
+| Directory Path | ![](../.gitbook/assets/library-directory-path.jpg) | Integer Slider | ![](../.gitbook/assets/library-integer-slider.jpg) |
+| File Path      | ![](../.gitbook/assets/library-file-path.jpg)      |                |                                                    |
 
 #### Watch oraz Watch3D
 
 Węzły Watch (obserwacyjne) są niezbędne do zarządzania danymi, które przepływają przez program wizualny. Wynik węzła można wyświetlić w **podglądzie danych węzła**, umieszczając wskaźnik myszy na węźle.
 
-![](<images/library-node-preview.jpg>)
+![](../.gitbook/assets/library-node-preview.jpg)
 
 Przydatne jest wyświetlenie informacji w węźle **Watch**
 
-![](<images/library-watch-node.jpg>)
+![](../.gitbook/assets/library-watch-node.jpg)
 
 Można też wyświetlić wyniki geometrii za pomocą węzła **Watch3D**.
 
-![](<images/library-watch3d-node.gif>)
+![](../.gitbook/assets/library-watch3d-node.gif)
 
 Oba te elementy znajdują się w kategorii widoku w bibliotece podstawowej.
 
-{% hint style="info" %} Wskazówka: czasami podgląd 3D może rozpraszać, gdy program wizualny zawiera wiele węzłów. Warto rozważyć wyczyszczenie zaznaczenia opcji Wyświetlanie podglądu tła w menu Ustawienia i użycie zamiast tego węzła Watch3D do wyświetlania podglądu geometrii. {% endhint %}
+{% hint style="info" %}
+Wskazówka: czasami podgląd 3D może rozpraszać, gdy program wizualny zawiera wiele węzłów. Warto rozważyć wyczyszczenie zaznaczenia opcji Wyświetlanie podglądu tła w menu Ustawienia i użycie zamiast tego węzła Watch3D do wyświetlania podglądu geometrii.
+{% endhint %}
 
 #### Code Block
 
@@ -123,9 +127,9 @@ Węzły Code Block (bloki kodu) umożliwiają definiowanie bloku kodu z wierszam
 
 Bloków kodu można też używać jako skrótów do definiowania wejścia liczbowego lub wywoływania funkcji innego węzła. Składnia potrzebna do tego celu jest zgodna z konwencją nazewnictwa języka tekstowego Dynamo, [DesignScript](../8_coding_in_dynamo/8-1_code-blocks-and-design-script/2-design-script-syntax.md).
 
-Oto prosty przykład (z instrukcjami) użycia bloku kodu w skrypcie.
+Oto prosty przykład (z instrukcjami) użycia węzłów Code Block w skrypcie.
 
-![](images/library-codeblockdemo.gif)
+![](../.gitbook/assets/library-codeblockdemo.gif)
 
 1. Kliknij dwukrotnie, aby utworzyć węzeł Code Block
 2. `Circle.ByCenterPointRadius(x,y);`Typ

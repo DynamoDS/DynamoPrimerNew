@@ -52,11 +52,11 @@ Jeśli Twoja odpowiedź obejmowała zastosowanie grafiki, **programowanie wizual
 
 **Program wizualny:**
 
-![](<images/visualProgramming.png>)
+![](../.gitbook/assets/visualProgramming.png)
 
 **Program tekstowy:**
 
-```
+```py
 myPoint = Point.ByCoordinates(0.0,0.0,0.0);
 x = 5.6;
 y = 11.5;
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 Wyniki algorytmu:
 
-![](<images/visualProgramming.png>)
+![](../.gitbook/assets/visualProgramming.png)
 
 Wizualność programowania w taki sposób ułatwia rozpoczęcie korzystania z niego i często przemawia do projektantów. Dodatek Dynamo służy do programowania wizualnego, ale jak przekonamy się później, nadal umożliwia programowanie tekstowe w aplikacji.

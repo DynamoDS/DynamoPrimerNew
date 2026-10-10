@@ -1,8 +1,8 @@
 # Analiza przypadku pakietu — zestaw Mesh Toolkit
 
-Zestaw Dynamo Mesh Toolkit zawiera narzędzia do importowania siatek z zewnętrznych formatów plików, tworzenia siatki z obiektów geometrii Dynamo oraz ręcznego tworzenia siatek na podstawie wierzchołków i indeksów. Ta biblioteka zawiera również narzędzia do modyfikowania siatek, naprawiania siatek i wyodrębniania warstw poziomych do użycia w produkcji.
+Zestaw Dynamo Mesh Toolkit zawiera narzędzia do tworzenia siatek z obiektów geometrii Dynamo oraz ręcznego tworzenia siatek na podstawie wierzchołków i indeksów. Ta biblioteka zawiera również narzędzia do modyfikowania siatek, naprawiania siatek i wyodrębniania warstw poziomych do użycia w produkcji. Chociaż ten zestaw narzędzi może być również używany do importowania zewnętrznych plików siatki i badania ich za pomocą zapytań, w tym przykładzie siatka jest zawarta w skrypcie jako zestaw wierzchołków i indeksów, dzięki czemu nie jest potrzebny dodatkowy plik. Zamiast zewnętrznego pliku siatki w dostarczonym wykresie używane są węzły **Data.Remember** do przechowywania wszystkich informacji niezbędnych do odbudowania słynnej siatki królika Stanforda.
 
-\![](<../images/meshToolkit case study 01.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study 01.jpg>)
 
 Zestaw narzędzi Dynamo Mesh Toolkit jest częścią nieustających badań firmy Autodesk nad siatką, więc w nadchodzących latach będzie się rozwijać. Należy spodziewać się częstego dodawania do zestawu nowych metod. Zachęcamy też do kierowania do zespołu Dynamo komentarzy, informacji o błędach i sugestii dotyczących nowych funkcji.
 
@@ -14,7 +14,7 @@ W poniższym ćwiczeniu przedstawiono niektóre podstawowe operacje na siatce pr
 
 W dodatku Dynamo na górnym pasku menu przejdź do obszaru Pakiety > Menedżer pakietów. W polu wyszukiwania wpisz „MeshToolkit” (jedno słowo). Kliknij przycisk Zainstaluj i zaakceptuj potwierdzenia, aby rozpocząć pobieranie. To wystarczy.
 
-<figure><img src="../images/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
 ## Ćwiczenie: przecinająca się siatka
 
@@ -24,23 +24,23 @@ W dodatku Dynamo na górnym pasku menu przejdź do obszaru Pakiety > Menedżer p
 
 {% file src="../../.gitbook/assets/MeshToolkit.zip" %}
 
-W tym przykładzie przyjrzymy się węzłowi Intersect w zestawie Mesh Toolkit. Zaimportujemy siatkę i przetniemy ją szeregiem płaszczyzn wejściowych, aby utworzyć warstwy. Jest to punkt wyjścia do przygotowania modelu do produkcji na przecinarce laserowej, wodnej lub frezarce CNC.
+W tym przykładzie przyjrzymy się węzłowi Intersect w zestawie Mesh Toolkit. Wygenerujemy siatkę z zapisanych wierzchołków i przetniemy ją szeregiem płaszczyzn wejściowych, aby utworzyć warstwy. Jest to punkt wyjścia do przygotowania modelu do produkcji na przecinarce laserowej, wodnej lub frezarce CNC.
 
 Rozpocznij od otwarcia pliku _Mesh-Toolkit_Intersect-Mesh.dyn w dodatku Dynamo._
 
-\![](<../images/meshToolkit case study - exercise 01.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 01.jpg>)
 
-> 1. **File Path:** odszukaj plik siatki do zaimportowania (_stanford_bunny_tri.obj_). Obsługiwane typy plików to .mix i .obj
-> 2. **Mesh.ImportFile:** połącz ścieżkę pliku w celu zaimportowania siatki.
+> 1. **Data.Remember:** te dwa węzły zawierają wierzchołki siatki, które są przechowywane jako punkty, oraz indeksy siatki, które są szeregiem liczb całkowitych. Razem dostarczają one wszystkich niezbędnych informacji potrzebnych do zbudowania siatki.
+> 2. **Mesh.ByVerticesAndIndices:** połącz wierzchołki i indeksy z węzłów danych, aby utworzyć siatkę.
 
-\![](<../images/meshToolkit case study - exercise 02.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 02.jpg>)
 
 > 1. **Point.ByCoordinates:** utwórz punkt — będzie to środek łuku.
 > 2. **Arc.ByCenterPointRadiusAngle:** utwórz łuk wokół punktu. Ta krzywa zostanie użyta do rozmieszczenia szeregu płaszczyzn. __ Znajdują się tu następujące ustawienia: __ `radius: 40, startAngle: -90, endAngle:0`
 
 Utwórz szereg płaszczyzn zorientowanych wzdłuż łuku.
 
-\![](<../images/meshToolkit case study - exercise 03.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 03.jpg>)
 
 > 1. **Code Block**: utwórz 25 liczb z zakresu od 0 do 1.
 > 2. **Curve.PointAtParameter:** połącz łuk z wejściem _„curve”_ i wyjście węzła Code Block z wejściem _„param”_, aby wyodrębnić szereg punktów wzdłuż krzywej.
@@ -49,21 +49,21 @@ Utwórz szereg płaszczyzn zorientowanych wzdłuż łuku.
 
 Następnie użyjemy tych płaszczyzn do przecięcia siatki.
 
-\![](<../images/meshToolkit case study - exercise 04.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 04.jpg>)
 
-> 1. **Mesh.Intersect:** utwórz przecięcie płaszczyzn z zaimportowaną siatką, tworząc szereg konturów polikrzywej. Kliknij prawym przyciskiem myszy węzeł i ustaw skratowanie na najdłuższe
+> 1. **Mesh.Intersect:** utwórz przecięcie płaszczyzn z wygenerowaną siatką, tworząc szereg konturów polikrzywej. Kliknij prawym przyciskiem myszy węzeł i ustaw skratowanie na najdłuższe
 > 2. **PolyCurve.Curves:** rozbij polikrzywe na zakrzywione fragmenty.
 > 3. **Curve.EndPoint:** wyodrębnij punkty końcowe każdej krzywej.
 > 4. **NurbsCurve.ByPoints:** użyj punktów do utworzenia krzywej NURBS. Użyj węzła Boolean ustawionego na _True_, aby zamknąć krzywe.
 
-Przed kontynuowaniem wyłącz podgląd niektórych węzłów, takich jak Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal i Arc.ByCenterPointRadiusAngle, aby lepiej uwidocznić wynik.
+Przed kontynuowaniem wyłącz podgląd niektórych węzłów, takich jak Mesh.ByVerticesAndIndices, Curve.EndPoint, Plane.ByOriginNormal i Arc.ByCenterPointRadiusAngle, aby lepiej uwidocznić wynik.
 
-\![](<../images/meshToolkit case study - exercise 05.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 05.jpg>)
 
 > 1. **Surface.ByPatch:** utwórz ścieżki powierzchni dla każdego konturu, aby utworzyć „warstwy” siatki.
 
 Dodaj drugi zestaw warstw, aby uzyskać efekt wafla.
 
-\![](<../images/meshToolkit case study - exercise 06.jpg>)
+\![](<../../.gitbook/assets/meshToolkit case study - exercise 06.jpg>)
 
 Można zauważyć, że operacje przecięcia są dla siatki wykonywane szybciej niż dla porównywalnej bryły. Procesy robocze, takie jak ten przedstawiony w tym ćwiczeniu, dobrze nadają się do stosowania siatek.
