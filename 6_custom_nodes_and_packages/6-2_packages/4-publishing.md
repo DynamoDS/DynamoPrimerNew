@@ -41,6 +41,10 @@ Na kartě _Publikovat balíček_ vyplňte příslušná pole v levé části ok
 
 <figure><img src="../../.gitbook/assets/package-details.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+Pokud se má graf zobrazovat na domovské stránce aplikace Dynamo, přidejte před publikováním jeho miniaturu. Viz část [Miniatury grafů pro domovskou stránku aplikace Dynamo](../../3_user_interface/3-graph-thumbnails.md).
+{% endhint %}
+
 Dále přidáme soubory balíčku. Soubory můžete přidat po jednom nebo můžete přidat celou složku výběrem možnosti Přidat složku (1). Chcete-li přidat soubory, které nejsou soubory .dyf, změňte typ souboru v okně prohlížeče na **Všechny soubory (**_._**)**. Všimněte si, že budeme přidávat soubor, vlastní uzel (.dyf) nebo ukázkový soubor (.dyn), bez rozdílu. Aplikace Dynamo tyto položky kategorizuje při publikování balíčku.
 
 <figure><img src="../../.gitbook/assets/map-to-surface-contents.png" alt=""><figcaption></figcaption></figure>
@@ -80,7 +84,7 @@ Poznámka: Tento krok neprovádějte, pokud skutečně nepublikujete vlastní ba
 
 <figure><img src="../../.gitbook/assets/publish-version.png" alt=""><figcaption></figcaption></figure>
 
-1. Až budete připraveni k publikování, v okně Balíčky > Package Manager > Instalované balíčky vyberte tlačítko vpravo od balíčku, který chcete publikovat, a zvolte možnost Publikovat.
+1. Až budete připraveni k publikování, v okně Balíčky > Package Manager > Instalované balíčky vyberte tlačítko vpravo od balíčku, který chcete publikovat, a zvolte možnost Publikovat.
 2. Pokud aktualizujete balíček, který již byl publikován, klikněte na tlačítko Publikovat verzi a aplikace Dynamo aktualizuje balíček online podle nových souborů v kořenovém adresáři daného balíčku. Je to tak jednoduché.
 
 ### Publikování verze...
