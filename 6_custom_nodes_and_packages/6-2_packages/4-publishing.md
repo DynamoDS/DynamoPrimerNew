@@ -41,6 +41,10 @@
 
 <figure><img src="../../.gitbook/assets/package-details.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+如果图形将显示在 Dynamo 主页上，请在发布之前附着图形缩略图。请参见 [Dynamo 主页的图形缩略图](../../3_user_interface/3-graph-thumbnails.md)。
+{% endhint %}
+
 接下来，我们将添加软件包文件。可以逐个添加文件，也可以通过选择“添加文件夹”(1) 来添加整个文件夹。要添加并非 .dyf 文件的文件，请确保在浏览器窗口中将文件类型更改为 **“所有文件(**_._**)”**。请注意，我们将随意添加每个文件、自定义节点 (.dyf) 或示例文件 (.dyn)。当我们发布软件包时，Dynamo 会对这些项目进行分类。
 
 <figure><img src="../../.gitbook/assets/map-to-surface-contents.png" alt=""><figcaption></figcaption></figure>
