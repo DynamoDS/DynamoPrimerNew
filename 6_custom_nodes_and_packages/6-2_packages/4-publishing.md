@@ -41,6 +41,10 @@ En la ficha _Publicar un paquete_, rellene los campos correspondientes en el lad
 
 <figure><img src="../../.gitbook/assets/package-details.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+Enlace una miniatura del gráfico antes de publicarlo si este va a aparecer en Inicio de Dynamo. Consulte [Miniaturas de gráficos en Inicio de Dynamo](../../3_user_interface/3-graph-thumbnails.md).
+{% endhint %}
+
 A continuación, añadiremos archivos del paquete. Puede añadir archivos individualmente o carpetas enteras si selecciona Añadir carpeta (1). Para añadir archivos que no sean .dyf, asegúrese de cambiar el tipo de archivo en la ventana del navegador a **"Todos los archivos (**_._**)"**. Observe que añadiremos sin distinción todos los archivos, los nodos personalizados (.dyf) o los archivos de ejemplo (.dyn). Dynamo organizará estos elementos en categorías cuando publiquemos el paquete.
 
 <figure><img src="../../.gitbook/assets/map-to-surface-contents.png" alt=""><figcaption></figcaption></figure>
