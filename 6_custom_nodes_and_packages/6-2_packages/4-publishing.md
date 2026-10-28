@@ -41,6 +41,10 @@ _[パッケージをパブリッシュ]_ タブで、ウィンドウの左側に
 
 <figure><img src="../../.gitbook/assets/package-details.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+グラフが Dynamo ホームに表示される場合は、パブリッシュする前にグラフのサムネイルを添付してください。「[Dynamo ホーム のグラフ サムネイル](../../3_user_interface/3-graph-thumbnails.md)」を参照してください。
+{% endhint %}
+
 次に、パッケージ ファイルを追加します。ファイルを 1 つずつ追加するか、[フォルダを追加] (1)を選択してフォルダ全体を追加します。.dyf ファイル以外のファイルを追加するには、ブラウザ ウィンドウでファイル タイプを必ず **[すべてのファイル(**_._**)]** に変更してください。カスタム ノード(.dyf)やサンプル ファイル(.dyn)など、すべてのファイルが追加されていることを確認してください。パッケージをパブリッシュすると、Dynamo によってこれらのファイルが分類されます。
 
 <figure><img src="../../.gitbook/assets/map-to-surface-contents.png" alt=""><figcaption></figcaption></figure>
