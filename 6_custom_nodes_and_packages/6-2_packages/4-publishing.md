@@ -41,6 +41,10 @@ Füllen Sie auf der Registerkarte _Paket publizieren_ die entsprechenden Felder 
 
 <figure><img src="../../.gitbook/assets/package-details.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+Hängen Sie vor dem Publizieren eine Miniaturansicht des Diagramms an, wenn das Diagramm auf der Dynamo-Startseite angezeigt wird. Siehe [Diagramm-Miniaturansichten für die Dynamo-Startseite](../../3_user_interface/3-graph-thumbnails.md).
+{% endhint %}
+
 Als Nächstes fügen wir Paketdateien hinzu. Sie können Dateien einzeln oder ganze Ordner mit Dateien hinzufügen, indem Sie Ordner hinzufügen (1) auswählen. Um Dateien hinzuzufügen, die keine DYF-Dateien sind, ändern Sie den Dateityp im Browser-Fenster in **Alle Dateien(**_._**)**. Beachten Sie, dass sämtliche Dateien ohne Unterscheidung zwischen benutzerdefinierten Blöcken (.dyf) und Beispieldateien (.dyn) hinzugefügt werden. Dynamo ordnet diese Objekte beim Publizieren des Pakets in Kategorien ein.
 
 <figure><img src="../../.gitbook/assets/map-to-surface-contents.png" alt=""><figcaption></figcaption></figure>
