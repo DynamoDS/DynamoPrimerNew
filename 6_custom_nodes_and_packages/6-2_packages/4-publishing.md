@@ -22,7 +22,7 @@
 在 Dynamo Sandbox 2.17 版及更新版本中，只要自訂節點和套件沒有主 API 相依性，即可加以發佈。在較舊版中，只有 Dynamo for Revit 和 Dynamo for Civil 3D 中可發佈自訂節點和套件。
 {% endhint %}
 
-> 按下方的連結下載範例檔案。
+> 按一下下方的連結下載範例檔案。
 >
 > 附錄中提供完整的範例檔案清單。
 
@@ -40,6 +40,10 @@
 在 _「發佈套件」_ 頁籤中，填寫視窗左側的相關欄位。
 
 <figure><img src="../../.gitbook/assets/package-details.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+如果圖表將出現在 Dynamo 首頁，請在發佈前貼附圖表縮圖。請參閱 [Dynamo 首頁的圖表縮圖](../../3_user_interface/3-graph-thumbnails.md)。
+{% endhint %}
 
 接下來，我們將加入套件檔案。您可以逐一加入檔案，或選取「加入資料夾」(1) 加入整個資料夾。若要加入非 .dyf 的檔案，請務必在瀏覽器視窗中將檔案類型變更為 **「所有檔案 (**_._**)」**。請注意，我們會加入所有檔案，不會區分該檔案是自訂節點檔案 (.dyf) 或範例檔案 (.dyn)。發佈套件時，Dynamo 會將這些項目分類。
 
