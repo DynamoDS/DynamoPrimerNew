@@ -19,10 +19,10 @@ Em seguida, reinicie o Dynamo. Depois de reabrir, quando você verificar a janel
 ### Publicar um pacote localmente
 
 {% hint style="warning" %}
-É possível publicar nós e pacotes personalizados do Dynamo Sandbox na versão 2.17 e mais recentes, desde que não tenham dependências de APIs do hospedeiro. Em versões anteriores, a publicação de nós e pacotes personalizados somente estava ativada no Dynamo for Revit e no Dynamo for Civil 3D.
+É possível publicar nós e pacotes personalizados do Dynamo Sandbox na versão 2.17 e mais recentes, desde que não tenham dependências de APIs do hospedeiro. Em versões anteriores, a publicação de nós e pacotes personalizados somente estava ativada no Dynamo for Revit e no Dynamo for Civil 3D.
 {% endhint %}
 
-> Faça o download do arquivo de exemplo clicando no link abaixo.
+> Baixe o arquivo de exemplo clicando no link abaixo.
 >
 > É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
@@ -40,6 +40,10 @@ No Dynamo, comece clicando na guia _Pacotes > Package Manager > Publicar novo pa
 Na guia _Publicar um pacote_, preencha os campos relevantes no lado esquerdo da janela.
 
 <figure><img src="../../.gitbook/assets/package-details.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+Anexe uma miniatura de gráfico antes de publicar se o gráfico aparecer no Início do Dynamo. Consulte [Miniaturas de gráficos do Início do Dynamo](../../3_user_interface/3-graph-thumbnails.md).
+{% endhint %}
 
 Em seguida, adicionaremos arquivos de pacote. É possível adicionar arquivos um a um ou todas as pastas selecionando Adicionar pasta (1). Para adicionar arquivos que não são arquivos .dyf, assegure-se de alterar o tipo de arquivo na janela do navegador para **“Todos os arquivos (**_._**)”**. Observe que vamos adicionar indiscriminadamente cada arquivo, nó personalizado (.dyf) ou arquivo de exemplo (.dyn). O Dynamo categorizará esses itens quando o pacote for publicado.
 
@@ -81,7 +85,7 @@ Observação: Não siga estas etapas, a não ser que você esteja realmente publ
 <figure><img src="../../.gitbook/assets/publish-version.png" alt=""><figcaption></figcaption></figure>
 
 1. Quando estiver pronto para publicar, na janela Pacotes > Gerenciador de pacotes > Pacotes instalados, selecione o botão à direita do pacote que deseja publicar e escolha Publicar.
-2. Se você estiver atualizando um pacote que já foi publicado, selecione “Publicar versão” e o Dynamo atualizará o pacote on-line com base nos novos arquivos no diretório raiz do pacote. É tão simples quanto isso.
+2. Se você estiver atualizando um pacote que já foi publicado, selecione “Publicar versão” e o Dynamo atualizará o pacote on-line com base nos novos arquivos no diretório raiz do pacote. Simples assim!
 
 ### Publicar versão...
 
