@@ -4,7 +4,7 @@ Dans les sections précédentes, vous avez découvert en détail comment configu
 
 \![](<../../.gitbook/assets/develop package - custom nodes 01 (2).jpg>)
 
-Il existe plusieurs façons de publier un package. Voici le processus recommandé :**publier localement, développer localement, puis publier en ligne**. Vous allez commencer par un dossier contenant tous les fichiers du package.
+Il existe de nombreuses façons de publier un package. Voici le processus recommandé :**publier localement, développer localement, puis publier en ligne**. Vous allez commencer par un dossier contenant tous les fichiers du package.
 
 ### Désinstallation d'un package
 
@@ -19,7 +19,7 @@ Ensuite, redémarrez Dynamo. Lors de la réouverture, vérifiez la fenêtre _«�
 ### Publication locale d’un package
 
 {% hint style="warning" %}
-Vous pouvez publier des nœuds et des packages personnalisés à partir de Dynamo Sandbox dans la version 2.17 et les versions ultérieures, à condition qu’ils n’aient aucune dépendance à l’API hôte. Dans les versions plus anciennes, la publication de nœuds et de packages personnalisés n’est possible que dans Dynamo for Revit et Dynamo for Civil 3D.
+Vous pouvez publier des nœuds et des packages personnalisés à partir de Dynamo Sandbox dans la version 2.17 et les versions ultérieures, à condition qu’ils n’aient aucune dépendance à l’API hôte. Dans les versions plus anciennes, la publication de nœuds et de packages personnalisés n’est possible que dans Dynamo for Revit et Dynamo for Civil 3D.
 {% endhint %}
 
 > Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
@@ -41,7 +41,11 @@ Dans l’onglet _Publier un package_, remplissez les champs pertinents dans la p
 
 <figure><img src="../../.gitbook/assets/package-details.png" alt=""><figcaption></figcaption></figure>
 
-Ensuite, ajoutez des fichiers de package. Vous pouvez ajouter des fichiers un par un ou des dossiers entiers en sélectionnant Ajouter un dossier (1). Pour ajouter des fichiers qui ne sont pas des fichiers .dyf, veillez à modifier le type de fichier dans la fenêtre du navigateur en **« Tous les fichiers(**_._**) »**. Notez que nous ajouterons chaque fichier, nœud personnalisé (.dyf) ou fichier d’exemple (.dyn), sans distinction. Dynamo classe ces éléments lors de la publication du package.
+{% hint style="info" %}
+Joignez une miniature au graphique avant la publication si celui-ci doit apparaître dans la page d’accueil de Dynamo. Reportez-vous à la rubrique [Miniatures de graphiques pour la page d’accueil de Dynamo](../../3_user_interface/3-graph-thumbnails.md).
+{% endhint %}
+
+Ensuite, nous allons ajouter des fichiers de package. Vous pouvez ajouter des fichiers un par un ou des dossiers entiers en sélectionnant Ajouter un dossier (1). Pour ajouter des fichiers qui ne sont pas des fichiers .dyf, veillez à définir le type de fichier sur **« Tous les fichiers(**_._**) »** dans la boîte de dialogue de sélection de fichiers. Notez que nous ajouterons chaque fichier, nœud personnalisé (.dyf) ou fichier d’exemple (.dyn), sans distinction. Dynamo classe ces éléments lors de la publication du package.
 
 <figure><img src="../../.gitbook/assets/map-to-surface-contents.png" alt=""><figcaption></figcaption></figure>
 
@@ -53,13 +57,13 @@ Ici, vous avez la possibilité de voir comment Dynamo organisera vos fichiers de
 
 <figure><img src="../../.gitbook/assets/publish-locally.png" alt=""><figcaption></figcaption></figure>
 
-Publiez en cliquant sur « Publier localement » (1). Si vous suivez la démarche, veillez à cliquer sur _« Publier localement »_ et **non** sur _« Publier en ligne »_, pour éviter de créer une multitude de packages en double dans le gestionnaire de package.
+Publiez en cliquant sur « Publier localement » (1). Si vous suivez cet exercice, veillez à cliquer sur _« Publier localement »_ et **non** sur _« Publier en ligne »_, pour éviter de créer une multitude de packages en double dans le gestionnaire de package.
 
-Une fois la publication terminée, les nœuds personnalisés doivent être disponibles sous le groupe « DynamoPrimer » ou votre bibliothèque Dynamo.
+Une fois la publication terminée, les nœuds personnalisés doivent être disponibles dans le groupe « DynamoPrimer » ou dans votre bibliothèque Dynamo.
 
 \![](<../../.gitbook/assets/develop package - install package 02 (2).jpg>)
 
-Examinez maintenant le répertoire racine pour découvrir comment Dynamo a mis en forme le package créé. Pour ce faire, allez dans l’onglet Packages installés > à côté de MapToSurface, cliquez sur le menu des points verticaux > sélectionnez Afficher le répertoire racine.
+Examinons maintenant le répertoire racine pour voir comment Dynamo a organisé le package que nous venons de créer. Pour ce faire, allez dans l’onglet Packages installés > à côté de MapToSurface, cliquez sur le menu des points verticaux > sélectionnez Afficher le répertoire racine.
 
 <figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
@@ -80,7 +84,7 @@ Remarque : ne suivez pas cette étape, sauf si vous publiez réellement un pack
 
 <figure><img src="../../.gitbook/assets/publish-version.png" alt=""><figcaption></figcaption></figure>
 
-1. Lorsque vous êtes prêt à publier, dans la fenêtre Packages > Gestionnaire de package > Packages installés, sélectionnez le bouton situé à droite du package à publier, puis choisissez Publier.
+1. Au moment de publier, dans la fenêtre Packages > Gestionnaire de package > Packages installés, sélectionnez le bouton situé à droite du package à publier, puis choisissez Publier.
 2. Si vous mettez à jour un package qui a déjà été publié, choisissez « Publier la version » et Dynamo mettra à jour votre package en ligne en fonction des nouveaux fichiers contenus dans le répertoire racine de ce package. C'est aussi simple que ça !
 
 ### Version de publication…
