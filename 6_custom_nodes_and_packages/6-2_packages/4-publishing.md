@@ -41,6 +41,10 @@ _패키지 게시_ 탭에서 창 왼쪽에 있는 관련 필드를 채웁니다.
 
 <figure><img src="../../.gitbook/assets/package-details.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+그래프가 Dynamo 홈에 표시될 예정이라면 게시하기 전에 그래프 썸네일을 추가하십시오. [Dynamo 홈의 그래프 썸네일](../../3_user_interface/3-graph-thumbnails.md)을 참조하십시오.
+{% endhint %}
+
 다음으로, 패키지 파일을 추가하겠습니다. 파일을 하나씩 추가하거나 폴더 추가(1)를 선택하여 폴더 전체를 추가할 수 있습니다. .dyf 파일이 아닌 파일을 추가하려면 탐색기 창에서 파일 유형을 **"모든 파일(**_._**)"** 로 변경합니다. 모든 파일, 사용자 노드(.dyf) 또는 예제 파일(.dyn)을 별다른 구분 없이 추가하겠습니다. 패키지를 게시하면 Dynamo에서는 이러한 항목을 분류합니다.
 
 <figure><img src="../../.gitbook/assets/map-to-surface-contents.png" alt=""><figcaption></figcaption></figure>
