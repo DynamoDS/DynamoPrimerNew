@@ -41,6 +41,10 @@ Na karcie _Publikowanie pakietu_ wypełnij odpowiednie pola po lewej stronie okn
 
 <figure><img src="../../.gitbook/assets/package-details.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+Przed opublikowaniem dołącz miniaturę grafu, jeśli graf będzie widoczny na stronie głównej dodatku Dynamo. Zobacz [Miniatury grafów dla strony głównej dodatku Dynamo](../../3_user_interface/3-graph-thumbnails.md).
+{% endhint %}
+
 Następnie dodamy pliki pakietu. Pliki można dodawać pojedynczo lub całymi folderami, wybierając opcję Dodaj folder (1). Aby dodać pliki, które nie są plikami .dyf, należy zmienić typ pliku w oknie przeglądarki na **„Wszystkie pliki(**_._**)”**. Uwaga: dodamy wszystkie pliki bez rozróżniania typów: węzły niestandardowe (.dyf) i pliki przykładów (.dyn). Po opublikowaniu pakietu dodatek Dynamo skategoryzuje te elementy.
 
 <figure><img src="../../.gitbook/assets/map-to-surface-contents.png" alt=""><figcaption></figcaption></figure>
@@ -53,7 +57,7 @@ W tym miejscu można wyświetlić podgląd zorganizowania plików pakietu przez 
 
 <figure><img src="../../.gitbook/assets/publish-locally.png" alt=""><figcaption></figcaption></figure>
 
-Opublikuj, klikając przycisk „Opublikuj lokalnie” (1). Postępując zgodnie z tymi instrukcjami, należy koniecznie kliknąć przycisk _„Opublikuj lokalnie”_, a **nie** _„Opublikuj online”, aby uniknąć_ powielenia pakietów w Menedżerze pakietów.
+Opublikuj, klikając przycisk „Opublikuj lokalnie” (1). Postępując zgodnie z tymi instrukcjami, należy koniecznie kliknąć przycisk _„Opublikuj lokalnie”_, a **nie** _„Opublikuj online”_, aby uniknąć powielenia pakietów w Menedżerze pakietów.
 
 Po opublikowaniu węzły niestandardowe powinny być dostępne w grupie „DynamoPrimer” lub w bibliotece Dynamo.
 
