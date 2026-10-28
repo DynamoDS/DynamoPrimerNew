@@ -2,7 +2,7 @@
 
 V předchozích částech jsme se zabývali podrobnostmi o tom, jak je balíček _MapToSurface_ nastaven pomocí vlastních uzlů a vzorových souborů. Ale jak publikujeme balíček, který byl vyvinut místně? Tato případová studie ukazuje, jak publikovat balíček ze sady souborů v místní složce.
 
-\![](<../../.gitbook/assets/develop package - custom nodes 01 (2).jpg>)
+![](<../../.gitbook/assets/develop package - custom nodes 01 (2).jpg>)
 
 Balíček lze publikovat mnoha způsoby. Níže je popsán proces, který doporučujeme: **publikovat místně, vyvíjet místně a poté publikovat online**. Začneme složkou obsahující všechny soubory v balíčku.
 
@@ -30,7 +30,7 @@ Vlastní uzly a balíčky z aplikace Dynamo Sandbox ve verzi 2.17 a novějšíc
 
 Toto je první odeslání pro náš balíček a všechny ukázkové soubory a vlastní uzly souborů jsme umístili do jedné složky. Když je tato složka připravena, jsme připraveni k odeslání do správce Dynamo Package Manager.
 
-\![](<../../.gitbook/assets/publish a package - publish locally 01.jpg>)
+![](<../../.gitbook/assets/publish a package - publish locally 01.jpg>)
 
 > 1. Tato složka obsahuje pět vlastních uzlů (.dyf).
 > 2. Tato složka také obsahuje pět vzorových souborů (.dyn) a jeden importovaný vektorový soubor (.svg). Tyto soubory budou sloužit jako úvodní cvičení, která uživateli ukážou, jak pracovat s vlastními uzly.
@@ -61,7 +61,7 @@ Publikujte balíček kliknutím na tlačítko Publikovat místně (1).. Pokud pr
 
 Po publikování by měly být vlastní uzly dostupné ve skupině DynamoPrimer nebo v knihovně aplikace Dynamo.
 
-\![](<../../.gitbook/assets/develop package - install package 02 (2).jpg>)
+![](<../../.gitbook/assets/develop package - install package 02 (2).jpg>)
 
 Nyní se podívejme na kořenový adresář a uvidíme, jak aplikace Dynamo formátovala balíček, který jsme právě vytvořili. Proveďte to tak, že přejdete na kartu Nainstalované balíčky > vedle položky MapToSurface klikněte na nabídku se svislými tečkami > vyberte možnost Zobrazit kořenový adresář.
 
@@ -69,7 +69,7 @@ Nyní se podívejme na kořenový adresář a uvidíme, jak aplikace Dynamo form
 
 Všimněte si, že kořenový adresář se nachází v místním umístění balíčku (balíček jsme publikovali „místně“). Aplikace Dynamo aktuálně odkazuje na tuto složku pro čtení vlastních uzlů. Proto je důležité místně publikovat adresář do trvalého umístění složky (například ne na plochu). Zde je struktura složky balíčku Dynamo.
 
-\![](<../../.gitbook/assets/publish a package - publish locally 06.jpg>)
+![](<../../.gitbook/assets/publish a package - publish locally 06.jpg>)
 
 > 1. Složka _bin_ obsahuje soubory .dll vytvořené pomocí knihoven C# nebo Zero-Touch. Pro tento balíček žádné nemáme, proto je tato složka v tomto příkladu prázdná.
 > 2. Složka _dyf_ slouží k umístění vlastních uzlů. Otevřením tohoto okna se zobrazí všechny vlastní uzly (soubory .dyf) pro tento balíček.
