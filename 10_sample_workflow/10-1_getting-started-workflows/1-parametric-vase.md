@@ -48,7 +48,7 @@ Conservez la valeur par défaut de _centerPoint_, mais ajoutez un nœud **Number
 
 Ce nœud est légèrement différent du nœud précédent, car il contient un curseur. Vous pouvez utiliser l’interface pour modifier la valeur de sortie du curseur.
 
-\![](<../../.gitbook/assets/vase13 (1).gif>)
+![](<../../.gitbook/assets/vase13 (1).gif>)
 
 Le curseur peut être configuré à l’aide du bouton déroulant situé à gauche du nœud. Limitez le curseur à une valeur maximale de 15.
 
@@ -70,7 +70,7 @@ Continuons à ajouter des nœuds et des connexions à notre logique pour défini
 
 Copiez ces nœuds 4 fois pour que ces cercles définissent votre surface, puis modifiez les noms des **Number Slider** comme illustré ci-dessous.
 
-\![](<../../.gitbook/assets/vase4 (1).png>)
+![](<../../.gitbook/assets/vase4 (1).png>)
 
 > 1. Les cercles sont créés à l’aide d’un point central et d’un rayon
 
@@ -78,7 +78,7 @@ Copiez ces nœuds 4 fois pour que ces cercles définissent votre surface, puis 
 
 Il vous manque un paramètre clé pour votre vase, sa hauteur. Pour contrôler la hauteur du vase, vous allez créer un autre curseur de numérotation. Vous allez aussi ajouter un nœud **Code Block**. Les nœuds Code Block peuvent vous aider à ajouter des extraits de code personnalisés à votre workflow. Vous allez utiliser le nœud Code Block pour multiplier le curseur de hauteur par différents facteurs afin de pouvoir positionner nos cercles le long de la hauteur du vase.
 
-\![](<../../.gitbook/assets/vase15 (1).png>)
+![](<../../.gitbook/assets/vase15 (1).png>)
 
 Vous allez ensuite utiliser un nœud **Geometry.Translate** pour placer des cercles à la hauteur souhaitée. Comme vous voulez distribuer vos cercles à travers le vase, utilisez des nœuds Code Block pour multiplier le paramètre de hauteur par un facteur.
 
