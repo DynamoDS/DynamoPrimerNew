@@ -103,3 +103,15 @@ Stable Releases
 Daily Builds and Stable Releases
 
 [https://dynamobuilds.com/](https://dynamobuilds.com/)
+
+## Is Generative Design available in Dynamo Sandbox?
+
+Generative Design ships with, and is supported in, Autodesk Revit only. When you install Revit, Generative Design and Dynamo Player come with it and work out of the box through Dynamo for Revit.
+
+Dynamo Sandbox and Dynamo in other hosts (including Dynamo for Civil 3D) don't include Generative Design and don't officially support it.
+
+Some advanced users have gotten Generative Design running in Sandbox by adding the packages from a Revit install to Sandbox's package paths. That setup isn't tested or supported, and parts of it, like "Open in Dynamo," might not work as expected. If you try it, treat it as experimental.
+
+{% hint style="info" %}
+If you need Generative Design for your work, the supported path is Generative Design in Revit. If you'd like to see it in other Dynamo flavors, let us know on the [Dynamo Forum](https://forum.dynamobim.com/). That feedback helps shape what comes next.
+{% endhint %}
